@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Korean OS — Quiz System</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:#0d0d0f;--surface:#141416;--surface2:#1c1c20;--border:#2a2a30;
+    --accent:#c8f060;--accent2:#60c8f0;--accent3:#f06090;
+    --text:#e8e8ec;--text-muted:#666672;--text-dim:#44444e;
+    --correct:#60f090;--wrong:#f06060;--radius:12px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Syne',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden}
+  body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(200,240,96,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(200,240,96,.03) 1px,transparent 1px);background-size:40px 40px;pointer-events:none;z-index:0}
+  .app{position:relative;z-index:1;max-width:960px;margin:0 auto;padding:32px 20px 80px}
+
+  /* HEADER */
+  .header{display:flex;align-items:center;justify-content:space-between;margin-bottom:40px;padding-bottom:24px;border-bottom:1px solid var(--border);flex-wrap:wrap;gap:16px}
+  .logo{display:flex;align-items:center;gap:12px}
+  .logo-badge{width:36px;height:36px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Noto Serif KR',serif;font-size:16px;color:#000;font-weight:700}
+  .logo-text{font-size:14px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted)}
+  .mode-tabs{display:flex;gap:4px;background:var(--surface);padding:4px;border-radius:10px;border:1px solid var(--border);flex-wrap:wrap}
+  .mode-tab{padding:6px 14px;border-radius:7px;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;cursor:pointer;border:none;background:transparent;color:var(--text-muted);transition:all .2s;white-space:nowrap}
+  .mode-tab.active{background:var(--accent);color:#000}
+  .mode-tab:hover:not(.active){color:var(--text)}
+
+  /* SCREENS */
+  .screen{display:none;animation:fadeIn .3s ease}
+  .screen.active{display:block}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+  .section-title{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:16px}
+
+  /* STATS */
+  .stats-bar{display:flex;gap:12px;margin-bottom:28px;flex-wrap:wrap}
+  .stat-chip{display:flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:8px 14px;font-size:12px}
+  .stat-dot{width:8px;height:8px;border-radius:50%}
+  .stat-num{font-weight:700;font-size:15px}
+  .stat-lbl{color:var(--text-muted)}
+
+  /* QUESTION BANK */
+  .question-bank{display:flex;flex-direction:column;gap:8px;margin-bottom:32px}
+  .question-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:14px 18px;display:flex;align-items:flex-start;gap:14px;transition:border-color .2s}
+  .question-card:hover{border-color:var(--accent)}
+  .q-type-badge{font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:4px;white-space:nowrap;flex-shrink:0;margin-top:2px}
+  .badge-vocab{background:rgba(200,240,96,.15);color:var(--accent)}
+  .badge-grammar{background:rgba(96,200,240,.15);color:var(--accent2)}
+  .badge-chunk{background:rgba(240,96,144,.15);color:var(--accent3)}
+  .q-content{flex:1}
+  .q-text{font-family:'Noto Serif KR',serif;font-size:14px;color:var(--text);margin-bottom:4px}
+  .q-meta{font-size:11px;color:var(--text-muted);font-family:'DM Mono',monospace}
+  .q-actions{display:flex;gap:6px;flex-shrink:0}
+  .btn-icon{width:28px;height:28px;border:1px solid var(--border);border-radius:6px;background:transparent;color:var(--text-muted);cursor:pointer;font-size:12px;display:flex;align-items:center;justify-content:center;transition:all .2s}
+  .btn-icon:hover{border-color:var(--accent);color:var(--accent)}
+  .btn-icon.danger:hover{border-color:var(--wrong);color:var(--wrong)}
+
+  /* BUTTONS */
+  .btn{padding:10px 20px;border-radius:8px;font-family:'Syne',sans-serif;font-size:13px;font-weight:700;letter-spacing:.05em;cursor:pointer;border:none;transition:all .2s}
+  .btn-primary{background:var(--accent);color:#000}
+  .btn-primary:hover{background:#d4f570;transform:translateY(-1px)}
+  .btn-secondary{background:transparent;color:var(--text-muted);border:1px solid var(--border)}
+  .btn-secondary:hover{border-color:var(--text-muted);color:var(--text)}
+  .btn-accent2{background:rgba(96,200,240,.15);color:var(--accent2);border:1px solid rgba(96,200,240,.3)}
+  .btn-accent2:hover{background:rgba(96,200,240,.25)}
+  .btn-accent3{background:rgba(240,96,144,.15);color:var(--accent3);border:1px solid rgba(240,96,144,.3)}
+  .btn-accent3:hover{background:rgba(240,96,144,.25)}
+
+  /* ══════════════════════════════════
+     BULK IMPORT SCREEN
+  ══════════════════════════════════ */
+  .bulk-header{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin-bottom:24px}
+  .bulk-header-top{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:20px}
+  .bulk-title{font-size:18px;font-weight:800;margin-bottom:6px}
+  .bulk-subtitle{font-size:13px;color:var(--text-muted);line-height:1.6}
+
+  /* Meta row */
+  .bulk-meta{display:flex;gap:12px;margin-bottom:20px;flex-wrap:wrap}
+  .bulk-meta-field{display:flex;flex-direction:column;gap:5px;flex:1;min-width:160px}
+  .form-label{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted)}
+  .form-input,.form-select{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:9px 13px;color:var(--text);font-family:'Syne',sans-serif;font-size:13px;transition:border-color .2s;outline:none;width:100%}
+  .form-input:focus,.form-select:focus{border-color:var(--accent)}
+  .form-select option{background:var(--surface)}
+
+  /* Count selector */
+  .count-selector{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap}
+  .count-chip{padding:7px 16px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;border:1px solid var(--border);background:transparent;color:var(--text-muted);transition:all .2s;letter-spacing:.05em}
+  .count-chip.active{background:var(--accent);color:#000;border-color:var(--accent)}
+  .count-chip:hover:not(.active){border-color:var(--text-muted);color:var(--text)}
+
+  /* Bulk table */
+  .bulk-table-wrap{overflow-x:auto;margin-bottom:20px}
+  .bulk-table{width:100%;border-collapse:collapse;min-width:900px}
+  .bulk-table th{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);padding:10px 8px;text-align:left;border-bottom:1px solid var(--border);white-space:nowrap}
+  .bulk-table td{padding:6px 4px;vertical-align:top}
+  .bulk-table tr:nth-child(even) .cell-input{background:rgba(255,255,255,.02)}
+
+  .row-num{font-family:'DM Mono',monospace;font-size:11px;color:var(--text-dim);padding:10px 8px;vertical-align:middle;text-align:center;width:28px}
+  .row-status{width:24px;text-align:center;vertical-align:middle;font-size:14px}
+
+  .cell-input{background:var(--surface2);border:1px solid transparent;border-radius:6px;padding:8px 10px;color:var(--text);font-family:'Syne',sans-serif;font-size:13px;outline:none;width:100%;transition:border-color .2s;line-height:1.4}
+  .cell-input:focus{border-color:var(--accent);background:var(--surface)}
+  .cell-input.error{border-color:var(--wrong)!important}
+  .cell-input::placeholder{color:var(--text-dim)}
+  .cell-select{background:var(--surface2);border:1px solid transparent;border-radius:6px;padding:8px 6px;color:var(--text);font-family:'Syne',sans-serif;font-size:12px;outline:none;width:100%;cursor:pointer;transition:border-color .2s}
+  .cell-select:focus{border-color:var(--accent)}
+  .cell-select option{background:var(--surface)}
+
+  /* col widths */
+  .col-q{min-width:200px}
+  .col-opt{min-width:120px}
+  .col-ans{width:60px}
+  .col-type{width:110px}
+  .col-exp{min-width:160px}
+  .col-del{width:36px}
+
+  .bulk-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+  .bulk-counter{font-size:12px;color:var(--text-muted);font-family:'DM Mono',monospace;margin-left:auto}
+
+  /* validation toast */
+  .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px 20px;font-size:13px;font-weight:600;z-index:100;animation:toastIn .3s ease;display:flex;align-items:center;gap:10px;max-width:90vw}
+  .toast.success{border-color:var(--correct);color:var(--correct)}
+  .toast.error{border-color:var(--wrong);color:var(--wrong)}
+  @keyframes toastIn{from{opacity:0;transform:translateX(-50%) translateY(12px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
+
+  /* preview panel */
+  .import-preview{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:20px;display:none}
+  .import-preview.show{display:block}
+  .preview-title{font-size:13px;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+  .preview-list{display:flex;flex-direction:column;gap:6px;max-height:200px;overflow-y:auto}
+  .preview-item{display:flex;gap:10px;font-size:12px;padding:8px 12px;background:var(--surface2);border-radius:6px;align-items:flex-start}
+  .preview-ok{color:var(--correct)}
+  .preview-err{color:var(--wrong)}
+
+  /* ══════ QUIZ SCREEN ══════ */
+  .quiz-setup{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:28px;margin-bottom:24px}
+  .quiz-setup-title{font-size:20px;font-weight:800;margin-bottom:20px}
+  .setup-options{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px}
+  .setup-chip{padding:8px 16px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;border:1px solid var(--border);background:transparent;color:var(--text-muted);transition:all .2s;letter-spacing:.05em}
+  .setup-chip.active{background:var(--accent);color:#000;border-color:var(--accent)}
+  .setup-chip:hover:not(.active){border-color:var(--text-muted);color:var(--text)}
+
+  .quiz-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
+  .quiz-progress-wrap{flex:1;margin:0 20px}
+  .quiz-progress-bar{height:4px;background:var(--surface2);border-radius:4px;overflow:hidden;margin-bottom:6px}
+  .quiz-progress-fill{height:100%;background:var(--accent);border-radius:4px;transition:width .4s ease}
+  .quiz-progress-text{font-size:11px;color:var(--text-muted);font-family:'DM Mono',monospace;text-align:center}
+  .quiz-score-display{font-family:'DM Mono',monospace;font-size:13px;color:var(--accent);font-weight:500}
+
+  .question-block{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:32px;margin-bottom:20px;position:relative;overflow:hidden}
+  .question-block::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+  .q-number{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-dim);margin-bottom:12px;font-family:'DM Mono',monospace}
+  .q-question{font-family:'Noto Serif KR',serif;font-size:20px;line-height:1.6;margin-bottom:8px;color:var(--text)}
+  .q-hint{font-size:12px;color:var(--text-muted);margin-bottom:28px;font-style:italic}
+
+  .options-list{display:flex;flex-direction:column;gap:10px}
+  .option-btn{display:flex;align-items:center;gap:14px;padding:14px 18px;background:var(--surface2);border:1px solid var(--border);border-radius:10px;cursor:pointer;transition:all .2s;text-align:left;width:100%}
+  .option-btn:hover:not(:disabled){border-color:var(--accent);background:rgba(200,240,96,.05);transform:translateX(4px)}
+  .option-btn:disabled{cursor:default}
+  .option-btn.correct{border-color:var(--correct);background:rgba(96,240,144,.1)}
+  .option-btn.wrong{border-color:var(--wrong);background:rgba(240,96,96,.1)}
+  .option-letter{width:32px;height:32px;border-radius:8px;background:var(--bg);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;font-family:'DM Mono',monospace;flex-shrink:0;transition:all .2s}
+  .option-btn.correct .option-letter{background:var(--correct);color:#000;border-color:var(--correct)}
+  .option-btn.wrong .option-letter{background:var(--wrong);color:#fff;border-color:var(--wrong)}
+  .option-text{font-family:'Noto Serif KR',serif;font-size:15px}
+
+  .feedback-block{padding:16px 20px;border-radius:10px;margin-bottom:16px;display:none;animation:fadeIn .25s ease}
+  .feedback-block.show{display:flex;gap:12px;align-items:flex-start}
+  .feedback-block.correct-fb{background:rgba(96,240,144,.08);border:1px solid rgba(96,240,144,.2)}
+  .feedback-block.wrong-fb{background:rgba(240,96,96,.08);border:1px solid rgba(240,96,96,.2)}
+  .feedback-icon{font-size:18px;flex-shrink:0}
+  .feedback-text{font-size:14px;line-height:1.6}
+  .feedback-text strong{display:block;margin-bottom:4px;font-weight:700}
+
+  .btn-next{width:100%;padding:14px;background:var(--accent);color:#000;border:none;border-radius:10px;font-family:'Syne',sans-serif;font-size:14px;font-weight:800;letter-spacing:.05em;cursor:pointer;transition:all .2s;display:none}
+  .btn-next.show{display:block}
+  .btn-next:hover{background:#d4f570;transform:translateY(-2px)}
+
+  .results-screen{text-align:center;padding:48px 24px}
+  .results-emoji{font-size:64px;margin-bottom:16px}
+  .results-score-big{font-size:72px;font-weight:800;line-height:1;margin-bottom:8px}
+  .results-label{color:var(--text-muted);margin-bottom:32px;font-size:16px}
+  .results-breakdown{display:flex;justify-content:center;gap:20px;margin-bottom:40px;flex-wrap:wrap}
+  .breakdown-item{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px 24px;min-width:100px}
+  .breakdown-num{font-size:28px;font-weight:800;margin-bottom:4px}
+  .breakdown-lbl{font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:.08em}
+  .results-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+
+  .review-log{display:flex;flex-direction:column;gap:10px;margin-top:24px}
+  .review-item{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 18px;display:flex;gap:12px;align-items:flex-start}
+  .review-status{font-size:16px;flex-shrink:0;margin-top:1px}
+  .review-q{font-family:'Noto Serif KR',serif;font-size:14px;margin-bottom:4px}
+  .review-answer{font-size:12px;color:var(--text-muted);font-family:'DM Mono',monospace}
+
+  @media(max-width:600px){
+    .header{flex-direction:column;align-items:flex-start}
+    .results-score-big{font-size:56px}
+    .bulk-table{min-width:700px}
+  }
+</style>
+</head>
+<body>
+<div class="app">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="logo">
+      <div class="logo-badge">한</div>
+      <div><div class="logo-text">Korean OS — Quiz System</div></div>
+    </div>
+    <div class="mode-tabs">
+      <button class="mode-tab active" onclick="switchMode('manage',this)">📋 Ngân hàng</button>
+      <button class="mode-tab" onclick="switchMode('bulk',this)">⚡ Nhập hàng loạt</button>
+      <button class="mode-tab" onclick="switchMode('quiz',this)">🎯 Luyện tập</button>
+    </div>
+  </div>
+
+  <!-- ══════════════ MANAGE ══════════════ -->
+  <div class="screen active" id="screen-manage">
+    <div class="stats-bar" id="stats-bar"></div>
+    <div style="display:flex;gap:10px;margin-bottom:20px;flex-wrap:wrap">
+      <button class="btn btn-accent2" onclick="loadSampleData()">⚡ Load bài mẫu Seoul 3A Bài 2</button>
+      <button class="btn btn-secondary" onclick="clearAll()">🗑 Xoá tất cả</button>
+    </div>
+    <p class="section-title">Danh sách câu hỏi (<span id="q-count">0</span>)</p>
+    <div class="question-bank" id="question-bank"></div>
+  </div>
+
+  <!-- ══════════════ BULK IMPORT ══════════════ -->
+  <div class="screen" id="screen-bulk">
+    <div class="bulk-header">
+      <div class="bulk-header-top">
+        <div>
+          <div class="bulk-title">⚡ Nhập câu hỏi hàng loạt</div>
+          <div class="bulk-subtitle">Điền thẳng vào bảng — nhập 10, 15, 20 câu cùng lúc.<br>Mỗi hàng = 1 câu. Điền xong nhấn <strong style="color:var(--accent)">Lưu vào ngân hàng</strong>.</div>
+        </div>
+      </div>
+
+      <!-- Meta -->
+      <div class="bulk-meta">
+        <div class="bulk-meta-field">
+          <label class="form-label">Tên bài học (áp dụng cho tất cả)</label>
+          <input class="form-input" id="bulk-lesson" placeholder="VD: Seoul 3A Bài 3" value="Seoul 3A Bài 2">
+        </div>
+        <div class="bulk-meta-field">
+          <label class="form-label">Loại mặc định</label>
+          <select class="form-select" id="bulk-default-type">
+            <option value="vocab">📗 Từ vựng</option>
+            <option value="grammar">📘 Ngữ pháp</option>
+            <option value="chunk">📙 Speaking chunk</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Count selector -->
+      <p class="form-label" style="margin-bottom:10px">Số hàng cần nhập</p>
+      <div class="count-selector">
+        <button class="count-chip" onclick="setRowCount(5,this)">5 câu</button>
+        <button class="count-chip active" onclick="setRowCount(10,this)">10 câu</button>
+        <button class="count-chip" onclick="setRowCount(15,this)">15 câu</button>
+        <button class="count-chip" onclick="setRowCount(20,this)">20 câu</button>
+        <button class="count-chip" onclick="setRowCount(30,this)">30 câu</button>
+      </div>
+    </div>
+
+    <!-- TABLE -->
+    <div class="bulk-table-wrap">
+      <table class="bulk-table" id="bulk-table">
+        <thead>
+          <tr>
+            <th style="width:28px">#</th>
+            <th style="width:20px"></th>
+            <th class="col-type">Loại</th>
+            <th class="col-q">Câu hỏi <span style="color:var(--wrong)">*</span></th>
+            <th class="col-opt">Đáp án A <span style="color:var(--wrong)">*</span></th>
+            <th class="col-opt">Đáp án B <span style="color:var(--wrong)">*</span></th>
+            <th class="col-opt">Đáp án C <span style="color:var(--wrong)">*</span></th>
+            <th class="col-opt">Đáp án D <span style="color:var(--wrong)">*</span></th>
+            <th class="col-ans">Đúng <span style="color:var(--wrong)">*</span></th>
+            <th class="col-exp">Giải thích</th>
+            <th class="col-del"></th>
+          </tr>
+        </thead>
+        <tbody id="bulk-tbody"></tbody>
+      </table>
+    </div>
+
+    <!-- Preview -->
+    <div class="import-preview" id="import-preview">
+      <div class="preview-title">👁 Xem trước <span id="preview-count"></span></div>
+      <div class="preview-list" id="preview-list"></div>
+    </div>
+
+    <!-- Actions -->
+    <div class="bulk-actions">
+      <button class="btn btn-secondary" onclick="previewBulk()">👁 Xem trước</button>
+      <button class="btn btn-primary" onclick="saveBulk()" style="padding:12px 28px;font-size:14px">💾 Lưu vào ngân hàng</button>
+      <button class="btn btn-secondary" onclick="clearBulkTable()">🧹 Xoá trắng bảng</button>
+      <div class="bulk-counter" id="bulk-counter">0 / 10 hàng đã điền</div>
+    </div>
+  </div>
+
+  <!-- ══════════════ QUIZ ══════════════ -->
+  <div class="screen" id="screen-quiz">
+    <div id="quiz-setup-panel">
+      <div class="quiz-setup">
+        <div class="quiz-setup-title">⚙️ Cài đặt bài kiểm tra</div>
+        <p class="section-title">Lọc theo loại</p>
+        <div class="setup-options" id="type-filters">
+          <button class="setup-chip active" data-filter="all" onclick="toggleFilter(this)">Tất cả</button>
+          <button class="setup-chip" data-filter="vocab" onclick="toggleFilter(this)">📗 Từ vựng</button>
+          <button class="setup-chip" data-filter="grammar" onclick="toggleFilter(this)">📘 Ngữ pháp</button>
+          <button class="setup-chip" data-filter="chunk" onclick="toggleFilter(this)">📙 Chunk</button>
+        </div>
+        <p class="section-title">Số câu hỏi</p>
+        <div class="setup-options" id="count-options">
+          <button class="setup-chip active" data-count="5" onclick="selectCount(this)">5 câu</button>
+          <button class="setup-chip" data-count="10" onclick="selectCount(this)">10 câu</button>
+          <button class="setup-chip" data-count="15" onclick="selectCount(this)">15 câu</button>
+          <button class="setup-chip" data-count="all" onclick="selectCount(this)">Tất cả</button>
+        </div>
+        <p class="section-title">Chế độ</p>
+        <div class="setup-options">
+          <button class="setup-chip active" data-mode="practice" onclick="selectMode(this)">🎯 Luyện tập (có giải thích)</button>
+          <button class="setup-chip" data-mode="test" onclick="selectMode(this)">⏱ Thi thử</button>
+        </div>
+        <div style="margin-top:24px">
+          <button class="btn btn-primary" style="width:100%;padding:14px;font-size:15px" onclick="startQuiz()">Bắt đầu →</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="quiz-active" style="display:none">
+      <div class="quiz-header">
+        <div class="quiz-score-display" id="quiz-score-display">0 ✓</div>
+        <div class="quiz-progress-wrap">
+          <div class="quiz-progress-bar"><div class="quiz-progress-fill" id="progress-fill" style="width:0%"></div></div>
+          <div class="quiz-progress-text" id="progress-text">0 / 0</div>
+        </div>
+        <button class="btn btn-secondary" style="padding:6px 12px;font-size:11px" onclick="endQuiz()">Kết thúc</button>
+      </div>
+      <div class="question-block" id="question-block">
+        <div class="q-number" id="q-number"></div>
+        <div class="q-question" id="q-question-text"></div>
+        <div class="q-hint" id="q-hint-text"></div>
+        <div class="options-list" id="options-list"></div>
+      </div>
+      <div class="feedback-block" id="feedback-block">
+        <div class="feedback-icon" id="feedback-icon"></div>
+        <div class="feedback-text" id="feedback-text"></div>
+      </div>
+      <button class="btn-next" id="btn-next" onclick="nextQuestion()">Câu tiếp theo →</button>
+    </div>
+
+    <div id="quiz-results" style="display:none">
+      <div class="results-screen">
+        <div class="results-emoji" id="results-emoji"></div>
+        <div class="results-score-big" id="results-score-big"></div>
+        <div class="results-label" id="results-label"></div>
+        <div class="results-breakdown">
+          <div class="breakdown-item"><div class="breakdown-num" id="res-correct" style="color:var(--correct)"></div><div class="breakdown-lbl">Đúng</div></div>
+          <div class="breakdown-item"><div class="breakdown-num" id="res-wrong" style="color:var(--wrong)"></div><div class="breakdown-lbl">Sai</div></div>
+          <div class="breakdown-item"><div class="breakdown-num" id="res-total"></div><div class="breakdown-lbl">Tổng</div></div>
+        </div>
+        <div class="results-actions">
+          <button class="btn btn-primary" onclick="restartQuiz()">🔁 Làm lại</button>
+          <button class="btn btn-secondary" onclick="showReviewLog()">📋 Xem chi tiết</button>
+          <button class="btn btn-secondary" onclick="backToSetup()">⚙️ Cài đặt lại</button>
+        </div>
+        <div class="review-log" id="review-log" style="display:none;text-align:left"></div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /app -->
+
+<script>
+// ═══════════════════════════════════
+// DATA
+// ═══════════════════════════════════
+let questions = [];
+let bulkRowCount = 10;
+let quizState = { active:[], current:0, score:0, answered:[], filter:'all', count:5, mode:'practice' };
+
+const SAMPLE = [
+  {id:1,type:'vocab',lesson:'Seoul 3A Bài 2',question:'"불편하다" có nghĩa là gì?',hint:'Tính từ miêu tả trạng thái',options:['Thoải mái, dễ chịu','Bất tiện, khó chịu','Yên tĩnh, im lặng','Sạch sẽ, gọn gàng'],correct:1,explanation:'불편하다 = bất tiện. Trái nghĩa: 편하다. VD: 방이 좀 불편해요.'},
+  {id:2,type:'vocab',lesson:'Seoul 3A Bài 2',question:'Điền: "에어컨이 _____났어요" (điều hoà bị hỏng)',hint:'Từ chỉ sự cố kỹ thuật',options:['고장','문제','사고','손상'],correct:0,explanation:'고장나다 = bị hỏng thiết bị. Dùng 고장났어요 ✓ — không dùng 고장했어요 ✗'},
+  {id:3,type:'grammar',lesson:'Seoul 3A Bài 2',question:'Câu nào dùng "-아/어 달라고 하다" ĐÚNG?',hint:'Pattern tường thuật lại lời nhờ',options:['친구한테 기다려 달라고 했어요','친구한테 기다려 주라고 했어요','친구가 기다려 달라고 해요','친구를 기다려 달라고 했어요'],correct:0,explanation:'-아/어 달라고 하다: tường thuật lại lời nhờ. Cấu trúc: A가 B한테 [동사-달라고 했어요].'},
+  {id:4,type:'grammar',lesson:'Seoul 3A Bài 2',question:'"내일 온다고 했어요" nghĩa là gì?',hint:'Pattern -ㄴ/는다고 하다',options:['Tôi nói sẽ đến ngày mai','Nghe nói ngày mai ai đó sẽ đến','Tôi muốn đến ngày mai','Ngày mai tôi phải đến'],correct:1,explanation:'-ㄴ/는다고 하다 = tường thuật lại lời nói người khác.'},
+  {id:5,type:'grammar',lesson:'Seoul 3A Bài 2',question:'Điền: "프런트에 말해 _____요" (thử nói với lễ tân)',hint:'-아/어 보다 = thử làm',options:['봐','봤','보는','볼'],correct:0,explanation:'-아/어 봐요 = hãy thử. Đề nghị nhẹ nhàng hơn 말하세요.'},
+  {id:6,type:'chunk',lesson:'Seoul 3A Bài 2',question:'Nhờ đổi phòng LỊCH SỰ nhất:',hint:'Nói với nhân viên khách sạn',options:['방 바꿔요!','방을 바꿔 주세요.','혹시 방을 바꿔 주실 수 있을까요?','방 바꿔 달라고요.'],correct:2,explanation:'"혹시 ~실 수 있을까요?" = cách nhờ lịch sự nhất. Dùng khi nói với người lạ / địa vị cao hơn.'},
+  {id:7,type:'chunk',lesson:'Seoul 3A Bài 2',question:'"죄송하지만, 불편한 점이 있어서요." Dùng khi nào?',hint:'Chú ý từ 죄송하지만',options:['Từ chối lời mời','Mở đầu khiếu nại lịch sự','Xin lỗi vì đến trễ','Cảm ơn người đã giúp'],correct:1,explanation:'"죄송하지만..." = Mở đầu phàn nàn / nhờ vả mà không gây khó chịu.'},
+  {id:8,type:'vocab',lesson:'Seoul 3A Bài 2',question:'"담당자" có nghĩa là gì?',hint:'Gặp khi liên hệ dịch vụ',options:['Khách hàng','Người phụ trách','Quản lý cấp cao','Nhân viên bảo vệ'],correct:1,explanation:'담당자 = người phụ trách. VD: 담당자한테 연결해 드릴게요.'},
+  {id:9,type:'chunk',lesson:'Seoul 3A Bài 2',question:'Câu nào nghĩa là "Tôi sẽ kiểm tra rồi liên lạc lại"?',hint:'Nhân viên hay nói câu này',options:['지금 바로 처리해 드릴게요.','확인해 보고 연락드릴게요.','죄송하지만 어려울 것 같아요.','담당자한테 물어봐 드릴게요.'],correct:1,explanation:'"확인해 보고 연락드릴게요" = kiểm tra (thử) + liên lạc lại (kính ngữ).'},
+  {id:10,type:'grammar',lesson:'Seoul 3A Bài 2',question:'Câu nào KHÁC ý so với "방을 바꿔 달라고 했어요"?',hint:'Direct vs indirect speech',options:['"방을 바꿔 주세요"라고 했어요','방을 바꿔 달라고 부탁했어요','방을 바꾸고 싶다고 했어요','방을 바꿔 달라는 부탁을 했어요'],correct:2,explanation:'"방을 바꾸고 싶다고 했어요" = muốn đổi (mong muốn). Các câu còn lại = hành động nhờ/yêu cầu.'}
+];
+
+// ═══════════════════════════════════
+// INIT
+// ═══════════════════════════════════
+function init() {
+  renderBulkTable();
+  renderStats();
+  renderQuestionBank();
+}
+
+// ═══════════════════════════════════
+// NAVIGATION
+// ═══════════════════════════════════
+function switchMode(mode, el) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.mode-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('screen-' + mode).classList.add('active');
+  el.classList.add('active');
+}
+
+// ═══════════════════════════════════
+// MANAGE
+// ═══════════════════════════════════
+function loadSampleData() {
+  questions = JSON.parse(JSON.stringify(SAMPLE));
+  renderQuestionBank(); renderStats();
+  showToast('✅ Đã load 10 câu mẫu Seoul 3A Bài 2!', 'success');
+}
+function clearAll() {
+  if (!confirm('Xoá toàn bộ ngân hàng câu hỏi?')) return;
+  questions = []; renderQuestionBank(); renderStats();
+}
+function deleteQuestion(id) {
+  questions = questions.filter(q => q.id !== id);
+  renderQuestionBank(); renderStats();
+}
+function renderQuestionBank() {
+  const el = document.getElementById('question-bank');
+  document.getElementById('q-count').textContent = questions.length;
+  if (!questions.length) {
+    el.innerHTML = `<div style="text-align:center;padding:48px;color:var(--text-muted)"><div style="font-size:32px;margin-bottom:12px">📭</div><div style="font-weight:700;margin-bottom:8px">Chưa có câu hỏi</div><div style="font-size:13px">Load bài mẫu hoặc nhập ở tab ⚡ Nhập hàng loạt</div></div>`;
+    return;
+  }
+  const badges = {vocab:'badge-vocab',grammar:'badge-grammar',chunk:'badge-chunk'};
+  const labels = {vocab:'📗 Từ vựng',grammar:'📘 Ngữ pháp',chunk:'📙 Chunk'};
+  el.innerHTML = questions.map(q => `
+    <div class="question-card">
+      <span class="q-type-badge ${badges[q.type]}">${labels[q.type]}</span>
+      <div class="q-content">
+        <div class="q-text">${q.question}</div>
+        <div class="q-meta">${q.lesson} · Đáp án: ${['A','B','C','D'][q.correct]}</div>
+      </div>
+      <div class="q-actions">
+        <button class="btn-icon danger" onclick="deleteQuestion(${q.id})" title="Xoá">🗑</button>
+      </div>
+    </div>`).join('');
+}
+function renderStats() {
+  const v = questions.filter(q=>q.type==='vocab').length;
+  const g = questions.filter(q=>q.type==='grammar').length;
+  const c = questions.filter(q=>q.type==='chunk').length;
+  document.getElementById('stats-bar').innerHTML = `
+    <div class="stat-chip"><div class="stat-dot" style="background:var(--text-muted)"></div><span class="stat-num">${questions.length}</span><span class="stat-lbl">Tổng</span></div>
+    <div class="stat-chip"><div class="stat-dot" style="background:var(--accent)"></div><span class="stat-num">${v}</span><span class="stat-lbl">Từ vựng</span></div>
+    <div class="stat-chip"><div class="stat-dot" style="background:var(--accent2)"></div><span class="stat-num">${g}</span><span class="stat-lbl">Ngữ pháp</span></div>
+    <div class="stat-chip"><div class="stat-dot" style="background:var(--accent3)"></div><span class="stat-num">${c}</span><span class="stat-lbl">Chunk</span></div>`;
+}
+
+// ═══════════════════════════════════
+// BULK IMPORT
+// ═══════════════════════════════════
+function setRowCount(n, el) {
+  bulkRowCount = n;
+  document.querySelectorAll('.count-chip').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+  renderBulkTable();
+}
+
+function renderBulkTable() {
+  const tbody = document.getElementById('bulk-tbody');
+  const defaultType = document.getElementById('bulk-default-type')?.value || 'vocab';
+  let rows = '';
+  for (let i = 0; i < bulkRowCount; i++) {
+    rows += `
+    <tr id="brow-${i}">
+      <td class="row-num">${i+1}</td>
+      <td class="row-status" id="bstat-${i}">·</td>
+      <td>
+        <select class="cell-select" id="btype-${i}">
+          <option value="vocab" ${defaultType==='vocab'?'selected':''}>📗 Từ vựng</option>
+          <option value="grammar" ${defaultType==='grammar'?'selected':''}>📘 Ngữ pháp</option>
+          <option value="chunk" ${defaultType==='chunk'?'selected':''}>📙 Chunk</option>
+        </select>
+      </td>
+      <td class="col-q"><input class="cell-input" id="bq-${i}" placeholder="Câu hỏi..." oninput="updateCounter()"></td>
+      <td><input class="cell-input" id="ba-${i}" placeholder="Đáp án A..." oninput="updateCounter()"></td>
+      <td><input class="cell-input" id="bb-${i}" placeholder="Đáp án B..." oninput="updateCounter()"></td>
+      <td><input class="cell-input" id="bc-${i}" placeholder="Đáp án C..." oninput="updateCounter()"></td>
+      <td><input class="cell-input" id="bd-${i}" placeholder="Đáp án D..." oninput="updateCounter()"></td>
+      <td>
+        <select class="cell-select col-ans" id="bcor-${i}">
+          <option value="0">A</option>
+          <option value="1">B</option>
+          <option value="2">C</option>
+          <option value="3">D</option>
+        </select>
+      </td>
+      <td class="col-exp"><input class="cell-input" id="bexp-${i}" placeholder="Giải thích (tuỳ chọn)"></td>
+      <td><button class="btn-icon danger" onclick="clearRow(${i})" title="Xoá hàng">✕</button></td>
+    </tr>`;
+  }
+  tbody.innerHTML = rows;
+  updateCounter();
+}
+
+function clearRow(i) {
+  ['bq','ba','bb','bc','bd','bexp'].forEach(p => { const el = document.getElementById(`${p}-${i}`); if(el) el.value=''; });
+  document.getElementById(`bstat-${i}`).textContent = '·';
+  updateCounter();
+}
+
+function clearBulkTable() {
+  if (!confirm('Xoá trắng toàn bộ bảng?')) return;
+  renderBulkTable();
+}
+
+function updateCounter() {
+  let filled = 0;
+  for (let i = 0; i < bulkRowCount; i++) {
+    const q = document.getElementById(`bq-${i}`)?.value.trim();
+    const a = document.getElementById(`ba-${i}`)?.value.trim();
+    if (q && a) filled++;
+  }
+  document.getElementById('bulk-counter').textContent = `${filled} / ${bulkRowCount} hàng đã điền`;
+}
+
+function parseBulkRows(validate = false) {
+  const lesson = document.getElementById('bulk-lesson').value.trim() || 'Không rõ bài';
+  const results = [];
+  const errors = [];
+
+  for (let i = 0; i < bulkRowCount; i++) {
+    const q   = document.getElementById(`bq-${i}`)?.value.trim();
+    const a   = document.getElementById(`ba-${i}`)?.value.trim();
+    const b   = document.getElementById(`bb-${i}`)?.value.trim();
+    const c   = document.getElementById(`bc-${i}`)?.value.trim();
+    const d   = document.getElementById(`bd-${i}`)?.value.trim();
+    const cor = parseInt(document.getElementById(`bcor-${i}`)?.value || '0');
+    const exp = document.getElementById(`bexp-${i}`)?.value.trim();
+    const typ = document.getElementById(`btype-${i}`)?.value || 'vocab';
+
+    // skip empty rows
+    if (!q && !a && !b && !c && !d) {
+      document.getElementById(`bstat-${i}`).textContent = '·';
+      continue;
+    }
+
+    const rowErrors = [];
+    if (!q) rowErrors.push('thiếu câu hỏi');
+    if (!a) rowErrors.push('thiếu đáp án A');
+    if (!b) rowErrors.push('thiếu đáp án B');
+    if (!c) rowErrors.push('thiếu đáp án C');
+    if (!d) rowErrors.push('thiếu đáp án D');
+
+    if (validate) {
+      ['ba','bb','bc','bd'].forEach((pfx, idx) => {
+        const val = [a,b,c,d][idx];
+        const el = document.getElementById(`${pfx}-${i}`);
+        if (el) el.classList.toggle('error', !val);
+      });
+      const qel = document.getElementById(`bq-${i}`);
+      if (qel) qel.classList.toggle('error', !q);
+    }
+
+    if (rowErrors.length) {
+      errors.push({ row: i+1, errors: rowErrors });
+      document.getElementById(`bstat-${i}`).textContent = '❌';
+    } else {
+      document.getElementById(`bstat-${i}`).textContent = '✅';
+      results.push({ id: Date.now() + i, type: typ, lesson, question: q, hint: '', options: [a,b,c,d], correct: cor, explanation: exp || '' });
+    }
+  }
+  return { results, errors };
+}
+
+function previewBulk() {
+  const { results, errors } = parseBulkRows(false);
+  const preview = document.getElementById('import-preview');
+  const list = document.getElementById('preview-list');
+  const count = document.getElementById('preview-count');
+
+  if (!results.length && !errors.length) {
+    showToast('Chưa có dữ liệu nào để xem trước.', 'error'); return;
+  }
+
+  preview.classList.add('show');
+  count.textContent = `${results.length} hợp lệ${errors.length ? `, ${errors.length} lỗi` : ''}`;
+
+  const typeLabel = {vocab:'📗',grammar:'📘',chunk:'📙'};
+  list.innerHTML = [
+    ...results.map(r => `<div class="preview-item"><span class="preview-ok">✅</span><span>${typeLabel[r.type]} ${r.question} <span style="color:var(--text-muted)">→ Đúng: ${['A','B','C','D'][r.correct]}</span></span></div>`),
+    ...errors.map(e => `<div class="preview-item"><span class="preview-err">❌</span><span>Hàng ${e.row}: ${e.errors.join(', ')}</span></div>`)
+  ].join('');
+}
+
+function saveBulk() {
+  const { results, errors } = parseBulkRows(true);
+  if (!results.length) {
+    showToast(`Không có câu nào hợp lệ. Kiểm tra lại ${errors.length} hàng lỗi.`, 'error');
+    return;
+  }
+  questions.push(...results);
+  renderQuestionBank();
+  renderStats();
+  showToast(`✅ Đã lưu ${results.length} câu hỏi vào ngân hàng!${errors.length ? ` (${errors.length} hàng bị bỏ qua)` : ''}`, 'success');
+
+  // clear saved rows
+  results.forEach((_, idx) => {
+    // find which row produced this — re-parse to clear
+  });
+  // switch to manage tab after short delay
+  setTimeout(() => {
+    document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.mode-tab').forEach(t => t.classList.remove('active'));
+    document.getElementById('screen-manage').classList.add('active');
+    document.querySelector('.mode-tab').classList.add('active');
+  }, 1200);
+}
+
+// ═══════════════════════════════════
+// QUIZ
+// ═══════════════════════════════════
+function toggleFilter(el) {
+  document.querySelectorAll('#type-filters .setup-chip').forEach(c=>c.classList.remove('active'));
+  el.classList.add('active'); quizState.filter = el.dataset.filter;
+}
+function selectCount(el) {
+  document.querySelectorAll('#count-options .setup-chip').forEach(c=>c.classList.remove('active'));
+  el.classList.add('active'); quizState.count = el.dataset.count;
+}
+function selectMode(el) {
+  el.closest('.setup-options').querySelectorAll('.setup-chip').forEach(c=>c.classList.remove('active'));
+  el.classList.add('active'); quizState.mode = el.dataset.mode;
+}
+function startQuiz() {
+  if (!questions.length) { showToast('Chưa có câu hỏi! Hãy load bài mẫu hoặc nhập hàng loạt.','error'); return; }
+  let pool = quizState.filter==='all' ? [...questions] : questions.filter(q=>q.type===quizState.filter);
+  if (!pool.length) { showToast('Không có câu hỏi phù hợp với bộ lọc này.','error'); return; }
+  pool = pool.sort(()=>Math.random()-.5);
+  if (quizState.count!=='all') pool = pool.slice(0,parseInt(quizState.count));
+  quizState.active=pool; quizState.current=0; quizState.score=0; quizState.answered=[];
+  document.getElementById('quiz-setup-panel').style.display='none';
+  document.getElementById('quiz-active').style.display='block';
+  document.getElementById('quiz-results').style.display='none';
+  renderQuestion();
+}
+function renderQuestion() {
+  const q=quizState.active[quizState.current], total=quizState.active.length, idx=quizState.current;
+  document.getElementById('q-number').textContent=`CÂU ${idx+1} / ${total}`;
+  document.getElementById('q-question-text').textContent=q.question;
+  document.getElementById('q-hint-text').textContent=quizState.mode==='practice'&&q.hint?`💡 ${q.hint}`:'';
+  document.getElementById('progress-fill').style.width=`${(idx/total)*100}%`;
+  document.getElementById('progress-text').textContent=`${idx} / ${total}`;
+  document.getElementById('quiz-score-display').textContent=`${quizState.score} ✓`;
+  document.getElementById('options-list').innerHTML=q.options.map((opt,i)=>`
+    <button class="option-btn" onclick="selectAnswer(${i})">
+      <div class="option-letter">${['A','B','C','D'][i]}</div>
+      <div class="option-text">${opt}</div>
+    </button>`).join('');
+  document.getElementById('feedback-block').className='feedback-block';
+  document.getElementById('btn-next').className='btn-next';
+}
+function selectAnswer(idx) {
+  const q=quizState.active[quizState.current], isCorrect=idx===q.correct;
+  const btns=document.querySelectorAll('.option-btn');
+  btns.forEach(b=>b.disabled=true);
+  btns[idx].classList.add(isCorrect?'correct':'wrong');
+  if(!isCorrect) btns[q.correct].classList.add('correct');
+  quizState.answered.push({q,chosen:idx,correct:isCorrect});
+  if(isCorrect) quizState.score++;
+  const fb=document.getElementById('feedback-block');
+  document.getElementById('feedback-icon').textContent=isCorrect?'✅':'❌';
+  document.getElementById('feedback-text').innerHTML=isCorrect
+    ?`<strong>Chính xác!</strong>${quizState.mode==='practice'&&q.explanation?q.explanation:''}`
+    :`<strong>Chưa đúng. Đáp án: ${['A','B','C','D'][q.correct]}</strong>${quizState.mode==='practice'&&q.explanation?q.explanation:''}`;
+  fb.className=`feedback-block ${isCorrect?'correct-fb':'wrong-fb'} show`;
+  document.getElementById('btn-next').className='btn-next show';
+  document.getElementById('quiz-score-display').textContent=`${quizState.score} ✓`;
+}
+function nextQuestion() {
+  quizState.current++;
+  if(quizState.current>=quizState.active.length) showResults(); else renderQuestion();
+}
+function endQuiz() { if(confirm('Kết thúc?')) showResults(); }
+function showResults() {
+  document.getElementById('quiz-active').style.display='none';
+  document.getElementById('quiz-results').style.display='block';
+  const total=quizState.answered.length, score=quizState.score, pct=total?Math.round((score/total)*100):0;
+  let emoji='😅',label='Cần ôn thêm nhé!';
+  if(pct>=90){emoji='🏆';label='완벽해요! Xuất sắc!';}
+  else if(pct>=70){emoji='🎉';label='잘했어요! Khá tốt!';}
+  else if(pct>=50){emoji='💪';label='조금만 더! Cố thêm!';}
+  document.getElementById('results-emoji').textContent=emoji;
+  document.getElementById('results-score-big').textContent=pct+'%';
+  document.getElementById('results-score-big').style.color=pct>=70?'var(--correct)':pct>=50?'var(--accent)':'var(--wrong)';
+  document.getElementById('results-label').textContent=label;
+  document.getElementById('res-correct').textContent=score;
+  document.getElementById('res-wrong').textContent=total-score;
+  document.getElementById('res-total').textContent=total;
+  document.getElementById('review-log').style.display='none';
+}
+function showReviewLog() {
+  const log=document.getElementById('review-log');
+  if(log.style.display!=='none'){log.style.display='none';return;}
+  log.style.display='flex';
+  log.innerHTML=quizState.answered.map(a=>`
+    <div class="review-item">
+      <div class="review-status">${a.correct?'✅':'❌'}</div>
+      <div><div class="review-q">${a.q.question}</div>
+      <div class="review-answer">${a.correct?'✓ '+a.q.options[a.q.correct]:'✗ Bạn chọn: '+a.q.options[a.chosen]+' → Đúng: '+a.q.options[a.q.correct]}</div></div>
+    </div>`).join('');
+}
+function restartQuiz(){document.getElementById('quiz-results').style.display='none';startQuiz();}
+function backToSetup(){document.getElementById('quiz-results').style.display='none';document.getElementById('quiz-setup-panel').style.display='block';}
+
+// ═══════════════════════════════════
+// TOAST
+// ═══════════════════════════════════
+function showToast(msg, type='success') {
+  const existing = document.querySelector('.toast');
+  if (existing) existing.remove();
+  const t = document.createElement('div');
+  t.className = `toast ${type}`;
+  t.textContent = msg;
+  document.body.appendChild(t);
+  setTimeout(()=>t.remove(), 3000);
+}
+
+init();
+</script>
+</body>
+</html>
