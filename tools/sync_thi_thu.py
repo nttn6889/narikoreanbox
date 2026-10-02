@@ -27,26 +27,20 @@ APP_HEAD = """<link rel="manifest" href="manifest.webmanifest">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Hàn Ngữ Nari">
 """
-# Mở app từ biểu tượng mà không có link → mở lại lộ trình từ vựng (#l=…) em đã mở gần nhất.
-APP_BOOT = """/* ---------- App cài trên điện thoại (PWA) ---------- */
-(function(){
-  var standalone = (window.matchMedia && matchMedia("(display-mode: standalone)").matches) || navigator.standalone;
-  try{
-    if(/[#&]l=/.test(location.hash)) localStorage.setItem("nari-app-route", location.hash);
-    else if(standalone && !location.hash && !location.search){ var h = localStorage.getItem("nari-app-route"); if(h) history.replaceState(null, "", h); }
-  }catch(e){}
-  if("serviceWorker" in navigator) window.addEventListener("load", function(){ navigator.serviceWorker.register("sw.js").catch(function(){}); });
-})();
-"""
+# Trang đầu "Bài của em", ô dán link, nút Trang đầu, service worker — thay cho dòng khởi động của trang.
+APP_SHELL = os.path.join(ROOT, "tools", "app_shell.js")
 BOOT_LINE = "if(!examBoot() && !vocabBoot() && !routeBoot()) studentLanding();"
 
 
 def add_app(src):
     if "manifest.webmanifest" not in src:
         src = src.replace("</title>\n", "</title>\n" + APP_HEAD, 1)
-    if "nari-app-route" not in src:
-        assert BOOT_LINE in src, "không thấy dòng khởi động trang"
-        src = src.replace(BOOT_LINE, APP_BOOT + BOOT_LINE, 1)
+    i = src.find("/* ---------- App cài trên điện thoại (PWA) ----------")
+    if i >= 0:  # bỏ bản cũ để chèn lại bản mới nhất
+        j = src.index("appRun();\n", i) + len("appRun();\n")
+        src = src[:i] + BOOT_LINE + "\n" + src[j:]
+    assert BOOT_LINE in src, "không thấy dòng khởi động trang"
+    src = src.replace(BOOT_LINE, open(APP_SHELL, encoding="utf-8").read().rstrip("\n"), 1)
     return src
 
 

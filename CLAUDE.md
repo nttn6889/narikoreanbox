@@ -23,8 +23,11 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 
 ## App trên điện thoại (PWA)
 - `thi-thu/` cài được như app (“Thêm vào màn hình chính”): `manifest.webmanifest`, `sw.js` (lấy mạng trước, mất mạng dùng
-  bản lưu), biểu tượng trong `thi-thu/icon/` (từ logo). `sync_thi_thu.py` tự chèn thẻ head + đoạn khởi động app (`add_app`).
-- Mở app không kèm link → tự mở lại link lộ trình `#l=` gần nhất (localStorage `nari-app-route`).
+  bản lưu), biểu tượng trong `thi-thu/icon/` (từ logo). `sync_thi_thu.py` tự chèn thẻ head + `tools/app_shell.js`
+  (thay dòng khởi động trang; code này chỉ có ở site, không có trong trang quản lý — sửa thẳng trong `tools/app_shell.js`,
+  rồi `python3 tools/sync_thi_thu.py --app-only` để chèn lại vào `thi-thu/index.html` hiện có).
+- Trang đầu có “Bài của em” (mọi link `#d=`/`#v=`/`#l=` đã mở, localStorage `nari-app-saved`) và ô “Dán link bài cô gửi”;
+  trong bài có nút “⌂ Trang đầu”, nút Quay lại cũng về được → giao bài mới không phải cài lại app.
 
 ## Lưu ý
 - Repo không được chứa tên, điểm, nhận xét của học sinh.
