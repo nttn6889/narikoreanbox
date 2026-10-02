@@ -240,6 +240,24 @@ input.code{text-transform:uppercase;letter-spacing:.18em;font-weight:700;font-si
 .slotgrid input{width:18px;height:18px;margin:0;cursor:pointer}
 .dd{font-weight:700;color:var(--pen)}
 .inactive{opacity:.6}
+.vgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:8px 0 18px}
+.vcol{display:flex;flex-direction:column;gap:8px}
+.vcard{all:unset;box-sizing:border-box;position:relative;border:1.5px solid var(--line);border-radius:8px;padding:9px 10px 9px 36px;min-height:46px;cursor:pointer;background:var(--paper);font-size:15px;line-height:1.35;display:flex;flex-direction:column;justify-content:center}
+.vcard.kr{font-family:var(--kr);font-size:16.5px;font-weight:600}
+.vcard .vn{position:absolute;left:8px;top:50%;transform:translateY(-50%);width:21px;height:21px;border-radius:50%;border:1.5px solid var(--line);color:var(--muted);font:700 12px/1 var(--ui);display:grid;place-items:center}
+.vcard:focus-visible{outline:3px solid var(--violet);outline-offset:2px}
+.vcard.sel{border-color:var(--violet);box-shadow:0 0 0 2px var(--violet)}
+.vcard.on{background:var(--violet-soft);border-color:var(--violet)}
+.vcard.on .vn{background:var(--violet);border-color:var(--violet);color:var(--on-violet)}
+.vcard.ok{background:var(--ok-soft);border-color:var(--ok)}
+.vcard.bad{background:var(--pen-soft);border-color:var(--pen)}
+.locked .vcard{cursor:default}
+.vfix{display:block;font:600 13px var(--ui);color:var(--ok);margin-top:3px}
+.opt.badpick{border-color:var(--pen);background:var(--pen-soft)}
+.vtype{display:flex;gap:10px;align-items:center}
+.vdays{display:flex;gap:3px;flex-wrap:wrap;margin:6px 0}
+.vdays span{width:15px;height:15px;border-radius:3px;background:var(--bg);border:1px solid var(--line)}
+.vdays span.on{background:var(--ok);border-color:var(--ok)}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
@@ -613,8 +631,178 @@ function startPreview(a, keys, showKeys){
    ADMIN (owner / editors)
    ===================================================================== */
 
+/* =====================================================================
+   TỪ VỰNG – phía học sinh. Bài nằm ngay trong link (#v=…) nên giao bài không cần cập nhật trang.
+   ===================================================================== */
+var VTYPES = {match:"Nối từ", kv:"Trắc nghiệm Hàn → Việt", vk:"Trắc nghiệm Việt → Hàn", type:"Gõ từ tiếng Hàn"};
+function b64e(obj){ return btoa(unescape(encodeURIComponent(JSON.stringify(obj)))).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,""); }
+function b64d(raw){ var b = String(raw).replace(/-/g,"+").replace(/_/g,"/"); while(b.length % 4) b += "="; return JSON.parse(decodeURIComponent(escape(atob(b)))); }
+function vPack(a){ var raw = b64e(a); return raw + "." + sum(raw); }
+function vUnpack(s){ var m = String(s).match(/^([A-Za-z0-9_-]+)\.([0-9a-z]{4})$/); if(!m || sum(m[1]) !== m[2]) return null; try{ return b64d(m[1]); }catch(e){ return null; } }
+function encodeV(obj){ var raw = b64e(obj); return "NV1-" + raw + "-" + sum(raw); }
+function decodeV(code){
+  var m = String(code).match(/^NV1-([A-Za-z0-9_-]+)-([0-9a-z]{4})$/);
+  if(!m || sum(m[1]) !== m[2]) return null;
+  try{ var o = b64d(m[1]); o._sum = m[2]; return o; }catch(e){ return null; }
+}
+function vNorm(s){ return String(s == null ? "" : s).normalize("NFC").replace(/[\s.,!?~·…'"“”‘’()\[\]\-]/g,"").toLowerCase(); }
+function vAlts(ko){
+  var s = String(ko || ""), base = s.replace(/\([^)]*\)/g, ""), out = [s, base];
+  base.split(/[\/,]/).forEach(function(p){ out.push(p); });
+  var m = s.match(/\(([^)]*)\)/); if(m) m[1].split(/[\/,]/).forEach(function(p){ out.push(p); });
+  return out.map(vNorm).filter(Boolean);
+}
+/* items: [[ko, vi], …]; ans: chỉ số mục đã chọn (nối từ, trắc nghiệm) hoặc chữ đã gõ */
+function vCheck(type, items, i, ans){
+  if(type === "type") return !!String(ans || "").trim() && vAlts(items[i][0]).indexOf(vNorm(ans)) >= 0;
+  if(typeof ans !== "number" || ans < 0 || !items[ans]) return false;
+  if(ans === i) return true;
+  return type === "vk" ? vNorm(items[ans][0]) === vNorm(items[i][0]) : vNorm(items[ans][1]) === vNorm(items[i][1]);
+}
+function vAnsText(type, items, ans){
+  if(type === "type") return String(ans || "");
+  if(typeof ans !== "number" || ans < 0 || !items[ans]) return "";
+  return type === "vk" ? items[ans][0] : items[ans][1];
+}
+function vShuffle(a){ a = a.slice(); for(var i = a.length - 1; i > 0; i--){ var j = Math.floor(Math.random()*(i+1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+
+var VS = null, vTimer = null;
+function vocabBoot(){
+  var m = String(location.hash || "").match(/[#&]v=([A-Za-z0-9_.-]+)/);
+  if(!m) return false;
+  var a = vUnpack(m[1]);
+  if(!a || !a.w || !a.w.length || !VTYPES[a.y]){
+    app.innerHTML = '<div class="wrap">' + headerHTML() + '<main class="paper"><div class="title"><h1>단어 시험</h1><p>Bài từ vựng · Hàn Ngữ Nari</p></div><p class="err">Link bài từ vựng bị thiếu hoặc bị cắt. Em sao chép lại đủ cả link cô gửi rồi mở lại nhé.</p></main></div>';
+    return true;
+  }
+  vEntry(a);
+  return true;
+}
+function vEntry(a){
+  var last = lsGet("nari-tt-last") || {};
+  app.innerHTML = '<div class="wrap">' + headerHTML() + '<main class="paper"><div class="title"><h1>단어 시험</h1><p>' + esc(a.t || "Bài từ vựng") + '</p></div>' +
+    '<div class="metaline"><span>Dạng bài: <strong>' + esc(VTYPES[a.y]) + '</strong></span><span><strong>' + a.w.length + '</strong> từ</span></div>' +
+    '<label class="l" for="vname">Họ và tên của em</label><input class="t" id="vname" autocomplete="name" value="' + esc(last.name || "") + '" placeholder="VD: Nguyễn Thị Lan">' +
+    '<p class="err" id="verr" hidden></p><div class="row"><button class="btn wide" id="vgo">Bắt đầu làm bài</button></div>' +
+    '<p class="hint" style="margin-top:14px">Làm xong em bấm “Nộp bài”, sao chép tin nhắn kết quả và gửi lại cho cô qua Zalo.</p></main></div>';
+  $("#vgo").onclick = function(){
+    var n = cleanName($("#vname").value);
+    if(!n){ var e = $("#verr"); e.textContent = "Em nhập họ tên trước khi làm bài nhé."; e.hidden = false; $("#vname").focus(); return; }
+    last.name = n; lsSet("nari-tt-last", last);
+    vStart(a, n);
+  };
+  $("#vname").addEventListener("keydown", function(e){ if(e.key === "Enter") $("#vgo").click(); });
+}
+function vStart(a, name){
+  var key = "nari-v-" + a.c + "-" + normName(name).replace(/[^a-z0-9]/g, "");
+  var saved = lsGet(key);
+  if(saved && saved.c === a.c && saved.n === a.w.length) VS = saved;
+  else{
+    var idx = a.w.map(function(_, i){ return i; });
+    VS = {c:a.c, n:a.w.length, ans:{}, start:Date.now(), submitted:null, order:vShuffle(idx), opts:{}, mo:[]};
+    if(a.y === "kv" || a.y === "vk"){
+      idx.forEach(function(i){
+        var col = a.y === "kv" ? 1 : 0, seen = {}, pick = [i]; seen[vNorm(a.w[i][col])] = 1;
+        vShuffle(idx).forEach(function(j){ if(pick.length < 4 && !seen[vNorm(a.w[j][col])]){ seen[vNorm(a.w[j][col])] = 1; pick.push(j); } });
+        VS.opts[i] = vShuffle(pick);
+      });
+    }
+    if(a.y === "match"){ var per = Math.ceil(VS.order.length / Math.ceil(VS.order.length / 8)); for(var k = 0; k < VS.order.length; k += per) VS.mo.push(vShuffle(VS.order.slice(k, k + per))); VS.per = per; }
+  }
+  VS.a = a; VS.name = name; VS.key = key; VS.sel = null;
+  vSave(); vRender();
+  window.scrollTo(0, 0);
+}
+function vSave(){ var c = Object.assign({}, VS); delete c.a; delete c.sel; lsSet(VS.key, c); }
+function vDone(){ var a = VS.a; return a.w.filter(function(_, i){ var x = VS.ans[i]; return a.y === "type" ? !!String(x || "").trim() : typeof x === "number"; }).length; }
+function vRender(){
+  var a = VS.a, items = a.w, locked = !!VS.submitted, h = "";
+  var mark = function(i){ return locked ? (vCheck(a.y, items, i, VS.ans[i]) ? " ok" : " bad") : ""; };
+  if(a.y === "kv" || a.y === "vk"){
+    VS.order.forEach(function(i, k){
+      var prompt = a.y === "kv" ? items[i][0] : items[i][1];
+      h += '<section class="q"><p class="stem"><b>' + (k+1) + '.</b><span' + (a.y === "kv" ? ' style="font-weight:600"' : ' style="font-family:var(--ui)"') + '>' + esc(prompt) + '</span></p><div class="opts two" role="radiogroup" aria-label="Câu ' + (k+1) + '">' +
+        (VS.opts[i] || []).map(function(o, j){
+          var txt = a.y === "kv" ? items[o][1] : items[o][0], picked = VS.ans[i] === o, right = locked && vCheck(a.y, items, i, o);
+          return '<button type="button" class="opt' + (right ? ' key' : '') + (locked && picked && !right ? ' badpick' : '') + '" role="radio" aria-checked="' + picked + '" data-i="' + i + '" data-o="' + o + '"' + (a.y === "kv" ? ' style="font-family:var(--ui)"' : '') + '><span class="num">' + (j+1) + '</span><span>' + esc(txt) + '</span></button>';
+        }).join("") + '</div></section>';
+    });
+  } else if(a.y === "type"){
+    VS.order.forEach(function(i, k){
+      var ok = locked && vCheck(a.y, items, i, VS.ans[i]);
+      h += '<section class="q"><p class="stem" style="font-family:var(--ui)"><b>' + (k+1) + '.</b><span>' + esc(items[i][1]) + '</span></p><div class="vtype"><input class="t kr" data-ti="' + i + '" value="' + esc(VS.ans[i] || "") + '" placeholder="Gõ từ tiếng Hàn" autocomplete="off" autocapitalize="off" spellcheck="false" lang="ko"' + (locked ? ' disabled style="border-color:' + (ok ? 'var(--ok)' : 'var(--pen)') + '"' : '') + '></div>' +
+        (locked && !ok ? '<span class="vfix">Đáp án: <span style="font-family:var(--kr)">' + esc(items[i][0]) + '</span></span>' : '') + '</section>';
+    });
+  } else {
+    h += '<p class="hint" style="margin-bottom:10px">Bấm một từ tiếng Hàn rồi bấm nghĩa của nó để nối. Muốn đổi thì bấm lại ô đã nối.</p>';
+    VS.mo.forEach(function(right, g){
+      var per = VS.per || 8, left = VS.order.slice(g*per, g*per + per);
+      h += (VS.mo.length > 1 ? '<div class="grp"><span class="tag">Phần ' + (g+1) + '/' + VS.mo.length + '</span></div>' : '') + '<div class="vgrid"><div class="vcol">' +
+        left.map(function(i, k){
+          var on = typeof VS.ans[i] === "number";
+          return '<button type="button" class="vcard kr' + (on ? ' on' : '') + (VS.sel === i ? ' sel' : '') + mark(i) + '" data-li="' + i + '"><span class="vn">' + (on ? k+1 : '') + '</span>' + esc(items[i][0]) +
+            (locked && !vCheck(a.y, items, i, VS.ans[i]) ? '<span class="vfix">' + esc(items[i][1]) + '</span>' : '') + '</button>';
+        }).join("") + '</div><div class="vcol">' +
+        right.map(function(m){
+          var by = null; left.forEach(function(i, k){ if(VS.ans[i] === m) by = k; });
+          return '<button type="button" class="vcard' + (by !== null ? ' on' : '') + '" data-ri="' + m + '"><span class="vn">' + (by !== null ? by+1 : '') + '</span>' + esc(items[m][1]) + '</button>';
+        }).join("") + '</div></div>';
+    });
+  }
+  var nd = vDone();
+  app.innerHTML = '<div class="wrap">' + headerHTML() + '<main class="paper" id="exam"><div class="title"><h1>단어 시험</h1><p>' + esc(a.t || "Bài từ vựng") + '</p></div>' +
+    '<div class="metaline"><span>' + esc(VTYPES[a.y]) + ' · <strong>' + items.length + '</strong> từ</span><span>Học sinh: <strong>' + esc(VS.name) + '</strong></span></div>' +
+    '<div id="vq"' + (locked ? ' class="locked"' : '') + '>' + h + '</div><div id="vres"></div></main></div>' +
+    '<nav class="strip" aria-label="Tiến độ"><div class="in"><div style="flex:1;font-weight:600">Đã làm <span id="vcount">' + nd + '</span>/' + items.length + '</div><div class="clock" id="vclock"></div><button class="btn" id="vsub"' + (locked ? ' disabled' : '') + '>' + (locked ? 'Đã nộp' : 'Nộp bài') + '</button></div></nav>';
+  vWire();
+  if(locked){ vStopClock(); vShowResult(); } else vStartClock();
+}
+function vWire(){
+  var a = VS.a, q = $("#vq");
+  $("#vsub").onclick = vSubmit;
+  if(VS.submitted) return;
+  q.addEventListener("click", function(e){
+    var b = e.target.closest(".opt");
+    if(b){ VS.ans[b.dataset.i] = +b.dataset.o; vSave(); $$('.opt[data-i="' + b.dataset.i + '"]', q).forEach(function(o){ o.setAttribute("aria-checked", o === b ? "true" : "false"); }); $("#vcount").textContent = vDone(); return; }
+    var l = e.target.closest("[data-li]"), r = e.target.closest("[data-ri]");
+    if(l){ var i = +l.dataset.li; if(typeof VS.ans[i] === "number"){ delete VS.ans[i]; VS.sel = null; } else VS.sel = VS.sel === i ? null : i; vSave(); vRepaint(); return; }
+    if(r){
+      var m = +r.dataset.ri;
+      Object.keys(VS.ans).forEach(function(k){ if(VS.ans[k] === m) delete VS.ans[k]; });
+      if(VS.sel !== null){ VS.ans[VS.sel] = m; VS.sel = null; }
+      vSave(); vRepaint();
+    }
+  });
+  $$("[data-ti]", q).forEach(function(inp){ inp.addEventListener("input", function(){ VS.ans[inp.dataset.ti] = inp.value; vSave(); $("#vcount").textContent = vDone(); }); });
+}
+function vRepaint(){ var y = window.scrollY; vRender(); window.scrollTo(0, y); }
+function vStartClock(){ vStopClock(); var tick = function(){ var el = $("#vclock"); if(!el || !VS){ vStopClock(); return; } var s = Math.floor((Date.now() - VS.start)/1000); el.textContent = pad(Math.floor(s/60)) + ":" + pad(s%60); }; tick(); vTimer = setInterval(tick, 1000); }
+function vStopClock(){ if(vTimer){ clearInterval(vTimer); vTimer = null; } }
+function vSubmit(){
+  if(VS.submitted) return;
+  var miss = VS.n - vDone();
+  ask(miss ? "Em còn " + miss + " từ chưa làm. Em vẫn muốn nộp bài? Sau khi nộp sẽ không sửa được." : "Em đã làm đủ " + VS.n + " từ. Nộp bài?", "Nộp bài", "Làm tiếp").then(function(ok){
+    if(!ok) return;
+    VS.submitted = Date.now(); vSave(); vRender();
+    setTimeout(function(){ var r = $("#vres"); if(r) r.scrollIntoView({behavior:"smooth", block:"start"}); }, 60);
+  });
+}
+function vShowResult(){
+  var a = VS.a, items = a.w, sc = 0, wrong = [];
+  items.forEach(function(it, i){ if(vCheck(a.y, items, i, VS.ans[i])) sc++; else wrong.push(i); });
+  var ans = items.map(function(_, i){ var x = VS.ans[i]; return a.y === "type" ? String(x || "") : (typeof x === "number" ? x : -1); });
+  var code = encodeV({c:a.c, n:VS.name, a:ans, t:Math.round((VS.submitted - VS.start)/1000), d:VS.submitted});
+  var msg = "BÀI TỪ VỰNG\nBài: " + (a.t || "Từ vựng") + " (" + VTYPES[a.y] + ")\nHọ tên: " + VS.name + "\nĐiểm: " + sc + "/" + items.length + "\nNộp lúc: " + fmtDate(VS.submitted) + "\nMã bài làm: " + code;
+  $("#vres").innerHTML = '<div class="panel" id="result"><h2>Em đúng ' + sc + '/' + items.length + ' từ</h2>' +
+    (wrong.length ? '<p>Các từ cần ôn lại:</p><div class="scroll"><table class="tbl" style="background:var(--paper)"><tbody>' + wrong.map(function(i){ var t = vAnsText(a.y, items, VS.ans[i]); return '<tr><td style="font-family:var(--kr);font-weight:600">' + esc(items[i][0]) + '</td><td>' + esc(items[i][1]) + '</td><td class="muted" style="font-size:13px">' + (t ? 'em chọn: ' + esc(t) : 'chưa làm') + '</td></tr>'; }).join("") + '</tbody></table></div>' : '<p class="okmsg">Xuất sắc! Em không sai từ nào.</p>') +
+    '<p style="margin-top:12px">Bấm “Sao chép” rồi dán vào tin nhắn Zalo gửi cho cô.</p><div id="vmsg">' + copyBox(msg, 6) + '</div>' +
+    '<div class="row"><button class="btn ghost" id="vagain">Làm lại để luyện thêm</button></div></div>';
+  wireCopy($("#vmsg"));
+  $("#vagain").onclick = function(){ ask("Làm lại từ đầu? Kết quả lần này em đã gửi cô chưa? Nếu chưa, em sao chép tin nhắn trước nhé.", "Làm lại", "Ở lại").then(function(ok){ if(!ok) return; try{ localStorage.removeItem(VS.key); }catch(e){} vStart(a, VS.name); }); };
+}
+
 /* ---------- boot ---------- */
-studentLanding();
+if(!vocabBoot()) studentLanding();
 })();
 </script>
 </body>
