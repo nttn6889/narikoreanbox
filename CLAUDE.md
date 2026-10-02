@@ -15,3 +15,12 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 
 ## Lưu ý
 - Repo không được chứa tên, điểm, nhận xét của học sinh.
+
+## Về cô (`ve-co/`)
+- Bản sao trang https://claude.ai/artifact/2XJHcdRJMNbKnDoMXqVZWQ, sửa trực tiếp ở đây (link "Trang chủ" trỏ về trang chủ site).
+
+## Nhập đề thi vào ngân hàng đề
+- Ngân hàng đề nằm trong cơ sở dữ liệu của trang quản lý (collection `bank`, câu hỏi ở `bank/<id>/q/<qid>`).
+- Cô gửi file đề trong phiên Code → trích nội dung → ghi thẳng vào ngân hàng bằng ArtifactData (batch), hoặc
+  xuất văn bản theo định dạng “Dán nhiều câu” của trang quản lý để cô tự dán.
+- PDF có chữ (không phải bản scan) rẻ nhất: dùng `pdftotext` thay vì xem ảnh từng trang.

@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Về Cô — Nguyễn Thị Thủy Ngân</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Playwrite+VN:wght@100..400&family=Patrick+Hand&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #1b1a22;
+    --card: #2a2938;
+    --card-border: #38364a;
+    --group-bg: #232230;
+    --gold: #e8b23c;
+    --gold-soft: #f4d78a;
+    --gold-wash: rgba(232,178,60,.14);
+    --ink: #f3f1ec;
+    --ink-dim: #b6b2c4;
+    --ink-faint: #837e96;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family:'Inter', system-ui, sans-serif;
+    line-height:1.6;
+  }
+  .wrap{ max-width: 800px; margin:0 auto; padding: 52px 28px 72px; }
+
+  .brandline{
+    font-size:12.5px; color:var(--ink-faint);
+    margin-bottom:34px; display:flex; gap:8px; flex-wrap:wrap;
+    align-items:center; justify-content:space-between;
+  }
+  .brandline b{ color:var(--ink-dim); font-weight:600; }
+  .brandline-left{ display:flex; gap:8px; flex-wrap:wrap; }
+  .nari-home-link{
+    display:inline-flex; align-items:center; gap:5px; text-decoration:none;
+    color: var(--gold-soft); font-size:12.5px; font-weight:600;
+    border:1px solid var(--card-border); border-radius:20px; padding:5px 12px;
+  }
+  .nari-nav{display:inline-flex;gap:8px;flex-wrap:wrap}
+  button.nari-home-link{font:inherit;cursor:pointer;background:none}
+  .nari-home-link:hover{ border-color: var(--gold); }
+
+  header{ margin-bottom:44px; }
+  .kicker{ color:var(--gold); font-size:14px; font-weight:600; letter-spacing:.02em; margin-bottom:10px; }
+  h1{
+    font-family: 'Playwrite VN', cursive; font-weight:400;
+    font-size: clamp(16px,6vw,24px); margin:0 0 18px; line-height:1.3;
+    color: var(--gold-soft); white-space:nowrap;
+  }
+  .lede{
+    font-family: 'Patrick Hand', cursive; font-weight:400;
+    color:var(--ink-dim); font-size:16.5px; line-height:1.7;
+    max-width:44ch; margin:0 0 10px auto; text-align:left;
+  }
+  .lede.hint{
+    font-family:'Inter', system-ui, sans-serif; font-weight:400;
+    font-size:13px; color:var(--ink-faint); text-align:right;
+    max-width:none; margin:0;
+  }
+  .emph{ color: var(--gold-soft); }
+
+  /* ===== top-level collapsible groups ===== */
+  .group{
+    margin-top:14px;
+    border:1px solid var(--card-border);
+    border-radius:14px;
+    overflow:hidden;
+    background: var(--group-bg);
+  }
+  .group > summary{
+    cursor:pointer;
+    list-style:none;
+    padding:22px 24px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:14px;
+  }
+  .group > summary::-webkit-details-marker{ display:none; }
+  .group > summary::marker{ content:""; }
+  .group-title{
+    display:flex; align-items:baseline; gap:10px; flex-wrap:wrap;
+  }
+  .group-title h2{
+    font-family:'Fraunces', serif; font-weight:600; font-size:21px;
+    margin:0; color:var(--ink);
+  }
+  .group-count{ font-size:12.5px; color:var(--ink-faint); }
+  .group-chevron{
+    width:22px; height:22px; flex-shrink:0; color:var(--gold);
+    transition: transform .2s ease;
+  }
+  .group[open] > summary .group-chevron{ transform: rotate(180deg); }
+  .group[open] > summary{ border-bottom:1px solid var(--card-border); }
+  .group-body{ padding:22px 24px 24px; }
+  .group-body > .section-note{
+    color:var(--ink-faint); font-size:13.5px; margin:0 0 20px; max-width:62ch;
+  }
+
+  /* shared role badge */
+  .role-badges{ display:flex; flex-wrap:wrap; gap:6px; }
+  .role-badge{
+    display:inline-block;
+    background: var(--gold-wash);
+    color: var(--gold-soft);
+    font-size:12px;
+    font-weight:600;
+    padding:4px 11px;
+    border-radius:999px;
+    white-space:nowrap;
+  }
+
+  /* ---- static entry (education) : role -> org (right aligned, bigger) -> story ---- */
+  .entry{
+    background:var(--card);
+    border:1px solid var(--card-border);
+    border-radius:12px;
+    padding:22px 24px;
+    margin-bottom:12px;
+  }
+  .entry:last-child{ margin-bottom:0; }
+  .entry-top{
+    display:flex; justify-content:space-between; align-items:center;
+    gap:12px; flex-wrap:wrap; margin-bottom:10px;
+  }
+  .entry-period{ font-size:12.5px; color:var(--ink-faint); font-weight:600; white-space:nowrap; }
+  .entry-org{
+    font-family:'Fraunces', serif; font-weight:600; font-size:18px;
+    color:var(--ink); text-align:right; margin-bottom:10px;
+  }
+  .entry p.story{ font-size:14px; color:var(--ink-dim); margin:0; }
+
+  /* ---- collapsible entry (work / projects / làm thêm) ---- */
+  details.entry{ padding:0; margin-bottom:12px; }
+  details.entry:last-child{ margin-bottom:0; }
+  details.entry summary{
+    cursor:pointer;
+    list-style:none;
+    padding:18px 22px;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+  }
+  details.entry summary::-webkit-details-marker{ display:none; }
+  details.entry summary::marker{ content:""; }
+  details.entry[open] summary{ border-bottom:1px solid var(--card-border); padding-bottom:18px; }
+
+  .s-row1{
+    display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap;
+  }
+  .s-meta{ display:flex; align-items:center; gap:10px; flex-shrink:0; }
+  .chevron{
+    width:20px; height:20px;
+    flex-shrink:0;
+    color: var(--ink-faint);
+    transition: transform .18s ease;
+  }
+  details.entry[open] .chevron{ transform: rotate(180deg); }
+
+  .s-org{
+    font-family:'Fraunces', serif; font-weight:600; font-size:17px;
+    color:var(--ink); text-align:right;
+  }
+  .s-partner{ font-size:13px; color:var(--ink-faint); text-align:right; }
+
+  .entry-body{ padding:0 22px 20px; }
+  .entry-body p.story{ font-size:14px; color:var(--ink-dim); margin:0; }
+
+  footer{
+    margin-top:40px; padding-top:22px; border-top:1px solid var(--card-border);
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
+  }
+  footer .name{ font-size:14px; color:var(--ink-dim); }
+  footer .name b{ color:var(--ink); }
+  footer .contact{ font-size:13.5px; color:var(--ink-faint); }
+  footer .contact a{ color:var(--gold-soft); text-decoration:none; }
+
+  @media (max-width:560px){
+    .wrap{ padding:40px 18px 56px; }
+    .group > summary{ padding:18px 18px; }
+    .group-body{ padding:18px 18px 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="brandline">
+    <span class="brandline-left"><b>Hàn Ngữ Nari</b> · Quỳnh Lưu, Nghệ An · Cô Ngân: 0399 214 554</span>
+    <span class="nari-nav">
+    <button type="button" class="nari-home-link" id="nariBack">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+      Quay lại
+    </button>
+    <a class="nari-home-link" id="nariHome" href="../">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7"/><path d="M9 22V12h6v10"/></svg>
+      <span id="nariHomeText">Trang chủ</span>
+    </a>
+    </span>
+  </div>
+
+  <header>
+    <div class="kicker">Về Cô</div>
+    <h1>Nguyễn Thị Thủy Ngân</h1>
+    <p class="lede">Cô bén duyên với tiếng Hàn từ năm 2005 — tính đến nay đã 21 năm. Nhìn lại, đó là một hành trình đủ dài, nhưng tình yêu với tiếng Hàn thì chưa bao giờ vơi. Giờ đây, cô tiếp tục có duyên với tiếng Hàn trong việc giảng dạy — công việc giúp cô có cơ hội được nghiên cứu sâu hơn về ngôn ngữ này. Nên dù thức trắng đêm soạn giáo án, hay dù ốm mệt đến đâu, chỉ cần bước vào lớp, bắt đầu bài học cùng các em là bao mệt mỏi dường như tan biến hết.</p>
+    <p class="lede">Xuất thân từ một gia đình không có nhiều điều kiện, tiếng Hàn đã cho cô rất nhiều cơ hội để thay đổi cuộc đời mình. Đó cũng là điều cô mong mỏi nhất ở mỗi học sinh — tiếng Hàn sẽ giúp các em tìm thấy những cơ hội mới cho riêng mình, và cô mong được vinh hạnh đồng hành, cố vấn cùng các em trên <span class="emph">chặng đường thành công cùng tiếng Hàn</span>.</p>
+    <p class="lede hint">Bấm vào từng mục bên dưới để xem chi tiết hành trình của cô.</p>
+  </header>
+
+  <!-- HỌC VẤN -->
+  <details class="group" open>
+    <summary>
+      <div class="group-title">
+        <h2>Học vấn</h2>
+        <span class="group-count">4 chặng</span>
+      </div>
+      <svg class="group-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+    </summary>
+    <div class="group-body">
+      <p class="section-note">Không chỉ là tấm bằng — mỗi chặng học đều để lại cho cô một trải nghiệm khác nhau.</p>
+
+      <div class="entry">
+        <div class="entry-top">
+          <div class="role-badges"><span class="role-badge">Cử nhân Quản trị Kinh doanh</span></div>
+          <span class="entry-period">09.2006 – 02.2011</span>
+        </div>
+        <div class="entry-org">Đại học Daegu, Hàn Quốc</div>
+        <p class="story">4 năm rưỡi học Quản trị Kinh doanh tại Đại học Daegu, cô vừa học chuyên ngành vừa tiếp tục trau dồi tiếng Hàn qua từng buổi giảng, bài tập nhóm cùng bạn học người Hàn. Đây là giai đoạn tiếng Hàn của cô trưởng thành nhanh nhất — từ ngôn ngữ học trong sách vở trở thành công cụ thật sự để học và làm việc.</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-top">
+          <div class="role-badges"><span class="role-badge">Chương trình tiếng Hàn</span></div>
+          <span class="entry-period">09.2005 – 08.2006</span>
+        </div>
+        <div class="entry-org">Viện đào tạo tiếng Hàn — Đại học Daegu</div>
+        <p class="story">Năm đầu tiên đặt chân đến Hàn Quốc, cô theo học chương trình tiếng Hàn dành cho người nước ngoài tại đây, học từ những điều cơ bản nhất để đủ vốn tiếng Hàn bước vào chương trình đại học chính quy sau đó. Đây là quãng thời gian "vỡ lòng" nhưng cũng đầy thử thách, khi phải làm quen cùng lúc với một ngôn ngữ và một đất nước hoàn toàn mới.</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-top">
+          <div class="role-badges"><span class="role-badge">Lớp chuyên Sử</span></div>
+          <span class="entry-period">09.2002 – 07.2005</span>
+        </div>
+        <div class="entry-org">THPT chuyên Phan Bội Châu, Nghệ An</div>
+        <p class="story">3 năm học chuyên Sử là môi trường rèn cho cô thói quen đọc nhiều, phân tích vấn đề và trình bày mạch lạc — những kỹ năng tưởng không liên quan đến ngoại ngữ, nhưng sau này lại giúp ích rất nhiều khi cô làm biên phiên dịch và đứng lớp giảng dạy.</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-top">
+          <div class="role-badges"><span class="role-badge">Lớp chuyên Toán</span></div>
+          <span class="entry-period">09.1998 – 07.2002</span>
+        </div>
+        <div class="entry-org">THCS chuyên Hồ Xuân Hương, Nghệ An</div>
+        <p class="story">4 năm học chuyên Toán đặt nền móng đầu tiên cho tư duy logic và sự kiên trì trong học tập của cô — nền tảng mà cô mang theo suốt những năm tháng học ngoại ngữ và làm nghề sau này.</p>
+      </div>
+    </div>
+  </details>
+
+  <!-- CÔNG TÁC -->
+  <details class="group">
+    <summary>
+      <div class="group-title">
+        <h2>Công tác</h2>
+        <span class="group-count">6 nơi</span>
+      </div>
+      <svg class="group-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+    </summary>
+    <div class="group-body">
+      <p class="section-note">Các công ty đã làm việc chính thức, kể lại theo hành trình từ phiên dịch viên đến quản lý.</p>
+
+      <details class="entry">
+        <summary>
+          <div class="s-row1">
+            <div class="role-badges"><span class="role-badge">Giáo viên tiếng Hàn</span></div>
+            <div class="s-meta">
+              <span class="entry-period">2020 – nay</span>
+              <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+          </div>
+          <div class="s-org">Các trường THPT Quỳnh Lưu</div>
+        </summary>
+        <div class="entry-body">
+          <p class="story">Từ năm 2020, cô trực tiếp đứng lớp giảng dạy tiếng Hàn tại các trường THPT trên địa bàn Quỳnh Lưu. Đây là nơi cô được sống trọn với nghề giáo — không chỉ truyền đạt kiến thức mà còn đồng hành cùng các em học sinh qua từng kỳ thi, từng mục tiêu riêng, điều mà những công việc trước đây chưa từng cho cô trải nghiệm.</p>
+        </div>
+      </details>
+
+      <details class="entry">
+        <summary>
+          <div class="s-row1">
+            <div class="role-badges"><span class="role-badge">Người sáng lập, điều hành</span></div>
+            <div class="s-meta">
+              <span class="entry-period">2020 – nay</span>
+              <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+          </div>
+          <div class="s-org">Trung tâm Hàn ngữ Nari</div>
+          <div class="s-partner">Đào tạo tiếng Hàn EPS, TOPIK tại Quỳnh Lưu, Nghệ An và online toàn quốc</div>
+        </summary>
+        <div class="entry-body">
+          <p class="story">Cũng từ năm 2020, cô sáng lập và điều hành Hàn Ngữ Nari — trung tâm chuyên đào tạo tiếng Hàn EPS và TOPIK, dạy trực tiếp tại Quỳnh Lưu, Nghệ An và dạy online cho học viên khắp cả nước. Đây là nơi cô dồn toàn bộ kinh nghiệm hơn 20 năm gắn bó với tiếng Hàn vào việc biên soạn giáo trình và xây dựng phương pháp học phù hợp với người Việt.</p>
+        </div>
+      </details>
+
+      <details class="entry">
+        <summary>
+          <div class="s-row1">
+            <div class="role-badges"><span class="role-badge">Giám đốc chi nhánh</span></div>
+            <div class="s-meta">
+              <span class="entry-period">09.2012 – 12.2019 (6 năm)</span>
+              <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+          </div>
+          <div class="s-org">Holmes J.S.C — Chi nhánh Hà Nội</div>
+        </summary>
+        <div class="entry-body">
+          <p class="story">Sau nửa năm làm trưởng phòng ở văn phòng Seoul, cô được giao phụ trách chi nhánh Hà Nội của Holmes trong suốt 6 năm — công ty vé máy bay và du lịch lữ hành. Giai đoạn này tiếng Hàn của cô chuyển sang một "chế độ" khác hẳn: quản lý nhân sự, đàm phán với đối tác, chăm sóc khách hàng, toàn những tình huống không có kịch bản sẵn. Đây cũng là quãng thời gian cô hiểu rõ nhất sự khác biệt trong cách làm việc, giao tiếp giữa người Hàn và người Việt — điều không giáo trình nào dạy được, chỉ có thể học qua va chạm thực tế.</p>
+        </div>
+      </details>
+
+      <details class="entry">
+        <summary>
+          <div class="s-row1">
+            <div class="role-badges"><span class="role-badge">Trưởng phòng thị trường Việt Nam</span></div>
+            <div class="s-meta">
+              <span class="entry-period">03.2012 – 08.2012 (5 tháng)</span>
+              <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+          </div>
+          <div class="s-org">Holmes J.S.C — Seoul, Hàn Quốc</div>
+        </summary>
+        <div class="entry-body">
+          <p class="story">Chỉ sau vài tháng vào công ty vé máy bay, du lịch lữ hành Holmes tại Seoul, cô đã được tin tưởng giao vị trí Trưởng phòng thị trường Việt Nam. Công việc đòi hỏi cô vừa quản lý nhân sự vừa trực tiếp phát triển quan hệ khách hàng — một bước chuyển quan trọng từ vai trò phiên dịch sang vai trò quản lý, nơi tiếng Hàn không chỉ để truyền đạt mà còn để thuyết phục và đàm phán.</p>
+        </div>
+      </details>
+
+      <details class="entry">
+        <summary>
+          <div class="s-row1">
+            <div class="role-badges"><span class="role-badge">Trợ lý phó giám đốc sản xuất</span></div>
+            <div class="s-meta">
+              <span class="entry-period">09.2011 – 02.2012 (5 tháng)</span>
+              <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+          </div>
+          <div class="s-org">MQS Sam Sung J.S.C — Vĩnh Phúc</div>
+        </summary>
+        <div class="entry-body">
+          <p class="story">Tại công ty sản xuất linh kiện điện tử cung cấp cho Samsung này, cô làm phiên dịch viên kiêm trợ lý cho Phó giám đốc phụ trách sản xuất. Công việc hàng ngày là dịch các buổi hướng dẫn dây chuyền sản xuất, hướng dẫn sử dụng thiết bị và tiêu chuẩn sản phẩm — một mảng từ vựng kỹ thuật hoàn toàn khác so với tiếng Hàn học ở trường. Đây là lần đầu cô hiểu ra rằng biết tiếng Hàn thôi chưa đủ, phải hiểu cả chuyên môn của lĩnh vực mình đang dịch thì mới dịch đúng và dịch nhanh được.</p>
+        </div>
+      </details>
+
+      <details class="entry">
+        <summary>
+          <div class="s-row1">
+            <div class="role-badges"><span class="role-badge">Nhân viên phòng kinh doanh quốc tế</span></div>
+            <div class="s-meta">
+              <span class="entry-period">02.2011 – 08.2011 (6 tháng)</span>
+              <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+          </div>
+          <div class="s-org">Megagen Implant J.S.C — Daegu</div>
+        </summary>
+        <div class="entry-body">
+          <p class="story">Đây là công việc đầu tiên sau khi tốt nghiệp đại học, tại một công ty sản xuất thiết bị nha khoa lớn của Hàn Quốc, cùng chuỗi bệnh viện nha khoa rộng khắp cả nước. Lần đầu tiên cô dùng tiếng Hàn không phải để đi học nữa, mà để xử lý đơn hàng thật, trao đổi với đối tác nước ngoài và tìm kiếm cơ hội hợp tác cho thị trường Việt Nam. Giai đoạn này cô học được rất nhiều từ vựng kinh doanh, cách viết email công việc và cách diễn đạt sao cho chuyên nghiệp — những thứ sách vở ít khi dạy.</p>
+        </div>
+      </details>
+    </div>
+  </details>
+
+  <!-- CỘNG TÁC BIÊN PHIÊN DỊCH -->
+  <details class="group">
+    <summary>
+      <div class="group-title">
+        <h2>Cộng tác biên — phiên dịch</h2>
+        <span class="group-count">11 dự án</span>
+      </div>
+      <svg class="group-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+    </summary>
+    <div class="group-body">
+      <p class="section-note">Những công việc cộng tác viên trong thời gian học tập tại Hàn Quốc — mỗi dự án dạy cô một mảng tiếng Hàn khác nhau.</p>
+
+      <details class="entry">
+        <summary>
+          <div class="s-row1">
+            <div class="role-badges"><span class="role-badge">Phiên dịch viên dự án</span></div>
+            <div class="s-meta">
+              <span class="entry-period">2020 – nay</span>
+              <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+          </div>
+          <div class="s-org">FPT Telecom</div>
+        </summary>
+        <div class="entry-body">
+          <p class="story">Từ năm 2020, cô làm biên dịch phụ đề phim cho FPT Telecom, song song với việc đứng lớp dạy tiếng Hàn. Dịch phim là một dạng tiếng Hàn rất khác so với dịch tài liệu hay hội thoại công việc — phải bắt được đúng ngữ điệu, cảm xúc và văn phong đời thường của từng nhân vật, đôi khi cả tiếng lóng, khẩu ngữ. Bộ phim gần nhất cô dịch là "Thế giới song song" (트레인), cũng là nguồn tư liệu sống động cô hay lấy làm ví dụ khi dạy học sinh cách nghe và cảm nhận tiếng Hàn tự nhiên.</p>
+        </div>
+      </details>
+
+      <details class="entry">
+        <summary>
+          <div class="s-row1">
+            <div class="role-badges"><span class="role-badge">Phiên dịch viên dự án</span></div>
+            <div class="s-meta">
+              <span class="entry-period">03.2009 – 12.2010 (1 năm 9 tháng)</span>
+              <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+          </div>
+          <div class="s-org">Phòng Quan hệ quốc tế — Đại học Daegu</div>
+        </summary>
+        <div class="entry-body">
+          <p class="story">Gần 2 năm làm cộng tác viên tư vấn tuyển sinh kiêm Trưởng ban liên lạc du học sinh Việt Nam, cô vừa hỗ trợ các bạn du học sinh mới làm hồ sơ, xin visa, vừa là người đứng ra kết nối cộng đồng sinh viên Việt tại Daegu. Công việc này cho cô tiếp xúc nhiều với tiếng Hàn hành chính — hồ sơ, thủ tục, giấy tờ — mảng tiếng Hàn "khô khan" nhưng cực kỳ cần thiết khi thật sự sống ở Hàn Quốc, và ít khi có trong giáo trình.</p>
+        </div>
+      </details>
+
+      <details class="entry">
+        <summary>
+          <div class="s-row1">
+            <div class="role-badges"><span class="role-badge">Phiên dịch viên dự án</span></div>
+            <div class="s-meta">
+              <span class="entry-period">10.2010 – 12.2010 (2 tháng)</span>
+              <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+          </div>
+          <div class="s-org">Trung tâm tư vấn &amp; hỗ trợ người nước ngoài Asia &amp; Korea — Daegu</div>
+        </summary>
+        <div class="entry-body">
+          <p class="story">Đây là công việc cộng tác viên đặc biệt nhất cô từng làm — hỗ trợ luật sư tiếp nhận và phiên dịch cho các trường hợp cô dâu, người lao động Việt cần tư vấn thủ tục kết hôn, ly hôn, nhập quốc tịch hay các vấn đề pháp lý khác. Cô phải chuyển đạt chính xác những câu chuyện đời thường, nhiều khi rất riêng tư, thành văn bản pháp lý Việt–Hàn cho luật sư xử lý, đồng thời dịch cả sổ hộ khẩu, giấy kết hôn, đơn từ. Đây là lúc cô nhận ra tiếng Hàn pháp lý đòi hỏi sự chính xác tuyệt đối, không có chỗ cho suy đoán hay diễn đạt mơ hồ.</p>
+        </div>
+      </details>
+
+      <details class="entry">
+        <summary>
+          <div class="s-row1">
+            <div class="role-badges">
+              <span class="role-badge">Phiên dịch viên dự án</span>
+              <span class="role-badge">Phiên dịch viên tháp tùng</span>
+            </div>
+            <div class="s-meta">
+              <span class="entry-period">02.2010 – 09.2010</span>
+              <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+          </div>
+          <div class="s-org">Công ty AJIN — sản xuất thiết bị, phụ tùng ô tô</div>
+        </summary>
+        <div class="entry-body">
+          <p class="story">Ở AJIN, cô làm phiên dịch cho các cuộc họp giữa ban quản lý Hàn Quốc và công ty con về tài chính, sản xuất, đồng thời có hai lần tháp tùng Giám đốc sang thăm công ty con tại Bình Dương. Phiên dịch tháp tùng khác hẳn phiên dịch trong phòng họp — phải phản xạ nhanh, dịch liên tục trong nhiều tình huống bất ngờ suốt cả chuyến đi. Đây là trải nghiệm giúp cô rèn phản xạ nghe – nói tiếng Hàn nhanh nhạy hơn rất nhiều.</p>
+        </div>
+      </details>
+
+      <details class="entry">
+        <summary>
+          <div class="s-row1">
+            <div class="role-badges"><span class="role-badge">Phiên dịch viên dự án</span></div>
+            <div class="s-meta">
+              <span class="entry-period">04.2010 – 07.2010 (3 tháng)</span>
+              <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+          </div>
+          <div class="s-org">Đại học Hawaii, Mỹ</div>
+          <div class="s-partner">Dự án nghiên cứu người Việt nhập cư nước ngoài</div>
+        </summary>
+        <div class="entry-body">
+          <p class="story">Cô tham gia một dự án nghiên cứu của Đại học Hawaii (Mỹ) về thói quen và nhu cầu của người Việt sinh sống ở nước ngoài, với vai trò tìm người phỏng vấn, biên dịch bảng câu hỏi khảo sát Hàn–Việt và tổng hợp báo cáo kết quả. Đây là lần đầu cô tiếp xúc với tiếng Hàn học thuật, mang tính nghiên cứu — một phong cách viết rất khác so với tiếng Hàn giao tiếp hay hành chính mà cô quen thuộc trước đó.</p>
+        </div>
+      </details>
+
+      <details class="entry">
+        <summary>
+          <div class="s-row1">
+            <div class="role-badges"><span class="role-badge">Phiên dịch viên dự án</span></div>
+            <div class="s-meta">
+              <span class="entry-period">05.2010 – 12.2010 (7 tháng)</span>
+              <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+          </div>
+          <div class="s-org">Hiệp hội doanh nghiệp thành phố Daegu</div>
+          <div class="s-partner">Hội thương mại quốc tế</div>
+        </summary>
+        <div class="entry-body">
+          <p class="story">Là hội viên của hiệp hội doanh nghiệp Daegu, cô thường được mời biên soạn và thuyết trình về du lịch, văn hóa, kinh tế Việt Nam cho các doanh nghiệp Hàn Quốc và bạn bè quốc tế. Đứng nói chuyện bằng tiếng Hàn trước đám đông là một kỹ năng hoàn toàn khác so với dịch hay viết — cô phải luyện cách trình bày mạch lạc, tự tin và truyền cảm hứng, một kỹ năng sau này giúp ích rất nhiều cho việc đứng lớp giảng dạy.</p>
+        </div>
+      </details>
+
+      <details class="entry">
+        <summary>
+          <div class="s-row1">
+            <div class="role-badges"><span class="role-badge">Phiên dịch viên dự án</span></div>
+            <div class="s-meta">
+              <span class="entry-period">20 – 21.06.2010 (2 ngày)</span>
+              <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+          </div>
+          <div class="s-org">Trung tâm nhân quyền phụ nữ nhập cư Daegu</div>
+          <div class="s-partner">Phối hợp Thời báo Phụ nữ Sài Gòn &amp; nhà tài trợ chương trình</div>
+        </summary>
+        <div class="entry-body">
+          <p class="story">Trong chương trình tài trợ mời bố mẹ cô dâu Việt sang thăm Hàn Quốc, cô làm phiên dịch cho các buổi phỏng vấn giữa nhà báo Thời báo Phụ nữ Sài Gòn với cô dâu Việt, nhà tài trợ và đơn vị tổ chức. Đây là một trong những lần phiên dịch giàu cảm xúc nhất — không chỉ chuyển ngữ mà còn phải truyền tải đúng tâm trạng, câu chuyện của những người phụ nữ Việt xa quê.</p>
+        </div>
+      </details>
+
+      <details class="entry">
+        <summary>
+          <div class="s-row1">
+            <div class="role-badges"><span class="role-badge">Phiên dịch viên tháp tùng</span></div>
+            <div class="s-meta">
+              <span class="entry-period">16.12.2010 (1 ngày)</span>
+              <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+          </div>
+          <div class="s-org">Tòa thị chính TP. Daegu</div>
+          <div class="s-partner">Tiếp đón đoàn công tác HĐND TP. Đà Nẵng</div>
+        </summary>
+        <div class="entry-body">
+          <p class="story">Cô được mời phiên dịch cho buổi giao lưu hữu nghị giữa Phó Chủ tịch HĐND TP. Đà Nẵng và Đoàn Chủ tịch Hội đồng TP. Daegu, đồng thời tháp tùng đoàn đi thăm các địa danh nổi tiếng của thành phố. Đây là dạng phiên dịch ngoại giao trang trọng, đòi hỏi sự chuẩn mực cả trong cách dùng từ lẫn thái độ, khác hẳn không khí phiên dịch đời thường.</p>
+        </div>
+      </details>
+
+      <details class="entry">
+        <summary>
+          <div class="s-row1">
+            <div class="role-badges"><span class="role-badge">Phiên dịch viên tháp tùng</span></div>
+            <div class="s-meta">
+              <span class="entry-period">29–31.10.2007 &amp; 28–29.09.2010</span>
+              <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+          </div>
+          <div class="s-org">Hội đồng nhân dân tỉnh Kyeongbuk</div>
+          <div class="s-partner">Đón đoàn cán bộ tỉnh Thái Nguyên học tập phong trào Saemaul</div>
+        </summary>
+        <div class="entry-body">
+          <p class="story">Hai lần cách nhau vài năm, cô được mời phiên dịch cho các đoàn cán bộ tỉnh Thái Nguyên sang học tập phong trào Saemaul — phong trào phát triển nông thôn nổi tiếng đã góp phần đưa Hàn Quốc trở thành cường quốc. Cô phiên dịch cả những giờ học lý thuyết lẫn các bài phát biểu tại hội thảo chuyên đề quốc tế, phải nắm được thuật ngữ chuyên ngành phát triển nông thôn bằng cả hai thứ tiếng. Đây là dạng phiên dịch "nặng đô" về kiến thức nền, buộc cô phải tự tìm hiểu sâu về chủ đề trước mỗi lần đi dịch.</p>
+        </div>
+      </details>
+
+      <details class="entry">
+        <summary>
+          <div class="s-row1">
+            <div class="role-badges"><span class="role-badge">Phiên dịch viên dự án</span></div>
+            <div class="s-meta">
+              <span class="entry-period">08.2007 – 09.2007 (2 tháng)</span>
+              <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+          </div>
+          <div class="s-org">Viện nghiên cứu Saemaul — Đại học Kyeongwoon</div>
+        </summary>
+        <div class="entry-body">
+          <p class="story">Cô tham gia biên dịch Hàn–Việt hai bộ sách: một giới thiệu về phong trào Saemaul, một là cẩm nang gia đình đa văn hóa dành cho cô dâu Việt mới sang Hàn Quốc sinh sống. Dịch sách khác hẳn dịch nói — không có ai để hỏi ngay khi bí từ, phải tự tra cứu, cân nhắc từng câu chữ sao cho vừa đúng nghĩa vừa dễ đọc. Đây là công việc rèn cho cô sự kiên nhẫn và khả năng tự học rất lớn.</p>
+        </div>
+      </details>
+
+      <details class="entry">
+        <summary>
+          <div class="s-row1">
+            <div class="role-badges"><span class="role-badge">Phiên dịch viên dự án</span></div>
+            <div class="s-meta">
+              <span class="entry-period">10.2006 – 12.2006 (2 tháng)</span>
+              <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+          </div>
+          <div class="s-org">Hội phụ nữ thành phố Kyeongsan, Hàn Quốc</div>
+        </summary>
+        <div class="entry-body">
+          <p class="story">Đây là công việc cộng tác đầu tiên của cô tại Hàn Quốc, chỉ vài tháng sau khi mới sang. Cô phiên dịch cho giáo viên tại trung tâm gia đình đa văn hóa TP. Kyeongsan trong các buổi dạy tiếng Hàn, nấu ăn và đời sống văn hóa cho cô dâu Việt mới định cư. Nhìn lại, đây chính là lần đầu tiên cô đứng ở vị trí "cầu nối" giúp người khác học tiếng Hàn và hòa nhập — có lẽ là hạt giống đầu tiên cho công việc giảng dạy sau này.</p>
+        </div>
+      </details>
+    </div>
+  </details>
+
+  <!-- LÀM THÊM -->
+  <details class="group">
+    <summary>
+      <div class="group-title">
+        <h2>Làm thêm</h2>
+        <span class="group-count">8 công việc</span>
+      </div>
+      <svg class="group-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+    </summary>
+    <div class="group-body">
+      <p class="section-note">Ngoài giờ học, cô cũng đi làm đủ việc để trang trải — từ nông trại, công xưởng đến phục vụ nhà hàng. Chính những công việc này lại cho cô vốn tiếng Hàn đời thường, tiếng Hàn của người lao động bình dân, thứ không trường lớp nào dạy.</p>
+
+      <details class="entry">
+        <summary>
+          <div class="s-row1">
+            <div class="role-badges"><span class="role-badge">Phục vụ nhà hàng</span></div>
+            <div class="s-meta">
+              <span class="entry-period">12.2010 – 02.2011</span>
+              <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+          </div>
+          <div class="s-org">Nhà hàng đặc sản biển — Buk-gu, Daegu</div>
+        </summary>
+        <div class="entry-body">
+          <p class="story">Nhận order và phục vụ bàn cho khách tại nhà hàng hải sản ở Buk-gu, Daegu.</p>
+        </div>
+      </details>
+
+      <details class="entry">
+        <summary>
+          <div class="s-row1">
+            <div class="role-badges"><span class="role-badge">Công nhân xưởng</span></div>
+            <div class="s-meta">
+              <span class="entry-period">01 – 03.2010</span>
+              <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+          </div>
+          <div class="s-org">Công ty chế tác kim khí — Gyeongsan-si</div>
+        </summary>
+        <div class="entry-body">
+          <p class="story">Phân loại ốc vít và đóng gói sản phẩm theo đơn hàng tại xưởng chế tác kim khí.</p>
+        </div>
+      </details>
+
+      <details class="entry">
+        <summary>
+          <div class="s-row1">
+            <div class="role-badges"><span class="role-badge">Công nhân may</span></div>
+            <div class="s-meta">
+              <span class="entry-period">06 – 07.2010</span>
+              <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+          </div>
+          <div class="s-org">Công ty len xuất khẩu châu Âu — Jillyang-eup, Gyeongsan-si</div>
+        </summary>
+        <div class="entry-body">
+          <p class="story">May găng tay len xuất khẩu, may nhãn mác, phân loại và đóng gói sản phẩm.</p>
+        </div>
+      </details>
+
+      <details class="entry">
+        <summary>
+          <div class="s-row1">
+            <div class="role-badges"><span class="role-badge">Phục vụ nhà hàng</span></div>
+            <div class="s-meta">
+              <span class="entry-period">07 – 09.2009</span>
+              <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+          </div>
+          <div class="s-org">Nhà hàng thịt nướng — Hayang-eup, Gyeongsan-si</div>
+        </summary>
+        <div class="entry-body">
+          <p class="story">Nhận order và phục vụ bàn tại nhà hàng thịt nướng.</p>
+        </div>
+      </details>
+
+      <details class="entry">
+        <summary>
+          <div class="s-row1">
+            <div class="role-badges"><span class="role-badge">Phục vụ nhà hàng</span></div>
+            <div class="s-meta">
+              <span class="entry-period">07–09.2008 &amp; 01–03.2009</span>
+              <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+          </div>
+          <div class="s-org">Nhà hàng món ăn truyền thống Hàn Quốc — Eumseong-gun</div>
+        </summary>
+        <div class="entry-body">
+          <p class="story">Nhận order và phục vụ bàn, trở lại làm hai đợt cách nhau nửa năm.</p>
+        </div>
+      </details>
+
+      <details class="entry">
+        <summary>
+          <div class="s-row1">
+            <div class="role-badges"><span class="role-badge">Công nhân xưởng</span></div>
+            <div class="s-meta">
+              <span class="entry-period">01 – 02.2008</span>
+              <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+          </div>
+          <div class="s-org">Công ty rượu truyền thống Hàn Quốc — Nonsan-si</div>
+        </summary>
+        <div class="entry-body">
+          <p class="story">Dán nhãn mác và đóng gói sản phẩm rượu truyền thống.</p>
+        </div>
+      </details>
+
+      <details class="entry">
+        <summary>
+          <div class="s-row1">
+            <div class="role-badges"><span class="role-badge">Công nhân xưởng</span></div>
+            <div class="s-meta">
+              <span class="entry-period">07–09.2006 &amp; 07–09.2007</span>
+              <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+          </div>
+          <div class="s-org">Công ty văn phòng phẩm — Daehwa, Gyeonggi-do</div>
+        </summary>
+        <div class="entry-body">
+          <p class="story">Phân loại và đóng gói sản phẩm, làm hai đợt hè liên tiếp hai năm.</p>
+        </div>
+      </details>
+
+      <details class="entry">
+        <summary>
+          <div class="s-row1">
+            <div class="role-badges"><span class="role-badge">Lao động nông trại</span></div>
+            <div class="s-meta">
+              <span class="entry-period">06 – 07.2006</span>
+              <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+          </div>
+          <div class="s-org">Nông trại — Jillyang-eup, Gyeongsan-si</div>
+        </summary>
+        <div class="entry-body">
+          <p class="story">Thu hoạch, phân loại và đóng gói nông sản — công việc làm thêm đầu tiên chỉ vài tháng sau khi cô mới sang Hàn Quốc.</p>
+        </div>
+      </details>
+    </div>
+  </details>
+
+  <!-- CHỨNG CHỈ -->
+  <details class="group">
+    <summary>
+      <div class="group-title">
+        <h2>Chứng chỉ &amp; thành tích</h2>
+        <span class="group-count">5 mục</span>
+      </div>
+      <svg class="group-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+    </summary>
+    <div class="group-body">
+      <div class="entry">
+        <div class="entry-top">
+          <span class="entry-period">18.02.2011</span>
+        </div>
+        <div class="entry-org">Bằng tốt nghiệp Cử nhân Quản trị Kinh doanh, Đại học Daegu</div>
+      </div>
+      <div class="entry">
+        <div class="entry-org">Bằng khen của Đại sứ đặc mệnh toàn quyền Việt Nam tại Hàn Quốc</div>
+        <p class="story">Đóng góp cho hội du học sinh Việt Nam tại Hàn và các chiến dịch quảng bá du lịch Việt Nam do Đại sứ quán tổ chức.</p>
+      </div>
+      <div class="entry">
+        <div class="entry-top">
+          <span class="entry-period">03.2012</span>
+        </div>
+        <div class="entry-org">Giấy chứng nhận hoạt động tình nguyện viên — Cục xuất nhập cảnh Suwon</div>
+      </div>
+      <div class="entry">
+        <div class="entry-org">Giấy chứng nhận thành viên Hiệp hội thông thương người nước ngoài TP. Daegu</div>
+      </div>
+      <div class="entry">
+        <div class="entry-org">Chứng chỉ tin học văn phòng: Word, Excel, PowerPoint</div>
+      </div>
+    </div>
+  </details>
+
+  <footer>
+    <div class="name"><b>Hàn Ngữ Nari</b> — Quỳnh Lưu, Nghệ An</div>
+    <div class="contact">Liên hệ: <a href="tel:0399214554">0399 214 554</a></div>
+  </footer>
+
+</div>
+<script>
+/* Học viên mở từ trang học tập: nút "Trang học tập" đưa em về đúng trang của em */
+(function () {
+  var m = /[#&]hoc=([A-Za-z0-9]{10,40})/.exec(location.hash || "");
+  var home = document.getElementById("nariHome");
+  if (m) { home.href = "https://claude.ai/artifact/" + m[1]; document.getElementById("nariHomeText").textContent = "Trang học tập"; }
+  document.getElementById("nariBack").addEventListener("click", function () {
+    if (history.length > 1) history.back(); else location.href = home.href;
+  });
+})();
+</script>
+</body>
+</html>

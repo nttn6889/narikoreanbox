@@ -11,7 +11,7 @@ import base64, hashlib, json, os, re, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "thi-thu")
-ABOUT_URL = "https://claude.ai/artifact/2XJHcdRJMNbKnDoMXqVZWQ"  # đổi khi trang "Về cô" có link riêng
+ABOUT_URL = "../ve-co/"
 
 
 def cut(src, start, end, repl=""):
