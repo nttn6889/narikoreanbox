@@ -255,6 +255,9 @@ input.code{text-transform:uppercase;letter-spacing:.18em;font-weight:700;font-si
 .vfix{display:block;font:600 13px var(--ui);color:var(--ok);margin-top:3px}
 .opt.badpick{border-color:var(--pen);background:var(--pen-soft)}
 .vtype{display:flex;gap:10px;align-items:center}
+.vsay{all:unset;box-sizing:border-box;cursor:pointer;flex:none;border:1.5px solid var(--violet);color:var(--violet);background:var(--violet-soft);border-radius:20px;padding:4px 14px;font:600 15px var(--ui)}
+.vsay:hover{filter:brightness(1.05)}
+.vsay:focus-visible{outline:3px solid var(--violet);outline-offset:2px}
 .vdays{display:flex;gap:3px;flex-wrap:wrap;margin:6px 0}
 .vdays span{width:15px;height:15px;border-radius:3px;background:var(--bg);border:1px solid var(--line)}
 .vdays span.on{background:var(--ok);border-color:var(--ok)}
@@ -714,7 +717,18 @@ function examBoot(){
 /* =====================================================================
    TỪ VỰNG – phía học sinh. Bài nằm ngay trong link (#v=…) nên giao bài không cần cập nhật trang.
    ===================================================================== */
-var VTYPES = {match:"Nối từ", kv:"Trắc nghiệm Hàn → Việt", vk:"Trắc nghiệm Việt → Hàn", type:"Gõ từ tiếng Hàn"};
+var VTYPES = {match:"Nối từ", kv:"Trắc nghiệm Hàn → Việt", vk:"Trắc nghiệm Việt → Hàn", nk:"Nghe → chọn nghĩa", type:"Gõ từ tiếng Hàn"};
+/* Dạng "nk": máy đọc từ tiếng Hàn (giọng đọc có sẵn của trình duyệt), học sinh chọn nghĩa tiếng Việt. */
+function vSay(text){
+  var ss = window.speechSynthesis; if(!ss || !text) return false;
+  try{
+    ss.cancel();
+    var u = new SpeechSynthesisUtterance(String(text).replace(/\([^)]*\)/g, "").split(/[\/,]/)[0].trim());
+    u.lang = "ko-KR"; u.rate = 0.85;
+    var v = ss.getVoices().filter(function(x){ return /^ko/i.test(x.lang); })[0]; if(v) u.voice = v;
+    ss.speak(u); return true;
+  }catch(e){ return false; }
+}
 function b64e(obj){ return btoa(unescape(encodeURIComponent(JSON.stringify(obj)))).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,""); }
 function b64d(raw){ var b = String(raw).replace(/-/g,"+").replace(/_/g,"/"); while(b.length % 4) b += "="; return JSON.parse(decodeURIComponent(escape(atob(b)))); }
 function vPack(a){ var raw = b64e(a); return raw + "." + sum(raw); }
@@ -780,9 +794,9 @@ function vStart(a, name){
   else{
     var idx = a.w.map(function(_, i){ return i; });
     VS = {c:a.c, n:a.w.length, ans:{}, start:Date.now(), submitted:null, order:vShuffle(idx), opts:{}, mo:[]};
-    if(a.y === "kv" || a.y === "vk"){
+    if(a.y === "kv" || a.y === "vk" || a.y === "nk"){
       idx.forEach(function(i){
-        var col = a.y === "kv" ? 1 : 0, seen = {}, pick = [i]; seen[vNorm(a.w[i][col])] = 1;
+        var col = a.y === "vk" ? 0 : 1, seen = {}, pick = [i]; seen[vNorm(a.w[i][col])] = 1;
         vShuffle(idx).forEach(function(j){ if(pick.length < 4 && !seen[vNorm(a.w[j][col])]){ seen[vNorm(a.w[j][col])] = 1; pick.push(j); } });
         VS.opts[i] = vShuffle(pick);
       });
@@ -798,13 +812,16 @@ function vDone(){ var a = VS.a; return a.w.filter(function(_, i){ var x = VS.ans
 function vRender(){
   var a = VS.a, items = a.w, locked = !!VS.submitted, h = "";
   var mark = function(i){ return locked ? (vCheck(a.y, items, i, VS.ans[i]) ? " ok" : " bad") : ""; };
-  if(a.y === "kv" || a.y === "vk"){
+  if(a.y === "kv" || a.y === "vk" || a.y === "nk"){
+    if(a.y === "nk") h += '<p class="hint" style="margin-bottom:6px">Bấm nút loa để nghe từ (nghe lại bao nhiêu lần cũng được), rồi chọn nghĩa đúng.' + (window.speechSynthesis ? '' : ' <strong style="color:var(--pen)">Trình duyệt này không đọc được tiếng Hàn — em mở link bằng Chrome hoặc Safari nhé.</strong>') + '</p>';
     VS.order.forEach(function(i, k){
-      var prompt = a.y === "kv" ? items[i][0] : items[i][1];
-      h += '<section class="q"><p class="stem"><b>' + (k+1) + '.</b><span' + (a.y === "kv" ? ' style="font-weight:600"' : ' style="font-family:var(--ui)"') + '>' + esc(prompt) + '</span></p><div class="opts two" role="radiogroup" aria-label="Câu ' + (k+1) + '">' +
+      var prompt = a.y === "vk" ? items[i][1] : items[i][0];
+      var stem = a.y === "nk" ? '<button type="button" class="vsay" data-say="' + i + '" aria-label="Nghe từ số ' + (k+1) + '">🔊 Nghe</button>' + (locked ? '<span style="font-weight:600;align-self:center">' + esc(prompt) + '</span>' : '')
+        : '<span' + (a.y === "kv" ? ' style="font-weight:600"' : ' style="font-family:var(--ui)"') + '>' + esc(prompt) + '</span>';
+      h += '<section class="q"><p class="stem"><b>' + (k+1) + '.</b>' + stem + '</p><div class="opts two" role="radiogroup" aria-label="Câu ' + (k+1) + '">' +
         (VS.opts[i] || []).map(function(o, j){
-          var txt = a.y === "kv" ? items[o][1] : items[o][0], picked = VS.ans[i] === o, right = locked && vCheck(a.y, items, i, o);
-          return '<button type="button" class="opt' + (right ? ' key' : '') + (locked && picked && !right ? ' badpick' : '') + '" role="radio" aria-checked="' + picked + '" data-i="' + i + '" data-o="' + o + '"' + (a.y === "kv" ? ' style="font-family:var(--ui)"' : '') + '><span class="num">' + (j+1) + '</span><span>' + esc(txt) + '</span></button>';
+          var txt = a.y === "vk" ? items[o][0] : items[o][1], picked = VS.ans[i] === o, right = locked && vCheck(a.y, items, i, o);
+          return '<button type="button" class="opt' + (right ? ' key' : '') + (locked && picked && !right ? ' badpick' : '') + '" role="radio" aria-checked="' + picked + '" data-i="' + i + '" data-o="' + o + '"' + (a.y !== "vk" ? ' style="font-family:var(--ui)"' : '') + '><span class="num">' + (j+1) + '</span><span>' + esc(txt) + '</span></button>';
         }).join("") + '</div></section>';
     });
   } else if(a.y === "type"){
@@ -840,6 +857,7 @@ function vRender(){
 function vWire(){
   var a = VS.a, q = $("#vq");
   $("#vsub").onclick = vSubmit;
+  $$("[data-say]", q).forEach(function(b){ b.onclick = function(){ vSay(a.w[+b.dataset.say][0]); }; });
   if(VS.submitted) return;
   q.addEventListener("click", function(e){
     var b = e.target.closest(".opt");
