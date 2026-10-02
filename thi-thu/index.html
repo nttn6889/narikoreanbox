@@ -263,6 +263,13 @@ input.code{text-transform:uppercase;letter-spacing:.18em;font-weight:700;font-si
 .opt.badpick{border-color:var(--pen);background:var(--pen-soft)}
 .vtype{display:flex;gap:10px;align-items:center}
 .vsay{all:unset;box-sizing:border-box;cursor:pointer;flex:none;border:1.5px solid var(--violet);color:var(--violet);background:var(--violet-soft);border-radius:20px;padding:4px 14px;font:600 15px var(--ui)}
+.nsub{margin-top:14px;font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.nline{font-family:var(--kr);font-size:16.5px;line-height:2.3;margin:2px 0}
+.nline b{font-weight:600;color:var(--muted)}
+.nblank{white-space:nowrap}
+.nblank input.t{display:inline-block;width:7.5em;padding:2px 8px;margin:0 2px;font-size:16px;vertical-align:baseline}
+.nblank .vfix{display:inline;margin-left:2px}
+.nscript{border-top:1px solid var(--line);padding-top:10px;margin-top:10px}
 .vsay:hover{filter:brightness(1.05)}
 .vsay:focus-visible{outline:3px solid var(--violet);outline-offset:2px}
 .vdays{display:flex;gap:3px;flex-wrap:wrap;margin:6px 0}
@@ -1018,15 +1025,195 @@ function rStart(p, k, words, name){
   vStart({c:p.c, t:p.t + (isRev ? " – Ôn từ sai " + fmtDay(Date.now()) : " – Ngày " + k), y:p.y, w:items, ids:okIds, k:k, route:p}, name);
 }
 
+/* =====================================================================
+   LUYỆN NGHE – phía học sinh. Link #n=… chứa {c: mã bài, t: tên bài, l: id bài nghe}.
+   Nội dung bài (lời thoại, câu hỏi, đáp án) ở nghe/<id>.json, file nghe ở nghe/audio/.
+   Phần 1: câu hỏi tiếng Việt (4 lựa chọn) · Phần 2: chọn câu nói tiếp theo (2 lựa chọn) ·
+   Phần 3: nghe lần 2, điền từ còn thiếu (trong lời thoại, từ cần điền viết trong [ ], đáp án khác nhau ngăn bằng /).
+   ===================================================================== */
+var NPARTS = ["Nghe và trả lời câu hỏi", "Chọn câu nói tiếp theo", "Nghe lại và điền từ"];
+function nBlanks(ko){ var out = []; String(ko || "").replace(/\[([^\]]+)\]/g, function(_, w){ out.push(w); return ""; }); return out; }
+/* Các ô trả lời theo thứ tự cố định (trang quản lý chấm theo đúng thứ tự này): {i: câu, p: phần 1–3, q, o, key} */
+function nSlots(L){
+  var s = [];
+  L.items.forEach(function(it, i){
+    (it.qs || []).forEach(function(q){ s.push({i:i, p:1, q:q.q, o:q.o, key:q.a}); });
+    if(it.next) s.push({i:i, p:2, q:it.next.q, o:it.next.o, key:it.next.a});
+  });
+  L.items.forEach(function(it, i){
+    (it.script || []).forEach(function(ln){ if(!ln.end) nBlanks(ln.ko).forEach(function(w){ s.push({i:i, p:3, key:w}); }); });
+  });
+  return s;
+}
+function nCheck(sl, ans){
+  if(sl.p === 3) return !!String(ans || "").trim() && String(sl.key).split("/").map(vNorm).indexOf(vNorm(ans)) >= 0;
+  return typeof ans === "number" && ans === sl.key;
+}
+function nAnsText(sl, ans){ if(sl.p === 3) return String(ans || ""); return typeof ans === "number" && sl.o[ans] != null ? sl.o[ans] : ""; }
+function nKeyText(sl){ return sl.p === 3 ? String(sl.key).split("/")[0] : sl.o[sl.key]; }
+/* Chấm: dùng chung cho trang học sinh và trang quản lý. */
+function nScore(L, ans){
+  var slots = nSlots(L), parts = [[0,0],[0,0],[0,0]], score = 0, wrong = [];
+  slots.forEach(function(sl, j){
+    var ok = nCheck(sl, ans[j]); parts[sl.p-1][1]++;
+    if(ok){ score++; parts[sl.p-1][0]++; }
+    else wrong.push({n:L.items[sl.i].n, p:sl.p, q:sl.p === 3 ? "" : sl.q, key:nKeyText(sl), ans:nAnsText(sl, ans[j])});
+  });
+  return {score:score, total:slots.length, parts:parts, wrong:wrong};
+}
+function encodeN(obj){ var raw = b64e(obj); return "NN1-" + raw + "-" + sum(raw); }
+function decodeN(code){
+  var m = String(code).match(/^NN1-([A-Za-z0-9_-]+)-([0-9a-z]{4})$/);
+  if(!m || sum(m[1]) !== m[2]) return null;
+  try{ var o = b64d(m[1]); o._sum = m[2]; return o; }catch(e){ return null; }
+}
+
+var NS = null;
+function nShell(inner){ vStopClock(); app.innerHTML = '<div class="wrap">' + headerHTML() + '<main class="paper"><div class="title"><h1>듣기 연습</h1><p>Luyện nghe · Hàn Ngữ Nari</p></div>' + inner + '</main></div>'; }
+function ngheBoot(){
+  var m = String(location.hash || "").match(/[#&]n=([A-Za-z0-9_.-]+)/);
+  if(!m) return false;
+  var p = vUnpack(m[1]);
+  if(!p || !p.c || !p.l){ nShell('<p class="err">Link bài nghe bị thiếu hoặc bị cắt. Em sao chép lại đủ cả link cô gửi rồi mở lại nhé.</p>'); return true; }
+  nShell('<p class="hint">Đang tải bài…</p>');
+  fetch("nghe/" + encodeURIComponent(p.l) + ".json", {cache:"no-cache"}).then(function(r){ if(!r.ok) throw new Error("http " + r.status); return r.json(); }).then(function(L){
+    nEntry(p, L);
+  }, function(){ nShell('<p class="err">Chưa tải được bài nghe. Em kiểm tra mạng rồi tải lại trang nhé. Nếu vẫn lỗi, em nhắn cô.</p>'); });
+  return true;
+}
+function nEntry(p, L){
+  var last = lsGet("nari-tt-last") || {};
+  nShell('<div class="metaline"><span>Bài: <strong>' + esc(p.t || L.title) + '</strong></span><span><strong>' + L.items.length + '</strong> đoạn nghe</span></div>' +
+    '<div class="note" style="white-space:normal"><strong>Cách làm:</strong> Mỗi đoạn em nghe <strong>2 lần</strong>.<br>Lần 1: làm <strong>Phần 1</strong> (trả lời câu hỏi) và <strong>Phần 2</strong> (chọn câu nói tiếp theo).<br>Lần 2: bấm “Sang Phần 3” rồi nghe lại và <strong>điền từ còn thiếu</strong>. Sang Phần 3 thì không sửa được Phần 1, 2 nữa.<br>Em đeo tai nghe hoặc bật loa trước khi bắt đầu nhé.</div>' +
+    '<label class="l" for="nname">Họ và tên của em</label><input class="t" id="nname" autocomplete="name" value="' + esc(last.name || "") + '" placeholder="VD: Nguyễn Thị Lan">' +
+    '<p class="err" id="nerr" hidden></p><div class="row"><button class="btn wide" id="ngo">Bắt đầu làm bài</button></div>');
+  $("#ngo").onclick = function(){
+    var n = cleanName($("#nname").value);
+    if(!n){ var e = $("#nerr"); e.textContent = "Em nhập họ tên trước khi làm bài nhé."; e.hidden = false; $("#nname").focus(); return; }
+    last.name = n; lsSet("nari-tt-last", last);
+    nStart(p, L, n);
+  };
+  $("#nname").addEventListener("keydown", function(e){ if(e.key === "Enter") $("#ngo").click(); });
+}
+function nStart(p, L, name){
+  var slots = nSlots(L), key = "nari-n-" + p.c + "-" + normName(name).replace(/[^a-z0-9]/g, "");
+  var saved = lsGet(key);
+  if(saved && saved.c === p.c && saved.n === slots.length) NS = saved;
+  else{
+    NS = {c:p.c, n:slots.length, ans:{}, ord:{}, stage:1, start:Date.now(), submitted:null};
+    slots.forEach(function(sl, j){ if(sl.p !== 3) NS.ord[j] = vShuffle(sl.o.map(function(_, k){ return k; })); });
+  }
+  NS.p = p; NS.L = L; NS.slots = slots; NS.name = name; NS.key = key;
+  nSave(); nRender(); window.scrollTo(0, 0);
+}
+function nSave(){ var c = Object.assign({}, NS); delete c.p; delete c.L; delete c.slots; lsSet(NS.key, c); }
+function nNeed(){ return NS.slots.filter(function(sl){ return NS.stage === 1 ? sl.p !== 3 : true; }).length; }
+function nDone(){ return NS.slots.filter(function(sl, j){ var x = NS.ans[j]; if(NS.stage === 1 && sl.p === 3) return false; return sl.p === 3 ? !!String(x || "").trim() : typeof x === "number"; }).length; }
+function nAudio(it){ return '<audio controls preload="none" src="' + esc(it.audio) + '" style="width:100%;margin:4px 0 8px"></audio>'; }
+function nChoice(j, label){
+  var sl = NS.slots[j], lockQ = NS.stage > 1 || !!NS.submitted, done = !!NS.submitted;
+  return '<div style="margin:10px 0 4px;font-weight:600">' + (label ? label + ' ' : '') + esc(sl.q) + '</div><div class="opts' + (sl.o.length > 2 ? ' two' : '') + '" role="radiogroup">' +
+    (NS.ord[j] || []).map(function(o, k){
+      var picked = NS.ans[j] === o, right = done && o === sl.key;
+      return '<button type="button" class="opt' + (right ? ' key' : '') + (done && picked && !right ? ' badpick' : '') + '" role="radio" aria-checked="' + picked + '" data-j="' + j + '" data-o="' + o + '"' + (lockQ ? ' tabindex="-1"' : '') + ' style="font-family:var(--ui)"><span class="num">' + "ABCD".charAt(k) + '</span><span>' + esc(sl.o[o]) + '</span></button>';
+    }).join("") + '</div>';
+}
+function nRender(){
+  var L = NS.L, slots = NS.slots, done = !!NS.submitted, h = "";
+  var byItem = function(i, p){ var out = []; slots.forEach(function(sl, j){ if(sl.i === i && sl.p === p) out.push(j); }); return out; };
+  L.items.forEach(function(it, i){
+    h += '<section class="q nitem"><div class="grp" style="margin-top:6px"><span class="tag">Câu ' + esc(it.n) + '</span>' + (done || NS.stage > 1 ? '' : 'Nghe lần 1') + '</div>' + (NS.stage === 1 && !done ? nAudio(it) : '') +
+      '<div class="nsub">Phần 1 · ' + NPARTS[0] + '</div>' + byItem(i, 1).map(function(j, k){ return nChoice(j, (k+1) + '.'); }).join("") +
+      (byItem(i, 2).length ? '<div class="nsub">Phần 2 · ' + NPARTS[1] + '</div>' + byItem(i, 2).map(function(j){ return nChoice(j, ""); }).join("") : '') + '</section>';
+  });
+  if(NS.stage > 1 || done){
+    h += '<div class="grp" style="margin-top:26px"><span class="tag">Phần 3</span>' + NPARTS[2] + '</div><p class="hint">Nghe lại từng đoạn và gõ từ còn thiếu bằng tiếng Hàn.</p>';
+    var j0 = slots.findIndex(function(sl){ return sl.p === 3; }), j = j0, num = 0;
+    L.items.forEach(function(it){
+      h += '<section class="q"><div style="font-weight:700;color:var(--violet);margin-bottom:4px">Câu ' + esc(it.n) + '</div>' + (done ? '' : nAudio(it));
+      (it.script || []).forEach(function(ln){
+        if(ln.end) return;
+        var txt = esc(ln.ko).replace(/\[([^\]]+)\]/g, function(){
+          var jj = j++, ok = done && nCheck(slots[jj], NS.ans[jj]); num++;
+          return '<span class="nblank">(' + num + ')<input class="t kr" data-bj="' + jj + '" value="' + esc(NS.ans[jj] || "") + '" autocomplete="off" autocapitalize="off" spellcheck="false" lang="ko"' + (done ? ' disabled style="border-color:' + (ok ? 'var(--ok)' : 'var(--pen)') + '"' : '') + '>' + (done && !ok ? '<span class="vfix">' + esc(nKeyText(slots[jj])) + '</span>' : '') + '</span>';
+        });
+        h += '<p class="nline"><b>' + esc(ln.s) + ':</b> ' + txt + '</p>';
+      });
+      h += '</section>';
+    });
+  }
+  var need = nNeed(), nd = nDone();
+  app.innerHTML = '<div class="wrap">' + headerHTML() + '<main class="paper" id="exam"><div class="title"><h1>듣기 연습</h1><p>' + esc(NS.p.t || L.title) + '</p></div>' +
+    '<div class="metaline"><span>Luyện nghe · <strong>' + L.items.length + '</strong> đoạn</span><span>Học sinh: <strong>' + esc(NS.name) + '</strong></span></div>' +
+    '<div id="nq"' + (done ? ' class="locked"' : '') + '>' + h + '</div><div id="nres"></div></main></div>' +
+    '<nav class="strip" aria-label="Tiến độ"><div class="in"><div style="flex:1;font-weight:600">' + (done ? 'Đã nộp' : 'Đã làm <span id="ncount">' + nd + '</span>/' + need) + '</div><div class="clock" id="vclock"></div>' +
+    (done ? '' : NS.stage === 1 ? '<button class="btn" id="nnext">Sang Phần 3</button>' : '<button class="btn" id="nsub">Nộp bài</button>') + '</div></nav>';
+  nWire();
+  if(done){ vStopClock(); nShowResult(); }
+  else{
+    vStopClock();
+    var tick = function(){ var el = $("#vclock"); if(!el || !NS || NS.submitted){ vStopClock(); return; } var t = Math.floor((Date.now() - NS.start)/1000); el.textContent = pad(Math.floor(t/60)) + ":" + pad(t%60); };
+    tick(); vTimer = setInterval(tick, 1000);
+  }
+}
+function nWire(){
+  var q = $("#nq");
+  if(NS.submitted) return;
+  if($("#nnext")) $("#nnext").onclick = function(){
+    var miss = nNeed() - nDone();
+    ask((miss ? "Em còn " + miss + " câu ở Phần 1, 2 chưa chọn. " : "") + "Sang Phần 3 thì không sửa được Phần 1, 2 nữa. Em sang Phần 3 nhé?", "Sang Phần 3", "Ở lại").then(function(ok){
+      if(!ok) return; NS.stage = 3; nSave(); nRender();
+      setTimeout(function(){ var el = $$(".nline")[0]; if(el) el.closest("section").scrollIntoView({behavior:"smooth", block:"start"}); }, 60);
+    });
+  };
+  if($("#nsub")) $("#nsub").onclick = nSubmit;
+  q.addEventListener("click", function(e){
+    var b = e.target.closest(".opt"); if(!b || NS.stage > 1) return;
+    NS.ans[b.dataset.j] = +b.dataset.o; nSave();
+    $$('.opt[data-j="' + b.dataset.j + '"]', q).forEach(function(o){ o.setAttribute("aria-checked", o === b ? "true" : "false"); });
+    $("#ncount").textContent = nDone();
+  });
+  $$("[data-bj]", q).forEach(function(inp){ inp.addEventListener("input", function(){ NS.ans[inp.dataset.bj] = inp.value; nSave(); $("#ncount").textContent = nDone(); }); });
+  /* chỉ phát một đoạn một lúc */
+  $$("audio", q).forEach(function(au){ au.addEventListener("play", function(){ $$("audio", q).forEach(function(x){ if(x !== au) x.pause(); }); }); });
+}
+function nSubmit(){
+  var miss = nNeed() - nDone();
+  ask(miss ? "Em còn " + miss + " ô chưa làm. Em vẫn muốn nộp bài? Sau khi nộp sẽ không sửa được." : "Em đã làm đủ. Nộp bài?", "Nộp bài", "Làm tiếp").then(function(ok){
+    if(!ok) return;
+    NS.submitted = Date.now(); nSave(); nRender();
+    setTimeout(function(){ var r = $("#nres"); if(r) r.scrollIntoView({behavior:"smooth", block:"start"}); }, 60);
+  });
+}
+function nShowResult(){
+  var L = NS.L, ans = NS.slots.map(function(sl, j){ var x = NS.ans[j]; return sl.p === 3 ? String(x || "") : (typeof x === "number" ? x : -1); });
+  var r = nScore(L, ans);
+  var code = encodeN({c:NS.c, l:L.id, x:NS.p.t || L.title, n:NS.name, a:ans, t:Math.round((NS.submitted - NS.start)/1000), d:NS.submitted});
+  var pl = r.parts.map(function(p, k){ return "Phần " + (k+1) + ": " + p[0] + "/" + p[1]; }).join(" · ");
+  var msg = "BÀI LUYỆN NGHE\nBài: " + (NS.p.t || L.title) + "\nHọ tên: " + NS.name + "\nĐiểm: " + r.score + "/" + r.total + " (" + pl + ")\nNộp lúc: " + fmtDate(NS.submitted) + "\nMã bài làm: " + code;
+  var script = L.items.map(function(it){
+    return '<div class="nscript"><div style="font-weight:700;color:var(--violet)">Câu ' + esc(it.n) + '</div>' + nAudio(it) + (it.script || []).map(function(ln){
+      return '<p class="nline"' + (ln.end ? ' style="color:var(--ok)"' : '') + '><b>' + esc(ln.s) + ':</b> ' + esc(String(ln.ko).replace(/\[([^\]]+)\]/g, function(_, w){ return w.split("/")[0]; })) + (ln.end ? ' <span class="pill good">câu nói tiếp theo</span>' : '') + (ln.vi ? '<br><span class="muted" style="font-family:var(--ui);font-size:14px">' + esc(ln.vi) + '</span>' : '') + '</p>';
+    }).join("") + '</div>';
+  }).join("");
+  $("#nres").innerHTML = '<div class="panel" id="result"><h2>Em đúng ' + r.score + '/' + r.total + ' câu</h2><p class="muted">' + esc(pl) + '</p>' +
+    '<p style="margin-top:12px">Bấm “Sao chép” rồi dán vào tin nhắn Zalo gửi cho cô.</p><div id="nmsg">' + copyBox(msg, 6) + '</div>' +
+    '<div class="row"><button class="btn ghost" id="nagain">Làm lại để luyện thêm</button></div></div>' +
+    '<div class="card" style="margin-top:16px"><h2>Lời thoại và nghĩa</h2><p class="hint">Em nghe lại và đọc theo lời thoại để luyện thêm.</p>' + script + '</div>';
+  wireCopy($("#nmsg"));
+  $$("#nres audio").forEach(function(au){ au.addEventListener("play", function(){ $$("audio").forEach(function(x){ if(x !== au) x.pause(); }); }); });
+  $("#nagain").onclick = function(){ ask("Làm lại từ đầu? Kết quả lần này em đã gửi cô chưa? Nếu chưa, em sao chép tin nhắn trước nhé.", "Làm lại", "Ở lại").then(function(ok){ if(!ok) return; try{ localStorage.removeItem(NS.key); }catch(e){} nStart(NS.p, L, NS.name); }); };
+}
+
 /* ---------- boot ---------- */
 /* ---------- App cài trên điện thoại (PWA) ----------
    Chèn vào thi-thu/index.html bởi tools/sync_thi_thu.py (không có trong trang quản lý).
-   - Mỗi link bài (#d= thi thử, #v= từ vựng, #l= lộ trình) em đã mở được nhớ trong máy (nari-app-saved).
+   - Mỗi link bài (#d= thi thử, #v= từ vựng, #l= lộ trình, #n= luyện nghe) em đã mở được nhớ trong máy (nari-app-saved).
    - Trang đầu có "Bài của em" (bấm là vào) và ô dán link cô gửi → không phải cài lại app khi có bài mới.
    - Đang ở trong bài có nút "Trang đầu"; nút Quay lại của điện thoại cũng về được. */
-var APP_KEY = "nari-app-saved", APP_KINDS = {l:"Lộ trình từ vựng", v:"Bài từ vựng", d:"Đề thi thử"};
+var APP_KEY = "nari-app-saved", APP_KINDS = {l:"Lộ trình từ vựng", v:"Bài từ vựng", d:"Đề thi thử", n:"Bài luyện nghe"};
 function appParse(s){
-  var m = String(s || "").match(/(?:^|[#&?\s\/])([dvl])=([A-Za-z0-9_-]+\.[0-9a-z]{4})/);
+  var m = String(s || "").match(/(?:^|[#&?\s\/])([dvln])=([A-Za-z0-9_-]+\.[0-9a-z]{4})/);
   if(!m) return null;
   var p = vUnpack(m[2]);
   if(!p) return null;
@@ -1046,7 +1233,7 @@ function appRun(){
   stopClock(); if(typeof vStopClock === "function") vStopClock();
   window.scrollTo(0, 0);
   appRemember();
-  if(!examBoot() && !vocabBoot() && !routeBoot()) studentLanding();
+  if(!examBoot() && !vocabBoot() && !routeBoot() && !ngheBoot()) studentLanding();
 }
 function appGo(h){ history.pushState(null, "", h || location.pathname + location.search); appRun(); }
 var headerHTMLBase = headerHTML;
@@ -1055,7 +1242,7 @@ headerHTML = function(){
   return location.hash ? h.replace('<a class="about"', '<button class="btn ghost apphome" type="button">⌂ Trang đầu</button><a class="about"') : h;
 };
 function appHomeClick(){
-  var busy = [].some.call(app.querySelectorAll("#submit, #vsub"), function(x){ return x.offsetParent; });
+  var busy = [].some.call(app.querySelectorAll("#submit, #vsub, #nsub, #nnext"), function(x){ return x.offsetParent; });
   if(!busy){ appGo(); return; }
   ask("Về trang đầu? Bài đang làm dở máy em vẫn nhớ, mở lại bài là làm tiếp.", "Về trang đầu", "Ở lại").then(function(ok){ if(ok) appGo(); });
 }

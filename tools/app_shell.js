@@ -1,11 +1,11 @@
 /* ---------- App cài trên điện thoại (PWA) ----------
    Chèn vào thi-thu/index.html bởi tools/sync_thi_thu.py (không có trong trang quản lý).
-   - Mỗi link bài (#d= thi thử, #v= từ vựng, #l= lộ trình) em đã mở được nhớ trong máy (nari-app-saved).
+   - Mỗi link bài (#d= thi thử, #v= từ vựng, #l= lộ trình, #n= luyện nghe) em đã mở được nhớ trong máy (nari-app-saved).
    - Trang đầu có "Bài của em" (bấm là vào) và ô dán link cô gửi → không phải cài lại app khi có bài mới.
    - Đang ở trong bài có nút "Trang đầu"; nút Quay lại của điện thoại cũng về được. */
-var APP_KEY = "nari-app-saved", APP_KINDS = {l:"Lộ trình từ vựng", v:"Bài từ vựng", d:"Đề thi thử"};
+var APP_KEY = "nari-app-saved", APP_KINDS = {l:"Lộ trình từ vựng", v:"Bài từ vựng", d:"Đề thi thử", n:"Bài luyện nghe"};
 function appParse(s){
-  var m = String(s || "").match(/(?:^|[#&?\s\/])([dvl])=([A-Za-z0-9_-]+\.[0-9a-z]{4})/);
+  var m = String(s || "").match(/(?:^|[#&?\s\/])([dvln])=([A-Za-z0-9_-]+\.[0-9a-z]{4})/);
   if(!m) return null;
   var p = vUnpack(m[2]);
   if(!p) return null;
@@ -25,7 +25,7 @@ function appRun(){
   stopClock(); if(typeof vStopClock === "function") vStopClock();
   window.scrollTo(0, 0);
   appRemember();
-  if(!examBoot() && !vocabBoot() && !routeBoot()) studentLanding();
+  if(!examBoot() && !vocabBoot() && !routeBoot() && !ngheBoot()) studentLanding();
 }
 function appGo(h){ history.pushState(null, "", h || location.pathname + location.search); appRun(); }
 var headerHTMLBase = headerHTML;
@@ -34,7 +34,7 @@ headerHTML = function(){
   return location.hash ? h.replace('<a class="about"', '<button class="btn ghost apphome" type="button">⌂ Trang đầu</button><a class="about"') : h;
 };
 function appHomeClick(){
-  var busy = [].some.call(app.querySelectorAll("#submit, #vsub"), function(x){ return x.offsetParent; });
+  var busy = [].some.call(app.querySelectorAll("#submit, #vsub, #nsub, #nnext"), function(x){ return x.offsetParent; });
   if(!busy){ appGo(); return; }
   ask("Về trang đầu? Bài đang làm dở máy em vẫn nhớ, mở lại bài là làm tiếp.", "Về trang đầu", "Ở lại").then(function(ok){ if(ok) appGo(); });
 }

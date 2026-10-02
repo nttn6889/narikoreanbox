@@ -17,7 +17,7 @@ self.addEventListener("fetch", function(e){
   if(r.method !== "GET" || new URL(r.url).origin !== location.origin) return;
   var nav = r.mode === "navigate";
   e.respondWith(fetch(r).then(function(res){
-    if(res.ok){ var copy = res.clone(); caches.open(CACHE).then(function(c){ c.put(nav ? "./" : r, copy); }); }
+    if(res.ok && res.status !== 206){ var copy = res.clone(); caches.open(CACHE).then(function(c){ c.put(nav ? "./" : r, copy); }); }
     return res;
   }).catch(function(){
     return caches.match(nav ? "./" : r, {ignoreSearch: true}).then(function(m){ return m || Response.error(); });

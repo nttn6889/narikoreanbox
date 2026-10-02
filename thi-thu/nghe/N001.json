@@ -1,0 +1,49 @@
+{
+  "id": "N001",
+  "title": "Câu 4~6 · Chọn câu nói tiếp theo",
+  "src": "Track 2-04 ~ 2-06",
+  "items": [
+    {
+      "n": 4,
+      "audio": "nghe/audio/N001-4.mp3",
+      "script": [
+        {"s": "남자", "ko": "감기는 좀 어때요?", "vi": "Cảm của chị đỡ chưa?"},
+        {"s": "여자", "ko": "약국에서 약을 [사다] 먹었는데 잘 안 [나아요].", "vi": "Tôi mua thuốc ở hiệu thuốc về uống mà không khỏi mấy."},
+        {"s": "남자", "ko": "병원에 한번 가 보지 그래요?", "vi": "Sao chị không thử đi bệnh viện một lần xem?", "end": true}
+      ],
+      "qs": [
+        {"q": "Người phụ nữ đang gặp vấn đề gì về sức khỏe?", "o": ["Bị cảm", "Bị đau bụng", "Bị đau chân", "Bị mất ngủ"], "a": 0},
+        {"q": "Cô ấy đã làm gì? Kết quả thế nào?", "o": ["Mua thuốc ở hiệu thuốc về uống nhưng chưa khỏi", "Đi bệnh viện khám và đã khỏi hẳn", "Chưa uống thuốc nên vẫn còn ốm", "Uống thuốc ở hiệu thuốc và đã khỏi"], "a": 0}
+      ],
+      "next": {"q": "Người đàn ông sẽ nói:", "o": ["Bạn thử đến bệnh viện khám xem sao?", "May quá, giờ khỏi hẳn rồi."], "a": 0}
+    },
+    {
+      "n": 5,
+      "audio": "nghe/audio/N001-5.mp3",
+      "script": [
+        {"s": "여자", "ko": "이번 주말에 도자기 체험 가기로 한 거, 언제 갈까?", "vi": "Vụ cuối tuần này đi trải nghiệm làm gốm ấy, mình đi hôm nào?"},
+        {"s": "남자", "ko": "토요일은 [약속]이 있고 일요일은 괜찮아.", "vi": "Thứ bảy mình có hẹn rồi, chủ nhật thì được."},
+        {"s": "여자", "ko": "그럼 일요일로 예약할게.", "vi": "Vậy mình đặt lịch ngày chủ nhật nhé.", "end": true}
+      ],
+      "qs": [
+        {"q": "Hai người định đi làm gì vào cuối tuần?", "o": ["Đi trải nghiệm làm gốm", "Đi xem triển lãm tranh", "Đi học nấu ăn", "Đi mua đồ gốm"], "a": 0},
+        {"q": "Người đàn ông rảnh vào ngày nào?", "o": ["Chủ nhật", "Thứ bảy", "Cả thứ bảy và chủ nhật", "Không rảnh ngày nào"], "a": 0}
+      ],
+      "next": {"q": "Người phụ nữ sẽ nói:", "o": ["Vậy mình đặt lịch ngày Chủ nhật nhé.", "Mình đã bắt đầu học làm gốm rồi."], "a": 0}
+    },
+    {
+      "n": 6,
+      "audio": "nghe/audio/N001-6.mp3",
+      "script": [
+        {"s": "남자", "ko": "저기 [전시장]이 있네. 한번 들어가 보자.", "vi": "Đằng kia có phòng triển lãm kìa. Mình vào xem thử đi."},
+        {"s": "여자", "ko": "(놀라며) 어, 근데 [음료수]는 못 갖고 들어가나 봐.", "vi": "(Ngạc nhiên) Ơ, nhưng hình như không được mang đồ uống vào."},
+        {"s": "남자", "ko": "그러네. 얼른 마시고 들어가자.", "vi": "Ừ nhỉ. Mình uống nhanh rồi vào thôi.", "end": true}
+      ],
+      "qs": [
+        {"q": "Hai người nhìn thấy địa điểm gì?", "o": ["Phòng triển lãm", "Quán cà phê", "Rạp chiếu phim", "Cửa hàng đồ uống"], "a": 0},
+        {"q": "Người phụ nữ ngạc nhiên vì phát hiện ra điều gì?", "o": ["Không được mang đồ uống vào trong", "Phòng triển lãm đã đóng cửa", "Phải mua vé trước mới được vào", "Trong phòng triển lãm có bán đồ uống"], "a": 0}
+      ],
+      "next": {"q": "Người đàn ông sẽ nói:", "o": ["Ừ nhỉ, mình uống nhanh rồi vào thôi.", "Ừ, mình đi mua đồ uống trước đã."], "a": 0}
+    }
+  ]
+}
