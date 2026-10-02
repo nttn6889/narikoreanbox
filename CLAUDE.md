@@ -1,6 +1,7 @@
 # Hàn Ngữ Nari — trang web cho học sinh
 
-Site tĩnh, deploy bằng Netlify từ repo này (mỗi lần push nhánh chính là site tự cập nhật).
+Site tĩnh, chạy bằng GitHub Pages từ nhánh `main` (push lên `main` là site tự cập nhật sau ~1 phút).
+Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối không đưa dữ liệu học sinh vào repo.
 
 ## Phòng thi thử (`thi-thu/`)
 - Trang **quản lý** của cô vẫn nằm trên claude.ai: https://claude.ai/artifact/7EWoCB9sEomX2FHY8d1QY8
