@@ -1,0 +1,156 @@
+{
+  "id": "N008",
+  "title": "Câu 27~32 · Ý định, nghề nghiệp, thái độ của người nói",
+  "src": "TOPIK II kỳ 96 · Track 2-27, 2-29, 2-31",
+  "items": [
+    {
+      "n": "27~28",
+      "audio": "nghe/audio/N008-27.mp3",
+      "script": [
+        {
+          "s": "남자",
+          "ko": "올해 우리 대학 [축제]에 가수 김민수 씨가 온대. 언제부턴가 대학 축제가 가수 콘서트처럼 변해 가는 거 같아.",
+          "vi": "Nghe nói năm nay ca sĩ Kim Minsu sẽ đến lễ hội trường mình. Không biết từ bao giờ lễ hội đại học cứ dần biến thành buổi hòa nhạc của ca sĩ."
+        },
+        {
+          "s": "여자",
+          "ko": "난 좋은데. 김민수 씨 팬인데 표가 비싸서 콘서트에 못 갔거든.",
+          "vi": "Mình thì thích. Mình là fan của Kim Minsu mà vé đắt quá nên chưa đi concert được."
+        },
+        {
+          "s": "남자",
+          "ko": "작년 축제 때 학과에서 하는 행사엔 [참여]하지 않고 공연만 보러 오는 학생들이 많았잖아. 관심이 공연에만 [집중되는] 거 같아서 좀 씁쓸해.",
+          "vi": "Lễ hội năm ngoái có nhiều sinh viên không tham gia sự kiện của các khoa mà chỉ đến xem biểu diễn. Sự quan tâm hình như chỉ dồn vào biểu diễn nên mình thấy hơi chạnh lòng."
+        },
+        {
+          "s": "여자",
+          "ko": "그래도 유명 가수가 오면 학교 [홍보]도 되고 좋은 면도 있을 거야.",
+          "vi": "Nhưng ca sĩ nổi tiếng đến thì cũng quảng bá được cho trường, chắc cũng có mặt tốt."
+        },
+        {
+          "s": "남자",
+          "ko": "올해는 작년보다 학생이 직접 참여하고 [교류하는] 행사가 더 줄어들었어. 그건 좀 잘못된 것 같아.",
+          "vi": "Năm nay các sự kiện để sinh viên trực tiếp tham gia và giao lưu còn ít hơn năm ngoái. Mình thấy như vậy là không đúng."
+        }
+      ],
+      "qs": [
+        {
+          "q": "Người đàn ông nói với ý định gì?",
+          "o": [
+            "Để chỉ ra vấn đề của lễ hội đại học",
+            "Để giải thích sự cần thiết của lễ hội đại học",
+            "Để cho biết phản ứng về lễ hội đại học",
+            "Để quảng bá cho ca sĩ biểu diễn ở lễ hội"
+          ],
+          "a": 0
+        },
+        {
+          "q": "Nội dung nào giống với bài nghe?",
+          "o": [
+            "Người phụ nữ tán thành việc mời ca sĩ nổi tiếng đến lễ hội",
+            "Người phụ nữ đã từng đi concert của Kim Minsu",
+            "Trường của người đàn ông năm nay không tổ chức lễ hội",
+            "Lễ hội năm ngoái có nhiều sinh viên tham gia sự kiện của khoa"
+          ],
+          "a": 0
+        }
+      ]
+    },
+    {
+      "n": "29~30",
+      "audio": "nghe/audio/N008-29.mp3",
+      "script": [
+        {
+          "s": "여자",
+          "ko": "박사님께서는 지난 20년 동안 제주 바다와 함께해 오셨는데요. 현재 제주 바다의 해양 상태는 어떤가요?",
+          "vi": "Tiến sĩ đã gắn bó với biển Jeju suốt 20 năm qua. Hiện nay tình trạng biển Jeju như thế nào ạ?"
+        },
+        {
+          "s": "남자",
+          "ko": "[해조류]가 줄어들고 [아열대] 생물들이 늘어나고 있습니다. [기후] 변화 때문이죠. 해조류를 먹이로 하는 생물들도 영향을 받고 있고요.",
+          "vi": "Rong tảo đang giảm đi còn sinh vật cận nhiệt đới đang tăng lên. Đó là do biến đổi khí hậu. Các sinh vật lấy rong tảo làm thức ăn cũng đang bị ảnh hưởng."
+        },
+        {
+          "s": "여자",
+          "ko": "그동안은 제주 바다의 [수온] 변화와 [생태계]의 관계에 대한 논문을 많이 발표해 오셨는데요. 최근에는 어떤 연구를 수행하고 계신지요?",
+          "vi": "Từ trước đến nay ông đã công bố nhiều bài báo về mối quan hệ giữa sự thay đổi nhiệt độ nước biển Jeju và hệ sinh thái. Gần đây ông đang thực hiện nghiên cứu gì ạ?"
+        },
+        {
+          "s": "남자",
+          "ko": "작년부터 다른 국가와 공동으로 팀을 꾸려서 태평양의 어종 [분포]에 대해 조사하고 있습니다.",
+          "vi": "Từ năm ngoái, tôi lập nhóm chung với các nước khác để khảo sát sự phân bố các loài cá ở Thái Bình Dương."
+        }
+      ],
+      "qs": [
+        {
+          "q": "Người đàn ông là ai?",
+          "o": [
+            "Người nghiên cứu hệ sinh thái biển",
+            "Người lắp đặt công trình trên biển",
+            "Người quảng bá thể thao biển",
+            "Người phát triển năng lượng biển"
+          ],
+          "a": 0
+        },
+        {
+          "q": "Nội dung nào giống với bài nghe?",
+          "o": [
+            "Người đàn ông đang lập nhóm làm việc cùng nước khác",
+            "Sinh vật cận nhiệt đới ở biển Jeju đang giảm đi",
+            "Người đàn ông bắt đầu làm việc liên quan đến biển từ năm ngoái",
+            "Nguyên nhân rong tảo ở biển Jeju giảm đi vẫn chưa được làm rõ"
+          ],
+          "a": 0
+        }
+      ]
+    },
+    {
+      "n": "31~32",
+      "audio": "nghe/audio/N008-31.mp3",
+      "script": [
+        {
+          "s": "여자",
+          "ko": "오토바이 사고를 줄이려면 현재 [뒷면]에 있는 [번호판]을 더 크게 만들고 [단속]을 강화하는 것이 최선의 방안이라고 생각합니다.",
+          "vi": "Tôi nghĩ để giảm tai nạn xe máy, cách tốt nhất là làm biển số hiện đang ở mặt sau to hơn và tăng cường kiểm soát xử phạt."
+        },
+        {
+          "s": "남자",
+          "ko": "그런데 현재 단속 시스템으로는 번호판이 아무리 커도 뒷면에 있어서 [식별]이 어렵습니다. 앞에도 번호판을 달아야 합니다.",
+          "vi": "Nhưng với hệ thống kiểm soát hiện nay, biển số dù to đến đâu nhưng ở mặt sau thì cũng khó nhận diện. Phải gắn biển số cả ở phía trước nữa."
+        },
+        {
+          "s": "여자",
+          "ko": "하지만 오토바이는 앞면에 번호판을 부착하기 어려운 [구조]입니다.",
+          "vi": "Nhưng xe máy có cấu tạo khó gắn biển số ở mặt trước."
+        },
+        {
+          "s": "남자",
+          "ko": "그런 문제 때문에 앞면에 스티커로 된 번호판을 부착한 해외의 [사례]도 있습니다. 매년 증가하는 오토바이 사고를 감소시키려면 더 이상 미룰 수만은 없는 문제입니다.",
+          "vi": "Vì vấn đề đó mà ở nước ngoài cũng có trường hợp dán biển số dạng nhãn dán ở mặt trước. Muốn giảm tai nạn xe máy đang tăng mỗi năm thì đây là vấn đề không thể trì hoãn thêm nữa."
+        }
+      ],
+      "qs": [
+        {
+          "q": "Suy nghĩ chính của người đàn ông là gì?",
+          "o": [
+            "Muốn giảm tai nạn xe máy thì phải cải tiến chế độ gắn biển số",
+            "Phải xử phạt nặng các vi phạm luật giao thông của xe máy",
+            "Phải tăng thêm thiết bị kiểm soát để phòng tai nạn xe máy",
+            "Phải tổ chức giáo dục an toàn cho người lái xe máy"
+          ],
+          "a": 0
+        },
+        {
+          "q": "Thái độ của người đàn ông là gì?",
+          "o": [
+            "Phản bác ý kiến của đối phương một cách nhất quán",
+            "Đồng ý một phần với phương án giải quyết vấn đề",
+            "Bàn bạc với đối phương để tìm điểm thỏa hiệp",
+            "Yêu cầu đối phương đưa ra căn cứ rõ ràng"
+          ],
+          "a": 0
+        }
+      ]
+    }
+  ]
+}

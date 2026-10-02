@@ -1,0 +1,136 @@
+{
+  "id": "N010",
+  "title": "Câu 39~44 · Đối thoại chuyên đề, bài giảng, phim tài liệu",
+  "src": "TOPIK II kỳ 96 · Track 2-39, 2-41, 2-43",
+  "items": [
+    {
+      "n": "39~40",
+      "audio": "nghe/audio/N010-39.mp3",
+      "script": [
+        {
+          "s": "여자",
+          "ko": "그럼 본인이 희망하면 성인이 된 후에도 [보육원]에서 지낼 수 있게 된 거네요. 보육원 퇴소 시기가 만 18세에서 24세까지로 늦춰진 거죠?",
+          "vi": "Vậy là nếu bản thân mong muốn thì kể cả sau khi trưởng thành vẫn có thể ở lại trại trẻ. Thời điểm rời trại trẻ đã được lùi từ đủ 18 tuổi đến 24 tuổi phải không ạ?"
+        },
+        {
+          "s": "남자",
+          "ko": "네. 그뿐만 아니라 정부에서는 사업비 [규모]를 늘려 보육원에서 나온 청년이 [자립]을 하는 데에 필요한 지원을 확대하고 있는데요. 올해부터 매달 주는 자립 [수당]을 50만 원으로 올렸고, 의료비도 일부 보조합니다.",
+          "vi": "Vâng. Không chỉ vậy, chính phủ còn tăng quy mô kinh phí để mở rộng hỗ trợ cần thiết cho thanh niên rời trại trẻ tự lập. Từ năm nay, trợ cấp tự lập hằng tháng được nâng lên 500.000 won, chi phí y tế cũng được hỗ trợ một phần."
+        },
+        {
+          "s": "남자",
+          "ko": "또한 기존 담당 부서에 [심리] 상담이 가능한 전담 인력도 보충해 상담 서비스를 지원하고 있고요. 전국 17개 시, 도에서는 1,000만 원 이상의 자립 정착금도 지급하고 있습니다.",
+          "vi": "Ngoài ra, bộ phận phụ trách hiện có cũng được bổ sung nhân lực chuyên trách có thể tư vấn tâm lý để hỗ trợ dịch vụ tư vấn. 17 thành phố, tỉnh trên toàn quốc cũng đang chi trả khoản tiền ổn định cuộc sống tự lập từ 10 triệu won trở lên."
+        }
+      ],
+      "qs": [
+        {
+          "q": "Nội dung trước đoạn hội thoại này là gì?",
+          "o": [
+            "Thời gian thanh thiếu niên không có người bảo hộ được ở trại trẻ đã được kéo dài",
+            "Số thanh thiếu niên sống không có người bảo hộ đã giảm",
+            "Hỗ trợ kinh tế của chính phủ để thanh niên có chỗ ở đã giảm",
+            "Đang tuyển thêm chuyên gia tư vấn tâm lý cho thanh thiếu niên"
+          ],
+          "a": 0
+        },
+        {
+          "q": "Nội dung nào giống với bài nghe?",
+          "o": [
+            "Đang có tư vấn tâm lý cho thanh niên chuẩn bị tự lập",
+            "Tiền ổn định cuộc sống tự lập sẽ được chi trả từ năm sau",
+            "Đã thành lập mới bộ phận phụ trách thanh niên chuẩn bị tự lập",
+            "Từ năm nay kinh phí hỗ trợ thanh niên chuẩn bị tự lập bị cắt giảm"
+          ],
+          "a": 0
+        }
+      ]
+    },
+    {
+      "n": "41~42",
+      "audio": "nghe/audio/N010-41.mp3",
+      "script": [
+        {
+          "s": "여자",
+          "ko": "여기 사진에 붉은 [벽돌]과 푸른 빛의 창틀이 어우러진 프랑스풍의 서양식 2층 [건물] 보이시죠? 이곳은 바로 ‘돈덕전’입니다.",
+          "vi": "Mọi người thấy tòa nhà hai tầng kiểu phương Tây phong cách Pháp với gạch đỏ hài hòa cùng khung cửa sổ màu xanh trong ảnh này chứ? Đây chính là “Dondeokjeon”."
+        },
+        {
+          "s": "여자",
+          "ko": "서양 열강에 근대화된 나라의 [위상]을 보여 주고 싶었던 고종은 즉위 40주년을 경축하는 국제적인 행사를 하기 위해 1902년부터 1년여에 걸쳐 이곳을 만들었습니다.",
+          "vi": "Vua Gojong, người muốn cho các cường quốc phương Tây thấy vị thế của một đất nước đã cận đại hóa, đã cho xây nơi này trong hơn một năm từ năm 1902 để tổ chức sự kiện quốc tế mừng 40 năm lên ngôi."
+        },
+        {
+          "s": "여자",
+          "ko": "이곳은 한동안 고종이 [외교] 사절을 접견하고 국외 주요 인사들과 [연회]를 베푸는 장소이자 국빈급 외국인의 [숙소]로 사용됐습니다. 이렇게 돈덕전은 근대 국가로서의 위상을 국제 사회에 한껏 드러내고자 한 곳이었습니다.",
+          "vi": "Trong một thời gian, nơi đây là chỗ vua Gojong tiếp kiến sứ thần ngoại giao, mở tiệc chiêu đãi các nhân vật quan trọng nước ngoài, đồng thời là nơi ở của khách nước ngoài cấp quốc khách. Như vậy, Dondeokjeon là nơi muốn thể hiện hết mức vị thế của một quốc gia cận đại với cộng đồng quốc tế."
+        }
+      ],
+      "qs": [
+        {
+          "q": "Nội dung chính của bài giảng là gì?",
+          "o": [
+            "Dondeokjeon là không gian ngoại giao thể hiện vị thế của quốc gia cận đại",
+            "Việc xây dựng Dondeokjeon đã áp dụng kỹ thuật đặc biệt",
+            "Dondeokjeon được xây dựng nhờ thu hút vốn nước ngoài",
+            "Dondeokjeon vẫn giữ nguyên hình dạng ban đầu nhờ quản lý chặt chẽ"
+          ],
+          "a": 0
+        },
+        {
+          "q": "Nội dung nào giống với bài nghe?",
+          "o": [
+            "Nơi này từng được dùng làm chỗ tổ chức tiệc chiêu đãi",
+            "Nơi này mất 40 năm mới xây xong",
+            "Nơi này thể hiện phong cách kiến trúc truyền thống của Hàn Quốc",
+            "Nơi này được dùng làm chỗ ở cho quan chức cấp cao trong nước"
+          ],
+          "a": 0
+        }
+      ]
+    },
+    {
+      "n": "43~44",
+      "audio": "nghe/audio/N010-43.mp3",
+      "script": [
+        {
+          "s": "남자",
+          "ko": "눈 덮인 설산 같은 소금 더미, 뜨거운 태양 아래 소금 장인이 묵묵히 일하는 이곳 [염전]. 드넓은 [갯벌]에 칸막이를 만들고 바닷물을 가둬 놓았다.",
+          "vi": "Những đống muối như núi tuyết phủ trắng, nơi đây là ruộng muối, nơi người thợ muối lặng lẽ làm việc dưới nắng nóng. Trên bãi bùn rộng lớn, người ta làm các vách ngăn rồi giữ nước biển lại."
+        },
+        {
+          "s": "남자",
+          "ko": "바닷물이 증발하면서 염전 바닥에 하얀 정육면체 [결정]이 생겨나기 시작한다. 태양이 좀 더 머물고 바람이 살랑살랑 불어 주니 소금 결정이 눈처럼 쌓인다.",
+          "vi": "Khi nước biển bốc hơi, các tinh thể hình lập phương màu trắng bắt đầu hình thành dưới đáy ruộng muối. Mặt trời nán lại lâu hơn, gió thổi hiu hiu nên tinh thể muối chất lên như tuyết."
+        },
+        {
+          "s": "남자",
+          "ko": "이제 소금을 [수확할] 시간. 염전 일꾼은 끌개로 부지런히 염전 바닥 가득한 소금 결정을 모아 한데 쌓아 놓는다. 포장하기 전 소금에 남아 있는 [수분]을 조금이라도 더 제거하기 위함이다. 이윽고 긴 인내의 끝에 자연과 인간이 빚어낸 소금이 탄생한다.",
+          "vi": "Giờ là lúc thu hoạch muối. Người làm muối chăm chỉ dùng cào gom tinh thể muối phủ đầy đáy ruộng lại, chất thành một chỗ. Đó là để loại bỏ thêm dù chỉ một chút hơi nước còn lại trong muối trước khi đóng gói. Cuối cùng, sau bao nhẫn nại, muối – thứ được tạo nên bởi thiên nhiên và con người – ra đời."
+        }
+      ],
+      "qs": [
+        {
+          "q": "Bài nói về nội dung gì?",
+          "o": [
+            "Quá trình sản xuất muối",
+            "Cách bảo quản muối",
+            "Giá trị kinh tế của muối",
+            "Ảnh hưởng của muối đến sức khỏe"
+          ],
+          "a": 0
+        },
+        {
+          "q": "Vì sao người ta chất muối lại một chỗ?",
+          "o": [
+            "Để loại bỏ hơi nước còn lại trong muối",
+            "Để quảng bá cho ruộng muối",
+            "Để chuyển sang ruộng muối khác",
+            "Để kiểm tra sản lượng muối"
+          ],
+          "a": 0
+        }
+      ]
+    }
+  ]
+}

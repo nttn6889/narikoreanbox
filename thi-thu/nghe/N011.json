@@ -1,0 +1,136 @@
+{
+  "id": "N011",
+  "title": "Câu 45~50 · Bài giảng và đối thoại chuyên sâu",
+  "src": "TOPIK II kỳ 96 · Track 2-45, 2-47, 2-49",
+  "items": [
+    {
+      "n": "45~46",
+      "audio": "nghe/audio/N011-45.mp3",
+      "script": [
+        {
+          "s": "여자",
+          "ko": "무쇠로 만든 전통 가마솥에 밥을 지으면 밥맛이 참 좋은데요. 왜 그런 걸까요? 첫째, 솥뚜껑 [무게] 때문입니다. 솥뚜껑은 솥 무게의 3분의 1에 달할 정도로 무겁습니다.",
+          "vi": "Nấu cơm bằng nồi gang truyền thống thì cơm rất ngon. Tại sao vậy? Thứ nhất là do trọng lượng của nắp nồi. Nắp nồi nặng đến mức bằng một phần ba trọng lượng của nồi."
+        },
+        {
+          "s": "여자",
+          "ko": "이 솥뚜껑으로 솥을 덮으면 공기와 수증기가 빠져나가지 못하도록 [밀폐할] 수 있죠. 덕분에 내부 [압력]이 올라가고 고온 상태가 유지돼 쌀이 익는 속도가 빨라집니다. 이렇게 익히면 쌀의 전분이 포도당으로 빨리 분해돼 밥의 풍미가 올라갑니다.",
+          "vi": "Đậy nồi bằng nắp này thì có thể bịt kín để không khí và hơi nước không thoát ra ngoài. Nhờ đó áp suất bên trong tăng lên, nhiệt độ cao được duy trì nên gạo chín nhanh hơn. Nấu như vậy thì tinh bột trong gạo nhanh chóng phân giải thành đường glucose nên cơm thơm ngon hơn."
+        },
+        {
+          "s": "여자",
+          "ko": "둘째, 솥 바닥의 [두께] 때문에 밥맛이 깊어집니다. 불에 닿는 중앙 부분은 두껍고 가장자리로 갈수록 얇아지는데요. 그래서 열이 솥 전체에 [균일하게] 전달돼 쌀알 하나하나가 골고루 잘 익는 겁니다.",
+          "vi": "Thứ hai, nhờ độ dày của đáy nồi mà cơm đậm vị hơn. Phần giữa tiếp xúc với lửa thì dày, càng ra mép càng mỏng. Vì vậy nhiệt được truyền đều khắp nồi nên từng hạt gạo đều chín kỹ."
+        }
+      ],
+      "qs": [
+        {
+          "q": "Nội dung nào giống với bài nghe?",
+          "o": [
+            "Nắp nồi gang có vai trò làm tăng áp suất bên trong nồi",
+            "Đáy nồi gang mỏng nhất ở phần giữa",
+            "Nắp nồi gang càng nhẹ thì cơm càng ngon",
+            "Nấu cơm bằng nồi gang thì gạo chín chậm"
+          ],
+          "a": 0
+        },
+        {
+          "q": "Cách nói của người phụ nữ là gì?",
+          "o": [
+            "Liệt kê lý do và cho biết nguyên lý",
+            "Dự đoán kết quả thông qua dữ liệu",
+            "Phân tích tài liệu để định nghĩa khái niệm",
+            "Chỉ ra vấn đề theo tiêu chuẩn đã đặt ra"
+          ],
+          "a": 0
+        }
+      ]
+    },
+    {
+      "n": "47~48",
+      "audio": "nghe/audio/N011-47.mp3",
+      "script": [
+        {
+          "s": "여자",
+          "ko": "건실한 기업을 만들고자 도입된 사외 이사 [제도]가 법제화된 지도 벌써 25년이 지났는데요. 그 [실효성] 논란이 끊이지 않습니다.",
+          "vi": "Chế độ giám đốc độc lập (thành viên HĐQT bên ngoài) được áp dụng nhằm xây dựng doanh nghiệp lành mạnh đã được luật hóa 25 năm rồi. Nhưng tranh cãi về hiệu quả thực tế của nó vẫn không ngừng."
+        },
+        {
+          "s": "남자",
+          "ko": "사외 이사 제도는 기업 내부자 이외에 외부 [전문가]도 이사회에 참여시키는 제도로, 기업 내 권력 집중을 막고 경영에 전문 지식을 활용하기 위해 도입됐습니다.",
+          "vi": "Chế độ giám đốc độc lập là chế độ cho cả chuyên gia bên ngoài, ngoài người trong doanh nghiệp, tham gia hội đồng quản trị; nó được áp dụng để ngăn tập trung quyền lực trong doanh nghiệp và tận dụng kiến thức chuyên môn vào việc kinh doanh."
+        },
+        {
+          "s": "남자",
+          "ko": "그러나 경영진에게도 사외 이사 [추천권]이 있어서 자신들과 친분이 있는 인물을 추천하고, 그러다 보니 이들이 경영진을 견제하기란 쉽지 않습니다. 또 전문성이 검증되지 않은 인물이 선임되기도 해 제도의 취지를 무색하게 하죠. 후보 추천 방법을 [개선하고] 자격 검증을 강화하는 등의 [대책] 마련이 시급합니다.",
+          "vi": "Tuy nhiên ban điều hành cũng có quyền đề cử giám đốc độc lập nên họ đề cử người thân quen với mình, vì thế những người này khó mà kiềm chế ban điều hành. Ngoài ra còn có người chưa được kiểm chứng chuyên môn cũng được bổ nhiệm, làm mục đích của chế độ trở nên vô nghĩa. Cần gấp rút đưa ra các biện pháp như cải tiến cách đề cử ứng viên và tăng cường kiểm tra tư cách."
+        }
+      ],
+      "qs": [
+        {
+          "q": "Nội dung nào giống với bài nghe?",
+          "o": [
+            "Ban điều hành có thể trực tiếp đề cử giám đốc độc lập",
+            "Chế độ này mới được thực hiện chưa lâu",
+            "Giám đốc độc lập không có tư cách tham gia hội đồng quản trị",
+            "Nhờ chế độ này mà tranh cãi về tư cách giám đốc độc lập đã được giải quyết"
+          ],
+          "a": 0
+        },
+        {
+          "q": "Thái độ của người đàn ông là gì?",
+          "o": [
+            "Chỉ ra giới hạn của chế độ và thúc giục biện pháp cải tiến",
+            "Nhấn mạnh sự cần thiết và ý nghĩa của chế độ",
+            "Cảnh giác với việc áp dụng mở rộng quá mức chế độ",
+            "Nêu nội dung chế độ và kêu gọi sự quan tâm của xã hội"
+          ],
+          "a": 0
+        }
+      ]
+    },
+    {
+      "n": "49~50",
+      "audio": "nghe/audio/N011-49.mp3",
+      "script": [
+        {
+          "s": "남자",
+          "ko": "얼마 전 대한민국의 [로켓] ‘누리호’가 우주 상공에 [위성]을 올려놓기 위해 발사됐는데요. 그 시각이 콕 집어 저녁 6시 24분이었습니다. 왜 발사 시각을 분 단위까지 철저히 계산했을까요? 이는 누리호에 실린 위성 때문이었습니다.",
+          "vi": "Cách đây không lâu, tên lửa “Nuri” của Hàn Quốc đã được phóng để đưa vệ tinh lên quỹ đạo. Thời điểm đó chính xác là 6 giờ 24 phút tối. Tại sao thời điểm phóng lại được tính toán kỹ lưỡng đến từng phút? Đó là vì vệ tinh được chở trên tên lửa Nuri."
+        },
+        {
+          "s": "남자",
+          "ko": "이 위성에는 정교한 [관측] 자료를 제공해 줄 영상 레이더가 탑재돼 있는데요. 전력 [소비]가 굉장해 이 위성이 임무를 수행하려면 항상 전력이 필요합니다. 이러한 이유로 태양 전지를 부착해 충전하게 하였죠.",
+          "vi": "Vệ tinh này được lắp radar hình ảnh có thể cung cấp dữ liệu quan sát tinh vi. Mức tiêu thụ điện rất lớn nên để vệ tinh thực hiện nhiệm vụ thì luôn cần điện. Vì lý do này người ta đã gắn pin mặt trời để nạp điện."
+        },
+        {
+          "s": "남자",
+          "ko": "그래서 24시간 내내 태양을 볼 수 있는 [궤도] 안에 위성을 안착시켜야 했는데요. 누리호 발사 위치와 지구의 움직임 등을 따져서 이 궤도에 [진입할] 수 있는 시점을 계산하니 그 시각이 딱 6시 24분이었던 겁니다.",
+          "vi": "Vì vậy phải đưa vệ tinh vào ổn định trong quỹ đạo có thể nhìn thấy mặt trời suốt 24 giờ. Tính toán vị trí phóng tên lửa Nuri, chuyển động của Trái Đất… để tìm thời điểm có thể đi vào quỹ đạo này thì đúng là 6 giờ 24 phút."
+        }
+      ],
+      "qs": [
+        {
+          "q": "Nội dung nào giống với bài nghe?",
+          "o": [
+            "Ở quỹ đạo vệ tinh đã vào, lúc nào cũng nhận được ánh nắng mặt trời",
+            "Vệ tinh lần này không gắn pin mặt trời",
+            "Tên lửa Nuri sắp được phóng để quan sát vũ trụ",
+            "Radar hình ảnh lắp trên vệ tinh tiêu thụ ít điện"
+          ],
+          "a": 0
+        },
+        {
+          "q": "Cách nói của người đàn ông là gì?",
+          "o": [
+            "Giải thích một cách khoa học bối cảnh quyết định thời điểm phóng",
+            "Định nghĩa lại ý nghĩa lịch sử khoa học của việc phóng tàu vũ trụ",
+            "Dự đoán vấn đề vệ tinh có thể gây ra trong vũ trụ",
+            "Đưa ra cách giải quyết vấn đề dựa trên kiến thức thiên văn học"
+          ],
+          "a": 0
+        }
+      ]
+    }
+  ]
+}

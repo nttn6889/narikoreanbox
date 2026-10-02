@@ -1,0 +1,111 @@
+{
+  "id": "N003",
+  "title": "Câu 7~8 · Chọn câu nói tiếp theo",
+  "src": "TOPIK II kỳ 96 · Track 2-07 ~ 2-08",
+  "items": [
+    {
+      "n": 7,
+      "audio": "nghe/audio/N003-7.mp3",
+      "script": [
+        {
+          "s": "여자",
+          "ko": "지난주에 [면접] 본 회사에서 연락 왔어?",
+          "vi": "Công ty cậu phỏng vấn tuần trước đã liên lạc chưa?"
+        },
+        {
+          "s": "남자",
+          "ko": "아니. 오늘까지 알려 준다고 했는데 [소식]이 없네. 벌써 세 시인데…….",
+          "vi": "Chưa. Họ bảo đến hôm nay sẽ báo mà vẫn chưa có tin gì. Đã ba giờ rồi…"
+        },
+        {
+          "s": "여자",
+          "ko": "아직 시간이 있으니까 기다려 봐.",
+          "vi": "Vẫn còn thời gian mà, cậu cứ chờ xem.",
+          "end": true
+        }
+      ],
+      "qs": [
+        {
+          "q": "Người đàn ông đang chờ điều gì?",
+          "o": [
+            "Kết quả phỏng vấn của công ty",
+            "Lịch phỏng vấn của công ty",
+            "Điện thoại của bạn gái",
+            "Thư mời nhập học"
+          ],
+          "a": 0
+        },
+        {
+          "q": "Công ty đã hẹn báo kết quả khi nào?",
+          "o": [
+            "Trong hôm nay",
+            "Tuần trước",
+            "Ngày mai",
+            "Lúc ba giờ"
+          ],
+          "a": 0
+        }
+      ],
+      "next": {
+        "q": "Người phụ nữ sẽ nói:",
+        "o": [
+          "Vẫn còn thời gian mà, cậu cứ chờ xem.",
+          "Đã xin được việc rồi à, chúc mừng cậu nhé."
+        ],
+        "a": 0
+      }
+    },
+    {
+      "n": 8,
+      "audio": "nghe/audio/N003-8.mp3",
+      "script": [
+        {
+          "s": "여자",
+          "ko": "사장님. 이 바지, [길이]를 좀 줄여 주실 수 있나요?",
+          "vi": "Chú chủ ơi. Chú sửa ngắn chiếc quần này giúp cháu được không ạ?"
+        },
+        {
+          "s": "남자",
+          "ko": "이런 바지는 [줄이면] 아랫부분 [모양]이 좀 달라지는데, 괜찮으세요?",
+          "vi": "Loại quần này mà cắt ngắn thì dáng phần dưới sẽ hơi khác đi, cô có sao không?"
+        },
+        {
+          "s": "여자",
+          "ko": "혹시 모양이 많이 이상해질까요?",
+          "vi": "Liệu dáng quần có bị xấu đi nhiều không ạ?",
+          "end": true
+        }
+      ],
+      "qs": [
+        {
+          "q": "Người phụ nữ nhờ chủ tiệm làm gì?",
+          "o": [
+            "Sửa cho quần ngắn lại",
+            "Đổi sang quần cỡ lớn hơn",
+            "Nới rộng phần eo quần",
+            "Gói quần làm quà"
+          ],
+          "a": 0
+        },
+        {
+          "q": "Chủ tiệm lưu ý điều gì?",
+          "o": [
+            "Cắt ngắn thì dáng phần dưới của quần sẽ khác đi",
+            "Cắt ngắn thì phải chờ một tuần",
+            "Loại quần này không sửa được",
+            "Sửa quần này tốn nhiều tiền"
+          ],
+          "a": 0
+        }
+      ],
+      "next": {
+        "q": "Người phụ nữ sẽ nói:",
+        "o": [
+          "Liệu dáng quần có bị xấu đi nhiều không ạ?",
+          "Cảm ơn chú đã sửa đẹp giúp cháu ạ."
+        ],
+        "a": 0
+      }
+    }
+  ]
+}

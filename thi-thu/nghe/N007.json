@@ -1,0 +1,141 @@
+{
+  "id": "N007",
+  "title": "Câu 21~26 · Hội thoại: ý chính và nội dung chi tiết",
+  "src": "TOPIK II kỳ 96 · Track 2-21, 2-23, 2-25",
+  "items": [
+    {
+      "n": "21~22",
+      "audio": "nghe/audio/N007-21.mp3",
+      "script": [
+        {
+          "s": "여자",
+          "ko": "오늘 아침 회의에서 나온 [의견] 중에 게임의 [캐릭터] 디자인을 좀 더 귀엽게 변경하면 좋겠다는 거, 어떻게 생각하세요?",
+          "vi": "Trong các ý kiến ở cuộc họp sáng nay có ý kiến nên đổi thiết kế nhân vật của trò chơi cho dễ thương hơn, anh nghĩ sao?"
+        },
+        {
+          "s": "남자",
+          "ko": "지금 디자인이 [현실감] 있고 좋은데요. 제작 초기부터 많은 논의 끝에 나온 건데 수정하는 문제는 좀 [신중해야] 할 것 같아요.",
+          "vi": "Thiết kế hiện tại có tính chân thực, tốt mà. Đó là kết quả sau rất nhiều thảo luận từ đầu quá trình sản xuất nên chuyện sửa đổi cần thận trọng."
+        },
+        {
+          "s": "여자",
+          "ko": "우리 게임은 만화 같은 분위기인데 캐릭터가 너무 [사실적]이라서 좀 안 어울리지 않아요? 아직 [출시]도 좀 남았는데…….",
+          "vi": "Trò chơi của chúng ta mang không khí như truyện tranh mà nhân vật lại quá giống thật nên có hơi không hợp không? Vẫn còn ít thời gian nữa mới ra mắt mà…"
+        },
+        {
+          "s": "남자",
+          "ko": "필요하다면 부분적으로 손을 볼 수는 있겠지만 많은 변화를 주는 건 부담이 클 것 같아요.",
+          "vi": "Nếu cần thì có thể chỉnh sửa một phần, nhưng thay đổi nhiều thì gánh nặng sẽ lớn lắm."
+        }
+      ],
+      "qs": [
+        {
+          "q": "Suy nghĩ chính của người đàn ông là gì?",
+          "o": [
+            "Nếu được thì muốn giữ thiết kế nhân vật hiện tại",
+            "Nên làm nhân vật của trò chơi dễ thương hơn",
+            "Phải nhờ công ty chuyên nghiệp thiết kế nhân vật",
+            "Phải chốt nhân vật để nhanh chóng ra mắt trò chơi"
+          ],
+          "a": 0
+        },
+        {
+          "q": "Nội dung nào giống với bài nghe?",
+          "o": [
+            "Nhân vật của trò chơi này rất giống thật",
+            "Trò chơi này đã ra mắt cách đây không lâu",
+            "Cuộc họp về nhân vật vẫn chưa diễn ra",
+            "Người phụ nữ nghĩ nhân vật hợp với trò chơi này"
+          ],
+          "a": 0
+        }
+      ]
+    },
+    {
+      "n": "23~24",
+      "audio": "nghe/audio/N007-23.mp3",
+      "script": [
+        {
+          "s": "남자",
+          "ko": "방금 3층 [상설] 전시관에서 [관람]하고 내려왔는데요. 전시관에 써 놓은 설명 내용에 잘못된 게 있어서요.",
+          "vi": "Tôi vừa xem ở phòng trưng bày thường trực tầng 3 xuống. Phần giải thích viết trong phòng trưng bày có chỗ bị sai."
+        },
+        {
+          "s": "여자",
+          "ko": "죄송합니다. 뭐가 잘못되어 있나요?",
+          "vi": "Xin lỗi anh. Có gì bị sai vậy ạ?"
+        },
+        {
+          "s": "남자",
+          "ko": "첫 번째 [전시실]을 소개하는 영어 설명 중에 [틀린] 단어가 하나 있더라고요. 박물관에 [외국인]도 많던데 빨리 고쳐 주시면 좋겠어요.",
+          "vi": "Trong phần giải thích bằng tiếng Anh giới thiệu phòng trưng bày thứ nhất có một từ bị sai. Bảo tàng có nhiều người nước ngoài nên mong chị sửa nhanh giúp."
+        },
+        {
+          "s": "여자",
+          "ko": "말씀해 주셔서 감사합니다. 바로 올라가서 확인해 보겠습니다.",
+          "vi": "Cảm ơn anh đã cho biết. Tôi sẽ lên kiểm tra ngay ạ."
+        }
+      ],
+      "qs": [
+        {
+          "q": "Người đàn ông đang làm gì?",
+          "o": [
+            "Yêu cầu sửa phần giải thích của phòng trưng bày",
+            "Đặt lịch tham quan bảo tàng theo đoàn",
+            "Hỏi về giờ mở cửa của bảo tàng",
+            "Hỏi địa điểm tổ chức triển lãm thường trực"
+          ],
+          "a": 0
+        },
+        {
+          "q": "Nội dung nào giống với bài nghe?",
+          "o": [
+            "Người đàn ông đã xem triển lãm thường trực ở bảo tàng",
+            "Người phụ nữ đang ở tầng 3 của bảo tàng",
+            "Phòng trưng bày của bảo tàng này không có giải thích tiếng Anh",
+            "Bảo tàng này không có nhiều người nước ngoài đến"
+          ],
+          "a": 0
+        }
+      ]
+    },
+    {
+      "n": "25~26",
+      "audio": "nghe/audio/N007-25.mp3",
+      "script": [
+        {
+          "s": "여자",
+          "ko": "서장님, 인주경찰서가 작년에 이어 올해도 전국에서 범인 [검거율]이 가장 높은 곳으로 선정되었는데 어떻게 이런 성과를 낼 수 있었나요?",
+          "vi": "Thưa ông trưởng đồn, năm nay đồn cảnh sát Inju tiếp tục được chọn là nơi có tỉ lệ bắt giữ tội phạm cao nhất cả nước giống như năm ngoái, làm thế nào để đạt được thành tích này ạ?"
+        },
+        {
+          "s": "남자",
+          "ko": "무엇보다 현장 [대응력]을 높이기 위한 [훈련] 덕분이라고 생각합니다. 이 지역은 [번화한] 곳이라서 사건, 사고가 많지요. 그래서 다른 곳에 비해 인력도 많은데 대부분 젊은 경찰관들입니다. 젊은 경찰관들은 아무래도 현장 경험이 부족하기 때문에 다양한 모의 상황을 만들어 현장 대응력을 강화하는 훈련을 [반복해서] 했습니다. 그렇게 하니까 실제 상황에서도 효과가 있었던 것 같습니다.",
+          "vi": "Tôi nghĩ trên hết là nhờ việc huấn luyện để nâng cao khả năng ứng phó tại hiện trường. Khu vực này là nơi sầm uất nên có nhiều vụ việc, tai nạn. Vì vậy nhân lực cũng nhiều hơn những nơi khác nhưng phần lớn là cảnh sát trẻ. Cảnh sát trẻ dù sao cũng thiếu kinh nghiệm thực tế nên chúng tôi đã tạo ra nhiều tình huống giả định khác nhau và huấn luyện lặp đi lặp lại để tăng cường khả năng ứng phó tại hiện trường. Làm như vậy hình như đã có hiệu quả cả trong tình huống thực tế."
+        }
+      ],
+      "qs": [
+        {
+          "q": "Suy nghĩ chính của người đàn ông là gì?",
+          "o": [
+            "Huấn luyện lặp lại theo tình huống giả định giống thực tế là quan trọng",
+            "Khu vực có nhiều tai nạn thì phải đủ nhân lực",
+            "Huấn luyện phải được thực hiện trong không khí thoải mái",
+            "Khi xảy ra vụ việc, cần sự hợp tác giữa các thành viên"
+          ],
+          "a": 0
+        },
+        {
+          "q": "Nội dung nào giống với bài nghe?",
+          "o": [
+            "Khu vực có đồn cảnh sát này thường xuyên xảy ra vụ việc",
+            "Đồn cảnh sát này phần lớn là cảnh sát nhiều kinh nghiệm",
+            "Tỉ lệ bắt giữ tội phạm của đồn này thấp hơn nơi khác",
+            "Việc huấn luyện ở đồn này không đem lại hiệu quả"
+          ],
+          "a": 0
+        }
+      ]
+    }
+  ]
+}

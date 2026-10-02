@@ -1,0 +1,199 @@
+{
+  "id": "N004",
+  "title": "Câu 9~12 · Chọn hành động tiếp theo của người phụ nữ",
+  "src": "TOPIK II kỳ 96 · Track 2-09 ~ 2-12",
+  "items": [
+    {
+      "n": 9,
+      "audio": "nghe/audio/N004-9.mp3",
+      "script": [
+        {
+          "s": "여자",
+          "ko": "여보세요. 민수야, 나 내일 여행 가는데 가방 좀 [빌려줄] 수 있어?",
+          "vi": "Alô. Minsu à, mai mình đi du lịch, cậu cho mình mượn cái túi được không?"
+        },
+        {
+          "s": "남자",
+          "ko": "그래. 그런데 내가 [수업]이 있어서 곧 나가야 하는데 지금 올래?",
+          "vi": "Được. Nhưng mình có tiết học nên sắp phải đi rồi, cậu qua bây giờ không?"
+        },
+        {
+          "s": "여자",
+          "ko": "응. 지금 바로 [가지러] 갈게. 고마워.",
+          "vi": "Ừ. Mình qua lấy ngay bây giờ. Cảm ơn nhé."
+        },
+        {
+          "s": "남자",
+          "ko": "그럼 가방 [꺼내] 놓을게.",
+          "vi": "Vậy mình lấy túi ra để sẵn nhé."
+        }
+      ],
+      "qs": [
+        {
+          "q": "Người phụ nữ sẽ làm gì tiếp theo?",
+          "o": [
+            "Đi lấy chiếc túi",
+            "Đi du lịch",
+            "Đi học",
+            "Lấy túi ra để sẵn"
+          ],
+          "a": 0
+        },
+        {
+          "q": "Vì sao người phụ nữ phải đến ngay?",
+          "o": [
+            "Vì người đàn ông sắp phải đi học",
+            "Vì ngày mai cô ấy bận đi làm",
+            "Vì người đàn ông cũng cần dùng túi",
+            "Vì cửa hàng túi sắp đóng cửa"
+          ],
+          "a": 0
+        }
+      ]
+    },
+    {
+      "n": 10,
+      "audio": "nghe/audio/N004-10.mp3",
+      "script": [
+        {
+          "s": "남자",
+          "ko": "저기요. 아버지께 [로션]을 하나 선물하려고 하는데 어떤 게 좋아요?",
+          "vi": "Chị ơi. Tôi muốn mua một lọ kem dưỡng tặng bố, loại nào thì tốt ạ?"
+        },
+        {
+          "s": "여자",
+          "ko": "이게 요즘 많이 팔리는 건데 한번 발라 보세요.",
+          "vi": "Loại này dạo này bán chạy lắm, anh thử bôi xem."
+        },
+        {
+          "s": "남자",
+          "ko": "음. [향기]도 좋고 부드럽네요. 이걸로 하나 [포장]해 주세요.",
+          "vi": "Ừm. Mùi thơm mà lại mềm mịn nữa. Gói cho tôi một lọ này nhé."
+        },
+        {
+          "s": "여자",
+          "ko": "네. [계산] 먼저 해 드릴 테니까 이쪽으로 오세요.",
+          "vi": "Vâng. Tôi tính tiền trước cho anh, mời anh qua bên này."
+        }
+      ],
+      "qs": [
+        {
+          "q": "Người phụ nữ sẽ làm gì tiếp theo?",
+          "o": [
+            "Tính tiền cho khách",
+            "Bôi thử kem dưỡng",
+            "Gói kem dưỡng",
+            "Tặng quà cho bố"
+          ],
+          "a": 0
+        },
+        {
+          "q": "Người đàn ông nhận xét gì về loại kem dưỡng?",
+          "o": [
+            "Thơm và mềm mịn",
+            "Rẻ và bán chạy",
+            "Mùi hơi nồng",
+            "Hơi nhờn, khó thấm"
+          ],
+          "a": 0
+        }
+      ]
+    },
+    {
+      "n": 11,
+      "audio": "nghe/audio/N004-11.mp3",
+      "script": [
+        {
+          "s": "여자",
+          "ko": "한국어 [토론] 대회에 나가려면 한 명 더 필요한데 누가 좋을까?",
+          "vi": "Muốn tham gia cuộc thi tranh luận tiếng Hàn thì cần thêm một người nữa, ai thì được nhỉ?"
+        },
+        {
+          "s": "남자",
+          "ko": "수잔 어때? 수잔이 한국어를 잘하잖아.",
+          "vi": "Susan thì sao? Susan giỏi tiếng Hàn mà."
+        },
+        {
+          "s": "여자",
+          "ko": "좋아. 내가 수잔한테 [연락]할게. 넌 대회 [일정] 좀 확실히 알아봐 줘.",
+          "vi": "Được đấy. Mình sẽ liên lạc với Susan. Cậu tìm hiểu kỹ giúp lịch thi nhé."
+        },
+        {
+          "s": "남자",
+          "ko": "응. 확인하고 일정표 [출력]해 놓을게.",
+          "vi": "Ừ. Mình kiểm tra rồi in sẵn lịch trình ra."
+        }
+      ],
+      "qs": [
+        {
+          "q": "Người phụ nữ sẽ làm gì tiếp theo?",
+          "o": [
+            "Liên lạc với Susan",
+            "Kiểm tra lịch thi",
+            "In lịch trình",
+            "Đến địa điểm thi"
+          ],
+          "a": 0
+        },
+        {
+          "q": "Hai người đang chuẩn bị cho việc gì?",
+          "o": [
+            "Tham gia cuộc thi tranh luận tiếng Hàn",
+            "Tham gia cuộc thi hùng biện tiếng Anh",
+            "Đi phỏng vấn xin việc",
+            "Dạy tiếng Hàn cho Susan"
+          ],
+          "a": 0
+        }
+      ]
+    },
+    {
+      "n": 12,
+      "audio": "nghe/audio/N004-12.mp3",
+      "script": [
+        {
+          "s": "여자",
+          "ko": "부장님, 신제품 소비자 [설문] 결과입니다. 확인 부탁드립니다.",
+          "vi": "Thưa trưởng phòng, đây là kết quả khảo sát người tiêu dùng về sản phẩm mới. Nhờ anh xem giúp ạ."
+        },
+        {
+          "s": "남자",
+          "ko": "음. 제품 크기를 줄인 것에 대한 [반응]이 좋군요.",
+          "vi": "Ừm. Phản hồi về việc thu nhỏ kích thước sản phẩm tốt đấy."
+        },
+        {
+          "s": "여자",
+          "ko": "네. 디자인을 다양화한 것도 좋았던 거 같습니다. 설문 결과를 가지고 바로 [보고서] 작성하겠습니다.",
+          "vi": "Vâng. Việc đa dạng hóa thiết kế hình như cũng được đánh giá tốt. Tôi sẽ dựa vào kết quả khảo sát để viết báo cáo ngay ạ."
+        },
+        {
+          "s": "남자",
+          "ko": "그렇게 하세요. 금요일이 부서장 [회의]니까 그 전까지 주세요.",
+          "vi": "Cứ làm vậy đi. Thứ sáu có cuộc họp trưởng bộ phận nên gửi tôi trước hôm đó nhé."
+        }
+      ],
+      "qs": [
+        {
+          "q": "Người phụ nữ sẽ làm gì tiếp theo?",
+          "o": [
+            "Viết báo cáo",
+            "Tham dự cuộc họp",
+            "Làm khảo sát",
+            "Nộp báo cáo"
+          ],
+          "a": 0
+        },
+        {
+          "q": "Người tiêu dùng phản hồi tốt về điều gì của sản phẩm mới?",
+          "o": [
+            "Kích thước được thu nhỏ và thiết kế đa dạng",
+            "Giá rẻ hơn sản phẩm cũ",
+            "Màu sắc tươi sáng hơn",
+            "Bao bì thân thiện với môi trường"
+          ],
+          "a": 0
+        }
+      ]
+    }
+  ]
+}

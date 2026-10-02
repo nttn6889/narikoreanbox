@@ -1,0 +1,159 @@
+{
+  "id": "N005",
+  "title": "Câu 13~16 · Chọn nội dung giống với bài nghe",
+  "src": "TOPIK II kỳ 96 · Track 2-13 ~ 2-16",
+  "items": [
+    {
+      "n": 13,
+      "audio": "nghe/audio/N005-13.mp3",
+      "script": [
+        {
+          "s": "여자",
+          "ko": "내일 비가 온다던데 [캠핑]하기로 한 거 [취소]할까?",
+          "vi": "Nghe nói mai trời mưa, hay mình hủy vụ đi cắm trại nhé?"
+        },
+        {
+          "s": "남자",
+          "ko": "그러지 말고 가자. 저번에 비 올 때 가 봤는데 [분위기]가 좋더라고.",
+          "vi": "Đừng thế, đi đi. Lần trước mình đi lúc trời mưa rồi, không khí hay lắm."
+        },
+        {
+          "s": "여자",
+          "ko": "정말? 난 비 오는 날 캠핑은 안 해 봤는데…….",
+          "vi": "Thật á? Mình chưa cắm trại ngày mưa bao giờ…"
+        },
+        {
+          "s": "남자",
+          "ko": "텐트 안에서 듣는 [빗소리]가 얼마나 좋은데. 너도 분명 좋아할 거야.",
+          "vi": "Tiếng mưa nghe từ trong lều hay lắm. Chắc chắn cậu cũng sẽ thích."
+        }
+      ],
+      "qs": [
+        {
+          "q": "Nội dung nào giống với bài nghe?",
+          "o": [
+            "Người đàn ông thích cắm trại khi trời mưa",
+            "Ngày mai người đàn ông định đi cắm trại một mình",
+            "Người phụ nữ chưa nghe về thời tiết ngày mai",
+            "Người phụ nữ đã từng cắm trại vào ngày mưa"
+          ],
+          "a": 0
+        },
+        {
+          "q": "Người phụ nữ đề nghị điều gì?",
+          "o": [
+            "Hủy chuyến cắm trại vì trời mưa",
+            "Đổi địa điểm cắm trại",
+            "Mua thêm lều mới",
+            "Đi cắm trại sớm hơn một ngày"
+          ],
+          "a": 0
+        }
+      ]
+    },
+    {
+      "n": 14,
+      "audio": "nghe/audio/N005-14.mp3",
+      "script": [
+        {
+          "s": "여자",
+          "ko": "(딩동댕) 저희 누리마트가 개업 10[주년]을 맞이하여 오늘부터 일주일 동안 식품 코너에서 특별 [할인] 행사를 진행합니다. 또 마트에서 5만 원 이상 구매하신 고객님들께 선물을 드립니다. 이 기간에는 [영업시간]도 한 시간 [연장]하니 많은 관심 부탁드립니다. (댕동딩)",
+          "vi": "(Tiếng chuông) Nhân dịp kỷ niệm 10 năm khai trương, siêu thị Nuri chúng tôi tổ chức chương trình giảm giá đặc biệt ở quầy thực phẩm trong một tuần kể từ hôm nay. Ngoài ra, quý khách mua từ 50.000 won trở lên tại siêu thị sẽ được tặng quà. Trong thời gian này, giờ mở cửa cũng được kéo dài thêm một tiếng, rất mong quý khách quan tâm. (Tiếng chuông)"
+        }
+      ],
+      "qs": [
+        {
+          "q": "Nội dung nào giống với bài nghe?",
+          "o": [
+            "Trong một tuần, giờ mở cửa được kéo dài thêm",
+            "Siêu thị mới khai trương năm nay",
+            "Quầy thực phẩm không nằm trong chương trình giảm giá",
+            "Siêu thị tặng quà cho tất cả khách đến mua sắm"
+          ],
+          "a": 0
+        },
+        {
+          "q": "Ai được nhận quà?",
+          "o": [
+            "Khách mua từ 50.000 won trở lên",
+            "Tất cả khách đến siêu thị",
+            "Khách mua ở quầy thực phẩm",
+            "Khách đến vào ngày đầu tiên"
+          ],
+          "a": 0
+        }
+      ]
+    },
+    {
+      "n": 15,
+      "audio": "nghe/audio/N005-15.mp3",
+      "script": [
+        {
+          "s": "남자",
+          "ko": "오늘 인주시청이 개최한 ‘인주자전거대회’가 이천 명 이상의 많은 시민이 참가한 가운데 성공적으로 마무리되었습니다. 시민들의 [체력] 향상을 위해 개최된 이 대회는 정해진 시간 안에 들어오면 [순위]와 관계없이 [메달]을 받을 수 있었는데요. [경쟁] 없이 운동을 즐길 수 있어서 참가자들에게 긍정적 평가를 받았습니다.",
+          "vi": "“Giải đua xe đạp Inju” do Tòa thị chính Inju tổ chức hôm nay đã kết thúc thành công với hơn 2.000 người dân tham gia. Giải đấu được tổ chức nhằm nâng cao thể lực cho người dân, ai về đích trong thời gian quy định đều được nhận huy chương, không phụ thuộc thứ hạng. Vì có thể vui chơi thể thao mà không phải cạnh tranh nên giải nhận được đánh giá tích cực từ người tham gia."
+        }
+      ],
+      "qs": [
+        {
+          "q": "Nội dung nào giống với bài nghe?",
+          "o": [
+            "Giải đấu này giúp người tham gia vui chơi mà không phải cạnh tranh",
+            "Tỉ lệ người dân tham gia giải đấu rất thấp",
+            "Giải đấu diễn ra từ hôm nay đến tuần sau",
+            "Giải đấu trao huy chương cho tất cả người tham gia"
+          ],
+          "a": 0
+        },
+        {
+          "q": "Muốn nhận huy chương thì cần điều kiện gì?",
+          "o": [
+            "Về đích trong thời gian quy định",
+            "Về đích ở thứ hạng cao",
+            "Đăng ký tham gia sớm",
+            "Là người dân của thành phố Inju"
+          ],
+          "a": 0
+        }
+      ]
+    },
+    {
+      "n": 16,
+      "audio": "nghe/audio/N005-16.mp3",
+      "script": [
+        {
+          "s": "남자",
+          "ko": "선생님께서는 [화재] 현장에서 일을 하시는데요. 구체적으로 어떤 일을 하시나요?",
+          "vi": "Chị làm việc tại hiện trường các vụ hỏa hoạn. Cụ thể chị làm những công việc gì ạ?"
+        },
+        {
+          "s": "여자",
+          "ko": "저는 화재가 발생하면 바로 현장에 가서 최초 [신고자]에게 상황 설명을 듣습니다. 그리고 화재의 시작점을 찾아 [흔적]을 살피고 그것을 분석해 화재의 [원인]을 밝힙니다. 그 후에는 화재로 인해 어느 정도의 [피해]를 보았는지 피해 금액도 계산하고요.",
+          "vi": "Khi xảy ra hỏa hoạn, tôi đến ngay hiện trường và nghe người báo cháy đầu tiên giải thích tình hình. Sau đó tôi tìm điểm bắt đầu của đám cháy, xem xét dấu vết và phân tích để làm rõ nguyên nhân vụ cháy. Sau đó tôi còn tính số tiền thiệt hại để biết vụ cháy gây thiệt hại đến mức nào."
+        }
+      ],
+      "qs": [
+        {
+          "q": "Nội dung nào giống với bài nghe?",
+          "o": [
+            "Người phụ nữ tìm nơi lửa bắt đầu cháy ở hiện trường",
+            "Tìm ra nguyên nhân vụ cháy là xong việc của người phụ nữ",
+            "Tính tiền thiệt hại không phải việc của người phụ nữ",
+            "Người phụ nữ gặp người báo cháy đầu tiên rồi mới đến hiện trường"
+          ],
+          "a": 0
+        },
+        {
+          "q": "Việc đầu tiên người phụ nữ làm khi đến hiện trường là gì?",
+          "o": [
+            "Nghe người báo cháy đầu tiên giải thích tình hình",
+            "Tính số tiền thiệt hại",
+            "Dập lửa cùng lính cứu hỏa",
+            "Chụp ảnh hiện trường gửi cảnh sát"
+          ],
+          "a": 0
+        }
+      ]
+    }
+  ]
+}

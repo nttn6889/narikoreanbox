@@ -1,0 +1,179 @@
+{
+  "id": "N006",
+  "title": "Câu 17~20 · Chọn suy nghĩ chính của người đàn ông",
+  "src": "TOPIK II kỳ 96 · Track 2-17 ~ 2-20",
+  "items": [
+    {
+      "n": 17,
+      "audio": "nghe/audio/N006-17.mp3",
+      "script": [
+        {
+          "s": "남자",
+          "ko": "영화 보기 전에 [팝콘] 사야겠다. 수미 너도 먹을 거지?",
+          "vi": "Trước khi xem phim phải mua bỏng ngô thôi. Sumi, cậu cũng ăn chứ?"
+        },
+        {
+          "s": "여자",
+          "ko": "아니. 난 아까 저녁을 많이 먹어서 배가 [부르거든].",
+          "vi": "Không. Lúc nãy mình ăn tối nhiều nên no rồi."
+        },
+        {
+          "s": "남자",
+          "ko": "그래? 난 먹을래. 팝콘이 있어야 [영화관]에 온 것 같지.",
+          "vi": "Vậy à? Mình thì ăn. Phải có bỏng ngô mới thấy giống đi rạp chiếu phim chứ."
+        }
+      ],
+      "qs": [
+        {
+          "q": "Suy nghĩ chính của người đàn ông là gì?",
+          "o": [
+            "Ăn bỏng ngô ở rạp chiếu phim thì thích",
+            "Muốn đi xem phim một mình",
+            "Muốn ăn nhiều loại bỏng ngô khác nhau",
+            "Thích xem phim ở nhà hơn"
+          ],
+          "a": 0
+        },
+        {
+          "q": "Vì sao người phụ nữ không ăn bỏng ngô?",
+          "o": [
+            "Vì lúc nãy ăn tối nhiều nên đã no",
+            "Vì cô ấy không thích bỏng ngô",
+            "Vì bỏng ngô ở rạp quá đắt",
+            "Vì phim sắp bắt đầu"
+          ],
+          "a": 0
+        }
+      ]
+    },
+    {
+      "n": 18,
+      "audio": "nghe/audio/N006-18.mp3",
+      "script": [
+        {
+          "s": "남자",
+          "ko": "민수 씨한테 아직도 [사과]를 안 했어요?",
+          "vi": "Chị vẫn chưa xin lỗi anh Minsu à?"
+        },
+        {
+          "s": "여자",
+          "ko": "네. 저도 사과하고 싶은데 먼저 말 [걸기]가 힘드네요.",
+          "vi": "Vâng. Tôi cũng muốn xin lỗi nhưng khó mở lời trước quá."
+        },
+        {
+          "s": "남자",
+          "ko": "메시지라도 보내 보세요. 시간이 지나면 [오해]가 더 커질 수도 있어요.",
+          "vi": "Chị thử gửi tin nhắn cũng được. Để lâu thì hiểu lầm có thể càng lớn hơn đấy."
+        }
+      ],
+      "qs": [
+        {
+          "q": "Suy nghĩ chính của người đàn ông là gì?",
+          "o": [
+            "Nên xin lỗi càng sớm càng tốt",
+            "Phải thường xuyên liên lạc với bạn bè",
+            "Muốn tìm cách giải quyết nỗi lo",
+            "Bắt chuyện với mọi người thật khó"
+          ],
+          "a": 0
+        },
+        {
+          "q": "Người đàn ông khuyên người phụ nữ làm gì?",
+          "o": [
+            "Thử gửi tin nhắn cho Minsu",
+            "Chờ Minsu nói chuyện trước",
+            "Nhờ bạn khác xin lỗi giúp",
+            "Gặp Minsu vào cuối tuần"
+          ],
+          "a": 0
+        }
+      ]
+    },
+    {
+      "n": 19,
+      "audio": "nghe/audio/N006-19.mp3",
+      "script": [
+        {
+          "s": "여자",
+          "ko": "무슨 [자료]를 그렇게 열심히 보고 있어?",
+          "vi": "Cậu đang chăm chú xem tài liệu gì thế?"
+        },
+        {
+          "s": "남자",
+          "ko": "여행 갈 곳에 대해 [찾아보고] 있어. 자세히 공부하고 가려고.",
+          "vi": "Mình đang tìm hiểu về nơi sắp đi du lịch. Định học kỹ rồi mới đi."
+        },
+        {
+          "s": "여자",
+          "ko": "[여행지]에 가도 자료가 다 있을 텐데. 그렇게까지 준비해야 해?",
+          "vi": "Đến nơi du lịch thì cũng có đủ tài liệu mà. Có cần chuẩn bị đến mức đó không?"
+        },
+        {
+          "s": "남자",
+          "ko": "난 아는 만큼 즐길 수 있다고 생각해서. [최대한] 조사해서 가고 싶어.",
+          "vi": "Mình nghĩ biết càng nhiều thì càng tận hưởng được nhiều. Mình muốn tìm hiểu hết mức có thể rồi mới đi."
+        }
+      ],
+      "qs": [
+        {
+          "q": "Suy nghĩ chính của người đàn ông là gì?",
+          "o": [
+            "Muốn biết thật nhiều về nơi du lịch trước khi đi",
+            "Du lịch thì phải đến nơi nổi tiếng",
+            "Ở nơi du lịch nên sống thong thả",
+            "Muốn đi du lịch ở nơi không xa"
+          ],
+          "a": 0
+        },
+        {
+          "q": "Người phụ nữ nghĩ gì về việc chuẩn bị của người đàn ông?",
+          "o": [
+            "Không cần chuẩn bị kỹ đến thế vì ở đó cũng có tài liệu",
+            "Nên chuẩn bị kỹ hơn nữa",
+            "Nên đi du lịch cùng hướng dẫn viên",
+            "Nên đặt vé máy bay trước"
+          ],
+          "a": 0
+        }
+      ]
+    },
+    {
+      "n": 20,
+      "audio": "nghe/audio/N006-20.mp3",
+      "script": [
+        {
+          "s": "여자",
+          "ko": "이전에 발표하셨던 동요의 [가사]를 이야기로 만들어 책으로 내셨는데요.",
+          "vi": "Anh đã chuyển lời các bài đồng dao từng công bố trước đây thành truyện và in thành sách."
+        },
+        {
+          "s": "남자",
+          "ko": "네. 요즘 책을 읽기 싫어하는 아이들이 많잖아요. 동요로 접했던 걸 책으로 읽으면 아이들이 [부담] 없이, 재미있게 책을 읽을 수 있을 것 같았어요. 그걸 시작으로 [독서]의 즐거움을 느낄 수 있으면 좋겠고요. 어렸을 때 독서에 대한 [흥미]를 갖는 것이 중요하니까요.",
+          "vi": "Vâng. Dạo này có nhiều trẻ không thích đọc sách mà. Tôi nghĩ nếu đọc dưới dạng sách những gì các em đã biết qua bài đồng dao thì các em có thể đọc một cách thoải mái, vui vẻ. Tôi mong từ đó các em cảm nhận được niềm vui đọc sách. Vì khi còn nhỏ, có hứng thú với việc đọc là rất quan trọng."
+        }
+      ],
+      "qs": [
+        {
+          "q": "Suy nghĩ chính của người đàn ông là gì?",
+          "o": [
+            "Mong trẻ em thấy việc đọc sách là vui",
+            "Phải xuất bản thật nhiều sách cho trẻ em",
+            "Phải có nhiều loại truyện cổ tích cho trẻ em",
+            "Mong có thêm nhiều không gian đọc sách cho trẻ"
+          ],
+          "a": 0
+        },
+        {
+          "q": "Người đàn ông đã làm gì?",
+          "o": [
+            "Chuyển lời bài đồng dao thành truyện và in thành sách",
+            "Sáng tác bài đồng dao mới từ truyện cổ tích",
+            "Mở thư viện cho trẻ em",
+            "Dạy trẻ em hát đồng dao"
+          ],
+          "a": 0
+        }
+      ]
+    }
+  ]
+}
