@@ -932,12 +932,12 @@ function routeBoot(){
   loadVocab().then(function(){ rHome(p); }, function(){ rShell('<p class="err">Chưa tải được từ vựng. Em kiểm tra mạng rồi tải lại trang nhé.</p>'); });
   return true;
 }
-function rShell(inner, sub){ vStopClock(); app.innerHTML = '<div class="wrap">' + headerHTML() + '<main class="paper"><div class="title"><h1>단어 공부</h1><p>' + esc(sub || "Lộ trình từ vựng · Hàn Ngữ Nari") + '</p></div>' + inner + '</main></div>'; }
+function rShell(inner, sub){ vStopClock(); app.innerHTML = '<div class="wrap">' + headerHTML() + '<main class="paper"><div class="title"><h1>단어 공부</h1><p>' + esc(sub || "Kiểm tra từ vựng · Hàn Ngữ Nari") + '</p></div>' + inner + '</main></div>'; }
 function rHome(p){
   window.scrollTo(0, 0);
   var last = lsGet("nari-tt-last") || {}, name = last.name || "";
   if(!name){
-    rShell('<p>Mỗi ngày em mở link này để học từ mới theo lộ trình cô đặt. Từ em làm sai sẽ tự được ôn lại ở bài hôm sau.</p><label class="l" for="rname">Họ và tên của em</label><input class="t" id="rname" autocomplete="name" placeholder="VD: Nguyễn Thị Lan"><p class="err" id="rerr" hidden></p><div class="row"><button class="btn wide" id="rgo">Tiếp tục</button></div>', p.t);
+    rShell('<p>Mỗi ngày em mở link này để kiểm tra từ vựng theo lịch cô đặt. Từ em làm sai sẽ tự được ôn lại ở bài hôm sau.</p><label class="l" for="rname">Họ và tên của em</label><input class="t" id="rname" autocomplete="name" placeholder="VD: Nguyễn Thị Lan"><p class="err" id="rerr" hidden></p><div class="row"><button class="btn wide" id="rgo">Tiếp tục</button></div>', p.t);
     var go = function(){ var n = cleanName($("#rname").value); if(!n){ var e = $("#rerr"); e.textContent = "Em nhập họ tên nhé."; e.hidden = false; return; } last.name = n; lsSet("nari-tt-last", last); rHome(p); };
     $("#rgo").onclick = go; $("#rname").addEventListener("keydown", function(e){ if(e.key === "Enter") go(); });
     return;
