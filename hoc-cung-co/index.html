@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Học cùng cô Ngân</title>
+<meta name="description" content="Luyện thi TOPIK cùng cô Ngân (Hàn Ngữ Nari): mỗi ngày 3 bài ngắn trên điện thoại, cô chấm và theo dõi từng câu em làm sai.">
+<meta property="og:title" content="Học TOPIK cùng cô Ngân · Hàn Ngữ Nari">
+<meta property="og:description" content="Mỗi ngày 3 bài ngắn: từ vựng, luyện nghe, đề thi thử. Cô theo dõi từng câu em sai. Làm thử miễn phí ngay.">
+<meta property="og:image" content="https://nttn6889.github.io/narikoreanbox/thi-thu/icon/icon-512.png">
+<meta name="theme-color" content="#1b2a5c">
+<link rel="icon" type="image/png" href="../thi-thu/icon/favicon-64.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Noto+Serif+KR:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EEF0F6; --paper:#FFFFFF; --ink:#1D1A2C; --muted:#5F5B74; --line:#D9D6E6;
+  --violet:#54478F; --violet-soft:#ECE9F7; --on-violet:#FFFFFF; --pen:#C4323A; --pen-soft:#FBE7E8;
+  --ok:#1F7A4D; --ok-soft:#E3F3EA; --gold:#B7791F; --gold-soft:#FDF1DC;
+  --kr:"Noto Serif KR","Apple SD Gothic Neo","Malgun Gothic",serif;
+  --ui:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#15131F; --paper:#1F1C2C; --ink:#ECEAF5; --muted:#A7A2BE; --line:#37334A;
+    --violet:#A99BEA; --violet-soft:#2C2745; --on-violet:#15131F; --pen:#F07077; --pen-soft:#3A1E24;
+    --ok:#5FCB94; --ok-soft:#1C3328; --gold:#F0B454; --gold-soft:#382A12;
+  }
+}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--ui);font-size:16.5px;line-height:1.65}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--violet)}
+.wrap{max-width:860px;margin:0 auto;padding:0 16px 64px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 0}
+.top .bn{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--violet);text-decoration:none;font-size:17px}
+.top .bn img{width:36px;height:36px;border-radius:9px}
+.top nav{display:flex;gap:14px;font-size:14.5px}
+.top nav a{text-decoration:none;font-weight:600}
+
+.hero{background:var(--violet);color:var(--on-violet);border-radius:16px;padding:34px 24px 30px;margin-top:4px}
+.hero .kr{font-family:var(--kr);font-size:15px;opacity:.85;margin:0 0 6px}
+.hero h1{font-size:clamp(27px,6vw,40px);line-height:1.2;margin:0 0 12px;font-weight:800}
+.hero p{margin:0 0 20px;font-size:17px;max-width:36em;opacity:.95}
+.btn{display:inline-block;background:var(--paper);color:var(--violet);font-weight:700;padding:12px 20px;border-radius:10px;text-decoration:none;font-size:16px}
+.btn.alt{background:transparent;color:inherit;border:2px solid currentColor}
+.btn.main{background:var(--violet);color:var(--on-violet)}
+.btn:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:24px}
+.facts div{background:rgba(255,255,255,.12);border-radius:10px;padding:10px 12px;font-size:13.5px;line-height:1.35}
+.facts b{display:block;font-size:22px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .facts div{background:rgba(0,0,0,.12)}}
+
+section{margin-top:44px}
+h2{font-size:clamp(22px,4.6vw,28px);line-height:1.3;margin:0 0 6px}
+.lead{color:var(--muted);margin:0 0 18px}
+.letter{background:var(--paper);border:1px solid var(--line);border-left:5px solid var(--gold);border-radius:12px;padding:20px 22px}
+.letter p{margin:0 0 10px}
+.letter p:last-child{margin:0}
+.letter .sig{font-weight:700;color:var(--violet)}
+
+.day{display:grid;gap:16px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px;display:grid;gap:16px;align-items:center}
+@media (min-width:680px){.card{grid-template-columns:230px 1fr}.card.flip{grid-template-columns:1fr 230px}.card.flip .shot{order:2}}
+.shot{border-radius:14px;border:6px solid var(--ink);overflow:hidden;max-width:230px;margin:0 auto;background:var(--bg);box-shadow:0 6px 18px rgba(0,0,0,.12)}
+.tag{display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--violet);background:var(--violet-soft);border-radius:20px;padding:2px 10px;margin-bottom:6px}
+.card h3{margin:0 0 6px;font-size:20px}
+.card ul{margin:0 0 14px;padding-left:20px}
+.card li{margin-bottom:4px}
+.time{font-size:14px;color:var(--muted);margin-left:4px}
+
+.loop{display:grid;gap:10px;counter-reset:s}
+@media (min-width:680px){.loop{grid-template-columns:repeat(5,1fr)}}
+.step{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px;position:relative}
+.step::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--violet);color:var(--on-violet);font-weight:700;font-size:14px;margin-bottom:8px}
+.step b{display:block;margin-bottom:2px}
+@media (max-width:679px){.step{display:grid;grid-template-columns:28px 1fr;gap:0 12px;padding:12px 14px}.step::before{grid-row:1/3;margin:0}}
+.step span{font-size:14px;color:var(--muted);line-height:1.45;display:block}
+.step.hl{border:2px solid var(--pen);background:var(--pen-soft)}
+.step.hl::before{background:var(--pen)}
+.callout{margin-top:14px;background:var(--ok-soft);border-radius:12px;padding:14px 18px;color:var(--ink)}
+.callout b{color:var(--ok)}
+
+.plan{width:100%;border-collapse:collapse;background:var(--paper);border-radius:12px;overflow:hidden;font-size:15px}
+.plan th,.plan td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.plan th{background:var(--violet-soft);color:var(--violet);font-size:13px;text-transform:uppercase;letter-spacing:.04em}
+.plan tr:last-child td{border-bottom:none}
+.two{display:grid;gap:12px}
+@media (min-width:680px){.two{grid-template-columns:1fr 1fr}}
+.box{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.box h3{margin:0 0 6px;font-size:17.5px}
+.box p,.box ul{margin:0}
+.box ul{padding-left:20px}
+
+.cta{background:var(--paper);border:2px solid var(--violet);border-radius:16px;padding:24px 22px;text-align:center}
+.cta h2{margin-bottom:8px}
+.cta ol{text-align:left;max-width:30em;margin:0 auto 18px;padding-left:22px}
+.cta ol li{margin-bottom:6px}
+.cta .row{justify-content:center}
+.zalo{font-size:22px;font-weight:800;color:var(--violet);letter-spacing:.02em}
+footer{margin-top:40px;text-align:center;font-size:13.5px;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="bn" href="../thi-thu/"><img src="../thi-thu/icon/icon-192.png" alt="">Hàn Ngữ Nari</a>
+    <nav><a href="../ve-co/">Về cô</a><a href="#lam-thu">Làm thử</a></nav>
+  </header>
+
+  <div class="hero">
+    <p class="kr">한국어능력시험 · TOPIK II</p>
+    <h1>Luyện thi TOPIK mỗi ngày cùng cô Ngân</h1>
+    <p>Trên lớp, cô dạy chiến thuật theo từng dạng đề. Ở nhà, mỗi ngày em làm 3 bài ngắn trên điện thoại. Câu nào em sai, cô đều ghi lại và cho em ôn đến khi làm đúng.</p>
+    <div class="row">
+      <a class="btn" href="#lam-thu">Làm thử miễn phí</a>
+      <a class="btn alt" href="#mot-ngay">Xem một ngày học</a>
+    </div>
+    <div class="facts">
+      <div><b>3 bài</b>mỗi ngày</div>
+      <div><b>15 phút</b>mỗi bài</div>
+      <div><b>100%</b>câu sai được ôn lại</div>
+    </div>
+  </div>
+
+  <section>
+    <div class="letter">
+      <p>Hơn 20 năm gắn bó với tiếng Hàn, cô thấy nhiều bạn <strong>học trên lớp thì hiểu, nhưng về nhà không luyện</strong>, hoặc luyện lan man mà không biết mình yếu ở đâu.</p>
+      <p>Vì vậy cô tự xây hệ thống luyện tập riêng cho học viên của cô. Cô nhập đề, soạn kho từ vựng theo từng dạng câu thi, chọn đề nghe TOPIK thật và chép lời thoại kèm bản dịch. Mỗi ngày em có bài vừa sức, còn cô thì biết em đang sai ở đâu để giúp đúng chỗ đó.</p>
+      <p class="sig">Cô Thủy Ngân · Hàn Ngữ Nari</p>
+    </div>
+  </section>
+
+  <section id="mot-ngay">
+    <h2>Một ngày học của em</h2>
+    <p class="lead">Ba bài ngắn, làm bằng điện thoại hay máy tính đều được. Cô gửi link qua Zalo, em bấm vào là làm.</p>
+    <div class="day">
+      <div class="card">
+        <div class="shot"><img src="img/tu-vung.png" alt="Bài từ vựng dạng nối từ trên điện thoại" width="390" height="760" loading="lazy"></div>
+        <div>
+          <span class="tag">📖 Từ vựng</span>
+          <h3>Học từ theo đúng dạng câu thi</h3>
+          <ul>
+            <li>Kho từ chia theo từng câu trong đề: câu 5 quảng cáo sản phẩm, câu 7 quảng cáo công ích, câu 8 hướng dẫn…</li>
+            <li>Có lộ trình theo ngày: mỗi ngày tự có bài mới, không cần chờ cô gửi.</li>
+            <li>Từ nào hôm nay em sai thì <strong>hôm sau tự quay lại</strong> để ôn.</li>
+            <li>Nhiều dạng bài: nối từ, Hàn → Việt, Việt → Hàn, gõ từ, nghe rồi chọn nghĩa.</li>
+          </ul>
+          <a class="btn main" href="https://nttn6889.github.io/narikoreanbox/thi-thu/#v=eyJjIjoiTk00RjciLCJ0IjoiTMOgbSB0aOG7rSDCtyBU4burIHbhu7FuZyBjw6J1IDfigJM4IiwieSI6Im1hdGNoIiwidyI6W1si7KeA7YKk64ukIiwiYuG6o28gduG7hyJdLFsi7ZmY6rK9IiwibcO0aSB0csaw4budbmciXSxbIuyGjOydjCIsInRp4bq_bmcg4buTbiJdLFsi7JyE7ZeYIiwibmd1eSBoaeG7g20iXSxbIuyehOyLoOu2gCIsInBo4bulIG7hu68gbWFuZyB0aGFpIl0sWyLsg53rqoUiLCJzaW5oIG3huqFuZyJdLFsi7KO87JewIiwidmFpIGNow61uaCJdLFsi7JiI7JW9IiwixJHhurd0IGjhurluIl0sWyLsl6ztlonsp4AiLCLEkWnhu4NtIGR1IGzhu4tjaCJdLFsi7IKs7JuQIOuqqOynkSIsInR1eeG7g24gbmjDom4gdmnDqm4iXSxbIuuBiuuLpCIsImLhu48vY2FpIl0sWyLrgZPsnbTri6QiLCLEkXVuIHPDtGkiXSxbIuuDieyepSIsImLhuqNvIHF14bqjbiBs4bqhbmgiXSxbIu2ZmOu2iCDslYjrgrQiLCJoxrDhu5tuZyBk4bqrbiBob8OgbiB0aeG7gW4iXSxbIuyKteq0gCIsInRow7NpIHF1ZW4iXSxbIu2ZlOyerCIsImjhu49hIGhv4bqhbiJdLFsi7LSs7JiBIOq4iOyngCIsImPhuqVtIGNo4bulcCDhuqNuaCJdLFsi7JWE64G864ukIiwidGnhur90IGtp4buHbSJdLFsi7Iug7Zi4IiwidMOtbiBoaeG7h3UgxJHDqG4iXSxbIuuCreu5hO2VmOuLpCIsImzDo25nIHBow60iXV19.btdd">Làm thử: từ vựng câu 7–8</a><span class="time">20 từ</span>
+        </div>
+      </div>
+      <div class="card flip">
+        <div class="shot"><img src="img/nghe.png" alt="Bài luyện nghe 3 phần trên điện thoại" width="390" height="760" loading="lazy"></div>
+        <div>
+          <span class="tag">🎧 Luyện nghe</span>
+          <h3>Nghe đề TOPIK thật, mỗi đoạn nghe 2 lần</h3>
+          <ul>
+            <li><strong>Phần 1:</strong> trả lời câu hỏi để kiểm tra em hiểu ý chính.</li>
+            <li><strong>Phần 2:</strong> chọn câu nói tiếp theo, giống câu 4–8 trong đề thi.</li>
+            <li><strong>Phần 3:</strong> nghe lại và điền từ còn thiếu, để luyện tai nghe từng chữ.</li>
+            <li>Nộp bài xong em xem được lời thoại tiếng Hàn kèm bản dịch để tự sửa lỗi.</li>
+          </ul>
+          <a class="btn main" href="https://nttn6889.github.io/narikoreanbox/thi-thu/#n=eyJjIjoiNjdCUk4iLCJ0IjoiTMOgbSB0aOG7rSDCtyBOZ2hlIGPDonUgNOKAkzYiLCJsIjoiTjAwMSJ9.63xh">Làm thử: nghe câu 4–6</a><span class="time">3 đoạn nghe</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="shot"><img src="img/de-thi.png" alt="Đề thi thử TOPIK II trên điện thoại" width="390" height="760" loading="lazy"></div>
+        <div>
+          <span class="tag">📝 Đề thi thử</span>
+          <h3>Làm đề theo cụm câu, không bị ngợp</h3>
+          <ul>
+            <li>Đề lấy từ sách luyện thi TOPIK có uy tín (HOT TOPIK, TOPIK 300⁺…).</li>
+            <li>Mỗi ngày chỉ 6–8 câu, đúng dạng em vừa học trên lớp. Tuần đầu câu 1–8, tuần sau câu 6–10, rồi câu 9–15…</li>
+            <li>Học 2 tháng là em đã làm qua vài chục đề.</li>
+          </ul>
+          <a class="btn main" href="https://nttn6889.github.io/narikoreanbox/thi-thu/#d=eyJjIjoiTURWVjgiLCJmIjoxLCJ0Ijo4LCJ4IjoixJDhu4EgMSDigJMgSE9UIFRPUElLIChCw6xhIMSR4buPKSIsImUiOiJFaG90MSJ9.6re7">Làm thử: HOT TOPIK đề 1, câu 1–8</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Câu em làm sai không bị bỏ qua</h2>
+    <p class="lead">Đây là điều cô tâm đắc nhất: em không chỉ làm bài cho xong, mà mỗi lỗi sai đều được xử lý.</p>
+    <div class="loop">
+      <div class="step"><b>Em làm bài</b><span>Trên điện thoại, bài làm dở máy vẫn nhớ.</span></div>
+      <div class="step"><b>Gửi mã cho cô</b><span>Bấm Nộp bài, sao chép tin nhắn và gửi qua Zalo.</span></div>
+      <div class="step"><b>Cô chấm, ghi sổ</b><span>Mỗi em có sổ điểm riêng, thấy rõ em sai câu nào, dạng nào.</span></div>
+      <div class="step hl"><b>Đề ôn câu sai</b><span>Cô ra đề riêng cho em, chỉ gồm những câu em từng sai.</span></div>
+      <div class="step"><b>Làm đúng thì gỡ</b><span>Câu nào làm lại đúng mới được gỡ khỏi danh sách.</span></div>
+    </div>
+    <p class="callout"><b>Kết quả:</b> em biết chính xác mình còn hổng chỗ nào và vá đúng chỗ đó, không phải học lại những gì đã biết.</p>
+  </section>
+
+  <section>
+    <h2>Lộ trình học</h2>
+    <p class="lead">Phù hợp cả với bạn ít thời gian, muốn bỏ qua giáo trình trung cấp 3, 4 để vào luyện đề luôn.</p>
+    <div class="two">
+      <div class="box">
+        <h3>Buổi học với cô</h3>
+        <ul>
+          <li>Học theo từng dạng đề, không học dàn trải.</li>
+          <li>Cô chọn lọc tài liệu và dạy chiến thuật làm từng dạng câu.</li>
+          <li>Cô xem điểm của em để biết buổi sau cần ôn gì.</li>
+        </ul>
+      </div>
+      <div class="box">
+        <h3>Ở nhà mỗi ngày</h3>
+        <ul>
+          <li>1 bài từ vựng, 1 bài nghe, 1 bài đề thi thử.</li>
+          <li>Mỗi bài khoảng 15 phút, làm lúc nào cũng được.</li>
+          <li>Cài như app trên điện thoại: mọi bài cô gửi nằm ở mục “Bài của em”.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="lam-thu">
+    <div class="cta">
+      <h2>Làm thử miễn phí ngay hôm nay</h2>
+      <p class="lead" style="margin-bottom:16px">Em không cần đăng ký. Bấm link là làm được.</p>
+      <ol>
+        <li>Làm một hoặc cả ba bài: <a href="https://nttn6889.github.io/narikoreanbox/thi-thu/#v=eyJjIjoiTk00RjciLCJ0IjoiTMOgbSB0aOG7rSDCtyBU4burIHbhu7FuZyBjw6J1IDfigJM4IiwieSI6Im1hdGNoIiwidyI6W1si7KeA7YKk64ukIiwiYuG6o28gduG7hyJdLFsi7ZmY6rK9IiwibcO0aSB0csaw4budbmciXSxbIuyGjOydjCIsInRp4bq_bmcg4buTbiJdLFsi7JyE7ZeYIiwibmd1eSBoaeG7g20iXSxbIuyehOyLoOu2gCIsInBo4bulIG7hu68gbWFuZyB0aGFpIl0sWyLsg53rqoUiLCJzaW5oIG3huqFuZyJdLFsi7KO87JewIiwidmFpIGNow61uaCJdLFsi7JiI7JW9IiwixJHhurd0IGjhurluIl0sWyLsl6ztlonsp4AiLCLEkWnhu4NtIGR1IGzhu4tjaCJdLFsi7IKs7JuQIOuqqOynkSIsInR1eeG7g24gbmjDom4gdmnDqm4iXSxbIuuBiuuLpCIsImLhu48vY2FpIl0sWyLrgZPsnbTri6QiLCLEkXVuIHPDtGkiXSxbIuuDieyepSIsImLhuqNvIHF14bqjbiBs4bqhbmgiXSxbIu2ZmOu2iCDslYjrgrQiLCJoxrDhu5tuZyBk4bqrbiBob8OgbiB0aeG7gW4iXSxbIuyKteq0gCIsInRow7NpIHF1ZW4iXSxbIu2ZlOyerCIsImjhu49hIGhv4bqhbiJdLFsi7LSs7JiBIOq4iOyngCIsImPhuqVtIGNo4bulcCDhuqNuaCJdLFsi7JWE64G864ukIiwidGnhur90IGtp4buHbSJdLFsi7Iug7Zi4IiwidMOtbiBoaeG7h3UgxJHDqG4iXSxbIuuCreu5hO2VmOuLpCIsImzDo25nIHBow60iXV19.btdd">từ vựng</a>, <a href="https://nttn6889.github.io/narikoreanbox/thi-thu/#n=eyJjIjoiNjdCUk4iLCJ0IjoiTMOgbSB0aOG7rSDCtyBOZ2hlIGPDonUgNOKAkzYiLCJsIjoiTjAwMSJ9.63xh">luyện nghe</a>, <a href="https://nttn6889.github.io/narikoreanbox/thi-thu/#d=eyJjIjoiTURWVjgiLCJmIjoxLCJ0Ijo4LCJ4IjoixJDhu4EgMSDigJMgSE9UIFRPUElLIChCw6xhIMSR4buPKSIsImUiOiJFaG90MSJ9.6re7">đề thi thử</a>.</li>
+        <li>Làm xong bấm <strong>Nộp bài</strong>, rồi bấm <strong>Sao chép</strong> tin nhắn kết quả.</li>
+        <li>Gửi tin nhắn đó cho cô qua Zalo. Cô xem em đang yếu phần nào rồi tư vấn lộ trình riêng cho em.</li>
+      </ol>
+      <p class="zalo">Zalo cô: 0399 214 554</p>
+      <div class="row">
+        <a class="btn main" href="https://zalo.me/0399214554" target="_blank" rel="noopener">Nhắn Zalo cho cô</a>
+        <a class="btn main" style="background:transparent;color:var(--violet);border:2px solid var(--violet)" href="../ve-co/">Tìm hiểu về cô</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>Hàn Ngữ Nari · Quỳnh Lưu, Nghệ An · Luyện thi TOPIK online</footer>
+</div>
+</body>
+</html>
