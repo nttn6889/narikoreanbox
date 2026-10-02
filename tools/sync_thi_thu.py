@@ -6,8 +6,13 @@ Cách dùng:  python3 tools/sync_thi_thu.py <file-html-tai-ve-tu-artifact>
 - Chỉ giữ phần học sinh: bỏ khối quản lý (Admin) và đoạn khởi động kết nối claude.ai.
 - Tách ảnh base64 trong đề ra thư mục thi-thu/img/ (tên file theo mã băm nên không trùng).
 - Đổi link "Về cô" sang link trong config bên dưới.
+
+Bài thi giao kiểu mới (link #d=…) và bài từ vựng không cần bước này; chỉ cần khi sửa mã trang.
+Ngân hàng đề và kho từ đồng bộ riêng bằng tools/sync_kho.py.
 """
 import base64, hashlib, json, os, re, sys
+
+from sync_kho import clean_images
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "thi-thu")
@@ -42,9 +47,6 @@ def main(path):
                 f.write(raw)
             used.add(name)
             q["image"] = "img/" + name
-    for f in os.listdir(img_dir):
-        if f not in used:
-            os.remove(os.path.join(img_dir, f))
 
     js = json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("<", "\\u003c")
     src = src[:m.start(2)] + js + src[m.end(2):]
@@ -60,6 +62,7 @@ def main(path):
     os.makedirs(OUT, exist_ok=True)
     with open(os.path.join(OUT, "index.html"), "w", encoding="utf-8") as f:
         f.write(src)
+    clean_images()  # ảnh thừa: không còn trong index.html lẫn thi-thu/de/*.json
     print("Đã tạo thi-thu/index.html (%d KB), %d ảnh, %d bài đang mở: %s" % (
         len(src.encode()) // 1024, len(used), len(data.get("assign", {})), ", ".join(sorted(data["assign"]))))
 
