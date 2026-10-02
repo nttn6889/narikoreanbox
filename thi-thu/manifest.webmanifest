@@ -1,0 +1,16 @@
+{
+  "name": "Hàn Ngữ Nari",
+  "short_name": "Hàn Ngữ Nari",
+  "description": "Thi thử TOPIK II và học từ vựng cùng cô Ngân",
+  "id": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1b2a5c",
+  "lang": "vi",
+  "icons": [
+    {"src": "icon/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "icon/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+    {"src": "icon/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ]
+}

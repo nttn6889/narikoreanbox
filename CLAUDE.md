@@ -21,6 +21,11 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   `python3 tools/sync_thi_thu.py <file-html>` để sinh lại `thi-thu/index.html` (bỏ khối Admin và đoạn kết nối claude.ai).
 - Tên đề trộn có thể chứa tên học sinh: chỉ được nằm trong link, không đưa vào repo (sync_kho bỏ đề trộn vì vậy).
 
+## App trên điện thoại (PWA)
+- `thi-thu/` cài được như app (“Thêm vào màn hình chính”): `manifest.webmanifest`, `sw.js` (lấy mạng trước, mất mạng dùng
+  bản lưu), biểu tượng trong `thi-thu/icon/` (từ logo). `sync_thi_thu.py` tự chèn thẻ head + đoạn khởi động app (`add_app`).
+- Mở app không kèm link → tự mở lại link lộ trình `#l=` gần nhất (localStorage `nari-app-route`).
+
 ## Lưu ý
 - Repo không được chứa tên, điểm, nhận xét của học sinh.
 

@@ -4,6 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Phòng thi thử TOPIK II · Hàn Ngữ Nari</title>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#1b2a5c">
+<link rel="icon" type="image/png" href="icon/favicon-64.png">
+<link rel="apple-touch-icon" href="icon/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Hàn Ngữ Nari">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Serif+KR:wght@400;600;700&display=swap" rel="stylesheet">
@@ -1012,6 +1019,15 @@ function rStart(p, k, words, name){
 }
 
 /* ---------- boot ---------- */
+/* ---------- App cài trên điện thoại (PWA) ---------- */
+(function(){
+  var standalone = (window.matchMedia && matchMedia("(display-mode: standalone)").matches) || navigator.standalone;
+  try{
+    if(/[#&]l=/.test(location.hash)) localStorage.setItem("nari-app-route", location.hash);
+    else if(standalone && !location.hash && !location.search){ var h = localStorage.getItem("nari-app-route"); if(h) history.replaceState(null, "", h); }
+  }catch(e){}
+  if("serviceWorker" in navigator) window.addEventListener("load", function(){ navigator.serviceWorker.register("sw.js").catch(function(){}); });
+})();
 if(!examBoot() && !vocabBoot() && !routeBoot()) studentLanding();
 })();
 </script>

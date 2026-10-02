@@ -18,6 +18,37 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "thi-thu")
 ABOUT_URL = "../ve-co/"
 
+# Cài thành app trên điện thoại (PWA): manifest + biểu tượng + service worker (thi-thu/sw.js).
+APP_HEAD = """<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#1b2a5c">
+<link rel="icon" type="image/png" href="icon/favicon-64.png">
+<link rel="apple-touch-icon" href="icon/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Hàn Ngữ Nari">
+"""
+# Mở app từ biểu tượng mà không có link → mở lại lộ trình từ vựng (#l=…) em đã mở gần nhất.
+APP_BOOT = """/* ---------- App cài trên điện thoại (PWA) ---------- */
+(function(){
+  var standalone = (window.matchMedia && matchMedia("(display-mode: standalone)").matches) || navigator.standalone;
+  try{
+    if(/[#&]l=/.test(location.hash)) localStorage.setItem("nari-app-route", location.hash);
+    else if(standalone && !location.hash && !location.search){ var h = localStorage.getItem("nari-app-route"); if(h) history.replaceState(null, "", h); }
+  }catch(e){}
+  if("serviceWorker" in navigator) window.addEventListener("load", function(){ navigator.serviceWorker.register("sw.js").catch(function(){}); });
+})();
+"""
+BOOT_LINE = "if(!examBoot() && !vocabBoot() && !routeBoot()) studentLanding();"
+
+
+def add_app(src):
+    if "manifest.webmanifest" not in src:
+        src = src.replace("</title>\n", "</title>\n" + APP_HEAD, 1)
+    if "nari-app-route" not in src:
+        assert BOOT_LINE in src, "không thấy dòng khởi động trang"
+        src = src.replace(BOOT_LINE, APP_BOOT + BOOT_LINE, 1)
+    return src
+
 
 def cut(src, start, end, repl=""):
     i = src.index(start)
@@ -59,6 +90,8 @@ def main(path):
     src = re.sub(r'var ABOUT = "[^"]*";', 'var ABOUT = "%s";' % ABOUT_URL, src)
     src = src.replace("stopClock(); Admin.render(); };", "stopClock(); studentLanding(); };")
 
+    src = add_app(src)
+
     os.makedirs(OUT, exist_ok=True)
     with open(os.path.join(OUT, "index.html"), "w", encoding="utf-8") as f:
         f.write(src)
@@ -68,4 +101,9 @@ def main(path):
 
 
 if __name__ == "__main__":
-    main(sys.argv[1])
+    if sys.argv[1:] == ["--app-only"]:  # chỉ thêm phần app vào thi-thu/index.html hiện có
+        f = os.path.join(OUT, "index.html")
+        s = open(f, encoding="utf-8").read()
+        open(f, "w", encoding="utf-8").write(add_app(s))
+    else:
+        main(sys.argv[1])
