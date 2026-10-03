@@ -73,3 +73,16 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - Cô gửi mp3 + đề → nén: `ffmpeg -i in.mp3 -ac 1 -ar 24000 -b:a 40k thi-thu/nghe/audio/<id>-<n>.mp3`, soạn json, ghi `nlessons`, commit + push.
 - Giao bài trong trang quản lý (`nassigns`), link `thi-thu/#n=<base64>.<sum>` ({c, t, l}). Học sinh nộp mã `NN1-…`, cô dán vào
   tab Chấm bài; kết quả ở `nresults`. Hàm chấm `nSlots`/`nScore` dùng chung cho cả hai trang (code học sinh nằm ngoài khối Admin).
+
+## Lớp học & đánh giá (tab "Lớp học" trong trang quản lý) — giai đoạn 1 đã xong
+- Lớp = nhóm học sinh cùng lộ trình (học 1:1 cùng trình độ cũng gom một lớp). Bài hằng ngày **giống nhau cả lớp**.
+- `classes/<id>`: name, level, goal, target (điểm đỗ: TOPIK II cấp 3=120, 4=150, 5=190, 6=230), examDate, due (giờ hạn nộp),
+  per (số từ/ngày), vtype, members[id trong `students`], weeks[{start, f, t, focus, p, n[]}]: đọc câu f–t (ôn + trọng tâm),
+  từ vựng xem trước đến câu p, bài nghe n[]. "Thêm tuần" tự trượt phạm vi +2 câu.
+- "Tạo bài hôm nay" → 3 bài thật trong `vassigns`/`nassigns`/`assigns` (có `cls`, `day`) + `cdays/<lớp>_<ngày>` {v, nn, e}
+  → một tin nhắn Zalo 3 link. Từ vựng lấy theo số câu ở đầu tên phần kho từ ("Câu 5 · …"): ~3/4 từ câu f–t, ~1/4 xem trước;
+  đề và bài nghe chọn cái lớp dùng ít nhất. Chấm bằng tab Chấm bài như cũ; bảng theo dõi khớp học sinh qua `stKey` (tên trong sổ điểm).
+- Thang mức (cô đã duyệt): ≥90% Rất tốt · 75–89% Tốt · 60–74% Khá, cần củng cố · <60% Cần ôn thêm. Không nhận xét riêng — chỉ số liệu + mức.
+- Toàn bộ chạy bằng JS trong trang (không gọi Claude). Code nằm trong khối Admin (`renderLop`, `makeDay`, `clsData`…) nên trang học sinh không đổi.
+- Còn lại: GĐ2 đề ôn tuần (chung trộn câu sai cả lớp + riêng từng em); GĐ3 đánh giá 2 tuần/lần + bảng tổng kết theo tiêu chuẩn
+  (điểm TOPIK ước tính so mục tiêu, dạng câu theo số câu, chủ đề từ yếu; phần Viết để sau); GĐ4 học trước từ vựng (dùng kho từ).
