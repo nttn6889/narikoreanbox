@@ -83,6 +83,13 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   → một tin nhắn Zalo 3 link. Từ vựng lấy theo số câu ở đầu tên phần kho từ ("Câu 5 · …"): ~3/4 từ câu f–t, ~1/4 xem trước;
   đề và bài nghe chọn cái lớp dùng ít nhất. Chấm bằng tab Chấm bài như cũ; bảng theo dõi khớp học sinh qua `stKey` (tên trong sổ điểm).
 - Thang mức (cô đã duyệt): ≥90% Rất tốt · 75–89% Tốt · 60–74% Khá, cần củng cố · <60% Cần ôn thêm. Không nhận xét riêng — chỉ số liệu + mức.
+- **Khối kiến thức** (Lớp học → “Thư viện khối kiến thức”): khối = {id, name, note, rd câu đọc "9-12;16-18", ls câu nghe, wr câu viết,
+  vk = tên phần kho từ bắt đầu bằng…}. Thư viện có sẵn trong code (`LIBS`: 18 dạng đọc, dạng nghe, 4 dạng viết, cấp độ 3급–6급,
+  10 chủ đề — theo trang https://claude.ai/artifact/ExdBDgYYhxrysxqHEDB27S) + thư viện cô dán (`syllabi/<id>`, ô “Dán mục lục”:
+  dòng `##` mở thư viện, “Bài N”/“N과” là khối, vk tự đặt “<tên sách> · <bài>”). Tuần của lớp: `weeks[].b` = ["<thư viện>/<khối>"].
+  `wkPlan`: trọng tâm = khối tuần này, ôn = khối tuần trước, xem trước = từ vựng khối tuần sau; đề mini = một đoạn câu liền (≤10 câu);
+  bài nghe khớp theo “Câu a~b” trong tên bài nghe. Khung mẫu: `rtemplates/<id>` {name, weeks[{b}]}.
+  Khối chủ đề/giáo trình có từ vựng khi cô thêm phần kho từ tên bắt đầu bằng vk (VD “Chủ đề 02 · …”, “SEOUL 3A · 1과 · …”).
 - Toàn bộ chạy bằng JS trong trang (không gọi Claude). Code nằm trong khối Admin (`renderLop`, `makeDay`, `clsData`…) nên trang học sinh không đổi.
 - Còn lại: GĐ2 đề ôn tuần (chung trộn câu sai cả lớp + riêng từng em); GĐ3 đánh giá 2 tuần/lần + bảng tổng kết theo tiêu chuẩn
   (điểm TOPIK ước tính so mục tiêu, dạng câu theo số câu, chủ đề từ yếu; phần Viết để sau); GĐ4 học trước từ vựng (dùng kho từ).
