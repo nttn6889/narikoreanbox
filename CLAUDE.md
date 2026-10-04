@@ -85,3 +85,9 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   https://claude.ai/artifact/1mkNvmWjkjFwgxHinJfiXk (biến `PRACTICE` trong trang; 80 câu dạng A điền / B tương đồng, chưa đưa vào ngân hàng đề —
   ngân hàng đề cô để dành cho đề gốc). Trang đó còn 4 câu sai đáp án so với sách 3급 목표 (열리는데 ②, 나오느라고 ④, 아프거나 ④, 맡게 됐다 ①).
 - Kho từ câu 11–12: phần `Câu 11–12 · 기사 주제` (nhóm `V11_00`…`V11_07`, secOrder 6); câu 51 đã lùi xuống secOrder 7.
+- Kho từ từ sách “Giáo trình từ vựng TOPIK II (토픽Ⅱ 합격 레시피)” (1.157 mục, nghĩa tiếng Việt tự soạn): thêm nhóm `V09_10`…`V09_13`
+  vào Câu 9 và các phần mới (secOrder): Câu 10 · 그래프 (6, kèm mẫu câu nghe 3), Câu 11–12 (7), Câu 19–20 · 접속 부사 (8),
+  Câu 21–22 · 관용 표현 (9, 187 câu), Câu 23–24 · 감정 표현 (10), Câu 25–27 · 신문 기사 제목 (11), Câu 42–43 · 소설 감정 표현 (12),
+  Câu 44–45 · 사회 이슈 어휘 (13), Câu 51 (14), Câu 53 · 그래프 쓰기 (15), Câu 54 · 속담 (16, 121 câu);
+  phần nghe `Nghe 4–12 · 장소별 대화` (20), `Nghe 15 · 뉴스` (21), `Nghe 31–32 · 찬반 표현` (22), nhóm `VN04_…`, `VN15_…`, `VN31_…`.
+- Trang `tu-vung/` lọc phần nghe bằng `#c=n4`, `#c=n15`, `#c=n4-31` (phần “Nghe …” có số câu +100 để không lẫn với câu đọc).

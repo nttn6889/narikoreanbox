@@ -67,14 +67,15 @@ footer a{color:var(--muted)}
   var GRAM = 'https://claude.ai/artifact/1mkNvmWjkjFwgxHinJfiXk';
   var PRACTICE = {1: {url: GRAM, what: 'chọn thẻ “Dạng điền chỗ trống”'}, 3: {url: GRAM, what: 'chọn thẻ “Dạng tương đồng”'}};
   function ul(s){ return esc(s).replace(/__(.+?)__/g, '<u>$1</u>'); }
-  function secNum(sec){ var m = /(\d+)/.exec(sec || ''); return m ? +m[1] : 0; }
-  // #c=5-9,11  → chỉ hiện các câu này (không có thì hiện tất cả)
+  // Phần đọc/viết "Câu 11–12 · …" → 11; phần nghe "Nghe 4–12 · …" → 104 (không lẫn với câu đọc)
+  function secNum(sec){ var m = /(\d+)/.exec(sec || ''); return m ? +m[1] + (/^Nghe/.test(sec) ? 100 : 0) : 0; }
+  // #c=5-9,11  → chỉ hiện các câu này; #c=n4,n15 → phần nghe (không có thì hiện tất cả)
   function wanted(){
-    var m = /[#&]c=([0-9,\-]+)/.exec(location.hash);
+    var m = /[#&]c=([0-9n,\-]+)/i.exec(location.hash);
     if (!m) return null;
     var set = {};
     m[1].split(',').forEach(function(p){
-      var r = p.split('-'), a = +r[0], b = r.length > 1 ? +r[1] : a;
+      var off = /^n/i.test(p) ? 100 : 0, r = p.replace(/n/gi, '').split('-'), a = off + +r[0], b = r.length > 1 ? off + +r[1] : a;
       for (var i = a; i <= b && i - a < 200; i++) set[i] = 1;
     });
     return set;
