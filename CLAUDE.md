@@ -90,6 +90,10 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   Câu 21–22 · 관용 표현 (9, 187 câu), Câu 23–24 · 감정 표현 (10), Câu 25–27 · 신문 기사 제목 (11), Câu 42–43 · 소설 감정 표현 (12),
   Câu 44–45 · 사회 이슈 어휘 (13), Câu 51 (14), Câu 53 · 그래프 쓰기 (15), Câu 54 · 속담 (16, 121 câu);
   phần nghe `Nghe 4–12 · 장소별 대화` (20), `Nghe 15 · 뉴스` (21), `Nghe 31–32 · 찬반 표현` (22), nhóm `VN04_…`, `VN15_…`, `VN31_…`.
+- Từ danh sách “Từ vựng chọn lọc TOPIK II” (EBS, https://claude.ai/artifact/6NAJ7UnAGUQ6xWkbnhfbdi) đã gộp phần 4–7, bỏ trùng:
+  quán ngữ → `V21_07`…`V21_12`, tượng thanh/tượng hình → `V42_03`…`V42_09` (Câu 42–43), tục ngữ → `V54_06`…`V54_08`,
+  12 địa điểm → `VN04_12`…`VN04_26` (Nghe 4–12). Phần 1–3 (đồng nghĩa/đa nghĩa/trái nghĩa) và phần 8 (55 chủ đề) chưa đưa vào;
+  cô định làm thẻ “Chủ đề” cùng với 10 chủ đề lớn × 12 chủ điểm ở https://claude.ai/artifact/ExdBDgYYhxrysxqHEDB27S.
 - Trang `tu-vung/` lọc phần nghe bằng `#c=n4`, `#c=n15`, `#c=n4-31` (phần “Nghe …” có số câu +100 để không lẫn với câu đọc).
 - Trang `tu-vung/` luôn có 3 thẻ Đọc (câu 1–50) / Nghe (phần `Nghe …`, nút ghi “Câu 4–12”) / Viết (câu ≥ 51); `#k=nghe`, `#k=viet` mở thẻ.
   `#c=` chỉ lọc trong thẻ có câu khớp (vd. `#c=1-12` lọc thẻ Đọc, thẻ Nghe/Viết vẫn hiện đủ) và thêm nút “Xem tất cả ›” để bỏ lọc.
