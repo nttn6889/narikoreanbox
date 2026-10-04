@@ -99,12 +99,16 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   `#c=` chỉ lọc trong thẻ có câu khớp (vd. `#c=1-12` lọc thẻ Đọc, thẻ Nghe/Viết vẫn hiện đủ) và thêm nút “Xem tất cả ›” để bỏ lọc.
 
 ## Thống kê đề → trang `tu-vung/` (thẻ ⭐ Ưu tiên, Chủ đề, dòng “Hay ra”, dấu ★)
-- `python3 tools/thong_ke_de.py` (cần `pip install kiwipiepy`) đọc `thi-thu/de/*.json` (bỏ dòng hướng dẫn), tách từ về dạng gốc
-  rồi ghi `tu-vung/de.json`: `uu` = từ gặp trong ≥3 đề có nghĩa (kho từ, `tu-vung/chu-de.json` hoặc `tools/nghia_de.tsv`),
-  `kho`/`cdk` = số đề của từng mục kho / từ chủ đề (dấu ★), `cd` = từ khóa theo chủ đề, `hay` = dòng “Hay ra” (viết tay trong script, biến `HAY`).
+- `python3 tools/thong_ke_de.py <dump>` (cần `pip install kiwipiepy`; `<dump>` = ArtifactData `list` collection `topics` với `out_dir`)
+  đọc `thi-thu/de/*.json` (bỏ dòng hướng dẫn), tách từ về dạng gốc rồi ghi `tu-vung/de.json`: `uu` = từ gặp trong ≥3 đề có nghĩa
+  (kho từ, `tu-vung/chu-de.json` hoặc `tools/nghia_de.tsv`), `kho`/`cdk` = số đề của từng mục kho / từ chủ đề (dấu ★),
+  `cd` = từ khóa theo chủ đề, `hay` = dòng “Hay ra” (viết tay trong script, biến `HAY`).
   Script in ra từ chưa có nghĩa → bổ sung `tools/nghia_de.tsv` (từ sơ cấp thì bỏ qua). Chạy lại sau mỗi lần “đồng bộ đề”.
-- `tools/chu_de.json`: chủ đề (10 chủ đề lớn) + mục (55 mục EBS) của từng đoạn văn câu 10–50, gắn tay; đề mới phải gắn thêm.
-  Bảng phân loại câu này chỉ dùng cho cô soạn giáo án — trang học sinh chỉ hiện danh sách từ, không hiện câu nào thuộc chủ đề nào.
+- **Chủ đề từng đoạn văn** nằm trong db trang quản lý, collection `topics/<id đề>` = `{units:[{n:[câu…], c: chủ đề lớn, s: số mục EBS 1–55}]}`
+  (c ∈ MT KH KT YT VH XH PL GD KHAC=Lịch sử VHOC DS). Không để trong repo (chỉ cô xem). Khi đồng bộ đề mới: đọc đoạn văn câu 10–50,
+  gắn chủ đề rồi ArtifactData `set` `topics/<id>`, sau đó chạy lại thống kê. Đề trộn (`mix`) và đề < 10 câu thì không gắn.
+- Tab **“Phân tích đề”** trong trang quản lý (`renderPhanTich`, hằng `PT_BIG`/`PT_SUB`/`PT_GROUPS`): bảng số câu theo chủ đề, chủ đề hay ra theo
+  dạng câu, lọc câu theo chủ đề/dạng câu/đề, sửa chủ đề từng đoạn, chọn câu → tạo đề trộn (dùng `buildMixDocs`/`sortMix` như “Tạo đề trộn”).
 - `tu-vung/chu-de.json`: 55 mục từ vựng chủ đề EBS (phần 8 của https://claude.ai/artifact/6NAJ7UnAGUQ6xWkbnhfbdi, đã chia Danh/Động/Tính/Biểu hiện)
   xếp vào 10 chủ đề lớn + “Đời sống hằng ngày” (`DS`: gia đình, gọi món, chào hỏi, vị trí… — ít gặp ở bài đọc) (`topics[].m` = số mục;
   “Khác” = `KHAC` chỉ còn Lịch sử). Thẻ “Chủ đề” = từ khóa gặp trong đề + các mục EBS của chủ đề đó.

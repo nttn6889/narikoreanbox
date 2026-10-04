@@ -2,14 +2,15 @@
 """Thống kê từ vựng trong các đề thi thử → tu-vung/de.json (thẻ ⭐ Ưu tiên, Chủ đề, dòng “Hay ra”, dấu ★ trong kho từ).
 
 Cách dùng:  pip install kiwipiepy   (bộ tách từ tiếng Hàn, chỉ cần cài một lần)
-            python3 tools/thong_ke_de.py
+            python3 tools/thong_ke_de.py <thu-muc-dump>
+  <thu-muc-dump>: thư mục ArtifactData `list` collection `topics` (out_dir) của trang quản lý → <dump>/topics/<id đề>.json
 
 Đầu vào:
   thi-thu/de/*.json      đề (chỉ đọc đoạn văn, câu hỏi, lựa chọn; bỏ dòng hướng dẫn “…고르십시오”)
   thi-thu/vocab.json     kho từ (từ trong kho được đánh ★ số đề đã gặp)
   tools/nghia_de.tsv     nghĩa tiếng Việt cho từ gặp trong đề mà kho chưa có
-  tools/chu_de.json      chủ đề của từng đoạn văn câu 10–50 (chỉ dùng để gom từ theo chủ đề;
-                         bảng phân loại câu không đưa ra trang học sinh)
+  topics (db trang quản lý) chủ đề của từng đoạn văn câu 10–50 ({units:[{n, c, s}]}); chỉ dùng để gom từ theo chủ đề.
+                         Bảng phân loại câu KHÔNG để trong repo (chỉ cô xem, tab “Phân tích đề”).
 Từ ưu tiên = từ gặp trong ít nhất MIN_DE đề và có nghĩa (trong kho hoặc nghia_de.tsv);
 từ chưa có nghĩa được in ra cuối để bổ sung vào nghia_de.tsv.
 """
@@ -35,6 +36,9 @@ HAY = {
 GROUPS = [(1, 2), (3, 4), (5, 8), (9, 9), (10, 10), (11, 12), (13, 15), (16, 18), (19, 20), (21, 22), (23, 24),
           (25, 27), (28, 31), (32, 34), (35, 38), (39, 41), (42, 43), (44, 45), (46, 47), (48, 50)]
 TOPIC_ORDER = ["MT", "KH", "KT", "YT", "VH", "XH", "PL", "GD", "KHAC", "VHOC", "DS"]
+BIG = {"MT": "Môi trường", "KH": "Khoa học – Tâm lý", "KT": "Doanh nghiệp – Kinh tế", "YT": "Y học – Sức khỏe",
+       "VH": "Văn hóa – Nghệ thuật – Thể thao", "XH": "Xã hội", "PL": "Pháp luật & chế độ", "GD": "Giáo dục",
+       "KHAC": "Lịch sử", "VHOC": "Văn học", "DS": "Đời sống hằng ngày"}
 TOPIC_MAX = 80
 
 kiwi = Kiwi()
@@ -87,18 +91,22 @@ def glabel(a):
     return str(a)
 
 
-def main():
+def main(dump):
     vocab = json.load(open(os.path.join(ROOT, "thi-thu/vocab.json"), encoding="utf-8"))
-    tags = json.load(open(os.path.join(ROOT, "tools/chu_de.json"), encoding="utf-8"))
     nghia = {}
     for line in open(os.path.join(ROOT, "tools/nghia_de.tsv"), encoding="utf-8"):
         if line.strip() and not line.startswith("#") and "\t" in line:
             k, v = line.rstrip("\n").split("\t", 1)
             nghia[k.strip()] = v.strip()
     topic_of = {}
-    for it in tags["items"]:
-        for n in it["n"]:
-            topic_of[(it["e"], n)] = it["c"]
+    for f in glob.glob(os.path.join(dump, "topics", "*.json")):
+        e = os.path.splitext(os.path.basename(f))[0]
+        d = json.load(open(f, encoding="utf-8"))
+        d = d.get("data", d)  # tệp ArtifactData có thể bọc trong "data"
+        for it in d.get("units", []):
+            it = dict(it, e=e)
+            for n in it["n"]:
+                topic_of[(it["e"], n)] = it["c"]
 
     qs = [(e, n, lemmas(t)) for e, n, t in exam_questions()]
     exams = sorted({e for e, _, _ in qs})
@@ -202,7 +210,7 @@ def main():
         # ưu tiên từ gặp ở nhiều đoạn của chủ đề và ít gặp ở chủ đề khác
         rows.sort(key=lambda r: (-r[2] * r[3], r[0]))
         rows = [r[:3] for r in rows]
-        cd.append({"k": tp, "t": tags["big"][tp], "w": rows[:TOPIC_MAX]})
+        cd.append({"k": tp, "t": BIG[tp], "w": rows[:TOPIC_MAX]})
 
     out = {"at": int(time.time() * 1000), "nde": len(exams), "hay": HAY, "kho": kho, "cdk": cdk, "uu": uu, "cd": cd}
     with open(os.path.join(ROOT, "tu-vung/de.json"), "w", encoding="utf-8") as f:
@@ -215,4 +223,7 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    import sys
+    if len(sys.argv) < 2 or not os.path.isdir(os.path.join(sys.argv[1], "topics")):
+        sys.exit("Cần thư mục dump có topics/*.json (ArtifactData list collection topics với out_dir).")
+    main(sys.argv[1])
