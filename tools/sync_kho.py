@@ -48,6 +48,14 @@ def vcanon(groups):
                                         for w in (g.get("words") or [])) for g in gs)
 
 
+def wrow(w):
+    """[id, ko, vi] (+ câu ví dụ nếu có — ngữ pháp câu 1–4; "__x__" là phần gạch chân)."""
+    r = [w.get("id", ""), w.get("ko", ""), w.get("vi", "")]
+    if w.get("ex"):
+        r.append(w["ex"])
+    return r
+
+
 def load(path):
     with open(path, encoding="utf-8") as f:
         return json.load(f)
@@ -125,7 +133,7 @@ def main(dump):
         site["v"][sec] = jsum(vcanon(gs))
     vocab = {"at": site["at"], "g": [{"id": g["id"], "sec": g.get("sec", ""), "so": g.get("secOrder") or 0,
                                       "o": g.get("order") or 0, "ko": g.get("ko", ""), "vi": g.get("vi", ""),
-                                      "w": [[w.get("id", ""), w.get("ko", ""), w.get("vi", "")] for w in (g.get("words") or [])]}
+                                      "w": [wrow(w) for w in (g.get("words") or [])]}
                                      for g in groups]}
     with open(os.path.join(OUT, "vocab.json"), "w", encoding="utf-8") as f:
         json.dump(vocab, f, ensure_ascii=False, separators=(",", ":"))

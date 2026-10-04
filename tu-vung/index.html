@@ -35,6 +35,9 @@ h3 small{font-weight:bold}
   .tb .h.wide{display:block}
 }
 @media (max-width:639px){.tb .pad{display:none}}
+.tb.gr .ex{grid-column:1/-1;font-family:"Noto Sans KR","Malgun Gothic","Apple SD Gothic Neo",sans-serif;font-size:14px;color:#333;background:#fafafa}
+.tb.gr .ex u{text-underline-offset:3px;font-weight:bold}
+@media (min-width:640px){.tb.gr{grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,2fr)}.tb.gr .ex{grid-column:auto;background:none}}
 footer{margin-top:40px;font-size:13px;color:var(--muted);text-align:center}
 footer a{color:var(--muted)}
 #msg{color:var(--acc)}
@@ -44,7 +47,7 @@ footer a{color:var(--muted)}
 <body>
 <main>
 <header>
-  <h1>Từ vựng học trước bài</h1>
+  <h1>Từ vựng · Ngữ pháp học trước bài</h1>
   <p>Hàn Ngữ Nari · Đọc kỹ từ vựng theo từng câu trước khi lên lớp; bấm tên câu ở thanh trên để chuyển câu. Bấm “Ẩn nghĩa” để tự kiểm tra, chạm vào ô để xem lại nghĩa.</p>
 </header>
 <nav id="nav"></nav>
@@ -57,6 +60,7 @@ footer a{color:var(--muted)}
 (function(){
   var out = document.getElementById('out'), nav = document.getElementById('nav'), msg = document.getElementById('msg');
   function esc(s){ return String(s == null ? '' : s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  function ul(s){ return esc(s).replace(/__(.+?)__/g, '<u>$1</u>'); }
   function secNum(sec){ var m = /(\d+)/.exec(sec || ''); return m ? +m[1] : 0; }
   // #c=5-9,11  → chỉ hiện các câu này (không có thì hiện tất cả)
   function wanted(){
@@ -84,11 +88,18 @@ footer a{color:var(--muted)}
       nv += '<a href="javascript:void 0" data-to="' + si + '">' + esc(parts[0]) + '</a>';
       h += '<section class="sec" id="' + id + '"><h2 id="' + id + '"><span class="n">' + esc(parts[0]) + '</span>' + esc(parts.slice(1).join(' · ')) + '</h2>';
       by[sec].forEach(function(g){
-        h += '<h3>' + esc(g.ko) + (g.vi ? ' <small>(' + esc(g.vi) + ')</small>' : '') + '</h3><div class="tb">' +
-             '<div class="h">Từ vựng</div><div class="h">Nghĩa tiếng Việt</div>' +
-             '<div class="h wide">Từ vựng</div><div class="h wide">Nghĩa tiếng Việt</div>';
-        g.w.forEach(function(w){ h += '<div class="ko">' + esc(w[1]) + '</div><div class="vi">' + esc(w[2]) + '</div>'; });
-        if (g.w.length % 2) h += '<div class="pad"></div><div class="pad"></div>';
+        h += '<h3>' + esc(g.ko) + (g.vi ? ' <small>(' + esc(g.vi) + ')</small>' : '') + '</h3>';
+        if (g.w.some(function(w){ return w[3]; })) {
+          // ngữ pháp (câu 1–4): mỗi dòng một mẫu, kèm câu ví dụ
+          h += '<div class="tb gr"><div class="h">Ngữ pháp</div><div class="h">Nghĩa tiếng Việt</div><div class="h wide">Ví dụ</div>';
+          g.w.forEach(function(w){ h += '<div class="ko">' + esc(w[1]) + '</div><div class="vi">' + esc(w[2]) + '</div><div class="ex">' + ul(w[3] || '') + '</div>'; });
+        } else {
+          h += '<div class="tb">' +
+               '<div class="h">Từ vựng</div><div class="h">Nghĩa tiếng Việt</div>' +
+               '<div class="h wide">Từ vựng</div><div class="h wide">Nghĩa tiếng Việt</div>';
+          g.w.forEach(function(w){ h += '<div class="ko">' + esc(w[1]) + '</div><div class="vi">' + esc(w[2]) + '</div>'; });
+          if (g.w.length % 2) h += '<div class="pad"></div><div class="pad"></div>';
+        }
         h += '</div>';
       });
       h += '</section>';
