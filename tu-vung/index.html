@@ -57,7 +57,13 @@ footer a{color:var(--muted)}
 .mt{display:block;font-family:Arial,sans-serif;font-size:11.5px;color:var(--muted)}
 .intro{margin:0 0 10px;font-size:15px;color:#333}
 h4{font-size:14px;margin:12px 0 4px;color:var(--muted)}
-@media print{nav,.parts,.tools,footer,.lt,.done{display:none}.sec{display:block}h2{break-before:auto}.tb{break-inside:auto}h3{break-after:avoid}}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px}
+.chips a{border:1px solid var(--acc);color:var(--acc);border-radius:14px;padding:2px 10px;font-size:14px;text-decoration:none;font-family:"Noto Sans KR","Malgun Gothic",sans-serif}
+.blk{margin:0 0 18px}
+.blk h3{margin:0;padding:6px 10px;background:var(--ink);color:#fff;font-size:17px;font-family:"Noto Sans KR","Malgun Gothic",sans-serif}
+.blk h3 small{font-weight:normal;font-size:13px;opacity:.85;font-family:"Times New Roman",serif}
+.blk .tb .h{background:var(--sub)}
+@media print{nav,.parts,.tools,footer,.lt,.done,.chips{display:none}.sec{display:block}h2{break-before:auto}.tb{break-inside:auto}h3{break-after:avoid}}
 </style>
 </head>
 <body>
@@ -97,7 +103,7 @@ h4{font-size:14px;margin:12px 0 4px;color:var(--muted)}
   // Ba thẻ Đọc / Nghe / Viết (luôn hiện). #k=nghe, #k=viet mở thẻ tương ứng.
   // #c= lọc câu trong thẻ có câu khớp; thẻ khác vẫn hiện đủ, kèm nút “Xem tất cả” để bỏ lọc.
   var PARTS = [{k: 'doc', t: 'Đọc', s: 'Câu 1–50'}, {k: 'nghe', t: 'Nghe', s: 'Câu 1–50'}, {k: 'viet', t: 'Viết', s: 'Câu 51–54'},
-               {k: 'uu', t: '⭐ Ưu tiên', s: 'Từ hay gặp'}, {k: 'cd', t: 'Chủ đề', s: '10 chủ đề'}];
+               {k: 'uu', t: '⭐ Ưu tiên', s: 'Từ hay gặp'}, {k: 'cd', t: 'Chủ đề', s: '11 chủ đề'}];
   // tu-vung/de.json (tools/thong_ke_de.py): thống kê từ trong các đề thi thử; tu-vung/chu-de.json: từ vựng theo chủ đề
   var DE = null, CD = null;
   function star(n){ return n ? '<span class="st' + (n < 3 ? ' lo' : '') + '" title="Gặp trong ' + n + ' đề">' + (n >= 3 ? '★' : '') + n + ' đề</span>' : ''; }
@@ -188,22 +194,24 @@ h4{font-size:14px;margin:12px 0 4px;color:var(--muted)}
       var muc = {}, kw = {}, nde = {};
       CD.muc.forEach(function(m){ muc[m.no] = m; });
       if (DE) { DE.cd.forEach(function(c){ kw[c.k] = c.w; }); DE.uu.forEach(function(x){ nde[x[0]] = x[2]; }); }
-      CD.topics.forEach(function(t){
+      CD.topics.forEach(function(t, ti){
         secs.push(t.t.split(' – ')[0].split(' & ')[0]);
-        h += '<section class="sec"><h2>' + esc(t.t) + '</h2>' + (t.n ? '<p class="intro">' + esc(t.n) + '</p>' : '');
-        var k = kw[t.k];
-        if (k && k.length) {
-          h += '<h3>Từ khóa gặp trong đề <small>(' + k.length + ' từ)</small></h3>' +
-               '<p class="intro">Từ hay xuất hiện trong các bài đọc thuộc chủ đề này. Dòng nhỏ: số đoạn văn có từ.</p>' +
-               cells(k.map(function(x){ return [esc(x[0]) + '<span class="mt">' + x[2] + ' đoạn văn</span>', x[1]]; }));
-        }
+        // mỗi mục là một khối: thanh tiêu đề + một bảng Từ vựng | Nghĩa (các từ xếp theo danh → động → tính → biểu hiện)
+        var blocks = [], k = kw[t.k];
+        if (k && k.length) blocks.push({t: '★ Từ khóa gặp trong đề', s: 'Dòng nhỏ: số đoạn văn có từ',
+          rows: k.map(function(x){ return [esc(x[0]) + '<span class="mt">' + x[2] + ' đoạn văn</span>', x[1]]; })});
         t.m.forEach(function(no){
-          var m = muc[no];
+          var m = muc[no], rows = [];
           if (!m) return;
-          h += '<h3>' + esc(m.ko) + ' <small>(' + esc(m.vi) + ')</small></h3>';
-          m.g.forEach(function(g){
-            h += '<h4>' + esc(g[0]) + '</h4>' + cells(g[1].map(function(x){ return [esc(x[0]) + star(DE && DE.cdk[x[0]]), x[1]]; }));
-          });
+          m.g.forEach(function(g){ g[1].forEach(function(x){ rows.push([esc(x[0]) + star(DE && DE.cdk[x[0]]), x[1]]); }); });
+          blocks.push({t: m.ko, s: m.vi, rows: rows});
+        });
+        h += '<section class="sec"><h2>' + esc(t.t) + '</h2>' + (t.n ? '<p class="intro">' + esc(t.n) + '</p>' : '') +
+             '<div class="chips">' + blocks.map(function(b, bi){
+               return '<a href="javascript:void 0" data-jump="b' + ti + '_' + bi + '">' + esc(b.t) + '</a>';
+             }).join('') + '</div>';
+        blocks.forEach(function(b, bi){
+          h += '<div class="blk" id="b' + ti + '_' + bi + '"><h3>' + esc(b.t) + ' <small>' + esc(b.s) + ' · ' + b.rows.length + ' từ</small></h3>' + cells(b.rows) + '</div>';
         });
         h += '</section>';
       });
@@ -220,6 +228,10 @@ h4{font-size:14px;margin:12px 0 4px;color:var(--muted)}
     [].forEach.call(nav.querySelectorAll('a'), function(x, k){ x.classList.toggle('on', k === i); });
     window.scrollTo(0, 0);
   }
+  out.addEventListener('click', function(e){
+    var j = e.target.getAttribute && e.target.getAttribute('data-jump');
+    if (j) { e.preventDefault(); var b = document.getElementById(j); if (b) window.scrollTo({top: b.getBoundingClientRect().top + window.pageYOffset - nav.offsetHeight - 8, behavior: 'smooth'}); }
+  });
   nav.addEventListener('click', function(e){
     if (e.target.getAttribute('data-all')) { e.preventDefault(); setHash(/^[ck]=/i, part0()); return; }
     var t = e.target.getAttribute('data-to');
