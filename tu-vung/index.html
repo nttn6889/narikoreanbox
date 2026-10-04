@@ -38,10 +38,13 @@ h3 small{font-weight:bold}
 .tb.gr .ex{grid-column:1/-1;font-family:"Noto Sans KR","Malgun Gothic","Apple SD Gothic Neo",sans-serif;font-size:14px;color:#333;background:#fafafa}
 .tb.gr .ex u{text-underline-offset:3px;font-weight:bold}
 @media (min-width:640px){.tb.gr{grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,2fr)}.tb.gr .ex{grid-column:auto;background:none}}
+.lt{display:block;margin:10px 0 4px;padding:10px 14px;border:2px solid var(--acc);border-radius:8px;color:var(--acc);text-decoration:none;font-weight:bold;font-size:17px;text-align:center}
+.lt small{display:block;font-weight:normal;font-size:13px;color:var(--muted)}
+.done{margin:24px 0 0;color:var(--muted);font-size:14px}
 footer{margin-top:40px;font-size:13px;color:var(--muted);text-align:center}
 footer a{color:var(--muted)}
 #msg{color:var(--acc)}
-@media print{nav,.tools,footer{display:none}.sec{display:block}h2{break-before:auto}.tb{break-inside:auto}h3{break-after:avoid}}
+@media print{nav,.tools,footer,.lt,.done{display:none}.sec{display:block}h2{break-before:auto}.tb{break-inside:auto}h3{break-after:avoid}}
 </style>
 </head>
 <body>
@@ -60,6 +63,9 @@ footer a{color:var(--muted)}
 (function(){
   var out = document.getElementById('out'), nav = document.getElementById('nav'), msg = document.getElementById('msg');
   function esc(s){ return String(s == null ? '' : s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  // Bài luyện ngữ pháp câu 1–4 (trang bài tập của cô trên claude.ai)
+  var GRAM = 'https://claude.ai/artifact/1mkNvmWjkjFwgxHinJfiXk';
+  var PRACTICE = {1: {url: GRAM, what: 'chọn thẻ “Dạng điền chỗ trống”'}, 3: {url: GRAM, what: 'chọn thẻ “Dạng tương đồng”'}};
   function ul(s){ return esc(s).replace(/__(.+?)__/g, '<u>$1</u>'); }
   function secNum(sec){ var m = /(\d+)/.exec(sec || ''); return m ? +m[1] : 0; }
   // #c=5-9,11  → chỉ hiện các câu này (không có thì hiện tất cả)
@@ -86,7 +92,9 @@ footer a{color:var(--muted)}
     secs.forEach(function(sec, si){
       var id = 's' + si, parts = sec.split(' · ');
       nv += '<a href="javascript:void 0" data-to="' + si + '">' + esc(parts[0]) + '</a>';
-      h += '<section class="sec" id="' + id + '"><h2 id="' + id + '"><span class="n">' + esc(parts[0]) + '</span>' + esc(parts.slice(1).join(' · ')) + '</h2>';
+      var lt = PRACTICE[secNum(sec)];
+      lt = lt ? '<a class="lt" href="' + lt.url + '">✎ Luyện tập ' + esc(parts[0]) + ' <small>(' + esc(lt.what) + ')</small></a>' : '';
+      h += '<section class="sec" id="' + id + '"><h2><span class="n">' + esc(parts[0]) + '</span>' + esc(parts.slice(1).join(' · ')) + '</h2>' + lt;
       by[sec].forEach(function(g){
         h += '<h3>' + esc(g.ko) + (g.vi ? ' <small>(' + esc(g.vi) + ')</small>' : '') + '</h3>';
         if (g.w.some(function(w){ return w[3]; })) {
@@ -102,7 +110,7 @@ footer a{color:var(--muted)}
         }
         h += '</div>';
       });
-      h += '</section>';
+      h += (lt ? '<p class="done">Học xong rồi? Làm bài luôn nhé:</p>' + lt : '') + '</section>';
     });
     nav.innerHTML = secs.length > 1 ? nv : '';
     out.innerHTML = h;

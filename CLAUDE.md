@@ -81,4 +81,7 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   (secOrder -2, nhóm `V01_00`…`V01_03`, 18 mẫu không có đồng nghĩa) và `Câu 3–4 · 유사 문법` (secOrder -1, `V03_00`…`V03_42`
   = 43 nhóm đồng nghĩa, 111 mẫu). Mỗi mẫu có thêm `ex` (câu ví dụ, `__x__` = gạch chân); `sync_kho.py` đưa `ex` thành phần tử
   thứ 4 của `w` trong `vocab.json`, trang `tu-vung/` hiện thành cột "Ví dụ". Sửa nhóm trong trang quản lý sẽ mất `ex` (form chỉ có ko = vi).
+- Thẻ Câu 1–2 và Câu 3–4 có nút “Luyện tập” (đầu và cuối thẻ) trỏ sang trang bài tập ngữ pháp của cô
+  https://claude.ai/artifact/1mkNvmWjkjFwgxHinJfiXk (biến `PRACTICE` trong trang; 80 câu dạng A điền / B tương đồng, chưa đưa vào ngân hàng đề —
+  ngân hàng đề cô để dành cho đề gốc). Trang đó còn 4 câu sai đáp án so với sách 3급 목표 (열리는데 ②, 나오느라고 ④, 아프거나 ④, 맡게 됐다 ①).
 - Kho từ câu 11–12: phần `Câu 11–12 · 기사 주제` (nhóm `V11_00`…`V11_07`, secOrder 6); câu 51 đã lùi xuống secOrder 7.
