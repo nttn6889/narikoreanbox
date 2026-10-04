@@ -190,7 +190,7 @@ h4{font-size:14px;margin:12px 0 4px;color:var(--muted)}
       if (DE) { DE.cd.forEach(function(c){ kw[c.k] = c.w; }); DE.uu.forEach(function(x){ nde[x[0]] = x[2]; }); }
       CD.topics.forEach(function(t){
         secs.push(t.t.split(' – ')[0].split(' & ')[0]);
-        h += '<section class="sec"><h2>' + esc(t.t) + '</h2>';
+        h += '<section class="sec"><h2>' + esc(t.t) + '</h2>' + (t.n ? '<p class="intro">' + esc(t.n) + '</p>' : '');
         var k = kw[t.k];
         if (k && k.length) {
           h += '<h3>Từ khóa gặp trong đề <small>(' + k.length + ' từ)</small></h3>' +

@@ -34,7 +34,7 @@ HAY = {
 # Nhóm dạng câu để ghi “thuộc câu nào”
 GROUPS = [(1, 2), (3, 4), (5, 8), (9, 9), (10, 10), (11, 12), (13, 15), (16, 18), (19, 20), (21, 22), (23, 24),
           (25, 27), (28, 31), (32, 34), (35, 38), (39, 41), (42, 43), (44, 45), (46, 47), (48, 50)]
-TOPIC_ORDER = ["MT", "KH", "KT", "YT", "VH", "XH", "PL", "GD", "KHAC", "VHOC"]
+TOPIC_ORDER = ["MT", "KH", "KT", "YT", "VH", "XH", "PL", "GD", "KHAC", "VHOC", "DS"]
 TOPIC_MAX = 80
 
 kiwi = Kiwi()

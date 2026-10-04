@@ -106,4 +106,5 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - `tools/chu_de.json`: chủ đề (10 chủ đề lớn) + mục (55 mục EBS) của từng đoạn văn câu 10–50, gắn tay; đề mới phải gắn thêm.
   Bảng phân loại câu này chỉ dùng cho cô soạn giáo án — trang học sinh chỉ hiện danh sách từ, không hiện câu nào thuộc chủ đề nào.
 - `tu-vung/chu-de.json`: 55 mục từ vựng chủ đề EBS (phần 8 của https://claude.ai/artifact/6NAJ7UnAGUQ6xWkbnhfbdi, đã chia Danh/Động/Tính/Biểu hiện)
-  xếp vào 10 chủ đề lớn (`topics[].m` = số mục). Thẻ “Chủ đề” = từ khóa gặp trong đề + các mục EBS của chủ đề đó.
+  xếp vào 10 chủ đề lớn + “Đời sống hằng ngày” (`DS`: gia đình, gọi món, chào hỏi, vị trí… — ít gặp ở bài đọc) (`topics[].m` = số mục;
+  “Khác” = `KHAC` chỉ còn Lịch sử). Thẻ “Chủ đề” = từ khóa gặp trong đề + các mục EBS của chủ đề đó.
