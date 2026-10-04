@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Từ vựng học trước bài · Hàn Ngữ Nari</title>
+<link rel="icon" href="../thi-thu/icon/icon-192.png">
+<style>
+:root{--ink:#111;--line:#555;--head:#d9d9d9;--sub:#efefef;--muted:#666;--bg:#fff;--acc:#b0283c}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 "Times New Roman",Times,"Noto Serif KR","Malgun Gothic",serif}
+main{max-width:860px;margin:0 auto;padding:16px 16px 48px}
+header h1{font-size:26px;margin:4px 0 2px}
+header p{margin:0 0 12px;color:var(--muted);font-size:14px}
+nav{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 8px}
+nav a{border:1px solid var(--line);padding:2px 10px;border-radius:14px;color:var(--ink);text-decoration:none;font-size:14px}
+.tools{margin:0 0 16px;font-size:14px}
+.tools button{font:inherit;border:1px solid var(--line);background:var(--sub);padding:4px 12px;border-radius:4px;cursor:pointer}
+h2{font-size:24px;margin:32px 0 6px;scroll-margin-top:8px}
+h2 .n{margin-right:14px}
+h3{font-size:18px;margin:20px 0 6px}
+h3 small{font-weight:bold}
+.tb{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.tb>div{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:5px 8px;min-height:32px}
+.tb .h{background:var(--head);text-align:center;padding:4px}
+.tb .h.wide{display:none}
+.tb .ko{font-family:"Noto Sans KR","Malgun Gothic","Apple SD Gothic Neo",sans-serif;font-size:15px}
+.hide .vi{color:transparent;background:repeating-linear-gradient(135deg,var(--sub) 0 6px,#fff 6px 12px);cursor:pointer}
+.hide .vi.show{color:var(--ink);background:none}
+.tb .pad{background:#fff}
+@media (min-width:640px){
+  .tb{grid-template-columns:minmax(0,1fr) minmax(0,1.3fr) minmax(0,1fr) minmax(0,1.3fr)}
+  .tb .h.wide{display:block}
+}
+@media (max-width:639px){.tb .pad{display:none}}
+footer{margin-top:40px;font-size:13px;color:var(--muted);text-align:center}
+footer a{color:var(--muted)}
+#msg{color:var(--acc)}
+@media print{nav,.tools,footer{display:none}h2{break-before:auto}.tb{break-inside:auto}h3{break-after:avoid}}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>Từ vựng học trước bài</h1>
+  <p>Hàn Ngữ Nari · Đọc kỹ từ vựng theo từng câu trước khi lên lớp. Bấm “Ẩn nghĩa” để tự kiểm tra, chạm vào ô để xem lại nghĩa.</p>
+</header>
+<nav id="nav"></nav>
+<div class="tools"><button id="tg" type="button">Ẩn nghĩa</button></div>
+<div id="msg">Đang tải từ vựng…</div>
+<div id="out"></div>
+<footer><a href="../">Trang chủ</a> · <a href="../thi-thu/">Phòng thi thử</a></footer>
+</main>
+<script>
+(function(){
+  var out = document.getElementById('out'), nav = document.getElementById('nav'), msg = document.getElementById('msg');
+  function esc(s){ return String(s == null ? '' : s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  function secNum(sec){ var m = /(\d+)/.exec(sec || ''); return m ? +m[1] : 0; }
+  // #c=5-9,11  → chỉ hiện các câu này (không có thì hiện tất cả)
+  function wanted(){
+    var m = /[#&]c=([0-9,\-]+)/.exec(location.hash);
+    if (!m) return null;
+    var set = {};
+    m[1].split(',').forEach(function(p){
+      var r = p.split('-'), a = +r[0], b = r.length > 1 ? +r[1] : a;
+      for (var i = a; i <= b && i - a < 200; i++) set[i] = 1;
+    });
+    return set;
+  }
+  function render(data){
+    var want = wanted(), secs = [], by = {};
+    data.g.slice().sort(function(a, b){ return (a.so - b.so) || (a.o - b.o) || (a.id < b.id ? -1 : 1); }).forEach(function(g){
+      if (want && !want[secNum(g.sec)]) return;
+      if (!by[g.sec]) { by[g.sec] = []; secs.push(g.sec); }
+      by[g.sec].push(g);
+    });
+    if (!secs.length) { msg.textContent = 'Chưa có từ vựng cho phần này.'; return; }
+    msg.textContent = '';
+    var h = '', nv = '';
+    secs.forEach(function(sec, si){
+      var id = 's' + si, parts = sec.split(' · ');
+      nv += '<a href="javascript:void 0" data-to="' + id + '">' + esc(parts[0]) + '</a>';
+      h += '<h2 id="' + id + '"><span class="n">' + esc(parts[0]) + '</span>' + esc(parts.slice(1).join(' · ')) + '</h2>';
+      by[sec].forEach(function(g){
+        h += '<h3>' + esc(g.ko) + (g.vi ? ' <small>(' + esc(g.vi) + ')</small>' : '') + '</h3><div class="tb">' +
+             '<div class="h">Từ vựng</div><div class="h">Nghĩa tiếng Việt</div>' +
+             '<div class="h wide">Từ vựng</div><div class="h wide">Nghĩa tiếng Việt</div>';
+        g.w.forEach(function(w){ h += '<div class="ko">' + esc(w[1]) + '</div><div class="vi">' + esc(w[2]) + '</div>'; });
+        if (g.w.length % 2) h += '<div class="pad"></div><div class="pad"></div>';
+        h += '</div>';
+      });
+    });
+    nav.innerHTML = secs.length > 1 ? nv : '';
+    out.innerHTML = h;
+  }
+  nav.addEventListener('click', function(e){
+    var t = e.target.getAttribute('data-to');
+    if (t) { e.preventDefault(); document.getElementById(t).scrollIntoView({behavior:'smooth'}); }
+  });
+  document.getElementById('tg').addEventListener('click', function(){
+    var on = out.classList.toggle('hide');
+    this.textContent = on ? 'Hiện nghĩa' : 'Ẩn nghĩa';
+    if (!on) [].forEach.call(out.querySelectorAll('.vi.show'), function(x){ x.classList.remove('show'); });
+  });
+  out.addEventListener('click', function(e){
+    if (out.classList.contains('hide') && e.target.classList.contains('vi')) e.target.classList.toggle('show');
+  });
+  window.addEventListener('hashchange', function(){ load(); });
+  var cache = null;
+  function load(){
+    if (cache) return render(cache);
+    fetch('../thi-thu/vocab.json', {cache: 'no-cache'}).then(function(r){ return r.json(); })
+      .then(function(d){ cache = d; render(d); })
+      .catch(function(){ msg.textContent = 'Không tải được từ vựng. Kiểm tra mạng rồi tải lại trang.'; });
+  }
+  load();
+})();
+</script>
+</body>
+</html>
