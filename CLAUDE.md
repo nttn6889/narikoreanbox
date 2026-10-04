@@ -35,6 +35,7 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 ## Tên học sinh gõ mỗi lần một kiểu (“Tên khác”)
 - Học viên & lịch → Sửa → ô “Tên khác” (`students/<id>.alias`, mảng tên). Khi tải dữ liệu, `canonNames()` (trang quản lý)
   gom `nameKey` của `results`/`vresults`/`nresults` trùng tên chính hoặc tên khác (so bằng `normName`: bỏ dấu, chữ hoa) về `stKey(st)`.
+  `name` cũng đổi thành tên chính của học viên (`rawName` giữ tên em gõ, hiện “(em ghi: …)” qua `shownName`).
   Chỉ đổi trong bộ nhớ (`rawKey` giữ tên gốc), không sửa dữ liệu đã chấm. Chỉ có trong khối Admin, không cần sinh lại `thi-thu/index.html`.
 
 ## Về cô (`ve-co/`)
