@@ -64,6 +64,13 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   bài sau (tối đa `review`). Mã nộp `NV1-` có thêm `k` (ngày, hoặc `R<ngày>` cho bài ôn) và `w` (id từ); trang quản lý chấm
   theo kho từ và lưu `items` vào `vresults` để “từ còn sai” vẫn đúng.
 
+## Lớp học (tab "Lớp học" trong trang quản lý)
+- `classes/<id>` có `start`, `end`, `wd` (thứ có buổi, 0 = CN) và `weeks[{start, b[khối], s[{d, b[khối], note, off}]}]`.
+  “Lên khung tuần & buổi” tự chia tuần (bắt đầu thứ Hai) và buổi theo `wd`; khối chọn cho từng buổi, khối của tuần `b` = gộp
+  khối các buổi (bài hằng ngày vẫn tính theo tuần). Tuần cũ không có `s` vẫn chạy như trước. Tuần chưa có khối → không tạo bài.
+- Trang lớp có bảng **Khung lộ trình** (đã học / sắp tới, chọn khối, dời buổi, ghi chú, nghỉ) và **Bài đã tạo tự động**
+  (từ vựng / nghe / đề theo tuần: xem nội dung, số em nộp, % đúng, câu/từ sai nhiều; bài chưa ai nộp thì sửa từ, đổi bài nghe, đổi đề).
+
 ## Luyện nghe (tab "Luyện nghe" trong trang quản lý)
 - Mỗi bài nghe là `thi-thu/nghe/<id>.json` (id `N001`, `N002`…) + file nghe `thi-thu/nghe/audio/<id>-<câu>.mp3`.
   Cùng nội dung đó ghi vào collection `nlessons/<id>` (ArtifactData `set` với `file_path`) để trang quản lý liệt kê và chấm.
