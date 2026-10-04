@@ -17,7 +17,7 @@ nav a{border:1px solid var(--line);padding:4px 12px;border-radius:16px;color:var
 nav a.on{background:var(--ink);color:#fff;font-weight:bold}
 .sec{display:none}.sec.on{display:block}
 .parts{display:flex;gap:0;margin:0 0 10px;border:2px solid var(--ink);border-radius:8px;overflow:hidden}
-.parts button{flex:1;font:inherit;font-size:17px;font-weight:bold;padding:8px 6px;border:0;background:var(--bg);color:var(--ink);cursor:pointer}
+.parts{flex-wrap:wrap}.parts button{flex:1 1 18%;min-width:64px;font:inherit;font-size:17px;font-weight:bold;padding:8px 6px;border:0;background:var(--bg);color:var(--ink);cursor:pointer}
 .parts button+button{border-left:2px solid var(--ink)}
 nav a[data-all]{border-style:dashed;color:var(--acc)}
 .parts button.on{background:var(--ink);color:#fff}
@@ -50,6 +50,13 @@ h3 small{font-weight:bold}
 footer{margin-top:40px;font-size:13px;color:var(--muted);text-align:center}
 footer a{color:var(--muted)}
 #msg{color:var(--acc)}
+.hay{margin:0 0 8px;padding:6px 10px;border-left:4px solid var(--acc);background:#fbf3f4;font-size:15px}
+.hay b{color:var(--acc)}
+.st{font-family:Arial,sans-serif;font-size:11px;color:var(--acc);font-weight:bold;white-space:nowrap;margin-left:4px}
+.st.lo{color:var(--muted);font-weight:normal}
+.mt{display:block;font-family:Arial,sans-serif;font-size:11.5px;color:var(--muted)}
+.intro{margin:0 0 10px;font-size:15px;color:#333}
+h4{font-size:14px;margin:12px 0 4px;color:var(--muted)}
 @media print{nav,.parts,.tools,footer,.lt,.done{display:none}.sec{display:block}h2{break-before:auto}.tb{break-inside:auto}h3{break-after:avoid}}
 </style>
 </head>
@@ -57,7 +64,7 @@ footer a{color:var(--muted)}
 <main>
 <header>
   <h1>Từ vựng · Ngữ pháp học trước bài</h1>
-  <p>Hàn Ngữ Nari · Đọc kỹ từ vựng theo từng câu trước khi lên lớp; bấm tên câu ở thanh trên để chuyển câu. Bấm “Ẩn nghĩa” để tự kiểm tra, chạm vào ô để xem lại nghĩa.</p>
+  <p>Hàn Ngữ Nari · Đọc kỹ từ vựng theo từng câu trước khi lên lớp; bấm tên câu ở thanh trên để chuyển câu. Bấm “Ẩn nghĩa” để tự kiểm tra, chạm vào ô để xem lại nghĩa. <b>★5 đề</b> = từ đã gặp trong 5 đề thi thử của lớp, học trước.</p>
 </header>
 <div class="parts" id="parts" hidden></div>
 <nav id="nav"></nav>
@@ -89,7 +96,11 @@ footer a{color:var(--muted)}
   }
   // Ba thẻ Đọc / Nghe / Viết (luôn hiện). #k=nghe, #k=viet mở thẻ tương ứng.
   // #c= lọc câu trong thẻ có câu khớp; thẻ khác vẫn hiện đủ, kèm nút “Xem tất cả” để bỏ lọc.
-  var PARTS = [{k: 'doc', t: 'Đọc', s: 'Câu 1–50'}, {k: 'nghe', t: 'Nghe', s: 'Câu 1–50'}, {k: 'viet', t: 'Viết', s: 'Câu 51–54'}];
+  var PARTS = [{k: 'doc', t: 'Đọc', s: 'Câu 1–50'}, {k: 'nghe', t: 'Nghe', s: 'Câu 1–50'}, {k: 'viet', t: 'Viết', s: 'Câu 51–54'},
+               {k: 'uu', t: '⭐ Ưu tiên', s: 'Từ hay gặp'}, {k: 'cd', t: 'Chủ đề', s: '10 chủ đề'}];
+  // tu-vung/de.json (tools/thong_ke_de.py): thống kê từ trong các đề thi thử; tu-vung/chu-de.json: từ vựng theo chủ đề
+  var DE = null, CD = null;
+  function star(n){ return n ? '<span class="st' + (n < 3 ? ' lo' : '') + '" title="Gặp trong ' + n + ' đề">' + (n >= 3 ? '★' : '') + n + ' đề</span>' : ''; }
   function partOf(sec){ return /^Nghe/.test(sec) ? 'nghe' : secNum(sec) >= 51 ? 'viet' : 'doc'; }
   function hashArg(name){ var m = new RegExp('[#&]' + name + '=([^&]*)', 'i').exec(location.hash); return m ? m[1] : ''; }
   function setHash(drop, add){
@@ -104,12 +115,13 @@ footer a{color:var(--muted)}
       if (!by[g.sec]) { by[g.sec] = []; all.push(g.sec); if (want && want[secNum(g.sec)]) hit[partOf(g.sec)] = 1; }
       by[g.sec].push(g);
     });
-    var k = hashArg('k').toLowerCase(), part = /^(nghe|viet)$/.test(k) ? k : (k ? 'doc' : (hit.doc ? 'doc' : hit.nghe ? 'nghe' : hit.viet ? 'viet' : 'doc'));
+    var k = hashArg('k').toLowerCase(), part = /^(nghe|viet|uu|cd)$/.test(k) ? k : (k ? 'doc' : (hit.doc ? 'doc' : hit.nghe ? 'nghe' : hit.viet ? 'viet' : 'doc'));
     if (part !== curPart) { curPart = part; cur = 0; }
     partsEl.hidden = false;
     partsEl.innerHTML = PARTS.map(function(x){
       return '<button type="button" data-k="' + x.k + '"' + (x.k === part ? ' class="on" aria-pressed="true"' : ' aria-pressed="false"') + '>' + x.t + '<small>' + x.s + '</small></button>';
     }).join('');
+    if (part === 'uu' || part === 'cd') return renderExtra(part);
     var secs = all.filter(function(sec){ return partOf(sec) === part; }), filtered = !!hit[part];
     if (filtered) secs = secs.filter(function(sec){ return want[secNum(sec)]; });
     if (!secs.length) { msg.textContent = 'Chưa có từ vựng cho phần này.'; nav.innerHTML = out.innerHTML = ''; return; }
@@ -121,7 +133,9 @@ footer a{color:var(--muted)}
       nv += '<a href="javascript:void 0" data-to="' + si + '">' + esc(parts[0]) + '</a>';
       var lt = PRACTICE[secNum(sec)];
       lt = lt ? '<a class="lt" href="' + lt.url + '">✎ Luyện tập ' + esc(parts[0]) + ' <small>(' + esc(lt.what) + ')</small></a>' : '';
-      h += '<section class="sec" id="' + id + '"><h2><span class="n">' + esc(parts[0]) + '</span>' + esc(parts.slice(1).join(' · ')) + '</h2>' + lt;
+      var hay = DE && DE.hay && part === 'doc' && DE.hay[secNum(sec)];
+      h += '<section class="sec" id="' + id + '"><h2><span class="n">' + esc(parts[0]) + '</span>' + esc(parts.slice(1).join(' · ')) + '</h2>' +
+           (hay ? '<p class="hay"><b>Hay ra:</b> ' + esc(hay) + ' <small>(theo ' + DE.nde + ' đề thi thử)</small></p>' : '') + lt;
       by[sec].forEach(function(g){
         h += '<h3>' + esc(g.ko) + (g.vi ? ' <small>(' + esc(g.vi) + ')</small>' : '') + '</h3>';
         if (g.w.some(function(w){ return w[3]; })) {
@@ -132,7 +146,7 @@ footer a{color:var(--muted)}
           h += '<div class="tb">' +
                '<div class="h">Từ vựng</div><div class="h">Nghĩa tiếng Việt</div>' +
                '<div class="h wide">Từ vựng</div><div class="h wide">Nghĩa tiếng Việt</div>';
-          g.w.forEach(function(w){ h += '<div class="ko">' + esc(w[1]) + '</div><div class="vi">' + esc(w[2]) + '</div>'; });
+          g.w.forEach(function(w){ h += '<div class="ko">' + esc(w[1]) + star(DE && DE.kho[w[0]]) + '</div><div class="vi">' + esc(w[2]) + '</div>'; });
           if (g.w.length % 2) h += '<div class="pad"></div><div class="pad"></div>';
         }
         h += '</div>';
@@ -141,6 +155,61 @@ footer a{color:var(--muted)}
     });
     if (filtered) nv += '<a href="javascript:void 0" data-all="1">Xem tất cả ›</a>';
     nav.innerHTML = secs.length > 1 || filtered ? nv : '';
+    out.innerHTML = h;
+    show(Math.min(cur, secs.length - 1));
+  }
+  function cells(rows){
+    // rows: [[ko-html, vi]] → bảng 2 cột (4 cột trên màn hình rộng) như các thẻ câu
+    var h = '<div class="tb"><div class="h">Từ vựng</div><div class="h">Nghĩa tiếng Việt</div><div class="h wide">Từ vựng</div><div class="h wide">Nghĩa tiếng Việt</div>';
+    rows.forEach(function(r){ h += '<div class="ko">' + r[0] + '</div><div class="vi">' + esc(r[1]) + '</div>'; });
+    if (rows.length % 2) h += '<div class="pad"></div><div class="pad"></div>';
+    return h + '</div>';
+  }
+  function renderExtra(part){
+    var secs = [], h = '';
+    if (part === 'uu') {
+      if (!DE) { msg.textContent = 'Không tải được thống kê đề. Kiểm tra mạng rồi tải lại trang.'; nav.innerHTML = out.innerHTML = ''; return; }
+      // nhóm theo số đề: n–(n-1), …, rồi 4 và 3 riêng
+      var n = DE.nde, tiers = [], hi = n;
+      while (hi >= 3) { var lo = hi > 5 ? hi - 1 : hi; tiers.push([lo, hi]); hi = lo - 1; }
+      tiers.forEach(function(t){
+        var lo = t[0], hi = t[1];
+        var rows = DE.uu.filter(function(x){ return x[2] >= lo && x[2] <= hi; });
+        if (!rows.length) return;
+        var lab = lo === hi ? lo + ' đề' : lo + '–' + hi + ' đề';
+        secs.push(lab);
+        h += '<section class="sec"><h2><span class="n">' + lab + '</span>' + rows.length + ' từ</h2>' +
+             '<p class="intro">Những từ gặp trong ' + lab + ' (trên ' + n + ' đề thi thử của lớp). Học hết nhóm này rồi chuyển sang nhóm sau. ' +
+             'Dòng nhỏ dưới mỗi từ: số lần gặp · thuộc câu nào.</p>' +
+             cells(rows.map(function(x){ return [esc(x[0]) + '<span class="mt">' + x[3] + ' lần · câu ' + esc(x[4]) + '</span>', x[1]]; })) + '</section>';
+      });
+    } else {
+      if (!CD) { msg.textContent = 'Không tải được từ vựng theo chủ đề. Kiểm tra mạng rồi tải lại trang.'; nav.innerHTML = out.innerHTML = ''; return; }
+      var muc = {}, kw = {}, nde = {};
+      CD.muc.forEach(function(m){ muc[m.no] = m; });
+      if (DE) { DE.cd.forEach(function(c){ kw[c.k] = c.w; }); DE.uu.forEach(function(x){ nde[x[0]] = x[2]; }); }
+      CD.topics.forEach(function(t){
+        secs.push(t.t.split(' – ')[0].split(' & ')[0]);
+        h += '<section class="sec"><h2>' + esc(t.t) + '</h2>';
+        var k = kw[t.k];
+        if (k && k.length) {
+          h += '<h3>Từ khóa gặp trong đề <small>(' + k.length + ' từ)</small></h3>' +
+               '<p class="intro">Từ hay xuất hiện trong các bài đọc thuộc chủ đề này. Dòng nhỏ: số đoạn văn có từ.</p>' +
+               cells(k.map(function(x){ return [esc(x[0]) + '<span class="mt">' + x[2] + ' đoạn văn</span>', x[1]]; }));
+        }
+        t.m.forEach(function(no){
+          var m = muc[no];
+          if (!m) return;
+          h += '<h3>' + esc(m.ko) + ' <small>(' + esc(m.vi) + ')</small></h3>';
+          m.g.forEach(function(g){
+            h += '<h4>' + esc(g[0]) + '</h4>' + cells(g[1].map(function(x){ return [esc(x[0]) + star(DE && DE.cdk[x[0]]), x[1]]; }));
+          });
+        });
+        h += '</section>';
+      });
+    }
+    msg.textContent = '';
+    nav.innerHTML = secs.map(function(s, i){ return '<a href="javascript:void 0" data-to="' + i + '">' + esc(s) + '</a>'; }).join('');
     out.innerHTML = h;
     show(Math.min(cur, secs.length - 1));
   }
@@ -175,8 +244,10 @@ footer a{color:var(--muted)}
   var cache = null;
   function load(){
     if (cache) return render(cache);
-    fetch('../thi-thu/vocab.json', {cache: 'no-cache'}).then(function(r){ return r.json(); })
-      .then(function(d){ cache = d; render(d); })
+    function get(u){ return fetch(u, {cache: 'no-cache'}).then(function(r){ return r.json(); }); }
+    var opt = function(u){ return get(u).catch(function(){ return null; }); };  // thống kê không có thì trang vẫn chạy
+    Promise.all([get('../thi-thu/vocab.json'), opt('de.json'), opt('chu-de.json')])
+      .then(function(r){ DE = r[1]; CD = r[2]; cache = r[0]; render(cache); })
       .catch(function(){ msg.textContent = 'Không tải được từ vựng. Kiểm tra mạng rồi tải lại trang.'; });
   }
   load();

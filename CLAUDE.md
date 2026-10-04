@@ -97,3 +97,13 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - Trang `tu-vung/` lọc phần nghe bằng `#c=n4`, `#c=n15`, `#c=n4-31` (phần “Nghe …” có số câu +100 để không lẫn với câu đọc).
 - Trang `tu-vung/` luôn có 3 thẻ Đọc (câu 1–50) / Nghe (phần `Nghe …`, nút ghi “Câu 4–12”) / Viết (câu ≥ 51); `#k=nghe`, `#k=viet` mở thẻ.
   `#c=` chỉ lọc trong thẻ có câu khớp (vd. `#c=1-12` lọc thẻ Đọc, thẻ Nghe/Viết vẫn hiện đủ) và thêm nút “Xem tất cả ›” để bỏ lọc.
+
+## Thống kê đề → trang `tu-vung/` (thẻ ⭐ Ưu tiên, Chủ đề, dòng “Hay ra”, dấu ★)
+- `python3 tools/thong_ke_de.py` (cần `pip install kiwipiepy`) đọc `thi-thu/de/*.json` (bỏ dòng hướng dẫn), tách từ về dạng gốc
+  rồi ghi `tu-vung/de.json`: `uu` = từ gặp trong ≥3 đề có nghĩa (kho từ, `tu-vung/chu-de.json` hoặc `tools/nghia_de.tsv`),
+  `kho`/`cdk` = số đề của từng mục kho / từ chủ đề (dấu ★), `cd` = từ khóa theo chủ đề, `hay` = dòng “Hay ra” (viết tay trong script, biến `HAY`).
+  Script in ra từ chưa có nghĩa → bổ sung `tools/nghia_de.tsv` (từ sơ cấp thì bỏ qua). Chạy lại sau mỗi lần “đồng bộ đề”.
+- `tools/chu_de.json`: chủ đề (10 chủ đề lớn) + mục (55 mục EBS) của từng đoạn văn câu 10–50, gắn tay; đề mới phải gắn thêm.
+  Bảng phân loại câu này chỉ dùng cho cô soạn giáo án — trang học sinh chỉ hiện danh sách từ, không hiện câu nào thuộc chủ đề nào.
+- `tu-vung/chu-de.json`: 55 mục từ vựng chủ đề EBS (phần 8 của https://claude.ai/artifact/6NAJ7UnAGUQ6xWkbnhfbdi, đã chia Danh/Động/Tính/Biểu hiện)
+  xếp vào 10 chủ đề lớn (`topics[].m` = số mục). Thẻ “Chủ đề” = từ khóa gặp trong đề + các mục EBS của chủ đề đó.
