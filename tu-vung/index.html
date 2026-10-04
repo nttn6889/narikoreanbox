@@ -19,6 +19,7 @@ nav a.on{background:var(--ink);color:#fff;font-weight:bold}
 .parts{display:flex;gap:0;margin:0 0 10px;border:2px solid var(--ink);border-radius:8px;overflow:hidden}
 .parts button{flex:1;font:inherit;font-size:17px;font-weight:bold;padding:8px 6px;border:0;background:var(--bg);color:var(--ink);cursor:pointer}
 .parts button+button{border-left:2px solid var(--ink)}
+nav a[data-all]{border-style:dashed;color:var(--acc)}
 .parts button.on{background:var(--ink);color:#fff}
 .parts small{display:block;font-weight:normal;font-size:12.5px}
 .tools{margin:0 0 16px;font-size:14px}
@@ -86,26 +87,32 @@ footer a{color:var(--muted)}
     });
     return set;
   }
-  // Hai thẻ: từ vựng đề Đọc (gồm cả câu 51–54 phần Viết) và đề Nghe; #k=nghe mở thẻ Nghe
-  var PARTS = [{k: 'doc', t: 'Đọc · Viết', s: 'Đọc câu 1–50 · Viết câu 51–54'}, {k: 'nghe', t: 'Nghe', s: 'Nghe câu 1–50'}];
-  function partOf(sec){ return /^Nghe/.test(sec) ? 'nghe' : 'doc'; }
+  // Ba thẻ Đọc / Nghe / Viết (luôn hiện). #k=nghe, #k=viet mở thẻ tương ứng.
+  // #c= lọc câu trong thẻ có câu khớp; thẻ khác vẫn hiện đủ, kèm nút “Xem tất cả” để bỏ lọc.
+  var PARTS = [{k: 'doc', t: 'Đọc', s: 'Câu 1–50'}, {k: 'nghe', t: 'Nghe', s: 'Câu 1–50'}, {k: 'viet', t: 'Viết', s: 'Câu 51–54'}];
+  function partOf(sec){ return /^Nghe/.test(sec) ? 'nghe' : secNum(sec) >= 51 ? 'viet' : 'doc'; }
   function hashArg(name){ var m = new RegExp('[#&]' + name + '=([^&]*)', 'i').exec(location.hash); return m ? m[1] : ''; }
+  function setHash(drop, add){
+    var h = location.hash.replace(/^#/, '').split('&').filter(function(x){ return x && !drop.test(x); });
+    if (add) h.push(add);
+    location.hash = h.join('&');
+    if (!h.length) render(cache);  // hash rỗng không phát sinh hashchange ở một số trình duyệt
+  }
   function render(data){
-    var want = wanted(), all = [], by = {}, has = {};
+    var want = wanted(), all = [], by = {}, hit = {};
     data.g.slice().sort(function(a, b){ return (a.so - b.so) || (a.o - b.o) || (a.id < b.id ? -1 : 1); }).forEach(function(g){
-      if (want && !want[secNum(g.sec)]) return;
-      if (!by[g.sec]) { by[g.sec] = []; all.push(g.sec); has[partOf(g.sec)] = 1; }
+      if (!by[g.sec]) { by[g.sec] = []; all.push(g.sec); if (want && want[secNum(g.sec)]) hit[partOf(g.sec)] = 1; }
       by[g.sec].push(g);
     });
-    if (!all.length) { msg.textContent = 'Chưa có từ vựng cho phần này.'; partsEl.hidden = true; nav.innerHTML = out.innerHTML = ''; return; }
-    var part = hashArg('k') === 'nghe' ? 'nghe' : 'doc';
-    if (!has[part]) part = part === 'nghe' ? 'doc' : 'nghe';
+    var k = hashArg('k').toLowerCase(), part = /^(nghe|viet)$/.test(k) ? k : (k ? 'doc' : (hit.doc ? 'doc' : hit.nghe ? 'nghe' : hit.viet ? 'viet' : 'doc'));
     if (part !== curPart) { curPart = part; cur = 0; }
-    partsEl.hidden = !(has.doc && has.nghe);
+    partsEl.hidden = false;
     partsEl.innerHTML = PARTS.map(function(x){
       return '<button type="button" data-k="' + x.k + '"' + (x.k === part ? ' class="on" aria-pressed="true"' : ' aria-pressed="false"') + '>' + x.t + '<small>' + x.s + '</small></button>';
     }).join('');
-    var secs = all.filter(function(sec){ return partOf(sec) === part; });
+    var secs = all.filter(function(sec){ return partOf(sec) === part; }), filtered = !!hit[part];
+    if (filtered) secs = secs.filter(function(sec){ return want[secNum(sec)]; });
+    if (!secs.length) { msg.textContent = 'Chưa có từ vựng cho phần này.'; nav.innerHTML = out.innerHTML = ''; return; }
     msg.textContent = '';
     var h = '', nv = '';
     secs.forEach(function(sec, si){
@@ -132,7 +139,8 @@ footer a{color:var(--muted)}
       });
       h += (lt ? '<p class="done">Học xong rồi? Làm bài luôn nhé:</p>' + lt : '') + '</section>';
     });
-    nav.innerHTML = secs.length > 1 ? nv : '';
+    if (filtered) nv += '<a href="javascript:void 0" data-all="1">Xem tất cả ›</a>';
+    nav.innerHTML = secs.length > 1 || filtered ? nv : '';
     out.innerHTML = h;
     show(Math.min(cur, secs.length - 1));
   }
@@ -144,16 +152,16 @@ footer a{color:var(--muted)}
     window.scrollTo(0, 0);
   }
   nav.addEventListener('click', function(e){
+    if (e.target.getAttribute('data-all')) { e.preventDefault(); setHash(/^[ck]=/i, part0()); return; }
     var t = e.target.getAttribute('data-to');
     if (t != null) { e.preventDefault(); show(+t); }
   });
+  function part0(){ return curPart && curPart !== 'doc' ? 'k=' + curPart : ''; }
   partsEl.addEventListener('click', function(e){
     var b = e.target.closest('button[data-k]');
     if (!b) return;
-    var h = location.hash.replace(/^#/, '').split('&').filter(function(x){ return x && !/^k=/i.test(x); });
-    if (b.getAttribute('data-k') === 'nghe') h.push('k=nghe');
-    location.hash = h.join('&');
-    if (!h.length) render(cache);  // hash rỗng không phát sinh hashchange ở một số trình duyệt
+    var k = b.getAttribute('data-k');
+    setHash(/^k=/i, k === 'doc' ? (wanted() ? 'k=doc' : '') : 'k=' + k);
   });
   document.getElementById('tg').addEventListener('click', function(){
     var on = out.classList.toggle('hide');
