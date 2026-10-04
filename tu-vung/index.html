@@ -12,11 +12,13 @@ body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 "Times New Ro
 main{max-width:860px;margin:0 auto;padding:16px 16px 48px}
 header h1{font-size:26px;margin:4px 0 2px}
 header p{margin:0 0 12px;color:var(--muted);font-size:14px}
-nav{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 8px}
-nav a{border:1px solid var(--line);padding:2px 10px;border-radius:14px;color:var(--ink);text-decoration:none;font-size:14px}
+nav{display:flex;flex-wrap:wrap;gap:6px;margin:0 -16px 8px;padding:8px 16px;position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);z-index:2}
+nav a{border:1px solid var(--line);padding:4px 12px;border-radius:16px;color:var(--ink);text-decoration:none;font-size:15px}
+nav a.on{background:var(--ink);color:#fff;font-weight:bold}
+.sec{display:none}.sec.on{display:block}
 .tools{margin:0 0 16px;font-size:14px}
 .tools button{font:inherit;border:1px solid var(--line);background:var(--sub);padding:4px 12px;border-radius:4px;cursor:pointer}
-h2{font-size:24px;margin:32px 0 6px;scroll-margin-top:8px}
+h2{font-size:24px;margin:16px 0 6px}
 h2 .n{margin-right:14px}
 h3{font-size:18px;margin:20px 0 6px}
 h3 small{font-weight:bold}
@@ -36,14 +38,14 @@ h3 small{font-weight:bold}
 footer{margin-top:40px;font-size:13px;color:var(--muted);text-align:center}
 footer a{color:var(--muted)}
 #msg{color:var(--acc)}
-@media print{nav,.tools,footer{display:none}h2{break-before:auto}.tb{break-inside:auto}h3{break-after:avoid}}
+@media print{nav,.tools,footer{display:none}.sec{display:block}h2{break-before:auto}.tb{break-inside:auto}h3{break-after:avoid}}
 </style>
 </head>
 <body>
 <main>
 <header>
   <h1>Từ vựng học trước bài</h1>
-  <p>Hàn Ngữ Nari · Đọc kỹ từ vựng theo từng câu trước khi lên lớp. Bấm “Ẩn nghĩa” để tự kiểm tra, chạm vào ô để xem lại nghĩa.</p>
+  <p>Hàn Ngữ Nari · Đọc kỹ từ vựng theo từng câu trước khi lên lớp; bấm tên câu ở thanh trên để chuyển câu. Bấm “Ẩn nghĩa” để tự kiểm tra, chạm vào ô để xem lại nghĩa.</p>
 </header>
 <nav id="nav"></nav>
 <div class="tools"><button id="tg" type="button">Ẩn nghĩa</button></div>
@@ -79,8 +81,8 @@ footer a{color:var(--muted)}
     var h = '', nv = '';
     secs.forEach(function(sec, si){
       var id = 's' + si, parts = sec.split(' · ');
-      nv += '<a href="javascript:void 0" data-to="' + id + '">' + esc(parts[0]) + '</a>';
-      h += '<h2 id="' + id + '"><span class="n">' + esc(parts[0]) + '</span>' + esc(parts.slice(1).join(' · ')) + '</h2>';
+      nv += '<a href="javascript:void 0" data-to="' + si + '">' + esc(parts[0]) + '</a>';
+      h += '<section class="sec" id="' + id + '"><h2 id="' + id + '"><span class="n">' + esc(parts[0]) + '</span>' + esc(parts.slice(1).join(' · ')) + '</h2>';
       by[sec].forEach(function(g){
         h += '<h3>' + esc(g.ko) + (g.vi ? ' <small>(' + esc(g.vi) + ')</small>' : '') + '</h3><div class="tb">' +
              '<div class="h">Từ vựng</div><div class="h">Nghĩa tiếng Việt</div>' +
@@ -89,13 +91,22 @@ footer a{color:var(--muted)}
         if (g.w.length % 2) h += '<div class="pad"></div><div class="pad"></div>';
         h += '</div>';
       });
+      h += '</section>';
     });
     nav.innerHTML = secs.length > 1 ? nv : '';
     out.innerHTML = h;
+    show(Math.min(cur, secs.length - 1));
+  }
+  var cur = 0;
+  function show(i){
+    cur = i;
+    [].forEach.call(out.querySelectorAll('.sec'), function(x, k){ x.classList.toggle('on', k === i); });
+    [].forEach.call(nav.querySelectorAll('a'), function(x, k){ x.classList.toggle('on', k === i); });
+    window.scrollTo(0, 0);
   }
   nav.addEventListener('click', function(e){
     var t = e.target.getAttribute('data-to');
-    if (t) { e.preventDefault(); document.getElementById(t).scrollIntoView({behavior:'smooth'}); }
+    if (t != null) { e.preventDefault(); show(+t); }
   });
   document.getElementById('tg').addEventListener('click', function(){
     var on = out.classList.toggle('hide');
