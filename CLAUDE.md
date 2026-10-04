@@ -91,3 +91,5 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   Câu 44–45 · 사회 이슈 어휘 (13), Câu 51 (14), Câu 53 · 그래프 쓰기 (15), Câu 54 · 속담 (16, 121 câu);
   phần nghe `Nghe 4–12 · 장소별 대화` (20), `Nghe 15 · 뉴스` (21), `Nghe 31–32 · 찬반 표현` (22), nhóm `VN04_…`, `VN15_…`, `VN31_…`.
 - Trang `tu-vung/` lọc phần nghe bằng `#c=n4`, `#c=n15`, `#c=n4-31` (phần “Nghe …” có số câu +100 để không lẫn với câu đọc).
+- Trang `tu-vung/` có 2 thẻ “Đọc · Viết” (mọi phần `Câu …`) và “Nghe” (phần `Nghe …`, nút ghi “Câu 4–12”); `#k=nghe` mở thẻ Nghe.
+  Khi `#c=` chỉ khớp một loại (vd. `#c=1-12`, `#c=n4-15`) thì ẩn 2 thẻ.

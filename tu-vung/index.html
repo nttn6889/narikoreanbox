@@ -16,6 +16,11 @@ nav{display:flex;flex-wrap:wrap;gap:6px;margin:0 -16px 8px;padding:8px 16px;posi
 nav a{border:1px solid var(--line);padding:4px 12px;border-radius:16px;color:var(--ink);text-decoration:none;font-size:15px}
 nav a.on{background:var(--ink);color:#fff;font-weight:bold}
 .sec{display:none}.sec.on{display:block}
+.parts{display:flex;gap:0;margin:0 0 10px;border:2px solid var(--ink);border-radius:8px;overflow:hidden}
+.parts button{flex:1;font:inherit;font-size:17px;font-weight:bold;padding:8px 6px;border:0;background:var(--bg);color:var(--ink);cursor:pointer}
+.parts button+button{border-left:2px solid var(--ink)}
+.parts button.on{background:var(--ink);color:#fff}
+.parts small{display:block;font-weight:normal;font-size:12.5px}
 .tools{margin:0 0 16px;font-size:14px}
 .tools button{font:inherit;border:1px solid var(--line);background:var(--sub);padding:4px 12px;border-radius:4px;cursor:pointer}
 h2{font-size:24px;margin:16px 0 6px}
@@ -44,7 +49,7 @@ h3 small{font-weight:bold}
 footer{margin-top:40px;font-size:13px;color:var(--muted);text-align:center}
 footer a{color:var(--muted)}
 #msg{color:var(--acc)}
-@media print{nav,.tools,footer,.lt,.done{display:none}.sec{display:block}h2{break-before:auto}.tb{break-inside:auto}h3{break-after:avoid}}
+@media print{nav,.parts,.tools,footer,.lt,.done{display:none}.sec{display:block}h2{break-before:auto}.tb{break-inside:auto}h3{break-after:avoid}}
 </style>
 </head>
 <body>
@@ -53,6 +58,7 @@ footer a{color:var(--muted)}
   <h1>Từ vựng · Ngữ pháp học trước bài</h1>
   <p>Hàn Ngữ Nari · Đọc kỹ từ vựng theo từng câu trước khi lên lớp; bấm tên câu ở thanh trên để chuyển câu. Bấm “Ẩn nghĩa” để tự kiểm tra, chạm vào ô để xem lại nghĩa.</p>
 </header>
+<div class="parts" id="parts" hidden></div>
 <nav id="nav"></nav>
 <div class="tools"><button id="tg" type="button">Ẩn nghĩa</button></div>
 <div id="msg">Đang tải từ vựng…</div>
@@ -61,7 +67,7 @@ footer a{color:var(--muted)}
 </main>
 <script>
 (function(){
-  var out = document.getElementById('out'), nav = document.getElementById('nav'), msg = document.getElementById('msg');
+  var out = document.getElementById('out'), nav = document.getElementById('nav'), partsEl = document.getElementById('parts'), msg = document.getElementById('msg');
   function esc(s){ return String(s == null ? '' : s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
   // Bài luyện ngữ pháp câu 1–4 (trang bài tập của cô trên claude.ai)
   var GRAM = 'https://claude.ai/artifact/1mkNvmWjkjFwgxHinJfiXk';
@@ -80,18 +86,31 @@ footer a{color:var(--muted)}
     });
     return set;
   }
+  // Hai thẻ: từ vựng đề Đọc (gồm cả câu 51–54 phần Viết) và đề Nghe; #k=nghe mở thẻ Nghe
+  var PARTS = [{k: 'doc', t: 'Đọc · Viết', s: 'Đọc câu 1–50 · Viết câu 51–54'}, {k: 'nghe', t: 'Nghe', s: 'Nghe câu 1–50'}];
+  function partOf(sec){ return /^Nghe/.test(sec) ? 'nghe' : 'doc'; }
+  function hashArg(name){ var m = new RegExp('[#&]' + name + '=([^&]*)', 'i').exec(location.hash); return m ? m[1] : ''; }
   function render(data){
-    var want = wanted(), secs = [], by = {};
+    var want = wanted(), all = [], by = {}, has = {};
     data.g.slice().sort(function(a, b){ return (a.so - b.so) || (a.o - b.o) || (a.id < b.id ? -1 : 1); }).forEach(function(g){
       if (want && !want[secNum(g.sec)]) return;
-      if (!by[g.sec]) { by[g.sec] = []; secs.push(g.sec); }
+      if (!by[g.sec]) { by[g.sec] = []; all.push(g.sec); has[partOf(g.sec)] = 1; }
       by[g.sec].push(g);
     });
-    if (!secs.length) { msg.textContent = 'Chưa có từ vựng cho phần này.'; return; }
+    if (!all.length) { msg.textContent = 'Chưa có từ vựng cho phần này.'; partsEl.hidden = true; nav.innerHTML = out.innerHTML = ''; return; }
+    var part = hashArg('k') === 'nghe' ? 'nghe' : 'doc';
+    if (!has[part]) part = part === 'nghe' ? 'doc' : 'nghe';
+    if (part !== curPart) { curPart = part; cur = 0; }
+    partsEl.hidden = !(has.doc && has.nghe);
+    partsEl.innerHTML = PARTS.map(function(x){
+      return '<button type="button" data-k="' + x.k + '"' + (x.k === part ? ' class="on" aria-pressed="true"' : ' aria-pressed="false"') + '>' + x.t + '<small>' + x.s + '</small></button>';
+    }).join('');
+    var secs = all.filter(function(sec){ return partOf(sec) === part; });
     msg.textContent = '';
     var h = '', nv = '';
     secs.forEach(function(sec, si){
       var id = 's' + si, parts = sec.split(' · ');
+      parts[0] = parts[0].replace(/^Nghe/, 'Câu');  // trong thẻ Nghe chỉ cần ghi "Câu 4–12" 
       nv += '<a href="javascript:void 0" data-to="' + si + '">' + esc(parts[0]) + '</a>';
       var lt = PRACTICE[secNum(sec)];
       lt = lt ? '<a class="lt" href="' + lt.url + '">✎ Luyện tập ' + esc(parts[0]) + ' <small>(' + esc(lt.what) + ')</small></a>' : '';
@@ -117,7 +136,7 @@ footer a{color:var(--muted)}
     out.innerHTML = h;
     show(Math.min(cur, secs.length - 1));
   }
-  var cur = 0;
+  var cur = 0, curPart = null;
   function show(i){
     cur = i;
     [].forEach.call(out.querySelectorAll('.sec'), function(x, k){ x.classList.toggle('on', k === i); });
@@ -127,6 +146,14 @@ footer a{color:var(--muted)}
   nav.addEventListener('click', function(e){
     var t = e.target.getAttribute('data-to');
     if (t != null) { e.preventDefault(); show(+t); }
+  });
+  partsEl.addEventListener('click', function(e){
+    var b = e.target.closest('button[data-k]');
+    if (!b) return;
+    var h = location.hash.replace(/^#/, '').split('&').filter(function(x){ return x && !/^k=/i.test(x); });
+    if (b.getAttribute('data-k') === 'nghe') h.push('k=nghe');
+    location.hash = h.join('&');
+    if (!h.length) render(cache);  // hash rỗng không phát sinh hashchange ở một số trình duyệt
   });
   document.getElementById('tg').addEventListener('click', function(){
     var on = out.classList.toggle('hide');
