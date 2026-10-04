@@ -3,13 +3,27 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Từ vựng học trước bài · Hàn Ngữ Nari</title>
+<title>Tổng hợp từ vựng TOPIK II · Hàn Ngữ Nari</title>
+<meta name="description" content="Từ vựng, ngữ pháp TOPIK II theo từng câu trong đề thi, do cô Ngân (Hàn ngữ Nari, Quỳnh Lưu – Nghệ An) tổng hợp.">
+<meta property="og:title" content="Tổng hợp từ vựng TOPIK II – Hàn ngữ Nari">
+<meta property="og:description" content="Từ vựng, ngữ pháp TOPIK II theo từng câu trong đề thi, do cô Ngân tổng hợp từ đề thi thật và giáo trình. Zalo: 0399.214.554">
+<meta property="og:image" content="https://nttn6889.github.io/narikoreanbox/thi-thu/icon/icon-512.png">
+<meta property="og:url" content="https://nttn6889.github.io/narikoreanbox/tu-vung/">
+<meta property="og:type" content="website">
 <link rel="icon" href="../thi-thu/icon/icon-192.png">
 <style>
 :root{--ink:#111;--line:#555;--head:#d9d9d9;--sub:#efefef;--muted:#666;--bg:#fff;--acc:#b0283c}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 "Times New Roman",Times,"Noto Serif KR","Malgun Gothic",serif}
 main{max-width:860px;margin:0 auto;padding:16px 16px 48px}
+.brand{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid #d8dde6}
+.brand b{display:block;font-size:19px}
+.brand span{font-size:14px;color:var(--muted)}
+.brand span a{color:inherit;text-decoration:none;border-bottom:1px dotted var(--muted)}
+.co{flex:none;display:flex;flex-direction:column;align-items:center;gap:3px;text-decoration:none;color:var(--muted);font:12px Arial,sans-serif}
+.co i{width:40px;height:40px;border-radius:50%;background:#1f3c88;color:#fff;display:grid;place-items:center;font:bold 17px Georgia,serif;font-style:normal}
+.src{margin:0 0 8px;font-size:13px;color:var(--muted);font-style:italic}
+.upd{margin:0 0 4px;font:13px Arial,sans-serif;color:var(--acc)}
 header h1{font-size:26px;margin:4px 0 2px}
 header p{margin:0 0 12px;color:var(--muted);font-size:14px}
 nav{display:flex;flex-wrap:wrap;gap:6px;margin:0 -16px 8px;padding:8px 16px;position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);z-index:2}
@@ -63,14 +77,20 @@ h4{font-size:14px;margin:12px 0 4px;color:var(--muted)}
 .blk h3{margin:0;padding:6px 10px;background:var(--ink);color:#fff;font-size:17px;font-family:"Noto Sans KR","Malgun Gothic",sans-serif}
 .blk h3 small{font-weight:normal;font-size:13px;opacity:.85;font-family:"Times New Roman",serif}
 .blk .tb .h{background:var(--sub)}
-@media print{nav,.parts,.tools,footer,.lt,.done,.chips{display:none}.sec{display:block}h2{break-before:auto}.tb{break-inside:auto}h3{break-after:avoid}}
+@media print{.co,nav,.parts,.tools,footer,.lt,.done,.chips{display:none}.sec{display:block}h2{break-before:auto}.tb{break-inside:auto}h3{break-after:avoid}}
 </style>
 </head>
 <body>
 <main>
 <header>
-  <h1>Từ vựng · Ngữ pháp học trước bài</h1>
-  <p>Hàn Ngữ Nari · Đọc kỹ từ vựng theo từng câu trước khi lên lớp; bấm tên câu ở thanh trên để chuyển câu. Bấm “Ẩn nghĩa” để tự kiểm tra, chạm vào ô để xem lại nghĩa. <b>★5 đề</b> = từ đã gặp trong 5 đề thi thử của lớp, học trước.</p>
+  <div class="brand">
+    <div><b>Hàn ngữ Nari – Cô Ngân</b><span>Quỳnh Lưu, Nghệ An · Zalo: <a href="https://zalo.me/0399214554">0399.214.554</a></span></div>
+    <a class="co" href="https://claude.ai/artifact/2XJHcdRJMNbKnDoMXqVZWQ" target="_blank" rel="noopener"><i>N</i>Về cô</a>
+  </div>
+  <p class="src">Tài liệu do cô Ngân tổng hợp từ đề thi thật và giáo trình TOPIK II.</p>
+  <h1>Tổng hợp từ vựng TOPIK II</h1>
+  <p class="upd" id="upd"></p>
+  <p>Đọc kỹ từ vựng theo từng câu trước khi lên lớp; bấm tên câu ở thanh trên để chuyển câu. Bấm “Ẩn nghĩa” để tự kiểm tra, chạm vào ô để xem lại nghĩa. <b>★5 đề</b> = từ đã gặp trong 5 đề thi thử của lớp, học trước.</p>
 </header>
 <div class="parts" id="parts" hidden></div>
 <nav id="nav"></nav>
@@ -254,12 +274,17 @@ h4{font-size:14px;margin:12px 0 4px;color:var(--muted)}
   });
   window.addEventListener('hashchange', function(){ load(); });
   var cache = null;
+  function upd(v){
+    var n = 0, d = new Date(v.at || 0);
+    (v.g || []).forEach(function(g){ n += (g.w || []).length; });
+    document.getElementById('upd').textContent = 'Cập nhật: ' + ('0' + d.getDate()).slice(-2) + '/' + ('0' + (d.getMonth() + 1)).slice(-2) + '/' + d.getFullYear() + ' · ' + n.toLocaleString('vi-VN') + ' từ, mẫu ngữ pháp';
+  }
   function load(){
     if (cache) return render(cache);
     function get(u){ return fetch(u, {cache: 'no-cache'}).then(function(r){ return r.json(); }); }
     var opt = function(u){ return get(u).catch(function(){ return null; }); };  // thống kê không có thì trang vẫn chạy
     Promise.all([get('../thi-thu/vocab.json'), opt('de.json'), opt('chu-de.json')])
-      .then(function(r){ DE = r[1]; CD = r[2]; cache = r[0]; render(cache); })
+      .then(function(r){ DE = r[1]; CD = r[2]; cache = r[0]; upd(cache); render(cache); })
       .catch(function(){ msg.textContent = 'Không tải được từ vựng. Kiểm tra mạng rồi tải lại trang.'; });
   }
   load();
