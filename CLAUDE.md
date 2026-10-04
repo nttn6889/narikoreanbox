@@ -32,6 +32,11 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 ## Lưu ý
 - Repo không được chứa tên, điểm, nhận xét của học sinh.
 
+## Tên học sinh gõ mỗi lần một kiểu (“Tên khác”)
+- Học viên & lịch → Sửa → ô “Tên khác” (`students/<id>.alias`, mảng tên). Khi tải dữ liệu, `canonNames()` (trang quản lý)
+  gom `nameKey` của `results`/`vresults`/`nresults` trùng tên chính hoặc tên khác (so bằng `normName`: bỏ dấu, chữ hoa) về `stKey(st)`.
+  Chỉ đổi trong bộ nhớ (`rawKey` giữ tên gốc), không sửa dữ liệu đã chấm. Chỉ có trong khối Admin, không cần sinh lại `thi-thu/index.html`.
+
 ## Về cô (`ve-co/`)
 - Bản sao trang https://claude.ai/artifact/2XJHcdRJMNbKnDoMXqVZWQ, sửa trực tiếp ở đây (link "Trang chủ" trỏ về trang chủ site).
 
