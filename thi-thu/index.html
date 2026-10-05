@@ -272,9 +272,41 @@ input.code{text-transform:uppercase;letter-spacing:.18em;font-weight:700;font-si
 .nscript{border-top:1px solid var(--line);padding-top:10px;margin-top:10px}
 .vsay:hover{filter:brightness(1.05)}
 .vsay:focus-visible{outline:3px solid var(--violet);outline-offset:2px}
+.fses{padding:5px 0;border-bottom:1px dashed var(--line)}
+.fses:last-child{border-bottom:none}
+.fses.off{opacity:.6}
+.fses .nt{font-size:13px;color:var(--muted)}
+.prog{height:8px;border-radius:4px;background:var(--bg);border:1px solid var(--line);overflow:hidden;margin:6px 0 10px}
+.prog span{display:block;height:100%;background:var(--ok)}
+.tbl tr.wcur td{background:var(--violet-soft)}
+.seg{display:inline-flex;flex-wrap:wrap;border:1.5px solid var(--violet);border-radius:6px;overflow:hidden}
+.seg button{all:unset;cursor:pointer;padding:6px 12px;font-weight:600;font-size:14px;color:var(--violet)}
+.seg button[aria-pressed="true"]{background:var(--violet);color:var(--on-violet)}
+.seg button:focus-visible{outline:3px solid var(--ink);outline-offset:-3px}
+.wdpick{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0}
 .vdays{display:flex;gap:3px;flex-wrap:wrap;margin:6px 0}
 .vdays span{width:15px;height:15px;border-radius:3px;background:var(--bg);border:1px solid var(--line)}
 .vdays span.on{background:var(--ok);border-color:var(--ok)}
+.ptu{border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:0 0 8px;background:var(--paper)}
+.ptu.cur{border-color:var(--violet);background:var(--violet-soft)}
+.pt-h{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap;cursor:pointer;font-size:15px}
+.pt-h input{width:18px;height:18px;margin:0;align-self:center}
+.pt-h .muted{font-size:13px}
+.pt-tx{font-family:var(--kr);font-size:15px;line-height:1.7;margin:6px 0}
+.pt-tx summary{cursor:pointer;list-style:none}
+.pt-tx summary::-webkit-details-marker{display:none}
+.pt-more{font-family:var(--ui);font-size:13px;color:var(--violet);text-decoration:underline;white-space:nowrap}
+.pt-tx[open] summary{display:none}
+.pt-tag{font-size:13.5px}
+@media (min-width:600px){.grid4{grid-template-columns:1.2fr 1.5fr .9fr 1fr}}
+.pt-sub{all:unset;cursor:pointer;color:var(--violet);text-decoration:underline;text-underline-offset:2px}
+.pt-sub:focus-visible{outline:2px solid var(--violet)}
+.pt-chips{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0}
+.pt-chip{all:unset;box-sizing:border-box;cursor:pointer;border:1.5px solid var(--line);border-radius:14px;padding:2px 10px;font-size:13.5px;background:var(--paper)}
+.pt-chip b{color:var(--violet)}
+.pt-chip[aria-pressed="true"]{background:var(--violet);border-color:var(--violet);color:var(--on-violet)}
+.pt-chip[aria-pressed="true"] b{color:var(--on-violet)}
+.pt-chip:focus-visible{outline:3px solid var(--ink);outline-offset:1px}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
@@ -1205,16 +1237,127 @@ function nShowResult(){
   $("#nagain").onclick = function(){ ask("Làm lại từ đầu? Kết quả lần này em đã gửi cô chưa? Nếu chưa, em sao chép tin nhắn trước nhé.", "Làm lại", "Ở lại").then(function(ok){ if(!ok) return; try{ localStorage.removeItem(NS.key); }catch(e){} nStart(NS.p, L, NS.name); }); };
 }
 
+/* ==NL== */
+/* ---------- Đánh giá năng lực (dùng chung cho trang quản lý và trang học sinh) ----------
+   Nguồn: tools/nangluc.js, chèn vào trang bằng tools/nangluc.py — sửa ở file đó, không sửa trong trang.
+   Gom 3 nguồn: đề thi (results), từ vựng (vresults), luyện nghe (nresults). Số liệu tính lại từ bài đã chấm,
+   chỉ lưu nhận xét (notes/<id>.text, dùng chung với Sổ điểm) và việc cần làm (nlnotes/<id>.next). Bản gửi học sinh nằm trọn trong link thi-thu/#r=<base64>.<sum>. */
+var NL_RT = [[1,2,"Ngữ pháp – điền chỗ trống"],[3,4,"Ngữ pháp – nghĩa tương đương"],[5,8,"Chủ đề của văn bản ngắn"],
+  [9,12,"Đối chiếu nội dung"],[13,15,"Sắp xếp câu"],[16,18,"Điền vào chỗ trống"],[19,24,"Đoạn văn 2 câu hỏi"],
+  [25,27,"Tiêu đề báo"],[28,31,"Điền chỗ trống (đoạn dài)"],[32,34,"Nội dung giống với bài"],[35,38,"Ý chính của bài"],
+  [39,41,"Vị trí của câu"],[42,43,"Văn học"],[44,50,"Văn bản dài"]];
+var NL_LP = ["Phần 1 · Hiểu nội dung", "Phần 2 · Chọn câu nói tiếp theo", "Phần 3 · Nghe điền từ"];
+var NL_VT = {match:"Nối từ", kv:"Hàn → Việt", vk:"Việt → Hàn", nk:"Nghe → nghĩa", type:"Gõ từ tiếng Hàn"};
+function nlType(n){ for(var i = 0; i < NL_RT.length; i++) if(n >= NL_RT[i][0] && n <= NL_RT[i][1]) return i; return -1; }
+function nlPct(a){ return a && a[1] ? Math.round(a[0]*100/a[1]) : null; }
+function nlCls(p){ return p == null ? "" : p >= 80 ? "good" : p >= 60 ? "warn" : "bad"; }
+function nlCss(){
+  if(document.getElementById("nlcss")) return;
+  var st = document.createElement("style"); st.id = "nlcss";
+  st.textContent = ".nlsec{margin-top:18px}.nlsec>h3{margin:0 0 4px;font-size:16.5px}" +
+    ".nlrow{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(50px,1fr) auto;gap:2px 10px;align-items:center;padding:6px 0;border-bottom:1px solid var(--line);font-size:14.5px}" +
+    ".nll small{display:block;color:var(--muted);font-size:12.5px}.nlv{font-size:13px;color:var(--muted);white-space:nowrap;text-align:right}.nlv b{color:var(--ink);font-size:14px}" +
+    ".nlbar{height:9px;background:var(--bg);border:1px solid var(--line);border-radius:5px;overflow:hidden}.nlbar i{display:block;height:100%}" +
+    ".nlbar i.good,.nlk.good{background:var(--ok)}.nlbar i.warn,.nlk.warn{background:var(--warn)}.nlbar i.bad,.nlk.bad{background:var(--pen)}" +
+    ".kq-sum b.good{color:var(--ok)}.kq-sum b.warn{color:var(--warn)}.kq-sum b.bad{color:var(--pen)}" +
+    ".nldays{display:grid;grid-template-columns:repeat(14,1fr);gap:3px;max-width:430px;margin:6px 0}" +
+    ".nldays span{aspect-ratio:1;border-radius:3px;background:var(--bg);border:1px solid var(--line)}.nldays span.l1{background:var(--ok-soft);border-color:var(--ok)}.nldays span.l2{background:var(--ok);border-color:var(--ok)}" +
+    ".nlch .s0{stroke:var(--violet)}.nlch .s1{stroke:var(--ok)}.nlch .s2{stroke:var(--warn)}.nlch path{fill:none;stroke-width:2.5}.nlch circle{fill:var(--paper);stroke-width:2.5}" +
+    ".nlleg{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--muted)}.nlleg i{display:inline-block;width:12px;height:4px;border-radius:2px;margin-right:5px;vertical-align:3px}" +
+    ".nlleg .s0{background:var(--violet)}.nlleg .s1{background:var(--ok)}.nlleg .s2{background:var(--warn)}" +
+    ".nlw{display:inline-block;border:1px solid var(--line);border-radius:6px;padding:2px 8px;margin:2px 4px 2px 0;font-size:14px}.nlw b{font-family:var(--kr)}" +
+    ".nlcards{display:grid;gap:10px}@media(min-width:640px){.nlcards{grid-template-columns:1fr 1fr}}.nlcards .card{margin:0;padding:14px;cursor:pointer}.nlcards .card:hover{border-color:var(--violet)}" +
+    ".nlmini{display:grid;grid-template-columns:auto 1fr auto;gap:2px 8px;align-items:center;font-size:13px;margin-top:6px}";
+  document.head.appendChild(st);
+}
+function nlBar(label, a, sub){
+  var p = nlPct(a);
+  return '<div class="nlrow"><div class="nll">' + label + (sub ? '<small>' + sub + '</small>' : '') + '</div><div class="nlbar"><i class="' + nlCls(p) + '" style="width:' + (p || 0) + '%"></i></div>' +
+    '<div class="nlv">' + a[0] + '/' + a[1] + ' · <b>' + p + '%</b></div></div>';
+}
+/* Biểu đồ theo tuần: w = [[nhãn, đọc%, nghe%, từ%]] (-1 = tuần đó không làm). */
+function nlChart(w){
+  var W = 440, H = 170, L = 40, R = 14, T = 12, B = 26, step = w.length > 1 ? (W - L - R) / (w.length - 1) : 0;
+  var y = function(p){ return T + (H - T - B) * (1 - p/100); };
+  var h = '<svg class="chart nlch" viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Tỉ lệ đúng theo tuần">';
+  [0,50,100].forEach(function(v){ h += '<line class="ax" x1="' + L + '" x2="' + (W-R) + '" y1="' + y(v) + '" y2="' + y(v) + '"/><text x="' + (L-6) + '" y="' + (y(v)+4) + '" text-anchor="end">' + v + '%</text>'; });
+  w.forEach(function(r, i){ h += '<text x="' + (L + i*step).toFixed(1) + '" y="' + (H-7) + '" text-anchor="middle">' + r[0] + '</text>'; });
+  [1,2,3].forEach(function(k){
+    var d = "", pen = "M";
+    w.forEach(function(r, i){ if(r[k] < 0){ pen = "M"; return; } d += pen + (L + i*step).toFixed(1) + " " + y(r[k]).toFixed(1) + " "; pen = "L"; });
+    h += '<path class="s' + (k-1) + '" d="' + d + '"/>';
+    w.forEach(function(r, i){ if(r[k] >= 0) h += '<circle class="s' + (k-1) + '" cx="' + (L + i*step).toFixed(1) + '" cy="' + y(r[k]).toFixed(1) + '" r="3.5"><title>' + r[0] + ': ' + r[k] + '%</title></circle>'; });
+  });
+  return h + '</svg><div class="nlleg"><span><i class="s0"></i>Đọc (đề thi)</span><span><i class="s1"></i>Nghe</span><span><i class="s2"></i>Từ vựng</span></div>';
+}
+/* Thân bản đánh giá. o: xem nlBuild trong khối quản lý. full = bản của cô (thêm ước lượng điểm). */
+function nlReportHTML(o, full){
+  nlCss();
+  var s = o.s || {}, h = '', you = full ? 'Học sinh' : 'Em';
+  var tile = function(k, label){
+    var a = s[k], p = nlPct(a);
+    if(p == null) return '<div><b>–</b><span>' + label + ': chưa có bài</span></div>';
+    var d = a[2] == null ? '' : a[2] > 0 ? ' · tăng ' + a[2] + '%' : a[2] < 0 ? ' · giảm ' + (-a[2]) + '%' : ' · giữ nguyên';
+    return '<div><b class="' + nlCls(p) + '">' + p + '%</b><span>' + label + ' đúng ' + a[0] + '/' + a[1] + d + '</span></div>';
+  };
+  var act = 0; String(o.a || "").split("").forEach(function(c){ if(c !== "0") act++; });
+  h += '<div class="kq-sum">' + tile("r", "Đọc (đề thi)") + tile("l", "Nghe") + tile("v", "Từ vựng") +
+    '<div><b>' + act + '/28</b><span>ngày có làm bài (4 tuần qua)</span></div></div>';
+  if(s.r || s.l || s.v) h += '<p class="hint" style="margin-top:-6px">' + (o.d ? 'Tính trong ' + o.d + ' ngày gần nhất' : 'Tính trên toàn bộ bài đã làm') + (o.d ? '; “tăng/giảm” so với ' + o.d + ' ngày trước đó' : '') + '. Xanh ≥ 80%, vàng 60–79%, đỏ dưới 60%.</p>';
+  if(!full && (o.c || o.m)){
+    if(o.c) h += '<div class="nlsec"><h3>Nhận xét của cô</h3><div class="note">' + esc(o.c) + '</div></div>';
+    if(o.m) h += '<div class="nlsec"><h3>Việc em cần làm tiếp</h3><div class="note">' + esc(o.m) + '</div></div>';
+  }
+  if((o.w || []).filter(function(r){ return r[1] >= 0 || r[2] >= 0 || r[3] >= 0; }).length >= 2)
+    h += '<div class="nlsec"><h3>Tiến bộ theo tuần</h3>' + nlChart(o.w) + '</div>';
+  if((o.rt || []).length){
+    h += '<div class="nlsec"><h3>Đọc · theo dạng câu TOPIK II</h3>';
+    if(full && o.es) h += '<p class="hint">Ước lượng phần Đọc: <strong>≈ ' + o.es[0] + '/100 điểm</strong> (tính theo tỉ lệ đúng của các dạng đã luyện, chiếm ' + o.es[1] + '/50 câu của đề thật; chỉ để tham khảo).</p>';
+    h += o.rt.map(function(t){ var R = NL_RT[t[0]]; return nlBar(R[2], [t[1], t[2]], 'Câu ' + R[0] + (R[1] > R[0] ? '–' + R[1] : '')); }).join("");
+    var weak = o.rt.filter(function(t){ return t[2] >= 3 && t[1]/t[2] < 0.6; });
+    if(weak.length) h += '<p class="hint">' + you + ' cần ôn trước: ' + weak.map(function(t){ return '<strong>' + NL_RT[t[0]][2] + '</strong>'; }).join(", ") + '.</p>';
+    h += '</div>';
+  }
+  if((o.lp || []).some(function(a){ return a[1]; }) || (o.lt || []).length){
+    h += '<div class="nlsec"><h3>Nghe</h3>' + (o.lp || []).map(function(a, i){ return a[1] ? nlBar(NL_LP[i], a) : ''; }).join("");
+    if((o.lt || []).length) h += '<p class="hint" style="margin:10px 0 0">Theo bài nghe</p>' + o.lt.map(function(t){ return nlBar(esc(t[0]), [t[1], t[2]]); }).join("");
+    h += '</div>';
+  }
+  if((o.vt || []).length || o.vn){
+    h += '<div class="nlsec"><h3>Từ vựng</h3>' + (o.vn ? '<p class="hint" style="margin:0 0 4px">Đã luyện <strong>' + o.vn + ' từ</strong>' + ((o.vw || []).length ? ', còn <strong>' + (o.vc || o.vw.length) + ' từ</strong> lần gần nhất vẫn sai' : ', không còn từ nào sai') + '.</p>' : '') +
+      (o.vt || []).map(function(t){ return nlBar(esc(NL_VT[t[0]] || t[0]), [t[1], t[2]]); }).join("");
+    if((o.vw || []).length) h += '<p class="hint" style="margin:10px 0 2px">Từ ' + (full ? 'còn sai' : 'em cần ôn lại') + (o.vc > o.vw.length ? ' (' + o.vw.length + ' từ sai nhiều nhất)' : '') + '</p><div>' +
+      o.vw.map(function(w){ return '<span class="nlw"><b>' + esc(w[0]) + '</b> ' + esc(w[1]) + (w[2] > 1 ? ' <span class="pill bad">×' + w[2] + '</span>' : '') + '</span>'; }).join("") + '</div>';
+    h += '</div>';
+  }
+  h += '<div class="nlsec"><h3>Chuyên cần</h3><div class="nldays" aria-label="28 ngày gần nhất">' + String(o.a || "").split("").map(function(c, i){
+      var t = new Date((o.g || Date.now()) - (27 - i)*864e5), lab = pad(t.getDate()) + '/' + pad(t.getMonth()+1);
+      return '<span class="' + (c === "0" ? '' : +c >= 2 ? 'l2' : 'l1') + '" title="' + lab + ': ' + c + ' bài"></span>';
+    }).join("") + '</div><p class="hint" style="margin:0">Mỗi ô là một ngày trong 4 tuần qua (ô cuối là hôm nay), ô xanh là ngày có nộp bài.</p>' +
+    (o.cl || []).map(function(c){ return '<p style="margin:6px 0 0;font-size:14.5px">Bài hằng ngày lớp <strong>' + esc(c[0]) + '</strong>: nộp ' + c[1] + '/' + c[2] + ' bài' + (c[3] ? ', ' + c[3] + ' bài trễ hạn' : '') + '.</p>'; }).join("") + '</div>';
+  return h;
+}
+function reportBoot(){
+  var m = String(location.hash || "").match(/[#&]r=([A-Za-z0-9_.-]+)/);
+  if(!m) return false;
+  var o = vUnpack(m[1]);
+  stopClock(); nlCss();
+  app.innerHTML = '<div class="wrap">' + headerHTML() + '<main class="paper"><div class="title"><h1>학습 평가</h1><p>Đánh giá học tập · Hàn Ngữ Nari</p></div>' +
+    (o && o.n ? '<h2 style="margin:0;font-size:20px">' + esc(o.n) + '</h2><p class="hint" style="margin-bottom:12px">Cô đánh giá ngày ' + fmtDate(o.g) + '</p>' + nlReportHTML(o, false) :
+      '<p class="err">Link đánh giá bị thiếu hoặc bị cắt. Em sao chép lại đủ cả link cô gửi rồi mở lại nhé.</p>') + '</main></div>';
+  return true;
+}
+/* ==/NL== */
 /* ---------- boot ---------- */
 /* ---------- App cài trên điện thoại (PWA) ----------
    Chèn vào thi-thu/index.html bởi tools/sync_thi_thu.py (không có trong trang quản lý).
-   - Mỗi link bài (#d= thi thử, #v= từ vựng, #l= lộ trình, #n= luyện nghe) em đã mở được nhớ trong máy (nari-app-saved).
+   - Mỗi link bài (#d= thi thử, #v= từ vựng, #l= lộ trình, #n= luyện nghe, #r= bảng đánh giá) em đã mở được nhớ trong máy (nari-app-saved).
    - Trang đầu có "Bài của em" (bấm là vào) và ô dán link cô gửi → không phải cài lại app khi có bài mới.
    - Đang ở trong bài có nút "Trang đầu"; nút Quay lại của điện thoại cũng về được.
    - "Bài hôm nay": em nhập mã lớp + mã riêng một lần (hoặc bấm link #a= cô gửi), app đọc app/<mã>.json. */
-var APP_KEY = "nari-app-saved", APP_KINDS = {l:"Lộ trình từ vựng", v:"Bài từ vựng", d:"Đề thi thử", n:"Bài luyện nghe"};
+var APP_KEY = "nari-app-saved", APP_KINDS = {l:"Lộ trình từ vựng", v:"Bài từ vựng", d:"Đề thi thử", n:"Bài luyện nghe", r:"Đánh giá của cô"};
 function appParse(s){
-  var m = String(s || "").match(/(?:^|[#&?\s\/])([dvln])=([A-Za-z0-9_-]+\.[0-9a-z]{4})/);
+  var m = String(s || "").match(/(?:^|[#&?\s\/])([dvlnr])=([A-Za-z0-9_-]+\.[0-9a-z]{4})/);
   if(!m) return null;
   var p = vUnpack(m[2]);
   if(!p) return null;
@@ -1223,7 +1366,7 @@ function appParse(s){
 function appRemember(){
   var it = appParse(location.hash);
   if(!it) return;
-  var list = (lsGet(APP_KEY) || []).filter(function(x){ return x.h !== it.h; });
+  var list = (lsGet(APP_KEY) || []).filter(function(x){ return x.h !== it.h && !(it.k === "r" && x.k === "r"); }); /* chỉ giữ bảng đánh giá mới nhất */
   it.at = Date.now();
   list.unshift(it);
   var routes = list.filter(function(x){ return x.k === "l"; }).slice(0, 5);
@@ -1360,7 +1503,7 @@ function appRun(){
   window.scrollTo(0, 0);
   appMeBoot();
   appRemember();
-  if(!examBoot() && !vocabBoot() && !routeBoot() && !ngheBoot()) studentLanding();
+  if(!examBoot() && !vocabBoot() && !routeBoot() && !ngheBoot() && !reportBoot()) studentLanding();
 }
 function appGo(h){ history.pushState(null, "", h || location.pathname + location.search); appRun(); }
 var headerHTMLBase = headerHTML;

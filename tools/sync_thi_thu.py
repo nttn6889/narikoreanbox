@@ -29,7 +29,7 @@ APP_HEAD = """<link rel="manifest" href="manifest.webmanifest">
 """
 # Trang đầu "Bài của em", ô dán link, nút Trang đầu, service worker — thay cho dòng khởi động của trang.
 APP_SHELL = os.path.join(ROOT, "tools", "app_shell.js")
-BOOT_LINE = "if(!examBoot() && !vocabBoot() && !routeBoot() && !ngheBoot()) studentLanding();"
+BOOT_LINE = "if(!examBoot() && !vocabBoot() && !routeBoot() && !ngheBoot() && !reportBoot()) studentLanding();"
 
 
 def add_app(src):

@@ -1,12 +1,12 @@
 /* ---------- App cài trên điện thoại (PWA) ----------
    Chèn vào thi-thu/index.html bởi tools/sync_thi_thu.py (không có trong trang quản lý).
-   - Mỗi link bài (#d= thi thử, #v= từ vựng, #l= lộ trình, #n= luyện nghe) em đã mở được nhớ trong máy (nari-app-saved).
+   - Mỗi link bài (#d= thi thử, #v= từ vựng, #l= lộ trình, #n= luyện nghe, #r= bảng đánh giá) em đã mở được nhớ trong máy (nari-app-saved).
    - Trang đầu có "Bài của em" (bấm là vào) và ô dán link cô gửi → không phải cài lại app khi có bài mới.
    - Đang ở trong bài có nút "Trang đầu"; nút Quay lại của điện thoại cũng về được.
    - "Bài hôm nay": em nhập mã lớp + mã riêng một lần (hoặc bấm link #a= cô gửi), app đọc app/<mã>.json. */
-var APP_KEY = "nari-app-saved", APP_KINDS = {l:"Lộ trình từ vựng", v:"Bài từ vựng", d:"Đề thi thử", n:"Bài luyện nghe"};
+var APP_KEY = "nari-app-saved", APP_KINDS = {l:"Lộ trình từ vựng", v:"Bài từ vựng", d:"Đề thi thử", n:"Bài luyện nghe", r:"Đánh giá của cô"};
 function appParse(s){
-  var m = String(s || "").match(/(?:^|[#&?\s\/])([dvln])=([A-Za-z0-9_-]+\.[0-9a-z]{4})/);
+  var m = String(s || "").match(/(?:^|[#&?\s\/])([dvlnr])=([A-Za-z0-9_-]+\.[0-9a-z]{4})/);
   if(!m) return null;
   var p = vUnpack(m[2]);
   if(!p) return null;
@@ -15,7 +15,7 @@ function appParse(s){
 function appRemember(){
   var it = appParse(location.hash);
   if(!it) return;
-  var list = (lsGet(APP_KEY) || []).filter(function(x){ return x.h !== it.h; });
+  var list = (lsGet(APP_KEY) || []).filter(function(x){ return x.h !== it.h && !(it.k === "r" && x.k === "r"); }); /* chỉ giữ bảng đánh giá mới nhất */
   it.at = Date.now();
   list.unshift(it);
   var routes = list.filter(function(x){ return x.k === "l"; }).slice(0, 5);
@@ -152,7 +152,7 @@ function appRun(){
   window.scrollTo(0, 0);
   appMeBoot();
   appRemember();
-  if(!examBoot() && !vocabBoot() && !routeBoot() && !ngheBoot()) studentLanding();
+  if(!examBoot() && !vocabBoot() && !routeBoot() && !ngheBoot() && !reportBoot()) studentLanding();
 }
 function appGo(h){ history.pushState(null, "", h || location.pathname + location.search); appRun(); }
 var headerHTMLBase = headerHTML;

@@ -42,6 +42,19 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   “Bài riêng cô giao”. Đã nộp = localStorage `nari-v-|nari-n-|nari-tt-<mã bài>-<tên>` có `submitted`. Học sinh vẫn gửi mã nộp qua
   Zalo (có nút “Gửi qua Zalo…” dùng bảng chia sẻ của máy).
 
+## Đánh giá năng lực (tab "Đánh giá" trong trang quản lý)
+- Gom đề thi (`results`), từ vựng (`vresults`), nghe (`nresults`) theo từng học sinh. Số liệu tính lại trong trình duyệt,
+  không lưu thêm gì. Chỉ lưu nhận xét (`notes/<id>.text`, dùng chung với Sổ điểm) và việc cần làm (`nlnotes/<id>.next`).
+- Đọc theo dạng câu TOPIK II (bảng `NL_RT`, theo số câu; đề trộn quy về câu gốc qua `src`), nghe theo phần và theo bài,
+  từ vựng theo dạng bài và từ còn sai, chuyên cần 28 ngày, biểu đồ theo tuần, ước lượng điểm Đọc (chỉ cô thấy).
+- Bản gửi học sinh: link `thi-thu/#r=<base64>.<sum>` chứa sẵn số liệu (không cần đồng bộ), mở bằng `reportBoot`.
+- **Toàn bộ code nằm trong `tools/nangluc.js`** (trên dấu `/* ==ADMIN==` là phần chung, dưới là phần trong khối Admin).
+  Sửa ở đó rồi:
+  - chỉ sửa bản học sinh thấy: `python3 tools/nangluc.py --site` → commit (không cần tải trang quản lý);
+  - có sửa phần của cô: Artifact `read` trang quản lý (bỏ lớp vỏ `<!doctype…><body>` ngoài cùng của file tải về),
+    `python3 tools/nangluc.py <file>` (thay đoạn giữa dấu `==NL==`/`==NLA==`, tự móc tab), `publish` với `url`,
+    rồi `python3 tools/sync_thi_thu.py <file>`.
+
 ## Lưu ý
 - Repo không được chứa tên, điểm, nhận xét của học sinh.
 
