@@ -29,6 +29,19 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - Trang đầu có “Bài của em” (mọi link `#d=`/`#v=`/`#l=`/`#n=` đã mở, localStorage `nari-app-saved`) và ô “Dán link bài cô gửi”;
   trong bài có nút “⌂ Trang đầu”, nút Quay lại cũng về được → giao bài mới không phải cài lại app.
 
+## Bài hôm nay trong app (mã lớp + mã học sinh)
+- Trang quản lý: Lớp học → lớp → thẻ “App học sinh”: “Tin nhắn vào app cho từng em” tạo mã (`classes/<id>.app`,
+  `students/<id>.app`, 6 ký tự ngẫu nhiên) và tin nhắn có link `thi-thu/#a=<base64>.<sum>` ({l, h, n}) để máy học sinh nhớ mã + tên.
+  “Tạo bài 7 ngày tới” tạo bài hằng ngày (giống “Tạo bài hôm nay”, lấy lựa chọn sẵn). Bài riêng: Học viên → nút “App” → tick bài
+  (ghi `app:[id học viên]` vào `assigns`/`vassigns`/`nassigns`).
+- **Đăng bài** (cô nhắn “đăng bài”): ArtifactData `list` với `out_dir` các collection `classes`, `students`, `cdays`, `assigns`,
+  `vassigns`, `nassigns` → `python3 tools/sync_app.py <dump>` → ghi `thi-thu/app/<mã>.json` (chỉ mã, tên bài, nội dung link;
+  không tên học sinh/tên lớp; bài riêng và đề trộn đặt lại tên chung) → ArtifactData `set` `site/app` từ `<dump>/site_app.json`
+  (trang quản lý hiện “đã lên app”) → kiểm tra Playwright, commit + push.
+- App (`tools/app_shell.js`): hồ sơ `nari-app-me` {l, h, n}; trang đầu “Bài hôm nay”, “Bài những ngày trước em chưa nộp” (7 ngày),
+  “Bài riêng cô giao”. Đã nộp = localStorage `nari-v-|nari-n-|nari-tt-<mã bài>-<tên>` có `submitted`. Học sinh vẫn gửi mã nộp qua
+  Zalo (có nút “Gửi qua Zalo…” dùng bảng chia sẻ của máy).
+
 ## Lưu ý
 - Repo không được chứa tên, điểm, nhận xét của học sinh.
 
