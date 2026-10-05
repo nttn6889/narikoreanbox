@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nối âm 연음</title>
+<meta name="description" content="Giáo án sơ cấp: quy tắc nối âm (연음) – kiến thức, luyện đọc, trắc nghiệm, luyện nghe.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Noto+Serif+KR:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EEF0F6; --paper:#FFFFFF; --ink:#1D1A2C; --muted:#5F5B74; --line:#D9D6E6;
+  --violet:#54478F; --violet-soft:#ECE9F7; --on-violet:#FFFFFF;
+  --pen:#C4323A; --pen-soft:#FBE7E8; --ok:#1F7A4D; --ok-soft:#E3F3EA; --gold:#B7791F; --gold-soft:#FDF1DC;
+  --kr:"Noto Serif KR","Apple SD Gothic Neo","Malgun Gothic",serif;
+  --ui:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#15131F; --paper:#1F1C2C; --ink:#ECEAF5; --muted:#A7A2BE; --line:#37334A;
+    --violet:#A99BEA; --violet-soft:#2C2745; --on-violet:#15131F;
+    --pen:#F07077; --pen-soft:#3A1E24; --ok:#5FCB94; --ok-soft:#1C3328; --gold:#F0B454; --gold-soft:#382A12;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#15131F; --paper:#1F1C2C; --ink:#ECEAF5; --muted:#A7A2BE; --line:#37334A;
+  --violet:#A99BEA; --violet-soft:#2C2745; --on-violet:#15131F;
+  --pen:#F07077; --pen-soft:#3A1E24; --ok:#5FCB94; --ok-soft:#1C3328; --gold:#F0B454; --gold-soft:#382A12;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--ui);font-size:clamp(16px,1.15vw + 8px,26px);line-height:1.5;overflow:hidden}
+.kr{font-family:var(--kr);font-weight:700}
+button{font:inherit;color:inherit;cursor:pointer}
+
+/* ---- slides ---- */
+.deck{position:fixed;inset:0 0 56px 0}
+.slide{position:absolute;inset:0;display:none;overflow-y:auto;padding:clamp(16px,3vw,48px) clamp(16px,5vw,80px) 24px}
+.slide.on{display:block;animation:fade .25s ease}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.wrap{max-width:1180px;margin:0 auto}
+.tag{display:inline-block;font-size:.7em;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--violet);background:var(--violet-soft);padding:.2em .7em;border-radius:99px}
+h1{font-size:2.6em;line-height:1.15;margin:.3em 0 .2em}
+h2{font-size:1.7em;line-height:1.2;margin:.35em 0 .5em}
+p{margin:.4em 0}
+.muted{color:var(--muted)}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:clamp(14px,2vw,28px)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:16px}
+.pron{color:var(--pen);font-family:var(--kr);font-weight:700}
+.mv{color:var(--pen);background:var(--pen-soft);border-radius:6px;padding:0 .08em}
+.ex{display:flex;flex-wrap:wrap;gap:.5em 1.4em;font-size:1.25em;margin:.4em 0}
+.ex span{white-space:nowrap}
+.big{font-size:1.5em}
+.note{border-left:4px solid var(--gold);background:var(--gold-soft);padding:.6em .9em;border-radius:0 10px 10px 0;margin:.8em 0}
+.btn{border:1px solid var(--line);background:var(--paper);border-radius:10px;padding:.35em .9em;font-weight:600}
+.btn.pri{background:var(--violet);border-color:var(--violet);color:var(--on-violet)}
+.btn:hover{border-color:var(--violet)}
+.btn.sm{font-size:.8em;padding:.25em .7em}
+.row{display:flex;flex-wrap:wrap;gap:.6em;align-items:center}
+
+/* title slide */
+.title-hero{min-height:calc(100vh - 140px);display:flex;flex-direction:column;justify-content:center}
+.title-hero .kr-big{font-family:var(--kr);font-size:4.5em;color:var(--violet);line-height:1}
+
+/* rule formula */
+.formula{display:flex;flex-wrap:wrap;align-items:center;gap:.5em;font-size:1.25em;margin:.6em 0}
+.box{border:2px solid var(--line);border-radius:12px;padding:.3em .7em;background:var(--paper)}
+.box.p{border-color:var(--pen);color:var(--pen)}
+.box.v{border-color:var(--violet);color:var(--violet)}
+
+/* liaison demo */
+.demo{display:grid;gap:.4em;margin-top:.6em}
+.demo .line{display:flex;align-items:center;gap:.8em;min-height:2.6em;opacity:0;transform:translateX(-8px);transition:.35s}
+.demo .line.show{opacity:1;transform:none}
+.demo .lbl{width:4.5em;flex:none;color:var(--muted);font-size:.8em;font-weight:600}
+.demo .w{font-family:var(--kr);font-weight:700;font-size:2.2em;display:flex;align-items:center;gap:.08em}
+.jamo{display:inline-block;color:var(--pen);background:var(--pen-soft);border-radius:8px;padding:0 .15em;font-size:.8em;animation:hop .6s ease}
+.jamo.gone{text-decoration:line-through;color:var(--muted);background:none}
+.ghost{color:var(--muted);opacity:.55}
+@keyframes hop{0%{transform:translate(-.4em,-.4em)}60%{transform:translate(.1em,-.2em)}100%{transform:none}}
+.chips{display:flex;flex-wrap:wrap;gap:.4em;margin:.5em 0}
+.chip{border:1px solid var(--line);background:var(--paper);border-radius:99px;padding:.15em .8em;font-family:var(--kr);font-weight:700}
+.chip.on{background:var(--violet);border-color:var(--violet);color:var(--on-violet)}
+
+/* reading table */
+.tbl{width:100%;border-collapse:collapse;background:var(--paper);border-radius:14px;overflow:hidden}
+.tbl td{border-bottom:1px dashed var(--line);padding:.35em .6em;vertical-align:top}
+.tbl td.k{width:2.6em;text-align:center;font-family:var(--kr);font-weight:700;color:var(--violet);font-size:1.15em;background:var(--violet-soft)}
+.w-card{display:inline-flex;flex-direction:column;align-items:center;border:1px solid transparent;border-radius:10px;padding:.1em .45em;margin:.1em .1em;background:none}
+.w-card:hover{border-color:var(--line)}
+.w-card .kr{font-size:1.15em}
+.w-card .pron{font-size:.95em;display:none}
+.w-card .vi{font-size:.62em;color:var(--muted);display:none;max-width:9em;line-height:1.2}
+.w-card.open .pron,.w-card.open .vi{display:block}
+.w-card.open{background:var(--pen-soft)}
+
+/* audio */
+.player{margin:.6em 0}
+.player h3{margin:.2em 0 .4em;font-size:1em}
+.clips{display:flex;flex-wrap:wrap;gap:.35em}
+.clip{min-width:2.4em;border:1px solid var(--line);background:var(--paper);border-radius:8px;padding:.2em .5em;font-weight:700}
+.clip.playing{background:var(--violet);color:var(--on-violet);border-color:var(--violet)}
+.clip.all{font-weight:600}
+
+/* quiz */
+.q-word{font-family:var(--kr);font-weight:700;font-size:3em;line-height:1.2}
+.opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:.6em;margin:.8em 0}
+.opt{border:2px solid var(--line);background:var(--paper);border-radius:14px;padding:.5em;font-family:var(--kr);font-weight:700;font-size:1.5em}
+.opt.right{border-color:var(--ok);background:var(--ok-soft);color:var(--ok)}
+.opt.wrong{border-color:var(--pen);background:var(--pen-soft);color:var(--pen)}
+.bar{height:8px;background:var(--line);border-radius:99px;overflow:hidden;margin:.4em 0}
+.bar i{display:block;height:100%;background:var(--violet);transition:width .3s}
+
+/* teacher notes */
+.tnote{display:none;margin-top:1.2em;border:1px dashed var(--violet);border-radius:12px;padding:.6em 1em;background:var(--violet-soft);font-size:.8em}
+.tnote b:first-child{color:var(--violet)}
+body.notes .tnote{display:block}
+
+/* nav */
+nav{position:fixed;left:0;right:0;bottom:0;height:56px;display:flex;align-items:center;gap:8px;padding:0 12px;background:var(--paper);border-top:1px solid var(--line);font-size:15px}
+nav .count{min-width:4.5em;text-align:center;color:var(--muted);font-variant-numeric:tabular-nums}
+nav .sp{flex:1}
+nav .nb{border:1px solid var(--line);background:var(--paper);border-radius:10px;height:38px;min-width:38px;padding:0 10px;font-weight:600}
+nav .nb.on{background:var(--violet);color:var(--on-violet);border-color:var(--violet)}
+nav .home{color:var(--muted);text-decoration:none;font-weight:600}
+@media (max-width:560px){ nav .lbl-long{display:none} h1{font-size:2em} .title-hero .kr-big{font-size:3.2em} .demo .w{font-size:1.7em} }
+
+/* image overlay */
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.75);display:none;align-items:center;justify-content:center;z-index:20;padding:16px}
+.ov.on{display:flex}
+.ov img{max-width:100%;max-height:100%;border-radius:8px;background:#fff}
+.ov .x{position:absolute;top:12px;right:12px;font-size:20px;background:#fff;color:#000;border:0;border-radius:99px;width:40px;height:40px}
+</style>
+</head>
+<body>
+<div class="deck" id="deck">
+
+<!-- 1. Title -->
+<section class="slide">
+  <div class="wrap title-hero">
+    <span class="tag">Sơ cấp · Phát âm</span>
+    <div class="kr-big" style="margin-top:.4em">연음</div>
+    <h1>Nối âm (연음)</h1>
+    <p class="muted big">Patchim + nguyên âm → patchim “chuyển sang” âm tiết sau</p>
+    <p class="muted" style="margin-top:1.4em">Hàn Ngữ Nari · Bấm → hoặc vuốt để sang trang</p>
+    <div class="tnote"><b>Gợi ý dạy (cả buổi ~60 phút):</b> Khởi động 5′ → Quy tắc 20′ → Luyện đọc theo sách + MP3 08 15′ → Trắc nghiệm 10′ → Nghe MP3 09–12 10′.
+      Phím tắt: ← → chuyển trang, <b>G</b> bật/tắt ghi chú này, <b>F</b> toàn màn hình.</div>
+  </div>
+</section>
+
+<!-- 2. Warm-up -->
+<section class="slide">
+  <div class="wrap">
+    <span class="tag">Khởi động</span>
+    <h2>Các từ này đọc thế nào?</h2>
+    <div class="grid2">
+      <div class="card" style="text-align:center">
+        <div class="q-word">음악을</div><p class="muted">âm nhạc</p>
+        <button class="btn" data-reveal>Xem cách đọc</button>
+        <div class="pron big" hidden>[으마글]</div>
+      </div>
+      <div class="card" style="text-align:center">
+        <div class="q-word">책이</div><p class="muted">sách</p>
+        <button class="btn" data-reveal>Xem cách đọc</button>
+        <div class="pron big" hidden>[채기]</div>
+      </div>
+      <div class="card" style="text-align:center">
+        <div class="q-word">꽃이</div><p class="muted">hoa</p>
+        <button class="btn" data-reveal>Xem cách đọc</button>
+        <div class="pron big" hidden>[꼬치]</div>
+      </div>
+    </div>
+    <p class="big" style="margin-top:.8em">👉 Viết một kiểu, <b>đọc</b> một kiểu. Vì sao?</p>
+    <div class="tnote"><b>Gợi ý:</b> Cho học sinh đọc thử trước khi bấm “Xem cách đọc”. Hỏi: “chữ ㄱ của 책 đi đâu rồi?” → dẫn vào quy tắc.</div>
+  </div>
+</section>
+
+<!-- 3. Main rule -->
+<section class="slide">
+  <div class="wrap">
+    <span class="tag">Quy tắc</span>
+    <h2>Patchim + nguyên âm → nối âm</h2>
+    <div class="formula">
+      <span class="box p">Âm tiết có patchim</span><span>+</span><span class="box v">Âm tiết bắt đầu bằng ㅇ</span><span>→</span><span class="box">patchim đọc sang vị trí ㅇ</span>
+    </div>
+    <p>ㅇ đứng đầu âm tiết là <b>“ghế trống”</b> (không có âm) → patchim phía trước “ngồi vào” chỗ đó.</p>
+    <div class="card" style="margin-top:.8em">
+      <div class="row"><b>Xem nối âm:</b> <span class="muted" style="font-size:.85em">chọn một từ</span></div>
+      <div class="chips" id="demoChips"></div>
+      <div class="demo" id="demo"></div>
+      <div class="row" style="margin-top:.4em"><button class="btn pri" id="demoGo">Nối ▶</button><button class="btn" id="demoSay" hidden>🔊 Nghe máy đọc</button></div>
+    </div>
+    <div class="tnote"><b>Gợi ý:</b> Bấm “Nối ▶” từng bước: Viết → Tách → Đọc. Cho cả lớp đọc to theo dòng “Đọc”. Có thể ví ㅇ là chiếc ghế trống.</div>
+  </div>
+</section>
+
+<!-- 4. Single patchim -->
+<section class="slide">
+  <div class="wrap">
+    <span class="tag">Quy tắc 1</span>
+    <h2>Patchim đơn: chuyển nguyên sang</h2>
+    <div class="grid2">
+      <div class="card">
+        <div class="ex"><span class="kr">책이</span><span class="pron">[채<span class="mv">기</span>]</span></div>
+        <div class="ex"><span class="kr">밥을</span><span class="pron">[바<span class="mv">블</span>]</span></div>
+        <div class="ex"><span class="kr">옷을</span><span class="pron">[오<span class="mv">슬</span>]</span></div>
+        <div class="ex"><span class="kr">서울은</span><span class="pron">[서우<span class="mv">른</span>]</span></div>
+        <div class="ex"><span class="kr">사람이</span><span class="pron">[사라<span class="mv">미</span>]</span></div>
+      </div>
+      <div class="card">
+        <p><b>ㄹ</b> nối sang đọc là <b>[r]</b> (bật lưỡi nhẹ), không phải [l]:</p>
+        <div class="ex"><span class="kr">물이</span><span class="pron">[무리]</span></div>
+        <div class="ex"><span class="kr">놀아요</span><span class="pron">[노라요]</span></div>
+        <div class="note">Nối âm cả khi từ có nhiều âm tiết: <span class="kr">천원이에요</span> <span class="pron">[처눠니에요]</span> — nối liên tiếp từ trái sang phải.</div>
+      </div>
+    </div>
+    <div class="tnote"><b>Gợi ý:</b> Đọc mẫu chậm → nhanh dần để học sinh nghe được 책+이 thành 채기 một cách tự nhiên. Nhấn mạnh ㄹ → [r].</div>
+  </div>
+</section>
+
+<!-- 5. Original sound returns -->
+<section class="slide">
+  <div class="wrap">
+    <span class="tag">Quy tắc 1 · Lưu ý</span>
+    <h2>Khi nối âm, patchim đọc <u>đúng âm gốc</u></h2>
+    <p>Đứng cuối, nhiều patchim chỉ đọc thành 7 âm [ㄱ ㄴ ㄷ ㄹ ㅁ ㅂ ㅇ]. Nhưng khi nối sang nguyên âm, chúng <b>“hiện nguyên hình”</b>:</p>
+    <div class="card">
+      <table class="tbl" style="font-size:1.1em">
+        <tr><td><b>Đứng một mình</b></td><td><b>Nối âm</b></td></tr>
+        <tr><td><span class="kr">꽃</span> <span class="pron">[꼳]</span></td><td><span class="kr">꽃이</span> <span class="pron">[꼬<span class="mv">치</span>]</span> — ㅊ</td></tr>
+        <tr><td><span class="kr">밭</span> <span class="pron">[받]</span></td><td><span class="kr">밭에</span> <span class="pron">[바<span class="mv">테</span>]</span> — ㅌ</td></tr>
+        <tr><td><span class="kr">부엌</span> <span class="pron">[부억]</span></td><td><span class="kr">부엌에서</span> <span class="pron">[부어<span class="mv">케</span>서]</span> — ㅋ</td></tr>
+        <tr><td><span class="kr">앞</span> <span class="pron">[압]</span></td><td><span class="kr">앞으로</span> <span class="pron">[아<span class="mv">프</span>로]</span> — ㅍ</td></tr>
+        <tr><td><span class="kr">낮</span> <span class="pron">[낟]</span></td><td><span class="kr">낮에</span> <span class="pron">[나<span class="mv">제</span>]</span> — ㅈ</td></tr>
+      </table>
+    </div>
+    <div class="note">Lỗi hay gặp: đọc <span class="kr">꽃이</span> thành <span class="pron">[꼬디]</span> ✗ → đúng là <span class="pron">[꼬치]</span> ✓</div>
+    <div class="tnote"><b>Gợi ý:</b> Cho học sinh đọc cột trái trước, rồi cột phải → thấy rõ âm thay đổi. Đây là lỗi học sinh Việt hay mắc nhất.</div>
+  </div>
+</section>
+
+<!-- 6. Exceptions ㅇ ㅎ -->
+<section class="slide">
+  <div class="wrap">
+    <span class="tag">Quy tắc 2 · Ngoại lệ</span>
+    <h2>Patchim ㅇ và ㅎ</h2>
+    <div class="grid2">
+      <div class="card">
+        <h3 style="margin-top:0">ㅇ — <u>không</u> chuyển</h3>
+        <p>ㅇ cuối là âm [ng], giữ nguyên, nối mềm sang nguyên âm sau.</p>
+        <div class="ex"><span class="kr">은행이</span><span class="pron">[은행이]</span></div>
+        <div class="ex"><span class="kr">한강에</span><span class="pron">[한강에]</span></div>
+        <div class="ex"><span class="kr">공항이</span><span class="pron">[공항이]</span></div>
+        <div class="ex"><span class="kr">풍경은</span><span class="pron">[풍경은]</span></div>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0">ㅎ — <u>câm</u> (không đọc)</h3>
+        <p>ㅎ gặp nguyên âm thì biến mất.</p>
+        <div class="ex"><span class="kr">놓아요</span><span class="pron">[노아요]</span></div>
+        <div class="ex"><span class="kr">좋아요</span><span class="pron">[조아요]</span></div>
+        <div class="note">Đặc biệt: tên chữ <span class="kr">히읗이</span> <span class="pron">[히으시]</span> (tên các chữ cái có cách đọc riêng).</div>
+      </div>
+    </div>
+    <div class="tnote"><b>Gợi ý:</b> Hỏi lại cả lớp: “은행이 có đọc thành 은해잉 không?” → không, ㅇ đứng yên. 좋아요 là từ học sinh đã biết, dễ nhớ.</div>
+  </div>
+</section>
+
+<!-- 7. Double consonants -->
+<section class="slide">
+  <div class="wrap">
+    <span class="tag">Quy tắc 3</span>
+    <h2>Patchim kép giống nhau (ㄲ, ㅆ): chuyển cả cặp</h2>
+    <div class="card">
+      <div class="ex"><span class="kr">밖에</span><span class="pron">[바<span class="mv">께</span>]</span></div>
+      <div class="ex"><span class="kr">닦으십시오</span><span class="pron">[다<span class="mv">끄</span>십씨오]</span></div>
+      <div class="ex"><span class="kr">깎아요</span><span class="pron">[까<span class="mv">까</span>요]</span></div>
+      <div class="ex"><span class="kr">있어요</span><span class="pron">[이<span class="mv">써</span>요]</span></div>
+    </div>
+    <div class="note">Đuôi <span class="kr">-(으)십시오</span> luôn đọc <span class="pron">[십씨오]</span>: ㅂ trước ㅅ làm ㅅ đọc căng thành [ㅆ] (học kỹ ở bài “âm căng hoá”).</div>
+    <div class="tnote"><b>Gợi ý:</b> 있어요 học sinh đã gặp → ví dụ dễ nhớ. Nhắc ㄲ/ㅆ phải đọc căng, mạnh.</div>
+  </div>
+</section>
+
+<!-- 8. Clusters -->
+<section class="slide">
+  <div class="wrap">
+    <span class="tag">Quy tắc 4</span>
+    <h2>Patchim đôi (ㄺ ㄵ ㄻ ㄼ…): giữ chữ đầu, chuyển chữ sau</h2>
+    <div class="formula"><span class="box">읽</span><span>+</span><span class="box">으</span><span>→</span><span class="box">일</span><span class="box p">그</span><span class="muted" style="font-size:.7em">ㄹ ở lại · ㄱ sang</span></div>
+    <div class="grid2">
+      <div class="card">
+        <div class="ex"><span class="kr">읽으면</span><span class="pron">[일<span class="mv">그</span>면]</span></div>
+        <div class="ex"><span class="kr">밝은</span><span class="pron">[발<span class="mv">근</span>]</span></div>
+        <div class="ex"><span class="kr">앉아요</span><span class="pron">[안<span class="mv">자</span>요]</span></div>
+      </div>
+      <div class="card">
+        <div class="ex"><span class="kr">젊어서</span><span class="pron">[절<span class="mv">머</span>서]</span></div>
+        <div class="ex"><span class="kr">삶아서</span><span class="pron">[살<span class="mv">마</span>서]</span></div>
+        <div class="ex"><span class="kr">밟아서</span><span class="pron">[발<span class="mv">바</span>서]</span></div>
+      </div>
+    </div>
+    <div class="note">So sánh: <span class="kr">읽다</span> <span class="pron">[익따]</span> (đứng trước phụ âm chỉ đọc 1 chữ) ↔ <span class="kr">읽어요</span> <span class="pron">[일거요]</span> (gặp nguyên âm thì đọc cả hai).</div>
+    <div class="tnote"><b>Gợi ý:</b> Dùng trang “Xem nối âm” (trang 3) chọn 읽으면, 앉아요 để minh hoạ. Không cần giải thích quy tắc đọc patchim đôi khi đứng cuối ở buổi này.</div>
+  </div>
+</section>
+
+<!-- 9. Reading practice -->
+<section class="slide">
+  <div class="wrap">
+    <span class="tag">Luyện đọc · 읽기 연습 1</span>
+    <h2>Đọc to – bấm vào từ để xem cách đọc</h2>
+    <div class="row" style="margin-bottom:.6em">
+      <button class="btn pri" id="showAll">Hiện tất cả cách đọc</button>
+      <button class="btn" id="ttsToggle" hidden>🔊 Máy đọc khi bấm: tắt</button>
+      <button class="btn" data-img>📖 Xem trang sách</button>
+    </div>
+    <div class="card player" data-track="08"></div>
+    <table class="tbl" id="readTbl"></table>
+    <div class="tnote"><b>Gợi ý:</b> Cho cả lớp nghe MP3 08 (bấm từng số để nghe từng câu, lặp lại), rồi gọi từng học sinh đọc một dòng. Bấm vào từ học sinh đọc sai để hiện cách đọc đúng.</div>
+  </div>
+</section>
+
+<!-- 10. Quiz -->
+<section class="slide">
+  <div class="wrap" id="quiz"></div>
+</section>
+
+<!-- 11. Listening -->
+<section class="slide">
+  <div class="wrap">
+    <span class="tag">Luyện nghe</span>
+    <h2>Nghe – đọc theo – viết lại</h2>
+    <p class="muted">Bấm từng số để nghe từng câu. Nghe 2 lần → đọc theo → viết lại bằng tiếng Hàn và đánh dấu chỗ nối âm.</p>
+    <div class="grid2">
+      <div class="card player" data-track="09"></div>
+      <div class="card player" data-track="10"></div>
+      <div class="card player" data-track="11"></div>
+      <div class="card player" data-track="12"></div>
+    </div>
+    <div class="row" style="margin-top:.6em"><label class="row" style="font-size:.85em"><input type="checkbox" id="slow"> Nghe chậm (0,75×)</label></div>
+    <div class="tnote"><b>Gợi ý:</b> Chia lớp thành nhóm, mỗi nhóm một file. Học sinh viết lên bảng, cô đối chiếu với sách và gạch chân chỗ nối âm.</div>
+  </div>
+</section>
+
+<!-- 12. Summary -->
+<section class="slide">
+  <div class="wrap">
+    <span class="tag">Tổng kết</span>
+    <h2>Nhớ 4 điều</h2>
+    <div class="grid2">
+      <div class="card"><p class="big">① Patchim + ㅇ → <b>chuyển sang</b></p><p><span class="kr">책이</span> <span class="pron">[채기]</span> · <span class="kr">꽃이</span> <span class="pron">[꼬치]</span> (đọc âm gốc)</p></div>
+      <div class="card"><p class="big">② ㅇ <b>đứng yên</b> · ㅎ <b>câm</b></p><p><span class="kr">은행이</span> <span class="pron">[은행이]</span> · <span class="kr">놓아요</span> <span class="pron">[노아요]</span></p></div>
+      <div class="card"><p class="big">③ ㄲ ㅆ <b>chuyển cả cặp</b></p><p><span class="kr">밖에</span> <span class="pron">[바께]</span> · <span class="kr">있어요</span> <span class="pron">[이써요]</span></p></div>
+      <div class="card"><p class="big">④ Patchim đôi: <b>chữ sau</b> chuyển</p><p><span class="kr">읽으면</span> <span class="pron">[일그면]</span> · <span class="kr">앉아요</span> <span class="pron">[안자요]</span></p></div>
+    </div>
+    <div class="note"><b>Bài về nhà:</b> Đọc to bảng 읽기 연습 1 theo MP3 08 (3 lần), quay video gửi cô qua Zalo.</div>
+  </div>
+</section>
+
+</div>
+
+<nav>
+  <a class="home" href="../../">⌂</a>
+  <span class="sp"></span>
+  <button class="nb" id="prev" aria-label="Trang trước">‹</button>
+  <span class="count" id="count"></span>
+  <button class="nb" id="next" aria-label="Trang sau">›</button>
+  <span class="sp"></span>
+  <button class="nb" id="notesBtn" title="Ghi chú cho cô (G)">📝<span class="lbl-long"> Ghi chú</span></button>
+  <button class="nb" id="fsBtn" title="Toàn màn hình (F)">⛶</button>
+</nav>
+
+<div class="ov" id="ov"><button class="x" aria-label="Đóng">✕</button><img src="img/trang-08.png" alt="Trang sách 읽기 연습 1" loading="lazy"></div>
+
+<script>
+/* ---------- data ---------- */
+const ROWS=[
+ ['ㄱ',[['책이','채기','sách'],['미국에서','미구게서','ở Mỹ'],['학원','하권','trung tâm học'],['목요일','모교일','thứ Năm'],['찍으십시오','찌그십씨오','hãy chụp']]],
+ ['ㄴ',[['천원이에요','처눠니에요','là 1.000 won'],['일본으로','일보느로','đến Nhật'],['부산에','부사네','ở/đến Busan']]],
+ ['ㄷ',[['닫아요','다다요','đóng'],['받은','바든','đã nhận'],['닫으세요','다드세요','hãy đóng'],['걸어요','거러요','đi bộ'],['받으십시오','바드십씨오','xin hãy nhận']]],
+ ['ㄹ',[['교실에서','교시레서','ở lớp học'],['서울은','서우른','Seoul thì'],['월요일','워료일','thứ Hai'],['물이','무리','nước'],['놀아요','노라요','chơi'],['설악산','서락싼','núi Seorak']]],
+ ['ㅁ',[['사람이','사라미','người'],['금요일','그묘일','thứ Sáu'],['음악을','으마글','âm nhạc'],['서점에서','서저메서','ở hiệu sách'],['여름에도','여르메도','cả mùa hè'],['이름을','이르믈','tên']]],
+ ['ㅂ',[['밥을','바블','cơm'],['잡으십시오','자브십씨오','hãy nắm'],['집에','지베','ở/về nhà'],['입어요','이버요','mặc']]],
+ ['ㅅ',[['이것이','이거시','cái này'],['옷을','오슬','quần áo'],['씻으세요','씨스세요','hãy rửa']]],
+ ['ㅇ',[['은행이','은행이','ngân hàng'],['한강에','한강에','ở sông Hàn'],['공항이','공항이','sân bay'],['풍경은','풍경은','phong cảnh thì']]],
+ ['ㅈ',[['찾으십시오','차즈십씨오','hãy tìm'],['잊어버리십시오','이저버리십씨오','hãy quên đi'],['낮에','나제','ban ngày'],['빚이','비지','món nợ']]],
+ ['ㅊ',[['꽃이','꼬치','hoa'],['빛이','비치','ánh sáng'],['낯이','나치','gương mặt']]],
+ ['ㅋ',[['부엌에서','부어케서','ở bếp'],['동녘이','동녀키','phía đông']]],
+ ['ㅌ',[['밑에','미테','ở dưới'],['바깥으로','바까트로','ra ngoài'],['밭에','바테','ở ruộng'],['같아요','가타요','giống'],['같은','가튼','giống nhau']]],
+ ['ㅍ',[['앞으로','아프로','về phía trước'],['옆에','여페','bên cạnh'],['숲은','수픈','rừng thì'],['깊이','기피','sâu / độ sâu'],['갚으세요','가프세요','hãy trả (nợ)'],['엎어요','어퍼요','úp ngược']]],
+ ['ㅎ',[['히읗이','히으시','chữ ㅎ'],['놓아요','노아요','đặt, để']]],
+ ['ㄲ',[['밖에','바께','ở ngoài'],['닦으십시오','다끄십씨오','hãy lau'],['깎아요','까까요','gọt, cắt']]],
+ ['ㄺ',[['읽으면','일그면','nếu đọc'],['읽으십시오','일그십씨오','hãy đọc'],['밝은','발근','sáng'],['맑아요','말가요','trong, quang']]],
+ ['ㄵ',[['앉아서','안자서','ngồi rồi…'],['앉으십시오','안즈십씨오','mời ngồi'],['앉아요','안자요','ngồi']]],
+ ['ㄻ',[['삶아서','살마서','luộc rồi…'],['삶으십시오','살므십씨오','hãy luộc'],['젊으면','절므면','nếu trẻ'],['젊어서','절머서','vì trẻ']]],
+ ['ㄼ',[['밟아서','발바서','giẫm rồi…'],['밟으십시오','발브십씨오','hãy giẫm'],['밟으니까','발브니까','vì giẫm']]],
+];
+const WORDS=ROWS.flatMap(r=>r[1]);
+/* clip times (s) – cut by silence */
+const SEGS={"08":[[0,1.48],[2.4,4.2],[5.67,6.53],[7.69,8.8],[10.24,11.16],[12.37,13.39],[14.84,16.17],[17.82,19.26],[20.73,21.87],[23.38,24.43],[26.07,27.12],[28.7,29.59],[30.95,32.17],[33.96,35.03],[36.55,38.04]],"09":[[0,1.39],[2.87,4.01],[5.61,6.72],[8.62,9.42],[10.8,11.9],[13.51,14.73],[16.3,17.51],[18.89,20.01],[21.61,22.71],[24.29,25.69],[27.35,28.6],[30.54,31.61],[33.61,34.56],[35.53,36.96],[38.07,38.94],[40.08,41.11]],"10":[[0,0.96],[2.2,3.03],[4.19,5.48],[7.34,8.31],[9.47,10.62],[12.03,13.03],[14.22,15.32],[16.85,18.28],[19.58,21.33],[22.75,23.66],[24.63,25.46]],"11":[[0,0.92],[2.16,3.06],[4.2,5.17],[6.65,7.78],[9.19,10.31],[12.17,13.02],[14.46,15.55],[16.87,17.73],[19.09,20.26],[21.43,22.42]],"12":[[0,0.87],[2.26,3.15],[4.43,5.4],[6.6,7.49],[8.77,9.96],[11.25,12.27],[14.21,15.31],[16.43,17.39],[19.14,20.03],[21.03,22.49],[23.68,24.84]]};
+
+/* ---------- hangul helpers ---------- */
+const FIN=['','ㄱ','ㄲ','ㄳ','ㄴ','ㄵ','ㄶ','ㄷ','ㄹ','ㄺ','ㄻ','ㄼ','ㄽ','ㄾ','ㄿ','ㅀ','ㅁ','ㅂ','ㅄ','ㅅ','ㅆ','ㅇ','ㅈ','ㅊ','ㅋ','ㅌ','ㅍ','ㅎ'];
+const INI=['ㄱ','ㄲ','ㄴ','ㄷ','ㄸ','ㄹ','ㅁ','ㅂ','ㅃ','ㅅ','ㅆ','ㅇ','ㅈ','ㅉ','ㅊ','ㅋ','ㅌ','ㅍ','ㅎ'];
+/* final index -> [final kept, initial moved]; -1 = dropped (ㅎ) */
+const LINK={1:[0,0],2:[0,1],3:[1,9],4:[0,2],5:[4,12],6:[4,-1],7:[0,3],8:[0,5],9:[8,0],10:[8,6],11:[8,7],12:[8,9],13:[8,16],14:[8,17],15:[8,-1],16:[0,6],17:[0,7],18:[17,9],19:[0,9],20:[0,10],22:[0,12],23:[0,14],24:[0,15],25:[0,16],26:[0,17],27:[0,-1]};
+const dec=c=>{const n=c.charCodeAt(0)-0xAC00;return n<0||n>11171?null:{l:Math.floor(n/588),v:Math.floor(n%588/28),t:n%28}};
+const enc=s=>String.fromCharCode(0xAC00+(s.l*21+s.v)*28+s.t);
+/* apply liaison with a rule f(t) -> [keep, move] or null */
+function link(word,f){
+  const s=[...word].map(dec);
+  for(let i=0;i<s.length-1;i++){
+    const a=s[i],b=s[i+1];
+    if(!a||!b||!a.t||b.l!==11)continue;
+    const r=f(a.t);if(!r)continue;
+    a.t=r[0];if(r[1]>=0)b.l=r[1];
+  }
+  return s.map(enc).join('');
+}
+const OK=t=>t===21?null:LINK[t];
+const REP={1:0,2:0,24:0,3:0,9:0,7:3,19:3,20:3,22:3,23:3,25:3,27:3,17:7,26:7,11:7,14:7,18:7};
+const NEUT=t=>t===21?[0,-1]:(LINK[t]&&LINK[t][0]?[0,LINK[t][1]<0?11:LINK[t][1]]:(REP[t]!==undefined?[0,REP[t]]:null));
+const DBL=t=>t===21?null:(t===27?[0,18]:(LINK[t]&&LINK[t][1]>=0?[t,LINK[t][1]]:null));
+const hl=(word,pron)=>{const w=[...word],p=[...pron];return p.map((c,i)=>{const a=dec(c),b=dec(w[i]||'');return a&&b&&w.length===p.length&&a.l!==b.l?`<span class="mv">${c}</span>`:c}).join('')};
+
+/* ---------- TTS ---------- */
+let koVoice=null;
+function loadVoice(){const v=speechSynthesis.getVoices().find(v=>/^ko/i.test(v.lang));if(v){koVoice=v;document.getElementById('demoSay').hidden=false;document.getElementById('ttsToggle').hidden=false}}
+function say(t){if(!koVoice)return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.voice=koVoice;u.lang=koVoice.lang;u.rate=.8;speechSynthesis.speak(u)}
+if('speechSynthesis' in window){loadVoice();speechSynthesis.onvoiceschanged=loadVoice}
+
+/* ---------- liaison demo ---------- */
+const DEMO=['책이','음악을','꽃이','부엌에서','천원이에요','밖에','읽으면','앉아요','놓아요','은행이'];
+let demoWord=DEMO[0],demoStep=0;
+const chipsEl=document.getElementById('demoChips'),demoEl=document.getElementById('demo');
+chipsEl.innerHTML=DEMO.map(w=>`<button class="chip" data-w="${w}">${w}</button>`).join('');
+function splitHTML(word){
+  const s=[...word].map(dec);let out='',note='';
+  s.forEach((a,i)=>{
+    const b=s[i+1];
+    if(a&&a.t&&b&&b.l===11){
+      if(a.t===21){out+=enc(a);note='Patchim ㅇ đứng yên, không chuyển.';return}
+      const r=LINK[a.t],keep=enc({...a,t:r[0]});
+      const j=a.t===27||r[1]<0?`<span class="jamo gone">ㅎ</span>`:`<span class="jamo">${INI[r[1]]}</span>`;
+      out+=keep+j;if(r[1]<0)note='ㅎ câm, không đọc.';
+    }else out+=a?enc(a):word[i];
+  });
+  return [out,note];
+}
+function renderDemo(){
+  chipsEl.querySelectorAll('.chip').forEach(c=>c.classList.toggle('on',c.dataset.w===demoWord));
+  const w=WORDS.find(x=>x[0]===demoWord)||[demoWord,link(demoWord,OK),''];
+  const [sp,note]=splitHTML(w[0]);
+  demoEl.innerHTML=`<div class="line show"><span class="lbl">Viết</span><span class="w">${w[0]}</span><span class="muted" style="font-size:.8em">${w[2]}</span></div>
+   <div class="line ${demoStep>0?'show':''}"><span class="lbl">Tách</span><span class="w">${demoStep>0?sp:''}</span><span class="muted" style="font-size:.8em">${note}</span></div>
+   <div class="line ${demoStep>1?'show':''}"><span class="lbl">Đọc</span><span class="w pron">${demoStep>1?'['+hl(w[0],w[1])+']':''}</span></div>`;
+  document.getElementById('demoGo').textContent=demoStep<2?'Nối ▶':'Làm lại ↺';
+}
+chipsEl.addEventListener('click',e=>{const c=e.target.closest('.chip');if(!c)return;demoWord=c.dataset.w;demoStep=0;renderDemo()});
+document.getElementById('demoGo').onclick=()=>{demoStep=demoStep<2?demoStep+1:0;renderDemo();if(demoStep===2)say(demoWord)};
+document.getElementById('demoSay').onclick=()=>say(demoWord);
+renderDemo();
+
+/* ---------- reveal buttons ---------- */
+document.querySelectorAll('[data-reveal]').forEach(b=>b.onclick=()=>{b.nextElementSibling.hidden=!b.nextElementSibling.hidden});
+
+/* ---------- reading table ---------- */
+let ttsOn=false;
+document.getElementById('readTbl').innerHTML=ROWS.map(([k,ws])=>`<tr><td class="k">${k}</td><td>${ws.map(w=>`<button class="w-card" data-w="${w[0]}"><span class="kr">${w[0]}</span><span class="pron">[${hl(w[0],w[1])}]</span><span class="vi">${w[2]}</span></button>`).join('')}</td></tr>`).join('');
+document.getElementById('readTbl').addEventListener('click',e=>{const c=e.target.closest('.w-card');if(!c)return;c.classList.toggle('open');if(ttsOn&&c.classList.contains('open'))say(c.dataset.w)});
+document.getElementById('showAll').onclick=e=>{const cards=[...document.querySelectorAll('.w-card')],open=!cards.every(c=>c.classList.contains('open'));cards.forEach(c=>c.classList.toggle('open',open));e.target.textContent=open?'Ẩn cách đọc':'Hiện tất cả cách đọc'};
+document.getElementById('ttsToggle').onclick=e=>{ttsOn=!ttsOn;e.target.textContent='🔊 Máy đọc khi bấm: '+(ttsOn?'bật':'tắt');e.target.classList.toggle('pri',ttsOn)};
+
+/* ---------- audio players ---------- */
+let cur=null;
+document.querySelectorAll('.player').forEach(p=>{
+  const n=p.dataset.track,segs=SEGS[n],a=new Audio('audio/'+n+'.mp3');a.preload='none';
+  p.innerHTML=`<h3>🎧 MP3 ${n} <span class="muted" style="font-weight:400;font-size:.8em">· ${segs.length} câu</span></h3><div class="clips"><button class="clip all">▶ Cả bài</button>${segs.map((s,i)=>`<button class="clip" data-i="${i}">${i+1}</button>`).join('')}</div>`;
+  let stopAt=null;
+  const clear=()=>p.querySelectorAll('.clip').forEach(c=>c.classList.remove('playing'));
+  a.addEventListener('timeupdate',()=>{if(stopAt!==null&&a.currentTime>=stopAt){a.pause();stopAt=null;clear()}});
+  a.addEventListener('ended',clear);a.addEventListener('pause',()=>{if(stopAt===null)clear()});
+  p.addEventListener('click',e=>{
+    const b=e.target.closest('.clip');if(!b)return;
+    if(cur&&cur!==a)cur.pause();cur=a;
+    const was=b.classList.contains('playing');a.pause();stopAt=null;clear();if(was)return;
+    a.playbackRate=document.getElementById('slow')?.checked?.75:1;
+    if(b.classList.contains('all')){a.currentTime=0}else{const s=segs[+b.dataset.i];a.currentTime=s[0];stopAt=s[1]}
+    b.classList.add('playing');a.play();
+  });
+});
+
+/* ---------- image overlay ---------- */
+const ov=document.getElementById('ov');
+document.querySelectorAll('[data-img]').forEach(b=>b.onclick=()=>ov.classList.add('on'));
+ov.onclick=()=>ov.classList.remove('on');
+
+/* ---------- quiz ---------- */
+const POOL=WORDS.filter(w=>link(w[0],OK)===w[1]);
+let qs=[],qi=0,score=0;
+const shuffle=a=>{for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+function newQuiz(){
+  qs=shuffle(POOL.slice()).slice(0,10).map(w=>{
+    const opts=[...new Set([w[1],w[0],link(w[0],NEUT),link(w[0],DBL)])].slice(0,4);
+    return {w,opts:shuffle(opts)};
+  });qi=0;score=0;renderQuiz();
+}
+function renderQuiz(){
+  const el=document.getElementById('quiz');
+  if(qi>=qs.length){
+    el.innerHTML=`<span class="tag">Trắc nghiệm</span><h2>Hoàn thành!</h2><div class="card" style="text-align:center"><div class="q-word">${score} / ${qs.length}</div><p class="big">${score===qs.length?'Xuất sắc! 🎉':score>=7?'Tốt lắm! 👏':'Ôn lại quy tắc rồi làm lại nhé 💪'}</p><button class="btn pri" id="qAgain">Làm lại (câu mới)</button></div>`;
+    document.getElementById('qAgain').onclick=newQuiz;return;
+  }
+  const q=qs[qi];
+  el.innerHTML=`<span class="tag">Trắc nghiệm</span><h2>Chọn cách đọc đúng</h2>
+   <div class="row muted" style="font-size:.85em"><span>Câu ${qi+1} / ${qs.length}</span><span class="sp" style="flex:1"></span><span>Đúng: ${score}</span></div>
+   <div class="bar"><i style="width:${qi/qs.length*100}%"></i></div>
+   <div class="card" style="text-align:center;margin-top:.6em"><div class="q-word">${q.w[0]}</div><p class="muted">${q.w[2]}</p>
+   <div class="opts">${q.opts.map(o=>`<button class="opt" data-o="${o}">[${o}]</button>`).join('')}</div>
+   <div id="qFb" style="min-height:2.4em"></div></div>
+   <div class="tnote"><b>Gợi ý:</b> Chiếu lên cho cả lớp giơ tay chọn, hoặc gửi link cho học sinh tự làm trên điện thoại (mỗi lần làm lại là bộ câu mới).</div>`;
+  el.querySelector('.opts').onclick=e=>{
+    const b=e.target.closest('.opt');if(!b||el.querySelector('.opt.right'))return;
+    const ok=b.dataset.o===q.w[1];if(ok)score++;
+    el.querySelectorAll('.opt').forEach(x=>{if(x.dataset.o===q.w[1])x.classList.add('right');else if(x===b)x.classList.add('wrong')});
+    document.getElementById('qFb').innerHTML=`<p class="big">${ok?'✅ Đúng rồi!':'❌ Chưa đúng'} <span class="pron">[${hl(q.w[0],q.w[1])}]</span></p><button class="btn pri" id="qNext">${qi<qs.length-1?'Câu tiếp →':'Xem kết quả'}</button>`;
+    document.getElementById('qNext').onclick=()=>{qi++;renderQuiz()};
+    say(q.w[0]);
+  };
+}
+newQuiz();
+
+/* ---------- navigation ---------- */
+const slides=[...document.querySelectorAll('.slide')];let idx=0;
+function go(i){
+  idx=Math.max(0,Math.min(slides.length-1,i));
+  slides.forEach((s,j)=>s.classList.toggle('on',j===idx));
+  document.getElementById('count').textContent=(idx+1)+' / '+slides.length;
+  if(location.hash!=='#'+(idx+1))history.replaceState(null,'','#'+(idx+1));
+  slides[idx].scrollTop=0;
+}
+document.getElementById('prev').onclick=()=>go(idx-1);
+document.getElementById('next').onclick=()=>go(idx+1);
+const notesBtn=document.getElementById('notesBtn');
+function toggleNotes(){document.body.classList.toggle('notes');notesBtn.classList.toggle('on',document.body.classList.contains('notes'))}
+notesBtn.onclick=toggleNotes;
+function fs(){document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen?.()}
+document.getElementById('fsBtn').onclick=fs;
+document.addEventListener('keydown',e=>{
+  if(e.target.closest('input,textarea'))return;
+  if(e.key==='Escape'&&ov.classList.contains('on')){ov.classList.remove('on');return}
+  if(['ArrowRight','PageDown'].includes(e.key)||(e.key===' '&&!e.target.closest('button'))){e.preventDefault();go(idx+1)}
+  else if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();go(idx-1)}
+  else if(e.key==='g'||e.key==='G')toggleNotes();
+  else if(e.key==='f'||e.key==='F')fs();
+});
+let tx=null,ty=null;
+document.getElementById('deck').addEventListener('touchstart',e=>{tx=e.touches[0].clientX;ty=e.touches[0].clientY},{passive:true});
+document.getElementById('deck').addEventListener('touchend',e=>{if(tx===null)return;const dx=e.changedTouches[0].clientX-tx,dy=e.changedTouches[0].clientY-ty;if(Math.abs(dx)>60&&Math.abs(dx)>Math.abs(dy)*1.5)go(idx+(dx<0?1:-1));tx=null});
+window.addEventListener('hashchange',()=>go((parseInt(location.hash.slice(1))||1)-1));
+go((parseInt(location.hash.slice(1))||1)-1);
+</script>
+</body>
+</html>
