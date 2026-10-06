@@ -164,7 +164,8 @@ def main(dump):
             if k:
                 kho[w[0]] = k
             base = re.sub(r"\(.*?\)|[~…]", "", w[1]).strip()
-            if " " not in base:
+            # từ giáo trình Seoul (trang seoul/) chỉ lấy dấu ★, không dùng làm nghĩa cho thẻ Ưu tiên (tránh từ sơ cấp)
+            if " " not in base and not g["sec"].startswith("Seoul "):
                 kho_vi.setdefault(base, w[2])
 
     # Từ vựng theo chủ đề (EBS phần 8): dấu ★ theo từ

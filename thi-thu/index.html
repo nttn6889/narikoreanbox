@@ -763,7 +763,11 @@ function examBoot(){
 /* =====================================================================
    TỪ VỰNG – phía học sinh. Bài nằm ngay trong link (#v=…) nên giao bài không cần cập nhật trang.
    ===================================================================== */
-var VTYPES = {match:"Nối từ", kv:"Trắc nghiệm Hàn → Việt", vk:"Trắc nghiệm Việt → Hàn", nk:"Nghe → chọn nghĩa", type:"Gõ từ tiếng Hàn"};
+var VTYPES = {match:"Nối từ", kv:"Trắc nghiệm Hàn → Việt", vk:"Trắc nghiệm Việt → Hàn", nk:"Nghe → chọn nghĩa", type:"Gõ từ tiếng Hàn", cau:"Điền từ vào câu (chia đuôi)"};
+/* Dạng "cau": mỗi mục [ko, vi, câu ví dụ]; phần __…__ của câu là chỗ trống, học sinh gõ từ đã chia đúng đuôi.
+   Từ chưa có câu ví dụ thì làm như dạng "type" (xem nghĩa, gõ từ). */
+function vCauKey(it){ var m = String((it && it[2]) || "").match(/__(.+?)__/); return m ? m[1] : (it ? it[0] : ""); }
+function vTyped(type){ return type === "type" || type === "cau"; }
 /* Dạng "nk": máy đọc từ tiếng Hàn (giọng đọc có sẵn của trình duyệt), học sinh chọn nghĩa tiếng Việt. */
 function vSay(text){
   var ss = window.speechSynthesis; if(!ss || !text) return false;
@@ -794,13 +798,13 @@ function vAlts(ko){
 }
 /* items: [[ko, vi], …]; ans: chỉ số mục đã chọn (nối từ, trắc nghiệm) hoặc chữ đã gõ */
 function vCheck(type, items, i, ans){
-  if(type === "type") return !!String(ans || "").trim() && vAlts(items[i][0]).indexOf(vNorm(ans)) >= 0;
+  if(vTyped(type)) return !!String(ans || "").trim() && vAlts(type === "cau" ? vCauKey(items[i]) : items[i][0]).indexOf(vNorm(ans)) >= 0;
   if(typeof ans !== "number" || ans < 0 || !items[ans]) return false;
   if(ans === i) return true;
   return type === "vk" ? vNorm(items[ans][0]) === vNorm(items[i][0]) : vNorm(items[ans][1]) === vNorm(items[i][1]);
 }
 function vAnsText(type, items, ans){
-  if(type === "type") return String(ans || "");
+  if(vTyped(type)) return String(ans || "");
   if(typeof ans !== "number" || ans < 0 || !items[ans]) return "";
   return type === "vk" ? items[ans][0] : items[ans][1];
 }
@@ -854,7 +858,7 @@ function vStart(a, name){
   window.scrollTo(0, 0);
 }
 function vSave(){ var c = Object.assign({}, VS); delete c.a; delete c.sel; lsSet(VS.key, c); }
-function vDone(){ var a = VS.a; return a.w.filter(function(_, i){ var x = VS.ans[i]; return a.y === "type" ? !!String(x || "").trim() : typeof x === "number"; }).length; }
+function vDone(){ var a = VS.a; return a.w.filter(function(_, i){ var x = VS.ans[i]; return vTyped(a.y) ? !!String(x || "").trim() : typeof x === "number"; }).length; }
 function vRender(){
   var a = VS.a, items = a.w, locked = !!VS.submitted, h = "";
   var mark = function(i){ return locked ? (vCheck(a.y, items, i, VS.ans[i]) ? " ok" : " bad") : ""; };
@@ -869,6 +873,15 @@ function vRender(){
           var txt = a.y === "vk" ? items[o][0] : items[o][1], picked = VS.ans[i] === o, right = locked && vCheck(a.y, items, i, o);
           return '<button type="button" class="opt' + (right ? ' key' : '') + (locked && picked && !right ? ' badpick' : '') + '" role="radio" aria-checked="' + picked + '" data-i="' + i + '" data-o="' + o + '"' + (a.y !== "vk" ? ' style="font-family:var(--ui)"' : '') + '><span class="num">' + (j+1) + '</span><span>' + esc(txt) + '</span></button>';
         }).join("") + '</div></section>';
+    });
+  } else if(a.y === "cau"){
+    h += '<p class="hint" style="margin-bottom:6px">Điền từ trong ngoặc vào chỗ trống, <strong>chia đúng đuôi</strong> cho hợp với câu (VD: 먹다 → 먹었어요).</p>';
+    VS.order.forEach(function(i, k){
+      var it = items[i], ok = locked && vCheck(a.y, items, i, VS.ans[i]), ex = String(it[2] || ""), m = ex.match(/__(.+?)__/);
+      var inp = '<input class="t kr" data-ti="' + i + '" value="' + esc(VS.ans[i] || "") + '" placeholder="' + (m ? '' : 'Gõ từ tiếng Hàn') + '" autocomplete="off" autocapitalize="off" spellcheck="false" lang="ko"' + (m ? ' style="width:9em;max-width:100%' + (locked ? ';border-color:' + (ok ? 'var(--ok)' : 'var(--pen)') : '') + '"' : (locked ? ' style="border-color:' + (ok ? 'var(--ok)' : 'var(--pen)') + '"' : '')) + (locked ? ' disabled' : '') + '>';
+      h += '<section class="q"><p class="stem"><b>' + (k+1) + '.</b><span' + (m ? ' style="line-height:2.2"' : ' style="font-family:var(--ui)"') + '>' + (m ? esc(ex.slice(0, m.index)) + '<span class="nblank">' + inp + '</span>' + esc(ex.slice(m.index + m[0].length)) : esc(it[1])) + '</span></p>' +
+        (m ? '<p class="hint" style="margin:-4px 0 0 2.2em">(<span style="font-family:var(--kr);font-weight:600">' + esc(it[0]) + '</span> · ' + esc(it[1]) + ')</p>' : '<div class="vtype">' + inp + '</div>') +
+        (locked && !ok ? '<span class="vfix">Đáp án: <span style="font-family:var(--kr)">' + esc(vCauKey(it)) + '</span></span>' : '') + '</section>';
     });
   } else if(a.y === "type"){
     VS.order.forEach(function(i, k){
@@ -936,13 +949,13 @@ function vSubmit(){
 function vShowResult(){
   var a = VS.a, items = a.w, sc = 0, wrong = [];
   items.forEach(function(it, i){ if(vCheck(a.y, items, i, VS.ans[i])) sc++; else wrong.push(i); });
-  var ans = items.map(function(_, i){ var x = VS.ans[i]; return a.y === "type" ? String(x || "") : (typeof x === "number" ? x : -1); });
+  var ans = items.map(function(_, i){ var x = VS.ans[i]; return vTyped(a.y) ? String(x || "") : (typeof x === "number" ? x : -1); });
   var pl = {c:a.c, n:VS.name, a:ans, t:Math.round((VS.submitted - VS.start)/1000), d:VS.submitted};
   if(a.route){ pl.k = a.k; pl.y = a.y; pl.w = a.ids; }
   var code = encodeV(pl);
   var msg = "BÀI TỪ VỰNG\nBài: " + (a.t || "Từ vựng") + " (" + VTYPES[a.y] + ")\nHọ tên: " + VS.name + "\nĐiểm: " + sc + "/" + items.length + "\nNộp lúc: " + fmtDate(VS.submitted) + "\nMã bài làm: " + code;
   $("#vres").innerHTML = '<div class="panel" id="result"><h2>Em đúng ' + sc + '/' + items.length + ' từ</h2>' +
-    (wrong.length ? '<p>Các từ cần ôn lại:</p><div class="scroll"><table class="tbl" style="background:var(--paper)"><tbody>' + wrong.map(function(i){ var t = vAnsText(a.y, items, VS.ans[i]); return '<tr><td style="font-family:var(--kr);font-weight:600">' + esc(items[i][0]) + '</td><td>' + esc(items[i][1]) + '</td><td class="muted" style="font-size:13px">' + (t ? 'em chọn: ' + esc(t) : 'chưa làm') + '</td></tr>'; }).join("") + '</tbody></table></div>' : '<p class="okmsg">Xuất sắc! Em không sai từ nào.</p>') +
+    (wrong.length ? '<p>Các từ cần ôn lại:</p><div class="scroll"><table class="tbl" style="background:var(--paper)"><tbody>' + wrong.map(function(i){ var t = vAnsText(a.y, items, VS.ans[i]); return '<tr><td style="font-family:var(--kr);font-weight:600">' + esc(items[i][0]) + (a.y === "cau" && items[i][2] ? ' → ' + esc(vCauKey(items[i])) : '') + '</td><td>' + esc(items[i][1]) + '</td><td class="muted" style="font-size:13px">' + (t ? 'em chọn: ' + esc(t) : 'chưa làm') + '</td></tr>'; }).join("") + '</tbody></table></div>' : '<p class="okmsg">Xuất sắc! Em không sai từ nào.</p>') +
     '<p style="margin-top:12px">Bấm “Sao chép” rồi dán vào tin nhắn Zalo gửi cho cô.</p><div id="vmsg">' + copyBox(msg, 6) + '</div>' +
     '<div class="row">' + (a.route ? '<button class="btn" id="vback">Về lộ trình</button>' : '') + '<button class="btn ghost" id="vagain">Làm lại để luyện thêm</button></div></div>';
   wireCopy($("#vmsg"));
@@ -968,21 +981,29 @@ function routeWords(p, vocab){
   var out = [], seen = {};
   (p.s || []).forEach(function(sec){
     vocab.g.filter(function(g){ return g.sec === sec; }).sort(function(a,b){ return ((a.o||0) - (b.o||0)) || (a.id < b.id ? -1 : a.id > b.id ? 1 : 0); }).forEach(function(g){
-      g.w.forEach(function(w){ if(w[0] && !seen[w[0]]){ seen[w[0]] = 1; out.push({id:w[0], ko:w[1], vi:w[2]}); } });
+      g.w.forEach(function(w){ if(w[0] && !seen[w[0]]){ seen[w[0]] = 1; out.push({id:w[0], ko:w[1], vi:w[2], ex:w[3] || ""}); } });
     });
   });
   return out;
 }
 function rKey(p, name){ return "nari-l-" + p.c + "-" + normName(name).replace(/[^a-z0-9]/g, ""); }
-function rMem(p, name){ var m = lsGet(rKey(p, name)) || {}; m.wrong = m.wrong || {}; m.done = m.done || {}; m.les = m.les || {}; return m; }
+function rMem(p, name){ var m = lsGet(rKey(p, name)) || {}; m.wrong = m.wrong || {}; m.done = m.done || {}; m.les = m.les || {}; m.srs = m.srs || {}; m.ok = m.ok || {}; return m; }
+/* Ôn ngắt quãng (lộ trình có q): mỗi từ đã học có hộp b và ngày đến hạn due (số ngày của lộ trình).
+   Sai → hộp 0, ôn lại hôm sau. Đúng → lên hộp, ôn lại sau 3, 7, 14 ngày; đúng ở hộp 3 → đã thuộc (bỏ khỏi danh sách ôn). */
+var SRS_GAP = [1, 3, 7, 14];
+function rSrsDue(mem, day){ return Object.keys(mem.srs).map(function(id){ var w = mem.srs[id]; return {id:id, ko:w.ko, vi:w.vi, ex:w.ex, b:w.b, due:w.due}; }).filter(function(w){ return w.due <= day; }).sort(function(a,b){ return (a.due - b.due) || (a.b - b.b); }); }
 /* Từ sai đang chờ ôn, cũ trước. */
-function rWrongList(mem){ return Object.keys(mem.wrong).map(function(id){ var w = mem.wrong[id]; return {id:id, ko:w.ko, vi:w.vi, n:w.n || 1, t:w.t || 0}; }).sort(function(a,b){ return a.t - b.t; }); }
+function rWrongList(mem){ return Object.keys(mem.wrong).map(function(id){ var w = mem.wrong[id]; return {id:id, ko:w.ko, vi:w.vi, ex:w.ex, n:w.n || 1, t:w.t || 0}; }).sort(function(a,b){ return a.t - b.t; }); }
 function rRecord(a, vs){
-  var p = a.route, mem = rMem(p, vs.name), sc = 0, now = Date.now();
+  var p = a.route, mem = rMem(p, vs.name), sc = 0, now = Date.now(), day = routeDayNo(p);
   a.w.forEach(function(it, i){
-    var id = a.ids[i];
-    if(vCheck(a.y, a.w, i, vs.ans[i])){ sc++; delete mem.wrong[id]; }
-    else { var o = mem.wrong[id] || {t:now, n:0}; mem.wrong[id] = {ko:it[0], vi:it[1], n:(o.n || 0) + 1, t:o.t || now}; }
+    var id = a.ids[i], ok = vCheck(a.y, a.w, i, vs.ans[i]), s = mem.srs[id];
+    if(ok){ sc++; delete mem.wrong[id]; }
+    else { var o = mem.wrong[id] || {t:now, n:0}; mem.wrong[id] = {ko:it[0], vi:it[1], ex:it[2] || "", n:(o.n || 0) + 1, t:o.t || now}; }
+    if(!p.q) return;
+    if(!ok) mem.srs[id] = {ko:it[0], vi:it[1], ex:it[2] || "", b:0, due:day + SRS_GAP[0]};
+    else if(s && s.b >= SRS_GAP.length - 1){ delete mem.srs[id]; mem.ok[id] = 1; }
+    else { var b = s ? s.b + 1 : 1; mem.srs[id] = {ko:it[0], vi:it[1], ex:it[2] || "", b:b, due:day + SRS_GAP[b]}; }
   });
   mem.done[a.k] = {d:now, sc:sc, tot:a.w.length};
   lsSet(rKey(p, vs.name), mem);
@@ -1007,6 +1028,7 @@ function rHome(p){
     return;
   }
   var words = routeWords(p, VOCAB), days = Math.ceil(words.length / p.n), today = routeDayNo(p), mem = rMem(p, name), wl = rWrongList(mem);
+  var due = p.q ? rSrsDue(mem, today) : [], nTrack = Object.keys(mem.srs).length, nOk = Object.keys(mem.ok).length, rk = rReviewKey();
   var h = '<div class="metaline"><span>' + esc(VTYPES[p.y]) + ' · <strong>' + p.n + '</strong> từ mới mỗi ngày</span><span>Học sinh: <strong>' + esc(name) + '</strong> <button class="lnk" id="rname2" style="font-size:13px">đổi tên</button></span></div>';
   if(!words.length) h += '<p class="err">Chưa có từ nào cho lộ trình này. Em nhắn cô kiểm tra giúp nhé.</p>';
   else if(today < 1) h += '<div class="panel"><h2>Lộ trình bắt đầu ngày ' + fmtDay(ymdTs(p.d)) + '</h2><p>Còn ' + (1 - today) + ' ngày nữa. Hôm đó em mở lại link này để làm bài ngày 1 nhé.</p></div>';
@@ -1018,7 +1040,9 @@ function rHome(p){
       h += '<div class="panel"><h2>Bài ngày ' + today + ': ' + li.nNew + ' từ mới' + (li.nRev ? ' + ' + li.nRev + ' từ ôn' : '') + '</h2>' +
         (dn ? '<p class="okmsg">Em đã làm bài hôm nay: đúng ' + dn.sc + '/' + dn.tot + ' từ.</p><div class="row"><button class="btn ghost" data-rk="' + today + '">Xem lại bài hôm nay</button></div>' : '<p>Hôm nay ' + fmtDay(Date.now()) + ' · ngày ' + today + '/' + days + ' của lộ trình.</p><div class="row"><button class="btn wide" data-rk="' + today + '">Làm bài hôm nay</button></div>') + '</div>';
     } else {
-      h += '<div class="panel"><h2>Em đã học hết ' + words.length + ' từ của lộ trình</h2><p>' + (wl.length ? 'Còn ' + wl.length + ' từ em hay sai. Mỗi ngày em làm một bài ôn cho tới khi hết từ sai nhé.' : 'Em không còn từ nào làm sai. Giỏi lắm!') + '</p>' +
+      if(p.q) h += '<div class="panel"><h2>Em đã học hết ' + words.length + ' từ của lộ trình</h2><p>' + (nTrack ? 'Còn ' + nTrack + ' từ đang ôn ngắt quãng' + (due.length ? ', hôm nay có ' + due.length + ' từ đến hạn ôn.' : ', hôm nay chưa có từ nào đến hạn.') + ' Mỗi ngày em mở link này để ôn cho tới khi thuộc hết nhé.' : 'Em đã ôn thuộc hết các từ. Giỏi lắm!') + '</p>' +
+        (mem.done[rk] ? '<p class="okmsg">Em đã ôn hôm nay: đúng ' + mem.done[rk].sc + '/' + mem.done[rk].tot + ' từ.</p>' : due.length ? '<div class="row"><button class="btn wide" data-rk="' + rk + '">Ôn ' + due.length + ' từ đến hạn hôm nay</button></div>' : '') + '</div>';
+      else h += '<div class="panel"><h2>Em đã học hết ' + words.length + ' từ của lộ trình</h2><p>' + (wl.length ? 'Còn ' + wl.length + ' từ em hay sai. Mỗi ngày em làm một bài ôn cho tới khi hết từ sai nhé.' : 'Em không còn từ nào làm sai. Giỏi lắm!') + '</p>' +
         (wl.length ? '<div class="row"><button class="btn wide" data-rk="' + rReviewKey() + '">Làm bài ôn từ sai hôm nay</button></div>' : '') + '</div>';
     }
     var miss = todo.filter(function(k){ return k !== today; });
@@ -1026,6 +1050,7 @@ function rHome(p){
     h += '<h3 style="margin:20px 0 6px;font-size:16px">Tiến độ</h3><div class="vdays">';
     for(var j = 1; j <= days; j++) h += '<span' + (mem.done[j] ? ' class="on"' : '') + ' title="Ngày ' + j + ' · ' + fmtDay(ymdTs(p.d) + (j-1)*864e5) + '"' + (j === today ? ' style="outline:2px solid var(--violet)"' : '') + '></span>';
     h += '</div><p class="hint">Đã làm ' + Object.keys(mem.done).filter(function(k){ return +k >= 1; }).length + '/' + days + ' bài · ' + words.length + ' từ. Ô xanh là bài đã làm, ô viền tím là hôm nay.</p>';
+    if(p.q && (nTrack || nOk)) h += '<p style="margin-top:12px"><strong>Ôn ngắt quãng:</strong> ' + nTrack + ' từ đang ôn (từ đúng được hỏi lại sau 3, 7, 14 ngày), ' + nOk + ' từ đã thuộc chắc.' + (due.length ? ' Hôm nay có ' + due.length + ' từ đến hạn, trang tự thêm vào bài.' : '') + '</p>';
     if(wl.length) h += '<p style="margin-top:12px"><strong>Từ em còn sai (' + wl.length + '):</strong> sẽ được ôn ở bài sau.</p><div style="font-size:14px;line-height:1.9">' + wl.slice(0, 30).map(function(w){ return '<span class="pill bad" style="font-family:var(--kr)">' + esc(w.ko) + '</span>'; }).join("") + (wl.length > 30 ? ' …' : '') + '</div>';
   }
   rShell(h, p.t);
@@ -1038,7 +1063,7 @@ function rLessonIds(p, k, words, mem){
   if(mem.les[k]) return mem.les[k];
   var isRev = String(k).charAt(0) === "R", nw = isRev ? [] : words.slice((k-1)*p.n, k*p.n).map(function(w){ return w.id; });
   var max = isRev ? Math.max(p.r || 0, 20) : (p.r || 0);
-  var rev = rWrongList(mem).map(function(w){ return w.id; }).filter(function(id){ return nw.indexOf(id) < 0; }).slice(0, max);
+  var rev = (p.q ? rSrsDue(mem, routeDayNo(p)) : rWrongList(mem)).map(function(w){ return w.id; }).filter(function(id){ return nw.indexOf(id) < 0; }).slice(0, max);
   return nw.concat(rev);
 }
 function rLessonInfo(p, k, words, mem){
@@ -1050,7 +1075,7 @@ function rStart(p, k, words, name){
   var mem = rMem(p, name), ids = rLessonIds(p, k, words, mem), map = {};
   words.forEach(function(w){ map[w.id] = w; });
   var items = [], okIds = [];
-  ids.forEach(function(id){ var w = map[id] || mem.wrong[id]; if(w){ items.push([w.ko, w.vi]); okIds.push(id); } });
+  ids.forEach(function(id){ var w = map[id] || mem.srs[id] || mem.wrong[id]; if(w){ items.push([w.ko, w.vi, w.ex || ""]); okIds.push(id); } });
   if(!items.length) return;
   if(!mem.les[k]){ mem.les[k] = okIds; lsSet(rKey(p, name), mem); }
   var isRev = String(k).charAt(0) === "R";

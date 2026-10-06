@@ -20,7 +20,23 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "thi-thu", "app")
 KEEP_DAYS = 14
 CODE = re.compile(r"^[A-Z0-9]{6}$")
-VTYPES = {"match": "Nối từ", "kv": "Hàn → Việt", "vk": "Việt → Hàn", "nk": "Nghe → nghĩa", "type": "Gõ từ"}
+VTYPES = {"match": "Nối từ", "kv": "Hàn → Việt", "vk": "Việt → Hàn", "nk": "Nghe → nghĩa", "type": "Gõ từ", "cau": "Điền câu"}
+_EX = None
+
+
+def ex_of(wid):
+    """Câu ví dụ của từ trong kho (thi-thu/vocab.json) — dạng “điền câu” cần câu trong link."""
+    global _EX
+    if _EX is None:
+        _EX = {}
+        p = os.path.join(ROOT, "thi-thu", "vocab.json")
+        if os.path.exists(p):
+            with open(p, encoding="utf-8") as f:
+                for g in json.load(f).get("g", []):
+                    for w in g.get("w", []):
+                        if len(w) > 3 and w[3]:
+                            _EX[w[0]] = w[3]
+    return _EX.get(wid, "")
 
 
 def docs(dump, col):
@@ -42,7 +58,8 @@ def bank_title(eid):
 
 
 def v_item(a, mine):
-    words = [[it.get("ko", ""), it.get("vi", "")] for it in a.get("items") or []]
+    cau = a.get("type") == "cau"
+    words = [[it.get("ko", ""), it.get("vi", "")] + ([ex_of(it.get("w"))] if cau else []) for it in a.get("items") or []]
     t = "Ôn từ vựng" if mine else a.get("title", "")
     show = "%s · %d từ · %s" % (t, len(words), VTYPES.get(a.get("type"), "Nối từ"))
     return {"y": "v", "t": show, "p": {"c": a["code"], "t": t, "y": a.get("type") or "match", "w": words}}

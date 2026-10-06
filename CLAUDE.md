@@ -138,3 +138,22 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - `tu-vung/chu-de.json`: 55 mục từ vựng chủ đề EBS (phần 8 của https://claude.ai/artifact/6NAJ7UnAGUQ6xWkbnhfbdi, đã chia Danh/Động/Tính/Biểu hiện)
   xếp vào 10 chủ đề lớn + “Đời sống hằng ngày” (`DS`: gia đình, gọi món, chào hỏi, vị trí… — ít gặp ở bài đọc) (`topics[].m` = số mục;
   “Khác” = `KHAC` chỉ còn Lịch sử). Thẻ “Chủ đề” = từ khóa gặp trong đề + các mục EBS của chủ đề đó.
+
+## Từ vựng giáo trình Seoul (`seoul/`) — lớp trung cấp 3 (Seoul 3A/3B) + ôn nền tảng 1A–2B
+- Nguồn soạn tay: `tools/seoul/<cuốn>.tsv` (`# bài | tên Hàn | tên Việt`, `## nhóm Việt | nhóm Hàn`, dòng từ
+  `ko<TAB>nghĩa<TAB>Hán Việt<TAB>câu ví dụ có __từ đã chia__`). Lấy từ file tổng hợp cô gửi (bản tóm tắt, chưa đối chiếu sách;
+  bỏ từ lặp lại từ cuốn trước, tách các mục “A / B”, sửa vài nghĩa). 4A/4B chưa nhập. Cô sẽ gửi bảng 어휘 색인 cuối sách để bổ sung.
+- `python3 tools/seoul_kho.py <thư mục>` → `<thư mục>/vocab/S<cuốn><bài>_<nhóm>.json` (id cố định, từ `s3a01_1_0`…) +
+  `seoul/bai.json` (tên bài tiếng Việt). Ghi vào db bằng ArtifactData batch `set` collection `vocab` (file_path), rồi đồng bộ kho từ.
+  Phần: `Seoul 3A · Bài 1 · <tên bài>`, secOrder 100 + 20×(cấp−1) + số bài. Từ có thêm `hv` (Hán Việt) và `ex` (câu ví dụ).
+- `vocab.json`: `w = [id, ko, vi, ex|"", hv]`. Trang `tu-vung/` bỏ các phần `Seoul …`; `thong_ke_de.py` chỉ lấy dấu ★ cho từ Seoul
+  (không lấy nghĩa vào thẻ Ưu tiên).
+- Trang `seoul/`: thẻ 1A…3B + “★ Cốt lõi” (từ 1A–2B gặp trong ≥ 3 đề TOPIK II). Link `seoul/#b=3A&c=5` (bài 5), `#c=1-3`, `#b=cot`.
+- Chỉ đồng bộ kho từ (đề không đổi): ArtifactData `list` collection `vocab` với out_dir → `python3 tools/sync_kho.py --vocab-only <dump>`
+  → ArtifactData `update` `site/kho` từ `<dump>/site_kho_v.json` (chỉ trường `v`, giữ dấu đề `e`).
+- Dạng bài từ vựng `cau` (“Điền từ vào câu (chia đuôi)”): mục link `[ko, vi, ex]`, học sinh gõ phần `__…__` của câu ví dụ;
+  từ không có câu thì làm như “Gõ từ”. Trang quản lý lấy câu theo id từ trong kho (`vExOf`) khi tạo link và khi chấm;
+  `sync_app.py` lấy câu từ `thi-thu/vocab.json`. Sửa nhóm trong trang quản lý giữ nguyên `ex`/`hv` của từ không đổi.
+- Lộ trình hàng ngày có “Cách ôn”: ôn ngắt quãng (`vroutes.srs`, link `q:1`) — localStorage `mem.srs[id] = {b, due}`:
+  sai → ôn ngày hôm sau, đúng → hỏi lại sau 3, 7, 14 ngày, đúng ở lần 14 ngày → `mem.ok` (đã thuộc). Bài ngày k = từ mới + từ đến hạn
+  (tối đa `review`). Chưa làm: nghe chép từ file nghe gốc của sách (cô chưa có file).
