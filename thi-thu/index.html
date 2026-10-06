@@ -313,6 +313,19 @@ input.code{text-transform:uppercase;letter-spacing:.18em;font-weight:700;font-si
 .wit .pt-tx{margin:4px 0 8px}
 .wkey{font-size:14.5px;margin:2px 0}
 .wkey .k{font-family:var(--kr);font-weight:600}
+mark.whl{background:var(--warn-soft);color:inherit;border-radius:3px;padding:0 2px;box-shadow:inset 0 -2px 0 var(--warn)}
+b.whl{font-family:var(--kr);color:var(--warn)}
+.wslot{margin:10px 0 4px}
+.whints{margin:6px 0 0;padding-left:22px;font-size:14.5px;background:var(--warn-soft);border-radius:6px;padding:8px 10px 8px 30px}
+.whints li{margin:2px 0}
+.wkey2{margin-top:8px;padding:8px 12px;border-left:4px solid var(--ok);background:var(--ok-soft);border-radius:6px;font-size:14.5px}
+.wkey2 .k{font-family:var(--kr);font-weight:600}
+.wgr{border-top:1px dashed var(--line);padding-top:8px;margin-top:8px}
+.wgr .ans{font-family:var(--kr);font-size:16px;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:6px 10px;white-space:pre-wrap;margin:4px 0}
+.wsc{display:flex;gap:5px;flex-wrap:wrap;align-items:center}
+.wsc button{all:unset;cursor:pointer;width:32px;height:32px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;font-weight:700}
+.wsc button[aria-pressed="true"]{background:var(--violet);border-color:var(--violet);color:var(--on-violet)}
+.wsc button:focus-visible{outline:3px solid var(--violet)}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
@@ -1268,6 +1281,105 @@ function nShowResult(){
   $("#nagain").onclick = function(){ ask("Làm lại từ đầu? Kết quả lần này em đã gửi cô chưa? Nếu chưa, em sao chép tin nhắn trước nhé.", "Làm lại", "Ở lại").then(function(ok){ if(!ok) return; try{ localStorage.removeItem(NS.key); }catch(e){} nStart(NS.p, L, NS.name); }); };
 }
 
+/* ==W== */
+/* ---------- Luyện viết (câu 51–54) — link thi-thu/#w=<base64>.<sum> ----------
+   p = {c: mã bài, t: tên bài, i: [{s: nguồn, y: dạng câu, p: đoạn văn có ( ㉠ ) ( ㉡ ), h: {a:[gợi ý…], b:[…]}, k: {a:[đáp án mẫu…], b:[…]}, g: {a: mẫu ngữ pháp, b}}]}
+   Gợi ý mở dần từng bậc (không trừ điểm, mã nộp ghi số gợi ý đã mở); «chữ» trong gợi ý được tô trong đoạn văn.
+   Nộp: mã NW1-{c, n: tên, a: [[㉠, ㉡]…], h: [[số gợi ý ㉠, ㉡]…], t, d} → cô dán vào Chấm bài, chấm tay từng ô 0–5 (wresults). */
+var WS = null, W_BL = {a:"㉠", b:"㉡"};
+function wTwoY(y){ return +y === 51 || +y === 52; }
+function wKeysOf(y){ return wTwoY(y) ? ["a","b"] : ["a"]; }
+function wMarks(t){ var out = []; String(t || "").replace(/«([^»]+)»/g, function(_, x){ out.push(x); return _; }); return out; }
+function wHintHTML(t){ return esc(t).replace(/«([^»]+)»/g, '<b class="whl">$1</b>'); }
+function wPassHTML(p, marks){
+  var h = esc(p || "");
+  (marks || []).forEach(function(m){ var e = esc(m); if(e) h = h.split(e).join('\u0001' + e + '\u0002'); });
+  h = h.replace(/\u0001/g, '<mark class="whl">').replace(/\u0002/g, '</mark>');
+  return h.replace(/\(\s*(㉠|㉡)\s*\)/g, '<span class="wbl">( $1 )</span>').replace(/\n/g, "<br>");
+}
+function encodeW(obj){ var raw = b64e(obj); return "NW1-" + raw + "-" + sum(raw); }
+function decodeW(code){
+  var m = String(code).match(/^NW1-([A-Za-z0-9_-]+)-([0-9a-z]{4})$/);
+  if(!m || sum(m[1]) !== m[2]) return null;
+  try{ var o = b64d(m[1]); o._sum = m[2]; return o; }catch(e){ return null; }
+}
+function wShell(inner){ stopClock(); app.innerHTML = '<div class="wrap">' + headerHTML() + '<main class="paper"><div class="title"><h1>쓰기 연습</h1><p>Luyện viết · Hàn Ngữ Nari</p></div>' + inner + '</main></div>'; }
+function writeBoot(){
+  var m = String(location.hash || "").match(/[#&]w=([A-Za-z0-9_.-]+)/);
+  if(!m) return false;
+  var p = vUnpack(m[1]);
+  if(!p || !p.c || !p.i || !p.i.length){ wShell('<p class="err">Link bài luyện viết bị thiếu hoặc bị cắt. Em sao chép lại đủ cả link cô gửi rồi mở lại nhé.</p>'); return true; }
+  var last = lsGet("nari-tt-last") || {};
+  wShell('<div class="metaline"><span>Bài: <strong>' + esc(p.t || "Luyện viết") + '</strong></span><span><strong>' + p.i.length + '</strong> câu</span></div>' +
+    '<div class="note" style="white-space:normal"><strong>Cách làm:</strong> Em đọc đoạn văn rồi viết vào ô ㉠, ㉡. Bí thì bấm <strong>“Gợi ý”</strong> — mỗi lần mở thêm một gợi ý, mở gợi ý <strong>không bị trừ điểm</strong>, nhưng cô sẽ thấy em đã mở mấy gợi ý. Nộp bài xong em xem ngay đáp án mẫu để tự so, rồi gửi mã cho cô chấm.</div>' +
+    '<label class="l" for="wname">Họ và tên của em</label><input class="t" id="wname" autocomplete="name" value="' + esc(last.name || "") + '" placeholder="VD: Nguyễn Thị Lan">' +
+    '<p class="err" id="werr" hidden></p><div class="row"><button class="btn wide" id="wgo">Bắt đầu làm bài</button></div>');
+  $("#wgo").onclick = function(){
+    var n = cleanName($("#wname").value);
+    if(!n){ var e = $("#werr"); e.textContent = "Em nhập họ tên trước khi làm bài nhé."; e.hidden = false; $("#wname").focus(); return; }
+    last.name = n; lsSet("nari-tt-last", last);
+    wStart(p, n);
+  };
+  $("#wname").addEventListener("keydown", function(e){ if(e.key === "Enter") $("#wgo").click(); });
+  return true;
+}
+function wStart(p, name){
+  var key = "nari-w-" + p.c + "-" + normName(name).replace(/[^a-z0-9]/g, "");
+  var saved = lsGet(key);
+  WS = saved && saved.c === p.c && saved.n === p.i.length ? saved : {c:p.c, n:p.i.length, ans:{}, hint:{}, start:Date.now(), submitted:null};
+  WS.p = p; WS.name = name; WS.key = key;
+  wSave(); wRender(); window.scrollTo(0, 0);
+}
+function wSave(){ var c = Object.assign({}, WS); delete c.p; lsSet(WS.key, c); }
+function wItemMarks(it, i){ var out = []; wKeysOf(it.y).forEach(function(k){ ((it.h || {})[k] || []).slice(0, WS.hint[i + k] || 0).forEach(function(t){ out = out.concat(wMarks(t)); }); }); return out; }
+function wRender(){
+  var p = WS.p, done = !!WS.submitted, h = "";
+  p.i.forEach(function(it, i){
+    h += '<section class="q" id="wq' + i + '"><div class="grp" style="margin-top:6px"><span class="tag">Câu ' + (i+1) + '</span>' + esc(it.s || "") + '</div>' +
+      '<div class="passage"><div class="ptext" id="wp' + i + '">' + wPassHTML(it.p, wItemMarks(it, i)) + '</div></div>';
+    wKeysOf(it.y).forEach(function(k){
+      var id = i + k, hs = (it.h || {})[k] || [], n = WS.hint[id] || 0, two = wTwoY(it.y);
+      h += '<div class="wslot"><label class="l" for="wa' + id + '">' + (two ? W_BL[k] : 'Bài viết của em') + '</label>' +
+        '<textarea class="t kr" id="wa' + id + '" data-w="' + id + '" rows="' + (two ? 2 : 8) + '"' + (done ? ' readonly' : '') + '>' + esc(WS.ans[id] || "") + '</textarea>' +
+        (n ? '<ol class="whints">' + hs.slice(0, n).map(function(t){ return '<li>' + wHintHTML(t) + '</li>'; }).join("") + '</ol>' : '') +
+        (!done && hs.length ? '<div class="row" style="margin-top:6px"><button type="button" class="btn sm ghost" data-wh="' + id + '"' + (n >= hs.length ? ' disabled' : '') + '>' + (n >= hs.length ? 'Đã mở hết gợi ý' : 'Gợi ý ' + (n+1) + '/' + hs.length) + '</button></div>' : '') +
+        (done ? '<div class="wkey2"><b>Đáp án mẫu:</b> ' + ((it.k || {})[k] || []).map(function(x){ return '<span class="k">' + esc(x) + '</span>'; }).join(' <span class="muted">/</span> ') +
+          ((it.g || {})[k] ? '<br><b>Mẫu ngữ pháp:</b> <span class="pill">' + esc(it.g[k]) + '</span>' : '') + (n ? ' <span class="muted" style="font-size:13px">· em đã mở ' + n + ' gợi ý</span>' : '') + '</div>' : '') + '</div>';
+    });
+    h += '</section>';
+  });
+  wShell('<div class="metaline"><span>Bài: <strong>' + esc(p.t || "Luyện viết") + '</strong></span><span>Học sinh: <strong>' + esc(WS.name) + '</strong></span></div>' + h +
+    '<div id="wres"></div>' + (done ? '' : '<div class="row" style="margin-top:18px"><button class="btn wide" id="wsub">Nộp bài</button></div>'));
+  $$("[data-w]").forEach(function(ta){ ta.addEventListener("input", function(){ WS.ans[ta.dataset.w] = ta.value; wSave(); }); });
+  $$("[data-wh]").forEach(function(b){ b.onclick = function(){
+    var id = b.dataset.wh; WS.hint[id] = (WS.hint[id] || 0) + 1; wSave();
+    var y = window.scrollY; wRender(); window.scrollTo(0, y);
+  }; });
+  if(!done) $("#wsub").onclick = wSubmit; else wShowResult();
+}
+function wSubmit(){
+  var p = WS.p, miss = 0;
+  p.i.forEach(function(it, i){ wKeysOf(it.y).forEach(function(k){ if(!String(WS.ans[i + k] || "").trim()) miss++; }); });
+  ask(miss ? "Em còn " + miss + " ô chưa viết. Em vẫn muốn nộp bài? Sau khi nộp sẽ không sửa được." : "Nộp bài? Sau khi nộp sẽ không sửa được.", "Nộp bài", "Viết tiếp").then(function(ok){
+    if(!ok) return;
+    WS.submitted = Date.now(); wSave(); wRender();
+    setTimeout(function(){ var r = $("#wres"); if(r) r.scrollIntoView({behavior:"smooth", block:"start"}); }, 60);
+  });
+}
+function wShowResult(){
+  var p = WS.p;
+  var a = p.i.map(function(it, i){ return wKeysOf(it.y).map(function(k){ return String(WS.ans[i + k] || "").trim(); }); });
+  var hs = p.i.map(function(it, i){ return wKeysOf(it.y).map(function(k){ return WS.hint[i + k] || 0; }); });
+  var nh = hs.reduce(function(s, x){ return s + x.reduce(function(u, v){ return u + v; }, 0); }, 0);
+  var code = encodeW({c:p.c, n:WS.name, a:a, h:hs, t:Math.round((WS.submitted - WS.start)/1000), d:WS.submitted});
+  var msg = "BÀI LUYỆN VIẾT\nBài: " + (p.t || "Luyện viết") + "\nHọ tên: " + WS.name + "\nSố gợi ý đã mở: " + nh + "\nNộp lúc: " + fmtDate(WS.submitted) + "\nMã bài làm: " + code;
+  $("#wres").innerHTML = '<div class="panel" id="result"><h2>Em đã nộp bài</h2><p>Đáp án mẫu hiện ngay dưới mỗi ô — em so với bài của mình nhé. Đáp án mẫu chỉ là một vài cách viết; viết khác mà đúng ý, đúng ngữ pháp vẫn được điểm.</p>' +
+    '<p style="margin-top:12px">Bấm “Sao chép” rồi dán vào tin nhắn Zalo gửi cho cô để cô chấm.</p><div id="wmsg">' + copyBox(msg, 6) + '</div>' +
+    '<div class="row"><button class="btn ghost" id="wagain">Làm lại để luyện thêm</button></div></div>';
+  wireCopy($("#wmsg"));
+  $("#wagain").onclick = function(){ ask("Làm lại từ đầu? Kết quả lần này em đã gửi cô chưa? Nếu chưa, em sao chép tin nhắn trước nhé.", "Làm lại", "Ở lại").then(function(ok){ if(!ok) return; try{ localStorage.removeItem(WS.key); }catch(e){} wStart(p, WS.name); }); };
+}
+/* ==/W== */
 /* ==NL== */
 /* ---------- Đánh giá năng lực (dùng chung cho trang quản lý và trang học sinh) ----------
    Nguồn: tools/nangluc.js, chèn vào trang bằng tools/nangluc.py — sửa ở file đó, không sửa trong trang.
@@ -1382,13 +1494,13 @@ function reportBoot(){
 /* ---------- boot ---------- */
 /* ---------- App cài trên điện thoại (PWA) ----------
    Chèn vào thi-thu/index.html bởi tools/sync_thi_thu.py (không có trong trang quản lý).
-   - Mỗi link bài (#d= thi thử, #v= từ vựng, #l= lộ trình, #n= luyện nghe, #r= bảng đánh giá) em đã mở được nhớ trong máy (nari-app-saved).
+   - Mỗi link bài (#d= thi thử, #v= từ vựng, #l= lộ trình, #n= luyện nghe, #w= luyện viết, #r= bảng đánh giá) em đã mở được nhớ trong máy (nari-app-saved).
    - Trang đầu có "Bài của em" (bấm là vào) và ô dán link cô gửi → không phải cài lại app khi có bài mới.
    - Đang ở trong bài có nút "Trang đầu"; nút Quay lại của điện thoại cũng về được.
    - "Bài hôm nay": em nhập mã lớp + mã riêng một lần (hoặc bấm link #a= cô gửi), app đọc app/<mã>.json. */
-var APP_KEY = "nari-app-saved", APP_KINDS = {l:"Lộ trình từ vựng", v:"Bài từ vựng", d:"Đề thi thử", n:"Bài luyện nghe", r:"Đánh giá của cô"};
+var APP_KEY = "nari-app-saved", APP_KINDS = {l:"Lộ trình từ vựng", v:"Bài từ vựng", d:"Đề thi thử", n:"Bài luyện nghe", w:"Bài luyện viết", r:"Đánh giá của cô"};
 function appParse(s){
-  var m = String(s || "").match(/(?:^|[#&?\s\/])([dvlnr])=([A-Za-z0-9_-]+\.[0-9a-z]{4})/);
+  var m = String(s || "").match(/(?:^|[#&?\s\/])([dvlnwr])=([A-Za-z0-9_-]+\.[0-9a-z]{4})/);
   if(!m) return null;
   var p = vUnpack(m[2]);
   if(!p) return null;
@@ -1534,7 +1646,7 @@ function appRun(){
   window.scrollTo(0, 0);
   appMeBoot();
   appRemember();
-  if(!examBoot() && !vocabBoot() && !routeBoot() && !ngheBoot() && !reportBoot()) studentLanding();
+  if(!examBoot() && !writeBoot() && !vocabBoot() && !routeBoot() && !ngheBoot() && !reportBoot()) studentLanding();
 }
 function appGo(h){ history.pushState(null, "", h || location.pathname + location.search); appRun(); }
 var headerHTMLBase = headerHTML;

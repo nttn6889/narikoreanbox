@@ -26,7 +26,7 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   bản lưu), biểu tượng trong `thi-thu/icon/` (từ logo). `sync_thi_thu.py` tự chèn thẻ head + `tools/app_shell.js`
   (thay dòng khởi động trang; code này chỉ có ở site, không có trong trang quản lý — sửa thẳng trong `tools/app_shell.js`,
   rồi `python3 tools/sync_thi_thu.py --app-only` để chèn lại vào `thi-thu/index.html` hiện có).
-- Trang đầu có “Bài của em” (mọi link `#d=`/`#v=`/`#l=`/`#n=` đã mở, localStorage `nari-app-saved`) và ô “Dán link bài cô gửi”;
+- Trang đầu có “Bài của em” (mọi link `#d=`/`#v=`/`#l=`/`#n=`/`#w=` đã mở, localStorage `nari-app-saved`) và ô “Dán link bài cô gửi”;
   trong bài có nút “⌂ Trang đầu”, nút Quay lại cũng về được → giao bài mới không phải cài lại app.
 
 ## Bài hôm nay trong app (mã lớp + mã học sinh)
@@ -72,7 +72,13 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - **Đề viết** ở collection riêng `wbank/<id>` (id `W52_035` = câu 52 kỳ 35): `{type:51..54, src, round, passage (chỗ trống "( ㉠ )", "( ㉡ )"),
   keys:{a:[cách viết…], b:[…]}, pat:{a, b} (mẫu ngữ pháp, nhiều mẫu ngăn bằng dấu phẩy), note}`. Câu 53/54 chỉ dùng `keys.a` (bài mẫu).
   Không nằm trong `bank` nên không vào đồng bộ đề, thống kê, đề trộn, bài hằng ngày. Thẻ Viết có bảng “Mẫu ngữ pháp trong đáp án” đếm theo `pat`.
-- Đã nhập câu 52 của 14 kỳ (35, 36, 37, 41, 47, 52, 60, 64, 83, 91, 92, 93, 94, 95). Bài tập viết cho học sinh: chưa làm (cô sẽ bàn dạng bài).
+- Đã nhập câu 52 của 14 kỳ (35, 36, 37, 41, 47, 52, 60, 64, 83, 91, 92, 93, 94, 95), mỗi ô có 3 gợi ý (`hint:{a:[…3], b:[…3]}`):
+  bậc 1 đọc tín hiệu (từ nối, vị trí ô), bậc 2 mẫu ngữ pháp, bậc 3 từ khóa. `«chữ»` trong gợi ý = tô vàng chữ đó trong đoạn văn (phải có đúng trong `passage`).
+- **Luyện viết** (thẻ Đề viết → tick câu → “Giao bài viết”): `wassigns/<code>` {code, title, items:[id wbank]}, link `thi-thu/#w=<base64>.<sum>`
+  chứa sẵn đoạn văn + gợi ý + đáp án mẫu (không cần đồng bộ; sửa câu sau khi giao thì link cũ giữ bản cũ, “Tin nhắn” tạo link mới).
+  Trang học sinh (`writeBoot`, code giữa dấu `==W==`, ngoài khối Admin): gợi ý mở dần, **không trừ điểm**; nộp xong **hiện đáp án mẫu ngay**;
+  mã nộp `NW1-{c, n, a:[[㉠,㉡]…], h:[[số gợi ý]…], t, d}`. Chấm bài: dán mã → `wresults/<code>_<sum>` (ans/hints lưu dạng `[{v:[…]}]`
+  vì db không nhận mảng lồng), cô chấm tay từng ô 0–5 + nhận xét (`wGradeModal`); danh sách ở cuối thẻ Đề viết. Chưa đưa vào Sổ điểm/Đánh giá.
 
 ## Nhập đề thi vào ngân hàng đề
 - Ngân hàng đề nằm trong cơ sở dữ liệu của trang quản lý (collection `bank`, câu hỏi ở `bank/<id>/q/<qid>`).
