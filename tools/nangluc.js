@@ -138,13 +138,17 @@ function reportBoot(){
     var tally = function(list, f){ var c = [0,0], q = [0,0]; list.forEach(function(r){ var x = f(r); if(cur(r)){ c[0] += x[0]; c[1] += x[1]; } else if(prev(r)){ q[0] += x[0]; q[1] += x[1]; } });
       if(!c[1]) return null; c.push(q[1] ? nlPct(c) - nlPct(q) : null); return c; };
     var eSc = function(r){ return [r.score, r.total - (r.nokey || []).length]; }, sc = function(r){ return [r.score, r.total]; };
+    /* Đề trong ngân hàng có nghe:1 (đề nghe) tính vào Nghe; nghe:2 (kịch bản nghe, luyện đọc) tính vào Đọc nhưng không vào dạng câu Đọc */
+    var exNghe = function(r){ var ex = S.exams.find(function(e){ return e.id === r.examId; }); return (ex && ex.nghe) || 0; };
+    var pe = p.e.filter(function(r){ return exNghe(r) !== 1; }), pn = p.e.filter(function(r){ return exNghe(r) === 1; });
+    var pl = p.n.concat(pn), lSc = function(r){ return pn.indexOf(r) >= 0 ? eSc(r) : sc(r); };
     var o = {n:p.name, g:now, d:days, s:{}};
-    ["r","l","v"].forEach(function(k, i){ var x = tally([p.e, p.n, p.v][i], i ? sc : eSc); if(x) o.s[k] = x; });
+    ["r","l","v"].forEach(function(k, i){ var x = tally([pe, pl, p.v][i], [eSc, lSc, sc][i]); if(x) o.s[k] = x; });
     /* Đọc theo dạng câu (đề trộn quy về câu gốc nếu đã tải câu hỏi) */
     var rt = NL_RT.map(function(){ return [0,0]; });
     p.e.filter(cur).forEach(function(r){
       var ex = S.exams.find(function(e){ return e.id === r.examId; }), qm = ex && ex.mix ? S.qcache[r.examId] : null;
-      if(ex && ex.mix && !qm) return;
+      if((ex && ex.mix && !qm) || exNghe(r)) return;
       for(var n = r.from; n <= r.to; n++){
         if((r.nokey || []).indexOf(n) >= 0) continue;
         var sn = qm ? (qm[n] && qm[n].src ? qm[n].src.n : 0) : n, t = nlType(sn);
@@ -188,7 +192,7 @@ function reportBoot(){
     o.w = [];
     for(var i = 7; i >= 0; i--){
       var a = mon - i*7*864e5, b = a + 7*864e5, row = [fmtDay(a)];
-      [[p.e, eSc], [p.n, sc], [p.v, sc]].forEach(function(z){ var c = [0,0]; z[0].forEach(function(r){ if(r.submittedAt >= a && r.submittedAt < b){ var x = z[1](r); c[0] += x[0]; c[1] += x[1]; } }); row.push(c[1] ? nlPct(c) : -1); });
+      [[pe, eSc], [pl, lSc], [p.v, sc]].forEach(function(z){ var c = [0,0]; z[0].forEach(function(r){ if(r.submittedAt >= a && r.submittedAt < b){ var x = z[1](r); c[0] += x[0]; c[1] += x[1]; } }); row.push(c[1] ? nlPct(c) : -1); });
       o.w.push(row);
     }
     while(o.w.length > 2 && o.w[0][1] < 0 && o.w[0][2] < 0 && o.w[0][3] < 0) o.w.shift();

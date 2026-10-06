@@ -72,6 +72,16 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   xuất văn bản theo định dạng “Dán nhiều câu” của trang quản lý để cô tự dán.
 - PDF có chữ (không phải bản scan) rẻ nhất: dùng `pdftotext` thay vì xem ảnh từng trang.
 
+## Đề nghe trong ngân hàng đề (`bank/<id>.nghe`)
+- `nghe:1` = câu hỏi phần Nghe (học sinh nghe file của sách; giải thích của từng câu chứa sẵn kịch bản để cô xem khi chấm),
+  `nghe:2` = bản “kịch bản” (đoạn hội thoại hiện trong đoạn văn, câu 4–8 thay câu đáp bằng `(    )`) để luyện đọc.
+- Đề nghe không tự chọn vào bài hằng ngày (`pickExams`), không vào Phân tích đề / trộn đề / ôn câu sai, không tính dạng câu Đọc
+  (`tools/nangluc.js`: `nghe:1` tính vào kỹ năng Nghe, `nghe:2` vào điểm Đọc chung). `sync_kho.py` ghi `nghe` vào `thi-thu/de/<id>.json`,
+  `thong_ke_de.py` bỏ qua đề có `nghe`.
+- Bộ EBS 실전모의고사: `Eebs1`/`Eebs2` (Đọc), `Eebs1n`/`Eebs2n` (Nghe), `Eebs1k`/`Eebs2k` (Nghe – kịch bản), nhập từ file tổng hợp do AI
+  dựng lại (nhiều lỗi): câu nghi sai đáp án/thiếu gạch chân có ghi “⚠” ở giải thích. `Eebs2k` câu 4–8, 17–20, 35–38 chưa có kịch bản đúng.
+  Đề 3 trong file đó chưa nhập (phần nghe là nội dung soạn lại, phần đọc chép trùng đề 2 và thiếu lựa chọn).
+
 ## Đề trộn (ôn câu sai) — trong trang quản lý
 - Ngân hàng đề → "Tạo đề trộn", hoặc Sổ điểm → thẻ học sinh → "Tạo đề ôn câu sai".
 - Đề trộn có id `M…` và `mix:true`; mỗi câu chép đủ nội dung + `src:{e,n,t}` (đề gốc, câu gốc).

@@ -121,9 +121,11 @@ def main(dump, vocab_only=False):
                        "image": save_img(q.get("image"), img_dir, used), "stem": q.get("stem") or "",
                        "opts": list(q.get("opts") or ["", "", "", ""])[:4], "share": bool(q.get("share"))})
         qs.sort(key=lambda x: x["n"])
+        de = {"id": eid, "t": meta.get("title", ""), "total": meta.get("total", len(qs)), "q": qs}
+        if meta.get("nghe"):  # 1 = đề nghe, 2 = kịch bản nghe (luyện đọc); thong_ke_de.py bỏ qua
+            de["nghe"] = meta["nghe"]
         with open(os.path.join(de_dir, eid + ".json"), "w", encoding="utf-8") as f:
-            json.dump({"id": eid, "t": meta.get("title", ""), "total": meta.get("total", len(qs)), "q": qs},
-                      f, ensure_ascii=False, separators=(",", ":"))
+            json.dump(de, f, ensure_ascii=False, separators=(",", ":"))
         keep.add(eid + ".json")
         site["e"][eid] = {"t": meta.get("title", ""), "h": hs}
     for f in os.listdir(de_dir):

@@ -67,7 +67,7 @@ CLEAN = re.compile(r"\*\*|__|\(\s*\)|\(\s*[㉠㉡㉢㉣]\s*\)|\([가나다라]\)
 def exam_questions():
     for f in sorted(glob.glob(os.path.join(ROOT, "thi-thu/de/*.json"))):
         d = json.load(open(f, encoding="utf-8"))
-        if d["id"].endswith("old"):  # bản bìa xanh trùng đề Ehot1
+        if d["id"].endswith("old") or d.get("nghe"):  # bản bìa xanh trùng đề Ehot1; đề nghe/kịch bản nghe
             continue
         for q in d["q"]:
             parts = [q.get("passage") or ""] + list(q.get("opts") or [])
