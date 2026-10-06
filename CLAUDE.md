@@ -173,4 +173,6 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   nội dung sách có bản quyền) → `python3 tools/nguphap_kho.py <file> <mã> "<tên sách>" <thư mục>` → ArtifactData batch `set`
   (file_path). Nghĩa tiếng Việt (`vi`) do Claude soạn; ko/en chép đúng sách (sửa lỗi in rõ ràng như “명사” thay cho “동사”).
   Đã có: Seoul 2B 문법 해설 (bài 10–18, sách tr. 236–254, 35 điểm; file dừng ở 18과 mục 3).
+  Seoul 3A 문법 해설 (bài 1–9, sách tr. 241–262, 35 điểm; bài 6 chỉ có 3 điểm). Bảng so sánh hai mẫu ngữ pháp
+  ghi thành `table` của lưu ý (mỗi ô gồm giải thích Hàn + Anh, ví dụ ngăn bằng ` / `).
 - Muốn làm tài liệu học tập: ArtifactData `list` `grammar`/`vocab`/`bank` với `out_dir` rồi lọc.
