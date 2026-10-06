@@ -74,10 +74,18 @@ h4{font-size:14px;margin:12px 0 4px;color:var(--muted)}
 .chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px}
 .chips a{border:1px solid var(--acc);color:var(--acc);border-radius:14px;padding:2px 10px;font-size:14px;text-decoration:none;font-family:"Noto Sans KR","Malgun Gothic",sans-serif}
 .blk{margin:0 0 18px}
+.lde{margin:6px 0 4px;border:1px solid var(--acc);border-radius:6px;background:#fffafa}
+.lde summary{cursor:pointer;padding:6px 10px;color:var(--acc);font-size:15px}
+.lde summary small{display:block;color:var(--muted);font-size:12.5px;font-family:Arial,sans-serif}
+.lde ol{margin:0;padding:4px 12px 8px 32px}
+.lde li{margin:8px 0;font-family:"Noto Sans KR","Malgun Gothic","Apple SD Gothic Neo",sans-serif;font-size:15px}
+.lde .ref{display:block;font:bold 12px Arial,sans-serif;color:var(--muted)}
+.lde .stem{display:block}.lde u{text-underline-offset:3px}
+.lde .op{display:flex;flex-wrap:wrap;gap:2px 18px;font-size:14px;color:#333}
 .blk h3{margin:0;padding:6px 10px;background:var(--ink);color:#fff;font-size:17px;font-family:"Noto Sans KR","Malgun Gothic",sans-serif}
 .blk h3 small{font-weight:normal;font-size:13px;opacity:.85;font-family:"Times New Roman",serif}
 .blk .tb .h{background:var(--sub)}
-@media print{.co,nav,.parts,.tools,footer,.lt,.done,.chips{display:none}.sec{display:block}h2{break-before:auto}.tb{break-inside:auto}h3{break-after:avoid}}
+@media print{.lde{break-inside:avoid}.co,nav,.parts,.tools,footer,.lt,.done,.chips{display:none}.sec{display:block}h2{break-before:auto}.tb{break-inside:auto}h3{break-after:avoid}}
 </style>
 </head>
 <body>
@@ -107,6 +115,48 @@ h4{font-size:14px;margin:12px 0 4px;color:var(--muted)}
   var GRAM = 'https://claude.ai/artifact/1mkNvmWjkjFwgxHinJfiXk';
   var PRACTICE = {1: {url: GRAM, what: 'chọn thẻ “Dạng điền chỗ trống”'}, 3: {url: GRAM, what: 'chọn thẻ “Dạng tương đồng”'}};
   function ul(s){ return esc(s).replace(/__(.+?)__/g, '<u>$1</u>'); }
+  // Câu đề 1–4 của các đề thi thử (thi-thu/de/*.json) xếp theo nhóm ngữ pháp → mục "Luyện đề" dưới mỗi nhóm.
+  // Một câu có thể ở nhiều nhóm; "V01_KHAC"/"V03_KHAC" = ngữ pháp chưa có nhóm (hiện cuối thẻ Câu 1–2 / Câu 3–4).
+  var DEQ = {"Ehot1":{"t":"HOT Đề 1","q":{"1":["배가 (    ) 라면을 끓여 먹었다.",["고프거든","고프다가","고파야지","고프길래"]],"2":["친구도 만나고 영화도 (    ) 극장에 갔다.",["본 줄","볼 겸","볼 텐데","보는 대로"]],"3":["갑자기 비가 많이 __오는 탓에__ 일정이 취소되었다.",["오는 김에","오는 만큼","오는 바람에","오는 사이에"]],"4":["식당에 사람이 많은 걸 보니 음식이 __맛있는 모양이다__.",["맛있어졌다","맛있는 듯하다","맛있을 따름이다","맛있으면 좋겠다"]]}},"Ehot1old":{"t":"HOT Đề 1 (bìa xanh)","q":{"1":["아이한테 (    ) 맵지 않은 것으로 사 왔어요.",["매운 대로","매운 김에","매운 채로","매울까 봐"]],"2":["오늘 아침에 늦게 일어나서 버스를 못 (    ).",["타는 편이다","탈 뻔했다","타나 보다","타기로 했다"]],"3":["샤워를 __하고 있어서__ 전화벨 소리를 못 들었다.",["하느라고","하자마자","하더라도","하다시피"]],"4":["대학원에 __진학하려고__ 밤낮으로 공부하고 있다.",["진학하는 데다가","진학하기 무섭게","진학하는 반면에","진학하기 위해서"]]}},"Ehot2":{"t":"HOT Đề 2","q":{"1":["부모(    ) 자식 사랑하지 않는 사람은 없다.",["커녕","대로","치고","나마"]],"2":["매주 일요일이면 아이들을 데리고 공원에 (    ).",["가곤 했다","갈 듯하다","가는 중이다","가기 달렸다"]],"3":["전에는 며칠 밤을 새워도 __괜찮더니__ 요즘은 그렇지 못하다.",["괜찮았는데","괜찮으므로","괜찮았기에","괜찮거니와"]],"4":["아무리 화가 __나더라도__ 폭력은 안 된다.",["나니","나려야","나자마자","날지라도"]]}},"Ehot3":{"t":"HOT Đề 3","q":{"1":["지하철에서 (    ) 내려야 할 역을 지나쳤다.",["졸고서","졸려면","졸든지","졸다가"]],"2":["그 영화는 (    ) 예매율 1위를 차지하였다.",["개봉한다고","개봉하도록","개봉하자마자","개봉하다시피"]],"3":["구름이 많이 낀 것을 보니 눈이 __오려나 보다__.",["오고 있다","올 것 같다","올 지경이다","올 리가 없다"]],"4":["시험을 못 봐서 합격이 __어렵게 되었다__.",["어려워졌다","어려워야겠다","어려워도 된다","어려워야 한다"]]}},"Ehot4":{"t":"HOT Đề 4","q":{"1":["비밀을 영원히 (    ) 그 은혜를 잊지 않겠다.",["지키려고","지키던데","지켜준다면","지키느라고"]],"2":["요즘 체중을 (    ) 매일 운동을 하고 있다.",["줄여 가지고","줄이는 반면","줄이기 위해","줄이는 대신"]],"3":["준서는 큰 욕심을 내지 않고 묵묵히 시험을 __준비할 따름이다__.",["준비할 뿐이다","준비할 만하다","준비하나 보다","준비하게 하다"]],"4":["면접 전에 질문을 미리 __연습해 두면__ 당황하지 않고 잘 볼 수 있을 것이다.",["연습해 대면","연습하고 보니","연습해 놓으면","연습하고 해서"]]}},"Ehot5":{"t":"HOT Đề 5","q":{"1":["우리는 되도록 빨리 (    ) 서둘렀다.",["도착해야","도착하더니","도착하고자","도착하거나"]],"2":["(    ) 어머니 목소리를 들어 기분이 좋아졌었다.",["전화뿐","전화만큼","전화같이","전화로나마"]],"3":["우리 팀은 최선을 다했지만 결국 __져 버렸다__.",["지고 싶었다","지고 말았다","졌을 법하다","지면 안 됐다"]],"4":["중기는 다른 사람들에 비해 밥을 지나치게 많이 __먹는 축에 든다__.",["먹나 보다","먹는 편이다","먹을 뻔하다","먹을 리 만무하다"]]}},"Et3001":{"t":"300⁺ Đề 1","q":{"1":["어젯밤에 책을 (    ) 잠이 들었어요.",["읽도록","읽지만","읽자마자","읽으니까"]],"2":["오늘 아침에 늦잠을 자느라고 학교에 (    ).",["지각할 뻔했다","지각하곤 했다","지각하는 척했다","지각하기 마련이다"]],"3":["밤에 바람이 __세게 불어서__ 모든 촛불이 꺼졌다.",["세게 불어 봐야","세게 부는 대로","세게 분다고 해도","세게 부는 바람에"]],"4":["나에겐 친구가 __너 말고도 많다__.",["뿐이다","하나이다","밖에 없다","외에도 많다"]]}},"Et3002":{"t":"300⁺ Đề 2","q":{"1":["아무리 화가 (    ) 친구와 싸우면 안 된다.",["나듯이","나든지","나니까","나더라도"]],"2":["밥을 조금만 먹는 것을 보니 입맛이 (    ).",["없게 한다","없나 보다","없는 셈이다","없을 리가 없다"]],"3":["회사에 __늦을까 봐__ 택시를 타고 갔다.",["늦을수록","늦었는데","늦는 바람에","늦을 것 같아서"]],"4":["약속 시간이 다 되어서 지금 막 __나가려던 참이었다__.",["나갈 뻔했다","나가려고 했다","나갔어야 했다","나가는 척했다"]]}},"Et3003":{"t":"300⁺ Đề 3","q":{"1":["장마 기간에는 비가 많이 (    ).",["내릴 뻔했다","내리는 편이다","내리기로 했다","내리는 중이다"]],"2":["키가 (    ) 음식을 골고루 먹어야 한다.",["크려면","크거나","크든지","크거든"]],"3":["엄마가 만들어준 음식은 __먹어보나 마나__ 맛있을 것이다.",["먹었는데","먹기만 하면","먹기 무섭게","먹어보지 않아도"]],"4":["성공과 실패는 본인이 __노력하기에 달려있다__.",["노력한 셈이다","노력하기도 한다","노력하기 나름이다","노력하기 마련이다"]]}},"Et3004":{"t":"300⁺ Đề 4","q":{"1":["그 가게는 야채가 (    ) 가격도 싸다.",["신선해서","신선하더라도","신선한 데다가","신선해서 그런지"]],"2":["밤에는 바람이 거세게 (    ) 아침이 되니까 조용해졌다.",["불길래","불더니","불었더니","부는 탓에"]],"3":["이번 시험에는 꼭 90점을 __넘도록__ 열심히 노력할 것이다.",["넘어도","넘기 위해서","넘어 가지고","넘기만 하면"]],"4":["두 사람이 오늘 한마디도 안 하는 걸 보니 __싸웠나 보다__.",["싸운 셈이다","싸우는 편이다","싸운 모양이다","싸우기 마련이다"]]}},"Et3005":{"t":"300⁺ Đề 5","q":{"1":["길이 막혀서 비행기를 (    ).",["놓칠 뻔했다","놓쳐야 했다","놓칠 걸 그랬다","놓칠 리가 없다"]],"2":["이 음식이 (    ) 안 먹었는데 생각보다 맵지 않네요.",["매워야","맵다면","매운데도","매울까 봐"]],"3":["어두운 곳에서 책을 자주 __읽다 보면__ 눈이 나빠질 거예요.",["읽다가는","읽느라고","읽는 대로","읽고 해서"]],"4":["이 제품은 실용성과 디자인 면에서 우수하다고 __소개된 바 있다__.",["소개된 셈이다","소개하곤 했다","소개하려고 한다","소개된 적이 있다"]]}}};
+  var LDE = {
+    V01_00: ['Ehot1-1', 'Ehot1-2', 'Ehot1old-1', 'Ehot3-1', 'Ehot3-2', 'Ehot4-1', 'Ehot4-2', 'Ehot5-1', 'Et3001-1', 'Et3002-1', 'Et3003-2', 'Et3004-1', 'Et3004-2', 'Et3005-2', 'Et3005-3'],
+    V01_01: ['Ehot2-1'],
+    V01_02: ['Et3002-2', 'Et3003-1'],
+    V01_03: ['Ehot3-4'],
+    V01_KHAC: ['Ehot1old-2', 'Ehot2-2', 'Ehot5-2', 'Et3001-2', 'Et3005-1'],
+    V03_00: ['Ehot1-4', 'Ehot3-3', 'Et3002-2', 'Et3004-4'],
+    V03_04: ['Et3004-1'],
+    V03_05: ['Ehot1-3', 'Ehot1old-3', 'Et3001-3'],
+    V03_06: ['Ehot1old-1', 'Et3002-3', 'Et3005-2'],
+    V03_07: ['Ehot3-2', 'Et3001-1'],
+    V03_08: ['Ehot5-4', 'Et3003-1'],
+    V03_09: ['Et3003-3'],
+    V03_10: ['Et3004-3'],
+    V03_11: ['Ehot3-1'],
+    V03_13: ['Ehot4-3'],
+    V03_15: ['Et3002-4'],
+    V03_16: ['Ehot1old-4', 'Ehot4-2', 'Ehot5-1', 'Et3004-3'],
+    V03_18: ['Et3003-4'],
+    V03_23: ['Et3005-3'],
+    V03_27: ['Ehot2-3', 'Et3004-2'],
+    V03_29: ['Ehot2-4', 'Et3002-1'],
+    V03_32: ['Et3003-2'],
+    V03_40: ['Ehot1-1'],
+    V03_42: ['Ehot1-2'],
+    V03_KHAC: ['Ehot4-4', 'Ehot5-3', 'Et3001-4', 'Et3005-4']
+  };
+  function ldeHtml(key, title){
+    var L = LDE[key];
+    if (!L) return '';
+    var refs = L.map(function(r){ var m = r.split('-'); return DEQ[m[0]].t + ' câu ' + m[1]; });
+    var h = '<details class="lde"><summary>' + esc(title) + ' <b>' + L.length + ' câu</b><small>' + esc(refs.join(' · ')) + '</small></summary><ol>';
+    L.forEach(function(r, i){
+      var m = r.split('-'), q = DEQ[m[0]].q[m[1]];
+      h += '<li><span class="ref">' + esc(refs[i]) + '</span><span class="stem">' + ul(q[0]).replace(/\(\s*\)/g, '(&emsp;&emsp;&emsp;)') + '</span><span class="op">' +
+           q[1].map(function(o, k){ return '<span>' + '①②③④'.charAt(k) + ' ' + esc(o) + '</span>'; }).join('') + '</span></li>';
+    });
+    return h + '</ol></details>';
+  }
   // Phần đọc/viết "Câu 11–12 · …" → 11; phần nghe "Nghe 4–12 · …" → 104 (không lẫn với câu đọc)
   function secNum(sec){ var m = /(\d+)/.exec(sec || ''); return m ? +m[1] + (/^Nghe/.test(sec) ? 100 : 0) : 0; }
   // #c=5-9,11  → chỉ hiện các câu này; #c=n4,n15 → phần nghe (không có thì hiện tất cả)
@@ -175,8 +225,10 @@ h4{font-size:14px;margin:12px 0 4px;color:var(--muted)}
           g.w.forEach(function(w){ h += '<div class="ko">' + esc(w[1]) + star(DE && DE.kho[w[0]]) + '</div><div class="vi">' + esc(w[2]) + '</div>'; });
           if (g.w.length % 2) h += '<div class="pad"></div><div class="pad"></div>';
         }
-        h += '</div>';
+        h += '</div>' + ldeHtml(g.id, '✎ Luyện đề nhóm này:');
       });
+      var kh = {1: 'V01_KHAC', 3: 'V03_KHAC'}[secNum(sec)];
+      if (kh) h += '<h3>Ngữ pháp khác trong đề</h3>' + ldeHtml(kh, '✎ Câu đề chưa thuộc nhóm nào ở trên:');
       h += (lt ? '<p class="done">Học xong rồi? Làm bài luôn nhé:</p>' + lt : '') + '</section>';
     });
     if (filtered) nv += '<a href="javascript:void 0" data-all="1">Xem tất cả ›</a>';
@@ -273,6 +325,7 @@ h4{font-size:14px;margin:12px 0 4px;color:var(--muted)}
     if (out.classList.contains('hide') && e.target.classList.contains('vi')) e.target.classList.toggle('show');
   });
   window.addEventListener('hashchange', function(){ load(); });
+  window.addEventListener('beforeprint', function(){ [].forEach.call(out.querySelectorAll('details.lde'), function(d){ d.open = true; }); });
   var cache = null;
   function upd(v){
     var n = 0, d = new Date(v.at || 0);
