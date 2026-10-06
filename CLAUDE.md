@@ -160,3 +160,17 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - Lộ trình hàng ngày có “Cách ôn”: ôn ngắt quãng (`vroutes.srs`, link `q:1`) — localStorage `mem.srs[id] = {b, due}`:
   sai → ôn ngày hôm sau, đúng → hỏi lại sau 3, 7, 14 ngày, đúng ở lần 14 ngày → `mem.ok` (đã thuộc). Bài ngày k = từ mới + từ đến hạn
   (tối đa `review`). Chưa làm: nghe chép từ file nghe gốc của sách (cô chưa có file).
+
+## Tài liệu gốc (tab “Tài liệu gốc” trong trang quản lý)
+- Collection `docs/<id>`: {title, kind giaotrinh|nguphap|de|tuvung|nghe|khac, status chua|dang|xong, level, note,
+  `g` (mã nguồn ngữ pháp), `v` (tiền tố tên phần kho từ, vd. `Seoul 2B`), `e` [id đề gốc]}. Trang tự đếm phần đã nhập theo `g`/`v`/`e`.
+  Mỗi tài liệu mới cô gửi: thêm/sửa dòng `docs` (ghi trang nào đã nhập, phần nào còn thiếu).
+- Ngân hàng đề: đề không có `mix` = đề gốc (tài liệu gốc); đề trộn (`M…`, `mix:true`) là bài luyện của học sinh, hiện riêng
+  trong khung thu gọn “Đề luyện tập của học sinh”. Dữ liệu vẫn chung collection `bank` (link `#d=`, kết quả, mixQs không đổi).
+- **Ngữ pháp**: collection `grammar/<id>` (id `g_<mã>_<bài>_<số>`, vd. `g_2B_14_2`) = {src, book, lesson, no, page, title,
+  mean{ko,en,vi}, form{ko,en}, table[[…]], ex[…], notes[{ko,en,vi,table?,ex?}], order}; `**…**` = chữ đậm.
+  Nhập: chép sách thành văn bản theo định dạng trong `tools/nguphap_kho.py` (ở thư mục tạm, KHÔNG để trong repo — repo công khai,
+  nội dung sách có bản quyền) → `python3 tools/nguphap_kho.py <file> <mã> "<tên sách>" <thư mục>` → ArtifactData batch `set`
+  (file_path). Nghĩa tiếng Việt (`vi`) do Claude soạn; ko/en chép đúng sách (sửa lỗi in rõ ràng như “명사” thay cho “동사”).
+  Đã có: Seoul 2B 문법 해설 (bài 10–18, sách tr. 236–254, 35 điểm; file dừng ở 18과 mục 3).
+- Muốn làm tài liệu học tập: ArtifactData `list` `grammar`/`vocab`/`bank` với `out_dir` rồi lọc.
