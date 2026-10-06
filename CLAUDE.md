@@ -142,7 +142,7 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 ## Từ vựng giáo trình Seoul (`seoul/`) — lớp trung cấp 3 (Seoul 3A/3B) + ôn nền tảng 1A–2B
 - Nguồn soạn tay: `tools/seoul/<cuốn>.tsv` (`# bài | tên Hàn | tên Việt`, `## nhóm Việt | nhóm Hàn`, dòng từ
   `ko<TAB>nghĩa<TAB>Hán Việt<TAB>câu ví dụ có __từ đã chia__`). Theo file cô gửi lần 2 (“từ vựng chính thức phần 번역 từng bài”,
-  tên bài giữ nguyên như sách, 52 bài, 957 từ): giữ đúng danh sách từng bài kể cả từ lặp lại giữa các bài; mục “A / B” tách thành
+  52 bài; tên bài 3A sửa theo mục lục sách, từ vựng 3A bài 3↔4, 5↔6 đổi chỗ, bài 7–8 nhập từ ảnh trang 번역 của sách): giữ đúng danh sách từng bài kể cả từ lặp lại giữa các bài; mục “A / B” tách thành
   từng từ, “(을) 하다” viết đầy đủ; nghĩa theo file cô (sửa lỗi gõ); Hán Việt + câu ví dụ do Claude soạn. 4A/4B chưa nhập.
   Cô sẽ gửi bảng 어휘 색인 cuối sách để bổ sung. Id từ theo vị trí (bài, nhóm, thứ tự) — sửa danh sách sau khi đã giao bài thì
   kiểm tra `vassigns`/`vroutes` có dùng từ Seoul không trước khi ghi đè.

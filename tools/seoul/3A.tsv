@@ -104,31 +104,57 @@
 볼링을 치다	chơi bowling		친구들과 __볼링을 치러__ 갔어요.
 당구를 치다	chơi bi-a	chàng cầu	형은 __당구를 잘 쳐요__.
 # 7 | 껐다가 다시 켜 보세요 | Hãy tắt đi rồi bật lại xem
-## Môi trường ở & Thuê nhà | 주거 환경
-보증금	tiền đặt cọc (thuê nhà)	bảo chứng kim	__보증금__ 500만 원에 월세 40만 원이에요.
-월세	thuê nhà trả tiền hằng tháng	nguyệt thế	저는 __월세__로 원룸에 살아요.
-전세	thuê nhà đặt cọc lớn (jeonse, không trả tiền tháng)	truyền thế	__전세__로 집을 구하고 있어요.
-복덕방	văn phòng môi giới nhà đất (cách gọi cũ)	phúc đức phòng	동네 __복덕방__에 가서 방을 알아봤어요.
-부동산	văn phòng bất động sản	bất động sản	__부동산__에 가서 집을 알아봤어요.
-계약금	tiền cọc ký hợp đồng	khế ước kim	집을 계약하고 __계약금__을 냈어요.
-계약서	bản hợp đồng	khế ước thư	__계약서__를 꼼꼼히 읽어 보세요.
-계약 기간	thời hạn hợp đồng	khế ước kỳ gian	__계약 기간__은 2년이에요.
-집주인	chủ nhà	chủ nhân	__집주인__에게 월세를 보냈어요.
-세입자	người thuê nhà	thế nhập giả	__세입자__는 보증금을 돌려받을 수 있어요.
-이사하다	chuyển nhà	di tỉ	다음 달에 학교 근처로 __이사해요__.
-짐을 싸다	đóng gói đồ đạc		이사하려고 어제 __짐을 쌌어요__.
-짐을 풀다	dỡ đồ, mở đồ đạc ra		새 집에 도착해서 __짐을 풀었어요__.
+## Máy móc gặp sự cố | 고장
+이상한 소리가 나다	phát ra tiếng lạ		세탁기에서 __이상한 소리가 나요__.
+탈수가 안 되다	không vắt (khô) được (máy giặt)	thoát thủy	세탁기가 고장 나서 __탈수가 안 돼요__.
+전화가 끊기다	điện thoại bị ngắt, mất kết nối	điện thoại	통화하다가 갑자기 __전화가 끊겼어요__.
+채소가 얼다	rau bị đông đá	thái sơ	냉장고가 너무 차가워서 __채소가 얼었어요__.
+온도 조절이 안 되다	không điều chỉnh được nhiệt độ	ôn độ điều tiết	에어컨이 __온도 조절이 안 돼요__.
+화면이 안 나오다	màn hình không hiện	họa diện	텔레비전을 켰는데 __화면이 안 나와요__.
+액정이 나가다	màn hình (LCD) bị hỏng	dịch tinh	휴대폰을 떨어뜨려서 __액정이 나갔어요__.
+종이가 걸리다	kẹt giấy	chỉ	복사기에 __종이가 걸렸어요__.
+## Nguyên nhân hỏng | 고장 원인
+물에 빠뜨리다	đánh rơi xuống nước		휴대폰을 __물에 빠뜨렸어요__.
+땅에 떨어뜨리다	đánh rơi xuống đất		카메라를 __땅에 떨어뜨려서__ 고장 났어요.
+음료수를 쏟다	làm đổ nước uống	ẩm liệu thủy	노트북에 __음료수를 쏟았어요__.
+먼지가 끼다	bám bụi		오래 안 써서 선풍기에 __먼지가 꼈어요__.
+## Bật, tắt, cắm, rút | 켜고 끄기
+전원을 켜다	bật nguồn (công tắc)	điện nguyên	컴퓨터 __전원을 켜세요__.
+전원을 끄다	tắt nguồn	điện nguyên	잠깐 __전원을 껐다가__ 다시 켜 보세요.
+수돗물을 틀다	mở vòi nước	thủy đạo	손을 씻으려고 __수돗물을 틀었어요__.
+수돗물을 잠그다	khóa vòi nước	thủy đạo	양치할 때는 __수돗물을 잠그세요__.
+시동을 걸다	nổ máy, khởi động (xe)	thủy động	추운 날에는 __시동을 걸고__ 조금 기다리세요.
+시동을 끄다	tắt máy (xe)	thủy động	차를 세우고 __시동을 껐어요__.
+플러그를 꽂다	cắm phích điện		충전하려고 __플러그를 꽂았어요__.
+플러그를 빼다	rút phích điện		외출할 때는 __플러그를 빼세요__.
 # 8 | 교통사고가 났다고요? | Bị tai nạn giao thông à?
-## Đặt chỗ & Xác nhận | 예약 & 확인
-예약을 하다	đặt chỗ, đặt phòng	dự ước	주말이라서 미리 식당 __예약을 했어요__.
-예약을 취소하다	hủy đặt chỗ	dự ước thủ tiêu	일이 생겨서 __예약을 취소했어요__.
-예약을 변경하다	đổi lịch đặt	dự ước biến canh	날짜를 바꾸려고 __예약을 변경했어요__.
-예약 내용을 확인하다	xác nhận nội dung đặt chỗ	dự ước nội dung xác nhận	전화로 __예약 내용을 확인했어요__.
-잔여석	số ghế còn trống	tàn dư tịch	그 비행기는 __잔여석__이 없어요.
-성수기	mùa cao điểm	thịnh nhu kỳ	__성수기__에는 호텔 값이 비싸요.
-비수기	mùa thấp điểm	phi nhu kỳ	__비수기__에 여행하면 싸요.
-숙박	lưu trú, nghỉ trọ	túc bạc	이 요금은 __숙박__과 식사를 포함해요.
-조식 포함	bao gồm bữa sáng	triêu thực bao hàm	이 호텔 요금은 __조식 포함__이에요.
+## An toàn giao thông | 교통 안전
+안전벨트를 매다	thắt dây an toàn	an toàn	차를 타면 꼭 __안전벨트를 매세요__.
+과속을 하다	chạy quá tốc độ	quá tốc	__과속을 하면__ 사고가 나기 쉬워요.
+제한 속도를 지키다	tuân thủ tốc độ giới hạn	chế hạn tốc độ	학교 앞에서는 __제한 속도를 지켜야__ 해요.
+신호를 어기다	vượt đèn tín hiệu, vi phạm tín hiệu	tín hiệu	__신호를 어긴__ 차 때문에 사고가 났어요.
+주위를 살피다	quan sát xung quanh	chu vi	길을 건널 때는 __주위를 잘 살피세요__.
+음주 운전을 하다	lái xe khi say rượu	ẩm tửu vận chuyển	__음주 운전을 하면__ 절대 안 돼요.
+## Tai nạn | 사고
+사고가 나다	xảy ra tai nạn	sự cố	집 앞 사거리에서 __사고가 났어요__.
+사고를 내다	gây tai nạn	sự cố	졸음운전으로 __사고를 냈어요__.
+사고를 당하다	bị tai nạn	sự cố đương	출근길에 __사고를 당했어요__.
+## Gặp nạn | 사고 상황
+엘리베이터에 갇히다	bị kẹt trong thang máy		정전 때문에 __엘리베이터에 갇혔어요__.
+지하철 문에 끼이다	bị kẹp vào cửa tàu điện ngầm	địa hạ thiết môn	가방이 __지하철 문에 끼였어요__.
+물에 빠지다	rơi xuống nước, đuối nước		아이가 __물에 빠져서__ 구해 줬어요.
+뱀에 물리다	bị rắn cắn		산에서 __뱀에 물렸어요__.
+눈길에 미끄러지다	trượt ngã trên đường tuyết		출근하다가 __눈길에 미끄러졌어요__.
+## Chấn thương & điều trị | 부상과 치료
+삐다	bong gân, trẹo		계단에서 발목을 __삐었어요__.
+부러지다	bị gãy		넘어져서 팔이 __부러졌어요__.
+찢어지다	bị rách		넘어져서 무릎이 __찢어졌어요__.
+깁스를 하다	bó bột		다리가 부러져서 __깁스를 했어요__.
+수술하다	phẫu thuật, mổ	thủ thuật	다친 무릎을 __수술했어요__.
+꿰매다	khâu (vết thương)		의사가 찢어진 곳을 __꿰맸어요__.
+입원하다	nhập viện	nhập viện	교통사고로 일주일 동안 __입원했어요__.
+문병을 가다	đi thăm người ốm	vấn bệnh	친구가 입원해서 __문병을 갔어요__.
+퇴원하다	xuất viện	thoái viện	다음 주에 __퇴원할__ 거예요.
 # 9 | 한글날에 대해 들어 봤어요? | Bạn đã nghe về ngày Hangeul chưa?
 ## Lễ hội & Sự kiện | 축제 & 행사
 축제에 참가하다	tham gia lễ hội	chúc tế tham gia	외국인 학생들도 __축제에 참가했어요__.
