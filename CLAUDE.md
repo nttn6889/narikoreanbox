@@ -175,4 +175,6 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   Đã có: Seoul 2B 문법 해설 (bài 10–18, sách tr. 236–254, 35 điểm; file dừng ở 18과 mục 3).
   Seoul 3A 문법 해설 (bài 1–9, sách tr. 241–262, 35 điểm; bài 6 chỉ có 3 điểm). Bảng so sánh hai mẫu ngữ pháp
   ghi thành `table` của lưu ý (mỗi ô gồm giải thích Hàn + Anh, ví dụ ngăn bằng ` / `).
+  Seoul 2A 문법 해설 (bài 1–9, sách tr. 234–254, 36 điểm; bài 4 có 3 điểm, bài 6 có 5 điểm). PDF bản scan có lớp chữ
+  lỗi font (chữ Hàn ra ký tự rác) → đọc ảnh (`pdftoppm -r 140`, cắt nửa trang) thay vì `pdftotext`.
 - Muốn làm tài liệu học tập: ArtifactData `list` `grammar`/`vocab`/`bank` với `out_dir` rồi lọc.
