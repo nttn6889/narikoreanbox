@@ -151,6 +151,8 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   Phần: `Seoul 3A · Bài 1 · <tên bài>`, secOrder 100 + 20×(cấp−1) + số bài. Từ có thêm `hv` (Hán Việt) và `ex` (câu ví dụ).
 - `vocab.json`: `w = [id, ko, vi, ex|"", hv]`. Trang `tu-vung/` bỏ các phần `Seoul …`; `thong_ke_de.py` chỉ lấy dấu ★ cho từ Seoul
   (không lấy nghĩa vào thẻ Ưu tiên).
+- Thư viện khối kiến thức (Lớp học) tự có thư viện “Seoul 1A”…“Seoul 3B” (`seoulLibs` trong trang quản lý, id `b_seoul3A`, khối `b5`):
+  dựng từ các phần kho từ `Seoul 3A · Bài 5 · …`, mỗi bài một khối, khối lấy từ theo `vk` = `Seoul 3A · Bài 5 ·`. Thêm cuốn/bài vào kho từ là có khối.
 - Trang `seoul/`: thẻ 1A…3B + “★ Cốt lõi” (từ 1A–2B gặp trong ≥ 3 đề TOPIK II). Link `seoul/#b=3A&c=5` (bài 5), `#c=1-3`, `#b=cot`.
 - Chỉ đồng bộ kho từ (đề không đổi): ArtifactData `list` collection `vocab` với out_dir → `python3 tools/sync_kho.py --vocab-only <dump>`
   → ArtifactData `update` `site/kho` từ `<dump>/site_kho_v.json` (chỉ trường `v`, giữ dấu đề `e`).
