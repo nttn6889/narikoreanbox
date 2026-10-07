@@ -2,7 +2,7 @@
 """Chèn module "Đánh giá năng lực" (tools/nangluc.js) vào trang.
 
 Cách dùng:
-  python3 tools/nangluc.py <file-html-trang-quan-ly>   # sửa tại chỗ: phần chung + khối Admin + tab "Đánh giá"
+  python3 tools/nangluc.py <file-html-trang-quan-ly>   # sửa tại chỗ: phần chung + khối Admin + tab "Học sinh"
                                                         # rồi Artifact publish file đó (url trang quản lý)
                                                         # và python3 tools/sync_thi_thu.py <file> để cập nhật site
   python3 tools/nangluc.py --site                       # chỉ sửa phần học sinh thấy: chèn lại phần chung vào
@@ -20,12 +20,16 @@ BOOT_MARK = "/* ---------- boot ---------- */"
 ADMIN_END = "  return { init:init, render:render };\n})();"
 OLD_BOOT = "!ngheBoot()) studentLanding();"
 NEW_BOOT = "!ngheBoot() && !reportBoot()) studentLanding();"
-HOOKS = [  # (đã có thì bỏ qua, chưa có thì thay)
-    ('tabBtn("danhgia","Đánh giá")', 'tabBtn("lop","Lớp học")', 'tabBtn("lop","Lớp học") + tabBtn("danhgia","Đánh giá")'),
-    ('S.tab === "danhgia") renderDanhGia(body);', '    else if(S.tab === "lop") renderLop(body);\n',
-     '    else if(S.tab === "lop") renderLop(body);\n    else if(S.tab === "danhgia") renderDanhGia(body);\n'),
-    ('S.tab === "danhgia" && S.nlId', '    if(S.tab === "cham") return;\n',
-     '    if(S.tab === "cham") return;\n    if(S.tab === "danhgia" && S.nlId) return;\n'),
+HOOKS = [  # (cũ, mới): còn chỗ cũ thì thay; đã là bản mới thì bỏ qua. Tab "Học sinh" thay 3 tab Học viên & lịch, Đánh giá, Sổ điểm.
+    ('var S = { tab:"hocvien",', 'var S = { tab:"hocsinh",'),
+    ('tabBtn("hocvien","Học viên & lịch") + tabBtn("lop","Lớp học") + tabBtn("danhgia","Đánh giá")', 'tabBtn("hocsinh","Học sinh") + tabBtn("lop","Lớp học")'),
+    (' + tabBtn("so","Sổ điểm")', ''),
+    ('    if(S.tab === "giao") renderGiao(body);\n',
+     '    if(S.tab === "hocvien" || S.tab === "danhgia" || S.tab === "so") S.tab = "hocsinh";\n    if(S.tab === "hocsinh") renderHocSinh(body);\n    else if(S.tab === "giao") renderGiao(body);\n'),
+    ('    else if(S.tab === "so") renderSo(body);\n', ''),
+    ('    else if(S.tab === "hocvien") renderStudents(body);\n', ''),
+    ('    else if(S.tab === "danhgia") renderDanhGia(body);\n', ''),
+    ('    if(S.tab === "danhgia" && S.nlId) return;\n', '    if(S.tab === "hocsinh" && S.nlId && S.hpt === "nx" && kind !== "students") return;\n'),
 ]
 
 
@@ -59,10 +63,12 @@ def admin_page(path):
     shared, admin = parts()
     src = put(src, "/* ==NL== */", "/* ==/NL== */", shared, BOOT_MARK)
     src = put(src, "  /* ==NLA== */", "  /* ==/NLA== */", admin, ADMIN_END)
-    for done, old, new in HOOKS:
-        if done not in src:
-            assert src.count(old) == 1, "không thấy chỗ móc: " + old
+    for old, new in HOOKS:
+        if old in src:
+            assert src.count(old) == 1, "chỗ móc bị lặp: " + old
             src = src.replace(old, new)
+        else:
+            assert not new or new in src, "không thấy chỗ móc: " + old
     src = boot(src)
     open(path, "w", encoding="utf-8").write(src)
     print("Đã chèn Đánh giá năng lực vào", path)
