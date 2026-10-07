@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kiểm tra nền tảng Seoul 1A–2B · Hàn Ngữ Nari</title>
+<meta name="description" content="Bài kiểm tra chẩn đoán nền tảng giáo trình tiếng Hàn Seoul 1A–2B trước khi học 3A — Hàn ngữ Nari.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="../../thi-thu/icon/icon-192.png">
+<style>
+:root{--ink:#111;--line:#555;--soft:#d8dde6;--sub:#f3f4f6;--muted:#666;--bg:#fff;--acc:#1f5c8a;--ok:#1d7a3a;--okbg:#e7f5ec;--bad:#b0283c;--badbg:#fbe9ec;--warn:#9a6400;--warnbg:#fff4dc}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Arial,"Noto Sans KR","Malgun Gothic",sans-serif}
+main{max-width:760px;margin:0 auto;padding:16px 16px 64px}
+.brand{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--soft)}
+.brand b{display:block;font-size:18px}
+.brand span{font-size:14px;color:var(--muted)}
+.brand span a{color:inherit;text-decoration:none;border-bottom:1px dotted var(--muted)}
+.co{flex:none;display:flex;flex-direction:column;align-items:center;gap:3px;text-decoration:none;color:var(--muted);font-size:12px}
+.co i{width:40px;height:40px;border-radius:50%;background:#1f3c88;color:#fff;display:grid;place-items:center;font:bold 17px Georgia,serif;font-style:normal}
+h1{font-size:24px;margin:6px 0 4px}
+h2{font-size:20px;margin:28px 0 4px;padding-top:8px;border-top:2px solid var(--ink)}
+h2 small{display:block;font-size:14px;font-weight:normal;color:var(--muted);margin-top:2px}
+.intro{color:#333}
+.intro li{margin:2px 0}
+.ko{font-family:"Noto Sans KR","Malgun Gothic","Apple SD Gothic Neo",sans-serif}
+.card{border:1px solid var(--soft);border-radius:10px;padding:12px 14px;margin:12px 0;background:#fff}
+.card.need{border-color:var(--warn);box-shadow:0 0 0 2px var(--warnbg)}
+.qn{font-size:13px;color:var(--muted);margin-bottom:4px}
+.qt{font-size:17px;margin:0 0 4px}
+.vi{font-size:14px;color:var(--muted);margin:0 0 8px;font-style:italic}
+.blank{display:inline-block;min-width:3.5em;border-bottom:2px solid var(--ink);text-align:center;color:var(--acc);font-weight:bold}
+.opts{display:grid;gap:6px}
+.opt{display:flex;gap:10px;align-items:flex-start;text-align:left;font:inherit;font-size:16px;padding:9px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);cursor:pointer;width:100%}
+.opt b{flex:none;width:22px;height:22px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;font-size:13px}
+.opt.on{background:#e8f0f8;border-color:var(--acc);box-shadow:inset 0 0 0 1px var(--acc)}
+.opt.on b{background:var(--acc);color:#fff;border-color:var(--acc)}
+.opt.idk{border-style:dashed;color:var(--muted);font-size:14px;padding:6px 12px}
+.in{width:100%;font:inherit;font-size:18px;padding:9px 12px;border:1px solid var(--line);border-radius:8px}
+.conf{display:flex;gap:6px;align-items:center;margin-top:8px;font-size:14px;color:var(--muted);flex-wrap:wrap}
+.conf button{font:inherit;font-size:14px;padding:4px 12px;border:1px solid var(--line);border-radius:16px;background:#fff;cursor:pointer;color:var(--ink)}
+.conf button.on{background:var(--ink);color:#fff}
+.passage{background:var(--sub);border-radius:8px;padding:10px 14px;margin:12px 0;font-size:16px;line-height:1.75}
+.self label{display:flex;gap:8px;align-items:flex-start;padding:4px 0}
+.self input[type=checkbox]{margin-top:5px;width:18px;height:18px;flex:none}
+.rate{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 10px;align-items:center}
+.rate .st{display:flex;gap:4px}
+.rate .st button{font:inherit;width:36px;height:32px;border:1px solid var(--line);border-radius:6px;background:#fff;cursor:pointer}
+.rate .st button.on{background:var(--acc);color:#fff;border-color:var(--acc)}
+textarea{width:100%;font:inherit;padding:8px 10px;border:1px solid var(--line);border-radius:8px;min-height:70px}
+.name{display:flex;gap:8px;align-items:center;margin:12px 0}
+.name input{flex:1;font:inherit;padding:8px 10px;border:1px solid var(--line);border-radius:8px}
+.bar{position:sticky;bottom:0;background:#fff;border-top:1px solid var(--soft);padding:10px 0;margin-top:20px;display:flex;gap:10px;align-items:center;justify-content:space-between}
+.bar .prog{font-size:14px;color:var(--muted)}
+.btn{font:inherit;font-weight:bold;padding:10px 18px;border-radius:8px;border:0;background:var(--acc);color:#fff;cursor:pointer}
+.btn.ghost{background:#fff;color:var(--ink);border:1px solid var(--line);font-weight:normal}
+/* kết quả */
+.sum{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin:12px 0}
+.tile{border:1px solid var(--soft);border-radius:10px;padding:10px 12px}
+.tile .k{font-size:13px;color:var(--muted)}
+.tile .v{font-size:22px;font-weight:bold}
+.tile .m{height:6px;background:var(--sub);border-radius:3px;margin-top:6px;overflow:hidden}
+.tile .m i{display:block;height:100%;background:var(--acc)}
+.tile.lo .m i{background:var(--bad)}
+.tile.mid .m i{background:var(--warn)}
+.tile .g{font-size:12.5px;color:var(--muted);margin-top:4px}
+table{border-collapse:collapse;width:100%;font-size:15px;margin:8px 0}
+th,td{border:1px solid var(--soft);padding:6px 8px;text-align:left;vertical-align:top}
+th{background:var(--sub);font-weight:bold}
+td.n{text-align:center;white-space:nowrap}
+.tag{display:inline-block;font-size:12px;padding:1px 7px;border-radius:10px;margin-right:4px;white-space:nowrap}
+.t-ok{background:var(--okbg);color:var(--ok)}
+.t-bad{background:var(--badbg);color:var(--bad)}
+.t-warn{background:var(--warnbg);color:var(--warn)}
+.t-mut{background:var(--sub);color:var(--muted)}
+.rv{border-left:4px solid var(--bad);padding:8px 12px;margin:10px 0;background:#fff}
+.rv.guess{border-left-color:var(--warn)}
+.rv.skip{border-left-color:#999}
+.rv .why{font-size:14.5px;color:#333;margin-top:4px}
+.rv .ans{font-size:15px;margin-top:2px}
+.note{background:var(--warnbg);border-radius:8px;padding:10px 12px;font-size:15px}
+.share{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.who{background:#e8f0f8;border-radius:8px;padding:10px 12px;margin:8px 0}
+@media print{.bar,.share,.noprint{display:none!important}.card{break-inside:avoid}}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <div class="brand">
+    <div><b>Hàn ngữ Nari – Cô Ngân</b><span>Quỳnh Lưu, Nghệ An · Zalo: <a href="https://zalo.me/0399214554">0399.214.554</a></span></div>
+    <a class="co" href="../../ve-co/"><i>N</i>Về cô</a>
+  </div>
+  <h1>Kiểm tra nền tảng Seoul 1A–2B</h1>
+</header>
+<div id="app"></div>
+</main>
+<script>
+/* ===== Đề =====
+   o: lựa chọn, phần tử đầu là đáp án đúng (trang tự đảo thứ tự). Mỗi lựa chọn sai kèm ghi chú lỗi.
+   a: đáp án gõ (nhiều cách đúng), w: lỗi hay gặp → ghi chú.
+   need: bài 3A sẽ dùng lại kiến thức này. */
+var SECS = [
+ {k:"A", t:"Từ vựng", d:"Chọn nghĩa đúng (12 câu)"},
+ {k:"B", t:"Chia đuôi", d:"Gõ từ đã chia vào ô trống (10 câu)"},
+ {k:"C", t:"Tiểu từ", d:"Chọn tiểu từ đúng (6 câu)"},
+ {k:"D", t:"Ngữ pháp theo bài", d:"Chọn câu đúng với nghĩa tiếng Việt (17 câu)"},
+ {k:"E", t:"Đọc hiểu", d:"Đọc đoạn văn rồi trả lời (4 câu)"},
+ {k:"F", t:"Thử trước 3A", d:"Ngữ pháp của 3A, em chưa học cũng không sao — cứ chọn “Em chưa học” (4 câu)"}
+];
+var P1 = "저는 지난달에 학교 근처 원룸으로 이사했어요. 전에는 기숙사에서 살았어요. 기숙사는 학교 안에 있어서 편했지만 방이 좁고 룸메이트가 있어서 혼자 공부하기가 어려웠어요. 지금 사는 원룸은 월세가 좀 비싸지만 조용하고 창문이 커서 밝아요. 지하철역도 걸어서 5분이면 갈 수 있어요. 다만 관리비를 따로 내야 해서 생활비가 전보다 많이 들어요.";
+var P2 = "한국에 처음 왔을 때는 한국어를 잘 못해서 많이 힘들었어요. 식당에서 음식을 시킬 때도 메뉴를 읽을 수 없어서 사진만 보고 주문했어요. 그런데 한국 친구를 사귄 후에 한국어 실력이 많이 좋아졌어요. 그 친구가 주말마다 저와 같이 시장에 가서 물건을 사는 방법을 가르쳐 줬어요. 이제는 혼자서도 길을 잘 찾고 은행 일도 볼 수 있어요.";
+var Q = [
+ // A. Từ vựng — Hàn → Việt
+ {id:"A1",s:"A",b:"1B",l:"Bài 11 · Bệnh",g:"Từ vựng triệu chứng",q:"콧물이 나다",o:[["chảy nước mũi"],["bị sốt","nhầm với 열이 나다"],["bị ho","nhầm với 기침을 하다"],["đau họng","nhầm với 목이 아프다"]]},
+ {id:"A2",s:"A",b:"1B",l:"Bài 13 · Giao thông",g:"Từ vựng giao thông",q:"갈아타다",o:[["đổi xe, chuyển tuyến"],["lên xe","nhầm với 타다"],["xuống xe","nhầm với 내리다"],["đi bộ","nhầm với 걸어가다"]]},
+ {id:"A3",s:"A",b:"2A",l:"Bài 4 · Mua sắm",g:"Biểu hiện mua sắm",q:"마음에 들다",o:[["vừa ý, thích"],["lo lắng","nhầm với 걱정하다"],["nhớ, nhớ nhung","nhầm với 보고 싶다"],["quyết tâm","nhầm với 마음을 먹다"]]},
+ {id:"A4",s:"A",b:"2A",l:"Bài 5 · Du lịch",g:"Từ vựng du lịch",q:"일정",o:[["lịch trình"],["điểm xuất phát","nhầm với 출발지"],["chỗ ở","nhầm với 숙소"],["xuất cảnh","nhầm với 출국"]]},
+ {id:"A5",s:"A",b:"2B",l:"Bài 12 · Tính cách",g:"Từ vựng tính cách",q:"내성적이다",o:[["hướng nội, rụt rè"],["hướng ngoại","nhầm với 외향적이다"],["tích cực","nhầm với 적극적이다"],["nóng tính","nhầm với 성격이 급하다"]]},
+ {id:"A6",s:"A",b:"2B",l:"Bài 13 · Nhà ở",g:"Từ vựng nhà ở",q:"관리비",o:[["phí quản lý (chung cư, nhà trọ)"],["tiền thuê nhà hằng tháng","nhầm với 월세"],["tiền đặt cọc","nhầm với 보증금"],["tiền điện","nhầm với 전기 요금"]]},
+ // A. Việt → Hàn
+ {id:"A7",s:"A",b:"1B",l:"Bài 14 · Quần áo",g:"Tính từ miêu tả",q:"dày (sách, áo…)",o:[["두껍다"],["얇다","nghĩa ngược lại: mỏng"],["짧다","nhầm: ngắn"],["가볍다","nhầm: nhẹ"]]},
+ {id:"A8",s:"A",b:"1B",l:"Bài 9 · Gia đình",g:"Từ kính ngữ",q:"họ tên (kính ngữ)",o:[["성함"],["연세","nhầm: tuổi (kính ngữ)"],["댁","nhầm: nhà (kính ngữ)"],["이름","đúng nghĩa nhưng không phải kính ngữ"]]},
+ {id:"A9",s:"A",b:"2A",l:"Bài 6 · Bưu điện, ngân hàng",g:"Từ vựng ngân hàng",q:"con dấu",o:[["도장"],["통장","nhầm: sổ tài khoản"],["봉투","nhầm: phong bì"],["우표","nhầm: tem"]]},
+ {id:"A10",s:"A",b:"2A",l:"Bài 9 · Bệnh viện",g:"Từ vựng bệnh viện",q:"được điều trị, chữa bệnh",o:[["치료를 받다"],["주사를 맞다","nhầm: tiêm"],["약을 바르다","nhầm: bôi thuốc"],["입원하다","nhầm: nhập viện"]]},
+ {id:"A11",s:"A",b:"2B",l:"Bài 10 · Ăn uống",g:"Từ vựng nhà hàng",q:"gọi món",o:[["시키다"],["계산하다","nhầm: thanh toán"],["배달하다","nhầm: giao hàng"],["예약하다","nhầm: đặt chỗ"]]},
+ {id:"A12",s:"A",b:"2B",l:"Bài 15 · Cuộc sống",g:"Từ vựng học tập",q:"tốt nghiệp",o:[["졸업하다"],["입학하다","nhầm: nhập học"],["취직하다","nhầm: xin được việc"],["퇴근하다","nhầm: tan làm"]]},
+ // B. Chia đuôi (gõ)
+ {id:"B1",s:"B",b:"1A",l:"Bất quy tắc ㅂ",g:"Bất quy tắc ㅂ",q:"오늘 날씨가 정말 ___.",h:"춥다 + -아요/어요",a:["추워요"],w:{"춥어요":"Chưa biết bất quy tắc ㅂ: ㅂ + 아/어 → 워.","추어요":"Bỏ ㅂ nhưng chưa đổi thành 우 (ㅂ → 우 + 어 = 워)."},gen:"Bất quy tắc ㅂ: 춥다 → 추 + 우 + 어요 → 추워요."},
+ {id:"B2",s:"B",b:"1B",l:"Bất quy tắc ㄷ",g:"Bất quy tắc ㄷ",q:"저는 매일 한국 음악을 ___.",h:"듣다 + -아요/어요",a:["들어요"],w:{"듣어요":"Chưa biết bất quy tắc ㄷ: ㄷ + nguyên âm → ㄹ.","드러요":"Viết theo cách đọc, chưa nắm chính tả (들어요)."},gen:"Bất quy tắc ㄷ: 듣다 → 들어요.",need:"3A bài 4 (먹어 보니까, 들어 보니까)"},
+ {id:"B3",s:"B",b:"2A",l:"Bất quy tắc ㅅ",g:"Bất quy tắc ㅅ",q:"감기가 다 ___.",h:"낫다 + -았어요/었어요",a:["나았어요"],w:{"낫았어요":"Chưa biết bất quy tắc ㅅ: ㅅ mất trước nguyên âm.","났어요":"Bỏ ㅅ rồi gộp 나+았 → 났 (sai, ㅅ mất nhưng không gộp: 나았어요)."},gen:"Bất quy tắc ㅅ: 낫다 → 나았어요.",need:""},
+ {id:"B4",s:"B",b:"1B",l:"Bất quy tắc 르",g:"Bất quy tắc 르",q:"KTX가 정말 ___.",h:"빠르다 + -아요/어요",a:["빨라요"],w:{"빠라요":"Biết 르 → 라 nhưng quên thêm ㄹ vào âm trước (빨라요).","빠르어요":"Chưa biết bất quy tắc 르.","빨르어요":"Chưa biết bất quy tắc 르: 빠르 + 아요 → 빨라요."},gen:"Bất quy tắc 르: 빠르다 → 빨라요.",need:""},
+ {id:"B5",s:"B",b:"2A",l:"Bất quy tắc ㅎ",g:"Bất quy tắc ㅎ",q:"저는 ___ 가방을 샀어요.",h:"빨갛다 + -(으)ㄴ (định ngữ)",a:["빨간"],w:{"빨갛은":"Chưa biết bất quy tắc ㅎ: ㅎ mất trước -(으)ㄴ.","빨갛는":"Dùng -는 cho tính từ (tính từ dùng -(으)ㄴ) và chưa biết bất quy tắc ㅎ.","빨가는":"Dùng -는 cho tính từ; tính từ hiện tại dùng -(으)ㄴ."},gen:"Bất quy tắc ㅎ: 빨갛다 → 빨간.",need:""},
+ {id:"B6",s:"B",b:"2A",l:"Định ngữ + ㄹ",g:"Định ngữ hiện tại (ㄹ)",q:"서울에 ___ 친구가 있어요.",h:"살다 + -는 (định ngữ)",a:["사는"],w:{"살는":"Gốc có ㄹ: ㄹ mất trước -는 (사는).","살은":"Dùng định ngữ quá khứ/tính từ; động từ hiện tại dùng -는.","산":"Đây là định ngữ quá khứ (đã sống); hiện tại là 사는."},gen:"ㄹ + -는 → ㄹ mất: 살다 → 사는."},
+ {id:"B7",s:"B",b:"1B",l:"Bài 9 · Kính ngữ",g:"Kính ngữ đặc biệt",q:"할머니께서 지금 방에서 ___.",h:"자다 → kính ngữ + -(으)세요",a:["주무세요","주무십니다","주무시고 계세요"],w:{"자세요":"Biết thêm -(으)시- nhưng chưa biết từ kính ngữ riêng của 자다 là 주무시다.","자요":"Chưa dùng kính ngữ với người lớn (께서 → động từ phải kính ngữ)."},gen:"자다 → 주무시다 → 주무세요.",need:""},
+ {id:"B8",s:"B",b:"2A",l:"Định ngữ quá khứ",g:"Định ngữ quá khứ -(으)ㄴ",q:"어제 ___ 음식이 맛있었어요.",h:"먹다 + định ngữ quá khứ",a:["먹은"],w:{"먹는":"Dùng định ngữ hiện tại; việc đã xảy ra (어제) dùng -(으)ㄴ.","먹을":"Dùng định ngữ tương lai; việc đã xảy ra dùng -(으)ㄴ.","먹던":"-던 là ngữ pháp 3A (hồi tưởng); ở đây chỉ cần -(으)ㄴ."},gen:"Động từ + -(으)ㄴ = đã làm: 먹은.",need:"3A bài 3 (-(으)ㄴ/는/(으)ㄹ 줄 몰랐다)"},
+ {id:"B9",s:"B",b:"2A",l:"Định ngữ tương lai",g:"Định ngữ tương lai -(으)ㄹ",q:"내일 ___ 사람이 누구예요?",h:"만나다 + định ngữ tương lai",a:["만날"],w:{"만나는":"Dùng định ngữ hiện tại; việc sẽ xảy ra (내일) dùng -(으)ㄹ.","만난":"Dùng định ngữ quá khứ; việc sẽ xảy ra dùng -(으)ㄹ.","만나을":"Gốc kết thúc bằng nguyên âm thì chỉ thêm ㄹ."},gen:"Động từ + -(으)ㄹ = sẽ làm: 만날.",need:"3A bài 3 (-(으)ㄹ 줄 몰랐다), bài 5 (-(으)ㄹ걸)"},
+ {id:"B10",s:"B",b:"1A",l:"Quá khứ · bỏ ㅡ",g:"Thì quá khứ (ㅡ)",q:"어제는 너무 ___.",h:"바쁘다 + -았어요/었어요",a:["바빴어요"],w:{"바쁘었어요":"Chưa biết quy tắc bỏ ㅡ: 바쁘 + 았 → 바빴.","바쁘았어요":"Chưa biết quy tắc bỏ ㅡ: 바쁘 + 았 → 바빴.","바뻤어요":"Chọn sai 았/었: nguyên âm trước ㅡ là ㅏ → 았 (바빴어요)."},gen:"Bỏ ㅡ, nhìn nguyên âm trước (ㅏ) → 았: 바빴어요.",need:"3A bài 7 (-았/었다가)"},
+ // C. Tiểu từ
+ {id:"C1",s:"C",b:"1A",l:"에서 – 에",g:"에서 (nơi hành động)",q:"저는 도서관<span class=blank>( )</span> 공부해요.",o:[["에서"],["에","에 dùng cho nơi tồn tại/đích đến; nơi diễn ra hành động dùng 에서."],["을","을/를 là tân ngữ; 도서관 là nơi chốn."],["로","(으)로 chỉ hướng/phương tiện."]]},
+ {id:"C2",s:"C",b:"1A",l:"에 – 에서",g:"에 (đích đến)",q:"내일 친구 집<span class=blank>( )</span> 가요.",o:[["에"],["에서","Với 가다/오다, đích đến dùng 에."],["를","Đích đến của 가다 không dùng 를 (trong văn chuẩn)."],["이","이/가 là chủ ngữ."]]},
+ {id:"C3",s:"C",b:"1A",l:"이/가 – 은/는",g:"이/가 (trả lời 누가)",q:"A: 누가 왔어요?<br>B: 민수 씨<span class=blank>( )</span> 왔어요.",o:[["가"],["는","Trả lời câu hỏi 누가/무엇이 thì thông tin mới dùng 이/가, không dùng 은/는."],["를","을/를 là tân ngữ, 민수 là người làm (chủ ngữ)."],["에","에 không đánh dấu chủ ngữ."]]},
+ {id:"C4",s:"C",b:"1B",l:"Bài 13 · (으)로",g:"(으)로 (phương tiện)",q:"저는 버스<span class=blank>( )</span> 학교에 가요.",o:[["로"],["를","Phương tiện dùng (으)로."],["에서","에서 là nơi hành động / điểm xuất phát."],["에","Phương tiện dùng (으)로."]]},
+ {id:"C5",s:"C",b:"1B",l:"한테 – 한테서",g:"한테 (cho ai)",q:"저는 동생<span class=blank>( )</span> 선물을 줬어요.",o:[["한테"],["한테서","한테서 = nhận TỪ ai (받다); cho AI (주다) dùng 한테."],["에서","Người nhận dùng 한테/에게, không dùng 에서."],["로","(으)로 là hướng/phương tiện."]]},
+ {id:"C6",s:"C",b:"2A",l:"So sánh 보다",g:"보다 (so sánh)",q:"오늘은 어제<span class=blank>( )</span> 더 추워요.",o:[["보다"],["처럼","처럼 = giống như; so sánh hơn (더) dùng 보다."],["부터","부터 = từ (thời điểm)."],["만큼","만큼 = bằng; không dùng với 더."]]},
+ // D. Ngữ pháp theo bài
+ {id:"D1",s:"D",b:"1B",l:"Bài 15 · Du lịch",g:"-(으)러 가다",vi:"Tôi đi Busan để ăn hải sản.",q:"해산물을 <span class=blank>( )</span> 부산에 가요.",o:[["먹으러"],["먹러","Gốc có phụ âm cuối phải thêm 으: 먹으러."],["먹으면","-(으)면 = nếu, sai nghĩa."],["먹지만","-지만 = nhưng, sai nghĩa."]]},
+ {id:"D2",s:"D",b:"1B",l:"Bài 16 · Mời",g:"-(으)ㄹ 수 있다",vi:"Bạn có thể đến nhà tôi không?",q:"우리 집에 <span class=blank>( )</span>?",o:[["올 수 있어요"],["오고 싶어요","-고 싶다 = muốn, không phải 'có thể'."],["와야 돼요","-아/어야 되다 = phải."],["온 적이 있어요","-(으)ㄴ 적이 있다 = đã từng."]]},
+ {id:"D3",s:"D",b:"2A",l:"Bài 3 · Kinh nghiệm",g:"-아/어 본 적이 있다",vi:"Bạn đã từng ăn gà hầm sâm chưa?",q:"삼계탕을 <span class=blank>( )</span>?",o:[["먹어 본 적이 있어요"],["먹을 적이 있어요","Nhầm định ngữ: kinh nghiệm (đã từng) dùng -(으)ㄴ 적."],["먹는 적이 있어요","Nhầm định ngữ: kinh nghiệm (đã từng) dùng -(으)ㄴ 적."],["먹어 보고 싶어요","-고 싶다 = muốn ăn thử, sai nghĩa."]],need:"3A bài 9 (들어 봤어요)"},
+ {id:"D4",s:"D",b:"2A",l:"Bài 4 · Phỏng đoán",g:"-(으)ㄹ 것 같다",vi:"Trời tối quá. Hình như sắp mưa.",q:"하늘이 어두워요. 곧 비가 <span class=blank>( )</span>.",o:[["올 것 같아요"],["온 것 같아요","-(으)ㄴ 것 같다 = hình như ĐÃ mưa; việc sắp xảy ra dùng -(으)ㄹ."],["오는 것 같아요","-는 것 같다 = hình như ĐANG mưa."],["와 봤어요","-아/어 보다 = thử / đã từng."]],need:"3A bài 3, 5 (định ngữ -(으)ㄹ)"},
+ {id:"D5",s:"D",b:"2A",l:"Bài 5 · Điều kiện",g:"-(으)면",vi:"Nếu đến Seoul thì nhất định hãy đi Gyeongbokgung.",q:"서울에 <span class=blank>( )</span> 꼭 경복궁에 가 보세요.",o:[["가면"],["가서","-아/어서 = (đi) rồi, không mang nghĩa 'nếu'."],["가지만","-지만 = nhưng."],["갔는데","-았는데 = đã đi mà/nên, không mang nghĩa 'nếu'."]]},
+ {id:"D6",s:"D",b:"2A",l:"Bài 7 · Hỏi đường",g:"-는지 알다",vi:"Bạn có biết làng Hanok ở đâu không?",q:"한옥마을이 어디에 <span class=blank>( )</span> 아세요?",o:[["있는지"],["있어요","Hai câu nằm trong một câu thì phải nối bằng -는지."],["있는 것","-는 것 = việc…, không dùng cho câu hỏi gián tiếp có 어디."],["있으면","-(으)면 = nếu."]]},
+ {id:"D7",s:"D",b:"2A",l:"Bài 8 · Chia sẻ cảm xúc",g:"-겠어요 (phỏng đoán cảm xúc)",vi:"Bạn: “Mình bị mất ví.” — Đáp: “Chắc bạn buồn lắm.”",q:"정말 <span class=blank>( )</span>.",o:[["속상하겠어요"],["속상해요","Đây là nói cảm xúc của chính mình; đoán cảm xúc người khác dùng -겠어요."],["속상했어요","Quá khứ, cảm xúc của mình."],["속상하고 싶어요","-고 싶다 = muốn, sai nghĩa."]]},
+ {id:"D8",s:"D",b:"2A",l:"Bài 9 · Hỏi, nhờ",g:"-(으)ㄴ/는데 (bối cảnh)",vi:"Tôi muốn đổi áo này, nhưng (mà) tôi không có hóa đơn.",q:"이 옷을 바꾸고 <span class=blank>( )</span> 영수증이 없어요.",o:[["싶은데"],["싶어서","-아/어서 = vì… nên, sai nghĩa."],["싶으면","-(으)면 = nếu."],["싶고","-고 = và, không thể hiện quan hệ bối cảnh."]],need:"3A bài 4 (-던데요 xây trên -는데요)"},
+ {id:"D9",s:"D",b:"2B",l:"Bài 10 · 반말",g:"반말 (câu hỏi)",vi:"Hỏi bạn thân: “Cậu ăn gì?”",q:"<span class=blank>( )</span>",o:[["뭐 먹어?"],["뭐 드세요?","Kính ngữ, dùng với người lớn."],["뭐 먹습니까?","Đuôi trang trọng -습니까."],["뭐 먹어요?","Đuôi lịch sự -요, chưa phải 반말."]],need:"3A bài 2 (방을 바꿔 달라고 해 봐)"},
+ {id:"D10",s:"D",b:"2B",l:"Bài 10 · 반말",g:"반말 (danh từ + 이야/야)",vi:"Nói với bạn: “Tớ là sinh viên.”",q:"<span class=blank>( )</span>",o:[["나는 대학생이야."],["나는 대학생이어.","Danh từ trong 반말 dùng 이야/야, không chia -어."],["저는 대학생이야.","Trộn 저 (khiêm tốn) với 반말; 반말 dùng 나."],["나는 대학생이에요.","Trộn 나 (반말) với đuôi lịch sự -이에요."]],need:"3A bài 1–2 (-(이)라고 하다)"},
+ {id:"D11",s:"D",b:"2B",l:"Bài 11 · Khuyên",g:"-는 게 어때요?",vi:"Hay là bạn thử đi bệnh viện xem sao?",q:"<span class=blank>( )</span>",o:[["병원에 가 보는 게 어때요?"],["병원에 가 봤어요?","= Bạn đã đi bệnh viện chưa? Không phải lời khuyên."],["병원에 갈 거예요?","= Bạn sẽ đi bệnh viện à?"],["병원에 가는 편이에요.","-는 편이다 = thuộc dạng hay…"]]},
+ {id:"D12",s:"D",b:"2B",l:"Bài 12 · Tính cách",g:"-는 편이다",vi:"Tôi thuộc dạng ăn cay khá giỏi.",q:"저는 매운 음식을 잘 <span class=blank>( )</span>.",o:[["먹는 편이에요"],["먹은 편이에요","Thói quen/tính chất dùng -는 편이다 (định ngữ hiện tại)."],["먹을 편이에요","Thói quen/tính chất dùng -는 편이다 (định ngữ hiện tại)."],["먹어 봤어요","= đã ăn thử."]]},
+ {id:"D13",s:"D",b:"2B",l:"Bài 13 · Nhà ở",g:"-아/어서 (lý do) + bất quy tắc ㅂ",vi:"Vì gần ga tàu điện ngầm nên tiện.",q:"지하철역이 <span class=blank>( )</span> 편리해요.",o:[["가까워서"],["가깝어서","Chưa biết bất quy tắc ㅂ (가깝다 → 가까워서)."],["가까웠어서","-아/어서 không gắn với thì quá khứ -았/었-."],["가까우면","-(으)면 = nếu, sai nghĩa."]]},
+ {id:"D14",s:"D",b:"2B",l:"Bài 14 · Cho phép",g:"-아/어도 되다",vi:"Tôi chụp ảnh ở đây có được không?",q:"여기서 사진을 <span class=blank>( )</span>?",o:[["찍어도 돼요"],["찍으면 안 돼요","= không được chụp (cấm), sai nghĩa."],["찍어야 돼요","= phải chụp."],["찍을 수 없어요","= không thể chụp."]]},
+ {id:"D15",s:"D",b:"2B",l:"Bài 15 · Thay đổi",g:"-아/어지다",vi:"Sau khi tập thể dục, sức khỏe đã tốt lên.",q:"운동을 한 후에 건강이 <span class=blank>( )</span>.",o:[["좋아졌어요"],["좋아했어요","Nhầm với 좋아하다 (= thích)."],["좋게 했어요","-게 하다 = làm cho, sai nghĩa."],["좋아 봤어요","-아/어 보다 = thử."]]},
+ {id:"D16",s:"D",b:"2B",l:"Bài 17 · Suýt nữa",g:"-(으)ㄹ 뻔하다",vi:"Tôi suýt nữa thì nhỡ máy bay.",q:"비행기를 <span class=blank>( )</span>.",o:[["놓칠 뻔했어요"],["놓친 뻔했어요","-(으)ㄹ 뻔하다 luôn dùng định ngữ -(으)ㄹ."],["놓쳤어요","= đã nhỡ thật, mất nghĩa 'suýt'."],["놓치면 안 돼요","= không được nhỡ."]]},
+ {id:"D17",s:"D",b:"2B",l:"Bài 18 · Thời gian",g:"-(으)ㄴ 지 (được bao lâu)",vi:"Tôi đến Hàn Quốc được 6 tháng rồi.",q:"한국에 <span class=blank>( )</span> 6개월이 되었어요.",o:[["온 지"],["오는 지","Khoảng thời gian từ khi làm gì dùng -(으)ㄴ 지 (định ngữ quá khứ)."],["올 지","Khoảng thời gian từ khi làm gì dùng -(으)ㄴ 지."],["와서","-아/어서 không diễn tả 'được bao lâu'."]]},
+ // E. Đọc
+ {id:"E1",s:"E",b:"2B",l:"Bài 13 · Nhà ở",g:"Đọc: tìm lý do",p:1,q:"Vì sao người viết chuyển ra khỏi ký túc xá?",o:[["Phòng chật và có bạn cùng phòng nên khó học một mình"],["Ký túc xá xa trường","Đọc nhầm: 학교 안에 있어서 편했지만 = ở trong trường nên tiện."],["Tiền ký túc xá đắt","Đọc nhầm: '비싸다' nói về 월세 của phòng mới."],["Ký túc xá ồn vì gần ga tàu điện","Ghép sai thông tin: ga tàu là của phòng mới."]]},
+ {id:"E2",s:"E",b:"2B",l:"Bài 13 · Nhà ở",g:"Đọc: chọn nội dung đúng",p:1,q:"Câu nào đúng với đoạn văn?",o:[["Từ phòng mới đi bộ 5 phút là đến ga tàu điện"],["Tiền thuê phòng mới rẻ hơn","Đọc nhầm: 월세가 좀 비싸지만 = hơi đắt."],["Phòng mới tối vì cửa sổ nhỏ","Đọc nhầm: 창문이 커서 밝아요 = cửa sổ to nên sáng."],["Bây giờ chi phí sinh hoạt ít hơn trước","Đọc nhầm: 생활비가 전보다 많이 들어요 = tốn hơn trước."]]},
+ {id:"E3",s:"E",b:"2B",l:"Bài 15 · Cuộc sống",g:"Đọc: chi tiết",p:2,q:"Lúc mới sang Hàn, người viết gọi món ăn thế nào?",o:[["Nhìn ảnh rồi gọi"],["Nhờ bạn người Hàn đọc thực đơn","Đọc nhầm: bạn Hàn là chuyện sau này."],["Tự đọc thực đơn tiếng Hàn","Đọc nhầm: 메뉴를 읽을 수 없어서 = không đọc được thực đơn."],["Chỉ ăn ở nhà","Không có trong bài."]]},
+ {id:"E4",s:"E",b:"2B",l:"Bài 15 · Cuộc sống",g:"Đọc: chọn nội dung đúng",p:2,q:"Câu nào đúng với đoạn văn?",o:[["Nhờ người bạn Hàn mà tiếng Hàn tiến bộ nhiều"],["Người bạn dạy tiếng Hàn ở trường mỗi ngày","Đọc nhầm: 주말마다 = mỗi cuối tuần, đi chợ cùng."],["Bây giờ vẫn chưa tự tìm đường được","Đọc nhầm: 혼자서도 길을 잘 찾고 = tự tìm đường giỏi."],["Mỗi cuối tuần người viết đi chợ một mình","Đọc nhầm: 저와 같이 = đi cùng bạn."]]},
+ // F. Thử trước 3A
+ {id:"F1",s:"F",b:"3A",l:"3A Bài 1 · Lời nói gián tiếp",g:"-다고 하다 (tính từ)",vi:"Mina nói: “Ngày mai tôi bận.” → Mina nói là ngày mai bận.",q:"미나 씨가 내일 <span class=blank>( )</span>.",o:[["바쁘다고 했어요"],["바쁜다고 했어요","Tính từ chỉ thêm -다고, không thêm ㄴ (ㄴ/는다고 là của động từ)."],["바쁘자고 했어요","-자고 하다 = rủ, sai nghĩa."],["바쁘라고 했어요","-(으)라고 하다 = bảo (mệnh lệnh), sai nghĩa."]]},
+ {id:"F2",s:"F",b:"3A",l:"3A Bài 1 · Lời nói gián tiếp",g:"-ㄴ/는다고 하다 (động từ)",vi:"Minsu nói: “Tôi đi Busan.” → Minsu nói là đi Busan.",q:"민수 씨가 부산에 <span class=blank>( )</span>.",o:[["간다고 했어요"],["가다고 했어요","Động từ hiện tại phải thêm ㄴ/는: 간다고."],["가라고 했어요","-(으)라고 하다 = bảo (người khác) đi."],["가자고 했어요","-자고 하다 = rủ đi cùng."]]},
+ {id:"F3",s:"F",b:"3A",l:"3A Bài 3 · Bất ngờ",g:"-(으)ㄹ 줄 몰랐다",vi:"Không ngờ trời lại mưa nhiều thế này.",q:"비가 이렇게 많이 <span class=blank>( )</span>.",o:[["올 줄 몰랐어요"],["올 수 없었어요","-(으)ㄹ 수 없다 = không thể."],["오는 줄 알았어요","= Tôi tưởng là đang mưa (ngược nghĩa)."],["와서 몰랐어요","= Vì mưa nên không biết (sai nghĩa)."]]},
+ {id:"F4",s:"F",b:"3A",l:"3A Bài 5 · Hối tiếc",g:"-(으)ㄹ걸 그랬다",vi:"Lẽ ra tôi nên mặc thử rồi mới mua.",q:"입어 보고 <span class=blank>( )</span>.",o:[["살걸 그랬어요"],["산 걸 그랬어요","Mẫu hối tiếc luôn dùng -(으)ㄹ걸."],["사야 돼요","= phải mua (hiện tại), không có nghĩa hối tiếc."],["살 거예요","= sẽ mua."]]}
+];
+var RATE = [["nghe","Nghe hiểu cô nói trên lớp"],["noi","Nói, trả lời câu hỏi"],["doc","Đọc bài khóa"],["viet","Viết câu, viết đoạn"],["tv","Nhớ từ vựng"],["np","Hiểu và dùng ngữ pháp"],["cd","Chia đuôi, bất quy tắc"]];
+var HARD = ["Cô nói nhanh, em không theo kịp","Nhiều từ mới, học xong mau quên","Hiểu ngữ pháp nhưng không biết dùng khi nói/viết","Hay nhầm các ngữ pháp giống nhau","Không nhớ cách chia bất quy tắc","Ngại nói trước lớp","Bài tập về nhà khó, không tự làm được","Không có thời gian ôn bài","Các bài 1A–1B đã quên nhiều"];
+var BOOKS = ["1A","1B","2A","2B"];
+var KEY = "nari-kt-seoul";
+
+/* ===== Tiện ích ===== */
+function $(s){return document.querySelector(s)}
+function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function b64e(obj){return btoa(unescape(encodeURIComponent(JSON.stringify(obj)))).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,"")}
+function b64d(raw){var b=String(raw).replace(/-/g,"+").replace(/_/g,"/");while(b.length%4)b+="=";return JSON.parse(decodeURIComponent(escape(atob(b))))}
+function load(){try{return JSON.parse(localStorage.getItem(KEY))||{}}catch(e){return {}}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+function hash(s){var h=0;for(var i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))|0;return Math.abs(h)}
+function order(q){ // thứ tự hiển thị cố định theo mã câu
+  var idx=q.o.map(function(_,i){return i}),h=hash(q.id+"nari");
+  for(var i=idx.length-1;i>0;i--){h=(h*1103515245+12345)&0x7fffffff;var j=h%(i+1),t=idx[i];idx[i]=idx[j];idx[j]=t}
+  return idx;
+}
+function norm(s){return String(s||"").replace(/[\s.。,!?~]/g,"").normalize("NFC")}
+function qById(id){for(var i=0;i<Q.length;i++)if(Q[i].id===id)return Q[i]}
+
+/* S = {n: tên, a:{id: chỉ số gốc | -1 (chưa học) | "chuỗi gõ"}, c:{id: 1 chắc | 2 đoán}, r:{mã: 1..4}, h:[chỉ số khó khăn], x: ý kiến, d: ngày nộp} */
+var S = load(); S.a=S.a||{}; S.c=S.c||{}; S.r=S.r||{}; S.h=S.h||[];
+
+function isCorrect(q,v){
+  if(v==null||v===""||v===-1)return false;
+  if(q.a){var n=norm(v);return q.a.some(function(x){return norm(x)===n})}
+  return v===0;
+}
+function answered(q){var v=S.a[q.id];return v!=null&&v!==""}
+
+/* ===== Làm bài ===== */
+function renderTest(){
+  var h='<div class="intro"><p>Bài này giúp cô biết em đang vững phần nào, còn hổng phần nào trong Seoul 1A–2B để soạn lộ trình học 3A cho em. <b>Không lấy điểm</b>, em cứ làm thật nhé.</p><ul>'+
+   '<li>Khoảng 40 phút, 53 câu, 6 phần. Bài tự lưu trên máy, tắt đi mở lại vẫn còn.</li>'+
+   '<li>Sau mỗi câu, chọn <b>Chắc chắn</b> hoặc <b>Đoán</b> — phần này quan trọng với cô hơn cả điểm.</li>'+
+   '<li>Câu nào chưa học hoặc không biết thì bấm <b>“Em chưa học / không biết”</b>, đừng đoán bừa.</li>'+
+   '<li>Không tra từ điển, không hỏi bạn.</li></ul></div>'+
+   '<div class="name"><label for="nm"><b>Tên em:</b></label><input id="nm" value="'+esc(S.n||"")+'" placeholder="Họ và tên"></div>';
+  SECS.forEach(function(sec){
+    h+='<h2>Phần '+sec.k+'. '+sec.t+'<small>'+sec.d+'</small></h2>';
+    var lastP=0;
+    Q.forEach(function(q,qi){
+      if(q.s!==sec.k)return;
+      if(q.p&&q.p!==lastP){lastP=q.p;h+='<div class="passage ko">'+(q.p===1?P1:P2)+'</div>'}
+      h+=renderQ(q,qi);
+    });
+  });
+  h+='<h2>Phần G. Em tự đánh giá<small>Không có đúng sai, em chọn theo cảm nhận của mình</small></h2>'+
+   '<div class="card self"><div class="qt">Em thấy mình làm tốt những việc sau đến mức nào? <span class="vi">(1 = rất khó · 4 = dễ)</span></div><div class="rate">';
+  RATE.forEach(function(r){
+    h+='<div>'+r[1]+'</div><div class="st">';
+    for(var i=1;i<=4;i++)h+='<button type="button" data-rate="'+r[0]+'" data-v="'+i+'" class="'+(S.r[r[0]]===i?"on":"")+'">'+i+'</button>';
+    h+='</div>';
+  });
+  h+='</div></div><div class="card self"><div class="qt">Khi học trên lớp, em hay gặp khó khăn nào? <span class="vi">(chọn nhiều)</span></div>';
+  HARD.forEach(function(t,i){h+='<label><input type="checkbox" data-hard="'+i+'"'+(S.h.indexOf(i)>=0?" checked":"")+'> '+t+'</label>'});
+  h+='</div><div class="card"><div class="qt">Phần nào em thấy khó nhất? Em mong học phụ đạo sẽ giúp em điều gì?</div><textarea id="tx" placeholder="Em viết thoải mái…">'+esc(S.x||"")+'</textarea></div>';
+  h+='<div class="bar"><span class="prog" id="prog"></span><button class="btn" id="submit">Nộp bài</button></div>';
+  $("#app").innerHTML=h;
+  bindTest(); prog();
+}
+function renderQ(q,qi){
+  var v=S.a[q.id],c=S.c[q.id],num=qi+1;
+  var h='<div class="card" id="q-'+q.id+'"><div class="qn">Câu '+num+'</div>';
+  if(q.s==="A")h+='<div class="qt"><span class="ko"><b>'+esc(q.q)+'</b></span></div><div class="vi">'+(/[가-힣]/.test(q.q)?"Nghĩa là gì?":"Tiếng Hàn là gì?")+'</div>';
+  else{
+    h+='<div class="qt ko">'+(q.a?esc(q.q).replace("___",'<span class="blank">( )</span>'):q.q)+'</div>';
+    if(q.vi)h+='<div class="vi">'+esc(q.vi)+'</div>';
+    if(q.h)h+='<div class="vi ko">('+esc(q.h)+')</div>';
+  }
+  if(q.a){
+    h+='<input class="in ko" data-in="'+q.id+'" value="'+(typeof v==="string"?esc(v):"")+'" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Gõ tiếng Hàn…">'+
+       '<div class="opts" style="margin-top:6px"><button type="button" class="opt idk'+(v===-1?" on":"")+'" data-q="'+q.id+'" data-v="-1">Em chưa học / không biết</button></div>';
+  }else{
+    h+='<div class="opts">';
+    order(q).forEach(function(oi,k){
+      h+='<button type="button" class="opt'+(v===oi?" on":"")+'" data-q="'+q.id+'" data-v="'+oi+'"><b>'+(k+1)+'</b><span class="'+(/[가-힣]/.test(q.o[oi][0])?"ko":"")+'">'+esc(q.o[oi][0])+'</span></button>';
+    });
+    h+='<button type="button" class="opt idk'+(v===-1?" on":"")+'" data-q="'+q.id+'" data-v="-1">Em chưa học / không biết</button></div>';
+  }
+  h+='<div class="conf" data-conf="'+q.id+'"'+(v===-1?' hidden':'')+'>Em làm câu này: <button type="button" data-c="1" class="'+(c===1?"on":"")+'">Chắc chắn</button><button type="button" data-c="2" class="'+(c===2?"on":"")+'">Đoán</button></div></div>';
+  return h;
+}
+function bindTest(){
+  $("#nm").oninput=function(){S.n=this.value.trim();save()};
+  $("#tx").oninput=function(){S.x=this.value;save()};
+  document.querySelectorAll(".opt").forEach(function(b){b.onclick=function(){
+    var id=b.dataset.q,v=+b.dataset.v;S.a[id]=v;if(v===-1)delete S.c[id];
+    var card=$("#q-"+id);card.querySelectorAll(".opt").forEach(function(x){x.classList.toggle("on",x===b)});
+    card.querySelector(".conf").hidden=v===-1;card.classList.remove("need");
+    var inp=card.querySelector(".in");if(inp&&v===-1)inp.value="";
+    save();prog();
+  }});
+  document.querySelectorAll(".in").forEach(function(inp){inp.oninput=function(){
+    var id=inp.dataset.in,card=$("#q-"+id);S.a[id]=inp.value.trim();
+    var idk=card.querySelector(".idk");if(idk)idk.classList.remove("on");
+    card.querySelector(".conf").hidden=false;card.classList.remove("need");save();prog();
+  }});
+  document.querySelectorAll(".conf button").forEach(function(b){b.onclick=function(){
+    var id=b.parentNode.dataset.conf;S.c[id]=+b.dataset.c;
+    b.parentNode.querySelectorAll("button").forEach(function(x){x.classList.toggle("on",x===b)});save();prog();
+  }});
+  document.querySelectorAll("[data-rate]").forEach(function(b){b.onclick=function(){
+    S.r[b.dataset.rate]=+b.dataset.v;document.querySelectorAll('[data-rate="'+b.dataset.rate+'"]').forEach(function(x){x.classList.toggle("on",x===b)});save();
+  }});
+  document.querySelectorAll("[data-hard]").forEach(function(cb){cb.onchange=function(){
+    var i=+cb.dataset.hard,k=S.h.indexOf(i);if(cb.checked&&k<0)S.h.push(i);if(!cb.checked&&k>=0)S.h.splice(k,1);save();
+  }});
+  $("#submit").onclick=submit;
+}
+function prog(){
+  var n=Q.filter(answered).length;
+  $("#prog").textContent="Đã làm "+n+"/"+Q.length+" câu";
+}
+function submit(){
+  if(!S.n){alert("Em ghi tên trước khi nộp nhé.");$("#nm").focus();return}
+  var miss=Q.filter(function(q){return !answered(q)});
+  var noc=Q.filter(function(q){return answered(q)&&S.a[q.id]!==-1&&!S.c[q.id]});
+  var first=miss[0]||noc[0];
+  document.querySelectorAll(".card.need").forEach(function(c){c.classList.remove("need")});
+  miss.concat(noc).forEach(function(q){$("#q-"+q.id).classList.add("need")});
+  if(miss.length){alert("Em còn "+miss.length+" câu chưa làm (khung vàng). Câu nào không biết thì bấm “Em chưa học / không biết”.");$("#q-"+first.id).scrollIntoView({block:"center"});return}
+  if(noc.length&&!confirm("Còn "+noc.length+" câu em chưa chọn “Chắc chắn / Đoán” (khung vàng). Vẫn nộp bài?")){$("#q-"+first.id).scrollIntoView({block:"center"});return}
+  S.d=new Date().toISOString().slice(0,10);S.done=1;save();
+  location.hash="";renderResult(S,false);scrollTo(0,0);
+}
+
+/* ===== Kết quả ===== */
+function stat(R,list){
+  var t={n:list.length,ok:0,sure:0,guess:0,idk:0};
+  list.forEach(function(q){var v=R.a[q.id];if(v===-1)t.idk++;if(isCorrect(q,v)){t.ok++;if(R.c[q.id]===2)t.guess++;else t.sure++}});
+  return t;
+}
+function tile(label,t,sub){
+  var p=t.n?t.sure/t.n:0,cl=p<.5?"lo":p<.8?"mid":"";
+  return '<div class="tile '+cl+'"><div class="k">'+label+'</div><div class="v">'+t.ok+'/'+t.n+'</div><div class="m"><i style="width:'+Math.round((t.ok?t.sure/t.n:0)*100)+'%"></i></div><div class="g">'+[sub,t.guess?t.guess+' câu đúng nhờ đoán':'',t.idk?t.idk+' chưa học':''].filter(Boolean).join(' · ')+'</div></div>';
+}
+function wrongNote(q,v){
+  if(v===-1)return "Em chưa học / không biết.";
+  if(q.a){var n=norm(v);for(var k in q.w)if(norm(k)===n)return q.w[k];return q.gen}
+  return (q.o[v]&&q.o[v][1])||"";
+}
+function ansText(q,v){
+  if(v===-1)return "—";
+  if(q.a)return v;
+  return q.o[v]?q.o[v][0]:"";
+}
+function renderResult(R,teacher){
+  var all=stat(R,Q),core=Q.filter(function(q){return q.s!=="F"});
+  var h='';
+  if(teacher)h+='<div class="who">Bài làm của <b>'+esc(R.n)+'</b>'+(R.d?' · nộp ngày '+R.d.split("-").reverse().join("/"):'')+'</div>';
+  else h+='<p>Em đã nộp bài. Bấm <b>“Gửi kết quả cho cô”</b> ở dưới để gửi qua Zalo nhé.</p>';
+  var cs=stat(R,core);
+  h+='<h2>Tổng quan<small>Thanh màu = tỉ lệ câu đúng <b>và chắc chắn</b> (câu đúng nhờ đoán không tính là vững)</small></h2>';
+  h+='<div class="sum">'+tile("Nền tảng 1A–2B (phần A–E)",cs)+'</div>';
+  h+='<h2>Theo phần</h2><div class="sum">';
+  SECS.forEach(function(sec){h+=tile(sec.k+". "+sec.t,stat(R,Q.filter(function(q){return q.s===sec.k})))});
+  h+='</div><h2>Theo cuốn<small>Chỉ tính phần A–E</small></h2><div class="sum">';
+  BOOKS.forEach(function(b){var l=core.filter(function(q){return q.b===b});if(l.length)h+=tile("Seoul "+b,stat(R,l))});
+  h+='</div>';
+  // Cần ôn trước 3A
+  var need=Q.filter(function(q){return q.need&&!(isCorrect(q,R.a[q.id])&&R.c[q.id]!==2)});
+  if(need.length){
+    h+='<h2>Cần ôn trước khi vào 3A<small>Những điểm 3A sẽ dùng lại mà em còn sai hoặc phải đoán</small></h2><table><tr><th>Kiến thức</th><th>3A dùng ở</th></tr>';
+    need.forEach(function(q){h+='<tr><td><span class="ko">'+esc(q.g)+'</span> <span class="tag t-mut">'+q.b+'</span></td><td>'+esc(q.need)+'</td></tr>'});
+    h+='</table>';
+  }
+  // Chi tiết từng câu
+  var bad=Q.filter(function(q){return !isCorrect(q,R.a[q.id])||R.c[q.id]===2});
+  h+='<h2>Các câu cần xem lại<small>'+bad.length+' câu: sai, chưa học, hoặc đúng nhưng đoán</small></h2>';
+  bad.forEach(function(q){
+    var v=R.a[q.id],ok=isCorrect(q,v),cls=ok?"guess":v===-1?"skip":"";
+    var tg=ok?'<span class="tag t-warn">Đúng nhưng đoán</span>':v===-1?'<span class="tag t-mut">Chưa học</span>':'<span class="tag t-bad">Sai</span>'+(R.c[q.id]===1?'<span class="tag t-bad">em tưởng chắc</span>':'');
+    var qtext=q.s==="A"?q.q:(q.vi||q.q.replace(/<[^>]+>/g," "));
+    h+='<div class="rv '+cls+'"><div>'+tg+' <b>Câu '+(Q.indexOf(q)+1)+'</b> · '+esc(q.b)+' '+esc(q.l)+(q.g!==q.l?' · <span class="ko">'+esc(q.g)+'</span>':'')+'</div>'+
+      '<div class="ans ko">'+esc(qtext)+'</div>'+
+      (ok?'':'<div class="ans">Em chọn: <span class="ko">'+esc(ansText(q,v))+'</span> → Đúng: <b class="ko">'+esc(q.a?q.a[0]:q.o[0][0])+'</b></div>')+
+      (!ok&&v!==-1?'<div class="why">'+esc(wrongNote(q,v))+'</div>':'')+'</div>';
+  });
+  if(!bad.length)h+='<p>Em làm đúng và chắc chắn tất cả các câu. Giỏi lắm!</p>';
+  // Tự đánh giá
+  h+='<h2>Em tự đánh giá</h2><table><tr><th>Kỹ năng</th><th class="n">1 khó → 4 dễ</th></tr>';
+  RATE.forEach(function(r){var v=R.r[r[0]];h+='<tr><td>'+r[1]+'</td><td class="n">'+(v?'<span class="tag '+(v<=2?"t-bad":"t-ok")+'">'+v+'</span>':'—')+'</td></tr>'});
+  h+='</table>';
+  if(R.h&&R.h.length)h+='<p><b>Khó khăn khi học:</b></p><ul>'+R.h.map(function(i){return '<li>'+esc(HARD[i])+'</li>'}).join("")+'</ul>';
+  if(R.x)h+='<p><b>Em viết:</b></p><div class="note">'+esc(R.x).replace(/\n/g,"<br>")+'</div>';
+  if(teacher)h+='<h2>Gợi ý đọc kết quả</h2><ul class="intro"><li><b>Sai + “em tưởng chắc”</b>: em hiểu sai, cần dạy lại.</li><li><b>Đúng nhưng đoán</b>: em đã gặp nhưng chưa vững, cần luyện thêm.</li><li><b>Chưa học</b> ở phần A–E: lỗ hổng kiến thức; ở phần F là bình thường (ngữ pháp 3A).</li><li>Phần F đúng chắc → có thể đi nhanh các bài 3A đó.</li></ul>';
+  h+='<div class="share noprint">';
+  if(!teacher)h+='<button class="btn" id="send">Gửi kết quả cho cô</button><button class="btn ghost" id="redo">Làm lại từ đầu</button>';
+  else h+='<button class="btn ghost" onclick="print()">In / lưu PDF</button>';
+  h+='</div>';
+  $("#app").innerHTML=h;
+  if(!teacher){
+    $("#send").onclick=function(){
+      var link=location.href.split("#")[0]+"#r="+b64e({n:R.n,d:R.d,a:R.a,c:R.c,r:R.r,h:R.h,x:R.x||""});
+      var text="Cô ơi, em là "+R.n+", em gửi kết quả bài kiểm tra nền tảng Seoul 1A–2B: "+link;
+      if(navigator.share){navigator.share({title:"Kết quả kiểm tra",text:text}).catch(function(){})}
+      else if(navigator.clipboard){navigator.clipboard.writeText(text).then(function(){alert("Đã chép link kết quả. Em dán vào Zalo gửi cô nhé.")},function(){prompt("Em chép link này gửi cô:",text)})}
+      else prompt("Em chép link này gửi cô:",text);
+    };
+    $("#redo").onclick=function(){if(confirm("Xóa bài đã làm và làm lại từ đầu?")){S={a:{},c:{},r:{},h:[],n:S.n};save();renderTest();scrollTo(0,0)}};
+  }
+}
+
+/* ===== Khởi động ===== */
+function boot(){
+  var m=location.hash.match(/#r=([\w-]+)/);
+  if(m){try{var R=b64d(m[1]);R.a=R.a||{};R.c=R.c||{};R.r=R.r||{};R.h=R.h||[];document.title="Kết quả · "+R.n;renderResult(R,true);return}catch(e){}}
+  if(S.done)renderResult(S,false);else renderTest();
+}
+window.addEventListener("hashchange",boot);
+boot();
+</script>
+</body>
+</html>

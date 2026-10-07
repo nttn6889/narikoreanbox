@@ -174,3 +174,10 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - Lộ trình hàng ngày có “Cách ôn”: ôn ngắt quãng (`vroutes.srs`, link `q:1`) — localStorage `mem.srs[id] = {b, due}`:
   sai → ôn ngày hôm sau, đúng → hỏi lại sau 3, 7, 14 ngày, đúng ở lần 14 ngày → `mem.ok` (đã thuộc). Bài ngày k = từ mới + từ đến hạn
   (tối đa `review`). Chưa làm: nghe chép từ file nghe gốc của sách (cô chưa có file).
+
+## Kiểm tra nền tảng Seoul (`seoul/kiem-tra/`)
+- Bài chẩn đoán cho học sinh học tiếp 3A: 53 câu (A từ vựng 12 · B chia đuôi gõ 10 · C tiểu từ 6 · D ngữ pháp theo bài 1B–2B 17 ·
+  E đọc 4 · F thử trước 3A 4) + tự đánh giá. Mỗi câu chọn “Chắc chắn/Đoán”, có nút “Em chưa học”. Đề nằm trong mảng `Q` của trang
+  (lựa chọn đầu là đáp án, mỗi lựa chọn sai kèm ghi chú lỗi; `need` = bài 3A dùng lại). Bài làm lưu localStorage `nari-kt-seoul`.
+- Nộp xong học sinh bấm “Gửi kết quả cho cô” → link `seoul/kiem-tra/#r=<base64>` (tên + đáp án, chỉ nằm trong link) mở bản báo cáo
+  cho cô. Đổi thứ tự/đáp án câu cũ sẽ làm sai link đã gửi — thêm câu mới thì dùng id mới.
