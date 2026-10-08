@@ -168,18 +168,6 @@ def main(dump):
             if " " not in base and not g["sec"].startswith("Seoul "):
                 kho_vi.setdefault(base, w[2])
 
-    # Từ vựng theo chủ đề (EBS phần 8): dấu ★ theo từ
-    ebs = json.load(open(os.path.join(ROOT, "tu-vung/chu-de.json"), encoding="utf-8"))
-    cdk = {}
-    for m in ebs["muc"]:
-        for _, items in m["g"]:
-            for ko, vi in items:
-                k = star(ko)
-                if k:
-                    cdk[ko] = k
-                if " " not in ko:
-                    kho_vi.setdefault(ko, vi)
-
     def meaning(l):
         return kho_vi.get(l) or nghia.get(l)
 
@@ -213,11 +201,11 @@ def main(dump):
         rows = [r[:3] for r in rows]
         cd.append({"k": tp, "t": BIG[tp], "w": rows[:TOPIC_MAX]})
 
-    out = {"at": int(time.time() * 1000), "nde": len(exams), "hay": HAY, "kho": kho, "cdk": cdk, "uu": uu, "cd": cd}
+    out = {"at": int(time.time() * 1000), "nde": len(exams), "hay": HAY, "kho": kho, "uu": uu, "cd": cd}
     with open(os.path.join(ROOT, "tu-vung/de.json"), "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, separators=(",", ":"))
-    print("%d đề · %d từ ưu tiên · %d mục kho có ★ · %d từ chủ đề EBS có ★ · từ khóa chủ đề: %s" % (
-        len(exams), len(uu), len(kho), len(cdk), ", ".join("%s %d" % (c["k"], len(c["w"])) for c in cd)))
+    print("%d đề · %d từ ưu tiên · %d mục kho có ★ · từ khóa chủ đề: %s" % (
+        len(exams), len(uu), len(kho), ", ".join("%s %d" % (c["k"], len(c["w"])) for c in cd)))
     if missing:
         print("Chưa có nghĩa (thêm vào tools/nghia_de.tsv nếu cần, từ sơ cấp thì bỏ qua): %d" % len(missing))
         print(" ".join(missing))

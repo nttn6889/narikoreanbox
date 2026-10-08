@@ -141,7 +141,7 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 ## Thống kê đề → trang `tu-vung/` (thẻ ⭐ Ưu tiên, Chủ đề, dòng “Hay ra”, dấu ★)
 - `python3 tools/thong_ke_de.py <dump>` (cần `pip install kiwipiepy`; `<dump>` = ArtifactData `list` collection `topics` với `out_dir`)
   đọc `thi-thu/de/*.json` (bỏ dòng hướng dẫn), tách từ về dạng gốc rồi ghi `tu-vung/de.json`: `uu` = từ gặp trong ≥3 đề có nghĩa
-  (kho từ, `tu-vung/chu-de.json` hoặc `tools/nghia_de.tsv`), `kho`/`cdk` = số đề của từng mục kho / từ chủ đề (dấu ★),
+  (kho từ hoặc `tools/nghia_de.tsv`), `kho` = số đề của từng mục kho, kể cả từ chủ đề (dấu ★),
   `cd` = từ khóa theo chủ đề, `hay` = dòng “Hay ra” (viết tay trong script, biến `HAY`).
   Script in ra từ chưa có nghĩa → bổ sung `tools/nghia_de.tsv` (từ sơ cấp thì bỏ qua). Chạy lại sau mỗi lần “đồng bộ đề”.
 - **Chủ đề từng đoạn văn** nằm trong db trang quản lý, collection `topics/<id đề>` = `{units:[{n:[câu…], c: chủ đề lớn, s: số mục EBS 1–55}]}`
@@ -149,9 +149,11 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   gắn chủ đề rồi ArtifactData `set` `topics/<id>`, sau đó chạy lại thống kê. Đề trộn (`mix`) và đề < 10 câu thì không gắn.
 - Tab **“Phân tích đề”** trong trang quản lý (`renderPhanTich`, hằng `PT_BIG`/`PT_SUB`/`PT_GROUPS`): bảng số câu theo chủ đề, chủ đề hay ra theo
   dạng câu, lọc câu theo chủ đề/dạng câu/đề, sửa chủ đề từng đoạn, chọn câu → tạo đề trộn (dùng `buildMixDocs`/`sortMix` như “Tạo đề trộn”).
-- `tu-vung/chu-de.json`: 55 mục từ vựng chủ đề EBS (phần 8 của https://claude.ai/artifact/6NAJ7UnAGUQ6xWkbnhfbdi, đã chia Danh/Động/Tính/Biểu hiện)
-  xếp vào 10 chủ đề lớn + “Đời sống hằng ngày” (`DS`: gia đình, gọi món, chào hỏi, vị trí… — ít gặp ở bài đọc) (`topics[].m` = số mục;
-  “Khác” = `KHAC` chỉ còn Lịch sử). Thẻ “Chủ đề” = từ khóa gặp trong đề + các mục EBS của chủ đề đó.
+- **Từ vựng theo chủ đề nằm trong kho từ** (giao bài được như các phần khác): 55 mục EBS (phần 8 của https://claude.ai/artifact/6NAJ7UnAGUQ6xWkbnhfbdi)
+  xếp vào 11 phần `Chủ đề · <chủ đề lớn>` (secOrder 50 Môi trường … 60 Đời sống hằng ngày — `DS`: gia đình, gọi món, chào hỏi, vị trí… ít gặp ở bài đọc);
+  mỗi mục chia theo từ loại thành nhóm `VCD<số mục>_<0 Danh|1 Động|2 Tính|3 Biểu hiện>` (ko `가정 · 명사`, vi `Gia đình · Danh từ`), id từ `cd<mục>_<loại>_<thứ tự>`.
+  Trang `tu-vung/` không hiện các phần này ở thẻ Đọc; thẻ “Chủ đề” gộp lại theo mục = từ khóa gặp trong đề (`de.json` `cd`, khớp theo tên chủ đề) + các mục của chủ đề.
+  Sửa/thêm từ chủ đề trong trang quản lý rồi “đồng bộ kho từ” là trang tự cập nhật (chạy lại `thong_ke_de.py` để có dấu ★).
 
 ## Từ vựng giáo trình Seoul (`seoul/`) — lớp trung cấp 3 (Seoul 3A/3B) + ôn nền tảng 1A–2B
 - Nguồn soạn tay: `tools/seoul/<cuốn>.tsv` (`# bài | tên Hàn | tên Việt`, `## nhóm Việt | nhóm Hàn`, dòng từ

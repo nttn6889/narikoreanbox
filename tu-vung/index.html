@@ -124,8 +124,9 @@ h4{font-size:14px;margin:12px 0 4px;color:var(--muted)}
   // #c= lọc câu trong thẻ có câu khớp; thẻ khác vẫn hiện đủ, kèm nút “Xem tất cả” để bỏ lọc.
   var PARTS = [{k: 'doc', t: 'Đọc', s: 'Câu 1–50'}, {k: 'nghe', t: 'Nghe', s: 'Câu 1–50'}, {k: 'viet', t: 'Viết', s: 'Câu 51–54'},
                {k: 'uu', t: '⭐ Ưu tiên', s: 'Từ hay gặp'}, {k: 'cd', t: 'Chủ đề', s: '11 chủ đề'}];
-  // tu-vung/de.json (tools/thong_ke_de.py): thống kê từ trong các đề thi thử; tu-vung/chu-de.json: từ vựng theo chủ đề
-  var DE = null, CD = null;
+  // tu-vung/de.json (tools/thong_ke_de.py): thống kê từ trong các đề thi thử.
+  // Từ vựng theo chủ đề nằm trong kho từ (phần "Chủ đề · …", nhóm VCD<mục EBS>_<từ loại>) → thẻ Chủ đề, không hiện ở thẻ Đọc.
+  var DE = null, CD = null, CD_NOTE = {'Đời sống hằng ngày': 'Từ vựng sinh hoạt hằng ngày (chào hỏi, gọi món, vị trí, trang phục…): ít gặp ở bài đọc, chủ yếu dùng cho phần Nghe và giao tiếp.'};
   function star(n){ return n ? '<span class="st' + (n < 3 ? ' lo' : '') + '" title="Gặp trong ' + n + ' đề">' + (n >= 3 ? '★' : '') + n + ' đề</span>' : ''; }
   function partOf(sec){ return /^Nghe/.test(sec) ? 'nghe' : secNum(sec) >= 51 ? 'viet' : 'doc'; }
   function hashArg(name){ var m = new RegExp('[#&]' + name + '=([^&]*)', 'i').exec(location.hash); return m ? m[1] : ''; }
@@ -210,23 +211,26 @@ h4{font-size:14px;margin:12px 0 4px;color:var(--muted)}
              cells(rows.map(function(x){ return [esc(x[0]) + '<span class="mt">' + x[3] + ' lần · câu ' + esc(x[4]) + '</span>', x[1]]; })) + '</section>';
       });
     } else {
-      if (!CD) { msg.textContent = 'Không tải được từ vựng theo chủ đề. Kiểm tra mạng rồi tải lại trang.'; nav.innerHTML = out.innerHTML = ''; return; }
-      var muc = {}, kw = {}, nde = {};
-      CD.muc.forEach(function(m){ muc[m.no] = m; });
-      if (DE) { DE.cd.forEach(function(c){ kw[c.k] = c.w; }); DE.uu.forEach(function(x){ nde[x[0]] = x[2]; }); }
-      CD.topics.forEach(function(t, ti){
-        secs.push(t.t.split(' – ')[0].split(' & ')[0]);
+      if (!CD.length) { msg.textContent = 'Chưa có từ vựng theo chủ đề.'; nav.innerHTML = out.innerHTML = ''; return; }
+      var kw = {}, topics = [], tby = {};
+      if (DE) DE.cd.forEach(function(c){ kw[c.t.split(' – ')[0]] = c.w; });
+      CD.forEach(function(g){
+        var t = g.sec.replace(/^Chủ đề · /, '');
+        if (!tby[t]) { tby[t] = {t: t, muc: [], by: {}}; topics.push(tby[t]); }
+        var T = tby[t], mk = g.id.split('_')[0], ko = g.ko.split(' · '), vi = g.vi.split(' · ');
+        // các nhóm cùng một mục (danh/động/tính/biểu hiện) gộp thành một khối
+        if (!T.by[mk]) { T.by[mk] = {t: ko.slice(0, -1).join(' · ') || ko[0], s: vi.slice(0, -1).join(' · ') || vi[0], rows: []}; T.muc.push(T.by[mk]); }
+        g.w.forEach(function(w){ T.by[mk].rows.push([esc(w[1]) + star(DE && DE.kho[w[0]]), w[2]]); });
+      });
+      topics.forEach(function(T, ti){
+        var t = T.t;
+        secs.push(t.split(' – ')[0].split(' & ')[0]);
         // mỗi mục là một khối: thanh tiêu đề + một bảng Từ vựng | Nghĩa (các từ xếp theo danh → động → tính → biểu hiện)
-        var blocks = [], k = kw[t.k];
+        var blocks = [], k = kw[t.split(' – ')[0]];
         if (k && k.length) blocks.push({t: '★ Từ khóa gặp trong đề', s: 'Dòng nhỏ: số đoạn văn có từ',
           rows: k.map(function(x){ return [esc(x[0]) + '<span class="mt">' + x[2] + ' đoạn văn</span>', x[1]]; })});
-        t.m.forEach(function(no){
-          var m = muc[no], rows = [];
-          if (!m) return;
-          m.g.forEach(function(g){ g[1].forEach(function(x){ rows.push([esc(x[0]) + star(DE && DE.cdk[x[0]]), x[1]]); }); });
-          blocks.push({t: m.ko, s: m.vi, rows: rows});
-        });
-        h += '<section class="sec"><h2>' + esc(t.t) + '</h2>' + (t.n ? '<p class="intro">' + esc(t.n) + '</p>' : '') +
+        blocks = blocks.concat(T.muc);
+        h += '<section class="sec"><h2>' + esc(t) + '</h2>' + (CD_NOTE[t] ? '<p class="intro">' + esc(CD_NOTE[t]) + '</p>' : '') +
              '<div class="chips">' + blocks.map(function(b, bi){
                return '<a href="javascript:void 0" data-jump="b' + ti + '_' + bi + '">' + esc(b.t) + '</a>';
              }).join('') + '</div>';
@@ -283,11 +287,14 @@ h4{font-size:14px;margin:12px 0 4px;color:var(--muted)}
     if (cache) return render(cache);
     function get(u){ return fetch(u, {cache: 'no-cache'}).then(function(r){ return r.json(); }); }
     var opt = function(u){ return get(u).catch(function(){ return null; }); };  // thống kê không có thì trang vẫn chạy
-    Promise.all([get('../thi-thu/vocab.json'), opt('de.json'), opt('chu-de.json')])
+    Promise.all([get('../thi-thu/vocab.json'), opt('de.json')])
       .then(function(r){
-        DE = r[1]; CD = r[2]; cache = r[0];
+        DE = r[1]; cache = r[0];
         cache.g = cache.g.filter(function(g){ return !/^Seoul /.test(g.sec); });  // từ giáo trình Seoul ở trang ../seoul/
-        upd(cache); render(cache);
+        upd(cache);
+        CD = cache.g.filter(function(g){ return /^Chủ đề · /.test(g.sec); });
+        cache.g = cache.g.filter(function(g){ return !/^Chủ đề · /.test(g.sec); });
+        render(cache);
       })
       .catch(function(){ msg.textContent = 'Không tải được từ vựng. Kiểm tra mạng rồi tải lại trang.'; });
   }
