@@ -224,3 +224,9 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - Mỗi buổi có trắc nghiệm nhận diện (mảng `MCQ`, câu tự soạn, lựa chọn đầu là đáp án) và đề thật: đề + đáp án + `pat` + gợi ý 3 bậc
   nhúng sẵn trong biến `Q` (lấy từ `wbank` lúc soạn trang; sửa gợi ý trong trang quản lý thì phải chép lại vào đây).
 - Học sinh tự chấm 0–5 mỗi ô (trùng đáp án mẫu tự cho 5), bài lưu localStorage `nari-52`, nút “Gửi kết quả cho cô…” chia sẻ đoạn chữ qua Zalo.
+
+## Học câu 51 trong 3 buổi (`viet-51/`)
+- Cùng khung với `viet-52/` (code trang chép từ đó): Buổi 1 (ô cuối câu và câu hỏi “?”, 13 kỳ: 70, 72, 73, 74, 78, 79, 80, 82, 87, 91, 94, 95, 103),
+  Buổi 2 (ô giữa câu, 13 kỳ: 75, 76, 77, 81, 83–86, 88–90, 92, 93), Buổi 3 (làm như thi, 4 phút/câu: 96–102, 104–106), thẻ Bảng tra (12 nhóm, thống kê 72 ô). Link `viet-51/#b=1|2|3|tra`.
+- Đề + gợi ý nhúng trong biến `Q` (lấy từ `wbank` W51_*; sửa trong trang quản lý thì chép lại). Cảnh báo đuôi: ô cuối câu viết -다 / -요, ô giữa câu viết -ㅂ니다.
+  Bài lưu localStorage `nari-51`.
