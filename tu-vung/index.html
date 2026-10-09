@@ -123,9 +123,10 @@ h4{font-size:14px;margin:12px 0 4px;color:var(--muted)}
   // Ba thẻ Đọc / Nghe / Viết (luôn hiện). #k=nghe, #k=viet mở thẻ tương ứng.
   // #c= lọc câu trong thẻ có câu khớp; thẻ khác vẫn hiện đủ, kèm nút “Xem tất cả” để bỏ lọc.
   var PARTS = [{k: 'doc', t: 'Đọc', s: 'Câu 1–50'}, {k: 'nghe', t: 'Nghe', s: 'Câu 1–50'}, {k: 'viet', t: 'Viết', s: 'Câu 51–54'},
-               {k: 'uu', t: '⭐ Ưu tiên', s: 'Từ hay gặp'}, {k: 'cd', t: 'Chủ đề', s: '11 chủ đề'}];
+               {k: 'uu', t: '⭐ Cốt lõi', s: 'Từ đề nào cũng có'}, {k: 'cd', t: 'Chủ đề', s: '11 chủ đề'}];
   // tu-vung/de.json (tools/thong_ke_de.py): thống kê từ trong các đề thi thử; tu-vung/chu-de.json: từ vựng theo chủ đề
-  var DE = null, CD = null;
+  // CORE: phần “Cốt lõi · Tầng …” của kho từ (tools/cot_loi_kho.py) — từ lặp lại trong 20 đề đọc, cũng là từ của lộ trình hằng ngày
+  var DE = null, CD = null, CORE = [];
   function star(n){ return n ? '<span class="st' + (n < 3 ? ' lo' : '') + '" title="Gặp trong ' + n + ' đề">' + (n >= 3 ? '★' : '') + n + ' đề</span>' : ''; }
   function partOf(sec){ return /^Nghe/.test(sec) ? 'nghe' : secNum(sec) >= 51 ? 'viet' : 'doc'; }
   function hashArg(name){ var m = new RegExp('[#&]' + name + '=([^&]*)', 'i').exec(location.hash); return m ? m[1] : ''; }
@@ -194,20 +195,23 @@ h4{font-size:14px;margin:12px 0 4px;color:var(--muted)}
   function renderExtra(part){
     var secs = [], h = '';
     if (part === 'uu') {
-      if (!DE) { msg.textContent = 'Không tải được thống kê đề. Kiểm tra mạng rồi tải lại trang.'; nav.innerHTML = out.innerHTML = ''; return; }
-      // nhóm theo số đề: n–(n-1), …, rồi 4 và 3 riêng
-      var n = DE.nde, tiers = [], hi = n;
-      while (hi >= 3) { var lo = hi > 5 ? hi - 1 : hi; tiers.push([lo, hi]); hi = lo - 1; }
-      tiers.forEach(function(t){
-        var lo = t[0], hi = t[1];
-        var rows = DE.uu.filter(function(x){ return x[2] >= lo && x[2] <= hi; });
-        if (!rows.length) return;
-        var lab = lo === hi ? lo + ' đề' : lo + '–' + hi + ' đề';
-        secs.push(lab);
-        h += '<section class="sec"><h2><span class="n">' + lab + '</span>' + rows.length + ' từ</h2>' +
-             '<p class="intro">Những từ gặp trong ' + lab + ' (trên ' + n + ' đề thi thử của lớp). Học hết nhóm này rồi chuyển sang nhóm sau. ' +
-             'Dòng nhỏ dưới mỗi từ: số lần gặp · thuộc câu nào.</p>' +
-             cells(rows.map(function(x){ return [esc(x[0]) + '<span class="mt">' + x[3] + ' lần · câu ' + esc(x[4]) + '</span>', x[1]]; })) + '</section>';
+      if (!CORE.length) { msg.textContent = 'Chưa có từ cốt lõi. Kiểm tra mạng rồi tải lại trang.'; nav.innerHTML = out.innerHTML = ''; return; }
+      var tiers = [], bySec = {};
+      CORE.forEach(function(g){ if (!bySec[g.sec]) { bySec[g.sec] = []; tiers.push(g.sec); } bySec[g.sec].push(g); });
+      tiers.forEach(function(sec, ti){
+        var p = sec.split(' · '), gs = bySec[sec], n = gs.reduce(function(a, g){ return a + g.w.length; }, 0);
+        secs.push(p[1] || sec);
+        h += '<section class="sec"><h2><span class="n">' + esc(p[1] || sec) + '</span>' + esc(p.slice(2).join(' · ')) + ' · ' + n + ' từ</h2>' +
+             '<p class="intro">Từ lặp lại trong nhiều đề thi (tính trên 20 đề đọc), chủ đề nào cũng gặp — học Tầng 1 trước. ' +
+             'Đây cũng là từ trong bài kiểm tra từ vựng hằng ngày cô giao. Câu ví dụ lấy từ đề thật.</p>' +
+             '<div class="chips">' + gs.map(function(g, gi){ return '<a href="javascript:void 0" data-jump="c' + ti + '_' + gi + '">Nhóm ' + (gi + 1) + '</a>'; }).join('') + '</div>';
+        gs.forEach(function(g, gi){
+          h += '<div class="blk" id="c' + ti + '_' + gi + '"><h3>Nhóm ' + (gi + 1) + ' <small>' + g.w.length + ' từ</small></h3>' +
+               '<div class="tb gr"><div class="h">Từ vựng</div><div class="h">Nghĩa tiếng Việt</div><div class="h wide">Câu trong đề</div>';
+          g.w.forEach(function(w){ h += '<div class="ko">' + esc(w[1]) + '</div><div class="vi">' + esc(w[2]) + '</div><div class="ex">' + ul(w[3] || '') + '</div>'; });
+          h += '</div></div>';
+        });
+        h += '</section>';
       });
     } else {
       if (!CD) { msg.textContent = 'Không tải được từ vựng theo chủ đề. Kiểm tra mạng rồi tải lại trang.'; nav.innerHTML = out.innerHTML = ''; return; }
@@ -286,7 +290,8 @@ h4{font-size:14px;margin:12px 0 4px;color:var(--muted)}
     Promise.all([get('../thi-thu/vocab.json'), opt('de.json'), opt('chu-de.json')])
       .then(function(r){
         DE = r[1]; CD = r[2]; cache = r[0];
-        cache.g = cache.g.filter(function(g){ return !/^(Seoul|Cốt lõi) /.test(g.sec); });  // từ giáo trình Seoul ở trang ../seoul/; từ cốt lõi chỉ dùng cho lộ trình hằng ngày
+        CORE = cache.g.filter(function(g){ return /^Cốt lõi /.test(g.sec); }).sort(function(a, b){ return (a.so - b.so) || (a.o - b.o); });
+        cache.g = cache.g.filter(function(g){ return !/^(Seoul|Cốt lõi) /.test(g.sec); });  // từ giáo trình Seoul ở trang ../seoul/; từ cốt lõi ở thẻ ⭐ Cốt lõi
         upd(cache); render(cache);
       })
       .catch(function(){ msg.textContent = 'Không tải được từ vựng. Kiểm tra mạng rồi tải lại trang.'; });
