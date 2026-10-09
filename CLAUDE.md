@@ -161,6 +161,8 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   4 phần `Cốt lõi · Tầng 1…4` (secOrder 30–33; ≥15, 10–14, 7–9, 5–6 đề), bỏ từ sơ cấp / chưa có nghĩa / cô “Bỏ qua”, nhóm 20 từ,
   câu ví dụ lấy từ câu trong đề (bỏ câu có chỗ trống “( )”). Id từ `cl0001…` cố định theo từ gốc trong `tools/cot_loi_id.tsv`.
   Trang `tu-vung/` không hiện phần `Cốt lõi …`. Cô giao bằng Từ vựng → Lộ trình hàng ngày (chọn các tầng, dạng “Điền từ vào câu”, ôn ngắt quãng).
+  Lộ trình đang dùng: `vroutes/CL30K` “Từ vựng cốt lõi TOPIK II – 30 ngày” (Tầng 1–4, 33 từ/ngày, trắc nghiệm Hàn → Việt, ôn tối đa 20,
+  ôn ngắt quãng, bắt đầu 2026-10-10). Form tạo lộ trình chọn phần theo nhóm thu gọn (`rtPickHTML`/`rtPickWire`), tới 40 từ/ngày.
 - Các nhóm `VCD…` (phần `Chủ đề · …`, 180 nhóm) có trong collection `vocab` nhưng **chưa đưa lên site** — khi đồng bộ kho từ thì
   bỏ các tệp `VCD*.json` khỏi dump cho tới khi cô muốn đưa (nếu đưa, trang `tu-vung/` sẽ hiện thêm phần mới).
 - `tu-vung/chu-de.json`: 55 mục từ vựng chủ đề EBS (phần 8 của https://claude.ai/artifact/6NAJ7UnAGUQ6xWkbnhfbdi, đã chia Danh/Động/Tính/Biểu hiện)
