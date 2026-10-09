@@ -216,3 +216,10 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   (lựa chọn đầu là đáp án, mỗi lựa chọn sai kèm ghi chú lỗi; `need` = bài 3A dùng lại). Bài làm lưu localStorage `nari-kt-seoul`.
 - Nộp xong học sinh bấm “Gửi kết quả cho cô” → link `seoul/kiem-tra/#r=<base64>` (tên + đáp án, chỉ nằm trong link) mở bản báo cáo
   cho cô. Đổi thứ tự/đáp án câu cũ sẽ làm sai link đã gửi — thêm câu mới thì dùng id mới.
+
+## Học câu 52 trong 3 buổi (`viet-52/`)
+- Trang học liệu gửi học sinh: Buổi 1 (ô cuối câu, 5 nhóm từ nối: 47, 41, 52, 92, 96, 36, 37), Buổi 2 (ô giữa câu: 60, 83, 91, 64, 35),
+  Buổi 3 (làm như thi, 6 phút/câu, không gợi ý: 93, 94, 95, 102), thẻ Bảng tra (9 nhóm tín hiệu → mẫu). Link `viet-52/#b=1|2|3|tra`.
+- Mỗi buổi có trắc nghiệm nhận diện (mảng `MCQ`, câu tự soạn, lựa chọn đầu là đáp án) và đề thật: đề + đáp án + `pat` + gợi ý 3 bậc
+  nhúng sẵn trong biến `Q` (lấy từ `wbank` lúc soạn trang; sửa gợi ý trong trang quản lý thì phải chép lại vào đây).
+- Học sinh tự chấm 0–5 mỗi ô (trùng đáp án mẫu tự cho 5), bài lưu localStorage `nari-52`, nút “Gửi kết quả cho cô…” chia sẻ đoạn chữ qua Zalo.
