@@ -87,6 +87,14 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   “Lưu & gửi kết quả” / “Gửi kết quả” tạo link `thi-thu/#s=<base64>.<sum>` (`wsBoot`, bài làm + phần sửa nằm trong link, so chữ `<del>/<ins>`);
   đề + ảnh + bài mẫu chia ý trang lấy từ `thi-thu/viet/<id>.json`. **Đồng bộ đề viết** (sau khi thêm/sửa câu viết — cô nhắn “đồng bộ đề viết”):
   ArtifactData `list` `wbank` với `out_dir` → `python3 tools/sync_viet.py <dump>` → commit + push.
+- **Chấm tự động** (nút “Chấm tự động” trong `wGradeModal`, `wAutoGrade`): trang quản lý dùng capability `sample` (hỏi Claude bằng tài khoản của cô;
+  khi publish phải khai `capabilities` đủ: `artifact`, `db` (rule admin), `user`, `sample`). Câu 53/54: `wPrompt5` gửi đề + số liệu `data` + bài mẫu chia ý +
+  câu học sinh (`wSents`) + bài lần trước cùng đề (`wPrevOf`) → mỗi câu `{b, f, e, v: ok|warn|bad, n: nhận xét}`, 3 điểm tiêu chí, `o`, `tb` (tiến bộ).
+  Câu 51/52: `wPrompt2` → điểm từng ô + nhận xét (`ev:[{i, nt:[㉠,㉡]}]`). Kết quả chỉ điền sẵn vào form, cô đọc lại rồi mới “Lưu”.
+- Bảng sửa bài `#s=` (gửi học sinh) = bảng đối chiếu từng câu **# ý | Bài mẫu | Em viết (so chữ) | Nhận xét** (điện thoại: mỗi câu một thẻ),
+  ý học sinh bỏ sót tô đỏ, thêm “Tiến bộ so với bài lần trước”. Nhận xét viết được `**đậm**`, `` `chữ Hàn` ``. Ảnh biểu đồ không tải được thì hiện `data`
+  (số liệu dạng chữ; link giao bài 53/54 kèm `dt`, `thi-thu/viet/<id>.json` kèm `data`).
+- Ảnh biểu đồ `img` trỏ tới GitHub Pages → chỉ hiện khi nhánh có ảnh đã vào `main`.
 
 ## Nhập đề thi vào ngân hàng đề
 - Đề nghe công khai TOPIK II kỳ 96, 102: `Etk096n`, `Etk102n` (`nghe:1`, câu 1–3 là ảnh tranh/biểu đồ, lựa chọn “Tranh ①…”; chưa có kịch bản/file nghe — cô gửi sau).

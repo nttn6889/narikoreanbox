@@ -4,14 +4,14 @@
 Cách dùng:  python3 tools/sync_viet.py <thu-muc-dump>
 
 <thu-muc-dump> là thư mục ArtifactData (out_dir) của collection wbank: <dump>/wbank/<id>.json.
-Ghi thi-thu/viet/<id>.json = {id, type, src, round, passage, img, keys, blocks, nums}
+Ghi thi-thu/viet/<id>.json = {id, type, src, round, passage, img, data, keys, blocks, nums}
 (bỏ gợi ý, ghi chú). Đề viết TOPIK công khai nên để trong repo được; không có dữ liệu học sinh.
 """
 import glob, json, os, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "thi-thu", "viet")
-FIELDS = ["type", "src", "round", "passage", "img", "keys", "blocks", "nums"]
+FIELDS = ["type", "src", "round", "passage", "img", "data", "keys", "blocks", "nums"]
 
 
 def main(dump):

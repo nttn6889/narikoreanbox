@@ -392,6 +392,32 @@ ins{color:var(--ok);text-decoration:none;background:var(--ok-soft);font-weight:6
 .wfull{white-space:pre-wrap;line-height:1.9;border:1px solid var(--line);border-radius:6px;padding:10px 12px;background:var(--bg)}
 .wst td.kr{font-family:var(--kr)}
 .kr{font-family:var(--kr)}
+.wdt{white-space:pre-wrap;font-family:var(--kr);font-size:15px;line-height:1.8;border:1px dashed var(--line);border-radius:6px;padding:8px 12px;margin:0 0 10px;background:var(--bg)}
+.wtb{width:100%;border-collapse:collapse;font-size:14.5px;line-height:1.6}
+.wtb th,.wtb td{border-bottom:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}
+.wtb th{background:var(--bg);font-size:13px;color:var(--muted);font-weight:700}
+.wtb td.wtk{font-weight:600;min-width:92px}
+.wtb td.wtm,.wtb td.wts{font-family:var(--kr);font-size:15px}
+.wtb td.wtm b{color:var(--violet)}
+.wtb tr.wtx td{background:var(--pen-soft)}
+@media (min-width:700px){.wtb th:first-child{width:15%}.wtb th:last-child{width:31%}}
+.wtb tr:last-child td{border-bottom:none}
+.wtbx{border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.wtn code,code.wq{font-family:var(--kr);background:var(--pen-soft);color:var(--pen);border-radius:4px;padding:0 4px;font-size:.95em}
+.wtn p{margin:0 0 4px}.wtn p:last-child{margin:0}
+.wtn .pill{margin-top:4px}
+@media (max-width:699px){
+  .wtb thead{display:none}
+  .wtb,.wtb tbody,.wtb tr,.wtb td{display:block;width:100%}
+  .wtb tr{border-bottom:2px solid var(--line)}
+  .wtb tr:last-child{border-bottom:none}
+  .wtb td{border-bottom:none;padding:6px 12px}
+  .wtb td.wtk{background:var(--violet-soft);color:var(--violet)}
+  .wtb td[data-l]::before{content:attr(data-l);display:block;font:700 11.5px var(--ui);color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+}
+.wai{display:flex;gap:10px;align-items:center;flex-wrap:wrap;border:1.5px dashed var(--violet);border-radius:8px;padding:10px 12px;margin:0 0 12px;background:var(--violet-soft);font-size:14.5px}
+.wai .hint{margin:0}
+.w5n{margin-top:6px;font-size:14.5px}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
@@ -1406,7 +1432,17 @@ function wPassHTML(p, marks){
   h = h.replace(/\u0001/g, '<mark class="whl">').replace(/\u0002/g, '</mark>');
   return h.replace(/\(\s*(㉠|㉡)\s*\)/g, '<span class="wbl">( $1 )</span>').replace(/\n/g, "<br>");
 }
-function wImgHTML(src){ return src ? '<img class="wimg" src="' + esc(src) + '" alt="Biểu đồ của đề">' : ''; }
+/* Ảnh biểu đồ câu 53; dt = số liệu dạng chữ (hiện khi không có ảnh hoặc ảnh không tải được). */
+function wImgHTML(src, dt){
+  var d = dt ? '<div class="wdt"' + (src ? ' hidden' : '') + '><b>Số liệu trong biểu đồ:</b>\n' + esc(dt) + '</div>' : '';
+  return (src ? '<img class="wimg" src="' + esc(src) + '" alt="Biểu đồ của đề" onerror="this.hidden=true;var n=this.nextElementSibling;if(n&&n.className===\'wdt\')n.hidden=false">' : '') + d;
+}
+var W_V = {ok:"✅", warn:"⚠️", bad:"❌"};
+/* Nhận xét: **đậm**, `chữ Hàn` (tô đỏ), xuống dòng = đoạn mới. */
+function wNoteHTML(t){
+  return String(t || "").split(/\n+/).filter(function(x){ return x.trim(); }).map(function(p){
+    return '<p>' + esc(p).replace(/\*\*([^*]+)\*\*/g, '<b>$1</b>').replace(/`([^`]+)`/g, '<code class="wq">$1</code>') + '</p>'; }).join("");
+}
 function encodeW(obj){ var raw = b64e(obj); return "NW1-" + raw + "-" + sum(raw); }
 function decodeW(code){
   var m = String(code).match(/^NW1-([A-Za-z0-9_-]+)-([0-9a-z]{4})$/);
@@ -1449,7 +1485,7 @@ function wRender(){
   var p = WS.p, done = !!WS.submitted, h = "";
   p.i.forEach(function(it, i){
     h += '<section class="q" id="wq' + i + '"><div class="grp" style="margin-top:6px"><span class="tag">Câu ' + (i+1) + '</span>' + esc(it.s || "") + (wTwoY(it.y) ? '' : ' · câu ' + it.y) + '</div>' +
-      '<div class="passage">' + wImgHTML(it.im) + '<div class="ptext" id="wp' + i + '">' + wPassHTML(it.p, wItemMarks(it, i)) + '</div></div>';
+      '<div class="passage">' + wImgHTML(it.im, it.dt) + '<div class="ptext" id="wp' + i + '">' + wPassHTML(it.p, wItemMarks(it, i)) + '</div></div>';
     wKeysOf(it.y).forEach(function(k){
       var id = i + k, hs = (it.h || {})[k] || [], n = WS.hint[id] || 0, two = wTwoY(it.y), keys = (it.k || {})[k] || [];
       h += '<div class="wslot"><label class="l" for="wa' + id + '">' + (two ? W_BL[k] : 'Bài viết của em') + '</label>' +
@@ -1504,7 +1540,8 @@ function wShowResult(){
    r = {c, t: tên bài, n: tên học sinh, d: lúc nộp, g: lúc chấm, sc, mx, no: nhận xét,
         i: [{id: mã câu (wbank), y, s: nguồn, a: [bài em viết…], h: [số gợi ý…],
              51–52: k: {a:[…], b:[…]} đáp án, p: [điểm ㉠, ㉡] (0–5);
-             53–54: r: [điểm 3 tiêu chí], x: [{b: số thứ tự ý trong bài mẫu (-1 = ngoài ý), s: câu em viết, f: câu cô sửa, e: "lỗi,lỗi"}], o: nhận xét câu}]}
+             51–52: nt: [nhận xét ㉠, ㉡];
+             53–54: r: [điểm 3 tiêu chí], x: [{b: số thứ tự ý trong bài mẫu (-1 = ngoài ý), s: câu em viết, f: câu cô sửa, e: "lỗi,lỗi", v: ok|warn|bad, n: nhận xét}], o: nhận xét câu, tb: tiến bộ so với lần trước}]}
    Đề bài, ảnh, bài mẫu chia ý lấy từ thi-thu/viet/<id>.json (tools/sync_viet.py). */
 function wsBoot(){
   var m = String(location.hash || "").match(/[#&]s=([A-Za-z0-9_.-]+)/);
@@ -1525,17 +1562,19 @@ function wsRender(r, src){
   r.i.forEach(function(it, i){
     var w = src[it.id] || {}, y = +it.y || +w.type || 52, two = wTwoY(y);
     h += '<section class="wit" style="margin-top:14px"><h3><span class="pill">Câu ' + (i+1) + '</span> ' + esc(it.s || w.src || "") + (two ? '' : ' · câu ' + y) + '</h3>';
-    if(w.passage) h += '<details class="pt-tx"' + (two ? ' open' : '') + '><summary><span class="pt-more">Xem đề</span></summary><div class="passage">' + wImgHTML(w.img) + '<div class="ptext">' + wPassHTML(w.passage) + '</div></div></details>';
+    if(w.passage) h += '<details class="pt-tx"' + (two ? ' open' : '') + '><summary><span class="pt-more">Xem đề</span></summary><div class="passage">' + wImgHTML(w.img, w.data) + '<div class="ptext">' + wPassHTML(w.passage) + '</div></div></details>';
     if(two){
       var keys = it.k || w.keys || {};
-      h += '<div class="scroll"><table class="tbl wst"><thead><tr><th></th><th>Em viết</th><th>Đáp án</th><th>Điểm</th></tr></thead><tbody>' +
+      var nts = it.nt || [], anyN = nts.some(Boolean);
+      h += '<div class="wtbx"><table class="wtb"><thead><tr><th></th><th>Đáp án mẫu</th><th>Em viết</th>' + (anyN ? '<th>Nhận xét</th>' : '') + '<th>Điểm</th></tr></thead><tbody>' +
         ["a","b"].map(function(k, j){ var v = (it.a || [])[j] || "", sc = (it.p || [])[j];
-          return '<tr><td><b>' + W_BL[k] + '</b></td><td class="kr">' + (v ? esc(v) : '<span class="muted">(bỏ trống)</span>') + ((it.h || [])[j] ? ' <span class="pill warn">mở ' + it.h[j] + ' gợi ý</span>' : '') + '</td><td class="kr">' + (keys[k] || []).map(esc).join(' <span class="muted">/</span> ') + '</td><td><b>' + (sc == null ? "–" : sc) + '</b>/5</td></tr>'; }).join("") + '</tbody></table></div>';
+          return '<tr><td class="wtk">' + W_BL[k] + '</td><td class="wtm" data-l="Đáp án mẫu">' + (keys[k] || []).map(esc).join(' <span class="muted">/</span> ') + '</td><td class="wts" data-l="Em viết">' + (v ? esc(v) : '<span class="muted">(bỏ trống)</span>') + ((it.h || [])[j] ? ' <span class="pill warn">mở ' + it.h[j] + ' gợi ý</span>' : '') + '</td>' +
+            (anyN ? '<td class="wtn" data-l="Nhận xét">' + wNoteHTML(nts[j]) + '</td>' : '') + '<td data-l="Điểm"><b>' + (sc == null ? "–" : sc) + '</b>/5</td></tr>'; }).join("") + '</tbody></table></div>';
     } else h += wsLongHTML(it, w, y);
-    if(it.o) h += '<div class="note">' + esc(it.o) + '</div>';
+    if(it.o) h += '<h4 class="wsh">Nhận xét</h4><div class="note wtn" style="white-space:normal">' + wNoteHTML(it.o) + '</div>';
     h += '</section>';
   });
-  h += '<p class="hint" style="margin-top:16px">Chữ <del>gạch đỏ</del> là chỗ cô bỏ, chữ <ins>tô xanh</ins> là chỗ cô sửa/thêm. Em chép lại câu đã sửa vào vở để nhớ nhé.</p>';
+  h += '<p class="hint" style="margin-top:16px">Cột “Em viết”: chữ <del>gạch đỏ</del> là chỗ cô bỏ, chữ <ins>tô xanh</ins> là chỗ cô sửa/thêm. ❌ lỗi sai · ⚠️ cần lưu ý · ✅ đúng. Em chép lại câu đã sửa vào vở để nhớ nhé.</p>';
   wShell(h);
 }
 function wsLongHTML(it, w, y){
@@ -1546,19 +1585,22 @@ function wsLongHTML(it, w, y){
   var miss = wNumsMiss(text, w.nums), spoken = xs.filter(function(x){ return wSpoken(x.s); }).length;
   h += '<p class="wchk">' + wLenHTML(text, y) + (w.nums && w.nums.length ? (miss.length ? ' <span class="pill warn">thiếu số liệu: ' + esc(miss.join(", ")) + '</span>' : ' <span class="pill good">đủ số liệu</span>') : '') +
     (spoken ? ' <span class="pill bad">' + spoken + ' câu dùng văn nói (-요 / -습니다)</span>' : '') + '</p>';
-  var row = function(x){ var fx = x.f && x.f !== x.s;
-    return '<div class="wsx">' + (fx ? '<div class="kr wdiff">' + wDiffHTML(x.s, x.f) + '</div>' : '<div class="kr">' + esc(x.s) + ' <span class="pill good">đúng</span></div>') +
-      (x.e ? '<div>' + String(x.e).split(",").filter(Boolean).map(function(e){ var t = W_TAGS.find(function(z){ return z[0] === e; }); return '<span class="pill bad">' + esc(t ? t[1] : e) + '</span>'; }).join("") + '</div>' : '') + '</div>'; };
-  if(blocks.length){
-    h += '<h4 class="wsh">Đối chiếu từng ý với bài mẫu</h4><div class="wcmp">' + blocks.map(function(b, j){
-      var mine = xs.filter(function(x){ return +x.b === j; });
-      return '<div class="wcr"><div class="wck">' + (j+1) + '. ' + esc(b.k || "") + '</div><div class="wcm"><div class="wcl">Em viết</div>' + (mine.length ? mine.map(row).join("") : '<div class="pill bad">Em chưa viết ý này</div>') + '</div>' +
-        '<div class="wcs"><div class="wcl">Bài mẫu</div><div class="kr">' + esc(b.ko || "") + '</div></div></div>';
-    }).join("") + '</div>';
-    var other = xs.filter(function(x){ return !(+x.b >= 0 && +x.b < blocks.length); });
-    if(other.length) h += '<h4 class="wsh">Câu chưa khớp ý nào trong bài mẫu</h4><div class="wcm">' + other.map(row).join("") + '</div>';
-  } else if(xs.length) h += '<h4 class="wsh">Từng câu em viết</h4><div class="wcm">' + xs.map(row).join("") + '</div>';
-  else h += '<h4 class="wsh">Bài em viết</h4><div class="kr wfull">' + esc(text) + '</div>';
+  var tags = function(x){ return x.e ? String(x.e).split(",").filter(Boolean).map(function(e){ var t = W_TAGS.find(function(z){ return z[0] === e; }); return '<span class="pill bad">' + esc(t ? t[1] : e) + '</span>'; }).join(" ") : ''; };
+  var mineHTML = function(x){ return x.f && x.f !== x.s ? '<div class="wdiff">' + wDiffHTML(x.s, x.f) + '</div>' : esc(x.s); };
+  var noteHTML = function(x){ var fx = x.f && x.f !== x.s, v = x.v || (fx ? "" : "ok");
+    var n = x.n ? wNoteHTML(x.n) : (v === "ok" && !fx ? '<p>✅ Đúng.</p>' : fx ? '<p>' + (W_V[v] || "❌") + ' Xem chỗ cô sửa ở cột bên.</p>' : '');
+    if(x.n && W_V[v] && !/^[\s]*(✅|⚠️|❌)/.test(x.n)) n = n.replace('<p>', '<p>' + W_V[v] + ' ');
+    return n + (x.e ? '<div>' + tags(x) + '</div>' : ''); };
+  if(xs.length){
+    var seen = {};
+    h += '<h4 class="wsh">Đối chiếu từng câu</h4><div class="wtbx"><table class="wtb"><thead><tr><th>#</th><th>Bài mẫu</th><th>Em viết</th><th>Nhận xét</th></tr></thead><tbody>' + xs.map(function(x, j){
+      var bi = +x.b, b = bi >= 0 ? blocks[bi] : null, first = b && !seen[bi]; if(b) seen[bi] = 1;
+      return '<tr><td class="wtk">' + (j+1) + '. ' + (b ? esc(b.k || "") + (first ? '' : ' (tiếp)') : '<span class="muted">Ngoài ý bài mẫu</span>') + '</td>' +
+        '<td class="wtm" data-l="Bài mẫu">' + (b ? (first ? esc(b.ko || "") : '<span class="muted">(như câu trên)</span>') : '<span class="muted">—</span>') + '</td>' +
+        '<td class="wts" data-l="Em viết">' + mineHTML(x) + '</td><td class="wtn" data-l="Nhận xét">' + noteHTML(x) + '</td></tr>';
+    }).join("") + blocks.map(function(b, bi){ return seen[bi] ? '' : '<tr class="wtx"><td class="wtk">' + esc(b.k || "") + '</td><td class="wtm" data-l="Bài mẫu">' + esc(b.ko || "") + '</td><td class="wts" data-l="Em viết"><span class="muted">(em chưa viết)</span></td><td class="wtn" data-l="Nhận xét"><p>❌ <b>Thiếu ý này.</b> Bài 53 cần đủ các ý như bài mẫu.</p></td></tr>'; }).join("") + '</tbody></table></div>';
+  } else h += '<h4 class="wsh">Bài em viết</h4><div class="kr wfull">' + esc(text) + '</div>';
+  if(it.tb) h += '<h4 class="wsh">Tiến bộ so với bài lần trước</h4><div class="note wtn" style="white-space:normal">' + wNoteHTML(it.tb) + '</div>';
   var model = ((w.keys || {}).a || [])[0];
   if(model) h += '<details class="pt-tx"><summary><span class="pt-more">Xem cả bài mẫu</span></summary><div class="kr wfull">' + esc(model) + '</div></details>';
   if(text && xs.length) h += '<details class="pt-tx"><summary><span class="pt-more">Xem bài em viết (bản gốc)</span></summary><div class="kr wfull">' + esc(text) + '</div></details>';
