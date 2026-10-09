@@ -42,6 +42,15 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   “Bài riêng cô giao”. Đã nộp = localStorage `nari-v-|nari-n-|nari-tt-<mã bài>-<tên>` có `submitted`. Học sinh vẫn gửi mã nộp qua
   Zalo (có nút “Gửi qua Zalo…” dùng bảng chia sẻ của máy).
 
+## Khung lộ trình lớp (Lớp học → lớp → “Khung lộ trình”)
+- Lớp có `wd` (thứ có buổi) + `weeks[].s[]` = buổi `{d, b:[khối], note, off}`; khối = `<thư viện>/<id>` trong `LIBS` (code) hoặc `syllabi`.
+- Thư viện có sẵn `b_t3` “Lộ trình TOPIK 3 · theo buổi” (hàm `t3`): 30 khối, mỗi khối = 1 buổi, có mục tiêu (`note`), ưu tiên `p`
+  (1 Bắt buộc · 2 Nên học · 3 Nếu kịp) và `vg` = nhóm kho từ riêng của buổi (câu 1–4 chia theo nhóm `V01_…`/`V03_…`, `vFor` dùng `vg`).
+- Xem “Theo buổi” (`sessListHTML`): Buổi 1…n, ngày, nội dung + mục tiêu, dòng Ngày thi, “còn X buổi đến ngày thi”.
+- “Tự xếp nội dung theo lộ trình” (`frameAuto`): chia khối vào các buổi trống từ một ngày; khối đã gắn cho buổi trước ngày đó coi như đã học;
+  thiếu buổi thì giữ khối ưu tiên cao (gộp 2 khối/buổi khi cần), dư buổi thì lặp khối thành buổi luyện thêm.
+- Bước tiếp theo đã bàn với cô: mỗi khối có giáo án (chỉ cô xem) + học liệu (trang cho học sinh) + bài luyện, làm lần lượt từng dạng.
+
 ## Đánh giá năng lực (tab "Đánh giá" trong trang quản lý)
 - Gom đề thi (`results`), từ vựng (`vresults`), nghe (`nresults`) theo từng học sinh. Số liệu tính lại trong trình duyệt,
   không lưu thêm gì. Chỉ lưu nhận xét (`notes/<id>.text`, dùng chung với Sổ điểm) và việc cần làm (`nlnotes/<id>.next`).
