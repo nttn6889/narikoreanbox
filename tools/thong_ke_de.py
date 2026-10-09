@@ -8,7 +8,7 @@ Cách dùng:  pip install kiwipiepy   (bộ tách từ tiếng Hàn, chỉ cần
 Đầu vào:
   thi-thu/de/*.json      đề (chỉ đọc đoạn văn, câu hỏi, lựa chọn; bỏ dòng hướng dẫn “…고르십시오”)
   thi-thu/vocab.json     kho từ (từ trong kho được đánh ★ số đề đã gặp)
-  tools/nghia_de.tsv     nghĩa tiếng Việt cho từ gặp trong đề mà kho chưa có
+  tools/nghia_de.tsv     nghĩa tiếng Việt cho từ gặp trong đề mà kho chưa có (+ tools/cot_loi.tsv)
   topics (db trang quản lý) chủ đề của từng đoạn văn câu 10–50 ({units:[{n, c, s}]}); chỉ dùng để gom từ theo chủ đề.
                          Bảng phân loại câu KHÔNG để trong repo (chỉ cô xem, tab “Phân tích đề”).
 Từ ưu tiên = từ gặp trong ít nhất MIN_DE đề và có nghĩa (trong kho hoặc nghia_de.tsv);
@@ -22,15 +22,15 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MIN_DE = 3
 
 # Dòng “Hay ra” trên thẻ câu (khóa = số câu đầu của phần trong kho từ). Viết lại khi thống kê chủ đề đổi.
-HAY = {
-    10: "biểu đồ khảo sát xã hội: thời gian rảnh, SNS, tình nguyện, rác thải, nghề nghiệp mơ ước",
-    11: "tin địa phương, chính sách thành phố (hỗ trợ việc làm, y tế, người khuyết tật), người tốt việc tốt, sự kiện, mẹo sức khỏe",
-    19: "khoa học – công nghệ (AI, mô phỏng sinh học, ô tô), văn hóa",
-    21: "kinh tế cá nhân (cổ phiếu, mua hàng nước ngoài), tâm lý, xã hội",
+HAY = {  # theo chủ đề đoạn văn của 20 đề đọc (collection topics)
+    10: "biểu đồ khảo sát xã hội: máy tính – internet, sở thích – thời gian rảnh, hôn nhân, môi trường, mua sắm",
+    11: "sự kiện – lễ hội văn hóa, vấn đề xã hội, ẩm thực, hôn nhân, sức khỏe, triển lãm – biểu diễn",
+    19: "khoa học – công nghệ (máy tính, phát minh mới), văn hóa, sức khỏe",
+    21: "tâm lý – tính cách con người, kinh tế, xã hội (giao thông, môi trường)",
     23: "tùy bút: cảm xúc nhân vật, kỷ niệm gia đình, trường học",
-    25: "kinh tế – giá cả (rau, cải thảo, suy thoái), sức khỏe, nắng nóng, văn hóa giải trí",
-    42: "tiểu thuyết: gia đình, cảm xúc nhân vật",
-    44: "khoa học, sức khỏe, kinh tế – xã hội",
+    25: "kinh tế – giá cả, thời tiết – thiên tai, tai nạn – sự cố, sức khỏe, văn hóa giải trí",
+    42: "tiểu thuyết: cảm xúc nhân vật, gia đình",
+    44: "khoa học, văn hóa – nghệ thuật, kinh tế – tiêu dùng, pháp luật",
 }
 # Nhóm dạng câu để ghi “thuộc câu nào”
 GROUPS = [(1, 2), (3, 4), (5, 8), (9, 9), (10, 10), (11, 12), (13, 15), (16, 18), (19, 20), (21, 22), (23, 24),
@@ -67,7 +67,9 @@ CLEAN = re.compile(r"\*\*|__|\(\s*\)|\(\s*[㉠㉡㉢㉣]\s*\)|\([가나다라]\)
 def exam_questions():
     for f in sorted(glob.glob(os.path.join(ROOT, "thi-thu/de/*.json"))):
         d = json.load(open(f, encoding="utf-8"))
-        if d["id"].endswith("old"):  # bản bìa xanh trùng đề Ehot1
+        # chỉ đề ĐỌC đủ 50 câu (giống tools/tu_cot_loi.py): bỏ bản bìa xanh trùng Ehot1 (…old), đề nghe (…n) và
+        # kịch bản nghe (…k), đề chỉ có câu 1–4 (Etk…)
+        if re.search(r"(k|n|old)$", d["id"]) or d["id"].startswith("Etk") or len(d["q"]) < 40:
             continue
         for q in d["q"]:
             parts = [q.get("passage") or ""] + list(q.get("opts") or [])
@@ -179,6 +181,13 @@ def main(dump):
                     cdk[ko] = k
                 if " " not in ko:
                     kho_vi.setdefault(ko, vi)
+
+    # nghĩa soạn cho thẻ Từ cốt lõi (cột cấp “x” = mảnh do máy tách từ, bỏ qua)
+    for line in open(os.path.join(ROOT, "tools/cot_loi.tsv"), encoding="utf-8"):
+        if line.strip() and not line.startswith("#"):
+            k, v, c = (line.rstrip("\n").split("\t") + ["", ""])[:3]
+            if v and c != "x":
+                nghia.setdefault(k, v)
 
     def meaning(l):
         return kho_vi.get(l) or nghia.get(l)

@@ -140,8 +140,8 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 
 ## Thống kê đề → trang `tu-vung/` (thẻ ⭐ Ưu tiên, Chủ đề, dòng “Hay ra”, dấu ★)
 - `python3 tools/thong_ke_de.py <dump>` (cần `pip install kiwipiepy`; `<dump>` = ArtifactData `list` collection `topics` với `out_dir`)
-  đọc `thi-thu/de/*.json` (bỏ dòng hướng dẫn), tách từ về dạng gốc rồi ghi `tu-vung/de.json`: `uu` = từ gặp trong ≥3 đề có nghĩa
-  (kho từ, `tu-vung/chu-de.json` hoặc `tools/nghia_de.tsv`), `kho`/`cdk` = số đề của từng mục kho / từ chủ đề (dấu ★),
+  đọc 20 đề **đọc** đủ 50 câu trong `thi-thu/de/*.json` (bỏ đề nghe, kịch bản nghe, đề câu 1–4, Ehot1old; bỏ dòng hướng dẫn), tách từ về dạng gốc rồi ghi `tu-vung/de.json`: `uu` = từ gặp trong ≥3 đề có nghĩa
+  (kho từ, `tu-vung/chu-de.json`, `tools/nghia_de.tsv` hoặc `tools/cot_loi.tsv`; thẻ ⭐ của trang giờ hiện Từ cốt lõi nên `uu` không còn hiện), `kho`/`cdk` = số đề của từng mục kho / từ chủ đề (dấu ★),
   `cd` = từ khóa theo chủ đề, `hay` = dòng “Hay ra” (viết tay trong script, biến `HAY`).
   Script in ra từ chưa có nghĩa → bổ sung `tools/nghia_de.tsv` (từ sơ cấp thì bỏ qua). Chạy lại sau mỗi lần “đồng bộ đề”.
 - **Chủ đề từng đoạn văn** nằm trong db trang quản lý, collection `topics/<id đề>` = `{units:[{n:[câu…], c: chủ đề lớn, s: số mục EBS 1–55}]}`
