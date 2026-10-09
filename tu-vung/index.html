@@ -286,7 +286,7 @@ h4{font-size:14px;margin:12px 0 4px;color:var(--muted)}
     Promise.all([get('../thi-thu/vocab.json'), opt('de.json'), opt('chu-de.json')])
       .then(function(r){
         DE = r[1]; CD = r[2]; cache = r[0];
-        cache.g = cache.g.filter(function(g){ return !/^Seoul /.test(g.sec); });  // từ giáo trình Seoul ở trang ../seoul/
+        cache.g = cache.g.filter(function(g){ return !/^(Seoul|Cốt lõi) /.test(g.sec); });  // từ giáo trình Seoul ở trang ../seoul/; từ cốt lõi chỉ dùng cho lộ trình hằng ngày
         upd(cache); render(cache);
       })
       .catch(function(){ msg.textContent = 'Không tải được từ vựng. Kiểm tra mạng rồi tải lại trang.'; });

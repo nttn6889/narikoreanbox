@@ -20,6 +20,7 @@ from thong_ke_de import kiwi, SUF, CLEAN, GROUPS, group_of, glabel, ROOT  # noqa
 
 MIN_DE = 3
 CHUNK = 250
+GAP = re.compile(r"\(\s*\)|_{3,}")
 POS = {"NNG": "N", "NNP": "N", "VV": "V", "VA": "A", "MAG": "AD"}
 
 
@@ -113,8 +114,9 @@ def main(dump):
             st = q.get("stem") or ""
             parts = [q.get("passage") or ""] + [st if "십시오" not in st else ""] + list(q.get("opts") or [])
             for part in parts:
-                for s in sentences(CLEAN.sub(" ", part)):
-                    s = re.sub(r"\s+", " ", s)
+                for raw in sentences(part):
+                    gap = GAP.search(raw)  # câu có chỗ trống của đề → không dùng làm câu ví dụ
+                    s = re.sub(r"\s+", " ", CLEAN.sub(" ", raw)).strip()
                     for l, p, a, b in lemma_spans(s):
                         cnt[l] += 1
                         de[l].add(e)
@@ -122,7 +124,7 @@ def main(dump):
                         cau[l][group_of(q["n"])] += 1
                         if (e, q["n"]) in topic_of:
                             tp[l][topic_of[(e, q["n"])]] += 1
-                        if 12 <= len(s) <= 110:
+                        if not gap and 12 <= len(s) <= 110:
                             exs[l].append({"e": e, "n": q["n"], "s": s, "a": a, "b": b})
 
     vi, kho, lv = meanings()
