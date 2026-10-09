@@ -1,0 +1,419 @@
+# Nghĩa + cấp độ cho tools/tu_cot_loi.py (thẻ “Từ cốt lõi” trong trang quản lý). Ưu tiên hơn nghĩa trong kho từ.
+# từ gốc<TAB>nghĩa<TAB>cấp: 1 = sơ cấp (TOPIK I), 0 = trung cấp, x = mảnh do máy tách từ (ẩn khỏi danh sách)
+있다	có; ở	1
+하다	làm	1
+사람	người	1
+되다	trở thành; được	1
+많다	nhiều	1
+없다	không có	1
+때	lúc, khi	1
+받다	nhận	1
+만들다	làm ra, tạo ra	1
+가다	đi	1
+같다	giống	1
+알다	biết	1
+말하다	nói	1
+오다	đến	1
+생각	suy nghĩ	1
+좋다	tốt, thích	1
+가장	nhất	1
+주다	cho	1
+가지다	có, mang	1
+속	bên trong	1
+생각하다	suy nghĩ	1
+사다	mua	1
+나다	xảy ra, phát sinh; mọc	1
+함께	cùng nhau	1
+모두	tất cả	1
+못	không thể	1
+모르다	không biết	1
+나오다	đi ra; xuất hiện	1
+동안	trong suốt (thời gian)	1
+살다	sống	1
+없이	mà không có	1
+찾다	tìm	1
+곳	nơi, chỗ	1
+다르다	khác	1
+내다	nộp; bỏ ra; tạo ra	1
+매우	rất	1
+나라	đất nước	1
+후	sau	1
+전	trước	1
+듣다	nghe	1
+이제	bây giờ, giờ đây	1
+시작하다	bắt đầu	1
+친구	bạn	1
+다시	lại	1
+잡다	bắt, nắm	1
+맞다	đúng; hợp	1
+이렇다	như thế này	1
+계속	liên tục	1
+오래	lâu	1
+같이	cùng	1
+돈	tiền	1
+그렇다	như thế	1
+지금	bây giờ	1
+예	ví dụ (예를 들면)	1
+적다	ít; ghi chép	1
+갖다	có, mang (갖추다…)	1
+좋아하다	thích	1
+처음	lần đầu	1
+해	năm; mặt trời	x
+걸리다	mất (thời gian); bị (bệnh); treo	1
+너무	quá	1
+보내다	gửi; trải qua (thời gian)	1
+먼저	trước tiên	1
+다니다	đi (học, làm)	1
+자리	chỗ ngồi; vị trí	1
+영화	phim	1
+부모	bố mẹ	1
+길	đường	1
+날	ngày	1
+사이	giữa; mối quan hệ	1
+다	tất cả, hết	1
+이야기	câu chuyện	1
+냉장고	tủ lạnh	1
+이번	lần này	1
+꼭	nhất định	1
+어떻다	thế nào	1
+동물	động vật	1
+커피	cà phê	1
+돕다	giúp	1
+남다	còn lại, sót lại	1
+문	cửa	1
+좀	một chút	1
+맞추다	làm cho khớp, điều chỉnh	0
+열다	mở	1
+나쁘다	xấu	1
+밖	bên ngoài	1
+올리다	nâng lên, đăng lên	1
+그림	tranh	1
+남자	nam	1
+수	cách, khả năng (-ㄹ 수 있다); số	x
+병	bệnh; chai	1
+비	mưa; chi phí (-비)	x
+게임	trò chơi	1
+그러다	làm như thế	1
+아직	vẫn chưa	1
+다음	tiếp theo	1
+부르다	gọi; hát; no	1
+대학	đại học	1
+운전	lái xe	1
+서울	Seoul	1
+음악	âm nhạc	1
+남	người khác	0
+스마트폰	điện thoại thông minh	1
+오늘	hôm nay	1
+올라가다	đi lên	1
+외국	nước ngoài	1
+옛날	ngày xưa	1
+기다리다	chờ	1
+낫다	khỏi (bệnh); tốt hơn	1
+어리다	nhỏ tuổi	1
+움직이다	di chuyển, cử động	1
+차다	đá; lạnh; đầy; đeo	x
+엄마	mẹ	1
+거리	đường phố; khoảng cách; tư liệu	1
+가정	gia đình; giả định	0
+자라다	lớn lên	1
+체험	trải nghiệm	0
+만나다	gặp	1
+믿다	tin	1
+사랑	tình yêu	1
+끝나다	kết thúc	1
+실력	thực lực, năng lực	0
+반	một nửa; lớp	x
+젊다	trẻ	1
+묻다	hỏi; dính; chôn	1
+치다	đánh; chơi (đàn, tennis)	1
+고려하다	cân nhắc, xem xét	0
+돌리다	xoay; chuyển	0
+정치	chính trị	0
+그리다	vẽ	1
+외국인	người nước ngoài	1
+여자	nữ	1
+키	chiều cao; chìa khóa	1
+남녀	nam nữ	0
+닫다	đóng	1
+한국인	người Hàn	1
+입장	lập trường; vào cửa	0
+올해	năm nay	1
+걱정	lo lắng	1
+건물	tòa nhà	1
+기억하다	nhớ	1
+이미	đã, rồi	0
+이해	sự hiểu	1
+각종	các loại	0
+적응하다	thích nghi	0
+외모	ngoại hình	0
+깊다	sâu	1
+뛰다	chạy, nhảy	1
+시작되다	được bắt đầu	1
+왜	tại sao	1
+일주일	một tuần	1
+가르치다	dạy	1
+이용	sử dụng	1
+혼자	một mình	1
+늘	luôn luôn	0
+뜻	ý nghĩa	1
+방안	phương án	0
+컴퓨터	máy tính	1
+결혼	kết hôn	1
+팀	đội, nhóm	1
+전쟁	chiến tranh	0
+개	cái (đơn vị); con chó	x
+가수	ca sĩ	1
+사진	ảnh	1
+주인	chủ	1
+땅	đất	0
+색	màu	1
+성인	người trưởng thành	0
+텔레비전	ti vi	1
+기분	tâm trạng	1
+창문	cửa sổ	1
+서다	đứng	1
+차량	xe cộ	0
+곧	sắp, ngay	1
+의견	ý kiến	1
+노래	bài hát	1
+놀이	trò chơi	0
+들어오다	đi vào	1
+약속	hẹn	1
+얼마나	bao nhiêu, biết bao	1
+좁다	hẹp	1
+내놓다	đưa ra, đề xuất	0
+마찬가지	cũng vậy, giống nhau	0
+시	giờ; thơ; thành phố	x
+중요	sự quan trọng (중요하다)	1
+도와주다	giúp đỡ	1
+마련	sự chuẩn bị (마련하다)	0
+바라다	mong muốn	0
+반응	phản ứng	0
+유도하다	dẫn dắt, khuyến khích	0
+저하	sự suy giảm	0
+팔다	bán	1
+끝	cuối, kết thúc	1
+날씨	thời tiết	1
+덜	ít hơn, chưa đủ	0
+요구	yêu cầu	0
+이때	lúc này	0
+불구하다	bất chấp (-에도 불구하고)	0
+옮기다	chuyển, dời	0
+한동안	một thời gian	0
+행동하다	hành động	0
+다문화	đa văn hóa	0
+불황	suy thoái kinh tế	0
+선생	giáo viên	1
+고령	cao tuổi	0
+불다	thổi	1
+흔히	thường, hay	0
+놀다	chơi	1
+전문	chuyên môn	0
+주	tuần; chủ yếu	x
+벌다	kiếm (tiền)	1
+신발	giày dép	1
+의무	nghĩa vụ	0
+글	bài viết, chữ	1
+밥	cơm	1
+세균	vi khuẩn	0
+중략	(lược bớt)	x
+넓다	rộng	1
+별	sao; đặc biệt (별로)	x
+부부	vợ chồng	0
+상	giải thưởng; bàn	x
+극복하다	khắc phục, vượt qua	0
+따다	hái; lấy (bằng, chứng chỉ)	0
+쇼핑	mua sắm	1
+유럽	châu Âu	1
+의지	ý chí; dựa vào	0
+점수	điểm số	1
+주목	sự chú ý	0
+말다	đừng (-지 말다)	x
+멀다	xa	1
+문자	tin nhắn; chữ viết	1
+구멍	cái lỗ	0
+보편	phổ biến (보편적)	0
+소	con bò; nhỏ (소-)	x
+실패	thất bại	0
+심지어	thậm chí	0
+이렇게	như thế này	1
+잠깐	một lát	1
+즐거움	niềm vui	0
+채우다	lấp đầy	0
+평일	ngày thường	1
+확률	xác suất	0
+가까이	gần	1
+가령	giả sử	0
+마지막	cuối cùng	1
+며칠	mấy ngày	1
+물고기	cá	1
+민감하다	nhạy cảm	0
+색다르다	mới lạ, khác biệt	0
+선풍기	quạt máy	1
+오랫동안	trong thời gian dài	1
+위협하다	đe dọa	0
+이야기하다	nói chuyện	1
+취지	mục đích, ý nghĩa	0
+켜다	bật	1
+외국어	ngoại ngữ	1
+수업	giờ học	1
+직장	nơi làm việc	1
+카드	thẻ	1
+한국어	tiếng Hàn	1
+바다	biển	1
+점차	dần dần	0
+채용	tuyển dụng	0
+싸우다	cãi nhau, đánh nhau	1
+약	thuốc; khoảng (약 10%)	1
+유학	du học	1
+농사	nghề nông	0
+불법	bất hợp pháp	0
+석	(mảnh tách: 좌석, 분석…)	x
+어른	người lớn	1
+요인	yếu tố, nguyên nhân	0
+인물	nhân vật	0
+과학자	nhà khoa học	0
+마르다	khô; gầy	0
+책임	trách nhiệm	0
+관광	du lịch, tham quan	1
+동네	khu phố	1
+식사	bữa ăn	1
+인	người (-인); nhân	x
+카페인	caffeine	0
+감기	cảm cúm	1
+느낌	cảm giác	1
+생명체	sinh vật sống	0
+잔	chén, ly	1
+지다	thua; (mặt trời) lặn; gánh	0
+진정하다	thật sự, chân chính; bình tĩnh lại	0
+질환	bệnh tật	0
+매력	sức hút	0
+방해	cản trở	0
+보급	phổ cập	0
+부	bộ (bộ phận); giàu có	x
+솔직하다	thẳng thắn	0
+시선	ánh nhìn	0
+일반인	người bình thường	0
+준비	chuẩn bị	1
+지나가다	đi qua	1
+집다	nhặt, gắp	0
+충격	cú sốc	0
+고급	cao cấp	0
+공부	việc học	1
+깊이	độ sâu; sâu sắc	0
+높이	độ cao; cao	0
+도전하다	thử thách	0
+뜨다	nổi; mọc; mở (mắt)	0
+생활하다	sinh hoạt	1
+정말	thật sự	1
+조절	điều chỉnh	0
+중시하다	coi trọng	0
+참가	tham gia	0
+추구하다	theo đuổi	0
+특성	đặc tính	0
+특정하다	nhất định, đặc thù	0
+판	ván, bản; sàn	x
+가득	đầy	0
+걸치다	trải dài; khoác	0
+고민	băn khoăn, trăn trở	0
+그러하다	như thế	0
+바닥	sàn nhà; đáy	0
+벗다	cởi	1
+분별하다	phân biệt	0
+빛	ánh sáng	0
+안다	ôm	0
+잊다	quên	1
+종	loài; chuông	x
+참가자	người tham gia	0
+합리	hợp lý (합리적)	0
+핵심	cốt lõi	0
+개선	cải thiện	0
+깨닫다	nhận ra	0
+내려오다	đi xuống	1
+말리다	can ngăn; phơi khô	0
+말씀	lời (kính ngữ)	1
+부동산	bất động sản	0
+불안감	cảm giác bất an	0
+삼다	coi là, lấy làm	0
+서울시	thành phố Seoul	1
+소수	thiểu số	0
+언제	khi nào	1
+여전히	vẫn như cũ	0
+위치	vị trí	0
+인정받다	được công nhận	0
+일부러	cố ý	0
+접하다	tiếp xúc	0
+지속되다	được duy trì, kéo dài	0
+진로	con đường tương lai	0
+참	thật là	1
+처하다	rơi vào (hoàn cảnh)	0
+풀다	giải quyết; tháo	0
+가리키다	chỉ, trỏ	0
+가져가다	mang đi	1
+과연	quả nhiên, liệu có	0
+나머지	phần còn lại	0
+다가오다	đến gần	0
+등	vân vân; lưng	1
+량	lượng (-량)	x
+막	vừa mới; bừa	0
+보기	ví dụ (đáp án mẫu)	x
+빨래	giặt giũ	1
+사소하다	nhỏ nhặt	0
+새	mới; chim	1
+성향	khuynh hướng	0
+손쉽다	dễ dàng	0
+숨다	trốn	0
+앞두다	sắp tới, trước (-을 앞두고)	0
+에어컨	máy lạnh	1
+요구되다	được yêu cầu	0
+이용되다	được sử dụng	0
+적응	thích nghi	0
+지적하다	chỉ ra	0
+지켜보다	theo dõi	0
+챙기다	chuẩn bị, lo liệu	0
+추세	xu thế	0
+취향	sở thích, khẩu vị	0
+통증	cơn đau	0
+보다	xem	1
+더	hơn	1
+아이	trẻ em	1
+먹다	ăn	1
+말	lời nói	1
+가족	gia đình	1
+요즘	dạo này	1
+물	nước	1
+음식	món ăn	1
+인터넷	internet	1
+자동차	ô tô	1
+빠르다	nhanh	1
+힘들다	vất vả, khó khăn	1
+바꾸다	đổi	1
+또	lại, thêm	1
+들어가다	đi vào	1
+옷	quần áo	1
+하루	một ngày	1
+배우다	học	1
+읽다	đọc	1
+마시다	uống	1
+앉다	ngồi	1
+시험	kỳ thi	1
+나이	tuổi	1
+도시	thành phố	1
+나무	cây	1
+늦다	muộn	1
+걷다	đi bộ	1
+맛있다	ngon	1
+이름	tên	1
+재미있다	thú vị	1
+깨끗하다	sạch sẽ	1
+가깝다	gần	1
+아름답다	đẹp	1
+잠	giấc ngủ	1
+떠나다	rời đi	1
+행복하다	hạnh phúc	1
+드라마	phim truyền hình	1
+들다	vào; tốn (tiền, thời gian); cầm; chứa (들어 있다)	0
+역할	vai trò	0
+타다	đi (xe); cháy	1
+괜찮다	ổn	1
+아프다	đau, ốm	1

@@ -149,6 +149,22 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   gắn chủ đề rồi ArtifactData `set` `topics/<id>`, sau đó chạy lại thống kê. Đề trộn (`mix`) và đề < 10 câu thì không gắn.
 - Tab **“Phân tích đề”** trong trang quản lý (`renderPhanTich`, hằng `PT_BIG`/`PT_SUB`/`PT_GROUPS`): bảng số câu theo chủ đề, chủ đề hay ra theo
   dạng câu, lọc câu theo chủ đề/dạng câu/đề, sửa chủ đề từng đoạn, chọn câu → tạo đề trộn (dùng `buildMixDocs`/`sortMix` như “Tạo đề trộn”).
+- **Thẻ “Từ cốt lõi”** (tab Phân tích đề → nút Chủ đề | Từ cốt lõi; code `renderCore`/`cwLoad`/`cwSave` trong khối Admin, chỉ cô thấy):
+  từ gốc gặp trong ≥ 3 trên 20 đề **đọc** đủ 50 câu (bỏ đề nghe/kịch bản nghe, đề câu 1–4, Ehot1old), lọc theo số đề, dạng câu,
+  chủ đề (chỉ từ có ≥ 30% số lần nằm trong chủ đề đó), loại từ, ẩn từ sơ cấp; xem câu trong đề có tô từ; cô xếp từ vào Tuần 1–6 hoặc Bỏ qua.
+  Dữ liệu: `python3 tools/tu_cot_loi.py <dump>` (dump có `topics/`) → `<dump>/core/meta.json`, `d0…dN.json` → ArtifactData batch `set`
+  collection `core` (≤ 1 MiB mỗi batch nên chia 2 lần). Lựa chọn của cô ở `core/marks` {m:{từ:{t, vi}}} — không ghi đè khi cập nhật.
+  Nghĩa + cấp (1 sơ cấp / 0 / x = mảnh tách từ, ẩn) bổ sung trong `tools/cot_loi.tsv` (ưu tiên hơn kho từ); không có cấp thì từ có trong
+  Seoul 1A–2B = sơ cấp. Cô nhắn “cập nhật từ cốt lõi” sau mỗi lần đồng bộ đề. Chưa đưa lên trang `tu-vung/` (cô duyệt xong mới đưa).
+- **Từ cốt lõi trong kho từ → Lộ trình hàng ngày**: `python3 tools/cot_loi_kho.py <dump>` (dump có `core/d*.json`, tùy chọn `core/marks.json`)
+  → `<dump>/vocab_cot/VC<tầng>_<nhóm>.json` → ArtifactData batch `set` collection `vocab` → đồng bộ kho từ `--vocab-only`.
+  4 phần `Cốt lõi · Tầng 1…4` (secOrder 30–33; ≥15, 10–14, 7–9, 5–6 đề), bỏ từ sơ cấp / chưa có nghĩa / cô “Bỏ qua”, nhóm 20 từ,
+  câu ví dụ lấy từ câu trong đề (bỏ câu có chỗ trống “( )”). Id từ `cl0001…` cố định theo từ gốc trong `tools/cot_loi_id.tsv`.
+  Trang `tu-vung/` không hiện phần `Cốt lõi …`. Cô giao bằng Từ vựng → Lộ trình hàng ngày (chọn các tầng, dạng “Điền từ vào câu”, ôn ngắt quãng).
+  Lộ trình đang dùng: `vroutes/CL30K` “Từ vựng cốt lõi TOPIK II – 30 ngày” (Tầng 1–4, 33 từ/ngày, trắc nghiệm Hàn → Việt, ôn tối đa 20,
+  ôn ngắt quãng, bắt đầu 2026-10-10). Form tạo lộ trình chọn phần theo nhóm thu gọn (`rtPickHTML`/`rtPickWire`), tới 40 từ/ngày.
+- Các nhóm `VCD…` (phần `Chủ đề · …`, 180 nhóm) có trong collection `vocab` nhưng **chưa đưa lên site** — khi đồng bộ kho từ thì
+  bỏ các tệp `VCD*.json` khỏi dump cho tới khi cô muốn đưa (nếu đưa, trang `tu-vung/` sẽ hiện thêm phần mới).
 - `tu-vung/chu-de.json`: 55 mục từ vựng chủ đề EBS (phần 8 của https://claude.ai/artifact/6NAJ7UnAGUQ6xWkbnhfbdi, đã chia Danh/Động/Tính/Biểu hiện)
   xếp vào 10 chủ đề lớn + “Đời sống hằng ngày” (`DS`: gia đình, gọi món, chào hỏi, vị trí… — ít gặp ở bài đọc) (`topics[].m` = số mục;
   “Khác” = `KHAC` chỉ còn Lịch sử). Thẻ “Chủ đề” = từ khóa gặp trong đề + các mục EBS của chủ đề đó.
