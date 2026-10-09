@@ -1,0 +1,324 @@
+<title>Giáo án TOPIK 3 · 109</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* Bố cục: giống trang học sinh của Hàn Ngữ Nari — đầu trang thương hiệu, phiếu đếm ngược, danh sách buổi bấm mở. */
+:root{
+  --paper:#FFFFFF; --raised:#F8FAFC; --ink:#1E293B; --soft:#64748B; --rule:#E2E8F0;
+  --rust:#DC2626; --rust-tint:#FEF2F2; --navy:#1E3A8A; --navy-tint:#EFF4FF;
+  --good:#2F6B4A; --good-tint:#E8F4EC; --gold:#B45309; --gold-tint:#FEF6E7;
+  --serif:'Fraunces',Georgia,serif;
+  --sans:'Be Vietnam Pro','Noto Sans KR',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#0F172A; --raised:#1E293B; --ink:#F1F5F9; --soft:#94A3B8; --rule:#334155;
+  --rust:#F87171; --rust-tint:#2A1C24; --navy:#93C5FD; --navy-tint:#1A2540;
+  --good:#7FBE9C; --good-tint:#1A2E25; --gold:#FCD34D; --gold-tint:#2E2614; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0F172A; --raised:#1E293B; --ink:#F1F5F9; --soft:#94A3B8; --rule:#334155;
+  --rust:#F87171; --rust-tint:#2A1C24; --navy:#93C5FD; --navy-tint:#1A2540;
+  --good:#7FBE9C; --good-tint:#1A2E25; --gold:#FCD34D; --gold-tint:#2E2614; color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6}
+a{color:var(--navy)}
+button,input,textarea,select{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--rust);outline-offset:2px}
+.wrap{max-width:860px;margin:0 auto;padding-inline:20px;padding-block:0 80px}
+.note-top{font-size:12px;color:var(--soft);padding-top:12px}
+header{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap;padding-block:14px 22px;border-bottom:1px solid var(--rule);margin-bottom:28px}
+.brand{font-family:var(--serif);font-size:18px;font-weight:600}
+.brand-sub{font-size:13px;color:var(--soft)}
+.hlinks{display:flex;gap:8px;flex-wrap:wrap}
+.hlinks a{font-size:13.5px;font-weight:600;text-decoration:none;padding:6px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--raised)}
+.hlinks a:hover{border-color:var(--navy)}
+
+.hero{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:end}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--rust);margin:0}
+h1{font-family:var(--serif);font-size:clamp(30px,6vw,42px);line-height:1.1;margin:4px 0 14px;font-weight:600;color:var(--navy);text-wrap:balance}
+.facts{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+.facts li{background:var(--raised);border:1px solid var(--rule);border-radius:6px;padding:4px 12px;font-size:14px}
+.facts b{font-weight:600}
+.lnk{background:none;border:0;padding:0;color:var(--navy);text-decoration:underline;cursor:pointer;font-size:13.5px}
+.dday{background:var(--raised);border:1px solid var(--rule);border-top:4px solid var(--rust);border-radius:6px;min-width:210px;text-align:center}
+.dday .s{font-size:13px;font-weight:600;color:var(--soft);padding:10px 14px 0}
+.dday .n{font-family:var(--serif);color:var(--rust);font-size:58px;font-weight:600;line-height:1;padding:6px 14px 0;font-variant-numeric:tabular-nums}
+.dday .u{font-size:14px;color:var(--soft);padding-bottom:10px}
+.dday .b{border-top:1px dashed var(--rule);padding:10px 14px 12px;font-size:13px;color:var(--soft)}
+.dday .b b{display:block;font-family:var(--serif);font-size:24px;color:var(--gold);line-height:1.2}
+.cap{margin:22px 0 0;padding:10px 14px;border-radius:6px;font-size:14.5px}
+.cap.ok{background:var(--good-tint);color:var(--good)}
+.cap.over{background:var(--rust-tint);color:var(--rust)}
+.track{margin:18px 0 0}
+.bar{height:6px;background:var(--rule);border-radius:99px;overflow:hidden}
+.bar span{display:block;height:100%;background:var(--rust)}
+.ends{display:flex;justify-content:space-between;font-size:13px;color:var(--soft);margin-top:6px}
+.settings{margin-top:14px;padding:12px 14px;border:1px solid var(--rule);border-radius:6px;background:var(--raised);display:flex;flex-wrap:wrap;gap:12px;align-items:end}
+.settings label{display:flex;flex-direction:column;font-size:13px;color:var(--soft);gap:2px}
+
+section{padding-top:34px}
+.sec-h{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:10px}
+h2{font-family:var(--serif);font-size:24px;margin:0;font-weight:600;color:var(--navy)}
+.sub{margin:4px 0 16px;color:var(--soft);font-size:15px}
+.seg{display:inline-flex;border:1.5px solid var(--navy);border-radius:6px;overflow:hidden}
+.seg button{background:none;border:0;padding:5px 12px;font-size:14px;font-weight:600;color:var(--navy);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--navy);color:var(--paper)}
+
+.list{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+details.ses{background:var(--raised);border:1px solid var(--rule);border-radius:6px;overflow:hidden}
+details.ses[open]{border-color:var(--rust)}
+details.ses>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:56px minmax(0,1fr) 20px;gap:14px;align-items:center;padding:12px 14px}
+details.ses>summary::-webkit-details-marker{display:none}
+.no{width:56px;height:56px;border-radius:6px;border:1px solid var(--rule);background:var(--paper);color:var(--rust);display:grid;place-items:center;text-align:center;line-height:1.05}
+.no small{display:block;font-size:10.5px;font-weight:600;color:var(--soft)}
+.no span{font-family:var(--serif);font-size:24px;font-weight:600}
+.ses.next .no{background:var(--rust);border-color:var(--rust);color:#fff}
+.ses.next .no small{color:#fff}
+.ses.done .no{color:var(--good)}
+.meta .d{font-size:13px;color:var(--soft);margin:0}
+.meta h3{margin:2px 0 4px;font-size:16px;font-weight:600;line-height:1.35}
+.chips{display:flex;flex-wrap:wrap;gap:4px}
+.chip{font-size:11.5px;font-weight:600;padding:1px 8px;border-radius:99px;background:var(--navy-tint);color:var(--navy)}
+.chip.rust{background:var(--rust-tint);color:var(--rust)}
+.chip.good{background:var(--good-tint);color:var(--good)}
+.chip.gold{background:var(--gold-tint);color:var(--gold)}
+.chip.gray{background:transparent;border:1px solid var(--rule);color:var(--soft)}
+.chev{color:var(--soft);transition:transform .2s}
+details.ses[open] .chev{transform:rotate(180deg)}
+@media (prefers-reduced-motion:reduce){.chev{transition:none}}
+.body{padding:6px 16px 16px;border-top:1px solid var(--rule);background:var(--paper)}
+.body h4{font-size:13px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--soft);margin:16px 0 4px}
+.body h4 em{font-style:normal;text-transform:none;letter-spacing:0;font-weight:600;color:var(--rust)}
+.steps{white-space:pre-wrap;margin:0;font-size:15px}
+.links{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+.links li{font-size:15px}
+.links .todo{color:var(--soft)}
+.links .todo::after{content:" · cần tạo link";color:var(--gold);font-size:13px;font-weight:600}
+.empty{color:var(--soft);font-size:14px;margin:0}
+.tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:16px;padding-top:12px;border-top:1px dashed var(--rule)}
+.tools label{display:flex;align-items:center;gap:6px;font-size:14px}
+.btn{border:1.5px solid var(--navy);background:var(--navy);color:var(--paper);font-weight:600;font-size:14px;padding:6px 12px;border-radius:6px;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--navy)}
+.btn.danger{background:transparent;color:var(--rust);border-color:var(--rust)}
+.btn[disabled]{opacity:.5;cursor:default}
+.sp{flex:1}
+input.t,textarea.t{border:1.5px solid var(--rule);border-radius:6px;background:var(--paper);padding:6px 10px;font-size:15px;width:100%}
+input[type=date].t{width:auto}
+textarea.t{min-height:80px;resize:vertical;line-height:1.5}
+.ed label{display:block;font-size:13px;font-weight:600;color:var(--soft);margin:10px 0 3px}
+.ed .hint{font-size:12.5px;color:var(--soft);margin:2px 0 0}
+.msg{font-size:13px;color:var(--soft)}
+.msg.err{color:var(--rust);font-weight:600}
+.state{padding:24px;border:1px dashed var(--rule);border-radius:6px;color:var(--soft);background:var(--raised)}
+@media (max-width:640px){
+  .hero{grid-template-columns:1fr}
+  .dday{min-width:0;display:grid;grid-template-columns:1fr 1fr}
+  .dday .s{grid-column:1/-1}
+  .dday .b{border-top:0;border-left:1px dashed var(--rule);grid-row:2/4;grid-column:2;display:flex;flex-direction:column;justify-content:center}
+  details.ses>summary{grid-template-columns:48px minmax(0,1fr) 16px;gap:10px;padding:10px}
+  .no{width:48px;height:48px}.no span{font-size:20px}
+}
+</style>
+
+<div class="wrap">
+  <div class="note-top">Trang riêng của cô — học sinh không xem được.</div>
+  <header>
+    <div><div class="brand">Hàn Ngữ Nari</div><div class="brand-sub">Giáo án lớp · Cô Ngân</div></div>
+    <nav class="hlinks" aria-label="Trang liên quan">
+      <a href="https://claude.ai/artifact/7EWoCB9sEomX2FHY8d1QY8" target="_blank" rel="noopener">Trang quản lý</a>
+      <a href="https://claude.ai/artifact/Mry3RB7hhXhEWgGNPuYtfM" target="_blank" rel="noopener">Trang học sinh</a>
+      <a href="https://nttn6889.github.io/narikoreanbox/tu-vung/" target="_blank" rel="noopener">Từ vựng</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <div>
+      <p class="eyebrow">Giáo án lớp</p>
+      <h1 id="title">TOPIK 3 · kỳ 109</h1>
+      <ul class="facts">
+        <li>Mục tiêu: <b id="fGoal">TOPIK 3 (120/300)</b></li>
+        <li>Ngày thi: <b id="fExam">–</b></li>
+        <li>Lịch: <b id="fPer">3</b> buổi/tuần</li>
+        <li><button class="lnk" id="setBtn" type="button">Sửa ngày thi, số buổi</button></li>
+      </ul>
+    </div>
+    <div class="dday" aria-live="polite">
+      <div class="s">Còn đến ngày thi</div>
+      <div class="n" id="dN">–</div>
+      <div class="u">ngày</div>
+      <div class="b"><b id="dS">–</b>buổi có thể dạy</div>
+    </div>
+  </div>
+  <div class="settings" id="settings" hidden>
+    <label>Ngày thi<input class="t" type="date" id="sExam"></label>
+    <label>Số buổi mỗi tuần<input class="t" type="number" min="1" max="7" id="sPer" style="width:90px"></label>
+    <button class="btn" id="sSave" type="button">Lưu</button>
+    <span class="msg" id="sMsg"></span>
+  </div>
+  <p class="cap" id="cap" hidden></p>
+  <div class="track" aria-hidden="true"><div class="bar"><span id="bar" style="width:0"></span></div>
+    <div class="ends"><span>Buổi 1</span><span id="doneTxt"></span><span>Ngày thi</span></div></div>
+
+  <section>
+    <div class="sec-h"><h2>Các buổi học</h2>
+      <div class="seg" role="group" aria-label="Lọc buổi"><button type="button" data-f="all" aria-pressed="true">Tất cả</button><button type="button" data-f="todo" aria-pressed="false">Chưa dạy</button><button type="button" data-f="done" aria-pressed="false">Đã dạy</button></div></div>
+    <p class="sub">Mỗi buổi có sẵn chủ đề, mục tiêu, giáo án khung, học liệu và bài tập. Ngày học cô chọn trong từng buổi; buổi nào dạy xong thì tick “Đã dạy”. Chip vàng là phần còn thiếu, Claude soạn dần theo thứ tự buổi.</p>
+    <ol class="list" id="list"><li class="state">Đang tải giáo án…</li></ol>
+    <div class="tools" style="border:0"><button class="btn ghost" id="addBtn" type="button" hidden>+ Thêm buổi</button><span class="msg" id="gMsg"></span></div>
+  </section>
+</div>
+
+<script>
+(function(){
+  var SK = {doc:["Đọc",""], nghe:["Nghe","good"], viet:["Viết","gold"], thi:["Thi thử","rust"]};
+  var PL = {2:"Nên học", 3:"Nếu kịp"};
+  var WD = ["CN","T2","T3","T4","T5","T6","T7"];
+  var db = null, plan = {exam:"2026-11-28", perWeek:3}, rows = null, filter = "all", openId = null, editId = null;
+  var $ = function(id){ return document.getElementById(id); };
+  var esc = function(s){ return String(s == null ? "" : s).replace(/[&<>"]/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); };
+  var today = (function(){ var n = new Date(); return new Date(n.getFullYear(), n.getMonth(), n.getDate()); })();
+  var toD = function(s){ var m = String(s || "").match(/^(\d{4})-(\d{2})-(\d{2})$/); return m ? new Date(+m[1], m[2]-1, +m[3]) : null; };
+  var fmt = function(s){ var d = toD(s); return d ? WD[d.getDay()] + " " + String(d.getDate()).padStart(2,"0") + "/" + String(d.getMonth()+1).padStart(2,"0") : ""; };
+  var fmtFull = function(s){ var d = toD(s); return d ? String(d.getDate()).padStart(2,"0") + "/" + String(d.getMonth()+1).padStart(2,"0") + "/" + d.getFullYear() : "–"; };
+  var safeUrl = function(u){ return /^https:\/\//.test(u || "") ? u : ""; };
+
+  function head(){
+    $("fExam").textContent = fmtFull(plan.exam);
+    $("fPer").textContent = plan.perWeek || 3;
+    if(plan.goal) $("fGoal").textContent = plan.goal;
+    if(plan.title){ $("title").textContent = plan.title; }
+    var ex = toD(plan.exam), left = ex ? Math.round((ex - today) / 864e5) : null;
+    $("dN").textContent = left == null ? "–" : Math.max(0, left);
+    var can = left == null ? null : Math.max(0, Math.floor(left / 7 * (plan.perWeek || 3)));
+    $("dS").textContent = can == null ? "–" : "≈ " + can;
+    if(!rows) return;
+    var done = rows.filter(function(r){ return r.done; }).length, todo = rows.length - done;
+    $("bar").style.width = (rows.length ? Math.round(done * 100 / rows.length) : 0) + "%";
+    $("doneTxt").textContent = "Đã dạy " + done + "/" + rows.length + " buổi";
+    var cap = $("cap");
+    if(can != null){
+      cap.hidden = false;
+      if(todo <= can){ cap.className = "cap ok"; cap.textContent = "Lộ trình còn " + todo + " buổi chưa dạy, đến ngày thi có khoảng " + can + " buổi" + (can > todo ? " (dư " + (can - todo) + " buổi để ôn)." : ": vừa đủ."); }
+      else { cap.className = "cap over"; cap.textContent = "Lộ trình còn " + todo + " buổi nhưng đến ngày thi chỉ có khoảng " + can + " buổi: thiếu " + (todo - can) + " buổi. Cô bỏ bớt buổi “Nếu kịp” hoặc dạy gộp 2 buổi."; }
+    }
+  }
+
+  function linkList(arr){
+    if(!arr || !arr.length) return '<p class="empty">Chưa có.</p>';
+    return '<ul class="links">' + arr.map(function(l){ var u = safeUrl(l.u); return u ? '<li><a href="' + esc(u) + '" target="_blank" rel="noopener">' + esc(l.t || u) + '</a></li>' : '<li class="todo">' + esc(l.t) + '</li>'; }).join("") + '</ul>';
+  }
+  function linesOf(arr){ return (arr || []).map(function(l){ return l.t + (l.u ? " | " + l.u : ""); }).join("\n"); }
+  function parseLines(txt){ return String(txt || "").split(/\n/).map(function(s){ return s.trim(); }).filter(Boolean).map(function(s){ var p = s.split("|"); var u = p.length > 1 ? p.pop().trim() : ""; var t = p.join("|").trim(); if(!t && u) t = u; if(!/^https:\/\//.test(u)){ if(u) t = t ? t + " | " + u : u; u = ""; } return {t:t, u:u}; }); }
+
+  function render(){
+    head();
+    var list = $("list");
+    if(!rows){ return; }
+    $("addBtn").hidden = false;
+    if(!rows.length){ list.innerHTML = '<li class="state">Chưa có buổi nào. Cô bấm “+ Thêm buổi”, hoặc nhắn Claude tạo lộ trình.</li>'; return; }
+    var nextId = (rows.find(function(r){ return !r.done; }) || {}).id;
+    var shown = rows.filter(function(r){ return filter === "all" || (filter === "done" ? r.done : !r.done); });
+    list.innerHTML = shown.map(function(r){
+      var sk = SK[r.skill] || SK.doc, missHw = (r.hw || []).filter(function(l){ return !safeUrl(l.u); }).length;
+      var chips = '<span class="chip ' + sk[1] + '">' + sk[0] + '</span>' + (PL[r.p] ? '<span class="chip gray">' + PL[r.p] + '</span>' : '') +
+        (r.done ? '<span class="chip good">Đã dạy</span>' : (r.ga ? '<span class="chip good">Giáo án chi tiết</span>' : '<span class="chip gold">Giáo án khung</span>') +
+          ((r.mats || []).length ? '' : '<span class="chip gold">Chưa có học liệu</span>') + (missHw ? '<span class="chip gold">' + missHw + ' bài tập cần tạo link</span>' : ''));
+      var cls = "ses" + (r.done ? " done" : "") + (r.id === nextId ? " next" : "");
+      var date = r.date ? fmt(r.date) + (r.id === nextId ? " · buổi tới" : "") : (r.id === nextId ? "Buổi tới · chưa xếp ngày" : "Chưa xếp ngày");
+      var body = editId === r.id ? editHTML(r) :
+        (r.goal ? '<h4>Mục tiêu</h4><p class="steps">' + esc(r.goal) + '</p>' : '') +
+        '<h4>Giáo án <em>(chỉ cô xem)</em></h4>' + (r.steps ? '<p class="steps">' + esc(r.steps) + '</p>' : '<p class="empty">Chưa có.</p>') +
+        '<h4>Học liệu</h4>' + linkList(r.mats) + '<h4>Bài tập</h4>' + linkList(r.hw) +
+        '<h4>Ghi chú sau buổi</h4>' + (r.note ? '<p class="steps">' + esc(r.note) + '</p>' : '<p class="empty">Chưa có.</p>') +
+        '<div class="tools"><label>Ngày học <input class="t" type="date" data-date="' + r.id + '" value="' + esc(r.date || "") + '"></label>' +
+        '<label><input type="checkbox" data-done="' + r.id + '"' + (r.done ? ' checked' : '') + '> Đã dạy</label><span class="sp"></span>' +
+        '<button class="btn ghost" type="button" data-up="' + r.id + '" aria-label="Đưa buổi lên trước">↑</button><button class="btn ghost" type="button" data-down="' + r.id + '" aria-label="Đưa buổi xuống sau">↓</button>' +
+        '<button class="btn ghost" type="button" data-copy="' + r.id + '">Chép cho trang học sinh</button><button class="btn" type="button" data-edit="' + r.id + '">Sửa buổi</button></div><p class="msg" data-msg="' + r.id + '"></p>';
+      return '<li><details class="' + cls + '" data-id="' + r.id + '"' + (openId === r.id ? ' open' : '') + '><summary><div class="no"><small>Buổi</small><span>' + r.no + '</span></div><div class="meta"><p class="d">' + esc(date) + '</p><h3>' + esc(r.topic) + '</h3><div class="chips">' + chips + '</div></div><svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="body">' + body + '</div></details></li>';
+    }).join("") || '<li class="state">Không có buổi nào trong mục này.</li>';
+    wire();
+  }
+  function editHTML(r){
+    return '<div class="ed"><label for="eT">Chủ đề buổi</label><input class="t" id="eT" value="' + esc(r.topic) + '">' +
+      '<label for="eG">Mục tiêu</label><textarea class="t" id="eG" rows="2">' + esc(r.goal) + '</textarea>' +
+      '<label for="eS">Giáo án (chỉ cô xem)</label><textarea class="t" id="eS" rows="7">' + esc(r.steps) + '</textarea>' +
+      '<label for="eM">Học liệu</label><textarea class="t" id="eM" rows="3">' + esc(linesOf(r.mats)) + '</textarea>' +
+      '<label for="eH">Bài tập</label><textarea class="t" id="eH" rows="3">' + esc(linesOf(r.hw)) + '</textarea><p class="hint">Mỗi dòng một mục: Tên | https://link (chưa có link thì chỉ ghi tên).</p>' +
+      '<label for="eN">Ghi chú sau buổi</label><textarea class="t" id="eN" rows="2">' + esc(r.note) + '</textarea>' +
+      '<label><input type="checkbox" id="eGa"' + (r.ga ? ' checked' : '') + '> Giáo án đã chi tiết</label>' +
+      '<div class="tools"><button class="btn" type="button" id="eSave">Lưu</button><button class="btn ghost" type="button" id="eCancel">Hủy</button><span class="sp"></span><button class="btn danger" type="button" id="eDel">Xóa buổi</button></div><p class="msg" id="eMsg"></p></div>';
+  }
+  function say(id, txt, err){ var el = document.querySelector('[data-msg="' + id + '"]') || $("gMsg"); if(el){ el.textContent = txt; el.className = "msg" + (err ? " err" : ""); } }
+  function save(id, patch){
+    return db.doc("ses/" + id).update(patch).then(function(){ say(id, "Đã lưu."); }, function(e){ say(id, "Chưa lưu được (" + ((e && e.code) || "lỗi") + "). Cô thử lại.", true); throw e; });
+  }
+  function byId(id){ return rows.find(function(r){ return r.id === id; }); }
+  function wire(){
+    document.querySelectorAll("details.ses").forEach(function(d){ d.addEventListener("toggle", function(){ if(d.open) openId = d.dataset.id; else if(openId === d.dataset.id) openId = null; }); });
+    document.querySelectorAll("[data-date]").forEach(function(i){ i.onchange = function(){ save(i.dataset.date, {date:i.value || ""}); }; });
+    document.querySelectorAll("[data-done]").forEach(function(i){ i.onchange = function(){ save(i.dataset.done, {done:i.checked}); }; });
+    document.querySelectorAll("[data-edit]").forEach(function(b){ b.onclick = function(){ editId = b.dataset.edit; openId = editId; render(); }; });
+    document.querySelectorAll("[data-up],[data-down]").forEach(function(b){ b.onclick = function(){
+      var id = b.dataset.up || b.dataset.down, i = rows.findIndex(function(r){ return r.id === id; }), j = b.dataset.up ? i - 1 : i + 1;
+      if(j < 0 || j >= rows.length) return;
+      var a = rows[i], c = rows[j], na = a.no, nc = c.no; openId = id;
+      b.disabled = true;
+      db.doc("ses/" + a.id).update({no:nc}).then(function(){ return db.doc("ses/" + c.id).update({no:na}); }).then(null, function(){ say(id, "Chưa đổi được thứ tự. Cô thử lại.", true); });
+    }; });
+    document.querySelectorAll("[data-copy]").forEach(function(b){ b.onclick = function(){
+      var r = byId(b.dataset.copy), links = (r.mats || []).concat(r.hw || []).filter(function(l){ return safeUrl(l.u); });
+      var txt = '  { no: ' + r.no + ', date: "' + (r.date || "") + '", topic: ' + JSON.stringify(r.topic) + ',\n    links: [' + links.map(function(l){ return '\n      { label: ' + JSON.stringify(l.t) + ', url: ' + JSON.stringify(l.u) + ' }'; }).join(",") + (links.length ? '\n    ' : '') + '] },';
+      var ok = function(){ say(r.id, "Đã chép. Dán vào danh sách LESSONS của trang học sinh, hoặc gửi Claude để cập nhật."); };
+      try { navigator.clipboard.writeText(txt).then(ok, function(){ say(r.id, txt); }); } catch(e){ say(r.id, txt); }
+    }; });
+    var es = $("eSave");
+    if(es){
+      var r = byId(editId);
+      es.onclick = function(){
+        var t = $("eT").value.trim(); if(!t){ $("eMsg").textContent = "Cô đặt chủ đề cho buổi nhé."; $("eMsg").className = "msg err"; return; }
+        es.disabled = true;
+        db.doc("ses/" + r.id).update({topic:t, goal:$("eG").value.trim(), steps:$("eS").value.trim(), mats:parseLines($("eM").value), hw:parseLines($("eH").value), note:$("eN").value.trim(), ga:$("eGa").checked ? 1 : 0})
+          .then(function(){ editId = null; render(); }, function(e){ es.disabled = false; $("eMsg").textContent = "Chưa lưu được (" + ((e && e.code) || "lỗi") + "). Cô thử lại."; $("eMsg").className = "msg err"; });
+      };
+      $("eCancel").onclick = function(){ editId = null; render(); };
+      var del = $("eDel"), armed = false;
+      del.onclick = function(){
+        if(!armed){ armed = true; del.textContent = "Bấm lần nữa để xóa hẳn"; return; }
+        db.doc("ses/" + r.id).delete().then(function(){ editId = null; openId = null; renumber(); });
+      };
+    }
+  }
+  function renumber(){
+    var chain = Promise.resolve();
+    rows.forEach(function(r, i){ if(r.no !== i + 1) chain = chain.then(function(){ return db.doc("ses/" + r.id).update({no:i + 1}); }); });
+    return chain;
+  }
+  document.querySelectorAll("[data-f]").forEach(function(b){ b.onclick = function(){ filter = b.dataset.f; document.querySelectorAll("[data-f]").forEach(function(x){ x.setAttribute("aria-pressed", x === b ? "true" : "false"); }); render(); }; });
+  $("setBtn").onclick = function(){ var s = $("settings"); s.hidden = !s.hidden; $("sExam").value = plan.exam || ""; $("sPer").value = plan.perWeek || 3; };
+  $("sSave").onclick = function(){
+    if(!db) return;
+    var p = {exam:$("sExam").value, perWeek:Math.max(1, Math.min(7, parseInt($("sPer").value, 10) || 3))};
+    db.doc("plan/main").update(p).then(function(){ $("sMsg").textContent = "Đã lưu."; }, function(){ return db.doc("plan/main").set(Object.assign({}, plan, p)); }).then(null, function(){ $("sMsg").textContent = "Chưa lưu được."; });
+  };
+  $("addBtn").onclick = function(){
+    var no = rows.length ? Math.max.apply(null, rows.map(function(r){ return r.no || 0; })) + 1 : 1, id = "b" + Date.now().toString(36);
+    db.doc("ses/" + id).set({no:no, skill:"doc", topic:"Buổi mới", goal:"", steps:"", mats:[], hw:[], p:1, date:"", done:false, ga:0, note:""})
+      .then(function(){ editId = id; openId = id; filter = "all"; }, function(){ $("gMsg").textContent = "Chưa thêm được buổi."; });
+  };
+
+  head();
+  if(window.claude && typeof window.claude.use === "function"){
+    window.claude.use("db").then(function(d){
+      if(!d){ $("list").innerHTML = '<li class="state">Không mở được dữ liệu giáo án. Cô mở trang khi đã đăng nhập claude.ai bằng tài khoản của cô.</li>'; return; }
+      db = d;
+      db.doc("plan/main").onSnapshot(function(s){ if(s.exists){ plan = Object.assign({exam:"2026-11-28", perWeek:3}, s.data()); render(); } }, function(){});
+      db.collection("ses").onSnapshot(function(s){
+        rows = s.docs.map(function(x){ var o = Object.assign({}, x.data()); o.id = x.id; return o; }).sort(function(a, b){ return (a.no || 0) - (b.no || 0); });
+        render();
+      }, function(){ $("list").innerHTML = '<li class="state">Không tải được giáo án. Cô tải lại trang.</li>'; });
+    });
+  } else {
+    $("list").innerHTML = '<li class="state">Trang này cần mở trên claude.ai để đọc dữ liệu giáo án.</li>';
+  }
+})();
+</script>

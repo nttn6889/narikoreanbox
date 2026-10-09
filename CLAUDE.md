@@ -42,6 +42,14 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   “Bài riêng cô giao”. Đã nộp = localStorage `nari-v-|nari-n-|nari-tt-<mã bài>-<tên>` có `submitted`. Học sinh vẫn gửi mã nộp qua
   Zalo (có nút “Gửi qua Zalo…” dùng bảng chia sẻ của máy).
 
+## Giáo án lớp TOPIK 3 · kỳ 109 (trang riêng của cô)
+- https://claude.ai/artifact/VGJTuWw7wdj8AvqUQS4aJi — trang riêng, giao diện giống trang học sinh (https://claude.ai/artifact/Mry3RB7hhXhEWgGNPuYtfM).
+  Dữ liệu trong db của trang này (rules: chỉ admin đọc/ghi): `plan/main` {exam, perWeek, title, goal}, `ses/<id>` = một buổi
+  {no, date, done, skill doc|nghe|viet|thi, topic, goal, steps (giáo án, chỉ cô xem), mats[{t,u}] học liệu, hw[{t,u}] bài tập
+  (u rỗng = “cần tạo link”), p ưu tiên, ga 0 khung/1 chi tiết, note}. Buổi 1–8 = đã dạy (theo trang học sinh), 9–29 = lộ trình đến thi.
+- Cô chọn ngày, tick “Đã dạy”, sửa buổi ngay trên trang; nút “Chép cho trang học sinh” tạo dòng cho mảng `LESSONS` của trang học sinh.
+- Soạn tiếp từng buổi: ArtifactData `update` `ses/<id>` (steps chi tiết + `ga:1`, thêm link học liệu/bài tập). Bản nguồn trang: `tools/giao-an-109.html`.
+
 ## Khung lộ trình lớp (Lớp học → lớp → “Khung lộ trình”)
 - Lớp có `wd` (thứ có buổi) + `weeks[].s[]` = buổi `{d, b:[khối], note, off}`; khối = `<thư viện>/<id>` trong `LIBS` (code) hoặc `syllabi`.
 - Thư viện có sẵn `b_t3` “Lộ trình TOPIK 3 · theo buổi” (hàm `t3`): 30 khối, mỗi khối = 1 buổi, có mục tiêu (`note`), ưu tiên `p`
