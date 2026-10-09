@@ -91,6 +91,12 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   (bỏ qua dấu cách, LCS) → chữ khác bài mẫu tô vàng gạch sóng (`mark.wdm`), chữ bài mẫu có mà học sinh thiếu tô xanh (`mark.wdk`), kèm % giống.
   53/54: mỗi câu học sinh tự gắn vào ý bài mẫu (`wGuessBlock`), trang chấm hiện câu đã tô + câu mẫu tương ứng + “thiếu ý: …”; 51/52 so với
   cách viết mẫu gần nhất (`wBest`). Sửa câu, nhãn lỗi, nhận xét từng câu (`x.n`) / từng ô (`ev:[{i, nt:[㉠,㉡]}]`), tiến bộ (`tb`) là tùy cô.
+- **Bộ lỗi câu 53/54 (máy chạy trong trang, không tốn token)** — code chung ngoài khối Admin: `W_VARS` (nhóm cách viết tương đương; `wCmp` tô tím
+  `mark.wdv` + tính là giống, ghi “Cũng đúng” vào nhận xét), `W_RULES` (lỗi hay gặp: `re`, tiêu chí `c` c/o/l, điểm trừ `d`, tên `t`, giải thích `m`, cách sửa `fx`),
+  `wHits`, `wFix` (nút “Sửa từ câu gốc” điền câu đã sửa tự động), `wAutoScore` (điểm gợi ý = tối đa − lỗi từng câu − lỗi cả bài: độ dài, số liệu, ý thiếu).
+  Trang chấm: mỗi câu có danh sách lỗi máy tìm (bỏ tick = không gửi, lưu `x.off`), ô “Máy chấm gợi ý” + nút “Dùng điểm gợi ý”. Bảng `#s=`
+  tự hiện lỗi + giải thích + điểm trừ trong cột Nhận xét. Các câu cùng một ý bài mẫu gộp một dòng, so cả cụm. Thêm lỗi: thêm dòng vào `W_RULES` (id mới).
+  Bước sau (cô đồng ý): Claude chấm trong phiên Code khi cô nhắn “chấm bài viết” — đọc `wresults` chưa chấm, ghi `ev` (câu sửa, nhận xét, điểm) để cô duyệt.
 - Bảng sửa bài `#s=` (gửi học sinh) = bảng đối chiếu từng câu **# ý | Bài mẫu | Em viết | Nhận xét** (tô màu theo `wCmp`; cột Nhận xét chỉ hiện khi cô có ghi;
   câu cô sửa hiện thêm dòng “Cô sửa” so chữ `<del>/<ins>`; điện thoại: mỗi câu một thẻ), ý học sinh bỏ sót tô đỏ, thêm “Tiến bộ so với bài lần trước”. Nhận xét viết được `**đậm**`, `` `chữ Hàn` ``. Ảnh biểu đồ không tải được thì hiện `data`
   (số liệu dạng chữ; link giao bài 53/54 kèm `dt`, `thi-thu/viet/<id>.json` kèm `data`).

@@ -417,6 +417,9 @@ ins{color:var(--ok);text-decoration:none;background:var(--ok-soft);font-weight:6
 }
 .w5n{margin-top:6px;font-size:14.5px}
 mark.wdm{background:var(--warn-soft);color:inherit;text-decoration:underline wavy var(--pen);text-underline-offset:4px;text-decoration-thickness:1.5px;border-radius:2px;padding:0}
+mark.wdv{background:var(--violet-soft);color:inherit;text-decoration:underline dotted var(--violet);text-underline-offset:4px;text-decoration-thickness:2px;border-radius:2px;padding:0}
+.wau{display:grid;gap:5px;margin:6px 0 8px;font-size:14.5px}.wtn .wau{margin:0;gap:8px}.wtn .wau1{display:block}.wtn .wau1 .pill{display:inline-block;margin:0 0 2px}.wau1{display:flex;gap:6px;align-items:flex-start;line-height:1.5}.wau1 p{margin:0}.wau1 input{margin-top:4px;flex:none}.wau1 .pill{flex:none;margin-top:1px}.wau1.off{opacity:.45}
+.wsug{border:1px dashed var(--violet);border-radius:6px;padding:8px 12px;margin:10px 0 4px;background:var(--violet-soft);font-size:14.5px}.wsug ul{margin:2px 0 6px;padding-left:20px}.wsug li{margin:1px 0}
 mark.wdk{background:var(--ok-soft);color:var(--ok);font-weight:600;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1.5px;border-radius:2px;padding:0}
 .w5m{font-size:15px;margin:4px 0 8px;padding:6px 10px;border-left:3px solid var(--ok);background:var(--paper);border-radius:0 6px 6px 0}
 .w5m .wcl{display:inline;margin-right:4px}
@@ -1415,6 +1418,101 @@ function wSents(t){
 /* Câu văn nói (đuôi -요 / -습니다, 제가, 저는…) — bài 53/54 phải viết đuôi -다. */
 function wSpoken(s){ return /(요|니다|니까)[.!?]?\s*$/.test(s) || /(^|\s)(제가|저는|저의|저도|저희)(\s|$)/.test(s); }
 function wNumsMiss(t, nums){ var x = String(t || "").replace(/\s/g, ""); return (nums || []).filter(function(n){ return x.indexOf(String(n).replace(/\s/g, "")) < 0; }); }
+/* ---------- Bộ lỗi câu 53/54 (máy chạy trong trang, không gọi Claude) ----------
+   W_VARS: các cách viết tương đương — chữ em viết khác bài mẫu nhưng nằm cùng nhóm thì tô tím, tính là giống.
+   W_RULES: lỗi hay gặp. y = câu áp dụng, re = mẫu bắt lỗi, c = tiêu chí (c nội dung, o bố cục, l ngôn ngữ), d = điểm trừ gợi ý,
+   t = tên ngắn, m = giải thích gửi học sinh (**đậm**, `chữ Hàn`), fx = cách sửa tự động (thay re, không có thì không tự sửa).
+   Thêm lỗi mới: thêm một dòng, id mới (id đã gửi học sinh thì không đổi nghĩa). */
+var W_VARS = [
+  ["이러한 변화의 원인은", "이렇게 변화한 것은", "이와 같이 변화한 것은", "이처럼 변화한 것은", "이렇게 변화한 이유는", "이와 같이 변화한 이유는"],
+  ["이렇게", "이와 같이", "이처럼"],
+  ["이와 달리", "이와 반대로", "반면에"],
+  ["에 따르면", "에 의하면"],
+  ["그 결과", "조사 결과"],
+  ["살펴보면", "알아보면"],
+  ["증가한 것으로 나타났다", "증가하였다", "증가했다", "늘어났다", "늘었다"],
+  ["감소한 것으로 나타났다", "감소하였다", "감소했다", "줄어들었다", "줄었다"],
+  ["증가하였고", "증가했고", "늘어났고", "늘었고"],
+  ["감소하였고", "감소했고", "줄어들었고", "줄었고"],
+  ["하였다", "했다"], ["하였고", "했고"], ["하였으며", "했으며"], ["하였는데", "했는데"],
+  ["되었다", "됐다"], ["되었고", "됐고"], ["되었으며", "됐으며"],
+  ["배나 ", "배 "]
+];
+var W_VARL = (function(){ var o = []; W_VARS.forEach(function(g, gi){ g.forEach(function(x){ o.push([x, gi]); }); }); return o.sort(function(a, b){ return b[0].length - a[0].length; }); })();
+/* Chữ em viết là cách viết khác của chữ trong bài mẫu (cùng nhóm W_VARS, bài mẫu không có đúng chữ em viết):
+   ca/cb = vị trí chữ được tính là giống ở 2 bên, v = [[chữ em, chữ mẫu]]. */
+function wVarSpans(a, b){
+  var ca = new Array(a.length).fill(0), cb = new Array(b.length).fill(0), v = [];
+  var free = function(arr, q, n){ for(var k = q; k < q + n; k++) if(arr[k]) return false; return true; };
+  var occ = function(t, x){ var o = [], k = t.indexOf(x); while(k >= 0){ o.push(k); k = t.indexOf(x, k + 1); } return o; };
+  W_VARL.forEach(function(e){ var x = e[0], g = W_VARS[e[1]];
+    occ(a, x).forEach(function(k){
+      if(!free(ca, k, x.length) || occ(b, x).some(function(q){ return free(cb, q, x.length); })) return;
+      for(var t = 0; t < g.length; t++){ var m = g[t]; if(m === x) continue;
+        var q = occ(b, m).filter(function(q){ return free(cb, q, m.length); })[0];
+        if(q != null){ for(var z = k; z < k + x.length; z++) ca[z] = 1; for(z = q; z < q + m.length; z++) cb[z] = 1; v.push([x.trim(), m.trim()]); return; }
+      }
+    });
+  });
+  return {ca:ca, cb:cb, v:v};
+}
+var W_CRN = {c:"Nội dung", o:"Bố cục", l:"Ngôn ngữ"};
+var W_RULES = [
+  {id:"spk", y:[53,54], t:"đuôi văn nói", c:"l", d:1, re:/(요|니다|니까)[.!?]?\s*$/,
+    m:"Bài 53/54 là văn viết: kết câu bằng **-다** (`-았/었다`, `-ㄴ/는다`), không dùng `-요`, `-습니다`."},
+  {id:"jeo", y:[53,54], t:"ngôi 저/제", c:"l", d:0.5, re:/(^|\s)(제가|저는|저의|저도|저희)(?=\s)/,
+    m:"Văn viết không dùng `저/제` (cách xưng khiêm nhường khi nói). Câu 53 không có ngôi thứ nhất; câu 54 nếu cần thì dùng `우리`."},
+  {id:"na", y:[53], t:"ngôi thứ nhất", c:"l", d:0.5, re:/(^|\s)(나는|내가|나의|우리는)(?=\s)/,
+    m:"Câu 53 chỉ tả bảng/biểu đồ một cách khách quan, không dùng ngôi thứ nhất (`나는`, `우리는`)."},
+  {id:"opn", y:[53], t:"ý kiến riêng", c:"c", d:1, re:/생각한다|생각된다|생각합니다|것 같다|것 같습니다/,
+    m:"Câu 53 chỉ trình bày nội dung của đề, không đưa ý kiến riêng (`생각한다`, `-ㄴ 것 같다`). Nêu nguyên nhân thì viết **`-기 때문인 것으로 보인다`**."},
+  {id:"and", y:[53], t:"그리고 đầu câu", c:"o", d:0.5, re:/^그리고\s+/, fx:"",
+    m:"Không mở câu bằng **그리고** trong câu 53 (nối lỏng, giống văn nói). Câu đã có `이를`, `이와 달리`… để nối thì bỏ `그리고`; cần thêm ý thì dùng `또한`."},
+  {id:"so", y:[53,54], t:"từ nối văn nói", c:"l", d:0.5, re:/^(그래서|근데|그런데|그니까)\s+/,
+    m:"`그래서`, `그런데` mang giọng văn nói. Văn viết dùng **`따라서`, `그러므로`, `이에 따라`** (nêu kết quả) hoặc **`그러나`, `한편`** (chuyển ý)."},
+  {id:"col", y:[53,54], t:"từ văn nói", c:"l", d:0.5, re:/(^|\s)(너무|되게|진짜|엄청|제일)(?=\s)/,
+    m:"Từ văn nói: `너무` → **`매우`/`상당히`**, `제일` → **`가장`**, `진짜/되게/엄청` → **`매우`**."},
+  {id:"rng", y:[53,54], t:"dấu ~", c:"l", d:0.5, re:/(\d+)\s*[-–]\s*(\d+)\s*(대|세|%|년|만|명)/, fx:"$1~$2$3",
+    m:"Khoảng số viết bằng dấu **~**: `20~30대` (hoặc `20대~30대`), không dùng dấu gạch `-`."},
+  {id:"man", y:[53,54], t:"viết cách 만에", c:"l", d:0.5, re:/(\d+\s*(?:년|개월|주|일|시간))만에/, fx:"$1 만에",
+    m:"**만** chỉ khoảng thời gian (‘sau … thì’) là danh từ phụ thuộc nên viết cách: `5년 만에`."},
+  {id:"cma", y:[53], t:"thiếu A에서 B로", c:"l", d:1, re:/(\d[\d.,]*\s*(?:만|천|억)?\s*(?:명|원|개|건|가구|톤|대|%|달러))\s*,\s*(\d{4}년)/, fx:"$1에서 $2",
+    m:"So sánh hai mốc phải nối bằng **A에서 B로**: `2019년 340만 명에서 2024년 650만 명으로`. Dấu phẩy chỉ là liệt kê, không cho thấy sự thay đổi."},
+  {id:"dae", y:[53,54], t:"에 대한 + động từ", c:"l", d:1, re:/에 대한 (조사|연구|분석)(하였다|했다|하였으며|했으며|하였고|했고)/, fx:"에 대해 $1$2",
+    m:"**에 대한** đi với danh từ (`변화에 대한 조사`); trước động từ phải là **에 대해**: `캠핑 인구의 변화에 대해 조사하였다`."},
+  {id:"jga", y:[53,54], t:"N이/가 증가로", c:"l", d:1, re:/([가-힣]{2,})(가|이) (증가|감소|상승|하락|확대|축소)로/, fx:"$1 $3로",
+    m:"**N 증가로** (‘do N tăng’) là danh từ + `로`, không có tiểu từ chủ ngữ: `대여료 증가로`. Muốn giữ `가/이` thì đổi sang động từ: `대여료가 증가하여`."},
+  {id:"tmn", y:[53,54], t:"때문만 / 때만", c:"l", d:0.5, re:/(때문|때)만(으로|이)/, fx:"때문$2",
+    m:"Viết đúng là **`때문`**, không ghép `만`: **`-기 때문이다`** / **`-기 때문인 것으로 보인다`** (`때문만으로`, `때만으로` đều sai)."},
+  {id:"sbj", y:[53], t:"thiếu chủ ngữ", c:"l", d:1, re:/^(이렇게|이와 같이|이처럼)\s*(변화한|변한|증가한|감소한)\s+(?!(것은|것의|이유는|원인은|까닭은|데에는|데는|배경에는))/, fx:"$1 $2 것은 ",
+    m:"Câu nêu nguyên nhân bị thiếu chủ ngữ: `이렇게 변화한` phải đi với danh từ — **`이렇게 변화한 것은 … 때문이다`** hoặc **`이러한 변화의 원인은 … 때문인 것으로 보인다`**."},
+  {id:"lng", y:[53,54], t:"câu quá dài", c:"o", d:0, test:function(s){ return wLen(s) > 130; },
+    m:"Câu dài hơn 130 chữ, nên tách làm 2 câu cho rõ ý."}
+];
+/* Lỗi máy tìm được trong một câu (mỗi lỗi tính một lần). */
+function wHits(s, y){ s = String(s || ""); return W_RULES.filter(function(r){ return r.y.indexOf(+y) >= 0 && (r.test ? r.test(s) : r.re.test(s)); }); }
+function wOffSet(x){ return String((x && x.off) || "").split(",").filter(Boolean); }
+/* Câu sửa tự động theo các lỗi có cách sửa (bỏ lỗi cô đã tắt). */
+function wFix(s, y, off){ off = off || []; var t = String(s || "");
+  wHits(t, y).forEach(function(r){ if(r.fx != null && off.indexOf(r.id) < 0) t = t.replace(new RegExp(r.re.source, "g"), r.fx); });
+  return t.replace(/\s{2,}/g, " ").trim(); }
+function wPt(d){ return String(d).replace(".", ","); }
+function wHitHTML(r, box){ return '<div class="wau1">' + (box || '') + '<span class="pill ' + (r.d ? 'bad' : 'warn') + '">' + W_CRN[r.c] + (r.d ? ' −' + wPt(r.d) : '') + '</span><div>' + wNoteHTML(r.m) + '</div></div>'; }
+function wVarHTML(v){ var seen = {}; return (v || []).filter(function(p){ var k = p.join("|"); if(seen[k]) return false; seen[k] = 1; return true; }).map(function(p){
+  return '<div class="wau1"><span class="pill good">Cũng đúng</span><div><p><code class="wq">' + esc(p[0]) + '</code> = <code class="wq">' + esc(p[1]) + '</code> (bài mẫu) — cách viết khác, dùng cách nào cũng được.</p></div></div>'; }).join(""); }
+/* Điểm gợi ý theo 3 tiêu chí: điểm tối đa trừ lỗi từng câu + lỗi cả bài (độ dài, số liệu, ý còn thiếu). xs = [{b, s, off}]. */
+function wAutoScore(y, text, xs, blocks, nums){
+  var rub = W_RUB[+y] || [], len = W_LEN[+y], out = {}, n = wLen(text);
+  rub.forEach(function(c){ out[c[0]] = {max:c[3], d:0, items:[]}; });
+  var add = function(c, d, m){ if(out[c] && d){ out[c].d += d; out[c].items.push('−' + wPt(d) + ' ' + m); } };
+  if(len && n < len[0]) add("c", n < len[0] * 0.7 ? 4 : 2, 'bài chỉ có ' + n + '자 (tối thiểu ' + len[0] + '자)');
+  if(len && n > len[1]) add("o", 1, 'bài dài ' + n + '자, quá ' + len[1] + '자');
+  var miss = wNumsMiss(text, nums); if(miss.length) add("c", Math.min(3, miss.length), 'thiếu số liệu ' + miss.join(", "));
+  (blocks || []).forEach(function(b, k){ if(!(xs || []).some(function(x){ return +x.b === k; })) add("c", +y === 54 ? 3 : 2, 'thiếu ý “' + (b.k || "") + '”'); });
+  (xs || []).forEach(function(x, j){ var off = wOffSet(x); wHits(x.s, y).forEach(function(r){ if(off.indexOf(r.id) < 0) add(r.c, r.d, 'câu ' + (j+1) + ': ' + r.t); }); });
+  rub.forEach(function(c){ var o = out[c[0]]; o.s = Math.max(0, Math.round(o.max - o.d)); });
+  return out;
+}
 /* So từng chữ câu em viết với câu cô sửa: <del> chữ bỏ, <ins> chữ thêm. */
 function wDiffHTML(a, b){
   a = String(a || ""); b = String(b || "");
@@ -1442,14 +1540,14 @@ function wImgHTML(src, dt){
   return (src ? '<img class="wimg" src="' + esc(src) + '" alt="Biểu đồ của đề" onerror="this.hidden=true;var n=this.nextElementSibling;if(n&&n.className===\'wdt\')n.hidden=false">' : '') + d;
 }
 var W_V = {ok:"✅", warn:"⚠️", bad:"❌"};
-var W_LEG = '<mark class="wdm">Chữ tô vàng</mark> trong câu em viết = khác bài mẫu · <mark class="wdk">chữ tô xanh</mark> trong bài mẫu = bài mẫu có mà em chưa viết (không tính dấu cách).';
+var W_LEG = '<mark class="wdm">Chữ tô vàng</mark> trong câu em viết = khác bài mẫu · <mark class="wdk">chữ tô xanh</mark> trong bài mẫu = bài mẫu có mà em chưa viết · <mark class="wdv">chữ tô tím</mark> = cách viết khác bài mẫu nhưng cũng đúng (không tính dấu cách).';
 /* So câu em viết (a) với câu mẫu (b) ngay trong trình duyệt, không cần Claude: so từng chữ (bỏ qua dấu cách), chữ trùng lẻ loi 1 ký tự giữa hai đoạn khác
    cũng tính là khác cho đỡ vụn. Trả về {a: html câu em viết (chữ khác <mark class="wdm">), b: html câu mẫu (chữ em thiếu <mark class="wdk">), r: độ giống 0–1}. */
 function wCmp(a, b){
   a = String(a || ""); b = String(b || "");
-  var ia = [], ib = [], i, j;
-  for(i = 0; i < a.length; i++) if(!/\s/.test(a[i])) ia.push(i);
-  for(j = 0; j < b.length; j++) if(!/\s/.test(b[j])) ib.push(j);
+  var vs = wVarSpans(a, b), ia = [], ib = [], i, j, na = 0, nb = 0, va = 0, vb = 0;
+  for(i = 0; i < a.length; i++) if(!/\s/.test(a[i])){ na++; if(vs.ca[i]) va++; else ia.push(i); }
+  for(j = 0; j < b.length; j++) if(!/\s/.test(b[j])){ nb++; if(vs.cb[j]) vb++; else ib.push(j); }
   var n = ia.length, m = ib.length, fa = new Array(n).fill(0), fb = new Array(m).fill(0);
   if(n && m && n * m <= 250000){
     var L = []; for(i = 0; i <= n; i++) L.push(new Uint16Array(m + 1));
@@ -1459,16 +1557,18 @@ function wCmp(a, b){
     var smooth = function(f){ var g = f.slice(); for(var k = 0; k < f.length; k++) if(f[k] && (k === 0 || !f[k-1]) && (k === f.length - 1 || !f[k+1]) && (k > 0 || f.length > 1)) g[k] = 0; return g; };
     fa = smooth(fa); fb = smooth(fb);
   }
-  var same = fa.reduce(function(s, x){ return s + x; }, 0);
-  var paint = function(s, idx, f, cls){
-    var bad = new Array(s.length).fill(null);
-    idx.forEach(function(p, k){ bad[p] = !f[k]; });
-    for(var k = 0; k < s.length; k++) if(bad[k] === null){ var l = k - 1, r = k + 1; while(l >= 0 && bad[l] === null) l--; while(r < s.length && bad[r] === null) r++; bad[k] = l >= 0 && r < s.length && bad[l] === true && bad[r] === true; }
-    var out = "", on = false;
-    for(k = 0; k < s.length; k++){ if(bad[k] !== on){ out += bad[k] ? '<mark class="' + cls + '">' : '</mark>'; on = bad[k]; } out += esc(s[k]); }
+  var sum = function(f){ return f.reduce(function(s, x){ return s + x; }, 0); };
+  /* trạng thái từng chữ: 0 giống, 1 khác (tô màu), 2 cách viết khác cũng đúng (tô tím); dấu cách theo chữ hai bên */
+  var paint = function(s, idx, f, cls, forced){
+    var st = new Array(s.length).fill(null), k;
+    idx.forEach(function(p, q){ st[p] = f[q] ? 0 : 1; });
+    for(k = 0; k < s.length; k++) if(forced[k] && !/\s/.test(s[k])) st[k] = 2;
+    for(k = 0; k < s.length; k++) if(st[k] === null){ var l = k - 1, r = k + 1; while(l >= 0 && st[l] === null) l--; while(r < s.length && st[r] === null) r++; st[k] = l >= 0 && r < s.length && st[l] && st[l] === st[r] ? st[l] : 0; }
+    var out = "", on = 0;
+    for(k = 0; k < s.length; k++){ if(st[k] !== on){ if(on) out += '</mark>'; if(st[k]) out += '<mark class="' + (st[k] === 2 ? 'wdv' : cls) + '">'; on = st[k]; } out += esc(s[k]); }
     return out + (on ? '</mark>' : '');
   };
-  return {a:paint(a, ia, fa, "wdm"), b:paint(b, ib, fb, "wdk"), r:n + m ? 2 * same / (n + m) : 1};
+  return {a:paint(a, ia, fa, "wdm", vs.ca), b:paint(b, ib, fb, "wdk", vs.cb), r:na + nb ? (sum(fa) + sum(fb) + va + vb) / (na + nb) : 1, v:vs.v};
 }
 /* Cách viết mẫu gần câu em viết nhất (câu 51–52 có nhiều đáp án). */
 function wBest(v, ks){ if(!String(v || "").trim() || !(ks || []).length) return -1; var best = 0, bv = -1; ks.forEach(function(k, q){ var r = wCmp(v, k).r; if(r > bv){ bv = r; best = q; } }); return best; }
@@ -1620,7 +1720,7 @@ function wsLongHTML(it, w, y){
   h += '<p class="wchk">' + wLenHTML(text, y) + (w.nums && w.nums.length ? (miss.length ? ' <span class="pill warn">thiếu số liệu: ' + esc(miss.join(", ")) + '</span>' : ' <span class="pill good">đủ số liệu</span>') : '') +
     (spoken ? ' <span class="pill bad">' + spoken + ' câu dùng văn nói (-요 / -습니다)</span>' : '') + '</p>';
   var tags = function(x){ return x.e ? String(x.e).split(",").filter(Boolean).map(function(e){ var t = W_TAGS.find(function(z){ return z[0] === e; }); return '<span class="pill bad">' + esc(t ? t[1] : e) + '</span>'; }).join(" ") : ''; };
-  var hasN = xs.some(function(x){ return x.n || x.e; }), groups = [], gi = {}, seen = {};
+  var hasN = xs.some(function(x){ return x.n || x.e || wHits(x.s, y).some(function(r){ return wOffSet(x).indexOf(r.id) < 0; }); }), groups = [], gi = {}, seen = {};
   /* Các câu em viết cùng gắn vào một ý của bài mẫu gộp thành một dòng, so cả cụm với câu mẫu (tô màu + % mới đúng). */
   xs.forEach(function(x, j){ var bi = +x.b, ok = bi >= 0 && bi < blocks.length;
     if(ok && gi[bi] != null) groups[gi[bi]].push(j); else { if(ok) gi[bi] = groups.length; groups.push([j]); } });
@@ -1631,10 +1731,10 @@ function wsLongHTML(it, w, y){
       var joined = g.map(function(j){ return xs[j].s; }).join(" "), cm = b ? wCmp(joined, b.ko) : null;
       var mine = (cm ? cm.a + ' <span class="pill ' + (cm.r >= .7 ? 'good' : cm.r >= .4 ? 'warn' : 'bad') + '">giống ' + Math.round(cm.r * 100) + '%</span>' : esc(joined)) +
         g.map(function(j){ var x = xs[j]; return x.f && x.f !== x.s ? '<div class="wfix"><b>Cô sửa' + (g.length > 1 ? ' câu ' + (j+1) : '') + ':</b> <span class="wdiff">' + wDiffHTML(x.s, x.f) + '</span></div>' : ''; }).join("");
-      var note = g.map(function(j){ var x = xs[j], t = (x.n ? wNoteHTML(x.n) : '') + (x.e ? '<div>' + tags(x) + '</div>' : ''); return t && g.length > 1 ? '<div><b>Câu ' + (j+1) + ':</b> ' + t + '</div>' : t; }).join("");
+      var note = g.map(function(j){ var x = xs[j], off = wOffSet(x), t = wHits(x.s, y).filter(function(r){ return off.indexOf(r.id) < 0; }).map(function(r){ return wHitHTML(r); }).join("") + (x.n ? wNoteHTML(x.n) : '') + (x.e ? '<div>' + tags(x) + '</div>' : ''); return t && g.length > 1 ? '<div><b>Câu ' + (j+1) + ':</b> ' + t + '</div>' : t; }).join("") + (cm ? wVarHTML(cm.v) : '');
       return '<tr><td class="wtk">' + nums(g) + '. ' + (b ? esc(b.k || "") : '<span class="muted">Ngoài ý bài mẫu</span>') + '</td>' +
         '<td class="wtm" data-l="Bài mẫu">' + (cm ? cm.b : '<span class="muted">—</span>') + '</td>' +
-        '<td class="wts" data-l="Em viết">' + mine + '</td>' + (hasN ? '<td class="wtn" data-l="Nhận xét">' + (note || '<span class="muted">—</span>') + '</td>' : '') + '</tr>';
+        '<td class="wts" data-l="Em viết">' + mine + '</td>' + (hasN ? '<td class="wtn" data-l="Nhận xét">' + (note ? '<div class="wau">' + note + '</div>' : '<span class="muted">—</span>') + '</td>' : '') + '</tr>';
     }).join("") + blocks.map(function(b, bi){ return seen[bi] ? '' : '<tr class="wtx"><td class="wtk">' + esc(b.k || "") + '</td><td class="wtm" data-l="Bài mẫu"><mark class="wdk">' + esc(b.ko || "") + '</mark></td><td class="wts" data-l="Em viết"><span class="wmiss">❌ Em chưa viết ý này</span></td>' + (hasN ? '<td class="wtn" data-l="Nhận xét"><span class="muted">—</span></td>' : '') + '</tr>'; }).join("") + '</tbody></table></div>';
   } else h += '<h4 class="wsh">Bài em viết</h4><div class="kr wfull">' + esc(text) + '</div>';
   if(it.tb) h += '<h4 class="wsh">Tiến bộ so với bài lần trước</h4><div class="note wtn" style="white-space:normal">' + wNoteHTML(it.tb) + '</div>';
