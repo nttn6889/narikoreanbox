@@ -87,12 +87,12 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   “Lưu & gửi kết quả” / “Gửi kết quả” tạo link `thi-thu/#s=<base64>.<sum>` (`wsBoot`, bài làm + phần sửa nằm trong link, so chữ `<del>/<ins>`);
   đề + ảnh + bài mẫu chia ý trang lấy từ `thi-thu/viet/<id>.json`. **Đồng bộ đề viết** (sau khi thêm/sửa câu viết — cô nhắn “đồng bộ đề viết”):
   ArtifactData `list` `wbank` với `out_dir` → `python3 tools/sync_viet.py <dump>` → commit + push.
-- **Chấm tự động** (nút “Chấm tự động” trong `wGradeModal`, `wAutoGrade`): trang quản lý dùng capability `sample` (hỏi Claude bằng tài khoản của cô;
-  khi publish phải khai `capabilities` đủ: `artifact`, `db` (rule admin), `user`, `sample`). Câu 53/54: `wPrompt5` gửi đề + số liệu `data` + bài mẫu chia ý +
-  câu học sinh (`wSents`) + bài lần trước cùng đề (`wPrevOf`) → mỗi câu `{b, f, e, v: ok|warn|bad, n: nhận xét}`, 3 điểm tiêu chí, `o`, `tb` (tiến bộ).
-  Câu 51/52: `wPrompt2` → điểm từng ô + nhận xét (`ev:[{i, nt:[㉠,㉡]}]`). Kết quả chỉ điền sẵn vào form, cô đọc lại rồi mới “Lưu”.
-- Bảng sửa bài `#s=` (gửi học sinh) = bảng đối chiếu từng câu **# ý | Bài mẫu | Em viết (so chữ) | Nhận xét** (điện thoại: mỗi câu một thẻ),
-  ý học sinh bỏ sót tô đỏ, thêm “Tiến bộ so với bài lần trước”. Nhận xét viết được `**đậm**`, `` `chữ Hàn` ``. Ảnh biểu đồ không tải được thì hiện `data`
+- **So với bài mẫu tại chỗ, không gọi Claude** (không tốn token; cô không muốn bước gửi Claude chấm): `wCmp(câu em, câu mẫu)` so từng chữ
+  (bỏ qua dấu cách, LCS) → chữ khác bài mẫu tô vàng gạch sóng (`mark.wdm`), chữ bài mẫu có mà học sinh thiếu tô xanh (`mark.wdk`), kèm % giống.
+  53/54: mỗi câu học sinh tự gắn vào ý bài mẫu (`wGuessBlock`), trang chấm hiện câu đã tô + câu mẫu tương ứng + “thiếu ý: …”; 51/52 so với
+  cách viết mẫu gần nhất (`wBest`). Sửa câu, nhãn lỗi, nhận xét từng câu (`x.n`) / từng ô (`ev:[{i, nt:[㉠,㉡]}]`), tiến bộ (`tb`) là tùy cô.
+- Bảng sửa bài `#s=` (gửi học sinh) = bảng đối chiếu từng câu **# ý | Bài mẫu | Em viết | Nhận xét** (tô màu theo `wCmp`; cột Nhận xét chỉ hiện khi cô có ghi;
+  câu cô sửa hiện thêm dòng “Cô sửa” so chữ `<del>/<ins>`; điện thoại: mỗi câu một thẻ), ý học sinh bỏ sót tô đỏ, thêm “Tiến bộ so với bài lần trước”. Nhận xét viết được `**đậm**`, `` `chữ Hàn` ``. Ảnh biểu đồ không tải được thì hiện `data`
   (số liệu dạng chữ; link giao bài 53/54 kèm `dt`, `thi-thu/viet/<id>.json` kèm `data`).
 - Ảnh biểu đồ `img` trỏ tới GitHub Pages → chỉ hiện khi nhánh có ảnh đã vào `main`.
 
