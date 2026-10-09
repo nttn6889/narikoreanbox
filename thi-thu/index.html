@@ -1551,6 +1551,8 @@ function wFix(s, y, off){ off = off || []; var t = String(s || "");
   return t.replace(/\s{2,}/g, " ").trim(); }
 function wPt(d){ return String(d).replace(".", ","); }
 function wHitHTML(r, box){ return '<div class="wau1">' + (box || '') + '<span class="pill ' + (r.d ? 'bad' : 'warn') + '">' + W_CRN[r.c] + (r.d ? ' −' + wPt(r.d) : '') + '</span><div>' + wNoteHTML(r.m) + '</div></div>'; }
+/* Cô đã chép lỗi máy tìm / dòng “Cũng đúng” vào nhận xét thì bảng sửa bài không hiện lần nữa (so bỏ dấu cách, **, `). */
+function wInNote(n, t){ var k = function(s){ return String(s || "").replace(/[\s*`]/g, ""); }, a = k(n), b = k(t); return !!(a && b && a.indexOf(b) >= 0); }
 function wVarHTML(v){ var seen = {}; return (v || []).filter(function(p){ var k = p.join("|"); if(seen[k]) return false; seen[k] = 1; return true; }).map(function(p){
   return '<div class="wau1"><span class="pill good">Cũng đúng</span><div><p><code class="wq">' + esc(p[0]) + '</code> = <code class="wq">' + esc(p[1]) + '</code> (bài mẫu) — cách viết khác, dùng cách nào cũng được.</p></div></div>'; }).join(""); }
 /* Điểm gợi ý theo 3 tiêu chí: điểm tối đa trừ lỗi từng câu + lỗi cả bài (độ dài, số liệu, ý còn thiếu). xs = [{b, s, off}]. */
@@ -1784,7 +1786,8 @@ function wsLongHTML(it, w, y){
       var joined = g.map(function(j){ return xs[j].s; }).join(" "), cm = b ? wCmp(joined, b.ko) : null;
       var mine = (cm ? cm.a + ' <span class="pill ' + (cm.r >= .7 ? 'good' : cm.r >= .4 ? 'warn' : 'bad') + '">giống ' + Math.round(cm.r * 100) + '%</span>' : esc(joined)) +
         g.map(function(j){ var x = xs[j]; return x.f && x.f !== x.s ? '<div class="wfix"><b>Cô sửa' + (g.length > 1 ? ' câu ' + (j+1) : '') + ':</b> <span class="wdiff">' + wDiffHTML(x.s, x.f) + '</span></div>' : ''; }).join("");
-      var note = g.map(function(j){ var x = xs[j], off = wOffSet(x), t = wHits(x.s, y).filter(function(r){ return off.indexOf(r.id) < 0; }).map(function(r){ return wHitHTML(r); }).join("") + (x.n ? wNoteHTML(x.n) : '') + (x.e ? '<div>' + tags(x) + '</div>' : ''); return t && g.length > 1 ? '<div><b>Câu ' + (j+1) + ':</b> ' + t + '</div>' : t; }).join("") + (cm ? wVarHTML(cm.v) : '');
+      var gn = g.map(function(j){ return xs[j].n || ""; }).join("\n");
+      var note = g.map(function(j){ var x = xs[j], off = wOffSet(x), t = wHits(x.s, y).filter(function(r){ return off.indexOf(r.id) < 0 && !wInNote(x.n, r.m); }).map(function(r){ return wHitHTML(r); }).join("") + (x.n ? wNoteHTML(x.n) : '') + (x.e ? '<div>' + tags(x) + '</div>' : ''); return t && g.length > 1 ? '<div><b>Câu ' + (j+1) + ':</b> ' + t + '</div>' : t; }).join("") + (cm ? wVarHTML((cm.v || []).filter(function(p){ return !wInNote(gn, p[0] + " = " + p[1]); })) : '');
       return '<tr><td class="wtk">' + nums(g) + '. ' + (b ? esc(b.k || "") : '<span class="muted">Ngoài ý bài mẫu</span>') + '</td>' +
         '<td class="wtm" data-l="Bài mẫu">' + (cm ? cm.b : '<span class="muted">—</span>') + '</td>' +
         '<td class="wts" data-l="Em viết">' + mine + '</td>' + (hasN ? '<td class="wtn" data-l="Nhận xét">' + (note ? '<div class="wau">' + note + '</div>' : '<span class="muted">—</span>') + '</td>' : '') + '</tr>';
@@ -2133,4 +2136,5 @@ appRun();
 </script>
 </body>
 </html>
+
 
