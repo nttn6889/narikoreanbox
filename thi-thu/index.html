@@ -1620,17 +1620,21 @@ function wsLongHTML(it, w, y){
   h += '<p class="wchk">' + wLenHTML(text, y) + (w.nums && w.nums.length ? (miss.length ? ' <span class="pill warn">thiếu số liệu: ' + esc(miss.join(", ")) + '</span>' : ' <span class="pill good">đủ số liệu</span>') : '') +
     (spoken ? ' <span class="pill bad">' + spoken + ' câu dùng văn nói (-요 / -습니다)</span>' : '') + '</p>';
   var tags = function(x){ return x.e ? String(x.e).split(",").filter(Boolean).map(function(e){ var t = W_TAGS.find(function(z){ return z[0] === e; }); return '<span class="pill bad">' + esc(t ? t[1] : e) + '</span>'; }).join(" ") : ''; };
-  var hasN = xs.some(function(x){ return x.n || x.e; }), byB = {};
-  xs.forEach(function(x){ var bi = +x.b; if(bi >= 0 && bi < blocks.length) (byB[bi] = byB[bi] || []).push(x.s); });
+  var hasN = xs.some(function(x){ return x.n || x.e; }), groups = [], gi = {}, seen = {};
+  /* Các câu em viết cùng gắn vào một ý của bài mẫu gộp thành một dòng, so cả cụm với câu mẫu (tô màu + % mới đúng). */
+  xs.forEach(function(x, j){ var bi = +x.b, ok = bi >= 0 && bi < blocks.length;
+    if(ok && gi[bi] != null) groups[gi[bi]].push(j); else { if(ok) gi[bi] = groups.length; groups.push([j]); } });
+  var nums = function(g){ return g.length > 1 && g[g.length-1] - g[0] === g.length - 1 ? (g[0]+1) + '–' + (g[g.length-1]+1) : g.map(function(j){ return j+1; }).join(', '); };
   if(xs.length){
-    var seen = {};
-    h += '<h4 class="wsh">Đối chiếu từng câu với bài mẫu</h4><p class="hint">' + W_LEG + '</p><div class="wtbx"><table class="wtb"><thead><tr><th>#</th><th>Bài mẫu</th><th>Em viết</th>' + (hasN ? '<th>Nhận xét</th>' : '') + '</tr></thead><tbody>' + xs.map(function(x, j){
-      var bi = +x.b, b = bi >= 0 && bi < blocks.length ? blocks[bi] : null, first = b && !seen[bi]; if(b) seen[bi] = 1;
-      var mine = b ? wCmp(x.s, b.ko).a : esc(x.s);
-      if(x.f && x.f !== x.s) mine += '<div class="wfix"><b>Cô sửa:</b> <span class="wdiff">' + wDiffHTML(x.s, x.f) + '</span></div>';
-      return '<tr><td class="wtk">' + (j+1) + '. ' + (b ? esc(b.k || "") + (first ? '' : ' (tiếp)') : '<span class="muted">Ngoài ý bài mẫu</span>') + '</td>' +
-        '<td class="wtm" data-l="Bài mẫu">' + (b ? (first ? wCmp(byB[bi].join(" "), b.ko).b : '<span class="muted">(như câu trên)</span>') : '<span class="muted">—</span>') + '</td>' +
-        '<td class="wts" data-l="Em viết">' + mine + '</td>' + (hasN ? '<td class="wtn" data-l="Nhận xét">' + ((x.n ? wNoteHTML(x.n) : '') + (x.e ? '<div>' + tags(x) + '</div>' : '') || '<span class="muted">—</span>') + '</td>' : '') + '</tr>';
+    h += '<h4 class="wsh">Đối chiếu từng câu với bài mẫu</h4><p class="hint">' + W_LEG + '</p><div class="wtbx"><table class="wtb"><thead><tr><th>#</th><th>Bài mẫu</th><th>Em viết</th>' + (hasN ? '<th>Nhận xét</th>' : '') + '</tr></thead><tbody>' + groups.map(function(g){
+      var x0 = xs[g[0]], bi = +x0.b, b = bi >= 0 && bi < blocks.length ? blocks[bi] : null; if(b) seen[bi] = 1;
+      var joined = g.map(function(j){ return xs[j].s; }).join(" "), cm = b ? wCmp(joined, b.ko) : null;
+      var mine = (cm ? cm.a + ' <span class="pill ' + (cm.r >= .7 ? 'good' : cm.r >= .4 ? 'warn' : 'bad') + '">giống ' + Math.round(cm.r * 100) + '%</span>' : esc(joined)) +
+        g.map(function(j){ var x = xs[j]; return x.f && x.f !== x.s ? '<div class="wfix"><b>Cô sửa' + (g.length > 1 ? ' câu ' + (j+1) : '') + ':</b> <span class="wdiff">' + wDiffHTML(x.s, x.f) + '</span></div>' : ''; }).join("");
+      var note = g.map(function(j){ var x = xs[j], t = (x.n ? wNoteHTML(x.n) : '') + (x.e ? '<div>' + tags(x) + '</div>' : ''); return t && g.length > 1 ? '<div><b>Câu ' + (j+1) + ':</b> ' + t + '</div>' : t; }).join("");
+      return '<tr><td class="wtk">' + nums(g) + '. ' + (b ? esc(b.k || "") : '<span class="muted">Ngoài ý bài mẫu</span>') + '</td>' +
+        '<td class="wtm" data-l="Bài mẫu">' + (cm ? cm.b : '<span class="muted">—</span>') + '</td>' +
+        '<td class="wts" data-l="Em viết">' + mine + '</td>' + (hasN ? '<td class="wtn" data-l="Nhận xét">' + (note || '<span class="muted">—</span>') + '</td>' : '') + '</tr>';
     }).join("") + blocks.map(function(b, bi){ return seen[bi] ? '' : '<tr class="wtx"><td class="wtk">' + esc(b.k || "") + '</td><td class="wtm" data-l="Bài mẫu"><mark class="wdk">' + esc(b.ko || "") + '</mark></td><td class="wts" data-l="Em viết"><span class="wmiss">❌ Em chưa viết ý này</span></td>' + (hasN ? '<td class="wtn" data-l="Nhận xét"><span class="muted">—</span></td>' : '') + '</tr>'; }).join("") + '</tbody></table></div>';
   } else h += '<h4 class="wsh">Bài em viết</h4><div class="kr wfull">' + esc(text) + '</div>';
   if(it.tb) h += '<h4 class="wsh">Tiến bộ so với bài lần trước</h4><div class="note wtn" style="white-space:normal">' + wNoteHTML(it.tb) + '</div>';
@@ -1976,4 +1980,3 @@ appRun();
 </script>
 </body>
 </html>
-
