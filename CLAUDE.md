@@ -85,7 +85,8 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   Ô viết 53/54 đếm chữ (tính dấu cách, không tính xuống dòng). Chấm: 3 tiêu chí (53: 7/7/16, 54: 12/12/26, `W_RUB`) + từng câu học sinh (`wSents`)
   gắn vào ý bài mẫu (máy đoán theo cặp chữ), cô gõ câu sửa + nhãn lỗi (`W_TAGS`) → `wresults.ev:[{i, rc, ro, rl, o, x:[{b,s,f,e}]}]`.
   “Lưu & gửi kết quả” / “Gửi kết quả” tạo link `thi-thu/#s=<base64>.<sum>` (`wsBoot`, bài làm + phần sửa nằm trong link, so chữ `<del>/<ins>`);
-  đề + ảnh + bài mẫu chia ý trang lấy từ `thi-thu/viet/<id>.json`. **Đồng bộ đề viết** (sau khi thêm/sửa câu viết — cô nhắn “đồng bộ đề viết”):
+  đề + ảnh + bài mẫu chia ý trang lấy từ `thi-thu/viet/<id>.json`. Link `#s=` được nén (`#s=Z…`: deflate-raw + base64, `zPack` dùng CompressionStream ở
+  trang quản lý, `zUnpack`/`zInflate` viết tay ở trang học sinh) → ngắn còn ~1/3 cho Zalo khỏi cắt; link cũ không có `Z` vẫn mở được. **Đồng bộ đề viết** (sau khi thêm/sửa câu viết — cô nhắn “đồng bộ đề viết”):
   ArtifactData `list` `wbank` với `out_dir` → `python3 tools/sync_viet.py <dump>` → commit + push.
 - **So với bài mẫu tại chỗ, không gọi Claude** (không tốn token; cô không muốn bước gửi Claude chấm): `wCmp(câu em, câu mẫu)` so từng chữ
   (bỏ qua dấu cách, LCS) → chữ khác bài mẫu tô vàng gạch sóng (`mark.wdm`), chữ bài mẫu có mà học sinh thiếu tô xanh (`mark.wdk`), kèm % giống.
