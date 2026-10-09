@@ -42,13 +42,16 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   “Bài riêng cô giao”. Đã nộp = localStorage `nari-v-|nari-n-|nari-tt-<mã bài>-<tên>` có `submitted`. Học sinh vẫn gửi mã nộp qua
   Zalo (có nút “Gửi qua Zalo…” dùng bảng chia sẻ của máy).
 
-## Giáo án lớp TOPIK 3 · kỳ 109 (trang riêng của cô)
-- https://claude.ai/artifact/VGJTuWw7wdj8AvqUQS4aJi — trang riêng, giao diện giống trang học sinh (https://claude.ai/artifact/Mry3RB7hhXhEWgGNPuYtfM).
-  Dữ liệu trong db của trang này (rules: chỉ admin đọc/ghi): `plan/main` {exam, perWeek, title, goal}, `ses/<id>` = một buổi
-  {no, date, done, skill doc|nghe|viet|thi, topic, goal, steps (giáo án, chỉ cô xem), mats[{t,u}] học liệu, hw[{t,u}] bài tập
-  (u rỗng = “cần tạo link”), p ưu tiên, ga 0 khung/1 chi tiết, note}. Buổi 1–8 = đã dạy (theo trang học sinh), 9–29 = lộ trình đến thi.
-- Cô chọn ngày, tick “Đã dạy”, sửa buổi ngay trên trang; nút “Chép cho trang học sinh” tạo dòng cho mảng `LESSONS` của trang học sinh.
-- Soạn tiếp từng buổi: ArtifactData `update` `ses/<id>` (steps chi tiết + `ga:1`, thêm link học liệu/bài tập). Bản nguồn trang: `tools/giao-an-109.html`.
+## Giáo án theo lớp (tab “Giáo án” trong trang quản lý)
+- Tab Giáo án có thẻ cho từng lớp (+ thẻ “Giáo án cũ” = collection `plans` cũ). Code: `gaLoad`/`gaRender`/`gaWire`/`gaEditHTML` ngay trên `renderOldPlans`.
+- Dữ liệu: `ga/<lớp>` {title, cls (id lớp trong `classes`), exam, perWeek, goal, order}; buổi ở `ga/<lớp>/s/<id>`
+  {no, date, done, skill doc|nghe|viet|thi, topic, goal, steps (giáo án), mats[{t,u}] học liệu, hw[{t,u}] bài tập
+  (u rỗng = “cần tạo link”), p ưu tiên 1–3, ga 0 khung/1 chi tiết, note}. Trang tải bằng `get()` (không onSnapshot) nên Claude ghi
+  xong thì cô tải lại trang mới thấy.
+- `ga/topik109` = lớp “TOPIK 3 - 109” (thi 28/11/2026): buổi 1–8 đã dạy (theo trang học sinh https://claude.ai/artifact/Mry3RB7hhXhEWgGNPuYtfM),
+  9–29 lộ trình đến thi. Lớp sau (Seoul 3A, lớp `Cmuwax4jn`) = thêm `ga/<id>` với `order` 2 + các buổi.
+- Soạn tiếp từng buổi: ArtifactData `update` `ga/<lớp>/s/<id>` (steps chi tiết + `ga:1`, link học liệu/bài tập).
+- Trang riêng cũ https://claude.ai/artifact/VGJTuWw7wdj8AvqUQS4aJi (`tools/giao-an-109.html`) là bản thử, không dùng nữa.
 
 ## Khung lộ trình lớp (Lớp học → lớp → “Khung lộ trình”)
 - Lớp có `wd` (thứ có buổi) + `weeks[].s[]` = buổi `{d, b:[khối], note, off}`; khối = `<thư viện>/<id>` trong `LIBS` (code) hoặc `syllabi`.
