@@ -326,6 +326,41 @@ b.whl{font-family:var(--kr);color:var(--warn)}
 .wsc button{all:unset;cursor:pointer;width:32px;height:32px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;font-weight:700}
 .wsc button[aria-pressed="true"]{background:var(--violet);border-color:var(--violet);color:var(--on-violet)}
 .wsc button:focus-visible{outline:3px solid var(--violet)}
+.ga-hero{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px;align-items:end}
+.ga-hero h2{font-size:24px;margin:0 0 6px;color:var(--violet)}
+.ga-facts{display:flex;flex-wrap:wrap;gap:6px;font-size:14px}
+.ga-facts span{border:1px solid var(--line);border-radius:6px;padding:2px 10px;background:var(--bg)}
+.ga-dd{border:1px solid var(--line);border-top:4px solid var(--pen);border-radius:6px;text-align:center;min-width:190px;background:var(--bg)}
+.ga-dd .s{font-size:12.5px;font-weight:600;color:var(--muted);padding:8px 12px 0}
+.ga-dd .n{font-size:46px;font-weight:700;color:var(--pen);line-height:1;font-variant-numeric:tabular-nums}
+.ga-dd .u{font-size:13px;color:var(--muted);padding-bottom:6px}
+.ga-dd .b{border-top:1px dashed var(--line);padding:6px 12px 8px;font-size:12.5px;color:var(--muted)}
+.ga-dd .b b{display:block;font-size:20px;color:var(--warn)}
+.ga-cap{margin:12px 0 0;padding:8px 12px;border-radius:6px;font-size:14.5px;font-weight:600}
+.ga-cap.ok{background:var(--ok-soft);color:var(--ok)}
+.ga-cap.over{background:var(--pen-soft);color:var(--pen)}
+.ga-list{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+details.gas{border:1px solid var(--line);border-radius:8px;background:var(--paper);overflow:hidden}
+details.gas[open]{border-color:var(--pen)}
+details.gas>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:52px minmax(0,1fr) 18px;gap:12px;align-items:center;padding:10px 12px}
+details.gas>summary::-webkit-details-marker{display:none}
+.gas .no{width:52px;height:52px;border-radius:6px;border:1px solid var(--line);display:grid;place-items:center;text-align:center;line-height:1.05;color:var(--pen);background:var(--bg)}
+.gas .no small{display:block;font-size:10.5px;font-weight:600;color:var(--muted)}
+.gas .no span{font-size:22px;font-weight:700}
+.gas.next .no{background:var(--pen);border-color:var(--pen);color:#fff}
+.gas.next .no small{color:#fff}
+.gas.done .no{color:var(--ok)}
+.gas .d{font-size:13px;color:var(--muted);margin:0}
+.gas h3{margin:1px 0 3px;font-size:15.5px;line-height:1.35}
+.gas .chev{color:var(--muted);transition:transform .2s}
+details.gas[open] .chev{transform:rotate(180deg)}
+.gas .gb{padding:4px 14px 14px;border-top:1px solid var(--line)}
+.gas .gb h4{font-size:12.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin:14px 0 3px}
+.gas .pre{white-space:pre-wrap;margin:0;font-size:15px}
+.gas .lk2{margin:0;padding-left:18px;font-size:15px}
+.gas .todo{color:var(--muted)}
+.gas .todo::after{content:" · cần tạo link";color:var(--warn);font-size:13px;font-weight:600}
+@media (max-width:640px){.ga-hero{grid-template-columns:1fr}.ga-dd{min-width:0}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
