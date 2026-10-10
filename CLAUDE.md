@@ -106,7 +106,8 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - Ảnh biểu đồ `img` trỏ tới GitHub Pages → chỉ hiện khi nhánh có ảnh đã vào `main`.
 
 ## Nhập đề thi vào ngân hàng đề
-- Đề nghe công khai TOPIK II kỳ 96, 102: `Etk096n`, `Etk102n` (`nghe:1`, câu 1–3 là ảnh tranh/biểu đồ, lựa chọn “Tranh ①…”; chưa có kịch bản/file nghe — cô gửi sau).
+- Đề nghe công khai TOPIK II kỳ 96, 102: `Etk096n`, `Etk102n` (`nghe:1`, câu 1–3 là ảnh tranh/biểu đồ, lựa chọn “Tranh ①…”). `Etk096n` đã gắn file nghe
+  đủ 50 câu, dùng lại file của bài luyện nghe N001–N011 (`audio` = link `thi-thu/nghe/audio/N0xx-<câu>.mp3`, cặp 21–22… chung một file). `Etk102n` chưa có file nghe.
 - Kỳ 91 đủ cả đọc + nghe: `Etk091` (Đọc, 50 câu; câu 1–4 cô nhập trước giữ nguyên; câu 42–43 đề gốc không công bố đoạn văn) và
   `Etk091n` (Nghe, 50 câu; `explain` = kịch bản + đáp án). **File nghe từng câu**: trường `audio` của câu trong `bank` = link
   GitHub Pages `https://nttn6889.github.io/narikoreanbox/thi-thu/de/audio/<đề>-<câu>.mp3` (trang quản lý phát được);
