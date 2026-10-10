@@ -1480,6 +1480,10 @@ function wSents(t){
   if(cur.trim()) out.push(cur.trim());
   return out;
 }
+/* Bài mẫu 53/54 chia theo câu (Câu 1, Câu 2…): câu thứ j của học sinh đối chiếu với câu mẫu thứ j, không gắn ý.
+   Học sinh gộp/tách câu khác bài mẫu thì cô tách lại cho khớp (“Sửa cách tách câu”). */
+function wModelSents(w){ var m = ((w.keys || {}).a || [])[0] || (w.blocks || []).map(function(b){ return b.ko || ""; }).join(" "); return wSents(m).map(function(t, j){ return {k:"Câu " + (j+1), ko:t}; }); }
+function wByIdx(xs){ return (xs || []).map(function(x, j){ return Object.assign({}, x, {b:j}); }); }
 /* Câu văn nói (đuôi -요 / -습니다, 제가, 저는…) — bài 53/54 phải viết đuôi -다. */
 function wSpoken(s){ return /(요|니다|니까)[.!?]?\s*$/.test(s) || /(^|\s)(제가|저는|저의|저도|저희)(\s|$)/.test(s); }
 function wNumsMiss(t, nums){ var x = String(t || "").replace(/\s/g, ""); return (nums || []).filter(function(n){ return x.indexOf(String(n).replace(/\s/g, "")) < 0; }); }
@@ -1575,7 +1579,7 @@ function wAutoScore(y, text, xs, blocks, nums){
   if(len && n < len[0]) add("c", n < len[0] * 0.7 ? 4 : 2, 'bài chỉ có ' + n + '자 (tối thiểu ' + len[0] + '자)');
   if(len && n > len[1]) add("o", 1, 'bài dài ' + n + '자, quá ' + len[1] + '자');
   var miss = wNumsMiss(text, nums); if(miss.length) add("c", Math.min(3, miss.length), 'thiếu số liệu ' + miss.join(", "));
-  (blocks || []).forEach(function(b, k){ if(!(xs || []).some(function(x){ return +x.b === k; })) add("c", +y === 54 ? 3 : 2, 'thiếu ý “' + (b.k || "") + '”'); });
+  (blocks || []).forEach(function(b, k){ if(!(xs || []).some(function(x){ return +x.b === k; })) add("c", +y === 54 ? 3 : 2, 'thiếu ' + (b.k || "ý") + ' của bài mẫu'); });
   (xs || []).forEach(function(x, j){ var off = wOffSet(x); wHits(x.s, y).forEach(function(r){ if(off.indexOf(r.id) < 0) add(r.c, r.d, 'câu ' + (j+1) + ': ' + r.t); }); });
   rub.forEach(function(c){ var o = out[c[0]]; o.s = Math.max(0, Math.round(o.max - o.d)); });
   return out;
@@ -1614,7 +1618,7 @@ var W_AI_P = null;
 function wAiSample(){ if(!W_AI_P) W_AI_P = (window.claude && typeof window.claude.use === "function") ? Promise.resolve(window.claude.use("sample")).catch(function(){ return null; }) : Promise.resolve(null); return W_AI_P; }
 var W_AI_ERR = {not_granted:"Cô chưa cho phép trang này dùng Claude (hoặc đã bấm Từ chối). Mở lại trang để được hỏi lại.", sampling_disabled:"Tài khoản này chưa dùng được Claude từ trang.", rate_limited:"Claude đang bận hoặc đã hết lượt dùng — cô thử lại sau ít phút.", session_expired:"Cô đăng nhập lại claude.ai rồi thử lại.", invalid_json:"Claude trả lời sai định dạng — cô bấm thử lại một lần.", refused:"Claude không chấm bài này.", prompt_too_large:"Bài quá dài để gửi.", upstream_error:"Mất kết nối giữa chừng — cô bấm thử lại."};
 function wAiPrompt(w, e, y, auto){
-  var blocks = w.blocks || [], rub = W_RUB[y] || [];
+  var blocks = wModelSents(w), rub = W_RUB[y] || [];
   var data = String(w.data || "").trim(), pas = String(w.passage || "").trim();
   var skip = [], lines = e.x.map(function(x, j){
     var b = blocks[+x.b], hits = wHits(x.s, y).filter(function(r){ return wOffSet(x).indexOf(r.id) < 0; });
@@ -1672,7 +1676,7 @@ function wAiWire(el, r, ev, paintSug, showTot, wById){
       if(ctl){ ctl.abort(); return; }
       wAiSample().then(function(sample){
         if(!sample){ draw("Claude chưa dùng được ở chỗ mở trang này (cần mở trong claude.ai, đã đăng nhập).", "err"); return; }
-        var text = e.x.map(function(x){ return x.s; }).join(" "), auto = wAutoScore(53, text, e.x, w.blocks, w.nums);
+        var text = e.x.map(function(x){ return x.s; }).join(" "), auto = wAutoScore(53, text, e.x, wModelSents(w), w.nums);
         ctl = new AbortController();
         var btn = box.querySelector("[data-aigo]"), st = box.querySelector("[data-aist]");
         btn.textContent = "Dừng"; st.className = "hint"; st.textContent = "Claude đang chấm… (thường 10–40 giây)";
@@ -1861,7 +1865,7 @@ function wsRender(r, src){
   wShell(h);
 }
 function wsLongHTML(it, w, y){
-  var text = (it.a || [])[0] || "", rub = W_RUB[y] || [], blocks = w.blocks || [], xs = it.x || [], h = "";
+  var text = (it.a || [])[0] || "", rub = W_RUB[y] || [], blocks = wModelSents(w), xs = wByIdx(it.x), h = "";
   if(rub.length) h += '<div class="scroll"><table class="tbl wst"><thead><tr><th>Tiêu chí</th><th>Điểm</th></tr></thead><tbody>' +
     rub.map(function(c, j){ var v = (it.r || [])[j]; return '<tr><td>' + esc(c[1]) + ' <span class="muted">· ' + esc(c[2]) + '</span></td><td><b>' + (v == null ? "–" : v) + '</b>/' + c[3] + '</td></tr>'; }).join("") +
     '<tr><td><b>Tổng câu ' + y + '</b></td><td><b>' + (it.r || []).reduce(function(s, v){ return s + (+v || 0); }, 0) + '</b>/' + wMaxOf(y) + '</td></tr></tbody></table></div>';
@@ -1882,10 +1886,10 @@ function wsLongHTML(it, w, y){
         g.map(function(j){ var x = xs[j]; return x.f && x.f !== x.s ? '<div class="wfix"><b>Cô sửa' + (g.length > 1 ? ' câu ' + (j+1) : '') + ':</b> <span class="wdiff">' + wDiffHTML(x.s, x.f) + '</span></div>' : ''; }).join("");
       var gn = g.map(function(j){ return xs[j].n || ""; }).join("\n");
       var note = g.map(function(j){ var x = xs[j], off = wOffSet(x), t = wHits(x.s, y).filter(function(r){ return off.indexOf(r.id) < 0 && !wInNote(x.n, r.m); }).map(function(r){ return wHitHTML(r); }).join("") + (x.n ? wNoteHTML(x.n) : '') + (x.e ? '<div>' + tags(x) + '</div>' : ''); return t && g.length > 1 ? '<div><b>Câu ' + (j+1) + ':</b> ' + t + '</div>' : t; }).join("") + (cm ? wVarHTML((cm.v || []).filter(function(p){ return !wInNote(gn, p[0] + " = " + p[1]); })) : '');
-      return '<tr><td class="wtk">' + nums(g) + '. ' + (b ? esc(b.k || "") : '<span class="muted">Ngoài ý bài mẫu</span>') + '</td>' +
+      return '<tr><td class="wtk">Câu ' + nums(g) + (b ? '' : ' <span class="muted">· bài mẫu không có</span>') + '</td>' +
         '<td class="wtm" data-l="Bài mẫu">' + (cm ? cm.b : '<span class="muted">—</span>') + '</td>' +
         '<td class="wts" data-l="Em viết">' + mine + '</td>' + (hasN ? '<td class="wtn" data-l="Nhận xét">' + (note ? '<div class="wau">' + note + '</div>' : '<span class="muted">—</span>') + '</td>' : '') + '</tr>';
-    }).join("") + blocks.map(function(b, bi){ return seen[bi] ? '' : '<tr class="wtx"><td class="wtk">' + esc(b.k || "") + '</td><td class="wtm" data-l="Bài mẫu"><mark class="wdk">' + esc(b.ko || "") + '</mark></td><td class="wts" data-l="Em viết"><span class="wmiss">❌ Em chưa viết ý này</span></td>' + (hasN ? '<td class="wtn" data-l="Nhận xét"><span class="muted">—</span></td>' : '') + '</tr>'; }).join("") + '</tbody></table></div>';
+    }).join("") + blocks.map(function(b, bi){ return seen[bi] ? '' : '<tr class="wtx"><td class="wtk">' + esc(b.k || "") + '</td><td class="wtm" data-l="Bài mẫu"><mark class="wdk">' + esc(b.ko || "") + '</mark></td><td class="wts" data-l="Em viết"><span class="wmiss">❌ Em chưa viết câu này</span></td>' + (hasN ? '<td class="wtn" data-l="Nhận xét"><span class="muted">—</span></td>' : '') + '</tr>'; }).join("") + '</tbody></table></div>';
   } else h += '<h4 class="wsh">Bài em viết</h4><div class="kr wfull">' + esc(text) + '</div>';
   if(it.tb) h += '<h4 class="wsh">Tiến bộ so với bài lần trước</h4><div class="note wtn" style="white-space:normal">' + wNoteHTML(it.tb) + '</div>';
   var model = ((w.keys || {}).a || [])[0];

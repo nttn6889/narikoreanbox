@@ -91,14 +91,15 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   `thi-thu/viet/W53_<kỳ>.jpg`), `blocks:[{k: tên ý, ko: câu bài mẫu}]` (bài mẫu chia ý), `nums` (số liệu phải có), `dang` (dạng trong trang khung câu 53).
   Giao bài có 2 tùy chọn (`wassigns.key` hiện đáp án ngay khi nộp — mặc định tắt, link khi đó không chứa đáp án, cờ `nk:1`; `wassigns.hint`).
   Ô viết 53/54 đếm chữ (tính dấu cách, không tính xuống dòng). Chấm: 3 tiêu chí (53: 7/7/16, 54: 12/12/26, `W_RUB`) + từng câu học sinh (`wSents`)
-  gắn vào ý bài mẫu (máy đoán theo cặp chữ), cô gõ câu sửa + nhãn lỗi (`W_TAGS`) → `wresults.ev:[{i, rc, ro, rl, o, x:[{b,s,f,e}]}]`.
+  đối chiếu với câu mẫu cùng số thứ tự (`wModelSents`: bài mẫu `keys.a[0]` tách thành Câu 1, Câu 2…), cô gõ câu sửa + nhãn lỗi (`W_TAGS`) → `wresults.ev:[{i, rc, ro, rl, o, x:[{b,s,f,e}]}]`.
   “Lưu & gửi kết quả” / “Gửi kết quả” tạo link `thi-thu/#s=<base64>.<sum>` (`wsBoot`, bài làm + phần sửa nằm trong link, so chữ `<del>/<ins>`);
   đề + ảnh + bài mẫu chia ý trang lấy từ `thi-thu/viet/<id>.json`. Link `#s=` được nén (`#s=Z…`: deflate-raw + base64, `zPack` dùng CompressionStream ở
   trang quản lý, `zUnpack`/`zInflate` viết tay ở trang học sinh) → ngắn còn ~1/3 cho Zalo khỏi cắt; link cũ không có `Z` vẫn mở được. **Đồng bộ đề viết** (sau khi thêm/sửa câu viết — cô nhắn “đồng bộ đề viết”):
   ArtifactData `list` `wbank` với `out_dir` → `python3 tools/sync_viet.py <dump>` → commit + push.
 - **So với bài mẫu tại chỗ, không gọi Claude** (không tốn token; cô không muốn bước gửi Claude chấm): `wCmp(câu em, câu mẫu)` so từng chữ
   (bỏ qua dấu cách, LCS) → chữ khác bài mẫu tô vàng gạch sóng (`mark.wdm`), chữ bài mẫu có mà học sinh thiếu tô xanh (`mark.wdk`), kèm % giống.
-  53/54: mỗi câu học sinh tự gắn vào ý bài mẫu (`wGuessBlock`), trang chấm hiện câu đã tô + câu mẫu tương ứng + “thiếu ý: …”; 51/52 so với
+  53/54: câu thứ j của học sinh so với câu mẫu thứ j (không gắn ý; `x.b` = j), học sinh viết dính/tách khác thì cô “Sửa cách tách câu” cho khớp;
+  trang chấm hiện câu đã tô + câu mẫu cùng số + số câu so với bài mẫu; 51/52 so với
   cách viết mẫu gần nhất (`wBest`). Sửa câu, nhãn lỗi, nhận xét từng câu (`x.n`) / từng ô (`ev:[{i, nt:[㉠,㉡]}]`), tiến bộ (`tb`) là tùy cô.
 - Bảng sửa bài `#s=` (gửi học sinh) = bảng đối chiếu từng câu **# ý | Bài mẫu | Em viết | Nhận xét** (tô màu theo `wCmp`; cột Nhận xét chỉ hiện khi cô có ghi;
   câu cô sửa hiện thêm dòng “Cô sửa” so chữ `<del>/<ins>`; điện thoại: mỗi câu một thẻ), ý học sinh bỏ sót tô đỏ, thêm “Tiến bộ so với bài lần trước”. Nhận xét viết được `**đậm**`, `` `chữ Hàn` ``. Ảnh biểu đồ không tải được thì hiện `data`
