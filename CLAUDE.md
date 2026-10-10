@@ -230,3 +230,11 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   Buổi 2 (ô giữa câu, 13 kỳ: 75, 76, 77, 81, 83–86, 88–90, 92, 93), Buổi 3 (làm như thi, 4 phút/câu: 96–102, 104–106), thẻ Bảng tra (12 nhóm, thống kê 72 ô). Link `viet-51/#b=1|2|3|tra`.
 - Đề + gợi ý nhúng trong biến `Q` (lấy từ `wbank` W51_*; sửa trong trang quản lý thì chép lại). Cảnh báo đuôi: ô cuối câu viết -다 / -요, ô giữa câu viết -ㅂ니다.
   Bài lưu localStorage `nari-51`.
+
+## Học câu 1–2 ngữ pháp trong 4 buổi (`ngu-phap-12/`)
+- Cùng khung với `viet-52/`, học theo **cặp dễ nhầm**: Buổi 1 đuôi nối thời gian/trình tự/lựa chọn (+ quy trình 3 bước), Buổi 2 mục đích/điều kiện/
+  nhượng bộ/lý do/quan sát, Buổi 3 đuôi kết thúc câu (trạng từ → đuôi) + tiểu từ nâng cao, Buổi 4 trộn đề, Bảng tra (luật loại trừ, đáp án đề thật). Link `ngu-phap-12/#b=1|2|3|4|tra`.
+- Biến `R` = 61 câu 1–2 lấy từ `thi-thu/de/*.json` (đề đọc, bỏ Ehot1old và `Eys5` câu 1 vì đáp án không tự nhiên) + đáp án `a`
+  (chỉ số trong `o`) + giải thích `w` do Claude soạn (`src` “Kỳ N” = đề thật); `MCQ` = câu nhận diện tự soạn (lựa chọn đầu là đáp án).
+- Buổi 4: lượt 10 câu, 30 giây/câu, ôn ngắt quãng (`st.r[id] = {b, due, n, w, ok}`: sai → ngày mai; đúng → 3, 7, 14 ngày; đúng lần 14 ngày = thuộc);
+  câu làm ở Buổi 1–3 cũng vào lịch ôn. Bài lưu localStorage `nari-12`, nút “Gửi kết quả cho cô…” chia sẻ đoạn chữ.
