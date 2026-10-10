@@ -91,7 +91,9 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   ArtifactData `list` `wbank` với `out_dir` → `python3 tools/sync_viet.py <dump>` → commit + push.
 - **So với bài mẫu tại chỗ, không gọi Claude** (không tốn token; cô không muốn bước gửi Claude chấm): `wCmp(câu em, câu mẫu)` so từng chữ
   (bỏ qua dấu cách, LCS) → chữ khác bài mẫu tô vàng gạch sóng (`mark.wdm`), chữ bài mẫu có mà học sinh thiếu tô xanh (`mark.wdk`), kèm % giống.
-  53/54: mỗi câu học sinh tự gắn vào ý bài mẫu (`wGuessBlock`), trang chấm hiện câu đã tô + câu mẫu tương ứng + “thiếu ý: …”; 51/52 so với
+  53/54: tách câu bằng `wSents` (cắt ở `.!?` cả khi học sinh quên dấu cách sau dấu chấm, trừ `2.5`, `...`, ngoặc đóng); máy tách sai thì cô bấm
+  “✂ Sửa cách tách câu” (mỗi dòng một câu, “Máy tách lại”; câu không đổi giữ phần chấm, câu bị tách/gộp chuyển nhận xét + nhãn lỗi sang câu đầu; `ev.sp:1` = cô đã tự tách);
+  mỗi câu học sinh tự gắn vào ý bài mẫu (`wGuessBlock`), trang chấm hiện câu đã tô + câu mẫu tương ứng + “thiếu ý: …”; 51/52 so với
   cách viết mẫu gần nhất (`wBest`). Sửa câu, nhãn lỗi, nhận xét từng câu (`x.n`) / từng ô (`ev:[{i, nt:[㉠,㉡]}]`), tiến bộ (`tb`) là tùy cô.
 - Bảng sửa bài `#s=` (gửi học sinh) = bảng đối chiếu từng câu **# ý | Bài mẫu | Em viết | Nhận xét** (tô màu theo `wCmp`; cột Nhận xét chỉ hiện khi cô có ghi;
   câu cô sửa hiện thêm dòng “Cô sửa” so chữ `<del>/<ins>`; điện thoại: mỗi câu một thẻ), ý học sinh bỏ sót tô đỏ, thêm “Tiến bộ so với bài lần trước”. Nhận xét viết được `**đậm**`, `` `chữ Hàn` ``. Ảnh biểu đồ không tải được thì hiện `data`
