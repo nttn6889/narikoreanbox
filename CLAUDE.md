@@ -21,6 +21,16 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   `python3 tools/sync_thi_thu.py <file-html>` để sinh lại `thi-thu/index.html` (bỏ khối Admin và đoạn kết nối claude.ai).
 - Tên đề trộn có thể chứa tên học sinh: chỉ được nằm trong link, không đưa vào repo (sync_kho bỏ đề trộn vì vậy).
 
+## Menu trang quản lý (sắp xếp lại 10/2026)
+- Tab: Học sinh · Lớp học · Giao bài · Chấm bài · Tài liệu gốc · Phân tích đề · Giáo án · Link tài liệu (đã bỏ tab Ngân hàng đề, Từ vựng, Luyện nghe).
+- **Tài liệu gốc** (`renderTaiLieuTabs`, `S.tlsub`): Tài liệu & ngữ pháp · Lộ trình kiến thức (`renderLib`, trước là “Thư viện khối kiến thức” trong Lớp học)
+  · Kho từ (`renderVKho`) · Ngân hàng đề (`renderBank`, 3 thẻ Đọc/Nghe/Viết, **chỉ đề gốc**: `isGoc(e) = !e.mix && !e.tu`).
+- **Giao bài** (`renderGiaoTabs`, `S.gsub`): Đề thi (`renderGiao` + `renderGiaoTu`: tạo đề tự soạn `tu:1`, tạo đề trộn, danh sách đề tự soạn/đề trộn)
+  · Từ vựng (`renderVGiao`) · Luyện nghe (`renderNghe`, có cả sổ điểm nghe). Giao bài viết vẫn ở Ngân hàng đề → Đề viết.
+- Sổ điểm từ vựng chuyển vào Học sinh → thẻ “Sổ điểm từ vựng” (`S.hsub = "vso"`).
+- Tên tab cũ vẫn dùng được trong code (`S.tab = "nganhang"|"tuvung"|"nghe"` + `S.vsub`): `routeTab()` đổi sang chỗ mới.
+- Đề tự soạn (`tu:1`) vẫn lên site khi đồng bộ đề (`thi-thu/de/<id>.json` có `"tu":1`), nhưng thống kê đề / từ cốt lõi / bài hằng ngày / Phân tích đề bỏ qua.
+
 ## App trên điện thoại (PWA)
 - `thi-thu/` cài được như app (“Thêm vào màn hình chính”): `manifest.webmanifest`, `sw.js` (lấy mạng trước, mất mạng dùng
   bản lưu), biểu tượng trong `thi-thu/icon/` (từ logo). `sync_thi_thu.py` tự chèn thẻ head + `tools/app_shell.js`
@@ -122,7 +132,7 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - PDF có chữ (không phải bản scan) rẻ nhất: dùng `pdftotext` thay vì xem ảnh từng trang.
 
 ## Đề trộn (ôn câu sai) — trong trang quản lý
-- Ngân hàng đề → "Tạo đề trộn", hoặc Sổ điểm → thẻ học sinh → "Tạo đề ôn câu sai".
+- Giao bài → Đề thi → "Tạo đề trộn", hoặc Sổ điểm → thẻ học sinh → "Tạo đề ôn câu sai".
 - Đề trộn có id `M…` và `mix:true`; mỗi câu chép đủ nội dung + `src:{e,n,t}` (đề gốc, câu gốc).
 - Thống kê câu sai quy bài làm đề trộn về câu gốc qua `src`, nên làm lại đúng sẽ gỡ câu khỏi danh sách.
 - Kiểm thử trang quản lý: chạy bằng Playwright với `window.claude` giả (db trong bộ nhớ), không ghi vào dữ liệu thật.

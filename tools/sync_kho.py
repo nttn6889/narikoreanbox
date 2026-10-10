@@ -125,8 +125,10 @@ def main(dump, vocab_only=False):
                 qs[-1]["audio"] = q["audio"].replace(PAGES, "")
         qs.sort(key=lambda x: x["n"])
         with open(os.path.join(de_dir, eid + ".json"), "w", encoding="utf-8") as f:
-            json.dump({"id": eid, "t": meta.get("title", ""), "total": meta.get("total", len(qs)), "q": qs},
-                      f, ensure_ascii=False, separators=(",", ":"))
+            out = {"id": eid, "t": meta.get("title", ""), "total": meta.get("total", len(qs)), "q": qs}
+        if meta.get("tu"):  # đề cô tự soạn để giao (tab Giao bài), không phải đề gốc → thống kê bỏ qua
+            out["tu"] = 1
+        json.dump(out, f, ensure_ascii=False, separators=(",", ":"))
         keep.add(eid + ".json")
         site["e"][eid] = {"t": meta.get("title", ""), "h": hs}
     for f in os.listdir(de_dir):

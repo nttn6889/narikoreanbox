@@ -69,7 +69,7 @@ def exam_questions():
         d = json.load(open(f, encoding="utf-8"))
         # chỉ đề ĐỌC đủ 50 câu (giống tools/tu_cot_loi.py): bỏ bản bìa xanh trùng Ehot1 (…old), đề nghe (…n) và
         # kịch bản nghe (…k), đề chỉ có câu 1–4 (Etk…)
-        if re.search(r"(k|n|old)$", d["id"]) or d["id"].startswith("Etk") or len(d["q"]) < 40:
+        if d.get("tu") or re.search(r"(k|n|old)$", d["id"]) or d["id"].startswith("Etk") or len(d["q"]) < 40:
             continue
         for q in d["q"]:
             parts = [q.get("passage") or ""] + list(q.get("opts") or [])

@@ -27,7 +27,7 @@ POS = {"NNG": "N", "NNP": "N", "VV": "V", "VA": "A", "MAG": "AD"}
 def reading_exams():
     for f in sorted(glob.glob(os.path.join(ROOT, "thi-thu/de/*.json"))):
         d = json.load(open(f, encoding="utf-8"))
-        if re.search(r"(k|n|old)$", d["id"]) or d["id"].startswith("Etk") or len(d["q"]) < 40:
+        if d.get("tu") or re.search(r"(k|n|old)$", d["id"]) or d["id"].startswith("Etk") or len(d["q"]) < 40:
             continue
         yield d
 
