@@ -141,8 +141,8 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   lý do, quan sát, 3 nhóm đuôi câu, tiểu từ; 18 mẫu cũ giữ id `w01_*` (mẫu ít gặp ở 2 nhóm cuối “심화”), mẫu mới id `w01n_<nhóm>_<i>`, câu ví dụ lấy từ đề) và `Câu 3–4 · 유사 문법` (secOrder -1, `V03_00`…`V03_42`
   = 43 nhóm đồng nghĩa, 111 mẫu). Mỗi mẫu có thêm `ex` (câu ví dụ, `__x__` = gạch chân); `sync_kho.py` đưa `ex` thành phần tử
   thứ 4 của `w` trong `vocab.json`, trang `tu-vung/` hiện thành cột "Ví dụ". Sửa nhóm trong trang quản lý sẽ mất `ex` (form chỉ có ko = vi).
-- Thẻ Câu 1–2 có nút “Luyện tập” trỏ sang `ngu-phap-12/`; thẻ Câu 3–4 trỏ sang trang bài tập ngữ pháp của cô
-  https://claude.ai/artifact/1mkNvmWjkjFwgxHinJfiXk (biến `PRACTICE` trong trang; 80 câu dạng A điền / B tương đồng, chưa đưa vào ngân hàng đề —
+- Thẻ Câu 1–2 có nút “Luyện tập” trỏ sang `ngu-phap-12/`, thẻ Câu 3–4 trỏ sang `ngu-phap-34/` (biến `PRACTICE` trong trang). Trang bài tập ngữ pháp của cô
+  https://claude.ai/artifact/1mkNvmWjkjFwgxHinJfiXk (link ở Bảng tra của `ngu-phap-34/`; 80 câu dạng A điền / B tương đồng, chưa đưa vào ngân hàng đề —
   ngân hàng đề cô để dành cho đề gốc). Trang đó còn 4 câu sai đáp án so với sách 3급 목표 (열리는데 ②, 나오느라고 ④, 아프거나 ④, 맡게 됐다 ①).
 - Kho từ câu 11–12: phần `Câu 11–12 · 기사 주제` (nhóm `V11_00`…`V11_07`, secOrder 6); câu 51 đã lùi xuống secOrder 7.
 - Kho từ từ sách “Giáo trình từ vựng TOPIK II (토픽Ⅱ 합격 레시피)” (1.157 mục, nghĩa tiếng Việt tự soạn): thêm nhóm `V09_10`…`V09_13`
@@ -239,3 +239,13 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   (chỉ số trong `o`) + giải thích `w` do Claude soạn (`src` “Kỳ N” = đề thật); `MCQ` = câu nhận diện tự soạn (lựa chọn đầu là đáp án).
 - Buổi 4: lượt 10 câu, 30 giây/câu, ôn ngắt quãng (`st.r[id] = {b, due, n, w, ok}`: sai → ngày mai; đúng → 3, 7, 14 ngày; đúng lần 14 ngày = thuộc);
   câu làm ở Buổi 1–3 cũng vào lịch ôn. Bài lưu localStorage `nari-12`, nút “Gửi kết quả cho cô…” chia sẻ đoạn chữ.
+
+## Học câu 3–4 ngữ pháp tương đồng trong 4 buổi (`ngu-phap-34/`)
+- Cùng khung với `ngu-phap-12/`, học theo **tần suất trong đề thật** (21 câu 3–4 của kỳ 35–102; 6 nhóm = 16/21 câu), mỗi cặp học cả hai chiều:
+  Buổi 1 đuôi nối lõi (để -고자 = -기 위해, vì – chuyện xấu 바람에 = 탓에, có làm cũng vô ích 봐야 = 다고 해도 / 나 마나 / 더라도) + quy trình 3 bước
+  (gọi tên phần gạch chân bằng từ khóa → gọi tên 4 đáp án, gạch bẫy quen 대신에/김에/리가 없다/무섭게/반면에 và bẫy hình thức → kiểm tra dấu hiệu + thì),
+  Buổi 2 đuôi câu lõi (thang độ chắc chắn 뻔하다 / 나 보다 / 지도 모르다 / 리가 없다, coi như 셈이다, tùy vào 나름이다), Buổi 3 vòng hai (5 cặp đề thật ra 1 lần,
+  cặp đề luyện, “Nâng cao”), Buổi 4 trộn đề + ôn ngắt quãng, Bảng tra (đáp án đề thật, dấu hiệu → nhóm, luật loại trừ). Link `ngu-phap-34/#b=1|2|3|4|tra`.
+- Tham khảo giáo án “Giáo án TOPIK II” (Claude Docs, https://claude.ai/artifact/1ZXx9PXJjapaWdjJMSjTPn): dấu hiệu nhận biết, quy tắc loại trừ, bẫy.
+- Biến `R` = 60 câu 3–4 từ `thi-thu/de/*.json` (bỏ Ehot1old, Entk3 câu 3 trùng Entk1) + đáp án `a` + giải thích `w` do Claude soạn; `MCQ` câu tự soạn
+  (lựa chọn đầu là đáp án). Bài lưu localStorage `nari-34`.

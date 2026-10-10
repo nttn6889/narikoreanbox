@@ -103,9 +103,8 @@ h4{font-size:14px;margin:12px 0 4px;color:var(--muted)}
 (function(){
   var out = document.getElementById('out'), nav = document.getElementById('nav'), partsEl = document.getElementById('parts'), msg = document.getElementById('msg');
   function esc(s){ return String(s == null ? '' : s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
-  // Bài luyện ngữ pháp câu 1–4 (trang bài tập của cô trên claude.ai)
-  var GRAM = 'https://claude.ai/artifact/1mkNvmWjkjFwgxHinJfiXk';
-  var PRACTICE = {1: {url: '../ngu-phap-12/', what: 'học theo cặp dễ nhầm, 61 câu đề có giải thích'}, 3: {url: GRAM, what: 'chọn thẻ “Dạng tương đồng”'}};
+  // Trang học câu 1–2 / 3–4 trong 4 buổi
+  var PRACTICE = {1: {url: '../ngu-phap-12/', what: 'học theo cặp dễ nhầm, 61 câu đề có giải thích'}, 3: {url: '../ngu-phap-34/', what: 'học theo nhóm hay ra, 60 câu đề có giải thích'}};
   function ul(s){ return esc(s).replace(/__(.+?)__/g, '<u>$1</u>'); }
   // Phần đọc/viết "Câu 11–12 · …" → 11; phần nghe "Nghe 4–12 · …" → 104 (không lẫn với câu đọc)
   function secNum(sec){ var m = /(\d+)/.exec(sec || ''); return m ? +m[1] + (/^Nghe/.test(sec) ? 100 : 0) : 0; }
