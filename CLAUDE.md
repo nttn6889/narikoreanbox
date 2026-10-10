@@ -137,10 +137,11 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - Trang bảng từ đơn giản (2 cột Từ vựng | Nghĩa, như sách), đọc thẳng `thi-thu/vocab.json` → kho từ đồng bộ xong là trang tự cập nhật.
 - Mỗi câu là một thẻ (thanh chọn câu dính ở đầu trang; in ra thì in tất cả). Lọc theo câu bằng `#c=`: `tu-vung/#c=1-12`, `tu-vung/#c=11`, `tu-vung/#c=5,7,9` (không có `#c=` thì hiện tất cả). Số câu lấy từ tên phần (`Câu 11–12 · …` → 11).
 - Ngữ pháp câu 1–4 cũng nằm trong kho từ (nguồn: https://claude.ai/artifact/UJJE6sP6ByFEpg7n2JNdRz): phần `Câu 1–2 · 문법`
-  (secOrder -2, nhóm `V01_00`…`V01_03`, 18 mẫu không có đồng nghĩa) và `Câu 3–4 · 유사 문법` (secOrder -1, `V03_00`…`V03_42`
+  (secOrder -2, 13 nhóm `V01_00`…`V01_12`, 67 mẫu, xếp theo cụm của trang `ngu-phap-12/`: thời gian, lựa chọn, mục đích, điều kiện, nhượng bộ,
+  lý do, quan sát, 3 nhóm đuôi câu, tiểu từ; 18 mẫu cũ giữ id `w01_*` (mẫu ít gặp ở 2 nhóm cuối “심화”), mẫu mới id `w01n_<nhóm>_<i>`, câu ví dụ lấy từ đề) và `Câu 3–4 · 유사 문법` (secOrder -1, `V03_00`…`V03_42`
   = 43 nhóm đồng nghĩa, 111 mẫu). Mỗi mẫu có thêm `ex` (câu ví dụ, `__x__` = gạch chân); `sync_kho.py` đưa `ex` thành phần tử
   thứ 4 của `w` trong `vocab.json`, trang `tu-vung/` hiện thành cột "Ví dụ". Sửa nhóm trong trang quản lý sẽ mất `ex` (form chỉ có ko = vi).
-- Thẻ Câu 1–2 và Câu 3–4 có nút “Luyện tập” (đầu và cuối thẻ) trỏ sang trang bài tập ngữ pháp của cô
+- Thẻ Câu 1–2 có nút “Luyện tập” trỏ sang `ngu-phap-12/`; thẻ Câu 3–4 trỏ sang trang bài tập ngữ pháp của cô
   https://claude.ai/artifact/1mkNvmWjkjFwgxHinJfiXk (biến `PRACTICE` trong trang; 80 câu dạng A điền / B tương đồng, chưa đưa vào ngân hàng đề —
   ngân hàng đề cô để dành cho đề gốc). Trang đó còn 4 câu sai đáp án so với sách 3급 목표 (열리는데 ②, 나오느라고 ④, 아프거나 ④, 맡게 됐다 ①).
 - Kho từ câu 11–12: phần `Câu 11–12 · 기사 주제` (nhóm `V11_00`…`V11_07`, secOrder 6); câu 51 đã lùi xuống secOrder 7.
