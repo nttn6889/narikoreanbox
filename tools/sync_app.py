@@ -4,14 +4,14 @@
 Cách dùng:  python3 tools/sync_app.py <thu-muc-dump>
 
 <thu-muc-dump> là thư mục ArtifactData (out_dir) tải từ cơ sở dữ liệu của trang quản lý:
-  classes/, students/, cdays/, assigns/, vassigns/, nassigns/   (mỗi tài liệu một file <id>.json)
+  classes/, students/, cdays/, assigns/, vassigns/, nassigns/, vroutes/   (mỗi tài liệu một file <id>.json)
 
 Tạo ra:
   thi-thu/app/<mã lớp>.json   {due, days:[{d, f, it:[{y, t, p}]}]}   bài hằng ngày của lớp (14 ngày qua → tương lai)
   thi-thu/app/<mã em>.json    {due, cls:[mã lớp], it:[{y, t, p, d}]}  bài riêng cô tick trong “App · bài riêng”
   <thu-muc-dump>/site_app.json  ghi vào db (collection "site", doc "app") để trang quản lý hiện “đã lên app”.
 
-y = loại link (v từ vựng, n nghe, d đề), p = nội dung link (trang tự đóng gói thành #y=…), t = tên hiển thị.
+y = loại link (v từ vựng, n nghe, d đề, l lộ trình từ vựng), p = nội dung link (trang tự đóng gói thành #y=…), t = tên hiển thị.
 Không ghi tên học sinh, tên lớp hay ghi chú: tên bài riêng và tên đề trộn có thể chứa tên em nên đặt lại tên chung.
 """
 import datetime, glob, json, os, re, sys, time
@@ -90,6 +90,16 @@ def d_item(a, mine):
     return {"y": "d", "t": "%s · câu %s–%s" % (lp["x"], lp.get("f"), lp.get("t")), "p": lp}
 
 
+def l_item(r, vk):
+    """Bài lộ trình từ vựng của ngày (khung luyện tập): link #l= của lộ trình, k = bài “ngày k” hoặc bài ôn “R…”."""
+    p = {"c": r["code"], "t": r.get("title", ""), "s": r.get("secs") or [], "n": r.get("per"), "y": r.get("type") or "match",
+         "d": r.get("start"), "r": r.get("review") or 0}
+    if r.get("srs"):
+        p["q"] = 1
+    day = "bài ôn từ" if str(vk).startswith("R") else "ngày %s" % vk
+    return {"y": "l", "t": "%s · %s · %s" % (r.get("title", ""), day, VTYPES.get(p["y"], "")), "p": p, "k": str(vk)}
+
+
 def ymd(ms):
     return datetime.date.fromtimestamp((ms or 0) / 1000).isoformat()
 
@@ -107,6 +117,7 @@ def main(dump):
     va = {a["code"]: a for a in docs(dump, "vassigns") if a.get("code")}
     na = {a["code"]: a for a in docs(dump, "nassigns") if a.get("code")}
     ea = {a["code"]: a for a in docs(dump, "assigns") if a.get("code")}
+    ra = {r["code"]: r for r in docs(dump, "vroutes") if r.get("code")}
     since = (datetime.date.today() - datetime.timedelta(days=KEEP_DAYS)).isoformat()
     now = int(time.time() * 1000)
     site = {"at": now, "days": [], "a": []}
@@ -120,11 +131,18 @@ def main(dump):
             it = []
             if cd.get("v") in va:
                 it.append(v_item(va[cd["v"]], False))
+            if cd.get("vr") in ra and cd.get("vk"):
+                it.append(l_item(ra[cd["vr"]], cd["vk"]))
             if cd.get("nn") in na:
                 it.append(n_item(na[cd["nn"]], False))
             if cd.get("e") in ea:
                 x = d_item(ea[cd["e"]], False)
                 if x:
+                    it.append(x)
+            if cd.get("en") in ea:
+                x = d_item(ea[cd["en"]], False)
+                if x:
+                    x["lb"] = "Đề nghe"
                     it.append(x)
             if it:
                 days.append({"d": cd["day"], "f": cd.get("focus") or "", "it": it})

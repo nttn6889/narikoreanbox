@@ -26,7 +26,7 @@ function appRemember(){
    Hồ sơ trong máy (nari-app-me): {l: mã lớp, h: mã riêng, n: họ tên}. Link #a=… cô gửi một lần sẽ điền sẵn hồ sơ.
    Bài lấy từ app/<mã>.json (tools/sync_app.py, khi cô nhắn Claude “đăng bài”). Bài đã nộp = máy có bài làm đã nộp. */
 var ME_KEY = "nari-app-me", APP_DONE = {v:"nari-v-", n:"nari-n-", d:"nari-tt-"}, APP_WD = ["CN","T2","T3","T4","T5","T6","T7"];
-var APP_YK = {v:"Từ vựng", n:"Luyện nghe", d:"Đề mini"};
+var APP_YK = {v:"Từ vựng", l:"Từ vựng", n:"Luyện nghe", d:"Đề đọc"};
 function appYmd(off){ var d = new Date(Date.now() + (off || 0)*864e5); return d.getFullYear() + "-" + pad(d.getMonth()+1) + "-" + pad(d.getDate()); }
 function appDay(ymd){ var m = String(ymd).split("-"), d = new Date(+m[0], +m[1]-1, +m[2]); return APP_WD[d.getDay()] + " " + m[2] + "/" + m[1]; }
 function appCode(s){ return String(s || "").toUpperCase().replace(/[^A-Z0-9]/g, ""); }
@@ -60,12 +60,13 @@ function appLoad(me){
   });
 }
 function appDone(x, name){
+  if(x.y === "l"){ var m = lsGet("nari-l-" + x.p.c + "-" + normName(name).replace(/[^a-z0-9]/g, "")); return !!(m && m.done && m.done[x.k]); } /* lộ trình: bài ngày k đã làm */
   var s = lsGet(APP_DONE[x.y] + x.p.c + "-" + normName(name).replace(/[^a-z0-9]/g, ""));
   return !!(s && s.submitted);
 }
 function appTask(x, i, me, sub){
   var done = appDone(x, me.n);
-  return '<button class="appitem' + (done ? ' done' : '') + '" type="button" data-task="' + i + '"><span class="ak">' + esc(APP_YK[x.y] || "") + (sub ? ' · ' + esc(sub) : '') + (done ? ' · <b class="ok">✓ Đã nộp</b>' : '') + '</span>' +
+  return '<button class="appitem' + (done ? ' done' : '') + '" type="button" data-task="' + i + '"><span class="ak">' + esc(x.lb || APP_YK[x.y] || "") + (sub ? ' · ' + esc(sub) : '') + (done ? ' · <b class="ok">✓ Đã nộp</b>' : '') + '</span>' +
     '<span class="at">' + esc(x.t || APP_YK[x.y]) + '</span><span class="ago">›</span></button>';
 }
 function appTodayHTML(){

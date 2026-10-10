@@ -34,8 +34,15 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   `students/<id>.app`, 6 ký tự ngẫu nhiên) và tin nhắn có link `thi-thu/#a=<base64>.<sum>` ({l, h, n}) để máy học sinh nhớ mã + tên.
   “Tạo bài 7 ngày tới” tạo bài hằng ngày (giống “Tạo bài hôm nay”, lấy lựa chọn sẵn). Bài riêng: Học viên → nút “App” → tick bài
   (ghi `app:[id học viên]` vào `assigns`/`vassigns`/`nassigns`).
+- **Khung luyện tập** (Lớp học → lớp → thẻ “Khung luyện tập”, thay cho chọn khối): `classes/<id>.lt = [{from, v:{r: mã lộ trình}, d:{f,t}, nd:{f,t,k}, nl:{f,t}}]`,
+  mỗi mốc dùng từ ngày `from` tới mốc sau (không gắn với tuần/buổi). Ngày có khung thì “Tạo bài hôm nay”/“7 ngày tới” tạo bài theo khung
+  (`ltCreate`/`ltMakeAuto`), không theo khối: từ vựng = bài “ngày k” của lộ trình (`cdays.vr`, `cdays.vk`, hết từ mới thì `R<yyyymmdd>` = bài ôn,
+  không tạo `vassigns`); đề đọc câu f–t, mỗi ngày một đề lớp lâu chưa làm (`cdays.e`); đề nghe k câu/ngày nối tiếp câu lần trước, chỉ câu có
+  file nghe, cặp 21–22… không tách (`cdays.en`, `assigns.nd = 1`); luyện nghe = bài `nlessons` có câu trong f–t (`cdays.nn`). Chuyên cần tính bài
+  lộ trình theo `vresults.route` + `day`. Lộ trình từ vựng giờ tạo/quản lý ở nút “Lộ trình từ vựng” của thẻ này (đã bỏ khỏi tab Từ vựng).
+  Bảng “Buổi học & khối kiến thức” cũ vẫn còn (thu gọn) cho lớp chưa có khung luyện tập.
 - **Đăng bài** (cô nhắn “đăng bài”): ArtifactData `list` với `out_dir` các collection `classes`, `students`, `cdays`, `assigns`,
-  `vassigns`, `nassigns` → `python3 tools/sync_app.py <dump>` → ghi `thi-thu/app/<mã>.json` (chỉ mã, tên bài, nội dung link;
+  `vassigns`, `nassigns`, `vroutes` → `python3 tools/sync_app.py <dump>` → ghi `thi-thu/app/<mã>.json` (chỉ mã, tên bài, nội dung link;
   không tên học sinh/tên lớp; bài riêng và đề trộn đặt lại tên chung) → ArtifactData `set` `site/app` từ `<dump>/site_app.json`
   (trang quản lý hiện “đã lên app”) → kiểm tra Playwright, commit + push.
 - App (`tools/app_shell.js`): hồ sơ `nari-app-me` {l, h, n}; trang đầu “Bài hôm nay”, “Bài những ngày trước em chưa nộp” (7 ngày),
@@ -125,7 +132,7 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - Bài từ vựng nằm ngay trong link học sinh: `thi-thu/#v=<base64>.<sum>` → giao bài **không cần đồng bộ**.
   Học sinh nộp → mã `NV1-…` gửi Zalo → cô dán vào tab Chấm bài (chấm chung với mã `NT2-…` của đề thi).
 - Code phía học sinh (vocabBoot, vEntry, vRender…) nằm ngoài khối Admin nên `sync_thi_thu.py` giữ lại.
-- **Lộ trình hàng ngày** (Từ vựng → “Lộ trình hàng ngày”): collection `vroutes` (code, title, secs[thứ tự phần], per, type,
+- **Lộ trình hàng ngày** (Lớp học → lớp → Khung luyện tập → “Lộ trình từ vựng”; trước nằm ở tab Từ vựng): collection `vroutes` (code, title, secs[thứ tự phần], per, type,
   start YYYY-MM-DD, review). Link cố định `thi-thu/#l=<base64>.<sum>`; trang tự tính “ngày k” từ ngày bắt đầu, lấy từ trong
   `thi-thu/vocab.json` theo thứ tự phần → nhóm (order) → từ. Từ sai được nhớ trong localStorage máy học sinh và tự thêm vào
   bài sau (tối đa `review`). Mã nộp `NV1-` có thêm `k` (ngày, hoặc `R<ngày>` cho bài ôn) và `w` (id từ); trang quản lý chấm
