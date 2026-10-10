@@ -80,7 +80,7 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   Trang học sinh (`writeBoot`, code giữa dấu `==W==`, ngoài khối Admin): gợi ý mở dần, **không trừ điểm**; nộp xong **hiện đáp án mẫu ngay**;
   mã nộp `NW1-{c, n, a:[[㉠,㉡]…], h:[[số gợi ý]…], t, d}`. Chấm bài: dán mã → `wresults/<code>_<sum>` (ans/hints lưu dạng `[{v:[…]}]`
   vì db không nhận mảng lồng), cô chấm tay từng ô 0–5 + nhận xét (`wGradeModal`); danh sách ở cuối thẻ Đề viết. Chưa đưa vào Sổ điểm/Đánh giá.
-- **Câu 53/54 + bảng sửa bài** (đề công khai kỳ 96, 102 đã nhập đủ 51–54: `W51_096`…`W54_102`): `wbank` thêm `img` (link ảnh biểu đồ
+- **Câu 53/54 + bảng sửa bài** (đề công khai kỳ 91, 96, 102 đã nhập đủ 51–54: `W51_091`…`W54_102`; 53 kỳ 91 `dang:[3,7]` là đoán theo kỳ 96, có thêm ý “Triển vọng”): `wbank` thêm `img` (link ảnh biểu đồ
   `thi-thu/viet/W53_<kỳ>.jpg`), `blocks:[{k: tên ý, ko: câu bài mẫu}]` (bài mẫu chia ý), `nums` (số liệu phải có), `dang` (dạng trong trang khung câu 53).
   Giao bài có 2 tùy chọn (`wassigns.key` hiện đáp án ngay khi nộp — mặc định tắt, link khi đó không chứa đáp án, cờ `nk:1`; `wassigns.hint`).
   Ô viết 53/54 đếm chữ (tính dấu cách, không tính xuống dòng). Chấm: 3 tiêu chí (53: 7/7/16, 54: 12/12/26, `W_RUB`) + từng câu học sinh (`wSents`)
