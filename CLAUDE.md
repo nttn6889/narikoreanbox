@@ -80,7 +80,7 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   Trang học sinh (`writeBoot`, code giữa dấu `==W==`, ngoài khối Admin): gợi ý mở dần, **không trừ điểm**; nộp xong **hiện đáp án mẫu ngay**;
   mã nộp `NW1-{c, n, a:[[㉠,㉡]…], h:[[số gợi ý]…], t, d}`. Chấm bài: dán mã → `wresults/<code>_<sum>` (ans/hints lưu dạng `[{v:[…]}]`
   vì db không nhận mảng lồng), cô chấm tay từng ô 0–5 + nhận xét (`wGradeModal`); danh sách ở cuối thẻ Đề viết. Chưa đưa vào Sổ điểm/Đánh giá.
-- **Câu 53/54 + bảng sửa bài** (đề công khai kỳ 96, 102 đã nhập đủ 51–54: `W51_096`…`W54_102`): `wbank` thêm `img` (link ảnh biểu đồ
+- **Câu 53/54 + bảng sửa bài** (đề công khai kỳ 91, 96, 102 đã nhập đủ 51–54: `W51_091`…`W54_102`; 53 kỳ 91 `dang:[3,7]` là đoán theo kỳ 96, có thêm ý “Triển vọng”): `wbank` thêm `img` (link ảnh biểu đồ
   `thi-thu/viet/W53_<kỳ>.jpg`), `blocks:[{k: tên ý, ko: câu bài mẫu}]` (bài mẫu chia ý), `nums` (số liệu phải có), `dang` (dạng trong trang khung câu 53).
   Giao bài có 2 tùy chọn (`wassigns.key` hiện đáp án ngay khi nộp — mặc định tắt, link khi đó không chứa đáp án, cờ `nk:1`; `wassigns.hint`).
   Ô viết 53/54 đếm chữ (tính dấu cách, không tính xuống dòng). Chấm: 3 tiêu chí (53: 7/7/16, 54: 12/12/26, `W_RUB`) + từng câu học sinh (`wSents`)
@@ -100,6 +100,14 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 
 ## Nhập đề thi vào ngân hàng đề
 - Đề nghe công khai TOPIK II kỳ 96, 102: `Etk096n`, `Etk102n` (`nghe:1`, câu 1–3 là ảnh tranh/biểu đồ, lựa chọn “Tranh ①…”; chưa có kịch bản/file nghe — cô gửi sau).
+- Kỳ 91 đủ cả đọc + nghe: `Etk091` (Đọc, 50 câu; câu 1–4 cô nhập trước giữ nguyên; câu 42–43 đề gốc không công bố đoạn văn) và
+  `Etk091n` (Nghe, 50 câu; `explain` = kịch bản + đáp án). **File nghe từng câu**: trường `audio` của câu trong `bank` = link
+  GitHub Pages `https://nttn6889.github.io/narikoreanbox/thi-thu/de/audio/<đề>-<câu>.mp3` (trang quản lý phát được);
+  `sync_kho.py` đổi thành đường dẫn tương đối `de/audio/…`. Cặp câu (21–22…) cùng một file ghi ở cả hai câu, trang chỉ hiện một
+  trình phát (`buildSnapshot`/`mixQs` bỏ trình phát trùng với câu ngay trước). Không tính vào dấu `qSig`. Sửa câu có ô “File nghe”.
+  File cô gửi (rar 31 track) chỉ có tới câu 30: track 1 giới thiệu, track 2–21 = câu 1–20, track 22/24/…/30 = cặp 21–22…29–30
+  (nghe 2 lần), track lẻ 23…31 chỉ là “câu sau + thời gian làm bài”. Nén: `ffmpeg -af areverse,silenceremove=…,areverse -ac 1 -ar 24000 -b:a 40k`
+  (cắt im lặng cuối). Câu 31–50 chưa có file nghe.
 - Ngân hàng đề nằm trong cơ sở dữ liệu của trang quản lý (collection `bank`, câu hỏi ở `bank/<id>/q/<qid>`).
 - Cô gửi file đề trong phiên Code → trích nội dung → ghi thẳng vào ngân hàng bằng ArtifactData (batch), hoặc
   xuất văn bản theo định dạng “Dán nhiều câu” của trang quản lý để cô tự dán.

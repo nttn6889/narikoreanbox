@@ -90,6 +90,9 @@ input.code{text-transform:uppercase;letter-spacing:.18em;font-weight:700;font-si
 .q{padding:14px 0 18px;border-bottom:1px dashed var(--line)}
 .stem{font-family:var(--kr);font-size:17px;margin:0 0 10px;display:flex;gap:10px}
 .stem b{color:var(--violet);min-width:1.6em;flex:none}
+.qaudio{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 10px;padding:6px 10px;border:1px solid var(--line);border-radius:6px;background:var(--violet-soft)}
+.qaudio span{font-weight:600;font-size:14px;color:var(--violet)}
+.qaudio audio{flex:1;min-width:220px;height:36px}
 .passage{margin:4px 0 12px;border:1px solid var(--line);border-radius:6px;padding:12px;background:var(--paper)}
 .passage img{display:block;margin:0 auto;border-radius:4px;background:#fff}
 .ptext{font-family:var(--kr);font-size:16px;line-height:1.85;white-space:normal}
@@ -419,6 +422,7 @@ ins{color:var(--ok);text-decoration:none;background:var(--ok-soft);font-weight:6
 mark.wdm{background:var(--warn-soft);color:inherit;text-decoration:underline wavy var(--pen);text-underline-offset:4px;text-decoration-thickness:1.5px;border-radius:2px;padding:0}
 mark.wdv{background:var(--violet-soft);color:inherit;text-decoration:underline dotted var(--violet);text-underline-offset:4px;text-decoration-thickness:2px;border-radius:2px;padding:0}
 .wau{display:grid;gap:5px;margin:6px 0 8px;font-size:14.5px}.wtn .wau{margin:0;gap:8px}.wtn .wau1{display:block}.wtn .wau1 .pill{display:inline-block;margin:0 0 2px}.wau1{display:flex;gap:6px;align-items:flex-start;line-height:1.5}.wau1 p{margin:0}.wau1 input{margin-top:4px;flex:none}.wau1 .pill{flex:none;margin-top:1px}.wau1.off{opacity:.45}
+.wai{margin:8px 0 4px}.wai1{display:flex;gap:10px;align-items:center;flex-wrap:wrap;border:1px solid var(--violet);border-radius:6px;padding:8px 12px;background:var(--violet-soft)}.wai1 .hint,.wai1 .err,.wai1 .okmsg{margin:0;flex:1;min-width:200px}
 .wsug{border:1px dashed var(--violet);border-radius:6px;padding:8px 12px;margin:10px 0 4px;background:var(--violet-soft);font-size:14.5px}.wsug ul{margin:2px 0 6px;padding-left:20px}.wsug li{margin:1px 0}
 mark.wdk{background:var(--ok-soft);color:var(--ok);font-weight:600;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1.5px;border-radius:2px;padding:0}
 .w5m{font-size:15px;margin:4px 0 8px;padding:6px 10px;border-left:3px solid var(--ok);background:var(--paper);border-radius:0 6px 6px 0}
@@ -629,6 +633,7 @@ function buildSnapshot(qmap, from, to){
   for(var n = from; n <= to; n++){
     var q = qmap[n] || {};
     var it = {n:n, group:q.group||"", passage:q.passage||"", image:q.image||"", stem:q.stem||"", opts:(q.opts||["","","",""]).slice(0,4), share:!!q.share};
+    if(q.audio && !(out.length && (qmap[n-1]||{}).audio === q.audio)) it.audio = q.audio;
     if(n === from){
       if(!it.group){ for(var k = n-1; k >= 1; k--){ if(qmap[k] && qmap[k].group){ it.group = qmap[k].group; break; } } }
       if(it.share){ var j = n; while(j > 1 && qmap[j] && qmap[j].share) j--; it.passage = (qmap[j]||{}).passage || ""; it.image = (qmap[j]||{}).image || ""; it.share = false; }
@@ -655,6 +660,7 @@ function mixQs(list, qmaps){
     var own = (q.share && !share) ? passageOwner(qm, it.n) : q;
     docs.push({n:i+1, group:(body && body === prevBody) ? "" : g, passage:share ? "" : (own.passage || ""), image:share ? "" : (own.image || ""),
       stem:q.stem || "", opts:(q.opts || ["","","",""]).slice(0,4), share:share, _q:q, _it:it});
+    if(q.audio && !(cont && (qm[it.n-1]||{}).audio === q.audio)) docs[docs.length-1].audio = q.audio;
     prev = it; prevBody = body || prevBody;
   });
   docs.forEach(function(d, i){
@@ -678,6 +684,7 @@ function qHTML(q){
   var showP = !q.share && (q.passage || q.image);
   var pass = showP ? '<div class="passage">' + (q.image ? '<img src="' + esc(q.image) + '" alt="Hình minh họa câu ' + q.n + '">' : '') + (q.passage ? '<div class="ptext">' + fmt(q.passage) + '</div>' : '') + '</div>' : '';
   h += '<section class="q" id="q' + q.n + '">';
+  if(q.audio) h += '<div class="qaudio"><span>🎧 Nghe</span><audio controls preload="none" src="' + esc(q.audio) + '"></audio></div>';
   if(showP && q.stem) h += pass + '<p class="stem"><b>' + q.n + '.</b><span>' + fmt(q.stem) + '</span></p>';
   else if(showP) h += '<p class="stem"><b>' + q.n + '.</b></p>' + pass;
   else h += '<p class="stem"><b>' + q.n + '.</b><span>' + fmt(q.stem) + '</span></p>';
@@ -1456,14 +1463,19 @@ function wLenHTML(t, y){
   var cls = n < r[0] ? "warn" : n > r[1] ? "bad" : "good";
   return '<span class="pill ' + cls + '">' + n + '자</span> <span class="muted" style="font-size:13px">yêu cầu ' + r[0] + '–' + r[1] + '자</span>';
 }
-/* Tách câu: hết câu ở . ! ? khi sau đó là dấu cách / xuống dòng / hết bài (không cắt "2.5배"), hoặc ở chỗ xuống dòng. */
+/* Tách câu: hết câu ở . ! ? (cả khi học sinh quên dấu cách: "조사하였다.2019년"), trừ số thập phân "2.5배", dấu "..." và
+   dấu ngoặc/ngoặc kép đóng ngay sau; xuống dòng cũng là hết câu. Máy tách sai thì cô sửa tay trong wGradeModal (“Sửa cách tách câu”). */
 function wSents(t){
   var s = String(t || "").replace(/\r/g, ""), out = [], cur = "";
   for(var i = 0; i < s.length; i++){
-    var c = s[i];
+    var c = s[i], nx = s[i+1] || "";
     if(c === "\n"){ if(cur.trim()) out.push(cur.trim()); cur = ""; continue; }
     cur += c;
-    if(/[.!?。]/.test(c) && (i + 1 >= s.length || /\s/.test(s[i+1]))){ out.push(cur.trim()); cur = ""; }
+    if(!/[.!?。]/.test(c)) continue;
+    if(!nx || /\s/.test(nx)){ out.push(cur.trim()); cur = ""; continue; }
+    if(/[.!?。"'”’)」』\]~%]/.test(nx)) continue;
+    if(c === "." && /[0-9]/.test(s[i-1] || "") && /[0-9]/.test(nx)) continue;
+    out.push(cur.trim()); cur = "";
   }
   if(cur.trim()) out.push(cur.trim());
   return out;
@@ -1593,6 +1605,88 @@ function wPassHTML(p, marks){
 function wImgHTML(src, dt){
   var d = dt ? '<div class="wdt"' + (src ? ' hidden' : '') + '><b>Số liệu trong biểu đồ:</b>\n' + esc(dt) + '</div>' : '';
   return (src ? '<img class="wimg" src="' + esc(src) + '" alt="Biểu đồ của đề" onerror="this.hidden=true;var n=this.nextElementSibling;if(n&&n.className===\'wdt\')n.hidden=false">' : '') + d;
+}
+/* ---------- Claude chấm nháp câu 53 (gọi Claude, tốn lượt dùng của cô) ----------
+   Chỉ giao cho Claude phần máy không làm được: sửa ngữ pháp/tiểu từ/chính tả từng câu, nhận xét ngắn, điểm 3 tiêu chí.
+   Tiết kiệm token: không gửi ảnh (gửi số liệu dạng chữ + bài mẫu), không gửi lại lỗi máy đã bắt, bỏ qua câu đã khớp mẫu ≥ 90%,
+   một bài = một lần gọi, trả JSON ngắn, kết quả nhớ 24 giờ (mở lại cùng bài không tốn thêm) và lưu vào bài khi cô bấm Lưu. */
+var W_AI_P = null;
+function wAiSample(){ if(!W_AI_P) W_AI_P = (window.claude && typeof window.claude.use === "function") ? Promise.resolve(window.claude.use("sample")).catch(function(){ return null; }) : Promise.resolve(null); return W_AI_P; }
+var W_AI_ERR = {not_granted:"Cô chưa cho phép trang này dùng Claude (hoặc đã bấm Từ chối). Mở lại trang để được hỏi lại.", sampling_disabled:"Tài khoản này chưa dùng được Claude từ trang.", rate_limited:"Claude đang bận hoặc đã hết lượt dùng — cô thử lại sau ít phút.", session_expired:"Cô đăng nhập lại claude.ai rồi thử lại.", invalid_json:"Claude trả lời sai định dạng — cô bấm thử lại một lần.", refused:"Claude không chấm bài này.", prompt_too_large:"Bài quá dài để gửi.", upstream_error:"Mất kết nối giữa chừng — cô bấm thử lại."};
+function wAiPrompt(w, e, y, auto){
+  var blocks = w.blocks || [], rub = W_RUB[y] || [];
+  var data = String(w.data || "").trim(), pas = String(w.passage || "").trim();
+  var skip = [], lines = e.x.map(function(x, j){
+    var b = blocks[+x.b], hits = wHits(x.s, y).filter(function(r){ return wOffSet(x).indexOf(r.id) < 0; });
+    var sim = b ? wCmp(x.s, b.ko).r : 0;
+    if(sim >= 0.9 && !hits.length) skip.push(j + 1);
+    return (j + 1) + ". " + (b ? "[ý " + (+x.b + 1) + "] " : "[ngoài ý mẫu] ") + x.s + (hits.length ? "  ⟵ máy đã bắt: " + hits.map(function(r){ return r.t; }).join(", ") : "");
+  });
+  return [
+    "Bạn là giám khảo chấm TOPIK II 쓰기 câu 53 cho học sinh Việt Nam. Thang: " + rub.map(function(c){ return c[2] + " " + c[3]; }).join(", ") + " (tổng " + wMaxOf(y) + ").",
+    "Khung câu của lớp (đúng khung thì không bắt lỗi): văn viết đuôi -다; mở đầu '[cơ quan]에서 [đối tượng]을/를 대상으로 ...에 대해 조사하였다'; số liệu 'A년 X에서 B년 Y(으)로 증가/감소한 것으로 나타났다' (có 약 ○배/꾸준히/대폭/소폭); 3 mốc '…(으)로 증가하다가 …(으)로 감소하였다'; so sánh 2 đối tượng '…의 경우 … 반면, …은/는 …'; nguyên nhân '이와 같이 변화한 이유는 …고, …기 때문인 것으로 보인다' hoặc 첫째/둘째; dự đoán '이러한 영향이 계속된다면 …ㄹ 것으로 기대된다/전망된다'. Từ đồng nghĩa (늘어나다, 상승하다, 줄어들다, 하락하다…) đều đúng.",
+    "", "ĐỀ:" + (pas ? "\n" + pas.slice(0, 600) : "") + (data ? "\nSố liệu: " + data.slice(0, 800) : "") + ((w.nums || []).length ? "\nSố liệu bắt buộc: " + w.nums.join(", ") : ""),
+    "", "BÀI MẪU THEO Ý:" + (blocks.length ? "\n" + blocks.map(function(b, k){ return (k + 1) + ". " + (b.k || "") + ": " + (b.ko || ""); }).join("\n") : " (không có)"),
+    "", "BÀI HỌC SINH (" + wLen(e.x.map(function(x){ return x.s; }).join(" ")) + "자, đã tách câu):", lines.join("\n"),
+    skip.length ? "Câu " + skip.join(", ") + " đã khớp bài mẫu ≥90%: coi là đúng, không trả về." : "",
+    "Lỗi 'máy đã bắt' sẽ tự gửi cho học sinh: KHÔNG nhắc lại trong nhận xét (nhưng câu sửa vẫn phải sửa cả lỗi đó).",
+    "Điểm máy gợi ý (chỉ đếm lỗi hay gặp, độ dài, số liệu): " + rub.map(function(c){ return c[0] + " " + auto[c[0]].s + "/" + c[3]; }).join(", ") + ". Điều chỉnh theo chất lượng thật.",
+    "",
+    "Việc cần làm: chỉ trả về những câu có lỗi thật (ngữ pháp, tiểu từ, đuôi câu, chính tả, viết cách, từ vựng, sai số liệu hoặc sai xu hướng so với đề). Sửa tối thiểu, giữ ý và khung của học sinh. Nhận xét tiếng Việt, tối đa 25 từ mỗi câu, chữ Hàn đặt trong `backtick`.",
+    'Chỉ trả JSON, không chữ nào khác: {"x":[{"j":2,"f":"câu đã sửa","e":["조사"],"n":"nhận xét"}],"r":{"c":5,"o":6,"l":12},"o":"nhận xét chung 1-2 câu, nêu 1 điểm tốt và 1 điểm cần sửa"}',
+    "Nhãn e chỉ chọn trong: " + W_TAGS.map(function(t){ return t[0]; }).join(", ") + "."
+  ].filter(function(l){ return l !== null; }).join("\n");
+}
+function wAiWire(el, r, ev, paintSug, showTot, wById){
+  $$("[data-ai]", el).forEach(function(box){
+    var i = +box.dataset.ai, w = wById((r.items || [])[i]), y = +w.type, e = ev[i], ctl = null;
+    if(y !== 53 || !e || !e.x) return;
+    var draw = function(msg, cls){
+      var done = e.ai && e.ai.t;
+      box.innerHTML = '<div class="wai1"><button type="button" class="btn sm" data-aigo>' + (done ? '🤖 Claude chấm lại' : '🤖 Claude chấm nháp bài này') + '</button>' +
+        '<span class="hint" data-aist>' + (msg || (done ? 'Claude đã chấm nháp lúc ' + fmtDate(e.ai.t) + (e.ai.r ? ' · gợi ý ' + W_RUB[53].map(function(c){ return c[1] + ' ' + e.ai.r[c[0]] + '/' + c[3]; }).join(' · ') : '') + '. Cô xem lại từng câu rồi bấm Lưu.' : 'Claude chỉ sửa câu sai, ghi nhãn lỗi, nhận xét ngắn và gợi ý điểm — máy đã bắt lỗi quen thuộc, đếm chữ, số liệu và so bài mẫu rồi nên không gửi lại. Ô cô đã viết sẽ không bị ghi đè.')) + '</span></div>';
+      if(cls) box.querySelector("[data-aist]").className = cls;
+      box.querySelector("[data-aigo]").onclick = go;
+    };
+    var setTag = function(sb, x, t){ var b = sb.querySelector('[data-e="' + t + '"]'); if(!b) return; var s = String(x.e || "").split(",").filter(Boolean); if(s.indexOf(t) < 0){ s.push(t); x.e = s.join(","); } b.setAttribute("aria-pressed", "true"); };
+    var apply = function(res){
+      var nf = 0;
+      (Array.isArray(res && res.x) ? res.x : []).forEach(function(z){
+        var j = Math.round(+z.j) - 1, x = e.x[j], sb = el.querySelector('.w5s[data-i="' + i + '"][data-j="' + j + '"]'); if(!x || !sb) return;
+        var f = String(z.f || "").trim();
+        if(f && f !== x.s && !String(x.f || "").trim()){ x.f = f; var ta = sb.querySelector("[data-f]"); ta.value = f; sb.querySelector("[data-df]").innerHTML = wDiffHTML(x.s, f); nf++; }
+        (Array.isArray(z.e) ? z.e : []).forEach(function(t){ t = String(t).trim(); if(W_TAGS.some(function(q){ return q[0] === t; })) setTag(sb, x, t); });
+        var n = String(z.n || "").trim();
+        if(n && !String(x.n || "").trim()){ x.n = n; sb.querySelector("[data-n]").value = n; }
+      });
+      var rr = {}, ok = res && res.r && typeof res.r === "object";
+      W_RUB[53].forEach(function(c){ var v = ok ? Math.round(+res.r[c[0]]) : NaN; if(isNaN(v)) return; v = Math.max(0, Math.min(c[3], v)); rr[c[0]] = v;
+        var f2 = "r" + c[0]; if(typeof e[f2] !== "number"){ e[f2] = v; var sel = el.querySelector('[data-r="' + i + '"][data-f2="' + f2 + '"]'); if(sel) sel.value = String(v); } });
+      var o = String((res && res.o) || "").trim(), ot = el.querySelector('[data-o="' + i + '"]');
+      if(o && !String(e.o || "").trim()){ e.o = o; if(ot) ot.value = o; }
+      e.ai = {t:Date.now(), r:Object.keys(rr).length === 3 ? rr : null};
+      paintSug(i); showTot();
+      return nf;
+    };
+    var go = function(){
+      if(ctl){ ctl.abort(); return; }
+      wAiSample().then(function(sample){
+        if(!sample){ draw("Claude chưa dùng được ở chỗ mở trang này (cần mở trong claude.ai, đã đăng nhập).", "err"); return; }
+        var text = e.x.map(function(x){ return x.s; }).join(" "), auto = wAutoScore(53, text, e.x, w.blocks, w.nums);
+        ctl = new AbortController();
+        var btn = box.querySelector("[data-aigo]"), st = box.querySelector("[data-aist]");
+        btn.textContent = "Dừng"; st.className = "hint"; st.textContent = "Claude đang chấm… (thường 10–40 giây)";
+        sample.json(wAiPrompt(w, e, 53, auto), {signal:ctl.signal, modelTier:"default", cache:{gcTime:86400000}}).then(function(res){
+          ctl = null; var nf = apply(res);
+          draw("Xong: Claude sửa " + nf + " câu" + (e.ai.r ? " · gợi ý " + W_RUB[53].map(function(c){ return c[1] + " " + e.ai.r[c[0]] + "/" + c[3]; }).join(" · ") : "") + ". Cô xem lại, chỉnh nếu cần rồi bấm Lưu.", "okmsg");
+        }, function(err){
+          ctl = null; var c = (err && err.code) || "upstream_error";
+          draw(c === "cancelled" ? "Đã dừng." : (W_AI_ERR[c] || ("Chưa chấm được (" + c + ").")), c === "cancelled" ? "hint" : "err");
+        });
+      });
+    };
+    draw();
+  });
 }
 var W_V = {ok:"✅", warn:"⚠️", bad:"❌"};
 var W_LEG = '<mark class="wdm">Chữ tô vàng</mark> trong câu em viết = khác bài mẫu · <mark class="wdk">chữ tô xanh</mark> trong bài mẫu = bài mẫu có mà em chưa viết · <mark class="wdv">chữ tô tím</mark> = cách viết khác bài mẫu nhưng cũng đúng (không tính dấu cách).';
@@ -2136,5 +2230,3 @@ appRun();
 </script>
 </body>
 </html>
-
-
