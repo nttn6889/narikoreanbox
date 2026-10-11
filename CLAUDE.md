@@ -81,6 +81,15 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - 3 nút “Làm thử” là link bài thật: đề `Ehot1` câu 1–8 (mã `MDVV8`), 20 từ câu 7–8 dạng nối từ (mã `NM4F7`),
   nghe `N001` (mã `67BRN`). Muốn cô chấm được mã nộp thì 3 mã này phải có trong `assigns`/`vassigns`/`nassigns` của trang quản lý.
 
+## Tab Giao bài: 4 thẻ Đề đọc · Đề nghe · Đề viết · Từ vựng (trong trang quản lý)
+- `renderGiaoTabs` (`S.gsub` = `de` | `nghe` | `viet` | `tuvung`). Menu chung mọi thẻ: bảng “Chọn … để giao” (mỗi dòng **Xem** · **Giao bài**,
+  đề tự soạn/đề trộn thêm **Sửa**) rồi bảng “… đã giao” (**Xem** · **Tin nhắn** · Đóng bài/Mở lại hoặc Xóa). Helper `gTable`/`gBtns`/`giaoExRow`/`giaoAsgHTML`/`wireGiaoEx`.
+- Đề đọc (`renderGiao`): đề gốc không có `nghe` + đề tự soạn + đề trộn; Giao bài mở modal `giaoExModal` → `doAssign(ex, md)`; bài đã giao = `assigns` không phải đề nghe
+  (`exIsNghe`: `a.nd` hoặc đề có `nghe`). Ô “Tạo đề để giao” (`renderGiaoTu`) ở cuối.
+- Đề nghe (`renderNghe`): đề nghe trong sách đề (giao như đề đọc) + bài luyện nghe `nlessons`; bài đã giao tách 2 bảng (`assigns` đề nghe, `nassigns`) + Sổ điểm luyện nghe.
+- Đề viết (`renderGiaoViet`): chọn dạng 51–54, Xem (`wViewModal`: đề + đáp án + gợi ý), giao bài, bài đã giao, bài học sinh nộp (chấm). Tài liệu gốc → Ngân hàng đề → Đề viết
+  giờ chỉ để nhập/sửa câu (nút “Giao bài viết →” chuyển sang thẻ này).
+
 ## Ngân hàng đề: 3 thẻ Đề đọc · Đề nghe · Đề viết (trong trang quản lý)
 - `renderBank` chia thẻ con (`S.bsub`): Đọc = `renderBankDoc` (bank trắc nghiệm, đề trộn); Nghe = `renderBankNghe` (đề `bank` có `nghe` +
   bài luyện nghe `nlessons`); Viết = `renderBankViet`.
@@ -90,7 +99,7 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - Đã nhập câu 52 của 14 kỳ (35, 36, 37, 41, 47, 52, 60, 64, 83, 91, 92, 93, 94, 95), mỗi ô có 3 gợi ý (`hint:{a:[…3], b:[…3]}`):
   bậc 1 đọc tín hiệu (từ nối, vị trí ô), bậc 2 mẫu ngữ pháp, bậc 3 từ khóa. `«chữ»` trong gợi ý = tô vàng chữ đó trong đoạn văn (phải có đúng trong `passage`).
 - Câu 51 đã nhập 36 kỳ (70, 72–106; `W51_070`…`W51_106`), cùng định dạng gợi ý 3 bậc. `W51_099` ㉡ ghi chú: file đáp án tham khảo ghi “참석하신”, đã sửa thành “참석하지 못한”.
-- **Luyện viết** (thẻ Đề viết → tick câu → “Giao bài viết”): `wassigns/<code>` {code, title, items:[id wbank]}, link `thi-thu/#w=<base64>.<sum>`
+- **Luyện viết** (Giao bài → Đề viết → “Giao bài” từng câu, hoặc tick nhiều câu → “Giao các câu đã chọn”): `wassigns/<code>` {code, title, items:[id wbank]}, link `thi-thu/#w=<base64>.<sum>`
   chứa sẵn đoạn văn + gợi ý + đáp án mẫu (không cần đồng bộ; sửa câu sau khi giao thì link cũ giữ bản cũ, “Tin nhắn” tạo link mới).
   Trang học sinh (`writeBoot`, code giữa dấu `==W==`, ngoài khối Admin): gợi ý mở dần, **không trừ điểm**; nộp xong **hiện đáp án mẫu ngay**;
   mã nộp `NW1-{c, n, a:[[㉠,㉡]…], h:[[số gợi ý]…], t, d}`. Chấm bài: dán mã → `wresults/<code>_<sum>` (ans/hints lưu dạng `[{v:[…]}]`
