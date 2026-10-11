@@ -87,7 +87,10 @@ def d_item(a, mine):
         lp["x"] = "Đề ôn câu sai"
     elif mine or not lp.get("x"):
         lp["x"] = bank_title(lp.get("e")) or "Đề thi thử"
-    return {"y": "d", "t": "%s · câu %s–%s" % (lp["x"], lp.get("f"), lp.get("t")), "p": lp}
+    t = "%s · câu %s–%s" % (lp["x"], lp.get("f"), lp.get("t"))
+    if lp.get("lt"):  # bài luyện tập: trắc nghiệm từ vựng trước khi làm đề
+        t += " · kèm từ vựng"
+    return {"y": "d", "t": t, "p": lp}
 
 
 def l_item(r, vk):

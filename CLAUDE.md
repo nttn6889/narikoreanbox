@@ -10,13 +10,21 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - Giao bài thi thử **không cần đồng bộ**: link `thi-thu/#d=<base64>.<sum>` chứa mã bài, mã đề (`e`) và phạm vi câu (`f`,`t`);
   đề trộn thì chứa danh sách câu gốc `q:[[đề, câu],…]` và trang học sinh tự ghép lại bằng `mixQs` (giống hệt trang quản lý).
   Nội dung đề lấy từ `thi-thu/de/<id>.json`. Link cũ `?bai=MÃ` (bài nhúng trong index.html) vẫn chạy.
+- **Bài luyện tập / thi thật** (Giao bài → “Kiểu bài”; mặc định Luyện tập 20 từ): luyện tập ghi `lt` (số từ trắc nghiệm) vào `assigns` và link `#d=`.
+  Trang học sinh (`tuStage`/`tuTable`/`tuWire`, ngoài khối Admin): trắc nghiệm nghĩa (Hàn → Việt, đúng sai hiện ngay) các từ trong những câu được giao →
+  bảng từ theo câu → làm đề; trong đề từ được tô gạch chấm, chạm xem nghĩa, nút “Tách từng câu” (xuống dòng sau mỗi câu), nút “Bảng từ”.
+  Từ đã chọn đúng ở bài luyện tập trước không hỏi lại (localStorage `nari-tu-ok`). Mã nộp `NT2-` thêm `v:[đúng, số từ]`, `vw` (≤12 từ sai) →
+  `results.vq`/`vw`, hiện ở phần chấm. Thi thật (không `lt`) như cũ. Bài hằng ngày theo Khung luyện tập (`ltCreate`) luôn là luyện tập (`lt:20`).
+  Bảng từ theo câu: `python3 tools/tu_de.py [<dump>]` → `thi-thu/de/tu/<id>.json` ({w:[[từ gốc, nghĩa, số đề gặp, [chữ trong đề]]], q:{câu:[chỉ số]}};
+  kiwipiepy, nghĩa như Từ cốt lõi, bỏ từ sơ cấp/`STOP`; đề nghe lấy thêm kịch bản ở đề `…k`, bài luyện nghe cùng file nghe, hoặc `explain` trong dump
+  `bank/<id>/q`). **Chạy lại sau mỗi lần đồng bộ đề.**
 - **Đồng bộ ngân hàng đề + kho từ** (khi cô nhập/sửa đề hoặc thêm từ — cô nhắn “đồng bộ đề”/“đồng bộ kho từ”):
   1. ArtifactData `list` với `out_dir` (không đọc nội dung vào hội thoại): `bank`, từng `bank/<id>/q`, `vocab` → một thư mục dump.
   2. `python3 tools/sync_kho.py <dump>` — ghi `thi-thu/de/*.json` (bỏ đáp án, giải thích; bỏ đề trộn), `thi-thu/vocab.json`,
      ảnh vào `thi-thu/img/`, và `<dump>/site_kho.json`.
   3. ArtifactData `set` collection `site`, doc `kho` từ `site_kho.json` (dấu từng câu/từng phần; trang quản lý so dấu này để
      báo “câu đã sửa sau lần đồng bộ”). Hàm dấu `qSig`/`vSecSig` trong trang phải khớp `qcanon`/`vcanon` trong script.
-  4. Kiểm tra bằng Playwright, commit + push.
+  4. `python3 tools/tu_de.py <dump>` (bảng từ cho bài luyện tập), kiểm tra bằng Playwright, commit + push.
 - Sửa giao diện/chức năng: sửa trong artifact gốc (Artifact `read` → sửa → `publish` với `url`), rồi
   `python3 tools/sync_thi_thu.py <file-html>` để sinh lại `thi-thu/index.html` (bỏ khối Admin và đoạn kết nối claude.ai).
 - Tên đề trộn có thể chứa tên học sinh: chỉ được nằm trong link, không đưa vào repo (sync_kho bỏ đề trộn vì vậy).
