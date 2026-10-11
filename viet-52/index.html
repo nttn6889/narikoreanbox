@@ -112,6 +112,23 @@ button.b:disabled{opacity:.45;cursor:default}
 .chk{list-style:none;padding:0;margin:6px 0}
 .chk li{padding:3px 0 3px 26px;position:relative}
 .chk li::before{content:"☐";position:absolute;left:4px;top:2px;font-size:17px}
+/* Buổi 2: chép / lật */
+.kd{display:inline-block;border-radius:10px;padding:0 8px;font:bold 13px Arial,sans-serif;color:#fff;vertical-align:1px}
+.kd.C{background:var(--blue)}.kd.L{background:var(--acc)}.kd.S{background:var(--warn)}
+.ex u{text-decoration:none;box-shadow:inset 0 -2px var(--ok)}
+details.more{margin:6px 0 12px;border:1px dashed var(--line);border-radius:8px;padding:6px 10px}
+details.more summary{cursor:pointer;font-weight:bold;font-size:15px}
+.psg .sn{border-radius:4px}
+.psg.pick .sn{cursor:pointer}
+.psg.pick .sn:hover{background:var(--bluebg)}
+.psg .sn.src{background:var(--okbg);box-shadow:inset 0 -2px var(--ok)}
+.psg .sn.wr{background:#fbecee}
+.psg .sn sup{font:bold 11px Arial,sans-serif;color:var(--ok);margin-left:2px}
+.stp{margin:0 0 8px;padding:6px 10px;border:1px solid var(--soft);border-radius:6px;font-size:14.5px}
+.stp p{margin:3px 0}
+.stp .on{color:var(--blue);font-weight:bold}
+.stp .ok{color:var(--ok)}.stp .no{color:var(--acc)}
+.stp .btns button.b{font-weight:bold}
 footer{margin-top:40px;font-size:13px;color:var(--muted);text-align:center}
 footer a{color:var(--muted)}
 @media print{nav,.btns,.self,.timer,.sum,footer,.co{display:none}.sec{display:block!important}.locked .psg,.locked .blank{filter:none}.task,.card{break-inside:avoid}}
@@ -129,7 +146,7 @@ footer a{color:var(--muted)}
 </header>
 <nav><div class="bar">
   <a href="#b=1" data-k="1">Buổi 1<small>Ô cuối câu</small></a>
-  <a href="#b=2" data-k="2">Buổi 2<small>Ô giữa câu</small></a>
+  <a href="#b=2" data-k="2">Buổi 2<small>Chép hay Lật</small></a>
   <a href="#b=3" data-k="3">Buổi 3<small>Làm như thi</small></a>
   <a href="#b=tra" data-k="tra">Bảng tra<small>Ôn nhanh</small></a>
 </div></nav>
@@ -199,59 +216,82 @@ footer a{color:var(--muted)}
 
 <!-- ================= BUỔI 2 ================= -->
 <section class="sec" id="s2">
-<h2>Buổi 2 · Ô nằm giữa câu</h2>
-<p class="goal"><b>Mục tiêu:</b> các đề gần đây (từ kỳ 60) hầu như chỉ để trống <b>một phần câu</b>. Mẹo quan trọng nhất: <b>đọc chữ ngay sau ô trước</b>, rồi mới viết.</p>
+<h2>Buổi 2 · Tìm ý cho ô: Chép hay Lật?</h2>
+<p class="goal"><b>Mục tiêu:</b> Buổi 1 đã biết <b>viết đuôi gì</b>. Buổi này học <b>viết ý gì</b>. Ý của ô gần như luôn có sẵn trong đoạn văn: em chỉ cần <b>tìm câu chứa ý</b>, rồi <b>chép</b> hoặc <b>lật ngược</b> nó lại. Trong 32 ô của 16 đề thật: <b>Chép 15 · Lật 13 · Suy ra 4</b>.</p>
 
-<div class="warnbox">Ô giữa câu thì <b>không viết dấu chấm, không viết -다</b>. Phần em viết phải nối liền với chữ phía sau ô thành một câu đúng ngữ pháp. Viết xong, đọc to cả câu một lần.</div>
+<h3>1. Ba loại ô</h3>
+<div class="card"><div class="hd"><span class="kd C">Chép</span> Ý giống câu bên cạnh <small>· 15/32 ô</small></div><div class="bd">
+  <div class="sig">Lấy nguyên ý (và từ) của câu bên cạnh, chỉ đổi đuôi cho khớp với ô.</div>
+  <div class="ex"><span class="ko">이 소리는 동물을 깜짝 <b>( ㉠ )</b>. 결국 <u>놀란 동물은</u> 나뭇잎을 먹지 못하고 달아나 버린다.</span><span class="vi">Câu sau có «놀란 동물» → ô: 놀라게 한다. (Kỳ 83)</span></div>
+</div></div>
+<div class="card"><div class="hd"><span class="kd L">Lật</span> Ý ngược câu bên cạnh <small>· 13/32 ô</small></div><div class="bd">
+  <div class="sig">Lấy câu bên cạnh rồi lật lại: thêm/bỏ <span class="mau">안 · 못 · -지 않다</span>, đổi từ trái nghĩa, hoặc đổi chiều A→B thành B→A.</div>
+  <div class="ex"><span class="ko">그런데 <u>긍정적인</u> 결과를 기대할수록 좋은 결과를 얻을 확률이 <u>높다</u>. 반대로 <b>( ㉡ )</b>.</span><span class="vi">«반대로» → 부정적으로 생각하면 좋은 결과를 얻을 확률이 낮다. (Kỳ 37)</span></div>
+  <div class="ex"><span class="ko">왜냐하면 <b>( ㉠ )</b>. 그런데 <u>이와 반대로 표정이 우리의 감정에</u> 영향을 주기도 한다.</span><span class="vi">Câu sau là 표정 → 감정, nói «이와 반대로» → ô là chiều ngược: 감정이 표정에 영향을 주기 때문이다. (Kỳ 52)</span></div>
+</div></div>
+<div class="card"><div class="hd"><span class="kd S">Suy ra</span> Nghĩ thêm một bước <small>· 4/32 ô</small></div><div class="bd">
+  <div class="sig">Câu bên cạnh nói chuyện xấu → ô là cách tránh nó (thường <span class="mau">-아야 한다</span>, <span class="mau">-지 않도록</span>, <span class="mau">막기 위해서</span>).</div>
+  <div class="ex"><span class="ko"><u>젖은 머리로 자면 머릿결이 상하기 쉽다</u>. 따라서 <b>( ㉡ )</b>.</span><span class="vi">Ngủ khi tóc ướt thì hỏng tóc → sấy khô rồi mới ngủ: 자기 전에 머리를 말리고 자야 한다. (Kỳ 41)</span></div>
+</div></div>
 
-<h3>1. Nhìn chữ sau ô → chọn đuôi</h3>
+<h3>2. Quy trình 3 bước cho mỗi ô</h3>
+<ol class="steps">
+  <li><b>Tìm câu chứa ý:</b> câu có <b>cùng từ khóa</b> với chỗ quanh ô. Thường là câu <b>ngay trước</b>, <b>ngay sau</b> (nhất là câu mở đầu bằng <span class="ko">이렇게 · 이처럼 · 이와 반대로</span>) hoặc <b>câu đầu bài</b>. Gạch chân câu đó.</li>
+  <li><b>Nhìn tín hiệu → Chép hay Lật</b> (bảng dưới).</li>
+  <li><b>Lắp vào khuôn:</b> từ nối trước ô (5 nhóm Buổi 1) hoặc chữ ngay sau ô (bảng mục 4) → chọn đuôi. Chép đúng chính tả từ trong bài.</li>
+</ol>
+
+<h3>3. Tín hiệu: Chép hay Lật?</h3>
 <table class="t">
-<tr><th>Sau ô là…</th><th>Ô kết thúc bằng</th><th>Ví dụ</th></tr>
-<tr><td>Hành động chính (lắp đặt, tập thể dục…) → ô là <b>mục đích</b></td><td class="ko"><span class="mau">-기 위해서</span><br><span class="mau">-지 않도록</span></td><td class="ko">건강을 <b>지키기 위해서</b> 매일 운동을 한다.<br>감기에 <b>걸리지 않도록</b> 손을 자주 씻는다.</td></tr>
-<tr><td>Điều kiện cần (phải…, cần…) → <b>muốn … thì</b></td><td class="ko"><span class="mau">-기 위해서는</span><br><span class="mau">-(으)려면</span></td><td class="ko">시험에 <b>합격하기 위해서는</b> 매일 공부해야 한다.</td></tr>
-<tr><td>Kết quả → ô là <b>nguyên nhân</b></td><td class="ko"><span class="mau">-아서/어서</span><br><span class="mau">-기 때문에</span></td><td class="ko">비가 많이 <b>와서</b> 경기가 취소되었다.</td></tr>
-<tr><td>Việc nên làm thay thế → <b>đừng … mà</b></td><td class="ko"><span class="mau">-지 말고</span></td><td class="ko">밤에는 커피를 <b>마시지 말고</b> 우유를 마시는 것이 좋다.</td></tr>
-<tr><td><b>된다 / 괜찮다</b> → không cần…</td><td class="ko"><span class="mau">-지 않아도</span><br><span class="mau">-(으)ㄹ 필요가 없게</span></td><td class="ko">오늘은 휴일이라서 일찍 <b>일어나지 않아도</b> 된다.</td></tr>
-<tr><td><b>것 / danh từ</b> → định ngữ</td><td class="ko"><span class="mau">-는 / -(으)ㄴ</span></td><td class="ko">우울할 때는 <b>산책을 하는</b> 것이 좋다.</td></tr>
-<tr><td>Vế sau trái ý vế trước → <b>dù … vẫn</b></td><td class="ko"><span class="mau">-더라도</span><br><span class="mau">-아도/어도</span></td><td class="ko">아무리 <b>바쁘더라도</b> 아침은 꼭 먹어야 한다.</td></tr>
+<tr><th style="width:50%"><span class="kd C">Chép</span> cùng chiều</th><th><span class="kd L">Lật</span> ngược chiều</th></tr>
+<tr><td class="ko">그래서 · 따라서 · 그러므로 · 그래야</td><td class="ko">그러나 · 하지만 (sau 생각한다, 알려져 있다)</td></tr>
+<tr><td><span class="ko">이렇게 · 이처럼</span> ở câu <b>sau</b> ô → câu sau nhắc lại ý ô</td><td class="ko">반대로 · 이와 반대로 · 반면</td></tr>
+<tr><td><span class="ko">마찬가지이다 · -는 것처럼</span> (giống như)</td><td><span class="ko">만일 · 만약</span> (giả định ngược câu trước)</td></tr>
+<tr><td><span class="ko">-기도 하고</span> → viết song song vế trước</td><td><span class="ko">하나는 … 다른 하나는</span> → hai ý ngược nhau</td></tr>
+<tr><td><span class="ko">A가 아니라 B</span> → B cùng loại với A</td><td><span class="ko">항상 · 꼭 … 만</span> + 그러나 → <span class="mau">-는 것은 아니다</span></td></tr>
+<tr><td><span class="ko">전문가들은 · 학자들은</span> → chép ý chính của bài</td><td>Câu sau <span class="ko">-지 않게 하려면</span> → ô là chuyện xấu (bỏ 지 않다)</td></tr>
+</table>
+<div class="warnbox"><b>Cách lật:</b> ① thêm/bỏ phủ định: <span class="ko">감다 ↔ 감지 않다, 받다 ↔ 받지 않다</span> · ② từ trái nghĩa: <span class="ko">높다 ↔ 낮다, 긍정적 ↔ 부정적, 아침 ↔ 저녁, 상관없이 ↔ 따라 다르다</span> · ③ đổi chiều: <span class="ko">표정 → 감정</span> thành <span class="ko">감정 → 표정</span>.</div>
+
+<h3>4. Ô giữa câu: nhìn chữ sau ô</h3>
+<div class="warnbox">Ô giữa câu thì <b>không viết dấu chấm, không viết -다</b>. Viết xong, đọc to cả câu (phần em viết + chữ sau ô) một lần.</div>
+<table class="t">
+<tr><th>Sau ô là…</th><th>Ô kết thúc bằng</th><th>Đề thật</th></tr>
+<tr><td>Hành động chính (lắp, tập, chú ý…) → mục đích</td><td class="ko"><span class="mau">-기 위해서</span> <span class="mau">-지 않도록</span></td><td class="ko">낭비를 <b>막기 위해서</b> 회전문을 설치한다 (93)</td></tr>
+<tr><td>Điều kiện cần (phải…, cần…)</td><td class="ko"><span class="mau">-기 위해서는</span></td><td class="ko">높은 고도에서 <b>비행을 하기 위해서는</b> 엔진이 커야 한다 (102)</td></tr>
+<tr><td><b>된다</b></td><td class="ko"><span class="mau">-지 않아도</span></td><td class="ko">정보를 <b>처리하지 않아도</b> 된다 (95)</td></tr>
+<tr><td>Việc làm thay (đợi, làm việc khác)</td><td class="ko"><span class="mau">-지 말고</span></td><td class="ko">물을 더 이상 <b>주지 말고</b> 기다렸다가 (94)</td></tr>
+<tr><td>Kết quả (적다, 취소되다…)</td><td class="ko"><span class="mau">-아서/어서</span></td><td class="ko">영향을 별로 <b>받지 않아서</b> 흔들림이 적다 (102)</td></tr>
+<tr><td><b>것 / danh từ</b></td><td class="ko"><span class="mau">-는</span></td><td class="ko">밝은 표정을 <b>짓는</b> 것이 좋다 (52)</td></tr>
 </table>
 
-<h3>2. Làm cho ai/cái gì như thế nào</h3>
+<details class="more"><summary>Mẫu ít gặp hơn (sai khiến, giả định, từ đi theo cặp)</summary>
 <div class="card"><div class="hd">Sai khiến <small>· chủ ngữ là sự vật hoặc người khác, có tân ngữ 을/를</small></div><div class="bd">
   <div class="sig">Viết: <span class="mau">-게 하다</span> <span class="mau">-게 만들다</span> <span class="mau">-도록 하다</span></div>
-  <div class="ex"><span class="ko">선생님은 학생들이 매일 일기를 <b>쓰게 한다</b>.</span><span class="vi">Cô giáo bắt học sinh viết nhật ký mỗi ngày.</span></div>
   <div class="ex"><span class="ko">시끄러운 소리는 아기를 깜짝 <b>놀라게 한다</b>.</span><span class="vi">Tiếng ồn làm em bé giật mình.</span></div>
 </div></div>
-
-<h3>3. Giả định, điều kiện, giải thích</h3>
 <div class="card"><div class="hd">Câu có <span class="ko">만일 · 만약 · 그래야 · A가 아니라 B</span></div><div class="bd">
-  <div class="sig"><span class="tag">만일/만약</span> → <span class="mau">-(으)면 / -지 않으면 … -(으)ㄹ 것이다, -지 않는다</span></div>
-  <div class="ex"><span class="ko">만일 규칙을 <b>지키지 않으면</b> 사회는 혼란스러워질 것이다.</span><span class="vi">Nếu không giữ quy tắc thì xã hội sẽ hỗn loạn.</span></div>
+  <div class="sig"><span class="tag">만일/만약</span> → <span class="mau">-지 않으면 … -(으)ㄹ 것이다 / -지 않는다</span></div>
   <div class="sig"><span class="tag">-아야 (mới)</span> → <span class="mau">-아야 -(으)ㄹ 수 있다</span></div>
-  <div class="ex"><span class="ko">이 약은 꾸준히 <b>먹어야</b> 효과를 볼 수 있다.</span><span class="vi">Thuốc này phải uống đều đặn mới thấy hiệu quả.</span></div>
-  <div class="sig"><span class="tag">A가 아니라 B</span> → <span class="mau">-(으)ㄴ/는 것이다</span> (câu giải thích)</div>
-  <div class="ex"><span class="ko">달빛은 달이 스스로 내는 빛이 아니라 햇빛이 <b>반사된 것이다</b>.</span><span class="vi">Ánh trăng không phải do mặt trăng tự phát ra mà là ánh mặt trời phản chiếu.</span></div>
+  <div class="sig"><span class="tag">A가 아니라 B</span> → <span class="mau">-(으)ㄴ/는 것이다</span></div>
 </div></div>
-
-<h3>4. Từ luôn đi theo cặp</h3>
 <table class="t">
 <tr><th>Thấy</th><th>Ô phải có</th></tr>
 <tr><td class="ko">별로 · 전혀 · 결코</td><td>phủ định: <span class="mau">-지 않다 / 안</span></td></tr>
 <tr><td class="ko">아무리 · 비록</td><td><span class="mau">-아도 / -더라도</span></td></tr>
 <tr><td class="ko">깜짝</td><td><span class="mau">놀라다</span> (놀라게 하다)</td></tr>
-<tr><td class="ko">-(으)ㄹ수록</td><td>vế sau tăng/giảm theo: <span class="mau">더 …</span></td></tr>
-<tr><td class="ko">-는 것처럼</td><td>giống như vậy: lặp lại ý vế trước</td></tr>
 </table>
+</details>
 
-<h3>5. Luyện nhận diện nhanh</h3>
-<p class="note">Đọc chữ <b>sau</b> ô trước rồi mới chọn.</p>
+<h3>5. Luyện nhanh: Chép hay Lật?</h3>
+<p class="note">Tìm câu chứa ý, nhìn tín hiệu, rồi mới chọn.</p>
 <div id="mcq2"></div>
 
-<h3>6. Luyện đề thật (5 câu)</h3>
+<h3>6. Luyện đề thật theo 3 bước (5 câu)</h3>
+<p class="note">Mỗi ô: <b>① bấm vào câu chứa ý</b> trong đoạn văn → <b>② chọn Chép / Lật / Suy ra</b> → <b>③ viết</b>. Bước ① được thử 2 lần, sai cả 2 thì trang chỉ câu đúng.</p>
 <div id="t2"></div>
 <div class="sum" id="sum2"></div>
 </section>
-
 <!-- ================= BUỔI 3 ================= -->
 <section class="sec" id="s3">
 <h2>Buổi 3 · Làm như thi thật</h2>
@@ -299,7 +339,7 @@ footer a{color:var(--muted)}
 <ol class="steps">
   <li>Đọc câu đầu → chủ đề.</li>
   <li>Từ nối trước ô + chữ sau ô → ngữ pháp, hết câu hay chưa.</li>
-  <li>Chép từ có sẵn trong bài, chia lại đuôi.</li>
+  <li>Tìm câu chứa ý → <b>Chép</b> (그래서, 이처럼…) hay <b>Lật</b> (그러나, 반대로, 만일…), chép đúng chính tả rồi chia lại đuôi.</li>
   <li>Kiểm tra: văn viết, không 요, không thêm ý.</li>
 </ol>
 <div class="sum" id="sumall"></div>
@@ -325,20 +365,57 @@ var MCQ = {
  ['Câu nào viết đúng văn phong câu 52?',['날씨가 춥기 때문이다','날씨가 춥기 때문이에요','날씨가 춥기 때문입니다','날씨가 추워서요'],'Câu 52 dùng đuôi văn viết -다, không dùng 요 / 습니다.']
 ],
 2:[
- ['건강을 (    ) 매일 운동을 한다.',['지키기 위해서','지키기 때문이다','지켜야 한다','지키는 것은 아니다'],'Sau ô là hành động chính “매일 운동을 한다” → mục đích: -기 위해서. Ô giữa câu nên không có -다.'],
- ['감기에 (    ) 손을 자주 씻는 것이 좋다.',['걸리지 않도록','걸리지 않는다','걸리기 때문이다','걸렸다고 한다'],'Mục đích phòng tránh → -지 않도록.'],
- ['비가 많이 (    ) 경기가 취소되었다.',['와서','오기 위해서','오지 않도록','온다고'],'Sau ô là kết quả → ô là nguyên nhân: -아서/어서.'],
- ['아무리 (    ) 아침은 꼭 먹어야 한다.',['바쁘더라도','바빠서','바쁘기 위해서','바쁘게 해서'],'아무리 → -더라도 / -아도.'],
- ['오늘은 휴일이라서 일찍 (    ) 된다.',['일어나지 않아도','일어나지 않도록','일어나기 위해서','일어나서'],'Sau ô là “된다” → -지 않아도 되다 (không cần…).'],
- ['밤에는 커피를 (    ) 따뜻한 우유를 마시는 것이 좋다.',['마시지 말고','마시지 않아도','마시기 위해서','마셔서'],'Đừng làm A mà hãy làm B → -지 말고.'],
- ['선생님은 학생들이 매일 일기를 (    ).',['쓰게 한다','쓰기 위해서','쓰지 않도록','쓰기 때문이다'],'Người khác khiến học sinh làm → -게 하다.'],
- ['이 약은 꾸준히 (    ) 효과를 볼 수 있다.',['먹어야','먹지 말고','먹는다고','먹더라도'],'… mới có thể → -아야 -(으)ㄹ 수 있다.'],
- ['달빛은 달이 스스로 내는 빛이 아니라 햇빛이 (    ).',['반사된 것이다','반사되기 위해서','반사되지 않도록','반사되라고 한다'],'A가 아니라 B → giải thích: -(으)ㄴ 것이다.'],
- ['만일 사람들이 규칙을 (    ) 사회는 혼란스러워질 것이다.',['지키지 않으면','지키지 않아도','지키기 위해서','지키라고'],'만일 → -(으)면 / -지 않으면.']
+ ['운동을 하면 스트레스가 풀린다. 그래서 스트레스를 많이 받는 사람일수록 (    ) 것이 좋다.',['운동을 하는','운동을 하지 않는','스트레스를 받는','혼자 쉬는'],'Chép: 그래서 = cùng chiều → chép «운동을 하다» của câu trước. Sau ô là 것 → -는.'],
+ ['사람들은 비싼 물건이 항상 좋다고 생각한다. 그러나 비싼 물건이 항상 (    ).',['좋은 것은 아니다','좋은 것이다','비싸기 때문이다','좋다고 한다'],'Lật: «생각한다. 그러나» + 항상 → lật điều người ta nghĩ: -는 것은 아니다.'],
+ ['아침을 먹으면 집중력이 높아진다. 반대로 아침을 먹지 않으면 (    ).',['집중력이 낮아진다','집중력이 높아진다','아침을 먹어야 한다','배가 고프기 때문이다'],'Lật: 반대로 → 높아진다 ↔ 낮아진다.'],
+ ['책을 많이 읽는 아이는 (    ). 이처럼 독서는 아이의 말하기 능력을 키워 준다.',['말을 잘한다','말을 잘 못한다','책을 읽어야 한다','독서를 좋아하기 때문이다'],'Chép: câu SAU mở đầu bằng 이처럼 → nhắc lại ý ô: đọc sách → nói giỏi.'],
+ ['대화하는 방법은 두 가지이다. 하나는 직접 만나서 이야기하는 것이다. 다른 하나는 (    ).',['만나지 않고 전화로 이야기하는 것이다','직접 만나서 이야기하는 것이다','만나서 이야기하기 때문이다','전화로 이야기해야 한다'],'Lật: 하나는 … 다른 하나는 → ý ngược: 직접 만나서 → 만나지 않고. Đuôi chép: -는 것이다.'],
+ ['규칙을 지키면 모두가 편하게 생활할 수 있다. 그런데 만일 규칙을 (    ) 모두가 불편해질 것이다.',['지키지 않으면','지키면','지키기 위해서','지켜야'],'Lật: 만일 → giả định ngược câu trước: 지키면 → 지키지 않으면.'],
+ ['이 병은 나이 많은 사람만 걸리는 병이 아니라 젊은 사람도 (    ).',['걸릴 수 있는 병이다','걸리지 않는 병이다','나이가 많기 때문이다','걸리지 않도록 해야 한다'],'Chép: A가 아니라 B → B cùng loại với A (…병이다), chép 걸리다.'],
+ ['도시는 사람이 많아서 집값이 비싸다. 반면 시골은 사람이 적어서 (    ).',['집값이 싸다','집값이 비싸다','사람이 많다','집을 사야 한다'],'Lật: 반면 → 많다 ↔ 적다, 비싸다 ↔ 싸다.'],
+ ['겨울에는 공기가 건조해서 피부가 상하기 쉽다. 그래서 피부가 (    ) 로션을 자주 바르는 것이 좋다.',['건조해지지 않도록','건조해지도록','건조하기 때문에','상하기 위해서'],'Suy ra: câu trước nói chuyện xấu (khô da) → bôi kem để tránh nó: -지 않도록 (ô giữa câu, sau là hành động chính).'],
+ ['전문가들은 웃음이 건강에 좋다고 말한다. 그래서 의사들도 환자들에게 매일 많이 (    ).',['웃으라고 한다','웃지 말라고 한다','웃기 때문이다','웃는 것은 아니다'],'Chép: 그래서 + lời chuyên gia → chép «웃다» + trích dẫn mệnh lệnh -(으)라고 한다.']
 ]};
+/* Ý của từng ô: [loại C=Chép L=Lật S=Suy ra, chữ trong câu chứa ý, giải thích, (câu khác cũng đúng)] */
+var LAB = {
+W52_035:{a:['L','하나의 그림이 완성된다','«그런데 만일» → giả định ngược câu đầu. Câu đầu: mảnh ghép ĐÚNG chỗ → tranh hoàn thành. Lật: KHÔNG đúng chỗ → KHÔNG hoàn thành.'],
+         b:['C','하나의 그림이 완성된다','«마찬가지이다» + «그래야» → cùng chiều câu đầu, đổi 퍼즐 thành 사회: mỗi người đúng chỗ thì xã hội mới thành một khối.']},
+W52_036:{a:['C','명예와 부를 안겨 준다','«-기도 하고» → viết song song. Câu đầu có «명예와 부»: vế trước 유명해지다 = 명예, ô = 부 → 부자가 되기도 한다.'],
+         b:['C','기회를 잘 이용하지 못하는','Câu sau mở đầu «이렇게» = nhắc lại đúng ý ô → chép «기회를 잘 이용하지 못하다».']},
+W52_037:{a:['L','포기하는 것이다','«하나는 … 다른 하나는» → hai thái độ ngược nhau. Lật «포기하는 것» → 포기하지 않는 것.'],
+         b:['L','좋은 결과를 얻을 확률이 높다','«반대로» → lật cả câu trước: 긍정적 → 부정적, 높다 → 낮다.']},
+W52_041:{a:['L','아침에 머리를 감는다','«그러나» → ngược thói quen «아침에»: 저녁에 감는 것이 좋다 (trả lời câu hỏi đầu bài).'],
+         b:['S','젖은 머리로 자면 머릿결이 상하기 쉽다','«따라서» → suy ra: ngủ khi tóc ướt thì hỏng tóc → phải sấy khô trước khi ngủ.']},
+W52_047:{a:['S','세균이 많다','«그래서» → tay nhiều vi khuẩn → phải rửa tay. Từ «손을 씻다» có sẵn ở câu sau.'],
+         b:['L','비누 없이 물로만 씻으면','Câu sau là lý do: rửa KHÔNG có xà phòng thì không sạch → lật: phải dùng xà phòng.']},
+W52_052:{a:['L','표정이 우리의 감정에 영향을 주기도 한다','Câu sau có «이와 반대로»: 표정 → 감정. Ô là chiều ngược: 감정이 표정에 영향을 준다.'],
+         b:['C','밝은 표정을 지으면','«그러므로» cùng chiều → chép «밝은 표정을 짓다» của câu trước.']},
+W52_060:{a:['L','밝은 분위기의 음악을 들려 줄 것이라고 생각한다','«생각한다. 그러나» → lật điều mọi người nghĩ: không phải lúc nào cũng cho nghe nhạc vui.'],
+         b:['C','환자가 편안한 감정을 느끼는','Chép «감정을 느끼다»; nhạc «다양한» → cảm xúc «다양한». Có «환자가» → làm cho bệnh nhân cảm nhận (-게/-도록 하다).']},
+W52_064:{a:['C','우리가 이 별을 본다면','«A가 아니라 B» → B cùng loại «현재 모습»: 4억 년 전의 모습. Động từ chép từ «본다면» → 보는 것이다.'],
+         b:['C','오랜 시간이 지나야 지구에 도달한다','Câu trước «이처럼 … 오랜 시간이 지나야» → chép: 지나야 알 수 있다.']},
+W52_083:{a:['C','놀란 동물은','Câu sau có «놀란 동물» → âm thanh làm con vật giật mình: 놀라게 한다.'],
+         b:['C','다양한 방법으로 자신을 보호한다','Chép câu đầu bài «다양한 방법으로 자신을 보호한다»: đây là một «방법» → 방법이라고 한다.']},
+W52_091:{a:['C','중독되는 것처럼','«-는 것처럼» (giống như) → chép «중독되다»: cũng nghiện vị ngọt.'],
+         b:['S','중독되는 것처럼','«따라서» → suy ra từ ô ㉠: vị ngọt gây nghiện → chú ý để không ăn quá nhiều (-지 않도록).']},
+W52_092:{a:['L','종류에 상관없이','Câu đầu: bỏ chung «종류에 상관없이» là sai. Câu có ô nói «종류에 따라» → lật: mỗi loại một khác → 다르다.'],
+         b:['C','종이를 재활용 쓰레기로 버릴 때','Chép động từ câu đầu «버릴 때»: 모아서 버려야 한다.']},
+W52_093:{a:['S','에너지가 낭비될 수 있다','Câu trước: «에너지가 낭비» là chuyện xấu → lắp cửa xoay để ngăn nó: 막다/줄이다 + -기 위해서.'],
+         b:['C','바깥 공기가 안으로 들어와','Chép câu đầu «바깥 공기가 안으로 들어와» → 들어오는 것을 (막아주고).']},
+W52_094:{a:['L','뿌리가 썩지 않게','Câu sau «썩지 않게 하려면» (muốn rễ KHÔNG thối) → ô là chuyện xấu: bỏ phủ định → 썩기 때문이다.'],
+         b:['L','물을 너무 많이 주면','Câu đầu: tưới quá nhiều thì cây chết. Đất đã ướt → lật «물을 주다» thành KHÔNG tưới: 주지 말고.']},
+W52_095:{a:['C','왜 잠이 올까요','Chép câu hỏi đầu bài «잠이 올까요» (và câu cuối «잠이 오는 것이다») → 잠이 오게 한다.','잠이 오는 것이다'],
+         b:['L','이를 처리하려고 노력한다','«그런데 … 더 이상» → ngược câu trước «처리하려고 노력한다»: không cần xử lý nữa (-지 않아도 되다).']},
+W52_096:{a:['L','겨울잠을 잔다는 것은 잘 알려져 있다','«그런데 … 꼭 … 만» → lật điều «잘 알려져 있다»: không phải chỉ mùa đông mới ngủ dài (-는 것은 아니다).'],
+         b:['C','체온 조절을 못하는','Câu sau «개구리처럼 체온 조절을 못하는» nhắc lại ý ô → chép: 못하기 때문이다.']},
+W52_102:{a:['L','날씨의 영향을 받더라도','Câu sau «반면 … 영향을 받더라도» nói máy bay nhỏ. Máy bay lớn trên cao thì ngược lại: 받다 → 받지 않다.'],
+         b:['C','고도가 높은 하늘에서 비행을 한다','Chép câu đầu «고도가 높은 하늘에서 비행을 한다» → 높은 고도에서 비행을 하기 위해서는.']}
+};
+var KIND = {C:'Chép',L:'Lật',S:'Suy ra'};
 
 var KEY='nari-52', st={};
 try{st=JSON.parse(localStorage.getItem(KEY)||'{}')||{};}catch(e){st={};}
+if(st.m2v!==2){st.m2={};st.m2v=2;} // bài luyện Buổi 2 đã thay bằng “Chép hay Lật”
 function save(){try{localStorage.setItem(KEY,JSON.stringify(st));}catch(e){}}
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
 function $(id){return document.getElementById(id);}
@@ -376,13 +453,44 @@ function variants(k){ // "(쉽게) 썩기 때문이다" → có/không phần tr
   var out=[k.replace(/[()]/g,''),k.replace(/\([^)]*\)/g,'')];return out.map(norm);}
 function matches(ans,keys){var a=norm(ans);if(!a)return false;return keys.some(function(k){return variants(k).indexOf(a)>=0;});}
 function lastWord(s){return s.trim();}
+function sents(p){return p.match(/[^.?!]+[.?!]*\s*/g)||[p];}
+function findSn(id,t){var ss=sents(Q[id].passage);for(var i=0;i<ss.length;i++)if(ss[i].indexOf(t)>=0)return i;return -1;}
+function srcIdx(id,bi){var l=LAB[id]&&LAB[id][bi?'b':'a'];return l?findSn(id,l[1]):-1;}
+function okIdx(id,bi){var l=LAB[id][bi?'b':'a'];return [findSn(id,l[1])].concat(l[3]?[findSn(id,l[3])]:[]);}
+function fs(r,bi){if(!r.f)r.f=[{},{}];return r.f[bi];}
+function step1Done(f){return f.p!=null;}
+function activeBlank(id){var r=rec(id);if(modeOf(id)!==2||r.done||!LAB[id])return -1;for(var bi=0;bi<2;bi++)if(!step1Done(fs(r,bi)))return bi;return -1;}
 function passageHTML(q,id){
-  var p=esc(q.passage);
-  p=p.replace(/\(\s*㉠\s*\)/,'<span class="gap">( ㉠ )</span>').replace(/\(\s*㉡\s*\)/,'<span class="gap">( ㉡ )</span>');
-  var r=rec(id),seen=[];
+  var r=rec(id),seen=[],marks=[];
   ['a','b'].forEach(function(s,bi){(q.hint[s]||[]).slice(0,r.h[bi]).forEach(function(t){(t.match(/«([^»]+)»/g)||[]).forEach(function(m){seen.push(m.slice(1,-1));});});});
-  seen.forEach(function(w){var e=esc(w);if(e.length>1&&p.indexOf(e)>=0)p=p.split(e).join('<mark>'+e+'</mark>');});
-  return p;
+  // câu chứa ý: hiện khi đã nộp, hoặc khi đã xong bước ① của Buổi 2
+  ['a','b'].forEach(function(s,bi){var f=fs(r,bi),i=step1Done(f)?f.p:srcIdx(id,bi);if(i>=0&&(r.done||step1Done(f)))marks.push([i,bi?'㉡':'㉠']);});
+  var act=activeBlank(id),wr=act>=0?fs(r,act).w:null;
+  var h=sents(q.passage).map(function(t,i){
+    var p=esc(t);
+    p=p.replace(/\(\s*㉠\s*\)/,'<span class="gap">( ㉠ )</span>').replace(/\(\s*㉡\s*\)/,'<span class="gap">( ㉡ )</span>');
+    seen.forEach(function(w){var e=esc(w);if(e.length>1&&p.indexOf(e)>=0)p=p.split(e).join('<mark>'+e+'</mark>');});
+    var tags=marks.filter(function(m){return m[0]===i;}).map(function(m){return m[1];});
+    var cls='sn'+(tags.length?' src':'')+(wr===i?' wr':'');
+    return '<span class="'+cls+'" data-sn="'+i+'" data-id="'+id+'">'+p.replace(/\s+$/,'')+(tags.length?'<sup>→'+tags.join('')+'</sup>':'')+'</span> ';
+  }).join('');
+  return h;
+}
+function stepHTML(id,bi){
+  var r=rec(id),f=fs(r,bi),l=LAB[id][bi?'b':'a'],lab=bi?'㉡':'㉠',act=activeBlank(id),h='<div class="stp">';
+  if(!step1Done(f)){
+    if(act===bi)h+='<p class="on">① 👆 Bấm vào câu trong đoạn văn chứa ý của ô '+lab+'.</p>'+(f.w!=null?'<p class="no">Chưa đúng. Tìm câu có cùng từ khóa với chỗ quanh ô (câu ngay trước, ngay sau, hoặc câu đầu bài). Thử lại một lần.</p>':'');
+    else h+='<p>① Làm ô ㉠ trước.</p>';
+    return h+'</div>';
+  }
+  h+='<p class="'+(f.ok?'ok':'no')+'">① '+(f.ok?'✓ Đúng câu chứa ý.':f.rv?'Câu chứa ý là câu tô xanh (có dấu →'+lab+').':'✓ Đúng ở lần thử thứ 2.')+'</p>';
+  if(!f.k){
+    h+='<p class="on">② Ý của ô '+lab+' so với câu đó:</p><div class="btns">'+['C','L','S'].map(function(k){return '<button class="b" data-kind="'+id+'" data-b="'+bi+'" data-v="'+k+'"><span class="kd '+k+'">'+KIND[k]+'</span></button>';}).join('')+'</div>';
+    return h+'</div>';
+  }
+  h+='<p class="'+(f.k===l[0]?'ok':'no')+'">② '+(f.k===l[0]?'✓ ':'Em chọn '+KIND[f.k]+' — đáp án: ')+'<span class="kd '+l[0]+'">'+KIND[l[0]]+'</span> '+hintHTML(l[2])+'</p>';
+  h+='<p class="on">③ Giờ viết vào ô '+lab+' (nhìn từ nối trước ô / chữ sau ô để chọn đuôi).</p>';
+  return h+'</div>';
 }
 function hintHTML(t){return esc(t).replace(/«([^»]+)»/g,'<span class="ko">«$1»</span>');}
 function after(q,s){ // chữ ngay sau ô
@@ -392,10 +500,11 @@ function taskHTML(id,mode,no){
   var locked=exam&&!r.t0&&!done;
   var h='<div class="task'+(locked?' locked':'')+'" id="T'+id+'"><div class="hd"><b>'+no+'. Câu 52 · Kỳ '+q.round+'</b><span class="st'+(done&&tot(id)===10?' full':'')+'">'+(done?'Tự chấm '+tot(id)+'/10':'Chưa làm')+'</span></div><div class="bd">';
   if(exam){h+='<div class="timer" data-id="'+id+'"><span>⏱ <span class="clk">'+fmt(TIME)+'</span></span>'+(r.t0||done?'':'<button class="b blue" data-start="'+id+'">Bắt đầu</button>')+'</div>';}
-  h+='<div class="psg">'+passageHTML(q,id)+'</div>';
+  h+='<div class="psg'+(activeBlank(id)>=0?' pick':'')+'">'+passageHTML(q,id)+'</div>';
   ['a','b'].forEach(function(s,bi){
     var lab=s==='a'?'㉠':'㉡',mid=/[가-힣]/.test(after(q,s));
     h+='<div class="blank"><label>'+lab+(mid?' <small style="font-weight:normal;color:var(--muted)">(ô giữa câu – không viết dấu chấm)</small>':'')+'</label>';
+    if(mode===2&&!done&&LAB[id])h+=stepHTML(id,bi);
     h+='<input class="ans" data-id="'+id+'" data-b="'+bi+'" value="'+esc(r.a[bi])+'" autocomplete="off" autocapitalize="off" spellcheck="false" lang="ko"'+(done?' disabled':'')+'>';
     if(/요\.?$|니다\.?$/.test(r.a[bi].trim()))h+='<div class="warn">⚠ Câu 52 dùng đuôi văn viết -다, không dùng 요 / 습니다.</div>';
     if(!exam||done){
@@ -408,6 +517,7 @@ function taskHTML(id,mode,no){
       h+='<div class="res '+(ok?'ok':'rv')+'">'+(ok?'✅ Trùng đáp án mẫu.':'Chưa trùng hẳn đáp án mẫu — em tự so: <b>ý</b> có giống không, <b>đuôi ngữ pháp</b> có giống không?')+
         '<ul class="keys">'+q.keys[s].map(function(k){return '<li>'+esc(k)+'</li>';}).join('')+'</ul>'+
         (q.pat&&q.pat[s]?'<div class="pat">Mẫu ngữ pháp: <span class="mau">'+esc(q.pat[s])+'</span></div>':'')+
+        (LAB[id]?'<div class="pat">Ý lấy từ câu tô xanh (→'+lab+'): <span class="kd '+LAB[id][s][0]+'">'+KIND[LAB[id][s][0]]+'</span> '+hintHTML(LAB[id][s][2])+'</div>':'')+
         '<div class="self">Tự chấm ô '+lab+':'+[5,4,3,2,1,0].map(function(v){return '<button data-self="'+id+'" data-b="'+bi+'" data-v="'+v+'"'+(r.s[bi]===v?' class="on"':'')+'>'+v+'</button>';}).join('')+'</div></div>';
     }
     h+='</div>';
@@ -428,12 +538,20 @@ document.addEventListener('input',function(e){
   if(t.id==='name'||t.classList.contains('nm')){st.name=t.value;save();document.querySelectorAll('.sum').forEach(function(s){var p=s.querySelector('pre');if(p)p.textContent=report(s.dataset.k);});}
 });
 document.addEventListener('click',function(e){
+  var sn=e.target.closest('.psg.pick .sn');
+  if(sn){var id=sn.dataset.id,bi=activeBlank(id);if(bi<0)return;var f=fs(rec(id),bi),i=+sn.dataset.sn,ok=srcIdx(id,bi);
+    f.t=(f.t||0)+1;
+    if(okIdx(id,bi).indexOf(i)>=0){f.p=i;f.ok=f.t===1;delete f.w;}
+    else if(f.t>=2){f.p=ok;f.ok=false;f.rv=1;delete f.w;}
+    else f.w=i;
+    save();rerender(id);return;}
   var b=e.target.closest('button');if(!b)return;var d=b.dataset;
   if(d.hint){var r=rec(d.hint);r.h[+d.b]++;save();rerender(d.hint);}
   else if(d.check){var r=rec(d.check);
     if(!r.a[0].trim()&&!r.a[1].trim()&&!confirm('Em chưa viết ô nào. Vẫn xem đáp án?'))return;
     r.done=1;var q=Q[d.check];['a','b'].forEach(function(s,bi){if(r.s[bi]==null&&matches(r.a[bi],q.keys[s]))r.s[bi]=5;});
     if(r.t0)r.used=Math.round((Date.now()-r.t0)/1000);save();rerender(d.check);}
+  else if(d.kind){var f=fs(rec(d.kind),+d.b);if(!f.k){f.k=d.v;save();rerender(d.kind);}}
   else if(d.self){var r=rec(d.self);r.s[+d.b]=+d.v;save();rerender(d.self);}
   else if(d.redoT){delete st[d.redoT];save();rerender(d.redoT);}
   else if(d.start){var r=rec(d.start);r.t0=Date.now();save();rerender(d.start);}
@@ -450,7 +568,9 @@ setInterval(function(){
 function report(k){
   var ks=k==='all'?[1,2,3]:[+k],L=['Câu 52 · '+(k==='all'?'Cả 3 buổi':'Buổi '+k)+' · '+(st.name||'(chưa ghi tên)')];
   ks.forEach(function(kk){
-    if(MCQ[kk]){var m=st['m'+kk]||{},n=0,ok=0;for(var i in m){n++;if(m[i]===0)ok++;}L.push('Buổi '+kk+' – nhận diện: '+ok+'/'+MCQ[kk].length+(n<MCQ[kk].length?' (làm '+n+')':''));}
+    if(MCQ[kk]){var m=st['m'+kk]||{},n=0,ok=0;for(var i in m){n++;if(m[i]===0)ok++;}L.push('Buổi '+kk+' – '+(kk===2?'chép hay lật':'nhận diện')+': '+ok+'/'+MCQ[kk].length+(n<MCQ[kk].length?' (làm '+n+')':''));}
+    if(kk===2){var a1=0,a2=0,nn=0;PLAN[2].forEach(function(id){var r=st[id];if(!r||!r.f)return;r.f.forEach(function(f,bi){if(f.p==null)return;nn++;if(f.ok)a1++;if(f.k&&f.k===LAB[id][bi?'b':'a'][0])a2++;});});
+      if(nn)L.push('Buổi 2 – tìm đúng câu chứa ý ngay lần đầu: '+a1+'/'+nn+' ô · chọn đúng Chép/Lật/Suy ra: '+a2+'/'+nn+' ô');}
     PLAN[kk].forEach(function(id){var r=st[id],q=Q[id];if(!r||!r.done){L.push('Kỳ '+q.round+': chưa làm');return;}
       L.push('Kỳ '+q.round+': '+tot(id)+'/10'+(r.used?' · '+fmt(r.used).replace('+','')+' phút':'')+' · gợi ý '+r.h.join('+'));
       L.push('  ㉠ '+(r.a[0]||'—')+'  ['+(r.s[0]==null?'?':r.s[0])+']');

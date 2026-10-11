@@ -245,10 +245,13 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   cho cô. Đổi thứ tự/đáp án câu cũ sẽ làm sai link đã gửi — thêm câu mới thì dùng id mới.
 
 ## Học câu 52 trong 3 buổi (`viet-52/`)
-- Trang học liệu gửi học sinh: Buổi 1 (ô cuối câu, 5 nhóm từ nối: 47, 41, 52, 92, 96, 36, 37), Buổi 2 (ô giữa câu: 60, 83, 91, 64, 35),
+- Trang học liệu gửi học sinh: Buổi 1 (ô cuối câu, 5 nhóm từ nối: 47, 41, 52, 92, 96, 36, 37), Buổi 2 (“Chép hay Lật” = tìm ý cho ô; đề 60, 83, 91, 64, 35),
   Buổi 3 (làm như thi, 6 phút/câu, không gợi ý: 93, 94, 95, 102), thẻ Bảng tra (9 nhóm tín hiệu → mẫu). Link `viet-52/#b=1|2|3|tra`.
 - Mỗi buổi có trắc nghiệm nhận diện (mảng `MCQ`, câu tự soạn, lựa chọn đầu là đáp án) và đề thật: đề + đáp án + `pat` + gợi ý 3 bậc
   nhúng sẵn trong biến `Q` (lấy từ `wbank` lúc soạn trang; sửa gợi ý trong trang quản lý thì phải chép lại vào đây).
+- Buổi 2 (viết lại sau khi cô dạy thử: phần tìm ý khó dạy): mỗi ô là **Chép** (ý giống câu bên cạnh, 15/32), **Lật** (ý ngược, 13/32) hoặc **Suy ra** (4/32);
+  bảng tín hiệu cùng chiều/ngược chiều, 6 khuôn ô giữa câu, mẫu cũ thu vào `<details>`. Nhãn từng ô ở biến `LAB` ({id:{a:[C|L|S, chữ trong câu chứa ý, giải thích, câu khác cũng đúng?]}});
+  đề Buổi 2 làm theo 3 bước: bấm câu chứa ý (thử 2 lần) → chọn Chép/Lật/Suy ra → viết (`st[id].f`). Sau khi nộp, mọi buổi đều tô câu chứa ý + nhãn.
 - Học sinh tự chấm 0–5 mỗi ô (trùng đáp án mẫu tự cho 5), bài lưu localStorage `nari-52`, nút “Gửi kết quả cho cô…” chia sẻ đoạn chữ qua Zalo.
 
 ## Học câu 51 trong 3 buổi (`viet-51/`)
