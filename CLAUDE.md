@@ -45,7 +45,7 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   (ghi `app:[id học viên]` vào `assigns`/`vassigns`/`nassigns`).
 - **Khung luyện tập** (Lớp học → lớp → thẻ “Khung luyện tập”, thay cho chọn khối): `classes/<id>.lt = [{from, v:{r: mã lộ trình}, d:{f,t,lt}, nd:{f,t,k,lt}, nl:{f,t}}]`,
   mỗi mốc dùng từ ngày `from` tới mốc sau (không gắn với tuần/buổi). Ngày có khung thì “Tạo bài hôm nay”/“7 ngày tới” tạo bài theo khung
-  (`ltCreate`/`ltMakeAuto`), không theo khối: từ vựng = bài “ngày k” của lộ trình (`cdays.vr`, `cdays.vk`, hết từ mới thì `R<yyyymmdd>` = bài ôn,
+  (`ltCreate`/`ltMakeAuto`; hộp “Tạo bài hôm nay” `ltMakeDay` chỉ hiện bài máy đã chọn, không có ô chọn đề — muốn đổi thì sửa khung), không theo khối: từ vựng = bài “ngày k” của lộ trình (`cdays.vr`, `cdays.vk`, hết từ mới thì `R<yyyymmdd>` = bài ôn,
   không tạo `vassigns`); đề đọc câu f–t, mỗi ngày một đề lớp lâu chưa làm (`cdays.e`); đề nghe k câu/ngày nối tiếp câu lần trước, chỉ câu có
   file nghe, cặp 21–22… không tách (`cdays.en`, `assigns.nd = 1`); luyện nghe = bài `nlessons` có câu trong f–t (`cdays.nn`). Chuyên cần tính bài
   lộ trình theo `vresults.route` + `day`. Lộ trình từ vựng giờ tạo/quản lý ở nút “Lộ trình từ vựng” của thẻ này (đã bỏ khỏi tab Từ vựng).
