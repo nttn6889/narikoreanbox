@@ -61,7 +61,8 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - Ca có giờ dùng chung cả tuần: `site/ca = {list:[{id, b: "Sáng"|"Chiều"|"Tối", from:"14:00", to:"15:00"}]}` (nút “+ Thêm ca”, bấm giờ ca để sửa/xóa).
   Ca học của em: `students/<id>.slots = [{slot: buổi, day, ca?: id}]`; buổi cũ không có `ca` hiện ở dòng “Chưa chọn giờ” (xóa ca thì các buổi
   của ca đó về lại “chưa chọn giờ”). Ca tự xếp theo giờ bắt đầu; mỗi ca có nút Sửa/Xóa (`caDelete`). Bấm “+” trong ô để tick học viên hoặc “Chuyển…” em sang ca/ngày khác; xếp vào ca có giờ thì bỏ buổi “chưa chọn giờ” cùng ngày. Nhiều em cùng một ca = lớp ghép
-  (ô vàng “Lớp 1:2”, cô dạy 1:2 — không phải trùng); ô đỏ chỉ khi 2 ca chồng giờ cùng ngày đều có lớp. Code `caEdit`/`caCell`/`hsLich`/`editStudent` trong khối Admin (không có ở site học sinh).
+  (ghi “Lớp 1:2”, cô dạy 1:2 — không phải trùng); tên đỏ chỉ khi 2 ca chồng giờ cùng ngày đều có lớp. Mỗi em một màu (`stHue`: theo thứ tự
+  tạo, cách 137.5°). Nút “Lịch tuần | Theo học viên” (`S.lichv`, `hsLichHv`): danh sách từng em, các buổi + giờ, học cùng ai, trùng giờ, thiếu so với buổi/tuần. Code `caEdit`/`caCell`/`hsLich`/`editStudent` trong khối Admin (không có ở site học sinh).
 
 ## Đánh giá năng lực (tab "Đánh giá" trong trang quản lý)
 - Gom đề thi (`results`), từ vựng (`vresults`), nghe (`nresults`) theo từng học sinh. Số liệu tính lại trong trình duyệt,
