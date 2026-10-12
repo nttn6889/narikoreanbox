@@ -20,13 +20,7 @@ BOOT_MARK = "/* ---------- boot ---------- */"
 ADMIN_END = "  return { init:init, render:render };\n})();"
 OLD_BOOT = "!ngheBoot()) studentLanding();"
 NEW_BOOT = "!ngheBoot() && !reportBoot()) studentLanding();"
-HOOKS = [  # (đã có thì bỏ qua, chưa có thì thay)
-    ('tabBtn("danhgia","Đánh giá")', 'tabBtn("lop","Lớp học")', 'tabBtn("lop","Lớp học") + tabBtn("danhgia","Đánh giá")'),
-    ('S.tab === "danhgia") renderDanhGia(body);', '    else if(S.tab === "lop") renderLop(body);\n',
-     '    else if(S.tab === "lop") renderLop(body);\n    else if(S.tab === "danhgia") renderDanhGia(body);\n'),
-    ('S.tab === "danhgia" && S.nlId', '    if(S.tab === "cham") return;\n',
-     '    if(S.tab === "cham") return;\n    if(S.tab === "danhgia" && S.nlId) return;\n'),
-]
+HOOKS = []  # tab “Đánh giá” cũ đã gộp vào tab Học sinh (hồ sơ từng em) nên không móc tab nữa
 
 
 def parts():

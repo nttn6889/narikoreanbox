@@ -1,6 +1,6 @@
 /* ---------- Đánh giá năng lực (dùng chung cho trang quản lý và trang học sinh) ----------
    Nguồn: tools/nangluc.js, chèn vào trang bằng tools/nangluc.py — sửa ở file đó, không sửa trong trang.
-   Gom 3 nguồn: đề thi (results), từ vựng (vresults), luyện nghe (nresults). Số liệu tính lại từ bài đã chấm,
+   Gom 3 nguồn: đề thi (results), từ vựng (vresults), luyện nghe (nresults); bài viết (wresults) chỉ hiện trong danh sách bài đã làm. Số liệu tính lại từ bài đã chấm,
    chỉ lưu nhận xét (notes/<id>.text, dùng chung với Sổ điểm) và việc cần làm (nlnotes/<id>.next). Bản gửi học sinh nằm trọn trong link thi-thu/#r=<base64>.<sum>. */
 var NL_RT = [[1,2,"Ngữ pháp – điền chỗ trống"],[3,4,"Ngữ pháp – nghĩa tương đương"],[5,8,"Chủ đề của văn bản ngắn"],
   [9,12,"Đối chiếu nội dung"],[13,15,"Sắp xếp câu"],[16,18,"Điền vào chỗ trống"],[19,24,"Đoạn văn 2 câu hỏi"],
@@ -22,6 +22,8 @@ function nlCss(){
     ".kq-sum b.good{color:var(--ok)}.kq-sum b.warn{color:var(--warn)}.kq-sum b.bad{color:var(--pen)}" +
     ".nldays{display:grid;grid-template-columns:repeat(14,1fr);gap:3px;max-width:430px;margin:6px 0}" +
     ".nldays span{aspect-ratio:1;border-radius:3px;background:var(--bg);border:1px solid var(--line)}.nldays span.l1{background:var(--ok-soft);border-color:var(--ok)}.nldays span.l2{background:var(--ok);border-color:var(--ok)}" +
+    ".nldays span.cf{background:var(--ok);border-color:var(--ok)}.nldays span.cp{background:var(--warn-soft);border-color:var(--warn)}.nldays span.cx{background:var(--pen-soft);border-color:var(--pen)}.nldays span.ct{border:1.5px dashed var(--violet)}.nldays span.cs{background:var(--ok-soft);border-color:var(--ok)}" +
+    ".nlccl{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:12.5px;color:var(--muted);margin:2px 0 0}" +
     ".nlch .s0{stroke:var(--violet)}.nlch .s1{stroke:var(--ok)}.nlch .s2{stroke:var(--warn)}.nlch path{fill:none;stroke-width:2.5}.nlch circle{fill:var(--paper);stroke-width:2.5}" +
     ".nlleg{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--muted)}.nlleg i{display:inline-block;width:12px;height:4px;border-radius:2px;margin-right:5px;vertical-align:3px}" +
     ".nlleg .s0{background:var(--violet)}.nlleg .s1{background:var(--ok)}.nlleg .s2{background:var(--warn)}" +
@@ -61,8 +63,9 @@ function nlReportHTML(o, full){
     return '<div><b class="' + nlCls(p) + '">' + p + '%</b><span>' + label + ' đúng ' + a[0] + '/' + a[1] + d + '</span></div>';
   };
   var act = 0; String(o.a || "").split("").forEach(function(c){ if(c !== "0") act++; });
+  var cc = o.cc && o.cc[1] ? nlPct([o.cc[0], o.cc[1]]) : null;
   h += '<div class="kq-sum">' + tile("r", "Đọc (đề thi)") + tile("l", "Nghe") + tile("v", "Từ vựng") +
-    '<div><b>' + act + '/28</b><span>ngày có làm bài (4 tuần qua)</span></div></div>';
+    (cc != null ? '<div><b class="' + nlCls(cc) + '">' + cc + '%</b><span>Chuyên cần: nộp ' + o.cc[0] + '/' + o.cc[1] + ' bài cô giao</span></div>' : '<div><b>' + act + '/28</b><span>ngày có làm bài (4 tuần qua)</span></div>') + '</div>';
   if(s.r || s.l || s.v) h += '<p class="hint" style="margin-top:-6px">' + (o.d ? 'Tính trong ' + o.d + ' ngày gần nhất' : 'Tính trên toàn bộ bài đã làm') + (o.d ? '; “tăng/giảm” so với ' + o.d + ' ngày trước đó' : '') + '. Xanh ≥ 80%, vàng 60–79%, đỏ dưới 60%.</p>';
   if(!full && (o.c || o.m)){
     if(o.c) h += '<div class="nlsec"><h3>Nhận xét của cô</h3><div class="note">' + esc(o.c) + '</div></div>';
@@ -90,12 +93,25 @@ function nlReportHTML(o, full){
       o.vw.map(function(w){ return '<span class="nlw"><b>' + esc(w[0]) + '</b> ' + esc(w[1]) + (w[2] > 1 ? ' <span class="pill bad">×' + w[2] + '</span>' : '') + '</span>'; }).join("") + '</div>';
     h += '</div>';
   }
-  h += '<div class="nlsec"><h3>Chuyên cần</h3><div class="nldays" aria-label="28 ngày gần nhất">' + String(o.a || "").split("").map(function(c, i){
-      var t = new Date((o.g || Date.now()) - (27 - i)*864e5), lab = pad(t.getDate()) + '/' + pad(t.getMonth()+1);
-      return '<span class="' + (c === "0" ? '' : +c >= 2 ? 'l2' : 'l1') + '" title="' + lab + ': ' + c + ' bài"></span>';
-    }).join("") + '</div><p class="hint" style="margin:0">Mỗi ô là một ngày trong 4 tuần qua (ô cuối là hôm nay), ô xanh là ngày có nộp bài.</p>' +
-    (o.cl || []).map(function(c){ return '<p style="margin:6px 0 0;font-size:14.5px">Bài hằng ngày lớp <strong>' + esc(c[0]) + '</strong>: nộp ' + c[1] + '/' + c[2] + ' bài' + (c[3] ? ', ' + c[3] + ' bài trễ hạn' : '') + '.</p>'; }).join("") + '</div>';
+  h += '<div class="nlsec"><h3>Chuyên cần</h3>' + nlDaysHTML(o, 28);
+  if(o.b) h += '<p style="margin:6px 0 0;font-size:14.5px">' + (o.cc[1] ? 'Đã nộp <strong>' + o.cc[0] + '/' + o.cc[1] + '</strong> bài cô giao (' + cc + '%)' + (o.cc[2] ? ', ' + o.cc[2] + ' bài nộp sau hạn' : '') + '.' : 'Chưa có bài nào cô giao đã tới hạn.') + '</p>' +
+    ((o.ow || []).length ? '<p class="hint" style="margin:8px 0 2px">' + (full ? 'Bài chưa nộp' : 'Bài em chưa nộp') + '</p><ul style="margin:0;padding-left:20px;font-size:14.5px">' + o.ow.map(function(x){ return '<li>' + (x[0] ? esc(x[0]) + ' · ' : '') + esc(x[1]) + '</li>'; }).join("") + '</ul>' : '');
+  else h += (o.cl || []).map(function(c){ return '<p style="margin:6px 0 0;font-size:14.5px">Bài hằng ngày lớp <strong>' + esc(c[0]) + '</strong>: nộp ' + c[1] + '/' + c[2] + ' bài' + (c[3] ? ', ' + c[3] + ' bài trễ hạn' : '') + '.</p>'; }).join("");
+  h += '</div>';
   return h;
+}
+/* Ô chuyên cần n ngày gần nhất. Bản mới (o.b): theo bài cô giao; link cũ (chỉ có o.a): ngày có nộp bài. */
+var NL_CC = {f:["cf","nộp đủ bài"], p:["cp","nộp thiếu"], x:["cx","bỏ bài"], t:["ct","hôm nay, chưa tới hạn"], s:["cs","không có bài giao, em tự làm"], ".":["","không có bài"]};
+function nlDaysHTML(o, n){
+  var g = o.g || Date.now(), lab = function(i){ var t = new Date(g - (n - 1 - i)*864e5); return pad(t.getDate()) + '/' + pad(t.getMonth()+1); };
+  if(o.b){
+    var b = String(o.b).slice(-n), used = {};
+    return '<div class="nldays" aria-label="' + n + ' ngày gần nhất">' + b.split("").map(function(c, i){ var k = NL_CC[c] || NL_CC["."]; used[c] = 1; return '<span class="' + k[0] + '" title="' + lab(i) + ': ' + k[1] + '"></span>'; }).join("") + '</div>' +
+      (n > 14 ? '<div class="nlccl">' + ["f","p","x","t","s"].filter(function(c){ return used[c]; }).map(function(c){ return '<span><i style="display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:4px;vertical-align:-1px;border:1px solid var(--line);' + (c === "f" ? 'background:var(--ok);border-color:var(--ok)' : c === "p" ? 'background:var(--warn-soft);border-color:var(--warn)' : c === "x" ? 'background:var(--pen-soft);border-color:var(--pen)' : c === "t" ? 'border:1.5px dashed var(--violet)' : 'background:var(--ok-soft);border-color:var(--ok)') + '"></i>' + NL_CC[c][1] + '</span>'; }).join("") + '<span>ô cuối là hôm nay</span></div>' : '');
+  }
+  var a = String(o.a || "").slice(-n);
+  return '<div class="nldays" aria-label="' + n + ' ngày gần nhất">' + a.split("").map(function(c, i){ return '<span class="' + (c === "0" ? '' : +c >= 2 ? 'l2' : 'l1') + '" title="' + lab(i) + ': ' + c + ' bài"></span>'; }).join("") + '</div>' +
+    (n > 14 ? '<p class="hint" style="margin:0">Mỗi ô là một ngày trong 4 tuần qua (ô cuối là hôm nay), ô xanh là ngày có nộp bài.</p>' : '');
 }
 function reportBoot(){
   var m = String(location.hash || "").match(/[#&]r=([A-Za-z0-9_.-]+)/);
@@ -107,8 +123,9 @@ function reportBoot(){
       '<p class="err">Link đánh giá bị thiếu hoặc bị cắt. Em sao chép lại đủ cả link cô gửi rồi mở lại nhé.</p>') + '</main></div>';
   return true;
 }
+
 /* ==ADMIN== (phần dưới chèn vào trong khối Admin, chỉ có ở trang quản lý) */
-  /* =================== ĐÁNH GIÁ NĂNG LỰC =================== */
+  /* =================== ĐÁNH GIÁ NĂNG LỰC (số liệu cho hồ sơ học sinh) =================== */
   /* Ghép bài của một học sinh: theo học viên (tên trong sổ, hoặc tên đầy đủ kết thúc bằng tên học viên, khi chỉ khớp đúng một em),
      không khớp thì theo tên nhập. */
   function nlPeople(){
@@ -119,7 +136,7 @@ function reportBoot(){
       var hit = studs.filter(function(st){ var sk = stKey(st); return sk && (k.slice(-sk.length-1) === " " + sk || sk.slice(-k.length-1) === " " + k); });
       return hit.length === 1 ? hit[0] : null;
     };
-    var get = function(st, k){ var id = st ? "s:" + st.id : "k:" + k; return P[id] || (P[id] = {id:id, st:st, keys:[], raw:[], names:[], e:[], v:[], n:[], last:0}); };
+    var get = function(st, k){ var id = st ? "s:" + st.id : "k:" + k; return P[id] || (P[id] = {id:id, st:st, keys:[], raw:[], names:[], e:[], v:[], n:[], w:[], last:0}); };
     var add = function(kind, r){
       if(!r.nameKey) return;
       var p = get(findSt(r.nameKey), r.nameKey);
@@ -127,8 +144,8 @@ function reportBoot(){
       var rk = r.rawKey || r.nameKey; if(p.raw.indexOf(rk) < 0) p.raw.push(rk); /* tên em gõ, trước khi canonNames gom */
       p.names.push(r.name); p[kind].push(r); if(r.submittedAt > p.last) p.last = r.submittedAt;
     };
-    S.results.forEach(function(r){ add("e", r); }); S.vresults.forEach(function(r){ add("v", r); }); S.nresults.forEach(function(r){ add("n", r); });
-    studs.forEach(function(st){ if(st.active !== false){ var p = get(st); if(p.keys.indexOf(stKey(st)) < 0) p.keys.push(stKey(st)); } });
+    S.results.forEach(function(r){ add("e", r); }); S.vresults.forEach(function(r){ add("v", r); }); S.nresults.forEach(function(r){ add("n", r); }); (S.wresults || []).forEach(function(r){ add("w", r); });
+    studs.forEach(function(st){ var p = get(st); if(p.keys.indexOf(stKey(st)) < 0) p.keys.push(stKey(st)); });
     return Object.keys(P).map(function(id){ var p = P[id]; p.name = p.st ? p.st.name : bestName(p.names); return p; })
       .sort(function(a,b){ return (b.last - a.last) || a.name.localeCompare(b.name); });
   }
@@ -176,13 +193,16 @@ function reportBoot(){
     o.vw = sw.slice(0, 15).map(function(w){ return [w.ko, w.vi, w.n]; });
     /* Chuyên cần: số bài mỗi ngày, 28 ngày (tối đa 9) */
     var today = dayStart(now), cnt = {};
-    p.e.concat(p.v, p.n).forEach(function(r){ var d = Math.round((today - dayStart(r.submittedAt)) / 864e5); if(d >= 0 && d < 28) cnt[d] = (cnt[d] || 0) + 1; });
+    p.e.concat(p.v, p.n, p.w).forEach(function(r){ var d = Math.round((today - dayStart(r.submittedAt)) / 864e5); if(d >= 0 && d < 28) cnt[d] = (cnt[d] || 0) + 1; });
     o.a = ""; for(var d = 27; d >= 0; d--) o.a += Math.min(9, cnt[d] || 0);
-    o.cl = [];
-    if(p.st) S.classes.forEach(function(c){
-      if((c.members || []).indexOf(p.st.id) < 0) return;
-      var x = stuSummary(c, clsData(c), p.st); o.cl.push([c.name, x.done, x.given, x.late]);
-    });
+    /* Chuyên cần theo bài cô giao (cùng cách tính với Lớp học): cc = [đã nộp, đã giao, nộp muộn], b = trạng thái 28 ngày, ow = bài còn nợ */
+    if(p.st){
+      var cc = ccStu(p.st);
+      o.cc = [cc.done, cc.given, cc.late];
+      o.b = ccStrip(cc, p.e.concat(p.v, p.n, p.w).map(function(r){ return r.submittedAt; }));
+      o.ow = cc.owe.slice(0, 10).map(function(t){ return [shortD(t.day), t.t]; });
+      if(cc.owe.length > 10) o.ow.push(["", "… và " + (cc.owe.length - 10) + " bài cũ hơn"]);
+    }
     /* Theo tuần (thứ Hai đầu tuần), 8 tuần */
     var wd = new Date(today).getDay(), mon = today - ((wd + 6) % 7) * 864e5;
     o.w = [];
@@ -203,7 +223,8 @@ function reportBoot(){
     (o.lp || []).forEach(function(a, i){ if(a[1] >= 3 && a[0]/a[1] < 0.7) L.push("Nghe – " + NL_LP[i].replace(/^Phần \d · /, "").toLowerCase() + ": mới đúng " + nlPct(a) + "%, nghe lại bài và đọc theo lời thoại."); });
     if(o.vc) L.push("Ôn lại " + o.vc + " từ còn sai (danh sách trong bài đánh giá).");
     var act14 = 0; String(o.a || "").slice(-14).split("").forEach(function(c){ if(c !== "0") act14++; });
-    if(act14 < 8) L.push("Làm bài đều hơn: 2 tuần qua mới có " + act14 + "/14 ngày làm bài.");
+    if(o.cc && o.cc[1] && o.cc[0] / o.cc[1] < 0.8) L.push("Nộp đủ bài cô giao: mới nộp " + o.cc[0] + "/" + o.cc[1] + " bài (" + nlPct([o.cc[0], o.cc[1]]) + "%).");
+    else if(!o.cc && act14 < 8) L.push("Làm bài đều hơn: 2 tuần qua mới có " + act14 + "/14 ngày làm bài.");
     if(!L.length) L.push("Giữ nhịp học như hiện tại, chuyển sang luyện dạng câu khó hơn.");
     return L.map(function(x){ return "• " + x; }).join("\n");
   }
@@ -213,49 +234,145 @@ function reportBoot(){
       return '<span>' + k[1] + '</span><div class="nlbar"><i class="' + nlCls(p) + '" style="width:' + (p || 0) + '%"></i></div><span>' + (p == null ? '–' : p + '%') + '</span>';
     }).join("") + '</div>';
   }
-  function renderDanhGia(body){
-    nlCss();
+  /* =================== HỌC SINH: một nơi cho danh sách, lịch tuần, hồ sơ từng em, sổ điểm đề thi ===================
+     Thay cho 3 tab cũ Học viên & lịch, Đánh giá, Sổ điểm. Hồ sơ (S.nlId) gồm thông tin, năng lực, bài đã làm, nhận xét & gửi kết quả. */
+  var HS_PERIOD = [[14,"14 ngày"],[30,"30 ngày"],[90,"90 ngày"],[0,"Toàn bộ"]];
+  function hsCss(){
+    if(document.getElementById("hscss")) return;
+    var st = document.createElement("style"); st.id = "hscss";
+    st.textContent = ".hscard h3{margin:0;font-size:16.5px}.hscard .facts{font-size:13.5px;color:var(--muted);margin:2px 0 4px}.hscard .facts b{color:var(--ink)}" +
+      ".hsflags{margin:4px 0 2px}.hsmeta{font-size:13px;color:var(--muted);margin-top:4px}.hscard .nldays{max-width:none;margin:8px 0 0}" +
+      ".wk .nm[data-nl]{cursor:pointer}.wk .nm[data-nl]:hover{text-decoration:underline}.hsfacts{font-size:14.5px;color:var(--muted);margin:2px 0 6px}.hsfacts b{color:var(--ink)}";
+    document.head.appendChild(st);
+  }
+  function hsPeriod(id, f){ return '<select class="t" id="' + id + '"' + (id === "nlD2" ? ' style="width:auto"' : '') + '>' + HS_PERIOD.map(function(x){ return '<option value="' + x[0] + '"' + (f.d === x[0] ? ' selected' : '') + '>' + x[1] + '</option>'; }).join("") + '</select>'; }
+  function hsFacts(st){
+    if(!st) return '';
+    var dl = daysTo(st.examDate);
+    return [st.goal ? 'Mục tiêu: <b>' + esc(st.goal) + '</b>' : '', st.exam ? esc(st.exam) : '', st.examDate ? 'Thi ' + fmtYMD(st.examDate) + (dl != null && dl >= 0 ? ' · <span class="dd">còn ' + dl + ' ngày</span>' : '') : '', st.perWeek ? st.perWeek + ' buổi/tuần' : ''].filter(Boolean).join(' · ');
+  }
+  function hsSlots(st){ return st && (st.slots || []).length ? '<div>' + st.slots.map(function(sl){ return '<span class="pill">' + esc(slotLabel(st, sl)) + '</span>'; }).join("") + '</div>' : ''; }
+  /* Những điều cần để ý về một em (hiện ở thẻ trong danh sách và đầu hồ sơ). */
+  function hsFlags(p, o){
+    var st = p.st, F = [];
+    if(!st) F.push('<span class="pill warn">chưa ghép học viên</span>');
+    else if(st.active === false) F.push('<span class="pill warn">tạm nghỉ</span>');
+    if(!st || st.active !== false){
+      var idle = p.last ? Math.round((dayStart(Date.now()) - dayStart(p.last)) / 864e5) : null;
+      if(idle == null) F.push('<span class="pill bad">chưa nộp bài nào</span>');
+      else if(idle >= 3) F.push('<span class="pill bad">' + idle + ' ngày chưa làm bài</span>');
+      if(o.cc && o.cc[1] > o.cc[0]) F.push('<span class="pill warn">còn nợ ' + (o.cc[1] - o.cc[0]) + ' bài</span>');
+      var low = [["r","Đọc"],["l","Nghe"],["v","Từ vựng"]].filter(function(k){ var x = nlPct(o.s[k[0]]); return x != null && x < 60; });
+      if(low.length) F.push('<span class="pill bad">dưới 60%: ' + low.map(function(k){ return k[1]; }).join(", ") + '</span>');
+      var wn = p.w.filter(function(r){ return !r.graded; }).length;
+      if(wn) F.push('<span class="pill warn">' + wn + ' bài viết chưa chấm</span>');
+    }
+    return F;
+  }
+  function renderHocSinh(body){
+    nlCss(); hsCss();
+    if(S.nlId){ var cur = nlPeople().find(function(p){ return p.id === S.nlId; }); if(cur) return nlDetail(body, cur); S.nlId = null; }
+    var sub = S.hsub === "lich" ? "lich" : (S.hsub = "ds");
+    body.innerHTML = '<div class="row" style="margin:0 0 14px">' + [["ds","Học sinh"],["lich","Lịch tuần"]].map(function(t){ return '<button class="btn' + (sub === t[0] ? '' : ' ghost') + '" data-hsub="' + t[0] + '">' + t[1] + '</button>'; }).join("") +
+      '<span style="flex:1"></span><button class="btn ghost" id="stNew">+ Thêm học viên</button></div><div id="hsb"></div>';
+    $$("[data-hsub]", body).forEach(function(b){ b.onclick = function(){ S.hsub = b.dataset.hsub; renderTab(); }; });
+    $("#stNew").onclick = function(){ editStudent(null); };
+    var hb = $("#hsb");
+    if(sub === "lich") hsLich(hb); else hsList(hb);
+  }
+  function hsOpen(id){ S.nlId = id; S.hpt = "tq"; renderTab(); window.scrollTo(0, 0); }
+  function hsList(hb){
     var f = S.nlf || (S.nlf = {d:30, q:""}), ps = nlPeople();
-    if(S.nlId){ var cur = ps.find(function(p){ return p.id === S.nlId; }); if(cur) return nlDetail(body, cur); S.nlId = null; }
-    var sel = '<select class="t" id="nlD">' + [[14,"14 ngày"],[30,"30 ngày"],[90,"90 ngày"],[0,"Toàn bộ"]].map(function(x){ return '<option value="' + x[0] + '"' + (f.d === x[0] ? ' selected' : '') + '>' + x[1] + '</option>'; }).join("") + '</select>';
-    var h = '<div class="card"><h2>Đánh giá năng lực</h2><p class="hint">Gom cả đề thi, từ vựng và luyện nghe của từng học sinh (mọi bài đã chấm, giao ở đâu cũng được). Bấm vào một em để xem chi tiết, viết nhận xét và gửi bảng đánh giá cho em.</p>' +
-      '<div class="grid2"><div><label class="l" for="nlQ">Tìm học sinh</label><input class="t" id="nlQ" value="' + esc(f.q) + '" placeholder="Gõ tên, không cần dấu"></div><div><label class="l" for="nlD">Tính trong</label>' + sel + '</div></div></div>';
-    var list = ps.filter(function(p){ return !f.q || p.keys.concat([normName(p.name)]).some(function(k){ return k.indexOf(normName(f.q)) >= 0; }); });
-    var loose = list.filter(function(p){ return !p.st; });
+    var rank = function(p){ return !p.st ? 1 : p.st.active === false ? 2 : 0; };
+    var list = ps.filter(function(p){ return !f.q || p.keys.concat([normName(p.name)]).some(function(k){ return k.indexOf(normName(f.q)) >= 0; }); })
+      .sort(function(a,b){ return (rank(a) - rank(b)) || (b.last - a.last) || a.name.localeCompare(b.name); });
+    var h = '<div class="card"><div class="grid2"><div><label class="l" for="nlQ">Tìm học sinh</label><input class="t" id="nlQ" value="' + esc(f.q) + '" placeholder="Gõ tên, không cần dấu"></div><div><label class="l" for="nlD">Tính điểm trong</label>' + hsPeriod("nlD", f) + '</div></div>' +
+      '<p class="hint">Bấm vào một em để mở hồ sơ: tổng quan (chuyên cần + năng lực), mọi bài đã làm (đề thi, từ vựng, nghe, viết), nhận xét và gửi kết quả. Ô vuông là 14 ngày gần nhất: xanh đậm nộp đủ bài cô giao, vàng nộp thiếu, đỏ bỏ bài, xanh nhạt tự làm thêm (hôm đó không có bài giao).</p></div>';
+    if(!S.loaded.st || !S.loaded.r) h += '<p class="hint">Đang tải…</p>';
     h += '<div class="nlcards">' + list.map(function(p){
-      var o = nlBuild(p, f.d), n = p.e.length + p.v.length + p.n.length;
-      return '<div class="card" tabindex="0" data-nl="' + esc(p.id) + '"><h3 style="margin:0;font-size:16px">' + esc(p.name) + (p.st ? '' : ' <span class="pill warn">chưa ghép học viên</span>') + '</h3>' +
-        '<div class="muted" style="font-size:13px">' + n + ' bài đã chấm' + (p.last ? ' · gần nhất ' + fmtDay(p.last) : '') + '</div>' + nlMini(o) + '</div>';
+      var o = nlBuild(p, f.d), n = p.e.length + p.v.length + p.n.length + p.w.length, F = hsFlags(p, o);
+      return '<div class="card hscard' + (p.st && p.st.active === false ? ' inactive' : '') + '" tabindex="0" role="button" data-nl="' + esc(p.id) + '"><h3>' + esc(p.name) + '</h3>' +
+        (p.st ? '<div class="facts">' + hsFacts(p.st) + '</div>' : '') +
+        '<div class="hsflags">' + (F.length ? F.join("") : '<span class="pill good">đang ổn</span>') + '</div>' + nlMini(o) +
+        nlDaysHTML(o, 14) + (o.cc && o.cc[1] ? '<div class="hsmeta">Chuyên cần ' + nlPct([o.cc[0], o.cc[1]]) + '% · nộp ' + o.cc[0] + '/' + o.cc[1] + ' bài cô giao</div>' : '') +
+        '<div class="hsmeta">' + (n ? n + ' bài đã nộp · gần nhất ' + fmtDay(p.last) : 'Chưa có bài nào') + '</div></div>';
     }).join("") + '</div>';
-    if(!list.length) h += '<div class="card"><p class="hint">Chưa có học sinh nào' + (f.q ? ' khớp tên này' : '') + '.</p></div>';
-    if(loose.length) h += '<p class="hint" style="margin-top:12px">“Chưa ghép học viên”: tên em nhập khi làm bài không khớp học viên nào. Cô vào tab Học viên & lịch, điền “Tên trong sổ điểm” cho đúng em đó để gom bài về một chỗ (cả bảng theo dõi của Lớp học cũng dùng tên này).</p>';
-    body.innerHTML = h;
+    if(!list.length && S.loaded.st) h += '<div class="card"><p class="hint">' + (f.q ? 'Không có em nào khớp tên này.' : 'Chưa có học viên nào. Cô bấm “+ Thêm học viên”.') + '</p></div>';
+    if(list.some(function(p){ return !p.st; })) h += '<p class="hint" style="margin-top:12px">“Chưa ghép học viên”: tên em nhập khi làm bài không khớp học viên nào. Cô mở hồ sơ học viên đúng của em đó, bấm “Sửa thông tin” và thêm tên này vào ô “Tên khác” để gom bài về một chỗ (bảng theo dõi của Lớp học cũng dùng tên này).</p>';
+    hb.innerHTML = h;
     var q = $("#nlQ");
     q.oninput = function(){ f.q = q.value; var pos = q.selectionStart; renderTab(); var nq = $("#nlQ"); nq.focus(); try{ nq.setSelectionRange(pos, pos); }catch(e){} };
     $("#nlD").onchange = function(){ f.d = +this.value; renderTab(); };
-    $$("[data-nl]", body).forEach(function(c){ var go = function(){ S.nlId = c.dataset.nl; renderTab(); window.scrollTo(0, 0); }; c.onclick = go; c.onkeydown = function(e){ if(e.key === "Enter") go(); }; });
+    $$("[data-nl]", hb).forEach(function(c){ c.onclick = function(){ hsOpen(c.dataset.nl); }; c.onkeydown = function(e){ if(e.key === "Enter") hsOpen(c.dataset.nl); }; });
+  }
+  function hsLich(hb){
+    var act = S.students.filter(function(st){ return st.active !== false; });
+    var grid = {}; act.forEach(function(st){ (st.slots || []).forEach(function(sl){ var k = sl.slot + "|" + sl.day; (grid[k] = grid[k] || []).push(st); }); });
+    var clashes = 0;
+    var h = '<div class="card"><h2>Lịch dạy trong tuần</h2><p class="hint">Tổng hợp từ ca học của các học viên đang học (sửa ca học trong hồ sơ từng em → “Sửa thông tin”). Ô đỏ là trùng lịch. Bấm tên để mở hồ sơ.</p><div class="scroll"><table class="wk"><thead><tr><th>Ca</th>' + DAYS7.map(function(d){ return '<th>' + d + '</th>'; }).join("") + '</tr></thead><tbody>' +
+      SLOTS3.map(function(sl){ return '<tr><td class="sl">' + sl + '</td>' + DAYS7.map(function(d){ var ns = grid[sl + "|" + d] || []; if(ns.length > 1) clashes++; return '<td class="' + (ns.length > 1 ? "clash" : "") + '">' + (ns.length ? ns.map(function(st){ return '<span class="nm" tabindex="0" role="button" data-nl="s:' + esc(st.id) + '">' + esc(st.name) + (sl === "Tối" && st.eveTime ? ' <small>' + esc(st.eveTime) + '</small>' : '') + '</span>'; }).join("") : '<span class="empty">trống</span>') + '</td>'; }).join("") + '</tr>'; }).join("") +
+      '</tbody></table></div>' + (clashes ? '<p class="err">Có ' + clashes + ' ca bị trùng lịch.</p>' : '') + '</div>';
+    hb.innerHTML = h;
+    $$("[data-nl]", hb).forEach(function(c){ c.onclick = function(){ hsOpen(c.dataset.nl); }; c.onkeydown = function(e){ if(e.key === "Enter") hsOpen(c.dataset.nl); }; });
   }
   function nlDetail(body, p){
-    var f = S.nlf, main = p.keys.slice().sort(function(a,b){
+    var f = S.nlf || (S.nlf = {d:30, q:""}), st = p.st, tab = S.hpt || (S.hpt = "tq"), main = p.keys.slice().sort(function(a,b){
       var c = function(k){ return p.e.concat(p.v, p.n).filter(function(r){ return r.nameKey === k; }).length; }; return c(b) - c(a); })[0] || normName(p.name);
     var mixIds = []; p.e.forEach(function(r){ var ex = S.exams.find(function(e){ return e.id === r.examId; }); if(ex && ex.mix && !S.qcache[ex.id] && mixIds.indexOf(ex.id) < 0) mixIds.push(ex.id); });
     if(mixIds.length){ body.innerHTML = '<p class="hint">Đang tải đề trộn…</p>'; Promise.all(mixIds.map(function(id){ return loadQs(id); })).then(function(){ renderTab(); }, function(){ S.qcache[mixIds[0]] = {}; renderTab(); }); return; }
-    var o = nlBuild(p, f.d);
-    var hist = p.e.map(function(r){ return [r.submittedAt, "Đề thi", r.examTitle + " · câu " + r.from + "–" + r.to, r.score, r.total - (r.nokey || []).length]; })
-      .concat(p.n.map(function(r){ return [r.submittedAt, "Nghe", r.title, r.score, r.total]; }), p.v.map(function(r){ return [r.submittedAt, "Từ vựng", r.title + (NL_VT[r.type] ? " · " + NL_VT[r.type] : ""), r.score, r.total]; }))
+    var o = nlBuild(p, f.d), F = hsFlags(p, o);
+    var eKey = p.keys.filter(function(k){ return p.e.some(function(r){ return r.nameKey === k && (r.wrong || []).length; }); })[0];
+    var vKey = p.keys.filter(function(k){ return vStillWrong(k).length; })[0];
+    var exNghe = function(r){ var ex = S.exams.find(function(e){ return e.id === r.examId; }); return !!(ex && ex.nghe); };
+    var hist = p.e.map(function(r){ var ng = exNghe(r); return [r.submittedAt, ng ? "Đề nghe" : "Đề đọc", r.examTitle + " · câu " + r.from + "–" + r.to, r.score, r.total - (r.nokey || []).length, "e", r.id, ng ? "en" : "e"]; })
+      .concat(p.n.map(function(r){ return [r.submittedAt, "Luyện nghe", r.title, r.score, r.total, "n", r.id, "n"]; }),
+        p.v.map(function(r){ return [r.submittedAt, "Từ vựng", r.title + (NL_VT[r.type] ? " · " + NL_VT[r.type] : ""), r.score, r.total, "v", r.id, "v"]; }),
+        p.w.map(function(r){ return [r.submittedAt, "Bài viết", r.title, r.graded ? r.score : null, r.max, "w", r.id, "w"]; }))
       .sort(function(a,b){ return b[0] - a[0]; });
-    var sel = [[14,"14 ngày"],[30,"30 ngày"],[90,"90 ngày"],[0,"Toàn bộ"]].map(function(x){ return '<option value="' + x[0] + '"' + (f.d === x[0] ? ' selected' : '') + '>' + x[1] + '</option>'; }).join("");
-    var h = '<div class="row" style="margin:0 0 12px"><button class="btn ghost sm" id="nlBack">← Danh sách</button><span style="flex:1"></span><label class="hint" for="nlD2" style="margin:0">Tính trong</label><select class="t" id="nlD2" style="width:auto">' + sel + '</select></div>' +
-      '<div class="card"><h2>' + esc(p.name) + '</h2><p class="hint">' + (p.st ? '' : 'Chưa ghép học viên · ') + 'Tên đã nhập khi làm bài: ' + esc((p.raw.length ? p.raw : p.keys).join(", ")) + '</p>' + nlReportHTML(o, true) + '</div>' +
-      '<div class="card"><h2>Nhận xét và việc cần làm</h2><p class="hint">Học sinh thấy 2 mục này ở đầu bảng đánh giá. Nhận xét dùng chung với “Hồ sơ” trong Sổ điểm.</p>' +
-      '<label class="l" for="nlC">Nhận xét của cô</label><textarea class="t" id="nlC" rows="4" placeholder="VD: Em tiến bộ rõ ở phần nghe. Phần đọc còn chậm ở dạng sắp xếp câu."></textarea>' +
-      '<label class="l" for="nlX">Việc em cần làm tiếp</label><textarea class="t" id="nlX" rows="4"></textarea>' +
-      '<div class="row"><button class="btn ghost sm" id="nlSug">Gợi ý từ số liệu</button><button class="btn ghost sm" id="nlSave">Lưu</button><span class="okmsg" id="nlOk" hidden></span></div>' +
-      '<div class="row" style="border-top:1px solid var(--line);padding-top:12px"><button class="btn" id="nlSend">Tạo link đánh giá gửi em</button><button class="btn ghost" id="nlPrev">Xem trước bản của em</button></div></div>' +
-      '<div class="card"><h2>Tất cả bài đã chấm (' + hist.length + ')</h2><div class="scroll"><table class="tbl"><thead><tr><th>Ngày</th><th>Phần</th><th>Bài</th><th>Điểm</th></tr></thead><tbody>' +
-      hist.slice(0, 60).map(function(x){ var pc = nlPct([x[3], x[4]]); return '<tr><td>' + fmtDay(x[0]) + '</td><td>' + x[1] + '</td><td>' + esc(x[2]) + '</td><td><span class="pill ' + nlCls(pc) + '">' + x[3] + '/' + x[4] + '</span></td></tr>'; }).join("") +
-      '</tbody></table></div>' + (hist.length > 60 ? '<p class="hint">Hiện 60 bài gần nhất.</p>' : '') + '</div>';
+    var h = '<div class="row" style="margin:0 0 12px"><button class="btn ghost sm" id="nlBack">← Tất cả học sinh</button><span style="flex:1"></span><label class="hint" for="nlD2" style="margin:0">Tính điểm trong</label>' + hsPeriod("nlD2", f) + '</div>' +
+      '<div class="card"><h2>' + esc(p.name) + '</h2>' + (st ? '<div class="hsfacts">' + hsFacts(st) + '</div>' + hsSlots(st) : '') +
+      (F.length ? '<div class="hsflags">' + F.join("") + '</div>' : '') +
+      (st && (st.alias || []).length ? '<p class="hint" style="margin:4px 0 0">Tên khác: ' + st.alias.map(esc).join(", ") + '</p>' : '') +
+      (st && st.note ? '<p class="hint" style="margin:4px 0 0">' + esc(st.note) + '</p>' : '') +
+      '<p class="hint" style="margin:4px 0 0">' + (st ? '' : 'Chưa ghép học viên · ') + 'Tên đã nhập khi làm bài: ' + esc((p.raw.length ? p.raw : p.keys).join(", ")) + '</p>' +
+      '<div class="row">' + (st ? '<button class="btn sm ghost" id="hsEdit">Sửa thông tin</button><button class="btn sm ghost" id="hsApp">App' + (st.app ? ' · ' + esc(st.app) : '') + '</button>' + (st.page ? '<a class="btn sm ghost" href="' + esc(st.page) + '" target="_blank" rel="noopener">Trang học viên</a>' : '') : '') +
+      (eKey ? '<button class="btn sm ghost" id="hsMix">Tạo đề ôn câu sai</button>' : '') + (vKey ? '<button class="btn sm ghost" id="hsVre">Giao bài ôn từ sai</button>' : '') + '</div></div>' +
+      '<div class="row" style="margin:0 0 12px">' + [["tq","Tổng quan"],["bai","Bài đã làm (" + hist.length + ")"],["nx","Nhận xét & gửi kết quả"]].map(function(t){ return '<button class="btn' + (tab === t[0] ? '' : ' ghost') + '" data-hpt="' + t[0] + '">' + t[1] + '</button>'; }).join("") + '</div>';
+    if(tab === "bai"){
+      var HK = [["","Tất cả"],["e","Đề đọc"],["en","Đề nghe"],["v","Từ vựng"],["n","Luyện nghe"],["w","Bài viết"]], hk = S.hpk || "";
+      var cnt = {}; hist.forEach(function(x){ cnt[x[7]] = (cnt[x[7]] || 0) + 1; });
+      if(hk && !cnt[hk]) hk = S.hpk = "";
+      var all = hist; hist = hk ? hist.filter(function(x){ return x[7] === hk; }) : hist;
+      h += '<div class="card"><h2>Bài đã làm (' + hist.length + ')</h2><div class="row" style="margin:6px 0 10px"><span class="seg">' + HK.filter(function(k){ return !k[0] || cnt[k[0]]; }).map(function(k){ return '<button data-hpk="' + k[0] + '" aria-pressed="' + (hk === k[0]) + '">' + k[1] + ' (' + (k[0] ? cnt[k[0]] : all.length) + ')</button>'; }).join("") + '</span></div><p class="hint">Bấm vào một dòng để xem chi tiết bài' + (p.w.length ? ' (bài viết: mở bảng chấm)' : '') + '.</p><div class="scroll"><table class="tbl"><thead><tr><th>Ngày</th><th>Phần</th><th>Bài</th><th>Điểm</th></tr></thead><tbody>' +
+        hist.slice(0, 150).map(function(x){ var pc = x[3] == null ? null : nlPct([x[3], x[4]]); return '<tr class="click" tabindex="0" data-hr="' + x[5] + ':' + esc(x[6]) + '"><td>' + fmtDay(x[0]) + '</td><td>' + x[1] + '</td><td>' + esc(x[2]) + '</td><td>' + (x[3] == null ? '<span class="pill warn">chưa chấm</span>' : '<span class="pill ' + nlCls(pc) + '">' + x[3] + '/' + x[4] + '</span>') + '</td></tr>'; }).join("") +
+        '</tbody></table></div>' + (hist.length > 150 ? '<p class="hint">Hiện 150 bài gần nhất.</p>' : '') + (hist.length ? '' : '<p class="hint">Em chưa nộp bài nào.</p>') + '</div>';
+    } else if(tab === "nx"){
+      h += '<div class="card"><h2>Nhận xét và việc cần làm</h2><p class="hint">Học sinh thấy 2 mục này ở đầu bảng đánh giá.</p>' +
+        '<label class="l" for="nlC">Nhận xét của cô</label><textarea class="t" id="nlC" rows="4" placeholder="VD: Em tiến bộ rõ ở phần nghe. Phần đọc còn chậm ở dạng sắp xếp câu."></textarea>' +
+        '<label class="l" for="nlX">Việc em cần làm tiếp</label><textarea class="t" id="nlX" rows="4"></textarea>' +
+        '<div class="row"><button class="btn ghost sm" id="nlSug">Gợi ý từ số liệu</button><button class="btn ghost sm" id="nlSave">Lưu</button><span class="okmsg" id="nlOk" hidden></span></div>' +
+        '<div class="row" style="border-top:1px solid var(--line);padding-top:12px"><button class="btn" id="nlSend">Tạo link đánh giá gửi em</button><button class="btn ghost" id="nlPrev">Xem trước bản của em</button></div>' +
+        (eKey ? '<p class="hint" style="margin-top:10px">Cách cũ: <button class="lnk" id="hsOld">tin nhắn điểm đề thi</button> (mã kết quả em dán vào trang học viên).</p>' : '') + '</div>';
+    } else {
+      h += '<div class="card"><h2>Tổng quan</h2>' + nlReportHTML(o, true) + '</div>';
+    }
     body.innerHTML = h;
+    $("#nlBack").onclick = function(){ S.nlId = null; renderTab(); };
+    $("#nlD2").onchange = function(){ f.d = +this.value; renderTab(); };
+    $$("[data-hpt]", body).forEach(function(b){ b.onclick = function(){ S.hpt = b.dataset.hpt; renderTab(); }; });
+    $$("[data-hpk]", body).forEach(function(b){ b.onclick = function(){ S.hpk = b.dataset.hpk; renderTab(); }; });
+    if(st){ $("#hsEdit").onclick = function(){ editStudent(st); }; $("#hsApp").onclick = function(){ appStudent(st); }; }
+    if(eKey) $("#hsMix").onclick = function(){ openMix(eKey); };
+    if(vKey) $("#hsVre").onclick = function(){ S.vPreStu = vKey; S.vg = null; S.tab = "tuvung"; S.vsub = "giao"; render(); };
+    $$("[data-hr]", body).forEach(function(tr){
+      var go = function(){
+        var k = tr.dataset.hr.slice(0, 1), id = tr.dataset.hr.slice(2);
+        if(k === "e") openResult(id); else if(k === "v") openVResult(id); else if(k === "n") openNResult(id);
+        else { var r = (S.wresults || []).find(function(x){ return x.id === id; }); if(r) wGradeModal(r, function(){ renderTab(); }); }
+      };
+      tr.onclick = go; tr.onkeydown = function(e){ if(e.key === "Enter") go(); };
+    });
+    if(tab !== "nx") return;
     var ta = $("#nlC"), tx = $("#nlX"), saved = {c:"", x:"", note:null};
     var nid = noteId(main);
     Promise.all(p.keys.concat(p.raw.filter(function(k){ return p.keys.indexOf(k) < 0; })).map(function(k){ return db.doc("notes/" + noteId(k)).get().then(function(d){ return d.exists ? d.data() : null; }, function(){ return null; }); })
@@ -265,19 +382,22 @@ function reportBoot(){
       saved.note = best; saved.c = best ? best.text || "" : ""; saved.x = x ? x.next || "" : "";
       if(!ta.value) ta.value = saved.c; if(!tx.value) tx.value = saved.x;
     });
+    /* Chữ đang gõ dở giữ qua lần vẽ lại (VD sau khi “Sửa thông tin”). */
+    var dr = S.nxDraft && S.nxDraft.id === p.id ? S.nxDraft : null;
+    if(dr){ ta.value = dr.c; tx.value = dr.x; }
+    ta.oninput = tx.oninput = function(){ S.nxDraft = {id:p.id, c:ta.value, x:tx.value}; };
     var save = function(){
       var c = ta.value.trim(), x = tx.value.trim(), w = [];
       if(c !== saved.c) w.push(db.doc("notes/" + nid).set(Object.assign({}, saved.note || {}, {name:p.name, nameKey:main, text:c, updated:Date.now()})).then(function(){ saved.c = c; }));
       if(x !== saved.x) w.push(db.doc("nlnotes/" + nid).set({name:p.name, nameKey:main, next:x, updated:Date.now()}).then(function(){ saved.x = x; }));
-      return Promise.all(w);
+      return Promise.all(w).then(function(){ S.nxDraft = null; });
     };
     var pack = function(){ var q = Object.assign({}, o, {c:ta.value.trim(), m:tx.value.trim(), x:"Đánh giá của cô · " + fmtDay(o.g)}); delete q.es; return q; };
-    $("#nlBack").onclick = function(){ S.nlId = null; renderTab(); };
-    $("#nlD2").onchange = function(){ f.d = +this.value; renderTab(); };
     $("#nlSug").onclick = function(){ var s = nlSuggest(o); tx.value = tx.value.trim() ? tx.value.trim() + "\n" + s : s; tx.focus(); };
     $("#nlSave").onclick = function(){ var ok = $("#nlOk"); save().then(function(){ ok.textContent = "Đã lưu."; ok.hidden = false; }, function(e){ ok.textContent = "Chưa lưu được (" + (e && e.code) + ")."; ok.hidden = false; }); };
+    if(eKey) $("#hsOld").onclick = function(){ save().then(null, function(){}).then(function(){ openStudent(eKey); }); };
     $("#nlPrev").onclick = function(){
-      var md = modal('<div class="title"><h1 style="font-size:24px">학습 평가</h1><p>Bản em nhìn thấy</p></div><h2 style="margin:0;font-size:20px">' + esc(p.name) + '</h2>' + nlReportHTML(pack(), false) + '<div class="row"><button class="btn ghost" data-close>Đóng</button></div>', true);
+      modal('<div class="title"><h1 style="font-size:24px">학습 평가</h1><p>Bản em nhìn thấy</p></div><h2 style="margin:0;font-size:20px">' + esc(p.name) + '</h2>' + nlReportHTML(pack(), false) + '<div class="row"><button class="btn ghost" data-close>Đóng</button></div>', true);
     };
     $("#nlSend").onclick = function(){
       save().then(null, function(){}).then(function(){

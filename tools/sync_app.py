@@ -7,7 +7,7 @@ Cách dùng:  python3 tools/sync_app.py <thu-muc-dump>
   classes/, students/, cdays/, assigns/, vassigns/, nassigns/, vroutes/   (mỗi tài liệu một file <id>.json)
 
 Tạo ra:
-  thi-thu/app/<mã lớp>.json   {due, days:[{d, f, it:[{y, t, p}]}]}   bài hằng ngày của lớp (14 ngày qua → tương lai)
+  thi-thu/app/<mã lớp>.json   {due, days:[{d, f, it:[{y, t, p}]}]}   bài hằng ngày của lớp + bài “Giao cho” cả lớp (14 ngày qua → tương lai)
   thi-thu/app/<mã em>.json    {due, cls:[mã lớp], it:[{y, t, p, d}]}  bài riêng cô tick trong “App · bài riêng”
   <thu-muc-dump>/site_app.json  ghi vào db (collection "site", doc "app") để trang quản lý hiện “đã lên app”.
 
@@ -150,6 +150,22 @@ def main(dump):
             if it:
                 days.append({"d": cd["day"], "f": cd.get("focus") or "", "it": it})
                 site["days"].append("%s_%s" % (c["id"], cd["day"]))
+        # bài giao thêm cho cả lớp ở tab Giao bài (“Giao cho” lớp này): thêm vào ngày giao
+        for col, fn in ((va, v_item), (na, n_item), (ea, d_item)):
+            for a in col.values():
+                if a.get("toC") != c["id"] or a.get("cls") or a.get("active") is False or ymd(a.get("created")) < since:
+                    continue
+                x = fn(a, False)
+                if not x:
+                    continue
+                d = ymd(a.get("created"))
+                day = next((x2 for x2 in days if x2["d"] == d), None)
+                if not day:
+                    day = {"d": d, "f": "", "it": []}
+                    days.append(day)
+                day["it"].append(x)
+                site["a"].append("%s@c:%s" % (a["code"], c["id"]))
+        days.sort(key=lambda x2: x2["d"])
         write(c["app"], {"v": 1, "at": now, "due": c.get("due") or 22, "days": days}, keep)
         report.append("lớp %s: %d ngày" % (c["app"], len(days)))
 

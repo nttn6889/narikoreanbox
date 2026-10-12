@@ -57,13 +57,26 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   “Bài riêng cô giao”. Đã nộp = localStorage `nari-v-|nari-n-|nari-tt-<mã bài>-<tên>` có `submitted`. Học sinh vẫn gửi mã nộp qua
   Zalo (có nút “Gửi qua Zalo…” dùng bảng chia sẻ của máy).
 
+## Chuyên cần và chỗ xem điểm (sắp xếp lại 10/2026)
+- **“Giao cho”** ở mọi chỗ giao bài (đề đọc/đề nghe `assigns`, từ vựng `vassigns`, luyện nghe `nassigns`, viết `wassigns`): lớp → `toC: <id lớp>`,
+  một em → `app:[id]` (cũng là bài riêng trong app), kèm `due` (YYYY-MM-DD, hạn = giờ hạn nộp của lớp). Không chọn = link tự do, không tính chuyên cần.
+  Bài hằng ngày vẫn là `cls` + `day` (qua `cdays`). `sync_app.py` đưa bài `toC` vào ngày giao trong file app của lớp.
+- **Một cách tính chuyên cần** (`ccIdx`/`ccClsTasks`/`ccAsg`/`ccStu`/`ccStrip`, cạnh `clsData`): bài được giao = bài hằng ngày của lớp + bài `toC` + bài `app`;
+  chuyên cần = đã nộp / đã giao (bài chưa tới hạn chỉ tính khi đã nộp). Dùng chung cho Lớp học (Tổng kết, Theo dõi hằng ngày: `+` giao thêm, `★` bài riêng),
+  hồ sơ học sinh và bản đánh giá `#r=` (`o.cc` = [nộp, giao, muộn], `o.b` = 28 ô f/p/x/t/s, `o.ow` = bài còn nợ; link cũ chỉ có `o.a` vẫn hiện kiểu cũ).
+- Mỗi tab một việc: **Giao bài** chỉ giao + theo dõi từng bài (cột “Đã nộp” x/y, bấm mở `asgWho`: ai nộp, điểm, ai chưa nộp);
+  **Chấm bài** có “Bài viết chờ chấm” / “Bài viết đã chấm” (`paintWQueue`; đã bỏ khỏi thẻ Đề viết); **Lớp học** = cả lớp;
+  **Học sinh** chỉ còn Học sinh · Lịch tuần (bỏ Sổ điểm đề thi / Sổ điểm từ vựng, code `renderSo`/`renderVSo` còn nhưng không có lối vào),
+  hồ sơ từng em 3 thẻ: Tổng quan (năng lực + chuyên cần) · Bài đã làm (lọc theo loại) · Nhận xét & gửi kết quả. Sổ điểm luyện nghe đã bỏ khỏi thẻ Đề nghe.
+
 ## Đánh giá năng lực (tab "Đánh giá" trong trang quản lý)
 - Gom đề thi (`results`), từ vựng (`vresults`), nghe (`nresults`) theo từng học sinh. Số liệu tính lại trong trình duyệt,
   không lưu thêm gì. Chỉ lưu nhận xét (`notes/<id>.text`, dùng chung với Sổ điểm) và việc cần làm (`nlnotes/<id>.next`).
 - Đọc theo dạng câu TOPIK II (bảng `NL_RT`, theo số câu; đề trộn quy về câu gốc qua `src`), nghe theo phần và theo bài,
   từ vựng theo dạng bài và từ còn sai, chuyên cần 28 ngày, biểu đồ theo tuần, ước lượng điểm Đọc (chỉ cô thấy).
 - Bản gửi học sinh: link `thi-thu/#r=<base64>.<sum>` chứa sẵn số liệu (không cần đồng bộ), mở bằng `reportBoot`.
-- **Toàn bộ code nằm trong `tools/nangluc.js`** (trên dấu `/* ==ADMIN==` là phần chung, dưới là phần trong khối Admin).
+- Tab “Đánh giá” cũ đã gộp vào tab Học sinh (hồ sơ từng em); `nangluc.py` không móc tab nữa.
+- **Toàn bộ code nằm trong `tools/nangluc.js`** (trên dấu `/* ==ADMIN==` là phần chung, dưới là phần trong khối Admin; đã chép lại từ trang quản lý 10/2026).
   Sửa ở đó rồi:
   - chỉ sửa bản học sinh thấy: `python3 tools/nangluc.py --site` → commit (không cần tải trang quản lý);
   - có sửa phần của cô: Artifact `read` trang quản lý (bỏ lớp vỏ `<!doctype…><body>` ngoài cùng của file tải về),
