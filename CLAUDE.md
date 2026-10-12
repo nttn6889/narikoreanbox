@@ -60,7 +60,7 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 ## Lịch tuần (trang quản lý → Học sinh → Lịch tuần)
 - Ca có giờ dùng chung cả tuần: `site/ca = {list:[{id, b: "Sáng"|"Chiều"|"Tối", from:"14:00", to:"15:00"}]}` (nút “+ Thêm ca”, bấm giờ ca để sửa/xóa).
   Ca học của em: `students/<id>.slots = [{slot: buổi, day, ca?: id}]`; buổi cũ không có `ca` hiện ở dòng “Chưa chọn giờ” (xóa ca thì các buổi
-  của ca đó về lại “chưa chọn giờ”). Bấm “+” trong ô để tick học viên; xếp vào ca có giờ thì bỏ buổi “chưa chọn giờ” cùng ngày. Ô đỏ: 2 em cùng ca
+  của ca đó về lại “chưa chọn giờ”). Ca tự xếp theo giờ bắt đầu; mỗi ca có nút Sửa/Xóa (`caDelete`). Bấm “+” trong ô để tick học viên hoặc “Chuyển…” em sang ca/ngày khác; xếp vào ca có giờ thì bỏ buổi “chưa chọn giờ” cùng ngày. Ô đỏ: 2 em cùng ca
   hoặc 2 ca chồng giờ cùng ngày đều có lớp. Code `caEdit`/`caCell`/`hsLich`/`editStudent` trong khối Admin (không có ở site học sinh).
 
 ## Đánh giá năng lực (tab "Đánh giá" trong trang quản lý)
