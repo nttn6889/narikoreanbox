@@ -16,16 +16,19 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Playwrite+VN:wght@100..400&family=Patrick+Hand&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg: #1b1a22;
-    --card: #2a2938;
-    --card-border: #38364a;
-    --group-bg: #232230;
-    --gold: #e8b23c;
-    --gold-soft: #f4d78a;
-    --gold-wash: rgba(232,178,60,.14);
-    --ink: #f3f1ec;
-    --ink-dim: #b6b2c4;
-    --ink-faint: #837e96;
+    color-scheme: light;
+    --bg: #F4F2FA;
+    --card: #FFFFFF;
+    --card-border: #E2DEEE;
+    --group-bg: #FBFAFE;
+    --violet: #54478F;
+    --violet-soft: #ECE9F7;
+    --gold: #C98A1A;
+    --gold-ink: #9A6510;
+    --gold-soft: #FDF1DC;
+    --ink: #1D1A2C;
+    --ink-dim: #4A4660;
+    --ink-faint: #75718A;
   }
   *{box-sizing:border-box;}
   body{
@@ -46,19 +49,23 @@
   .brandline-left{ display:flex; gap:8px; flex-wrap:wrap; }
   .nari-home-link{
     display:inline-flex; align-items:center; gap:5px; text-decoration:none;
-    color: var(--gold-soft); font-size:12.5px; font-weight:600;
+    color: var(--violet); font-size:12.5px; font-weight:600; background:var(--card);
     border:1px solid var(--card-border); border-radius:20px; padding:5px 12px;
   }
   .nari-nav{display:inline-flex;gap:8px;flex-wrap:wrap}
-  button.nari-home-link{font:inherit;cursor:pointer;background:none}
+  button.nari-home-link{font:inherit;cursor:pointer;background:var(--card)}
   .nari-home-link:hover{ border-color: var(--gold); }
 
-  header{ margin-bottom:44px; }
-  .kicker{ color:var(--gold); font-size:14px; font-weight:600; letter-spacing:.02em; margin-bottom:10px; }
+  header{
+    margin-bottom:36px; padding:30px 28px 24px; border-radius:18px;
+    background: linear-gradient(135deg, var(--violet-soft) 0%, #F7F1FF 55%, var(--gold-soft) 100%);
+    border:1px solid var(--card-border);
+  }
+  .kicker{ color:var(--gold-ink); font-size:14px; font-weight:600; letter-spacing:.02em; margin-bottom:10px; }
   h1{
     font-family: 'Playwrite VN', cursive; font-weight:400;
     font-size: clamp(16px,6vw,24px); margin:0 0 18px; line-height:1.3;
-    color: var(--gold-soft); white-space:nowrap;
+    color: var(--violet); white-space:nowrap;
   }
   .lede{
     font-family: 'Patrick Hand', cursive; font-weight:400;
@@ -70,19 +77,20 @@
     font-size:13px; color:var(--ink-faint); text-align:right;
     max-width:none; margin:0;
   }
-  .emph{ color: var(--gold-soft); }
+  .emph{ color: var(--violet); font-weight:600; background:linear-gradient(transparent 62%, rgba(240,180,84,.45) 62%); }
 
   /* tóm tắt quá trình */
   .summary{
     margin:26px 0 18px; padding:20px 22px;
     background:var(--card); border:1px solid var(--card-border);
-    border-left:3px solid var(--gold); border-radius:12px;
+    border-left:4px solid var(--gold); border-radius:12px;
+    box-shadow:0 4px 14px rgba(84,71,143,.08);
   }
-  .summary-title{ font-size:12.5px; font-weight:600; color:var(--gold); letter-spacing:.02em; margin:0 0 14px; }
+  .summary-title{ font-size:12.5px; font-weight:600; color:var(--gold-ink); letter-spacing:.02em; margin:0 0 14px; }
   .facts{ display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin:0 0 14px; padding:0; list-style:none; }
   .facts li{ display:flex; flex-direction:column; gap:2px; }
-  .facts b small{ font-size:13px; font-family:'Inter', system-ui, sans-serif; font-weight:600; color:var(--gold); margin-right:2px; }
-  .facts b{ font-family:'Fraunces', serif; font-weight:600; font-size:22px; color:var(--gold-soft); line-height:1.2; }
+  .facts b small{ font-size:13px; font-family:'Inter', system-ui, sans-serif; font-weight:600; color:var(--gold-ink); margin-right:2px; }
+  .facts b{ font-family:'Fraunces', serif; font-weight:600; font-size:22px; color:var(--violet); line-height:1.2; }
   .facts li > span{ font-size:12.5px; color:var(--ink-dim); line-height:1.4; }
   .summary p{ font-size:14px; color:var(--ink-dim); margin:0; }
   @media (max-width:560px){ .facts{ grid-template-columns:repeat(2,1fr); } }
@@ -94,6 +102,7 @@
     border-radius:14px;
     overflow:hidden;
     background: var(--group-bg);
+    box-shadow:0 2px 10px rgba(84,71,143,.06);
   }
   .group > summary{
     cursor:pointer;
@@ -111,7 +120,7 @@
   }
   .group-title h2{
     font-family:'Fraunces', serif; font-weight:600; font-size:21px;
-    margin:0; color:var(--ink);
+    margin:0; color:var(--violet);
   }
   .group-count{ font-size:12.5px; color:var(--ink-faint); }
   .group-chevron{
@@ -119,7 +128,7 @@
     transition: transform .2s ease;
   }
   .group[open] > summary .group-chevron{ transform: rotate(180deg); }
-  .group[open] > summary{ border-bottom:1px solid var(--card-border); }
+  .group[open] > summary{ border-bottom:1px solid var(--card-border); background:var(--violet-soft); }
   .group-body{ padding:22px 24px 24px; }
   .group-body > .section-note{
     color:var(--ink-faint); font-size:13.5px; margin:0 0 20px; max-width:62ch;
@@ -129,8 +138,8 @@
   .role-badges{ display:flex; flex-wrap:wrap; gap:6px; }
   .role-badge{
     display:inline-block;
-    background: var(--gold-wash);
-    color: var(--gold-soft);
+    background: var(--gold-soft);
+    color: var(--gold-ink);
     font-size:12px;
     font-weight:600;
     padding:4px 11px;
@@ -204,10 +213,11 @@
   footer .name{ font-size:14px; color:var(--ink-dim); }
   footer .name b{ color:var(--ink); }
   footer .contact{ font-size:13.5px; color:var(--ink-faint); }
-  footer .contact a{ color:var(--gold-soft); text-decoration:none; }
+  footer .contact a{ color:var(--violet); font-weight:600; text-decoration:none; }
 
   @media (max-width:560px){
-    .wrap{ padding:40px 18px 56px; }
+    .wrap{ padding:28px 16px 56px; }
+    header{ padding:22px 16px 18px; }
     .group > summary{ padding:18px 18px; }
     .group-body{ padding:18px 18px 20px; }
   }
