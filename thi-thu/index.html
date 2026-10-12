@@ -13,12 +13,12 @@
 <meta name="apple-mobile-web-app-title" content="Hàn Ngữ Nari">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Serif+KR:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Noto+Serif+KR:wght@400;600;700&display=swap" rel="stylesheet">
 <style id="css">
 :root{
   --bg:#EEF0F6; --paper:#FFFFFF; --ink:#1D1A2C; --muted:#646079; --line:#D9D6E6;
   --violet:#54478F; --violet-soft:#ECE9F7; --on-violet:#FFFFFF; --pen:#C4323A; --pen-soft:#FBE7E8;
-  --ok:#1F7A4D; --ok-soft:#E3F3EA; --warn:#9A6200; --warn-soft:#FDF1DC;
+  --ok:#1F7A4D; --ok-soft:#E3F3EA; --warn:#9A6200; --warn-soft:#FDF1DC; --nm-bg:91%; --nm-fg:27%; --nm-bd:75%;
   --kr:"Noto Serif KR","Apple SD Gothic Neo","Malgun Gothic",serif;
   --ui:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   box-sizing:border-box;
@@ -29,13 +29,13 @@
   :root:not([data-theme="light"]){
     --bg:#15131F; --paper:#1F1C2C; --ink:#ECEAF5; --muted:#A7A2BE; --line:#37334A;
     --violet:#A99BEA; --violet-soft:#2C2745; --on-violet:#15131F; --pen:#F07077; --pen-soft:#3A1E24;
-    --ok:#5FCB94; --ok-soft:#1C3328; --warn:#F0B454; --warn-soft:#382A12;
+    --ok:#5FCB94; --ok-soft:#1C3328; --warn:#F0B454; --warn-soft:#382A12; --nm-bg:24%; --nm-fg:86%; --nm-bd:45%;
   }
 }
 :root[data-theme="dark"]{
   --bg:#15131F; --paper:#1F1C2C; --ink:#ECEAF5; --muted:#A7A2BE; --line:#37334A;
   --violet:#A99BEA; --violet-soft:#2C2745; --on-violet:#15131F; --pen:#F07077; --pen-soft:#3A1E24;
-  --ok:#5FCB94; --ok-soft:#1C3328; --warn:#F0B454; --warn-soft:#382A12;
+  --ok:#5FCB94; --ok-soft:#1C3328; --warn:#F0B454; --warn-soft:#382A12; --nm-bg:24%; --nm-fg:86%; --nm-bd:45%;
 }
 *,*::before,*::after{box-sizing:inherit}
 html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 12px)}
@@ -240,7 +240,71 @@ input.code{text-transform:uppercase;letter-spacing:.18em;font-weight:700;font-si
 .wk .nm{display:block;background:var(--violet-soft);color:var(--violet);border-radius:4px;padding:1px 4px;margin:2px 0;font-weight:600;font-size:13px}
 .wk td.clash{background:var(--pen-soft)}
 .wk td.clash .nm{background:var(--pen);color:#fff}
+.wk td.wkg{background:var(--bg)}
+.wk .nm.hc{background:hsl(var(--h) 60% var(--nm-bg));color:hsl(var(--h) 55% var(--nm-fg));border-left:4px solid hsl(var(--h) 55% var(--nm-bd))}
+.wk td.clash .nm.hc{background:var(--pen);color:#fff;border-left-color:var(--pen)}
+.hsv{display:flex;gap:8px;margin:0 0 12px}
+.lhhero{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:24px 24px 18px;margin-bottom:14px}
+.lhh{display:grid;grid-template-columns:minmax(0,1fr) 230px;gap:20px;align-items:start}
+.lhey{font-size:14px;color:var(--muted);margin:0}
+.lhname{font-family:"Fraunces",Georgia,serif;font-weight:700;font-size:clamp(30px,5vw,44px);line-height:1.1;color:var(--violet);margin:2px 0 14px;letter-spacing:-.01em;text-wrap:balance}
+.lhchips{display:flex;flex-wrap:wrap;gap:8px}.lhchips span{border:1px solid var(--line);background:var(--bg);border-radius:8px;padding:6px 12px;font-size:14px;color:var(--muted)}.lhchips b{color:var(--ink)}
+.lhcd{border:1px solid var(--line);border-top:4px solid var(--pen);border-radius:10px;text-align:center;padding:12px 10px 10px;background:var(--bg)}
+.lhcd .t{font-size:13.5px;font-weight:600;color:var(--muted)}.lhcd .n{font-family:"Fraunces",Georgia,serif;font-weight:700;font-size:58px;line-height:1.05;color:var(--pen);font-variant-numeric:tabular-nums}
+.lhcd .u{font-size:13.5px;color:var(--muted)}.lhcd hr{border:none;border-top:1px dashed var(--line);margin:10px 0 6px}.lhcd .s{font-family:"Fraunces",Georgia,serif;font-weight:700;font-size:26px;color:var(--warn)}
+.lhroad{margin-top:20px}.lhbar{display:flex;height:30px;border-radius:8px;overflow:hidden;gap:3px}
+.lhbar .m{display:flex;align-items:center;justify-content:center;font-size:12.5px;font-weight:700;white-space:nowrap;overflow:hidden;border-radius:6px;background:hsl(var(--h) 70% var(--nm-bg));color:hsl(var(--h) 50% var(--nm-fg));border:2px solid transparent}
+.lhbar .m .sh{display:none}.lhbar .m.fut{opacity:.55;font-weight:500}.lhbar .m.cur{border-color:var(--violet)}
+.lhprog{position:relative;height:6px;border-radius:3px;background:var(--line);margin:8px 0 6px}.lhprog i{position:absolute;left:0;top:0;bottom:0;border-radius:3px;background:var(--pen)}
+.lhprog .goal{position:absolute;right:-2px;top:-5px;width:16px;height:16px;border-radius:50%;background:var(--paper);border:3px solid var(--violet)}
+.lhends{display:flex;justify-content:space-between;gap:8px;font-size:13px;color:var(--muted)}.lhends b{color:var(--ink)}
+.lhtiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:14px}
+.lhtiles div{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:12px 14px}.lhtiles span{display:block;font-size:13px;color:var(--muted)}
+.lhtiles b{font-family:"Fraunces",Georgia,serif;font-size:26px;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums}.lhtiles b.ok{color:var(--ok)}.lhtiles b.bad{color:var(--pen)}
+.lhsec{font-family:"Fraunces",Georgia,serif;font-weight:700;font-size:22px;color:var(--violet);margin:0}
+.lhwh{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin:10px 0 4px;font-weight:600}
+.lhst{border-radius:16px;padding:3px 12px;font-size:13.5px;font-weight:700;background:var(--violet-soft);color:var(--violet)}.lhst.ok{background:var(--ok-soft);color:var(--ok)}.lhst.bad{background:var(--pen-soft);color:var(--pen)}
+.lhwk{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px;margin:10px 0}.lhwk div{border:1px solid var(--line);background:var(--bg);border-radius:8px;padding:8px 4px;text-align:center;font-size:13px;color:var(--muted);min-height:72px}
+.lhwk div.has{background:var(--ok-soft);border-color:var(--ok)}.lhwk div.td{border:2px solid var(--violet);background:var(--paper)}.lhwk b{display:block;font-family:"Fraunces",Georgia,serif;font-size:22px;color:var(--ink)}
+.lhwk .tg{display:block;font-size:11.5px;font-weight:700;color:var(--ok)}.lhnote{font-size:14.5px;margin:4px 0 0}.lhnote b{color:var(--pen)}
+@media (max-width:640px){.lhh{grid-template-columns:1fr}.lhhero{padding:18px 16px 14px}.lhtiles{grid-template-columns:1fr 1fr 1fr;gap:6px}.lhtiles div{padding:10px}.lhtiles b{font-size:21px}}
+details.lhm{border:1px solid var(--line);border-radius:6px;margin:6px 0}details.lhm summary{cursor:pointer;padding:9px 12px;display:flex;flex-wrap:wrap;gap:4px 12px;justify-content:space-between;font-weight:600}
+details.lhm .scroll{padding:0 8px 8px}.lhok{color:var(--ok)}.lhshort{color:var(--pen)}
+.lhl{display:grid;grid-template-columns:52px 1fr auto;gap:4px 12px;padding:10px 0;border-bottom:1px solid var(--line);align-items:start}.lhl:last-child{border-bottom:none}
+.lhl .no{text-align:center;background:var(--violet-soft);color:var(--violet);border-radius:6px;padding:4px 0;font-weight:700;font-size:18px;line-height:1.1}.lhl .no small{display:block;font-size:10.5px;font-weight:600}
+.lhl .dt{font-size:13px;color:var(--muted)}.lhl h4{margin:2px 0 4px;font-size:15px}.lhl .lhlk a{margin-right:12px;font-size:13.5px;color:var(--violet)}.lhl .act{display:flex;gap:6px}
+@media (max-width:560px){.lhwk{gap:4px}.lhwk div{padding:6px 1px;font-size:11px;min-height:64px}.lhwk b{font-size:18px}.lhwk .tg{font-size:10px}.lhwk .tdl{display:none}.lhbar .m .fl{display:none}.lhbar .m .sh{display:inline}.lhbar .m{font-size:11.5px}.lhl{grid-template-columns:44px 1fr}.lhl .act{grid-column:2}}
+.wkhv{min-width:0}.wkhv th,.wkhv td{vertical-align:middle;white-space:nowrap}.wkhv th.dl{background:var(--bg);font-weight:700;color:var(--ink)}
+.wkhv .nm{display:inline-block;margin:0}.wkhv th.stn .nm{cursor:pointer}
+.wkhv tr.tot th,.wkhv tr.tot td{background:var(--bg);font-weight:700;border-top:2px solid var(--muted)}.wkhv td.need{color:var(--pen)}
+.wkhv th.d0,.wkhv td.d0{border-left:2px solid var(--muted)}.wkhv .cat{display:block;font-weight:400;font-size:11.5px}.wkhv thead th.clash{background:var(--pen-soft);color:var(--pen)}
+.wkhv .stn{position:sticky;left:0;z-index:1;background:var(--paper);text-align:left}.wkhv thead .stn,.wkhv tr.tot .stn{background:var(--bg)}.wkhv tbody td .nm{min-width:26px}
+.hvrow{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;padding:12px 0;border-bottom:1px solid var(--line);align-items:start}
+.hvrow:last-child{border-bottom:none}.hvdot{width:14px;height:14px;border-radius:50%;margin-top:4px;background:hsl(var(--h) 55% var(--nm-bd))}
+.hvrow h3{margin:0;font-size:16px;display:inline}.hvrow h3 button{all:unset;cursor:pointer}.hvrow h3 button:hover{text-decoration:underline}
+.hvmeta{font-size:13px;color:var(--muted);margin:2px 0 6px}.hvmeta .warn{color:var(--warn);font-weight:600}
+.hvs{display:flex;flex-wrap:wrap;gap:6px}.hvs span{font-size:13px;border:1px solid var(--line);border-radius:14px;padding:2px 10px;background:var(--paper)}
+.hvs span.bad{border-color:var(--pen);background:var(--pen-soft);color:var(--pen);font-weight:600}.hvs span.no{color:var(--warn)}
+.hvrow .btn{margin-top:8px}
+.wk .grpl{display:block;font-size:11.5px;font-weight:700;color:var(--muted);margin-bottom:2px}
 .wk .empty{color:var(--line);font-size:12px}
+.wk tr.bu td{background:var(--paper);text-align:left;font-weight:700;font-size:14.5px;padding:10px 8px 6px}
+.wk tr.bu td .btn{margin-left:10px}
+.wk td.sl .tm{display:block;font-weight:400;font-size:12px;color:var(--muted)}
+.wk td.sl .tm.no{color:var(--warn)}
+.wk .caed{background:none;border:none;padding:0;font:inherit;color:inherit;cursor:pointer;text-align:left}
+.wk .caed:hover .tm{text-decoration:underline}
+.wk .wkadd{display:block;width:100%;background:none;border:1px dashed transparent;border-radius:4px;color:var(--muted);font:inherit;font-size:13px;line-height:1.4;cursor:pointer;margin-top:2px;padding:0}
+.wk .wkadd:hover,.wk .wkadd:focus-visible{border-color:var(--violet);color:var(--violet)}
+.wkstat{font-size:13.5px;color:var(--muted);margin:0 0 10px}.wkstat b{color:var(--ink)}
+.capick{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 10px}
+.castu{display:flex;align-items:center;gap:10px;padding:8px 2px;border-bottom:1px solid var(--line);cursor:pointer}
+.castu input{width:18px;height:18px}.castu small{margin-left:auto;color:var(--muted);font-size:12px;text-align:right}
+.wk .caact{display:flex;gap:4px;margin-top:4px}.wk .caact button{font:inherit;font-size:11.5px;font-weight:600;padding:1px 8px;border-radius:10px;cursor:pointer;background:none;border:1px solid var(--line);color:var(--violet)}
+.wk .caact button.del{color:var(--pen)}.wk .caact button:hover{border-color:currentColor}
+.cst{border-bottom:1px solid var(--line)}.cst .castu{border-bottom:none}
+.mvbtn{font:inherit;font-size:12px;font-weight:600;color:var(--violet);background:none;border:1px solid var(--line);border-radius:10px;padding:2px 9px;cursor:pointer;white-space:nowrap}
+.mv{display:flex;flex-wrap:wrap;gap:6px;align-items:center;padding:0 2px 10px 30px}.mv select{font:inherit;font-size:13.5px;padding:5px 6px;border:1px solid var(--line);border-radius:6px;background:var(--paper);color:var(--ink);max-width:100%}
 .stcard h3{margin:0;font-size:17px}
 .stcard .facts{font-size:14px;color:var(--muted);margin:2px 0 6px}
 .stcard .facts b{color:var(--ink)}
@@ -1111,18 +1175,24 @@ function tuWire(A){
 /* =====================================================================
    TỪ VỰNG – phía học sinh. Bài nằm ngay trong link (#v=…) nên giao bài không cần cập nhật trang.
    ===================================================================== */
-var VTYPES = {match:"Nối từ", kv:"Trắc nghiệm Hàn → Việt", vk:"Trắc nghiệm Việt → Hàn", nk:"Nghe → chọn nghĩa", type:"Gõ từ tiếng Hàn", cau:"Điền từ vào câu (chia đuôi)"};
+var VTYPES = {match:"Nối từ", kv:"Trắc nghiệm Hàn → Việt", vk:"Trắc nghiệm Việt → Hàn", nk:"Nghe → chọn nghĩa", type:"Gõ từ tiếng Hàn", cau:"Điền từ vào câu (chia đuôi)", nt:"Nghe → gõ từ (chính tả)", nc:"Nghe câu → điền từ khóa"};
+/* Bài nhiều dạng: y = "nk+nt+nc" (tối đa 3 dạng) — học sinh làm lần lượt từng dạng với cùng danh sách từ.
+   Câu trả lời xếp nối nhau (dạng 1 trước): ô j = dạng thứ ⌊j/n⌋, từ thứ j % n (n = số từ). */
+function vtSteps(y){ return String(y || "").split("+"); }
+function vtOk(y){ var s = vtSteps(y); return s.length <= 3 && s.every(function(t, i){ return !!VTYPES[t] && s.indexOf(t) === i; }); }
+function vtName(y){ return vtSteps(y).map(function(t){ return VTYPES[t] || t; }).join(" → "); }
 /* Dạng "cau": mỗi mục [ko, vi, câu ví dụ]; phần __…__ của câu là chỗ trống, học sinh gõ từ đã chia đúng đuôi.
-   Từ chưa có câu ví dụ thì làm như dạng "type" (xem nghĩa, gõ từ). */
+   Từ chưa có câu ví dụ thì làm như dạng "type" (xem nghĩa, gõ từ). Dạng "nc" giống "cau" nhưng không có gợi ý: máy đọc cả câu,
+   học sinh nghe rồi gõ từ khóa (đúng dạng đã chia); từ chưa có câu thì làm như "nt" (nghe từ, gõ lại). */
 function vCauKey(it){ var m = String((it && it[2]) || "").match(/__(.+?)__/); return m ? m[1] : (it ? it[0] : ""); }
-function vTyped(type){ return type === "type" || type === "cau"; }
-/* Dạng "nk": máy đọc từ tiếng Hàn (giọng đọc có sẵn của trình duyệt), học sinh chọn nghĩa tiếng Việt. */
-function vSay(text){
+function vTyped(type){ return type === "type" || type === "cau" || type === "nt" || type === "nc"; }
+/* Dạng "nk"/"nt"/"nc": máy đọc tiếng Hàn (giọng đọc có sẵn của trình duyệt). full = đọc cả câu (không cắt ở dấu phẩy), slow = đọc chậm. */
+function vSay(text, full, slow){
   var ss = window.speechSynthesis; if(!ss || !text) return false;
   try{
     ss.cancel();
-    var u = new SpeechSynthesisUtterance(String(text).replace(/\([^)]*\)/g, "").split(/[\/,]/)[0].trim());
-    u.lang = "ko-KR"; u.rate = 0.85;
+    var u = new SpeechSynthesisUtterance(full ? String(text).replace(/__/g, "").trim() : String(text).replace(/\([^)]*\)/g, "").split(/[\/,]/)[0].trim());
+    u.lang = "ko-KR"; u.rate = slow ? 0.6 : 0.85;
     var v = ss.getVoices().filter(function(x){ return /^ko/i.test(x.lang); })[0]; if(v) u.voice = v;
     ss.speak(u); return true;
   }catch(e){ return false; }
@@ -1199,7 +1269,7 @@ function vAlts(ko){
 }
 /* items: [[ko, vi], …]; ans: chỉ số mục đã chọn (nối từ, trắc nghiệm) hoặc chữ đã gõ */
 function vCheck(type, items, i, ans){
-  if(vTyped(type)) return !!String(ans || "").trim() && vAlts(type === "cau" ? vCauKey(items[i]) : items[i][0]).indexOf(vNorm(ans)) >= 0;
+  if(vTyped(type)) return !!String(ans || "").trim() && vAlts(type === "cau" || type === "nc" ? vCauKey(items[i]) : items[i][0]).indexOf(vNorm(ans)) >= 0;
   if(typeof ans !== "number" || ans < 0 || !items[ans]) return false;
   if(ans === i) return true;
   return type === "vk" ? vNorm(items[ans][0]) === vNorm(items[i][0]) : vNorm(items[ans][1]) === vNorm(items[i][1]);
@@ -1209,6 +1279,23 @@ function vAnsText(type, items, ans){
   if(typeof ans !== "number" || ans < 0 || !items[ans]) return "";
   return type === "vk" ? items[ans][0] : items[ans][1];
 }
+/* Chấm bài từ vựng một hoặc nhiều dạng (dùng chung cho trang học sinh và trang quản lý).
+   → {score, total, steps:[[dạng, đúng, số từ]…], bad:{chỉ số từ: [các bước sai]}} */
+function vScore(y, items, ans){
+  var st = vtSteps(y), n = items.length, out = {score:0, total:st.length * n, steps:[], bad:{}};
+  ans = ans || [];
+  st.forEach(function(t, s){
+    var ok = 0;
+    items.forEach(function(_, i){ if(vCheck(t, items, i, ans[s*n + i])) ok++; else (out.bad[i] = out.bad[i] || []).push(s); });
+    out.steps.push([t, ok, n]); out.score += ok;
+  });
+  return out;
+}
+/* Câu trả lời sai của một từ (bài nhiều dạng thì ghi từng dạng sai). */
+function vBadText(y, items, i, ans, steps){
+  var st = vtSteps(y), n = items.length;
+  return steps.map(function(s){ var t = vAnsText(st[s], items, (ans || [])[s*n + i]); return st.length > 1 ? VTYPES[st[s]] + ": " + (t || "(bỏ trống)") : t; }).join(" · ");
+}
 function vShuffle(a){ a = a.slice(); for(var i = a.length - 1; i > 0; i--){ var j = Math.floor(Math.random()*(i+1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
 
 var VS = null, vTimer = null;
@@ -1216,7 +1303,7 @@ function vocabBoot(){
   var m = String(location.hash || "").match(/[#&]v=([A-Za-z0-9_.-]+)/);
   if(!m) return false;
   var a = vUnpack(m[1]);
-  if(!a || !a.w || !a.w.length || !VTYPES[a.y]){
+  if(!a || !a.w || !a.w.length || !vtOk(a.y)){
     app.innerHTML = '<div class="wrap">' + headerHTML() + '<main class="paper"><div class="title"><h1>단어 시험</h1><p>Bài từ vựng · Hàn Ngữ Nari</p></div><p class="err">Link bài từ vựng bị thiếu hoặc bị cắt. Em sao chép lại đủ cả link cô gửi rồi mở lại nhé.</p></main></div>';
     return true;
   }
@@ -1226,7 +1313,7 @@ function vocabBoot(){
 function vEntry(a){
   var last = lsGet("nari-tt-last") || {};
   app.innerHTML = '<div class="wrap">' + headerHTML() + '<main class="paper"><div class="title"><h1>단어 시험</h1><p>' + esc(a.t || "Bài từ vựng") + '</p></div>' +
-    '<div class="metaline"><span>Dạng bài: <strong>' + esc(VTYPES[a.y]) + '</strong></span><span><strong>' + a.w.length + '</strong> từ</span></div>' +
+    '<div class="metaline"><span>Dạng bài: <strong>' + esc(vtName(a.y)) + '</strong></span><span><strong>' + a.w.length + '</strong> từ' + (vtSteps(a.y).length > 1 ? ' · ' + vtSteps(a.y).length + ' bước' : '') + '</span></div>' +
     '<label class="l" for="vname">Họ và tên của em</label><input class="t" id="vname" autocomplete="name" value="' + esc(last.name || "") + '" placeholder="VD: Nguyễn Thị Lan">' +
     '<p class="err" id="verr" hidden></p><div class="row"><button class="btn wide" id="vgo">Bắt đầu làm bài</button></div>' +
     '<p class="hint" style="margin-top:14px">Làm xong em bấm “Nộp bài”, sao chép tin nhắn kết quả và gửi lại cho cô qua Zalo.</p></main></div>';
@@ -1240,106 +1327,176 @@ function vEntry(a){
 }
 function vStart(a, name){
   var key = "nari-v-" + a.c + (a.k ? "-" + a.k : "") + "-" + normName(name).replace(/[^a-z0-9]/g, "");
-  var saved = lsGet(key);
-  if(saved && saved.c === a.c && saved.n === a.w.length) VS = saved;
+  var saved = lsGet(key), st = vtSteps(a.y), n = a.w.length;
+  if(saved && saved.c === a.c && saved.n === n && (saved.y ? saved.y === a.y : st.length === 1)) VS = saved;
   else{
     var idx = a.w.map(function(_, i){ return i; });
-    VS = {c:a.c, n:a.w.length, ans:{}, start:Date.now(), submitted:null, order:vShuffle(idx), opts:{}, mo:[]};
-    if(a.y === "kv" || a.y === "vk" || a.y === "nk"){
-      idx.forEach(function(i){
-        var col = a.y === "vk" ? 0 : 1, seen = {}, pick = [i]; seen[vNorm(a.w[i][col])] = 1;
-        vShuffle(idx).forEach(function(j){ if(pick.length < 4 && !seen[vNorm(a.w[j][col])]){ seen[vNorm(a.w[j][col])] = 1; pick.push(j); } });
-        VS.opts[i] = vShuffle(pick);
-      });
-    }
-    if(a.y === "match"){ var per = Math.ceil(VS.order.length / Math.ceil(VS.order.length / 8)); for(var k = 0; k < VS.order.length; k += per) VS.mo.push(vShuffle(VS.order.slice(k, k + per))); VS.per = per; }
+    VS = {c:a.c, n:n, y:a.y, ans:{}, start:Date.now(), submitted:null, order:vShuffle(idx), ords:[], step:0, opts:{}, mo:[]};
+    st.forEach(function(t, s){
+      var ord = s ? vShuffle(idx) : VS.order; VS.ords.push(ord);
+      if(t === "kv" || t === "vk" || t === "nk"){
+        idx.forEach(function(i){
+          var col = t === "vk" ? 0 : 1, seen = {}, pick = [i]; seen[vNorm(a.w[i][col])] = 1;
+          vShuffle(idx).forEach(function(j){ if(pick.length < 4 && !seen[vNorm(a.w[j][col])]){ seen[vNorm(a.w[j][col])] = 1; pick.push(j); } });
+          VS.opts[s*n + i] = vShuffle(pick);
+        });
+      }
+      if(t === "match"){ var per = Math.ceil(ord.length / Math.ceil(ord.length / 8)); for(var k = 0; k < ord.length; k += per) VS.mo.push(vShuffle(ord.slice(k, k + per))); VS.per = per; }
+    });
   }
+  VS.ords = VS.ords || [VS.order]; VS.step = VS.step || 0; VS.y = a.y;
   VS.a = a; VS.name = name; VS.key = key; VS.sel = null;
   vSave(); vRender();
   window.scrollTo(0, 0);
 }
 function vSave(){ var c = Object.assign({}, VS); delete c.a; delete c.sel; lsSet(VS.key, c); }
-function vDone(){ var a = VS.a; return a.w.filter(function(_, i){ var x = VS.ans[i]; return vTyped(a.y) ? !!String(x || "").trim() : typeof x === "number"; }).length; }
-function vRender(){
-  var a = VS.a, items = a.w, locked = !!VS.submitted, h = "";
-  var mark = function(i){ return locked ? (vCheck(a.y, items, i, VS.ans[i]) ? " ok" : " bad") : ""; };
-  if(a.y === "kv" || a.y === "vk" || a.y === "nk"){
-    if(a.y === "nk") h += '<p class="hint" style="margin-bottom:6px">Bấm nút loa để nghe từ (nghe lại bao nhiêu lần cũng được), rồi chọn nghĩa đúng.' + (window.speechSynthesis ? '' : ' <strong style="color:var(--pen)">Trình duyệt này không đọc được tiếng Hàn — em mở link bằng Chrome hoặc Safari nhé.</strong>') + '</p>';
-    VS.order.forEach(function(i, k){
-      var prompt = a.y === "vk" ? items[i][1] : items[i][0];
-      var stem = a.y === "nk" ? '<button type="button" class="vsay" data-say="' + i + '" aria-label="Nghe từ số ' + (k+1) + '">🔊 Nghe</button>' + (locked ? '<span style="font-weight:600;align-self:center">' + esc(prompt) + '</span>' : '')
-        : '<span' + (a.y === "kv" ? ' style="font-weight:600"' : ' style="font-family:var(--ui)"') + '>' + esc(prompt) + '</span>';
+/* Số ô đã làm: của bước s, hoặc cả bài nếu không có s. */
+function vDone(s){
+  var a = VS.a, n = a.w.length, c = 0;
+  vtSteps(a.y).forEach(function(t, k){
+    if(s != null && k !== s) return;
+    for(var i = 0; i < n; i++){ var x = VS.ans[k*n + i]; if(vTyped(t) ? !!String(x || "").trim() : typeof x === "number") c++; }
+  });
+  return c;
+}
+function vMulti(){ return vtSteps(VS.a.y).length > 1; }
+function vCount(){ return vMulti() && !VS.submitted ? vDone(VS.step) : vDone(); }
+/* Câu trả lời dạng mảng (thứ tự cố định: bước 1 từ 0…n-1, bước 2…) — dùng cho mã nộp và chấm. */
+function vAnsArr(a, vs){
+  var n = a.w.length, out = [];
+  vtSteps(a.y).forEach(function(t, s){ for(var i = 0; i < n; i++){ var x = vs.ans[s*n + i]; out.push(vTyped(t) ? String(x || "") : (typeof x === "number" ? x : -1)); } });
+  return out;
+}
+/* Nội dung một bước (một dạng bài) của bài từ vựng. Ô trả lời của bước s là s*n + i. */
+function vStepHTML(t, s, locked){
+  var a = VS.a, items = a.w, n = items.length, off = s*n, ord = VS.ords[s] || VS.order, h = "";
+  var ok = function(i){ return vCheck(t, items, i, VS.ans[off + i]); };
+  var noTts = window.speechSynthesis ? '' : ' <strong style="color:var(--pen)">Trình duyệt này không đọc được tiếng Hàn — em mở link bằng Chrome hoặc Safari nhé.</strong>';
+  var say = function(i, k, full){ var f = full ? ' data-full="1"' : ''; return '<button type="button" class="vsay" data-say="' + i + '"' + f + ' aria-label="Nghe ' + (full ? 'câu' : 'từ') + ' số ' + (k+1) + '">🔊 Nghe</button><button type="button" class="vsay" data-say="' + i + '" data-slow="1"' + f + ' aria-label="Nghe chậm câu số ' + (k+1) + '" title="Đọc chậm">🐢</button>'; };
+  var box = function(i, css, ph){
+    var j = off + i, bd = locked ? 'border-color:' + (ok(i) ? 'var(--ok)' : 'var(--pen)') : '';
+    return '<input class="t kr" data-ti="' + j + '" value="' + esc(VS.ans[j] || "") + '" placeholder="' + (ph || '') + '" autocomplete="off" autocapitalize="off" spellcheck="false" lang="ko"' + (css || bd ? ' style="' + (css || '') + (css && bd ? ';' : '') + bd + '"' : '') + (locked ? ' disabled' : '') + '>';
+  };
+  if(t === "kv" || t === "vk" || t === "nk"){
+    if(t === "nk") h += '<p class="hint" style="margin-bottom:6px">Bấm nút loa để nghe từ (nghe lại bao nhiêu lần cũng được), rồi chọn nghĩa đúng.' + noTts + '</p>';
+    ord.forEach(function(i, k){
+      var j = off + i, prompt = t === "vk" ? items[i][1] : items[i][0];
+      var stem = t === "nk" ? say(i, k) + (locked ? '<span style="font-weight:600;align-self:center">' + esc(prompt) + '</span>' : '')
+        : '<span' + (t === "kv" ? ' style="font-weight:600"' : ' style="font-family:var(--ui)"') + '>' + esc(prompt) + '</span>';
       h += '<section class="q"><p class="stem"><b>' + (k+1) + '.</b>' + stem + '</p><div class="opts two" role="radiogroup" aria-label="Câu ' + (k+1) + '">' +
-        (VS.opts[i] || []).map(function(o, j){
-          var txt = a.y === "vk" ? items[o][0] : items[o][1], picked = VS.ans[i] === o, right = locked && vCheck(a.y, items, i, o);
-          return '<button type="button" class="opt' + (right ? ' key' : '') + (locked && picked && !right ? ' badpick' : '') + '" role="radio" aria-checked="' + picked + '" data-i="' + i + '" data-o="' + o + '"' + (a.y !== "vk" ? ' style="font-family:var(--ui)"' : '') + '><span class="num">' + (j+1) + '</span><span>' + esc(txt) + '</span></button>';
+        (VS.opts[j] || []).map(function(o, x){
+          var txt = t === "vk" ? items[o][0] : items[o][1], picked = VS.ans[j] === o, right = locked && vCheck(t, items, i, o);
+          return '<button type="button" class="opt' + (right ? ' key' : '') + (locked && picked && !right ? ' badpick' : '') + '" role="radio" aria-checked="' + picked + '" data-i="' + j + '" data-o="' + o + '"' + (t !== "vk" ? ' style="font-family:var(--ui)"' : '') + '><span class="num">' + (x+1) + '</span><span>' + esc(txt) + '</span></button>';
         }).join("") + '</div></section>';
     });
-  } else if(a.y === "cau"){
+  } else if(t === "cau"){
     h += '<p class="hint" style="margin-bottom:6px">Điền từ trong ngoặc vào chỗ trống, <strong>chia đúng đuôi</strong> cho hợp với câu (VD: 먹다 → 먹었어요).</p>';
-    VS.order.forEach(function(i, k){
-      var it = items[i], ok = locked && vCheck(a.y, items, i, VS.ans[i]), ex = String(it[2] || ""), m = ex.match(/__(.+?)__/);
-      var inp = '<input class="t kr" data-ti="' + i + '" value="' + esc(VS.ans[i] || "") + '" placeholder="' + (m ? '' : 'Gõ từ tiếng Hàn') + '" autocomplete="off" autocapitalize="off" spellcheck="false" lang="ko"' + (m ? ' style="width:9em;max-width:100%' + (locked ? ';border-color:' + (ok ? 'var(--ok)' : 'var(--pen)') : '') + '"' : (locked ? ' style="border-color:' + (ok ? 'var(--ok)' : 'var(--pen)') + '"' : '')) + (locked ? ' disabled' : '') + '>';
+    ord.forEach(function(i, k){
+      var it = items[i], good = locked && ok(i), ex = String(it[2] || ""), m = ex.match(/__(.+?)__/);
+      var inp = box(i, m ? 'width:9em;max-width:100%' : '', m ? '' : 'Gõ từ tiếng Hàn');
       h += '<section class="q"><p class="stem"><b>' + (k+1) + '.</b><span' + (m ? ' style="line-height:2.2"' : ' style="font-family:var(--ui)"') + '>' + (m ? esc(ex.slice(0, m.index)) + '<span class="nblank">' + inp + '</span>' + esc(ex.slice(m.index + m[0].length)) : esc(it[1])) + '</span></p>' +
         (m ? '<p class="hint" style="margin:-4px 0 0 2.2em">(<span style="font-family:var(--kr);font-weight:600">' + esc(it[0]) + '</span> · ' + esc(it[1]) + ')</p>' : '<div class="vtype">' + inp + '</div>') +
-        (locked && !ok ? '<span class="vfix">Đáp án: <span style="font-family:var(--kr)">' + esc(vCauKey(it)) + '</span></span>' : '') + '</section>';
+        (locked && !good ? '<span class="vfix">Đáp án: <span style="font-family:var(--kr)">' + esc(vCauKey(it)) + '</span></span>' : '') + '</section>';
     });
-  } else if(a.y === "type"){
-    VS.order.forEach(function(i, k){
-      var ok = locked && vCheck(a.y, items, i, VS.ans[i]);
-      h += '<section class="q"><p class="stem" style="font-family:var(--ui)"><b>' + (k+1) + '.</b><span>' + esc(items[i][1]) + '</span></p><div class="vtype"><input class="t kr" data-ti="' + i + '" value="' + esc(VS.ans[i] || "") + '" placeholder="Gõ từ tiếng Hàn" autocomplete="off" autocapitalize="off" spellcheck="false" lang="ko"' + (locked ? ' disabled style="border-color:' + (ok ? 'var(--ok)' : 'var(--pen)') + '"' : '') + '></div>' +
-        (locked && !ok ? '<span class="vfix">Đáp án: <span style="font-family:var(--kr)">' + esc(items[i][0]) + '</span></span>' : '') + '</section>';
+  } else if(t === "nc"){
+    h += '<p class="hint" style="margin-bottom:6px">Bấm 🔊 nghe cả câu (🐢 = đọc chậm), rồi gõ <strong>từ còn thiếu đúng như em nghe</strong> (đã chia đuôi). Không có gợi ý — em nghe lại bao nhiêu lần cũng được.' + noTts + '</p>';
+    ord.forEach(function(i, k){
+      var it = items[i], good = locked && ok(i), ex = String(it[2] || ""), m = ex.match(/__(.+?)__/);
+      var inp = box(i, m ? 'width:8em;max-width:100%' : '', m ? '' : 'Gõ từ em nghe được');
+      h += '<section class="q"><p class="stem"><b>' + (k+1) + '.</b>' + say(i, k, !!m) + '</p>' +
+        (m ? '<p class="nline" style="margin:0 0 0 2.2em">' + esc(ex.slice(0, m.index)) + '<span class="nblank">' + inp + '</span>' + esc(ex.slice(m.index + m[0].length)) + '</p>' : '<div class="vtype" style="margin-left:2.2em">' + inp + '</div>') +
+        (locked ? '<span class="vfix" style="margin-left:2.2em' + (good ? ';color:var(--muted)' : '') + '">' + (good ? '' : 'Đáp án: <span style="font-family:var(--kr)">' + esc(vCauKey(it)) + '</span> · ') + '<span style="font-family:var(--kr)">' + esc(it[0]) + '</span> – ' + esc(it[1]) + '</span>' : '') + '</section>';
+    });
+  } else if(t === "nt"){
+    h += '<p class="hint" style="margin-bottom:6px">Bấm 🔊 nghe từ (🐢 = đọc chậm), rồi <strong>gõ lại bằng chữ Hàn</strong> cho đúng chính tả.' + noTts + '</p>';
+    ord.forEach(function(i, k){
+      var good = locked && ok(i);
+      h += '<section class="q"><p class="stem"><b>' + (k+1) + '.</b>' + say(i, k) + '</p><div class="vtype" style="margin-left:2.2em">' + box(i, '', 'Gõ từ em nghe được') + '</div>' +
+        (locked ? '<span class="vfix" style="margin-left:2.2em' + (good ? ';color:var(--muted)' : '') + '">' + (good ? '' : 'Đáp án: ') + '<span style="font-family:var(--kr)">' + esc(items[i][0]) + '</span> – ' + esc(items[i][1]) + '</span>' : '') + '</section>';
+    });
+  } else if(t === "type"){
+    ord.forEach(function(i, k){
+      var good = locked && ok(i);
+      h += '<section class="q"><p class="stem" style="font-family:var(--ui)"><b>' + (k+1) + '.</b><span>' + esc(items[i][1]) + '</span></p><div class="vtype">' + box(i, '', 'Gõ từ tiếng Hàn') + '</div>' +
+        (locked && !good ? '<span class="vfix">Đáp án: <span style="font-family:var(--kr)">' + esc(items[i][0]) + '</span></span>' : '') + '</section>';
     });
   } else {
     h += '<p class="hint" style="margin-bottom:10px">Bấm một từ tiếng Hàn rồi bấm nghĩa của nó để nối. Muốn đổi thì bấm lại ô đã nối.</p>';
     VS.mo.forEach(function(right, g){
-      var per = VS.per || 8, left = VS.order.slice(g*per, g*per + per);
+      var per = VS.per || 8, left = ord.slice(g*per, g*per + per);
       h += (VS.mo.length > 1 ? '<div class="grp"><span class="tag">Phần ' + (g+1) + '/' + VS.mo.length + '</span></div>' : '') + '<div class="vgrid"><div class="vcol">' +
         left.map(function(i, k){
-          var on = typeof VS.ans[i] === "number";
-          return '<button type="button" class="vcard kr' + (on ? ' on' : '') + (VS.sel === i ? ' sel' : '') + mark(i) + '" data-li="' + i + '"><span class="vn">' + (on ? k+1 : '') + '</span>' + esc(items[i][0]) +
-            (locked && !vCheck(a.y, items, i, VS.ans[i]) ? '<span class="vfix">' + esc(items[i][1]) + '</span>' : '') + '</button>';
+          var j = off + i, on = typeof VS.ans[j] === "number";
+          return '<button type="button" class="vcard kr' + (on ? ' on' : '') + (VS.sel === j ? ' sel' : '') + (locked ? (ok(i) ? ' ok' : ' bad') : '') + '" data-li="' + j + '"><span class="vn">' + (on ? k+1 : '') + '</span>' + esc(items[i][0]) +
+            (locked && !ok(i) ? '<span class="vfix">' + esc(items[i][1]) + '</span>' : '') + '</button>';
         }).join("") + '</div><div class="vcol">' +
         right.map(function(m){
-          var by = null; left.forEach(function(i, k){ if(VS.ans[i] === m) by = k; });
+          var by = null; left.forEach(function(i, k){ if(VS.ans[off + i] === m) by = k; });
           return '<button type="button" class="vcard' + (by !== null ? ' on' : '') + '" data-ri="' + m + '"><span class="vn">' + (by !== null ? by+1 : '') + '</span>' + esc(items[m][1]) + '</button>';
         }).join("") + '</div></div>';
     });
   }
-  var nd = vDone();
+  return h;
+}
+function vRender(){
+  var a = VS.a, items = a.w, n = items.length, st = vtSteps(a.y), multi = st.length > 1, locked = !!VS.submitted, cur = locked ? -1 : VS.step, h = "";
+  var head = function(s, extra){ return '<div class="grp vstep"><span class="tag">Bước ' + (s+1) + '/' + st.length + '</span>' + esc(VTYPES[st[s]]) + (extra || '') + '</div>'; };
+  if(multi && !locked) h += '<div class="note" style="white-space:normal;margin-top:0">Bài có <strong>' + st.length + ' bước</strong> với cùng ' + n + ' từ: ' + st.map(function(t, s){ return (s+1) + ') ' + esc(VTYPES[t]); }).join(" · ") + '. Làm xong một bước em bấm “Sang bước …” ở dưới (không quay lại sửa được). Kết quả cả bài hiện khi em nộp.</div>';
+  st.forEach(function(t, s){
+    if(!multi){ h += vStepHTML(t, s, locked); return; }
+    if(locked){ var sc = 0; items.forEach(function(_, i){ if(vCheck(t, items, i, VS.ans[s*n + i])) sc++; }); h += head(s, ' <span class="pill' + (sc === n ? ' good' : sc < n / 2 ? ' bad' : ' warn') + '">' + sc + '/' + n + '</span>') + vStepHTML(t, s, true); }
+    else if(s < cur) h += head(s, ' <span class="pill good">xong</span>') + '<p class="hint">Em đã làm bước này (' + vDone(s) + '/' + n + ' từ). Đúng sai hiện khi em nộp bài.</p>';
+    else if(s === cur) h += head(s) + vStepHTML(t, s, false);
+    else h += head(s) + '<p class="hint">Mở sau khi em làm xong bước ' + s + '.</p>';
+  });
+  var last = !multi || locked || cur === st.length - 1;
   app.innerHTML = '<div class="wrap">' + headerHTML() + '<main class="paper" id="exam"><div class="title"><h1>단어 시험</h1><p>' + esc(a.t || "Bài từ vựng") + '</p></div>' +
-    '<div class="metaline"><span>' + esc(VTYPES[a.y]) + ' · <strong>' + items.length + '</strong> từ</span><span>Học sinh: <strong>' + esc(VS.name) + '</strong></span></div>' +
+    '<div class="metaline"><span>' + esc(vtName(a.y)) + ' · <strong>' + n + '</strong> từ</span><span>Học sinh: <strong>' + esc(VS.name) + '</strong></span></div>' +
     '<div id="vq"' + (locked ? ' class="locked"' : '') + '>' + h + '</div><div id="vres"></div></main></div>' +
-    '<nav class="strip" aria-label="Tiến độ"><div class="in"><div style="flex:1;font-weight:600">Đã làm <span id="vcount">' + nd + '</span>/' + items.length + '</div><div class="clock" id="vclock"></div><button class="btn" id="vsub"' + (locked ? ' disabled' : '') + '>' + (locked ? 'Đã nộp' : 'Nộp bài') + '</button></div></nav>';
+    '<nav class="strip" aria-label="Tiến độ"><div class="in"><div style="flex:1;font-weight:600">' + (multi && !locked ? 'Bước ' + (cur+1) + '/' + st.length + ' · ' : '') + 'Đã làm <span id="vcount">' + vCount() + '</span>/' + (multi && !locked ? n : n * st.length) + '</div><div class="clock" id="vclock"></div><button class="btn" id="vsub"' + (locked ? ' disabled' : '') + '>' + (locked ? 'Đã nộp' : last ? 'Nộp bài' : 'Sang bước ' + (cur+2) + ' ›') + '</button></div></nav>';
   vWire();
   if(locked){ vStopClock(); vShowResult(); } else vStartClock();
 }
 function vWire(){
-  var a = VS.a, q = $("#vq");
+  var a = VS.a, q = $("#vq"), n = a.w.length, moff = vtSteps(a.y).indexOf("match") * n;
   $("#vsub").onclick = vSubmit;
-  $$("[data-say]", q).forEach(function(b){ b.onclick = function(){ vSay(a.w[+b.dataset.say][0]); }; });
+  $$("[data-say]", q).forEach(function(b){ b.onclick = function(){ var it = a.w[+b.dataset.say]; vSay(b.dataset.full ? it[2] : it[0], !!b.dataset.full, !!b.dataset.slow); }; });
   if(VS.submitted) return;
   q.addEventListener("click", function(e){
     var b = e.target.closest(".opt");
-    if(b){ VS.ans[b.dataset.i] = +b.dataset.o; vSave(); $$('.opt[data-i="' + b.dataset.i + '"]', q).forEach(function(o){ o.setAttribute("aria-checked", o === b ? "true" : "false"); }); $("#vcount").textContent = vDone(); return; }
+    if(b){ VS.ans[b.dataset.i] = +b.dataset.o; vSave(); $$('.opt[data-i="' + b.dataset.i + '"]', q).forEach(function(o){ o.setAttribute("aria-checked", o === b ? "true" : "false"); }); $("#vcount").textContent = vCount(); return; }
     var l = e.target.closest("[data-li]"), r = e.target.closest("[data-ri]");
     if(l){ var i = +l.dataset.li; if(typeof VS.ans[i] === "number"){ delete VS.ans[i]; VS.sel = null; } else VS.sel = VS.sel === i ? null : i; vSave(); vRepaint(); return; }
     if(r){
       var m = +r.dataset.ri;
-      Object.keys(VS.ans).forEach(function(k){ if(VS.ans[k] === m) delete VS.ans[k]; });
+      Object.keys(VS.ans).forEach(function(k){ if(+k >= moff && +k < moff + n && VS.ans[k] === m) delete VS.ans[k]; });
       if(VS.sel !== null){ VS.ans[VS.sel] = m; VS.sel = null; }
       vSave(); vRepaint();
     }
   });
-  $$("[data-ti]", q).forEach(function(inp){ inp.addEventListener("input", function(){ VS.ans[inp.dataset.ti] = inp.value; vSave(); $("#vcount").textContent = vDone(); }); });
+  var ins = $$("[data-ti]", q);
+  ins.forEach(function(inp, x){
+    inp.addEventListener("input", function(){ VS.ans[inp.dataset.ti] = inp.value; vSave(); $("#vcount").textContent = vCount(); });
+    inp.addEventListener("keydown", function(e){ if(e.key === "Enter" && !e.isComposing){ e.preventDefault(); if(ins[x + 1]) ins[x + 1].focus(); else inp.blur(); } });
+  });
 }
 function vRepaint(){ var y = window.scrollY; vRender(); window.scrollTo(0, y); }
 function vStartClock(){ vStopClock(); var tick = function(){ var el = $("#vclock"); if(!el || !VS){ vStopClock(); return; } var s = Math.floor((Date.now() - VS.start)/1000); el.textContent = pad(Math.floor(s/60)) + ":" + pad(s%60); }; tick(); vTimer = setInterval(tick, 1000); }
 function vStopClock(){ if(vTimer){ clearInterval(vTimer); vTimer = null; } }
 function vSubmit(){
   if(VS.submitted) return;
-  var miss = VS.n - vDone();
-  ask(miss ? "Em còn " + miss + " từ chưa làm. Em vẫn muốn nộp bài? Sau khi nộp sẽ không sửa được." : "Em đã làm đủ " + VS.n + " từ. Nộp bài?", "Nộp bài", "Làm tiếp").then(function(ok){
+  var st = vtSteps(VS.a.y), n = VS.n;
+  if(st.length > 1 && VS.step < st.length - 1){
+    var left = n - vDone(VS.step), nx = VS.step + 2;
+    ask((left ? "Bước này em còn " + left + " từ chưa làm. " : "") + "Sang bước " + nx + " (" + VTYPES[st[nx - 1]] + ")? Em sẽ không quay lại sửa bước này được.", "Sang bước " + nx, "Làm tiếp").then(function(ok){
+      if(!ok) return;
+      VS.step++; vSave(); vRender();
+      var el = $$(".vstep")[VS.step]; if(el) el.scrollIntoView({block:"start"}); else window.scrollTo(0, 0);
+    });
+    return;
+  }
+  var miss = n * st.length - vDone();
+  ask(miss ? "Em còn " + miss + " " + (st.length > 1 ? "ô" : "từ") + " chưa làm. Em vẫn muốn nộp bài? Sau khi nộp sẽ không sửa được." : "Em đã làm đủ " + (st.length > 1 ? "cả " + st.length + " bước" : VS.n + " từ") + ". Nộp bài?", "Nộp bài", "Làm tiếp").then(function(ok){
     if(!ok) return;
     VS.submitted = Date.now(); vSave();
     if(VS.a.route) rRecord(VS.a, VS);
@@ -1348,15 +1505,16 @@ function vSubmit(){
   });
 }
 function vShowResult(){
-  var a = VS.a, items = a.w, sc = 0, wrong = [];
-  items.forEach(function(it, i){ if(vCheck(a.y, items, i, VS.ans[i])) sc++; else wrong.push(i); });
-  var ans = items.map(function(_, i){ var x = VS.ans[i]; return vTyped(a.y) ? String(x || "") : (typeof x === "number" ? x : -1); });
+  var a = VS.a, items = a.w, st = vtSteps(a.y), ans = vAnsArr(a, VS), R = vScore(a.y, items, ans), sc = R.score;
+  var wrong = Object.keys(R.bad).map(Number).sort(function(x, y){ return x - y; });
+  var hasEx = st.indexOf("cau") >= 0 || st.indexOf("nc") >= 0;
   var pl = {c:a.c, n:VS.name, a:ans, t:Math.round((VS.submitted - VS.start)/1000), d:VS.submitted};
   if(a.route){ pl.k = a.k; pl.y = a.y; pl.w = a.ids; }
   var code = encodeV(pl);
-  var msg = "BÀI TỪ VỰNG\nBài: " + (a.t || "Từ vựng") + " (" + VTYPES[a.y] + ")\nHọ tên: " + VS.name + "\nĐiểm: " + sc + "/" + items.length + "\nNộp lúc: " + fmtDate(VS.submitted) + "\nMã bài làm: " + code;
-  $("#vres").innerHTML = '<div class="panel" id="result"><h2>Em đúng ' + sc + '/' + items.length + ' từ</h2>' +
-    (wrong.length ? '<p>Các từ cần ôn lại:</p><div class="scroll"><table class="tbl" style="background:var(--paper)"><tbody>' + wrong.map(function(i){ var t = vAnsText(a.y, items, VS.ans[i]); return '<tr><td style="font-family:var(--kr);font-weight:600">' + esc(items[i][0]) + (a.y === "cau" && items[i][2] ? ' → ' + esc(vCauKey(items[i])) : '') + '</td><td>' + esc(items[i][1]) + '</td><td class="muted" style="font-size:13px">' + (t ? 'em chọn: ' + esc(t) : 'chưa làm') + '</td></tr>'; }).join("") + '</tbody></table></div>' : '<p class="okmsg">Xuất sắc! Em không sai từ nào.</p>') +
+  var per = st.length > 1 ? R.steps.map(function(x){ return VTYPES[x[0]] + " " + x[1] + "/" + x[2]; }).join(" · ") : "";
+  var msg = "BÀI TỪ VỰNG\nBài: " + (a.t || "Từ vựng") + " (" + vtName(a.y) + ")\nHọ tên: " + VS.name + "\nĐiểm: " + sc + "/" + R.total + (per ? "\n" + per : "") + "\nNộp lúc: " + fmtDate(VS.submitted) + "\nMã bài làm: " + code;
+  $("#vres").innerHTML = '<div class="panel" id="result"><h2>Em đúng ' + sc + '/' + R.total + (st.length > 1 ? '' : ' từ') + '</h2>' + (per ? '<p>' + esc(per) + '</p>' : '') +
+    (wrong.length ? '<p>Các từ cần ôn lại:</p><div class="scroll"><table class="tbl" style="background:var(--paper)"><tbody>' + wrong.map(function(i){ return '<tr><td style="font-family:var(--kr);font-weight:600">' + esc(items[i][0]) + (hasEx && /__/.test(items[i][2] || "") ? ' → ' + esc(vCauKey(items[i])) : '') + '</td><td>' + esc(items[i][1]) + '</td><td class="muted" style="font-size:13px">' + esc(vBadText(a.y, items, i, ans, R.bad[i]) ? 'em làm: ' + vBadText(a.y, items, i, ans, R.bad[i]) : 'chưa làm') + '</td></tr>'; }).join("") + '</tbody></table></div>' : '<p class="okmsg">Xuất sắc! Em không sai từ nào.</p>') +
     '<p style="margin-top:12px">Bấm “Sao chép” rồi dán vào tin nhắn Zalo gửi cho cô.</p><div id="vmsg">' + copyBox(msg, 6) + '</div>' +
     '<div class="row">' + (a.route ? '<button class="btn" id="vback">Về lộ trình</button>' : '') + '<button class="btn ghost" id="vagain">Làm lại để luyện thêm</button></div></div>';
   wireCopy($("#vmsg"));
@@ -1396,9 +1554,9 @@ function rSrsDue(mem, day){ return Object.keys(mem.srs).map(function(id){ var w 
 /* Từ sai đang chờ ôn, cũ trước. */
 function rWrongList(mem){ return Object.keys(mem.wrong).map(function(id){ var w = mem.wrong[id]; return {id:id, ko:w.ko, vi:w.vi, ex:w.ex, n:w.n || 1, t:w.t || 0}; }).sort(function(a,b){ return a.t - b.t; }); }
 function rRecord(a, vs){
-  var p = a.route, mem = rMem(p, vs.name), sc = 0, now = Date.now(), day = routeDayNo(p);
+  var p = a.route, mem = rMem(p, vs.name), sc = 0, now = Date.now(), day = routeDayNo(p), R = vScore(a.y, a.w, vAnsArr(a, vs));
   a.w.forEach(function(it, i){
-    var id = a.ids[i], ok = vCheck(a.y, a.w, i, vs.ans[i]), s = mem.srs[id];
+    var id = a.ids[i], ok = !R.bad[i], s = mem.srs[id]; /* bài nhiều dạng: đúng ở mọi bước mới tính là đúng */
     if(ok){ sc++; delete mem.wrong[id]; }
     else { var o = mem.wrong[id] || {t:now, n:0}; mem.wrong[id] = {ko:it[0], vi:it[1], ex:it[2] || "", n:(o.n || 0) + 1, t:o.t || now}; }
     if(!p.q) return;
@@ -1413,7 +1571,7 @@ function routeBoot(){
   var m = String(location.hash || "").match(/[#&]l=([A-Za-z0-9_.-]+)/);
   if(!m) return false;
   var p = vUnpack(m[1]);
-  if(!p || !p.c || !p.s || !p.s.length || !(p.n > 0) || !VTYPES[p.y] || isNaN(ymdTs(p.d))){ rShell('<p class="err">Link lộ trình bị thiếu hoặc bị cắt. Em sao chép lại đủ cả link cô gửi rồi mở lại nhé.</p>'); return true; }
+  if(!p || !p.c || !p.s || !p.s.length || !(p.n > 0) || !vtOk(p.y) || isNaN(ymdTs(p.d))){ rShell('<p class="err">Link lộ trình bị thiếu hoặc bị cắt. Em sao chép lại đủ cả link cô gửi rồi mở lại nhé.</p>'); return true; }
   rShell('<p class="hint">Đang tải từ vựng…</p>');
   loadVocab().then(function(){ rHome(p); }, function(){ rShell('<p class="err">Chưa tải được từ vựng. Em kiểm tra mạng rồi tải lại trang nhé.</p>'); });
   return true;
@@ -1430,7 +1588,7 @@ function rHome(p){
   }
   var words = routeWords(p, VOCAB), days = Math.ceil(words.length / p.n), today = routeDayNo(p), mem = rMem(p, name), wl = rWrongList(mem);
   var due = p.q ? rSrsDue(mem, today) : [], nTrack = Object.keys(mem.srs).length, nOk = Object.keys(mem.ok).length, rk = rReviewKey();
-  var h = '<div class="metaline"><span>' + esc(VTYPES[p.y]) + ' · <strong>' + p.n + '</strong> từ mới mỗi ngày</span><span>Học sinh: <strong>' + esc(name) + '</strong> <button class="lnk" id="rname2" style="font-size:13px">đổi tên</button></span></div>';
+  var h = '<div class="metaline"><span>' + esc(vtName(p.y)) + ' · <strong>' + p.n + '</strong> từ mới mỗi ngày</span><span>Học sinh: <strong>' + esc(name) + '</strong> <button class="lnk" id="rname2" style="font-size:13px">đổi tên</button></span></div>';
   if(!words.length) h += '<p class="err">Chưa có từ nào cho lộ trình này. Em nhắn cô kiểm tra giúp nhé.</p>';
   else if(today < 1) h += '<div class="panel"><h2>Lộ trình bắt đầu ngày ' + fmtDay(ymdTs(p.d)) + '</h2><p>Còn ' + (1 - today) + ' ngày nữa. Hôm đó em mở lại link này để làm bài ngày 1 nhé.</p></div>';
   else{
@@ -2131,7 +2289,8 @@ var NL_RT = [[1,2,"Ngữ pháp – điền chỗ trống"],[3,4,"Ngữ pháp –
   [25,27,"Tiêu đề báo"],[28,31,"Điền chỗ trống (đoạn dài)"],[32,34,"Nội dung giống với bài"],[35,38,"Ý chính của bài"],
   [39,41,"Vị trí của câu"],[42,43,"Văn học"],[44,50,"Văn bản dài"]];
 var NL_LP = ["Phần 1 · Hiểu nội dung", "Phần 2 · Chọn câu nói tiếp theo", "Phần 3 · Nghe điền từ"];
-var NL_VT = {match:"Nối từ", kv:"Hàn → Việt", vk:"Việt → Hàn", nk:"Nghe → nghĩa", type:"Gõ từ tiếng Hàn"};
+var NL_VT = {match:"Nối từ", kv:"Hàn → Việt", vk:"Việt → Hàn", nk:"Nghe → nghĩa", type:"Gõ từ tiếng Hàn", cau:"Điền từ vào câu", nt:"Nghe → gõ từ", nc:"Nghe câu → điền từ"};
+function nlVtName(y){ return String(y || "").split("+").map(function(t){ return NL_VT[t] || t; }).join(" → "); }
 function nlType(n){ for(var i = 0; i < NL_RT.length; i++) if(n >= NL_RT[i][0] && n <= NL_RT[i][1]) return i; return -1; }
 function nlPct(a){ return a && a[1] ? Math.round(a[0]*100/a[1]) : null; }
 function nlCls(p){ return p == null ? "" : p >= 80 ? "good" : p >= 60 ? "warn" : "bad"; }
@@ -2146,6 +2305,8 @@ function nlCss(){
     ".kq-sum b.good{color:var(--ok)}.kq-sum b.warn{color:var(--warn)}.kq-sum b.bad{color:var(--pen)}" +
     ".nldays{display:grid;grid-template-columns:repeat(14,1fr);gap:3px;max-width:430px;margin:6px 0}" +
     ".nldays span{aspect-ratio:1;border-radius:3px;background:var(--bg);border:1px solid var(--line)}.nldays span.l1{background:var(--ok-soft);border-color:var(--ok)}.nldays span.l2{background:var(--ok);border-color:var(--ok)}" +
+    ".nldays span.cf{background:var(--ok);border-color:var(--ok)}.nldays span.cp{background:var(--warn-soft);border-color:var(--warn)}.nldays span.cx{background:var(--pen-soft);border-color:var(--pen)}.nldays span.ct{border:1.5px dashed var(--violet)}.nldays span.cs{background:var(--ok-soft);border-color:var(--ok)}" +
+    ".nlccl{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:12.5px;color:var(--muted);margin:2px 0 0}" +
     ".nlch .s0{stroke:var(--violet)}.nlch .s1{stroke:var(--ok)}.nlch .s2{stroke:var(--warn)}.nlch path{fill:none;stroke-width:2.5}.nlch circle{fill:var(--paper);stroke-width:2.5}" +
     ".nlleg{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--muted)}.nlleg i{display:inline-block;width:12px;height:4px;border-radius:2px;margin-right:5px;vertical-align:3px}" +
     ".nlleg .s0{background:var(--violet)}.nlleg .s1{background:var(--ok)}.nlleg .s2{background:var(--warn)}" +
@@ -2185,8 +2346,9 @@ function nlReportHTML(o, full){
     return '<div><b class="' + nlCls(p) + '">' + p + '%</b><span>' + label + ' đúng ' + a[0] + '/' + a[1] + d + '</span></div>';
   };
   var act = 0; String(o.a || "").split("").forEach(function(c){ if(c !== "0") act++; });
+  var cc = o.cc && o.cc[1] ? nlPct([o.cc[0], o.cc[1]]) : null;
   h += '<div class="kq-sum">' + tile("r", "Đọc (đề thi)") + tile("l", "Nghe") + tile("v", "Từ vựng") +
-    '<div><b>' + act + '/28</b><span>ngày có làm bài (4 tuần qua)</span></div></div>';
+    (cc != null ? '<div><b class="' + nlCls(cc) + '">' + cc + '%</b><span>Chuyên cần: nộp ' + o.cc[0] + '/' + o.cc[1] + ' bài cô giao</span></div>' : '<div><b>' + act + '/28</b><span>ngày có làm bài (4 tuần qua)</span></div>') + '</div>';
   if(s.r || s.l || s.v) h += '<p class="hint" style="margin-top:-6px">' + (o.d ? 'Tính trong ' + o.d + ' ngày gần nhất' : 'Tính trên toàn bộ bài đã làm') + (o.d ? '; “tăng/giảm” so với ' + o.d + ' ngày trước đó' : '') + '. Xanh ≥ 80%, vàng 60–79%, đỏ dưới 60%.</p>';
   if(!full && (o.c || o.m)){
     if(o.c) h += '<div class="nlsec"><h3>Nhận xét của cô</h3><div class="note">' + esc(o.c) + '</div></div>';
@@ -2214,12 +2376,25 @@ function nlReportHTML(o, full){
       o.vw.map(function(w){ return '<span class="nlw"><b>' + esc(w[0]) + '</b> ' + esc(w[1]) + (w[2] > 1 ? ' <span class="pill bad">×' + w[2] + '</span>' : '') + '</span>'; }).join("") + '</div>';
     h += '</div>';
   }
-  h += '<div class="nlsec"><h3>Chuyên cần</h3><div class="nldays" aria-label="28 ngày gần nhất">' + String(o.a || "").split("").map(function(c, i){
-      var t = new Date((o.g || Date.now()) - (27 - i)*864e5), lab = pad(t.getDate()) + '/' + pad(t.getMonth()+1);
-      return '<span class="' + (c === "0" ? '' : +c >= 2 ? 'l2' : 'l1') + '" title="' + lab + ': ' + c + ' bài"></span>';
-    }).join("") + '</div><p class="hint" style="margin:0">Mỗi ô là một ngày trong 4 tuần qua (ô cuối là hôm nay), ô xanh là ngày có nộp bài.</p>' +
-    (o.cl || []).map(function(c){ return '<p style="margin:6px 0 0;font-size:14.5px">Bài hằng ngày lớp <strong>' + esc(c[0]) + '</strong>: nộp ' + c[1] + '/' + c[2] + ' bài' + (c[3] ? ', ' + c[3] + ' bài trễ hạn' : '') + '.</p>'; }).join("") + '</div>';
+  h += '<div class="nlsec"><h3>Chuyên cần</h3>' + nlDaysHTML(o, 28);
+  if(o.b) h += '<p style="margin:6px 0 0;font-size:14.5px">' + (o.cc[1] ? 'Đã nộp <strong>' + o.cc[0] + '/' + o.cc[1] + '</strong> bài cô giao (' + cc + '%)' + (o.cc[2] ? ', ' + o.cc[2] + ' bài nộp sau hạn' : '') + '.' : 'Chưa có bài nào cô giao đã tới hạn.') + '</p>' +
+    ((o.ow || []).length ? '<p class="hint" style="margin:8px 0 2px">' + (full ? 'Bài chưa nộp' : 'Bài em chưa nộp') + '</p><ul style="margin:0;padding-left:20px;font-size:14.5px">' + o.ow.map(function(x){ return '<li>' + (x[0] ? esc(x[0]) + ' · ' : '') + esc(x[1]) + '</li>'; }).join("") + '</ul>' : '');
+  else h += (o.cl || []).map(function(c){ return '<p style="margin:6px 0 0;font-size:14.5px">Bài hằng ngày lớp <strong>' + esc(c[0]) + '</strong>: nộp ' + c[1] + '/' + c[2] + ' bài' + (c[3] ? ', ' + c[3] + ' bài trễ hạn' : '') + '.</p>'; }).join("");
+  h += '</div>';
   return h;
+}
+/* Ô chuyên cần n ngày gần nhất. Bản mới (o.b): theo bài cô giao; link cũ (chỉ có o.a): ngày có nộp bài. */
+var NL_CC = {f:["cf","nộp đủ bài"], p:["cp","nộp thiếu"], x:["cx","bỏ bài"], t:["ct","hôm nay, chưa tới hạn"], s:["cs","không có bài giao, em tự làm"], ".":["","không có bài"]};
+function nlDaysHTML(o, n){
+  var g = o.g || Date.now(), lab = function(i){ var t = new Date(g - (n - 1 - i)*864e5); return pad(t.getDate()) + '/' + pad(t.getMonth()+1); };
+  if(o.b){
+    var b = String(o.b).slice(-n), used = {};
+    return '<div class="nldays" aria-label="' + n + ' ngày gần nhất">' + b.split("").map(function(c, i){ var k = NL_CC[c] || NL_CC["."]; used[c] = 1; return '<span class="' + k[0] + '" title="' + lab(i) + ': ' + k[1] + '"></span>'; }).join("") + '</div>' +
+      (n > 14 ? '<div class="nlccl">' + ["f","p","x","t","s"].filter(function(c){ return used[c]; }).map(function(c){ return '<span><i style="display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:4px;vertical-align:-1px;border:1px solid var(--line);' + (c === "f" ? 'background:var(--ok);border-color:var(--ok)' : c === "p" ? 'background:var(--warn-soft);border-color:var(--warn)' : c === "x" ? 'background:var(--pen-soft);border-color:var(--pen)' : c === "t" ? 'border:1.5px dashed var(--violet)' : 'background:var(--ok-soft);border-color:var(--ok)') + '"></i>' + NL_CC[c][1] + '</span>'; }).join("") + '<span>ô cuối là hôm nay</span></div>' : '');
+  }
+  var a = String(o.a || "").slice(-n);
+  return '<div class="nldays" aria-label="' + n + ' ngày gần nhất">' + a.split("").map(function(c, i){ return '<span class="' + (c === "0" ? '' : +c >= 2 ? 'l2' : 'l1') + '" title="' + lab(i) + ': ' + c + ' bài"></span>'; }).join("") + '</div>' +
+    (n > 14 ? '<p class="hint" style="margin:0">Mỗi ô là một ngày trong 4 tuần qua (ô cuối là hôm nay), ô xanh là ngày có nộp bài.</p>' : '');
 }
 function reportBoot(){
   var m = String(location.hash || "").match(/[#&]r=([A-Za-z0-9_.-]+)/);

@@ -20,7 +20,13 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "thi-thu", "app")
 KEEP_DAYS = 14
 CODE = re.compile(r"^[A-Z0-9]{6}$")
-VTYPES = {"match": "Nối từ", "kv": "Hàn → Việt", "vk": "Việt → Hàn", "nk": "Nghe → nghĩa", "type": "Gõ từ", "cau": "Điền câu"}
+VTYPES = {"match": "Nối từ", "kv": "Hàn → Việt", "vk": "Việt → Hàn", "nk": "Nghe → nghĩa", "type": "Gõ từ", "cau": "Điền câu",
+          "nt": "Nghe → gõ từ", "nc": "Nghe câu → điền từ"}
+
+
+def vt_name(y):
+    """Tên dạng bài; bài nhiều dạng ("nk+nt+nc") nối bằng mũi tên."""
+    return " → ".join(VTYPES.get(t, t) for t in str(y or "match").split("+"))
 _EX = None
 
 
@@ -58,10 +64,10 @@ def bank_title(eid):
 
 
 def v_item(a, mine):
-    cau = a.get("type") == "cau"
+    cau = any(t in ("cau", "nc") for t in str(a.get("type") or "").split("+"))
     words = [[it.get("ko", ""), it.get("vi", "")] + ([ex_of(it.get("w"))] if cau else []) for it in a.get("items") or []]
     t = "Ôn từ vựng" if mine else a.get("title", "")
-    show = "%s · %d từ · %s" % (t, len(words), VTYPES.get(a.get("type"), "Nối từ"))
+    show = "%s · %d từ · %s" % (t, len(words), vt_name(a.get("type")))
     return {"y": "v", "t": show, "p": {"c": a["code"], "t": t, "y": a.get("type") or "match", "w": words}}
 
 
@@ -100,7 +106,7 @@ def l_item(r, vk):
     if r.get("srs"):
         p["q"] = 1
     day = "bài ôn từ" if str(vk).startswith("R") else "ngày %s" % vk
-    return {"y": "l", "t": "%s · %s · %s" % (r.get("title", ""), day, VTYPES.get(p["y"], "")), "p": p, "k": str(vk)}
+    return {"y": "l", "t": "%s · %s · %s" % (r.get("title", ""), day, vt_name(p["y"])), "p": p, "k": str(vk)}
 
 
 def ymd(ms):

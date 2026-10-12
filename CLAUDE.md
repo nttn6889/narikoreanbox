@@ -233,6 +233,13 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - Dạng bài từ vựng `cau` (“Điền từ vào câu (chia đuôi)”): mục link `[ko, vi, ex]`, học sinh gõ phần `__…__` của câu ví dụ;
   từ không có câu thì làm như “Gõ từ”. Trang quản lý lấy câu theo id từ trong kho (`vExOf`) khi tạo link và khi chấm;
   `sync_app.py` lấy câu từ `thi-thu/vocab.json`. Sửa nhóm trong trang quản lý giữ nguyên `ex`/`hv` của từ không đổi.
+- **Bài từ vựng nhiều dạng** (lộ trình): `vroutes.type` có thể là 1–3 dạng nối bằng `+` (vd. `nk+nt+nc`), chọn ở form lộ trình hoặc
+  Khung luyện tập → Từ vựng → “Dạng bài mỗi ngày” (lưu vào lộ trình, lớp khác dùng cùng lộ trình cũng đổi; sau đó “đăng bài” cho app).
+  Học sinh làm lần lượt từng dạng với cùng danh sách từ (xong bước mới mở bước sau), đáp án `a` xếp nối nhau (ô j = dạng ⌊j/n⌋, từ j % n).
+  Dạng mới: `nt` Nghe → gõ từ (chính tả), `nc` Nghe câu → điền từ khóa (máy đọc cả câu ví dụ, không gợi ý; có nút 🐢 đọc chậm).
+  Hàm chung `vtSteps`/`vtOk`/`vtName`/`vScore`; chấm theo `p.y` của mã nộp; `vresults.steps:[{y, s, n}]` (Đánh giá cộng điểm theo từng dạng).
+  Từ vựng ôn ngắt quãng: đúng ở mọi bước mới tính là đúng.
+- `tools/nangluc.js` đã lấy lại theo bản trong trang quản lý (bản cũ trong repo bị lạc hậu); Đánh giá nằm trong tab Học sinh nên `nangluc.py` không móc tab nữa.
 - Lộ trình hàng ngày có “Cách ôn”: ôn ngắt quãng (`vroutes.srs`, link `q:1`) — localStorage `mem.srs[id] = {b, due}`:
   sai → ôn ngày hôm sau, đúng → hỏi lại sau 3, 7, 14 ngày, đúng ở lần 14 ngày → `mem.ok` (đã thuộc). Bài ngày k = từ mới + từ đến hạn
   (tối đa `review`). Chưa làm: nghe chép từ file nghe gốc của sách (cô chưa có file).
