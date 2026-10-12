@@ -57,9 +57,10 @@ def boot(src):
 def admin_page(path):
     src = open(path, encoding="utf-8").read()
     shared, admin = parts()
+    first = "/* ==NLA== */" not in src  # trang đã có module thì không móc tab lại (tab Đánh giá giờ nằm trong tab Học sinh)
     src = put(src, "/* ==NL== */", "/* ==/NL== */", shared, BOOT_MARK)
     src = put(src, "  /* ==NLA== */", "  /* ==/NLA== */", admin, ADMIN_END)
-    for done, old, new in HOOKS:
+    for done, old, new in HOOKS if first else []:
         if done not in src:
             assert src.count(old) == 1, "không thấy chỗ móc: " + old
             src = src.replace(old, new)

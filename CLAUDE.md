@@ -14,7 +14,8 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   Trang học sinh (`tuStage`/`tuTable`/`tuWire`, ngoài khối Admin): trắc nghiệm nghĩa (Hàn → Việt, đúng sai hiện ngay) các từ trong những câu được giao →
   bảng từ theo câu → làm đề; trong đề từ được tô gạch chấm, chạm xem nghĩa, nút “Tách từng câu” (xuống dòng sau mỗi câu), nút “Bảng từ”.
   Từ đã chọn đúng ở bài luyện tập trước không hỏi lại (localStorage `nari-tu-ok`). Mã nộp `NT2-` thêm `v:[đúng, số từ]`, `vw` (≤12 từ sai) →
-  `results.vq`/`vw`, hiện ở phần chấm. Thi thật (không `lt`) như cũ. Bài hằng ngày theo Khung luyện tập (`ltCreate`) luôn là luyện tập (`lt:20`).
+  `results.vq`/`vw`, hiện ở phần chấm. Thi thật (không `lt`) như cũ. Bài hằng ngày theo Khung luyện tập (`ltCreate`): Đề đọc và Đề nghe mỗi phần có ô “Kiểu bài”
+  (`classes/<id>.lt[].d.lt`, `.nd.lt` = 20/10/30 từ, 0 = thi thật; chưa chọn thì là luyện tập 20 từ, `ltKind`).
   Bảng từ theo câu: `python3 tools/tu_de.py [<dump>]` → `thi-thu/de/tu/<id>.json` ({w:[[từ gốc, nghĩa, số đề gặp, [chữ trong đề]]], q:{câu:[chỉ số]}};
   kiwipiepy, nghĩa như Từ cốt lõi, bỏ từ sơ cấp/`STOP`; đề nghe lấy thêm kịch bản ở đề `…k`, bài luyện nghe cùng file nghe, hoặc `explain` trong dump
   `bank/<id>/q`). **Chạy lại sau mỗi lần đồng bộ đề.**
@@ -42,7 +43,7 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   `students/<id>.app`, 6 ký tự ngẫu nhiên) và tin nhắn có link `thi-thu/#a=<base64>.<sum>` ({l, h, n}) để máy học sinh nhớ mã + tên.
   “Tạo bài 7 ngày tới” tạo bài hằng ngày (giống “Tạo bài hôm nay”, lấy lựa chọn sẵn). Bài riêng: Học viên → nút “App” → tick bài
   (ghi `app:[id học viên]` vào `assigns`/`vassigns`/`nassigns`).
-- **Khung luyện tập** (Lớp học → lớp → thẻ “Khung luyện tập”, thay cho chọn khối): `classes/<id>.lt = [{from, v:{r: mã lộ trình}, d:{f,t}, nd:{f,t,k}, nl:{f,t}}]`,
+- **Khung luyện tập** (Lớp học → lớp → thẻ “Khung luyện tập”, thay cho chọn khối): `classes/<id>.lt = [{from, v:{r: mã lộ trình}, d:{f,t,lt}, nd:{f,t,k,lt}, nl:{f,t}}]`,
   mỗi mốc dùng từ ngày `from` tới mốc sau (không gắn với tuần/buổi). Ngày có khung thì “Tạo bài hôm nay”/“7 ngày tới” tạo bài theo khung
   (`ltCreate`/`ltMakeAuto`), không theo khối: từ vựng = bài “ngày k” của lộ trình (`cdays.vr`, `cdays.vk`, hết từ mới thì `R<yyyymmdd>` = bài ôn,
   không tạo `vassigns`); đề đọc câu f–t, mỗi ngày một đề lớp lâu chưa làm (`cdays.e`); đề nghe k câu/ngày nối tiếp câu lần trước, chỉ câu có
@@ -63,7 +64,7 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - Đọc theo dạng câu TOPIK II (bảng `NL_RT`, theo số câu; đề trộn quy về câu gốc qua `src`), nghe theo phần và theo bài,
   từ vựng theo dạng bài và từ còn sai, chuyên cần 28 ngày, biểu đồ theo tuần, ước lượng điểm Đọc (chỉ cô thấy).
 - Bản gửi học sinh: link `thi-thu/#r=<base64>.<sum>` chứa sẵn số liệu (không cần đồng bộ), mở bằng `reportBoot`.
-- **Toàn bộ code nằm trong `tools/nangluc.js`** (trên dấu `/* ==ADMIN==` là phần chung, dưới là phần trong khối Admin).
+- **Toàn bộ code nằm trong `tools/nangluc.js`** (tab Đánh giá giờ nằm trong tab Học sinh; `nangluc.py` chỉ móc tab khi trang chưa có module) (trên dấu `/* ==ADMIN==` là phần chung, dưới là phần trong khối Admin).
   Sửa ở đó rồi:
   - chỉ sửa bản học sinh thấy: `python3 tools/nangluc.py --site` → commit (không cần tải trang quản lý);
   - có sửa phần của cô: Artifact `read` trang quản lý (bỏ lớp vỏ `<!doctype…><body>` ngoài cùng của file tải về),
