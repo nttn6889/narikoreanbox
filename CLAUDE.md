@@ -65,6 +65,16 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   tạo, cách 137.5°). Nút “Lịch tuần | Bảng theo học viên” (`S.lichv`, `hsLichHv`): bảng hàng = thứ + ca (cột dọc trái), cột = từng em, ô tô màu em,
   đỏ = trùng giờ, hàng cuối buổi/tuần (đỏ khi ít hơn `perWeek`) + giờ/tuần; “Hiện cả ca trống” (`S.lichAll`). Danh sách từng em cô xem ở thẻ Học sinh. Code `caEdit`/`caCell`/`hsLich`/`editStudent` trong khối Admin (không có ở site học sinh).
 
+## Lịch học từng em (hồ sơ học sinh → thẻ “Lịch học”; thay phần lịch của trang học viên cũ)
+- Mỗi buổi đã học: collection `buoi/<id>` = `{st: id học viên, date: "YYYY-MM-DD", topic, links:[{label, url}], created, updated}`;
+  học viên có thêm `start` (ngày bắt đầu khóa, ô “Ngày bắt đầu khóa” ở Sửa thông tin), dùng cùng `examDate`, `perWeek`.
+- Thẻ hiện: Lộ trình (bắt đầu → ngày thi, còn bao nhiêu ngày, ≈ buổi còn lại, dải tháng có số buổi), Tuần này (đã học x/perWeek, 7 ô ngày),
+  Tổng kết theo tháng (tuần thiếu = nợ; buổi vượt ở tuần sau = học bù cho tuần nợ cũ nhất; tháng cần 4 × perWeek, tháng đầu tính theo tỉ lệ),
+  Lịch học theo ngày (Buổi 1… theo ngày, đánh số tự động; Thêm/Sửa/Xóa). Code `lhOf`/`lhHTML`/`lhWire`/`lhEdit` trong khối Admin.
+- **Cô gửi lịch đã dạy cho Claude** (vd. “<tên> 12/10: câu 13–15, link …”): ArtifactData `list` `students` (out_dir) để lấy id theo tên →
+  ArtifactData batch `set` `buoi/B<id học viên>_<yyyymmdd>[_n]` (không trùng id cũ; `created` = thời điểm ghi). 8 buổi `Bbinh01`…`Bbinh08`
+  chuyển từ trang học viên cũ https://claude.ai/artifact/Mry3RB7hhXhEWgGNPuYtfM (bài giảng buổi 3–5 vẫn nằm ở trang cũ, link trỏ về đó).
+
 ## Đánh giá năng lực (tab "Đánh giá" trong trang quản lý)
 - Gom đề thi (`results`), từ vựng (`vresults`), nghe (`nresults`) theo từng học sinh. Số liệu tính lại trong trình duyệt,
   không lưu thêm gì. Chỉ lưu nhận xét (`notes/<id>.text`, dùng chung với Sổ điểm) và việc cần làm (`nlnotes/<id>.next`).
