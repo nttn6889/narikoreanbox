@@ -49,6 +49,7 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   file nghe, cặp 21–22… không tách (`cdays.en`, `assigns.nd = 1`); luyện nghe = bài `nlessons` có câu trong f–t (`cdays.nn`). Chuyên cần tính bài
   lộ trình theo `vresults.route` + `day`. Lộ trình từ vựng giờ tạo/quản lý ở nút “Lộ trình từ vựng” của thẻ này (đã bỏ khỏi tab Từ vựng).
   Bảng “Buổi học & khối kiến thức” cũ vẫn còn (thu gọn) cho lớp chưa có khung luyện tập.
+  `classes.end` (ngày kết thúc khung tuần cũ) không chặn khung luyện tập (`ltAt` bỏ qua); muốn dừng thì xóa mốc khung.
 - **Đăng bài** (cô nhắn “đăng bài”): ArtifactData `list` với `out_dir` các collection `classes`, `students`, `cdays`, `assigns`,
   `vassigns`, `nassigns`, `vroutes` → `python3 tools/sync_app.py <dump>` → ghi `thi-thu/app/<mã>.json` (chỉ mã, tên bài, nội dung link;
   không tên học sinh/tên lớp; bài riêng và đề trộn đặt lại tên chung) → ArtifactData `set` `site/app` từ `<dump>/site_app.json`
