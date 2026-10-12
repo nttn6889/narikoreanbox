@@ -3,6 +3,12 @@
 Site tĩnh, chạy bằng GitHub Pages từ nhánh `main` (push lên `main` là site tự cập nhật sau ~1 phút).
 Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối không đưa dữ liệu học sinh vào repo.
 
+## Mục lục học liệu (luôn cập nhật)
+- Trang riêng của cô (claude.ai, chỉ cô mở được): https://claude.ai/artifact/6bTfJWsvsCeMrmggceXPjQ — gom mọi trang Site + artifact claude.ai theo chủ đề.
+- **Mỗi khi tạo trang/artifact mới (học liệu, giáo án, trang học viên) hoặc thêm thư mục trang mới trong repo**: Artifact `read` trang mục lục,
+  thêm một dòng vào mảng `G` (nhóm phù hợp; link Site bắt đầu bằng `/`, link claude.ai chỉ ghi mã), sửa ngày cập nhật, `publish` với `url`.
+  Trang này có tên học viên nên chỉ để trên claude.ai, không chép vào repo.
+
 ## Phòng thi thử (`thi-thu/`)
 - Trang **quản lý** của cô vẫn nằm trên claude.ai: https://claude.ai/artifact/7EWoCB9sEomX2FHY8d1QY8
   (dùng cơ sở dữ liệu của artifact: ngân hàng đề, học viên, sổ điểm). Cô giao bài ở đó.
