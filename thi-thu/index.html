@@ -18,7 +18,7 @@
 :root{
   --bg:#EEF0F6; --paper:#FFFFFF; --ink:#1D1A2C; --muted:#646079; --line:#D9D6E6;
   --violet:#54478F; --violet-soft:#ECE9F7; --on-violet:#FFFFFF; --pen:#C4323A; --pen-soft:#FBE7E8;
-  --ok:#1F7A4D; --ok-soft:#E3F3EA; --warn:#9A6200; --warn-soft:#FDF1DC;
+  --ok:#1F7A4D; --ok-soft:#E3F3EA; --warn:#9A6200; --warn-soft:#FDF1DC; --nm-bg:91%; --nm-fg:27%; --nm-bd:75%;
   --kr:"Noto Serif KR","Apple SD Gothic Neo","Malgun Gothic",serif;
   --ui:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   box-sizing:border-box;
@@ -29,13 +29,13 @@
   :root:not([data-theme="light"]){
     --bg:#15131F; --paper:#1F1C2C; --ink:#ECEAF5; --muted:#A7A2BE; --line:#37334A;
     --violet:#A99BEA; --violet-soft:#2C2745; --on-violet:#15131F; --pen:#F07077; --pen-soft:#3A1E24;
-    --ok:#5FCB94; --ok-soft:#1C3328; --warn:#F0B454; --warn-soft:#382A12;
+    --ok:#5FCB94; --ok-soft:#1C3328; --warn:#F0B454; --warn-soft:#382A12; --nm-bg:24%; --nm-fg:86%; --nm-bd:45%;
   }
 }
 :root[data-theme="dark"]{
   --bg:#15131F; --paper:#1F1C2C; --ink:#ECEAF5; --muted:#A7A2BE; --line:#37334A;
   --violet:#A99BEA; --violet-soft:#2C2745; --on-violet:#15131F; --pen:#F07077; --pen-soft:#3A1E24;
-  --ok:#5FCB94; --ok-soft:#1C3328; --warn:#F0B454; --warn-soft:#382A12;
+  --ok:#5FCB94; --ok-soft:#1C3328; --warn:#F0B454; --warn-soft:#382A12; --nm-bg:24%; --nm-fg:86%; --nm-bd:45%;
 }
 *,*::before,*::after{box-sizing:inherit}
 html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 12px)}
@@ -240,7 +240,54 @@ input.code{text-transform:uppercase;letter-spacing:.18em;font-weight:700;font-si
 .wk .nm{display:block;background:var(--violet-soft);color:var(--violet);border-radius:4px;padding:1px 4px;margin:2px 0;font-weight:600;font-size:13px}
 .wk td.clash{background:var(--pen-soft)}
 .wk td.clash .nm{background:var(--pen);color:#fff}
+.wk td.wkg{background:var(--bg)}
+.wk .nm.hc{background:hsl(var(--h) 60% var(--nm-bg));color:hsl(var(--h) 55% var(--nm-fg));border-left:4px solid hsl(var(--h) 55% var(--nm-bd))}
+.wk td.clash .nm.hc{background:var(--pen);color:#fff;border-left-color:var(--pen)}
+.hsv{display:flex;gap:8px;margin:0 0 12px}
+.lhtop{display:flex;flex-wrap:wrap;gap:10px 28px;margin:4px 0 12px;font-size:14.5px}.lhtop b{font-size:22px;display:block;color:var(--ink)}.lhtop span{color:var(--muted)}
+.lhbar{position:relative;display:flex;height:30px;border-radius:6px;overflow:hidden;border:1px solid var(--line);margin:6px 0 4px}
+.lhbar .m{display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--ink);border-right:1px solid var(--paper);white-space:nowrap;overflow:hidden;background:var(--violet-soft)}
+.lhbar .m:nth-child(even){background:var(--bg)}.lhbar .m.fut{opacity:.55}.lhbar .now{position:absolute;top:0;bottom:0;width:3px;background:var(--pen)}
+.lhends{display:flex;justify-content:space-between;font-size:12.5px;color:var(--muted)}
+.lhwk{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;margin:10px 0}.lhwk div{border:1px solid var(--line);border-radius:6px;padding:6px 4px;text-align:center;font-size:12.5px;min-height:62px}
+.lhwk div.has{background:var(--ok-soft);border-color:var(--ok)}.lhwk div.td{outline:2px solid var(--violet)}.lhwk b{display:block;font-size:15px}.lhwk .tg{display:block;font-size:11.5px;font-weight:700;color:var(--ok)}
+details.lhm{border:1px solid var(--line);border-radius:6px;margin:6px 0}details.lhm summary{cursor:pointer;padding:9px 12px;display:flex;flex-wrap:wrap;gap:4px 12px;justify-content:space-between;font-weight:600}
+details.lhm .scroll{padding:0 8px 8px}.lhok{color:var(--ok)}.lhshort{color:var(--pen)}
+.lhl{display:grid;grid-template-columns:52px 1fr auto;gap:4px 12px;padding:10px 0;border-bottom:1px solid var(--line);align-items:start}.lhl:last-child{border-bottom:none}
+.lhl .no{text-align:center;background:var(--violet-soft);color:var(--violet);border-radius:6px;padding:4px 0;font-weight:700;font-size:18px;line-height:1.1}.lhl .no small{display:block;font-size:10.5px;font-weight:600}
+.lhl .dt{font-size:13px;color:var(--muted)}.lhl h4{margin:2px 0 4px;font-size:15px}.lhl .lhlk a{margin-right:12px;font-size:13.5px;color:var(--violet)}.lhl .act{display:flex;gap:6px}
+@media (max-width:560px){.lhwk{grid-template-columns:repeat(4,minmax(0,1fr))}.lhl{grid-template-columns:44px 1fr}.lhl .act{grid-column:2}}
+.wkhv{min-width:0}.wkhv th,.wkhv td{vertical-align:middle;white-space:nowrap}.wkhv th.dl{background:var(--bg);font-weight:700;color:var(--ink)}
+.wkhv .nm{display:inline-block;margin:0}.wkhv th.stn .nm{cursor:pointer}
+.wkhv tr.tot th,.wkhv tr.tot td{background:var(--bg);font-weight:700;border-top:2px solid var(--muted)}.wkhv td.need{color:var(--pen)}
+.wkhv th.d0,.wkhv td.d0{border-left:2px solid var(--muted)}.wkhv .cat{display:block;font-weight:400;font-size:11.5px}.wkhv thead th.clash{background:var(--pen-soft);color:var(--pen)}
+.wkhv .stn{position:sticky;left:0;z-index:1;background:var(--paper);text-align:left}.wkhv thead .stn,.wkhv tr.tot .stn{background:var(--bg)}.wkhv tbody td .nm{min-width:26px}
+.hvrow{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;padding:12px 0;border-bottom:1px solid var(--line);align-items:start}
+.hvrow:last-child{border-bottom:none}.hvdot{width:14px;height:14px;border-radius:50%;margin-top:4px;background:hsl(var(--h) 55% var(--nm-bd))}
+.hvrow h3{margin:0;font-size:16px;display:inline}.hvrow h3 button{all:unset;cursor:pointer}.hvrow h3 button:hover{text-decoration:underline}
+.hvmeta{font-size:13px;color:var(--muted);margin:2px 0 6px}.hvmeta .warn{color:var(--warn);font-weight:600}
+.hvs{display:flex;flex-wrap:wrap;gap:6px}.hvs span{font-size:13px;border:1px solid var(--line);border-radius:14px;padding:2px 10px;background:var(--paper)}
+.hvs span.bad{border-color:var(--pen);background:var(--pen-soft);color:var(--pen);font-weight:600}.hvs span.no{color:var(--warn)}
+.hvrow .btn{margin-top:8px}
+.wk .grpl{display:block;font-size:11.5px;font-weight:700;color:var(--muted);margin-bottom:2px}
 .wk .empty{color:var(--line);font-size:12px}
+.wk tr.bu td{background:var(--paper);text-align:left;font-weight:700;font-size:14.5px;padding:10px 8px 6px}
+.wk tr.bu td .btn{margin-left:10px}
+.wk td.sl .tm{display:block;font-weight:400;font-size:12px;color:var(--muted)}
+.wk td.sl .tm.no{color:var(--warn)}
+.wk .caed{background:none;border:none;padding:0;font:inherit;color:inherit;cursor:pointer;text-align:left}
+.wk .caed:hover .tm{text-decoration:underline}
+.wk .wkadd{display:block;width:100%;background:none;border:1px dashed transparent;border-radius:4px;color:var(--muted);font:inherit;font-size:13px;line-height:1.4;cursor:pointer;margin-top:2px;padding:0}
+.wk .wkadd:hover,.wk .wkadd:focus-visible{border-color:var(--violet);color:var(--violet)}
+.wkstat{font-size:13.5px;color:var(--muted);margin:0 0 10px}.wkstat b{color:var(--ink)}
+.capick{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 10px}
+.castu{display:flex;align-items:center;gap:10px;padding:8px 2px;border-bottom:1px solid var(--line);cursor:pointer}
+.castu input{width:18px;height:18px}.castu small{margin-left:auto;color:var(--muted);font-size:12px;text-align:right}
+.wk .caact{display:flex;gap:4px;margin-top:4px}.wk .caact button{font:inherit;font-size:11.5px;font-weight:600;padding:1px 8px;border-radius:10px;cursor:pointer;background:none;border:1px solid var(--line);color:var(--violet)}
+.wk .caact button.del{color:var(--pen)}.wk .caact button:hover{border-color:currentColor}
+.cst{border-bottom:1px solid var(--line)}.cst .castu{border-bottom:none}
+.mvbtn{font:inherit;font-size:12px;font-weight:600;color:var(--violet);background:none;border:1px solid var(--line);border-radius:10px;padding:2px 9px;cursor:pointer;white-space:nowrap}
+.mv{display:flex;flex-wrap:wrap;gap:6px;align-items:center;padding:0 2px 10px 30px}.mv select{font:inherit;font-size:13.5px;padding:5px 6px;border:1px solid var(--line);border-radius:6px;background:var(--paper);color:var(--ink);max-width:100%}
 .stcard h3{margin:0;font-size:17px}
 .stcard .facts{font-size:14px;color:var(--muted);margin:2px 0 6px}
 .stcard .facts b{color:var(--ink)}
@@ -2146,6 +2193,8 @@ function nlCss(){
     ".kq-sum b.good{color:var(--ok)}.kq-sum b.warn{color:var(--warn)}.kq-sum b.bad{color:var(--pen)}" +
     ".nldays{display:grid;grid-template-columns:repeat(14,1fr);gap:3px;max-width:430px;margin:6px 0}" +
     ".nldays span{aspect-ratio:1;border-radius:3px;background:var(--bg);border:1px solid var(--line)}.nldays span.l1{background:var(--ok-soft);border-color:var(--ok)}.nldays span.l2{background:var(--ok);border-color:var(--ok)}" +
+    ".nldays span.cf{background:var(--ok);border-color:var(--ok)}.nldays span.cp{background:var(--warn-soft);border-color:var(--warn)}.nldays span.cx{background:var(--pen-soft);border-color:var(--pen)}.nldays span.ct{border:1.5px dashed var(--violet)}.nldays span.cs{background:var(--ok-soft);border-color:var(--ok)}" +
+    ".nlccl{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:12.5px;color:var(--muted);margin:2px 0 0}" +
     ".nlch .s0{stroke:var(--violet)}.nlch .s1{stroke:var(--ok)}.nlch .s2{stroke:var(--warn)}.nlch path{fill:none;stroke-width:2.5}.nlch circle{fill:var(--paper);stroke-width:2.5}" +
     ".nlleg{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--muted)}.nlleg i{display:inline-block;width:12px;height:4px;border-radius:2px;margin-right:5px;vertical-align:3px}" +
     ".nlleg .s0{background:var(--violet)}.nlleg .s1{background:var(--ok)}.nlleg .s2{background:var(--warn)}" +
@@ -2185,8 +2234,9 @@ function nlReportHTML(o, full){
     return '<div><b class="' + nlCls(p) + '">' + p + '%</b><span>' + label + ' đúng ' + a[0] + '/' + a[1] + d + '</span></div>';
   };
   var act = 0; String(o.a || "").split("").forEach(function(c){ if(c !== "0") act++; });
+  var cc = o.cc && o.cc[1] ? nlPct([o.cc[0], o.cc[1]]) : null;
   h += '<div class="kq-sum">' + tile("r", "Đọc (đề thi)") + tile("l", "Nghe") + tile("v", "Từ vựng") +
-    '<div><b>' + act + '/28</b><span>ngày có làm bài (4 tuần qua)</span></div></div>';
+    (cc != null ? '<div><b class="' + nlCls(cc) + '">' + cc + '%</b><span>Chuyên cần: nộp ' + o.cc[0] + '/' + o.cc[1] + ' bài cô giao</span></div>' : '<div><b>' + act + '/28</b><span>ngày có làm bài (4 tuần qua)</span></div>') + '</div>';
   if(s.r || s.l || s.v) h += '<p class="hint" style="margin-top:-6px">' + (o.d ? 'Tính trong ' + o.d + ' ngày gần nhất' : 'Tính trên toàn bộ bài đã làm') + (o.d ? '; “tăng/giảm” so với ' + o.d + ' ngày trước đó' : '') + '. Xanh ≥ 80%, vàng 60–79%, đỏ dưới 60%.</p>';
   if(!full && (o.c || o.m)){
     if(o.c) h += '<div class="nlsec"><h3>Nhận xét của cô</h3><div class="note">' + esc(o.c) + '</div></div>';
@@ -2214,12 +2264,25 @@ function nlReportHTML(o, full){
       o.vw.map(function(w){ return '<span class="nlw"><b>' + esc(w[0]) + '</b> ' + esc(w[1]) + (w[2] > 1 ? ' <span class="pill bad">×' + w[2] + '</span>' : '') + '</span>'; }).join("") + '</div>';
     h += '</div>';
   }
-  h += '<div class="nlsec"><h3>Chuyên cần</h3><div class="nldays" aria-label="28 ngày gần nhất">' + String(o.a || "").split("").map(function(c, i){
-      var t = new Date((o.g || Date.now()) - (27 - i)*864e5), lab = pad(t.getDate()) + '/' + pad(t.getMonth()+1);
-      return '<span class="' + (c === "0" ? '' : +c >= 2 ? 'l2' : 'l1') + '" title="' + lab + ': ' + c + ' bài"></span>';
-    }).join("") + '</div><p class="hint" style="margin:0">Mỗi ô là một ngày trong 4 tuần qua (ô cuối là hôm nay), ô xanh là ngày có nộp bài.</p>' +
-    (o.cl || []).map(function(c){ return '<p style="margin:6px 0 0;font-size:14.5px">Bài hằng ngày lớp <strong>' + esc(c[0]) + '</strong>: nộp ' + c[1] + '/' + c[2] + ' bài' + (c[3] ? ', ' + c[3] + ' bài trễ hạn' : '') + '.</p>'; }).join("") + '</div>';
+  h += '<div class="nlsec"><h3>Chuyên cần</h3>' + nlDaysHTML(o, 28);
+  if(o.b) h += '<p style="margin:6px 0 0;font-size:14.5px">' + (o.cc[1] ? 'Đã nộp <strong>' + o.cc[0] + '/' + o.cc[1] + '</strong> bài cô giao (' + cc + '%)' + (o.cc[2] ? ', ' + o.cc[2] + ' bài nộp sau hạn' : '') + '.' : 'Chưa có bài nào cô giao đã tới hạn.') + '</p>' +
+    ((o.ow || []).length ? '<p class="hint" style="margin:8px 0 2px">' + (full ? 'Bài chưa nộp' : 'Bài em chưa nộp') + '</p><ul style="margin:0;padding-left:20px;font-size:14.5px">' + o.ow.map(function(x){ return '<li>' + (x[0] ? esc(x[0]) + ' · ' : '') + esc(x[1]) + '</li>'; }).join("") + '</ul>' : '');
+  else h += (o.cl || []).map(function(c){ return '<p style="margin:6px 0 0;font-size:14.5px">Bài hằng ngày lớp <strong>' + esc(c[0]) + '</strong>: nộp ' + c[1] + '/' + c[2] + ' bài' + (c[3] ? ', ' + c[3] + ' bài trễ hạn' : '') + '.</p>'; }).join("");
+  h += '</div>';
   return h;
+}
+/* Ô chuyên cần n ngày gần nhất. Bản mới (o.b): theo bài cô giao; link cũ (chỉ có o.a): ngày có nộp bài. */
+var NL_CC = {f:["cf","nộp đủ bài"], p:["cp","nộp thiếu"], x:["cx","bỏ bài"], t:["ct","hôm nay, chưa tới hạn"], s:["cs","không có bài giao, em tự làm"], ".":["","không có bài"]};
+function nlDaysHTML(o, n){
+  var g = o.g || Date.now(), lab = function(i){ var t = new Date(g - (n - 1 - i)*864e5); return pad(t.getDate()) + '/' + pad(t.getMonth()+1); };
+  if(o.b){
+    var b = String(o.b).slice(-n), used = {};
+    return '<div class="nldays" aria-label="' + n + ' ngày gần nhất">' + b.split("").map(function(c, i){ var k = NL_CC[c] || NL_CC["."]; used[c] = 1; return '<span class="' + k[0] + '" title="' + lab(i) + ': ' + k[1] + '"></span>'; }).join("") + '</div>' +
+      (n > 14 ? '<div class="nlccl">' + ["f","p","x","t","s"].filter(function(c){ return used[c]; }).map(function(c){ return '<span><i style="display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:4px;vertical-align:-1px;border:1px solid var(--line);' + (c === "f" ? 'background:var(--ok);border-color:var(--ok)' : c === "p" ? 'background:var(--warn-soft);border-color:var(--warn)' : c === "x" ? 'background:var(--pen-soft);border-color:var(--pen)' : c === "t" ? 'border:1.5px dashed var(--violet)' : 'background:var(--ok-soft);border-color:var(--ok)') + '"></i>' + NL_CC[c][1] + '</span>'; }).join("") + '<span>ô cuối là hôm nay</span></div>' : '');
+  }
+  var a = String(o.a || "").slice(-n);
+  return '<div class="nldays" aria-label="' + n + ' ngày gần nhất">' + a.split("").map(function(c, i){ return '<span class="' + (c === "0" ? '' : +c >= 2 ? 'l2' : 'l1') + '" title="' + lab(i) + ': ' + c + ' bài"></span>'; }).join("") + '</div>' +
+    (n > 14 ? '<p class="hint" style="margin:0">Mỗi ô là một ngày trong 4 tuần qua (ô cuối là hôm nay), ô xanh là ngày có nộp bài.</p>' : '');
 }
 function reportBoot(){
   var m = String(location.hash || "").match(/[#&]r=([A-Za-z0-9_.-]+)/);
