@@ -83,8 +83,8 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - Icon app thi thử (`thi-thu/icon/`) và logo trên các trang **chưa đổi** sang logo mới — làm khi cô nhắn.
 
 ## Ảnh quảng cáo / đấu giá lớp (`quang-cao/`)
-- Mỗi bộ một thư mục, ảnh 1080×1350 viết bằng HTML (`base.css` chung, logo `logo/nari-topik-ngang.svg`), chụp bằng Playwright ra PNG cùng tên.
-- `topik2-len-3-4/`: cho bạn đã có TOPIK 2 (đề TOPIK I) muốn lên 3, gắng 4: bìa, điểm 120→150, lộ trình 26 + 16 buổi, app, đánh giá, thông tin lớp.
+- Mỗi bộ một thư mục, ảnh 1080×1350 (góc phải trên luôn có Zalo cô 0399 214 554) viết bằng HTML (`base.css` chung, logo `logo/nari-topik-ngang.svg`), chụp bằng Playwright ra PNG cùng tên.
+- `topik2-len-3-4/`: cho bạn đã có TOPIK 2 (đề TOPIK I) muốn lên 3, gắng 4: `0-comment` (1080×1080, ảnh chung để comment, không lộ cách dạy), bìa, điểm 120→150, lộ trình 26 + 16 buổi, app, đánh giá, thông tin lớp.
   Ảnh app dùng `hoc-cung-co/img/` (trang vẫn mang tên cũ “Hàn Ngữ Nari” cho tới khi đổi logo trên site).
 
 ## Về cô (`ve-co/`)

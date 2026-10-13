@@ -16,3 +16,5 @@ h1 .v{color:var(--v)} h1 .g{color:var(--g)}
 .cta .t{font-size:40px;font-weight:800}
 .cta .s{font-size:26px;opacity:.85;margin-top:4px}
 .cta .btn{background:#fff;color:var(--v);font-weight:800;font-size:32px;border-radius:50px;padding:20px 34px;white-space:nowrap}
+.top .tag.zalo{background:var(--v);border-color:var(--v);color:#fff;font-size:30px;font-weight:800;border-radius:22px;padding:10px 24px;text-align:center;line-height:1.15}
+.top .tag.zalo small{display:block;font-size:18px;font-weight:600;opacity:.85;letter-spacing:.3px}
