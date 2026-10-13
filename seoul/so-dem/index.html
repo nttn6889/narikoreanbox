@@ -1,0 +1,625 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Số Hán Hàn – thuần Hàn · Hàn Ngữ Nari</title>
+<meta name="description" content="Phân biệt số Hán Hàn và số thuần Hàn: dùng khi nào, lượng từ, giờ – ngày tháng – tuổi, đọc số lớn và tiền, máy đọc số có giọng đọc, luyện tập chấm ngay — Hàn Ngữ Nari.">
+<link rel="icon" href="../../thi-thu/icon/icon-192.png">
+<style>
+:root{--ink:#111;--line:#555;--soft:#d8dde6;--sub:#f2f2f2;--muted:#666;--bg:#fff;--acc:#b0283c;--ok:#1d7a3a;--okbg:#eaf6ee;--warn:#9a6200;--warnbg:#fff6df;--blue:#1f3c88;--bluebg:#eef2fb;--hl:#ffe9a8}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Times New Roman",Times,"Noto Serif KR","Malgun Gothic",serif}
+main{max-width:820px;margin:0 auto;padding:16px 16px 48px}
+.ko{word-break:keep-all}
+.ko,input.ans,textarea,.opt,.mau,code,.kt{font-family:"Noto Sans KR","Malgun Gothic","Apple SD Gothic Neo",sans-serif}
+.brand{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--soft)}
+.brand b{display:block;font-size:19px}
+.brand span{font-size:14px;color:var(--muted)}
+.brand span a{color:inherit;text-decoration:none;border-bottom:1px dotted var(--muted)}
+.co{flex:none;display:flex;flex-direction:column;align-items:center;gap:3px;text-decoration:none;color:var(--muted);font:12px Arial,sans-serif}
+.co i{width:40px;height:40px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font:bold 17px Georgia,serif;font-style:normal}
+h1{font-size:25px;margin:4px 0 2px;line-height:1.25}
+h1 .ko{display:block;font-size:20px;color:var(--acc)}
+.lead{margin:6px 0 12px;color:#333;font-size:15px}
+nav{display:flex;margin:0 -16px 14px;padding:8px 16px;position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);z-index:3}
+nav .bar{display:flex;flex:1;border:2px solid var(--ink);border-radius:8px;overflow:hidden}
+nav a{flex:1;text-align:center;padding:6px 2px;color:var(--ink);text-decoration:none;font-weight:bold;font-size:15px;line-height:1.2}
+nav a+a{border-left:2px solid var(--ink)}
+nav a small{display:block;font-weight:normal;font-size:11.5px}
+nav a.on{background:var(--ink);color:#fff}
+@media(max-width:420px){nav a{font-size:13.5px}nav a small{font-size:10.5px}}
+.sec{display:none}.sec.on{display:block}
+h2{font-size:23px;margin:6px 0 4px}
+h3{font-size:19px;margin:26px 0 8px;padding-bottom:3px;border-bottom:2px solid var(--ink)}
+h4{font-size:16.5px;margin:16px 0 4px}
+.goal{margin:0 0 14px;padding:8px 12px;background:var(--bluebg);border-left:4px solid var(--blue);font-size:15px}
+.steps{counter-reset:s;list-style:none;padding:0;margin:8px 0 14px}
+.steps li{counter-increment:s;position:relative;padding:6px 8px 6px 42px;margin:0 0 6px;border:1px solid var(--soft);border-radius:8px}
+.steps li::before{content:counter(s);position:absolute;left:8px;top:6px;width:26px;height:26px;border-radius:50%;background:var(--acc);color:#fff;display:grid;place-items:center;font:bold 14px Arial,sans-serif}
+.card{border:1px solid var(--line);border-radius:8px;margin:0 0 14px;overflow:hidden}
+.card>.hd{background:var(--ink);color:#fff;padding:6px 10px;font-weight:bold;font-size:16px}
+.card>.hd small{font-weight:normal;opacity:.85}
+.card>.bd{padding:8px 12px}
+.mau{display:inline-block;background:var(--hl);padding:0 6px;border-radius:4px;font-weight:bold;font-size:15px}
+.ex{margin:5px 0 3px;padding:6px 10px;background:var(--sub);border-radius:6px;font-size:15px}
+.ex .ko{display:block}
+.ex .vi{display:block;color:var(--muted);font-size:14px}
+.ex b,.ko b{color:var(--acc)}
+.note{font-size:14px;color:var(--muted);margin:4px 0}
+.warnbox{padding:8px 12px;background:var(--warnbg);border-left:4px solid var(--warn);margin:10px 0;font-size:15px}
+.okbox{padding:8px 12px;background:var(--okbg);border-left:4px solid var(--ok);margin:10px 0;font-size:15px}
+.deep{padding:8px 12px;border:1px dashed var(--blue);border-radius:8px;margin:10px 0;font-size:15px}
+.deep>b:first-child{color:var(--blue)}
+table.t{border-collapse:collapse;width:100%;font-size:15px;margin:6px 0 12px}
+table.t th,table.t td{border:1px solid var(--line);padding:5px 7px;text-align:left;vertical-align:top}
+table.t th{background:var(--sub)}
+table.t td.ko,table.t td .ko{font-size:14.5px}
+.scroll{overflow-x:auto;margin:0 -2px}
+@media(max-width:560px){table.t{font-size:14px}table.t th,table.t td{padding:4px 5px}}
+.flow{display:flex;flex-wrap:wrap;align-items:stretch;gap:6px;margin:8px 0 12px}
+.flow>div{flex:1 1 150px;border:2px solid var(--ink);border-radius:8px;padding:6px 8px;font-size:14.5px;text-align:center}
+.flow>div b{display:block;font-size:13px;color:var(--muted);font-family:Arial,sans-serif}
+.flow>div .ko{font-size:16px}
+.flow>i{align-self:center;font-style:normal;font-weight:bold;font-size:20px}
+@media(max-width:560px){.flow{flex-direction:column}.flow>i{transform:rotate(90deg);text-align:center}}
+button.say{font-size:14px;line-height:1;padding:3px 6px;border:1px solid var(--soft);border-radius:6px;background:var(--bg);cursor:pointer;vertical-align:middle}
+button.say:active{background:var(--hl)}
+.pron{font-family:"Noto Sans KR","Malgun Gothic",sans-serif;color:var(--blue);font-size:13.5px;white-space:nowrap}
+.hj{color:var(--muted);font-size:13px}
+.col{margin:0 0 4px}.col .ko{display:block}.col .note{display:block;margin:0}
+/* trắc nghiệm */
+.mcq{border:1px solid var(--soft);border-radius:8px;padding:8px 10px;margin:0 0 10px}
+.mcq .q{font-size:16px;margin:0 0 6px}
+.mcq .q .n{font:bold 13px Arial,sans-serif;color:var(--muted);margin-right:6px}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.opts.one{grid-template-columns:1fr}
+@media(max-width:520px){.opts{grid-template-columns:1fr}}
+.opt{font-size:15px;text-align:left;padding:7px 10px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);cursor:pointer}
+.opt.ok{background:var(--okbg);border-color:var(--ok);color:var(--ok);font-weight:bold}
+.opt.no{background:#fbecee;border-color:var(--acc);color:var(--acc);text-decoration:line-through}
+.mcq .why{display:none;margin:6px 0 0;font-size:14.5px;color:#333}
+.mcq.done .why{display:block}
+.mcq.done.wrong{border-color:var(--acc)}
+/* gõ chữ */
+.typ{border:1px solid var(--soft);border-radius:8px;padding:8px 10px;margin:0 0 10px}
+.typ .q{font-size:15.5px;margin:0 0 6px}
+.typ .q .n{font:bold 13px Arial,sans-serif;color:var(--muted);margin-right:6px}
+.typ .row{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+input.ans{font-size:16px;padding:6px 8px;border:1px solid var(--line);border-radius:6px;flex:1 1 180px;min-width:0}
+.typ.ok input.ans{border-color:var(--ok);background:var(--okbg)}
+.typ.no input.ans{border-color:var(--acc);background:#fbecee}
+.typ .fb{display:none;margin:6px 0 0;font-size:14.5px}
+.typ.ok .fb,.typ.no .fb{display:block}
+.typ.ok .fb .r{color:var(--ok);font-weight:bold}
+.typ.no .fb .r{color:var(--acc);font-weight:bold}
+textarea{width:100%;font-size:16px;padding:8px;border:1px solid var(--line);border-radius:6px;min-height:110px}
+.score{font:bold 15px Arial,sans-serif;color:var(--blue);margin:4px 0 14px}
+.score a{font-weight:normal}
+.btns{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 0}
+button.b{font:inherit;font-size:14px;padding:5px 12px;border:1px solid var(--line);border-radius:6px;background:var(--sub);color:var(--ink);cursor:pointer}
+button.b.main{background:var(--acc);border-color:var(--acc);color:#fff;font-weight:bold}
+button.b.blue{background:var(--blue);border-color:var(--blue);color:#fff}
+.hide{display:none}
+.model{display:none;margin:8px 0 0;padding:8px 10px;background:var(--okbg);border-radius:6px;font-size:15px}
+.model.on{display:block}
+.dlg td:first-child{white-space:nowrap;font-weight:bold}
+.chat{max-width:460px;margin:8px 0;padding:10px;background:#e8edf5;border-radius:10px;font-size:15px}
+.chat .m{background:#fff;border-radius:8px;padding:8px 10px}
+.chat .who{font:bold 12px Arial,sans-serif;color:var(--muted);margin:0 0 3px}
+.sum{border:2px solid var(--blue);border-radius:10px;padding:10px 12px;margin:20px 0}
+.sum h4{margin:0 0 6px}
+.sum input{font:inherit;font-size:16px;padding:6px 8px;border:1px solid var(--line);border-radius:6px;width:100%;max-width:320px}
+.sum pre{white-space:pre-wrap;font:13px/1.5 "Noto Sans KR",Arial,sans-serif;background:var(--sub);padding:8px;border-radius:6px;max-height:260px;overflow:auto}
+.chk{list-style:none;padding:0;margin:6px 0}
+.chk li{padding:4px 0 4px 30px;position:relative;cursor:pointer}
+.chk li::before{content:"☐";position:absolute;left:4px;top:2px;font-size:19px}
+.chk li.on::before{content:"☑";color:var(--ok)}
+.badge{display:inline-block;font:bold 12px Arial,sans-serif;border-radius:10px;padding:1px 8px;margin-left:4px;vertical-align:middle;background:var(--sub);color:var(--muted)}
+.badge.new{background:var(--acc);color:#fff}
+.badge.old{background:var(--blue);color:#fff}
+footer{margin-top:40px;font-size:13px;color:var(--muted);text-align:center}
+footer a{color:var(--muted)}
+@media print{nav,.btns,.sum,footer,.co,button.say{display:none}.sec{display:block!important}.card,.mcq,.typ{break-inside:avoid}}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <div class="brand">
+    <div><b>Hàn ngữ Nari – Cô Ngân</b><span>Quỳnh Lưu, Nghệ An · Zalo: <a href="https://zalo.me/0399214554">0399.214.554</a></span></div>
+    <a class="co" href="../../ve-co/"><i>N</i>Về cô</a>
+  </div>
+  <h1>Số Hán Hàn và số thuần Hàn<span class="ko">한자어 숫자 · 고유어 숫자</span></h1>
+  <p class="lead">Tiếng Hàn có <b>hai bộ số</b>. Hầu hết lỗi không nằm ở chỗ quên số, mà ở chỗ <b>chọn sai bộ</b> (<span class="ko">삼 개</span> thay vì <span class="ko">세 개</span>) hoặc <b>đọc sai số lớn</b> vì tiếng Việt đếm theo nghìn còn tiếng Hàn đếm theo vạn. Trang này gom toàn bộ kiến thức số đã rải ở Seoul 1A–2A (1A bài 5–6, 1B bài 9, 10, 12, 2A bài 3) thành một hệ thống, kèm luyện tập chấm ngay.</p>
+</header>
+<nav><div class="bar">
+  <a href="#b=tq" data-k="tq">Hai bộ số<small>Dùng khi nào</small></a>
+  <a href="#b=dv" data-k="dv">Lượng từ<small>Đếm cái gì</small></a>
+  <a href="#b=tg" data-k="tg">Thời gian<small>Giờ, ngày, tuổi</small></a>
+  <a href="#b=sl" data-k="sl">Số lớn<small>Tiền, đọc số</small></a>
+  <a href="#b=lt" data-k="lt">Luyện<small>Chấm ngay</small></a>
+</div></nav>
+
+<!-- ================= HAI BỘ SỐ ================= -->
+<section class="sec" id="stq">
+<h2>Hai bộ số và quy tắc chọn</h2>
+<p class="goal"><b>Một câu để nhớ:</b> hỏi <b>“bao nhiêu cái / người / lần?”</b> → số <b>thuần Hàn</b>. <b>Gọi tên</b> một con số (số thứ tự đánh số, ngày tháng năm, phút, tiền, đo lường, số điện thoại, số từ 100 trở lên) → số <b>Hán Hàn</b>.</p>
+
+<h3>1. Hai bộ số đặt cạnh nhau</h3>
+<div class="scroll"><table class="t" id="numtab"></table></div>
+<div class="deep"><b>Lợi thế của người Việt: số Hán Hàn chính là số Hán Việt.</b> Đọc to và so: <span class="ko">일</span> nhất · <span class="ko">이</span> nhị · <span class="ko">삼</span> tam · <span class="ko">사</span> tứ · <span class="ko">오</span> ngũ · <span class="ko">육</span> lục · <span class="ko">칠</span> thất · <span class="ko">팔</span> bát · <span class="ko">구</span> cửu · <span class="ko">십</span> thập · <span class="ko">백</span> bách · <span class="ko">천</span> thiên · <span class="ko">만</span> <b>vạn</b> · <span class="ko">억</span> ức. Em đã biết các từ “thập phần, bách khoa, thiên niên kỷ, vạn sự”: đó chính là bộ số này.</div>
+
+<h3>2. Ba điều khác nhau giữa hai bộ</h3>
+<table class="t">
+<tr><th></th><th>Thuần Hàn <span class="ko">하나, 둘, 셋…</span></th><th>Hán Hàn <span class="ko">일, 이, 삼…</span></th></tr>
+<tr><td>Đếm tới</td><td><b>99</b> (từ 100 trở lên dùng Hán Hàn)</td><td>không giới hạn</td></tr>
+<tr><td>Đổi hình trước lượng từ</td><td><b>Có:</b> <span class="ko">하나 → 한, 둘 → 두, 셋 → 세, 넷 → 네, 스물 → 스무</span></td><td>Không (chỉ tên tháng: <span class="ko">유월, 시월</span>)</td></tr>
+<tr><td>Ý nghĩa cốt lõi</td><td><b>Số lượng</b> đếm được bằng tay</td><td><b>Tên</b> của con số, phép đo</td></tr>
+</table>
+
+<h3>3. Quy tắc chọn bộ số</h3>
+<ol class="steps">
+  <li><b>Câu hỏi có <span class="ko">몇 + lượng từ đếm</span></b> (mấy cái, mấy người, mấy lần, mấy cốc…) → <b>thuần Hàn</b>: <span class="ko">사과 <b>세</b> 개, 학생 <b>다섯</b> 명, <b>두</b> 번</span>.</li>
+  <li><b>Đo lường, tiền, đơn vị gốc Hán hoặc tiếng Anh</b> (원, 층, 년, 월, 일, 분, 킬로, 미터, 퍼센트…) → <b>Hán Hàn</b>: <span class="ko"><b>오천</b> 원, <b>삼</b> 층, <b>이십</b> 분</span>.</li>
+  <li><b>Số đánh thứ tự / mã số</b> (số xe buýt, số phòng, số trang, bài số mấy, số điện thoại) → <b>Hán Hàn</b>: <span class="ko"><b>일</b> 번 버스, <b>오</b> 과, <b>공일공</b></span>.</li>
+  <li><b>Số từ 100 trở lên</b> → luôn <b>Hán Hàn</b>, kể cả khi đếm vật: <span class="ko">학생 <b>백이십</b> 명</span>.</li>
+</ol>
+<div class="warnbox"><b>Hai ngoại lệ phải thuộc lòng:</b>
+<br>① <b>Giờ dùng thuần Hàn, phút dùng Hán Hàn:</b> <span class="ko">3시 20분 = <b>세</b> 시 <b>이십</b> 분</span>.
+<br>② <b>Tuổi</b> nói thường dùng thuần Hàn <span class="ko">스무 <b>살</b></span>; văn bản trang trọng (báo, hồ sơ) dùng Hán Hàn <span class="ko">이십 <b>세</b></span>.</div>
+
+<h3>4. Cùng một chữ số, hai nghĩa khác nhau</h3>
+<table class="t">
+<tr><th>Thuần Hàn</th><th>Hán Hàn</th></tr>
+<tr><td class="ko"><b>한 번</b> <span class="note">một lần</span></td><td class="ko"><b>일 번</b> <span class="note">số 1 (câu số 1, xe buýt số 1)</span></td></tr>
+<tr><td class="ko"><b>세 분</b> <span class="note">ba vị (người, kính ngữ)</span></td><td class="ko"><b>삼 분</b> <span class="note">ba phút</span></td></tr>
+<tr><td class="ko"><b>사흘</b> <span class="note">ba ngày (khoảng)</span></td><td class="ko"><b>삼 일</b> <span class="note">ba ngày (khoảng) hoặc ngày mùng 3</span></td></tr>
+<tr><td class="ko"><b>첫째, 둘째</b> <span class="note">thứ nhất, thứ hai (trong nhà, trong liệt kê)</span></td><td class="ko"><b>제일, 제이</b> <span class="note">thứ nhất, thứ hai (văn bản: 제1과, 제91회)</span></td></tr>
+<tr><td class="ko"><b>두 달</b> <span class="note">hai tháng</span></td><td class="ko"><b>이 개월</b> <span class="note">hai tháng (cùng nghĩa, trang trọng hơn)</span></td></tr>
+</table>
+<h4>Kiểm tra nhanh</h4>
+<div class="set" data-set="q1"></div>
+</section>
+
+<!-- ================= LƯỢNG TỪ ================= -->
+<section class="sec" id="sdv">
+<h2>Lượng từ: đếm cái gì, dùng bộ số nào</h2>
+<p class="goal">Trong tiếng Hàn, số gần như không đứng một mình: luôn đi với một <b>lượng từ (단위 명사)</b>, giống “cái, con, chiếc” của tiếng Việt. Thuộc lượng từ đi với bộ số nào là chọn đúng 90%.</p>
+
+<h3>1. Lượng từ đi với số thuần Hàn</h3>
+<div class="scroll"><table class="t" id="dvN"></table></div>
+<h3>2. Lượng từ đi với số Hán Hàn</h3>
+<div class="scroll"><table class="t" id="dvS"></table></div>
+<div class="deep"><b>Vì sao <span class="ko">권, 장, 잔, 병, 시간</span> là từ gốc Hán mà vẫn đếm bằng thuần Hàn?</b> Vì quy tắc thật sự không dựa vào gốc của lượng từ mà dựa vào <b>việc đang làm</b>: <span class="ko">책 두 권</span> là <b>đếm</b> số quyển sách (bao nhiêu quyển?). Còn <span class="ko">삼 층, 오천 원, 이십 분</span> là <b>đo</b> hoặc <b>gọi tên</b> (tầng số 3, mức giá, số phút). Hỏi “mình đang đếm vật hay đang đọc một con số?” sẽ đúng cả với từ chưa học.</div>
+
+<h3>3. Đổi hình trước lượng từ</h3>
+<table class="t">
+<tr><th>Đứng một mình</th><th>Trước lượng từ</th><th>Ví dụ</th></tr>
+<tr><td class="ko">하나</td><td class="ko"><b>한</b></td><td class="ko">한 개, 한 명, 한 번 <button class="say" data-say="한 개, 한 명, 한 번">🔊</button></td></tr>
+<tr><td class="ko">둘</td><td class="ko"><b>두</b></td><td class="ko">두 잔, 두 시 <button class="say" data-say="두 잔, 두 시">🔊</button></td></tr>
+<tr><td class="ko">셋</td><td class="ko"><b>세</b></td><td class="ko">세 권, 세 살 <button class="say" data-say="세 권, 세 살">🔊</button></td></tr>
+<tr><td class="ko">넷</td><td class="ko"><b>네</b></td><td class="ko">네 마리, 네 시 <button class="say" data-say="네 마리, 네 시">🔊</button></td></tr>
+<tr><td class="ko">스물</td><td class="ko"><b>스무</b> (chỉ khi đúng 20)</td><td class="ko">스무 살 · nhưng <b>스물한</b> 살, <b>스물두</b> 개 <button class="say" data-say="스무 살, 스물한 살, 스물두 개">🔊</button></td></tr>
+<tr><td class="ko">열하나, 열둘…</td><td class="ko">열한, 열두, 열세, 열네</td><td class="ko">열한 시, 열두 명 <button class="say" data-say="열한 시, 열두 명">🔊</button></td></tr>
+</table>
+<p class="note">Số khác (다섯, 여섯, 일곱, 여덟, 아홉, 열, 서른…) giữ nguyên. Ghép số gần nhau để nói “khoảng”: <span class="ko">두세 명</span> (2–3 người), <span class="ko">서너 개</span> (3–4 cái), <span class="ko">대여섯 번</span> (5–6 lần).</p>
+
+<h3>4. Hỏi bằng 몇</h3>
+<table class="t">
+<tr><th>Hỏi</th><th>Trả lời</th><th>Bộ số</th></tr>
+<tr><td class="ko">몇 개예요? <span class="pron">[멷 깨]</span></td><td class="ko">세 개예요.</td><td>Thuần Hàn</td></tr>
+<tr><td class="ko">몇 명이에요? <span class="pron">[면 명]</span></td><td class="ko">다섯 명이에요.</td><td>Thuần Hàn</td></tr>
+<tr><td class="ko">몇 층이에요?</td><td class="ko">칠 층이에요.</td><td>Hán Hàn</td></tr>
+<tr><td class="ko">몇 번이에요?</td><td class="ko">일 번이에요. / 두 번 갔어요.</td><td>Tùy nghĩa: số mấy / mấy lần</td></tr>
+<tr><td class="ko">몇 월 <b>며칠</b>이에요? <span class="pron">[며 둴 며칠]</span></td><td class="ko">시월 십삼 일이에요.</td><td>Hán Hàn</td></tr>
+</table>
+<p class="note">Viết <span class="ko"><b>며칠</b></span> (ngày mấy, mấy ngày), <b>không</b> viết <span class="ko">몇 일</span>. Đây là lỗi chính tả rất hay gặp, kể cả với người Hàn.</p>
+<h4>Kiểm tra nhanh</h4>
+<div class="set" data-set="q2"></div>
+</section>
+
+<!-- ================= THỜI GIAN ================= -->
+<section class="sec" id="stg">
+<h2>Thời gian: giờ, ngày tháng, khoảng thời gian, tuổi</h2>
+<p class="goal">Thời gian là chỗ hai bộ số trộn vào nhau nhiều nhất. Học theo bảng dưới: <b>mốc</b> (lúc nào) và <b>khoảng</b> (bao lâu) có khi dùng bộ số khác nhau.</p>
+
+<h3>1. Mốc và khoảng</h3>
+<div class="scroll"><table class="t">
+<tr><th></th><th>Mốc (lúc nào?)</th><th>Khoảng (bao lâu?)</th></tr>
+<tr><td>Giờ</td><td class="ko"><b>세</b> 시 <span class="note">3 giờ</span> — thuần</td><td class="ko"><b>세</b> 시간 <span class="note">3 tiếng</span> — thuần</td></tr>
+<tr><td>Phút / giây</td><td class="ko"><b>삼십</b> 분, <b>십</b> 초 — Hán</td><td class="ko"><b>삼십</b> 분 동안 — Hán</td></tr>
+<tr><td>Ngày</td><td class="ko"><b>십삼</b> 일 <span class="note">ngày 13</span> — Hán</td><td class="ko"><b>삼</b> 일 = <b>사흘</b> <span class="note">3 ngày</span> — Hán / thuần</td></tr>
+<tr><td>Tuần</td><td class="ko">—</td><td class="ko"><b>일</b>주일, <b>이</b> 주 — Hán</td></tr>
+<tr><td>Tháng</td><td class="ko"><b>시</b>월 <span class="note">tháng 10</span> — Hán</td><td class="ko"><b>두</b> 달 = <b>이</b> 개월 — thuần / Hán</td></tr>
+<tr><td>Năm</td><td class="ko"><b>이천이십육</b> 년 — Hán</td><td class="ko"><b>삼</b> 년 동안 — Hán</td></tr>
+</table></div>
+<p class="note">Đếm ngày bằng thuần Hàn (dùng nhiều trong hội thoại, TOPIK nghe): <span class="ko">하루</span> 1 ngày · <span class="ko">이틀</span> 2 ngày · <span class="ko">사흘</span> 3 ngày · <span class="ko">나흘</span> 4 ngày <button class="say" data-say="하루, 이틀, 사흘, 나흘">🔊</button>. <span class="ko">사흘</span> là 3 ngày, không phải 4 ngày: người Hàn trẻ cũng hay nhầm.</p>
+
+<h3>2. Đọc giờ</h3>
+<table class="t">
+<tr><th>Giờ</th><th>Đọc</th></tr>
+<tr><td>1:00</td><td class="ko">한 시 <button class="say" data-say="한 시">🔊</button></td></tr>
+<tr><td>9:05</td><td class="ko">아홉 시 오 분 <button class="say" data-say="아홉 시 오 분">🔊</button></td></tr>
+<tr><td>2:30</td><td class="ko">두 시 삼십 분 = 두 시 <b>반</b> <button class="say" data-say="두 시 삼십 분. 두 시 반">🔊</button></td></tr>
+<tr><td>12:45</td><td class="ko">열두 시 사십오 분 = 한 시 십오 분 <b>전</b> <button class="say" data-say="열두 시 사십오 분">🔊</button></td></tr>
+<tr><td>15:20</td><td class="ko"><b>오후</b> 세 시 이십 분 <button class="say" data-say="오후 세 시 이십 분">🔊</button></td></tr>
+</table>
+<p class="note">Hàn Quốc nói giờ theo 12 giờ + <span class="ko">오전</span> (sáng) / <span class="ko">오후</span> (chiều); lịch tàu, thông báo mới dùng 24 giờ đọc Hán Hàn (<span class="ko">십오 시</span>).</p>
+
+<h3>3. Ngày tháng năm</h3>
+<p>Thứ tự ngược tiếng Việt: <b>năm → tháng → ngày</b>. Cả ba đều Hán Hàn.</p>
+<div class="ex"><span class="ko">2026년 10월 13일 → 이천이십육 년 <b>시월</b> 십삼 일 <button class="say" data-say="이천이십육 년 시월 십삼 일">🔊</button></span><span class="vi">ngày 13 tháng 10 năm 2026</span></div>
+<table class="t">
+<tr><th>Tháng</th><th>Đọc</th><th>Tháng</th><th>Đọc</th></tr>
+<tr><td>1</td><td class="ko">일월 <span class="pron">[이뤌]</span></td><td>7</td><td class="ko">칠월 <span class="pron">[치뤌]</span></td></tr>
+<tr><td>2</td><td class="ko">이월</td><td>8</td><td class="ko">팔월 <span class="pron">[파뤌]</span></td></tr>
+<tr><td>3</td><td class="ko">삼월 <span class="pron">[사뭘]</span></td><td>9</td><td class="ko">구월</td></tr>
+<tr><td>4</td><td class="ko">사월</td><td>10</td><td class="ko"><b>시월</b> (bỏ ㅂ)</td></tr>
+<tr><td>5</td><td class="ko">오월</td><td>11</td><td class="ko">십일월 <span class="pron">[시비뤌]</span></td></tr>
+<tr><td>6</td><td class="ko"><b>유월</b> (bỏ ㄱ)</td><td>12</td><td class="ko">십이월 <span class="pron">[시비월]</span></td></tr>
+</table>
+<p class="note"><span class="ko">유월, 시월</span> bỏ phụ âm cuối để đọc cho xuôi. Viết số thì vẫn là <span class="ko">6월, 10월</span>.</p>
+
+<h3>4. Tuổi, năm học, thứ tự</h3>
+<table class="t">
+<tr><th>Nói</th><th>Ví dụ</th></tr>
+<tr><td>Tuổi (nói thường)</td><td class="ko">스무 살, 스물한 살, 서른 살 <button class="say" data-say="스무 살, 스물한 살, 서른 살">🔊</button></td></tr>
+<tr><td>Tuổi (trang trọng, viết)</td><td class="ko">20세 → 이십 세</td></tr>
+<tr><td>Năm thứ (đại học)</td><td class="ko">일 학년, 이 학년 (Hán)</td></tr>
+<tr><td>Thứ tự</td><td class="ko">첫째, 둘째, 셋째 · 첫 번째, 두 번째 · 제일 과, 일 등 (hạng nhất)</td></tr>
+</table>
+<p class="note">Chú ý: “thứ nhất” là <span class="ko"><b>첫</b>째 / <b>첫</b> 번째</span>, không phải <span class="ko">한째, 한 번째</span>. Từ thứ hai trở đi mới dùng <span class="ko">두, 세, 네</span>.</p>
+<h4>Kiểm tra nhanh</h4>
+<div class="set" data-set="q3"></div>
+</section>
+
+<!-- ================= SỐ LỚN ================= -->
+<section class="sec" id="ssl">
+<h2>Số lớn, tiền và cách đọc</h2>
+<p class="goal"><b>Lỗi lớn nhất của người Việt:</b> tiếng Việt tách số theo <b>3 chữ số</b> (nghìn, triệu, tỷ), tiếng Hàn tách theo <b>4 chữ số</b> (만, 억). Nên “một trăm nghìn” không phải “백천” mà là <span class="ko"><b>십만</b></span>.</p>
+
+<h3>1. Bảng đối chiếu</h3>
+<div class="scroll"><table class="t">
+<tr><th>Số</th><th>Tiếng Việt</th><th>Tiếng Hàn</th><th>Hán Việt</th></tr>
+<tr><td>10</td><td>mười</td><td class="ko">십</td><td>thập</td></tr>
+<tr><td>100</td><td>một trăm</td><td class="ko">백</td><td>bách</td></tr>
+<tr><td>1.000</td><td>một nghìn</td><td class="ko">천</td><td>thiên</td></tr>
+<tr><td>1.0000</td><td>mười nghìn</td><td class="ko"><b>만</b></td><td><b>một vạn</b></td></tr>
+<tr><td>10.0000</td><td>một trăm nghìn</td><td class="ko"><b>십만</b></td><td>mười vạn</td></tr>
+<tr><td>100.0000</td><td>một triệu</td><td class="ko"><b>백만</b></td><td>trăm vạn</td></tr>
+<tr><td>1000.0000</td><td>mười triệu</td><td class="ko"><b>천만</b></td><td>nghìn vạn</td></tr>
+<tr><td>1.0000.0000</td><td>một trăm triệu</td><td class="ko"><b>억</b></td><td>ức</td></tr>
+</table></div>
+<p class="note">Cột “Số” cố ý chấm theo nhóm 4 chữ số để em thấy ranh giới <span class="ko">만</span> và <span class="ko">억</span>.</p>
+
+<h3>2. Đọc một số lớn trong 3 bước</h3>
+<ol class="steps">
+  <li><b>Tách từ phải sang trái, mỗi nhóm 4 chữ số:</b> 1234567 → 123 | 4567.</li>
+  <li><b>Đọc từng nhóm</b> như số dưới 1 vạn, rồi gắn tên nhóm: 123 → <span class="ko">백이십삼</span> + <span class="ko">만</span>; 4567 → <span class="ko">사천오백육십칠</span>.</li>
+  <li><b>Ghép lại:</b> <span class="ko">백이십삼만 사천오백육십칠</span>. <button class="say" data-say="백이십삼만 사천오백육십칠">🔊</button></li>
+</ol>
+<div class="warnbox"><b>Không nói “일” trước 십, 백, 천, 만:</b> 10 = <span class="ko">십</span>, 100 = <span class="ko">백</span>, 1.000 = <span class="ko">천</span>, 10.000 = <span class="ko">만</span> (không phải <span class="ko">일십, 일백, 일천, 일만</span>). Riêng 1억 vẫn đọc <span class="ko">일억</span>.</div>
+
+<h3>3. Máy đọc số</h3>
+<p>Gõ một con số (hoặc giờ <b>15:20</b>, ngày <b>2026-10-13</b>) để xem cách đọc và nghe máy đọc. Dùng được khi cô giảng hoặc khi em tự kiểm tra.</p>
+<div class="typ"><div class="row"><input class="ans" id="numIn" value="35000" inputmode="text" autocomplete="off" placeholder="vd. 125000, 21, 15:20, 2026-10-13"><button class="b blue" id="numGo">Đọc</button></div><div id="numOut" style="margin-top:8px"></div></div>
+
+<h3>4. Tiền</h3>
+<table class="t">
+<tr><th>Số tiền</th><th>Đọc</th><th>Phát âm thật</th></tr>
+<tr><td>10원</td><td class="ko">십 원</td><td><span class="pron">[시붠]</span> <button class="say" data-say="십 원">🔊</button></td></tr>
+<tr><td>100원</td><td class="ko">백 원</td><td><span class="pron">[배권]</span> <button class="say" data-say="백 원">🔊</button></td></tr>
+<tr><td>1.000원</td><td class="ko">천 원</td><td><span class="pron">[처눤]</span> <button class="say" data-say="천 원">🔊</button></td></tr>
+<tr><td>10.000원</td><td class="ko">만 원</td><td><span class="pron">[마눤]</span> <button class="say" data-say="만 원">🔊</button></td></tr>
+<tr><td>35.000원</td><td class="ko">삼만 오천 원</td><td><span class="pron">[삼마노처눤]</span> <button class="say" data-say="삼만 오천 원">🔊</button></td></tr>
+<tr><td>100.000동</td><td class="ko">십만 동</td><td><span class="pron">[심만 동]</span> <button class="say" data-say="십만 동">🔊</button></td></tr>
+</table>
+
+<h3>5. Số và biến âm</h3>
+<p>Nghe số mà không nhận ra thường là vì <b>biến âm</b>. Những dạng hay gặp nhất:</p>
+<table class="t">
+<tr><th>Viết</th><th>Đọc</th><th>Vì sao</th></tr>
+<tr><td class="ko">십육, 백육</td><td><span class="pron">[심뉵], [뱅뉵]</span> <button class="say" data-say="십육, 백육">🔊</button></td><td>Thêm ㄴ trước 육, rồi ㅂ/ㄱ gặp ㄴ thành ㅁ/ㅇ (mũi hóa)</td></tr>
+<tr><td class="ko">십만, 백만</td><td><span class="pron">[심만], [뱅만]</span></td><td>Mũi hóa: ㅂ, ㄱ trước ㅁ</td></tr>
+<tr><td class="ko">육십, 칠십, 팔십</td><td><span class="pron">[육씹], [칠씹], [팔씹]</span></td><td>Căng hóa: ㅅ sau ㄱ, ㄹ (từ Hán)</td></tr>
+<tr><td class="ko">몇 명, 몇 월</td><td><span class="pron">[면명], [며둴]</span></td><td>몇 đọc [멷]: trước ㅁ thành [면]; trước nguyên âm nối âm</td></tr>
+<tr><td class="ko">여섯 개, 일곱 시</td><td><span class="pron">[여섣깨], [일곱씨]</span></td><td>Căng hóa sau phụ âm cuối</td></tr>
+<tr><td class="ko">열여섯</td><td><span class="pron">[열려섣]</span></td><td>Thêm ㄴ rồi ㄹ hóa: ㄹ + ㄴ → ㄹㄹ</td></tr>
+</table>
+<p class="note">Các quy tắc này sẽ học kỹ ở chủ đề <b>Biến âm</b>.</p>
+<h4>Kiểm tra nhanh</h4>
+<div class="set" data-set="q4"></div>
+</section>
+
+<!-- ================= LUYỆN ================= -->
+<section class="sec" id="slt">
+<h2>Luyện tập · chấm ngay</h2>
+<p class="goal">Làm theo thứ tự. Bài gõ chữ: gõ cách đọc bằng chữ Hàn (dấu cách không quan trọng), bấm “Kiểm tra” hoặc Enter.</p>
+<h3>Bài 1 · Chọn cách đọc đúng</h3>
+<div class="set" data-set="l1"></div>
+<h3>Bài 2 · Viết cách đọc</h3>
+<div class="set" data-set="l2"></div>
+<h3>Bài 3 · Đổi số tiếng Việt sang tiếng Hàn</h3>
+<div class="set" data-set="l3"></div>
+<h3>Bài 4 · Nghe và chọn</h3>
+<p class="note">Bấm 🔊 để nghe (bấm nhiều lần được), rồi chọn con số em nghe thấy.</p>
+<div class="set" data-set="l4"></div>
+<h3>Bài 5 · Kiểm tra cuối (12 câu)</h3>
+<p class="note">Làm một lượt, không xem lại lý thuyết. Mục tiêu từ 10/12.</p>
+<div class="set" data-set="ck"></div>
+<div class="sum" id="sumall"></div>
+<h3>Nói được ngay</h3>
+<p>Dùng số để trả lời to các câu sau (cô hỏi, em trả lời không nhìn chữ):</p>
+<ol>
+<li class="ko">몇 학번이에요? 몇 학년이에요? 지금 몇 살이에요?</li>
+<li class="ko">생일이 몇 월 며칠이에요?</li>
+<li class="ko">오늘 수업이 몇 시에 시작해서 몇 시에 끝나요? 몇 시간 수업해요?</li>
+<li class="ko">이번 학기에 몇 과목을 들어요? 모두 몇 학점이에요?</li>
+<li class="ko">한 달 생활비가 얼마예요? 한국 돈으로 얼마예요?</li>
+<li class="ko">가족이 모두 몇 명이에요? 형제가 몇 명이에요?</li>
+</ol>
+</section>
+
+<footer>Hàn ngữ Nari · <a href="../">Từ vựng Seoul</a> · <a href="../../">Trang chủ</a></footer>
+</main>
+
+<script>
+/* ---------- đọc số ---------- */
+var D=['','일','이','삼','사','오','육','칠','팔','구'];
+function sino4(g){var s='',p=[[1000,'천'],[100,'백'],[10,'십']];p.forEach(function(x){var d=Math.floor(g/x[0])%10;if(d)s+=(d===1?'':D[d])+x[1];});if(g%10)s+=D[g%10];return s;}
+function sino(n){
+  if(n===0)return '영';
+  var U=['','만','억','조'],parts=[],i=0;
+  while(n>0&&i<U.length){var g=n%10000;if(g){var w=sino4(g);if(i===1&&g===1)w='';parts.unshift(w+U[i]);}n=Math.floor(n/10000);i++;}
+  return parts.join(' ');
+}
+var NT=['','열','스물','서른','마흔','쉰','예순','일흔','여든','아흔'],NU=['','하나','둘','셋','넷','다섯','여섯','일곱','여덟','아홉'],NC=['','한','두','세','네','다섯','여섯','일곱','여덟','아홉'];
+function nat(n,counter){if(n<1||n>99)return '';var t=Math.floor(n/10),u=n%10;if(counter&&t===2&&!u)return '스무';return NT[t]+(counter?NC[u]:NU[u]);}
+function month(m){return m===6?'유월':m===10?'시월':sino(m)+'월';}
+function readNum(raw){
+  var v=raw.trim(),m;
+  if((m=/^(\d{1,2})[:h](\d{2})$/.exec(v))){var H=+m[1],M=+m[2];if(H>23||M>59)return null;var h=H%12||12;
+    var r=(H<12?'오전 ':'오후 ')+nat(h,true)+' 시'+(M?' '+sino(M)+' 분':'');return [[r,'Giờ: giờ thuần Hàn, phút Hán Hàn'+(M===30?' (= '+nat(h,true)+' 시 반)':'')]];}
+  if((m=/^(\d{4})-(\d{1,2})-(\d{1,2})$/.exec(v))){var y=+m[1],mo=+m[2],d=+m[3];if(mo<1||mo>12||d<1||d>31)return null;
+    return [[sino(y)+' 년 '+month(mo)+' '+sino(d)+' 일','Ngày tháng: Hán Hàn, thứ tự năm → tháng → ngày']];}
+  v=v.replace(/[.,\s]/g,'');if(!/^\d{1,13}$/.test(v))return null;
+  var n=+v,out=[[sino(n),'Hán Hàn (đọc số, tiền, đo lường)']];
+  if(n>=1&&n<=99){out.push([nat(n,false),'Thuần Hàn (đứng một mình)']);var c=nat(n,true);if(c!==nat(n,false))out.push([c+' 개 / '+c+' 명','Thuần Hàn trước lượng từ']);}
+  else if(n>=100)out.push(['—','Thuần Hàn chỉ tới 99, từ 100 trở lên luôn dùng Hán Hàn']);
+  return out;
+}
+function showNum(){
+  var r=readNum(document.getElementById('numIn').value),o=document.getElementById('numOut');
+  if(!r){o.innerHTML='<p class="note">Gõ số (vd. 125000), giờ (15:20) hoặc ngày (2026-10-13).</p>';return;}
+  o.innerHTML=r.map(function(x){return '<div class="ex"><span class="ko"><b>'+esc(x[0])+'</b>'+(x[0]!=='—'?' <button class="say" data-say="'+esc(x[0])+'">🔊</button>':'')+'</span><span class="vi">'+esc(x[1])+'</span></div>';}).join('');
+}
+
+/* ---------- bảng ---------- */
+function sayBtn(t){return ' <button class="say" data-say="'+esc(t)+'">🔊</button>';}
+var NUMS=[1,2,3,4,5,6,7,8,9,10,11,20,30,40,50,60,70,80,90,100];
+function fillNumtab(){
+  document.getElementById('numtab').innerHTML='<tr><th>Số</th><th>Thuần Hàn</th><th>Trước lượng từ</th><th>Hán Hàn</th></tr>'+NUMS.map(function(n){
+    var a=nat(n,false),c=nat(n,true);
+    return '<tr><td><b>'+n+'</b></td><td class="ko">'+(a?a+sayBtn(a):'<span class="note">(không có)</span>')+'</td><td class="ko">'+(a?(c!==a?'<b>'+c+'</b>':c):'')+'</td><td class="ko">'+sino(n)+sayBtn(sino(n))+'</td></tr>';}).join('');
+}
+// Lượng từ: [lượng từ, dùng cho, ví dụ]
+var DVN=[
+ ['개','cái, chiếc (đồ vật nói chung)','사과 세 개'],['명','người','학생 다섯 명'],['분','vị, người (kính ngữ)','손님 두 분'],['사람','người (đứng sau số)','세 사람'],
+ ['마리','con (động vật)','고양이 두 마리'],['살','tuổi','스무 살'],['시','giờ (mốc)','네 시'],['시간','tiếng, giờ đồng hồ (khoảng)','두 시간'],
+ ['번','lần','한 번, 세 번'],['잔','cốc, ly','커피 한 잔'],['병','chai','맥주 세 병'],['권','quyển','책 네 권'],
+ ['장','tờ, tấm (giấy, vé, ảnh)','표 두 장'],['벌','bộ (quần áo)','옷 한 벌'],['켤레','đôi (giày, tất)','신발 한 켤레'],['대','chiếc (xe, máy móc)','차 두 대'],
+ ['그릇','bát, tô','밥 두 그릇'],['송이','bông (hoa)','장미 열 송이'],['달','tháng (khoảng)','세 달']
+];
+var DVS=[
+ ['원 / 동 / 달러','tiền','오천 원, 십만 동'],['층','tầng','삼 층'],['호','phòng số','삼백일 호'],['번','số (thứ tự, mã)','일 번 버스, 칠 번 문제'],
+ ['분 / 초','phút / giây','이십 분, 삼십 초'],['일','ngày','십삼 일, 삼 일 동안'],['주일 / 주','tuần','일주일, 이 주'],['월','tháng (tên)','시월'],
+ ['개월','tháng (khoảng)','삼 개월'],['년','năm','이천이십육 년, 삼 년'],['학년 / 학기','năm học / học kỳ','이 학년, 일 학기'],['과','bài (giáo trình)','제일 과, 오 과'],
+ ['쪽 / 페이지','trang','삼십 쪽'],['교시','tiết thứ','일 교시'],['회','kỳ, lần thứ (văn bản)','제91회 토픽'],['등','hạng','일 등'],
+ ['도','độ','삼십 도'],['킬로(그램) / 미터 / 센티','kg / m / cm','오 킬로, 백 미터'],['퍼센트','phần trăm','오십 퍼센트'],['인분','suất (ăn)','삼 인분'],['세','tuổi (trang trọng)','이십 세']
+];
+function fillDV(){
+  function rows(a){return '<tr><th>Lượng từ</th><th>Đếm / đo</th><th>Ví dụ</th></tr>'+a.map(function(r){return '<tr><td class="ko"><b>'+r[0]+'</b></td><td>'+r[1]+'</td><td class="ko">'+r[2]+sayBtn(r[2])+'</td></tr>';}).join('');}
+  document.getElementById('dvN').innerHTML=rows(DVN);document.getElementById('dvS').innerHTML=rows(DVS);
+}
+
+/* ---------- bài tập ---------- */
+// Trắc nghiệm: [câu, [đáp án đúng, sai…], giải thích, (câu để máy đọc)] — lựa chọn đầu là đáp án, trang tự đảo.
+var M={
+q1:[
+ ['Đếm: “ba quả táo” → 사과 (    )',['세 개','삼 개','셋 개'],'Đếm số lượng bằng lượng từ 개 → thuần Hàn, 셋 đổi thành 세 trước lượng từ.'],
+ ['“tầng 3” → (    )',['삼 층','세 층','셋 층'],'Tầng là số đánh thứ tự → Hán Hàn.'],
+ ['“xe buýt số 1” → (    ) 버스',['일 번','한 번','하나 번'],'Số mã, số thứ tự → Hán Hàn 일 번. 한 번 = một lần.'],
+ ['“3 giờ 20 phút” → (    )',['세 시 이십 분','삼 시 이십 분','세 시 스무 분','삼 시 스무 분'],'Giờ thuần Hàn, phút Hán Hàn.']
+],
+q2:[
+ ['“hai vị khách” → 손님 (    )',['두 분','이 분','둘 분'],'분 ở đây là “vị” (kính ngữ của 명) → thuần Hàn. 이 분 = hai phút (hoặc “vị này”).'],
+ ['“bốn quyển sách” → 책 (    )',['네 권','사 권','넷 권'],'Đếm số quyển → thuần Hàn, 넷 → 네.'],
+ ['“ngày mấy?” viết đúng là',['며칠','몇 일','몇일'],'Chính tả chuẩn là 며칠.'],
+ ['“20 tuổi” (nói thường) → (    )',['스무 살','스물 살','이십 살'],'스물 → 스무 trước lượng từ khi đúng 20. 살 đi với thuần Hàn.']
+],
+q3:[
+ ['“tháng 6” → (    )',['유월','육월','여섯 월'],'육월 bỏ ㄱ thành 유월.'],
+ ['“3 ngày” (thuần Hàn) → (    )',['사흘','나흘','삼흘'],'하루 1 · 이틀 2 · 사흘 3 · 나흘 4.'],
+ ['“hai tiếng đồng hồ” → (    )',['두 시간','이 시간','둘 시간'],'시간 (khoảng giờ) đếm bằng thuần Hàn.'],
+ ['“lần thứ nhất” → (    )',['첫 번째','한 번째','일 번째'],'Thứ nhất dùng 첫: 첫째, 첫 번째.']
+],
+q4:[
+ ['100.000 (một trăm nghìn) → (    )',['십만','백천','백만','일십만'],'Tách 4 chữ số: 10 | 0000 → 십만.'],
+ ['1.000.000 (một triệu) → (    )',['백만','천만','십만','일백만'],'100 | 0000 → 백만.'],
+ ['10.000원 → (    )',['만 원','일만 원','십천 원'],'Không nói 일 trước 만.'],
+ ['십육 đọc là',['[심뉵]','[십육]','[시뷱]'],'Thêm ㄴ rồi mũi hóa: 십육 → 십뉵 → 심뉵.']
+],
+l1:[
+ ['커피 2잔',['두 잔','이 잔','둘 잔'],'Đếm cốc → thuần Hàn 두.'],
+ ['5,000원',['오천 원','다섯천 원','오천 언'],'Tiền → Hán Hàn.'],
+ ['21살',['스물한 살','스무한 살','이십일 살'],'Chỉ đúng 20 mới là 스무; 21 là 스물한.'],
+ ['10월',['시월','십월','열 월'],'십월 bỏ ㅂ → 시월.'],
+ ['3개월',['삼 개월','셋 개월','삼 달'],'개월 → Hán Hàn. Thuần Hàn thì nói 세 달.'],
+ ['2026년',['이천이십육 년','이천스물여섯 년','두천이십육 년'],'Năm → Hán Hàn, không nói 일천/두천.'],
+ ['010-3456-7890',['공일공 삼사오육 칠팔구공','공하나공 셋넷다섯여섯 일곱여덟아홉공','영일영 삼사오육 칠팔구십'],'Số điện thoại đọc từng chữ số Hán Hàn, 0 đọc 공.'],
+ ['학생 120명',['백이십 명','백스무 명','일백이십 명'],'Từ 100 trở lên luôn Hán Hàn, kể cả khi đếm người.']
+],
+l3:[],
+l4:[
+ ['',['35.000원','3.500원','350.000원','30.500원'],'삼만 오천 원 = 3 | 5000.','삼만 오천 원'],
+ ['',['11:40','10:40','11:14','1:40'],'열한 시 사십 분.','열한 시 사십 분'],
+ ['',['16/6','10/6','16/10','6/10'],'유월 십육 일 = ngày 16 tháng 6.','유월 십육 일'],
+ ['',['2 tiếng','2 giờ (mốc)','2 phút','2 ngày'],'두 시간 = 2 tiếng.','두 시간'],
+ ['',['1.200.000원','120.000원','12.000.000원','1.020.000원'],'백이십만 원 = 120 | 0000.','백이십만 원'],
+ ['',['3 ngày','4 ngày','2 ngày','3 tuần'],'사흘 = 3 ngày.','사흘 동안 여행했어요']
+],
+ck:[
+ ['고양이 (    ) 있어요. (2 con)',['두 마리','이 마리','둘 마리','두 개'],'Đếm con vật → 마리, thuần Hàn.'],
+ ['우리 집은 (    )이에요. (tầng 15)',['십오 층','열다섯 층','십오 번','열다섯 번째'],'Tầng → Hán Hàn.'],
+ ['지금 (    )예요. (9:30)',['아홉 시 반','구 시 반','아홉 시 서른 분','구 시 삼십 분'],'Giờ thuần, 30 phút = 반.'],
+ ['이 가방은 (    ) 원이에요. (45.000)',['사만 오천','사십오천','마흔다섯천','사만 오백'],'45.000 = 4 | 5000.'],
+ ['제 생일은 (    )이에요. (10/6)',['유월 십 일','육월 십 일','시월 육 일','여섯 월 열 일'],'Tiếng Hàn: tháng trước ngày sau. 10/6 = ngày 10 tháng 6 → 유월 십 일.'],
+ ['한국어를 (    ) 동안 배웠어요. (2 năm)',['이 년','두 년','둘 년','이 해'],'년 → Hán Hàn.'],
+ ['제주도에 (    ) 가 봤어요. (3 lần)',['세 번','삼 번','셋 번','세 번째'],'Mấy lần → thuần Hàn 번.'],
+ ['손님이 (    ) 오셨어요. (3 vị)',['세 분','삼 분','셋 분','세 명님'],'분 = vị (kính ngữ) → thuần Hàn.'],
+ ['우리 반 학생은 모두 (    )이에요. (20 người)',['스무 명','스물 명','이십 명들','스무 사람명'],'20 trước lượng từ → 스무.'],
+ ['한 달 월세가 (    ) 원이에요. (500.000)',['오십만','오백천','오천만','다섯십만'],'50 | 0000 → 오십만.'],
+ ['오늘은 (    )예요? — 시월 십삼 일이에요.',['몇 월 며칠','몇 월 몇 일','몇 달 며칠','몇 월 몇 날'],'Hỏi ngày: 몇 월 며칠.'],
+ ['Câu nào đọc <b>sai</b>?',['커피 삼 잔 주세요.','책 두 권을 샀어요.','삼 층에 가요.','오천 원이에요.'],'Đếm cốc phải là 세 잔. Ba câu còn lại đúng.']
+]};
+// Gõ chữ: [đề, [đáp án chấp nhận], giải thích]
+var T={
+l2:[
+ ['책 4권',['네 권'],'Đếm quyển → thuần Hàn, 넷 → 네.'],
+ ['고양이 2마리',['두 마리'],'둘 → 두.'],
+ ['18살',['열여덟 살'],'Tuổi → thuần Hàn.'],
+ ['20살',['스무 살'],'스물 → 스무 khi đúng 20.'],
+ ['오후 4시 15분',['오후 네 시 십오 분'],'Giờ thuần, phút Hán.'],
+ ['3월 1일',['삼월 일 일','삼월 일일'],'Ngày tháng → Hán Hàn.'],
+ ['25,000원',['이만 오천 원'],'2 | 5000 → 이만 오천.'],
+ ['16층',['십육 층'],'Tầng → Hán Hàn (đọc [심뉵 층]).'],
+ ['맥주 3병',['세 병'],'Đếm chai → thuần Hàn.'],
+ ['2번 갔어요 (đi 2 lần)',['두 번 갔어요','두 번'],'Lần → thuần Hàn.']
+],
+l3:[
+ ['mười nghìn (10.000)',['만'],'1 | 0000 → 만, không nói 일만.'],
+ ['một trăm nghìn (100.000)',['십만'],'10 | 0000 → 십만.'],
+ ['năm trăm nghìn (500.000)',['오십만'],'50 | 0000 → 오십만.'],
+ ['một triệu (1.000.000)',['백만'],'100 | 0000 → 백만.'],
+ ['mười triệu (10.000.000)',['천만'],'1000 | 0000 → 천만.'],
+ ['một trăm triệu (100.000.000)',['일억','억'],'1 | 0000 | 0000 → 일억.'],
+ ['ba triệu năm trăm nghìn (3.500.000)',['삼백오십만'],'350 | 0000 → 삼백오십만.'],
+ ['hai mươi lăm nghìn (25.000)',['이만 오천','이만오천'],'2 | 5000 → 이만 오천.']
+]};
+delete M.l3;
+var TAB={tq:['q1'],dv:['q2'],tg:['q3'],sl:['q4'],lt:['l1','l2','l3','l4','ck']};
+var NAMES={q1:'Hai bộ số',q2:'Lượng từ',q3:'Thời gian',q4:'Số lớn',l1:'Chọn cách đọc',l2:'Viết cách đọc',l3:'Đổi số Việt → Hàn',l4:'Nghe và chọn',ck:'Kiểm tra cuối'};
+
+/* ---------- trạng thái ---------- */
+var KEY='nari-so', st={};
+try{st=JSON.parse(localStorage.getItem(KEY)||'{}')||{};}catch(e){st={};}
+st.m=st.m||{};st.t=st.t||{};
+function save(){try{localStorage.setItem(KEY,JSON.stringify(st));}catch(e){}}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function $(id){return document.getElementById(id);}
+function hash(s){var h=7;for(var i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))%233280;return h;}
+function order(n,seed){var r=[],x=seed||7;for(var i=0;i<n;i++)r.push(i);for(i=n-1;i>0;i--){x=(x*9301+49297)%233280;var j=Math.floor(x/233280*(i+1));var t=r[i];r[i]=r[j];r[j]=t;}return r;}
+function norm(s){return String(s).replace(/[\s.,!?~“”"'’‘·…()]/g,'');}
+
+/* ---------- đọc tiếng Hàn ---------- */
+var koVoice=null;
+function pickVoice(){if(!window.speechSynthesis)return;var v=speechSynthesis.getVoices();for(var i=0;i<v.length;i++){if(/^ko/i.test(v[i].lang)){koVoice=v[i];if(/google|yuna|female|sun/i.test(v[i].name))break;}}}
+if(window.speechSynthesis){pickVoice();speechSynthesis.onvoiceschanged=pickVoice;}
+function say(t,rate){
+  if(!window.speechSynthesis)return;
+  speechSynthesis.cancel();var u=new SpeechSynthesisUtterance(t);u.lang='ko-KR';if(koVoice)u.voice=koVoice;u.rate=rate||0.9;speechSynthesis.speak(u);
+}
+
+/* ---------- trắc nghiệm ---------- */
+function mcqHTML(set,i){
+  var it=M[set][i],o=it[1],ord=order(o.length,hash(set+i)),pick=st.m[set]&&st.m[set][i],done=pick!=null;
+  var q=it[3]?'<button class="say" data-say="'+esc(it[3])+'">🔊</button> <button class="say" data-say="'+esc(it[3])+'" data-rate="0.6">🐢</button>'+(done?' <span class="ko note">'+esc(it[3])+'</span>':''):'<span class="ko">'+it[0]+'</span>';
+  var h='<div class="mcq'+(done?' done'+(pick===0?'':' wrong'):'')+'"><div class="q"><span class="n">'+(i+1)+'.</span>'+q+'</div><div class="opts">';
+  ord.forEach(function(k){var c='opt';if(done){if(k===0)c+=' ok';else if(k===pick)c+=' no';}
+    h+='<button class="'+c+'" data-set="'+set+'" data-i="'+i+'" data-k="'+k+'">'+o[k]+'</button>';});
+  return h+'</div><div class="why">'+(done?(pick===0?'✓ ':'✗ ')+it[2]:'')+'</div></div>';
+}
+function scoreOf(set){var m=st.m[set]||{},n=0,ok=0;for(var i in m){n++;if(m[i]===0)ok++;}return {n:n,ok:ok,all:M[set].length};}
+function scoreLine(s,set){return '<div class="score">Đúng '+s.ok+'/'+s.all+(s.n<s.all?' (còn '+(s.all-s.n)+' câu)':'')+(s.n?' · <a href="#" data-redo="'+set+'">Làm lại</a>':'')+'</div>';}
+function renderM(set){
+  var el=document.querySelector('.set[data-set="'+set+'"]');if(!el)return;
+  var h='';for(var i=0;i<M[set].length;i++)h+=mcqHTML(set,i);
+  el.innerHTML=h+scoreLine(scoreOf(set),set);
+}
+
+/* ---------- gõ chữ ---------- */
+function typHTML(set,i){
+  var it=T[set][i],r=st.t[set]&&st.t[set][i],cls=r?(r.ok?' ok':' no'):'';
+  var fb=r?(r.ok?'<span class="r">✓ Đúng.</span> '+esc(it[2]):'<span class="r">✗ Chưa đúng.</span> Đáp án: <b class="ko">'+esc(it[1][0])+'</b> — '+esc(it[2])):'';
+  return '<div class="typ'+cls+'"><div class="q"><span class="n">'+(i+1)+'.</span><span class="ko">'+esc(it[0])+'</span></div><div class="row"><input class="ans" data-set="'+set+'" data-i="'+i+'" value="'+esc(r?r.v:'')+'" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Gõ cách đọc bằng chữ Hàn"><button class="b blue" data-chk="'+set+'" data-i="'+i+'">Kiểm tra</button></div><div class="fb">'+fb+'</div></div>';
+}
+function tScore(set){var m=st.t[set]||{},n=0,ok=0;for(var i in m){n++;if(m[i].ok)ok++;}return {n:n,ok:ok,all:T[set].length};}
+function renderT(set){
+  var el=document.querySelector('.set[data-set="'+set+'"]');if(!el)return;
+  var h='';for(var i=0;i<T[set].length;i++)h+=typHTML(set,i);
+  el.innerHTML=h+scoreLine(tScore(set),set);
+}
+function check(set,i){
+  var inp=document.querySelector('input.ans[data-set="'+set+'"][data-i="'+i+'"]');if(!inp)return;
+  var v=inp.value.trim();if(!v)return;
+  var ok=T[set][i][1].some(function(a){return norm(a)===norm(v);});
+  st.t[set]=st.t[set]||{};st.t[set][i]={v:v,ok:ok};save();renderT(set);renderSum();
+  var nx=document.querySelector('input.ans[data-set="'+set+'"][data-i="'+(i+1)+'"]');if(ok&&nx)nx.focus();
+}
+
+/* ---------- tổng kết ---------- */
+function report(){
+  var L=['Số Hán Hàn – thuần Hàn · '+(st.name||'(chưa ghi tên)')];
+  Object.keys(NAMES).forEach(function(s){var r=M[s]?scoreOf(s):tScore(s);L.push('  '+NAMES[s]+': '+r.ok+'/'+r.all+(r.n<r.all?' (làm '+r.n+')':''));});
+  var m=st.m.ck||{};
+  M.ck.forEach(function(it,i){if(m[i]!=null&&m[i]!==0)L.push('  ✗ Câu '+(i+1)+': chọn '+it[1][m[i]]+' → đúng '+it[1][0]);});
+  ['l2','l3'].forEach(function(s){var t=st.t[s]||{};T[s].forEach(function(it,i){if(t[i]&&!t[i].ok)L.push('  ✗ '+it[0]+': viết '+t[i].v+' → đúng '+it[1][0]);});});
+  return L.join('\n');
+}
+function renderSum(){
+  var el=$('sumall');
+  el.innerHTML='<h4>Kết quả</h4><p class="note">Làm xong, ghi tên rồi bấm gửi cho cô qua Zalo (hoặc chép đoạn dưới gửi cô).</p>'+
+    '<input class="nm" placeholder="Tên em" value="'+esc(st.name||'')+'"><div class="btns"><button class="b main" data-share="1">Gửi kết quả cho cô…</button></div><pre>'+esc(report())+'</pre>';
+}
+function share(){
+  var t=report();
+  if(navigator.share){navigator.share({text:t}).catch(function(){});}
+  else if(navigator.clipboard){navigator.clipboard.writeText(t).then(function(){alert('Đã chép. Em dán vào Zalo gửi cô nhé.');});}
+  else prompt('Chép đoạn này gửi cô:',t);
+}
+
+/* ---------- sự kiện ---------- */
+document.addEventListener('click',function(e){
+  var d=e.target.closest('button,a');if(!d)return;
+  if(d.classList.contains('opt')&&d.dataset.set){
+    var set=d.dataset.set,i=+d.dataset.i;st.m[set]=st.m[set]||{};
+    if(st.m[set][i]!=null)return;st.m[set][i]=+d.dataset.k;save();renderM(set);renderSum();return;}
+  if(d.dataset.say){say(d.dataset.say,d.dataset.rate?+d.dataset.rate:0.9);return;}
+  if(d.dataset.chk){check(d.dataset.chk,+d.dataset.i);return;}
+  if(d.dataset.redo){e.preventDefault();var s=d.dataset.redo;if(M[s]){delete st.m[s];save();renderM(s);}else{delete st.t[s];save();renderT(s);}renderSum();return;}
+  if(d.dataset.share){share();return;}
+  if(d.id==='numGo'){showNum();return;}
+});
+document.addEventListener('keydown',function(e){
+  if(e.key!=='Enter')return;
+  if(e.target.id==='numIn'){e.preventDefault();showNum();return;}
+  if(e.target.classList.contains('ans')&&e.target.dataset.set){e.preventDefault();check(e.target.dataset.set,+e.target.dataset.i);}
+});
+document.addEventListener('input',function(e){
+  if(e.target.classList.contains('nm')){st.name=e.target.value;save();var p=document.querySelector('#sumall pre');if(p)p.textContent=report();}
+});
+
+/* ---------- điều hướng ---------- */
+function show(){
+  var m=location.hash.match(/b=(\w+)/),k=m?m[1]:(st.tab||'tq');if(!$('s'+k))k='tq';
+  document.querySelectorAll('.sec').forEach(function(s){s.classList.toggle('on',s.id==='s'+k);});
+  document.querySelectorAll('nav a').forEach(function(a){a.classList.toggle('on',a.dataset.k===k);});
+  st.tab=k;save();
+}
+fillNumtab();fillDV();showNum();
+Object.keys(M).forEach(renderM);Object.keys(T).forEach(renderT);renderSum();
+window.addEventListener('hashchange',function(){show();scrollTo(0,0);});show();
+</script>
+</body>
+</html>

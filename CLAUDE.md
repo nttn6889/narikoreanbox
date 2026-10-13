@@ -265,6 +265,13 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   **Không đặt link từ `seoul/` (hay trang học sinh nào) sang `seoul/3a-1/`** — cô coi trang học liệu như giáo án của cô.
   `TV1[i][5]` = cụm hay đi với `[[ko, nghĩa Việt]…]`.
 
+## Học liệu nền tảng cho lớp 3A chuyên ngành (cô dùng làm bản trình chiếu)
+- Mỗi chủ đề một trang riêng, cùng khung với `seoul/3a-1/` (thẻ lý thuyết + thẻ Luyện chấm ngay + “Gửi kết quả cho cô”). Không đặt link từ trang học sinh;
+  cô gom link ở trang “Mục lục học liệu Nari” (https://claude.ai/artifact/6bTfJWsvsCeMrmggceXPjQ, nhóm “Seoul 3A · lớp chuyên ngành”).
+- `seoul/so-dem/` Số Hán Hàn – thuần Hàn: hai bộ số + quy tắc chọn, lượng từ (`DVN`/`DVS`), thời gian, số lớn (만/억 so với nghìn/triệu), tiền, số và biến âm,
+  “Máy đọc số” (`sino`/`nat`/`readNum`: số, giờ `15:20`, ngày `2026-10-13`). Bài tập trong `M` (lựa chọn đầu là đáp án; phần tử 4 = câu máy đọc cho bài nghe), `T`. localStorage `nari-so`.
+- Còn làm: Biến âm, Trợ từ, Ngữ pháp tương đồng (cặp dễ nhầm 1A–3A).
+
 ## Học câu 52 trong 3 buổi (`viet-52/`)
 - Trang học liệu gửi học sinh: Buổi 1 (ô cuối câu, 5 nhóm từ nối: 47, 41, 52, 92, 96, 36, 37), Buổi 2 (“Chép hay Lật” = tìm ý cho ô; đề 60, 83, 91, 64, 35),
   Buổi 3 (làm như thi, 6 phút/câu, không gợi ý: 93, 94, 95, 102), thẻ Bảng tra (9 nhóm tín hiệu → mẫu). Link `viet-52/#b=1|2|3|tra`.
