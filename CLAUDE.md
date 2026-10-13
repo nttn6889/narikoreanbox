@@ -74,6 +74,14 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 ## Lưu ý
 - Repo không được chứa tên, điểm, nhận xét của học sinh.
 
+## Logo Nari TOPIK (`logo/`) — bản cô đã chốt
+- Tên **Nari TOPIK**, khẩu hiệu **Hiểu từng câu – Vững từng cấp**. Biểu tượng: tháp Namsan (chóp đỏ, chân là ngòi bút) cắm vào quyển sách mở
+  (trang trái tím, trang phải vàng, 1 nét lượn bên dưới). Màu: tím `#53468F`, vàng `#D4A843` (chữ TOPIK `#C99A2E`), đỏ `#E0313F`, nền ảnh đại diện `#EFEAF8`.
+- 5 bản: `nari-topik-logo` (hình + tên), `-logo-slogan`, `-ngang`, `-icon` (tròn tím nhạt), `-bieu-tuong` (chỉ hình); mỗi bản có `.svg`, `.png` (trong suốt),
+  `-nen-trang.jpg`. Sinh lại: `pip install fonttools brotli`, `python3 tools/logo/mklogo.py logo` (chữ đổi thành nét vẽ, font Be Vietnam Pro trong
+  `tools/logo/fonts/`), PNG chụp bằng Chromium. Logo cũ (đỏ – xanh “Hàn Ngữ Nari”, vòng tròn EPS) không dùng nữa.
+- Icon app thi thử (`thi-thu/icon/`) và logo trên các trang **chưa đổi** sang logo mới — làm khi cô nhắn.
+
 ## Về cô (`ve-co/`)
 - Bản sao trang https://claude.ai/artifact/2XJHcdRJMNbKnDoMXqVZWQ, sửa trực tiếp ở đây (link "Trang chủ" trỏ về trang chủ site).
 
