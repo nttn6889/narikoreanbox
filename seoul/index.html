@@ -87,11 +87,21 @@ h3 small{font-weight:normal;font-family:"Times New Roman",serif;font-size:15px}
 .sau .badge{display:inline-block;font:bold 12px Arial,sans-serif;border-radius:10px;padding:1px 8px;margin-left:4px;color:#fff;background:#1f3c88}
 .sau .badge.new{background:var(--star)}
 .sau button.say{font-size:14px;line-height:1;padding:3px 6px;border:1px solid #d8dde6;border-radius:6px;background:var(--bg);cursor:pointer;vertical-align:middle}
-.sau .go{display:inline-block;margin:6px 0 0;padding:6px 14px;border-radius:6px;background:var(--star);color:#fff;text-decoration:none;font-weight:bold}
+.sau h4{font-size:16px;margin:16px 0 6px}
+.sau .mcq{border:1px solid #d8dde6;border-radius:8px;padding:8px 10px;margin:0 0 10px}
+.sau .mcq .q{margin:0 0 6px}
+.sau .opts{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+@media(max-width:520px){.sau .opts{grid-template-columns:1fr}}
+.sau .opt{font-size:15px;text-align:left;padding:7px 10px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);cursor:pointer}
+.sau .opt.ok{background:#eaf6ee;border-color:#1d7a3a;color:#1d7a3a;font-weight:bold}
+.sau .opt.no{background:#fbecee;border-color:var(--star);color:var(--star);text-decoration:line-through}
+.sau .why{margin:6px 0 0;font-size:14.5px;color:#333}
+.sau .mcq.wrong{border-color:var(--star)}
+.sau .score{font:bold 15px Arial,sans-serif;color:#1f3c88;margin:4px 0 12px}
 @media(max-width:560px){.sau{padding:4px 8px 10px}.sau table.t{font-size:14px}.sau table.t th,.sau table.t td{padding:4px 5px}}
 footer{margin-top:40px;font-size:13px;color:var(--muted);text-align:center}
 footer a{color:var(--muted)}
-@media print{.co,nav,.parts,.tools,footer,.sau button.say,.sau .go{display:none}.sec{display:block}h2{break-before:page}h2:first-of-type{break-before:auto}.tb{break-inside:auto}h3{break-after:avoid}}
+@media print{.co,nav,.parts,.tools,footer,.sau button.say{display:none}.sec{display:block}h2{break-before:page}h2:first-of-type{break-before:auto}.tb{break-inside:auto}h3{break-after:avoid}}
 </style>
 </head>
 <body>
@@ -104,7 +114,6 @@ footer a{color:var(--muted)}
   <h1>Từ vựng giáo trình Seoul</h1>
   <p class="upd" id="upd"></p>
   <p>Học từ của bài trước khi lên lớp: đọc nghĩa, nhìn <b style="color:var(--acc)">Hán Việt</b> để đoán nghĩa nhanh, đọc câu ví dụ (chữ gạch chân là từ đã chia đuôi). Bấm “Ẩn nghĩa” để tự kiểm tra, chạm vào ô để xem lại. <b style="color:var(--star)">★5 đề</b> = từ đã gặp trong 5 đề TOPIK II của lớp.</p>
-  <p>Học liệu theo bài: <a href="3a-1/">3A · Bài 1 (ôn nền 1A–2B + -다고 하다)</a> · <a href="kiem-tra/">Kiểm tra nền tảng 1A–2B</a></p>
 </header>
 <div class="parts" id="parts" hidden></div>
 <nav id="nav"></nav>
@@ -124,8 +133,8 @@ footer a{color:var(--muted)}
   var BOOKS = ['1A', '1B', '2A', '2B', '3A', '3B'];
   var PARTS = BOOKS.map(function(b){ return {k: b, t: b, s: +b[0] < 3 ? 'Sơ cấp · ôn' : 'Trung cấp'}; }).concat([{k: 'cot', t: '★ Cốt lõi', s: 'Sơ cấp hay gặp'}]);
   var MIN_DE = 3;
-  // Bài có phần học sâu từ vựng: seoul/sau/<khóa>.html + trang học liệu để luyện tập.
-  var SAU = {'3A-1': '3a-1/#b=tv'}, SAUC = {};
+  // Bài có phần học sâu từ vựng: seoul/sau/<khóa>.html (bảng + dữ liệu bài luyện từ vựng).
+  var SAU = {'3A-1': 1}, SAUC = {};
   var DATA = null, DE = null, BAI = {}, cur = 0, curPart = null;
   function hashArg(name){ var m = new RegExp('[#&]' + name + '=([^&]*)', 'i').exec(location.hash); return m ? decodeURIComponent(m[1]) : ''; }
   function wanted(){
@@ -175,13 +184,50 @@ footer a{color:var(--muted)}
   }
   function loadSau(){
     [].forEach.call(out.querySelectorAll('.sau[data-sau]'), function(el){
-      var k = el.getAttribute('data-sau'), tail = '<a class="go" href="' + SAU[k] + '">Luyện tập từ vựng bài này ›</a>';
-      function put(t){ el.innerHTML = el.querySelector('.sh').outerHTML + t + tail; }
+      var k = el.getAttribute('data-sau');
+      function put(t){ el.innerHTML = el.querySelector('.sh').outerHTML + t; quiz(el, k); }
       if (SAUC[k]) return put(SAUC[k]);
       fetch('sau/' + k + '.html', {cache: 'no-cache'}).then(function(r){ if (!r.ok) throw 0; return r.text(); })
         .then(function(t){ SAUC[k] = t; put(t); }).catch(function(){ put('<p class="note">Không tải được phần học sâu. Kiểm tra mạng rồi tải lại trang.</p>'); });
     });
   }
+  // Bài luyện trắc nghiệm trong phần học sâu: [câu, [đáp án đúng, sai…], giải thích]; đảo lựa chọn cố định theo câu.
+  function quiz(el, k){
+    var d = el.querySelector('script.sau-q'); if (!d) return;
+    var sets = JSON.parse(d.textContent), h = '';
+    sets.forEach(function(s, si){
+      h += '<h4>7.' + (si + 1) + '. ' + esc(s.t) + '</h4>';
+      s.q.forEach(function(it, i){
+        var n = it[1].length, ord = [], x = 7 + si * 31 + i * 7;
+        for (var j = 0; j < n; j++) ord.push(j);
+        for (j = n - 1; j > 0; j--) { x = (x * 9301 + 49297) % 233280; var r = Math.floor(x / 233280 * (j + 1)), t = ord[j]; ord[j] = ord[r]; ord[r] = t; }
+        h += '<div class="mcq"><div class="q"><b>' + (i + 1) + '.</b> <span class="ko">' + it[0] + '</span></div><div class="opts">' +
+          ord.map(function(j){ return '<button type="button" class="opt ko" data-k="' + j + '">' + it[1][j] + '</button>'; }).join('') +
+          '</div><div class="why" data-why="' + esc(it[2]) + '"></div></div>';
+      });
+      h += '<p class="score" data-set="' + si + '"></p>';
+    });
+    var box = document.createElement('div'); box.className = 'quiz'; box.innerHTML = h; d.parentNode.replaceChild(box, d);
+  }
+  out.addEventListener('click', function(e){
+    var b = e.target.closest('.sau .opt'); if (!b) return;
+    var q = b.closest('.mcq'); if (q.classList.contains('done')) return;
+    var ok = b.getAttribute('data-k') === '0';
+    q.classList.add('done'); if (!ok) q.classList.add('wrong');
+    [].forEach.call(q.querySelectorAll('.opt'), function(o){ if (o.getAttribute('data-k') === '0') o.classList.add('ok'); });
+    if (!ok) b.classList.add('no');
+    var w = q.querySelector('.why'); w.innerHTML = (ok ? '✓ ' : '✗ ') + w.getAttribute('data-why');
+    var sc = q.nextElementSibling; while (sc && !sc.classList.contains('score')) sc = sc.nextElementSibling;
+    if (sc) { var all = 0, dn = 0, good = 0, p = sc.previousElementSibling;
+      while (p && p.classList.contains('mcq')) { all++; if (p.classList.contains('done')) { dn++; if (!p.classList.contains('wrong')) good++; } p = p.previousElementSibling; }
+      sc.innerHTML = 'Đúng ' + good + '/' + all + (dn < all ? ' (còn ' + (all - dn) + ' câu)' : ' · <a href="javascript:void 0" class="redo">Làm lại</a>'); }
+  });
+  out.addEventListener('click', function(e){
+    var a = e.target.closest('.sau .redo'); if (!a) return;
+    var p = a.closest('.score').previousElementSibling;
+    while (p && p.classList.contains('mcq')) { p.classList.remove('done', 'wrong'); [].forEach.call(p.querySelectorAll('.opt'), function(o){ o.classList.remove('ok', 'no'); }); p.querySelector('.why').innerHTML = ''; p = p.previousElementSibling; }
+    a.closest('.score').innerHTML = '';
+  });
   // Đọc tiếng Hàn cho nút 🔊 trong phần học sâu
   out.addEventListener('click', function(e){
     var b = e.target.closest('button.say'); if (!b || !window.speechSynthesis) return;

@@ -1,4 +1,4 @@
-// Trích phần từ vựng (thẻ "Từ vựng", mục 1 tới trước mục "Luyện từ vựng") của trang học liệu seoul/<bài>/
+// Trích phần từ vựng (thẻ "Từ vựng", mục 1 tới trước mục "Luyện từ vựng", kèm dữ liệu bài luyện từ vựng) của trang học liệu seoul/<bài>/
 // thành đoạn HTML seoul/sau/<cuốn>-<bài>.html để trang seoul/ hiện dưới bảng từ của bài.
 // Dùng: node tools/seoul_sau.js 3a-1   (cần Playwright; Chromium có sẵn ở /opt/pw-browsers)
 const {chromium} = require('playwright');
@@ -11,7 +11,10 @@ const fs = require('fs'), path = require('path');
   const html = await p.evaluate(() => {
     const sec = document.getElementById('stv'), kids = [...sec.children];
     const i0 = kids.findIndex(e => e.tagName === 'H3'), i1 = kids.findIndex(e => e.tagName === 'H3' && /Luyện/.test(e.textContent));
-    return kids.slice(i0, i1 < 0 ? undefined : i1).map(e => e.outerHTML).join('\n');
+    // Bài luyện từ vựng (trắc nghiệm M.v1…v4, lựa chọn đầu là đáp án): tiêu đề h4 + dữ liệu JSON, trang seoul/ tự vẽ.
+    const q = [...sec.querySelectorAll('h4')].map(h => { const set = h.nextElementSibling && h.nextElementSibling.dataset.set; return set && M[set] ? {t: h.textContent.replace(/^[\d.]+\s*/, ''), q: M[set]} : null; }).filter(Boolean);
+    return kids.slice(i0, i1 < 0 ? undefined : i1).map(e => e.outerHTML).join('\n') +
+      '\n<h3>7. Luyện từ vựng</h3>\n<script type="application/json" class="sau-q">' + JSON.stringify(q).replace(/</g, '\\u003c') + '</' + 'script>';
   });
   await b.close();
   fs.writeFileSync(out, '<!-- Sinh tự động từ seoul/' + slug + '/ bằng tools/seoul_sau.js — không sửa tay -->\n' + html + '\n');
