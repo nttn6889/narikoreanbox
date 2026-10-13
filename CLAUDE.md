@@ -84,7 +84,7 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 
 ## Ảnh quảng cáo / đấu giá lớp (`quang-cao/`)
 - Mỗi bộ một thư mục, ảnh 1080×1350 (góc phải trên luôn có Zalo cô 0399 214 554) viết bằng HTML (`base.css` chung, logo `logo/nari-topik-ngang.svg`), chụp bằng Playwright ra PNG cùng tên.
-- `topik2-len-3-4/`: cho bạn đã có TOPIK 2 (đề TOPIK I) muốn lên 3, gắng 4: `0-comment` (1080×1080, ảnh chung để comment, không lộ cách dạy), bìa, điểm 120→150, lộ trình 26 + 16 buổi, app, đánh giá, thông tin lớp.
+- `topik2-len-3-4/`: cho bạn đã có TOPIK 2 (đề TOPIK I) muốn lên 3, gắng 4: `0-comment` (1080×1080, ảnh chung để comment, không lộ cách dạy), bìa, điểm 120→150, lộ trình 26 + 16 buổi, app, đánh giá, thông tin lớp, `7-ve-co` (profile cô, không ảnh chân dung — cô không muốn đưa ảnh; số liệu theo `ve-co/`).
   Ảnh app dùng `hoc-cung-co/img/` (trang vẫn mang tên cũ “Hàn Ngữ Nari” cho tới khi đổi logo trên site).
 
 ## Về cô (`ve-co/`)
