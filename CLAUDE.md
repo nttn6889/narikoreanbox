@@ -258,6 +258,10 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   받침 + gốc ㄹ, bất quy tắc, thì, 이다/아니다, kính ngữ/반말) · Từ vựng (18 từ, phát âm, Hán tự, tiểu từ, phân biệt) · Ngữ pháp (+ hội thoại, đổi vai,
   xem trước Bài 2) · Luyện (gõ chữ, nghe – chép bằng giọng đọc máy `speechSynthesis`, kể lại tin nhắn nhóm, kiểm tra 14 câu, “Gửi kết quả cho cô”).
   Dữ liệu trong biến `M` (trắc nghiệm, lựa chọn đầu là đáp án; câu kiểm tra `ck` có nhãn viên gạch `n1…n6`), `T` (gõ chữ), `TV1/TV2`, `DLG`. localStorage `nari-3a1`.
+- **Học sâu từ vựng trên trang `seoul/`**: phần từ vựng của trang học liệu (thẻ Từ vựng, từ mục 1 tới trước “Luyện từ vựng”) được trích thành
+  `seoul/sau/3A-1.html` bằng `node tools/seoul_sau.js 3a-1` (không sửa tay; sửa trong trang học liệu rồi chạy lại). Trang `seoul/` hiện khung
+  “Học sâu từ vựng bài này” dưới bảng từ của bài có trong biến `SAU` (`{'3A-1': '3a-1/#b=tv'}` → nút “Luyện tập từ vựng bài này”).
+  `TV1[i][5]` = cụm hay đi với `[[ko, nghĩa Việt]…]`.
 
 ## Học câu 52 trong 3 buổi (`viet-52/`)
 - Trang học liệu gửi học sinh: Buổi 1 (ô cuối câu, 5 nhóm từ nối: 47, 41, 52, 92, 96, 36, 37), Buổi 2 (“Chép hay Lật” = tìm ý cho ô; đề 60, 83, 91, 64, 35),

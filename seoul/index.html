@@ -66,9 +66,32 @@ h3 small{font-weight:normal;font-family:"Times New Roman",serif;font-size:15px}
 .st{font-family:Arial,sans-serif;font-size:11px;color:var(--star);font-weight:bold;white-space:nowrap;margin-left:4px}
 .intro{margin:0 0 10px;font-size:15px;color:#333}
 #msg{color:var(--star)}
+/* Học sâu từ vựng (seoul/sau/<cuốn>-<bài>.html, trích từ trang học liệu bằng tools/seoul_sau.js) */
+.sau{margin:22px 0 0;padding:4px 12px 10px;border:2px solid var(--acc);border-radius:10px}
+.sau>.sh{margin:6px 0 2px;font:bold 19px "Times New Roman",serif;color:var(--acc)}
+.sau>.sh small{display:block;font-weight:normal;font-size:14px;color:var(--muted)}
+.sau h3{font-family:"Times New Roman",serif;font-size:18px;margin:20px 0 8px;padding-bottom:3px;border-bottom:2px solid var(--ink)}
+.sau .ko{font-family:"Noto Sans KR","Malgun Gothic","Apple SD Gothic Neo",sans-serif;word-break:keep-all}
+.sau table.t{border-collapse:collapse;width:100%;font-size:15px;margin:6px 0 12px}
+.sau table.t th,.sau table.t td{border:1px solid var(--line);padding:5px 7px;text-align:left;vertical-align:top}
+.sau table.t th{background:var(--head)}
+.sau .scroll{overflow-x:auto}
+.sau .note{font-size:14px;color:var(--muted)}
+.sau .pron{font-family:"Noto Sans KR","Malgun Gothic",sans-serif;color:#1f3c88;font-size:13.5px;white-space:nowrap}
+.sau .hj{color:var(--muted);font-size:13px}
+.sau .col{margin:0 0 4px}.sau .col .ko{display:block}.sau .col .note{display:block}
+.sau .mau{background:#ffe9a8;padding:0 5px;border-radius:4px;font-weight:bold}
+.sau .deep{padding:8px 12px;border:1px dashed #1f3c88;border-radius:8px;margin:10px 0;font-size:15px}
+.sau .deep>b:first-child{color:#1f3c88}
+.sau .warnbox{padding:8px 12px;background:#fff6df;border-left:4px solid #9a6200;margin:10px 0;font-size:15px}
+.sau .badge{display:inline-block;font:bold 12px Arial,sans-serif;border-radius:10px;padding:1px 8px;margin-left:4px;color:#fff;background:#1f3c88}
+.sau .badge.new{background:var(--star)}
+.sau button.say{font-size:14px;line-height:1;padding:3px 6px;border:1px solid #d8dde6;border-radius:6px;background:var(--bg);cursor:pointer;vertical-align:middle}
+.sau .go{display:inline-block;margin:6px 0 0;padding:6px 14px;border-radius:6px;background:var(--star);color:#fff;text-decoration:none;font-weight:bold}
+@media(max-width:560px){.sau{padding:4px 8px 10px}.sau table.t{font-size:14px}.sau table.t th,.sau table.t td{padding:4px 5px}}
 footer{margin-top:40px;font-size:13px;color:var(--muted);text-align:center}
 footer a{color:var(--muted)}
-@media print{.co,nav,.parts,.tools,footer{display:none}.sec{display:block}h2{break-before:page}h2:first-of-type{break-before:auto}.tb{break-inside:auto}h3{break-after:avoid}}
+@media print{.co,nav,.parts,.tools,footer,.sau button.say,.sau .go{display:none}.sec{display:block}h2{break-before:page}h2:first-of-type{break-before:auto}.tb{break-inside:auto}h3{break-after:avoid}}
 </style>
 </head>
 <body>
@@ -101,6 +124,8 @@ footer a{color:var(--muted)}
   var BOOKS = ['1A', '1B', '2A', '2B', '3A', '3B'];
   var PARTS = BOOKS.map(function(b){ return {k: b, t: b, s: +b[0] < 3 ? 'Sơ cấp · ôn' : 'Trung cấp'}; }).concat([{k: 'cot', t: '★ Cốt lõi', s: 'Sơ cấp hay gặp'}]);
   var MIN_DE = 3;
+  // Bài có phần học sâu từ vựng: seoul/sau/<khóa>.html + trang học liệu để luyện tập.
+  var SAU = {'3A-1': '3a-1/#b=tv'}, SAUC = {};
   var DATA = null, DE = null, BAI = {}, cur = 0, curPart = null;
   function hashArg(name){ var m = new RegExp('[#&]' + name + '=([^&]*)', 'i').exec(location.hash); return m ? decodeURIComponent(m[1]) : ''; }
   function wanted(){
@@ -139,13 +164,30 @@ footer a{color:var(--muted)}
       nv += '<a href="javascript:void 0" data-to="' + si + '">Bài ' + i.n + '</a>';
       h += '<section class="sec"><h2><span class="n">Bài ' + i.n + '</span>' + esc(i.ko) + '</h2><p class="lvi">' + esc(BAI[part + '-' + i.n] || '') + ' · ' + n + ' từ</p>';
       by[sec].forEach(function(g){ h += '<h3>' + esc(g.ko) + (g.vi && g.vi !== g.ko ? ' <small>(' + esc(g.vi) + ')</small>' : '') + '</h3>' + table(g.w); });
+      if (SAU[part + '-' + i.n]) h += '<div class="sau" data-sau="' + part + '-' + i.n + '"><p class="sh">Học sâu từ vựng bài này<small>Cách đọc, Hán Việt, đi với tiểu từ nào, phân biệt từ gần nghĩa</small></p><p class="note">Đang tải…</p></div>';
       h += '</section>';
     });
     if (want) nv += '<a href="javascript:void 0" data-all="1">Xem cả cuốn ›</a>';
     nav.innerHTML = nv;
     out.innerHTML = h;
+    loadSau();
     show(Math.min(cur, secs.length - 1));
   }
+  function loadSau(){
+    [].forEach.call(out.querySelectorAll('.sau[data-sau]'), function(el){
+      var k = el.getAttribute('data-sau'), tail = '<a class="go" href="' + SAU[k] + '">Luyện tập từ vựng bài này ›</a>';
+      function put(t){ el.innerHTML = el.querySelector('.sh').outerHTML + t + tail; }
+      if (SAUC[k]) return put(SAUC[k]);
+      fetch('sau/' + k + '.html', {cache: 'no-cache'}).then(function(r){ if (!r.ok) throw 0; return r.text(); })
+        .then(function(t){ SAUC[k] = t; put(t); }).catch(function(){ put('<p class="note">Không tải được phần học sâu. Kiểm tra mạng rồi tải lại trang.</p>'); });
+    });
+  }
+  // Đọc tiếng Hàn cho nút 🔊 trong phần học sâu
+  out.addEventListener('click', function(e){
+    var b = e.target.closest('button.say'); if (!b || !window.speechSynthesis) return;
+    speechSynthesis.cancel(); var u = new SpeechSynthesisUtterance(b.getAttribute('data-say')); u.lang = 'ko-KR'; u.rate = 0.9;
+    var v = speechSynthesis.getVoices().filter(function(x){ return /^ko/i.test(x.lang); })[0]; if (v) u.voice = v; speechSynthesis.speak(u);
+  });
   function renderCore(groups){
     if (!DE || !DE.kho) { msg.textContent = 'Không tải được thống kê đề. Kiểm tra mạng rồi tải lại trang.'; nav.innerHTML = out.innerHTML = ''; return; }
     var h = '', nv = '', k = 0;

@@ -72,6 +72,7 @@ button.say{font-size:14px;line-height:1;padding:3px 6px;border:1px solid var(--s
 button.say:active{background:var(--hl)}
 .pron{font-family:"Noto Sans KR","Malgun Gothic",sans-serif;color:var(--blue);font-size:13.5px;white-space:nowrap}
 .hj{color:var(--muted);font-size:13px}
+.col{margin:0 0 4px}.col .ko{display:block}.col .note{display:block;margin:0}
 /* trắc nghiệm */
 .mcq{border:1px solid var(--soft);border-radius:8px;padding:8px 10px;margin:0 0 10px}
 .mcq .q{font-size:16px;margin:0 0 6px}
@@ -546,18 +547,18 @@ footer a{color:var(--muted)}
 /* ---------- dữ liệu ---------- */
 // Từ vựng: [từ, phát âm, Hán tự, Hán Việt, nghĩa, hay đi với]
 var TV1=[
- ['입학식','[이팍씩]','入學式','nhập học thức','lễ nhập học','입학식이 있다 · 입학식에 참석하다'],
- ['오리엔테이션','[오리엔테이션]','','(orientation)','buổi định hướng tân sinh viên (OT)','오리엔테이션에 참석하다'],
- ['신입생 환영회','[시닙쌩 화녕회]','新入生 歡迎會','tân nhập sinh hoan nghênh hội','tiệc chào đón tân sinh viên','환영회를 하다 / 열다'],
- ['동아리','[동아리]','','(thuần Hàn)','câu lạc bộ sinh viên','동아리에 가입하다 / 들다 · 동아리 활동을 하다'],
- ['축제','[축쩨]','祝祭','chúc tế','lễ hội (trường)','축제가 열리다 · 축제를 열다'],
- ['졸업식','[조럽씩]','卒業式','tốt nghiệp thức','lễ tốt nghiệp','졸업식에 참석하다'],
- ['강의','[강의 / 강이]','講義','giảng nghĩa','bài giảng, giờ học đại học','강의를 듣다 (không dùng 보다) · 강의가 있다'],
- ['과목','[과목]','科目','khoa mục','môn học','과목을 듣다 / 신청하다'],
- ['전공','[전공]','專攻','chuyên công','chuyên ngành','N을/를 전공하다 · 전공이 뭐예요?'],
- ['성적','[성적]','成績','thành tích','kết quả học tập, điểm','성적이 오르다 / 떨어지다'],
- ['학점','[학쩜]','學點','học điểm','tín chỉ; điểm học phần','학점을 따다 / 채우다'],
- ['장학금','[장학끔]','奬學金','tưởng học kim','học bổng','장학금을 받다 / 타다 / 신청하다']
+ ['입학식','[이팍씩]','入學式','nhập học thức','lễ nhập học',[['입학식이 있다','có lễ nhập học'],['입학식에 참석하다','dự lễ nhập học']]],
+ ['오리엔테이션','[오리엔테이션]','','(orientation)','buổi định hướng tân sinh viên (OT)',[['오리엔테이션에 참석하다','dự buổi định hướng'],['오리엔테이션을 받다','được hướng dẫn (trong buổi định hướng)']]],
+ ['신입생 환영회','[시닙쌩 화녕회]','新入生 歡迎會','tân nhập sinh hoan nghênh hội','tiệc chào đón tân sinh viên',[['환영회를 하다 / 열다','tổ chức tiệc chào đón'],['환영회에 가다','đi dự tiệc chào đón']]],
+ ['동아리','[동아리]','','(thuần Hàn)','câu lạc bộ sinh viên',[['동아리에 가입하다 / 들다','vào câu lạc bộ'],['동아리 활동을 하다','sinh hoạt câu lạc bộ']]],
+ ['축제','[축쩨]','祝祭','chúc tế','lễ hội (trường)',[['축제가 열리다','lễ hội được tổ chức, diễn ra'],['축제를 열다','tổ chức lễ hội']]],
+ ['졸업식','[조럽씩]','卒業式','tốt nghiệp thức','lễ tốt nghiệp',[['졸업식에 참석하다','dự lễ tốt nghiệp'],['졸업식을 하다','làm lễ tốt nghiệp']]],
+ ['강의','[강의 / 강이]','講義','giảng nghĩa','bài giảng, giờ học đại học',[['강의를 듣다','nghe giảng, học (một môn) — không dùng 보다'],['강의가 있다','có tiết học'],['강의를 하다','giảng bài (giảng viên)']]],
+ ['과목','[과목]','科目','khoa mục','môn học',[['과목을 듣다','học môn'],['과목을 신청하다','đăng ký môn học']]],
+ ['전공','[전공]','專攻','chuyên công','chuyên ngành',[['N을/를 전공하다','học chuyên ngành N'],['전공이 뭐예요?','Chuyên ngành của bạn là gì?']]],
+ ['성적','[성적]','成績','thành tích','kết quả học tập, điểm',[['성적이 오르다','điểm tăng, học tiến bộ'],['성적이 떨어지다','điểm giảm, học sa sút'],['성적이 좋다','điểm tốt, học giỏi']]],
+ ['학점','[학쩜]','學點','học điểm','tín chỉ; điểm học phần',[['학점을 따다','lấy được tín chỉ'],['학점을 채우다','tích lũy đủ tín chỉ'],['학점이 나오다','có điểm học phần']]],
+ ['장학금','[장학끔]','奬學金','tưởng học kim','học bổng',[['장학금을 받다 / 타다','nhận được học bổng'],['장학금을 신청하다','nộp đơn xin học bổng']]]
 ];
 // [cụm, phát âm, Hán tự, Hán Việt, nghĩa, đồng/trái nghĩa, ví dụ]
 var TV2=[
@@ -723,8 +724,8 @@ function say(t,rate,queue){
 
 /* ---------- bảng từ vựng ---------- */
 function sayBtn(t){return ' <button class="say" data-say="'+esc(t)+'">🔊</button>';}
-$('tv1').innerHTML='<tr><th>Từ · cách đọc</th><th>Hán Việt</th><th>Nghĩa</th><th>Hay đi với</th></tr>'+TV1.map(function(w){
-  return '<tr><td class="ko"><b>'+w[0]+'</b>'+sayBtn(w[0])+'<br><span class="pron">'+w[1]+'</span></td><td>'+(w[2]?'<span class="hj">'+w[2]+'</span><br>':'')+w[3]+'</td><td>'+w[4]+'</td><td class="ko">'+w[5]+'</td></tr>';}).join('');
+$('tv1').innerHTML='<tr><th>Từ · cách đọc · Hán Việt</th><th>Nghĩa</th><th>Hay đi với</th></tr>'+TV1.map(function(w){
+  return '<tr><td class="ko"><b>'+w[0]+'</b>'+sayBtn(w[0])+'<br><span class="pron">'+w[1]+'</span><div class="hj">'+(w[2]?w[2]+' · ':'')+w[3]+'</div></td><td>'+w[4]+'</td><td>'+w[5].map(function(c){return '<div class="col"><span class="ko">'+c[0]+'</span><span class="note">'+c[1]+'</span></div>';}).join('')+'</td></tr>';}).join('');
 $('tv2').innerHTML='<tr><th>Cụm từ</th><th>Hán Việt</th><th>Nghĩa</th><th>Đồng / trái nghĩa</th></tr>'+TV2.map(function(w){
   return '<tr><td class="ko"><b>'+w[0]+'</b>'+sayBtn(w[0])+'<br><span class="pron">'+w[1]+'</span></td><td><span class="hj">'+w[2]+'</span><br>'+w[3]+'</td><td>'+w[4]+'<div class="ko note">'+w[6]+sayBtn(w[6])+'</div></td><td class="ko">'+w[5]+'</td></tr>';}).join('');
 $('dlg').innerHTML=DLG.map(function(d,i){return '<tr><td class="ko">'+d[0]+'</td><td><span class="ko">'+d[1]+'</span>'+sayBtn(d[1])+'<div class="note">'+d[2]+'</div></td></tr>';}).join('');
