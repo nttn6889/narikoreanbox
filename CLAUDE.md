@@ -252,6 +252,13 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - Nộp xong học sinh bấm “Gửi kết quả cho cô” → link `seoul/kiem-tra/#r=<base64>` (tên + đáp án, chỉ nằm trong link) mở bản báo cáo
   cho cô. Đổi thứ tự/đáp án câu cũ sẽ làm sai link đã gửi — thêm câu mới thì dùng id mới.
 
+## Học liệu Seoul 3A theo bài (`seoul/3a-1/`)
+- Lớp sinh viên chuyên ngành học gia sư song song với trường (đã học bài trên lớp rồi): mỗi buổi = ôn đúng phần nền 1A–2B bài đó cần + hiểu sâu bài + luyện có chấm ngay.
+- `seoul/3a-1/` (Bài 1, `-다고 하다/-대요/-다고 들었다/-다면서요?`): thẻ Lộ trình (9 bài 3A ↔ nền cũ, đọc từ tên bài) · Nền tảng (6 viên gạch: động/tính từ,
+  받침 + gốc ㄹ, bất quy tắc, thì, 이다/아니다, kính ngữ/반말) · Từ vựng (18 từ, phát âm, Hán tự, tiểu từ, phân biệt) · Ngữ pháp (+ hội thoại, đổi vai,
+  xem trước Bài 2) · Luyện (gõ chữ, nghe – chép bằng giọng đọc máy `speechSynthesis`, kể lại tin nhắn nhóm, kiểm tra 14 câu, “Gửi kết quả cho cô”).
+  Dữ liệu trong biến `M` (trắc nghiệm, lựa chọn đầu là đáp án; câu kiểm tra `ck` có nhãn viên gạch `n1…n6`), `T` (gõ chữ), `TV1/TV2`, `DLG`. localStorage `nari-3a1`.
+
 ## Học câu 52 trong 3 buổi (`viet-52/`)
 - Trang học liệu gửi học sinh: Buổi 1 (ô cuối câu, 5 nhóm từ nối: 47, 41, 52, 92, 96, 36, 37), Buổi 2 (“Chép hay Lật” = tìm ý cho ô; đề 60, 83, 91, 64, 35),
   Buổi 3 (làm như thi, 6 phút/câu, không gợi ý: 93, 94, 95, 102), thẻ Bảng tra (9 nhóm tín hiệu → mẫu). Link `viet-52/#b=1|2|3|tra`.
