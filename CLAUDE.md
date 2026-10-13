@@ -318,3 +318,10 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - Tham khảo giáo án “Giáo án TOPIK II” (Claude Docs, https://claude.ai/artifact/1ZXx9PXJjapaWdjJMSjTPn): dấu hiệu nhận biết, quy tắc loại trừ, bẫy.
 - Biến `R` = 60 câu 3–4 từ `thi-thu/de/*.json` (bỏ Ehot1old, Entk3 câu 3 trùng Entk1) + đáp án `a` + giải thích `w` do Claude soạn; `MCQ` câu tự soạn
   (lựa chọn đầu là đáp án). Bài lưu localStorage `nari-34`.
+
+## Facebook (`fb/`)
+- `fb/ca-nhan/`: bài cho trang cá nhân "Tiếng Hàn Ngân Nguyễn" (cô có ảnh đại diện thật, giọng văn kể chuyện, lồng từ Hàn). `bia.html` ảnh bìa 1640×924
+  (chữ để trên + hai bên, vì trên điện thoại ảnh đại diện che giữa phía dưới), `ghim-1` bài ghim, loạt “Một từ, một câu chuyện” `tu-NN-*.html`
+  (khung `tu.css`, từ lấy từ phần `Cốt lõi` của `thi-thu/vocab.json` + số đề trong `tu-vung/de.json`), lời đăng ở `caption.md`.
+  Dùng chung `quang-cao/topik2-len-3-4/base.css`. Chụp PNG: `node tools/chup_anh.js fb/ca-nhan/*.html` (cỡ khác 1080×1350 ghi `<meta name=size content="WxH">`).
+- Cô: cử nhân Quản trị kinh doanh Đại học Daegu, đang ở Quỳnh Lưu, dạy trực tiếp tại Quỳnh Lưu + online toàn quốc.

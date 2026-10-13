@@ -1,0 +1,20 @@
+/* Khung chung loạt "Một từ, một câu chuyện" (1080×1350) */
+.wd{margin-top:26px;padding:34px 40px;display:flex;align-items:flex-end;justify-content:space-between}
+.wd .ko{font-size:120px;font-weight:900;color:var(--v);line-height:1;letter-spacing:-2px}
+.wd .vi{font-size:34px;font-weight:700;margin-top:14px}
+.wd .hv{font-size:24px;color:var(--dim);margin-top:6px}
+.wd .n{text-align:center;background:var(--gs);border-radius:24px;padding:18px 22px;flex:none}
+.wd .n b{display:block;font-size:56px;font-weight:900;color:var(--g);line-height:1}
+.wd .n span{display:block;font-size:20px;font-weight:600;color:#9A6F12;margin-top:6px;line-height:1.3}
+.pt{margin-top:18px;padding:12px 36px}
+.pt .r{display:grid;grid-template-columns:330px 1fr;gap:16px;padding:14px 0;align-items:baseline}
+.pt .r+.r{border-top:2px dashed var(--line)}
+.pt .k{font-size:29px;font-weight:800;color:var(--v)}
+.pt .t{font-size:25px;line-height:1.4}
+.ex{margin-top:18px;padding:24px 36px;border-left:10px solid var(--gl)}
+.ex .h{font-size:21px;font-weight:700;color:var(--g);letter-spacing:.5px;text-transform:uppercase}
+.ex .k{font-size:29px;line-height:1.5;margin-top:8px;font-weight:500}
+.ex .k u{text-decoration:none;background:linear-gradient(transparent 55%,#F6DE9C 55%);font-weight:800}
+.ex .v{font-size:23px;color:var(--dim);margin-top:8px;line-height:1.45}
+.foot{position:absolute;left:72px;right:72px;bottom:50px;display:flex;justify-content:space-between;align-items:center;font-size:24px;color:var(--dim)}
+.foot b{color:var(--v)}
