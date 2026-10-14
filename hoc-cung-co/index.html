@@ -4,12 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Học cùng cô Ngân</title>
-<meta name="description" content="Luyện thi TOPIK cùng cô Ngân (Hàn Ngữ Nari): mỗi ngày 3 bài ngắn trên điện thoại, cô chấm và theo dõi từng câu em làm sai.">
-<meta property="og:title" content="Học TOPIK cùng cô Ngân · Hàn Ngữ Nari">
+<meta name="description" content="Luyện thi TOPIK cùng cô Ngân (Nari TOPIK): mỗi ngày 3 bài ngắn trên điện thoại, cô chấm và theo dõi từng câu em làm sai.">
+<meta property="og:title" content="Học TOPIK cùng cô Ngân · Nari TOPIK">
 <meta property="og:description" content="Mỗi ngày 3 bài ngắn: từ vựng, luyện nghe, đề thi thử. Cô theo dõi từng câu em sai. Làm thử miễn phí ngay.">
-<meta property="og:image" content="https://nttn6889.github.io/narikoreanbox/thi-thu/icon/icon-512.png">
-<meta name="theme-color" content="#1b2a5c">
-<link rel="icon" type="image/png" href="../thi-thu/icon/favicon-64.png">
+<meta property="og:image" content="https://nttn6889.github.io/narikoreanbox/logo/nari-topik-logo-nen-trang.jpg">
+<meta name="theme-color" content="#53468F">
+<link rel="icon" type="image/svg+xml" href="../logo/nari-topik-icon.svg">
+<link rel="icon" type="image/png" href="../logo/nari-topik-icon.png">
+<link rel="apple-touch-icon" href="../logo/nari-topik-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Noto+Serif+KR:wght@600;700&display=swap" rel="stylesheet">
@@ -34,8 +36,11 @@ img{max-width:100%;height:auto;display:block}
 a{color:var(--violet)}
 .wrap{max-width:860px;margin:0 auto;padding:0 16px 64px}
 .top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 0}
-.top .bn{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--violet);text-decoration:none;font-size:17px}
-.top .bn img{width:36px;height:36px;border-radius:9px}
+.top .bn{display:flex;align-items:center;text-decoration:none;border-radius:10px}
+.top .bn img{height:52px;width:auto}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .top .bn{background:#EFEAF8;padding:4px 10px}}
+.foot-logo{width:200px;margin:0 auto 10px;border-radius:12px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .foot-logo{background:#EFEAF8;padding:10px}}
 .top nav{display:flex;gap:14px;font-size:14.5px}
 .top nav a{text-decoration:none;font-weight:600}
 
@@ -106,7 +111,7 @@ footer{margin-top:40px;text-align:center;font-size:13.5px;color:var(--muted)}
 <body>
 <div class="wrap">
   <header class="top">
-    <a class="bn" href="../thi-thu/"><img src="../thi-thu/icon/icon-192.png" alt="">Hàn Ngữ Nari</a>
+    <a class="bn" href="../thi-thu/"><img src="../logo/nari-topik-ngang.svg" width="154" height="52" alt="Nari TOPIK – Hiểu từng câu, Vững từng cấp"></a>
     <nav><a href="../ve-co/">Về cô</a><a href="#lam-thu">Làm thử</a></nav>
   </header>
 
@@ -129,7 +134,7 @@ footer{margin-top:40px;text-align:center;font-size:13.5px;color:var(--muted)}
     <div class="letter">
       <p>Hơn 20 năm gắn bó với tiếng Hàn, cô thấy nhiều bạn <strong>học trên lớp thì hiểu, nhưng về nhà không luyện</strong>, hoặc luyện lan man mà không biết mình yếu ở đâu.</p>
       <p>Vì vậy cô tự xây hệ thống luyện tập riêng cho học viên của cô. Cô nhập đề, soạn kho từ vựng theo từng dạng câu thi, chọn đề nghe TOPIK thật và chép lời thoại kèm bản dịch. Mỗi ngày em có bài vừa sức, còn cô thì biết em đang sai ở đâu để giúp đúng chỗ đó.</p>
-      <p class="sig">Cô Thủy Ngân · Hàn Ngữ Nari</p>
+      <p class="sig">Cô Thủy Ngân · Nari TOPIK</p>
     </div>
   </section>
 
@@ -234,7 +239,7 @@ footer{margin-top:40px;text-align:center;font-size:13.5px;color:var(--muted)}
     </div>
   </section>
 
-  <footer>Hàn Ngữ Nari · Quỳnh Lưu, Nghệ An · Luyện thi TOPIK online</footer>
+  <footer><img class="foot-logo" src="../logo/nari-topik-logo-slogan.svg" width="200" height="187" alt="Nari TOPIK">Nari TOPIK · Quỳnh Lưu, Nghệ An · Luyện thi TOPIK online</footer>
 </div>
 </body>
 </html>
