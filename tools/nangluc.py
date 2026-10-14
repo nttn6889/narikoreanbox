@@ -21,7 +21,15 @@ ADMIN_END = "  return { init:init, render:render };\n})();"
 OLD_BOOT = "!ngheBoot()) studentLanding();"
 NEW_BOOT = "!ngheBoot() && !reportBoot()) studentLanding();"
 # Đánh giá giờ nằm trong tab Học sinh của trang quản lý (đã móc sẵn trong trang), không thêm tab riêng nữa.
-HOOKS = []  # (đã có thì bỏ qua, chưa có thì thay)
+BUOI_LINE = '    db.collection("buoi").onSnapshot(function(s){ S.buoi = s.docs.map(function(d){ var x = Object.assign({}, d.data()); x.id = d.id; return x; }); softRender("buoi"); }, dbErr);\n'
+HOOKS = [  # (đã có thì bỏ qua, chưa có thì thay)
+    # Học phí (Học sinh → Học phí): tải collection hocphi
+    ('db.collection("hocphi")', BUOI_LINE, BUOI_LINE +
+     '    db.collection("hocphi").onSnapshot(function(s){ S.hocphi = s.docs.map(function(d){ var x = Object.assign({}, d.data()); x.id = d.id; return x; }); softRender("hocphi"); }, dbErr);\n'),
+    # Sửa thông tin học viên không làm mất cách tính học phí
+    ('if(x.fee) doc.fee = x.fee;', '      if(x.app) doc.app = x.app;\n      var id = st ? st.id : "H"',
+     '      if(x.app) doc.app = x.app;\n      if(x.fee) doc.fee = x.fee;\n      var id = st ? st.id : "H"'),
+]
 
 
 def parts():

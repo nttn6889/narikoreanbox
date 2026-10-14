@@ -243,7 +243,14 @@ function reportBoot(){
     var st = document.createElement("style"); st.id = "hscss";
     st.textContent = ".hscard h3{margin:0;font-size:16.5px}.hscard .facts{font-size:13.5px;color:var(--muted);margin:2px 0 4px}.hscard .facts b{color:var(--ink)}" +
       ".hsflags{margin:4px 0 2px}.hsmeta{font-size:13px;color:var(--muted);margin-top:4px}.hscard .nldays{max-width:none;margin:8px 0 0}" +
-      ".wk .nm[data-nl]{cursor:pointer}.wk .nm[data-nl]:hover{text-decoration:underline}.hsfacts{font-size:14.5px;color:var(--muted);margin:2px 0 6px}.hsfacts b{color:var(--ink)}";
+      ".wk .nm[data-nl]{cursor:pointer}.wk .nm[data-nl]:hover{text-decoration:underline}.hsfacts{font-size:14.5px;color:var(--muted);margin:2px 0 6px}.hsfacts b{color:var(--ink)}" +
+      ".lhwk div.pl{border:1.5px dashed var(--violet);background:var(--paper)}.lhwk .tp{display:block;font-size:11.5px;font-weight:700;color:var(--violet)}.lhwk .tp.miss{color:var(--warn)}" +
+      ".hptl{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:10px 0}.hptl div{border:1px solid var(--line);border-radius:8px;padding:8px 12px;background:var(--bg)}.hptl span{display:block;font-size:12.5px;color:var(--muted)}.hptl b{font-size:18px;font-variant-numeric:tabular-nums}" +
+      ".hpt td{vertical-align:middle}.hpt td.r{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}.hpt .act{display:flex;gap:6px;flex-wrap:wrap}.hpt .sm2{font-size:12.5px;color:var(--muted)}" +
+      ".hpnm{all:unset;cursor:pointer;font-weight:700;color:var(--violet)}.hpnm:hover{text-decoration:underline}.hpnm:focus-visible{outline:2px solid var(--violet)}" +
+      ".hpmode{display:flex;gap:8px;align-items:flex-start;margin:6px 0;cursor:pointer}.hpmode input{margin-top:5px}.hpmode small{display:block;color:var(--muted);font-size:13px}" +
+      ".hpbox{border-left:4px solid var(--violet);background:var(--violet-soft);padding:8px 12px;border-radius:6px;font-size:14.5px;margin:10px 0}.hpbox p{margin:2px 0}" +
+      "@media (max-width:640px){.hptl{gap:5px}.hptl div{padding:6px 8px}.hptl b{font-size:14.5px}.hpt.hpl th:nth-child(2),.hpt.hpl td:nth-child(2){display:none}.hpt td,.hpt th{padding:6px 4px}.hpt .act{flex-direction:column}}";
     document.head.appendChild(st);
   }
   function hsPeriod(id, f){ return '<select class="t" id="' + id + '"' + (id === "nlD2" ? ' style="width:auto"' : '') + '>' + HS_PERIOD.map(function(x){ return '<option value="' + x[0] + '"' + (f.d === x[0] ? ' selected' : '') + '>' + x[1] + '</option>'; }).join("") + '</select>'; }
@@ -267,19 +274,21 @@ function reportBoot(){
       if(low.length) F.push('<span class="pill bad">dưới 60%: ' + low.map(function(k){ return k[1]; }).join(", ") + '</span>');
       var wn = p.w.filter(function(r){ return !r.graded; }).length;
       if(wn) F.push('<span class="pill warn">' + wn + ' bài viết chưa chấm</span>');
+      var hb0 = st && hpSet(st) ? hpBill(st, hpYm(new Date())) : null;
+      if(hb0 && hb0.total > hb0.paid && dayStart(Date.now()) > hb0.due.getTime()) F.push('<span class="pill bad">chưa đóng học phí T' + hpYmTxt(hb0.ym) + '</span>');
     }
     return F;
   }
   function renderHocSinh(body){
     nlCss(); hsCss();
     if(S.nlId){ var cur = nlPeople().find(function(p){ return p.id === S.nlId; }); if(cur) return nlDetail(body, cur); S.nlId = null; }
-    var sub = S.hsub === "lich" ? "lich" : (S.hsub = "ds");
-    body.innerHTML = '<div class="row" style="margin:0 0 14px">' + [["ds","Học sinh"],["lich","Lịch tuần"]].map(function(t){ return '<button class="btn' + (sub === t[0] ? '' : ' ghost') + '" data-hsub="' + t[0] + '">' + t[1] + '</button>'; }).join("") +
+    var sub = S.hsub === "lich" || S.hsub === "hp" ? S.hsub : (S.hsub = "ds");
+    body.innerHTML = '<div class="row" style="margin:0 0 14px">' + [["ds","Học sinh"],["lich","Lịch tuần"],["hp","Học phí"]].map(function(t){ return '<button class="btn' + (sub === t[0] ? '' : ' ghost') + '" data-hsub="' + t[0] + '">' + t[1] + '</button>'; }).join("") +
       '<span style="flex:1"></span><button class="btn ghost" id="stNew">+ Thêm học viên</button></div><div id="hsb"></div>';
     $$("[data-hsub]", body).forEach(function(b){ b.onclick = function(){ S.hsub = b.dataset.hsub; renderTab(); }; });
     $("#stNew").onclick = function(){ editStudent(null); };
     var hb = $("#hsb");
-    if(sub === "lich") hsLich(hb); else hsList(hb);
+    if(sub === "lich") hsLich(hb); else if(sub === "hp") hpList(hb); else hsList(hb);
   }
   /* ===== Lịch học từng em (chuyển từ trang học viên cũ): buoi/<id> = {st, date, topic, links:[{label,url}]} ===== */
   function lhD(iso){ var m = String(iso || "").match(/^(\d{4})-(\d{2})-(\d{2})$/); return m ? new Date(+m[1], +m[2] - 1, +m[3]) : null; }
@@ -294,7 +303,7 @@ function reportBoot(){
     return ls;
   }
   function lhHTML(st){
-    var ls = lhOf(st), need = st.perWeek || 0, now = new Date(), today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    var ls = lhOf(st), need = lhNeed(st), now = new Date(), today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
     var start = lhD(st.start) || (ls[0] && ls[0].d) || null, exam = lhD(st.examDate), thisMon = lhMon(today);
     /* tuần: thiếu buổi = nợ; buổi vượt ở tuần sau trả nợ cũ nhất trước (học bù), không còn nợ = học thêm */
     var WEEKS = [];
@@ -335,11 +344,13 @@ function reportBoot(){
     var miss = need ? Math.max(0, need - cw.ls.length) : 0, dleft = 6 - ((today.getDay() + 6) % 7);
     h += '<div class="lhtiles"><div><span>Đã học</span><b>' + ls.length + '</b> buổi</div><div><span>Tuần này</span><b class="' + (need && !miss ? 'ok' : '') + '">' + cw.ls.length + (need ? '/' + need : '') + '</b> buổi</div>' +
       '<div><span>Buổi cần học bù</span><b class="' + (owed > 0 ? 'bad' : 'ok') + '">' + (owed > 0 ? owed : '0') + '</b>' + (owed > 0 ? ' buổi' : ' · đúng lịch') + '</div></div>';
+    h += lhPlanCard(st, ls, today);
     var stTxt = need ? (miss === 0 ? 'ok' : dleft > 0 ? '' : 'bad') : '';
     h += '<div class="card"><h2 class="lhsec">Tuần này</h2><p class="hint" style="margin:2px 0 0">Theo dõi số buổi đã học trong tuần (Thứ 2 → Chủ nhật).</p>' +
       '<div class="lhwh"><span>Thứ 2, ' + lhDm(thisMon) + ' – Chủ nhật, ' + lhDm(lhAdd(thisMon, 6)) + '</span><span class="lhst ' + stTxt + '">Đã học ' + cw.ls.length + (need ? '/' + need : '') + ' buổi</span></div><div class="lhwk">' +
-      ["Thứ 2","Thứ 3","Thứ 4","Thứ 5","Thứ 6","Thứ 7","CN"].map(function(nm, i){ var d = lhAdd(thisMon, i), td = d.getTime() === today.getTime(), dl = cw.ls.filter(function(l){ return l.d.getTime() === d.getTime(); });
-        return '<div class="' + (dl.length ? 'has' : '') + (td ? ' td' : '') + '">' + nm + (td ? '<span class="tdl"> · hôm nay</span>' : '') + '<b>' + d.getDate() + '</b>' + dl.map(function(l){ return '<span class="tg">Buổi ' + l.no + (l.mk ? ' · bù' : '') + '</span>'; }).join("") + '</div>'; }).join("") + '</div>' +
+      ["Thứ 2","Thứ 3","Thứ 4","Thứ 5","Thứ 6","Thứ 7","CN"].map(function(nm, i){ var d = lhAdd(thisMon, i), td = d.getTime() === today.getTime(), dl = cw.ls.filter(function(l){ return l.d.getTime() === d.getTime(); }), pl = dl.length ? [] : lhPlanOn(st, d);
+        return '<div class="' + (dl.length ? 'has' : pl.length ? 'pl' : '') + (td ? ' td' : '') + '">' + nm + (td ? '<span class="tdl"> · hôm nay</span>' : '') + '<b>' + d.getDate() + '</b>' + dl.map(function(l){ return '<span class="tg">Buổi ' + l.no + (l.mk ? ' · bù' : '') + '</span>'; }).join("") +
+          pl.map(function(z){ return '<span class="tp' + (d < today ? ' miss' : '') + '">' + esc(lhSlotTime(st, z)) + (d < today ? ' · chưa ghi' : '') + '</span>'; }).join("") + '</div>'; }).join("") + '</div>' +
       (need ? '<p class="lhnote">' + (start > thisMon && miss ? 'Tuần đầu khóa học nên không tính thiếu buổi.' : miss === 0 ? 'Tuần này đã học đủ số buổi.' : dleft > 0 ? 'Còn <b>' + miss + ' buổi</b> chưa học trong tuần này. Nếu không kịp, cô và em sẽ sắp lịch học bù.' : 'Tuần này thiếu <b>' + miss + ' buổi</b>, cần sắp lịch học bù.') +
         (cw.mk.length ? ' Có ' + cw.mk.length + ' buổi học bù (' + cw.mk.map(function(l){ return lhDm(l.d) + ' bù cho tuần ' + lhDm(l.mk.mon); }).join("; ") + ').' : '') + '</p>' : '') + '</div>';
     if(start && need){
@@ -366,7 +377,7 @@ function reportBoot(){
     } else h += '<div class="card"><p class="hint">Ghi ngày bắt đầu khóa và số buổi/tuần (Sửa thông tin) để trang tính đủ / thiếu buổi theo tuần, tháng.</p></div>';
     h += '<div class="card"><div class="row" style="margin:0 0 6px;justify-content:space-between;align-items:center"><h2 class="lhsec">Lịch học theo ngày (' + ls.length + ' buổi)</h2><button class="btn sm" id="lhNew">+ Thêm buổi học</button></div>' +
       (ls.length ? ls.slice().reverse().map(function(l){
-        return '<div class="lhl"><div class="no"><small>Buổi</small>' + l.no + '</div><div><div class="dt">' + LH_DL[l.d.getDay()] + ', ' + lhDm(l.d) + '/' + l.d.getFullYear() + (l.mk ? ' · <span class="pill warn">học bù tuần ' + lhDm(l.mk.mon) + '</span>' : '') + '</div><h4>' + esc(l.topic || "(chưa ghi nội dung)") + '</h4>' +
+        return '<div class="lhl"><div class="no"><small>Buổi</small>' + l.no + '</div><div><div class="dt">' + LH_DL[l.d.getDay()] + ', ' + lhDm(l.d) + '/' + l.d.getFullYear() + (l.tm ? ' · ' + esc(l.tm) : '') + (l.mk ? ' · <span class="pill warn">học bù tuần ' + lhDm(l.mk.mon) + '</span>' : '') + '</div><h4>' + esc(l.topic || "(chưa ghi nội dung)") + '</h4>' +
           ((l.links || []).length ? '<div class="lhlk">' + l.links.map(function(k){ return '<a href="' + esc(k.url) + '" target="_blank" rel="noopener">' + esc(k.label || "Link") + '</a>'; }).join("") + '</div>' : '') +
           '</div><div class="act"><button class="btn sm ghost" data-lhed="' + esc(l.id) + '">Sửa</button><button class="btn sm danger" data-lhdel="' + esc(l.id) + '">Xóa</button></div></div>';
       }).join("") : '<p class="hint">Chưa có buổi nào. Cô bấm “+ Thêm buổi học”, hoặc gửi lịch cho Claude để nhập tự động.</p>') + '</div>';
@@ -374,6 +385,7 @@ function reportBoot(){
   }
   function lhWire(body, st){
     var nb = $("#lhNew"); if(nb) nb.onclick = function(){ lhEdit(st, null); };
+    var sy = $("#lhSync"); if(sy) sy.onclick = function(){ lhSync(st); };
     $$("[data-lhed]", body).forEach(function(b){ b.onclick = function(){ var l = (S.buoi || []).find(function(x){ return x.id === b.dataset.lhed; }); if(l) lhEdit(st, l); }; });
     $$("[data-lhdel]", body).forEach(function(b){ b.onclick = function(){ var l = (S.buoi || []).find(function(x){ return x.id === b.dataset.lhdel; }); if(!l) return;
       ask("Xóa buổi " + (l.no || "") + " ngày " + fmtYMD(l.date) + "?", "Xóa").then(function(ok){ if(ok) db.doc("buoi/" + l.id).delete(); }); }; });
@@ -392,7 +404,281 @@ function reportBoot(){
       var links = q("#lhLinks").value.split("\n").map(function(r){ r = r.trim(); if(!r) return null; var i = r.lastIndexOf("|"); var lab = i >= 0 ? r.slice(0, i).trim() : "", u = (i >= 0 ? r.slice(i + 1) : r).trim(); return validUrl(u) ? {label:lab || "Link", url:u} : false; }).filter(function(k){ return k !== null; });
       if(links.some(function(k){ return k === false; })){ err.textContent = "Mỗi link cần bắt đầu bằng https://"; err.hidden = false; return; }
       var doc = {st:st.id, date:d, topic:cleanName(q("#lhTopic").value), links:links, created:(l && l.created) || Date.now(), updated:Date.now()};
+      if(l && l.tm) doc.tm = l.tm;
       db.doc("buoi/" + (l ? l.id : "B" + Date.now().toString(36))).set(doc).then(function(){ md.close(); }, function(e){ err.textContent = "Không lưu được (" + (e && e.code) + ")."; err.hidden = false; });
+    };
+  }
+  /* ===== Lịch cố định của em = các ca ở Học sinh → Lịch tuần (students.slots); đổi ca ở đó thì hồ sơ và học phí đổi theo ===== */
+  function lhNeed(st){ return st.perWeek || (st.slots || []).length; }
+  function lhDow(day){ var i = DAYS7.indexOf(day); return i < 0 ? -1 : (i + 1) % 7; }
+  function lhSlotKey(z){ var c = slotCa(z); return SLOTS3.indexOf(z.slot) * 2000 + (c ? caMin(c.from) : 0); }
+  function lhPlanOn(st, d){ var w = d.getDay(); return (st.slots || []).filter(function(z){ return lhDow(z.day) === w; }).sort(function(a, b){ return lhSlotKey(a) - lhSlotKey(b); }); }
+  function lhPlan(st, from, to){ var out = []; for(var d = new Date(from); d < to; d = lhAdd(d, 1)) lhPlanOn(st, d).forEach(function(z){ out.push({d:new Date(d), z:z}); }); return out; }
+  function lhSlotTime(st, z){ var c = slotCa(z); return c ? caTime(c) : z.slot === "Tối" && st.eveTime ? st.eveTime : z.slot.toLowerCase(); }
+  /* Lịch gọn, VD "Thứ 2, Thứ 5 (18h–19h30) · Thứ 7 sáng" */
+  function lhPlanText(st){
+    var g = {}, order = [];
+    (st.slots || []).slice().sort(function(a, b){ return (DAYS7.indexOf(a.day) - DAYS7.indexOf(b.day)) || (lhSlotKey(a) - lhSlotKey(b)); }).forEach(function(z){
+      var t = lhSlotTime(st, z);
+      if(!g[t]){ g[t] = []; order.push(t); }
+      if(g[t].indexOf(z.day) < 0) g[t].push(z.day);
+    });
+    return order.map(function(t){ return g[t].join(", ") + (/\d/.test(t) ? " (" + t + ")" : " " + t); }).join(" · ");
+  }
+  /* Ngày có lịch mà chưa ghi buổi: sau buổi ghi gần nhất (hoặc từ ngày bắt đầu), tối đa 2 tháng trở lại, tính cả hôm nay. */
+  function lhTodo(st, ls, today){
+    var last = ls.length ? ls[ls.length - 1].d : null, from = last ? lhAdd(last, 1) : lhD(st.start), lim = lhAdd(today, -62);
+    if(!from) return [];
+    return lhPlan(st, from < lim ? lim : from, lhAdd(today, 1));
+  }
+  function lhPlanCard(st, ls, today){
+    var sl = st.slots || [];
+    if(!sl.length) return '<div class="card"><h2 class="lhsec">Lịch học cố định</h2><p class="hint">Em chưa có ca học. Cô xếp ở Học sinh → Lịch tuần (bấm “+” trong ô) hoặc “Sửa thông tin” → Ca học; lịch sẽ tự hiện ở đây và dùng để tính học phí.</p></div>';
+    var next = lhPlan(st, lhAdd(today, 1), lhAdd(today, 15)), todo = lhTodo(st, ls, today);
+    return '<div class="card"><h2 class="lhsec">Lịch học cố định</h2><p class="hint" style="margin:2px 0 6px">Lấy từ Học sinh → Lịch tuần; cô đổi ca ở đó thì ở đây và học phí đổi theo.</p>' + hsSlots(st) +
+      '<p class="lhnote" style="margin-top:8px"><b style="color:var(--ink)">' + sl.length + ' buổi/tuần</b>' + (st.perWeek && st.perWeek !== sl.length ? ' · <b>hồ sơ ghi ' + st.perWeek + ' buổi/tuần</b> (Sửa thông tin để khớp)' : '') + '</p>' +
+      (next.length ? '<p class="lhnote">Sắp tới: ' + next.slice(0, 6).map(function(x){ return LH_DN[x.d.getDay()] + ' ' + lhDm(x.d) + ' · ' + esc(lhSlotTime(st, x.z)); }).join(" | ") + '</p>' : '') +
+      (todo.length ? '<div class="row"><button class="btn sm" id="lhSync">Ghi ' + todo.length + ' buổi đã học theo lịch</button><span class="hint" style="margin:0">' + todo.map(function(x){ return LH_DN[x.d.getDay()] + ' ' + lhDm(x.d); }).join(", ") + ': có lịch, chưa ghi buổi học</span></div>' : '') + '</div>';
+  }
+  function lhSync(st){
+    var now = new Date(), today = new Date(now.getFullYear(), now.getMonth(), now.getDate()), todo = lhTodo(st, lhOf(st), today);
+    if(!todo.length) return;
+    var md = modal('<h3>Ghi buổi theo lịch · ' + esc(st.name) + '</h3><p class="hint">Bỏ chọn buổi em nghỉ. Nội dung từng buổi cô ghi sau (nút Sửa ở danh sách buổi).</p>' +
+      todo.map(function(x, i){ return '<label class="castu"><input type="checkbox" data-lt="' + i + '" checked> <span>' + LH_DL[x.d.getDay()] + ', ' + lhDm(x.d) + '/' + x.d.getFullYear() + '</span><small>' + esc(lhSlotTime(st, x.z)) + '</small></label>'; }).join("") +
+      '<p class="err" id="ltErr" hidden></p><div class="row"><button class="btn" id="ltOk">Ghi các buổi đã chọn</button><button class="btn ghost" data-close>Hủy</button></div>');
+    md.el.querySelector("#ltOk").onclick = function(){
+      var pick = $$("[data-lt]", md.el).filter(function(c){ return c.checked; }).map(function(c){ return todo[+c.dataset.lt]; }), t = Date.now();
+      if(!pick.length){ md.close(); return; }
+      Promise.all(pick.map(function(x, i){ return db.doc("buoi/B" + t.toString(36) + i).set({st:st.id, date:lhIso(x.d), tm:lhSlotTime(st, x.z), topic:"", links:[], plan:1, created:t + i, updated:t}); }))
+        .then(function(){ md.close(); }, function(e){ var err = md.el.querySelector("#ltErr"); err.textContent = "Không lưu được (" + (e && e.code) + ")."; err.hidden = false; });
+    };
+  }
+  /* =================== HỌC PHÍ ===================
+     students/<id>.fee = {rate: đồng/buổi, mode: "lich" (đếm buổi có lịch trong tháng) | "4t" (4 tuần × buổi/tuần) | "co" (trọn gói/tháng), month: đồng/tháng, from: ngày bắt đầu tính}.
+     Tháng đầu vào giữa tháng: số buổi có lịch từ ngày bắt đầu đến hết tháng × đơn giá, hạn đóng = ngày bắt đầu; từ tháng sau đóng đầu tháng (hạn = ngày `due`).
+     hocphi/<id học viên>_<YYYY-MM> = {st, ym, n, rate, base, how (chốt khi cô gửi thông báo / ghi đóng tiền), adj, adjNote, paid, paidAt, note, sent};
+     hocphi/_cfg = {due, bank, note, sign}. */
+  var HP_MODES = [["lich","Theo số buổi có lịch trong tháng","đơn giá × số buổi thật trong tháng (tháng có 5 thứ Hai thì nhiều hơn tháng có 4)"],["4t","Cố định 4 tuần","đơn giá × số buổi/tuần × 4, tháng nào cũng bằng nhau"],["co","Trọn gói theo tháng","một số tiền cố định mỗi tháng"]];
+  function hpMoney(n){ return Math.round(+n || 0).toLocaleString("vi-VN") + "đ"; }
+  function hpNum(v){
+    var s = String(v == null ? "" : v).trim().toLowerCase().replace(/\s/g, ""), neg = /^[-−]/.test(s), mul = 1;
+    if(/(k|nghìn|ngàn)$/.test(s)) mul = 1000; else if(/(tr|triệu)$/.test(s)) mul = 1e6;
+    s = s.replace(/[^\d.,]/g, "");
+    s = mul > 1 ? s.replace(",", ".") : s.replace(/[.,]/g, "");
+    var n = parseFloat(s); return isNaN(n) ? 0 : Math.round(n * mul) * (neg ? -1 : 1);
+  }
+  function hpIn(n){ return n ? Math.round(n).toLocaleString("vi-VN") : ""; }
+  function hpCfg(){ var c = (S.hocphi || []).find(function(x){ return x.id === "_cfg"; }) || {}; return {due:c.due || 5, bank:c.bank || "", note:c.note || "", sign:c.sign || "Cô Ngân · Nari TOPIK · 0399 214 554"}; }
+  function hpRec(st, ym){ return (S.hocphi || []).find(function(x){ return x.id === st.id + "_" + ym; }) || null; }
+  function hpYm(d){ return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0"); }
+  function hpYmD(ym){ var m = /^(\d{4})-(\d{2})$/.exec(ym); return new Date(+m[1], +m[2] - 1, 1); }
+  function hpYmTxt(ym){ var d = hpYmD(ym); return (d.getMonth() + 1) + "/" + d.getFullYear(); }
+  function hpYmAdd(ym, n){ var d = hpYmD(ym); return hpYm(new Date(d.getFullYear(), d.getMonth() + n, 1)); }
+  function hpFrom(st){ return lhD((st.fee || {}).from) || lhD(st.start); }
+  function hpSet(st){ var f = st.fee || {}; return !!(f.rate || (f.mode === "co" && f.month)); }
+  function hpFd(d){ return lhDm(d) + "/" + d.getFullYear(); }
+  /* Học phí một tháng (null nếu tháng đó em chưa học). */
+  function hpBill(st, ym){
+    var f = st.fee || {}, m0 = hpYmD(ym), m1 = new Date(m0.getFullYear(), m0.getMonth() + 1, 1), from = hpFrom(st), rec = hpRec(st, ym);
+    if(!from || from >= m1) return null;
+    var first = from > m0, dates = lhPlan(st, first ? from : m0, m1), rate = +f.rate || 0, need = lhNeed(st), mode = f.mode || "lich", n = dates.length, base, how;
+    if(first){
+      if(rate){ base = n * rate; how = n + " buổi × " + hpMoney(rate); }
+      else { var full = lhPlan(st, m0, m1).length; base = full ? Math.round((+f.month || 0) * n / full / 1000) * 1000 : 0; how = "trọn tháng " + hpMoney(f.month) + " × " + n + "/" + full + " buổi"; }
+    } else if(mode === "4t"){ n = need * 4; base = n * rate; how = "4 tuần × " + need + " buổi × " + hpMoney(rate); }
+    else if(mode === "co"){ base = +f.month || 0; how = "trọn gói tháng"; }
+    else { base = n * rate; how = n + " buổi × " + hpMoney(rate); }
+    var lock = !!(rec && rec.base != null);
+    if(lock){ n = +rec.n || 0; base = +rec.base || 0; rate = +rec.rate || 0; how = rec.how || (n + " buổi"); }
+    var adj = rec ? +rec.adj || 0 : 0, paid = rec ? +rec.paid || 0 : 0, total = base + adj, cfg = hpCfg();
+    return {ym:ym, first:first, from:from, dates:dates, n:n, rate:rate, base:base, how:how, mode:first ? "dau" : mode, lock:lock, adj:adj, adjNote:rec ? rec.adjNote || "" : "", total:total, paid:paid,
+      due:first ? (dates.length ? dates[0].d : from) : new Date(m0.getFullYear(), m0.getMonth(), Math.min(28, cfg.due)), rec:rec, set:hpSet(st) || lock};
+  }
+  function hpStatus(b){
+    var now = new Date(), today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    if(!b.set) return ["warn", "chưa đặt học phí"];
+    if(b.total <= 0) return ["", "không có buổi"];
+    if(b.paid >= b.total) return ["good", "đã đóng" + (b.rec && b.rec.paidAt ? " " + fmtYMD(b.rec.paidAt).slice(0, 5) : "")];
+    if(b.paid > 0) return ["warn", "còn thiếu " + hpMoney(b.total - b.paid)];
+    if(today > b.due) return ["bad", "quá hạn " + lhDm(b.due)];
+    return ["", "chưa đóng · hạn " + lhDm(b.due)];
+  }
+  /* Các tháng cần thu của một em: từ tháng bắt đầu tới tháng này (từ ngày 20 thêm tháng sau để báo trước). */
+  function hpMonths(st){
+    var from = hpFrom(st); if(!from) return [];
+    var now = new Date(), last = hpYm(now); if(now.getDate() >= 20) last = hpYmAdd(last, 1);
+    var out = []; for(var ym = hpYm(from); ym <= last && out.length < 60; ym = hpYmAdd(ym, 1)) out.push(ym);
+    return out;
+  }
+  function hpDates(b){
+    var c = {}, order = [];
+    b.dates.forEach(function(x){ var k = String(x.d.getDate()).padStart(2, "0"); if(!c[k]){ c[k] = 0; order.push(k); } c[k]++; });
+    return order.map(function(k){ return k + (c[k] > 1 ? " (" + c[k] + " buổi)" : ""); }).join(", ") + "/" + String(hpYmD(b.ym).getMonth() + 1).padStart(2, "0");
+  }
+  function hpMsg(st, b){
+    var c = hpCfg(), L = [], nx = hpYmTxt(hpYmAdd(b.ym, 1));
+    L.push("THÔNG BÁO HỌC PHÍ THÁNG " + hpYmTxt(b.ym));
+    L.push("Học viên: " + st.name);
+    if((st.slots || []).length) L.push("Lịch học: " + lhPlanText(st) + " · " + st.slots.length + " buổi/tuần");
+    if(b.first) L.push("Em bắt đầu học từ " + hpFd(b.from) + " nên tháng này tính theo số buổi từ ngày bắt đầu đến hết tháng.");
+    if(b.dates.length && b.mode !== "4t" && b.mode !== "co") L.push("Các buổi học trong tháng (" + b.dates.length + " buổi): " + hpDates(b));
+    L.push("Học phí: " + (b.how === "trọn gói tháng" ? "trọn gói tháng " + hpMoney(b.base) : b.how + " = " + hpMoney(b.base)));
+    if(b.adj) L.push((b.adj > 0 ? "Cộng thêm: " : "Giảm trừ: ") + hpMoney(Math.abs(b.adj)) + (b.adjNote ? " (" + b.adjNote + ")" : ""));
+    L.push("Tổng cần đóng: " + hpMoney(b.total));
+    if(b.paid >= b.total && b.total > 0) L.push("Em đã đóng đủ" + (b.rec && b.rec.paidAt ? " ngày " + fmtYMD(b.rec.paidAt) : "") + ". Cô cảm ơn em!");
+    else {
+      if(b.paid > 0) L.push("Em đã đóng " + hpMoney(b.paid) + ", còn lại " + hpMoney(b.total - b.paid) + ".");
+      L.push("Hạn đóng: " + (b.first ? "buổi học đầu tiên, ngày " + hpFd(b.due) : "trước ngày " + hpFd(b.due)));
+      if(c.bank) L.push("Chuyển khoản: " + c.bank);
+    }
+    if(b.first) L.push("Từ tháng " + nx + ", học phí đóng vào đầu tháng (trước ngày " + c.due + ").");
+    if(c.note) L.push(c.note);
+    L.push(c.sign);
+    return L.join("\n");
+  }
+  function hpSave(st, ym, doc){
+    doc.st = st.id; doc.ym = ym; doc.updated = Date.now();
+    Object.keys(doc).forEach(function(k){ if(doc[k] === undefined) delete doc[k]; });
+    return db.doc("hocphi/" + st.id + "_" + ym).set(doc);
+  }
+  function hpKeep(rec){ var d = Object.assign({}, rec || {}); delete d.id; return d; }
+  function hpLockDoc(b){ var d = hpKeep(b.rec); if(!b.lock){ d.n = b.n; d.rate = b.rate; d.base = b.base; d.how = b.how; } return d; }
+  function hpRowBtns(st, ym, b){
+    return b.set ? '<button class="btn sm" data-hpn="' + esc(st.id + "|" + ym) + '">Thông báo</button><button class="btn sm ghost" data-hpe="' + esc(st.id + "|" + ym) + '">' + (b.paid >= b.total && b.total > 0 ? 'Sửa' : 'Ghi đóng tiền') + '</button>'
+      : '<button class="btn sm ghost" data-hps="' + esc(st.id) + '">Đặt học phí</button>';
+  }
+  function hpList(hb){
+    var now = new Date(), cur = hpYm(now), ym = S.hpYm || (S.hpYm = now.getDate() >= 25 ? hpYmAdd(cur, 1) : cur);
+    var rows = S.students.map(function(st){ return {st:st, b:hpBill(st, ym)}; }).filter(function(x){ return x.b && (x.st.active !== false || (x.b.rec && x.b.total)); });
+    var noStart = S.students.filter(function(st){ return st.active !== false && !hpFrom(st); });
+    var T = {t:0, p:0, k:0};
+    rows.forEach(function(x){ if(!x.b.set) return; T.t += x.b.total; T.p += Math.min(x.b.paid, x.b.total); if(x.b.paid < x.b.total) T.k++; });
+    var h = '<div class="card"><div class="row" style="margin:0;justify-content:space-between;align-items:center"><div class="row" style="margin:0;align-items:center"><button class="btn sm ghost" data-hpm="-1" aria-label="Tháng trước">‹</button><h2 style="margin:0">Học phí tháng ' + hpYmTxt(ym) + '</h2><button class="btn sm ghost" data-hpm="1" aria-label="Tháng sau">›</button>' + (ym !== cur ? '<button class="lnk" data-hpm="0">về tháng này</button>' : '') + '</div><button class="btn sm ghost" id="hpCfgBtn">Hạn đóng & chuyển khoản</button></div>' +
+      '<p class="hint">Số buổi lấy từ Lịch tuần của từng em. Em vào giữa tháng: tháng đầu tính theo số buổi từ ngày bắt đầu đến hết tháng; từ tháng sau đóng đầu tháng (trước ngày ' + hpCfg().due + '). “Thông báo” tạo tin nhắn gửi em qua Zalo. Số tiền được chốt khi cô bấm “Đánh dấu đã gửi” hoặc ghi đóng tiền; sau đó đổi lịch không làm đổi tháng đó.</p>' +
+      '<div class="hptl"><div><span>Phải thu</span><b>' + hpMoney(T.t) + '</b></div><div><span>Đã thu</span><b style="color:var(--ok)">' + hpMoney(T.p) + '</b></div><div><span>Còn lại · ' + T.k + ' em</span><b style="color:' + (T.t - T.p > 0 ? 'var(--pen)' : 'var(--ok)') + '">' + hpMoney(T.t - T.p) + '</b></div></div>' +
+      (rows.length ? '<div class="scroll"><table class="tbl hpt hpl"><thead><tr><th>Học viên</th><th>Lịch</th><th>Số buổi</th><th style="text-align:right">Học phí</th><th>Trạng thái</th><th></th></tr></thead><tbody>' + rows.map(function(x){
+        var st = x.st, b = x.b, s = hpStatus(b);
+        return '<tr><td><button class="hpnm" data-hpo="' + esc(st.id) + '">' + esc(st.name) + '</button>' + (b.first ? '<div class="sm2">tháng đầu, từ ' + lhDm(b.from) + '</div>' : '') + (b.rec && b.rec.sent ? '<div class="sm2">đã gửi thông báo ' + fmtDay(b.rec.sent) + '</div>' : '') + '</td>' +
+          '<td class="sm2">' + ((st.slots || []).length ? esc(lhPlanText(st)) : '<span class="pill warn">chưa xếp lịch</span>') + '</td><td>' + (b.set ? b.n : '–') + '</td>' +
+          '<td class="r">' + (b.set ? '<b>' + hpMoney(b.total) + '</b>' + (b.adj ? '<div class="sm2">' + (b.adj > 0 ? '+' : '−') + hpMoney(Math.abs(b.adj)) + '</div>' : '') : '–') + '</td>' +
+          '<td><span class="pill ' + s[0] + '">' + esc(s[1]) + '</span></td><td><div class="act">' + hpRowBtns(st, ym, b) + '</div></td></tr>';
+      }).join("") + '</tbody></table></div>' : '<p class="hint">Tháng này chưa có em nào học.</p>') +
+      (noStart.length ? '<p class="hint" style="margin-top:10px">Chưa có ngày bắt đầu nên chưa tính được học phí: ' + noStart.map(function(st){ return '<button class="lnk" data-hps="' + esc(st.id) + '">' + esc(st.name) + '</button>'; }).join(", ") + '.</p>' : '') + '</div>';
+    hb.innerHTML = h;
+    $$("[data-hpm]", hb).forEach(function(x){ x.onclick = function(){ var d = +x.dataset.hpm; S.hpYm = d ? hpYmAdd(ym, d) : cur; renderTab(); }; });
+    $("#hpCfgBtn").onclick = hpCfgEdit;
+    $$("[data-hpo]", hb).forEach(function(x){ x.onclick = function(){ S.nlId = "s:" + x.dataset.hpo; S.hpt = "hp"; renderTab(); window.scrollTo(0, 0); }; });
+    hpWire(hb);
+  }
+  function hpWire(root){
+    var stOf = function(id){ return S.students.find(function(st){ return st.id === id; }); };
+    $$("[data-hps]", root).forEach(function(x){ x.onclick = function(){ var st = stOf(x.dataset.hps); if(st) hpSetup(st); }; });
+    $$("[data-hpn]", root).forEach(function(x){ x.onclick = function(){ var p = x.dataset.hpn.split("|"), st = stOf(p[0]); if(st) hpNotice(st, p[1]); }; });
+    $$("[data-hpe]", root).forEach(function(x){ x.onclick = function(){ var p = x.dataset.hpe.split("|"), st = stOf(p[0]); if(st) hpEdit(st, p[1]); }; });
+  }
+  function hpStuHTML(st){
+    var f = st.fee || {}, from = hpFrom(st), set = hpSet(st);
+    var h = '<div class="card"><div class="row" style="margin:0 0 4px;justify-content:space-between;align-items:center"><h2 class="lhsec">Cách tính học phí</h2><button class="btn sm' + (set ? ' ghost' : '') + '" data-hps="' + esc(st.id) + '">' + (set ? 'Sửa cách tính' : 'Đặt học phí') + '</button></div>' +
+      '<div class="hpbox"><p>Lịch học: <b>' + ((st.slots || []).length ? esc(lhPlanText(st)) + '</b> · ' + st.slots.length + ' buổi/tuần' : 'chưa xếp lịch</b> (Học sinh → Lịch tuần)') + '</p>' +
+      (set ? '<p>' + (f.rate ? 'Đơn giá <b>' + hpMoney(f.rate) + '/buổi</b> · ' : '') + esc((HP_MODES.find(function(m){ return m[0] === (f.mode || "lich"); }) || HP_MODES[0])[1]) + (f.mode === "co" ? ' <b>' + hpMoney(f.month) + '/tháng</b>' : '') + '</p>' : '<p>Chưa đặt học phí cho em.</p>') +
+      '<p>Tính từ: <b>' + (from ? hpFd(from) : 'chưa có ngày bắt đầu') + '</b>' + (from && from.getDate() > 1 ? ' · tháng đầu tính theo số buổi từ ngày này đến hết tháng' : '') + '</p></div></div>';
+    var ms = set ? hpMonths(st).reverse() : [];
+    if(ms.length){
+      var B = ms.map(function(ym){ return hpBill(st, ym); }), tp = B.reduce(function(a, b){ return a + Math.min(b.paid, b.total); }, 0), tk = B.reduce(function(a, b){ return a + Math.max(0, b.total - b.paid); }, 0);
+      h += '<div class="card"><h2 class="lhsec">Các tháng</h2><p class="hint">Đã đóng tổng <b>' + hpMoney(tp) + '</b>' + (tk ? ' · còn nợ <b style="color:var(--pen)">' + hpMoney(tk) + '</b>' : ' · không còn nợ') + '.</p><div class="scroll"><table class="tbl hpt"><thead><tr><th>Tháng</th><th>Số buổi</th><th style="text-align:right">Học phí</th><th style="text-align:right">Đã đóng</th><th>Trạng thái</th><th></th></tr></thead><tbody>' +
+        B.map(function(b){ var s = hpStatus(b);
+          return '<tr><td><b>' + hpYmTxt(b.ym) + '</b>' + (b.first ? '<div class="sm2">tháng đầu, từ ' + lhDm(b.from) + '</div>' : '') + (b.rec && b.rec.sent ? '<div class="sm2">đã gửi thông báo ' + fmtDay(b.rec.sent) + '</div>' : '') + '</td><td>' + b.n + '</td>' +
+            '<td class="r"><b>' + hpMoney(b.total) + '</b><div class="sm2">' + esc(b.how) + (b.adj ? ' ' + (b.adj > 0 ? '+' : '−') + ' ' + hpMoney(Math.abs(b.adj)) : '') + '</div></td><td class="r">' + (b.paid ? hpMoney(b.paid) : '–') + '</td>' +
+            '<td><span class="pill ' + s[0] + '">' + esc(s[1]) + '</span></td><td><div class="act">' + hpRowBtns(st, b.ym, b) + '</div></td></tr>'; }).join("") + '</tbody></table></div></div>';
+    }
+    return h;
+  }
+  function hpSetup(st){
+    var f = st.fee || {}, mode = f.mode || "lich";
+    var md = modal('<h3>Học phí · ' + esc(st.name) + '</h3>' +
+      '<p class="hint">Lịch học (từ Lịch tuần): <b>' + ((st.slots || []).length ? esc(lhPlanText(st)) + ' · ' + st.slots.length + ' buổi/tuần' : 'chưa xếp lịch') + '</b></p>' +
+      '<div class="grid2"><div><label class="l" for="hpRate">Học phí mỗi buổi</label><input class="t" id="hpRate" inputmode="numeric" data-focus value="' + hpIn(f.rate) + '" placeholder="VD: 150.000 hoặc 150k"></div>' +
+      '<div><label class="l" for="hpFrom">Tính học phí từ ngày</label><input class="t" id="hpFrom" type="date" value="' + esc(f.from || st.start || "") + '"></div></div>' +
+      '<p class="hint">Ngày em bắt đầu học (mặc định lấy “Ngày bắt đầu khóa”). Vào giữa tháng thì tháng đầu tính theo số buổi từ ngày này đến hết tháng.</p>' +
+      '<label class="l">Từ tháng sau, mỗi tháng tính</label>' + HP_MODES.map(function(o){ return '<label class="hpmode"><input type="radio" name="hpMode" value="' + o[0] + '"' + (mode === o[0] ? ' checked' : '') + '><span><b>' + o[1] + '</b><small>' + o[2] + '</small></span></label>'; }).join("") +
+      '<div id="hpMonthBox"><label class="l" for="hpMonth">Học phí trọn tháng</label><input class="t" id="hpMonth" inputmode="numeric" value="' + hpIn(f.month) + '" placeholder="VD: 1.200.000 hoặc 1,2tr"></div>' +
+      '<div class="hpbox" id="hpPrev"></div><p class="err" id="hpErr" hidden></p><div class="row"><button class="btn" id="hpOk">Lưu</button><button class="btn ghost" data-close>Hủy</button></div>', true);
+    var q = function(x){ return md.el.querySelector(x); };
+    var read = function(){ var m = (md.el.querySelector("[name=hpMode]:checked") || {}).value || "lich"; return {rate:hpNum(q("#hpRate").value), mode:m, month:m === "co" ? hpNum(q("#hpMonth").value) : 0, from:q("#hpFrom").value || ""}; };
+    var prev = function(){
+      var fee = read(), tmp = Object.assign({}, st, {id:"__hp", fee:fee}), from = hpFrom(tmp);
+      q("#hpMonthBox").hidden = fee.mode !== "co";
+      if(!hpSet(tmp) || !from){ q("#hpPrev").innerHTML = '<p>Nhập ' + (!from ? 'ngày bắt đầu' : fee.mode === "co" ? 'học phí trọn tháng' : 'học phí mỗi buổi') + ' để xem trước.</p>'; return; }
+      var y0 = hpYm(from), b0 = hpBill(tmp, y0), b1 = hpBill(tmp, hpYmAdd(y0, 1)), b2 = hpBill(tmp, hpYmAdd(y0, 2));
+      var line = function(b){ return 'Tháng ' + hpYmTxt(b.ym) + ': ' + esc(b.how) + (b.how === "trọn gói tháng" ? ' ' : ' = ') + '<b>' + hpMoney(b.total) + '</b>'; };
+      q("#hpPrev").innerHTML = '<p>' + line(b0) + (b0.first ? ' (tháng đầu, từ ' + lhDm(b0.from) + ', đóng ngày ' + lhDm(b0.due) + ')' : '') + '</p><p>' + line(b1) + ' · đóng trước ' + lhDm(b1.due) + '</p><p>' + line(b2) + '</p>' +
+        ((st.slots || []).length ? '' : '<p style="color:var(--pen)">Em chưa có ca trong Lịch tuần nên chưa đếm được số buổi.</p>');
+    };
+    $$("input", md.el).forEach(function(i){ i.addEventListener("input", prev); i.addEventListener("change", prev); });
+    prev();
+    q("#hpOk").onclick = function(){
+      var fee = read(), err = q("#hpErr");
+      if(fee.mode === "co" ? !fee.month : !fee.rate){ err.textContent = fee.mode === "co" ? "Cô nhập học phí trọn tháng nhé." : "Cô nhập học phí mỗi buổi nhé."; err.hidden = false; return; }
+      if(!fee.from){ err.textContent = "Cô chọn ngày bắt đầu tính học phí nhé."; err.hidden = false; return; }
+      db.doc("students/" + st.id).update({fee:fee, updated:Date.now()}).then(function(){ md.close(); }, function(e){ err.textContent = "Không lưu được (" + (e && e.code) + ")."; err.hidden = false; });
+    };
+  }
+  function hpNotice(st, ym){
+    var b = hpBill(st, ym); if(!b) return;
+    var md = modal('<h3>Thông báo học phí tháng ' + hpYmTxt(ym) + ' · ' + esc(st.name) + '</h3><p class="hint">Cô sửa chữ trong ô nếu cần, rồi sao chép gửi em qua Zalo.' + (hpCfg().bank ? '' : ' Số tài khoản ghi ở nút “Hạn đóng & chuyển khoản” (Học sinh → Học phí).') + '</p>' +
+      '<textarea class="t" id="hpTx" rows="13">' + esc(hpMsg(st, b)) + '</textarea>' +
+      '<div class="row"><button class="btn" id="hpCp">Sao chép</button><button class="btn ghost" id="hpSh" hidden>Gửi qua Zalo…</button><button class="btn ghost" id="hpSent">' + (b.rec && b.rec.sent ? 'Đã gửi ' + fmtDay(b.rec.sent) + ' · ghi lại' : 'Đánh dấu đã gửi') + '</button><span class="okmsg" id="hpSt" hidden></span></div>' +
+      '<div class="row"><button class="btn ghost sm" data-close>Đóng</button></div>', true);
+    var q = function(x){ return md.el.querySelector(x); }, ta = q("#hpTx"), stEl = q("#hpSt");
+    var mark = function(){ var d = hpLockDoc(b); d.sent = Date.now(); return hpSave(st, ym, d).then(function(){ stEl.hidden = false; stEl.textContent = "Đã ghi gửi thông báo, chốt " + hpMoney(b.total) + "."; }, function(e){ stEl.hidden = false; stEl.textContent = "Không lưu được (" + (e && e.code) + ")."; }); };
+    q("#hpCp").onclick = function(){ copyText(ta.value, stEl); };
+    if(navigator.share){ q("#hpSh").hidden = false; q("#hpSh").onclick = function(){ navigator.share({text:ta.value}).then(function(){ if(!(b.rec && b.rec.sent)) mark(); }, function(){}); }; }
+    q("#hpSent").onclick = mark;
+  }
+  function hpEdit(st, ym){
+    var b = hpBill(st, ym); if(!b) return;
+    var r = b.rec || {}, now = new Date();
+    var md = modal('<h3>Học phí tháng ' + hpYmTxt(ym) + ' · ' + esc(st.name) + '</h3>' +
+      '<div class="hpbox"><p>Theo lịch: <b>' + b.dates.length + ' buổi</b>' + (b.dates.length ? ' (' + esc(hpDates(b)) + ')' : '') + (b.first ? ' · tháng đầu, từ ' + lhDm(b.from) : '') + '</p><p>Cách tính: ' + esc(b.how) + (b.lock ? ' · <b>đã chốt</b>' : '') + '</p></div>' +
+      '<div class="grid2"><div><label class="l" for="heN">Số buổi</label><input class="t" id="heN" type="number" min="0" value="' + b.n + '"></div><div><label class="l" for="heR">Đơn giá/buổi</label><input class="t" id="heR" inputmode="numeric" value="' + hpIn(b.rate) + '"></div></div>' +
+      '<label class="l" for="heB">Học phí tháng</label><input class="t" id="heB" inputmode="numeric" value="' + hpIn(b.base) + '"><p class="hint">Tự tính = số buổi × đơn giá; cô sửa thẳng ở đây nếu thu trọn gói.</p>' +
+      '<div class="grid2"><div><label class="l" for="heA">Cộng / trừ</label><input class="t" id="heA" value="' + (b.adj ? (b.adj < 0 ? '-' : '') + hpIn(Math.abs(b.adj)) : '') + '" placeholder="VD: -150k"></div><div><label class="l" for="heAn">Lý do</label><input class="t" id="heAn" value="' + esc(b.adjNote) + '" placeholder="VD: cô nghỉ 1 buổi"></div></div>' +
+      '<div class="hpbox"><p>Tổng cần đóng: <b id="heT"></b></p></div>' +
+      '<div class="grid2"><div><label class="l" for="heP">Em đã đóng</label><input class="t" id="heP" inputmode="numeric" value="' + hpIn(b.paid) + '" placeholder="0"></div><div><label class="l" for="heD">Ngày đóng</label><input class="t" id="heD" type="date" value="' + esc(r.paidAt || "") + '"></div></div>' +
+      '<div class="row" style="margin-top:8px"><button class="btn sm ghost" id="heFull">Đóng đủ hôm nay</button></div>' +
+      '<label class="l" for="heNote">Ghi chú (chỉ cô xem)</label><input class="t" id="heNote" value="' + esc(r.note || "") + '" placeholder="VD: chuyển khoản, tiền mặt">' +
+      '<p class="err" id="heErr" hidden></p><div class="row"><button class="btn" id="heOk">Lưu</button><button class="btn ghost" data-close>Hủy</button>' + (b.lock && !b.paid ? '<span style="flex:1"></span><button class="btn sm ghost" id="heRe">Tính lại theo lịch</button>' : '') + '</div>', true);
+    var q = function(x){ return md.el.querySelector(x); };
+    var total = function(){ return hpNum(q("#heB").value) + hpNum(q("#heA").value); };
+    var show = function(){ q("#heT").textContent = hpMoney(total()); };
+    var auto = function(){ var n = parseInt(q("#heN").value, 10) || 0, rt = hpNum(q("#heR").value); if(rt) q("#heB").value = hpIn(n * rt); show(); };
+    q("#heN").oninput = auto; q("#heR").oninput = auto; q("#heB").oninput = show; q("#heA").oninput = show; show();
+    q("#heFull").onclick = function(){ q("#heP").value = hpIn(total()); q("#heD").value = lhIso(now); };
+    q("#heOk").onclick = function(){
+      var n = parseInt(q("#heN").value, 10) || 0, rt = hpNum(q("#heR").value), base = hpNum(q("#heB").value), err = q("#heErr");
+      var d = hpKeep(b.rec);
+      d.n = n; d.rate = rt; d.base = base;
+      d.how = n === b.n && rt === b.rate && base === b.base ? b.how : rt && base === n * rt ? n + " buổi × " + hpMoney(rt) : "trọn gói tháng";
+      d.adj = hpNum(q("#heA").value); d.adjNote = cleanName(q("#heAn").value); d.paid = hpNum(q("#heP").value); d.paidAt = q("#heD").value || ""; d.note = cleanName(q("#heNote").value);
+      if(d.paid && !d.paidAt) d.paidAt = lhIso(now);
+      hpSave(st, ym, d).then(function(){ md.close(); }, function(e){ err.textContent = "Không lưu được (" + (e && e.code) + ")."; err.hidden = false; });
+    };
+    var re = q("#heRe");
+    if(re) re.onclick = function(){ var d = hpKeep(b.rec); delete d.n; delete d.rate; delete d.base; delete d.how; hpSave(st, ym, d).then(function(){ md.close(); }); };
+  }
+  function hpCfgEdit(){
+    var c = hpCfg();
+    var md = modal('<h3>Hạn đóng & chuyển khoản</h3><p class="hint">Dùng chung cho mọi thông báo học phí.</p>' +
+      '<label class="l" for="hcDue">Hạn đóng học phí (ngày trong tháng)</label><input class="t" id="hcDue" type="number" min="1" max="28" value="' + c.due + '" style="max-width:120px">' +
+      '<label class="l" for="hcBank">Thông tin chuyển khoản</label><textarea class="t" id="hcBank" rows="3" placeholder="VD: Vietcombank 0123456789 – Nguyễn Thị Ngân. Nội dung: tên em + tháng">' + esc(c.bank) + '</textarea>' +
+      '<label class="l" for="hcNote">Lời nhắn thêm (không bắt buộc)</label><textarea class="t" id="hcNote" rows="2" placeholder="VD: Em đóng xong nhắn cô một tiếng nhé!">' + esc(c.note) + '</textarea>' +
+      '<label class="l" for="hcSign">Ký tên cuối tin nhắn</label><input class="t" id="hcSign" value="' + esc(c.sign) + '">' +
+      '<p class="err" id="hcErr" hidden></p><div class="row"><button class="btn" id="hcOk">Lưu</button><button class="btn ghost" data-close>Hủy</button></div>', true);
+    var q = function(x){ return md.el.querySelector(x); };
+    q("#hcOk").onclick = function(){
+      var due = Math.min(28, Math.max(1, parseInt(q("#hcDue").value, 10) || 5));
+      db.doc("hocphi/_cfg").set({due:due, bank:q("#hcBank").value.trim(), note:q("#hcNote").value.trim(), sign:cleanName(q("#hcSign").value) || hpCfg().sign, updated:Date.now()})
+        .then(function(){ md.close(); }, function(e){ var err = q("#hcErr"); err.textContent = "Không lưu được (" + (e && e.code) + ")."; err.hidden = false; });
     };
   }
   function hsOpen(id){ S.nlId = id; S.hpt = "tq"; renderTab(); window.scrollTo(0, 0); }
@@ -608,9 +894,11 @@ function reportBoot(){
       '<p class="hint" style="margin:4px 0 0">' + (st ? '' : 'Chưa ghép học viên · ') + 'Tên đã nhập khi làm bài: ' + esc((p.raw.length ? p.raw : p.keys).join(", ")) + '</p>' +
       '<div class="row">' + (st ? '<button class="btn sm ghost" id="hsEdit">Sửa thông tin</button><button class="btn sm ghost" id="hsApp">App' + (st.app ? ' · ' + esc(st.app) : '') + '</button>' + (st.page ? '<a class="btn sm ghost" href="' + esc(st.page) + '" target="_blank" rel="noopener">Trang học viên</a>' : '') : '') +
       (eKey ? '<button class="btn sm ghost" id="hsMix">Tạo đề ôn câu sai</button>' : '') + (vKey ? '<button class="btn sm ghost" id="hsVre">Giao bài ôn từ sai</button>' : '') + '</div></div>' +
-      '<div class="row" style="margin:0 0 12px">' + [["tq","Tổng quan"]].concat(st ? [["lh","Lịch học (" + lhOf(st).length + " buổi)"]] : []).concat([["bai","Bài đã làm (" + hist.length + ")"],["nx","Nhận xét & gửi kết quả"]]).map(function(t){ return '<button class="btn' + (tab === t[0] ? '' : ' ghost') + '" data-hpt="' + t[0] + '">' + t[1] + '</button>'; }).join("") + '</div>';
+      '<div class="row" style="margin:0 0 12px">' + [["tq","Tổng quan"]].concat(st ? [["lh","Lịch học (" + lhOf(st).length + " buổi)"],["hp","Học phí"]] : []).concat([["bai","Bài đã làm (" + hist.length + ")"],["nx","Nhận xét & gửi kết quả"]]).map(function(t){ return '<button class="btn' + (tab === t[0] ? '' : ' ghost') + '" data-hpt="' + t[0] + '">' + t[1] + '</button>'; }).join("") + '</div>';
     if(tab === "lh" && st){
       h += lhHTML(st);
+    } else if(tab === "hp" && st){
+      h += hpStuHTML(st);
     } else if(tab === "bai"){
       var HK = [["","Tất cả"],["e","Đề đọc"],["en","Đề nghe"],["v","Từ vựng"],["n","Luyện nghe"],["w","Bài viết"]], hk = S.hpk || "";
       var cnt = {}; hist.forEach(function(x){ cnt[x[7]] = (cnt[x[7]] || 0) + 1; });
@@ -635,6 +923,7 @@ function reportBoot(){
     $$("[data-hpt]", body).forEach(function(b){ b.onclick = function(){ S.hpt = b.dataset.hpt; renderTab(); }; });
     $$("[data-hpk]", body).forEach(function(b){ b.onclick = function(){ S.hpk = b.dataset.hpk; renderTab(); }; });
     if(tab === "lh" && st) lhWire(body, st);
+    if(tab === "hp" && st) hpWire(body);
     if(st){ $("#hsEdit").onclick = function(){ editStudent(st); }; $("#hsApp").onclick = function(){ appStudent(st); }; }
     if(eKey) $("#hsMix").onclick = function(){ openMix(eKey); };
     if(vKey) $("#hsVre").onclick = function(){ S.vPreStu = vKey; S.vg = null; S.tab = "tuvung"; S.vsub = "giao"; render(); };

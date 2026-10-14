@@ -71,6 +71,15 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
     `python3 tools/nangluc.py <file>` (thay đoạn giữa dấu `==NL==`/`==NLA==`, tự móc tab), `publish` với `url`,
     rồi `python3 tools/sync_thi_thu.py <file>`.
 
+## Lịch cố định + Học phí (tab Học sinh, chỉ trong trang quản lý — code trong `tools/nangluc.js`)
+- Lịch cố định của em = ca ở Học sinh → Lịch tuần (`students.slots`). Hồ sơ → Lịch học có thẻ “Lịch học cố định” (ca, buổi sắp tới), lưới “Tuần này”
+  tô khung nét đứt ngày có lịch, nút “Ghi N buổi đã học theo lịch” tạo `buoi` (`tm` = giờ ca, `plan:1`) cho ngày có lịch chưa ghi (cô bỏ chọn buổi nghỉ).
+- Học phí: `students/<id>.fee = {rate (đ/buổi), mode: lich (đếm buổi có lịch trong tháng) | 4t (4 tuần × buổi/tuần) | co (trọn gói, month), from}`.
+  Tháng đầu vào giữa tháng = số buổi có lịch từ `from` đến hết tháng × đơn giá (hạn = buổi đầu tiên); từ tháng sau đóng đầu tháng (hạn ngày `due`).
+  `hocphi/<id học viên>_<YYYY-MM>` = {n, rate, base, how (chốt khi “Đánh dấu đã gửi”/ghi đóng tiền), adj, adjNote, paid, paidAt, note, sent};
+  `hocphi/_cfg` = {due, bank, note, sign}. Thẻ Học sinh → Học phí (bảng theo tháng) + hồ sơ → Học phí; “Thông báo” tạo tin nhắn Zalo.
+- `nangluc.py` móc thêm 2 chỗ ngoài khối NLA: listener `hocphi`, và `editStudent` giữ `fee` khi cô sửa thông tin.
+
 ## Lưu ý
 - Repo không được chứa tên, điểm, nhận xét của học sinh.
 
