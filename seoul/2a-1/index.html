@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Seoul 2A · Bài 1 · Hàn Ngữ Nari</title>
-<meta name="description" content="Học liệu Seoul 2A Bài 1 (처음 뵙겠습니다) cho lớp 1:1 hướng tới TOPIK 3: từ vựng giới thiệu bản thân, -(이)라고 하다, -(으)려고, -거나, (이)나 hiểu sâu, luyện nói, nghe kiểu TOPIK, đọc – viết câu 51 — Hàn Ngữ Nari.">
+<meta name="description" content="Học liệu Seoul 2A Bài 1 (처음 뵙겠습니다) theo từng trang sách: từ vựng giới thiệu, tần suất; N(이)라고 하다, -(으)려고, -거나, (이)나; hai hội thoại, nghe – nói, đọc – viết tin tìm người học ngoại ngữ, giới thiệu quê, tên người Hàn, biến âm; luyện tập chấm ngay — Hàn Ngữ Nari.">
 <meta property="og:title" content="Seoul 2A · Bài 1: 처음 뵙겠습니다 – Hàn ngữ Nari">
-<meta property="og:description" content="Từ vựng → 4 mẫu ngữ pháp → nói, nghe kiểu TOPIK → đọc – viết câu 51 → kiểm tra cuối buổi, chấm ngay và gửi kết quả cho cô.">
+<meta property="og:description" content="Học sâu từng trang Bài 1 (tr. 25–43), làm bài của sách cùng cô, luyện thêm chấm ngay, gửi kết quả cho cô.">
 <meta property="og:image" content="https://nttn6889.github.io/narikoreanbox/thi-thu/icon/icon-512.png">
 <meta property="og:url" content="https://nttn6889.github.io/narikoreanbox/seoul/2a-1/">
 <meta property="og:type" content="website">
@@ -128,8 +128,15 @@ footer{margin-top:40px;font-size:13px;color:var(--muted);text-align:center}
 footer a{color:var(--muted)}
 @media print{nav,.btns,.sum,footer,.co,button.say{display:none}.sec{display:block!important}.card,.mcq,.typ{break-inside:avoid}}
 /* riêng trang 2A-1 */
-nav a{font-size:14px;padding:6px 1px}
-@media(max-width:480px){nav a{font-size:12.5px}nav a small{font-size:10px}}
+nav .bar{display:grid;grid-template-columns:repeat(5,1fr)}
+nav a{font-size:13.5px;padding:5px 1px;border-top:1px solid var(--ink)}
+nav a+a{border-left:none}
+nav a:not(:nth-child(5n+1)){border-left:1px solid var(--ink)}
+nav a:nth-child(-n+5){border-top:none}
+@media(max-width:480px){nav a{font-size:12px}nav a small{font-size:10px}}
+.pg{display:inline-block;font:bold 12px Arial,sans-serif;background:var(--blue);color:#fff;border-radius:10px;padding:2px 9px;margin:0 0 4px}
+.tp{padding:6px 10px;border:1px dashed var(--muted);border-radius:8px;margin:10px 0;font-size:14px;color:#333}
+.tp>b:first-child{color:var(--muted)}
 .scale{display:flex;margin:8px 0 4px;border:2px solid var(--ink);border-radius:8px;overflow:hidden;font-size:14px;text-align:center}
 .scale div{flex:1;padding:5px 2px;line-height:1.25}
 .scale div+div{border-left:1px solid var(--line)}
@@ -143,13 +150,19 @@ nav a{font-size:14px;padding:6px 1px}
 .qa .q{font-size:16px}
 .qa .model{margin-top:6px}
 .wf{display:flex;gap:6px;align-items:center;margin:6px 0}
-.wf b{flex:none;font-family:"Noto Sans KR",sans-serif}
+.wf b{flex:none;min-width:90px;font-family:"Noto Sans KR",sans-serif;font-size:14.5px}
 .wf input{font:16px "Noto Sans KR","Malgun Gothic",sans-serif;padding:6px 8px;border:1px solid var(--line);border-radius:6px;flex:1;min-width:0}
 .paper{border:1px solid var(--line);border-radius:8px;padding:10px 14px;margin:8px 0 12px;background:#fffdf6;font-size:15.5px}
 .paper .tt{text-align:center;font-weight:bold;font-size:17px;margin:0 0 6px}
 .paper p{margin:0 0 6px}
-.paper .ct{text-align:right;font-size:14px;color:var(--muted)}
 .en{font-family:Arial,sans-serif;font-size:13px;color:var(--blue)}
+.life{border:1px solid var(--soft);border-radius:8px;padding:8px 10px;margin:0 0 8px}
+.life .ko{display:block;margin:0 0 6px}
+.life .opts{grid-template-columns:repeat(4,1fr)}
+.life .opt.on{background:var(--bluebg);border-color:var(--blue);color:var(--blue);font-weight:bold}
+.sub{margin:4px 0 10px}
+.sub .dl{margin:0 0 4px}
+mark.s1{background:#fff2b3}mark.s2{background:#d9f0dc}mark.s3{background:#f9dbe6}mark.s4{background:#dfe3f3}
 </style>
 </head>
 <body>
@@ -159,365 +172,495 @@ nav a{font-size:14px;padding:6px 1px}
     <div><b>Hàn ngữ Nari – Cô Ngân</b><span>Quỳnh Lưu, Nghệ An · Zalo: <a href="https://zalo.me/0399214554">0399.214.554</a></span></div>
     <a class="co" href="../../ve-co/"><i>N</i>Về cô</a>
   </div>
-  <h1>Seoul 2A · Bài 1 · Giới thiệu bản thân<span class="ko">처음 뵙겠습니다</span></h1>
-  <p class="lead">Bài đầu tiên của chặng <b>2A → 2B → TOPIK 3 (tháng 4/2027)</b>. Ngoài từ vựng và ngữ pháp học sâu, buổi này dành nhiều thời gian cho <b>nói, nghe, đọc và viết</b>, mỗi phần đều làm theo kiểu câu hỏi của đề TOPIK II. Bài tập trong trang được chấm ngay; làm xong em bấm “Gửi kết quả cho cô”.</p>
+  <h1>Seoul 2A · Bài 1<span class="ko">처음 뵙겠습니다 · Rất hân hạnh được gặp bạn</span></h1>
+  <p class="lead">Học liệu đi <b>theo từng trang sách (tr. 25–43)</b>. Mỗi trang: hiểu đề và từng câu trong sách → học sâu (vì sao nói như vậy, bẫy hay sai) → làm bài của sách cùng cô → luyện thêm có chấm ngay. Chỗ nào liên quan đến đề TOPIK có khung <b>📝 TOPIK</b> nhỏ để em ghi nhớ sẵn.</p>
 </header>
 <nav><div class="bar">
-  <a href="#b=lo" data-k="lo">Đích<small>TOPIK 3</small></a>
-  <a href="#b=tv" data-k="tv">Từ vựng<small>Giới thiệu</small></a>
-  <a href="#b=np" data-k="np">Ngữ pháp<small>4 mẫu</small></a>
-  <a href="#b=nn" data-k="nn">Nói·Nghe<small>Hội thoại</small></a>
-  <a href="#b=dv" data-k="dv">Đọc·Viết<small>Câu 51</small></a>
-  <a href="#b=kt" data-k="kt">Kiểm tra<small>Cuối buổi</small></a>
+  <a href="#b=lo" data-k="lo">Mục tiêu<small>tr. 25</small></a>
+  <a href="#b=tv" data-k="tv">Từ vựng<small>tr. 26–27</small></a>
+  <a href="#b=g1" data-k="g1">Ngữ pháp 1<small>tr. 28–29</small></a>
+  <a href="#b=s1" data-k="s1">Nói 1<small>tr. 30–31</small></a>
+  <a href="#b=g2" data-k="g2">Ngữ pháp 2<small>tr. 32–33</small></a>
+  <a href="#b=s2" data-k="s2">Nói 2<small>tr. 34–35</small></a>
+  <a href="#b=nn" data-k="nn">Nghe–Nói<small>tr. 36–37</small></a>
+  <a href="#b=dv" data-k="dv">Đọc–Viết<small>tr. 38–39</small></a>
+  <a href="#b=nv" data-k="nv">Nhiệm vụ<small>tr. 40–42</small></a>
+  <a href="#b=kt" data-k="kt">Tự đánh giá<small>tr. 43</small></a>
 </div></nav>
 
-<!-- ================= ĐÍCH ================= -->
+<!-- ================= MỤC TIÊU ================= -->
 <section class="sec" id="slo">
-<h2>Đích đến: TOPIK II cấp 3, tháng 4/2027</h2>
-<p class="goal"><b>Một câu để nhớ:</b> TOPIK 3 không cần giỏi đều cả ba phần, nhưng <b>không được bỏ trắng phần Viết</b>. Mỗi bài 2A–2B mình học sẽ luôn có đủ 4 kỹ năng, và luôn nối với một dạng câu cụ thể trong đề.</p>
-
-<h3>1. Cần bao nhiêu điểm?</h3>
+<span class="pg">Trang 25 · 학습 목표</span>
+<h2>Bài 1 học những gì?</h2>
 <table class="t">
-<tr><th>Phần thi</th><th>Điểm tối đa</th><th>Đích của em</th><th>Ghi chú</th></tr>
-<tr><td>Nghe (듣기, 50 câu)</td><td>100</td><td><b>50</b></td><td>Đúng chắc câu 1–20 (hội thoại ngắn, đời sống)</td></tr>
-<tr><td>Đọc (읽기, 50 câu)</td><td>100</td><td><b>55</b></td><td>Đúng chắc câu 1–24 (ngữ pháp, quảng cáo, thông báo, đoạn ngắn)</td></tr>
-<tr><td>Viết (쓰기, 4 câu)</td><td>100</td><td><b>30</b></td><td>Câu 51 + 52 khoảng 12–14 điểm, câu 53 khoảng 12, câu 54 viết đủ ý cơ bản</td></tr>
-<tr><th>Tổng</th><th>300</th><th>135</th><th>Cấp 3 = <b>120–149 điểm</b>. Đích 135 để có 15 điểm dự phòng.</th></tr>
+<tr><th>Phần</th><th>Nội dung trong sách</th><th>Học ở thẻ</th></tr>
+<tr><td class="ko">어휘</td><td><span class="ko">소개</span> (giới thiệu) · <span class="ko">빈도 부사</span> (trạng từ tần suất)</td><td><a href="#b=tv">Từ vựng</a></td></tr>
+<tr><td class="ko">문법과 표현 1</td><td class="ko">N(이)라고 하다 · V-(으)려고</td><td><a href="#b=g1">Ngữ pháp 1</a></td></tr>
+<tr><td class="ko">말하기 1</td><td><span class="ko">자기소개하기</span> — tự giới thiệu</td><td><a href="#b=s1">Nói 1</a></td></tr>
+<tr><td class="ko">문법과 표현 2</td><td class="ko">V-거나 · N(이)나 1</td><td><a href="#b=g2">Ngữ pháp 2</a></td></tr>
+<tr><td class="ko">말하기 2</td><td><span class="ko">주말에 하는 일 설명하기</span> — kể việc làm cuối tuần</td><td><a href="#b=s2">Nói 2</a></td></tr>
+<tr><td class="ko">듣고 말하기</td><td>Nghe cuộc gọi hẹn gặp · tự giới thiệu với người được giới thiệu</td><td><a href="#b=nn">Nghe–Nói</a></td></tr>
+<tr><td class="ko">읽고 쓰기</td><td>Đọc tin tìm người giúp học ngoại ngữ · viết tin tìm người giúp học tiếng Hàn</td><td><a href="#b=dv">Đọc–Viết</a></td></tr>
+<tr><td class="ko">과제 · 문화 산책 · 발음</td><td>Giới thiệu quê hương · tên người Hàn · đồng hóa âm mũi 1 (<span class="ko">비음화</span>)</td><td><a href="#b=nv">Nhiệm vụ</a></td></tr>
+<tr><td class="ko">자기 평가</td><td>Tự kiểm tra từ vựng + ngữ pháp, kiểm tra cuối bài, gửi kết quả cho cô</td><td><a href="#b=kt">Tự đánh giá</a></td></tr>
 </table>
-<p class="note">TOPIK không có điểm sàn từng phần, chỉ tính tổng. Vì vậy mỗi điểm Viết “dễ lấy” ở câu 51–52 rất đáng giá.</p>
-
-<h3>2. Lộ trình đề xuất (cô điều chỉnh theo tốc độ của em)</h3>
-<table class="t">
-<tr><th>Thời gian</th><th>Học</th><th>Luyện TOPIK song song</th></tr>
-<tr><td>Tháng 10 – 12</td><td>Seoul 2A (bài 1–9)</td><td>Từ vựng hằng ngày trên app · ngữ pháp câu 1–4 · câu 51</td></tr>
-<tr><td>Tháng 12 – 2</td><td>Seoul 2B (bài 10–18)</td><td>Nghe câu 1–20 · Đọc câu 1–24 · câu 52 · khung câu 53</td></tr>
-<tr><td>Tháng 3 – 4</td><td>Ôn tổng</td><td>Đề thi thử trên app mỗi tuần · câu 54 khung cơ bản · chữa lỗi sai lặp lại</td></tr>
-</table>
-
-<h3>3. Bài 1 xuất hiện ở đâu trong đề TOPIK?</h3>
-<div class="scroll"><table class="t">
-<tr><th>Trong bài</th><th>Trong đề TOPIK II</th></tr>
-<tr><td class="ko">V-(으)려고</td><td>Đọc câu 1–2 (chọn ngữ pháp, nhóm <b>mục đích</b>: <span class="ko">-(으)려고, -(으)러, -기 위해서</span>). Đọc câu 3–4: <span class="ko">-고자</span> đồng nghĩa <span class="ko">-(으)려고</span>.</td></tr>
-<tr><td class="ko">V-거나 · N(이)나</td><td>Đọc câu 1–2 (nhóm <b>lựa chọn</b>: <span class="ko">-거나, -든지</span>). Gặp liên tục trong bài đọc, bài nghe.</td></tr>
-<tr><td class="ko">N(이)라고 하다</td><td>Bài đọc giải thích khái niệm: <span class="ko">“이것을 ‘○○’이라고 한다.”</span> Lên 3A sẽ thành lời dẫn gián tiếp <span class="ko">-다고 하다</span>.</td></tr>
-<tr><td>Giới thiệu, hỏi thông tin</td><td>Nghe câu 4–8 (<b>chọn câu nói tiếp theo</b>), câu 13–16 (chọn nội dung đúng).</td></tr>
-<tr><td>Quảng cáo tìm người (đọc – viết)</td><td><b>Viết câu 51</b>: điền 2 chỗ trống trong thông báo, quảng cáo, email. Đọc câu 9–12 (thông báo, quảng cáo).</td></tr>
-</table></div>
-
-<h3>4. Lợi thế của dân ngoại ngữ — dùng ngay</h3>
+<h3>Cách học mỗi trang</h3>
 <ol class="steps">
-  <li><b>Hán Việt:</b> rất nhiều từ đọc lên gần với tiếng Việt: <span class="ko">관심</span> quan tâm, <span class="ko">문화</span> văn hóa, <span class="ko">국적</span> quốc tịch. Mỗi từ Hán trong trang đều có Hán Việt để em đoán nghĩa từ mới về sau.</li>
-  <li><b>So với tiếng Anh:</b> mỗi mẫu ngữ pháp có dòng <span class="en">English</span> gần nghĩa nhất, kèm chỗ <b>khác</b> tiếng Anh (đó mới là chỗ hay sai).</li>
-  <li><b>Học theo cụm, không học từ rời:</b> <span class="ko">관심<b>이</b> 많다</span>, <span class="ko">전화<b>를</b> 걸다</span>, <span class="ko">시간<b>이</b> 나다</span>. TOPIK chấm ngữ pháp và từ đi kèm, không chấm từ đơn.</li>
+  <li><b>Hiểu đề:</b> đọc lời hướng dẫn của sách (có dịch), biết bài tập yêu cầu gì.</li>
+  <li><b>Học sâu:</b> từng câu mẫu trong sách được giải thích: cấu tạo, vì sao chọn cách nói đó, lỗi người Việt hay mắc. Em là dân ngoại ngữ nên có thêm dòng so với tiếng Anh.</li>
+  <li><b>Làm bài của sách</b> cùng cô (nói thành tiếng), có câu trả lời mẫu để đối chiếu.</li>
+  <li><b>Luyện thêm</b> chấm ngay ngay trong trang. Cuối bài (thẻ Tự đánh giá) gửi kết quả cho cô.</li>
 </ol>
-
-<h3>5. Buổi này làm theo thứ tự</h3>
-<table class="t">
-<tr><th>Thẻ</th><th>Nội dung</th><th>Kết quả cần đạt</th></tr>
-<tr><td><a href="#b=tv">Từ vựng</a></td><td>Thông tin cá nhân, kính ngữ khi hỏi, trạng từ tần suất, từ mới trong bài, phát âm</td><td>Điền phiếu, hỏi – đáp lịch sự được</td></tr>
-<tr><td><a href="#b=np">Ngữ pháp</a></td><td><span class="ko">-(이)라고 하다, -(으)려고, -거나, (이)나</span>: cách chia, nghĩa gốc, bẫy, mở rộng TOPIK</td><td>Chia đúng mọi kiểu gốc từ, tránh 3 lỗi hay gặp</td></tr>
-<tr><td><a href="#b=nn">Nói·Nghe</a></td><td>Hội thoại mẫu, phản xạ 12 câu hỏi, bài nói 1 phút, đóng vai, nghe kiểu TOPIK, nghe – chép</td><td>Tự giới thiệu 1 phút không nhìn giấy</td></tr>
-<tr><td><a href="#b=dv">Đọc·Viết</a></td><td>Đọc quảng cáo tìm bạn, 2 câu kiểu câu 51, viết quảng cáo của em, giới thiệu quê hương</td><td>Viết đúng đuôi <span class="ko">-습니다</span> cho văn bản</td></tr>
-<tr><td><a href="#b=kt">Kiểm tra</a></td><td>15 câu tổng hợp + gửi kết quả cho cô + bài về nhà</td><td>Từ 13/15 câu</td></tr>
-</table>
+<div class="tp"><b>📝 TOPIK</b> — Em học hết 2A, 2B rồi mới ôn đề TOPIK 3 (tháng 4/2027). Trong lúc học sách, chỗ nào đề thi hay hỏi sẽ có khung như thế này; chỉ cần ghi nhớ, chưa phải luyện đề.</div>
 </section>
 
 <!-- ================= TỪ VỰNG ================= -->
 <section class="sec" id="stv">
-<h2>Từ vựng · Giới thiệu bản thân</h2>
-<p class="goal">Mục tiêu: <b>điền được phiếu thông tin</b>, <b>hỏi thông tin người lạ một cách lịch sự</b>, và <b>nói mình làm việc gì thường xuyên đến đâu</b>. Bấm 🔊 để nghe. Danh sách đầy đủ có câu ví dụ ở trang <a href="../#b=2A&amp;c=1">Từ vựng Seoul · 2A bài 1</a>.</p>
+<span class="pg">Trang 26–27 · 어휘</span>
+<h2>Từ vựng · Giới thiệu và tần suất</h2>
 
-<h3>1. Thông tin cá nhân · 개인 정보</h3>
+<h3>Bài 1 · 학생 카드를 써 보세요 <small class="note">(Hãy điền thẻ học sinh)</small></h3>
+<p>Thẻ trong sách có 10 ô. Học từng ô: đọc, nghĩa, Hán Việt, câu hỏi dùng khi nói chuyện.</p>
 <div class="scroll"><table class="t" id="tv1"></table></div>
-<div class="deep"><b>Học sâu · đọc giấy tờ Hàn Quốc.</b> Ngày tháng viết theo thứ tự <b>năm → tháng → ngày</b> (ngược tiếng Việt): <span class="ko">2006년 3월 8일</span>. Trên phiếu, giới tính ghi <span class="ko">남</span> (nam, 男) / <span class="ko">여</span> (nữ, 女). Các từ <span class="ko">성명, 성별, 생년월일</span> là từ của giấy tờ; khi nói chuyện người Hàn dùng <span class="ko">이름, 생일</span>.</div>
+<div class="deep"><b>Học sâu · điền giấy tờ kiểu Hàn.</b><br>
+① <b>Ngày sinh</b> viết <b>năm → tháng → ngày</b>: <span class="ko">2006년 3월 8일</span> (ngược tiếng Việt). Đọc: <span class="ko">이천육 년 삼 월 팔 일</span>.<br>
+② <b>Địa chỉ</b> viết từ <b>lớn đến nhỏ</b> (ngược tiếng Việt): tỉnh → huyện → xã → số nhà. <span class="ko">베트남 응에안성 뀐르우현 …</span><br>
+③ <b>Tên tiếng Việt</b> viết bằng Hangeul theo cách đọc: Nguyễn <span class="ko">응우옌</span>, Trần <span class="ko">쩐</span>, Lê <span class="ko">레</span>, Phạm <span class="ko">팜</span>, Thị <span class="ko">티</span>, Văn <span class="ko">반</span>.<br>
+④ <b>Tôn giáo</b>: <span class="ko">없음</span> (không), <span class="ko">불교</span> (Phật giáo), <span class="ko">천주교</span> (Công giáo), <span class="ko">기독교</span> (Tin Lành).<br>
+⑤ Trên giấy tờ dùng <span class="ko">성명, 생년월일, 성별</span>; khi nói chuyện người Hàn dùng <span class="ko">이름, 생일</span>.</div>
+<p><b>Em điền thẻ của mình</b> (chỉ lưu trong máy em, không gửi đi):</p>
+<div class="paper ko" id="card"></div>
 
-<h3>2. Hỏi người lạ cho lịch sự · kính ngữ danh từ</h3>
-<p>Hỏi tên, tuổi, số điện thoại của người mới gặp, người lớn tuổi: mở đầu bằng <span class="ko"><b>실례지만</b></span> (xin lỗi nhưng…), dùng <b>danh từ kính ngữ</b> và hỏi bằng <span class="ko"><b>어떻게 되세요?</b></span> chứ không hỏi thẳng <span class="ko">뭐예요? / 몇 살이에요?</span></p>
-<table class="t">
-<tr><th>Thường</th><th>Kính ngữ</th><th>Câu hỏi lịch sự</th></tr>
-<tr><td class="ko">이름</td><td class="ko"><b>성함</b> <span class="hj">姓銜</span></td><td class="ko">실례지만 성함이 어떻게 되세요?<button class="say" data-say="실례지만 성함이 어떻게 되세요?">🔊</button></td></tr>
-<tr><td class="ko">나이</td><td class="ko"><b>연세</b> <span class="hj">年歲 · niên tuế</span></td><td class="ko">실례지만 연세가 어떻게 되세요?<button class="say" data-say="실례지만 연세가 어떻게 되세요?">🔊</button></td></tr>
-<tr><td class="ko">집</td><td class="ko"><b>댁</b> <span class="hj">宅 · trạch</span></td><td class="ko">댁이 어디세요?<button class="say" data-say="댁이 어디세요?">🔊</button></td></tr>
-<tr><td class="ko">생일</td><td class="ko"><b>생신</b> <span class="hj">生辰 · sinh thần</span></td><td class="ko">어머님 생신이 언제세요?</td></tr>
-<tr><td class="ko">사람</td><td class="ko"><b>분</b></td><td class="ko">저분이 누구세요?</td></tr>
-<tr><td class="ko">연락처 · 전화번호</td><td class="ko">(giữ nguyên)</td><td class="ko">연락처가 어떻게 되세요?<button class="say" data-say="연락처가 어떻게 되세요?">🔊</button></td></tr>
-</table>
-<div class="warnbox"><b>Chỗ hay sai:</b> kính ngữ dùng cho <b>người khác</b>, không dùng cho mình. Trả lời: <span class="ko">저는 투이<b>라고 합니다</b></span> ✓, không nói <span class="ko">제 성함은…</span> ✗. Với bạn cùng tuổi, cùng lớp thì hỏi <span class="ko">이름이 뭐예요?</span> là đủ; hỏi <span class="ko">연세</span> người trẻ nghe như trêu.</div>
-<div class="deep"><b>Học sâu · ba câu chào lần đầu.</b> <span class="ko">처음 <b>뵙겠습니다</b></span> trang trọng nhất: <span class="ko">뵙다</span> là dạng <b>khiêm nhường</b> của <span class="ko">보다/만나다</span> (hạ mình xuống), <span class="ko">-겠-</span> làm câu mềm, lịch sự. <span class="ko">만나서 반갑습니다</span> lịch sự, dùng được mọi nơi. <span class="ko">만나서 반가워요</span> thân thiện hơn. Trong buổi phỏng vấn, gặp giảng viên, gặp đối tác: luôn chọn câu đầu.</div>
+<h3>Bài 2 · 빈칸에 알맞은 단어를 골라 쓰세요 <small class="note">(Chọn từ đúng điền vào chỗ trống: 매일 · 매주 · 매달 · 매년)</small></h3>
+<p class="note">Mỗi câu kèm mô tả tranh trong sách.</p>
+<div class="set" data-set="v0"></div>
+<div class="deep"><b>Học sâu · <span class="ko">매-</span> và <span class="ko">-마다</span>.</b> <span class="ko">매</span> = 每 (mỗi): <span class="ko">매일</span> 每日, <span class="ko">매주</span> 每週, <span class="ko">매년</span> 每年; <span class="ko">매달</span> = 매 + <span class="ko">달</span> (thuần Hàn), văn viết dùng <span class="ko">매월</span>. Sau <span class="ko">매주 / 매년</span> thường có thời điểm cụ thể: <span class="ko">매주 일요일에, 매년 크리스마스에, 매달 30일에</span> — tiểu từ <span class="ko">에</span> đi với thời điểm, không đi với <span class="ko">매주</span> (<span class="ko">매주에</span> ✗). <span class="ko">매</span> chỉ ghép được với một số từ; muốn nói “mỗi …” với danh từ thời gian bất kỳ thì dùng <span class="ko">N마다</span>: <span class="ko">일요일마다, 방학마다</span>.</div>
 
-<h3>3. Trạng từ tần suất · 빈도 부사</h3>
+<h3>Bài 3 · 여러분의 한국 생활은 어떻습니까? <small class="note">(Cuộc sống tiếng Hàn của em thế nào? Chọn câu đúng với em rồi tính điểm)</small></h3>
 <div class="scale">
-  <div><b>항상</b><small>luôn luôn<br>≈ 100%</small></div>
-  <div><b>자주</b><small>thường xuyên</small></div>
-  <div><b>가끔</b><small>thỉnh thoảng</small></div>
-  <div><b>별로 안</b><small>không… lắm</small></div>
-  <div><b>전혀 안</b><small>hoàn toàn không<br>0%</small></div>
+  <div><b>항상</b><small>luôn luôn · 5đ</small></div>
+  <div><b>자주</b><small>thường xuyên · 3đ</small></div>
+  <div><b>가끔</b><small>thỉnh thoảng · 1đ</small></div>
+  <div><b>안</b><small>không · 0đ</small></div>
 </div>
+<div id="life"></div>
+<div class="deep"><b>Học sâu · đọc câu trong bài 3.</b><br>
+① Vị trí trạng từ: <b>ngay trước động từ</b> hoặc trước cụm tân ngữ: <span class="ko">(항상) 한국 노래를 합니다</span>. <span class="ko">안</span> phải đứng <b>sát động từ</b>: <span class="ko">한국 노래를 안 합니다</span>; với <span class="ko">N하다</span> thì <span class="ko">이야기를 안 합니다 / 전화를 안 합니다</span> (không nói <span class="ko">안 이야기합니다</span>).<br>
+② <span class="ko">노래방에 가면, 라면을 먹으면</span> = <span class="ko">-(으)면</span> (nếu / khi) em đã học ở 1B.<br>
+③ <span class="ko">한국 노래를 합니다</span> = hát bài hát Hàn (<span class="ko">노래를 하다 = 노래를 부르다</span>).</div>
+
+<h3>Mở rộng · đủ bộ trạng từ tần suất</h3>
 <div class="scroll"><table class="t" id="tv2"></table></div>
-<div class="warnbox"><b>Bẫy số 1:</b> <span class="ko">별로</span> và <span class="ko">전혀</span> <b>bắt buộc đi với phủ định</b> (<span class="ko">안, 못, 없다, -지 않다</span>). <span class="ko">저는 술을 전혀 마셔요</span> ✗ → <span class="ko">전혀 <b>안</b> 마셔요 / 전혀 <b>못</b> 마셔요</span> ✓. Trả lời ngắn <span class="ko">“별로요.”</span> = “Không… lắm.”</div>
-<div class="deep"><b>Học sâu · <span class="ko">매-</span> và <span class="ko">-마다</span>.</b> <span class="ko">매</span> = 每 (mỗi): <span class="ko">매일</span> (mỗi nhật), <span class="ko">매주</span> (mỗi chu), <span class="ko">매년</span> (mỗi niên); <span class="ko">매달</span> ghép với từ thuần Hàn <span class="ko">달</span>, văn viết hay dùng <span class="ko">매월</span>. <span class="ko">매</span> chỉ ghép với một số từ; muốn nói “mỗi …” với danh từ thời gian bất kỳ thì dùng <span class="ko"><b>N마다</b></span>: <span class="ko">주말마다, 일요일마다, 방학마다</span>. Mở rộng gặp trong TOPIK: <span class="ko">늘 / 언제나</span> (= 항상), <span class="ko">때때로</span> (= 가끔), <span class="ko">거의 안</span> (hầu như không).</div>
+<div class="warnbox"><b>Bẫy:</b> <span class="ko">별로</span> và <span class="ko">전혀</span> <b>bắt buộc đi với phủ định</b>: <span class="ko">저는 술을 전혀 마셔요</span> ✗ → <span class="ko">전혀 <b>안</b> 마셔요 / 전혀 <b>못</b> 마셔요</span> ✓. Trả lời ngắn <span class="ko">“별로요.”</span> = “Không … lắm.”</div>
+<div class="tp"><b>📝 TOPIK</b> — Câu hỏi “nội dung đúng” ở phần Nghe và Đọc hay gài bẫy bằng trạng từ tần suất: bài nói <span class="ko">가끔</span>, đáp án sai ghi <span class="ko">자주 / 매일</span>. Đọc đáp án phải soi kỹ những từ này.</div>
 
-<h3>4. Từ mới trong bài (ngoài hai nhóm trên)</h3>
-<div class="scroll"><table class="t" id="tv3"></table></div>
-
-<h3>5. Luyện từ vựng · chấm ngay</h3>
-<h4>5.1 Chọn từ đúng</h4>
+<h3>Luyện từ vựng · chấm ngay</h3>
+<h4>1. Chọn từ đúng</h4>
 <div class="set" data-set="v1"></div>
-<h4>5.2 Hỏi – chào cho lịch sự</h4>
-<div class="set" data-set="v2"></div>
-<h4>5.3 Từ đi với tiểu từ nào?</h4>
+<h4>2. Từ đi với tiểu từ nào?</h4>
 <div class="set" data-set="v3"></div>
 </section>
 
-<!-- ================= NGỮ PHÁP ================= -->
-<section class="sec" id="snp">
-<h2>Ngữ pháp · 4 mẫu của Bài 1</h2>
-<p class="goal">Mỗi mẫu học theo 5 bước: <b>cách chia → nghĩa gốc → so với tiếng Anh → bẫy hay sai → mở rộng TOPIK</b>. Đọc xong, làm bài 5 ở cuối thẻ.</p>
+<!-- ================= NGỮ PHÁP 1 ================= -->
+<section class="sec" id="sg1">
+<span class="pg">Trang 28–29 · 문법과 표현 1</span>
+<h2>Ngữ pháp 1 · N(이)라고 하다 · V-(으)려고</h2>
 
-<div class="card"><div class="hd">1. N(이)라고 하다 <small>· “tên là…, gọi là…”</small></div><div class="bd">
+<div class="card"><div class="hd">1. N(이)라고 하다 <small>· “tên là…, gọi là…” (track 02)</small></div><div class="bd">
+<p><b>Hội thoại trong sách:</b></p>
+<div class="ex"><span class="ko">A 안녕하세요? 저는 스티븐<b>입니다</b>.<br>B 저는 다나카 마리코<b>라고 합니다</b>.</span><span class="vi">A: Xin chào. Tôi là Steven. — B: Tôi tên là Tanaka Mariko.</span></div>
+<div class="ex"><span class="ko">저는 김민수<b>라고 합니다</b>. · 저는 히엔<b>이라고 해요</b>.</span><span class="vi">Tôi tên là Kim Minsu. · Tôi tên là Hiền.</span></div>
 <table class="t">
 <tr><th>Danh từ</th><th>Gắn</th><th>Ví dụ</th></tr>
-<tr><td>có 받침</td><td class="ko"><b>이라고</b> 하다</td><td class="ko">김민준<b>이라고</b> 합니다 · 남<b>이라고</b> 불러요</td></tr>
-<tr><td>không 받침</td><td class="ko"><b>라고</b> 하다</td><td class="ko">투이<b>라고</b> 합니다 · 뭐<b>라고</b> 해요?</td></tr>
+<tr><td>kết thúc bằng phụ âm (có 받침)</td><td class="ko"><b>이라고</b> 하다</td><td class="ko">히엔<b>이라고</b> 해요 · 민준<b>이라고</b> 합니다</td></tr>
+<tr><td>kết thúc bằng nguyên âm</td><td class="ko"><b>라고</b> 하다</td><td class="ko">김민수<b>라고</b> 합니다 · 뭐<b>라고</b> 해요?</td></tr>
 </table>
-<div class="ex"><span class="ko">처음 뵙겠습니다. 저는 응우옌 투이<b>라고 합니다</b>.</span><span class="vi">Rất hân hạnh. Tôi tên là Nguyễn Thùy.</span></div>
-<div class="ex"><span class="ko">친구들은 저를 그냥 투이<b>라고 불러요</b>.</span><span class="vi">Bạn bè cứ gọi tôi là Thùy.</span></div>
-<div class="ex"><span class="ko">‘감사합니다’를 베트남어로 뭐<b>라고 해요</b>? — ‘깜언’<b>이라고 해요</b>.</span><span class="vi">“감사합니다” tiếng Việt nói là gì? — Nói là “cảm ơn”.</span></div>
-<p><b>Nghĩa gốc:</b> <span class="ko">라고</span> là dấu <b>trích lời</b> (“…” là điều được nói ra). <span class="ko">저는 투이라고 합니다</span> nghĩa đen là “tôi, (người ta) nói là ‘Thùy’”. Vì vậy câu này <b>khiêm tốn, trang trọng hơn</b> <span class="ko">저는 투이입니다</span>, rất hợp khi giới thiệu lần đầu.</p>
-<p class="en">English: “I’m called…”, “What do you call … in Korean?”, “People call me…”.</p>
-<div class="warnbox"><b>Bẫy:</b> ① Quên 받침: <span class="ko">민준라고</span> ✗ → <span class="ko">민준이라고</span> ✓. Tên tiếng Việt cũng vậy: tên kết thúc bằng phụ âm (<span class="ko">남, 득, 응옥</span>) → <span class="ko">이라고</span>. ② Gọi ai là gì: <span class="ko">N<b>을/를</b> N(이)라고 부르다</span> — người được gọi mang <span class="ko">을/를</span>: <span class="ko">저<b>를</b> 투이라고 부르세요</span>.</div>
-<div class="okbox"><b>Mở rộng TOPIK:</b> trong bài đọc, câu giải thích thuật ngữ luôn có dạng <span class="ko">“이러한 현상을 ‘한류’<b>라고 한다</b>.”</span> (Hiện tượng này được gọi là “Hallyu”) và <span class="ko">‘한류’<b>라는</b> 말</span> (từ gọi là “Hallyu”). Lên 3A, cùng chữ <span class="ko">-라고/-다고</span> này sẽ thành lời dẫn gián tiếp.</div>
+<p><b>Nghĩa gốc:</b> <span class="ko">라고</span> là dấu <b>trích lời</b>: điều đứng trước được “nói ra”. <span class="ko">저는 마리코라고 합니다</span> nghĩa đen là “tôi, (người ta) nói là ‘Mariko’”. Vì vậy câu này <b>khiêm tốn, trang trọng hơn</b> <span class="ko">저는 마리코입니다</span>, rất hợp khi giới thiệu lần đầu (như B trong hội thoại). <span class="ko">합니다</span> trang trọng, <span class="ko">해요</span> thân mật lịch sự — cùng nghĩa.</p>
+<p class="en">English: “I’m called…”, “People call me…”, “What do you call … in Korean?”</p>
 </div></div>
 
-<div class="card"><div class="hd">2. V-(으)려고 <small>· “để…, nhằm…”</small></div><div class="bd">
+<h3>연습 1 · 여러분의 가족과 친구들은 여러분을 뭐라고 부릅니까? <small class="note">(Gia đình, bạn bè gọi em là gì?)</small></h3>
+<div class="ex"><span class="ko">저는 스도 아키라<b>라고 합니다</b>.</span><span class="vi">Tôi tên là Sudo Akira.</span></div>
+<div class="ex"><span class="ko">저는 라타난입니다. 친구들은 <b>저를</b> 탄<b>이라고 부릅니다</b>.</span><span class="vi">Tôi là Rattanan. Bạn bè gọi tôi là Tan.</span></div>
+<div class="deep"><b>Học sâu:</b><br>
+① Cấu trúc gọi tên: <span class="ko">(người gọi)은/는 (người được gọi)<b>을/를</b> (tên)(이)라고 부르다</span>. Người được gọi mang <span class="ko">을/를</span>: <span class="ko">친구들은 <b>저를</b> 탄이라고 불러요</span>.<br>
+② <span class="ko">부르다</span> là bất quy tắc <span class="ko">르</span>: <span class="ko">부르 + 어요 → 불러요</span>, <span class="ko">불렀어요</span>. Đuôi <span class="ko">-ㅂ니다</span> thì giữ nguyên: <span class="ko">부릅니다</span>.<br>
+③ Người Việt hay có <b>tên ở nhà</b> (Bin, Bống, Su…) — rất hợp để nói câu này: <span class="ko">가족들은 저를 ‘빈’이라고 불러요.</span></div>
+<p><b>Em viết 2 câu về em</b>, rồi nói với cô:</p>
+<textarea class="ko wtx" id="ex1" placeholder="저는 ___(이)라고 합니다. 가족들은 저를 ___(이)라고 불러요."></textarea>
+
+<h3>연습 2 · [보기]와 같이 이야기해 보세요 <small class="note">(Hỏi đáp như ví dụ)</small></h3>
+<div class="ex"><span class="ko">샤오밍 씨, ‘안녕하세요’를 중국어로 <b>뭐라고 해요</b>? — ‘니하오(你好)’<b>라고 해요</b>.</span><span class="vi">Xiaoming, “안녕하세요” tiếng Trung nói là gì? — Nói là “Nǐ hǎo”.</span></div>
+<p>Với em: hỏi – đáp bằng <b>tiếng Việt và tiếng Anh</b> cho 4 từ của sách: <span class="ko">안녕하세요 · 감사합니다 · 사랑해요 · 여보세요</span>.</p>
+<table class="t">
+<tr><th>Từ</th><th>Tiếng Việt</th><th>English</th></tr>
+<tr><td class="ko">안녕하세요</td><td class="ko">‘Xin chào’<b>라고</b> 해요</td><td class="ko">‘Hello’<b>라고</b> 해요</td></tr>
+<tr><td class="ko">감사합니다</td><td class="ko">‘Cảm ơn’<b>이라고</b> 해요</td><td class="ko">‘Thank you’<b>라고</b> 해요</td></tr>
+<tr><td class="ko">사랑해요</td><td class="ko">‘Anh yêu em’<b>이라고</b> 해요</td><td class="ko">‘I love you’<b>라고</b> 해요</td></tr>
+<tr><td class="ko">여보세요</td><td class="ko">‘A lô’<b>라고</b> 해요</td><td class="ko">‘Hello’<b>라고</b> 해요</td></tr>
+</table>
+<div class="deep"><b>Học sâu · từ nước ngoài chọn <span class="ko">이라고</span> hay <span class="ko">라고</span>?</b> Theo <b>âm cuối khi người Hàn đọc</b> từ đó: <i>Cảm ơn</i> → <span class="ko">깜언</span> (có 받침 ㄴ) → <span class="ko">이라고</span>; <i>Xin chào</i> → <span class="ko">신짜오</span> (hết bằng nguyên âm) → <span class="ko">라고</span>; <i>Thank you</i> → <span class="ko">땡큐</span> → <span class="ko">라고</span>.</div>
+
+<div class="card"><div class="hd">2. V-(으)려고 <small>· “để…, nhằm…” (track 03)</small></div><div class="bd">
+<p><b>Hội thoại trong sách:</b></p>
+<div class="ex"><span class="ko">A 왜 한국어를 공부하세요?<br>B 한국 친구들과 이야기하<b>려고</b> 공부해요.</span><span class="vi">A: Sao bạn học tiếng Hàn? — B: Mình học để nói chuyện với các bạn Hàn.</span></div>
+<div class="ex"><span class="ko">편지를 보내<b>려고</b> 우체국에 갔어요. · 저녁에 먹<b>으려고</b> 과일을 샀어요.</span><span class="vi">Tôi đến bưu điện để gửi thư. · Tôi mua hoa quả để ăn vào buổi tối.</span></div>
 <table class="t">
 <tr><th>Gốc động từ</th><th>Gắn</th><th>Ví dụ</th></tr>
-<tr><td>không 받침</td><td class="ko"><b>-려고</b></td><td class="ko">만나<b>려고</b>, 보<b>려고</b>, 공부하<b>려고</b></td></tr>
-<tr><td>có 받침</td><td class="ko"><b>-으려고</b></td><td class="ko">읽<b>으려고</b>, 먹<b>으려고</b>, 찾<b>으려고</b></td></tr>
-<tr><td>gốc ㄹ</td><td class="ko"><b>-려고</b> (không thêm 으)</td><td class="ko">만들<b>려고</b>, 살<b>려고</b>, 놀<b>려고</b></td></tr>
-<tr><td>bất quy tắc ㄷ / ㅂ / ㅅ</td><td class="ko">đổi gốc rồi <b>-으려고</b></td><td class="ko">듣다 → 들<b>으려고</b> · 돕다 → 도우<b>려고</b> · 짓다 → 지<b>으려고</b></td></tr>
+<tr><td>không 받침</td><td class="ko"><b>-려고</b></td><td class="ko">보내<b>려고</b>, 이야기하<b>려고</b></td></tr>
+<tr><td>có 받침</td><td class="ko"><b>-으려고</b></td><td class="ko">먹<b>으려고</b>, 읽<b>으려고</b></td></tr>
+<tr><td>gốc ㄹ</td><td class="ko"><b>-려고</b> (không thêm 으)</td><td class="ko">만들<b>려고</b>, 놀<b>려고</b></td></tr>
+<tr><td>bất quy tắc ㄷ / ㅂ</td><td class="ko">đổi gốc rồi gắn</td><td class="ko">듣다 → 들<b>으려고</b> · 돕다 → 도우<b>려고</b></td></tr>
 </table>
-<div class="ex"><span class="ko">졸업 자격증을 받<b>으려고</b> 한국어를 배우고 있어요.</span><span class="vi">Mình đang học tiếng Hàn để lấy chứng chỉ tốt nghiệp.</span></div>
-<div class="ex"><span class="ko">한국 드라마를 자막 없이 보<b>려고</b> 매일 듣기 연습을 해요.</span><span class="vi">Mình luyện nghe mỗi ngày để xem phim Hàn không cần phụ đề.</span></div>
-<p><b>Nghĩa gốc:</b> vế trước là <b>ý định</b> của người làm vế sau. Đây chính là <span class="ko">-(으)려고 하다</span> (định làm) em đã học, bỏ <span class="ko">하다</span> rồi nối vào câu sau: <span class="ko">보려고 해요</span> (định xem) → <span class="ko">보려고 연습해요</span> (luyện để xem).</p>
+<p><b>Nghĩa gốc:</b> vế trước là <b>ý định</b> của người làm vế sau. Đây chính là <span class="ko">-(으)려고 하다</span> (định làm) em đã học, bỏ <span class="ko">하다</span> rồi nối vào câu sau: <span class="ko">보내려고 해요</span> (định gửi) → <span class="ko">보내려고 우체국에 갔어요</span> (đến bưu điện để gửi).</p>
 <p class="en">English: “(in order) to…”. Khác tiếng Anh: vế mục đích đứng <b>trước</b>, hành động đứng sau.</p>
-<div class="warnbox"><b>3 bẫy (đề TOPIK hay gài):</b><br>
-① <b>Cùng một chủ ngữ</b> ở hai vế: <span class="ko">엄마가 요리하려고 제가 장을 봤어요</span> ✗.<br>
-② <b>Vế sau không là câu mệnh lệnh / rủ rê</b> (<span class="ko">-(으)세요, -(으)ㅂ시다, -(으)ㄹ까요?</span>): <span class="ko">밥을 먹으려고 식당에 갑시다</span> ✗ → <span class="ko">밥을 먹<b>으러</b> 식당에 갑시다</span> ✓.<br>
-③ <b>Chỉ gắn với động từ.</b> <span class="ko">건강하려고 운동해요</span> ✗ → <span class="ko">건강해<b>지</b>려고 운동해요</span> ✓ (tính từ + <span class="ko">-아/어지다</span> = trở nên).</div>
+<div class="warnbox"><b>3 bẫy hay sai:</b><br>
+① Hai vế <b>cùng một người làm</b>: <span class="ko">엄마가 요리하려고 제가 장을 봤어요</span> ✗.<br>
+② Vế sau <b>không là mệnh lệnh / rủ rê</b> (<span class="ko">-(으)세요, -(으)ㅂ시다, -(으)ㄹ까요?</span>): <span class="ko">밥을 먹으려고 식당에 갑시다</span> ✗ → <span class="ko">먹<b>으러</b> 갑시다</span> ✓.<br>
+③ <b>Chỉ gắn với động từ</b>: <span class="ko">건강하려고 운동해요</span> ✗ → <span class="ko">건강해<b>지</b>려고</span> ✓ (<span class="ko">-아/어지다</span> = trở nên).</div>
 <table class="t">
-<tr><th></th><th class="ko">-(으)러</th><th class="ko">-(으)려고</th></tr>
-<tr><td>Động từ sau</td><td>chỉ <span class="ko">가다, 오다, 다니다, 나가다…</span> (di chuyển)</td><td>mọi động từ</td></tr>
+<tr><th></th><th class="ko">-(으)러 (đã học ở 1A)</th><th class="ko">-(으)려고</th></tr>
+<tr><td>Động từ phía sau</td><td>chỉ <span class="ko">가다, 오다, 다니다</span> (di chuyển)</td><td>mọi động từ: <span class="ko">샀어요, 공부해요, 일어났어요…</span></td></tr>
 <tr><td>Vế sau mệnh lệnh / rủ rê</td><td>✓ <span class="ko">먹으러 갑시다</span></td><td>✗</td></tr>
-<tr><td>Ví dụ</td><td class="ko">책을 빌리러 도서관에 가요.</td><td class="ko">책을 빌리려고 도서관에 가요. / 돈을 모으려고 아르바이트를 해요.</td></tr>
 </table>
-<div class="okbox"><b>Mở rộng TOPIK · nhóm mục đích:</b> <span class="ko">-(으)려고</span> (nói) ≈ <span class="ko">-기 위해서</span> (viết, trang trọng; danh từ: <span class="ko">N을/를 위해서</span>) ≈ <span class="ko">-고자</span> (rất trang trọng, văn bản). Đọc câu 3–4 hay hỏi: <span class="ko">취업하<u>고자</u> 한국어를 배운다</span> → đáp án <span class="ko">취업하기 위해서</span> / <span class="ko">취업하려고</span>. Viết câu 51–54 nên dùng <span class="ko">-기 위해서</span>.</div>
+<div class="tp"><b>📝 TOPIK</b> — Phần Đọc câu 1–2 (chọn ngữ pháp) hay có nhóm “mục đích”: <span class="ko">-(으)려고, -(으)러</span> và <span class="ko">-기 위해서</span> (sẽ học sau, nghĩa giống <span class="ko">-(으)려고</span> nhưng trang trọng). Ba bẫy ở trên chính là cách đề loại đáp án.</div>
 </div></div>
 
-<div class="card"><div class="hd">3. V/A-거나 <small>· “hoặc… hoặc…” giữa hai hành động</small></div><div class="bd">
-<p>Gắn thẳng vào gốc, <b>không đổi gốc</b>: <span class="ko">쉬<b>거나</b>, 읽<b>거나</b>, 듣<b>거나</b>, 만들<b>거나</b>, 춥<b>거나</b></span>. Thì nằm ở vế cuối câu.</p>
-<div class="ex"><span class="ko">주말에는 집에서 쉬<b>거나</b> 친구를 만나요.</span><span class="vi">Cuối tuần mình nghỉ ở nhà hoặc gặp bạn.</span></div>
-<div class="ex"><span class="ko">시간이 나면 영어 소설을 읽<b>거나</b> 한국 노래를 들어요.</span><span class="vi">Có thời gian rảnh thì mình đọc tiểu thuyết tiếng Anh hoặc nghe nhạc Hàn.</span></div>
-<div class="ex"><span class="ko">날씨가 춥<b>거나</b> 비가 오면 집에 있어요.</span><span class="vi">Trời lạnh hoặc mưa thì mình ở nhà. (sách ghi V, nhưng tính từ cũng dùng được)</span></div>
-<p class="en">English: “do A or (do) B”. Khác tiếng Anh: chỉ có một đuôi câu ở vế cuối, vế đầu không chia thì.</p>
-<div class="warnbox"><b>Bẫy:</b> ① <span class="ko">-거나</span> nối <b>động từ / tính từ</b>, <span class="ko">(이)나</span> nối <b>danh từ</b>: <span class="ko">수영<b>이나</b> 농구를 해요</span> = <span class="ko">수영을 하<b>거나</b> 농구를 해요</span>. ② <span class="ko">-거나</span> ≠ <span class="ko">-고</span>: <span class="ko">쉬고 친구를 만나요</span> là làm <b>cả hai</b> (nghỉ rồi gặp bạn); <span class="ko">쉬거나</span> là <b>chọn một</b>.</div>
-<div class="okbox"><b>Mở rộng TOPIK · nhóm lựa chọn:</b> <span class="ko">-거나 ≈ -든지</span> (“hoặc…, …gì cũng được”). Đọc câu 1–2 hay để hai đuôi này cạnh nhau làm đáp án nhiễu với <span class="ko">-(으)려고, -는데</span>; nhìn câu có hai hành động “chọn một” là chọn nhóm này.</div>
-</div></div>
+<h3>연습 1 · [보기]와 같이 이야기해 보세요</h3>
+<div class="ex"><span class="ko">왜 공원에 갔어요? — 운동하<b>려고</b> 갔어요.</span><span class="vi">Sao bạn ra công viên? — Mình đi để tập thể dục.</span></div>
+<p>Bấm 🔊 nghe câu hỏi trong sách, trả lời thành tiếng bằng <span class="ko">-(으)려고</span>, rồi mở câu trả lời mẫu.</p>
+<div id="qa1"></div>
+<div class="deep"><b>Học sâu · trả lời câu hỏi <span class="ko">왜</span>:</b> lặp lại động từ của câu hỏi, chỉ thêm phần mục đích: <span class="ko">왜 공원에 <u>갔어요</u>? → 운동하려고 <u>갔어요</u></span>. Không cần nhắc lại nơi chốn. Mục đích là “để <b>không</b> …” thì dùng <span class="ko">-지 않으려고</span>: <span class="ko">늦지 않으려고 택시를 탔어요</span>.</div>
 
-<div class="card"><div class="hd">4. N(이)나 ① <small>· “hoặc” giữa hai danh từ</small></div><div class="bd">
-<table class="t">
-<tr><th>Danh từ trước</th><th>Gắn</th><th>Ví dụ</th></tr>
-<tr><td>có 받침</td><td class="ko"><b>이나</b></td><td class="ko">김밥<b>이나</b> 햄버거 · 월요일<b>이나</b> 화요일</td></tr>
-<tr><td>không 받침</td><td class="ko"><b>나</b></td><td class="ko">커피<b>나</b> 차 · 사과<b>나</b> 배</td></tr>
-</table>
-<div class="ex"><span class="ko">우리 일주일에 한 번<b>이나</b> 두 번 같이 공부할까요?</span><span class="vi">Mình học cùng nhau tuần một hoặc hai lần nhé?</span></div>
-<div class="ex"><span class="ko">토요일<b>이나</b> 일요일 어때요?</span><span class="vi">Thứ bảy hoặc chủ nhật thì sao?</span></div>
-<p><b>Nghĩa gốc:</b> <span class="ko">(이)나</span> đứng <b>thay chỗ tiểu từ</b> của danh từ đầu: <span class="ko">김밥<s>을</s>이나 햄버거<b>를</b></span> — tiểu từ chỉ còn ở danh từ cuối.</p>
-<p class="en">English: “A or B” (nouns). Văn viết, thông báo hay dùng <span class="ko">N 또는 N</span>.</p>
-<div class="warnbox"><b>Bẫy:</b> ① Không gắn vào động từ: <span class="ko">책을 읽나 음악을 들어요</span> ✗ → <span class="ko">읽거나</span> ✓. ② Phân biệt với <span class="ko">하고 / 와·과</span> (và): <span class="ko">김밥<b>하고</b> 햄버거를 먹어요</span> = ăn <b>cả hai</b>. ③ Sách ghi “(이)나 <b>1</b>” vì sau này em gặp <span class="ko">(이)나</span> khác nghĩa: <span class="ko">커피<b>나</b> 마실까요?</span> (thôi thì uống cà phê vậy), <span class="ko">세 시간<b>이나</b> 기다렸어요</span> (chờ <b>những</b> ba tiếng).</div>
-</div></div>
-
-<h3>5. Luyện ngữ pháp · chấm ngay</h3>
-<h4>5.1 Chia đúng dạng <small class="note">(gõ phần còn thiếu rồi bấm Kiểm tra hoặc Enter)</small></h4>
-<div class="set" data-set="g1"></div>
-<h4>5.2 Chọn đúng / tìm câu sai</h4>
-<div class="set" data-set="g2"></div>
+<h3>Luyện ngữ pháp 1 · chấm ngay</h3>
+<h4>1. <span class="ko">(이)라고</span> hay <span class="ko">라고</span>? <small class="note">(gõ phần còn thiếu, Enter để kiểm tra)</small></h4>
+<div class="set" data-set="ga"></div>
+<h4>2. Chia <span class="ko">-(으)려고</span></h4>
+<div class="set" data-set="gb"></div>
+<h4>3. Chọn đúng / tìm câu sai</h4>
+<div class="set" data-set="m1"></div>
 </section>
 
-<!-- ================= NÓI · NGHE ================= -->
-<section class="sec" id="snn">
-<h2>Nói · Nghe</h2>
-<p class="goal">Phần quan trọng nhất của buổi học 1:1. Thứ tự: <b>nghe – nhại hội thoại mẫu → trả lời phản xạ → bài nói 1 phút → đóng vai với cô → nghe kiểu TOPIK → nghe – chép</b>. Máy đọc dùng giọng Hàn có sẵn trong điện thoại / máy tính (nên mở bằng Chrome hoặc Safari).</p>
-
-<h3>1. Hội thoại mẫu · nghe rồi nói nhại (shadowing)</h3>
-<p>Thùy (sinh viên chuyên ngành tiếng Anh) gặp Jihun (du học sinh Hàn) ở buổi giao lưu ngôn ngữ.</p>
-<div class="btns"><button class="b blue" data-au="dlg">🔊 Nghe cả bài</button><button class="b" data-au="dlg" data-rate="0.65">🐢 Nghe chậm</button></div>
-<div class="scroll"><table class="t dlg" id="dlg"></table></div>
-<ol class="steps">
-  <li>Nghe cả bài 1 lần, nhìn phần dịch.</li>
-  <li>Bấm 🔊 từng câu, nói nhại theo ngay sau máy (không chờ máy đọc hết), 3 lần mỗi câu.</li>
-  <li>Đóng vai Thùy cùng cô, rồi đổi vai. Lần cuối thay thông tin của Thùy bằng thông tin của <b>chính em</b>.</li>
-</ol>
-<div class="deep"><b>Học sâu · 4 chỗ làm câu nói tự nhiên:</b><br>
-① <span class="ko">실례지만</span> trước câu hỏi về đời tư (nghề, tuổi, số điện thoại).<br>
-② Hỏi lại bằng cách <b>lặp lại + 요</b>: <span class="ko">졸업하려고<b>요</b>?</span> = “Để tốt nghiệp á?” — người Hàn dùng rất nhiều để tỏ ra đang nghe.<br>
-③ <span class="ko">그냥 투이라고 부르세요</span> — mời người kia gọi tên ngắn, làm không khí thân hơn.<br>
-④ Hỏi ngược lại bằng <span class="ko">N은/는요?</span>: <span class="ko">지훈 씨는요?</span> — khỏi lặp lại cả câu hỏi.</div>
-
-<h3>2. Phản xạ · nghe câu hỏi, trả lời thành tiếng</h3>
-<p>Bấm 🔊, trả lời <b>thành tiếng trong 5 giây</b>, rồi mới mở câu trả lời mẫu để so. Câu trả lời mẫu dùng thông tin của Thùy; em thay bằng thông tin của mình.</p>
-<div id="qa"></div>
-
-<h3>3. Bài nói 1 phút · tự giới thiệu</h3>
-<p>Viết bài nói theo khung 7 câu dưới đây, đọc to 3 lần, rồi <b>nói lại không nhìn giấy</b> và ghi âm gửi cô qua Zalo.</p>
+<!-- ================= NÓI 1 ================= -->
+<section class="sec" id="ss1">
+<span class="pg">Trang 30–31 · 말하기 1</span>
+<h2>Nói 1 · Tự giới thiệu (자기소개하기)</h2>
+<h3>Hội thoại trong sách (track 04)</h3>
+<div class="btns"><button class="b blue" data-au="d1">🔊 Nghe cả bài</button><button class="b" data-au="d1" data-rate="0.65">🐢 Nghe chậm</button></div>
+<div class="scroll"><table class="t dlg" id="dlg1"></table></div>
+<p class="note">Màu = những phần sẽ thay ở 연습 1: <mark class="s1">tên</mark> · <mark class="s2">tên gọi ngắn / người kia</mark> · <mark class="s3">việc đang làm</mark> · <mark class="s4">lý do học tiếng Hàn</mark>.</p>
+<h4>Học sâu từng câu</h4>
 <table class="t">
-<tr><th>#</th><th>Nội dung</th><th>Mẫu câu</th></tr>
-<tr><td>1</td><td>Chào lần đầu + tên</td><td class="ko">처음 뵙겠습니다. 저는 ___(이)라고 합니다.</td></tr>
-<tr><td>2</td><td>Cách gọi</td><td class="ko">그냥 ___(이)라고 부르세요.</td></tr>
-<tr><td>3</td><td>Học / làm gì</td><td class="ko">___ 대학교에서 ___을/를 전공하고 있어요.</td></tr>
-<tr><td>4</td><td>Học tiếng Hàn để làm gì</td><td class="ko">___-(으)려고 한국어를 배우고 있어요.</td></tr>
-<tr><td>5</td><td>Học thường xuyên đến đâu</td><td class="ko">한국어는 매일 / 자주 / 일주일에 ___ 번 공부해요.</td></tr>
-<tr><td>6</td><td>Thời gian rảnh</td><td class="ko">시간이 나면 ___-거나 ___.</td></tr>
-<tr><td>7</td><td>Kết</td><td class="ko">앞으로 잘 부탁드립니다.</td></tr>
+<tr><th>Câu</th><th>Vì sao nói như vậy</th></tr>
+<tr><td class="ko">처음 <b>뵙겠습니다</b>.</td><td><span class="ko">뵙다</span> là dạng <b>khiêm nhường</b> của <span class="ko">보다 / 만나다</span> (hạ mình xuống), <span class="ko">-겠-</span> làm câu mềm, lịch sự. Câu chào lần đầu trang trọng nhất.</td></tr>
+<tr><td class="ko">다나카 마리코<b>라고 합니다</b>.</td><td>Giới thiệu tên khiêm tốn (Ngữ pháp 1). Người Nhật, người Hàn nói <b>họ trước tên sau</b>, giống người Việt.</td></tr>
+<tr><td class="ko">만나서 반가워요. 다나카 마리코 <b>씨</b>.</td><td>Người mới quen: gọi <b>cả họ tên + 씨</b>. Không gọi <b>họ + 씨</b> (<span class="ko">다나카 씨</span>, <span class="ko">김 씨</span> nghe thiếu lịch sự). Không dùng <span class="ko">씨</span> cho chính mình.</td></tr>
+<tr><td class="ko"><b>그냥</b> 마리코라고 부르세요.</td><td>“Cứ gọi mình là Mariko” — mời người kia gọi tên ngắn cho thân hơn. <span class="ko">그냥</span> = cứ, chỉ đơn giản.</td></tr>
+<tr><td class="ko"><b>실례지만</b> … 무슨 일을 <b>하세요</b>?</td><td><span class="ko">실례지만</span> = “xin lỗi nhưng…”, nói trước câu hỏi đời tư. <span class="ko">무슨 일을 하세요?</span> lịch sự hơn <span class="ko">직업이 뭐예요?</span>; <span class="ko">-(으)세요</span> kính ngữ cho người được hỏi.</td></tr>
+<tr><td class="ko">한국 역사를 공부하<b>고 있어요</b>.</td><td><span class="ko">-고 있다</span> = đang (trong giai đoạn này). Sinh viên trả lời câu hỏi nghề nghiệp bằng việc học.</td></tr>
+<tr><td class="ko"><b>좋아하는</b> 한국 드라마를 한국어로 보<b>려고</b> 공부해요.</td><td><span class="ko">좋아하는 드라마</span> = phim (mà) mình thích — định ngữ <span class="ko">-는</span>, sẽ học kỹ ở các bài sau. <span class="ko">한국어로</span> = bằng tiếng Hàn. <span class="ko">-(으)려고</span> trả lời câu hỏi <span class="ko">왜</span>.</td></tr>
+</table>
+
+<h3>연습 1 · Thay thông tin, nói lại hội thoại</h3>
+<p>Cô và em đóng vai. Bấm 🔊 để nghe bản đã thay sẵn. Bộ 4 là thông tin của <b>em</b>.</p>
+<div id="sub1"></div>
+<textarea class="ko wtx" id="ex2" placeholder="Bộ 4: viết lại hội thoại với thông tin của em…"></textarea>
+
+<h3>연습 2 · 친구들과 이야기해 보세요 <small class="note">(Em muốn biết gì về bạn? Đặt câu hỏi)</small></h3>
+<p>Sách cho 6 điều muốn biết: <span class="ko">이름 · 국적 · 나이 · 직업 · 연락처 · 한국어를 배우는 이유</span> + 1 điều em tự chọn. Viết câu hỏi vào từng ô rồi mở câu mẫu.</p>
+<div class="wf"><b>1 이름</b><input class="wi" id="q1" placeholder="이름이 뭐예요? / 실례지만 …"></div>
+<div class="wf"><b>2 국적</b><input class="wi" id="q2"></div>
+<div class="wf"><b>3 나이</b><input class="wi" id="q3"></div>
+<div class="wf"><b>4 직업</b><input class="wi" id="q4"></div>
+<div class="wf"><b>5 연락처</b><input class="wi" id="q5"></div>
+<div class="wf"><b>6 이유</b><input class="wi" id="q6"></div>
+<div class="wf"><b>7 ?</b><input class="wi" id="q7"></div>
+<div class="btns"><button class="b blue" data-tog="qm">Xem câu hỏi mẫu</button></div>
+<div class="model" id="qm"><table class="t">
+<tr><th></th><th>Bạn bè, người cùng tuổi</th><th>Người lớn, người mới gặp (lịch sự)</th></tr>
+<tr><td>Tên</td><td class="ko">이름이 뭐예요?</td><td class="ko">실례지만 성함이 어떻게 되세요?</td></tr>
+<tr><td>Quốc tịch</td><td class="ko">어느 나라 사람이에요?</td><td class="ko">국적이 어떻게 되세요?</td></tr>
+<tr><td>Tuổi</td><td class="ko">몇 살이에요?</td><td class="ko">실례지만 나이가 / 연세가 어떻게 되세요?</td></tr>
+<tr><td>Nghề</td><td class="ko">직업이 뭐예요?</td><td class="ko">무슨 일을 하세요?</td></tr>
+<tr><td>Liên lạc</td><td class="ko">전화번호가 뭐예요?</td><td class="ko">연락처가 어떻게 되세요?</td></tr>
+<tr><td>Lý do</td><td class="ko">왜 한국어를 배워요?</td><td class="ko">왜 한국어를 배우세요?</td></tr>
+<tr><td>Thêm</td><td class="ko">취미가 뭐예요? · 고향이 어디예요?</td><td class="ko">고향이 어디세요?</td></tr>
+</table></div>
+
+<h3>Hai khung gợi ý cuối trang 31</h3>
+<div class="card"><div class="hd">처음 만났을 때 하는 인사 <small>· chào khi gặp lần đầu</small></div><div class="bd">
+<div class="ex"><span class="ko">처음 뵙겠습니다.</span><span class="vi">Rất hân hạnh (lần đầu gặp) — trang trọng nhất.</span></div>
+<div class="ex"><span class="ko">만나서 반갑습니다.</span><span class="vi">Rất vui được gặp — lịch sự, dùng được mọi nơi.</span></div>
+<div class="ex"><span class="ko">만나 뵙게 되어서 기쁩니다.</span><span class="vi">Tôi rất vui vì được gặp (anh/chị) — rất trang trọng, hay dùng khi gặp người trên, đối tác.</span></div>
+</div></div>
+<div class="card"><div class="hd">정중하게 물을 때 <small>· hỏi tên, tuổi, liên lạc một cách lịch sự</small></div><div class="bd">
+<div class="ex"><span class="ko">실례지만 <b>이름이 / 성함이</b> · <b>나이가 / 연세가</b> · <b>전화번호가 / 연락처가</b> 어떻게 되세요? (어떻게 되십니까?)</span></div>
+<p><b>Học sâu:</b> <span class="ko">어떻게 되세요?</span> nghĩa đen “(cái đó) là như thế nào ạ?” — hỏi vòng, không hỏi thẳng <span class="ko">뭐예요? / 몇 살이에요?</span> nên lịch sự hơn. Danh từ kính ngữ: <span class="ko">이름 → 성함</span>, <span class="ko">나이 → 연세</span> (dùng với người lớn tuổi; hỏi <span class="ko">연세</span> người trẻ nghe như trêu), <span class="ko">집 → 댁</span>, <span class="ko">생일 → 생신</span>.</p>
+<div class="warnbox">Kính ngữ chỉ dùng cho <b>người khác</b>. Được hỏi <span class="ko">성함이 어떻게 되세요?</span> thì trả lời <span class="ko">저는 ○○(이)라고 합니다</span>, không nói <span class="ko">제 성함은…</span> ✗.</div>
+</div></div>
+<div class="set" data-set="v2"></div>
+
+<h3>Phản xạ · trả lời thành tiếng</h3>
+<p>Bấm 🔊, trả lời trong 5 giây, rồi mới mở câu mẫu. Thay thông tin mẫu bằng thông tin của em.</p>
+<div id="qa2"></div>
+
+<h3>Bài nói · tự giới thiệu 1 phút</h3>
+<p>Ghép mọi thứ của trang 28–31, nói không nhìn giấy, ghi âm gửi cô qua Zalo.</p>
+<table class="t">
+<tr><td>1</td><td class="ko">처음 뵙겠습니다. 저는 ___(이)라고 합니다.</td></tr>
+<tr><td>2</td><td class="ko">그냥 ___(이)라고 부르세요.</td></tr>
+<tr><td>3</td><td class="ko">저는 ___ 대학교에서 ___을/를 공부하고 있어요.</td></tr>
+<tr><td>4</td><td class="ko">___-(으)려고 한국어를 배우고 있어요.</td></tr>
+<tr><td>5</td><td class="ko">만나서 반갑습니다. (앞으로 잘 부탁드립니다.)</td></tr>
 </table>
 <textarea class="ko wtx" id="sp1" placeholder="처음 뵙겠습니다. 저는 …"></textarea>
-<div class="btns"><button class="b" data-readw="sp1">🔊 Máy đọc bài của em</button><button class="b blue" data-tog="sp1m">Xem bài mẫu</button></div>
-<div class="model ko" id="sp1m">처음 뵙겠습니다. 저는 응우옌 투이<b>라고 합니다</b>. 그냥 투이<b>라고 부르세요</b>. 저는 하노이에 있는 대학교에서 영어를 전공하고 있어요. 그리고 졸업 자격증을 받<b>으려고</b> 한국어를 배우고 있어요. 한국어는 <b>거의 매일</b> 공부해요. 시간이 나면 영어 소설을 읽<b>거나</b> 한국 드라마를 봐요. 앞으로 잘 부탁드립니다.<button class="say" data-say="처음 뵙겠습니다. 저는 응우옌 투이라고 합니다. 그냥 투이라고 부르세요. 저는 하노이에 있는 대학교에서 영어를 전공하고 있어요. 그리고 졸업 자격증을 받으려고 한국어를 배우고 있어요. 한국어는 거의 매일 공부해요. 시간이 나면 영어 소설을 읽거나 한국 드라마를 봐요. 앞으로 잘 부탁드립니다.">🔊</button></div>
-<p class="note">Tự kiểm tra trước khi gửi: đủ 4 mẫu <span class="ko">(이)라고 하다, -(으)려고, -거나, (이)나</span> · ít nhất 2 trạng từ tần suất · nói liền khoảng 1 phút · không đọc theo giấy.</p>
-
-<h3>4. Đóng vai với cô</h3>
-<div class="card"><div class="hd">Tình huống 1 · Được bạn giới thiệu</div><div class="bd">
-<p>Cô là bạn cùng lớp, giới thiệu em với 하준 (cô đóng luôn vai 하준): <span class="ko">“하준 씨, 여기는 ○○ 씨예요.”</span></p>
-<p><b>Em cần:</b> chào lần đầu · nói tên và cách gọi · hỏi lịch sự 하준 làm gì (<span class="ko">실례지만…</span>) · hỏi vì sao 하준 học tiếng Việt · tìm một sở thích chung (<span class="ko">-거나</span>, <span class="ko">(이)나</span>, tần suất) · kết: <span class="ko">다음에 또 만나요.</span></p>
-</div></div>
-<div class="card"><div class="hd">Tình huống 2 · Gọi điện hẹn học trao đổi ngôn ngữ</div><div class="bd">
-<p><b>Em cần:</b> mở đầu cuộc gọi · hỏi cuối tuần có rảnh không · đưa ra 2 lựa chọn ngày và giờ (<span class="ko">(이)나</span>) · thống nhất địa điểm · nhắc lại giờ và nơi gặp trước khi cúp máy.</p>
-<table class="t">
-<tr><td class="ko">여보세요? 하준 씨, 저 투이예요.</td><td>A lô, Hajun à, mình Thùy đây.</td></tr>
-<tr><td class="ko">이번 주말에 시간 있어요?</td><td>Cuối tuần này bạn có rảnh không?</td></tr>
-<tr><td class="ko">토요일이나 일요일 어때요?</td><td>Thứ bảy hoặc chủ nhật thì sao?</td></tr>
-<tr><td class="ko">어디에서 만날까요?</td><td>Mình gặp ở đâu nhỉ?</td></tr>
-<tr><td class="ko">그럼 일요일 세 시에 도서관 앞에서 만나요.</td><td>Vậy hẹn 3 giờ chủ nhật trước thư viện nhé.</td></tr>
-</table>
-</div></div>
-<div class="deep"><b>Văn hóa · tên người Hàn.</b> Tên thường có 3 âm tiết: họ 1 + tên 2 (<span class="ko">김유미</span>). Bạn thân gọi tên, bỏ họ (<span class="ko">유미</span>); người mới quen gọi cả họ tên + <span class="ko">씨</span> (<span class="ko">김유미 씨</span>), <b>không gọi họ + 씨</b> (<span class="ko">김 씨</span> nghe thiếu lịch sự). Không dùng <span class="ko">씨</span> cho chính mình. Em nên chuẩn bị sẵn tên mình bằng Hangeul: Nguyễn <span class="ko">응우옌</span>, Trần <span class="ko">쩐</span>, Lê <span class="ko">레</span>, Phạm <span class="ko">팜</span>, Hoàng <span class="ko">호앙</span>, Thùy <span class="ko">투이</span>, Linh <span class="ko">린</span>, Ngọc <span class="ko">응옥</span>.</div>
-
-<h3>5. Phát âm · đồng hóa âm mũi (비음화)</h3>
-<p>Phụ âm cuối được đọc là <b>[ㅂ] [ㄷ] [ㄱ]</b>, khi chữ sau bắt đầu bằng <b>ㄴ, ㅁ</b>, đổi thành âm mũi cùng vị trí:</p>
-<div class="flow"><div><b>môi</b><span class="ko">[ㅂ] → [ㅁ]</span><br><span class="ko">합니다 [함니다]</span></div><div><b>lưỡi</b><span class="ko">[ㄷ] → [ㄴ]</span><br><span class="ko">받는 [반는]</span></div><div><b>cuống lưỡi</b><span class="ko">[ㄱ] → [ㅇ]</span><br><span class="ko">국물 [궁물]</span></div></div>
-<p class="note">Sách Bài 1 học dòng đầu (ㅂ → ㅁ). Hai dòng sau là cùng một quy luật; Nghe TOPIK đọc đúng như vậy nên biết sớm sẽ nghe ra từ dễ hơn. Cũng gặp: <span class="ko">앞문 [암문], 없네요 [엄네요], 값만 [감만]</span> (받침 ㅍ, ㅄ đọc [ㅂ] trước rồi mới đổi).</p>
-<div class="set" data-set="p1"></div>
-
-<h3>6. Nghe 1 · Cuộc gọi hẹn gặp</h3>
-<div class="btns"><button class="b blue" data-au="n1">🔊 Nghe</button><button class="b" data-au="n1" data-rate="0.65">🐢 Nghe chậm</button></div>
-<div class="set" data-set="n1"></div>
-<div class="btns"><button class="b" data-tog="n1t">Xem lời thoại</button></div>
-<div class="model" id="n1t"></div>
-
-<h3>7. Nghe 2 · Gặp nhau lần đầu (kiểu Nghe TOPIK câu 13–16)</h3>
-<div class="btns"><button class="b blue" data-au="n2">🔊 Nghe</button><button class="b" data-au="n2" data-rate="0.65">🐢 Nghe chậm</button></div>
-<div class="set" data-set="n2"></div>
-<div class="btns"><button class="b" data-tog="n2t">Xem lời thoại</button></div>
-<div class="model" id="n2t"></div>
-
-<h3>8. Nghe 3 · Chọn câu nói tiếp theo (kiểu Nghe TOPIK câu 4–8)</h3>
-<p class="note"><span class="ko">다음을 듣고 이어질 수 있는 말로 가장 알맞은 것을 고르십시오.</span> Bấm 🔊 nghe đoạn thoại, chọn câu người kia nói tiếp. Lời thoại hiện sau khi chọn.</p>
-<div class="set" data-set="n3"></div>
-
-<h3>9. Nghe – chép</h3>
-<p class="note">Bấm 🔊 (nghe được nhiều lần, 🐢 nghe chậm), gõ lại cả câu. Không cần gõ dấu chấm.</p>
-<div class="set" data-set="d1"></div>
+<div class="btns"><button class="b" data-readw="sp1">🔊 Máy đọc bài của em</button></div>
 </section>
 
-<!-- ================= ĐỌC · VIẾT ================= -->
-<section class="sec" id="sdv">
-<h2>Đọc · Viết</h2>
-<p class="goal">Bài 1 đọc – viết <b>quảng cáo tìm bạn luyện ngoại ngữ</b>. Đây đúng là thể loại của <b>Viết TOPIK câu 51</b> (thông báo, quảng cáo, email) và Đọc câu 9–12. Văn bản dùng đuôi <span class="ko"><b>-습니다 / -ㅂ니다</b></span>, không dùng <span class="ko">-아/어요</span>.</p>
+<!-- ================= NGỮ PHÁP 2 ================= -->
+<section class="sec" id="sg2">
+<span class="pg">Trang 32–33 · 문법과 표현 2</span>
+<h2>Ngữ pháp 2 · V-거나 · N(이)나 1</h2>
 
-<h3>1. Đọc · quảng cáo trên bảng tin</h3>
-<div class="paper ko">
-  <p class="tt">한국어로 이야기할 친구를 찾습니다!</p>
-  <p>안녕하세요? 저는 하노이에 있는 대학교 영어과 3학년 응우옌 투이<b>라고 합니다</b>. 저는 외국어를 아주 좋아하고 한국 문화에 관심이 많습니다. 내년 4월에 토픽 시험을 보<b>려고</b> 한국어를 공부하고 있습니다. 읽기는 괜찮지만 말하기가 조금 어렵습니다. 그래서 일주일에 한두 번, 한 시간 정도 한국어로 이야기할 수 있는 한국 친구를 찾고 있습니다. 카페에서 만나<b>거나</b> 화상 통화를 하고 싶습니다. 저는 베트남어<b>나</b> 영어를 가르쳐 드리겠습니다. 관심이 있으신 분은 이메일<b>이나</b> 문자로 연락 주십시오.</p>
-  <p class="ct">응우옌 투이 · thuy.nari@example.com · ☎ 090-000-0000</p>
-</div>
-<p class="note">Từ mới: <span class="ko">영어과</span> khoa tiếng Anh · <span class="ko">한두 번</span> một hai lần · <span class="ko">화상 통화</span> gọi video (畫像 họa tượng) · <span class="ko">-아/어 드리겠습니다</span> tôi sẽ … cho (khiêm nhường) · <span class="ko">관심이 있으신 분</span> người nào quan tâm · <span class="ko">문자</span> tin nhắn.</p>
-<div class="set" data-set="r1"></div>
+<div class="card"><div class="hd">1. V-거나 <small>· “hoặc” giữa hai hành động (track 05)</small></div><div class="bd">
+<p><b>Hội thoại trong sách:</b></p>
+<div class="ex"><span class="ko">A 주말에 보통 뭐 하세요?<br>B 집에서 쉬<b>거나</b> 친구를 만나요.</span><span class="vi">A: Cuối tuần bạn thường làm gì? — B: Mình nghỉ ở nhà hoặc gặp bạn bè.</span></div>
+<div class="ex"><span class="ko">부모님이 보고 싶으면 편지를 쓰<b>거나</b> 전화를 해요.</span><span class="vi">Nhớ bố mẹ thì mình viết thư hoặc gọi điện.</span></div>
+<div class="ex"><span class="ko">일요일에는 책을 읽<b>거나</b> 영화를 봐요.</span><span class="vi">Chủ nhật mình đọc sách hoặc xem phim.</span></div>
+<p><b>Cách gắn:</b> gắn thẳng vào gốc, <b>không đổi gốc</b> (vì <span class="ko">-거나</span> bắt đầu bằng phụ âm): <span class="ko">쉬거나, 읽거나, 듣거나, 만들거나, 돕거나</span>. Thì và đuôi câu chỉ chia ở <b>vế cuối</b>.</p>
+<p class="en">English: “do A or B”. Khác tiếng Anh: vế đầu không chia thì: <span class="ko">어제 쉬거나 친구를 만났어요</span>.</p>
+<div class="warnbox"><b>Bẫy:</b> ① <span class="ko">-거나</span> ≠ <span class="ko">-고</span>: <span class="ko">쉬고 친구를 만나요</span> = làm <b>cả hai</b> (nghỉ rồi gặp bạn); <span class="ko">쉬거나 친구를 만나요</span> = <b>chọn một</b>. ② <span class="ko">-거나</span> nối động từ, tính từ; danh từ dùng <span class="ko">(이)나</span>. Sách ghi V, nhưng tính từ cũng dùng được: <span class="ko">날씨가 춥거나 비가 오면 집에 있어요</span>.</div>
+<div class="tp"><b>📝 TOPIK</b> — Đọc câu 1–2 có nhóm “lựa chọn”: <span class="ko">-거나</span> và <span class="ko">-든지</span> (học sau). Câu có hai hành động mà người nói “chọn một” là nhóm này.</div>
+</div></div>
+<h3>연습 1 · [보기]와 같이 이야기해 보세요</h3>
+<div class="ex"><span class="ko">수업 후에 보통 뭐 해요? — 도서관에 가<b>거나</b> 친구를 만나요.</span><span class="vi">Sau giờ học bạn thường làm gì? — Mình đến thư viện hoặc gặp bạn.</span></div>
+<div id="qa3"></div>
+<div class="deep"><b>Học sâu:</b> <span class="ko">평일</span> = ngày thường (thứ hai – thứ sáu), ngược với <span class="ko">주말</span>. Câu hỏi có <span class="ko">-고 싶어요?</span> thì trả lời <span class="ko">V-거나 V-고 싶어요</span>; câu hỏi <span class="ko">어떻게 해요?</span> (làm thế nào) thì trả lời bằng hai cách làm.</div>
 
-<h3>2. Cấu trúc của một quảng cáo tìm người</h3>
+<div class="card"><div class="hd">2. N(이)나 1 <small>· “hoặc” giữa hai danh từ (track 06)</small></div><div class="bd">
+<p><b>Hội thoại trong sách:</b></p>
+<div class="ex"><span class="ko">A 점심에 보통 뭘 먹어요?<br>B 김밥<b>이나</b> 햄버거를 먹어요.</span><span class="vi">A: Trưa bạn thường ăn gì? — B: Mình ăn kimbap hoặc hamburger.</span></div>
+<div class="ex"><span class="ko">과일이 없어요. 사과<b>나</b> 배를 좀 사 오세요.</span><span class="vi">Hết hoa quả rồi. Mua táo hoặc lê về nhé.</span></div>
+<div class="ex"><span class="ko">언제 만날까요? — 월요일<b>이나</b> 화요일 어때요?</span><span class="vi">Mình gặp khi nào nhỉ? — Thứ hai hoặc thứ ba được không?</span></div>
 <table class="t">
-<tr><th>Phần</th><th>Câu trong bài</th><th>Mẫu dùng lại</th></tr>
-<tr><td>Tiêu đề</td><td class="ko">한국어로 이야기할 친구를 찾습니다!</td><td class="ko">N을/를 찾습니다 · N(을/를) 구합니다</td></tr>
-<tr><td>Giới thiệu</td><td class="ko">…투이라고 합니다.</td><td class="ko">저는 ○○에 있는 ○○ ○학년 ○○(이)라고 합니다.</td></tr>
-<tr><td>Mục đích</td><td class="ko">토픽 시험을 보려고 …공부하고 있습니다.</td><td class="ko">V-(으)려고 V-고 있습니다</td></tr>
-<tr><td>Vấn đề</td><td class="ko">읽기는 괜찮지만 말하기가 조금 어렵습니다.</td><td class="ko">A-지만 B</td></tr>
-<tr><td>Người cần tìm + điều kiện</td><td class="ko">일주일에 한두 번, 한 시간 정도 …</td><td class="ko">일주일에 ○번, ○시간 정도 · V-거나 V</td></tr>
-<tr><td>Đổi lại</td><td class="ko">베트남어나 영어를 가르쳐 드리겠습니다.</td><td class="ko">V-아/어 드리겠습니다</td></tr>
-<tr><td>Liên lạc</td><td class="ko">관심이 있으신 분은 … 연락 주십시오.</td><td class="ko">N(이)나 N(으)로 연락 주십시오</td></tr>
+<tr><th>Danh từ trước</th><th>Gắn</th><th>Ví dụ</th></tr>
+<tr><td>có 받침</td><td class="ko"><b>이나</b></td><td class="ko">김밥<b>이나</b>, 월요일<b>이나</b></td></tr>
+<tr><td>không 받침</td><td class="ko"><b>나</b></td><td class="ko">사과<b>나</b>, 커피<b>나</b></td></tr>
 </table>
+<p><b>Nghĩa gốc:</b> <span class="ko">(이)나</span> đứng <b>thay chỗ tiểu từ</b> của danh từ đầu, tiểu từ chỉ còn ở danh từ cuối: <span class="ko">김밥<s>을</s>이나 햄버거<b>를</b></span>.</p>
+<p class="en">English: “A or B” (nouns).</p>
+<div class="warnbox"><b>Bẫy:</b> ① Không gắn vào động từ: <span class="ko">책을 읽나 음악을 들어요</span> ✗ → <span class="ko">읽거나</span>. ② Khác <span class="ko">하고 / 와·과</span> (và): <span class="ko">김밥하고 햄버거를 먹어요</span> = ăn <b>cả hai</b>. ③ Sách ghi “<b>1</b>” vì sau này em gặp <span class="ko">(이)나</span> nghĩa khác: <span class="ko">세 시간<b>이나</b> 기다렸어요</span> (chờ <b>những</b> ba tiếng).</div>
+<div class="deep"><b>Học sâu · <span class="ko">사 오다</span> và <span class="ko">사 가다</span></b> (từ mới trang 33): <span class="ko">사 오세요</span> = mua <b>về đây</b> (về chỗ người nói); <span class="ko">사 가요</span> = mua <b>mang đến</b> nơi khác. Đi dự tiệc nhà người khác: <span class="ko">꽃이나 과일을 사 가요</span>. <span class="ko">초대를 받다</span> = được mời.</div>
+</div></div>
+<h3>연습 1 · [보기]와 같이 이야기해 보세요</h3>
+<div class="ex"><span class="ko">생일에 무슨 선물을 받고 싶어요? — 책<b>이나</b> 꽃을 받고 싶어요.</span><span class="vi">Sinh nhật bạn muốn nhận quà gì? — Mình muốn nhận sách hoặc hoa.</span></div>
+<p class="note">4 câu hỏi của sách, mỗi câu có 3 tranh + 1 ô “?” để em tự nói thêm.</p>
+<div id="qa4"></div>
 
-<h3>3. Luyện Viết câu 51 (2 bài)</h3>
-<p class="note"><span class="ko">다음 글의 ㉠과 ㉡에 알맞은 말을 각각 쓰시오.</span> Mỗi chỗ trống viết <b>một mệnh đề</b> hợp với câu trước – sau. Chấm: đúng ý + đúng ngữ pháp + đúng đuôi văn bản. Viết xong mới mở đáp án mẫu.</p>
-<div class="paper ko"><p class="tt">언어 교환 친구를 찾습니다</p>
-<p>안녕하세요? 저는 한국대학교에서 경영학을 공부하는 김하준이라고 합니다. 저는 졸업 후에 베트남에 있는 회사에서 ( ㉠ ) 베트남어를 배우고 있습니다. 그런데 혼자 공부하니까 말하기 연습을 하기가 어렵습니다. 그래서 일주일에 한 번 정도 같이 연습할 베트남 친구를 찾고 있습니다. 저는 그 친구에게 한국어를 ( ㉡ ). 관심이 있으신 분은 연락 주십시오.</p></div>
-<div class="wf"><b>㉠</b><input class="wi" id="w1a" placeholder="…"></div>
-<div class="wf"><b>㉡</b><input class="wi" id="w1b" placeholder="…"></div>
-<div class="btns"><button class="b blue" data-tog="w1m">Xem đáp án mẫu</button></div>
-<div class="model" id="w1m"><b>㉠</b> <span class="ko">일하려고 / 일하기 위해서</span> — câu sau là <span class="ko">배우고 있습니다</span>, câu trước nói tương lai làm ở công ty Việt Nam → mục đích.<br><b>㉡</b> <span class="ko">가르쳐 주겠습니다 / 가르쳐 드리겠습니다 / 가르쳐 줄 수 있습니다</span> — quảng cáo tìm bạn luôn có phần “đổi lại tôi sẽ…”. Viết <span class="ko">가르쳐요</span> là sai đuôi văn bản (bị trừ điểm).</div>
+<h3>Luyện ngữ pháp 2 · chấm ngay</h3>
+<h4>1. Gõ dạng đúng</h4>
+<div class="set" data-set="gc"></div>
+<h4>2. Chọn đúng / tìm câu sai</h4>
+<div class="set" data-set="m2"></div>
+</section>
 
-<div class="paper ko"><p class="tt">책 나눔 행사</p>
-<p>우리 학과에서는 매년 학기가 끝나면 책 나눔 행사를 합니다. 다 읽은 책이나 ( ㉠ ) 학과 사무실로 가져와 주십시오. 가져온 책은 책이 필요한 학생들에게 나누어 줍니다. 책을 가져오는 학생에게는 커피 쿠폰을 드립니다. 책은 ( ㉡ ). 다음 주 금요일 이후에는 받지 않습니다.</p></div>
-<div class="wf"><b>㉠</b><input class="wi" id="w2a" placeholder="…"></div>
-<div class="wf"><b>㉡</b><input class="wi" id="w2b" placeholder="…"></div>
-<div class="btns"><button class="b blue" data-tog="w2m">Xem đáp án mẫu</button></div>
-<div class="model" id="w2m"><b>㉠</b> <span class="ko">필요 없는 책이 있으면 / 이제 보지 않는 책이 있으면</span> — <span class="ko">(이)나</span> nối với một danh từ cùng loại “sách không cần nữa”, sau đó câu tiếp “mang đến văn phòng khoa”.<br><b>㉡</b> <span class="ko">다음 주 금요일까지 가져와 주십시오 / 다음 주 금요일까지 받습니다</span> — câu sau nói “sau thứ sáu tuần sau không nhận” → hạn chót. Câu 51 thường có một chỗ trống mà <b>câu ngay sau</b> là chìa khóa.</div>
-<div class="okbox">Cô có trang luyện riêng cho câu 51 theo đề thật các kỳ: <a href="../../viet-51/">Học câu 51 trong 3 buổi</a>. Học xong 2A, em làm Buổi 1 của trang đó.</div>
+<!-- ================= NÓI 2 ================= -->
+<section class="sec" id="ss2">
+<span class="pg">Trang 34–35 · 말하기 2</span>
+<h2>Nói 2 · Kể việc làm cuối tuần</h2>
+<h3>Hội thoại trong sách (track 07)</h3>
+<div class="btns"><button class="b blue" data-au="d2">🔊 Nghe cả bài</button><button class="b" data-au="d2" data-rate="0.65">🐢 Nghe chậm</button></div>
+<div class="scroll"><table class="t dlg" id="dlg2"></table></div>
+<h4>Học sâu từng câu</h4>
+<table class="t">
+<tr><th>Câu</th><th>Vì sao nói như vậy</th></tr>
+<tr><td class="ko">주말에 <b>보통</b> 뭐 하세요?</td><td><span class="ko">보통</span> = thường thường — hỏi thói quen, nên trả lời ở thì hiện tại.</td></tr>
+<tr><td class="ko">샤오밍 씨<b>는요</b>?</td><td>Hỏi ngược lại bằng <span class="ko">N은/는요?</span> — khỏi lặp lại cả câu hỏi. Nói chuyện tự nhiên luôn có câu này.</td></tr>
+<tr><td class="ko">저는 주말<b>에는</b> 항상 운동을 해요.</td><td><span class="ko">에 + 는</span>: “còn cuối tuần thì…” — <span class="ko">는</span> tạo ý <b>đối lập</b> (ngày thường thì khác).</td></tr>
+<tr><td class="ko"><b>무슨</b> 운동을 해요?</td><td><span class="ko">무슨 N</span> = N gì, loại nào.</td></tr>
+<tr><td class="ko">수영<b>이나</b> 농구를 해요.</td><td>= <span class="ko">수영을 하거나 농구를 해요</span>. Hai danh từ → <span class="ko">(이)나</span>, gọn hơn.</td></tr>
+<tr><td class="ko">그래요? <b>저도</b> 매일 수영을 해요.</td><td><span class="ko">그래요?</span> = thật à? (tỏ ra quan tâm). <span class="ko">도</span> = cũng.</td></tr>
+<tr><td class="ko">어, 우리는 취미가 <b>같네요</b>.</td><td><span class="ko">-네요</span>: ngạc nhiên vì vừa nhận ra điều gì. <span class="ko">N이/가 같다</span> = giống nhau.</td></tr>
+</table>
+<h3>연습 1 · Thay thông tin, nói lại hội thoại</h3>
+<p>Bộ 1 là hội thoại trong sách. Bấm 🔊 nghe bộ 2–4 đã thay sẵn, rồi cô và em đóng vai.</p>
+<div id="sub2"></div>
+<div class="tp"><b>📝 TOPIK</b> — Phần Nghe câu 4–8 (“chọn câu nói tiếp theo”) chính là những cặp hỏi – đáp ngắn như hội thoại này: <span class="ko">무슨 운동을 해요?</span> → phải nghe ra câu hỏi <span class="ko">무슨</span> để chọn câu trả lời là một loại thể thao.</div>
 
-<h3>4. Viết · quảng cáo tìm bạn luyện tiếng Hàn của em</h3>
-<p>Viết 6–8 câu theo cấu trúc ở mục 2, đuôi <span class="ko">-습니다</span>. Phải có: <span class="ko">-(이)라고 합니다, -(으)려고, -거나, (이)나</span> và một cụm thời gian (<span class="ko">일주일에 ○번, ○시간 정도</span>).</p>
+<h3>연습 2 · 친구들과 이야기해 보세요 <small class="note">(Phỏng vấn nhau)</small></h3>
+<div class="ex"><span class="ko">시간이 나면 보통 뭘 해요? — 저는 시간이 나면 음악을 듣<b>거나</b> 책을 읽어요.</span><span class="vi">Khi rảnh bạn thường làm gì? — Khi rảnh mình nghe nhạc hoặc đọc sách.</span></div>
+<p>Cô hỏi em 5 câu của sách, em hỏi lại cô. Ghi câu trả lời của em:</p>
+<div id="qa5"></div>
+<textarea class="ko wtx" id="ex3" placeholder="1. 저는 시간이 나면 …&#10;2. …"></textarea>
+<div class="deep"><b>Học sâu:</b> <span class="ko">시간이 나다</span> = có thời gian rảnh (tiểu từ <span class="ko">이</span>, không phải <span class="ko">을</span>). <span class="ko">뭘</span> = <span class="ko">무엇을</span> nói gọn. <span class="ko">방학</span> = kỳ nghỉ của học sinh, sinh viên (khác <span class="ko">휴가</span> = kỳ nghỉ của người đi làm).</div>
+</section>
+
+<!-- ================= NGHE – NÓI ================= -->
+<section class="sec" id="snn">
+<span class="pg">Trang 36–37 · 듣고 말하기</span>
+<h2>Nghe – Nói</h2>
+<div class="warnbox">Phần nghe dùng <b>file nghe của sách</b> (track 08, 09) — cô mở trong buổi học. Trang này chuẩn bị trước khi nghe, giải thích câu hỏi và để em ghi đáp án.</div>
+
+<h3>준비 · 여러분은 이성 친구를 어떻게 처음 만났습니까?</h3>
+<p>“Em gặp bạn trai / bạn gái lần đầu như thế nào?” — <span class="ko">이성 친구</span> (異性 dị tính) = bạn khác giới, bạn trai / bạn gái. Cách trả lời: <span class="ko">친구의 소개로 만났어요 · 학교에서 만났어요 · 동아리에서 만났어요</span>.</p>
+
+<h3>듣기 1 · 잘 듣고 빈칸에 써 보세요 (track 08)</h3>
+<p>Tranh: một nam, một nữ đang gọi điện. Câu cần điền:</p>
+<div class="ex"><span class="ko">두 사람은 토요일 오후 ______시에 ______에서 만나려고 합니다.</span><span class="vi">Hai người định gặp nhau lúc ___ giờ chiều thứ bảy ở ___.</span></div>
+<div class="deep"><b>Trước khi nghe:</b> ① Giờ đọc bằng <b>số thuần Hàn</b>: <span class="ko">한 시, 두 시, 세 시, 네 시, 다섯 시</span>, rưỡi = <span class="ko">반</span>. ② Địa điểm thường đi với <span class="ko">에서 만나요 / 앞에서 봐요</span>. ③ Cuộc gọi hẹn gặp hay có: <span class="ko">여보세요? · 이번 주말에 시간 있어요? · 몇 시에 만날까요? · 어디에서 만날까요? · ○시 어때요? · 그럼 ○시에 ○에서 만나요.</span> ④ Câu cuối thường <b>nhắc lại</b> giờ và nơi gặp — tập trung nghe câu cuối.</div>
+<h4>Luyện nghe giờ và địa điểm trước (máy đọc)</h4>
+<div class="set" data-set="h1"></div>
+<p><b>Đáp án em nghe được ở track 08:</b></p>
+<div class="wf"><b>몇 시?</b><input class="wi" id="l1a" placeholder="___시"></div>
+<div class="wf"><b>어디?</b><input class="wi" id="l1b" placeholder="___에서"></div>
+
+<h3>준비 · 소개팅을 해 봤습니까? 처음 만난 사람에게 무슨 질문을 합니까?</h3>
+<p><span class="ko">소개팅</span> = buổi gặp làm quen do người quen giới thiệu (<span class="ko">소개</span> giới thiệu + <i>meeting</i>). Câu hỏi hay gặp: <span class="ko">무슨 일을 하세요? · 학교가 어디예요? · 집이 어디예요? · 주말에 보통 뭐 하세요? · 취미가 뭐예요?</span></p>
+
+<h3>듣기 2 · 잘 듣고 질문에 답하세요 (track 09)</h3>
+<p>Tranh: một nam, một nữ ngồi trong quán cà phê.</p>
+<p><b>1) <span class="ko">맞는 것을 고르세요.</span></b> (Chọn câu đúng)</p>
+<table class="t">
+<tr><td class="ko">① 남자는 서울대학교에 다닙니다.</td><td>Người nam học ở Đại học Seoul. (<span class="ko">N에 다니다</span> = đi học / đi làm ở N)</td></tr>
+<tr><td class="ko">② 여자의 집은 학교에서 가깝습니다.</td><td>Nhà người nữ gần trường. (<span class="ko">N에서 가깝다</span> = gần N)</td></tr>
+<tr><td class="ko">③ 두 사람은 친구를 기다리고 있습니다.</td><td>Hai người đang đợi bạn.</td></tr>
+</table>
+<p><b>2) <span class="ko">남자는 주말에 보통 무엇을 합니까? 맞는 것을 모두 고르세요.</span></b> (Cuối tuần người nam thường làm gì? Chọn <b>tất cả</b> câu đúng) — tranh: ① xem phim ở rạp ② đọc sách ③ chạy bộ.</p>
+<div class="deep"><b>Chiến lược nghe:</b> đọc câu hỏi trước, gạch từ khóa (<span class="ko">서울대학교 · 가깝다 · 기다리다</span>; <span class="ko">영화 · 책 · 운동/조깅</span>). Bài này dùng đúng ngữ pháp của bài: người nam sẽ trả lời bằng <span class="ko">-거나</span> hoặc <span class="ko">(이)나</span> → nghe thấy hai hoạt động là chọn cả hai.</div>
+<div class="wf"><b>1) Câu đúng</b><input class="wi" id="l2a" placeholder="① / ② / ③"></div>
+<div class="wf"><b>2) Chọn hết</b><input class="wi" id="l2b" placeholder="vd. ①③"></div>
+<div class="tp"><b>📝 TOPIK</b> — Đề TOPIK luôn chỉ có <b>một</b> đáp án đúng; dạng “chọn câu đúng với nội dung” giống câu 1) ở trên. Đáp án sai thường đổi một chi tiết nhỏ (ai làm, gần / xa, đang làm gì).</div>
+
+<h3>말하기 · Tự giới thiệu với người được bạn giới thiệu</h3>
+<p>Sách: <span class="ko">같은 반 친구가 여러분에게 새 친구를 소개해 줬습니다. 소개 받은 사람에게 자기소개를 해 보세요.</span> — Bạn cùng lớp giới thiệu một bạn mới cho em; em tự giới thiệu với bạn đó. Câu mở đầu của người giới thiệu trong tranh: <span class="ko">“민재 씨, 여기는 나나코 씨예요.”</span></p>
+<table class="t">
+<tr><th>Vai</th><th>Câu dùng được</th></tr>
+<tr><td>Người giới thiệu</td><td class="ko">민재 씨, <b>여기는</b> 나나코 씨예요. 나나코 씨, <b>이쪽은</b> 민재 씨예요. 우리 반 친구예요.</td></tr>
+<tr><td>Hai người mới gặp</td><td class="ko">처음 뵙겠습니다. 저는 ○○(이)라고 합니다. · 만나서 반가워요. · 실례지만 무슨 일을 하세요? · 왜 한국어를 배우세요? · 주말에는 보통 뭐 하세요? · 그래요? 저도…</td></tr>
+<tr><td>Kết thúc</td><td class="ko">다음에 또 만나요. · 연락처 좀 알려 주세요.</td></tr>
+</table>
+<p class="note"><span class="ko">여기는 / 이쪽은 ○○ 씨예요</span> = “Đây là …” khi giới thiệu người đứng cạnh; không dùng <span class="ko">이 사람은</span> (nghe thiếu lịch sự).</p>
+<p>Cô đóng vai người giới thiệu + bạn mới; em dùng đủ <span class="ko">(이)라고 하다, -(으)려고, -거나, (이)나</span> trong cuộc nói chuyện.</p>
+</section>
+
+<!-- ================= ĐỌC – VIẾT ================= -->
+<section class="sec" id="sdv">
+<span class="pg">Trang 38–39 · 읽고 쓰기</span>
+<h2>Đọc – Viết · Tin tìm người giúp học ngoại ngữ</h2>
+<h3>준비 · 게시판에 어떤 글들이 있습니까?</h3>
+<p>“Trên bảng tin có những bài gì?” — <span class="ko">게시판</span> (揭示板) = bảng tin. Ba tờ trong tranh: <span class="ko">텔레비전 팔아요!</span> (bán tivi) · <span class="ko">Language Exchange 영어 ↔ 한국어</span> (trao đổi ngôn ngữ Anh – Hàn) · <span class="ko">스페인어 할 수 있으세요?</span> (bạn nói được tiếng Tây Ban Nha không?).</p>
+
+<h3>읽기 · 다음을 읽고 질문에 답하세요</h3>
+<div class="btns"><button class="b blue" data-au="rd">🔊 Nghe đọc</button><button class="b" data-au="rd" data-rate="0.65">🐢</button></div>
+<div class="paper ko" id="read"></div>
+<h4>Đọc sâu từng câu</h4>
+<div class="scroll"><table class="t" id="readt"></table></div>
+<div class="set" data-set="r1"></div>
+<h4>Cấu trúc một tin tìm người</h4>
+<table class="t">
+<tr><th>Phần</th><th>Trong bài</th></tr>
+<tr><td>Tiêu đề (câu hỏi gây chú ý)</td><td class="ko">스페인어 할 수 있으세요?</td></tr>
+<tr><td>Giới thiệu bản thân</td><td class="ko">저는 … 박민영이라고 합니다.</td></tr>
+<tr><td>Sở thích, mối quan tâm</td><td class="ko">여행을 좋아하고 … 관심이 많습니다.</td></tr>
+<tr><td>Lý do học (<span class="ko">-(으)려고</span>)</td><td class="ko">중남미를 여행하려고 스페인어를 공부하고 있습니다.</td></tr>
+<tr><td>Khó khăn (<span class="ko">-지만</span>)</td><td class="ko">재미있지만 발음이 조금 어렵습니다.</td></tr>
+<tr><td>Người cần tìm (bao lâu, giúp gì)</td><td class="ko">매주 두 시간 정도 … 도와줄 수 있는 분을 찾고 있습니다.</td></tr>
+<tr><td>Đổi lại mình làm gì</td><td class="ko">한국어를 가르쳐 드리겠습니다.</td></tr>
+<tr><td>Liên lạc</td><td class="ko">전화 주세요! + tên, email, số điện thoại</td></tr>
+</table>
+<div class="tp"><b>📝 TOPIK</b> — Thông báo, quảng cáo, tin tìm người như bài này là dạng văn bản của Đọc câu 9–12 và Viết câu 51. Văn bản dùng đuôi <span class="ko">-습니다 / -ㅂ니다</span>, không dùng <span class="ko">-아/어요</span> — tập ngay từ bài viết dưới đây.</div>
+
+<h3>쓰기 · 한국어 연습을 도와줄 수 있는 친구를 찾는 광고를 만들어 보세요</h3>
+<p>“Viết tin tìm bạn giúp em luyện tiếng Hàn.” Bước 1 — ghi chú nhanh 4 mục của sách:</p>
+<div class="wf"><b>제목</b><input class="wi" id="m1t" placeholder="Tiêu đề"></div>
+<div class="wf"><b>자기소개</b><input class="wi" id="m1a" placeholder="Em là ai, học gì"></div>
+<div class="wf"><b>배우는 이유</b><input class="wi" id="m1b" placeholder="-(으)려고"></div>
+<div class="wf"><b>연락처</b><input class="wi" id="m1c" placeholder="email / số điện thoại"></div>
+<p>Bước 2 — viết thành tin hoàn chỉnh (6–8 câu, đuôi <span class="ko">-습니다</span>), theo cấu trúc ở bảng trên.</p>
 <textarea class="ko wtx" id="wad" placeholder="제목: …&#10;안녕하세요? 저는 …"></textarea>
 <div class="btns"><button class="b blue" data-tog="wadm">Xem bài mẫu</button></div>
-<div class="model ko" id="wadm"><b>한국어 말하기 친구를 구합니다</b><br>안녕하세요? 저는 ○○대학교에서 영어를 전공하는 ○○○(이)라고 합니다. 저는 졸업 자격증을 받으려고 한국어를 공부하고 있습니다. 문법은 재미있지만 듣기와 말하기가 아직 어렵습니다. 그래서 일주일에 두 번, 한 시간 정도 같이 이야기할 한국 친구를 찾고 있습니다. 학교 근처 카페에서 만나거나 화상 통화를 하면 좋겠습니다. 저는 베트남어나 영어를 가르쳐 드리겠습니다. 관심이 있으신 분은 이메일로 연락 주십시오.</div>
-
-<h3>5. Nhiệm vụ · giới thiệu quê hương (고향 소개하기)</h3>
-<p>Ghi ý theo 5 câu hỏi rồi viết 6–8 câu đuôi <span class="ko">-습니다</span>. Sau đó dùng bài viết làm <b>bài thuyết trình 1 phút</b> với cô, mở đầu và kết thúc như người Hàn:</p>
-<div class="ex"><span class="ko">지금부터 제 고향에 대해서 발표하겠습니다. … 잘 들어 주셔서 감사합니다.</span><span class="vi">Sau đây tôi xin trình bày về quê hương mình. … Cảm ơn mọi người đã lắng nghe.</span></div>
-<table class="t">
-<tr><td class="ko">어디에 있어요?</td><td class="ko">제 고향은 베트남 ___에 있는 ___입니다.</td></tr>
-<tr><td class="ko">어떤 곳이에요?</td><td class="ko">___이/가 있는 조용한 / 아름다운 곳입니다.</td></tr>
-<tr><td class="ko">뭐가 유명해요?</td><td class="ko">___이/가 유명합니다.</td></tr>
-<tr><td class="ko">어떤 음식이 맛있어요?</td><td class="ko">___이/가 아주 맛있습니다.</td></tr>
-<tr><td class="ko">사람들은 주말에 뭐 해요?</td><td class="ko">주말에는 보통 ___-거나 ___.</td></tr>
-</table>
-<textarea class="ko wtx" id="whome" placeholder="제 고향은 …"></textarea>
-<div class="btns"><button class="b" data-readw="whome">🔊 Máy đọc bài của em</button><button class="b blue" data-tog="whomem">Xem bài mẫu</button></div>
-<div class="model ko" id="whomem">제 고향은 베트남 중부에 있는 응에안입니다. 응에안은 바다와 산이 있는 아름다운 곳입니다. 특히 끄어로 해변이 유명합니다. 여름에는 수영을 하<b>거나</b> 해산물을 먹<b>으려고</b> 많은 사람들이 응에안에 옵니다. 응에안 음식 중에서는 장어 수프가 아주 맛있습니다. 고향 사람들은 주말에 보통 가족과 같이 밥을 먹<b>거나</b> 시장에 갑니다. 저는 <b>방학마다</b> 고향에 갑니다. 여러분도 꼭 한번 와 보십시오.</div>
+<div class="model ko" id="wadm"><b>한국어로 이야기할 친구를 찾습니다!</b><br>안녕하세요? 저는 ○○대학교에서 영어를 전공하는 ○○○(이)라고 합니다. 저는 외국어를 아주 좋아하고 한국 문화에 관심이 많습니다. 졸업 자격증을 받으려고 한국어를 공부하고 있습니다. 한국어 공부는 재미있지만 말하기가 조금 어렵습니다. 그래서 매주 두 시간 정도 한국어 연습을 도와줄 수 있는 친구를 찾고 있습니다. 저는 베트남어나 영어를 가르쳐 드리겠습니다. 이메일이나 전화로 연락 주세요!</div>
+<p class="note">Tự kiểm tra: đủ 4 mục ghi chú · có <span class="ko">(이)라고 합니다, -(으)려고, -지만, (이)나</span> · mọi câu kết thúc bằng <span class="ko">-습니다 / -ㅂ니다</span> (trừ câu mời liên lạc).</p>
 </section>
 
-<!-- ================= KIỂM TRA ================= -->
+<!-- ================= NHIỆM VỤ · VĂN HÓA · PHÁT ÂM ================= -->
+<section class="sec" id="snv">
+<span class="pg">Trang 40 · 과제</span>
+<h2>Nhiệm vụ · Giới thiệu quê hương</h2>
+<p>Sách: <span class="ko">여러분의 고향을 소개해 보세요.</span> — Thuyết trình giới thiệu quê của em.</p>
+<p><b>Bước 1:</b> <span class="ko">여러분의 고향은 어디입니까? 어떤 곳입니까?</span> (Quê em ở đâu? Là nơi thế nào?)</p>
+<p><b>Bước 2:</b> ghi chú theo 4 câu hỏi của sách.</p>
+<div class="wf"><b>어디에 있어요?</b><input class="wi" id="h1" placeholder="베트남 ___에 있어요"></div>
+<div class="wf"><b>어떤 곳이에요?</b><input class="wi" id="h2" placeholder="조용한 / 아름다운 곳이에요"></div>
+<div class="wf"><b>뭐가 유명해요?</b><input class="wi" id="h3" placeholder="___이/가 유명해요"></div>
+<div class="wf"><b>어떤 음식이 맛있어요?</b><input class="wi" id="h4" placeholder="___이/가 맛있어요"></div>
+<p><b>Bước 3:</b> dùng ghi chú để thuyết trình, mở đầu và kết thúc như trong tranh:</p>
+<div class="ex"><span class="ko">지금부터 제 고향에 대해서 발표하겠습니다. 제 고향은 …… 잘 들어 주셔서 감사합니다.</span><span class="vi">Sau đây em xin trình bày về quê hương mình. Quê em là … Cảm ơn mọi người đã lắng nghe.</span></div>
+<div class="deep"><b>Học sâu · từ mới trang 40:</b> <span class="ko">유명하다</span> (有名 hữu danh) = nổi tiếng: <span class="ko">N이/가 유명하다</span>. <span class="ko">N에 대해(서)</span> = về N. <span class="ko">발표하다</span> (發表) = thuyết trình. <span class="ko">발표하겠습니다</span>: <span class="ko">-겠-</span> nói ý định một cách trang trọng trước đám đông. <span class="ko">들어 주셔서 감사합니다</span> = cảm ơn vì đã nghe (cho tôi).</div>
+<textarea class="ko wtx" id="whome" placeholder="지금부터 제 고향에 대해서 발표하겠습니다. 제 고향은 …"></textarea>
+<div class="btns"><button class="b" data-readw="whome">🔊 Máy đọc bài của em</button><button class="b blue" data-tog="whomem">Xem bài mẫu</button></div>
+<div class="model ko" id="whomem">지금부터 제 고향에 대해서 발표하겠습니다. 제 고향은 베트남 중부에 있는 응에안입니다. 응에안은 바다와 산이 있는 아름다운 곳입니다. 특히 끄어로 해변이 유명합니다. 여름에는 사람들이 바다에서 수영을 하<b>거나</b> 해산물을 먹<b>으려고</b> 응에안에 많이 옵니다. 응에안 음식 중에서는 장어 수프가 아주 맛있습니다. 저는 <b>방학마다</b> 고향에 갑니다. 여러분도 꼭 한번 오세요. 잘 들어 주셔서 감사합니다.</div>
+
+<span class="pg">Trang 41 · 문화 산책</span>
+<h2>Văn hóa · Tên người Hàn Quốc</h2>
+<p><b>준비:</b> <span class="ko">여러분은 한국 친구가 있습니까? 그 친구의 이름은 무엇입니까?</span> — Em có bạn Hàn không? Tên bạn ấy là gì? (Tranh: <span class="ko">김철수, 최은영, 정창용, 양영모, 황건희, 이지현, 한고은, 박성준, 윤민수</span> — để ý: chữ đầu là họ.)</p>
+<h4>알아보기 · đọc trong sách</h4>
+<div class="btns"><button class="b blue" data-au="cul">🔊 Nghe đọc</button></div>
+<div class="paper ko" id="cult"></div>
+<div class="scroll"><table class="t" id="cultt"></table></div>
+<div class="deep"><b>Học sâu · tên người Hàn:</b> ① Thường 3 âm tiết: họ 1 + tên 2. Họ phổ biến nhất: <span class="ko">김, 이, 박</span> (gần một nửa dân số). ② Tên thường là chữ Hán: <span class="ko">민수</span> 敏洙, <span class="ko">은영</span> 恩英… ③ Anh chị em hay có chung một chữ trong tên (như <span class="ko">유미, 유리, 유진</span>) — theo truyền thống <span class="ko">돌림자</span> (chữ chung cho một thế hệ). ④ Phụ nữ Hàn <b>không đổi họ</b> khi kết hôn.</div>
+<h4>생각 나누기 · Trao đổi</h4>
+<p><span class="ko">여러분 나라에는 어떤 성과 이름이 많습니까? 여러분 나라에서도 형제들의 이름이 비슷합니까?</span> — Ở nước em họ và tên nào phổ biến? Anh chị em có tên giống nhau không? Nói 3–4 câu với cô.</p>
+<textarea class="ko wtx" id="ex4" placeholder="베트남 사람들의 성은 …"></textarea>
+<div class="btns"><button class="b blue" data-tog="ex4m">Xem câu mẫu</button></div>
+<div class="model ko" id="ex4m">베트남 사람들의 성은 ‘응우옌’이 제일 많습니다. ‘쩐’이나 ‘레’도 많습니다. 베트남 사람들의 이름은 보통 세 글자나 네 글자입니다. 친구들은 성을 빼고 마지막 글자로 부릅니다. 예를 들면 ‘응우옌 티 투이’는 ‘투이’라고 부릅니다. 형제들의 이름이 비슷한 집도 많습니다.</div>
+
+<span class="pg">Trang 42 · 발음</span>
+<h2>Phát âm · Đồng hóa âm mũi 1 (비음화)</h2>
+<p><b>준비</b> (track 10) — nghe hai câu, để ý chữ đỏ:</p>
+<div class="ex"><span class="ko">저는 마리라고 <b>합</b>니다. [함니다]</span><button class="say" data-say="저는 마리라고 합니다.">🔊</button></div>
+<div class="ex"><span class="ko">교실에 시계가 <b>없</b>네요. [엄네요]</span><button class="say" data-say="교실에 시계가 없네요.">🔊</button></div>
+<div class="okbox"><b>Quy tắc (규칙):</b> phụ âm cuối được đọc là <b>[ㅂ]</b>, khi chữ sau bắt đầu bằng <b>ㄴ</b> hoặc <b>ㅁ</b>, đổi thành <b>[ㅁ]</b>.<br>
+<span class="ko">입는 [임는] · 앞만 [암만] · 없는 [엄는]</span></div>
+<div class="deep"><b>Học sâu · vì sao?</b> [ㅂ] và [ㅁ] cùng phát âm bằng <b>hai môi</b>. Khi chữ sau là âm mũi (ㄴ, ㅁ), miệng chuẩn bị đọc âm mũi sớm nên [ㅂ] bị “mũi hóa” thành [ㅁ]. Chữ viết là <span class="ko">ㅍ</span> (<span class="ko">앞</span>) hay <span class="ko">ㅄ</span> (<span class="ko">없, 값</span>) thì vẫn đọc [ㅂ] trước, nên cũng đổi thành [ㅁ]. Đuôi <span class="ko">-ㅂ니다 / -습니다</span> luôn đọc <span class="ko">[-ㅁ니다 / -슴니다]</span> — em nói câu này hàng ngày.<br>
+<b>Mở rộng (biến âm số 2, sẽ học sau):</b> cùng quy luật, [ㄷ] → [ㄴ] (<span class="ko">받는 [반는]</span>), [ㄱ] → [ㅇ] (<span class="ko">국물 [궁물]</span>).</div>
+<h4>연습 · 잘 듣고 따라 해 보세요 (track 11)</h4>
+<table class="t" id="pron"></table>
+<div class="set" data-set="p1"></div>
+<div class="tp"><b>📝 TOPIK</b> — Bài nghe đọc đúng như phát âm thật (<span class="ko">[함니다], [엄네요]</span>), không đọc như chữ viết. Quen biến âm thì nghe ra từ nhanh hơn.</div>
+</section>
+
+<!-- ================= TỰ ĐÁNH GIÁ ================= -->
 <section class="sec" id="skt">
-<h2>Kiểm tra cuối buổi</h2>
-<p class="goal">15 câu trộn từ vựng, ngữ pháp, phát âm và câu kiểu TOPIK. Làm một lượt, không xem lại lý thuyết. Mục tiêu từ <b>13/15</b>.</p>
+<span class="pg">Trang 43 · 자기 평가</span>
+<h2>Tự đánh giá</h2>
+<h3>1. 다음 중 아는 단어에 ✓ 하세요 <small class="note">(Đánh dấu từ em đã biết — bấm vào từ)</small></h3>
+<ul class="chk" id="chk0"></ul>
+<h3>2. 알맞은 것을 골라 대화를 만들어 보세요 <small class="note">(Dùng <span class="ko">(이)라고 하다, -(으)려고, -거나, (이)나</span> hoàn thành hội thoại)</small></h3>
+<div class="set" data-set="s2"></div>
+
+<h3>3. Kiểm tra cuối bài (15 câu)</h3>
+<p class="note">Làm một lượt, không xem lại các thẻ. Mục tiêu từ 13/15.</p>
 <div class="set" data-set="ck"></div>
 
 <div class="sum" id="sumall"></div>
 
 <h3>Bài về nhà</h3>
 <ol class="steps">
-  <li><b>Từ vựng:</b> ôn từ Bài 1 ở trang <a href="../#b=2A&amp;c=1">Từ vựng Seoul · 2A bài 1</a> và làm bài từ vựng cô gửi trên app mỗi ngày.</li>
-  <li><b>Ghi âm bài nói 1 phút</b> (thẻ Nói·Nghe, mục 3), nói không nhìn giấy, gửi Zalo cho cô.</li>
-  <li><b>Viết</b> quảng cáo tìm bạn (thẻ Đọc·Viết, mục 4) và bài giới thiệu quê hương (mục 5); bấm “Gửi kết quả cho cô” — bài viết đi kèm trong kết quả.</li>
-  <li><b>Chuẩn bị Bài 2:</b> mỗi ngày nói nhại hội thoại mẫu 1 lần (5 phút).</li>
+  <li><b>Từ vựng:</b> ôn từ Bài 1 ở trang <a href="../#b=2A&amp;c=1">Từ vựng Seoul · 2A bài 1</a>.</li>
+  <li><b>Nói:</b> nói nhại 2 hội thoại của sách (Nói 1, Nói 2) mỗi ngày 1 lần; ghi âm bài tự giới thiệu 1 phút gửi cô.</li>
+  <li><b>Viết:</b> tin tìm bạn luyện tiếng Hàn (thẻ Đọc–Viết) và bài giới thiệu quê hương (thẻ Nhiệm vụ) — gõ trong trang, bài viết đi kèm khi em bấm “Gửi kết quả cho cô”.</li>
 </ol>
-
-<h3>Sau buổi này em làm được</h3>
+<h3>Sau bài này em làm được</h3>
 <ul class="chk" id="chk">
-  <li>Điền phiếu thông tin cá nhân bằng tiếng Hàn, đọc đúng <span class="ko">연락처, 생년월일, 국적</span>.</li>
-  <li>Hỏi tên, tuổi, số điện thoại người mới gặp một cách lịch sự (<span class="ko">실례지만 … 어떻게 되세요?</span>).</li>
-  <li>Dùng đúng 9 trạng từ tần suất, không quên phủ định sau <span class="ko">별로, 전혀</span>.</li>
-  <li>Chia đúng <span class="ko">-(으)려고</span> với mọi kiểu gốc và tránh 3 bẫy (chủ ngữ, mệnh lệnh, tính từ).</li>
+  <li>Điền thẻ thông tin cá nhân bằng tiếng Hàn, đọc đúng <span class="ko">연락처, 생년월일, 직업</span>.</li>
+  <li>Dùng đúng <span class="ko">매일 / 매주 / 매달 / 매년</span> và <span class="ko">항상 / 자주 / 가끔</span>, nhớ phủ định sau <span class="ko">별로, 전혀</span>.</li>
+  <li>Giới thiệu tên bằng <span class="ko">(이)라고 하다</span>, hỏi “… nói thế nào” bằng <span class="ko">뭐라고 해요?</span></li>
+  <li>Chia đúng <span class="ko">-(으)려고</span> và tránh 3 bẫy (cùng người làm, không mệnh lệnh / rủ rê, không tính từ).</li>
   <li>Phân biệt <span class="ko">-거나 / (이)나 / -고 / 하고</span>.</li>
-  <li>Tự giới thiệu 1 phút không nhìn giấy.</li>
-  <li>Viết quảng cáo tìm người đúng đuôi <span class="ko">-습니다</span>, làm được câu 51 dạng tìm người.</li>
+  <li>Tự giới thiệu và hỏi thông tin người mới gặp một cách lịch sự (<span class="ko">실례지만 … 어떻게 되세요?</span>).</li>
+  <li>Đọc hiểu và tự viết tin tìm người giúp học ngoại ngữ (đuôi <span class="ko">-습니다</span>).</li>
+  <li>Thuyết trình 1 phút về quê hương; đọc đúng <span class="ko">합니다 [함니다]</span>.</li>
 </ul>
 </section>
 
@@ -526,212 +669,258 @@ nav a{font-size:14px;padding:6px 1px}
 
 <script>
 /* ---------- dữ liệu ---------- */
-// Thông tin cá nhân: [từ, phát âm, Hán tự, Hán Việt, nghĩa, hay đi với]
+// Thẻ học sinh: [từ, phát âm, Hán tự, Hán Việt, nghĩa, [[câu hỏi / cụm, nghĩa]]]
 var TV1=[
- ['성명','[성명]','姓名','tính danh','họ và tên (trên giấy tờ)',[['성명을 쓰다 / 적다','ghi họ tên'],['이름 (khi nói) · 성함 (kính ngữ)','']]],
- ['성별','[성별]','性別','tính biệt','giới tính',[['남 (남성) / 여 (여성)','nam / nữ'],['성별에 표시하다','đánh dấu vào ô giới tính']]],
- ['생년월일','[생녀눠릴]','生年月日','sinh niên nguyệt nhật','ngày tháng năm sinh',[['생년월일이 어떻게 되세요?','Ngày sinh của anh/chị là gì ạ?']]],
- ['직업','[지겁]','職業','chức nghiệp','nghề nghiệp',[['직업이 뭐예요?','Bạn làm nghề gì?'],['무슨 일을 하세요?','(lịch sự hơn) Anh/chị làm việc gì ạ?']]],
- ['국적','[국쩍]','國籍','quốc tịch','quốc tịch',[['국적이 어디예요?','Quốc tịch của bạn là gì?']]],
- ['종교','[종교]','宗敎','tông giáo','tôn giáo',[['종교가 있다 / 없다','có / không theo đạo'],['종교를 믿다','theo một tôn giáo']]],
- ['연락처','[열락처]','連絡處','liên lạc xứ','thông tin liên lạc (số điện thoại, email)',[['연락처를 남기다','để lại thông tin liên lạc'],['연락처를 주고받다','trao đổi số liên lạc']]],
- ['주소','[주소]','住所','trú sở','địa chỉ',[['주소를 쓰다 / 알려 주다','ghi / cho biết địa chỉ'],['이메일 주소','địa chỉ email']]],
- ['전화','[저놔]','電話','điện thoại','điện thoại, cuộc gọi',[['전화를 걸다 / 받다','gọi / nghe máy'],['전화번호','số điện thoại']]],
- ['이메일','[이메일]','','(e-mail)','thư điện tử',[['이메일을 보내다 / 확인하다','gửi / kiểm tra email']]]
+ ['성명','[성명]','姓名','tính danh','họ và tên (giấy tờ)',[['성명을 쓰다','ghi họ tên'],['이름이 뭐예요? · 성함이 어떻게 되세요?','khi nói chuyện']]],
+ ['성별','[성별]','性別','tính biệt','giới tính',[['남 (남자) / 여 (여자)','nam / nữ (ô ☐남 ☐여)']]],
+ ['생년월일','[생녀눠릴]','生年月日','sinh niên nguyệt nhật','ngày tháng năm sinh',[['___년 ___월 ___일','năm → tháng → ngày'],['생일이 언제예요?','khi nói chuyện']]],
+ ['직업','[지겁]','職業','chức nghiệp','nghề nghiệp',[['직업이 뭐예요?',''],['무슨 일을 하세요?','lịch sự hơn']]],
+ ['국적','[국쩍]','國籍','quốc tịch','quốc tịch',[['국적이 어디예요?',''],['어느 나라 사람이에요?','khi nói chuyện']]],
+ ['종교','[종교]','宗敎','tông giáo','tôn giáo',[['종교가 있어요 / 없어요','có / không theo đạo']]],
+ ['연락처','[열락처]','連絡處','liên lạc xứ (nơi liên lạc)','thông tin liên lạc (gồm 주소, 전화, 이메일)',[['연락처가 어떻게 되세요?',''],['연락처를 남기다','để lại thông tin liên lạc']]],
+ ['주소','[주소]','住所','trú sở','địa chỉ',[['주소가 어디예요?',''],['이메일 주소','địa chỉ email']]],
+ ['전화','[저놔]','電話','điện thoại','điện thoại',[['전화번호가 뭐예요?',''],['전화를 걸다 / 받다','gọi / nghe máy']]],
+ ['이메일','[이메일]','','(e-mail)','thư điện tử',[['이메일을 보내다','gửi email']]]
 ];
-// Tần suất: [từ, ghi chú, nghĩa, ví dụ, dịch]
+// Tần suất: [từ, Hán Việt, nghĩa, ví dụ, dịch]
 var TV2=[
- ['매일','每日 · mỗi nhật','mỗi ngày','저는 매일 아침 한국어 단어를 외워요.','Sáng nào mình cũng học thuộc từ tiếng Hàn.'],
- ['매주','每週 · mỗi chu','mỗi tuần','매주 토요일에 한국어 수업이 있어요.','Thứ bảy hằng tuần có lớp tiếng Hàn.'],
- ['매달','每 + 달 (= 매월)','mỗi tháng','매달 부모님께 용돈을 받아요.','Tháng nào mình cũng nhận tiền tiêu vặt của bố mẹ.'],
- ['매년','每年 · mỗi niên','mỗi năm','매년 여름에 고향에 가요.','Hè năm nào mình cũng về quê.'],
  ['항상','恒常 · hằng thường','luôn luôn (= 늘, 언제나)','그 친구는 항상 웃어요.','Bạn ấy lúc nào cũng cười.'],
  ['자주','','thường xuyên, hay','저는 그 카페에 자주 가요.','Mình hay đến quán cà phê đó.'],
  ['가끔','','thỉnh thoảng (= 때때로)','가끔 고향 음식이 먹고 싶어요.','Thỉnh thoảng mình thèm món ăn quê nhà.'],
  ['별로 + phủ định','別 · biệt','không… lắm','그 영화는 별로 재미없었어요.','Phim đó không hay lắm.'],
  ['전혀 + phủ định','全 · toàn','hoàn toàn không','저는 술을 전혀 못 마셔요.','Mình hoàn toàn không uống được rượu.']
 ];
-// Từ mới khác: [từ, Hán tự · Hán Việt, nghĩa, cụm / ghi chú]
-var TV3=[
- ['뵙다','','gặp (khiêm nhường của 보다/만나다)','처음 뵙겠습니다 · 다음에 또 뵙겠습니다'],
- ['부르다','','gọi (tên)','N을/를 N(이)라고 부르다'],
- ['그냥','','cứ, chỉ đơn giản là','그냥 투이라고 부르세요'],
- ['(학교에) 들어가다','','vào (trường), nhập học','내년에 대학교에 들어가요'],
- ['이유','理由 · lý do','lý do','한국어를 배우는 이유'],
- ['평일','平日 · bình nhật','ngày thường (thứ hai – thứ sáu)','↔ 주말'],
- ['방학','放學 · phóng học','kỳ nghỉ (của học sinh, sinh viên)','방학에 보통 뭐 해요?'],
- ['시간이 나다','','có thời gian rảnh','시간이 나면 책을 읽어요 (tiểu từ 이, không phải 을)'],
- ['사 오다','','mua mang về','과일을 좀 사 오세요'],
- ['초대를 받다','招待 · chiêu đãi','được mời','친구 집에 초대를 받았어요 · 초대하다 = mời'],
- ['언어','言語 · ngôn ngữ','ngôn ngữ','외국어 = ngoại ngữ (外國語)'],
- ['문화','文化 · văn hóa','văn hóa','한국 문화'],
- ['관심','關心 · quan tâm','sự quan tâm, hứng thú','N에 관심이 많다 / 있다 (tiểu từ 에)'],
- ['정도','程度 · trình độ','khoảng, chừng','두 시간 정도 · 일주일에 한 번 정도'],
- ['유명하다','有名 · hữu danh','nổi tiếng','N이/가 유명하다 · N(으)로 유명하다'],
- ['발표하다','發表 · phát biểu','thuyết trình, công bố','N에 대해서 발표하다'],
- ['친하다','親 · thân','thân thiết','N와/과 친하다 · 제일 친한 친구'],
- ['성','姓 · tính','họ','성을 빼고 부르다 = gọi tên bỏ họ'],
- ['형제','兄弟 · huynh đệ','anh chị em','형제가 어떻게 되세요?'],
- ['비슷하다','','giống, tương tự','N와/과 비슷하다'],
- ['게시판','揭示板 · yết thị bản','bảng tin','게시판에 광고를 붙이다'],
- ['광고','廣告 · quảng cáo','quảng cáo, tờ rơi','광고를 보다 / 내다'],
- ['소개팅','紹介 + meeting','buổi gặp mặt làm quen (do người quen giới thiệu)','소개팅을 하다'],
- ['고향','故鄕 · cố hương','quê hương','고향이 어디예요?']
+// Bài 3 trang 27
+var LIFE=[
+ ['나는 노래방에 가면 (항상/자주/가끔) 한국 노래를 합니다.','Đi karaoke thì em … hát bài tiếng Hàn.'],
+ ['나는 라면을 먹으면 (항상/자주/가끔) 김치를 먹고 싶습니다.','Ăn mì thì em … muốn ăn kim chi.'],
+ ['나는 인터넷에서 한국 뉴스를 (항상/자주/가끔) 봅니다.','Em … đọc tin tức Hàn trên mạng.'],
+ ['나는 한국 사람과 (항상/자주/가끔) 한국어로 이야기합니다.','Em … nói chuyện bằng tiếng Hàn với người Hàn.'],
+ ['나는 (항상/자주/가끔) 한국어로 전화를 합니다.','Em … gọi điện bằng tiếng Hàn.']
 ];
-// Hội thoại mẫu: [người nói, câu, dịch]
-var DLG=[
- ['투이','처음 뵙겠습니다. 저는 응우옌 투이라고 합니다.','Rất hân hạnh được gặp anh. Em tên là Nguyễn Thùy.'],
- ['지훈','만나서 반가워요. 저는 박지훈이에요. 실례지만 무슨 일을 하세요?','Rất vui được gặp bạn. Mình là Park Jihun. Xin lỗi, bạn làm gì vậy?'],
- ['투이','대학교에서 영어를 전공하고 있어요. 그리고 졸업하려고 한국어도 배우고 있어요.','Em học chuyên ngành tiếng Anh ở đại học. Và em đang học cả tiếng Hàn để tốt nghiệp.'],
- ['지훈','졸업하려고요? 왜요?','Để tốt nghiệp á? Sao vậy?'],
- ['투이','우리 학교는 졸업할 때 외국어 자격증이 하나 더 필요해요. 그래서 내년 4월에 토픽 시험을 보려고 해요.','Trường em khi tốt nghiệp cần thêm một chứng chỉ ngoại ngữ nữa. Nên em định thi TOPIK vào tháng 4 năm sau.'],
- ['지훈','아, 그래요? 투이 씨는 한국어를 매일 공부해요?','À, vậy à? Thùy học tiếng Hàn mỗi ngày à?'],
- ['투이','네, 거의 매일 해요. 수업이 없는 날에는 한국 드라마를 보거나 한국 노래를 들어요. 지훈 씨는요?','Vâng, gần như ngày nào cũng học. Hôm nào không có tiết thì em xem phim Hàn hoặc nghe nhạc Hàn. Còn anh Jihun?'],
- ['지훈','저는 베트남어를 배우려고 베트남에 왔어요. 우리 일주일에 한 번이나 두 번 같이 공부할까요?','Mình sang Việt Nam để học tiếng Việt. Mình học cùng nhau tuần một hoặc hai lần nhé?'],
- ['투이','좋아요! 토요일이나 일요일 어때요? 그냥 투이라고 부르세요.','Hay quá! Thứ bảy hoặc chủ nhật được không anh? Anh cứ gọi em là Thùy nhé.'],
- ['지훈','토요일이 좋아요. 그럼 제 연락처를 드릴게요.','Thứ bảy được đấy. Vậy mình đưa bạn số liên lạc nhé.']
+var LIFEW=['항상','자주','가끔','안'],LIFEP=[5,3,1,0];
+// Hội thoại sách: [người nói, câu (có mark), dịch]
+var D1=[
+ ['마리코','처음 뵙겠습니다. 저는 <mark class="s1">다나카 마리코</mark>라고 합니다.','Rất hân hạnh. Tôi tên là Tanaka Mariko.'],
+ ['스티븐','만나서 반가워요. <mark class="s1">다나카 마리코</mark> 씨. 저는 <mark class="s2">스티븐</mark>입니다.','Rất vui được gặp chị Tanaka Mariko. Tôi là Steven.'],
+ ['마리코','그냥 <mark class="s1">마리코</mark>라고 부르세요. 실례지만 <mark class="s2">스티븐</mark> 씨는 무슨 일을 하세요?','Cứ gọi tôi là Mariko. Xin lỗi, anh Steven làm nghề gì ạ?'],
+ ['스티븐','저는 <mark class="s3">대학교에서 한국 역사를 공부하고 있어요</mark>. <mark class="s1">마리코</mark> 씨는 왜 한국어를 공부하세요?','Tôi đang học lịch sử Hàn Quốc ở đại học. Còn Mariko, sao chị học tiếng Hàn?'],
+ ['마리코','<mark class="s4">좋아하는 한국 드라마를 한국어로 보려고</mark> 공부해요.','Tôi học để xem những bộ phim Hàn mình thích bằng tiếng Hàn.']
 ];
-// Phản xạ: [câu hỏi, trả lời mẫu, ghi chú]
-var QA=[
- ['실례지만 성함이 어떻게 되세요?','저는 응우옌 투이라고 합니다. 그냥 투이라고 부르세요.','Không trả lời 제 성함은… (không dùng kính ngữ cho mình).'],
- ['무슨 일을 하세요?','저는 대학생이에요. 영어를 전공하고 있어요.','Sinh viên vẫn trả lời câu này bằng việc học.'],
- ['왜 한국어를 배우세요?','졸업 자격증을 받으려고 배워요. 그리고 한국 드라마를 좋아해요.','Lý do = -(으)려고. Thêm một ý thứ hai cho tự nhiên.'],
- ['한국어를 얼마나 자주 공부해요?','거의 매일 공부해요. 주말에는 가끔 쉬어요.','Trả lời bằng trạng từ tần suất.'],
- ['주말에 보통 뭐 하세요?','집에서 쉬거나 친구를 만나요.','-거나 cho hai việc, chọn một.'],
- ['시간이 나면 보통 뭐 해요?','영어 소설을 읽거나 한국 노래를 들어요.','듣다 → 들어요 (bất quy tắc ㄷ), nhưng 듣거나 giữ nguyên.'],
- ['아침에 보통 뭘 먹어요?','쌀국수나 반미를 먹어요.','Danh từ + (이)나.'],
- ['고향이 어디예요?','제 고향은 응에안이에요. 바다가 아름다워요.','Thay bằng quê của em.'],
- ['‘감사합니다’를 베트남어로 뭐라고 해요?','‘깜언’이라고 해요.','깜언 có 받침 → 이라고.'],
- ['생일에 무슨 선물을 받고 싶어요?','책이나 꽃을 받고 싶어요.',''],
- ['술을 자주 마셔요?','아니요, 별로 안 마셔요. 가끔 맥주를 한 잔 마셔요.','별로 + phủ định.'],
- ['연락처가 어떻게 되세요?','공구공에 일이삼에 사오육칠이에요.','Số điện thoại đọc bằng số Hán Hàn, 0 = 공, dấu gạch đọc là 에.']
+var D2=[
+ ['샤오밍','마리코 씨는 주말에 보통 뭐 하세요?','Mariko, cuối tuần chị thường làm gì?'],
+ ['마리코','<mark class="s1">집에서 쉬거나 친구를 만나요</mark>. 샤오밍 씨는요?','Tôi nghỉ ở nhà hoặc gặp bạn bè. Còn anh Xiaoming?'],
+ ['샤오밍','저는 주말에는 항상 <mark class="s2">운동을 해요</mark>.','Cuối tuần tôi luôn chơi thể thao.'],
+ ['마리코','무슨 <mark class="s2">운동을 해요</mark>?','Anh chơi môn gì?'],
+ ['샤오밍','<mark class="s3">수영이나 농구를 해요</mark>.','Tôi bơi hoặc chơi bóng rổ.'],
+ ['마리코','그래요? 저도 <mark class="s4">매일 수영을 해요</mark>.','Vậy à? Tôi cũng bơi mỗi ngày.'],
+ ['샤오밍','어, 우리는 취미가 같네요.','Ồ, chúng ta có cùng sở thích nhỉ.']
 ];
-// Bài nghe: [người nói, câu]
-var AU={
- n1:[['여','여보세요? 하준 씨, 저 투이예요.'],['남','아, 투이 씨! 안녕하세요?'],['여','이번 주말에 시간 있어요? 같이 한국어하고 베트남어를 연습하고 싶어요.'],['남','좋아요. 그런데 토요일에는 아르바이트가 있어요. 일요일 어때요?'],['여','일요일 좋아요. 오후 두 시나 세 시 어때요?'],['남','세 시가 좋아요. 어디에서 만날까요?'],['여','학교 도서관 앞에 카페가 있어요. 거기에서 만나요.'],['남','네, 그럼 일요일 오후 세 시에 도서관 앞 카페에서 만나요.']],
- n2:[['남','처음 뵙겠습니다. 저는 이민호라고 합니다.'],['여','안녕하세요? 저는 팜 란이에요. 그냥 란이라고 부르세요.'],['남','란 씨는 무슨 일을 하세요?'],['여','하노이에 있는 대학교에서 영어를 가르쳐요. 민호 씨는요?'],['남','저는 회사에 다녀요. 내년에 베트남 지사에서 일하려고 베트남어를 배우고 있어요.'],['여','그래요? 주말에는 보통 뭐 하세요?'],['남','저는 주말에는 항상 운동을 해요. 수영을 하거나 자전거를 타요. 란 씨는요?'],['여','저는 운동은 별로 안 좋아해요. 집에서 책을 읽거나 영화를 봐요.']]
-};
-// Trắc nghiệm: [câu hỏi, [đáp án đúng, nhiễu…], giải thích, (lời thoại nghe)]
+// 연습 1 trang 30: [tên → gọi tắt, lý do học] · [người kia, việc đang làm]
+var SUB1=[
+ [['사만다','샘','내년에 한국 대학교에 들어가려고'],['김민수','컴퓨터 회사에 다니고 있어요']],
+ [['낫다룬','언','한국 친구들과 한국어로 이야기하려고'],['크리스','학교에서 영어를 가르치고 있어요']]
+];
+// 연습 1 trang 34: [A trả lời, B nói, B hỏi, B (이)나, A cũng]
+var SUB2=[
+ ['책을 읽거나 청소를 해요','영화를 봐요','무슨 영화를 봐요?','코미디 영화나 액션 영화를 봐요','영화를 자주 봐요'],
+ ['쇼핑을 하거나 운동을 해요','요리를 해요','무슨 요리를 해요?','한국 요리나 중국 요리를 해요','매주 토요일에 요리를 배워요'],
+ ['숙제를 하거나 산책을 해요','책을 읽어요','무슨 책을 읽어요?','소설책이나 잡지를 읽어요','소설책을 아주 좋아해요']
+];
+// Câu hỏi – trả lời mẫu: [câu hỏi, mẫu, ghi chú]
+var QA={
+qa1:[
+ ['왜 공원에 갔어요?','운동하려고 갔어요. / 산책하려고 갔어요.','Câu mẫu của sách.'],
+ ['왜 한국에 왔어요?','한국어를 배우려고 왔어요. / 한국 회사에서 일하려고 왔어요.','Với em: 왜 한국어를 배워요? → 졸업 자격증을 받으려고 배워요.'],
+ ['왜 학교에 일찍 왔어요?','숙제를 하려고 일찍 왔어요. / 친구하고 공부하려고 왔어요.',''],
+ ['왜 택시를 탔어요?','약속 시간에 늦지 않으려고 택시를 탔어요.','Mục đích “để không…” → -지 않으려고.'],
+ ['왜 케이크를 샀어요?','친구 생일 파티를 하려고 샀어요. / 동생에게 선물하려고 샀어요.','']
+],
+qa2:[
+ ['실례지만 성함이 어떻게 되세요?','저는 응우옌 투이라고 합니다. 그냥 투이라고 부르세요.','Không trả lời 제 성함은…'],
+ ['무슨 일을 하세요?','저는 대학생이에요. 영어를 공부하고 있어요.',''],
+ ['왜 한국어를 배우세요?','졸업 자격증을 받으려고 배워요.','-(으)려고.'],
+ ['국적이 어떻게 되세요?','베트남 사람이에요. / 국적은 베트남이에요.',''],
+ ['실례지만 나이가 어떻게 되세요?','스무 살이에요.','Tuổi đọc bằng số thuần Hàn: 스무 살, 스물한 살.'],
+ ['연락처가 어떻게 되세요?','공구공에 일이삼에 사오육칠이에요.','Số điện thoại đọc bằng số Hán Hàn, 0 = 공, dấu gạch đọc là 에.'],
+ ['가족들은 투이 씨를 뭐라고 불러요?','가족들은 저를 ‘빈’이라고 불러요.','N을/를 N(이)라고 부르다.'],
+ ['‘감사합니다’를 베트남어로 뭐라고 해요?','‘깜언’이라고 해요.','깜언 có 받침 → 이라고.']
+],
+qa3:[
+ ['수업 후에 보통 뭐 해요?','도서관에 가거나 친구를 만나요.','Câu mẫu của sách.'],
+ ['일요일에 보통 뭐 해요?','집에서 쉬거나 가족하고 시장에 가요.',''],
+ ['평일에 보통 뭐 해요?','학교에 가거나 아르바이트를 해요.','평일 = ngày thường.'],
+ ['돈이 많으면 뭐 하고 싶어요?','세계 여행을 하거나 큰 집을 사고 싶어요.','-고 싶다 chỉ chia ở vế cuối.'],
+ ['가족이 보고 싶으면 어떻게 해요?','전화를 하거나 가족 사진을 봐요.','']
+],
+qa4:[
+ ['생일에 무슨 선물을 받고 싶어요?','책이나 시계를 받고 싶어요.','Tranh: sách, áo/khăn, đồng hồ.'],
+ ['친구를 만나면 보통 어디에 가요?','노래방이나 카페에 가요.','Tranh: karaoke, quán cà phê, rạp chiếu phim.'],
+ ['다른 사람 집에 초대를 받으면 보통 뭘 사 가요?','꽃이나 과일을 사 가요.','Tranh: hoa, giỏ hoa quả, rượu vang. 사 가다 = mua mang đến.'],
+ ['어느 나라에 가 보고 싶어요?','프랑스나 이집트에 가 보고 싶어요.','Tranh: tháp Eiffel (프랑스), tượng Nữ thần Tự do (미국), kim tự tháp (이집트). -아/어 보다 = thử.']
+],
+qa5:[
+ ['시간이 나면 보통 뭘 해요?','저는 시간이 나면 음악을 듣거나 책을 읽어요.','Câu mẫu của sách.'],
+ ['한국 식당에 가면 보통 뭘 먹어요?','비빔밥이나 불고기를 먹어요.',''],
+ ['쉬는 시간에 보통 뭘 해요?','커피를 마시거나 친구하고 이야기해요.','쉬는 시간 = giờ giải lao.'],
+ ['고향에서는 학생들이 보통 방학에 뭘 해요?','고향에서는 학생들이 방학에 아르바이트를 하거나 여행을 해요.',''],
+ ['친구를 만나면 보통 어디에 가요?','카페나 영화관에 가요.','']
+]};
+// Bài đọc trang 38
+var READ=[
+ ['안녕하세요? 저는 서울대학교 2학년 박민영이라고 합니다.','Xin chào. Tôi là Park Minyoung, sinh viên năm 2 Đại học Seoul.','<b>(이)라고 합니다</b> — giới thiệu tên. <b>2학년</b> [이항년] = năm thứ 2.'],
+ ['저는 여행을 아주 좋아하고 다른 나라의 언어나 문화에 관심이 많습니다.','Tôi rất thích du lịch và quan tâm nhiều đến ngôn ngữ, văn hóa của các nước khác.','<b>-고</b> nối hai ý. <b>언어나 문화</b> = (이)나. <b>N에 관심이 많다</b> (關心 quan tâm) — tiểu từ 에.'],
+ ['이번 가을에 중남미를 여행하려고 스페인어를 공부하고 있습니다.','Tôi đang học tiếng Tây Ban Nha để mùa thu này đi du lịch Trung – Nam Mỹ.','<b>-(으)려고</b> + <b>-고 있다</b>. 중남미 (中南美) = Trung và Nam Mỹ.'],
+ ['스페인어 공부는 재미있지만 발음이 조금 어렵습니다.','Học tiếng Tây Ban Nha thú vị nhưng phát âm hơi khó.','<b>-지만</b> = nhưng. <b>공부는</b>: 은/는 nêu chủ đề.'],
+ ['그래서 매주 두 시간 정도 스페인어 연습을 도와줄 수 있는 분을 찾고 있습니다.','Vì vậy tôi đang tìm người có thể giúp tôi luyện tiếng Tây Ban Nha khoảng hai tiếng mỗi tuần.','<b>매주</b> + <b>정도</b> (khoảng). <b>도와줄 수 있는 분</b> = người (lịch sự: 분) có thể giúp — <b>-(으)ㄹ 수 있다</b> + định ngữ <b>-는</b>.'],
+ ['저는 한국어를 가르쳐 드리겠습니다.','Đổi lại, tôi sẽ dạy tiếng Hàn (cho người đó).','<b>-아/어 드리다</b> = làm cho (người trên, khiêm nhường). <b>-겠-</b> = ý chí, lời hứa.'],
+ ['전화 주세요!','Hãy gọi điện cho tôi nhé!','<b>전화(를) 주다</b> = gọi điện cho mình.']
+];
+// Văn hóa trang 41
+var CUL=[
+ ['제 한국 친구들의 이름은 보통 세 글자입니다.','Tên các bạn Hàn của tôi thường có ba chữ.','<b>글자</b> = chữ, âm tiết.'],
+ ['저와 제일 친한 친구의 이름은 ‘김유미’입니다.','Bạn thân nhất của tôi tên là “Kim Yumi”.','<b>제일</b> = nhất. <b>N와/과 친하다</b> = thân với N; <b>친한 친구</b> = bạn thân.'],
+ ['친구들은 성을 빼고 ‘유미’라고 부릅니다.','Bạn bè bỏ họ, gọi là “Yumi”.','<b>성</b> (姓) = họ. <b>빼다</b> = bỏ ra. <b>(이)라고 부르다</b>.'],
+ ['유미의 형제들은 이름이 아주 비슷합니다.','Anh chị em của Yumi có tên rất giống nhau.','<b>형제</b> (兄弟) = anh chị em. <b>비슷하다</b> = giống.'],
+ ['유미의 언니 이름은 ‘김유리’이고 남동생 이름은 ‘김유진’입니다.','Chị của Yumi tên là “Kim Yuri”, còn em trai tên là “Kim Yujin”.','<b>N이고</b> = 이다 + -고 (là … và …).'],
+ ['형제들의 이름이 비슷한 것이 재미있습니다.','Việc anh chị em có tên giống nhau thật thú vị.','<b>비슷한 것</b> = việc (cái) giống nhau.']
+];
+// Phát âm trang 42: [câu, phát âm chỗ biến âm]
+var PRON=[
+ ['어제 사십 명쯤 왔어요.','사십 명 [사심 명]'],
+ ['앞문으로 들어오세요.','앞문 [암문]'],
+ ['값만 물어보고 안 샀어요.','값만 [감만]'],
+ ['안녕하세요? 저는 다나카라고 합니다.','합니다 [함니다]'],
+ ['안녕하세요? 스티븐입니다.','입니다 [임니다]']
+];
+// Tự đánh giá 1
+var SELF=[['성명','họ và tên'],['국적','quốc tịch'],['연락처','thông tin liên lạc'],['생년월일','ngày tháng năm sinh'],['항상','luôn luôn'],['가끔','thỉnh thoảng'],['매주','mỗi tuần'],['매년','mỗi năm'],['언어','ngôn ngữ'],['관심','sự quan tâm'],['시간이 나다','có thời gian rảnh'],['학교에 들어가다','vào trường, nhập học']];
+// Bài nghe máy đọc
+var AU={rd:READ.map(function(r){return ['',r[0]];}),cul:CUL.map(function(r){return ['',r[0]];})};
+function strip(s){return s.replace(/<[^>]+>/g,'');}
+AU.d1=D1.map(function(d){return [d[0],strip(d[1])];});
+AU.d2=D2.map(function(d){return [d[0],strip(d[1])];});
+var MALE={'스티븐':1,'샤오밍':1,'김민수':1,'크리스':1,'남':1,'A':1};
+// Trắc nghiệm: [câu hỏi, [đúng, nhiễu…], giải thích, (lời máy đọc)]
 var M={
+v0:[
+ ['Tranh: tờ lịch xé từng ngày. — 저는 (    ) 한국어를 공부해요.',['매일','매주','매달','매년'],'Ngày nào cũng học → 매일.'],
+ ['Tranh: lịch tháng 12 của nhiều năm, ngày 25 được khoanh. — 저는 (    ) 크리스마스에 고향에 가요.',['매년','매일','매주','매달'],'Giáng sinh mỗi năm một lần → 매년.'],
+ ['Tranh: lịch tháng 6, các ngày chủ nhật được khoanh. — 저는 (    ) 일요일에 등산을 해요.',['매주','매일','매달','매년'],'Chủ nhật tuần nào cũng đi → 매주.'],
+ ['Tranh: lịch nhiều tháng, ngày 30 được khoanh. — 저는 (    ) 30일에 회의를 해요.',['매달','매주','매일','매년'],'Ngày 30 tháng nào cũng họp → 매달.']
+],
 v1:[
  ['서류에 이름, 주소, (    )을/를 쓰세요. 전화번호나 이메일을 쓰면 돼요.',['연락처','국적','종교','성별'],'Số điện thoại, email = 연락처.'],
  ['저는 한국 사람이 아니에요. (    )은/는 베트남이에요.',['국적','직업','주소','성명'],'Quốc tịch = 국적.'],
- ['(    )이/가 어떻게 되세요? — 2006년 3월 8일이에요.',['생년월일','연락처','성별','종교'],'Ngày tháng năm sinh = 생년월일; viết năm → tháng → ngày.'],
- ['저는 (    ) 아침 여섯 시에 일어나요. 하루도 안 늦어요.',['매일','가끔','별로','전혀'],'“Không ngày nào trễ” → mỗi ngày.'],
- ['그 식당은 (    ) 맛없어요. 다시 가고 싶지 않아요.',['별로','항상','자주','매년'],'별로 + 맛없다 (phủ định) = không ngon lắm. Câu này dùng 맛없어요 nên 별로 đi được.'],
- ['저는 술을 (    ) 못 마셔요. 한 잔도 못 마셔요.',['전혀','가끔','자주','매주'],'“Một ly cũng không” → 전혀 (hoàn toàn không) + 못.'],
- ['한 달에 한 번 부모님께 돈을 보내요. = (    ) 돈을 보내요.',['매달','매주','매일','매년'],'Một tháng một lần = mỗi tháng.'],
+ ['(    )이/가 어떻게 되세요? — 2006년 3월 8일이에요.',['생년월일','연락처','성별','종교'],'Ngày tháng năm sinh = 생년월일.'],
+ ['그 식당은 (    ) 맛없어요. 다시 가고 싶지 않아요.',['별로','항상','자주','매년'],'별로 + phủ định (맛없다).'],
+ ['저는 술을 (    ) 못 마셔요. 한 잔도 못 마셔요.',['전혀','가끔','자주','매주'],'“Một ly cũng không” → 전혀 + 못.'],
  ['1년에 두세 번 영화를 봐요. 영화를 (    ) 봐요.',['가끔','항상','매일','자주'],'Hai ba lần một năm = thỉnh thoảng.']
 ],
 v2:[
- ['Lần đầu gặp giáo sư, muốn hỏi tên. Câu nào phù hợp nhất?',['실례지만 성함이 어떻게 되세요?','이름이 뭐야?','실례지만 이름이 몇이에요?','성함이 뭐니?'],'실례지만 + kính ngữ 성함 + 어떻게 되세요?'],
- ['Hỏi tuổi bà của bạn. Câu nào đúng?',['할머니, 연세가 어떻게 되세요?','할머니, 나이가 몇 살이에요?','할머니, 연세가 몇 살이야?','할머니, 나이가 어떻게 돼?'],'Người lớn tuổi: 연세 + 어떻게 되세요?'],
- ['Câu chào lần đầu trang trọng nhất (phỏng vấn, gặp đối tác):',['처음 뵙겠습니다.','처음 보겠습니다.','처음 만나요.','반가워.'],'뵙다 là dạng khiêm nhường của 보다/만나다. 처음 보겠습니다 là sai.'],
- ['선생님, (    )이 어디세요? (nhà)',['댁','집','성함','연세'],'Nhà của người trên = 댁.'],
- ['Người khác hỏi: 실례지만 성함이 어떻게 되세요? Em trả lời:',['저는 투이라고 합니다.','제 성함은 투이입니다.','투이 씨예요.','제 성함은 투이라고 하세요.'],'Không dùng kính ngữ (성함, 씨, -세요) cho chính mình.']
+ ['Lần đầu gặp giáo sư, muốn hỏi tên. Câu nào phù hợp nhất?',['실례지만 성함이 어떻게 되세요?','이름이 뭐야?','실례지만 이름이 몇이에요?','성함이 뭐니?'],'실례지만 + 성함 + 어떻게 되세요?'],
+ ['Hỏi tuổi bà của bạn:',['할머니, 연세가 어떻게 되세요?','할머니, 나이가 몇 살이에요?','할머니, 연세가 몇 살이야?','할머니, 나이가 어떻게 돼?'],'Người lớn tuổi: 연세 + 어떻게 되세요?'],
+ ['Câu chào lần đầu trang trọng nhất:',['처음 뵙겠습니다.','처음 보겠습니다.','처음 만나요.','반가워.'],'뵙다 = khiêm nhường của 보다/만나다; 처음 보겠습니다 là sai.'],
+ ['Được hỏi 실례지만 성함이 어떻게 되세요?, em trả lời:',['저는 투이라고 합니다.','제 성함은 투이입니다.','투이 씨예요.','제 성함은 투이라고 하세요.'],'Không dùng kính ngữ (성함, 씨, -세요) cho chính mình.']
 ],
 v3:[
- ['저는 한국 문화(    ) 관심이 많아요.',['에','을','가','로'],'N에 관심이 많다 / 있다.'],
- ['친구에게 전화(    ) 걸었어요.',['를','에','이','로'],'전화를 걸다 / 받다.'],
- ['저를 그냥 마리(    ) 부르세요.',['라고','이라고','를','가'],'마리 không 받침 → 라고. N을/를 N(이)라고 부르다.'],
- ['내년에 대학교(    ) 들어가요.',['에','를','이','에서'],'(학교)에 들어가다 = vào trường.'],
- ['시간(    ) 나면 보통 책을 읽어요.',['이','을','에','로'],'시간이 나다 — tiểu từ chủ ngữ 이.'],
- ['다른 사람 집에 초대(    ) 받았어요.',['를','에','가','로'],'초대를 받다 = được mời.']
+ ['저는 한국 문화(    ) 관심이 많아요.',['에','을','가','로'],'N에 관심이 많다.'],
+ ['저를 그냥 마리(    ) 부르세요.',['라고','이라고','를','가'],'마리 không 받침 → 라고.'],
+ ['내년에 대학교(    ) 들어가요.',['에','를','이','에서'],'(학교)에 들어가다.'],
+ ['시간(    ) 나면 보통 책을 읽어요.',['이','을','에','로'],'시간이 나다.'],
+ ['다른 사람 집에 초대(    ) 받았어요.',['를','에','가','로'],'초대를 받다.']
 ],
-g2:[
- ['한국 친구를 (    ) 한국어 동아리에 가입했어요.',['사귀려고','사귀러','사귀거나','사귀나'],'가입하다 không phải động từ di chuyển → không dùng -(으)러; mục đích → -(으)려고.'],
- ['Câu nào SAI?',['같이 밥을 먹으려고 식당에 갑시다.','같이 밥을 먹으러 식당에 갑시다.','밥을 먹으려고 식당에 갔어요.','밥을 먹으러 식당에 갔어요.'],'-(으)려고 không đi với vế sau rủ rê (-ㅂ시다); dùng -(으)러.'],
- ['Câu nào SAI?',['예쁘려고 매일 운동해요.','예뻐지려고 매일 운동해요.','건강해지려고 매일 운동해요.','살을 빼려고 저녁을 안 먹어요.'],'Tính từ không đi với -(으)려고 → 예뻐지려고 (trở nên đẹp).'],
- ['Câu nào SAI?',['엄마가 요리하려고 제가 장을 봤어요.','저는 요리하려고 장을 봤어요.','엄마가 요리하시려고 장을 보셨어요.','요리하려고 고기를 샀어요.'],'Hai vế -(으)려고 phải cùng chủ ngữ.'],
+m1:[
+ ['한국 친구를 (    ) 한국어 동아리에 가입했어요.',['사귀려고','사귀러','사귀거나','사귀나'],'가입하다 không phải động từ di chuyển → không dùng -(으)러.'],
+ ['Câu nào SAI?',['같이 밥을 먹으려고 식당에 갑시다.','같이 밥을 먹으러 식당에 갑시다.','밥을 먹으려고 식당에 갔어요.','밥을 먹으러 식당에 갔어요.'],'-(으)려고 + vế sau rủ rê (-ㅂ시다) ✗.'],
+ ['Câu nào SAI?',['예쁘려고 매일 운동해요.','예뻐지려고 매일 운동해요.','건강해지려고 매일 운동해요.','살을 빼려고 저녁을 안 먹어요.'],'Tính từ không đi với -(으)려고 → 예뻐지려고.'],
+ ['Câu nào SAI?',['엄마가 요리하려고 제가 장을 봤어요.','저는 요리하려고 장을 봤어요.','엄마가 요리하시려고 장을 보셨어요.','요리하려고 고기를 샀어요.'],'Hai vế -(으)려고 phải cùng một người làm.'],
+ ['저는 응우옌 반 남(    ) 합니다.',['이라고','라고','이나','이에요'],'남 có 받침 → 이라고.'],
+ ['이 단어를 한국어로 뭐(    ) 해요?',['라고','이라고','나','거나'],'뭐 không 받침 → 뭐라고.']
+],
+m2:[
  ['주말에는 영화를 (    ) 쇼핑을 해요.',['보거나','보나','보려고','보러'],'Hai hoạt động, chọn một → -거나.'],
  ['생일 선물로 책(    ) 꽃을 받고 싶어요.',['이나','나','거나','이라고'],'책 có 받침 → 이나.'],
- ['저는 응우옌 반 남(    ) 합니다. 그냥 남이라고 부르세요.',['이라고','라고','이나','이에요'],'남 có 받침 → 이라고 합니다.'],
- ['날씨가 (    ) 비가 오면 집에 있어요.',['춥거나','춥나','추우려고','추워서나'],'-거나 gắn thẳng vào gốc, tính từ cũng được: 춥거나.'],
- ['이 단어를 한국어로 뭐(    ) 해요?',['라고','이라고','나','거나'],'뭐 không 받침 → 뭐라고.'],
- ['쉬고 친구를 만나요 khác 쉬거나 친구를 만나요 ở đâu?',['-고: làm cả hai việc; -거나: chọn một trong hai','Giống nhau hoàn toàn','-고: chọn một; -거나: làm cả hai','-거나 chỉ dùng trong văn viết'],'-고 nối (và rồi), -거나 lựa chọn (hoặc).']
+ ['날씨가 (    ) 비가 오면 집에 있어요.',['춥거나','춥나','추우려고','추워서나'],'-거나 gắn thẳng vào gốc, tính từ cũng được.'],
+ ['Câu nào SAI?',['책을 읽나 음악을 들어요.','책을 읽거나 음악을 들어요.','책이나 잡지를 읽어요.','소설책이나 잡지를 읽어요.'],'(이)나 không gắn vào động từ → 읽거나.'],
+ ['쉬고 친구를 만나요 khác 쉬거나 친구를 만나요 ở đâu?',['-고: làm cả hai việc; -거나: chọn một','Giống nhau hoàn toàn','-고: chọn một; -거나: làm cả hai','-거나 chỉ dùng trong văn viết'],'-고 = và (rồi); -거나 = hoặc.'],
+ ['친구 집에 초대를 받으면 보통 꽃이나 과일을 (    ).',['사 가요','사 와요','팔아요','받아요'],'Mua mang đến nhà người khác → 사 가다.']
 ],
-p1:[
- ['합니다 đọc là',['[함니다]','[합니다]','[한니다]','[하니다]'],'ㅂ + ㄴ → [ㅁ] + ㄴ.'],
- ['없네요 đọc là',['[엄네요]','[업네요]','[언네요]','[어네요]'],'ㅄ đọc [ㅂ], gặp ㄴ → [ㅁ].'],
- ['앞문 đọc là',['[암문]','[압문]','[아문]','[앙문]'],'ㅍ đọc [ㅂ], gặp ㅁ → [ㅁ].'],
- ['국물 đọc là',['[궁물]','[국물]','[굼물]','[구물]'],'ㄱ + ㅁ → [ㅇ] + ㅁ.'],
- ['받는 đọc là',['[반는]','[받는]','[밤는]','[방는]'],'ㄷ + ㄴ → [ㄴ] + ㄴ.'],
- ['연락처 đọc là',['[열락처]','[연낙처]','[연락처]','[여락처]'],'ㄴ + ㄹ → [ㄹㄹ] (biến âm khác: 유음화).'],
- ['생년월일 đọc là',['[생녀눠릴]','[생년월일]','[생녀월일]','[생년워릴]'],'Nối âm: 년+월 → 녀눠, 월+일 → 워릴.']
-],
-n1:[
- ['두 사람은 언제 만납니까?',['일요일 오후 세 시','토요일 오후 세 시','일요일 오후 두 시','토요일 오후 두 시'],'여: 두 시나 세 시 → 남: 세 시가 좋아요.'],
- ['어디에서 만납니까?',['도서관 앞 카페','도서관 안','학교 앞 식당','남자의 집 앞 카페'],'학교 도서관 앞에 카페가 있어요. 거기에서 만나요.'],
- ['남자는 왜 토요일에 안 됩니까?',['아르바이트가 있어서','수업이 있어서','고향에 가서','친구를 만나서'],'토요일에는 아르바이트가 있어요.']
-],
-n2:[
- ['들은 내용과 같은 것을 고르십시오.',['남자는 베트남어를 배우고 있습니다.','여자는 대학교에서 한국어를 가르칩니다.','여자는 주말에 자주 수영을 합니다.','남자는 운동을 별로 좋아하지 않습니다.'],'남: 베트남어를 배우고 있어요. Nữ dạy tiếng Anh; nam mới là người bơi; nữ mới là người không thích thể thao.'],
- ['남자는 왜 베트남어를 배웁니까?',['베트남 지사에서 일하려고','베트남 친구를 사귀려고','베트남을 여행하려고','베트남 대학교에 들어가려고'],'내년에 베트남 지사에서 일하려고…'],
- ['여자는 주말에 보통 무엇을 합니까?',['책을 읽거나 영화를 봅니다.','수영을 하거나 자전거를 탑니다.','영어를 가르치거나 운동을 합니다.','회사에 가거나 친구를 만납니다.'],'집에서 책을 읽거나 영화를 봐요.'],
- ['여자를 부르는 이름은?',['란','팜','팜 란 씨','민호'],'그냥 란이라고 부르세요.']
-],
-n3:[
- ['이어질 수 있는 말을 고르십시오.',['저는 은행에 다니고 있어요.','네, 처음 뵙겠습니다.','저는 김수민이라고 해요.','네, 일을 해요.'],'Câu hỏi 무슨 일을 하세요? → trả lời nghề nghiệp.',[['남','처음 뵙겠습니다. 김수민이라고 합니다.'],['여','반갑습니다. 실례지만 무슨 일을 하세요?']]],
- ['이어질 수 있는 말을 고르십시오.',['그래요? 저도 등산을 자주 해요.','네, 저는 집이에요.','등산을 하려고 쉬어요.','주말이나 평일이에요.'],'Nghe sở thích của người kia → phản hồi bằng sở thích của mình.',[['여','주말에 보통 뭐 해요?'],['남','등산을 하거나 집에서 쉬어요.']]],
- ['이어질 수 있는 말을 고르십시오.',['한국 회사에서 일하려고 배워요.','한국어를 매일 배워요.','한국어 학원에서 배워요.','한국어가 재미있거나 어려워요.'],'왜 (tại sao) → mục đích -(으)려고.',[['남','투이 씨는 한국어를 잘하네요.'],['여','고마워요. 아직 많이 부족해요.'],['남','그런데 왜 한국어를 배워요?']]],
- ['이어질 수 있는 말을 고르십시오.',['‘깜언’이라고 해요.','‘감사합니다’라고 해요.','베트남어를 가끔 해요.','네, 감사합니다.'],'뭐라고 해요? → N(이)라고 해요.',[['남','투이 씨, ‘감사합니다’를 베트남어로 뭐라고 해요?']]],
- ['이어질 수 있는 말을 고르십시오.',['수요일이나 목요일 어때요?','저는 영화를 별로 안 봐요.','지난주에 영화를 봤어요.','영화관에서 봐요.'],'언제 (khi nào) → đưa ra ngày; N(이)나 để đề xuất hai lựa chọn.',[['남','다음 주에 같이 영화 볼까요?'],['여','좋아요. 언제가 좋아요?']]],
- ['이어질 수 있는 말을 고르십시오.',['공일공에 일이삼사에 오육칠팔이에요.','서울에 살아요.','이메일을 자주 써요.','네, 연락할게요.'],'연락처 → đọc số điện thoại.',[['여','다음에 또 만나고 싶어요.'],['남','저도요. 실례지만 연락처가 어떻게 되세요?']]]
+h1:[
+ ['Nghe và chọn:',['2 giờ chiều thứ bảy','3 giờ chiều thứ bảy','2 giờ chiều chủ nhật','12 giờ trưa thứ bảy'],'토요일 오후 두 시.',[['','토요일 오후 두 시에 만나요.']]],
+ ['Nghe và chọn:',['3 giờ rưỡi, trước cổng trường','3 giờ, trong trường','4 giờ rưỡi, trước cổng trường','3 giờ rưỡi, trước thư viện'],'세 시 반에 학교 앞에서.',[['','세 시 반에 학교 앞에서 만나요.']]],
+ ['Nghe và chọn:',['4 giờ, ở thư viện','4 giờ, ở nhà sách','10 giờ, ở thư viện','2 giờ, ở thư viện'],'네 시 · 도서관.',[['','네 시에 도서관에서 만날까요?']]],
+ ['Nghe và chọn:',['11 giờ, ở quán cà phê','1 giờ, ở quán cà phê','11 giờ, ở nhà hàng','7 giờ, ở quán cà phê'],'열한 시 · 커피숍.',[['','열한 시에 커피숍에서 만나요.']]],
+ ['Nghe và chọn:',['1 giờ, trước ga tàu điện ngầm','1 giờ, trong ga tàu điện ngầm','9 giờ, trước ga tàu điện ngầm','1 giờ, trước bến xe buýt'],'한 시 · 지하철역 앞.',[['','한 시에 지하철역 앞에서 봐요.']]]
 ],
 r1:[
- ['이 사람은 왜 이 글을 썼습니까?',['한국어로 이야기할 친구를 찾으려고','베트남어를 배우려고','토픽 시험을 신청하려고','한국 문화를 소개하려고'],'제목: 한국어로 이야기할 친구를 찾습니다!'],
- ['글의 내용과 같은 것을 고르십시오.',['이 사람은 말하기를 더 연습하고 싶어 합니다.','이 사람은 한국어 읽기가 어렵습니다.','이 사람은 매일 한 시간씩 만나고 싶어 합니다.','이 사람은 한국어를 가르쳐 줄 수 있습니다.'],'읽기는 괜찮지만 말하기가 조금 어렵습니다. Gặp 1–2 lần/tuần, không phải mỗi ngày; người viết dạy tiếng Việt hoặc tiếng Anh.'],
- ['이 사람은 어떻게 만나고 싶어 합니까?',['카페에서 만나거나 화상 통화를 합니다.','학교 도서관에서만 만납니다.','이메일로만 이야기합니다.','매일 전화를 합니다.'],'카페에서 만나거나 화상 통화를 하고 싶습니다.'],
- ['‘한두 번’의 뜻은?',['một hai lần','mười hai lần','một lần duy nhất','hai lần một ngày'],'한두 = một hai (ước lượng). Tương tự: 두세 번 = hai ba lần.']
+ ['이 사람은 왜 이 글을 썼습니까?',['스페인어 연습을 도와줄 사람을 찾으려고','스페인어를 가르치려고','중남미 여행 친구를 찾으려고','한국어 학생을 찾으려고'],'…도와줄 수 있는 분을 찾고 있습니다.'],
+ ['이 사람은 왜 스페인어를 공부합니까? (① đám cưới ② du lịch ③ lớp học)',['② 여행하려고','① 결혼하려고','③ 수업을 들으려고','① 외국 친구를 사귀려고'],'이번 가을에 중남미를 여행하려고…'],
+ ['글의 내용과 같은 것을 고르십시오.',['이 사람은 스페인어 발음이 어렵습니다.','이 사람은 매일 두 시간 연습하고 싶어 합니다.','이 사람은 스페인어를 가르쳐 줄 수 있습니다.','이 사람은 여행을 별로 안 좋아합니다.'],'발음이 조금 어렵습니다. Mỗi tuần (không phải mỗi ngày); người viết dạy tiếng Hàn.']
+],
+p1:[
+ ['입는 đọc là',['[임는]','[입는]','[인는]','[이는]'],'ㅂ + ㄴ → [ㅁ].'],
+ ['앞만 đọc là',['[암만]','[압만]','[아만]','[앞만]'],'ㅍ đọc [ㅂ] → gặp ㅁ → [ㅁ].'],
+ ['없는 đọc là',['[엄는]','[업는]','[언는]','[어는]'],'ㅄ đọc [ㅂ] → gặp ㄴ → [ㅁ].'],
+ ['사십 명 đọc là',['[사심 명]','[사십 명]','[사시 명]','[사신 명]'],'Biến âm xảy ra cả giữa hai từ đọc liền.'],
+ ['감사합니다 đọc là',['[감사함니다]','[감사합니다]','[감사한니다]','[감사하니다]'],'-ㅂ니다 luôn đọc [-ㅁ니다].']
 ],
 ck:[
+ ['저는 (    ) 아침 일곱 시에 일어나요. 하루도 안 늦어요.',['매일','가끔','별로','매년'],'Ngày nào cũng → 매일.'],
+ ['저는 고기를 (    ) 안 먹어요.',['전혀','자주','항상','매일'],'전혀 + phủ định.'],
+ ['A: 실례지만 (    ) 어떻게 되세요? B: 스물한 살이에요.',['나이가','성함이','국적이','연락처가'],'Trả lời tuổi → 나이.'],
+ ['Ô ghi “베트남” trên thẻ học sinh là',['국적','직업','종교','주소'],'Quốc tịch.'],
+ ['제 이름은 레 반 득이에요. 친구들은 저를 그냥 득(    ) 불러요.',['이라고','라고','이나','을'],'득 có 받침 → 이라고.'],
+ ['‘Xin chào’를 한국어로 뭐라고 해요? — ‘안녕하세요’(    ) 해요.',['라고','이라고','이나','를'],'안녕하세요 hết bằng nguyên âm → 라고.'],
  ['한국 친구를 (    ) 한국어 동아리에 가입했어요.',['사귀려고','사귀거나','사귀고','사귀나'],'Mục đích → -(으)려고.'],
+ ['Câu nào SAI?',['같이 운동하려고 공원에 갑시다.','운동하러 공원에 갑시다.','운동하려고 공원에 갔어요.','운동하러 공원에 갔어요.'],'-(으)려고 + vế sau rủ rê ✗.'],
+ ['케이크를 (    ) 밀가루를 샀어요.',['만들려고','만들으려고','만드려고','만들러'],'Gốc ㄹ: 만들 + 려고.'],
  ['저녁에는 보통 운동을 (    ) 산책을 해요.',['하거나','하려고','하나','하러'],'Hai việc, chọn một → -거나.'],
  ['점심에는 김밥(    ) 라면을 먹어요.',['이나','나','거나','이라고'],'김밥 có 받침 → 이나.'],
- ['제 이름은 레 반 득이에요. 친구들은 저를 그냥 득(    ) 불러요.',['이라고','라고','이나','을'],'득 có 받침 → 이라고 부르다.'],
- ['저는 고기를 (    ) 안 먹어요. 채식주의자예요.',['전혀','자주','항상','매일'],'Ăn chay → hoàn toàn không: 전혀 + 안.'],
- ['A: 실례지만 (    ) 어떻게 되세요? B: 스물한 살이에요.',['나이가','성함이','국적이','연락처가'],'Trả lời tuổi → hỏi 나이 (bạn trẻ) / 연세 (người lớn tuổi).'],
- ['Phiếu thông tin: ô ghi “베트남” là',['국적','직업','종교','주소'],'Quốc tịch.'],
- ['Câu nào SAI?',['같이 운동하려고 공원에 갑시다.','운동하러 공원에 갑시다.','운동하려고 공원에 갔어요.','운동하러 공원에 갔어요.'],'-(으)려고 + vế sau rủ rê ✗.'],
- ['Câu nào SAI?',['책을 읽나 음악을 들어요.','책을 읽거나 음악을 들어요.','책이나 잡지를 읽어요.','소설책이나 잡지를 읽어요.'],'(이)나 không gắn vào động từ → 읽거나.'],
- ['앞문으로 들어오세요. — 앞문 đọc là',['[암문]','[압문]','[아문]','[앞문]'],'ㅍ → [ㅂ] → gặp ㅁ → [ㅁ].'],
- ['밑줄 친 부분과 의미가 비슷한 것: 한국 회사에 <u>취직하려고</u> 한국어를 배워요.',['취직하기 위해서','취직하거나','취직해서','취직하면'],'-(으)려고 ≈ -기 위해서 (mục đích). Dạng Đọc TOPIK câu 3–4.'],
- ['A: 주말에 보통 뭐 해요? B: (    )',['집에서 쉬거나 친구를 만나요.','집에서 쉬려고 친구를 만나요.','주말이나 쉬어요.','주말이라고 해요.'],'Kể việc thường làm, hai lựa chọn → -거나.'],
- ['글의 내용과 같은 것: 저는 매주 토요일 오전에 테니스를 칩니다. 가끔 일요일에도 칩니다. 하지만 평일에는 전혀 못 칩니다.',['이 사람은 평일에 테니스를 치지 않습니다.','이 사람은 매일 테니스를 칩니다.','이 사람은 일요일마다 테니스를 칩니다.','이 사람은 토요일 오후에 테니스를 칩니다.'],'평일에는 전혀 못 칩니다. Chủ nhật chỉ thỉnh thoảng; thứ bảy buổi sáng (오전).'],
- ['Câu cuối của một quảng cáo tìm người (Viết câu 51) nên viết:',['관심이 있으신 분은 연락 주십시오.','관심 있으면 연락해.','관심이 있으면 연락했어요.','관심이 있으려고 연락하세요.'],'Văn bản thông báo / quảng cáo: đuôi -(으)십시오, -습니다.'],
- ['“Em ấy đang học tiếng Hàn để xem phim không cần phụ đề.” Câu đúng:',['그 친구는 자막 없이 드라마를 보려고 한국어를 배우고 있어요.','그 친구는 한국어를 배우려고 자막 없이 드라마를 봐요.','그 친구는 자막 없이 드라마를 보거나 한국어를 배우고 있어요.','그 친구는 자막 없이 드라마를 보러 한국어를 배우고 있어요.'],'Mục đích (xem phim) đứng trước -(으)려고, hành động (học) đứng sau. -(으)러 chỉ đi với động từ di chuyển.']
+ ['A: 주말에 보통 뭐 하세요? B: 집에서 쉬거나 친구를 만나요. 지훈 씨(    )?',['는요','도요','이에요','라고요'],'Hỏi ngược lại: N은/는요?'],
+ ['Người mới quen tên 김유미. Gọi thế nào cho lịch sự?',['김유미 씨','김 씨','유미야','김유미 님이에요'],'Họ tên + 씨; không gọi họ + 씨.'],
+ ['합니다 đọc là',['[함니다]','[합니다]','[한니다]','[하니다]'],'ㅂ + ㄴ → [ㅁ].'],
+ ['Câu cuối tin tìm người (văn bản) nên viết:',['한국어를 가르쳐 드리겠습니다.','한국어를 가르쳐 줄게.','한국어를 가르쳤어요.','한국어를 가르치려고 해.'],'Văn bản: -습니다; -아/어 드리겠습니다 = tôi sẽ làm cho (khiêm nhường).']
 ]};
-// Gõ chữ: [gợi ý, câu có ___, đáp án chấp nhận, giải thích]; d1: [câu nghe]
+// Gõ chữ: [gợi ý, câu có ___, đáp án chấp nhận, giải thích]
 var T={
-g1:[
+ga:[
  ['Tên: 김민준','저는 김민준___ 합니다.',['이라고'],'민준 có 받침 ㄴ → 이라고.'],
  ['Tên: 투이','저는 투이___ 합니다.',['라고'],'투이 không 받침 → 라고.'],
- ['Bạn bè gọi tôi là “남”','친구들은 저를 남___ 불러요.',['이라고'],'N을/를 N(이)라고 부르다; 남 có 받침 → 이라고.'],
- ['“Cảm ơn” nói thế nào?','‘Cảm ơn’을 한국어로 뭐___ 해요?',['라고'],'뭐라고 해요? = nói là gì?'],
- ['-(으)려고 · 만나다','친구를 ___ 카페에 갔어요.',['만나려고'],'만나 không 받침 → -려고.'],
- ['-(으)려고 · 읽다','한국 소설을 ___ 한국어를 배워요.',['읽으려고'],'읽 có 받침 → -으려고.'],
- ['-(으)려고 · 만들다','케이크를 ___ 밀가루를 샀어요.',['만들려고'],'Gốc ㄹ: 만들 + 려고 (✗ 만들으려고).'],
- ['-(으)려고 · 듣다','한국 노래를 ___ 이어폰을 샀어요.',['들으려고'],'Bất quy tắc ㄷ: 듣 → 들 + 으려고.'],
- ['-(으)려고 · 돕다','친구 이사를 ___ 일찍 일어났어요.',['도우려고'],'Bất quy tắc ㅂ: 돕 → 도우 + 려고.'],
- ['-거나 · 쉬다','주말에는 집에서 ___ 잠을 자요.',['쉬거나'],'V-거나 V.'],
- ['-거나 · 듣다','시간이 나면 음악을 ___ 드라마를 봐요.',['듣거나'],'-거나 gắn thẳng vào gốc, không đổi ㄷ: 듣거나.'],
- ['(이)나 · 커피 / 차','아침에는 보통 커피___ 차를 마셔요.',['나'],'커피 không 받침 → 나.'],
- ['(이)나 · 빵 / 밥','아침에 빵___ 밥을 먹어요.',['이나'],'빵 có 받침 ㅇ → 이나.'],
- ['(이)나 · 토요일 / 일요일','토요일___ 일요일에 만날까요?',['이나'],'토요일 có 받침 ㄹ → 이나.']
+ ['Tên ở nhà: 빈','가족들은 저를 ‘빈’___ 불러요.',['이라고'],'빈 có 받침 → 이라고.'],
+ ['Xin chào → 신짜오','‘안녕하세요’를 베트남어로 ‘Xin chào’___ 해요.',['라고'],'Xin chào đọc 신짜오, hết bằng nguyên âm → 라고.'],
+ ['Cảm ơn → 깜언','‘감사합니다’를 베트남어로 ‘Cảm ơn’___ 해요.',['이라고'],'깜언 có 받침 ㄴ → 이라고.'],
+ ['Thank you → 땡큐','영어로는 ‘Thank you’___ 해요.',['라고'],'땡큐 hết bằng nguyên âm → 라고.'],
+ ['부르다 + -아/어요','친구들은 저를 투이라고 ___.',['불러요'],'Bất quy tắc 르: 부르 + 어요 → 불러요.']
 ],
-d1:[
- ['저는 응우옌 투이라고 합니다.'],
- ['한국 회사에서 일하려고 한국어를 배워요.'],
- ['주말에는 집에서 쉬거나 친구를 만나요.'],
- ['아침에는 보통 빵이나 과일을 먹어요.'],
- ['저는 술을 전혀 못 마셔요.'],
- ['실례지만 연락처가 어떻게 되세요?']
+gb:[
+ ['보내다','편지를 ___ 우체국에 갔어요.',['보내려고'],'보내 không 받침 → -려고.'],
+ ['먹다','저녁에 ___ 과일을 샀어요.',['먹으려고'],'먹 có 받침 → -으려고.'],
+ ['만들다','케이크를 ___ 밀가루를 샀어요.',['만들려고'],'Gốc ㄹ: 만들 + 려고 (✗ 만들으려고).'],
+ ['듣다','한국 노래를 ___ 이어폰을 샀어요.',['들으려고'],'Bất quy tắc ㄷ: 듣 → 들 + 으려고.'],
+ ['돕다','친구 이사를 ___ 일찍 일어났어요.',['도우려고'],'Bất quy tắc ㅂ: 돕 → 도우 + 려고.'],
+ ['늦지 않다','약속 시간에 ___ 택시를 탔어요.',['늦지않으려고','늦지 않으려고'],'않다 có 받침 → 않으려고.']
+],
+gc:[
+ ['-거나 · 쉬다','주말에는 집에서 ___ 친구를 만나요.',['쉬거나'],'V-거나 V.'],
+ ['-거나 · 듣다','시간이 나면 음악을 ___ 책을 읽어요.',['듣거나'],'-거나 không đổi gốc: 듣거나.'],
+ ['-거나 · 쓰다','부모님이 보고 싶으면 편지를 ___ 전화를 해요.',['쓰거나'],'Câu mẫu của sách.'],
+ ['(이)나 · 사과','과일이 없어요. 사과___ 배를 좀 사 오세요.',['나'],'사과 không 받침 → 나.'],
+ ['(이)나 · 월요일','월요일___ 화요일 어때요?',['이나'],'월요일 có 받침 → 이나.'],
+ ['(이)나 · 커피','아침에는 보통 커피___ 차를 마셔요.',['나'],'커피 không 받침 → 나.'],
+ ['(이)나 · 빵','아침에 빵___ 밥을 먹어요.',['이나'],'빵 có 받침 → 이나.']
+],
+s2:[
+ ['(숙제하다)','A 왜 이렇게 일찍 왔어요?  B ___ 일찍 왔어요.',['숙제하려고','숙제를하려고','숙제를 하려고'],'Đáp án sách: 숙제하려고.'],
+ ['(빵, 과일)','A 보통 아침에 뭘 먹어요?  B ___ 먹어요.',['빵이나 과일을','빵이나과일을'],'Đáp án sách: 빵이나 과일을.'],
+ ['(송편)','A 이건 이름이 뭐예요?  B ___, 추석에 먹는 떡이에요.',['송편이라고 해요','송편이라고 합니다','송편이라고해요'],'Đáp án sách: 송편이라고 해요. 송편 = bánh songpyeon ăn dịp Trung thu (추석).'],
+ ['(쇼핑하러 가다, 친구를 만나다)','A 주말에 뭐 할 거예요?  B ___.',['쇼핑하러 가거나 친구를 만날 거예요','쇼핑하러 가거나 친구를 만나요'],'Đáp án sách: 쇼핑하러 가거나 친구를 만날 거예요. Hỏi bằng -(으)ㄹ 거예요 thì trả lời cũng -(으)ㄹ 거예요.']
 ]};
 
 /* ---------- trạng thái ---------- */
-var KEY='nari-2a1', st={};
+var KEY='nari-2a1v2', st={};
 try{st=JSON.parse(localStorage.getItem(KEY)||'{}')||{};}catch(e){st={};}
-st.m=st.m||{};st.t=st.t||{};st.c=st.c||{};st.w=st.w||{};
+st.m=st.m||{};st.t=st.t||{};st.c=st.c||{};st.c0=st.c0||{};st.w=st.w||{};st.life=st.life||{};st.card=st.card||{};
 function save(){try{localStorage.setItem(KEY,JSON.stringify(st));}catch(e){}}
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
 function $(id){return document.getElementById(id);}
@@ -752,22 +941,48 @@ function say(t,rate,queue,pitch){
 function play(lines,rate){
   if(!window.speechSynthesis){say('');return;}
   speechSynthesis.cancel();
-  lines.forEach(function(l){say(l[1],rate||0.9,true,l[0]==='남'||l[0]==='지훈'?0.75:1.2);});
+  lines.forEach(function(l){say(l[1],rate||0.9,true,!l[0]?1:(MALE[l[0]]?0.75:1.2));});
 }
-function trHTML(lines){return '<div class="tr ko">'+lines.map(function(l){return '<div><span class="sp">'+esc(l[0])+'</span>'+esc(l[1])+'</div>';}).join('')+'</div>';}
-
-/* ---------- bảng từ vựng, hội thoại ---------- */
+function trHTML(lines){return '<div class="tr ko">'+lines.map(function(l){return '<div>'+(l[0]?'<span class="sp">'+esc(l[0])+'</span>':'')+esc(l[1])+'</div>';}).join('')+'</div>';}
 function sayBtn(t){return ' <button class="say" data-say="'+esc(t)+'">🔊</button>';}
-$('tv1').innerHTML='<tr><th>Từ · cách đọc · Hán Việt</th><th>Nghĩa</th><th>Hay đi với</th></tr>'+TV1.map(function(w){
+
+/* ---------- vẽ nội dung ---------- */
+$('tv1').innerHTML='<tr><th>Ô trên thẻ</th><th>Nghĩa</th><th>Câu hỏi · cụm</th></tr>'+TV1.map(function(w){
   return '<tr><td class="ko"><b>'+w[0]+'</b>'+sayBtn(w[0])+'<br><span class="pron">'+w[1]+'</span><div class="hj">'+(w[2]?w[2]+' · ':'')+w[3]+'</div></td><td>'+w[4]+'</td><td>'+w[5].map(function(c){return '<div class="col"><span class="ko">'+c[0]+'</span>'+(c[1]?'<span class="note">'+c[1]+'</span>':'')+'</div>';}).join('')+'</td></tr>';}).join('');
+var CARD=[['성명','응우옌 티 투이'],['성별','남 / 여'],['생년월일','2006년 3월 8일'],['직업','대학생'],['국적','베트남'],['종교','없음'],['주소','베트남 …'],['전화','090-…'],['이메일','…@…']];
+$('card').innerHTML='<p class="tt">학생 카드</p>'+CARD.map(function(c,i){return '<div class="wf"><b>'+c[0]+'</b><input class="cd" data-i="'+i+'" placeholder="'+esc(c[1])+'" value="'+esc(st.card[i]||'')+'"></div>';}).join('');
 $('tv2').innerHTML='<tr><th>Từ</th><th>Nghĩa</th><th>Ví dụ</th></tr>'+TV2.map(function(w){
-  return '<tr><td class="ko"><b>'+w[0]+'</b>'+sayBtn(w[0].replace(/ \+.*/,''))+(w[1]?'<div class="hj">'+w[1]+'</div>':'')+'</td><td>'+w[2]+'</td><td><span class="ko">'+w[3]+'</span>'+sayBtn(w[3].replace(/ →.*/,''))+'<div class="note">'+w[4]+'</div></td></tr>';}).join('');
-$('tv3').innerHTML='<tr><th>Từ</th><th>Nghĩa</th><th>Cụm · ghi chú</th></tr>'+TV3.map(function(w){
-  return '<tr><td class="ko"><b>'+w[0]+'</b>'+sayBtn(w[0].replace(/[()]/g,''))+(w[1]?'<div class="hj">'+w[1]+'</div>':'')+'</td><td>'+w[2]+'</td><td class="ko">'+w[3]+'</td></tr>';}).join('');
-$('dlg').innerHTML=DLG.map(function(d){return '<tr><td class="ko">'+d[0]+'</td><td><span class="ko">'+d[1]+'</span>'+sayBtn(d[1])+'<div class="note">'+d[2]+'</div></td></tr>';}).join('');
-AU.dlg=DLG.map(function(d){return [d[0],d[1]];});
-$('qa').innerHTML=QA.map(function(q,i){return '<div class="qa"><div class="q"><span class="ko">'+(i+1)+'. '+esc(q[0])+'</span>'+sayBtn(q[0])+' <button class="b" data-tog="qa'+i+'">Câu trả lời mẫu</button></div><div class="model" id="qa'+i+'"><span class="ko">'+esc(q[1])+'</span>'+sayBtn(q[1])+(q[2]?'<div class="note">'+q[2]+'</div>':'')+'</div></div>';}).join('');
-$('n1t').innerHTML=trHTML(AU.n1);$('n2t').innerHTML=trHTML(AU.n2);
+  return '<tr><td class="ko"><b>'+w[0]+'</b>'+sayBtn(w[0].replace(/ \+.*/,''))+(w[1]?'<div class="hj">'+w[1]+'</div>':'')+'</td><td>'+w[2]+'</td><td><span class="ko">'+w[3]+'</span>'+sayBtn(w[3])+'<div class="note">'+w[4]+'</div></td></tr>';}).join('');
+function renderLife(){
+  var tot=0,n=0;
+  var h=LIFE.map(function(l,i){var p=st.life[i];if(p!=null){n++;tot+=LIFEP[p];}
+    return '<div class="life"><span class="ko">'+(i+1)+') '+l[0]+'</span><span class="note">'+l[1]+'</span><div class="opts">'+LIFEW.map(function(w,k){return '<button class="opt ko'+(p===k?' on':'')+'" data-life="'+i+'" data-k="'+k+'">'+w+'</button>';}).join('')+'</div></div>';}).join('');
+  var r='';
+  if(n===LIFE.length)r=tot<=10?'0–10 điểm: 한국 생활이 불편해요. (còn bất tiện — cần dùng tiếng Hàn nhiều hơn!)':tot<=17?'11–17 điểm: 한국 생활이 괜찮아요. (ổn rồi)':'18–25 điểm: 한국 생활이 아주 편해요. (rất thoải mái)';
+  h+='<div class="score">Điểm: '+tot+(n<LIFE.length?' (còn '+(LIFE.length-n)+' câu)':'')+(r?' — <span class="ko">'+r+'</span>':'')+'</div>';
+  $('life').innerHTML=h;
+}
+function dlgHTML(D){return D.map(function(d){return '<tr><td class="ko">'+d[0]+'</td><td><span class="ko">'+d[1]+'</span>'+sayBtn(strip(d[1]))+'<div class="note">'+d[2]+'</div></td></tr>';}).join('');}
+$('dlg1').innerHTML=dlgHTML(D1);$('dlg2').innerHTML=dlgHTML(D2);
+// hội thoại thay thế
+function ira(n){var c=n.charCodeAt(n.length-1)-44032;return n+(c>=0&&c<11172&&c%28?'이라고':'라고');}
+SUB1.forEach(function(s,k){
+  var a=s[0],b=s[1];
+  AU['s1'+k]=[[a[0],'처음 뵙겠습니다. 저는 '+ira(a[0])+' 합니다.'],[b[0],'만나서 반가워요. '+a[0]+' 씨. 저는 '+b[0]+'입니다.'],[a[0],'그냥 '+ira(a[1])+' 부르세요. 실례지만 '+b[0]+' 씨는 무슨 일을 하세요?'],[b[0],'저는 '+b[1]+'. '+a[1]+' 씨는 왜 한국어를 공부하세요?'],[a[0],a[2]+' 공부해요.']];
+});
+$('sub1').innerHTML=SUB1.map(function(s,k){return '<div class="sub"><div class="dl"><b>Bộ '+(k+2)+':</b> <span class="ko">'+s[0][0]+' → '+s[0][1]+' · '+s[0][2].replace(/려고$/,'다').replace(/으다$/,'다')+'</span> | <span class="ko">'+s[1][0]+' · '+s[1][1]+'</span> <button class="b blue" data-au="s1'+k+'">🔊</button> <button class="b" data-tog="s1t'+k+'">Xem lời</button></div><div class="model" id="s1t'+k+'">'+trHTML(AU['s1'+k])+'</div></div>';}).join('')+'<p class="note">Bộ 4 (của em): tên em → tên gọi ngắn · lý do em học tiếng Hàn | cô → việc cô đang làm.</p>';
+SUB2.forEach(function(s,k){
+  AU['s2'+k]=[['샤오밍','마리코 씨는 주말에 보통 뭐 하세요?'],['마리코',s[0]+'. 샤오밍 씨는요?'],['샤오밍','저는 주말에는 항상 '+s[1]+'.'],['마리코',s[2]],['샤오밍',s[3]+'.'],['마리코','그래요? 저도 '+s[4]+'.'],['샤오밍','어, 우리는 취미가 같네요.']];
+});
+$('sub2').innerHTML=SUB2.map(function(s,k){return '<div class="sub"><div class="dl"><b>Bộ '+(k+2)+':</b> <span class="ko">'+s[0]+' · '+s[1]+' · '+s[3]+' · '+s[4]+'</span> <button class="b blue" data-au="s2'+k+'">🔊</button> <button class="b" data-tog="s2t'+k+'">Xem lời</button></div><div class="model" id="s2t'+k+'">'+trHTML(AU['s2'+k])+'</div></div>';}).join('');
+Object.keys(QA).forEach(function(id){$(id).innerHTML=QA[id].map(function(q,i){return '<div class="qa"><div class="q"><span class="ko">'+(i+1)+'. '+esc(q[0])+'</span>'+sayBtn(q[0])+' <button class="b" data-tog="'+id+'_'+i+'">Câu mẫu</button></div><div class="model" id="'+id+'_'+i+'"><span class="ko">'+esc(q[1])+'</span>'+sayBtn(q[1].replace(/ \/ .*/,''))+(q[2]?'<div class="note">'+q[2]+'</div>':'')+'</div></div>';}).join('');});
+function textTable(R){return '<tr><th>Câu</th><th>Ghi chú</th></tr>'+R.map(function(r){return '<tr><td><span class="ko">'+r[0]+'</span>'+sayBtn(r[0])+'<div class="note">'+r[1]+'</div></td><td>'+r[2]+'</td></tr>';}).join('');}
+$('read').innerHTML='<p class="tt">스페인어 할 수 있으세요? (¿Puede hablar español?)</p><p>'+READ.map(function(r){return r[0];}).join(' ')+'</p><p class="note" style="text-align:right">박민영 · email · ☎</p>';
+$('readt').innerHTML=textTable(READ);
+$('cult').innerHTML='<p>'+CUL.map(function(r){return r[0];}).join(' ')+'</p>';
+$('cultt').innerHTML=textTable(CUL);
+$('pron').innerHTML=PRON.map(function(p,i){return '<tr><td>'+(i+1)+')</td><td><span class="ko">'+p[0]+'</span>'+sayBtn(p[0])+' <button class="say" data-say="'+esc(p[0])+'" data-rate="0.6">🐢</button></td><td class="ko pron">'+p[1]+'</td></tr>';}).join('');
+$('chk0').innerHTML=SELF.map(function(s,i){return '<li class="'+(st.c0[i]?'on':'')+'"><span class="ko">'+s[0]+'</span> <span class="note">— '+s[1]+'</span></li>';}).join('');
 
 /* ---------- trắc nghiệm ---------- */
 function mcqHTML(set,i){
@@ -791,12 +1006,10 @@ function renderM(set){
 /* ---------- gõ chữ ---------- */
 function typHTML(set,i){
   var it=T[set][i],r=st.t[set]&&st.t[set][i],cls=r?(r.ok?' ok':' no'):'';
-  var q;
-  if(set==='d1')q='<span class="n">'+(i+1)+'.</span><button class="say" data-say="'+esc(it[0])+'">🔊</button> <button class="say" data-say="'+esc(it[0])+'" data-rate="0.6">🐢</button>';
-  else q='<span class="n">'+(i+1)+'.</span><span class="note">'+esc(it[0])+'</span><br><span class="ko">'+esc(it[1]).replace('___',' <b>_____</b> ')+'</span>';
+  var q='<span class="n">'+(i+1)+'.</span><span class="note">'+esc(it[0])+'</span><br><span class="ko">'+esc(it[1]).replace('___',' <b>_____</b> ')+'</span>';
   var fb='';
-  if(r){var ans=set==='d1'?it[0]:it[2][0];fb=r.ok?'<span class="r">✓ Đúng.</span> '+(set==='d1'?'':esc(it[3])):'<span class="r">✗ Chưa đúng.</span> Đáp án: <b class="ko">'+esc(ans)+'</b>'+(set==='d1'?'':' — '+esc(it[3]));}
-  return '<div class="typ'+cls+'"><div class="q">'+q+'</div><div class="row"><input class="ans" data-set="'+set+'" data-i="'+i+'" value="'+esc(r?r.v:'')+'" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="'+(set==='d1'?'Gõ lại cả câu':'Gõ phần còn thiếu')+'"><button class="b blue" data-chk="'+set+'" data-i="'+i+'">Kiểm tra</button></div><div class="fb">'+fb+'</div></div>';
+  if(r)fb=r.ok?'<span class="r">✓ Đúng.</span> '+esc(it[3]):'<span class="r">✗ Chưa đúng.</span> Đáp án: <b class="ko">'+esc(it[2][0])+'</b> — '+esc(it[3]);
+  return '<div class="typ'+cls+'"><div class="q">'+q+'</div><div class="row"><input class="ans" data-set="'+set+'" data-i="'+i+'" value="'+esc(r?r.v:'')+'" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Gõ phần còn thiếu"><button class="b blue" data-chk="'+set+'" data-i="'+i+'">Kiểm tra</button></div><div class="fb">'+fb+'</div></div>';
 }
 function tScore(set){var m=st.t[set]||{},n=0,ok=0;for(var i in m){n++;if(m[i].ok)ok++;}return {n:n,ok:ok,all:T[set].length};}
 function renderT(set){
@@ -809,33 +1022,35 @@ function renderT(set){
 function check(set,i){
   var inp=document.querySelector('input.ans[data-set="'+set+'"][data-i="'+i+'"]');if(!inp)return;
   var v=inp.value.trim();if(!v)return;
-  var it=T[set][i],acc=set==='d1'?[it[0]]:it[2],ok=acc.some(function(a){return norm(a)===norm(v);});
+  var ok=T[set][i][2].some(function(a){return norm(a)===norm(v);});
   st.t[set]=st.t[set]||{};st.t[set][i]={v:v,ok:ok};save();renderT(set);renderSum();
   var nx=document.querySelector('input.ans[data-set="'+set+'"][data-i="'+(i+1)+'"]');if(ok&&nx)nx.focus();
 }
 
 /* ---------- tổng kết ---------- */
-var WNAME={sp1:'Bài nói 1 phút',w1a:'Câu 51 (1) ㉠',w1b:'Câu 51 (1) ㉡',w2a:'Câu 51 (2) ㉠',w2b:'Câu 51 (2) ㉡',wad:'Quảng cáo tìm bạn',whome:'Giới thiệu quê hương'};
+var WNAME={ex1:'NP1 · 연습 1 (tên gọi)',ex2:'Nói 1 · Bộ 4',q1:'Câu hỏi 이름',q2:'Câu hỏi 국적',q3:'Câu hỏi 나이',q4:'Câu hỏi 직업',q5:'Câu hỏi 연락처',q6:'Câu hỏi 이유',q7:'Câu hỏi thêm',sp1:'Tự giới thiệu',ex3:'Nói 2 · phỏng vấn',l1a:'Nghe 1 · giờ',l1b:'Nghe 1 · nơi',l2a:'Nghe 2 · câu 1)',l2b:'Nghe 2 · câu 2)',m1t:'Ghi chú · 제목',m1a:'Ghi chú · 자기소개',m1b:'Ghi chú · 이유',m1c:'Ghi chú · 연락처',wad:'Tin tìm bạn luyện tiếng Hàn',h1:'Quê · ở đâu',h2:'Quê · nơi thế nào',h3:'Quê · nổi tiếng',h4:'Quê · món ngon',whome:'Giới thiệu quê hương',ex4:'Văn hóa · tên người Việt'};
 function line(lbl,s){return lbl+': '+s.ok+'/'+s.all+(s.n<s.all?' (làm '+s.n+')':'');}
 function report(){
   var L=['Seoul 2A · Bài 1 · '+(st.name||'(chưa ghi tên)')];
-  L.push('— Từ vựng —');
-  [['v1','Chọn từ'],['v2','Hỏi – chào lịch sự'],['v3','Tiểu từ']].forEach(function(p){L.push('  '+line(p[1],scoreOf(p[0])));});
-  L.push('— Ngữ pháp —');
-  L.push('  '+line('Chia dạng',tScore('g1')));
-  L.push('  '+line('Chọn đúng / tìm câu sai',scoreOf('g2')));
-  L.push('— Nói · Nghe —');
-  L.push('  '+line('Phát âm',scoreOf('p1')));
-  L.push('  '+line('Nghe 1 (hẹn gặp)',scoreOf('n1')));
-  L.push('  '+line('Nghe 2 (câu 13–16)',scoreOf('n2')));
-  L.push('  '+line('Nghe 3 (câu 4–8)',scoreOf('n3')));
-  L.push('  '+line('Nghe – chép',tScore('d1')));
-  L.push('— Đọc —');
-  L.push('  '+line('Quảng cáo tìm bạn',scoreOf('r1')));
+  L.push('— Từ vựng (tr.26–27) —');
+  L.push('  '+line('매일/매주/매달/매년',scoreOf('v0')));
+  L.push('  '+line('Chọn từ',scoreOf('v1')));
+  L.push('  '+line('Tiểu từ',scoreOf('v3')));
+  L.push('— Ngữ pháp 1 (tr.28–29) —');
+  L.push('  '+line('(이)라고',tScore('ga')));
+  L.push('  '+line('-(으)려고',tScore('gb')));
+  L.push('  '+line('Chọn / câu sai',scoreOf('m1')));
+  L.push('— Nói 1: hỏi lịch sự '+scoreOf('v2').ok+'/'+M.v2.length+' —');
+  L.push('— Ngữ pháp 2 (tr.32–33) —');
+  L.push('  '+line('-거나 / (이)나',tScore('gc')));
+  L.push('  '+line('Chọn / câu sai',scoreOf('m2')));
+  L.push('— Nghe giờ, địa điểm: '+scoreOf('h1').ok+'/'+M.h1.length+' · Đọc (tr.38): '+scoreOf('r1').ok+'/'+M.r1.length+' · Phát âm: '+scoreOf('p1').ok+'/'+M.p1.length+' —');
+  var c0=0;SELF.forEach(function(s,i){if(st.c0[i])c0++;});
+  L.push('— Tự đánh giá: biết '+c0+'/'+SELF.length+' từ · hội thoại '+tScore('s2').ok+'/'+T.s2.length+' —');
   var c=scoreOf('ck');
-  L.push('— Kiểm tra cuối buổi: '+c.ok+'/'+c.all+(c.n<c.all?' (làm '+c.n+')':'')+' —');
+  L.push('— Kiểm tra cuối bài: '+c.ok+'/'+c.all+(c.n<c.all?' (làm '+c.n+')':'')+' —');
   var m=st.m.ck||{};
-  M.ck.forEach(function(it,i){if(m[i]!=null&&m[i]!==0)L.push('  ✗ Câu '+(i+1)+': chọn '+it[1][m[i]].replace(/<[^>]+>/g,'')+' → đúng '+it[1][0].replace(/<[^>]+>/g,''));});
+  M.ck.forEach(function(it,i){if(m[i]!=null&&m[i]!==0)L.push('  ✗ Câu '+(i+1)+': chọn '+strip(it[1][m[i]])+' → đúng '+strip(it[1][0]));});
   Object.keys(WNAME).forEach(function(k){var v=st.w[k];if(v&&v.trim())L.push('— '+WNAME[k]+' —\n'+v.trim());});
   return L.join('\n');
 }
@@ -843,7 +1058,7 @@ function renderSum(){
   var el=$('sumall');if(!el)return;
   var pre=el.querySelector('pre');
   if(pre){pre.textContent=report();return;}
-  el.innerHTML='<h4>Kết quả cả buổi</h4><p class="note">Làm xong, ghi tên rồi bấm gửi cho cô qua Zalo (hoặc chép đoạn dưới gửi cô). Bài nói, bài viết em đã gõ trong trang cũng được gửi kèm.</p>'+
+  el.innerHTML='<h4>Kết quả cả bài</h4><p class="note">Ghi tên rồi bấm gửi cho cô qua Zalo (hoặc chép đoạn dưới gửi cô). Bài nói, bài viết, đáp án nghe em đã gõ trong trang được gửi kèm.</p>'+
     '<input class="nm" placeholder="Tên em" value="'+esc(st.name||'')+'"><div class="btns"><button class="b main" data-share="1">Gửi kết quả cho cô…</button></div><pre>'+esc(report())+'</pre>';
 }
 function share(){
@@ -856,6 +1071,7 @@ function share(){
 /* ---------- sự kiện ---------- */
 document.addEventListener('click',function(e){
   var d=e.target.closest('button,a,li');if(!d)return;
+  if(d.dataset.life!=null){st.life[d.dataset.life]=+d.dataset.k;save();renderLife();return;}
   if(d.classList.contains('opt')&&d.dataset.set){
     var set=d.dataset.set,i=+d.dataset.i;st.m[set]=st.m[set]||{};
     if(st.m[set][i]!=null)return;st.m[set][i]=+d.dataset.k;save();renderM(set);renderSum();return;}
@@ -867,7 +1083,7 @@ document.addEventListener('click',function(e){
   if(d.dataset.redo){e.preventDefault();var s=d.dataset.redo;if(M[s]){delete st.m[s];save();renderM(s);}else{delete st.t[s];save();renderT(s);}renderSum();return;}
   if(d.dataset.tog){var el=$(d.dataset.tog);if(el)el.classList.toggle('on');return;}
   if(d.dataset.share){share();return;}
-  if(d.tagName==='LI'&&d.parentNode.id==='chk'){var idx=[].indexOf.call(d.parentNode.children,d);st.c[idx]=!st.c[idx];save();d.classList.toggle('on',!!st.c[idx]);return;}
+  if(d.tagName==='LI'&&(d.parentNode.id==='chk'||d.parentNode.id==='chk0')){var o=d.parentNode.id==='chk'?st.c:st.c0,idx=[].indexOf.call(d.parentNode.children,d);o[idx]=!o[idx];save();d.classList.toggle('on',!!o[idx]);renderSum();return;}
 });
 document.addEventListener('keydown',function(e){
   if(e.key==='Enter'&&e.target.classList.contains('ans')){e.preventDefault();check(e.target.dataset.set,+e.target.dataset.i);}
@@ -875,6 +1091,7 @@ document.addEventListener('keydown',function(e){
 document.addEventListener('input',function(e){
   var t=e.target;
   if(t.classList.contains('nm')){st.name=t.value;save();renderSum();}
+  if(t.classList.contains('cd')){st.card[t.dataset.i]=t.value;save();}
   if(t.classList.contains('wtx')||t.classList.contains('wi')){st.w[t.id]=t.value;save();renderSum();}
 });
 
@@ -885,6 +1102,7 @@ function show(){
   document.querySelectorAll('nav a').forEach(function(a){a.classList.toggle('on',a.dataset.k===k);});
   st.tab=k;save();
 }
+renderLife();
 Object.keys(M).forEach(renderM);Object.keys(T).forEach(renderT);
 Object.keys(WNAME).forEach(function(k){if(st.w[k]&&$(k))$(k).value=st.w[k];});
 [].forEach.call($('chk').children,function(li,i){if(st.c[i])li.classList.add('on');});
