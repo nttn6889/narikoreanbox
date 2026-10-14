@@ -237,6 +237,10 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   từng từ, “(을) 하다” viết đầy đủ; nghĩa theo file cô (sửa lỗi gõ); Hán Việt + câu ví dụ do Claude soạn. 4A/4B chưa nhập.
   Cô sẽ gửi bảng 어휘 색인 cuối sách để bổ sung. Id từ theo vị trí (bài, nhóm, thứ tự) — sửa danh sách sau khi đã giao bài thì
   kiểm tra `vassigns`/`vroutes` có dùng từ Seoul không trước khi ghi đè.
+- **Phụ lục sách (nguồn gốc)**: `tools/seoul/sach/<cuốn>.md` = chép nguyên văn phần cuối sách (문법 해설 từng bài, 문화 해설, 듣기 지문, 모범 답안;
+  bỏ bản dịch tiếng Anh, tranh chỉ ghi `[tranh]` khi có câu nói) và `tools/seoul/sach/<cuốn>-chi-muc.tsv` = 어휘 색인 (từ, nghĩa Anh, trang).
+  Đã có 1A, 1B (từ bản scan cô gửi); 2A–3B cô gửi dần. Chỉ mục chưa gộp vào `<cuốn>.tsv` (1A: 312/446 mục chưa có, 1B: 239/386).
+  Đây là nguồn cho trang học liệu ngữ pháp theo giáo trình (giải thích từng ngữ pháp theo thứ tự bài).
 - `python3 tools/seoul_kho.py <thư mục>` → `<thư mục>/vocab/S<cuốn><bài>_<nhóm>.json` (id cố định, từ `s3a01_1_0`…) +
   `seoul/bai.json` (tên bài tiếng Việt). Ghi vào db bằng ArtifactData batch `set` collection `vocab` (file_path), rồi đồng bộ kho từ.
   Phần: `Seoul 3A · Bài 1 · <tên bài>`, secOrder 100 + 20×(cấp−1) + số bài. Từ có thêm `hv` (Hán Việt) và `ex` (câu ví dụ).
