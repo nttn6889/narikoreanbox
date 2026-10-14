@@ -80,7 +80,8 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - 5 bản: `nari-topik-logo` (hình + tên), `-logo-slogan`, `-ngang`, `-icon` (tròn tím nhạt), `-bieu-tuong` (chỉ hình); mỗi bản có `.svg`, `.png` (trong suốt),
   `-nen-trang.jpg`. Sinh lại: `pip install fonttools brotli`, `python3 tools/logo/mklogo.py logo` (chữ đổi thành nét vẽ, font Be Vietnam Pro trong
   `tools/logo/fonts/`), PNG chụp bằng Chromium. Logo cũ (đỏ – xanh “Hàn Ngữ Nari”, vòng tròn EPS) không dùng nữa.
-- Icon app thi thử (`thi-thu/icon/`) và logo trên các trang **chưa đổi** sang logo mới — làm khi cô nhắn.
+- `hoc-cung-co/` đã đổi sang logo mới (đầu trang bản ngang, cuối trang bản có khẩu hiệu, favicon, ảnh chia sẻ; chế độ tối đặt logo trên nền `#EFEAF8`).
+  Icon app thi thử (`thi-thu/icon/`) và logo trên các trang khác **chưa đổi** — làm khi cô nhắn.
 
 ## Ảnh quảng cáo / đấu giá lớp (`quang-cao/`)
 - Mỗi bộ một thư mục, ảnh 1080×1350 (góc phải trên luôn có Zalo cô 0399 214 554) viết bằng HTML (`base.css` chung, logo `logo/nari-topik-ngang.svg`), chụp bằng Playwright ra PNG cùng tên.
