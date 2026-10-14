@@ -278,6 +278,18 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   **Không đặt link từ `seoul/` (hay trang học sinh nào) sang `seoul/3a-1/`** — cô coi trang học liệu như giáo án của cô.
   `TV1[i][5]` = cụm hay đi với `[[ko, nghĩa Việt]…]`.
 
+## Học liệu Seoul 2A theo bài (`seoul/2a-1/`) — lớp 1:1, đích TOPIK 3 tháng 4/2027
+- Học sinh: sinh viên ngoại ngữ (văn bằng 2 tiếng Anh), cần chứng chỉ ngoại ngữ thứ hai để tốt nghiệp; học 2A → 2B rồi thi TOPIK II, phải đạt cấp 3
+  (đích 135: Nghe 50 / Đọc 55 / Viết 30). Học sâu như lớp 3A, nhưng chú trọng nói, nghe, đọc, viết, và mỗi phần nối với một dạng câu TOPIK.
+- Sách cô gửi là PDF ảnh scan (không có chữ, ~1.500 token/trang khi đọc). Không chép nguyên văn hội thoại, bài đọc của sách lên site (repo công khai):
+  hội thoại, bài nghe, bài đọc trong trang đều do Claude viết lại theo mẫu sách (nhân vật Thùy – sinh viên tiếng Anh).
+- `seoul/2a-1/` (Bài 1 `처음 뵙겠습니다`: `N(이)라고 하다, -(으)려고, -거나, N(이)나`): thẻ Đích (điểm, lộ trình 6 tháng, Bài 1 trong đề TOPIK) ·
+  Từ vựng (`TV1` thông tin cá nhân, kính ngữ danh từ, `TV2` tần suất, `TV3` từ mới) · Ngữ pháp (cách chia → nghĩa gốc → English → bẫy → mở rộng TOPIK) ·
+  Nói·Nghe (`DLG` shadowing, `QA` phản xạ, bài nói 1 phút, đóng vai, phát âm 비음화, `AU.n1/n2` nghe hội thoại bằng `speechSynthesis` — nam giọng trầm,
+  nữ giọng cao; `M.n3` kiểu Nghe câu 4–8, phần tử 4 = lời thoại) · Đọc·Viết (quảng cáo tìm bạn, 2 bài kiểu câu 51, viết quảng cáo, giới thiệu quê) ·
+  Kiểm tra (15 câu). Trắc nghiệm `M` (lựa chọn đầu là đáp án), gõ chữ `T`, bài viết `st.w` gửi kèm báo cáo. localStorage `nari-2a1`.
+  Không đặt link từ trang học sinh sang trang này (giống `seoul/3a-1/`).
+
 ## Học liệu nền tảng cho lớp 3A chuyên ngành (cô dùng làm bản trình chiếu)
 - Mỗi chủ đề một trang riêng, cùng khung với `seoul/3a-1/` (thẻ lý thuyết + thẻ Luyện chấm ngay + “Gửi kết quả cho cô”). Không đặt link từ trang học sinh;
   cô gom link ở trang “Mục lục học liệu Nari” (https://claude.ai/artifact/6bTfJWsvsCeMrmggceXPjQ, nhóm “Seoul 3A · lớp chuyên ngành”).
