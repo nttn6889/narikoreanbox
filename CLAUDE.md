@@ -285,11 +285,14 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   không thêm bài luyện đề (câu 51…) hay hội thoại tự viết thay cho sách.
 - Sách cô gửi là PDF ảnh scan (không có chữ, ~1.500 token/trang khi đọc). Trang dùng hội thoại, bài đọc ngắn của sách (để học từng câu);
   file nghe của sách (track 08–11) không có → phần nghe chỉ chuẩn bị + giải thích câu hỏi + ô ghi đáp án, cô mở file trong buổi học.
-- `seoul/2a-1/` (Bài 1 `처음 뵙겠습니다`): 10 thẻ theo trang — Mục tiêu (tr.25) · Từ vựng (26–27: thẻ học sinh `TV1`, bài 2 `M.v0`, bài 3 `LIFE`
-  tính điểm, tần suất `TV2`) · Ngữ pháp 1 (28–29) · Nói 1 (30–31: `D1`, thay thế `SUB1`, câu hỏi lịch sự) · Ngữ pháp 2 (32–33) · Nói 2 (34–35: `D2`, `SUB2`) ·
-  Nghe–Nói (36–37) · Đọc–Viết (38–39: `READ` từng câu) · Nhiệm vụ (40 quê hương, 41 văn hóa `CUL`, 42 phát âm `PRON`) · Tự đánh giá (43: `SELF`, `T.s2`
-  đáp án sách, kiểm tra `M.ck`, gửi kết quả). Câu hỏi – câu mẫu `QA`, trắc nghiệm `M` (lựa chọn đầu là đáp án; phần tử 4 = câu máy đọc), gõ chữ `T`,
-  bài viết/ghi chú `st.w` (tên trong `WNAME`) gửi kèm báo cáo. Máy đọc `speechSynthesis`, nam giọng trầm (`MALE`). localStorage `nari-2a1v2`.
+- **Cấu trúc: mỗi trang sách là một mục** (cô không muốn chia theo kỹ năng Từ vựng/Ngữ pháp/Nói…): `seoul/2a-1/#b=p25` … `#b=p43`
+  (p25 = tr.24–25). Mỗi trang: “Trang này có gì” (`.on-page`, liệt kê đúng những gì in trên trang) → các điểm **cô giảng sâu** (`.pt`: cấu tạo, nghĩa gốc,
+  so sánh, Hán Việt, phát âm, lỗi người Việt hay mắc, văn hóa) → “Cô hỏi” (`.ask`, đáp án ẩn) → bài trong sách (đáp án / câu mẫu) → luyện thêm chấm ngay.
+  Nút trang trước/sau và nút 🔊 cho mọi `.ex>.ko` do JS tự thêm.
+- Dữ liệu `seoul/2a-1/`: `TV1` (tr.26), `M.v0`, `T.fr` (tr.26), `LIFE`, `TV2`, `M.v1` (tr.27), `T.ga` (28), `QA.qa1`, `T.gb`, `M.m1` (29), `D1`, `SUB1` (30),
+  `QA.qa2`, `M.v2` (31), `QA.qa3`, `T.gc` (32), `QA.qa4`, `M.m2` (33), `D2`, `SUB2` (34), `QA.qa5`, `M.v3` (35), `M.h1` (36), `READ` (38), `M.r1` (39),
+  `CUL` (41), `PRON`, `M.p1` (42), `SELF`, `T.s2` (đáp án sách), `M.ck` (43). Trắc nghiệm lựa chọn đầu là đáp án; bài viết/ghi chú `st.w` (tên trong `WNAME`)
+  gửi kèm báo cáo. Máy đọc `speechSynthesis`, nam giọng trầm (`MALE`). localStorage `nari-2a1v2`.
   Không đặt link từ trang học sinh sang trang này (giống `seoul/3a-1/`). Bài 2, 3… làm cùng khuôn: `seoul/2a-<bài>/`.
 
 ## Học liệu nền tảng cho lớp 3A chuyên ngành (cô dùng làm bản trình chiếu)
