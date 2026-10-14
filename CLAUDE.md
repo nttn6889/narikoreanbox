@@ -279,16 +279,17 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   `TV1[i][5]` = cụm hay đi với `[[ko, nghĩa Việt]…]`.
 
 ## Học liệu Seoul 2A theo bài (`seoul/2a-1/`) — lớp 1:1, đích TOPIK 3 tháng 4/2027
-- Học sinh: sinh viên ngoại ngữ (văn bằng 2 tiếng Anh), cần chứng chỉ ngoại ngữ thứ hai để tốt nghiệp; học 2A → 2B rồi thi TOPIK II, phải đạt cấp 3
-  (đích 135: Nghe 50 / Đọc 55 / Viết 30). Học sâu như lớp 3A, nhưng chú trọng nói, nghe, đọc, viết, và mỗi phần nối với một dạng câu TOPIK.
-- Sách cô gửi là PDF ảnh scan (không có chữ, ~1.500 token/trang khi đọc). Không chép nguyên văn hội thoại, bài đọc của sách lên site (repo công khai):
-  hội thoại, bài nghe, bài đọc trong trang đều do Claude viết lại theo mẫu sách (nhân vật Thùy – sinh viên tiếng Anh).
-- `seoul/2a-1/` (Bài 1 `처음 뵙겠습니다`: `N(이)라고 하다, -(으)려고, -거나, N(이)나`): thẻ Đích (điểm, lộ trình 6 tháng, Bài 1 trong đề TOPIK) ·
-  Từ vựng (`TV1` thông tin cá nhân, kính ngữ danh từ, `TV2` tần suất, `TV3` từ mới) · Ngữ pháp (cách chia → nghĩa gốc → English → bẫy → mở rộng TOPIK) ·
-  Nói·Nghe (`DLG` shadowing, `QA` phản xạ, bài nói 1 phút, đóng vai, phát âm 비음화, `AU.n1/n2` nghe hội thoại bằng `speechSynthesis` — nam giọng trầm,
-  nữ giọng cao; `M.n3` kiểu Nghe câu 4–8, phần tử 4 = lời thoại) · Đọc·Viết (quảng cáo tìm bạn, 2 bài kiểu câu 51, viết quảng cáo, giới thiệu quê) ·
-  Kiểm tra (15 câu). Trắc nghiệm `M` (lựa chọn đầu là đáp án), gõ chữ `T`, bài viết `st.w` gửi kèm báo cáo. localStorage `nari-2a1`.
-  Không đặt link từ trang học sinh sang trang này (giống `seoul/3a-1/`).
+- Học sinh: sinh viên ngoại ngữ (văn bằng 2 tiếng Anh), cần chứng chỉ ngoại ngữ thứ hai để tốt nghiệp; học **hết 2A → 2B rồi mới ôn TOPIK 3**.
+  Cô muốn học liệu **bám theo từng trang sách**, học sâu đủ nội dung bài; điểm nào liên quan TOPIK thì chỉ ghi chú nhỏ (khung `.tp` “📝 TOPIK”),
+  không thêm bài luyện đề (câu 51…) hay hội thoại tự viết thay cho sách.
+- Sách cô gửi là PDF ảnh scan (không có chữ, ~1.500 token/trang khi đọc). Trang dùng hội thoại, bài đọc ngắn của sách (để học từng câu);
+  file nghe của sách (track 08–11) không có → phần nghe chỉ chuẩn bị + giải thích câu hỏi + ô ghi đáp án, cô mở file trong buổi học.
+- `seoul/2a-1/` (Bài 1 `처음 뵙겠습니다`): 10 thẻ theo trang — Mục tiêu (tr.25) · Từ vựng (26–27: thẻ học sinh `TV1`, bài 2 `M.v0`, bài 3 `LIFE`
+  tính điểm, tần suất `TV2`) · Ngữ pháp 1 (28–29) · Nói 1 (30–31: `D1`, thay thế `SUB1`, câu hỏi lịch sự) · Ngữ pháp 2 (32–33) · Nói 2 (34–35: `D2`, `SUB2`) ·
+  Nghe–Nói (36–37) · Đọc–Viết (38–39: `READ` từng câu) · Nhiệm vụ (40 quê hương, 41 văn hóa `CUL`, 42 phát âm `PRON`) · Tự đánh giá (43: `SELF`, `T.s2`
+  đáp án sách, kiểm tra `M.ck`, gửi kết quả). Câu hỏi – câu mẫu `QA`, trắc nghiệm `M` (lựa chọn đầu là đáp án; phần tử 4 = câu máy đọc), gõ chữ `T`,
+  bài viết/ghi chú `st.w` (tên trong `WNAME`) gửi kèm báo cáo. Máy đọc `speechSynthesis`, nam giọng trầm (`MALE`). localStorage `nari-2a1v2`.
+  Không đặt link từ trang học sinh sang trang này (giống `seoul/3a-1/`). Bài 2, 3… làm cùng khuôn: `seoul/2a-<bài>/`.
 
 ## Học liệu nền tảng cho lớp 3A chuyên ngành (cô dùng làm bản trình chiếu)
 - Mỗi chủ đề một trang riêng, cùng khung với `seoul/3a-1/` (thẻ lý thuyết + thẻ Luyện chấm ngay + “Gửi kết quả cho cô”). Không đặt link từ trang học sinh;
