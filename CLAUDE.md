@@ -309,7 +309,11 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   cô gom link ở trang “Mục lục học liệu Nari” (https://claude.ai/artifact/6bTfJWsvsCeMrmggceXPjQ, nhóm “Seoul 3A · lớp chuyên ngành”).
 - `seoul/so-dem/` Số Hán Hàn – thuần Hàn: hai bộ số + quy tắc chọn, lượng từ (`DVN`/`DVS`), thời gian, số lớn (만/억 so với nghìn/triệu), tiền, số và biến âm,
   “Máy đọc số” (`sino`/`nat`/`readNum`: số, giờ `15:20`, ngày `2026-10-13`). Bài tập trong `M` (lựa chọn đầu là đáp án; phần tử 4 = câu máy đọc cho bài nghe), `T`. localStorage `nari-so`.
-- Còn làm: Biến âm, Trợ từ, Ngữ pháp tương đồng (cặp dễ nhầm 1A–3A).
+- `seoul/tuong-dong/` Ngữ pháp tương đồng 1A–3A: thẻ Bản đồ (5 câu hỏi phân biệt: chủ ngữ, thì, kiểu câu sau, loại từ, nguồn thông tin + bảng 25 nhóm),
+  Tiểu từ (nhóm 1–5), Nối câu (6–10), Ý định (11–16), Phỏng đoán (17–21), Gián tiếp (22–25, kèm bảng danh từ phụ thuộc → đuôi định ngữ), Luyện.
+  Mỗi nhóm một thẻ `.card id=gN` (link `#b=<thẻ>&g=gN`); cột “Sách” chỉ ghi số bài khi chắc (3A theo tên bài, 1B–2B theo `seoul/kiem-tra/`).
+  Bài tập `M` (lựa chọn đầu là đáp án; bộ `l4` “tìm câu sai” thì lựa chọn đầu là câu sai), `T` (gõ). localStorage `nari-tuongdong`.
+- Còn làm: Biến âm, Trợ từ.
 
 ## Học câu 52 trong 3 buổi (`viet-52/`)
 - Trang học liệu gửi học sinh: Buổi 1 (ô cuối câu, 5 nhóm từ nối: 47, 41, 52, 92, 96, 36, 37), Buổi 2 (“Chép hay Lật” = tìm ý cho ô; đề 60, 83, 91, 64, 35),
