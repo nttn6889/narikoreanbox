@@ -1,4 +1,4 @@
-/* App "Hàn Ngữ Nari": luôn lấy bản mới qua mạng, mất mạng thì dùng bản đã lưu.
+/* App "Nari TOPIK": luôn lấy bản mới qua mạng, mất mạng thì dùng bản đã lưu.
    Không cần đổi tên cache khi cập nhật trang — mỗi lần có mạng là tự lưu bản mới. */
 var CACHE = "nari-v1";
 var CORE = ["./", "vocab.json", "manifest.webmanifest", "icon/icon-192.png", "icon/apple-touch-icon.png"];

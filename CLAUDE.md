@@ -92,7 +92,9 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - `hoc-cung-co/` đã đổi sang logo mới (đầu trang bản ngang, cuối trang bản có khẩu hiệu, favicon, ảnh chia sẻ; chế độ tối đặt logo trên nền `#EFEAF8`).
   Icon app thi thử (`thi-thu/icon/`) đã đổi sang biểu tượng mới (`node tools/logo/mkicons.js`, nền `#EFEAF8`) → favicon/ảnh xem trước của mọi trang dùng
   `thi-thu/icon/` cũng đổi theo; `thi-thu/` có `og:image` = `logo/nari-topik-logo-nen-trang.jpg` (trong `APP_HEAD` của `sync_thi_thu.py`).
-  Tên “Hàn Ngữ Nari” trong tiêu đề các trang chưa đổi.
+  Đã đổi tên thương hiệu “Hàn Ngữ Nari” → **Nari TOPIK** trên mọi trang học sinh + trang quản lý (tiêu đề, og, tên app trong manifest, tin nhắn).
+  Đầu trang: `.brand` dùng `logo/nari-topik-ngang.svg` (có khẩu hiệu); trang thi thử/quản lý nhúng SVG đó trong biến `LOGO_SVG` (`headerHTML`).
+  `ve-co/` cuối trang dùng bản `-logo-slogan`; phần tiểu sử vẫn giữ “Trung tâm Hàn ngữ Nari” (tên trung tâm từ 2020).
 
 ## Ảnh quảng cáo / đấu giá lớp (`quang-cao/`)
 - Mỗi bộ một thư mục, ảnh 1080×1350 (góc phải trên luôn có Zalo cô 0399 214 554) viết bằng HTML (`base.css` chung, logo `logo/nari-topik-ngang.svg`), chụp bằng Playwright ra PNG cùng tên.
