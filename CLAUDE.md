@@ -353,6 +353,13 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - Biến `R` = 60 câu 3–4 từ `thi-thu/de/*.json` (bỏ Ehot1old, Entk3 câu 3 trùng Entk1) + đáp án `a` + giải thích `w` do Claude soạn; `MCQ` câu tự soạn
   (lựa chọn đầu là đáp án). Bài lưu localStorage `nari-34`.
 
+## Học câu 25–27 tiêu đề báo (`cau-25-27/`)
+- Cùng khung với `ngu-phap-34/`: Buổi 1 (luật rút gọn của tiêu đề, quan hệ hai nửa, chữ cuối → thời điểm, quy trình 4 bước, 6 bẫy), Buổi 2 (ẩn dụ/quán ngữ theo nhóm nghĩa, biến `GL`),
+  Buổi 3 (làm như thi, 40 giây/câu), Ôn (ôn ngắt quãng 10 câu), thẻ “63 câu” (giải thích từng câu, lọc theo buổi/quan hệ, “Che đáp án”), Bảng tra. Link `cau-25-27/#b=1|2|3|on|all|tra`, `#b=all&q=<id>`.
+- Biến `R` = 63 câu 25–27 của 21 đề đọc đủ 50 câu (`Etk091` + 20 đề luyện; tiêu đề + lựa chọn lấy từ `thi-thu/de/*.json`) + đáp án `a`, tách khúc `t`, nghĩa `v`,
+  giải thích `w`, `x[i]` = bẫy của đáp án sai (`N` nghĩa đen, `D` đảo nhân quả, `G` sai thời điểm, `C` ngược nghĩa, `T` thêm ý, `P` sai đối tượng) do Claude soạn.
+  Đề thật giữ thứ tự ①–④; `MCQ` câu tự soạn (lựa chọn đầu là đáp án, trang tự đảo). Bài lưu localStorage `nari-2527`.
+
 ## Facebook (`fb/`)
 - `fb/ca-nhan/`: bài cho trang cá nhân "Tiếng Hàn Ngân Nguyễn" (cô có ảnh đại diện thật, giọng văn kể chuyện, lồng từ Hàn). `bia.html` ảnh bìa 1640×924
   (chữ để trên + hai bên, vì trên điện thoại ảnh đại diện che giữa phía dưới), `ghim-1` bài ghim, loạt “Một từ, một câu chuyện” `tu-NN-*.html`
