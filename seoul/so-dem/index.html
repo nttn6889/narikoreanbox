@@ -75,6 +75,7 @@ button.say:active{background:var(--hl)}
 .mcq .q .n{font:bold 13px Arial,sans-serif;color:var(--muted);margin-right:6px}
 .opts{display:grid;grid-template-columns:1fr 1fr;gap:6px}
 .opts.one{grid-template-columns:1fr}
+.opts.two{grid-template-columns:1fr 1fr!important}
 @media(max-width:520px){.opts{grid-template-columns:1fr}}
 .opt{font-size:15px;text-align:left;padding:7px 10px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);cursor:pointer}
 .opt.ok{background:var(--okbg);border-color:var(--ok);color:var(--ok);font-weight:bold}
@@ -122,6 +123,25 @@ button.b.blue{background:var(--blue);border-color:var(--blue);color:#fff}
 .badge.c{background:#fff;color:var(--blue);border:1px dashed var(--blue)}
 .badge.m{background:var(--hl);color:var(--ink)}
 .badge.e{background:var(--okbg);color:var(--ok)}
+.try,.talk,.spin{border-radius:10px;margin:14px 0 16px;padding:8px 12px 4px}
+.try{border:2px solid var(--ok);background:#f6fbf7}
+.talk{border:2px solid var(--warn);background:#fffaf0}
+.spin{border:2px solid var(--blue);background:var(--bluebg);padding-bottom:10px}
+.try>.th,.talk>.th,.spin>.th{font:bold 16px Arial,sans-serif;margin:0 0 8px}
+.try>.th{color:var(--ok)}.talk>.th{color:var(--warn)}.spin>.th{color:var(--blue)}
+.th small{font-weight:normal;color:var(--muted);font-size:13.5px}
+.try .score{margin:2px 0 6px}
+.talk ol{margin:0 0 6px;padding-left:24px}.talk li{margin:0 0 8px}.talk li>.ko{font-size:16px}
+.talk details{display:inline;margin-left:6px;font-size:14.5px}.talk summary{display:inline;cursor:pointer;color:var(--warn);font:13px Arial,sans-serif;text-decoration:underline}
+.talk details[open] summary{margin-right:6px}
+.sp-q{font:bold 30px Arial,"Noto Sans KR",sans-serif;text-align:center;padding:10px 6px;background:#fff;border-radius:8px;min-height:62px;word-break:keep-all}
+.sp-q small{display:block;font:14px Arial,sans-serif;color:var(--muted)}
+.sp-a{margin-top:8px}.spin .btns{justify-content:center}
+.how{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px;font:13.5px Arial,sans-serif}.how span{padding:3px 9px;border-radius:12px;border:1px solid}
+@media print{.spin{display:none}}
+.dgw{margin:30px 0 0;border:2px solid #53468F;border-radius:12px;padding:10px 14px}.dgw>summary{cursor:pointer;font:bold 17px Arial,sans-serif;color:#53468F}.dgw>summary small{font-weight:normal;color:var(--muted)}
+.dgw .dg{border:0;padding:0;margin:8px 0 0;background:none}
+@media print{.dgw{display:none}}
 table.ds td:first-child{width:34%}table.ds td:nth-child(2){width:22%;white-space:nowrap}
 @media(max-width:560px){table.ds td:nth-child(2){white-space:normal}}
 footer{margin-top:40px;font-size:13px;color:var(--muted);text-align:center}
@@ -138,6 +158,7 @@ footer a{color:var(--muted)}
   </div>
   <h1>Số Hán Hàn và số thuần Hàn<span class="ko">한자어 숫자 · 고유어 숫자</span></h1>
   <p class="lead">Tiếng Hàn có <b>hai bộ số</b>. Hầu hết lỗi không nằm ở chỗ quên số, mà ở chỗ <b>chọn sai bộ</b> (<span class="ko">삼 개</span> thay vì <span class="ko">세 개</span>) hoặc <b>đọc sai số lớn</b> vì tiếng Việt đếm theo nghìn còn tiếng Hàn đếm theo vạn. Trang này gom toàn bộ kiến thức số đã rải ở Seoul 1A–2A (1A bài 5–6, 1B bài 9, 10, 12, 2A bài 3) thành một hệ thống, kèm luyện tập chấm ngay.</p>
+<div class="how"><b style="align-self:center">Mỗi phần học:</b><span>① Cô giảng</span><span style="border-color:var(--ok);color:var(--ok)">② ✋ Em thử – chấm ngay</span><span style="border-color:var(--warn);color:var(--warn)">③ 🗣 Nói to</span><span style="border-color:var(--blue);color:var(--blue)">④ 🎲 Quay số</span></div>
 </header>
 <nav><div class="bar">
   <a href="#b=tq" data-k="tq">Hai bộ số<small>Dùng khi nào</small></a>
@@ -157,6 +178,8 @@ footer a{color:var(--muted)}
 <h3>1. Hai bộ số đặt cạnh nhau</h3>
 <div class="scroll"><table class="t" id="numtab"></table></div>
 <div class="deep"><b>Lợi thế của người Việt: số Hán Hàn chính là số Hán Việt.</b> Đọc to và so: <span class="ko">일</span> nhất · <span class="ko">이</span> nhị · <span class="ko">삼</span> tam · <span class="ko">사</span> tứ · <span class="ko">오</span> ngũ · <span class="ko">육</span> lục · <span class="ko">칠</span> thất · <span class="ko">팔</span> bát · <span class="ko">구</span> cửu · <span class="ko">십</span> thập · <span class="ko">백</span> bách · <span class="ko">천</span> thiên · <span class="ko">만</span> <b>vạn</b> · <span class="ko">억</span> ức. Em đã biết các từ “thập phần, bách khoa, thiên niên kỷ, vạn sự”: đó chính là bộ số này.</div>
+<div class="talk"><div class="th">🗣 Nói to <small>cả lớp cùng đọc</small></div><ol><li><span class="ko">Đếm 1 → 10 bằng thuần Hàn, rồi bằng Hán Hàn.</span><details><summary>Gợi ý</summary><span class="ko">하나, 둘, 셋, 넷, 다섯, 여섯, 일곱, 여덟, 아홉, 열</span> <button class="say" data-say="하나, 둘, 셋, 넷, 다섯, 여섯, 일곱, 여덟, 아홉, 열">🔊</button></details></li><li><span class="ko">Đếm ngược 10 → 1 bằng Hán Hàn.</span><details><summary>Gợi ý</summary><span class="ko">십, 구, 팔, 칠, 육, 오, 사, 삼, 이, 일</span> <button class="say" data-say="십, 구, 팔, 칠, 육, 오, 사, 삼, 이, 일">🔊</button></details></li><li><span class="ko">Đọc hàng chục thuần Hàn: 10, 20, 30… 90.</span><details><summary>Gợi ý</summary><span class="ko">열, 스물, 서른, 마흔, 쉰, 예순, 일흔, 여든, 아흔</span> <button class="say" data-say="열, 스물, 서른, 마흔, 쉰, 예순, 일흔, 여든, 아흔">🔊</button></details></li><li><span class="ko">Cô nói một số Hán Việt (“thất”, “cửu”, “bách”…), em nói số Hán Hàn tương ứng.</span><details><summary>Gợi ý</summary><span class="ko">칠, 구, 백</span> <button class="say" data-say="칠, 구, 백">🔊</button></details></li></ol></div>
+<div class="try"><div class="th">✋ Em thử <small>số này đọc thế nào?</small></div><div class="set" data-set="e1"></div></div>
 
 <h3>2. Ba điều khác nhau giữa hai bộ</h3>
 <table class="t">
@@ -176,6 +199,8 @@ footer a{color:var(--muted)}
 <div class="warnbox"><b>Hai ngoại lệ phải thuộc lòng:</b>
 <br>① <b>Giờ dùng thuần Hàn, phút dùng Hán Hàn:</b> <span class="ko">3시 20분 = <b>세</b> 시 <b>이십</b> 분</span>.
 <br>② <b>Tuổi</b> nói thường dùng thuần Hàn <span class="ko">스무 <b>살</b></span>; văn bản trang trọng (báo, hồ sơ) dùng Hán Hàn <span class="ko">이십 <b>세</b></span>.</div>
+<div class="try"><div class="th">✋ Em thử <small>thuần Hàn hay Hán Hàn? Nghĩ “đang đếm hay đang gọi tên?”</small></div><div class="set" data-set="e2"></div></div>
+<div class="spin" data-kind="so"><div class="th">🎲 Quay số <small>cô bấm ra số, cả lớp đọc cả hai bộ</small></div><div class="sp-q"></div><div class="btns"><button class="b" data-reveal="1">Xem đáp án</button><button class="b blue" data-spin="1">🎲 Số khác</button></div><div class="sp-a"></div></div>
 
 <h3>4. Cùng một chữ số, hai nghĩa khác nhau</h3>
 <table class="t">
@@ -186,6 +211,7 @@ footer a{color:var(--muted)}
 <tr><td class="ko"><b>첫째, 둘째</b> <span class="note">thứ nhất, thứ hai (trong nhà, trong liệt kê)</span></td><td class="ko"><b>제일, 제이</b> <span class="note">thứ nhất, thứ hai (văn bản: 제1과, 제91회)</span></td></tr>
 <tr><td class="ko"><b>두 달</b> <span class="note">hai tháng</span></td><td class="ko"><b>이 개월</b> <span class="note">hai tháng (cùng nghĩa, trang trọng hơn)</span></td></tr>
 </table>
+<div class="talk"><div class="th">🗣 Nói to <small>cô đọc, em nói nghĩa – rồi đổi vai</small></div><ol><li><span class="ko">한 번 · 일 번</span><details><summary>Gợi ý</summary><span class="ko">một lần · số 1</span> <button class="say" data-say="một lần · số 1">🔊</button></details></li><li><span class="ko">세 분 · 삼 분</span><details><summary>Gợi ý</summary><span class="ko">ba vị · ba phút</span> <button class="say" data-say="ba vị · ba phút">🔊</button></details></li><li><span class="ko">두 달 · 이 개월</span><details><summary>Gợi ý</summary><span class="ko">hai tháng · hai tháng (trang trọng)</span> <button class="say" data-say="hai tháng · hai tháng (trang trọng)">🔊</button></details></li><li><span class="ko">첫째 · 제일</span><details><summary>Gợi ý</summary><span class="ko">thứ nhất (đếm) · thứ nhất (văn bản)</span> <button class="say" data-say="thứ nhất (đếm) · thứ nhất (văn bản)">🔊</button></details></li></ol></div>
 <h4>Kiểm tra nhanh</h4>
 <div class="set" data-set="q1"></div>
 </section>
@@ -200,6 +226,8 @@ footer a{color:var(--muted)}
 <h3>2. Lượng từ đi với số Hán Hàn</h3>
 <div class="scroll"><table class="t" id="dvS"></table></div>
 <div class="deep"><b>Vì sao <span class="ko">권, 장, 잔, 병, 시간</span> là từ gốc Hán mà vẫn đếm bằng thuần Hàn?</b> Vì quy tắc thật sự không dựa vào gốc của lượng từ mà dựa vào <b>việc đang làm</b>: <span class="ko">책 두 권</span> là <b>đếm</b> số quyển sách (bao nhiêu quyển?). Còn <span class="ko">삼 층, 오천 원, 이십 분</span> là <b>đo</b> hoặc <b>gọi tên</b> (tầng số 3, mức giá, số phút). Hỏi “mình đang đếm vật hay đang đọc một con số?” sẽ đúng cả với từ chưa học.</div>
+<div class="try"><div class="th">✋ Em thử <small>chọn lượng từ</small></div><div class="set" data-set="e3"></div></div>
+<div class="spin" data-kind="dem"><div class="th">🎲 Quay số <small>nhìn hình, nói số lượng với lượng từ</small></div><div class="sp-q"></div><div class="btns"><button class="b" data-reveal="1">Xem đáp án</button><button class="b blue" data-spin="1">🎲 Số khác</button></div><div class="sp-a"></div></div>
 
 <h3>3. Đổi hình trước lượng từ</h3>
 <table class="t">
@@ -212,6 +240,7 @@ footer a{color:var(--muted)}
 <tr><td class="ko">열하나, 열둘…</td><td class="ko">열한, 열두, 열세, 열네</td><td class="ko">열한 시, 열두 명 <button class="say" data-say="열한 시, 열두 명">🔊</button></td></tr>
 </table>
 <p class="note">Số khác (다섯, 여섯, 일곱, 여덟, 아홉, 열, 서른…) giữ nguyên. Ghép số gần nhau để nói “khoảng”: <span class="ko">두세 명</span> (2–3 người), <span class="ko">서너 개</span> (3–4 cái), <span class="ko">대여섯 번</span> (5–6 lần).</p>
+<div class="try"><div class="th">✋ Em thử <small>gõ cách đọc (đổi hình trước lượng từ)</small></div><div class="set" data-set="e4"></div></div>
 
 <h3>4. Hỏi bằng 몇</h3>
 <table class="t">
@@ -224,6 +253,7 @@ footer a{color:var(--muted)}
 </table>
 <p class="note">Viết <span class="ko"><b>며칠</b></span> (ngày mấy, mấy ngày), <b>không</b> viết <span class="ko">몇 일</span>. Đây là lỗi chính tả rất hay gặp, kể cả với người Hàn.</p>
 <p class="note">Lượng từ trong từng tình huống thật (gọi món, đi chợ, uống thuốc…): xem thẻ <a href="#b=ds">Đời sống</a>.</p>
+<div class="talk"><div class="th">🗣 Nói to <small>cô hỏi, em trả lời bằng đồ vật thật quanh em</small></div><ol><li><span class="ko">교실에 학생이 몇 명 있어요?</span><details><summary>Gợi ý</summary><span class="ko">학생이 <b>여섯 명</b> 있어요.</span> <button class="say" data-say="학생이 여섯 명 있어요.">🔊</button></details></li><li><span class="ko">책상 위에 책이 몇 권 있어요?</span><details><summary>Gợi ý</summary><span class="ko">책이 <b>세 권</b> 있어요.</span> <button class="say" data-say="책이 세 권 있어요.">🔊</button></details></li><li><span class="ko">오늘 커피를 몇 잔 마셨어요?</span><details><summary>Gợi ý</summary><span class="ko"><b>두 잔</b> 마셨어요.</span> <button class="say" data-say="두 잔 마셨어요.">🔊</button></details></li><li><span class="ko">집에 휴대폰이 몇 대 있어요?</span><details><summary>Gợi ý</summary><span class="ko"><b>네 대</b> 있어요.</span> <button class="say" data-say="네 대 있어요.">🔊</button></details></li><li><span class="ko">신발이 몇 켤레 있어요?</span><details><summary>Gợi ý</summary><span class="ko"><b>다섯 켤레</b> 있어요.</span> <button class="say" data-say="다섯 켤레 있어요.">🔊</button></details></li><li><span class="ko">이 교실은 몇 층이에요?</span><details><summary>Gợi ý</summary><span class="ko"><b>삼 층</b>이에요.</span> <button class="say" data-say="삼 층이에요.">🔊</button></details></li></ol></div>
 <h4>Kiểm tra nhanh</h4>
 <div class="set" data-set="q2"></div>
 </section>
@@ -244,6 +274,7 @@ footer a{color:var(--muted)}
 <tr><td>Năm</td><td class="ko"><b>이천이십육</b> 년 — Hán</td><td class="ko"><b>삼</b> 년 동안 — Hán</td></tr>
 </table></div>
 <p class="note">Đếm ngày bằng thuần Hàn (dùng nhiều trong hội thoại, TOPIK nghe): <span class="ko">하루</span> 1 ngày · <span class="ko">이틀</span> 2 ngày · <span class="ko">사흘</span> 3 ngày · <span class="ko">나흘</span> 4 ngày <button class="say" data-say="하루, 이틀, 사흘, 나흘">🔊</button>. <span class="ko">사흘</span> là 3 ngày, không phải 4 ngày: người Hàn trẻ cũng hay nhầm.</p>
+<div class="try"><div class="th">✋ Em thử <small>mốc hay khoảng?</small></div><div class="set" data-set="e5"></div></div>
 
 <h3>2. Đọc giờ</h3>
 <table class="t">
@@ -255,6 +286,7 @@ footer a{color:var(--muted)}
 <tr><td>15:20</td><td class="ko"><b>오후</b> 세 시 이십 분 <button class="say" data-say="오후 세 시 이십 분">🔊</button></td></tr>
 </table>
 <p class="note">Hàn Quốc nói giờ theo 12 giờ + <span class="ko">오전</span> (sáng) / <span class="ko">오후</span> (chiều); lịch tàu, thông báo mới dùng 24 giờ đọc Hán Hàn (<span class="ko">십오 시</span>).</p>
+<div class="spin" data-kind="gio"><div class="th">🎲 Quay số <small>đọc giờ (thêm 오전/오후)</small></div><div class="sp-q"></div><div class="btns"><button class="b" data-reveal="1">Xem đáp án</button><button class="b blue" data-spin="1">🎲 Số khác</button></div><div class="sp-a"></div></div>
 
 <h3>3. Ngày tháng năm</h3>
 <p>Thứ tự ngược tiếng Việt: <b>năm → tháng → ngày</b>. Cả ba đều Hán Hàn.</p>
@@ -269,6 +301,8 @@ footer a{color:var(--muted)}
 <tr><td>6</td><td class="ko"><b>유월</b> (bỏ ㄱ)</td><td>12</td><td class="ko">십이월 <span class="pron">[시비월]</span></td></tr>
 </table>
 <p class="note"><span class="ko">유월, 시월</span> bỏ phụ âm cuối để đọc cho xuôi. Viết số thì vẫn là <span class="ko">6월, 10월</span>.</p>
+<div class="try"><div class="th">✋ Em thử <small>ngày tháng</small></div><div class="set" data-set="e6"></div></div>
+<div class="spin" data-kind="ngay"><div class="th">🎲 Quay số <small>đọc ngày tháng năm</small></div><div class="sp-q"></div><div class="btns"><button class="b" data-reveal="1">Xem đáp án</button><button class="b blue" data-spin="1">🎲 Số khác</button></div><div class="sp-a"></div></div>
 
 <h3>4. Tuổi, năm học, thứ tự</h3>
 <table class="t">
@@ -279,6 +313,7 @@ footer a{color:var(--muted)}
 <tr><td>Thứ tự</td><td class="ko">첫째, 둘째, 셋째 · 첫 번째, 두 번째 · 제일 과, 일 등 (hạng nhất)</td></tr>
 </table>
 <p class="note">Chú ý: “thứ nhất” là <span class="ko"><b>첫</b>째 / <b>첫</b> 번째</span>, không phải <span class="ko">한째, 한 번째</span>. Từ thứ hai trở đi mới dùng <span class="ko">두, 세, 네</span>.</p>
+<div class="talk"><div class="th">🗣 Nói to <small>hỏi đáp theo cặp</small></div><ol><li><span class="ko">지금 몇 시예요?</span><details><summary>Gợi ý</summary><span class="ko">지금 <b>오후 두 시 사십 분</b>이에요.</span> <button class="say" data-say="지금 오후 두 시 사십 분이에요.">🔊</button></details></li><li><span class="ko">생일이 몇 월 며칠이에요?</span><details><summary>Gợi ý</summary><span class="ko"><b>칠월 이십오 일</b>이에요.</span> <button class="say" data-say="칠월 이십오 일이에요.">🔊</button></details></li><li><span class="ko">몇 년에 태어났어요?</span><details><summary>Gợi ý</summary><span class="ko"><b>이천오 년</b>에 태어났어요.</span> <button class="say" data-say="이천오 년에 태어났어요.">🔊</button></details></li><li><span class="ko">몇 학년이에요?</span><details><summary>Gợi ý</summary><span class="ko"><b>삼 학년</b>이에요.</span> <button class="say" data-say="삼 학년이에요.">🔊</button></details></li><li><span class="ko">하루에 몇 시간 공부해요?</span><details><summary>Gợi ý</summary><span class="ko"><b>두 시간</b> 공부해요.</span> <button class="say" data-say="두 시간 공부해요.">🔊</button></details></li><li><span class="ko">형제 중에서 몇째예요?</span><details><summary>Gợi ý</summary><span class="ko"><b>첫째</b>예요.</span> <button class="say" data-say="첫째예요.">🔊</button></details></li></ol></div>
 <h4>Kiểm tra nhanh</h4>
 <div class="set" data-set="q3"></div>
 </section>
@@ -301,6 +336,7 @@ footer a{color:var(--muted)}
 <tr><td>1.0000.0000</td><td>một trăm triệu</td><td class="ko"><b>억</b></td><td>ức</td></tr>
 </table></div>
 <p class="note">Cột “Số” cố ý chấm theo nhóm 4 chữ số để em thấy ranh giới <span class="ko">만</span> và <span class="ko">억</span>.</p>
+<div class="try"><div class="th">✋ Em thử <small>tách 4 chữ số rồi chọn</small></div><div class="set" data-set="e7"></div></div>
 
 <h3>2. Đọc một số lớn trong 3 bước</h3>
 <ol class="steps">
@@ -309,6 +345,7 @@ footer a{color:var(--muted)}
   <li><b>Ghép lại:</b> <span class="ko">백이십삼만 사천오백육십칠</span>. <button class="say" data-say="백이십삼만 사천오백육십칠">🔊</button></li>
 </ol>
 <div class="warnbox"><b>Không nói “일” trước 십, 백, 천, 만:</b> 10 = <span class="ko">십</span>, 100 = <span class="ko">백</span>, 1.000 = <span class="ko">천</span>, 10.000 = <span class="ko">만</span> (không phải <span class="ko">일십, 일백, 일천, 일만</span>). Riêng 1억 vẫn đọc <span class="ko">일억</span>.</div>
+<div class="try"><div class="th">✋ Em thử <small>gõ cách đọc số tiền</small></div><div class="set" data-set="e8"></div></div>
 
 <h3>3. Máy đọc số</h3>
 <p>Gõ một con số (hoặc giờ <b>15:20</b>, ngày <b>2026-10-13</b>) để xem cách đọc và nghe máy đọc. Dùng được khi cô giảng hoặc khi em tự kiểm tra.</p>
@@ -324,6 +361,8 @@ footer a{color:var(--muted)}
 <tr><td>35.000원</td><td class="ko">삼만 오천 원</td><td><span class="pron">[삼마노처눤]</span> <button class="say" data-say="삼만 오천 원">🔊</button></td></tr>
 <tr><td>100.000동</td><td class="ko">십만 동</td><td><span class="pron">[심만 동]</span> <button class="say" data-say="십만 동">🔊</button></td></tr>
 </table>
+<div class="spin" data-kind="tien"><div class="th">🎲 Quay số <small>đi chợ: đọc giá tiền</small></div><div class="sp-q"></div><div class="btns"><button class="b" data-reveal="1">Xem đáp án</button><button class="b blue" data-spin="1">🎲 Số khác</button></div><div class="sp-a"></div></div>
+<div class="talk"><div class="th">🗣 Nói to <small>nói giá ở Việt Nam</small></div><ol><li><span class="ko">Một cốc trà sữa 35.000 동</span><details><summary>Gợi ý</summary><span class="ko">삼만 오천 동이에요.</span> <button class="say" data-say="삼만 오천 동이에요.">🔊</button></details></li><li><span class="ko">Một bát phở 50.000 동</span><details><summary>Gợi ý</summary><span class="ko">오만 동이에요.</span> <button class="say" data-say="오만 동이에요.">🔊</button></details></li><li><span class="ko">Tiền nhà một tháng 2.500.000 동</span><details><summary>Gợi ý</summary><span class="ko">이백오십만 동이에요.</span> <button class="say" data-say="이백오십만 동이에요.">🔊</button></details></li><li><span class="ko">Một chiếc điện thoại 12.000.000 동</span><details><summary>Gợi ý</summary><span class="ko">천이백만 동이에요.</span> <button class="say" data-say="천이백만 동이에요.">🔊</button></details></li></ol></div>
 
 <h3>5. Số và biến âm</h3>
 <p>Nghe số mà không nhận ra thường là vì <b>biến âm</b>. Những dạng hay gặp nhất:</p>
@@ -337,6 +376,7 @@ footer a{color:var(--muted)}
 <tr><td class="ko">열여섯</td><td><span class="pron">[열려섣]</span></td><td>Thêm ㄴ rồi ㄹ hóa: ㄹ + ㄴ → ㄹㄹ</td></tr>
 </table>
 <p class="note">Các quy tắc này sẽ học kỹ ở chủ đề <b>Biến âm</b>.</p>
+<div class="try"><div class="th">✋ Em thử <small>đọc thế nào? (bấm 🔊 ở bảng trên để nghe lại)</small></div><div class="set" data-set="e9"></div></div>
 <h4>Kiểm tra nhanh</h4>
 <div class="set" data-set="q4"></div>
 </section>
@@ -370,9 +410,12 @@ footer a{color:var(--muted)}
 </td></tr>
 </table></div>
 
+<div class="try"><div class="th">✋ Em thử <small>tình huống này dùng bộ số nào?</small></div><div class="set" data-set="e10"></div></div>
 <h3>2. Tình huống theo lĩnh vực</h3>
 <p class="note">Bấm 🔊 để nghe cả câu. Chữ in đậm là phần số.</p>
 <div id="dsList"></div>
+<div class="talk"><div class="th">🗣 Nói to <small>nói về em: đọc to thông tin thật của em</small></div><ol><li><span class="ko">Số điện thoại của em</span><details><summary>Gợi ý</summary><span class="ko"><b>공구공 일이삼사 오육칠팔</b>이에요.</span> <button class="say" data-say="공구공 일이삼사 오육칠팔이에요.">🔊</button></details></li><li><span class="ko">Em ở phòng / nhà số mấy, tầng mấy?</span><details><summary>Gợi ý</summary><span class="ko"><b>삼백오</b> 호, <b>삼</b> 층에 살아요.</span> <button class="say" data-say="삼백오 호, 삼 층에 살아요.">🔊</button></details></li><li><span class="ko">Ngày tháng năm sinh của em</span><details><summary>Gợi ý</summary><span class="ko"><b>이천오</b> 년 <b>삼</b>월 <b>일</b> 일이에요.</span> <button class="say" data-say="이천오 년 삼월 일 일이에요.">🔊</button></details></li><li><span class="ko">Em cao bao nhiêu? Đi giày cỡ mấy?</span><details><summary>Gợi ý</summary><span class="ko"><b>백육십</b> 센티예요. <b>이백삼십오</b> 신어요.</span> <button class="say" data-say="백육십 센티예요. 이백삼십오 신어요.">🔊</button></details></li><li><span class="ko">Gia đình em có mấy người? Em là con thứ mấy?</span><details><summary>Gợi ý</summary><span class="ko"><b>네</b> 명이에요. 저는 <b>둘째</b>예요.</span> <button class="say" data-say="네 명이에요. 저는 둘째예요.">🔊</button></details></li><li><span class="ko">Hôm qua em ăn gì, bao nhiêu tiền?</span><details><summary>Gợi ý</summary><span class="ko">쌀국수 <b>한</b> 그릇 먹었어요. <b>사만 오천</b> 동이었어요.</span> <button class="say" data-say="쌀국수 한 그릇 먹었어요. 사만 오천 동이었어요.">🔊</button></details></li></ol></div>
+<div class="spin" data-kind="mix"><div class="th">🎲 Quay số <small>tình huống đời sống ngẫu nhiên</small></div><div class="sp-q"></div><div class="btns"><button class="b" data-reveal="1">Xem đáp án</button><button class="b blue" data-spin="1">🎲 Số khác</button></div><div class="sp-a"></div></div>
 
 <h3>3. Đọc theo giá trị hay đọc từng chữ số?</h3>
 <p>Cùng là số Hán Hàn nhưng có hai cách đọc. Quy tắc: <b>con số mang ý “bao nhiêu”</b> (giá, số lượng, số tầng, số phòng ngắn) đọc theo giá trị; <b>con số chỉ là mã để nhận diện</b>, nhất là khi dài, đọc từng chữ số.</p>
@@ -382,6 +425,7 @@ footer a{color:var(--muted)}
 <td class="ko">010-1234-5678 → 공일공 일이삼사 오육칠팔<br>273번 버스 → 이칠삼 번 버스<br>23학번 → 이삼 학번<br>05년생 → 공오 년생<br>우편번호, 계좌번호, 비밀번호, 비행기 편명</td></tr>
 </table></div>
 <div class="deep"><b>Số 0 có ba cách đọc.</b> <span class="ko"><b>공</b></span> (空 không) khi đọc từng chữ số: <span class="ko">공일공, 삼공오 호</span>. <span class="ko"><b>영</b></span> (零 linh) khi 0 là một giá trị: <span class="ko">영 도, 영 점, 영하, 영 대 일</span> (1:0 đọc ngược <span class="ko">일 대 영</span>). <span class="ko"><b>빵</b></span> trong khẩu ngữ: <span class="ko">빵점</span> (điểm 0), <span class="ko">일 대 빵</span>. Nghe được ba cách này là không bị bất ngờ trong bài nghe.</div>
+<div class="try"><div class="th">✋ Em thử <small>số 0 và đọc từng chữ số</small></div><div class="set" data-set="e11"></div></div>
 
 <h3>4. Dấu câu trong con số</h3>
 <div class="scroll"><table class="t">
@@ -395,6 +439,7 @@ footer a{color:var(--muted)}
 <tr><td>2~3명 · 5~10분</td><td class="ko">두세 명 · 오 분<b>에서</b> 십 분</td><td>Khoảng thuần Hàn ghép số liền nhau; Hán Hàn dùng <span class="ko">에서 … (까지)</span>.</td></tr>
 <tr><td>1+1</td><td class="ko">원 플러스 원</td><td>Khuyến mãi “mua 1 tặng 1”: đọc tiếng Anh.</td></tr>
 </table></div>
+<div class="try"><div class="th">✋ Em thử <small>dấu trong con số</small></div><div class="set" data-set="e12"></div></div>
 
 <h3>5. Tuổi ở Hàn Quốc: chủ đề nói chuyện rất hay gặp</h3>
 <ul>
@@ -405,6 +450,7 @@ footer a{color:var(--muted)}
 <li><b>Em bé dưới 2 tuổi tính theo tháng</b>: <span class="ko">아기가 몇 개월이에요? — 십팔 개월이에요.</span></li>
 <li><b>Các mốc lễ</b> là từ Hán: <span class="ko">백일</span> (100 ngày tuổi; cặp đôi cũng kỷ niệm 100 ngày yêu), <span class="ko">돌 / 첫돌</span> (thôi nôi), <span class="ko">환갑</span> (60, hoàn giáp), <span class="ko">칠순</span> (70, thất tuần), <span class="ko">팔순</span> (80).</li>
 </ul>
+<div class="try"><div class="th">✋ Em thử <small>tuổi</small></div><div class="set" data-set="e13"></div></div>
 
 <h3>6. Cùng một chữ, đổi bộ số là đổi nghĩa</h3>
 <table class="t">
@@ -477,6 +523,9 @@ footer a{color:var(--muted)}
 </ol>
 </section>
 
+<details class="dgw" id="dgw"><summary>📝 Đánh giá buổi học hôm nay <small>(làm cuối buổi, 2 phút)</small></summary>
+<div id="danhgia" data-buoi="so-dem" data-title="Số Hán Hàn – thuần Hàn" data-parts="Hai bộ số|Lượng từ|Thời gian|Số lớn, tiền|Đời sống|Luyện tập"></div>
+</details>
 <footer>Nari TOPIK · <a href="../">Từ vựng Seoul</a> · <a href="../../">Trang chủ</a></footer>
 </main>
 
@@ -624,6 +673,33 @@ function fillDS(){
       return '<tr><td>'+r[0]+' <span class="badge '+k[0]+'">'+k[1]+'</span></td><td class="ko">'+esc(r[1])+'</td><td class="ko">'+r[2]+sayBtn(plain)+'</td></tr>';}).join('')+'</table></div></div>';}).join('');
 }
 
+/* ---------- quay số ---------- */
+function rnd(a,b){return a+Math.floor(Math.random()*(b-a+1));}
+function vn(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,'.');}
+function digits(s){return s.split('').map(function(c){return c==='-'?' ':c==='0'?'공':D[+c];}).join('');}
+var DEM=[['사과','개','🍎'],['학생','명','🧑‍🎓'],['고양이','마리','🐱'],['책','권','📕'],['커피','잔','☕'],['맥주','병','🍺'],['영화표','장','🎫'],['자동차','대','🚗'],['운동화','켤레','👟'],['장미','송이','🌹'],['손님','분','🙇']];
+var SPK={
+ so:function(){var n=rnd(1,99),a=[[nat(n,false),'Thuần Hàn'],[sino(n),'Hán Hàn']];if(nat(n,true)!==nat(n,false))a.push([nat(n,true)+' 개','Thuần Hàn trước lượng từ']);return {q:n,s:'đọc cả hai bộ số',a:a};},
+ dem:function(){var it=DEM[rnd(0,DEM.length-1)],n=rnd(1,12);return {q:Array(n+1).join(it[2])+'<small>'+it[0]+' ? '+it[1]+'</small>',s:'',a:[[it[0]+' '+nat(n,true)+' '+it[1],n+' — thuần Hàn']]};},
+ gio:function(){var H=rnd(0,23),M=rnd(0,11)*5,t=H+':'+(M<10?'0':'')+M;return {q:t,s:'',a:readNum(t)};},
+ ngay:function(){var t=rnd(1990,2030)+'-'+rnd(1,12)+'-'+rnd(1,28);return {q:t.replace(/(\d+)-(\d+)-(\d+)/,'$3/$2/$1'),s:'ngày/tháng/năm',a:readNum(t)};},
+ tien:function(){var k=rnd(0,2),n=k===0?rnd(5,99)*100:k===1?rnd(1,99)*1000:rnd(1,300)*10000;return {q:vn(n)+'원',s:'',a:[[sino(n)+' 원','Hán Hàn, tách 4 chữ số']]};},
+ mix:function(){var k=rnd(0,9),n,t;switch(k){
+  case 0:n=rnd(1,9)*100+rnd(1,20);return {q:n+'호',s:'số phòng',a:[[sino(n)+' 호','Hán Hàn (đọc theo giá trị)']]};
+  case 1:n=rnd(1,30);return {q:n+'층',s:'tầng',a:[[sino(n)+' 층','Hán Hàn']]};
+  case 2:n=rnd(15,40);return {q:n+'살',s:'tuổi (nói)',a:[[nat(n,true)+' 살','Thuần Hàn']]};
+  case 3:t='010-'+rnd(1000,9999)+'-'+rnd(1000,9999);return {q:t,s:'số điện thoại',a:[[digits(t),'Đọc từng chữ số, 0 = 공']]};
+  case 4:t=String(rnd(100,9999));return {q:t+'번 버스',s:'xe buýt',a:[[digits(t)+' 번 버스','Số dài: đọc từng chữ số']]};
+  case 5:n=rnd(1,9);return {q:n+'호선',s:'tuyến tàu điện',a:[[sino(n)+' 호선','Hán Hàn']]};
+  case 6:n=rnd(2,12);return {q:n+'명이요',s:'vào quán: mấy người',a:[[nat(n,true)+' 명이요','Thuần Hàn (đếm người)']]};
+  case 7:n=rnd(2,4);return {q:'삼겹살 '+n+'인분',s:'gọi suất ăn',a:[['삼겹살 '+sino(n)+' 인분','Hán Hàn (인분)']]};
+  case 8:n=rnd(1,12);var d=rnd(1,31);return {q:'생일: '+n+'월 '+d+'일',s:'sinh nhật',a:[[month(n)+' '+sino(d)+' 일','Hán Hàn']]};
+  default:n=rnd(150,185);return {q:n+'cm',s:'chiều cao',a:[['백'+sino(n-100)+' 센티','Hán Hàn']]};}}
+};
+function spin(el){var r=SPK[el.dataset.kind]();el._a=r.a;el.querySelector('.sp-q').innerHTML=r.q+(r.s?'<small>'+esc(r.s)+'</small>':'');el.querySelector('.sp-a').innerHTML='';}
+function reveal(el){el.querySelector('.sp-a').innerHTML=(el._a||[]).map(function(x){return '<div class="ex"><span class="ko"><b>'+esc(x[0])+'</b>'+sayBtn(x[0])+'</span><span class="vi">'+esc(x[1])+'</span></div>';}).join('');}
+
+
 /* ---------- bài tập ---------- */
 // Trắc nghiệm: [câu, [đáp án đúng, sai…], giải thích, (câu để máy đọc)] — lựa chọn đầu là đáp án, trang tự đảo.
 var M={
@@ -659,6 +735,77 @@ q5:[
  ['“tuần thứ ba của tháng này” → 이번 달 (    ) 주',['셋째','삼째','삼'],'Thứ tự đếm → thuần Hàn 셋째. 삼 주 = ba tuần.'],
  ['키가 (    )예요. (160cm)',['백육십 센티','백예순 센티','일백육십 센티'],'Đo lường, số ≥ 100 → Hán Hàn; không nói 일 trước 백.']
 ],
+e1:[
+ ['7 (thuần Hàn)',['일곱','칠','여덟'],'7: 일곱 (thuần) – 칠 (Hán, “thất”).'],
+ ['9 (Hán Hàn)',['구','아홉','열'],'Hán Việt “cửu” → 구.'],
+ ['40 (thuần Hàn)',['마흔','사십','넷열'],'Hàng chục thuần Hàn có tên riêng: 스물, 서른, 마흔, 쉰…'],
+ ['60 (thuần Hàn)',['예순','육십','여섯열'],'예순 = 60.']
+],
+e2:[
+ ['사과 3개',['Thuần Hàn','Hán Hàn'],'Đếm số cái → 세 개.'],
+ ['3층 (tầng 3)',['Hán Hàn','Thuần Hàn'],'Tầng là số gọi tên → 삼 층.'],
+ ['5,000원',['Hán Hàn','Thuần Hàn'],'Tiền → 오천 원.'],
+ ['친구 2명',['Thuần Hàn','Hán Hàn'],'Đếm người → 두 명.'],
+ ['20분 (20 phút)',['Hán Hàn','Thuần Hàn'],'Phút → 이십 분.'],
+ ['3시 (3 giờ)',['Thuần Hàn','Hán Hàn'],'Giờ dùng thuần Hàn (ngoại lệ) → 세 시.'],
+ ['학생 150명',['Hán Hàn','Thuần Hàn'],'Từ 100 trở lên → 백오십 명.'],
+ ['7과 (bài 7)',['Hán Hàn','Thuần Hàn'],'Số bài → 칠 과.']
+],
+e3:[
+ ['고양이 두 (    )',['마리','개','명'],'Con vật → 마리.'],
+ ['책 세 (    )',['권','장','개'],'Quyển → 권.'],
+ ['커피 한 (    )',['잔','병','그릇'],'Cốc → 잔.'],
+ ['영화표 두 (    )',['장','권','대'],'Vé, tờ giấy → 장.'],
+ ['자동차 한 (    )',['대','마리','개'],'Xe, máy móc → 대.'],
+ ['운동화 한 (    )',['켤레','벌','장'],'Đôi giày → 켤레; 벌 là bộ quần áo.']
+],
+e5:[
+ ['“3 tiếng” → (    )',['세 시간','삼 시간','세 시'],'Khoảng giờ → 시간, thuần Hàn.'],
+ ['“3 giờ” → (    )',['세 시','세 시간','삼 시'],'Mốc giờ → 시.'],
+ ['“2 ngày” (thuần) → (    )',['이틀','두 일','하루'],'하루 1 · 이틀 2 · 사흘 3.'],
+ ['“30 phút” → (    )',['삼십 분','서른 분','삼십 시간'],'Phút → Hán Hàn.']
+],
+e6:[
+ ['“ngày 16 tháng 6” → (    )',['유월 십육 일','육월 십육 일','십육 일 유월'],'Tháng trước ngày sau; 6 → 유월.'],
+ ['“tháng 10” → (    )',['시월','십월','열 월'],'십월 bỏ ㅂ → 시월.'],
+ ['“ngày 1 tháng 1” → (    )',['일월 일 일','한 월 한 일','일월 하루'],'Ngày tháng đều Hán Hàn.']
+],
+e7:[
+ ['50.000',['오만','오십천','다섯만'],'5 | 0000 → 오만.'],
+ ['200.000',['이십만','이백천','이백만'],'20 | 0000 → 이십만.'],
+ ['3.000.000',['삼백만','삼천만','삼십만'],'300 | 0000 → 삼백만.'],
+ ['20.000.000',['이천만','이억','이백만'],'2000 | 0000 → 이천만.']
+],
+e9:[
+ ['십만',['[심만]','[십만]','[시반]'],'ㅂ trước ㅁ → ㅁ (mũi hóa).'],
+ ['육십',['[육씹]','[육십]','[유깁]'],'ㅅ sau ㄱ → ㅆ (căng hóa).'],
+ ['몇 명',['[면명]','[멷명]','[몇명]'],'몇 [멷], ㄷ trước ㅁ → ㄴ.']
+],
+e10:[
+ ['Số phòng 305호',['Hán Hàn','Thuần Hàn'],'Số phòng là tên → 삼백오 호.'],
+ ['19 tuổi (nói)',['Thuần Hàn','Hán Hàn'],'Tuổi khi nói → 열아홉 살.'],
+ ['Uống thuốc 3 lần/ngày',['Thuần Hàn','Hán Hàn'],'Số lần → 세 번.'],
+ ['Năm sinh 2005',['Hán Hàn','Thuần Hàn'],'Năm → 이천오 년.'],
+ ['2 suất thịt (인분)',['Hán Hàn','Thuần Hàn'],'인분 → 이 인분.'],
+ ['2 chai bia',['Thuần Hàn','Hán Hàn'],'Đếm chai → 두 병.']
+],
+e11:[
+ ['Nhiệt độ 0°C → (    ) 도',['영','공','빵'],'0 là một giá trị → 영.'],
+ ['Số điện thoại 090… → (    )구공…',['공','영','빵'],'Đọc từng chữ số → 공.'],
+ ['Bài thi 0 điểm (khẩu ngữ) → (    )점',['빵','공','영하'],'Khẩu ngữ: 빵점.'],
+ ['Xe buýt 7016 thường đọc',['칠공일육 번','칠천십육 번','일곱공하나여섯 번'],'Số xe buýt dài → đọc từng chữ số.']
+],
+e12:[
+ ['2.5',['이 점 오','이 쉼표 오','두 점 다섯'],'Dấu thập phân đọc 점.'],
+ ['1/4',['사 분의 일','일 분의 사','네 분의 하나'],'Mẫu trước, tử sau.'],
+ ['Tỉ số 3:0',['삼 대 영','세 대 영','삼 분의 영'],'Tỉ số đọc 대, số 0 là giá trị → 영.']
+],
+e13:[
+ ['“đầu 30 tuổi” → (    ) 초반',['삼십 대','서른 대','삼십 살'],'Độ tuổi → Hán Hàn + 대.'],
+ ['Hỏi tuổi người lớn tuổi một cách lịch sự',['연세가 어떻게 되세요?','몇 살이야?','나이가 몇 개예요?'],'연세 là kính ngữ của 나이.'],
+ ['Bé 18 tháng tuổi → (    )이에요',['십팔 개월','열여덟 달','십팔 살'],'Em bé dưới 2 tuổi tính bằng 개월.']
+],
+
 q4:[
  ['100.000 (một trăm nghìn) → (    )',['십만','백천','백만','일십만'],'Tách 4 chữ số: 10 | 0000 → 십만.'],
  ['1.000.000 (một triệu) → (    )',['백만','천만','십만','일백만'],'100 | 0000 → 백만.'],
@@ -712,6 +859,21 @@ l2:[
  ['맥주 3병',['세 병'],'Đếm chai → thuần Hàn.'],
  ['2번 갔어요 (đi 2 lần)',['두 번 갔어요','두 번'],'Lần → thuần Hàn.']
 ],
+e4:[
+ ['1개',['한 개'],'하나 → 한.'],
+ ['2명',['두 명'],'둘 → 두.'],
+ ['3잔',['세 잔'],'셋 → 세.'],
+ ['4마리',['네 마리'],'넷 → 네.'],
+ ['20살',['스무 살'],'스물 → 스무 (đúng 20).'],
+ ['12권',['열두 권'],'열둘 → 열두.'],
+ ['22개',['스물두 개'],'스물 giữ nguyên, 둘 → 두.']
+],
+e8:[
+ ['15.000원',['만 오천 원'],'1 | 5000 → 만 오천 (không nói 일만).'],
+ ['80.000원',['팔만 원'],'8 | 0000 → 팔만.'],
+ ['120.000원',['십이만 원'],'12 | 0000 → 십이만.'],
+ ['2.500.000원',['이백오십만 원'],'250 | 0000 → 이백오십만.']
+],
 l3:[
  ['mười nghìn (10.000)',['만'],'1 | 0000 → 만, không nói 일만.'],
  ['một trăm nghìn (100.000)',['십만'],'10 | 0000 → 십만.'],
@@ -727,6 +889,7 @@ var TAB={tq:['q1'],dv:['q2'],tg:['q3'],sl:['q4'],ds:['q5'],lt:['l1','l2','l3','l
 var NAMES={q1:'Hai bộ số',q2:'Lượng từ',q3:'Thời gian',q4:'Số lớn',q5:'Đời sống',l1:'Chọn cách đọc',l2:'Viết cách đọc',l3:'Đổi số Việt → Hàn',l4:'Nghe và chọn',ck:'Kiểm tra cuối'};
 
 /* ---------- trạng thái ---------- */
+var EM=['e1','e2','e3','e4','e5','e6','e7','e8','e9','e10','e11','e12','e13'];
 var KEY='nari-so', st={};
 try{st=JSON.parse(localStorage.getItem(KEY)||'{}')||{};}catch(e){st={};}
 st.m=st.m||{};st.t=st.t||{};
@@ -750,7 +913,7 @@ function say(t,rate){
 function mcqHTML(set,i){
   var it=M[set][i],o=it[1],ord=order(o.length,hash(set+i)),pick=st.m[set]&&st.m[set][i],done=pick!=null;
   var q=it[3]?'<button class="say" data-say="'+esc(it[3])+'">🔊</button> <button class="say" data-say="'+esc(it[3])+'" data-rate="0.6">🐢</button>'+(done?' <span class="ko note">'+esc(it[3])+'</span>':''):'<span class="ko">'+it[0]+'</span>';
-  var h='<div class="mcq'+(done?' done'+(pick===0?'':' wrong'):'')+'"><div class="q"><span class="n">'+(i+1)+'.</span>'+q+'</div><div class="opts">';
+  var h='<div class="mcq'+(done?' done'+(pick===0?'':' wrong'):'')+'"><div class="q"><span class="n">'+(i+1)+'.</span>'+q+'</div><div class="opts'+(o.length===2?' two':'')+'">';
   ord.forEach(function(k){var c='opt';if(done){if(k===0)c+=' ok';else if(k===pick)c+=' no';}
     h+='<button class="'+c+'" data-set="'+set+'" data-i="'+i+'" data-k="'+k+'">'+o[k]+'</button>';});
   return h+'</div><div class="why">'+(done?(pick===0?'✓ ':'✗ ')+it[2]:'')+'</div></div>';
@@ -787,6 +950,8 @@ function check(set,i){
 function report(){
   var L=['Số Hán Hàn – thuần Hàn · '+(st.name||'(chưa ghi tên)')];
   Object.keys(NAMES).forEach(function(s){var r=M[s]?scoreOf(s):tScore(s);L.push('  '+NAMES[s]+': '+r.ok+'/'+r.all+(r.n<r.all?' (làm '+r.n+')':''));});
+  var eo=0,ea=0,en=0;EM.forEach(function(s){var r=M[s]?scoreOf(s):tScore(s);eo+=r.ok;ea+=r.all;en+=r.n;});
+  L.push('  Em thử trong bài: '+eo+'/'+ea+(en<ea?' (làm '+en+')':''));
   var m=st.m.ck||{};
   M.ck.forEach(function(it,i){if(m[i]!=null&&m[i]!==0)L.push('  ✗ Câu '+(i+1)+': chọn '+it[1][m[i]]+' → đúng '+it[1][0]);});
   ['l2','l3'].forEach(function(s){var t=st.t[s]||{};T[s].forEach(function(it,i){if(t[i]&&!t[i].ok)L.push('  ✗ '+it[0]+': viết '+t[i].v+' → đúng '+it[1][0]);});});
@@ -815,6 +980,8 @@ document.addEventListener('click',function(e){
   if(d.dataset.redo){e.preventDefault();var s=d.dataset.redo;if(M[s]){delete st.m[s];save();renderM(s);}else{delete st.t[s];save();renderT(s);}renderSum();return;}
   if(d.dataset.share){share();return;}
   if(d.id==='numGo'){showNum();return;}
+  if(d.dataset.spin){spin(d.closest('.spin'));return;}
+  if(d.dataset.reveal){reveal(d.closest('.spin'));return;}
 });
 document.addEventListener('keydown',function(e){
   if(e.key!=='Enter')return;
@@ -827,14 +994,16 @@ document.addEventListener('input',function(e){
 
 /* ---------- điều hướng ---------- */
 function show(){
-  var m=location.hash.match(/b=(\w+)/),k=m?m[1]:(st.tab||'tq');if(!$('s'+k))k='tq';
+  var m=location.hash.match(/b=(\w+)/),k=m?m[1]:(st.tab||'tq');
+  if(k==='dg'){$('dgw').open=true;setTimeout(function(){$('dgw').scrollIntoView();},50);k=st.tab||'tq';}if(!$('s'+k))k='tq';
   document.querySelectorAll('.sec').forEach(function(s){s.classList.toggle('on',s.id==='s'+k);});
   document.querySelectorAll('nav a').forEach(function(a){a.classList.toggle('on',a.dataset.k===k);});
   st.tab=k;save();
 }
-fillNumtab();fillDV();fillDS();showNum();
+fillNumtab();fillDV();fillDS();showNum();document.querySelectorAll('.spin').forEach(spin);
 Object.keys(M).forEach(renderM);Object.keys(T).forEach(renderT);renderSum();
 window.addEventListener('hashchange',function(){show();scrollTo(0,0);});show();
 </script>
+<script src="../../danh-gia/dg.js"></script>
 </body>
 </html>

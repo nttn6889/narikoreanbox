@@ -318,12 +318,21 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   cô gom link ở trang “Mục lục học liệu Nari” (https://claude.ai/artifact/6bTfJWsvsCeMrmggceXPjQ, nhóm “Seoul 3A · lớp chuyên ngành”).
 - `seoul/so-dem/` Số Hán Hàn – thuần Hàn: hai bộ số + quy tắc chọn, lượng từ (`DVN`/`DVS`), thời gian, số lớn (만/억 so với nghìn/triệu), tiền, số và biến âm,
   “Máy đọc số” (`sino`/`nat`/`readNum`: số, giờ `15:20`, ngày `2026-10-13`). Thẻ “Đời sống” (`#b=ds`): bảng tình huống theo lĩnh vực trong biến `DS` ([tình huống, viết, đọc, T|H|C|M|E]),
-  đọc từng chữ số, số 0, phân số/tỉ số, tuổi ở Hàn, văn hóa, thành ngữ; bài `q5`. Bài tập trong `M` (lựa chọn đầu là đáp án; phần tử 4 = câu máy đọc cho bài nghe), `T`. localStorage `nari-so`.
+  đọc từng chữ số, số 0, phân số/tỉ số, tuổi ở Hàn, văn hóa, thành ngữ; bài `q5`.
+  **Sau mỗi phần lý thuyết có hoạt động** (cô thấy trang nhiều lý thuyết quá, học sinh cần được tham gia): `.try` “✋ Em thử” (bộ `e1…e13`, chấm ngay,
+  báo cáo gộp dòng “Em thử trong bài”, danh sách `EM`), `.talk` “🗣 Nói to” (cô hỏi – em đáp, gợi ý ẩn), `.spin` “🎲 Quay số” (`SPK`: so, dem, gio, ngay, tien, mix;
+  ra đề ngẫu nhiên, “Xem đáp án” có 🔊). Học liệu mới làm cùng khuôn: lý thuyết ngắn → ví dụ → em thử → nói to. Bài tập trong `M` (lựa chọn đầu là đáp án; phần tử 4 = câu máy đọc cho bài nghe), `T`. localStorage `nari-so`.
 - `seoul/tuong-dong/` Ngữ pháp tương đồng 1A–3A: thẻ Bản đồ (5 câu hỏi phân biệt: chủ ngữ, thì, kiểu câu sau, loại từ, nguồn thông tin + bảng 25 nhóm),
   Tiểu từ (nhóm 1–5), Nối câu (6–10), Ý định (11–16), Phỏng đoán (17–21), Gián tiếp (22–25, kèm bảng danh từ phụ thuộc → đuôi định ngữ), Luyện.
   Mỗi nhóm một thẻ `.card id=gN` (link `#b=<thẻ>&g=gN`); cột “Sách” chỉ ghi số bài khi chắc (3A theo tên bài, 1B–2B theo `seoul/kiem-tra/`).
   Bài tập `M` (lựa chọn đầu là đáp án; bộ `l4` “tìm câu sai” thì lựa chọn đầu là câu sai), `T` (gõ). localStorage `nari-tuongdong`.
 - Còn làm: Biến âm, Trợ từ.
+
+## Đánh giá buổi học (`danh-gia/`)
+- Phiếu dùng chung: `danh-gia/dg.js` gắn vào trang bằng `<div id="danhgia" data-buoi="<khóa>" data-title="…" data-parts="Phần 1|Phần 2"></div>` + script.
+  8 câu: chung (5 mức), hiểu từng phần, tốc độ, lý thuyết/luyện tập, hoạt động thích nhất, tự tin dùng ngoài đời, chỗ chưa hiểu, góp ý; tên có thể để trống.
+  “Gửi đánh giá cho cô…” chia sẻ đoạn chữ qua Zalo (không lưu lên mạng); nháp ở localStorage `nari-dg-<khóa>`.
+- Trang riêng cho buổi bất kỳ: `danh-gia/#t=<tên buổi>&p=<phần 1>|<phần 2>`. `seoul/so-dem/` có sẵn phiếu thu gọn cuối trang (`#b=dg` mở thẳng).
 
 ## Học câu 52 trong 3 buổi (`viet-52/`)
 - Trang học liệu gửi học sinh: Buổi 1 (ô cuối câu, 5 nhóm từ nối: 47, 41, 52, 92, 96, 36, 37), Buổi 2 (“Chép hay Lật” = tìm ý cho ô; đề 60, 83, 91, 64, 35),

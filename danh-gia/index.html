@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Đánh giá buổi học · Nari TOPIK</title>
+<meta name="description" content="Phiếu đánh giá sau buổi học của lớp Nari TOPIK.">
+<link rel="icon" href="../thi-thu/icon/icon-192.png">
+<style>
+body{margin:0;background:#fff;color:#111;font:16px/1.55 "Times New Roman",Times,serif}
+main{max-width:720px;margin:0 auto;padding:16px 16px 48px}
+.logo{display:block;height:50px;width:auto;margin:0 0 6px -4px}
+</style>
+</head>
+<body>
+<main>
+<img class="logo" src="../logo/nari-topik-ngang.svg" width="148" height="50" alt="Nari TOPIK">
+<!-- Link: danh-gia/#t=<tên buổi>&p=<phần 1>|<phần 2>|… (vd. danh-gia/#t=Buổi 2 · Số đếm&p=Hai bộ số|Lượng từ) -->
+<div id="danhgia"></div>
+</main>
+<script>
+(function(){
+  var h=decodeURIComponent(location.hash.slice(1)),g={};
+  h.split('&').forEach(function(x){var i=x.indexOf('=');if(i>0)g[x.slice(0,i)]=x.slice(i+1);});
+  var el=document.getElementById('danhgia'),t=g.t||'Buổi học';
+  var k=7;for(var i=0;i<t.length;i++)k=(k*31+t.charCodeAt(i))%1000003;el.dataset.buoi='l'+k;
+  el.dataset.title=t;el.dataset.parts=g.p||'';
+  document.title='Đánh giá · '+t+' · Nari TOPIK';
+})();
+</script>
+<script src="dg.js"></script>
+</body>
+</html>
