@@ -153,6 +153,11 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   File cô gửi (rar 31 track) chỉ có tới câu 30: track 1 giới thiệu, track 2–21 = câu 1–20, track 22/24/…/30 = cặp 21–22…29–30
   (nghe 2 lần), track lẻ 23…31 chỉ là “câu sau + thời gian làm bài”. Nén: `ffmpeg -af areverse,silenceremove=…,areverse -ac 1 -ar 24000 -b:a 40k`
   (cắt im lặng cuối). Câu 31–50 chưa có file nghe.
+- Kỳ 83 làm y như kỳ 91: `Etk083` (Đọc, 50 câu; câu 1–4 cô nhập trước giữ nguyên, ảnh câu 5–10 cắt từ PDF scan; 42–43 không công bố đoạn văn)
+  và `Etk083n` (Nghe, 50 câu, kịch bản + đáp án trong `explain`; tranh câu 1–3 cắt từ PDF đề). Rar 30 track (`unar` giải nén được rar5):
+  track 1 giới thiệu, track 2–21 = câu 1–20, track chẵn 22…30 = cặp 21–22…29–30 → `de/audio/Etk083n-*.mp3` (câu 1–30; 31–50 chưa có).
+  Đồng bộ chỉ 2 đề này (không dump cả ngân hàng): ghi `de/Etk083*.json` bằng hàm của `sync_kho.py`, rồi sửa mục `e.Etk083`, `e.Etk083n` trong `site/kho`.
+  Viết 51/52 kỳ 83 đã có ở `wbank`; 53/54 kỳ 83 chưa nhập (đáp án mẫu có trong file đáp án cô gửi).
 - Ngân hàng đề nằm trong cơ sở dữ liệu của trang quản lý (collection `bank`, câu hỏi ở `bank/<id>/q/<qid>`).
 - Cô gửi file đề trong phiên Code → trích nội dung → ghi thẳng vào ngân hàng bằng ArtifactData (batch), hoặc
   xuất văn bản theo định dạng “Dán nhiều câu” của trang quản lý để cô tự dán.
