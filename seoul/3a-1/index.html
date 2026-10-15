@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Seoul 3A · Bài 1 · Nari TOPIK</title>
-<meta name="description" content="Học liệu buổi 1 lớp Seoul 3A: ôn lại nền tảng 1A–2B mà Bài 1 cần, từ vựng đời sống đại học, lời dẫn gián tiếp -다고 하다 / -대요 hiểu tận gốc, luyện tập có chấm ngay — Nari TOPIK.">
+<meta name="description" content="Học liệu buổi 1 lớp Seoul 3A: ôn lại nền tảng 1A–2B mà Bài 1 cần, từ vựng đời sống đại học, 4 ngữ pháp của bài (-다고 하다, -아야겠다, -다고 들었다, -대요) học từ cơ bản đến chuyên sâu, luyện tập có chấm ngay — Nari TOPIK.">
 <meta property="og:title" content="Seoul 3A · Bài 1: 신입생 환영회를 한다고 해요 – Nari TOPIK">
-<meta property="og:description" content="Nền tảng 1A–2B → từ vựng đại học → -다고 하다, -대요, -다고 들었다 → luyện tập có chấm ngay và gửi kết quả cho cô.">
+<meta property="og:description" content="Nền tảng 1A–2B → từ vựng đại học → -다고 하다, -아야겠다, -다고 들었다, -대요 → luyện tập có chấm ngay và gửi kết quả cho cô.">
 <meta property="og:image" content="https://nttn6889.github.io/narikoreanbox/logo/nari-topik-logo-nen-trang.jpg">
 <meta property="og:url" content="https://nttn6889.github.io/narikoreanbox/seoul/3a-1/">
 <meta property="og:type" content="website">
@@ -124,9 +124,16 @@ button.b.blue{background:var(--blue);border-color:var(--blue);color:#fff}
 .badge{display:inline-block;font:bold 12px Arial,sans-serif;border-radius:10px;padding:1px 8px;margin-left:4px;vertical-align:middle;background:var(--sub);color:var(--muted)}
 .badge.new{background:var(--acc);color:#fff}
 .badge.old{background:var(--blue);color:#fff}
+.gbar{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 14px}
+.gbar a{flex:1 1 140px;text-align:center;padding:7px 6px;border:2px solid var(--acc);border-radius:20px;color:var(--acc);text-decoration:none;font:bold 14.5px "Noto Sans KR","Malgun Gothic",sans-serif}
+.gbar a.on{background:var(--acc);color:#fff}
+.gp{display:none}.gp.on{display:block}
+.gp>h2{margin-top:14px;padding-top:10px;border-top:3px double var(--ink)}
+.lvl{margin:22px 0 0;padding:5px 12px;background:var(--blue);color:#fff;font:bold 14px Arial,sans-serif;border-radius:6px;letter-spacing:.02em}
+.gtab td a{color:var(--acc);font-weight:bold}
 footer{margin-top:40px;font-size:13px;color:var(--muted);text-align:center}
 footer a{color:var(--muted)}
-@media print{nav,.btns,.sum,footer,.co,button.say{display:none}.sec{display:block!important}.card,.mcq,.typ{break-inside:avoid}}
+@media print{nav,.btns,.sum,footer,.co,button.say,.gbar{display:none}.sec,.gp{display:block!important}.card,.mcq,.typ{break-inside:avoid}}
 </style>
 </head>
 <body>
@@ -143,7 +150,7 @@ footer a{color:var(--muted)}
   <a href="#b=lo" data-k="lo">Lộ trình<small>Học thế nào</small></a>
   <a href="#b=nen" data-k="nen">Nền tảng<small>Ôn 1A–2B</small></a>
   <a href="#b=tv" data-k="tv">Từ vựng<small>Đại học</small></a>
-  <a href="#b=np" data-k="np">Ngữ pháp<small>-다고 하다</small></a>
+  <a href="#b=np" data-k="np">Ngữ pháp<small>4 mẫu</small></a>
   <a href="#b=lt" data-k="lt">Luyện<small>Chấm ngay</small></a>
 </div></nav>
 
@@ -156,7 +163,7 @@ footer a{color:var(--muted)}
 <p>Tên mỗi bài trong sách chính là một câu chứa ngữ pháp của bài. Cột bên phải là phần nền cũ mà bài đó dùng lại.</p>
 <div class="scroll"><table class="t">
 <tr><th>Bài</th><th>Tên bài</th><th>Mẫu câu trong tên bài</th><th>Nền cũ phải chắc</th></tr>
-<tr><td><b>1</b></td><td class="ko">신입생 환영회를 <b>한다고 해요</b></td><td class="ko">-ㄴ/는다고 하다</td><td>Động từ / tính từ, gốc ㄹ, thì quá khứ – tương lai, 이다, kính ngữ (1A–1B), 반말 (2B bài 10)</td></tr>
+<tr><td><b>1</b></td><td class="ko">신입생 환영회를 <b>한다고 해요</b></td><td class="ko">-ㄴ/는다고 하다 · -아/어야겠다 · -다고 들었다 · -대요</td><td>Động từ / tính từ, gốc ㄹ, thì quá khứ – tương lai, 이다, kính ngữ (1A–1B), 반말 (2B bài 10)</td></tr>
 <tr><td>2</td><td class="ko">방을 <b>바꿔 달라고</b> 해 봐</td><td class="ko">-아/어 달라고 하다</td><td class="ko"><span>-아/어 주다, -아/어 보다, 반말 · và chính Bài 1</span></td></tr>
 <tr><td>3</td><td class="ko">비가 이렇게 많이 <b>올 줄 몰랐어요</b></td><td class="ko">-(으)ㄹ 줄 몰랐다</td><td>Định ngữ <span class="ko">-(으)ㄴ/는/(으)ㄹ</span> (2A)</td></tr>
 <tr><td>4</td><td class="ko"><b>먹어 보니까</b> <b>맛있던데요</b></td><td class="ko">-아/어 보니까, -던데요</td><td><span class="ko">-아/어 보다</span> (1B bài 14), <span class="ko">-(으)니까</span>, <span class="ko">-는데요</span> (2A bài 9)</td></tr>
@@ -181,8 +188,8 @@ footer a{color:var(--muted)}
 <tr><th>Thẻ</th><th>Nội dung</th><th>Kết quả cần đạt</th></tr>
 <tr><td><a href="#b=nen">Nền tảng</a></td><td>6 “viên gạch” 1A–2B của câu gián tiếp, mỗi viên có 2–3 câu kiểm tra</td><td>Biết mình hổng viên nào</td></tr>
 <tr><td><a href="#b=tv">Từ vựng</a></td><td>18 từ Bài 1: phát âm thật, Hán Việt, đi với tiểu từ gì, phân biệt từ gần nghĩa</td><td>Dùng đúng cả cụm, không chỉ biết nghĩa</td></tr>
-<tr><td><a href="#b=np">Ngữ pháp</a></td><td><span class="ko">-다고 하다, -대요, -다고 들었다, -다면서요?</span> + hội thoại, đổi vai</td><td>Chuyển đúng mọi loại câu, chọn đúng mẫu theo tình huống</td></tr>
-<tr><td><a href="#b=lt">Luyện</a></td><td>Bài tập chấm ngay, nghe – chép, kể lại tin nhắn nhóm, kiểm tra cuối buổi</td><td>Đạt từ 12/14 câu kiểm tra cuối buổi</td></tr>
+<tr><td><a href="#b=np">Ngữ pháp</a></td><td>4 mẫu trong sách: <span class="ko">-다고 하다, -아/어야겠다, -다고 들었다, -대요</span>, mỗi mẫu học từ cơ bản → chi tiết → chuyên sâu + luyện ngay</td><td>Chuyển đúng mọi loại câu, chọn đúng mẫu theo tình huống</td></tr>
+<tr><td><a href="#b=lt">Luyện</a></td><td>Bài tập chấm ngay, nghe – chép, kể lại tin nhắn nhóm, kiểm tra cuối buổi</td><td>Đạt từ 15/18 câu kiểm tra cuối buổi</td></tr>
 </table>
 </section>
 
@@ -341,7 +348,21 @@ footer a{color:var(--muted)}
 
 <!-- ================= NGỮ PHÁP ================= -->
 <section class="sec" id="snp">
-<h2>Ngữ pháp · Lời dẫn gián tiếp câu trần thuật</h2>
+<h2>Ngữ pháp Bài 1 · 4 mẫu trong sách</h2>
+<p class="note" style="margin-top:0">Theo phần 문법 của sách (tr.26–31). Em học lần lượt ① → ④; mỗi mẫu đi từ <b>cơ bản</b> (nghĩa, cách chia) → <b>chi tiết</b> (kết hợp, bẫy) → <b>chuyên sâu</b> (so sánh, sắc thái, TOPIK), cuối mỗi mẫu có bài luyện chấm ngay.</p>
+<div class="scroll"><table class="t gtab">
+<tr><th>Mẫu</th><th>Sách</th><th>Nghĩa</th><th>Một câu để nhớ</th></tr>
+<tr><td class="ko"><a href="#b=np&amp;g=1">① -다고 하다</a></td><td>tr.26</td><td>(ai đó) nói rằng…</td><td class="ko">선배가 금요일에 환영회를 한다고 했어요.</td></tr>
+<tr><td class="ko"><a href="#b=np&amp;g=2">② -아/어야겠다</a></td><td>tr.27</td><td>phải … thôi (tự quyết)</td><td class="ko">숙제가 많네. 오늘은 일찍 들어가야겠다.</td></tr>
+<tr><td class="ko"><a href="#b=np&amp;g=3">③ -다고 들었다</a></td><td>tr.30</td><td>tôi nghe nói…</td><td class="ko">이 학교 축제가 유명하다고 들었어요.</td></tr>
+<tr><td class="ko"><a href="#b=np&amp;g=4">④ -대(요)</a></td><td>tr.31</td><td>nghe nói… (① rút gọn khi nói)</td><td class="ko">금요일에 환영회를 한대요.</td></tr>
+</table></div>
+<p class="note">①, ③, ④ là một “gia đình” (kể lại tin), cùng một cách chia. ② là mẫu riêng, nhưng hay đứng ngay sau tin vừa nghe: <span class="ko">시험이 어렵대요. 그럼 열심히 공부해야겠어요.</span></p>
+<div class="gbar" id="gbar"><a href="#b=np&amp;g=1" data-g="1">① -다고 하다</a><a href="#b=np&amp;g=2" data-g="2">② -아야겠다</a><a href="#b=np&amp;g=3" data-g="3">③ -다고 들었다</a><a href="#b=np&amp;g=4" data-g="4">④ -대요</a></div>
+
+<!-- ===== ① -다고 하다 (sách tr.26) ===== -->
+<div class="gp" id="gp1">
+<h2>① -다고 하다 · Lời dẫn gián tiếp câu trần thuật <span class="badge">Sách tr.26</span></h2>
 <p class="goal"><b>Dùng để làm gì:</b> kể lại điều người khác đã nói, hoặc tin em đọc / nghe được (thông báo, báo, mạng): “(ai đó) nói rằng…”, “nghe nói…”. Đây là một trong những ngữ pháp dùng nhiều nhất ngoài đời và trong đề TOPIK.</p>
 
 <h3>1. Tự tìm quy luật trước</h3>
@@ -399,37 +420,10 @@ footer a{color:var(--muted)}
 </table>
 <p>Ngoài <span class="ko">하다</span>, động từ dẫn có thể là <span class="ko">말하다</span> (nói), <span class="ko">전하다</span> (nhắn lại), <span class="ko">생각하다</span> (nghĩ), <span class="ko">듣다</span> (nghe): <span class="ko">저는 그 사람이 한국 사람이라고 생각했어요</span> = Tôi (đã) tưởng người đó là người Hàn.</p>
 
-<h3>6. Rút gọn khi nói: -대요 / -래요</h3>
-<p>Khi nói, người Hàn gần như luôn rút gọn: <span class="ko">-다고 해요 → -다 해요 → <b>-대요</b></span>, <span class="ko">-(이)라고 해요 → <b>-(이)래요</b></span>.</p>
-<table class="t">
-<tr><th>Đầy đủ</th><th>Rút gọn (존댓말)</th><th>반말</th></tr>
-<tr><td class="ko">바쁘다고 해요</td><td class="ko">바쁘대요 <button class="say" data-say="바쁘대요">🔊</button></td><td class="ko">바쁘대</td></tr>
-<tr><td class="ko">간다고 해요 / 먹는다고 해요</td><td class="ko">간대요 / 먹는대요 <button class="say" data-say="간대요. 먹는대요.">🔊</button></td><td class="ko">간대 / 먹는대</td></tr>
-<tr><td class="ko">갔다고 해요</td><td class="ko">갔대요 <button class="say" data-say="갔대요">🔊</button></td><td class="ko">갔대</td></tr>
-<tr><td class="ko">갈 거라고 해요</td><td class="ko">갈 거래요 <button class="say" data-say="갈 거래요">🔊</button></td><td class="ko">갈 거래</td></tr>
-<tr><td class="ko">학생이라고 해요 / 친구라고 해요</td><td class="ko">학생이래요 / 친구래요 <button class="say" data-say="학생이래요. 친구래요.">🔊</button></td><td class="ko">학생이래 / 친구래</td></tr>
-<tr><td class="ko">아니라고 해요</td><td class="ko">아니래요</td><td class="ko">아니래</td></tr>
-</table>
-<div class="warnbox"><b>-대요 (ㅐ) ≠ -데요 (ㅔ)</b>. Đọc gần giống nhau nên rất hay viết nhầm.
-<br><span class="ko"><b>맛있대요</b></span> = <b>nghe nói</b> ngon (người khác nói).
-<br><span class="ko"><b>맛있던데요</b></span> = (tôi tự ăn rồi) thấy ngon lắm → đây là ngữ pháp <b>Bài 4</b>, xây trên <span class="ko">-는데요</span> (2A bài 9).
-<br>Mẹo nhớ: <b>대</b> có <b>ㅐ</b> như trong <span class="ko">해</span> của <span class="ko">-다고 <b>해</b>요</span>.</div>
+<h3>6. Ba mẫu còn lại của bài xây trên ①</h3>
+<p>Nói nhanh thì <span class="ko">-다고 해요</span> rút gọn thành <span class="ko">-대요</span> (<a href="#b=np&amp;g=4">④</a>); thay <span class="ko">하다</span> bằng <span class="ko">듣다</span> là <span class="ko">-다고 들었어요</span> (<a href="#b=np&amp;g=3">③</a>); và lời kể lại hay kéo theo một quyết định <span class="ko">-아야겠어요</span> (<a href="#b=np&amp;g=2">②</a>).</p>
 
-<h3>7. Ba mẫu “anh em” của -다고 하다</h3>
-<table class="t">
-<tr><th>Mẫu</th><th>Người nói đang…</th><th>Nguồn tin</th><th>Dùng khi</th></tr>
-<tr><td class="ko">-다고 했어요</td><td>kể lại</td><td>một người cụ thể đã nói</td><td>nói và viết</td></tr>
-<tr><td class="ko">-대요</td><td>kể lại</td><td>người khác / tin đồn / thông báo</td><td>nói (thân mật – lịch sự)</td></tr>
-<tr><td class="ko">-다고 들었어요</td><td>kể lại, nhấn mạnh <b>“tôi nghe được”</b></td><td>có thể không nhớ ai nói</td><td>nói và viết</td></tr>
-<tr><td class="ko">-다면서요?</td><td><b>hỏi lại</b> để xác nhận điều mình nghe</td><td>mình đã nghe</td><td>chỉ khi nói</td></tr>
-</table>
-<div class="ex"><span class="ko">이 학교는 축제가 아주 유명하<b>다고 들었어요</b>. <button class="say" data-say="이 학교는 축제가 아주 유명하다고 들었어요.">🔊</button></span><span class="vi">Tôi nghe nói lễ hội trường này rất nổi tiếng.</span></div>
-<div class="ex"><span class="ko">장학금을 받았<b>다면서요</b>? 축하해요! <button class="say" data-say="장학금을 받았다면서요? 축하해요!">🔊</button></span><span class="vi">Nghe nói bạn được học bổng à? Chúc mừng nhé! (hỏi chính người được học bổng)</span></div>
-<div class="ex"><span class="ko">내일 비가 많이 온<b>대요</b>. <button class="say" data-say="내일 비가 많이 온대요.">🔊</button></span><span class="vi">Nghe nói mai mưa to. (không cần nêu ai nói: dự báo thời tiết, tin tức)</span></div>
-
-<div class="deep"><b>Trong văn viết và TOPIK.</b> Văn viết dùng 한다체 cho cả động từ dẫn: <span class="ko">…에 따르면 …다고 한다</span> (theo … thì nghe nói…). Ví dụ: <span class="ko">학생회에 따르면 올해 신입생은 2천 명이라고 한다.</span> Đây là câu mở rất hay gặp trong bài đọc TOPIK và dùng được ngay ở câu 53–54.</div>
-
-<h3>8. Hội thoại: phân tích, không chỉ đọc theo</h3>
+<h3>7. Hội thoại: phân tích, không chỉ đọc theo</h3>
 <p>마이 (tân sinh viên người Việt) hỏi 민준 (anh khóa trên). Bấm 🔊 để nghe từng câu, rồi tự trả lời 3 câu hỏi bên dưới trước khi xem phân tích.</p>
 <div class="scroll"><table class="t dlg" id="dlg"></table></div>
 <div class="btns"><button class="b" data-dlg="all">🔊 Nghe cả bài</button><button class="b" data-dlg="slow">🐢 Nghe chậm</button></div>
@@ -445,7 +439,7 @@ footer a{color:var(--muted)}
 <b>3. Câu dùng được ngay:</b> <span class="ko">혹시 … 있어요?</span> (hỏi lịch sự) · <span class="ko">아직 … 안 해서 몰랐어요</span> · <span class="ko">재미있겠네요</span> · <span class="ko">걱정하지 마</span> · <span class="ko">…거든</span> (giải thích điều người nghe chưa biết).<br>
 <b>Từ khẩu ngữ:</b> <span class="ko">단톡방</span> (nhóm chat), <span class="ko">회비</span> (phí sinh hoạt), <span class="ko">사회를 보다</span> (dẫn chương trình).</div>
 
-<h3>9. Đổi vai: cùng một tin, nói với 3 người</h3>
+<h3>8. Đổi vai: cùng một tin, nói với 3 người</h3>
 <p>Tin: <i>Thứ Sáu tuần này có tiệc chào đón tân sinh viên.</i> Thử tự nói trước, rồi mới xem.</p>
 <table class="t">
 <tr><th>Nói với</th><th>Câu</th></tr>
@@ -455,19 +449,19 @@ footer a{color:var(--muted)}
 </table>
 <p class="note">Với giáo sư dùng dạng đầy đủ <span class="ko">-다고 합니다</span> (trang trọng); với người ngang hàng, người quen dùng <span class="ko">-대요 / -대</span>. Văn nói trang trọng (thông báo, phát biểu) cũng dùng <span class="ko">-다고 합니다</span>.</p>
 
-<h3>10. Xem trước Bài 2: bản đồ 4 loại câu</h3>
-<p>Bài 1 mới là câu <b>trần thuật</b>. Bài 2 (<span class="ko">방을 바꿔 달라고 해 봐</span>) sẽ thuật lại các loại câu còn lại. Nhìn trước để thấy cả hệ thống:</p>
+<h3>9. Xem trước Bài 2–3: bản đồ 4 loại câu</h3>
+<p>Bài 1 mới là câu <b>trần thuật</b>. Bài 2 (<span class="ko">방을 바꿔 달라고 해 봐</span>) thuật lại câu mệnh lệnh, lời nhờ; Bài 3 thuật lại câu hỏi và câu rủ. Nhìn trước để thấy cả hệ thống:</p>
 <table class="t">
 <tr><th>Loại câu gốc</th><th>Ví dụ</th><th>Gián tiếp</th></tr>
 <tr><td>Trần thuật <span class="badge new">Bài 1</span></td><td class="ko">“환영회를 해요.”</td><td class="ko">환영회를 <b>한다고</b> 했어요</td></tr>
-<tr><td>Câu hỏi</td><td class="ko">“환영회에 가요?”</td><td class="ko">환영회에 <b>가냐고</b> 물었어요</td></tr>
-<tr><td>Rủ</td><td class="ko">“같이 가요 / 갑시다.”</td><td class="ko">같이 <b>가자고</b> 했어요</td></tr>
-<tr><td>Mệnh lệnh</td><td class="ko">“일찍 오세요.”</td><td class="ko">일찍 <b>오라고</b> 했어요</td></tr>
-<tr><td>Nhờ (cho mình)</td><td class="ko">“방을 바꿔 주세요.”</td><td class="ko">방을 <b>바꿔 달라고</b> 했어요</td></tr>
+<tr><td>Câu hỏi <span class="badge">Bài 3</span></td><td class="ko">“환영회에 가요?”</td><td class="ko">환영회에 <b>가냐고</b> 물었어요</td></tr>
+<tr><td>Rủ <span class="badge">Bài 3</span></td><td class="ko">“같이 가요 / 갑시다.”</td><td class="ko">같이 <b>가자고</b> 했어요</td></tr>
+<tr><td>Mệnh lệnh <span class="badge">Bài 2</span></td><td class="ko">“일찍 오세요.”</td><td class="ko">일찍 <b>오라고</b> 했어요</td></tr>
+<tr><td>Nhờ (cho mình) <span class="badge">Bài 2</span></td><td class="ko">“방을 바꿔 주세요.”</td><td class="ko">방을 <b>바꿔 달라고</b> 했어요</td></tr>
 </table>
-<p class="note">Cả 5 dòng đều theo một khuôn: <b>đuôi đặc trưng của loại câu + 고 + 하다</b>. Bài 1 vững thì Bài 2 chỉ là thay đuôi.</p>
+<p class="note">Cả 5 dòng đều theo một khuôn: <b>đuôi đặc trưng của loại câu + 고 + 하다</b>. Bài 1 vững thì Bài 2, Bài 3 chỉ là thay đuôi.</p>
 
-<h3>11. Lỗi hay gặp</h3>
+<h3>10. Lỗi hay gặp</h3>
 <table class="t">
 <tr><th>Sai</th><th>Đúng</th><th>Vì sao</th></tr>
 <tr><td class="ko">가다고</td><td class="ko">간다고</td><td>Động từ hiện tại phải có <span class="ko">-ㄴ/는다</span></td></tr>
@@ -480,6 +474,384 @@ footer a{color:var(--muted)}
 <tr><td class="ko">민수는 저는 바쁘다고…</td><td class="ko">민수는 자기는…</td><td>Đổi ngôi khi kể lại</td></tr>
 <tr><td class="ko">맛있데요 (= nghe nói ngon)</td><td class="ko">맛있대요</td><td>Thuật lại là ㅐ</td></tr>
 </table>
+<p class="note">Luyện ① ở thẻ <a href="#b=lt">Luyện</a> (Bài 1, Bài 3, Bài 4).</p>
+<div class="btns"><a class="b blue" href="#b=np&amp;g=2" style="text-decoration:none">Tiếp: ② -아야겠다 →</a></div>
+</div>
+
+<!-- ===== ② -아야겠다/어야겠다 (sách tr.27) ===== -->
+<div class="gp" id="gp2">
+<h2>② -아야겠다/어야겠다 · “Phải … thôi” <span class="badge">Sách tr.27</span></h2>
+<p class="goal"><b>Dùng để làm gì:</b> người nói <b>nhận ra mình cần làm một việc và quyết định sẽ làm</b>, thường ngay lúc nói, sau khi thấy một tình huống. Tiếng Việt: “chắc phải … thôi”, “phải … mới được”, “thôi, mình … đây”. Mẫu này không phải câu gián tiếp, nhưng trong Bài 1 nó đi rất hay với tin mình vừa nghe: <span class="ko">시험이 어렵<b>대요</b>. 그럼 열심히 공부<b>해야겠어요</b>.</span></p>
+
+<div class="lvl">Bậc 1 · Cơ bản</div>
+<h3>1. Tự tìm quy luật trước</h3>
+<p>Ba câu trong sách. Mỗi câu có hai phần. Em đoán xem phần trước nói gì, phần sau nói gì, rồi mới bấm “Xem quy luật”.</p>
+<div class="ex"><span class="ko">너무 졸려요. 이제 <b>자야겠어요</b>. <button class="say" data-say="너무 졸려요. 이제 자야겠어요.">🔊</button></span><span class="vi">Buồn ngủ quá. Giờ phải đi ngủ thôi.</span></div>
+<div class="ex"><span class="ko">배가 고파서 죽겠어. 빵이라도 <b>먹어야겠어</b>. <button class="say" data-say="배가 고파서 죽겠어. 빵이라도 먹어야겠어.">🔊</button></span><span class="vi">Đói chết mất. Phải ăn tạm cái bánh mì thôi.</span></div>
+<div class="ex"><span class="ko">모르는 단어가 너무 많아. 주말에는 단어 공부를 <b>해야겠어</b>. <button class="say" data-say="모르는 단어가 너무 많아. 주말에는 단어 공부를 해야겠어.">🔊</button></span><span class="vi">Từ không biết nhiều quá. Cuối tuần phải học từ mới được.</span></div>
+<div class="btns"><button class="b blue" data-tog="rule2">Xem quy luật</button></div>
+<div class="model" id="rule2">Phần trước = <b>tình huống người nói vừa nhận ra</b> (buồn ngủ, đói, nhiều từ không biết). Phần sau = <b>việc người nói quyết định làm</b> vì tình huống đó. Chủ ngữ là <b>tôi</b>, nhưng gần như luôn được lược đi. Cả ba câu đều là <b>động từ</b> + <span class="ko">-아야겠다/어야겠다</span>.</div>
+
+<h3>2. Cấu tạo: ghép từ hai mảnh em đã học</h3>
+<div class="flow">
+  <div><b>Mảnh 1 · phải</b><span class="ko">-아/어야 하다</span><br><small>가야 해요 = phải đi</small></div><i>+</i>
+  <div><b>Mảnh 2 · ý chí “tôi sẽ”</b><span class="ko">-겠-</span><br><small>제가 하겠습니다</small></div><i>→</i>
+  <div><b>Ghép rồi rút gọn</b><span class="ko">가야 하겠다 → <b>가야겠다</b></span></div>
+</div>
+<p><span class="ko">-아/어야 하다</span> nói một việc <b>cần làm</b>. <span class="ko">-겠-</span> nói <b>ý chí của người nói</b>. Ghép lại: “việc này cần làm, và tôi sẽ làm” = <b>“phải … thôi”</b>. Chữ <span class="ko">하</span> ở giữa rơi mất khi nói, nên sách dạy luôn dạng gọn <span class="ko">-아야겠다/어야겠다</span>.</p>
+
+<h3>3. Bảng chia: y hệt -아요/어요</h3>
+<p><b>Mẹo:</b> em lấy dạng <span class="ko">-아요/어요</span> mà em đã chia thuộc từ 1A, <b>bỏ 요, thêm 야겠다</b>. Mọi bất quy tắc đều đã nằm sẵn trong dạng <span class="ko">-아요/어요</span> (viên gạch ③).</p>
+<div class="scroll"><table class="t">
+<tr><th>Động từ</th><th>-아요/어요</th><th>-아야겠다/어야겠다</th><th>Ghi chú</th></tr>
+<tr><td class="ko">가다</td><td class="ko">가요</td><td class="ko">가<b>야겠다</b></td><td>ㅏ + 아 gộp làm một</td></tr>
+<tr><td class="ko">오다</td><td class="ko">와요</td><td class="ko">와<b>야겠다</b></td><td>ㅗ + 아 → 와</td></tr>
+<tr><td class="ko">먹다</td><td class="ko">먹어요</td><td class="ko">먹어<b>야겠다</b></td><td>Không phải ㅏ/ㅗ → 어</td></tr>
+<tr><td class="ko">하다</td><td class="ko">해요</td><td class="ko">해<b>야겠다</b></td><td>하 → 해</td></tr>
+<tr><td class="ko">쉬다 / 배우다</td><td class="ko">쉬어요 / 배워요</td><td class="ko">쉬어야겠다 / 배워야겠다</td><td>ㅜ + 어 → ㅝ</td></tr>
+<tr><td class="ko">듣다 (ㄷ)</td><td class="ko">들어요</td><td class="ko">들어<b>야겠다</b></td><td>Đuôi bắt đầu bằng nguyên âm → ㄷ thành ㄹ</td></tr>
+<tr><td class="ko">돕다 (ㅂ)</td><td class="ko">도와요</td><td class="ko">도와<b>야겠다</b></td><td>ㅂ → 오 (riêng 돕다, 곱다)</td></tr>
+<tr><td class="ko">쓰다 (rụng ㅡ)</td><td class="ko">써요</td><td class="ko">써<b>야겠다</b></td><td>ㅡ rụng</td></tr>
+<tr><td class="ko">부르다 (르)</td><td class="ko">불러요</td><td class="ko">불러<b>야겠다</b></td><td>르 → ㄹ러</td></tr>
+<tr><td class="ko">짓다 (ㅅ)</td><td class="ko">지어요</td><td class="ko">지어<b>야겠다</b></td><td>ㅅ rụng</td></tr>
+<tr><td class="ko">만들다 (gốc ㄹ)</td><td class="ko">만들어요</td><td class="ko">만들어<b>야겠다</b></td><td>Trước nguyên âm, ㄹ <b>không</b> rụng</td></tr>
+</table></div>
+
+<h3>4. Đuôi câu theo người nghe</h3>
+<table class="t">
+<tr><th>Nói với</th><th>Đuôi</th><th>Ví dụ</th></tr>
+<tr><td>Chính mình (nói một mình, nhật ký)</td><td class="ko">-아야겠다</td><td class="ko">아, 벌써 12시네. 자<b>야겠다</b>. <button class="say" data-say="아, 벌써 12시네. 자야겠다.">🔊</button></td></tr>
+<tr><td>Bạn bè, em khóa dưới</td><td class="ko">-아야겠어</td><td class="ko">나 먼저 가<b>야겠어</b>. <button class="say" data-say="나 먼저 가야겠어.">🔊</button></td></tr>
+<tr><td>Người lớn hơn, người lạ</td><td class="ko">-아야겠어요</td><td class="ko">오늘은 일찍 들어가<b>야겠어요</b>. <button class="say" data-say="오늘은 일찍 들어가야겠어요.">🔊</button></td></tr>
+<tr><td>Trang trọng (họp, phát biểu)</td><td class="ko">-아야겠습니다</td><td class="ko">회의를 다음 주로 미뤄<b>야겠습니다</b>. <button class="say" data-say="회의를 다음 주로 미뤄야겠습니다.">🔊</button></td></tr>
+</table>
+<p class="note">Dòng đầu rất quan trọng: người Hàn hay <b>nói một mình</b> bằng <span class="ko">-아야겠다</span>. Ở đây 한다체 không phải văn viết mà là “tự nói với mình”. Phát âm: <span class="pron">가야겠다 [가야겓따]</span>, <span class="pron">가야겠어요 [가야게써요]</span>, <span class="pron">가야겠습니다 [가야겓씀니다]</span>.</p>
+
+<div class="lvl">Bậc 2 · Chi tiết</div>
+<h3>5. Phần đứng trước thường là gì?</h3>
+<p>Vì đây là quyết định “vì thấy cần”, câu gần như luôn có một lý do đứng trước. Bốn cách nối hay gặp:</p>
+<div class="scroll"><table class="t">
+<tr><th>Lý do bằng…</th><th>Ví dụ</th></tr>
+<tr><td>Câu cảm thán <span class="ko">-네(요)</span> (vừa nhận ra)</td><td class="ko">벌써 10시<b>네</b>. 이제 가야겠다. <button class="say" data-say="벌써 10시네. 이제 가야겠다.">🔊</button></td></tr>
+<tr><td class="ko">-아서/어서</td><td class="ko">감기에 걸<b>려서</b> 오늘은 일찍 자야겠어요. <button class="say" data-say="감기에 걸려서 오늘은 일찍 자야겠어요.">🔊</button></td></tr>
+<tr><td class="ko">-(으)니까</td><td class="ko">다음 주가 시험<b>이니까</b> 이제부터 열심히 공부해야겠어요. <button class="say" data-say="다음 주가 시험이니까 이제부터 열심히 공부해야겠어요.">🔊</button></td></tr>
+<tr><td>Tin vừa nghe <span class="ko">-대요</span> (④) + <span class="ko">그럼</span></td><td class="ko">가: 오늘 도서관 문 닫았<b>대</b>. 나: 그래? <b>그럼</b> 카페에서 공부해야겠다. <button class="say" data-say="오늘 도서관 문 닫았대. 그래? 그럼 카페에서 공부해야겠다.">🔊</button></td></tr>
+</table></div>
+<div class="deep"><b>Vì sao -아서 đi được với -아야겠다?</b> Em đã học <span class="ko">-아서/어서</span> không đi với câu mệnh lệnh, câu rủ (<span class="ko">배가 고파서 먹읍시다</span> ✗). Nhưng <span class="ko">-아야겠다</span> là <b>quyết định của chính mình</b>, không sai khiến ai, nên <span class="ko">배가 고파서 뭐 좀 먹어야겠어요</span> hoàn toàn tự nhiên.</div>
+
+<h3>6. Phủ định: “thôi, không … nữa”</h3>
+<table class="t">
+<tr><th>Ý muốn nói</th><th>Dùng</th><th>Ví dụ</th></tr>
+<tr><td>Quyết <b>không làm</b> (nữa)</td><td class="ko">-지 말아야겠다</td><td class="ko">이제 밤늦게 라면을 먹<b>지 말아야겠어요</b>. <button class="say" data-say="이제 밤늦게 라면을 먹지 말아야겠어요.">🔊</button><br>다시는 지각하<b>지 말아야겠다</b>.</td></tr>
+<tr><td>“Chắc em <b>không đi được</b>” (không thể)</td><td class="ko">못 -겠다 / 못 -(으)ㄹ 것 같다</td><td class="ko">오늘은 <b>못 가겠어요</b>. · 오늘은 <b>못 갈 것 같아요</b>.</td></tr>
+</table>
+<div class="warnbox"><b>Bẫy của người Việt:</b> “Chắc hôm nay em phải nghỉ, không đi được ạ” → nhiều bạn nói <span class="ko">오늘은 못 가야겠어요</span> ✗. <span class="ko">못</span> (không thể) và <span class="ko">-아야겠다</span> (quyết định phải làm) mâu thuẫn nhau. Đúng: <span class="ko">오늘은 못 갈 것 같아요</span>, hoặc nói việc mình quyết định: <span class="ko">오늘은 집에서 쉬어야겠어요</span>.<br>Khẩu ngữ đôi khi nghe <span class="ko">안 먹어야겠어</span>, nhưng dạng chuẩn em nên dùng là <span class="ko">-지 말아야겠다</span> (không phải <span class="ko">-지 마야겠다</span>).</div>
+
+<h3>7. Chủ ngữ: thường là “tôi”, đôi khi là “bạn”</h3>
+<table class="t">
+<tr><th>Chủ ngữ</th><th>Nghĩa</th><th>Ví dụ</th></tr>
+<tr><td><b>Tôi</b> (hầu hết các câu)</td><td>Tôi quyết định làm</td><td class="ko">숙제가 많네. 오늘은 놀지 말고 공부해야겠다.</td></tr>
+<tr><td><b>Bạn / người khác</b></td><td>Người nói <b>nhận định</b>: “(bạn) cần phải … thôi”</td><td class="ko">너 얼굴이 안 좋다. 오늘은 좀 쉬어<b>야겠다</b>. <button class="say" data-say="너 얼굴이 안 좋다. 오늘은 좀 쉬어야겠다.">🔊</button><br><span class="note">(Bạn trông mệt quá. Hôm nay bạn phải nghỉ đi thôi.)</span></td></tr>
+<tr><td><b>Khách</b> (nhân viên nói)</td><td><span class="ko">-(으)셔야겠어요/습니다</span>: yêu cầu lịch sự nhưng <b>không để từ chối</b></td><td class="ko">손님, 이 서류는 다시 작성하<b>셔야겠어요</b>. <button class="say" data-say="손님, 이 서류는 다시 작성하셔야겠어요.">🔊</button><br>죄송하지만 여기에서는 담배를 끄<b>셔야겠습니다</b>.</td></tr>
+</table>
+
+<h3>8. Không gắn -았/었- vào trước</h3>
+<p><span class="ko">-아야겠다</span> luôn nói về việc <b>từ bây giờ trở đi</b>. Muốn nói về quá khứ thì đổi mẫu:</p>
+<table class="t">
+<tr><th>Muốn nói</th><th>Sai</th><th>Đúng</th></tr>
+<tr><td>“Lẽ ra hôm qua phải đi khám” (tiếc)</td><td class="ko">어제 병원에 갔어야겠어요 ✗</td><td class="ko">어제 병원에 <b>갔어야 했는데</b>… · 갈걸 그랬어요 (Bài 5)</td></tr>
+<tr><td>Kể lại quyết định đã có lúc trước</td><td class="ko">그때 공부했어야겠어요 ✗</td><td class="ko">그때 열심히 공부<b>해야겠다고 생각했어요</b>.</td></tr>
+</table>
+<div class="deep"><b>Ghép ② với ①.</b> Dòng cuối là chỗ hai ngữ pháp của bài gặp nhau: lấy câu <span class="ko">공부해야겠다</span> (한다체) + <span class="ko">고</span> + <span class="ko">생각하다 / 결심하다 / 하다</span>. Ví dụ: <span class="ko">민수가 이제 담배를 끊어야겠다고 했어요</span> = Minsu nói là giờ phải bỏ thuốc thôi. Rút gọn khi nói: <span class="ko">끊어야겠대요</span>.</div>
+
+<div class="lvl">Bậc 3 · Chuyên sâu</div>
+<h3>9. Sáu cách nói “sẽ làm”: chọn cái nào?</h3>
+<div class="scroll"><table class="t">
+<tr><th>Mẫu</th><th>Sắc thái</th><th>Ví dụ</th></tr>
+<tr><td class="ko">-아/어야 해요</td><td><b>Nghĩa vụ, quy định</b>, ai cũng phải; không có ý chí riêng</td><td class="ko">도서관에서는 학생증이 있어야 해요.</td></tr>
+<tr><td class="ko"><b>-아/어야겠어요</b></td><td>Tôi thấy cần → <b>quyết định ngay lúc này</b></td><td class="ko">지갑을 잃어버렸네. 경찰서에 가 봐야겠어요.</td></tr>
+<tr><td class="ko">-(으)ㄹ게요</td><td><b>Hứa / báo cho người nghe</b>, việc có liên quan đến người nghe</td><td class="ko">제가 내일 전화할게요.</td></tr>
+<tr><td class="ko">-(으)려고 해요</td><td><b>Dự định đã có từ trước</b></td><td class="ko">방학에 제주도에 가려고 해요.</td></tr>
+<tr><td class="ko">-기로 했어요</td><td>Đã <b>quyết định / hẹn</b> xong (sau khi suy nghĩ, bàn bạc)</td><td class="ko">친구하고 같이 살기로 했어요.</td></tr>
+<tr><td class="ko">-겠습니다</td><td><b>Tuyên bố ý chí</b>, trang trọng</td><td class="ko">열심히 하겠습니다.</td></tr>
+</table></div>
+<p>Cùng chuyện “mua ô”, ba hoàn cảnh khác nhau:</p>
+<div class="ex"><span class="ko">어, 비가 오네. 우산을 <b>사야겠다</b>.</span><span class="vi">Vừa thấy mưa → quyết định ngay.</span></div>
+<div class="ex"><span class="ko">내일 우산을 <b>사려고 해요</b>.</span><span class="vi">Đã định từ trước, kể cho người khác nghe.</span></div>
+<div class="ex"><span class="ko">제가 우산 <b>사 올게요</b>.</span><span class="vi">Hứa với người đang nói chuyện cùng.</span></div>
+
+<h3>10. “저 먼저 가 봐야겠어요”: câu xin phép về</h3>
+<p>Muốn rời buổi gặp mà không làm mất lòng, người Hàn hay nói như thể đó là <b>việc cần làm</b> chứ không phải mình muốn đi:</p>
+<div class="ex"><span class="ko">시간이 늦었네요. 저 먼저 <b>가 봐야겠어요</b>. <button class="say" data-say="시간이 늦었네요. 저 먼저 가 봐야겠어요.">🔊</button></span><span class="vi">Muộn rồi. Em xin phép về trước ạ.</span></div>
+<div class="ex"><span class="ko">저 이제 <b>일어나야겠어요</b>. 오늘 정말 즐거웠어요. <button class="say" data-say="저 이제 일어나야겠어요. 오늘 정말 즐거웠어요.">🔊</button></span><span class="vi">Em phải đứng dậy về thôi. Hôm nay vui thật ạ.</span></div>
+<div class="ex"><span class="ko">(điện thoại) 미안, 나 이제 <b>끊어야겠어</b>. 수업 시작해. <button class="say" data-say="미안, 나 이제 끊어야겠어. 수업 시작해.">🔊</button></span><span class="vi">Xin lỗi, tớ phải cúp máy đây. Vào học rồi.</span></div>
+<p class="note"><span class="ko">-아 보다</span> trong <span class="ko">가 봐야겠어요</span> làm câu mềm hơn. Đây là câu em dùng được ngay sau buổi sinh hoạt câu lạc bộ, tiệc chào đón tân sinh viên.</p>
+
+<h3>11. Cẩn thận khi nói với người trên</h3>
+<p><span class="ko">-아야겠어요</span> là <b>tự quyết</b>. Nói với giáo sư về việc cần giáo sư cho phép thì nghe như em đã quyết thay giáo sư:</p>
+<table class="t">
+<tr><th>Nghe thiếu lễ phép</th><th>Nên nói</th></tr>
+<tr><td class="ko">교수님, 과제를 내일 내야겠어요.</td><td class="ko">교수님, 과제를 내일 내<b>도 될까요</b>?</td></tr>
+<tr><td class="ko">선배, 저 오늘 동아리 모임에 빠져야겠어요.</td><td class="ko">선배, 죄송한데 오늘 동아리 모임에 <b>못 갈 것 같아요</b>.</td></tr>
+</table>
+
+<div class="deep"><b>Trong đề TOPIK.</b> Phần Nghe câu 9–12 hỏi <span class="ko">“여자가 이어서 할 행동으로 알맞은 것을 고르십시오”</span> (việc người phụ nữ sẽ làm tiếp theo). Câu có <span class="ko">-아야겠다 / -아야겠네요</span> ở cuối đoạn hội thoại thường <b>chính là đáp án</b>: <span class="ko">“그래요? 그럼 지금 가서 신청해야겠네요.”</span> → <span class="ko">신청하러 간다</span>. Nghe được đuôi <span class="ko">-야겠-</span> là bắt được đáp án.</div>
+
+<h3>12. Lỗi hay gặp</h3>
+<table class="t">
+<tr><th>Sai</th><th>Đúng</th><th>Vì sao</th></tr>
+<tr><td class="ko">가아야겠어요</td><td class="ko">가야겠어요</td><td>ㅏ + 아 gộp (như 가요)</td></tr>
+<tr><td class="ko">먹아야겠어요</td><td class="ko">먹어야겠어요</td><td>Không phải ㅏ/ㅗ → 어</td></tr>
+<tr><td class="ko">듣어야겠어요</td><td class="ko">들어야겠어요</td><td>Bất quy tắc ㄷ (như 들어요)</td></tr>
+<tr><td class="ko">갔어야겠어요 (lẽ ra phải đi)</td><td class="ko">갔어야 했는데</td><td>-아야겠다 chỉ nói từ bây giờ</td></tr>
+<tr><td class="ko">못 가야겠어요</td><td class="ko">못 갈 것 같아요</td><td>“Không thể” ≠ “quyết định phải”</td></tr>
+<tr><td class="ko">가지 마야겠어요</td><td class="ko">가지 말아야겠어요</td><td>말다 + 아야겠다 = 말아야겠다</td></tr>
+<tr><td class="ko">내일 비가 와야겠어요 (chắc mai mưa)</td><td class="ko">내일 비가 올 것 같아요</td><td>-아야겠다 không phải phỏng đoán</td></tr>
+</table>
+
+<h3>13. Luyện ngay · chấm ngay</h3>
+<h4>a. Chọn câu đúng</h4>
+<div class="set" data-set="y1"></div>
+<h4>b. Chia động từ <small class="note">(gõ dạng <span class="ko">-아야겠어요/어야겠어요</span>; cũng chấp nhận <span class="ko">-야겠다</span>)</small></h4>
+<div class="set" data-set="y2"></div>
+<div class="btns"><a class="b blue" href="#b=np&amp;g=3" style="text-decoration:none">Tiếp: ③ -다고 들었다 →</a></div>
+</div>
+
+<!-- ===== ③ -다고 들었다 (sách tr.30) ===== -->
+<div class="gp" id="gp3">
+<h2>③ -다고 들었다 · “Tôi nghe nói …” <span class="badge">Sách tr.30</span></h2>
+<p class="goal"><b>Dùng để làm gì:</b> thuật lại điều <b>mình đã nghe</b> từ người khác hoặc từ tin tức, mạng xã hội, và <b>nhấn mạnh “tôi là người nghe được”</b>, tức là mình chưa tự kiểm chứng. Tiếng Việt: “tôi nghe nói…”, “mình nghe bảo…”.</p>
+
+<div class="lvl">Bậc 1 · Cơ bản</div>
+<h3>1. Câu trong sách</h3>
+<div class="ex"><span class="ko">서울이 복잡하<b>다고 들었어요</b>. <button class="say" data-say="서울이 복잡하다고 들었어요.">🔊</button></span><span class="vi">Tôi nghe nói Seoul đông đúc, phức tạp lắm.</span></div>
+<div class="ex"><span class="ko">마이클 씨가 고향에 <b>간다고 들었어요</b>. <button class="say" data-say="마이클 씨가 고향에 간다고 들었어요.">🔊</button></span><span class="vi">Tôi nghe nói anh Michael sắp về quê.</span></div>
+<div class="ex"><span class="ko">투투 씨가 불고기를 잘 먹<b>는다고 들었어요</b>. <button class="say" data-say="투투 씨가 불고기를 잘 먹는다고 들었어요.">🔊</button></span><span class="vi">Tôi nghe nói Tutu ăn bulgogi giỏi lắm.</span></div>
+<div class="ex"><span class="ko">내일이 쉬는 날<b>이라고 들었어요</b>. <button class="say" data-say="내일이 쉬는 날이라고 들었어요.">🔊</button></span><span class="vi">Tôi nghe nói mai là ngày nghỉ.</span></div>
+
+<h3>2. Cấu tạo: chỉ thay một chữ của ①</h3>
+<div class="flow">
+  <div><b>Câu ① đã có</b><span class="ko">고향에 간다고 <b>해요</b></span></div><i>→</i>
+  <div><b>Thay 하다 bằng 듣다</b><span class="ko">고향에 간다고 <b>듣다</b></span></div><i>→</i>
+  <div><b>Chia quá khứ</b><span class="ko">고향에 간다고 <b>들었어요</b></span></div>
+</div>
+<p>Phần đứng trước <span class="ko">고</span> chia <b>y hệt ①</b> (em không phải học gì mới). Chỉ cần nhớ <span class="ko">듣다</span> là bất quy tắc ㄷ: <span class="ko">듣 + 었어요 → <b>들었어요</b></span> (viên gạch ③).</p>
+
+<h3>3. Bảng chia đầy đủ</h3>
+<div class="scroll"><table class="t">
+<tr><th>Loại</th><th>Hiện tại</th><th>Quá khứ</th><th>Tương lai</th></tr>
+<tr><td>Tính từ</td><td class="ko">복잡하<b>다고</b> 들었어요</td><td class="ko">복잡했다고 들었어요</td><td class="ko">복잡할 거라고 들었어요</td></tr>
+<tr><td>Động từ không 받침</td><td class="ko">간<b>다고</b> 들었어요</td><td class="ko">갔다고 들었어요</td><td class="ko">갈 거라고 들었어요</td></tr>
+<tr><td>Động từ có 받침</td><td class="ko">먹<b>는다고</b> 들었어요</td><td class="ko">먹었다고 들었어요</td><td class="ko">먹을 거라고 들었어요</td></tr>
+<tr><td>있다 / 없다</td><td class="ko">재미있다고 들었어요</td><td class="ko">재미있었다고 들었어요</td><td class="ko">재미있을 거라고 들었어요</td></tr>
+<tr><td>N이다</td><td class="ko">학교<b>라고</b> · 쉬는 날<b>이라고</b> 들었어요</td><td class="ko">학교였다고 · 쉬는 날이었다고 들었어요</td><td class="ko">—</td></tr>
+<tr><td>아니다</td><td class="ko">학생이 아니라고 들었어요</td><td class="ko">학생이 아니었다고 들었어요</td><td class="ko">—</td></tr>
+</table></div>
+
+<h3>4. Vì sao gần như luôn là “들었어요”?</h3>
+<p>Việc <b>nghe</b> đã xảy ra trước lúc em kể, nên <span class="ko">듣다</span> chia quá khứ: <span class="ko">들었어요</span>. Còn lời trích vẫn <b>giữ thì của tin gốc</b> (giống ①, mục 4):</p>
+<table class="t">
+<tr><th>Câu</th><th>Việc trong tin</th><th>Lúc nghe</th></tr>
+<tr><td class="ko">다음 주에 시험을 <b>본다고 들었어요</b>.</td><td>tuần sau mới thi</td><td>đã nghe</td></tr>
+<tr><td class="ko">어제 시험을 <b>봤다고 들었어요</b>.</td><td>đã thi hôm qua</td><td>đã nghe</td></tr>
+</table>
+<p class="note">Câu <span class="ko">본다고 들어요</span> nghe rất lạ khi kể một tin cụ thể. Em cứ dùng <span class="ko">들었어요</span>.</p>
+
+<div class="lvl">Bậc 2 · Chi tiết</div>
+<h3>5. Nghe từ ai? Tiểu từ của nguồn tin</h3>
+<table class="t">
+<tr><th>Nguồn</th><th>Tiểu từ</th><th>Ví dụ</th></tr>
+<tr><td>Một người (nói)</td><td class="ko">한테서</td><td class="ko">민수<b>한테서</b> 다음 주에 휴강이라고 들었어요.</td></tr>
+<tr><td>Một người (viết, trang trọng)</td><td class="ko">에게서</td><td class="ko">선배<b>에게서</b> 장학금 신청이 내일까지라고 들었다.</td></tr>
+<tr><td>Người đáng kính</td><td class="ko">께</td><td class="ko">교수님<b>께</b> 시험 범위가 5과까지라고 들었어요.</td></tr>
+<tr><td>Tổ chức, phương tiện</td><td class="ko">에서</td><td class="ko">뉴스<b>에서</b> 올해 장학금이 늘었다고 들었어요.</td></tr>
+</table>
+<p class="note"><span class="ko">께</span> = kính ngữ của <span class="ko">에게/한테</span> (người nhận, nguồn). <span class="ko">께서</span> = kính ngữ của <span class="ko">이/가</span> (chủ ngữ). Nên “nghe từ giáo sư” là <span class="ko">교수님께 들었어요</span>, không phải <span class="ko">교수님께서 들었어요</span> (= giáo sư nghe).</p>
+
+<h3>6. “민수가” hay “민수한테서”? Chỗ hay nhầm nhất</h3>
+<p>Thử đoán nghĩa 3 câu trước khi xem giải thích:</p>
+<table class="t">
+<tr><th>Câu</th><th>Nghĩa</th></tr>
+<tr><td class="ko">① 민수<b>가</b> 바쁘다고 <b>했어요</b>.</td><td>?</td></tr>
+<tr><td class="ko">② 민수<b>가</b> 바쁘다고 <b>들었어요</b>.</td><td>?</td></tr>
+<tr><td class="ko">③ 민수<b>한테서</b> 바쁘다고 <b>들었어요</b>.</td><td>?</td></tr>
+</table>
+<div class="btns"><button class="b blue" data-tog="m6">Xem giải thích</button></div>
+<div class="model" id="m6">
+① <b>Minsu nói</b> là (mình) bận. <span class="ko">민수가</span> = người nói, chủ ngữ của <span class="ko">했어요</span>.<br>
+② <b>Tôi nghe nói Minsu bận.</b> <span class="ko">민수가</span> nằm <b>trong lời trích</b> (<span class="ko">민수가 바쁘다</span>), là người bận, không phải người nói. Ai nói cho tôi thì câu không cho biết.<br>
+③ <b>Tôi nghe Minsu nói</b> là bận. <span class="ko">민수한테서</span> = nguồn tin.<br>
+<b>Quy tắc:</b> chủ ngữ của <span class="ko">들었어요</span> luôn là <b>tôi</b> (được lược). Muốn nói “ai đã nói cho tôi” thì dùng <span class="ko">한테서 / 께 / 에서</span>, không dùng <span class="ko">이/가</span>.</div>
+
+<h3>7. Bốn cách kể lại tin: so sánh</h3>
+<div class="scroll"><table class="t">
+<tr><th>Mẫu</th><th>Người nói đang…</th><th>Nguồn tin</th><th>Dùng khi</th></tr>
+<tr><td class="ko">-다고 했어요 (①)</td><td>kể lại lời một người</td><td>một người cụ thể đã nói (chủ ngữ là người đó)</td><td>nói và viết</td></tr>
+<tr><td class="ko"><b>-다고 들었어요</b> (③)</td><td>kể lại, nhấn mạnh <b>“tôi nghe được”</b></td><td>có thể không nhớ ai nói; chưa chắc</td><td>nói và viết</td></tr>
+<tr><td class="ko">-대요 (④)</td><td>kể lại, gọn nhẹ</td><td>người khác / tin đồn / thông báo</td><td>chỉ khi nói</td></tr>
+<tr><td class="ko">-다면서요? <span class="badge">thêm</span></td><td><b>hỏi lại</b> để xác nhận điều mình nghe</td><td>mình đã nghe</td><td>chỉ khi nói</td></tr>
+</table></div>
+<div class="ex"><span class="ko">이 학교는 축제가 아주 유명하<b>다고 들었어요</b>. <button class="say" data-say="이 학교는 축제가 아주 유명하다고 들었어요.">🔊</button></span><span class="vi">Tôi nghe nói lễ hội trường này rất nổi tiếng.</span></div>
+<div class="ex"><span class="ko">장학금을 받았<b>다면서요</b>? 축하해요! <button class="say" data-say="장학금을 받았다면서요? 축하해요!">🔊</button></span><span class="vi">Nghe nói bạn được học bổng à? Chúc mừng nhé! (hỏi chính người được học bổng; ≈ <span class="ko">받았다고 들었는데 맞아요?</span>)</span></div>
+
+<h3>8. Các cách nói gần nghĩa (sách tr.30)</h3>
+<table class="t">
+<tr><th>Mẫu</th><th>Nghĩa, sắc thái</th><th>Ví dụ</th></tr>
+<tr><td class="ko">-다고 말하다</td><td>= -다고 하다, nhấn mạnh <b>hành động nói</b> (hay đi với 분명히 “rõ ràng”)</td><td class="ko">조교가 분명히 오늘까지라고 <b>말했어요</b>.</td></tr>
+<tr><td class="ko">-다고 그랬다</td><td>= -다고 했다, <b>khẩu ngữ</b> thân mật</td><td class="ko">엄마가 오늘 늦게 온다고 <b>그랬어</b>.</td></tr>
+<tr><td class="ko">-다고 생각하다</td><td>nêu <b>suy nghĩ, ý kiến của mình</b> (không phải nghe ai)</td><td class="ko">저는 대학 생활이 중요하다고 <b>생각해요</b>.</td></tr>
+<tr><td class="ko">-다는 이야기를 / 소식을 듣다</td><td>= -다고 듣다, nhưng có danh từ <span class="ko">이야기, 소식</span> → đổi thành <span class="ko">-다는</span></td><td class="ko">친구가 합격했<b>다는 소식을</b> 들었어요.</td></tr>
+</table>
+<div class="deep"><b>Vì sao lại là -다는?</b> <span class="ko">-다는</span> là dạng rút gọn của <span class="ko">-다고 하는</span> (định ngữ của <span class="ko">-다고 하다</span>): <span class="ko">합격했다고 하는 소식 → 합격했다는 소식</span>. Danh từ đứng sau thường là <span class="ko">이야기, 소식, 말, 소문</span> (tin đồn), <span class="ko">생각</span>. Đây là cấu trúc rất hay gặp trong bài đọc TOPIK.</div>
+
+<div class="lvl">Bậc 3 · Chuyên sâu</div>
+<h3>9. Dùng -다고 들었는데 để mở chuyện, hỏi khéo, phản bác nhẹ</h3>
+<table class="t">
+<tr><th>Mục đích</th><th>Ví dụ</th></tr>
+<tr><td><b>Mở lời rồi nhờ / hỏi</b></td><td class="ko">이 근처에 맛집이 많<b>다고 들었는데</b> 추천해 주실 수 있어요? <button class="say" data-say="이 근처에 맛집이 많다고 들었는데 추천해 주실 수 있어요?">🔊</button></td></tr>
+<tr><td><b>Chúc mừng, hỏi thăm</b> (cho thấy mình quan tâm)</td><td class="ko">장학금을 받았<b>다고 들었는데</b> 정말 축하해요! <button class="say" data-say="장학금을 받았다고 들었는데 정말 축하해요!">🔊</button></td></tr>
+<tr><td><b>Phản bác nhẹ</b> (cuối câu <span class="ko">-는데요</span>)</td><td class="ko">가: 오늘 수업 있어요? 나: 오늘 휴강<b>이라고 들었는데요</b>… <button class="say" data-say="오늘 수업 있어요? 오늘 휴강이라고 들었는데요.">🔊</button><br><span class="note">(Em nghe nói hôm nay nghỉ mà… — mềm hơn nhiều so với <span class="ko">휴강이에요</span>.)</span></td></tr>
+</table>
+<p>Vì sao người Hàn hay nói “tôi nghe nói” như vậy? Câu <span class="ko">-다고 들었어요</span> cho thấy <b>mình không khẳng định</b>, mình chỉ nghe được. Nói như vậy vừa lịch sự (không áp đặt), vừa an toàn khi tin chưa chắc chắn. Với chuyện riêng của người khác, kể lại tin đồn cũng nên dùng mẫu này để không nghe như mình là người khẳng định.</p>
+
+<div class="deep"><b>Trong đề TOPIK.</b> Câu hỏi <span class="ko">“들은 내용과 같은 것을 고르십시오”</span> hay gài bẫy ở đây: <span class="ko">여자는 그 식당이 비싸다고 들었다</span> chỉ có nghĩa là cô ấy <b>nghe nói</b> quán đắt, <b>không</b> có nghĩa cô ấy đã ăn ở đó hay chính cô ấy nói quán đắt. Phần Viết câu 54 có thể mở bài bằng <span class="ko">“…다는 이야기를 자주 듣는다.”</span> (Ta thường nghe nói rằng…).</div>
+
+<h3>10. Lỗi hay gặp</h3>
+<table class="t">
+<tr><th>Sai</th><th>Đúng</th><th>Vì sao</th></tr>
+<tr><td class="ko">바쁘다고 듣었어요</td><td class="ko">바쁘다고 들었어요</td><td>Bất quy tắc ㄷ</td></tr>
+<tr><td class="ko">민수가 … 들었어요 (muốn nói Minsu kể)</td><td class="ko">민수한테서 … 들었어요</td><td>Nguồn tin dùng 한테서</td></tr>
+<tr><td class="ko">교수님께서 … 들었어요 (nghe từ thầy)</td><td class="ko">교수님께 … 들었어요</td><td>께 = từ (người đáng kính); 께서 = chủ ngữ</td></tr>
+<tr><td class="ko">학생이다고 들었어요</td><td class="ko">학생이라고 들었어요</td><td>이다 → (이)라고</td></tr>
+<tr><td class="ko">본다고 들어요</td><td class="ko">본다고 들었어요</td><td>Việc nghe đã xảy ra</td></tr>
+<tr><td class="ko">합격했다고 소식을 들었어요</td><td class="ko">합격했다는 소식을 들었어요</td><td>Có danh từ 소식 → -다는</td></tr>
+</table>
+
+<h3>11. Luyện ngay · chấm ngay</h3>
+<h4>a. Chọn câu đúng</h4>
+<div class="set" data-set="h1"></div>
+<h4>b. Kể lại: “tôi nghe (ai) nói là …” <small class="note">(gõ phần còn thiếu, kết thúc bằng <span class="ko">들었어요</span>)</small></h4>
+<div class="set" data-set="h2"></div>
+<div class="btns"><a class="b blue" href="#b=np&amp;g=4" style="text-decoration:none">Tiếp: ④ -대요 →</a></div>
+</div>
+
+<!-- ===== ④ -대(요) (sách tr.31) ===== -->
+<div class="gp" id="gp4">
+<h2>④ -대(요) · “Nghe nói… / (người ta) bảo là…” <span class="badge">Sách tr.31</span></h2>
+<p class="goal"><b>Dùng để làm gì:</b> đây là <b>dạng rút gọn của ① khi nói</b>: <span class="ko">-다고 해요 → -대요</span>, <span class="ko">-(이)라고 해요 → -(이)래요</span>. Nghĩa không đổi: kể lại điều nghe được từ người khác hoặc từ tin tức, và thường <b>không cần nêu ai nói</b>. Ngoài đời, người Hàn dùng dạng này nhiều hơn hẳn dạng đầy đủ.</p>
+
+<div class="lvl">Bậc 1 · Cơ bản</div>
+<h3>1. Câu trong sách</h3>
+<div class="ex"><span class="ko">마이클 씨가 감기에 걸려서 많이 아프<b>대요</b>. <button class="say" data-say="마이클 씨가 감기에 걸려서 많이 아프대요.">🔊</button></span><span class="vi">Nghe nói Michael bị cảm, ốm lắm.</span></div>
+<div class="ex"><span class="ko">코이 씨 고향은 지금 아주 덥<b>대요</b>. <button class="say" data-say="코이 씨 고향은 지금 아주 덥대요.">🔊</button></span><span class="vi">Nghe nói quê của Koi bây giờ nóng lắm.</span></div>
+<div class="ex"><span class="ko">외국인들이 명동에서 화장품을 많이 <b>산대요</b>. <button class="say" data-say="외국인들이 명동에서 화장품을 많이 산대요.">🔊</button></span><span class="vi">Nghe nói người nước ngoài mua nhiều mỹ phẩm ở Myeongdong.</span></div>
+<div class="ex"><span class="ko">그 학교는 졸업식 때 한복을 입<b>는대요</b>. <button class="say" data-say="그 학교는 졸업식 때 한복을 입는대요.">🔊</button></span><span class="vi">Nghe nói trường đó mặc hanbok vào lễ tốt nghiệp.</span></div>
+<div class="ex"><span class="ko">이 나무는 아버지가 어렸을 때 심은 나무<b>래요</b>. <button class="say" data-say="이 나무는 아버지가 어렸을 때 심은 나무래요.">🔊</button></span><span class="vi">Nghe nói cây này là cây bố trồng hồi bé.</span></div>
+<div class="ex"><span class="ko">저 건물이 새로 지은 도서관<b>이래요</b>. <button class="say" data-say="저 건물이 새로 지은 도서관이래요.">🔊</button></span><span class="vi">Nghe nói tòa nhà kia là thư viện mới xây.</span></div>
+
+<h3>2. Rút gọn diễn ra thế nào</h3>
+<div class="flow">
+  <div><b>Đầy đủ</b><span class="ko">한다<b>고</b> 해요</span></div><i>→</i>
+  <div><b>Bỏ 고</b><span class="ko">한<b>다 해</b>요</span></div><i>→</i>
+  <div><b>다 + 해 → 대</b><span class="ko">한<b>대</b>요</span></div>
+</div>
+<div class="flow">
+  <div><b>Đầy đủ</b><span class="ko">학생이라<b>고</b> 해요</span></div><i>→</i>
+  <div><b>Bỏ 고</b><span class="ko">학생이<b>라 해</b>요</span></div><i>→</i>
+  <div><b>라 + 해 → 래</b><span class="ko">학생이<b>래</b>요</span></div>
+</div>
+<p>Nguyên âm <b>ㅏ</b> của <span class="ko">다/라</span> gặp <b>ㅐ</b> của <span class="ko">해</span> → còn lại <b>ㅐ</b>. Vì thế <span class="ko">-대요</span> viết <b>ㅐ</b>. Phần đứng trước vẫn chia y hệt ①: tính từ giữ nguyên, động từ thêm <span class="ko">-ㄴ/는</span>, danh từ thêm <span class="ko">(이)</span>.</p>
+
+<h3>3. Bảng chia đầy đủ</h3>
+<div class="scroll"><table class="t">
+<tr><th>Loại</th><th>Đầy đủ</th><th>Rút gọn (존댓말)</th><th>반말</th></tr>
+<tr><td>Tính từ</td><td class="ko">바쁘다고 해요</td><td class="ko">바쁘<b>대요</b> <button class="say" data-say="바쁘대요">🔊</button></td><td class="ko">바쁘대</td></tr>
+<tr><td>Động từ không 받침</td><td class="ko">간다고 해요</td><td class="ko">간<b>대요</b> <button class="say" data-say="간대요">🔊</button></td><td class="ko">간대</td></tr>
+<tr><td>Động từ có 받침</td><td class="ko">먹는다고 해요</td><td class="ko">먹는<b>대요</b> <button class="say" data-say="먹는대요">🔊</button></td><td class="ko">먹는대</td></tr>
+<tr><td>Gốc ㄹ</td><td class="ko">만든다고 해요</td><td class="ko">만든대요</td><td class="ko">만든대</td></tr>
+<tr><td>있다 / 없다</td><td class="ko">맛있다고 해요</td><td class="ko">맛있대요 <button class="say" data-say="맛있대요">🔊</button></td><td class="ko">맛있대</td></tr>
+<tr><td>Quá khứ</td><td class="ko">갔다고 해요</td><td class="ko">갔대요 <button class="say" data-say="갔대요">🔊</button></td><td class="ko">갔대</td></tr>
+<tr><td>Tương lai</td><td class="ko">갈 거라고 해요 / 가겠다고 해요</td><td class="ko">갈 거래요 / 가겠대요 <button class="say" data-say="갈 거래요. 가겠대요.">🔊</button></td><td class="ko">갈 거래 / 가겠대</td></tr>
+<tr><td>Đang làm</td><td class="ko">자고 있다고 해요</td><td class="ko">자고 있대요</td><td class="ko">자고 있대</td></tr>
+<tr><td>Phủ định</td><td class="ko">안 온다고 해요</td><td class="ko">안 온대요 · 못 온대요</td><td class="ko">안 온대</td></tr>
+<tr><td>N이다 (không 받침)</td><td class="ko">친구라고 해요</td><td class="ko">친구<b>래요</b> <button class="say" data-say="친구래요">🔊</button></td><td class="ko">친구래</td></tr>
+<tr><td>N이다 (có 받침)</td><td class="ko">학생이라고 해요</td><td class="ko">학생<b>이래요</b> <button class="say" data-say="학생이래요">🔊</button></td><td class="ko">학생이래</td></tr>
+<tr><td>아니다</td><td class="ko">아니라고 해요</td><td class="ko">아니래요</td><td class="ko">아니래</td></tr>
+</table></div>
+<p class="note">Quá khứ của danh từ: <span class="ko">학생이었대요, 친구였대요</span>. Phát âm: <span class="pron">먹는대요 [멍는대요]</span>, <span class="pron">있대요 [읻때요]</span>, <span class="pron">없대요 [업때요]</span>.</p>
+
+<div class="lvl">Bậc 2 · Chi tiết</div>
+<h3>4. -대요? : hỏi “người ta bảo là …?”</h3>
+<p>Lên giọng ở cuối, <span class="ko">-대요?</span> thành câu hỏi về <b>điều người khác đã nói</b>. Hay đi với từ để hỏi:</p>
+<div class="scroll"><table class="t">
+<tr><th>Câu hỏi</th><th>Đầy đủ</th><th>Nghĩa</th></tr>
+<tr><td class="ko">민수 씨가 언제 <b>온대요</b>? <button class="say" data-say="민수 씨가 언제 온대요?">🔊</button></td><td class="ko">언제 온다고 해요?</td><td>Minsu bảo bao giờ đến?</td></tr>
+<tr><td class="ko">왜 안 <b>온대요</b>?</td><td class="ko">왜 안 온다고 해요?</td><td>Sao (bạn ấy bảo là) không đến?</td></tr>
+<tr><td class="ko">선생님이 <b>뭐래요</b>? <button class="say" data-say="선생님이 뭐래요?">🔊</button></td><td class="ko">뭐라고 해요?</td><td>Cô nói gì thế?</td></tr>
+<tr><td class="ko"><b>진짜래</b>? <button class="say" data-say="진짜래?">🔊</button></td><td class="ko">진짜라고 해?</td><td>(Người ta bảo) thật á?</td></tr>
+</table></div>
+<p class="note"><span class="ko">뭐래요? / 뭐래?</span> (= <span class="ko">뭐라고 해요?</span>) là câu em sẽ nghe hằng ngày. Trả lời bằng <span class="ko">-대요</span>: <span class="ko">가: 선생님이 뭐래요? 나: 내일 시험 본대요.</span></p>
+
+<h3>5. -대요 (ㅐ) và -데요 (ㅔ)</h3>
+<p>Ngày nay người Seoul đọc <b>ㅐ</b> và <b>ㅔ</b> gần như giống nhau, nên phải phân biệt bằng <b>nghĩa</b>:</p>
+<table class="t">
+<tr><th></th><th class="ko">맛있<b>대요</b></th><th class="ko">맛있<b>던데요</b> / 맛있<b>는데요</b></th></tr>
+<tr><td>Nghĩa</td><td><b>Nghe nói</b> ngon (người khác bảo)</td><td><b>Tôi thấy</b> ngon (tự mình ăn rồi) / ngon mà…</td></tr>
+<tr><td>Nguồn tin</td><td>người khác</td><td>chính mình</td></tr>
+<tr><td>Ngữ pháp</td><td>Bài 1 (<span class="ko">-다고 해요</span> rút gọn)</td><td><span class="ko">-던데요</span> Bài 4 · <span class="ko">-는데요</span> 2A</td></tr>
+</table>
+<p class="note">Mẹo nhớ: <b>대</b> có <b>ㅐ</b> như trong <span class="ko">해</span> của <span class="ko">-다고 <b>해</b>요</span>. Hễ là “nghe người khác nói” thì viết ㅐ.</p>
+
+<h3>6. Khi nào KHÔNG dùng -대요</h3>
+<div class="scroll"><table class="t">
+<tr><th>Trường hợp</th><th>Không nói</th><th>Nên nói</th></tr>
+<tr><td><b>Nhắc lại lời của chính mình</b></td><td class="ko">제가 아까 못 간대요 ✗</td><td class="ko">제가 아까 못 간다고 <b>했잖아요</b></td></tr>
+<tr><td><b>Văn viết</b>, báo cáo, bài TOPIK 53–54</td><td class="ko">신입생이 늘었대요 ✗</td><td class="ko">신입생이 늘었다고 <b>한다</b></td></tr>
+<tr><td>Muốn <b>tỏ kính trọng</b> người đã nói</td><td class="ko">교수님이 휴강이래요 (nghe thân mật)</td><td class="ko">교수님께서 휴강이라고 <b>하셨어요</b></td></tr>
+<tr><td>Câu gốc là <b>câu hỏi, câu rủ, mệnh lệnh</b></td><td class="ko">-대요 ✗</td><td>dùng đuôi riêng, xem bảng dưới</td></tr>
+</table></div>
+<table class="t">
+<tr><th>Câu gốc</th><th>Đầy đủ</th><th>Rút gọn</th><th>Học ở</th></tr>
+<tr><td>Trần thuật</td><td class="ko">간다고 해요</td><td class="ko">간<b>대요</b></td><td>Bài 1</td></tr>
+<tr><td>Mệnh lệnh</td><td class="ko">가라고 해요</td><td class="ko">가<b>래요</b></td><td>Bài 2</td></tr>
+<tr><td>Câu hỏi</td><td class="ko">가냐고 해요</td><td class="ko">가<b>냬요</b></td><td>Bài 3</td></tr>
+<tr><td>Rủ</td><td class="ko">가자고 해요</td><td class="ko">가<b>재요</b></td><td>Bài 3</td></tr>
+</table>
+<div class="warnbox"><b>-래요 có hai nghĩa.</b> Đứng sau <b>danh từ</b> là trần thuật: <span class="ko">학생이래요, 친구래요</span> (nghe nói là học sinh / là bạn). Đứng sau <b>gốc động từ</b> là mệnh lệnh (Bài 2): <span class="ko">일찍 오래요</span> (người ta bảo đến sớm). Nhìn chữ đứng trước là biết.</div>
+
+<div class="lvl">Bậc 3 · Chuyên sâu</div>
+<h3>7. Sắc thái khi kể chuyện</h3>
+<table class="t">
+<tr><th>Cách nói</th><th>Sắc thái</th><th>Ví dụ</th></tr>
+<tr><td class="ko"><b>글쎄</b> … -대요!</td><td>Kể chuyện <b>bất ngờ</b> (“Biết gì không, …”)</td><td class="ko">글쎄, 민수가 장학금을 받았대요! <button class="say" data-say="글쎄, 민수가 장학금을 받았대요!">🔊</button></td></tr>
+<tr><td class="ko">그렇대요 / 그렇대</td><td>“Người ta bảo thế” (không chịu trách nhiệm về tin)</td><td class="ko">가: 정말 내일 휴강이야? 나: 몰라, 다들 그렇대. <button class="say" data-say="정말 내일 휴강이야? 몰라, 다들 그렇대.">🔊</button></td></tr>
+<tr><td class="ko">-대요 + 감정</td><td>Kể tin rồi nêu cảm xúc của mình</td><td class="ko">내일 비가 많이 온대요. 걱정이네요.</td></tr>
+<tr><td class="ko">-대요. 그럼 -아야겠어요</td><td>Nghe tin → quyết định (④ + ②)</td><td class="ko">신청이 오늘까지래요. 그럼 지금 해야겠어요. <button class="say" data-say="신청이 오늘까지래요. 그럼 지금 해야겠어요.">🔊</button></td></tr>
+</table>
+<div class="deep"><b>Dạng trang trọng -답니다 / -랍니다.</b> <span class="ko">-다고 합니다</span> cũng rút gọn được thành <span class="ko">-답니다</span>: <span class="ko">내일 휴강이랍니다</span>. Em sẽ gặp trong thông báo, chương trình truyền hình, truyện cổ tích (<span class="ko">…행복하게 살았답니다</span> = …và họ sống hạnh phúc mãi mãi). Khi tự nói với người trên, em vẫn nên dùng dạng đầy đủ <span class="ko">-다고 합니다</span>.</div>
+<div class="deep"><b>Trong đề TOPIK.</b> Phần Nghe hỏi <span class="ko">“남자의 중심 생각으로 가장 알맞은 것”</span> (suy nghĩ chính của người đàn ông). Câu có <span class="ko">-대요 / -다고 해요</span> là <b>ý của người khác</b>, không phải suy nghĩ của người đang nói, nên thường <b>không phải đáp án</b>. Suy nghĩ chính thường nằm ở câu <span class="ko">-는 것 같아요, -아야 해요, -(으)면 좋겠어요</span> ngay sau đó.</div>
+
+<h3>8. Lỗi hay gặp</h3>
+<table class="t">
+<tr><th>Sai</th><th>Đúng</th><th>Vì sao</th></tr>
+<tr><td class="ko">맛있데요 (= nghe nói ngon)</td><td class="ko">맛있대요</td><td>Thuật lại → ㅐ</td></tr>
+<tr><td class="ko">가대요</td><td class="ko">간대요</td><td>Động từ hiện tại cần -ㄴ/는</td></tr>
+<tr><td class="ko">먹대요</td><td class="ko">먹는대요</td><td>Có 받침 → 는대요</td></tr>
+<tr><td class="ko">바쁜대요</td><td class="ko">바쁘대요</td><td>Tính từ không thêm ㄴ</td></tr>
+<tr><td class="ko">있는대요</td><td class="ko">있대요</td><td>Nhóm 있다/없다 giữ nguyên</td></tr>
+<tr><td class="ko">학생대요 · 학생이대요</td><td class="ko">학생이래요</td><td>N이다 → (이)래요</td></tr>
+<tr><td class="ko">갈 거대요</td><td class="ko">갈 거래요</td><td>거예요 có 이다 bên trong</td></tr>
+<tr><td class="ko">뭐대요?</td><td class="ko">뭐래요?</td><td>뭐라고 해요 → 뭐래요</td></tr>
+</table>
+
+<h3>9. Luyện ngay · chấm ngay</h3>
+<h4>a. Chọn câu đúng</h4>
+<div class="set" data-set="d4"></div>
+<h4>b. Nói gọn <small class="note">(gõ phần còn thiếu ở dạng rút gọn)</small></h4>
+<div class="set" data-set="d5"></div>
+<p class="note">Còn 8 câu rút gọn nữa ở thẻ <a href="#b=lt">Luyện</a> (Bài 2).</p>
+<div class="btns"><a class="b blue" href="#b=lt" style="text-decoration:none">Sang thẻ Luyện: làm cả buổi →</a></div>
+</div>
 </section>
 
 <!-- ================= LUYỆN ================= -->
@@ -512,8 +884,8 @@ footer a{color:var(--muted)}
 가고 싶으면 수요일까지 단톡방에 이름을 <b>남기래</b>.
 <p class="note" style="font-family:'Times New Roman',serif">Câu cuối trong tin gốc là câu <b>nhờ / yêu cầu</b> (<span class="ko">남겨 주세요</span>), nên không dùng <span class="ko">-대</span> mà dùng <span class="ko">-(으)라고 → -(으)래</span>: <span class="ko">남기래</span>. Đây chính là Bài 2 — em vừa xem trước rồi đấy.</p></div>
 
-<h3>Bài 6 · Kiểm tra cuối buổi (14 câu)</h3>
-<p class="note">Làm một lượt, không xem lại phần lý thuyết. Mục tiêu từ 12/14.</p>
+<h3>Bài 6 · Kiểm tra cuối buổi (18 câu)</h3>
+<p class="note">Làm một lượt, không xem lại phần lý thuyết. Mục tiêu từ 15/18.</p>
 <div class="set" data-set="ck"></div>
 
 <div class="sum" id="sumall"></div>
@@ -521,7 +893,7 @@ footer a{color:var(--muted)}
 <h3>Bài về nhà</h3>
 <ol class="steps">
   <li><b>Từ vựng:</b> học 18 từ Bài 1 trên trang <a href="../#b=3A&amp;c=1">Từ vựng Seoul · 3A bài 1</a> (có câu ví dụ). Mỗi ngày làm bài từ vựng cô gửi trên app.</li>
-  <li><b>Ghi âm 1 phút</b> gửi Zalo cho cô: kể lại 3 tin về trường / khoa của em (thông báo, lịch thi, sự kiện…), ít nhất 3 câu <span class="ko">-대요</span> và 1 câu <span class="ko">-다고 들었어요</span>.</li>
+  <li><b>Ghi âm 1 phút</b> gửi Zalo cho cô: kể lại 3 tin về trường / khoa của em (thông báo, lịch thi, sự kiện…), ít nhất 3 câu <span class="ko">-대요</span>, 1 câu <span class="ko">-다고 들었어요</span>, và sau mỗi tin nói em sẽ làm gì bằng <span class="ko">-아/어야겠어요</span> (vd. <span class="ko">시험이 다음 주래요. 이번 주말에는 도서관에 가야겠어요.</span>).</li>
   <li><b>Viết 5–7 câu bằng 한다체</b>: <span class="ko">“입학 전에 들은 이야기와 실제 대학 생활”</span>. Bắt đầu bằng: <span class="ko">입학 전에 선배들에게서 대학 생활이 자유롭다고 들었다. 그런데 …</span> Dùng ít nhất 5 từ của Bài 1.</li>
   <li>Nếu em chưa làm: <a href="../kiem-tra/">Bài kiểm tra nền tảng Seoul 1A–2B</a> (khoảng 30 phút) để cô biết phần cũ nào cần ôn ở các buổi sau.</li>
 </ol>
@@ -533,6 +905,9 @@ footer a{color:var(--muted)}
   <li>Đổi đúng <span class="ko">저 → 자기</span>, <span class="ko">이 → 그</span>, đặt kính ngữ ở <span class="ko">하셨어요</span>.</li>
   <li>Nói rút gọn <span class="ko">-대요 / -래요</span>, và không viết nhầm thành <span class="ko">-데요</span>.</li>
   <li>Chọn đúng giữa <span class="ko">-다고 했어요 / -대요 / -다고 들었어요 / -다면서요?</span></li>
+  <li>Nói điều mình vừa quyết định bằng <span class="ko">-아/어야겠어요</span> (và <span class="ko">-지 말아야겠어요</span>), không nhầm với <span class="ko">-아야 해요, -(으)ㄹ게요, -(으)려고 해요</span>.</li>
+  <li>Nói <span class="ko">-다고 들었어요</span> với đúng nguồn tin (<span class="ko">한테서 / 께 / 에서</span>), không nhầm <span class="ko">민수가</span> với <span class="ko">민수한테서</span>.</li>
+  <li>Hỏi lại bằng <span class="ko">-대요? / 뭐래요?</span> và biết khi nào không dùng <span class="ko">-대요</span>.</li>
   <li>Đọc đúng 18 từ Bài 1 và dùng đúng tiểu từ (<span class="ko">동아리에 가입하다, 장학금을 신청하다</span>).</li>
 </ul>
 </section>
@@ -661,7 +1036,41 @@ ck:[
  ['이번 학기에 장학금(    ) 신청했어요.',['을','에','이','에서'],'N을/를 신청하다.','tv'],
  ['다음 주 월요일에 동아리 회의가 있으니까 꼭 (    ) 주세요.',['참석해','가입해','합격해','지원해'],'Cuộc họp → 참석하다.','tv'],
  ['가: 하준 씨가 다음 달에 군대에 간다면서요? 나: 네, 그래서 다음 학기에 (    ).',['휴학한대요','휴학한데요','휴학하대요','휴학했다면서요'],'Kể lại tin nghe được: 휴학하다 → 휴학한다 → 휴학한대요.','np'],
- ['Câu nào <b>sai</b>?',['선배가 내일 시간이 있는다고 했어요.','친구가 그 식당이 맛있다고 했어요.','동생이 밥을 먹는다고 했어요.','수미 씨가 자기가 반장이라고 했어요.'],'있다 giữ nguyên: 있다고 했어요. Ba câu còn lại đều đúng.','n1']
+ ['Câu nào <b>sai</b>?',['선배가 내일 시간이 있는다고 했어요.','친구가 그 식당이 맛있다고 했어요.','동생이 밥을 먹는다고 했어요.','수미 씨가 자기가 반장이라고 했어요.'],'있다 giữ nguyên: 있다고 했어요. Ba câu còn lại đều đúng.','n1'],
+ ['너무 늦었네요. 이제 집에 (    ).',['가야겠어요','가야겠대요','갔어야겠어요','가야겠데요'],'Vừa nhận ra → quyết định ngay: 가야겠어요 (ㅏ + 아 gộp).','np'],
+ ['배가 아파서 오늘은 매운 음식을 먹지 (    ).',['말아야겠어요','마야겠어요','못 해야겠어요','않아야겠대요'],'Quyết không làm → -지 말아야겠어요.','np'],
+ ['친구(    ) 그 수업이 재미있다고 들었어요.',['한테서','가','를','께서'],'Nguồn tin → 한테서.','np'],
+ ['가: 지수 씨가 뭐래요? 나: 오늘 바빠서 못 (    ).',['온대요','온데요','오대요','온다래요'],'오다 → 온다 → 온대요 (ㅐ).','np']
+],
+y1:[
+ ['너무 피곤하네. 오늘은 일찍 (    ).',['자야겠다','자야 한다','잘게','자려고 했다'],'Vừa nhận ra mình mệt → quyết định ngay → -아야겠다. 자야 한다 = quy định chung; 잘게 = hứa với người nghe (ở đây đang nói một mình).'],
+ ['Câu nào là <b>quy định, ai cũng phải</b>?',['도서관에서는 조용히 해야 해요.','배가 고파서 뭐 좀 먹어야겠어요.','늦었네. 택시를 타야겠다.','감기에 걸려서 병원에 가야겠어요.'],'Nghĩa vụ chung → -아/어야 해요. Ba câu kia là quyết định của người nói → -아야겠어요.'],
+ ['(Nhân viên nói với khách) 손님, 여기는 금연이라서 담배를 (    ).',['끄셔야겠습니다','끄겠습니다','끌게요','꺼야겠어요'],'Yêu cầu khách một cách lịch sự nhưng cứng rắn → -(으)셔야겠습니다. 꺼야겠어요 thiếu kính ngữ, nghe như nhân viên tự dập thuốc.'],
+ ['가: 내일 비가 많이 온대. 나: 그래? 그럼 우산을 (    ).',['가져가야겠다','가져갔어야겠다','가져가야 했다','가져가겠대'],'Nghe tin (-대) → quyết định → 그럼 … -아야겠다. Không gắn -았- vào trước -아야겠다.'],
+ ['Câu nào đúng?',['다시는 그 식당에 가지 말아야겠어요.','다시는 그 식당에 못 가야겠어요.','다시는 그 식당에 갔어야겠어요.','다시는 그 식당에 가지 마야겠어요.'],'Quyết không làm nữa → -지 말아야겠다 (말 + 아야겠다). 못 + -아야겠다 mâu thuẫn nhau.'],
+ ['(Ở nhà bạn, muốn xin phép về) 시간이 늦었네요. 저 먼저 (    ).',['가 봐야겠어요','가야 해요','갈 거예요','가려고 해요'],'Câu xin phép về quen thuộc: 저 먼저 가 봐야겠어요. -아 보다 làm câu mềm hơn.'],
+ ['그때 저는 앞으로 한국어를 열심히 공부해야겠다고 (    ).',['생각했어요','들었어요','물었어요','공부했어요'],'Kể lại quyết định đã có: -아야겠다 + 고 생각했어요 (ghép ② với ①).'],
+ ['(TOPIK Nghe) 남: 신청 마감이 오늘까지래요. 여: 그래요? 그럼 지금 바로 신청해야겠네요. → 여자가 이어서 할 행동은?',['신청을 한다','마감 날짜를 묻는다','신청을 취소한다','남자에게 신청을 부탁한다'],'Câu cuối có -아야겠네요 → đó là việc người phụ nữ sẽ làm ngay: 신청한다.']
+],
+h1:[
+ ['“Tôi nghe Minsu nói là mai nghỉ học.” → (    ) 내일 휴강이라고 들었어요.',['민수한테서','민수가','민수를','민수께서'],'Nguồn tin (người kể cho mình) → 한테서. 민수가 sẽ thành người nằm trong lời trích.'],
+ ['민수가 바쁘다고 들었어요. → Ai bận?',['민수','người nói','người nghe','không rõ'],'민수가 là chủ ngữ của lời trích (민수가 바쁘다). Người nghe được tin là “tôi”.'],
+ ['교수님(    ) 시험이 어렵다고 들었어요. (nghe từ giáo sư)',['께','께서','이','을'],'께 = kính ngữ của 한테/에게 (từ ai). 께서 = chủ ngữ (giáo sư nghe).'],
+ ['친구가 장학금을 받았(    ) 소식을 들었어요.',['다는','다고','대요','는다는'],'Có danh từ 소식 đứng sau → -다는 (= -다고 하는). Quá khứ 받았 + 다는.'],
+ ['오늘이 시험 날(    ) 들었어요.',['이라고','이다고','라고','인다고'],'날 có 받침 → 이라고.'],
+ ['Câu nào tự nhiên nhất để mở lời nhờ người dân địa phương giới thiệu quán?',['이 근처에 맛집이 많다고 들었는데 추천해 주실 수 있어요?','이 근처에 맛집이 많다고 들어요. 추천해요.','이 근처에 맛집이 많다고 했어요?','이 근처에 맛집이 많대요. 추천하세요.'],'-다고 들었는데 + lời nhờ: mở lời khéo, lịch sự.'],
+ ['(TOPIK) 여자는 그 식당이 비싸다고 들었다. → Điều nào chắc chắn đúng?',['Cô ấy nghe người khác nói quán đó đắt','Cô ấy đã ăn ở quán đó và thấy đắt','Cô ấy nói với mọi người là quán đó đắt','Cô ấy là chủ quán'],'-다고 들었다 chỉ có nghĩa là “nghe nói”; không cho biết cô ấy đã đến quán.'],
+ ['가: 오늘 수업 있어요? 나: 오늘 휴강이라고 (    )… (phản bác nhẹ: “em nghe là nghỉ mà…”)',['들었는데요','들었어요?','들을게요','들어야겠어요'],'-다고 들었는데요 cuối câu: nói mềm, không khẳng định thẳng.']
+],
+d4:[
+ ['“Nghe nói thư viện đóng cửa rồi.” (nói với bạn thân)',['도서관이 문을 닫았대','도서관이 문을 닫았데','도서관이 문을 닫았대요?','도서관이 문을 닫았다고 들어'],'Thuật lại, 반말 → -대 (ㅐ). Có dấu ? là câu hỏi.'],
+ ['가: 민수 씨가 왜 안 와요? 나: 감기에 걸려서 많이 (    ).',['아프대요','아픈대요','아프데요','아파대요'],'Tính từ → giữ nguyên + 대요; thuật lại viết ㅐ.'],
+ ['가: 선생님이 (    )? 나: 내일 시험 본대요.',['뭐래요','뭐대요','뭐데요','뭐라요'],'뭐라고 해요? → 뭐래요? (“Cô nói gì thế?”)'],
+ ['Câu nào thuật lại <b>câu mệnh lệnh</b> (Bài 2)?',['일찍 오래요','학생이래요','친구래요','의사래요'],'-래요 sau gốc động từ (오) = -라고 해요 (mệnh lệnh). Sau danh từ là N이다.'],
+ ['(    ), 민수가 장학금을 받았대요! (kể chuyện bất ngờ)',['글쎄','그래서','그러면','그런데도'],'글쎄 … -대요! = “Biết gì không, …” khi kể tin bất ngờ.'],
+ ['(Nhắc lại lời chính mình) 제가 아까 내일 못 (    ).',['간다고 했잖아요','간대요','간데요','가재요'],'Không dùng -대요 cho lời của chính mình → -다고 했잖아요.'],
+ ['(TOPIK Nghe) 남: 이 영화 정말 재미있대요. 같이 볼래요? → Điều nào đúng?',['Người đàn ông nghe người khác nói phim hay','Người đàn ông đã xem phim rồi','Người đàn ông nghĩ phim chán','Người phụ nữ đã xem phim rồi'],'-대요 = tin của người khác; chưa chắc anh ấy đã xem.'],
+ ['(Viết báo cáo, 한다체) 조사에 따르면 대학생의 70%가 아르바이트를 (    ).',['한다고 한다','한대요','한대','한다면서요'],'Văn viết không dùng -대요 → -다고 한다.']
 ]};
 
 // Gõ chữ: [câu gốc (hiện), phần trước ô, [đáp án chấp nhận], giải thích]
@@ -696,6 +1105,38 @@ d1:[
  ['수진 씨가 장학금을 받았대요.'],
  ['민수는 자기가 과대표라고 했어요.'],
  ['다음 주에 시험이 있다고 들었어요.']
+],
+y2:[
+ ['배가 너무 고파요. (먹다)','뭐 좀',['먹어야겠어요','먹어야겠다','먹어야겠어'],'먹 + 어야겠어요.'],
+ ['시험이 다음 주예요. (하다)','이제 공부를',['해야겠어요','해야겠다','해야겠어'],'하다 → 해 → 해야겠어요.'],
+ ['이 강의는 정말 중요하대요. (듣다)','꼭',['들어야겠어요','들어야겠다','들어야겠어'],'Bất quy tắc ㄷ: 들어요 → 들어야겠어요.'],
+ ['친구가 이사를 해서 힘들대요. (돕다)','주말에 친구를',['도와야겠어요','도와야겠다','도와야겠어'],'돕다 → 도와요 → 도와야겠어요.'],
+ ['내일까지 보고서를 내야 해요. (쓰다)','오늘 밤에',['써야겠어요','써야겠다','써야겠어'],'ㅡ rụng: 써요 → 써야겠어요.'],
+ ['수업에 늦었어요. (부르다)','택시를',['불러야겠어요','불러야겠다','불러야겠어'],'르: 불러요 → 불러야겠어요.'],
+ ['감기에 걸렸어요. (쉬다)','오늘은 집에서',['쉬어야겠어요','쉬어야겠다','쉬어야겠어'],'쉬 + 어야겠어요.'],
+ ['내일 친구 생일이에요. (만들다)','케이크를',['만들어야겠어요','만들어야겠다','만들어야겠어'],'Trước nguyên âm, gốc ㄹ không rụng: 만들어야겠어요.'],
+ ['장학금을 받고 싶어요. (받다)','이번 학기에는 성적을 잘',['받아야겠어요','받아야겠다','받아야겠어'],'받 có ㅏ → 아야겠어요.'],
+ ['(Quyết không thức khuya chơi game nữa) (말다)','이제 밤늦게까지 게임을 하지',['말아야겠어요','말아야겠다','말아야겠어'],'-지 말아야겠어요.']
+],
+h2:[
+ ['선배: “이번 축제는 3일 동안 해요.”','선배한테서 이번 축제는 3일 동안',['한다고 들었어요'],'하다 → 한다 + 고 들었어요.'],
+ ['친구: “그 과목은 학점 받기가 어려워요.”','친구한테서 그 과목은 학점 받기가',['어렵다고 들었어요'],'Tính từ → 어렵다고.'],
+ ['조교: “내일은 휴강이에요.”','조교님께 내일은',['휴강이라고 들었어요'],'휴강 có 받침 → 이라고. Nghe từ 조교님 → 께.'],
+ ['뉴스: “올해 신입생이 작년보다 늘었어요.”','뉴스에서 올해 신입생이 작년보다',['늘었다고 들었어요'],'Quá khứ giữ nguyên: 늘었다고. Nguồn là phương tiện → 에서.'],
+ ['수진: “다음 학기에 휴학할 거예요.”','수진 씨한테서 다음 학기에',['휴학할 거라고 들었어요','휴학할 것이라고 들었어요'],'거예요 → 거라고.'],
+ ['친구: “학생 식당은 토요일에 문을 안 열어요.”','친구한테서 학생 식당은 토요일에 문을 안',['연다고 들었어요'],'열다 gốc ㄹ: 열 + ㄴ다 → 연다.'],
+ ['선배: “그 교수님은 출석을 아주 중요하게 생각해요.”','선배한테서 그 교수님은 출석을 아주 중요하게',['생각한다고 들었어요','생각하신다고 들었어요'],'생각하다 → 생각한다. Giáo sư là chủ ngữ của lời trích nên 생각하신다고 cũng đúng.'],
+ ['친구: “민수가 장학금을 받았어요.”','친구한테서 민수가 장학금을 받았다는 소식을',['들었어요'],'Đã có -다는 소식을 → chỉ còn 들었어요.']
+],
+d5:[
+ ['민수 씨가 몇 시에 온다고 해요?','민수 씨가 몇 시에',['온대요'],'온다고 해요 → 온대요 (lên giọng thành câu hỏi).'],
+ ['선생님이 뭐라고 해요?','선생님이',['뭐래요'],'뭐라고 해요 → 뭐래요.'],
+ ['(반말) 내일 날씨가 춥다고 해.','내일 날씨가',['춥대'],'반말: 춥다고 해 → 춥대.'],
+ ['그 사람이 의사라고 해요.','그 사람이',['의사래요'],'의사 không 받침 → 의사래요.'],
+ ['도서관이 일요일에 문을 안 연다고 해요.','도서관이 일요일에 문을',['안 연대요'],'연다고 해요 → 연대요.'],
+ ['수업이 벌써 끝났다고 해요.','수업이 벌써',['끝났대요'],'Quá khứ: 끝났다고 해요 → 끝났대요.'],
+ ['친구가 다음 달에 한국에 올 거라고 해요.','친구가 다음 달에 한국에',['올 거래요'],'올 거라고 해요 → 올 거래요.'],
+ ['민수가 이제 담배를 끊어야겠다고 해요.','민수가 이제 담배를',['끊어야겠대요'],'② + ④: 끊어야겠다고 해요 → 끊어야겠대요.']
 ]};
 
 /* ---------- trạng thái ---------- */
@@ -786,6 +1227,12 @@ function report(k){
   L.push('  '+line('Rút gọn -대요',tScore('g2')));
   L.push('  '+line('Chọn mẫu',scoreOf('g3')));
   L.push('  '+line('Nghe – chép',tScore('d1')));
+  L.push('  '+line('② -아야겠다 · chọn',scoreOf('y1')));
+  L.push('  '+line('② -아야겠다 · chia',tScore('y2')));
+  L.push('  '+line('③ -다고 들었다 · chọn',scoreOf('h1')));
+  L.push('  '+line('③ -다고 들었다 · kể lại',tScore('h2')));
+  L.push('  '+line('④ -대요 · chọn',scoreOf('d4')));
+  L.push('  '+line('④ -대요 · nói gọn',tScore('d5')));
   var c=scoreOf('ck');
   L.push('— Kiểm tra cuối buổi: '+c.ok+'/'+c.all+(c.n<c.all?' (làm '+c.n+')':'')+' —');
   var m=st.m.ck||{};
@@ -837,13 +1284,20 @@ function show(){
   var m=location.hash.match(/b=(\w+)/),k=m?m[1]:(st.tab||'lo');if(!$('s'+k))k='lo';
   document.querySelectorAll('.sec').forEach(function(s){s.classList.toggle('on',s.id==='s'+k);});
   document.querySelectorAll('nav a').forEach(function(a){a.classList.toggle('on',a.dataset.k===k);});
-  st.tab=k;save();
+  st.tab=k;
+  if(k==='np'){
+    var g=location.hash.match(/g=(\d)/),n=g?g[1]:(st.g||'1');if(!$('gp'+n))n='1';
+    document.querySelectorAll('.gp').forEach(function(x){x.classList.toggle('on',x.id==='gp'+n);});
+    document.querySelectorAll('#gbar a').forEach(function(a){a.classList.toggle('on',a.dataset.g===n);});
+    st.g=n;
+  }
+  save();
 }
 Object.keys(M).forEach(renderM);Object.keys(T).forEach(renderT);
 if(st.r1)$('r1').value=st.r1;
 [].forEach.call($('chk').children,function(li,i){if(st.c[i])li.classList.add('on');});
 renderSums();
-window.addEventListener('hashchange',function(){show();scrollTo(0,0);});show();
+window.addEventListener('hashchange',function(){show();var g=/g=\d/.test(location.hash)&&$('gbar');scrollTo(0,g?g.getBoundingClientRect().top+scrollY-70:0);});show();
 </script>
 </body>
 </html>
