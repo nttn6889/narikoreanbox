@@ -26,6 +26,9 @@ APP_HEAD = """<link rel="manifest" href="manifest.webmanifest">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Hàn Ngữ Nari">
+<meta property="og:title" content="Phòng thi thử TOPIK II · Nari TOPIK">
+<meta property="og:description" content="Bài cô Ngân giao: đề thi thử, từ vựng, luyện nghe, luyện viết.">
+<meta property="og:image" content="https://nttn6889.github.io/narikoreanbox/logo/nari-topik-logo-nen-trang.jpg">
 """
 # Trang đầu "Bài của em", ô dán link, nút Trang đầu, service worker — thay cho dòng khởi động của trang.
 APP_SHELL = os.path.join(ROOT, "tools", "app_shell.js")
@@ -33,8 +36,11 @@ BOOT_LINE = "if(!examBoot() && !writeBoot() && !vocabBoot() && !routeBoot() && !
 
 
 def add_app(src):
-    if "manifest.webmanifest" not in src:
-        src = src.replace("</title>\n", "</title>\n" + APP_HEAD, 1)
+    i = src.find('<link rel="manifest"')
+    if i >= 0:  # bỏ bản cũ để chèn lại bản mới nhất (biểu tượng, ảnh xem trước link)
+        j = src.index("\n<link rel=\"preconnect\"", i) + 1
+        src = src[:i] + src[j:]
+    src = src.replace("</title>\n", "</title>\n" + APP_HEAD, 1)
     i = src.find("/* ---------- App cài trên điện thoại (PWA) ----------")
     if i >= 0:  # bỏ bản cũ để chèn lại bản mới nhất
         j = src.index("appRun();\n", i) + len("appRun();\n")
