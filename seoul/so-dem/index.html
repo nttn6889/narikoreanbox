@@ -29,7 +29,7 @@ nav a{flex:1;text-align:center;padding:6px 2px;color:var(--ink);text-decoration:
 nav a+a{border-left:2px solid var(--ink)}
 nav a small{display:block;font-weight:normal;font-size:11.5px}
 nav a.on{background:var(--ink);color:#fff}
-@media(max-width:420px){nav a{font-size:13.5px}nav a small{font-size:10.5px}}
+@media(max-width:420px){nav a{font-size:12.5px}nav a small{font-size:10px}}
 .sec{display:none}.sec.on{display:block}
 h2{font-size:23px;margin:6px 0 4px}
 h3{font-size:19px;margin:26px 0 8px;padding-bottom:3px;border-bottom:2px solid var(--ink)}
@@ -119,6 +119,11 @@ button.b.blue{background:var(--blue);border-color:var(--blue);color:#fff}
 .badge{display:inline-block;font:bold 12px Arial,sans-serif;border-radius:10px;padding:1px 8px;margin-left:4px;vertical-align:middle;background:var(--sub);color:var(--muted)}
 .badge.new{background:var(--acc);color:#fff}
 .badge.old{background:var(--blue);color:#fff}
+.badge.c{background:#fff;color:var(--blue);border:1px dashed var(--blue)}
+.badge.m{background:var(--hl);color:var(--ink)}
+.badge.e{background:var(--okbg);color:var(--ok)}
+table.ds td:first-child{width:34%}table.ds td:nth-child(2){width:22%;white-space:nowrap}
+@media(max-width:560px){table.ds td:nth-child(2){white-space:normal}}
 footer{margin-top:40px;font-size:13px;color:var(--muted);text-align:center}
 footer a{color:var(--muted)}
 @media print{nav,.btns,.sum,footer,.co,button.say{display:none}.sec{display:block!important}.card,.mcq,.typ{break-inside:avoid}}
@@ -139,12 +144,14 @@ footer a{color:var(--muted)}
   <a href="#b=dv" data-k="dv">Lượng từ<small>Đếm cái gì</small></a>
   <a href="#b=tg" data-k="tg">Thời gian<small>Giờ, ngày, tuổi</small></a>
   <a href="#b=sl" data-k="sl">Số lớn<small>Tiền, đọc số</small></a>
+  <a href="#b=ds" data-k="ds">Đời sống<small>Tình huống</small></a>
   <a href="#b=lt" data-k="lt">Luyện<small>Chấm ngay</small></a>
 </div></nav>
 
 <!-- ================= HAI BỘ SỐ ================= -->
 <section class="sec" id="stq">
 <h2>Hai bộ số và quy tắc chọn</h2>
+<p class="note">Danh sách tình huống cụ thể (số nhà, số xe, số phòng, ngày sinh…): xem thẻ <a href="#b=ds">Đời sống</a>.</p>
 <p class="goal"><b>Một câu để nhớ:</b> hỏi <b>“bao nhiêu cái / người / lần?”</b> → số <b>thuần Hàn</b>. <b>Gọi tên</b> một con số (số thứ tự đánh số, ngày tháng năm, phút, tiền, đo lường, số điện thoại, số từ 100 trở lên) → số <b>Hán Hàn</b>.</p>
 
 <h3>1. Hai bộ số đặt cạnh nhau</h3>
@@ -216,6 +223,7 @@ footer a{color:var(--muted)}
 <tr><td class="ko">몇 월 <b>며칠</b>이에요? <span class="pron">[며 둴 며칠]</span></td><td class="ko">시월 십삼 일이에요.</td><td>Hán Hàn</td></tr>
 </table>
 <p class="note">Viết <span class="ko"><b>며칠</b></span> (ngày mấy, mấy ngày), <b>không</b> viết <span class="ko">몇 일</span>. Đây là lỗi chính tả rất hay gặp, kể cả với người Hàn.</p>
+<p class="note">Lượng từ trong từng tình huống thật (gọi món, đi chợ, uống thuốc…): xem thẻ <a href="#b=ds">Đời sống</a>.</p>
 <h4>Kiểm tra nhanh</h4>
 <div class="set" data-set="q2"></div>
 </section>
@@ -333,6 +341,113 @@ footer a{color:var(--muted)}
 <div class="set" data-set="q4"></div>
 </section>
 
+<!-- ================= ĐỜI SỐNG ================= -->
+<section class="sec" id="sds">
+<h2>Trong đời sống: tình huống nào dùng bộ số nào</h2>
+<p class="goal">Bảng dưới gom các tình huống hằng ngày theo từng lĩnh vực. Ngoài hai bộ số, đời sống còn có cách thứ ba rất hay gặp: <b>đọc từng chữ số</b> (số điện thoại, số xe buýt, mã số). Nhãn: <span class="badge new">Thuần</span> thuần Hàn · <span class="badge old">Hán</span> Hán Hàn · <span class="badge c">Từng số</span> đọc từng chữ số Hán Hàn · <span class="badge m">Trộn</span> có cả hai · <span class="badge e">Anh</span> số tiếng Anh.</p>
+
+<h3>1. Tóm tắt trong 2 cột</h3>
+<div class="scroll"><table class="t">
+<tr><th>Thuần Hàn <span class="ko">하나, 둘…</span> — <b>đếm</b></th><th>Hán Hàn <span class="ko">일, 이…</span> — <b>gọi tên, đo</b></th></tr>
+<tr><td>
+• Đếm người, đồ vật, con vật (<span class="ko">명, 개, 마리, 권, 잔, 병, 장, 대</span>…)<br>
+• Tuổi khi nói (<span class="ko">살</span>)<br>
+• Giờ (<span class="ko">시</span>) và số tiếng (<span class="ko">시간</span>)<br>
+• Số lần (<span class="ko">번</span>), số viên thuốc (<span class="ko">알</span>)<br>
+• Thứ tự đếm: <span class="ko">첫째, 둘째, 두 번째</span>, tuần thứ mấy trong tháng (<span class="ko">셋째 주</span>)<br>
+• Tháng – ngày đếm kiểu thuần: <span class="ko">두 달, 하루, 이틀</span><br>
+• Số chữ số: <span class="ko">네 자리</span> (4 chữ số)<br>
+• Hô nhịp, đếm khi chụp ảnh: <span class="ko">하나, 둘, 셋!</span>
+</td><td>
+• Tiền, giá, kích cỡ, cân nặng, chiều cao, nhiệt độ, tốc độ, %<br>
+• Ngày tháng năm, năm sinh, phút, giây<br>
+• Số nhà, số tầng, số phòng, số căn hộ, tuyến tàu, cửa ra<br>
+• Năm học, lớp, tiết, bài, trang, điểm thi, cấp TOPIK, hạng<br>
+• Độ tuổi (<span class="ko">이십 대</span>), thế kỷ, khóa (<span class="ko">기</span>), tập phim<br>
+• Suất ăn (<span class="ko">인분</span>), tỉ số trận đấu (<span class="ko">대</span>)<br>
+• Số thập phân, phân số, số âm<br>
+• Mọi số từ 100 trở lên
+</td></tr>
+</table></div>
+
+<h3>2. Tình huống theo lĩnh vực</h3>
+<p class="note">Bấm 🔊 để nghe cả câu. Chữ in đậm là phần số.</p>
+<div id="dsList"></div>
+
+<h3>3. Đọc theo giá trị hay đọc từng chữ số?</h3>
+<p>Cùng là số Hán Hàn nhưng có hai cách đọc. Quy tắc: <b>con số mang ý “bao nhiêu”</b> (giá, số lượng, số tầng, số phòng ngắn) đọc theo giá trị; <b>con số chỉ là mã để nhận diện</b>, nhất là khi dài, đọc từng chữ số.</p>
+<div class="scroll"><table class="t">
+<tr><th>Đọc theo giá trị</th><th>Đọc từng chữ số</th></tr>
+<tr><td class="ko">35,000원 → 삼만 오천 원<br>305호 → 삼백오 호<br>101동 → 백일 동<br>2005년 → 이천오 년<br>1번 출구 → 일 번 출구</td>
+<td class="ko">010-1234-5678 → 공일공 일이삼사 오육칠팔<br>273번 버스 → 이칠삼 번 버스<br>23학번 → 이삼 학번<br>05년생 → 공오 년생<br>우편번호, 계좌번호, 비밀번호, 비행기 편명</td></tr>
+</table></div>
+<div class="deep"><b>Số 0 có ba cách đọc.</b> <span class="ko"><b>공</b></span> (空 không) khi đọc từng chữ số: <span class="ko">공일공, 삼공오 호</span>. <span class="ko"><b>영</b></span> (零 linh) khi 0 là một giá trị: <span class="ko">영 도, 영 점, 영하, 영 대 일</span> (1:0 đọc ngược <span class="ko">일 대 영</span>). <span class="ko"><b>빵</b></span> trong khẩu ngữ: <span class="ko">빵점</span> (điểm 0), <span class="ko">일 대 빵</span>. Nghe được ba cách này là không bị bất ngờ trong bài nghe.</div>
+
+<h3>4. Dấu câu trong con số</h3>
+<div class="scroll"><table class="t">
+<tr><th>Viết</th><th>Đọc</th><th>Ghi chú</th></tr>
+<tr><td>3.5 · 36.5도</td><td class="ko">삼 <b>점</b> 오 · 삼십육 점 오 도<button class="say" data-say="삼 점 오. 삼십육 점 오 도">🔊</button></td><td>Dấu thập phân đọc <span class="ko">점</span> (điểm). Người Hàn dùng dấu chấm cho thập phân, dấu phẩy để tách nghìn: <b>ngược tiếng Việt</b>.</td></tr>
+<tr><td>1/3 · 2/5</td><td class="ko">삼 <b>분의</b> 일 · 오 분의 이<button class="say" data-say="삼 분의 일. 오 분의 이">🔊</button></td><td>Phân số đọc <b>mẫu trước, tử sau</b>: “chia 3 phần, lấy 1”. Giống Hán Việt “tam phân chi nhất”.</td></tr>
+<tr><td>2:1 (tỉ số)</td><td class="ko">이 <b>대</b> 일<button class="say" data-say="이 대 일">🔊</button></td><td><span class="ko">대</span> (對 đối). Cũng dùng cho tỉ lệ: <span class="ko">경쟁률 십 대 일</span> (tỉ lệ chọi 10:1).</td></tr>
+<tr><td>-5°C</td><td class="ko"><b>영하</b> 오 도<button class="say" data-say="영하 오 도">🔊</button></td><td>Nhiệt độ âm dùng <span class="ko">영하</span> (dưới 0); toán học mới nói <span class="ko">마이너스</span>.</td></tr>
+<tr><td>010-1234-5678</td><td class="ko">공일공<b>에</b> 일이삼사<b>에</b> 오육칠팔</td><td>Dấu gạch số điện thoại thường bỏ qua (ngắt hơi), có người đọc <span class="ko">에</span>.</td></tr>
+<tr><td>123-4번지</td><td class="ko">백이십삼 <b>다시</b> 사 번지</td><td>Dấu gạch trong địa chỉ kiểu cũ đọc <span class="ko">다시</span> (hoặc <span class="ko">의</span>).</td></tr>
+<tr><td>2~3명 · 5~10분</td><td class="ko">두세 명 · 오 분<b>에서</b> 십 분</td><td>Khoảng thuần Hàn ghép số liền nhau; Hán Hàn dùng <span class="ko">에서 … (까지)</span>.</td></tr>
+<tr><td>1+1</td><td class="ko">원 플러스 원</td><td>Khuyến mãi “mua 1 tặng 1”: đọc tiếng Anh.</td></tr>
+</table></div>
+
+<h3>5. Tuổi ở Hàn Quốc: chủ đề nói chuyện rất hay gặp</h3>
+<ul>
+<li><b>Tuổi tròn (<span class="ko">만 나이</span>)</b>: từ 28/6/2023 Hàn Quốc thống nhất dùng tuổi tròn (tính theo ngày sinh) trong luật và giấy tờ. “Tuổi Hàn” (<span class="ko">세는 나이</span>, sinh ra đã 1 tuổi, qua năm mới +1) vẫn còn trong thói quen nói. Vì vậy câu <span class="ko">만으로 스무 살이에요</span> = “tính tròn thì 20 tuổi”.</li>
+<li><b>Hỏi tuổi tế nhị</b>: người Hàn ít hỏi thẳng <span class="ko">몇 살이에요?</span> với người lớn hơn. Hay dùng: <span class="ko">몇 년생이에요?</span> → <span class="ko">공오 년생이에요</span> (sinh năm 05), <span class="ko">무슨 띠예요?</span> → <span class="ko">닭띠예요</span>, hoặc với sinh viên <span class="ko">몇 학번이에요?</span> → <span class="ko">이삼 학번이에요</span> (vào trường năm 2023). Với người lớn tuổi: <span class="ko">연세가 어떻게 되세요?</span></li>
+<li><b>Con giáp khác Việt Nam một con</b>: năm Mão Việt Nam là con mèo, Hàn Quốc là <span class="ko">토끼띠</span> (con thỏ).</li>
+<li><b><span class="ko">스무 살</span> nhưng <span class="ko">이십 대</span></b>: tuổi cụ thể dùng thuần Hàn, <b>độ tuổi</b> (lứa tuổi 20) dùng Hán Hàn: <span class="ko">이십 대 초반</span> (đầu 20), <span class="ko">삼십 대 후반</span> (cuối 30). <span class="ko">스무 대</span> là “20 chiếc xe”.</li>
+<li><b>Em bé dưới 2 tuổi tính theo tháng</b>: <span class="ko">아기가 몇 개월이에요? — 십팔 개월이에요.</span></li>
+<li><b>Các mốc lễ</b> là từ Hán: <span class="ko">백일</span> (100 ngày tuổi; cặp đôi cũng kỷ niệm 100 ngày yêu), <span class="ko">돌 / 첫돌</span> (thôi nôi), <span class="ko">환갑</span> (60, hoàn giáp), <span class="ko">칠순</span> (70, thất tuần), <span class="ko">팔순</span> (80).</li>
+</ul>
+
+<h3>6. Cùng một chữ, đổi bộ số là đổi nghĩa</h3>
+<table class="t">
+<tr><th>Thuần Hàn</th><th>Hán Hàn</th></tr>
+<tr><td class="ko"><b>세 대</b> <span class="note">3 chiếc (xe, máy)</span></td><td class="ko"><b>삼 대</b> <span class="note">3 thế hệ (삼 대 가족) · tỉ số “3 đối…”</span></td></tr>
+<tr><td class="ko"><b>스무 살</b> <span class="note">20 tuổi</span></td><td class="ko"><b>이십 대</b> <span class="note">lứa tuổi 20–29</span></td></tr>
+<tr><td class="ko"><b>두 번째</b> <span class="note">lần thứ hai</span></td><td class="ko"><b>이 번</b> <span class="note">số 2 (câu 2, cửa số 2)</span></td></tr>
+<tr><td class="ko"><b>셋째 주</b> <span class="note">tuần thứ ba của tháng</span></td><td class="ko"><b>삼 주</b> <span class="note">ba tuần (khoảng)</span></td></tr>
+<tr><td class="ko"><b>한 반</b> <span class="note">cùng một lớp</span></td><td class="ko"><b>일 반</b> <span class="note">lớp số 1 (lớp 1)</span></td></tr>
+</table>
+
+<h3>7. Thực tế khác sách: số lớn trước lượng từ</h3>
+<p>Sách dạy đếm bằng thuần Hàn tới 99. Trong thực tế, khi số <b>từ vài chục trở lên</b>, người Hàn rất hay chuyển sang Hán Hàn cho nhanh, nhất là trong thông báo, tin tức, công việc:</p>
+<div class="ex"><span class="ko">학생이 <b>쉰 명</b> 왔어요. = 학생이 <b>오십 명</b> 왔어요.<button class="say" data-say="학생이 쉰 명 왔어요. 학생이 오십 명 왔어요.">🔊</button></span><span class="vi">Cả hai đều đúng; câu sau gặp nhiều hơn trong đời sống.</span></div>
+<div class="ex"><span class="ko"><b>이십사 시간</b> 편의점 · 택배는 <b>사십팔 시간</b> 안에 도착해요.<button class="say" data-say="이십사 시간 편의점. 택배는 사십팔 시간 안에 도착해요.">🔊</button></span><span class="vi">Cửa hàng 24 giờ · hàng gửi đến trong vòng 48 tiếng.</span></div>
+<p class="note">Chiều ngược lại thì <b>không</b> được: số nhỏ đếm vật vẫn phải thuần Hàn (<span class="ko">사과 세 개</span>, không nói <span class="ko">삼 개</span>). Khi viết bài thi, cứ theo quy tắc trong sách là an toàn.</p>
+
+<h3>8. Số và văn hóa</h3>
+<ul>
+<li><b>Số 4</b> (<span class="ko">사</span>) đồng âm với 死 (chết): nhiều thang máy ghi tầng 4 là <b>F</b> (four), bệnh viện, khách sạn có khi bỏ phòng số 4. Giống người Việt kiêng số 4 theo âm Hán.</li>
+<li><b>Số 3</b> là số tròn, đủ: <span class="ko">삼세판</span> (chơi ba ván mới tính), <span class="ko">삼시 세끼</span> (ba bữa một ngày). Số 7 là số may mắn (<span class="ko">럭키 세븐</span>).</li>
+<li><b>Diện tích nhà</b> người Hàn vẫn quen nói theo <span class="ko">평</span> (坪 bình, khoảng 3,3 ㎡): <span class="ko">삼십 평 아파트</span> ≈ 100 ㎡.</li>
+<li><b>Cỡ giày</b> tính bằng mm: <span class="ko">이백오십</span> (250 mm) ≈ cỡ 40 ở Việt Nam. Thịt ở chợ bán theo <span class="ko">근</span>: <span class="ko">한 근</span> = 600 g; trứng theo <span class="ko">판</span>: <span class="ko">한 판</span> = 30 quả.</li>
+<li><b>Số tiếng Anh</b> trong từ mượn: <span class="ko">원룸</span> (phòng một gian), <span class="ko">투룸</span>, <span class="ko">원샷</span> (cạn ly), <span class="ko">원 플러스 원</span>, <span class="ko">나인 투 식스</span> (làm 9 giờ – 6 giờ).</li>
+</ul>
+
+<h3>9. Thành ngữ có số (hay gặp trong TOPIK)</h3>
+<div class="scroll"><table class="t">
+<tr><th>Thành ngữ</th><th>Hán Việt / nghĩa</th></tr>
+<tr><td class="ko">일석이조</td><td>nhất thạch nhị điểu: một công đôi việc</td></tr>
+<tr><td class="ko">십중팔구</td><td>thập trung bát cửu: mười phần chắc tám chín</td></tr>
+<tr><td class="ko">구사일생</td><td>cửu tử nhất sinh: thoát chết trong gang tấc</td></tr>
+<tr><td class="ko">삼삼오오</td><td>tam tam ngũ ngũ: tụm năm tụm ba</td></tr>
+<tr><td class="ko">작심삼일</td><td>tác tâm tam nhật: quyết tâm được ba ngày (cả thèm chóng chán)</td></tr>
+<tr><td class="ko">천만에요</td><td>thiên vạn: “không có gì” (đáp lời cảm ơn)</td></tr>
+<tr><td class="ko">하나부터 열까지</td><td>(thuần) từ đầu đến cuối, từ A đến Z</td></tr>
+<tr><td class="ko">한두 번이 아니다</td><td>(thuần) không phải một hai lần, chuyện thường xuyên</td></tr>
+<tr><td class="ko">열 번 찍어 안 넘어가는 나무 없다</td><td>(tục ngữ) chặt mười lần thì cây nào cũng đổ: kiên trì ắt thành</td></tr>
+</table></div>
+<h4>Kiểm tra nhanh</h4>
+<div class="set" data-set="q5"></div>
+</section>
+
 <!-- ================= LUYỆN ================= -->
 <section class="sec" id="slt">
 <h2>Luyện tập · chấm ngay</h2>
@@ -424,6 +539,91 @@ function fillDV(){
   document.getElementById('dvN').innerHTML=rows(DVN);document.getElementById('dvS').innerHTML=rows(DVS);
 }
 
+// Đời sống: [nhóm, [[tình huống, viết, đọc (<b>số</b>), loại T|H|C|M|E]]]
+var DS=[
+['Bản thân & gia đình',[
+ ['Tuổi (nói)','20살','저는 <b>스무</b> 살이에요.','T'],
+ ['Năm sinh','2005년생 · 05년생','<b>이천오</b> 년생 · <b>공오</b> 년생','H'],
+ ['Sinh nhật','3월 1일','제 생일은 <b>삼</b>월 <b>일</b> 일이에요.','H'],
+ ['Ngày tháng năm sinh (giấy tờ)','2005. 3. 1.','<b>이천오</b> 년 <b>삼</b>월 <b>일</b> 일','H'],
+ ['Gia đình mấy người','4명','우리 가족은 <b>네</b> 명이에요.','T'],
+ ['Con thứ mấy','첫째, 둘째','저는 <b>둘째</b>예요. 언니는 <b>첫째</b>, 동생은 막내예요.','T'],
+ ['Chiều cao, cân nặng','160cm, 50kg','키는 <b>백육십</b> 센티, 몸무게는 <b>오십</b> 킬로예요.','H'],
+ ['Cỡ giày, cỡ áo','250, 95','신발은 <b>이백오십</b>, 옷은 <b>구십오</b> 사이즈예요.','H']]],
+['Nhà ở & địa chỉ',[
+ ['Địa chỉ theo tên đường','세종대로 110','세종대로 <b>백십</b>','H'],
+ ['Căn hộ chung cư','101동 1203호','<b>백일</b> 동 <b>천이백삼</b> 호','H'],
+ ['Tầng, tầng hầm','3층, B1','<b>삼</b> 층 · 지하 <b>일</b> 층','H'],
+ ['Phòng ký túc xá','305호','기숙사 <b>삼백오</b> 호','H'],
+ ['Diện tích nhà','30평','<b>삼십</b> 평 아파트','H'],
+ ['Nhà có mấy phòng','방 3개','방이 <b>세</b> 개, 화장실이 <b>두</b> 개예요.','T'],
+ ['Mã bưu chính','03188','우편번호 <b>공삼일팔팔</b>','C']]],
+['Giao thông',[
+ ['Xe buýt số (nhiều chữ số)','273번','<b>이칠삼</b> 번 버스','C'],
+ ['Xe buýt số (ngắn)','1번','<b>일</b> 번 버스','H'],
+ ['Tuyến tàu điện, cửa ra','2호선, 3번 출구','<b>이</b> 호선 타고 <b>삼</b> 번 출구로 나오세요.','H'],
+ ['Số trạm còn lại','3정거장','<b>세</b> 정거장 더 가세요.','T'],
+ ['Biển số xe','12가 3456','<b>십이</b> 가 <b>삼사오육</b>','H'],
+ ['Toa, ghế tàu KTX','5호차 12A석','<b>오</b> 호차 <b>십이</b> 에이 석','H'],
+ ['Gọi taxi','택시 2대','택시 <b>두</b> 대 불러 주세요.','T'],
+ ['Đi mất bao lâu','1시간 30분','<b>한</b> 시간 <b>반</b> 걸려요.','T'],
+ ['Tốc độ','80km/h','시속 <b>팔십</b> 킬로','H']]],
+['Liên lạc & giấy tờ',[
+ ['Số điện thoại','010-1234-5678','<b>공일공 일이삼사 오육칠팔</b>','C'],
+ ['Số tài khoản','110-234-567890','<b>일일공 이삼사 오육칠팔구공</b>','C'],
+ ['Mật khẩu','4자리','비밀번호 <b>네</b> 자리를 누르세요. — <b>일이삼사</b>','M'],
+ ['Số thứ tự chờ (ngân hàng)','37번','대기 번호 <b>삼십칠</b> 번 손님','H'],
+ ['Số hồ sơ, mã đơn hàng','A2031','에이 <b>이공삼일</b>','C']]],
+['Mua sắm & ăn uống',[
+ ['Giá','35,000원','<b>삼만 오천</b> 원이에요.','H'],
+ ['Trả tiền mặt','만 원짜리 2장','<b>만</b> 원짜리 <b>두</b> 장 드릴게요.','M'],
+ ['Vào quán: mấy người','2명','<b>두</b> 명이요.','T'],
+ ['Gọi suất ăn','2인분','삼겹살 <b>이</b> 인분 주세요.','H'],
+ ['Gọi đồ uống, món','1병, 2잔, 3줄','소주 <b>한</b> 병, 콜라 <b>두</b> 잔, 김밥 <b>세</b> 줄 주세요.','T'],
+ ['Ở chợ','1봉지, 1판, 1근','사과 <b>한</b> 봉지, 계란 <b>한</b> 판, 고기 <b>한</b> 근 주세요.','T'],
+ ['Giảm giá','30%','<b>삼십</b> 퍼센트 할인 · <b>삼십</b> 프로 세일','H'],
+ ['Khuyến mãi','1+1','<b>원 플러스 원</b>','E']]],
+['Thời gian & lịch',[
+ ['Giờ hẹn','오후 3:30','오후 <b>세</b> 시 <b>삼십</b> 분에 만나요.','M'],
+ ['Tuần thứ mấy trong tháng','셋째 주','이번 달 <b>셋째</b> 주 금요일','T'],
+ ['Chuyến du lịch','2박 3일','<b>이</b> 박 <b>삼</b> 일 여행','H'],
+ ['Khoảng thời gian','1주일, 1달, 1년','<b>일</b>주일 · <b>한</b> 달 · <b>일</b> 년','M'],
+ ['Kỷ niệm','100일, 1주년','<b>백</b>일 · <b>일</b> 주년','H'],
+ ['Thế kỷ, thập niên','21세기, 90년대','<b>이십일</b> 세기 · <b>구십</b> 년대','H']]],
+['Học tập & thi cử',[
+ ['Năm thứ mấy','2학년','대학교 <b>이</b> 학년이에요.','H'],
+ ['Khóa vào trường','23학번','<b>이삼</b> 학번이에요.','C'],
+ ['Lớp và số thứ tự (trường Hàn)','2학년 3반 5번','<b>이</b> 학년 <b>삼</b> 반 <b>오</b> 번','H'],
+ ['Tiết học','1교시','<b>일</b> 교시는 한국어예요.','H'],
+ ['Bài, trang','제5과, 30쪽','제<b>오</b> 과 <b>삼십</b> 쪽을 펴세요.','H'],
+ ['Số câu sai (đếm)','3개','<b>세</b> 개 틀렸어요.','T'],
+ ['Điểm, cấp','100점 만점에 80점, 3급','<b>백</b> 점 만점에 <b>팔십</b> 점 · 토픽 <b>삼</b> 급','H'],
+ ['Số môn, số tín chỉ','5과목, 18학점','<b>다섯</b> 과목, <b>십팔</b> 학점 들어요.','M'],
+ ['Hạng','반에서 3등','반에서 <b>삼</b> 등 했어요.','H']]],
+['Sức khỏe',[
+ ['Uống thuốc','하루 3번, 1번에 2알','하루에 <b>세</b> 번, 한 번에 <b>두</b> 알씩 드세요.','T'],
+ ['Thời điểm uống','식후 30분','식후 <b>삼십</b> 분에 드세요.','H'],
+ ['Nhiệt độ cơ thể','36.5도','<b>삼십육 점 오</b> 도','H'],
+ ['Phòng khám số','2번 진료실','<b>이</b> 번 진료실로 들어가세요.','H'],
+ ['Nghỉ mấy ngày','3일','<b>사흘</b> 동안 / <b>삼</b> 일 동안 쉬세요.','M']]],
+['Thời tiết, thể thao, giải trí',[
+ ['Nhiệt độ ngoài trời','-5도','<b>영하 오</b> 도','H'],
+ ['Khả năng mưa','70%','강수 확률 <b>칠십</b> 퍼센트','H'],
+ ['Tỉ số trận đấu','2:1','<b>이 대 일</b>로 이겼어요.','H'],
+ ['Số bàn thắng (đếm)','2골','<b>두</b> 골을 넣었어요.','T'],
+ ['Xếp hạng','1위','<b>일</b> 위','H'],
+ ['Kênh, tập phim','11번, 1회','<b>십일</b> 번 채널 · <b>일</b> 회','H'],
+ ['Giới hạn tuổi xem phim','15세','<b>십오</b> 세 이상 관람가','H'],
+ ['Chụp ảnh, hô nhịp','하나, 둘, 셋','<b>하나, 둘, 셋!</b> 김치!','T']]]
+];
+var DSK={T:['new','Thuần'],H:['old','Hán'],C:['c','Từng số'],M:['m','Trộn'],E:['e','Anh']};
+function fillDS(){
+  $('dsList').innerHTML=DS.map(function(g){
+    return '<div class="card"><div class="hd">'+g[0]+'</div><div class="bd scroll"><table class="t ds"><tr><th>Tình huống</th><th>Viết</th><th>Nói</th></tr>'+g[1].map(function(r){
+      var k=DSK[r[3]],plain=r[2].replace(/<[^>]+>/g,'');
+      return '<tr><td>'+r[0]+' <span class="badge '+k[0]+'">'+k[1]+'</span></td><td class="ko">'+esc(r[1])+'</td><td class="ko">'+r[2]+sayBtn(plain)+'</td></tr>';}).join('')+'</table></div></div>';}).join('');
+}
+
 /* ---------- bài tập ---------- */
 // Trắc nghiệm: [câu, [đáp án đúng, sai…], giải thích, (câu để máy đọc)] — lựa chọn đầu là đáp án, trang tự đảo.
 var M={
@@ -444,6 +644,20 @@ q3:[
  ['“3 ngày” (thuần Hàn) → (    )',['사흘','나흘','삼흘'],'하루 1 · 이틀 2 · 사흘 3 · 나흘 4.'],
  ['“hai tiếng đồng hồ” → (    )',['두 시간','이 시간','둘 시간'],'시간 (khoảng giờ) đếm bằng thuần Hàn.'],
  ['“lần thứ nhất” → (    )',['첫 번째','한 번째','일 번째'],'Thứ nhất dùng 첫: 첫째, 첫 번째.']
+],
+q5:[
+ ['Phòng ký túc xá số 305 → 기숙사 (    )',['삼백오 호','세백다섯 호','삼백다섯 호'],'Số phòng → Hán Hàn.'],
+ ['“tuyến tàu điện số 2” → (    )',['이 호선','두 호선','둘 호선'],'Tuyến tàu là số gọi tên → Hán Hàn.'],
+ ['Số điện thoại 010 → (    )',['공일공','영일영','빵일빵'],'Đọc từng chữ số, 0 đọc 공.'],
+ ['Ngày sinh 1/3/2005 → (    )',['이천오 년 삼월 일 일','이천오 년 일월 삼 일','두천다섯 년 삼월 하루'],'Năm → tháng → ngày, đều Hán Hàn; 1/3 là ngày 1 tháng 3.'],
+ ['“lứa tuổi 20” → (    ) 초반',['이십 대','스무 대','스물 대'],'Độ tuổi dùng Hán Hàn. 스무 대 = 20 chiếc xe.'],
+ ['Thuốc: 하루에 (    ) 드세요. (3 lần)',['세 번','삼 번','셋 번'],'Số lần → thuần Hàn.'],
+ ['삼겹살 (    ) 주세요. (2 suất)',['이 인분','두 인분','둘 인분'],'인분 (suất) → Hán Hàn.'],
+ ['Nhiệt độ -5°C → (    )',['영하 오 도','영하 다섯 도','공하 오 도'],'Nhiệt độ → Hán Hàn, số âm dùng 영하.'],
+ ['1/3 (một phần ba) → (    )',['삼 분의 일','일 분의 삼','세 분의 하나'],'Phân số: mẫu trước, tử sau.'],
+ ['Tỉ số 2:1 → (    )로 이겼어요.',['이 대 일','두 대 하나','이 분의 일'],'Tỉ số đọc Hán Hàn với 대.'],
+ ['“tuần thứ ba của tháng này” → 이번 달 (    ) 주',['셋째','삼째','삼'],'Thứ tự đếm → thuần Hàn 셋째. 삼 주 = ba tuần.'],
+ ['키가 (    )예요. (160cm)',['백육십 센티','백예순 센티','일백육십 센티'],'Đo lường, số ≥ 100 → Hán Hàn; không nói 일 trước 백.']
 ],
 q4:[
  ['100.000 (một trăm nghìn) → (    )',['십만','백천','백만','일십만'],'Tách 4 chữ số: 10 | 0000 → 십만.'],
@@ -509,8 +723,8 @@ l3:[
  ['hai mươi lăm nghìn (25.000)',['이만 오천','이만오천'],'2 | 5000 → 이만 오천.']
 ]};
 delete M.l3;
-var TAB={tq:['q1'],dv:['q2'],tg:['q3'],sl:['q4'],lt:['l1','l2','l3','l4','ck']};
-var NAMES={q1:'Hai bộ số',q2:'Lượng từ',q3:'Thời gian',q4:'Số lớn',l1:'Chọn cách đọc',l2:'Viết cách đọc',l3:'Đổi số Việt → Hàn',l4:'Nghe và chọn',ck:'Kiểm tra cuối'};
+var TAB={tq:['q1'],dv:['q2'],tg:['q3'],sl:['q4'],ds:['q5'],lt:['l1','l2','l3','l4','ck']};
+var NAMES={q1:'Hai bộ số',q2:'Lượng từ',q3:'Thời gian',q4:'Số lớn',q5:'Đời sống',l1:'Chọn cách đọc',l2:'Viết cách đọc',l3:'Đổi số Việt → Hàn',l4:'Nghe và chọn',ck:'Kiểm tra cuối'};
 
 /* ---------- trạng thái ---------- */
 var KEY='nari-so', st={};
@@ -618,7 +832,7 @@ function show(){
   document.querySelectorAll('nav a').forEach(function(a){a.classList.toggle('on',a.dataset.k===k);});
   st.tab=k;save();
 }
-fillNumtab();fillDV();showNum();
+fillNumtab();fillDV();fillDS();showNum();
 Object.keys(M).forEach(renderM);Object.keys(T).forEach(renderT);renderSum();
 window.addEventListener('hashchange',function(){show();scrollTo(0,0);});show();
 </script>
