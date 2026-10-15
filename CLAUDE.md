@@ -312,7 +312,8 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - Mỗi chủ đề một trang riêng, cùng khung với `seoul/3a-1/` (thẻ lý thuyết + thẻ Luyện chấm ngay + “Gửi kết quả cho cô”). Không đặt link từ trang học sinh;
   cô gom link ở trang “Mục lục học liệu Nari” (https://claude.ai/artifact/6bTfJWsvsCeMrmggceXPjQ, nhóm “Seoul 3A · lớp chuyên ngành”).
 - `seoul/so-dem/` Số Hán Hàn – thuần Hàn: hai bộ số + quy tắc chọn, lượng từ (`DVN`/`DVS`), thời gian, số lớn (만/억 so với nghìn/triệu), tiền, số và biến âm,
-  “Máy đọc số” (`sino`/`nat`/`readNum`: số, giờ `15:20`, ngày `2026-10-13`). Bài tập trong `M` (lựa chọn đầu là đáp án; phần tử 4 = câu máy đọc cho bài nghe), `T`. localStorage `nari-so`.
+  “Máy đọc số” (`sino`/`nat`/`readNum`: số, giờ `15:20`, ngày `2026-10-13`). Thẻ “Đời sống” (`#b=ds`): bảng tình huống theo lĩnh vực trong biến `DS` ([tình huống, viết, đọc, T|H|C|M|E]),
+  đọc từng chữ số, số 0, phân số/tỉ số, tuổi ở Hàn, văn hóa, thành ngữ; bài `q5`. Bài tập trong `M` (lựa chọn đầu là đáp án; phần tử 4 = câu máy đọc cho bài nghe), `T`. localStorage `nari-so`.
 - `seoul/tuong-dong/` Ngữ pháp tương đồng 1A–3A: thẻ Bản đồ (5 câu hỏi phân biệt: chủ ngữ, thì, kiểu câu sau, loại từ, nguồn thông tin + bảng 25 nhóm),
   Tiểu từ (nhóm 1–5), Nối câu (6–10), Ý định (11–16), Phỏng đoán (17–21), Gián tiếp (22–25, kèm bảng danh từ phụ thuộc → đuôi định ngữ), Luyện.
   Mỗi nhóm một thẻ `.card id=gN` (link `#b=<thẻ>&g=gN`); cột “Sách” chỉ ghi số bài khi chắc (3A theo tên bài, 1B–2B theo `seoul/kiem-tra/`).
