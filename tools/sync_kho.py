@@ -19,7 +19,7 @@ import base64, glob, hashlib, json, os, re, sys, time
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "thi-thu")
-PAGES = "https://nttn6889.github.io/narikoreanbox/thi-thu/"
+PAGES = ("https://naritopik.com/thi-thu/", "https://nttn6889.github.io/narikoreanbox/thi-thu/")
 
 
 def jsum(s):
@@ -122,7 +122,10 @@ def main(dump, vocab_only=False):
                        "image": save_img(q.get("image"), img_dir, used), "stem": q.get("stem") or "",
                        "opts": list(q.get("opts") or ["", "", "", ""])[:4], "share": bool(q.get("share"))})
             if q.get("audio"):  # file nghe (đề nghe): link GitHub Pages trong db → đường dẫn tương đối
-                qs[-1]["audio"] = q["audio"].replace(PAGES, "")
+                a = q["audio"]
+                for p in PAGES:
+                    a = a.replace(p, "")
+                qs[-1]["audio"] = a
         qs.sort(key=lambda x: x["n"])
         with open(os.path.join(de_dir, eid + ".json"), "w", encoding="utf-8") as f:
             json.dump({"id": eid, "t": meta.get("title", ""), "total": meta.get("total", len(qs)), "q": qs},
