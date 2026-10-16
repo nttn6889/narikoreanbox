@@ -159,7 +159,7 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   và `Etk083n` (Nghe, 50 câu, kịch bản + đáp án trong `explain`; tranh câu 1–3 cắt từ PDF đề). Rar 30 track (`unar` giải nén được rar5):
   track 1 giới thiệu, track 2–21 = câu 1–20, track chẵn 22…30 = cặp 21–22…29–30 → `de/audio/Etk083n-*.mp3` (câu 1–30; 31–50 chưa có).
   Đồng bộ chỉ 2 đề này (không dump cả ngân hàng): ghi `de/Etk083*.json` bằng hàm của `sync_kho.py`, rồi sửa mục `e.Etk083`, `e.Etk083n` trong `site/kho`.
-  Viết 51/52 kỳ 83 đã có ở `wbank`; 53/54 kỳ 83 chưa nhập (đáp án mẫu có trong file đáp án cô gửi).
+  Viết kỳ 83 đủ 51–54 ở `wbank` (`W53_083` ảnh biểu đồ cắt từ PDF đề, có ý “Triển vọng”; `W54_083` sáng tạo – 창의력).
 - Ngân hàng đề nằm trong cơ sở dữ liệu của trang quản lý (collection `bank`, câu hỏi ở `bank/<id>/q/<qid>`).
 - Cô gửi file đề trong phiên Code → trích nội dung → ghi thẳng vào ngân hàng bằng ArtifactData (batch), hoặc
   xuất văn bản theo định dạng “Dán nhiều câu” của trang quản lý để cô tự dán.
