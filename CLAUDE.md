@@ -373,6 +373,18 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - Đề + gợi ý nhúng trong biến `Q` (lấy từ `wbank` W51_*; sửa trong trang quản lý thì chép lại). Cảnh báo đuôi: ô cuối câu viết -다 / -요, ô giữa câu viết -ㅂ니다.
   Bài lưu localStorage `nari-51`.
 
+## Học câu 53 (`viet-53/`)
+- Gộp 2 trang cũ trên claude.ai: “Khung câu 53 — 10 dạng” (https://claude.ai/artifact/3D57egxtLffpyYHR4ZbGWt) → thẻ **Khung câu** (`#b=khung&d=d1…d10`;
+  HTML + CSS chép nguyên, CSS bọc trong `.kh`), “Luyện viết câu 53” (https://claude.ai/artifact/MBTxyhkb8maZmk9TnhJLAC) → thẻ **Luyện viết** (biến `GR`,
+  8 dạng / 37 câu; bài lưu localStorage, “Tạo link gửi cô” → `viet-53/#s=<Z + deflate-raw base64url>` mở bản xem bài cho cô). Ảnh tách ra `viet-53/img/`
+  (`k*` ảnh khung, `v*` ảnh đề luyện; nguồn Cool-Topik-쓰기) → trang đặt `noindex`. Từ nay sửa thẳng trong `viet-53/index.html`, không sửa 2 artifact cũ.
+- Phần mới (cô thấy học sinh không biết viết nguyên nhân / triển vọng / phương án, không phân biệt mảnh thiếu động từ):
+  Buổi 1 Mảnh → mệnh đề (5 dạng mảnh, câu hỏi “tự xảy ra hay có người làm?” → 이/가+되다 hay 을/를+하다, nhóm A/B/C, ↑↓ → động từ, tiểu từ),
+  Buổi 2 Nguyên nhân (ký hiệu → từ nối, 때문 / 기 때문, khung câu), Buổi 3 Triển vọng + Phương án, Bảng tra. Link `#b=1|2|3|khung|viet|tra`.
+- Dữ liệu: `MCQ` (lựa chọn đầu là đáp án), `FR1` (mảnh → mệnh đề, đáp án ngăn `|`, máy tự nhận thêm đuôi quá khứ/hiện tại qua `ENDS`),
+  `TK` (đề viết câu: `fr` = mảnh + đáp án hoặc id `FR1`, `md` = câu mẫu; so câu bằng LCS từng chữ, học sinh tự chấm). Đề thật kỳ 83, 91, 96, 102 lấy từ
+  `thi-thu/viet/W53_*.json`; đề phương án là câu tự soạn (4 đề thật chưa có ô 방안). localStorage `nari-53`. Kết quả Buổi 1–3 gửi cô bằng chia sẻ đoạn chữ.
+
 ## Học câu 1–2 ngữ pháp trong 4 buổi (`ngu-phap-12/`)
 - Cùng khung với `viet-52/`, học theo **cặp dễ nhầm**: Buổi 1 đuôi nối thời gian/trình tự/lựa chọn (+ quy trình 3 bước), Buổi 2 mục đích/điều kiện/
   nhượng bộ/lý do/quan sát, Buổi 3 đuôi kết thúc câu (trạng từ → đuôi) + tiểu từ nâng cao, Buổi 4 trộn đề, Bảng tra (luật loại trừ, đáp án đề thật). Link `ngu-phap-12/#b=1|2|3|4|tra`.
