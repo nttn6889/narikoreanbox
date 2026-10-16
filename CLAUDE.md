@@ -2,7 +2,9 @@
 
 Site tĩnh, chạy bằng GitHub Pages từ nhánh `main` (push lên `main` là site tự cập nhật sau ~1 phút).
 Tên miền học liệu **https://hoc.naritopik.com/** (file `CNAME`; DNS: CNAME `hoc` → `nttn6889.github.io`). Tên miền chính `naritopik.com`
-để dành cho landing page / quảng cáo khóa học (làm riêng sau, không đặt trong repo này). Link cũ `nttn6889.github.io/narikoreanbox/…`
+để dành cho landing page / quảng cáo khóa học (làm riêng sau, không đặt trong repo này).
+Tạm thời `naritopik.com` chạy từ repo `nttn6889/naritopik` (GitHub Pages): chỉ `/ve-co/`, `/hoc-cung-co/`, `/thi-thu/` tự chuyển sang
+`hoc.naritopik.com` (giữ `?…#…`, dùng cho link quảng cáo); trang đầu + 404 chỉ có logo và 3 nút. Link cũ `nttn6889.github.io/narikoreanbox/…`
 GitHub tự chuyển sang tên miền mới. Link tuyệt đối trong trang viết `https://hoc.naritopik.com/…`.
 Giáo án / bản trình chiếu của cô (`seoul/2a-1/`, `seoul/3a-1/`…) gắn `<meta name="robots" content="noindex">` để Google không đưa lên tìm kiếm.
 Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối không đưa dữ liệu học sinh vào repo.
