@@ -291,6 +291,15 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   sai → ôn ngày hôm sau, đúng → hỏi lại sau 3, 7, 14 ngày, đúng ở lần 14 ngày → `mem.ok` (đã thuộc). Bài ngày k = từ mới + từ đến hạn
   (tối đa `review`). Chưa làm: nghe chép từ file nghe gốc của sách (cô chưa có file).
 
+## Ngữ pháp giáo trình Seoul (`seoul/ngu-phap/`)
+- Nguồn: collection `grammar` của trang quản lý (Tài liệu gốc → Ngữ pháp; 170 điểm 1A–3A, `g_<cuốn>_<bài>_<số>`). 3B chưa nhập.
+- **Đồng bộ ngữ pháp** (cô nhắn “đồng bộ ngữ pháp” sau khi nhập/sửa): ArtifactData `list` `grammar` với `out_dir` →
+  `python3 tools/seoul_np.py <dump>` → `seoul/ngu-phap/np.json` (bỏ tiếng Anh; tên bài lấy từ `seoul/bai.json` + `thi-thu/vocab.json`;
+  `form.ko` chưa có bản Việt thì dịch theo bảng `FORM_VI` trong script, câu lạ script in ra để bổ sung) → kiểm tra Playwright, commit + push.
+- Trang: thẻ cuốn → “Mục lục” (mọi mẫu của cuốn + nghĩa) hoặc từng bài; link `#b=3A`, `#b=3A&c=1`, `#b=3A&c=1&g=2` (mẫu thứ 2). Ô tìm kiếm tìm trong
+  mọi cuốn (tên mẫu, nghĩa, ví dụ, lưu ý). Giải thích tiếng Hàn gốc ẩn, nút “Hiện tiếng Hàn” (localStorage `nari-np-ko`). Ví dụ `" / "` = lượt hội thoại, 🔊 máy đọc.
+- Trang từ vựng `seoul/` có nút chuyển Từ vựng | Ngữ pháp và dòng “Ngữ pháp bài này” dưới tên bài (đọc `ngu-phap/np.json`).
+
 ## Kiểm tra nền tảng Seoul (`seoul/kiem-tra/`)
 - Bài chẩn đoán cho học sinh học tiếp 3A: 53 câu (A từ vựng 12 · B chia đuôi gõ 10 · C tiểu từ 6 · D ngữ pháp theo bài 1B–2B 17 ·
   E đọc 4 · F thử trước 3A 4) + tự đánh giá. Mỗi câu chọn “Chắc chắn/Đoán”, có nút “Em chưa học”. Đề nằm trong mảng `Q` của trang

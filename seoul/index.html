@@ -23,6 +23,12 @@ main{max-width:900px;margin:0 auto;padding:16px 16px 48px}
 .brand span a{color:inherit;text-decoration:none;border-bottom:1px dotted var(--muted)}
 .co{flex:none;display:flex;flex-direction:column;align-items:center;gap:3px;text-decoration:none;color:var(--muted);font:12px Arial,sans-serif}
 .co i{width:40px;height:40px;border-radius:50%;background:#1f3c88;color:#fff;display:grid;place-items:center;font:bold 17px Georgia,serif;font-style:normal}
+.sw{display:flex;margin:2px 0 8px;font:15px Arial,sans-serif}
+.sw a,.sw b{padding:5px 14px;border:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.sw>:first-child{border-radius:16px 0 0 16px}.sw>:last-child{border-radius:0 16px 16px 0;border-left:0}.sw b{background:var(--ink);color:#fff}
+.npl{margin:-4px 0 12px;padding:6px 10px;border-left:4px solid var(--acc);background:#f4f7fb;font-size:15px}
+.npl a{color:var(--acc);text-decoration:none}.npl a:hover{text-decoration:underline}
+.npl .kr{font-family:"Noto Sans KR","Malgun Gothic","Apple SD Gothic Neo",sans-serif}
 .upd{margin:0 0 4px;font:13px Arial,sans-serif;color:var(--acc)}
 header h1{font-size:26px;margin:4px 0 2px}
 header p{margin:0 0 12px;color:#333;font-size:15px}
@@ -102,7 +108,7 @@ h3 small{font-weight:normal;font-family:"Times New Roman",serif;font-size:15px}
 @media(max-width:560px){.sau{padding:4px 8px 10px}.sau table.t{font-size:14px}.sau table.t th,.sau table.t td{padding:4px 5px}}
 footer{margin-top:40px;font-size:13px;color:var(--muted);text-align:center}
 footer a{color:var(--muted)}
-@media print{.co,nav,.parts,.tools,footer,.sau button.say{display:none}.sec{display:block}h2{break-before:page}h2:first-of-type{break-before:auto}.tb{break-inside:auto}h3{break-after:avoid}}
+@media print{.co,nav,.parts,.tools,.sw,.npl,footer,.sau button.say{display:none}.sec{display:block}h2{break-before:page}h2:first-of-type{break-before:auto}.tb{break-inside:auto}h3{break-after:avoid}}
 </style>
 </head>
 <body>
@@ -112,6 +118,7 @@ footer a{color:var(--muted)}
     <div><img class="logo" src="../logo/nari-topik-ngang.svg" width="148" height="50" alt="Nari TOPIK – Hiểu từng câu, Vững từng cấp"><span>Cô Ngân · Quỳnh Lưu, Nghệ An · Zalo: <a href="https://zalo.me/0399214554">0399.214.554</a></span></div>
     <a class="co" href="../ve-co/"><i>N</i>Về cô</a>
   </div>
+  <div class="sw"><b>Từ vựng</b><a href="ngu-phap/" id="toNp">Ngữ pháp</a></div>
   <h1>Từ vựng giáo trình Seoul</h1>
   <p class="upd" id="upd"></p>
   <p>Học từ của bài trước khi lên lớp: đọc nghĩa, nhìn <b style="color:var(--acc)">Hán Việt</b> để đoán nghĩa nhanh, đọc câu ví dụ (chữ gạch chân là từ đã chia đuôi). Bấm “Ẩn nghĩa” để tự kiểm tra, chạm vào ô để xem lại. <b style="color:var(--star)">★5 đề</b> = từ đã gặp trong 5 đề TOPIK II của lớp.</p>
@@ -121,7 +128,7 @@ footer a{color:var(--muted)}
 <div class="tools"><button id="tg" type="button" aria-pressed="false">Ẩn nghĩa</button><button id="tx" type="button" aria-pressed="false">Ẩn câu ví dụ</button></div>
 <div id="msg">Đang tải từ vựng…</div>
 <div id="out"></div>
-<footer><a href="../">Trang chủ</a> · <a href="../tu-vung/">Từ vựng TOPIK II</a> · <a href="../thi-thu/">Phòng thi thử</a></footer>
+<footer><a href="../">Trang chủ</a> · <a href="ngu-phap/">Ngữ pháp giáo trình Seoul</a> · <a href="../tu-vung/">Từ vựng TOPIK II</a> · <a href="../thi-thu/">Phòng thi thử</a></footer>
 </main>
 <script>
 (function(){
@@ -136,7 +143,13 @@ footer a{color:var(--muted)}
   var MIN_DE = 3;
   // Bài có phần học sâu từ vựng: seoul/sau/<khóa>.html (bảng + dữ liệu bài luyện từ vựng).
   var SAU = {'3A-1': 1}, SAUC = {};
-  var DATA = null, DE = null, BAI = {}, cur = 0, curPart = null;
+  var DATA = null, DE = null, BAI = {}, NP = null, cur = 0, curPart = null;
+  // Ngữ pháp từng bài (ngu-phap/np.json, tools/seoul_np.py) → dòng "Ngữ pháp bài này" trỏ sang trang ngu-phap/.
+  function npLine(b, n){
+    var L = NP && NP.b && (NP.b[b] || []).filter(function(x){ return x.n === n; })[0];
+    if (!L) return '';
+    return '<p class="npl"><b>Ngữ pháp bài này:</b> ' + L.g.map(function(g, i){ return '<a class="kr" href="ngu-phap/#b=' + b + '&c=' + n + '&g=' + (i + 1) + '">' + esc(g.t) + '</a>'; }).join(' · ') + ' · <a href="ngu-phap/#b=' + b + '&c=' + n + '">Xem giải thích ›</a></p>';
+  }
   function hashArg(name){ var m = new RegExp('[#&]' + name + '=([^&]*)', 'i').exec(location.hash); return m ? decodeURIComponent(m[1]) : ''; }
   function wanted(){
     var c = hashArg('c'); if (!c) return null;
@@ -172,7 +185,7 @@ footer a{color:var(--muted)}
       var i = info(sec), n = 0;
       by[sec].forEach(function(g){ n += g.w.length; });
       nv += '<a href="javascript:void 0" data-to="' + si + '">Bài ' + i.n + '</a>';
-      h += '<section class="sec"><h2><span class="n">Bài ' + i.n + '</span>' + esc(i.ko) + '</h2><p class="lvi">' + esc(BAI[part + '-' + i.n] || '') + ' · ' + n + ' từ</p>';
+      h += '<section class="sec"><h2><span class="n">Bài ' + i.n + '</span>' + esc(i.ko) + '</h2><p class="lvi">' + esc(BAI[part + '-' + i.n] || '') + ' · ' + n + ' từ</p>' + npLine(part, i.n);
       by[sec].forEach(function(g){ h += '<h3>' + esc(g.ko) + (g.vi && g.vi !== g.ko ? ' <small>(' + esc(g.vi) + ')</small>' : '') + '</h3>' + table(g.w); });
       if (SAU[part + '-' + i.n]) h += '<div class="sau" data-sau="' + part + '-' + i.n + '"><p class="sh">Học sâu từ vựng bài này<small>Cách đọc, Hán Việt, đi với tiểu từ nào, phân biệt từ gần nghĩa</small></p><p class="note">Đang tải…</p></div>';
       h += '</section>';
@@ -253,6 +266,8 @@ footer a{color:var(--muted)}
   }
   function show(i){
     cur = i;
+    var a = nav.querySelectorAll('a[data-to]')[i], m = a && /Bài (\d+)/.exec(a.textContent);
+    document.getElementById('toNp').href = 'ngu-phap/#b=' + (curPart === 'cot' ? '' : curPart) + (m && curPart !== 'cot' ? '&c=' + m[1] : '');
     [].forEach.call(out.querySelectorAll('.sec'), function(x, k){ x.classList.toggle('on', k === i); });
     [].forEach.call(nav.querySelectorAll('a[data-to]'), function(x, k){ x.classList.toggle('on', k === i); });
     window.scrollTo(0, 0);
@@ -280,8 +295,8 @@ footer a{color:var(--muted)}
   window.addEventListener('hashchange', function(){ if (DATA) render(); });
   function get(u){ return fetch(u, {cache: 'no-cache'}).then(function(r){ if (!r.ok) throw new Error(r.status); return r.json(); }); }
   function opt(u){ return get(u).catch(function(){ return null; }); }
-  Promise.all([get('../thi-thu/vocab.json'), opt('../tu-vung/de.json'), opt('bai.json')]).then(function(r){
-    DATA = r[0]; DE = r[1]; BAI = r[2] || {};
+  Promise.all([get('../thi-thu/vocab.json'), opt('../tu-vung/de.json'), opt('bai.json'), opt('ngu-phap/np.json')]).then(function(r){
+    DATA = r[0]; DE = r[1]; BAI = r[2] || {}; NP = r[3];
     var n = 0, d = new Date(DATA.at || 0);
     DATA.g.forEach(function(g){ if (/^Seoul /.test(g.sec)) n += g.w.length; });
     document.getElementById('upd').textContent = 'Cập nhật: ' + ('0' + d.getDate()).slice(-2) + '/' + ('0' + (d.getMonth() + 1)).slice(-2) + '/' + d.getFullYear() + ' · ' + n.toLocaleString('vi-VN') + ' từ (1A–3B)';
