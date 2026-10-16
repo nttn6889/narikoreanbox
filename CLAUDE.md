@@ -90,6 +90,9 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - Collection `tuvan/<id>` {date, st: chua|inbox|hoc|khong, kase (tóm tắt), tags, src, post, outer, inner, qna}. Code `renderTuVan`/`tvForm` trong khối Admin.
 - Văn phong cô chốt cho comment ngoài: ngắn, 3–4 câu (ĐH Daegu, gần 10 năm sống và làm biên phiên dịch tại Hàn, dạy TOPIK online → trả lời câu hỏi →
   “Học thử miễn phí, em inbox cô”). Lộ trình để ở comment trả lời, giữ nguyên chữ cô đã duyệt.
+- **Mỗi lần cô nhờ trả lời comment đấu giá / bài tìm gia sư:** soạn xong (cô duyệt bản cuối) thì tự lưu luôn, không cần cô nhắc:
+  ArtifactData `set` collection `tuvan`, doc `T<yyyymmdd><a|b|c…>` (trang quản lý https://claude.ai/artifact/7EWoCB9sEomX2FHY8d1QY8),
+  `st:"chua"`, `post` = bài học sinh đăng, `outer`/`inner` = bản cô chốt, `kase`/`tags` tóm tắt, `qna` = bản hỏi – đáp không tên. Cô sửa tiếp thì `update` bản đó.
 
 ## Lưu ý
 - Repo không được chứa tên, điểm, nhận xét của học sinh.
