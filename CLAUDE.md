@@ -1,8 +1,10 @@
 # Hàn Ngữ Nari — trang web cho học sinh
 
 Site tĩnh, chạy bằng GitHub Pages từ nhánh `main` (push lên `main` là site tự cập nhật sau ~1 phút).
-Tên miền riêng **https://naritopik.com/** (file `CNAME`; DNS: 4 bản ghi A `185.199.108–111.153` + CNAME `www` → `nttn6889.github.io`).
-Link cũ `nttn6889.github.io/narikoreanbox/…` GitHub tự chuyển sang tên miền mới. Link tuyệt đối trong trang viết `https://naritopik.com/…`.
+Tên miền học liệu **https://hoc.naritopik.com/** (file `CNAME`; DNS: CNAME `hoc` → `nttn6889.github.io`). Tên miền chính `naritopik.com`
+để dành cho landing page / quảng cáo khóa học (làm riêng sau, không đặt trong repo này). Link cũ `nttn6889.github.io/narikoreanbox/…`
+GitHub tự chuyển sang tên miền mới. Link tuyệt đối trong trang viết `https://hoc.naritopik.com/…`.
+Giáo án / bản trình chiếu của cô (`seoul/2a-1/`, `seoul/3a-1/`…) gắn `<meta name="robots" content="noindex">` để Google không đưa lên tìm kiếm.
 Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối không đưa dữ liệu học sinh vào repo.
 
 ## Phòng thi thử (`thi-thu/`)
@@ -149,7 +151,7 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   đủ 50 câu, dùng lại file của bài luyện nghe N001–N011 (`audio` = link `thi-thu/nghe/audio/N0xx-<câu>.mp3`, cặp 21–22… chung một file). `Etk102n` chưa có file nghe.
 - Kỳ 91 đủ cả đọc + nghe: `Etk091` (Đọc, 50 câu; câu 1–4 cô nhập trước giữ nguyên; câu 42–43 đề gốc không công bố đoạn văn) và
   `Etk091n` (Nghe, 50 câu; `explain` = kịch bản + đáp án). **File nghe từng câu**: trường `audio` của câu trong `bank` = link
-  GitHub Pages `https://naritopik.com/thi-thu/de/audio/<đề>-<câu>.mp3` (link cũ `nttn6889.github.io/narikoreanbox/…` vẫn nhận) (trang quản lý phát được);
+  GitHub Pages `https://hoc.naritopik.com/thi-thu/de/audio/<đề>-<câu>.mp3` (link cũ `nttn6889.github.io/narikoreanbox/…` vẫn nhận) (trang quản lý phát được);
   `sync_kho.py` đổi thành đường dẫn tương đối `de/audio/…`. Cặp câu (21–22…) cùng một file ghi ở cả hai câu, trang chỉ hiện một
   trình phát (`buildSnapshot`/`mixQs` bỏ trình phát trùng với câu ngay trước). Không tính vào dấu `qSig`. Sửa câu có ô “File nghe”.
   File cô gửi (rar 31 track) chỉ có tới câu 30: track 1 giới thiệu, track 2–21 = câu 1–20, track 22/24/…/30 = cặp 21–22…29–30

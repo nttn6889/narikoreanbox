@@ -19,7 +19,7 @@ import base64, glob, hashlib, json, os, re, sys, time
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "thi-thu")
-PAGES = ("https://naritopik.com/thi-thu/", "https://nttn6889.github.io/narikoreanbox/thi-thu/")
+PAGES = ("https://hoc.naritopik.com/thi-thu/", "https://naritopik.com/thi-thu/", "https://nttn6889.github.io/narikoreanbox/thi-thu/")
 
 
 def jsum(s):

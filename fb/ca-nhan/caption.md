@@ -10,7 +10,7 @@
   - Học vấn: thêm "Đại học Daegu (대구대학교) – Quản trị kinh doanh".
   - Công việc: "Giáo viên tiếng Hàn – Nari TOPIK".
   - Sống tại: đổi thành Quỳnh Lưu. Daegu để ở mục "Từng sống tại".
-- **Liên kết:** https://naritopik.com/ve-co/
+- **Liên kết:** https://hoc.naritopik.com/ve-co/
 - **Đáng chú ý:** `ghim-1.png`, `quang-cao/topik2-len-3-4/7-ve-co.png`, `4-app.png`, `5-danh-gia.png`
 
 ## 1. Bài ghim — ảnh: ghim-1 → 7-ve-co → 4-app → 5-danh-gia → 3-lo-trinh
