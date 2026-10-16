@@ -241,6 +241,9 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   bỏ bản dịch tiếng Anh, tranh chỉ ghi `[tranh]` khi có câu nói) và `tools/seoul/sach/<cuốn>-chi-muc.tsv` = 어휘 색인 (từ, nghĩa Anh, trang).
   Đã có 1A, 1B (từ bản scan cô gửi); 2A–3B cô gửi dần. Chỉ mục chưa gộp vào `<cuốn>.tsv` (1A: 312/446 mục chưa có, 1B: 239/386).
   Đây là nguồn cho trang học liệu ngữ pháp theo giáo trình (giải thích từng ngữ pháp theo thứ tự bài).
+  **Ngữ pháp vào trang quản lý** (Tài liệu gốc → Ngữ pháp, collection `grammar/g_<cuốn>_<bài>_<số>`, `docs/Dseoul<cuốn>.g = "<cuốn>"`):
+  `python3 tools/nguphap_kho.py <cuốn> <thư mục>` đọc `sach/<cuốn>.md` + nghĩa Việt `sach/<cuốn>-vi.tsv` (id, m|f|n<số>, câu) → `<thư mục>/grammar/*.json`
+  + `batch_<cuốn>.json` → ArtifactData batch `set`. 1A, 1B đã ghi (64 điểm, chưa có tiếng Anh); 2A, 2B, 3A ghi từ phiên trước (có tiếng Anh).
 - `python3 tools/seoul_kho.py <thư mục>` → `<thư mục>/vocab/S<cuốn><bài>_<nhóm>.json` (id cố định, từ `s3a01_1_0`…) +
   `seoul/bai.json` (tên bài tiếng Việt). Ghi vào db bằng ArtifactData batch `set` collection `vocab` (file_path), rồi đồng bộ kho từ.
   Phần: `Seoul 3A · Bài 1 · <tên bài>`, secOrder 100 + 20×(cấp−1) + số bài. Từ có thêm `hv` (Hán Việt) và `ex` (câu ví dụ).

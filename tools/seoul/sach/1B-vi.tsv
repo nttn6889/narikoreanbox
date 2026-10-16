@@ -1,0 +1,113 @@
+# Nghĩa tiếng Việt (Claude soạn) cho phụ lục 문법 해설 Seoul 1B — id<TAB>m | f | n<số><TAB>tiếng Việt
+g_1B_09_1	m	"의" chỉ sở hữu, sự thuộc về: "N1의 N2" = "N2 của N1".
+g_1B_09_1	f	Kết hợp với danh từ (có hay không 받침 đều + 의).
+g_1B_09_1	n1	Khi nói có thể lược "의": 누구 가방이에요?
+g_1B_09_1	n2	"나의, 저의" thường rút gọn thành "내, 제".
+g_1B_09_1	n3	Với người/vật gắn bó thân thiết với mình (gia đình, nhà, trường…), dùng "우리" tự nhiên hơn "내, 제": 우리 형, 우리 집.
+g_1B_09_2	m	"N을/를 잘하다" = giỏi, làm tốt việc gì; "잘 못하다" = làm chưa tốt, kém; "못하다" = không biết làm, không có khả năng.
+g_1B_09_2	f	Kết hợp với danh từ + 을/를.
+g_1B_09_2	n1	Dùng với các danh từ có dạng "N하다": 공부, 노래, 수영, 요리, 운동, 청소, 축구…
+g_1B_09_2	n2	Chú ý viết cách: "잘 못하다" (kém) có dấu cách; "잘못하다" viết liền là "làm sai, có lỗi".
+g_1B_09_3	m	"N(이)세요" là dạng kính ngữ của "이에요/예요", dùng khi chủ ngữ hơn người nói về tuổi hoặc địa vị: "(Vị đó) là…".
+g_1B_09_3	f	Kết hợp với danh từ: không 받침 + 세요, có 받침 + 이세요.
+g_1B_09_3	n1	Quá khứ: "이셨어요/셨어요".
+g_1B_09_3	n2	Không dùng khi chủ ngữ là ngôi thứ nhất (나, 저).
+g_1B_09_4	m	"-(으)시-" là kính ngữ chủ thể: chèn vào vị từ để tôn trọng người thực hiện hành động khi người đó ở vị trí cao hơn người nói.
+g_1B_09_4	f	Kết hợp với tính từ, động từ: không 받침 + 시, có 받침 + 으시 (hiện tại -(으)세요, quá khứ -(으)셨어요).
+g_1B_09_4	n1	Không dùng "-(으)시-" khi chủ ngữ là chính mình (나, 저) — kể cả khi trả lời người trên.
+g_1B_09_4	n2	"-(으)셔요" cũng được nhưng "-(으)세요" phổ biến hơn.
+g_1B_10_1	m	Nói giờ: "시" (giờ) trước, "분" (phút) sau.
+g_1B_10_1	f	Giờ dùng số thuần Hàn (한, 두, 세… 시); phút dùng số Hán Hàn (일, 이, 삼… 분).
+g_1B_10_1	n1	"삼십 분" có thể nói là "반" (rưỡi).
+g_1B_10_1	n2	Thời gian khoảng chừng dùng "쯤": 한 시쯤.
+g_1B_10_1	n3	Dùng thêm 오전/오후, 새벽, 아침, 낮, 저녁, 밤 để phân biệt buổi.
+g_1B_10_2	m	"N부터 N까지" chỉ điểm bắt đầu và kết thúc của thời gian: "từ… đến…". Thường đi thành cặp nhưng cũng dùng riêng được.
+g_1B_10_2	f	Kết hợp với danh từ.
+g_1B_10_2	n1	Cũng dùng cho phạm vi (từ bài… đến bài…, từ trang… đến trang…).
+g_1B_10_3	m	"V-아서/어서" nối hai hành động liên tiếp có liên quan: làm A rồi (với chính kết quả đó / tại đó) làm B: "…rồi…".
+g_1B_10_3	f	Kết hợp với động từ: ㅏ, ㅗ + 아서; 하다 → 해서; khác + 어서.
+g_1B_10_3	n1	Thường đi với 가다, 오다, 만나다, 만들다, 사다, 일어나다, 내리다.
+g_1B_10_3	n2	Hai vế phải cùng chủ ngữ.
+g_1B_10_3	n3	Không chia thì trước "-아서/어서" (만났어서 ✗); thì chia ở vế cuối.
+g_1B_10_3	n4	So sánh "-아서/어서" và "-고" (bài 5): "-아서" — việc trước là tiền đề cho việc sau (mua bánh rồi tặng chính cái bánh đó); "-고" — chỉ nối theo thứ tự, không liên quan (mua bánh rồi gặp bạn).
+g_1B_10_4	m	"-(으)ㄹ 거예요" diễn tả dự định hoặc khả năng trong tương lai chưa chắc chắn: "sẽ…".
+g_1B_10_4	f	Kết hợp với động từ: không 받침 + ㄹ 거예요, có 받침 + 을 거예요.
+g_1B_10_4	n1	Tình huống trang trọng: "-(으)ㄹ 것입니다" hoặc "-(으)ㄹ 겁니다".
+g_1B_11_1	m	Lược "ㅡ": gốc từ kết thúc bằng nguyên âm ㅡ, khi gặp đuôi bắt đầu bằng -아/어- thì ㅡ rơi mất (아프다 → 아파요, 쓰다 → 써요). Ví dụ: 아프다, 바쁘다, 배고프다, 예쁘다, 쓰다, 끄다.
+g_1B_11_2	m	"-지 마세요" dùng để cấm, khuyên đừng làm: "Đừng…".
+g_1B_11_2	f	Kết hợp với động từ.
+g_1B_11_2	n1	Tình huống trang trọng: "-지 마십시오".
+g_1B_11_3	m	"만" = "chỉ": giới hạn vào đúng một thứ, loại trừ cái khác.
+g_1B_11_3	f	Dùng với danh từ.
+g_1B_11_4	m	"-아야/어야 되다" diễn tả nghĩa vụ, sự cần thiết: "phải…".
+g_1B_11_4	f	Kết hợp với động từ: ㅏ, ㅗ + 아야; 하다 → 해야; khác + 어야.
+g_1B_11_4	n1	Cũng nói "-아야/어야 하다": "되다" hay dùng khi nói chuyện thân mật, "하다" dùng khi trang trọng hoặc viết.
+g_1B_12_1	m	"-지요?" dùng để xác nhận điều mình đã biết: "…phải không? …nhỉ?". Khi trả lời không dùng "-지요".
+g_1B_12_1	f	Kết hợp với tính từ, động từ, danh từ (danh từ có 받침 + 이지요).
+g_1B_12_1	n1	Quá khứ: tính từ, động từ "-았지요/었지요"; danh từ "였지요/이었지요".
+g_1B_12_1	n2	Tương lai: "-(으)ㄹ 거지요".
+g_1B_12_1	n3	Khi nói "-지요" rút gọn thành "-죠".
+g_1B_12_1	n4	Đi với từ để hỏi (얼마, 몇 시, 누구…), "(이)지요" nghe mềm hơn "이에요/예요" — dùng khi tin người nghe biết câu trả lời.
+g_1B_12_2	m	"-고 있다" diễn tả hành động đang diễn ra: "đang…".
+g_1B_12_2	f	Kết hợp với động từ.
+g_1B_12_2	n1	Cũng dùng cho việc lặp lại, kéo dài một thời gian tính tới hiện tại (dạo này đang học bơi, đang đi học).
+g_1B_12_2	n2	Chủ ngữ là người trên thì dùng "-고 계시다".
+g_1B_12_3	m	"못 + V" = không thể làm (vì không có khả năng hoặc hoàn cảnh không cho phép).
+g_1B_12_3	f	Đặt ngay trước động từ.
+g_1B_12_3	n1	Với động từ "danh từ + 하다", viết "전화 못했어요" (theo sách); sách đánh dấu "전화 못 했어요" là sai.
+g_1B_12_3	n2	So sánh "못 V" và "안 A/V" (bài 3): "못" = không thể (muốn mà không làm được), chỉ đi với động từ; "안" = không (phủ định đơn thuần, có thể do không muốn), đi được cả tính từ.
+g_1B_12_4	m	"A/V-아서/어서" chỉ lý do, nguyên nhân: "vì… nên…".
+g_1B_12_4	f	Kết hợp với tính từ, động từ: ㅏ, ㅗ + 아서; 하다 → 해서; khác + 어서.
+g_1B_12_4	n1	Với danh từ dùng "이라서/라서".
+g_1B_12_4	n2	Vế sau không được là câu mệnh lệnh hay rủ rê (드세요, 산책할까요 ✗).
+g_1B_12_4	n3	Không chia thì trước "-아서/어서" (재미있었어서 ✗); thì chia ở vế cuối.
+g_1B_13_1	m	"-(으)려고 하다" diễn tả ý định, mong muốn, kế hoạch làm việc gì: "định…".
+g_1B_13_1	f	Kết hợp với động từ: không 받침 + 려고 하다, có 받침 + 으려고 하다.
+g_1B_13_1	n1	So sánh với "-(으)ㄹ 거예요" (bài 10): "-려고 하다" nói ý định (có thể sắp làm ngay, đang chuẩn bị làm) và dùng được cho quá khứ (보려고 했어요 — đã định xem); "-ㄹ 거예요" nói việc tương lai chưa chắc chắn, chỉ dùng cho tương lai.
+g_1B_13_2	m	"N에서 N까지" chỉ điểm xuất phát và điểm đến khi di chuyển trong không gian: "từ… đến…".
+g_1B_13_2	f	Kết hợp với danh từ chỉ nơi chốn.
+g_1B_13_2	n1	Thường đi thành cặp nhưng cũng dùng riêng được (미국에서 왔어요, 서울대학교까지 가요).
+g_1B_13_2	n2	Thời gian "từ… đến…" thì dùng "N부터 N까지" (bài 10).
+g_1B_13_3	m	"-아/어 주다" diễn tả làm việc gì đó cho người khác, giúp người khác: "…giúp, …cho".
+g_1B_13_3	f	Kết hợp với động từ: ㅏ, ㅗ + 아 주다; 하다 → 해 주다; khác + 어 주다.
+g_1B_13_3	n1	Hỏi ý muốn giúp: "-아/어 줄까요?" (để tôi… giúp nhé?); trả lời: "-아/어 주세요".
+g_1B_13_3	n2	Người làm giúp là người trên thì dùng "-아/어 주시다".
+g_1B_13_4	m	"(으)로" chỉ hướng di chuyển: "về phía, tới…".
+g_1B_13_4	f	Kết hợp với danh từ: không 받침 + 로, có 받침 + 으로.
+g_1B_13_4	n1	Danh từ có 받침 ㄹ thì dùng "로", không dùng "으로": 잠실로.
+g_1B_14_1	m	Lược "ㄹ": gốc từ có 받침 ㄹ được coi như không có 받침 (không thêm "으"), và khi gặp đuôi bắt đầu bằng ㄴ, ㅂ, ㅅ thì ㄹ luôn rơi mất (만들다 → 만드세요, 만듭니다, 만드네요).
+g_1B_14_1	n1	Gặp đuôi dạng "-을/ㄹ" (-(으)ㄹ까요, -(으)ㄹ 거예요) thì ㄹ của gốc cũng nhập vào: 만들까요, 놀 거예요.
+g_1B_14_2	m	"A-(으)ㄴ + N": biến tính từ thành định ngữ đứng trước danh từ để miêu tả tính chất, trạng thái của danh từ đó ("cà phê nóng", "bạn tốt").
+g_1B_14_2	f	Kết hợp với tính từ: không 받침 + ㄴ, có 받침 + 은; tính từ đuôi 있다/없다 + 는 (재미있는).
+g_1B_14_3	m	"한테/께" chỉ người nhận tác động của hành động: "cho, với, tới (ai)". Khi nói thường dùng "한테"; với người trên dùng "께".
+g_1B_14_3	f	Kết hợp với danh từ chỉ người.
+g_1B_14_3	n1	Tình huống trang trọng hoặc văn viết dùng "에게".
+g_1B_14_3	n2	Chỉ nguồn xuất phát của hành động ("từ ai") dùng "한테서", "에게서".
+g_1B_14_4	m	"-아/어 보세요" khuyên người khác thử làm việc gì: "Hãy thử…".
+g_1B_14_4	f	Kết hợp với động từ: ㅏ, ㅗ + 아 보세요; 하다 → 해 보세요; khác + 어 보세요.
+g_1B_14_4	n1	Với "보다" thì nói "보세요", không nói "봐 보세요".
+g_1B_15_1	m	"-(으)면" nêu giả định, điều kiện chưa chắc chắn hoặc chưa xảy ra: "nếu…, khi…".
+g_1B_15_1	f	Kết hợp với tính từ, động từ: không 받침 (và gốc ㄹ) + 면, có 받침 + 으면.
+g_1B_15_1	n1	Chú ý bất quy tắc: ㅂ (추우면, 더우면, 매우면…), lược ㄹ (만들면, 살면), ㄷ (들으면, 걸으면).
+g_1B_15_2	m	"V-는 + N": biến động từ thành định ngữ (hiện tại) đứng trước danh từ: "N đang/hay làm V" (người học tiếng Hàn, món người Hàn ăn hằng ngày).
+g_1B_15_2	f	Kết hợp với động từ (có hay không 받침 đều + 는; gốc ㄹ bỏ ㄹ: 만드는, 아는).
+g_1B_15_2	n1	Chủ ngữ trong cụm định ngữ dùng "이/가", không dùng "은/는" (내가 다니는 회사).
+g_1B_15_3	m	"-고 싶다" diễn tả mong muốn của người nói, hoặc hỏi mong muốn của người nghe: "muốn…".
+g_1B_15_3	f	Kết hợp với động từ.
+g_1B_15_4	m	"-고 싶어 하다" diễn tả mong muốn của người thứ ba (không phải người nói, người nghe).
+g_1B_15_4	f	Kết hợp với động từ.
+g_1B_15_4	n1	"-고 싶다": mong muốn của mình hoặc hỏi người nghe; "-고 싶어 하다": mong muốn của người khác.
+g_1B_15_4	n2	"싶다" là tính từ, "싶어 하다" là động từ nên chia khác nhau (định ngữ: 먹고 싶은 음식 / 먹고 싶어 하는 음식).
+g_1B_16_1	m	"-(으)ㄹ 수 있다/없다" diễn tả khả năng (năng lực, hoặc khả năng xảy ra): "có thể… / không thể…".
+g_1B_16_1	f	Kết hợp với động từ: không 받침 + ㄹ 수 있다, có 받침 + 을 수 있다.
+g_1B_16_1	n1	Trả lời phủ định câu hỏi "có thể… không?" thì dùng "못" tự nhiên hơn "-(으)ㄹ 수 없다": 오늘은 못 가요.
+g_1B_16_2	m	"-(으)ㄹ게요" (văn nói): người nói hứa, cam kết với người nghe sẽ làm việc gì: "(tôi) sẽ…".
+g_1B_16_2	f	Kết hợp với động từ: không 받침 + ㄹ게요, có 받침 + 을게요.
+g_1B_16_2	n1	Là lời hứa của chính người nói nên chủ ngữ chỉ là ngôi thứ nhất (저, 나, 우리); nói về người khác thì dùng "-(으)ㄹ 거예요".
+g_1B_16_3	m	"-(으)러 가다/오다" chỉ mục đích của việc đi/đến: "đi (để)…, đến (để)…".
+g_1B_16_3	f	Kết hợp với động từ: không 받침 (và gốc ㄹ) + 러, có 받침 + 으러.
+g_1B_16_3	n1	Động từ gốc ㄹ chỉ thêm "러": 살러 (không phải 살으러).
+g_1B_16_4	m	"-(으)면서" diễn tả hai hành động diễn ra cùng lúc: "vừa… vừa…".
+g_1B_16_4	f	Kết hợp với động từ: không 받침 (và gốc ㄹ) + 면서, có 받침 + 으면서.
+g_1B_16_4	n1	Hai vế phải cùng chủ ngữ.
+g_1B_16_4	n2	Dù là việc đã qua, trước "-(으)면서" không chia quá khứ; thì chia ở vế cuối.

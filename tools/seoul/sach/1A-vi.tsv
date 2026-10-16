@@ -1,0 +1,129 @@
+# Nghĩa tiếng Việt (Claude soạn) cho phụ lục 문법 해설 Seoul 1A — id<TAB>m (ý nghĩa) | f (kết hợp) | n<số> (lưu ý thứ mấy)<TAB>tiếng Việt
+g_1A_01_1	m	"안녕하세요?" là lời chào thông dụng nhất khi gặp ai đó, dùng được bất cứ lúc nào: sáng, trưa, tối.
+g_1A_01_1	n1	Tình huống trang trọng dùng "안녕하십니까?".
+g_1A_01_1	n2	"만나서 반가워요" là lời chào khi gặp ai đó lần đầu: "Rất vui được gặp bạn".
+g_1A_01_1	n3	Tình huống trang trọng dùng "반갑습니다".
+g_1A_01_1	n4	"안녕히 가세요" và "안녕히 계세요" đều dùng khi chia tay: nói "안녕히 가세요" với người rời đi, "안녕히 계세요" với người ở lại (khi mình là người đi).
+g_1A_01_1	n5	Tình huống trang trọng dùng "안녕히 가십시오" và "안녕히 계십시오".
+g_1A_01_2	m	"은/는" đánh dấu chủ đề của câu ("còn…, thì…"). Danh từ không 받침 + 는, có 받침 + 은.
+g_1A_01_2	f	Kết hợp với danh từ.
+g_1A_01_2	n1	"이에요/예요" là đuôi câu thân mật lịch sự dùng để hỏi và trả lời "là…" (danh tính, thuộc tính của chủ ngữ). Không 받침 + 예요, có 받침 + 이에요.
+g_1A_01_2	n2	Lên giọng cuối câu thì thành câu hỏi, xuống giọng thì thành câu trả lời.
+g_1A_01_3	m	"입니까? / 입니다" là dạng trang trọng của "là…" — dùng để hỏi và trả lời trong tình huống trang trọng (phát biểu, phỏng vấn, giới thiệu chính thức).
+g_1A_01_3	f	Kết hợp với danh từ (có hay không 받침 đều + 입니다 / 입니까).
+g_1A_01_4	m	"이/가 아닙니다" là dạng phủ định trang trọng: "không phải là…". Không 받침 + 가 아닙니다, có 받침 + 이 아닙니다.
+g_1A_01_4	f	Kết hợp với danh từ.
+g_1A_01_4	n1	Tình huống thân mật dùng "이/가 아니에요".
+g_1A_02_1	m	"이/가 있어요" = có (sở hữu người, vật); "이/가 없어요" = không có.
+g_1A_02_1	f	Kết hợp với danh từ: không 받침 + 가, có 받침 + 이.
+g_1A_02_1	n1	Khi nói có thể lược "이/가".
+g_1A_02_2	m	"이거" = cái này (gần người nói), "그거" = cái đó (gần người nghe), "저거" = cái kia (xa cả hai).
+g_1A_02_2	f	Kết hợp với danh từ + 이에요/예요.
+g_1A_02_2	n1	Khi nói có thể lược "는": 이거 뭐예요?
+g_1A_02_2	n2	"그거" còn dùng để nhắc lại thứ đã được nói tới trước đó, người nghe đã biết.
+g_1A_02_2	n3	Tình huống trang trọng dùng "이것은[그것은, 저것은] N입니까?, N입니다".
+g_1A_02_3	m	"N 주세요" = "Cho tôi N" — dùng khi xin, yêu cầu người khác đưa cho mình cái gì.
+g_1A_02_3	f	Dùng với danh từ.
+g_1A_02_3	n1	Thêm "좀" thì nghe lịch sự, nhẹ nhàng hơn.
+g_1A_02_4	m	"하고" nối hai danh từ: "N và N". Chủ yếu dùng khi nói.
+g_1A_02_4	f	Kết hợp với danh từ (có hay không 받침 đều + 하고).
+g_1A_02_4	n1	"과/와" cũng nối hai danh từ như "하고" nhưng chủ yếu dùng trong tình huống trang trọng hoặc văn viết. Không 받침 + 와, có 받침 + 과.
+g_1A_02_4	n2	"N(이)랑 N" dùng khi nói chuyện thân mật, không dùng trong tình huống trang trọng.
+g_1A_02_4	n3	Không dùng "하고" để nối hai câu; nối câu dùng "그리고".
+g_1A_03_1	m	"-아요/어요" là đuôi câu thân mật lịch sự, thì hiện tại — dùng để kể hoặc hỏi về sự việc hiện tại.
+g_1A_03_1	f	Kết hợp với động từ: nguyên âm cuối ㅏ, ㅗ + 아요; 하다 → 해요; các nguyên âm khác + 어요.
+g_1A_03_1	n1	Cũng dùng cho việc đã dự định trong tương lai gần (오늘 뭐 해요?).
+g_1A_03_1	n2	Cũng dùng để nói sự thật chung hoặc thói quen.
+g_1A_03_2	m	"을/를" đánh dấu tân ngữ — danh từ chịu tác động của động từ. Không 받침 + 를, có 받침 + 을.
+g_1A_03_2	f	Kết hợp với danh từ.
+g_1A_03_2	n1	Khi nói có thể lược bỏ.
+g_1A_03_3	m	"에서" đi sau danh từ chỉ nơi chốn, cho biết hành động diễn ra ở đâu: "ở, tại…".
+g_1A_03_3	f	Kết hợp với danh từ (có hay không 받침 đều + 에서).
+g_1A_03_4	m	"안" đặt trước động từ để tạo câu phủ định: "không…".
+g_1A_03_4	f	Đặt ngay trước động từ.
+g_1A_03_4	n1	Với động từ dạng "danh từ + 하다" (공부하다, 운동하다), "안" đặt giữa danh từ và 하다: 운동 안 해요.
+g_1A_04_1	m	"여기가 N이에요/예요" dùng để hỏi và nói về nơi mình đang đứng: "Đây là…".
+g_1A_04_1	f	Kết hợp với danh từ chỉ nơi chốn.
+g_1A_04_1	n1	"여기" = chỗ người nói đang ở hoặc gần người nói; "저기" = chỗ xa cả người nói lẫn người nghe; "거기" = chỗ gần người nghe, hoặc nơi đã nhắc tới / nơi đang nghĩ đến.
+g_1A_04_2	m	"N에 있어요/없어요" cho biết người, vật ở (có mặt) hay không ở một nơi: "ở…, có ở… / không có ở…".
+g_1A_04_2	f	Kết hợp với danh từ chỉ nơi chốn + 에.
+g_1A_04_2	n1	"N에" có thể đứng trước chủ ngữ: 교실에 유진 씨가 있어요.
+g_1A_04_2	n2	Khi nơi chốn là chủ đề đang nói hoặc đã nhắc trước đó, dùng "에는" tự nhiên hơn — nhấn mạnh "ở chỗ đó thì…".
+g_1A_04_3	m	"N에 가요/와요" chỉ việc di chuyển tới một nơi: đích là nơi khác chỗ đang nói → "가요" (đi); đích là chính chỗ đang nói → "와요" (đến).
+g_1A_04_3	f	Kết hợp với danh từ chỉ nơi chốn + 에.
+g_1A_04_3	n1	Dù không phải chỗ đang đứng nói, nếu nơi đó "thuộc về" người nói (nhà mình, lớp mình…) vẫn dùng "와요": 친구가 우리 집에 와요.
+g_1A_04_4	m	"앞/뒤/옆" chỉ vị trí so với một danh từ: phía trước (hướng danh từ đó quay mặt), phía sau (ngược hướng), bên cạnh (trái hoặc phải).
+g_1A_04_4	f	Đặt sau danh từ làm mốc.
+g_1A_04_4	n1	Thường đi với "에 있어요[없어요]".
+g_1A_04_4	n2	Khi trả lời, nhắc lại danh từ trong câu hỏi thì dùng "은/는" tự nhiên hơn; khi nói có thể bỏ luôn "N은/는".
+g_1A_04_4	n3	Nói danh từ làm mốc trước rồi mới tới 앞/뒤/옆 (아키라 앞에) — không đảo thứ tự.
+g_1A_05_1	m	Ngày tháng: nói "월" (tháng) trước, "일" (ngày) sau; tháng không có tên riêng mà ghép số Hán Hàn + 월.
+g_1A_05_1	f	Dùng với số Hán Hàn (일, 이, 삼…).
+g_1A_05_1	n1	Tháng 6 và tháng 10 đọc là "유월", "시월" (không phải 육월, 십월).
+g_1A_05_1	n2	"며칠" chỉ dùng hỏi ngày; "언제" hỏi rộng hơn (ngày, thứ, giờ…).
+g_1A_05_1	n3	"요일" là các ngày trong tuần: 월(thứ Hai), 화, 수, 목, 금, 토, 일(Chủ nhật) + 요일.
+g_1A_05_1	n4	Hỏi thứ phải nói "무슨 요일", không nói "몇 요일".
+g_1A_05_2	m	"에" đi sau danh từ chỉ thời gian, cho biết hành động xảy ra lúc nào: "vào…" (ngày, thứ, dịp đặc biệt).
+g_1A_05_2	f	Kết hợp với danh từ chỉ thời gian.
+g_1A_05_2	n1	Không dùng "에" sau 어제, 오늘, 내일, 지금.
+g_1A_05_2	n2	Khi thời gian đã được nhắc tới, dùng "에는" tự nhiên hơn — nhấn mạnh "vào lúc đó thì…".
+g_1A_05_3	m	"-았/었-" diễn tả việc đã xảy ra trong quá khứ (thì quá khứ).
+g_1A_05_3	f	Kết hợp với động từ: ㅏ, ㅗ + 았; 하다 → 했; nguyên âm khác + 었 (rồi + 어요).
+g_1A_05_3	n1	Sau "-았-" vẫn dùng "-어요" (닫았어요, không phải 닫았아요).
+g_1A_05_3	n2	Quá khứ của "이에요/예요" là "이었어요/였어요".
+g_1A_05_4	m	"V-고" nối hai hành động theo thứ tự thời gian: "…rồi…".
+g_1A_05_4	f	Kết hợp với động từ (có hay không 받침 đều + 고).
+g_1A_05_4	n1	Dù là việc đã qua, trước "-고" không chia quá khứ; thì chỉ chia ở vế cuối.
+g_1A_05_4	n2	Hai vế cùng chủ ngữ thì bỏ chủ ngữ ở vế sau.
+g_1A_05_4	n3	Đổi chỗ hai vế thì nghĩa (thứ tự việc) thay đổi.
+g_1A_05_4	n4	Lỗi hay gặp: gắn -고 vào dạng đã chia (봐고, 운동해고, 마셔고) — đúng là gắn vào gốc: 보고, 운동하고, 마시고.
+g_1A_06_1	m	"-(으)세요" là đuôi câu thân mật lịch sự dùng để nhờ, đề nghị hoặc ra lệnh một cách lịch sự: "Hãy…, mời…".
+g_1A_06_1	f	Kết hợp với động từ: không 받침 + 세요, có 받침 + 으세요.
+g_1A_06_1	n1	Thêm "좀" để lịch sự, nhẹ nhàng hơn.
+g_1A_06_1	n2	Tình huống trang trọng dùng "-(으)십시오".
+g_1A_06_2	m	"개, 병, 잔, 그릇" là đơn vị đếm đồ vật: cái/quả (개), chai (병), cốc/ly (잔), bát/tô (그릇) — chọn theo loại đồ vật.
+g_1A_06_2	f	Dùng với số thuần Hàn dạng định từ (한, 두, 세, 네, 다섯…).
+g_1A_06_2	n1	Thứ tự: tên đồ vật → số → đơn vị (사과 다섯 개).
+g_1A_06_2	n2	Số 1–4 trước đơn vị đếm đổi thành "한, 두, 세, 네" (không dùng 하나, 둘, 셋, 넷).
+g_1A_06_3	m	"N이/가 A-아요/어요" dùng để tả hoặc hỏi trạng thái, tính chất hiện tại của danh từ (đẹp, rẻ, đông…), thân mật lịch sự.
+g_1A_06_3	f	Kết hợp với tính từ, chia như động từ (ㅏ, ㅗ + 아요; 하다 → 해요; khác + 어요).
+g_1A_06_3	n1	Tính từ tiếng Hàn tự làm vị ngữ như động từ (không cần "là").
+g_1A_06_3	n2	Danh từ được tính từ mô tả là chủ ngữ nên đi với "이/가".
+g_1A_06_3	n3	Trạng thái trong quá khứ dùng "-았어요/었어요".
+g_1A_06_4	m	"도" = "cũng": thêm một thứ nữa vào cái đã nói trước đó.
+g_1A_06_4	f	Kết hợp với danh từ.
+g_1A_06_4	n1	"도" thay cho "은/는, 을/를" — không dùng chồng (저는도 ✗ → 저도).
+g_1A_06_4	n2	Với các tiểu từ khác (에, 에서…) thì ghép được: 시장에도, 집에서도.
+g_1A_07_1	m	Bất quy tắc ㅂ: một số tính từ/động từ có 받침 ㅂ, khi gặp đuôi bắt đầu bằng nguyên âm thì ㅂ đổi thành "우" (덥다 → 더워요). Ví dụ: 덥다, 춥다, 어렵다, 쉽다, 맵다, 무겁다, 가볍다.
+g_1A_07_1	n1	Không phải từ nào có 받침 ㅂ cũng bất quy tắc: 좁다 → 좁아요, 입다 → 입었어요, 잡다 → 잡으세요.
+g_1A_07_2	m	"-지만" = "…nhưng…": nói một ý rồi nói ý trái ngược.
+g_1A_07_2	f	Kết hợp với tính từ, động từ (có hay không 받침 đều + 지만).
+g_1A_07_2	n1	Khi đối chiếu hai sự việc, dùng "은/는" cho hai chủ ngữ (나나 씨 휴대폰은… 제 휴대폰은…).
+g_1A_07_2	n2	Hai vế cùng chủ ngữ thì bỏ chủ ngữ ở vế sau.
+g_1A_07_2	n3	Nói về quá khứ: "-았지만/했지만/었지만".
+g_1A_07_2	n4	Lỗi hay gặp: gắn -지만 vào dạng đã chia (공부해지만, 마셔지만) — đúng là gắn vào gốc: 공부하지만, 마시지만, 보지만.
+g_1A_07_3	m	"-습니다/ㅂ니다" là đuôi câu trần thuật trang trọng, lịch sự (tin tức, phát biểu, công việc).
+g_1A_07_3	f	Kết hợp với tính từ, động từ: không 받침 + ㅂ니다, có 받침 + 습니다.
+g_1A_07_3	n1	Câu hỏi trang trọng dùng "-습니까/ㅂ니까?".
+g_1A_07_4	m	"A/V-고" liệt kê hai sự việc không theo thứ tự thời gian: "…và…".
+g_1A_07_4	f	Kết hợp với tính từ, động từ.
+g_1A_07_4	n1	Hai vế cùng chủ ngữ thì bỏ chủ ngữ ở vế sau.
+g_1A_07_4	n2	Hai vế khác chủ ngữ cũng dùng được.
+g_1A_07_4	n3	Đổi chỗ hai vế thì nghĩa không đổi.
+g_1A_07_4	n4	Lỗi hay gặp: 숙제해고, 마셔고, 와고 — đúng là 숙제하고, 마시고, 오고.
+g_1A_07_4	n5	So sánh "V-고" thứ tự thời gian (bài 5) và "A/V-고" liệt kê (bài 7): bài 5 theo thứ tự, đổi vế là đổi nghĩa, chỉ đi với động từ; bài 7 không theo thứ tự, đổi vế không đổi nghĩa, đi được cả tính từ.
+g_1A_08_1	m	"-(으)ㄹ까요?" dùng để hỏi ý kiến hoặc rủ người nghe về một việc chưa quyết định: "…nhé? …không?".
+g_1A_08_1	f	Kết hợp với động từ: không 받침 + ㄹ까요, có 받침 + 을까요.
+g_1A_08_1	n1	Trả lời thường dùng "-아요/어요" mang nghĩa rủ rê ("…đi!") — cùng câu 도서관에 가요 nhưng nghĩa khác tùy câu hỏi.
+g_1A_08_1	n2	Chủ ngữ ngầm hiểu là "우리" (chúng ta).
+g_1A_08_1	n3	Tình huống trang trọng trả lời bằng "-(으)ㅂ시다", nhưng không dùng "-(으)ㅂ시다" với người trên.
+g_1A_08_2	m	Bất quy tắc ㄷ: một số động từ có 받침 ㄷ, khi gặp đuôi bắt đầu bằng nguyên âm thì ㄷ đổi thành ㄹ (듣다 → 들어요, 걷다 → 걸어요).
+g_1A_08_2	n1	Không phải động từ nào có 받침 ㄷ cũng bất quy tắc: 받다 → 받으세요.
+g_1A_08_3	m	"이/그/저 + N" chỉ rõ một danh từ: "này" (gần người nói), "đó" (gần người nghe), "kia" (xa cả hai).
+g_1A_08_3	f	Đặt trước danh từ.
+g_1A_08_3	n1	"그" còn chỉ người/vật đã nhắc trước đó hoặc đang nghĩ trong đầu.
+g_1A_08_4	m	"-네요" bày tỏ cảm thán, cảm nhận về điều mình vừa mới biết, vừa thấy: "…quá nhỉ!, …thế!".
+g_1A_08_4	f	Kết hợp với tính từ, động từ (có hay không 받침 đều + 네요).
+g_1A_08_4	n1	Điều mới biết là việc đã xảy ra / đã xong thì dùng "-았네요/었네요" (눈이 왔네요 — thấy tuyết đã rơi).
+g_1A_08_4	n2	"A-군요 / V-는군요" cũng là cảm thán về điều mới biết, nhưng "-네요" nghe mềm, tự nhiên hơn.
+g_1A_08_4	n3	"-네요" phải thể hiện cảm nhận, nhận xét của chính người nói — không dùng để lặp lại y nguyên thông tin vừa nghe (3,000원이네요 ✗ → 정말 싸네요 ○).
