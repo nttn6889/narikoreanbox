@@ -84,6 +84,13 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   `hocphi/_cfg` = {due, bank, note, sign}. Thẻ Học sinh → Học phí (bảng theo tháng) + hồ sơ → Học phí; “Thông báo” tạo tin nhắn Zalo.
 - `nangluc.py` móc thêm 2 chỗ ngoài khối NLA: listener `hocphi`, và `editStudent` giữ `fee` khi cô sửa thông tin.
 
+## Tư vấn (tab "Tư vấn" trong trang quản lý, chỉ cô xem)
+- Lưu bài tìm gia sư học sinh đăng + 2 comment của cô (comment ngoài: giới thiệu cô ngắn gọn + trả lời; comment trả lời bên trong: lộ trình chi tiết)
+  để lần sau tìm bài tương tự, “Dùng làm mẫu” rồi sửa; ô “Bản QnA” soạn sẵn bài hỏi – đáp cho trang Nari TOPIK (không tên người hỏi).
+- Collection `tuvan/<id>` {date, st: chua|inbox|hoc|khong, kase (tóm tắt), tags, src, post, outer, inner, qna}. Code `renderTuVan`/`tvForm` trong khối Admin.
+- Văn phong cô chốt cho comment ngoài: ngắn, 3–4 câu (ĐH Daegu, gần 10 năm sống và làm biên phiên dịch tại Hàn, dạy TOPIK online → trả lời câu hỏi →
+  “Học thử miễn phí, em inbox cô”). Lộ trình để ở comment trả lời, giữ nguyên chữ cô đã duyệt.
+
 ## Lưu ý
 - Repo không được chứa tên, điểm, nhận xét của học sinh.
 
