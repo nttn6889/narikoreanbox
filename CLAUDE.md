@@ -173,6 +173,7 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   và `Etk083n` (Nghe, 50 câu, kịch bản + đáp án trong `explain`; tranh câu 1–3 cắt từ PDF đề). Rar 30 track (`unar` giải nén được rar5):
   track 1 giới thiệu, track 2–21 = câu 1–20, track chẵn 22…30 = cặp 21–22…29–30 → `de/audio/Etk083n-*.mp3` (câu 1–30; 31–50 chưa có).
   Đồng bộ chỉ 2 đề này (không dump cả ngân hàng): ghi `de/Etk083*.json` bằng hàm của `sync_kho.py`, rồi sửa mục `e.Etk083`, `e.Etk083n` trong `site/kho`.
+  Câu 53 kỳ 64: `W53_064` (ảnh biểu đồ cắt từ ảnh đề cô gửi, `dang:[1,3,7]`, bài mẫu chính thức 3 ý).
   Viết kỳ 83 đủ 51–54 ở `wbank` (`W53_083` ảnh biểu đồ cắt từ PDF đề, có ý “Triển vọng”; `W54_083` sáng tạo – 창의력).
 - Ngân hàng đề nằm trong cơ sở dữ liệu của trang quản lý (collection `bank`, câu hỏi ở `bank/<id>/q/<qid>`).
 - Cô gửi file đề trong phiên Code → trích nội dung → ghi thẳng vào ngân hàng bằng ArtifactData (batch), hoặc
@@ -332,6 +333,9 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   (p25 = tr.24–25). Mỗi trang: “Trang này có gì” (`.on-page`, liệt kê đúng những gì in trên trang) → các điểm **cô giảng sâu** (`.pt`: cấu tạo, nghĩa gốc,
   so sánh, Hán Việt, phát âm, lỗi người Việt hay mắc, văn hóa) → “Cô hỏi” (`.ask`, đáp án ẩn) → bài trong sách (đáp án / câu mẫu) → luyện thêm chấm ngay.
   Nút trang trước/sau và nút 🔊 cho mọi `.ex>.ko` do JS tự thêm.
+- Mục đầu `#b=son` (section `id="sson"`, mở mặc định) **Ôn ngữ pháp 1A–1B**: Bước 0 bảng chia đuôi, 7 nhóm theo chức năng (tiểu từ, đuôi câu/kính ngữ,
+  phủ định/khả năng, nối câu, muốn/định/phải, định ngữ, bất quy tắc), mỗi nhóm có “🔗 Nối sang Bài 1”; bài luyện xen sau các nhóm (cô thấy để cuối mục thì khó tìm): `M.o1` tiểu từ (sau nhóm 1), `M.o3` nối câu (sau nhóm 5),
+  `T.o2` chia đuôi gõ (sau nhóm 7), cuối mục `M.o4` tìm câu sai (lựa chọn đầu là câu sai) + `M.o5` cầu nối sang Bài 1; đầu mục có nút `data-jump` nhảy tới từng bài; cuối mục bảng 64 mẫu (link `seoul/ngu-phap/#b=1A&c=…&g=…`).
 - Dữ liệu `seoul/2a-1/`: `TV1` (tr.26), `M.v0`, `T.fr` (tr.26), `LIFE`, `TV2`, `M.v1` (tr.27), `T.ga` (28), `QA.qa1`, `T.gb`, `M.m1` (29), `D1`, `SUB1` (30),
   `QA.qa2`, `M.v2` (31), `QA.qa3`, `T.gc` (32), `QA.qa4`, `M.m2` (33), `D2`, `SUB2` (34), `QA.qa5`, `M.v3` (35), `M.h1` (36), `READ` (38), `M.r1` (39),
   `CUL` (41), `PRON`, `M.p1` (42), `SELF`, `T.s2` (đáp án sách), `M.ck` (43). Trắc nghiệm lựa chọn đầu là đáp án; bài viết/ghi chú `st.w` (tên trong `WNAME`)
@@ -404,6 +408,21 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - Tham khảo giáo án “Giáo án TOPIK II” (Claude Docs, https://claude.ai/artifact/1ZXx9PXJjapaWdjJMSjTPn): dấu hiệu nhận biết, quy tắc loại trừ, bẫy.
 - Biến `R` = 60 câu 3–4 từ `thi-thu/de/*.json` (bỏ Ehot1old, Entk3 câu 3 trùng Entk1) + đáp án `a` + giải thích `w` do Claude soạn; `MCQ` câu tự soạn
   (lựa chọn đầu là đáp án). Bài lưu localStorage `nari-34`.
+
+## Học câu 13–15 sắp xếp câu (`cau-13-15/`)
+- Chiến thuật rút từ 66 câu của 22 đề đọc: 65/66 câu 4 đáp án chỉ có 2 câu đầu → chọn câu đầu (loại câu có **dấu bám**: từ nối, từ chỉ, câu lý do `때문이다`/`-ㄴ 것이다`;
+  cả hai sạch thì phép thử “đứng một mình” + 4 kiểu câu đầu G/H/Q/T) → còn 2 đáp án, so đúng **một vị trí** (vị trí 2: 46, vị trí 3: 19). Câu đầu đúng không bao giờ có dấu bám (66/66).
+  Đề thật kỳ 83, 91: 5/6 câu bị loại không có dấu bám.
+- Buổi 1 (dấu bám, 18 câu làm từng bước), Buổi 2 (hai câu đều sạch, nối đuôi / thời gian, bẫy định nghĩa đứng sau hiện tượng, 20 câu từng bước), Buổi 3 (28 câu như thi, 1 phút/câu,
+  báo sai ở bước câu đầu hay bước 3), Ôn (ôn ngắt quãng 10 câu), thẻ “66 câu”, Bảng tra. Link `cau-13-15/#b=1|2|3|on|all|tra`, `#b=all&q=<id>`.
+- Biến `R` (66 câu, câu + đáp án lấy từ `thi-thu/de/*.json` và `bank` — đáp án `a` theo `bank`): `o` = 4 đáp án dạng `"나가다라"`, `f` kiểu câu đầu, `m` vì sao câu kia không đứng đầu
+  (N C L K), `k` tín hiệu bước 3 (C L N K T D), `h` = chữ được tô theo từng câu (phải có đúng trong câu), `v` nghĩa tiếng Việt, `r`/`w` giải thích bước câu đầu / bước 3 do Claude soạn.
+  Bước làm tự tính từ `o` (`stepsOf`). `MCQ` câu tự soạn (lựa chọn đầu là đáp án). Bài lưu localStorage `nari-1315`.
+- **Trang tự luyện `cau-13-15/luyen/`** (gửi học sinh không có thời gian học cùng cô; chỉ có câu luyện, không phần kiến thức, chỉ một bảng dấu hiệu thu gọn):
+  66 câu làm 2 bước (Bước 1 câu đầu → Bước 2 vị trí khác nhau), 4 thẻ `#p=1|2|3|4` (1–2: câu bị loại có dấu bám, 15+15; 3–4: hai câu đều sạch, 18+18) + `#p=on` ôn ngắt quãng
+  10 câu (đúng mà có xem gợi ý → ôn lại ngày mai). Mỗi bước có 💡 gợi ý 2 mức (mức 1 = `g1`/`g3`, mức 2 = tô `h` của câu đang so + cách làm) và phản hồi tách
+  “Vì sao chọn” (`c1`/`c3`) / “Vì sao loại” (`x1`/`x3`) + nghĩa 2 câu đang so. Dữ liệu `R` cùng câu, đáp án, `h`, `v` với trang chính + 6 trường trên, `p` = thẻ.
+  Báo cáo gửi cô: đúng cả 2 bước / không cần gợi ý / sai bước nào. localStorage `nari-1315l`.
 
 ## Học câu 16–18 điền chỗ trống (`cau-16-18/`)
 - Cùng khung với `cau-25-27/`: Buổi 1 (thói quen **đọc qua ô** — 39/65 câu manh mối nằm sau ô; quy trình 3 bước; khung quanh ô → loại ý; tín hiệu ① Đảo chiều, ② Giải thích ở sau),
