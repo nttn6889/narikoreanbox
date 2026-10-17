@@ -333,6 +333,9 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   (p25 = tr.24–25). Mỗi trang: “Trang này có gì” (`.on-page`, liệt kê đúng những gì in trên trang) → các điểm **cô giảng sâu** (`.pt`: cấu tạo, nghĩa gốc,
   so sánh, Hán Việt, phát âm, lỗi người Việt hay mắc, văn hóa) → “Cô hỏi” (`.ask`, đáp án ẩn) → bài trong sách (đáp án / câu mẫu) → luyện thêm chấm ngay.
   Nút trang trước/sau và nút 🔊 cho mọi `.ex>.ko` do JS tự thêm.
+- Mục đầu `#b=son` (section `id="sson"`, mở mặc định) **Ôn ngữ pháp 1A–1B**: Bước 0 bảng chia đuôi, 7 nhóm theo chức năng (tiểu từ, đuôi câu/kính ngữ,
+  phủ định/khả năng, nối câu, muốn/định/phải, định ngữ, bất quy tắc), mỗi nhóm có “🔗 Nối sang Bài 1”; bài luyện `M.o1` tiểu từ, `T.o2` chia đuôi gõ, `M.o3` nối câu,
+  `M.o4` tìm câu sai (lựa chọn đầu là câu sai), `M.o5` cầu nối sang Bài 1; cuối mục bảng 64 mẫu (link `seoul/ngu-phap/#b=1A&c=…&g=…`).
 - Dữ liệu `seoul/2a-1/`: `TV1` (tr.26), `M.v0`, `T.fr` (tr.26), `LIFE`, `TV2`, `M.v1` (tr.27), `T.ga` (28), `QA.qa1`, `T.gb`, `M.m1` (29), `D1`, `SUB1` (30),
   `QA.qa2`, `M.v2` (31), `QA.qa3`, `T.gc` (32), `QA.qa4`, `M.m2` (33), `D2`, `SUB2` (34), `QA.qa5`, `M.v3` (35), `M.h1` (36), `READ` (38), `M.r1` (39),
   `CUL` (41), `PRON`, `M.p1` (42), `SELF`, `T.s2` (đáp án sách), `M.ck` (43). Trắc nghiệm lựa chọn đầu là đáp án; bài viết/ghi chú `st.w` (tên trong `WNAME`)
