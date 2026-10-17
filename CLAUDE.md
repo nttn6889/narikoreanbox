@@ -414,6 +414,11 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - Biến `R` (66 câu, câu + đáp án lấy từ `thi-thu/de/*.json` và `bank` — đáp án `a` theo `bank`): `o` = 4 đáp án dạng `"나가다라"`, `f` kiểu câu đầu, `m` vì sao câu kia không đứng đầu
   (N C L K), `k` tín hiệu bước 3 (C L N K T D), `h` = chữ được tô theo từng câu (phải có đúng trong câu), `v` nghĩa tiếng Việt, `r`/`w` giải thích bước câu đầu / bước 3 do Claude soạn.
   Bước làm tự tính từ `o` (`stepsOf`). `MCQ` câu tự soạn (lựa chọn đầu là đáp án). Bài lưu localStorage `nari-1315`.
+- **Trang tự luyện `cau-13-15/luyen/`** (gửi học sinh không có thời gian học cùng cô; chỉ có câu luyện, không phần kiến thức, chỉ một bảng dấu hiệu thu gọn):
+  66 câu làm 2 bước (Bước 1 câu đầu → Bước 2 vị trí khác nhau), 4 thẻ `#p=1|2|3|4` (1–2: câu bị loại có dấu bám, 15+15; 3–4: hai câu đều sạch, 18+18) + `#p=on` ôn ngắt quãng
+  10 câu (đúng mà có xem gợi ý → ôn lại ngày mai). Mỗi bước có 💡 gợi ý 2 mức (mức 1 = `g1`/`g3`, mức 2 = tô `h` của câu đang so + cách làm) và phản hồi tách
+  “Vì sao chọn” (`c1`/`c3`) / “Vì sao loại” (`x1`/`x3`) + nghĩa 2 câu đang so. Dữ liệu `R` cùng câu, đáp án, `h`, `v` với trang chính + 6 trường trên, `p` = thẻ.
+  Báo cáo gửi cô: đúng cả 2 bước / không cần gợi ý / sai bước nào. localStorage `nari-1315l`.
 
 ## Học câu 16–18 điền chỗ trống (`cau-16-18/`)
 - Cùng khung với `cau-25-27/`: Buổi 1 (thói quen **đọc qua ô** — 39/65 câu manh mối nằm sau ô; quy trình 3 bước; khung quanh ô → loại ý; tín hiệu ① Đảo chiều, ② Giải thích ở sau),
