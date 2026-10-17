@@ -49,7 +49,12 @@ td.n{font-size:13.5px;color:#444}
 .join{font-size:15px;margin:6px 0}
 .md{font-size:18px;line-height:1.9;padding:10px 12px;border-radius:8px;background:var(--okbg);border:1.5px solid var(--ok);margin:6px 0 4px}
 .md b{color:var(--acc)}
-.vi{font-size:14.5px;color:#444;margin:2px 0 6px;font-style:italic}
+body.hide .card.show .vi{display:block}
+.vi{font-size:15.5px;color:#222;margin:4px 0 6px;padding:6px 10px;background:var(--bluebg);border-left:4px solid var(--blue);border-radius:4px}
+.vi b{color:var(--blue)}
+.mp{color:#1f3c88;background:#dbe6ff;border-radius:3px;padding:0 2px}.mh{color:#1d7a3a;background:#d4f0dc;border-radius:3px;padding:0 2px}.mn{color:#b0283c;background:#ffdbe2;border-radius:3px;padding:0 2px}.mo{color:#6b3a9a;background:#ecdff7;border-radius:3px;padding:0 2px}
+.leg{font-size:13.5px;margin:2px 0 6px;display:flex;flex-wrap:wrap;gap:4px 10px}
+ol.all .vi{font-size:14.5px;margin:2px 0 0}
 .c1{background:#dbe6ff;border-radius:3px}.c2{background:#ffdbe2;border-radius:3px}.c3{background:#d4f0dc;border-radius:3px}.c4{background:#ffeab0;border-radius:3px}
 .btns{display:flex;gap:6px;flex-wrap:wrap;margin:4px 0 0}
 button.b{font:bold 13.5px Arial,sans-serif;padding:5px 11px;border:1px solid var(--line);border-radius:6px;background:var(--sub);color:var(--ink);cursor:pointer}
@@ -76,7 +81,7 @@ footer a{color:var(--muted)}
     <a class="co" href="../../ve-co/"><i>N</i>Về cô</a>
   </div>
   <h1>Câu 53 · Đọc mẫu trước giờ thi</h1>
-  <p class="lead">Phần <b>nguyên nhân · triển vọng · phương án</b>. Mỗi đề: khung đề cho → từng mảnh thành mệnh đề → câu mẫu hoàn chỉnh. Em <b>đọc to câu mẫu 3 lần</b> (bấm 🔊 nghe máy đọc), đọc hết cả trang 2 lượt để thuộc khung. Muốn tự kiểm tra thì bật <b>“Che câu mẫu”</b> rồi tự nói lại trước khi bấm Xem.</p>
+  <p class="lead">Phần <b>nguyên nhân · triển vọng · phương án</b>. Mỗi đề: khung đề cho → từng mảnh thành mệnh đề → câu mẫu hoàn chỉnh. Em <b>đọc to câu mẫu 3 lần</b>, đọc hết cả trang 2 lượt để thuộc khung. Muốn tự kiểm tra thì bật <b>“Che câu mẫu”</b> rồi tự nói lại trước khi bấm Xem.</p>
 </header>
 <nav>
   <a href="#cong-thuc">Công thức</a><a href="#nguyen-nhan">Nguyên nhân</a><a href="#trien-vong">Triển vọng</a><a href="#phuong-an">Phương án</a><a href="#ca-bai">Cả bài</a><a href="#doc-lien">Đọc liền</a>
@@ -105,7 +110,6 @@ Ký hiệu: <b>A → B</b> = A-아/어 B · hai gạch = <b>-고</b> · <b>A &gt
 <h2 id="ca-bai">5. Câu đó nằm ở đâu trong bài? (bài mẫu kỳ 91)</h2>
 <p>Bài 53 thường đi theo thứ tự: <b>mở đầu → số liệu → nguyên nhân → triển vọng</b>. Phần tô vàng là hai câu em vừa học.</p>
 <div class="full ko" id="full"></div>
-<div class="btns"><button class="b blue" data-say="full">🔊 Nghe cả bài</button></div>
 
 <h2 id="doc-lien">6. Đọc liền một lượt (sáng mai đọc lại phần này)</h2>
 <ol class="all ko" id="all"></ol>
@@ -117,107 +121,107 @@ Ký hiệu: <b>A → B</b> = A-아/어 B · hai gạch = <b>-고</b> · <b>A &gt
 var D={
 g1:[
  {t:'Kỳ 96 · 마라톤 대회 참가자 수',box:'원인',lines:['건강 관리에 대한 관심↑ → 달리기 문화 확산','SNS를 통한 마라톤 모임 활성화 → 20~30대 참가자↑'],
-  st:[['건강 관리에 대한 관심↑','건강 관리에 대한 관심이 높아지다','관심 = mức độ → 높아지다'],['달리기 문화 확산','달리기 문화가 확산되다','tự lan rộng → 되다'],['SNS를 통한 마라톤 모임 활성화','SNS를 통한 마라톤 모임이 활성화되다','tự sôi động → 되다'],['20~30대 참가자↑','20~30대 참가자가 증가하다','số người → 증가하다']],
+  st:[["건강 관리에 대한 관심↑", "건강 관리에 대한 관심{p|이} {n|높아지다}", "Giữ nguyên “건강 관리에 대한 관심”, thêm 이 (chủ ngữ). Mũi tên ↑ chưa phải động từ → thêm động từ mới 높아지다 (관심 là mức độ nên dùng “cao lên”)."], ["달리기 문화 확산", "달리기 문화{p|가} 확산{h|되다}", "문화 + 가 (chủ ngữ). 확산 là chữ Hán chỉ biến đổi; văn hóa tự lan rộng, không ai làm → + 되다."], ["SNS를 통한 마라톤 모임 활성화", "SNS를 통한 마라톤 모임{p|이} 활성화{h|되다}", "Giữ nguyên “SNS를 통한”, thêm 이 sau 모임. 활성화 tự xảy ra → + 되다."], ["20~30대 참가자↑", "20~30대 참가자{p|가} {n|증가하다}", "참가자 + 가. Mũi tên ↑ với số người → thêm động từ mới 증가하다."]],
   join:'Mũi tên → thành <b>-아/어</b> (높아<b>져</b>, 활성화되<b>어</b>); hai dòng nối bằng <b>-고</b> (확산되었<b>고</b>).',
   md:'[[이러한 변화의 원인은]] {1|건강 관리에 대한 관심이 높아져} {2|달리기 문화가 확산되었고} {3|SNS를 통한 마라톤 모임이 활성화되어} {4|20~30대 참가자가 증가하였기} [[때문인 것으로 보인다.]]',
   vi:'Nguyên nhân của sự thay đổi này có vẻ là do sự quan tâm đến sức khỏe tăng lên khiến văn hóa chạy bộ lan rộng, và các hội nhóm marathon qua SNS sôi động lên khiến người tham gia tuổi 20–30 tăng.'},
  {t:'Kỳ 91 · 편의점 매출액',box:'원인',lines:['편의점 수↑ → 고객 접근성 향상','소포장 상품 수요 증가'],
-  st:[['편의점 수↑','편의점 수가 증가하다','số lượng → 증가하다'],['고객 접근성 향상','고객 접근성이 향상되다','향상 → luôn 되다'],['소포장 상품 수요 증가','소포장 상품의 수요가 증가하다','증가 → 이/가 + 하다; thêm 의']],
+  st:[["편의점 수↑", "편의점 수{p|가} {n|증가하다}", "수 + 가 (chủ ngữ). ↑ với số lượng → thêm động từ mới 증가하다."], ["고객 접근성 향상", "고객 접근성{p|이} 향상{h|되다}", "접근성 + 이. 향상 là chữ Hán chỉ biến đổi, tự xảy ra → + 되다."], ["소포장 상품 수요 증가", "소포장 상품{p|의} 수요{p|가} 증가{h|하다}", "Thêm 의 nối hai danh từ, 수요 + 가. 증가 chỉ đi với 하다 (không viết 증가되다)."]],
   join:'Mũi tên → <b>-여</b> (증가하<b>여</b>); hai nguyên nhân tách bằng <b>첫째, 둘째</b>.',
   md:'[[이렇게 편의점 매출액이 크게 증가한 원인은 첫째,]] {1|편의점 수가 증가하여} {2|고객 접근성이 향상되고,} [[둘째,]] {3|소포장 상품의 수요가 증가했기} [[때문이다.]]',
   vi:'Nguyên nhân doanh thu cửa hàng tiện lợi tăng mạnh như vậy là: thứ nhất, số cửa hàng tăng nên khách dễ tiếp cận hơn; thứ hai, nhu cầu hàng đóng gói nhỏ tăng.'},
  {t:'Kỳ 102 · 캠핑 인구',box:'원인',lines:['장비의 고급화와 캠핑장 대여료 증가 → 경제력이 요구됨','자녀와의 여가 활동을 위한 가족 단위 캠핑↑'],
-  st:[['장비의 고급화와 캠핑장 대여료 증가','giữ danh từ + (으)로 인해','hai danh từ nối bằng 와 → giữ nguyên, thêm 로 인해'],['경제력이 요구됨','경제력이 요구되다','-ㅁ → chỉ đổi đuôi'],['가족 단위 캠핑↑','가족 단위 캠핑이 증가하다','số lượng → 증가하다']],
+  st:[["장비의 고급화와 캠핑장 대여료 증가", "캠핑 장비의 고급화와 캠핑장 대여료 증가{p|로 인해}", "Hai danh từ nối bằng 와 → giữ nguyên danh từ, không thêm động từ; thêm (으)로 인해 = “vì”."], ["경제력이 요구됨", "경제력이 요구{o|되다}", "Đã có 이 và động từ, chỉ bị rút gọn thành đuôi -ㅁ → đổi 요구됨 thành 요구되다."], ["자녀와의 여가 활동을 위한 가족 단위 캠핑↑", "자녀와의 여가 활동을 위한 가족 단위 캠핑{p|이} {n|증가하다}", "Giữ nguyên phần trước, 캠핑 + 이. ↑ → thêm động từ mới 증가하다."]],
   join:'Danh từ + <b>(으)로 인해</b> = vì…; hai dòng nối bằng <b>-고</b>.',
   md:'[[이렇게 변화한 것은]] {1|캠핑 장비의 고급화와 캠핑장 대여료 증가로 인해} {2|경제력이 요구되었고} {3|자녀와의 여가 활동을 위한 가족 단위 캠핑이 증가하였기} [[때문으로 나타났다.]]',
   vi:'Sự thay đổi này được cho là do thiết bị cắm trại cao cấp hơn và phí thuê khu cắm trại tăng nên đòi hỏi khả năng kinh tế, đồng thời cắm trại theo gia đình để vui chơi cùng con cái tăng lên.'},
  {t:'Kỳ 83 · 인주시의 가구 수',box:'원인',lines:['20대 독립↑','노인 가구↑'],
-  st:[['20대 독립↑','독립하는 20대가 늘어나다','số người làm việc đó tăng'],['노인 가구↑','노인 가구가 증가하다','số hộ → 증가하다']],
+  st:[["20대 독립↑", "{n|독립한} 20대{p|가} {n|늘어나다}", "독립 đổi thành định ngữ 독립한 (đã ra ở riêng) đứng trước 20대; 20대 + 가; ↑ → thêm động từ mới 늘어나다."], ["노인 가구↑", "노인 가구{p|가} {n|증가하다}", "가구 + 가. ↑ với số hộ → thêm động từ mới 증가하다."]],
   join:'Cách ngắn của bài mẫu: <b>… 의 결과로 보인다</b>. Cách dùng khung chung (cũng đúng) ở câu dưới.',
   md:'[[이러한 변화는]] {1|독립한 20대와 노인 가구 증가}[[의 결과로 보인다.]]',
-  md2:'[[이러한 변화의 원인은]] {1|독립하는 20대가 늘어나고} {2|노인 가구가 증가했기} [[때문인 것으로 보인다.]]',
+  md2:'[[이러한 변화의 원인은]] {1|독립하는 20대가 늘어나고} {2|노인 가구가 증가했기} [[때문인 것으로 보인다.]]',vi2:'Nguyên nhân của sự thay đổi này có vẻ là do số thanh niên tuổi 20 ra ở riêng tăng lên và số hộ người cao tuổi tăng.',
   vi:'Sự thay đổi này có vẻ là kết quả của việc thanh niên tuổi 20 ra ở riêng và số hộ người cao tuổi tăng lên.'},
  {t:'영어 사교육 증가',box:'원인',lines:['다양한 교류의 기회가 많음','취업에 유리함'],
-  st:[['다양한 교류의 기회가 많음','다양한 교류의 기회가 많다','-음 → đổi đuôi'],['취업에 유리함','취업에 유리하다','-함 → 하다']],
+  st:[["다양한 교류의 기회가 많음", "다양한 교류의 기회가 많{o|다}", "Đã có 가 và tính từ 많다, chỉ là đuôi -음 rút gọn → đổi thành 많다."], ["취업에 유리함", "취업에 유리{o|하다}", "Đuôi -함 rút gọn → đổi thành 유리하다."]],
   join:'Hai gạch → <b>-고</b>; trước 때문 là tính từ → <b>-기 때문</b>.',
   md:'[[이와 같이 영어 사교육이 증가한 원인은]] {1|다양한 교류의 기회가 많고} {2|취업에 유리하기} [[때문인 것으로 보인다.]]',
   vi:'Nguyên nhân học thêm tiếng Anh tăng như vậy có vẻ là do có nhiều cơ hội giao lưu đa dạng và có lợi khi xin việc.'},
  {t:'외국인 관광객 재방문 감소',box:'이유',lines:['외국인 관광객에게 바가지 요금','불친절한 태도'],
-  st:[['외국인 관광객에게 바가지 요금','외국인 관광객에게 바가지 요금을 받다','chỉ danh từ → thêm 받다'],['불친절한 태도','불친절한 태도를 보이다','chỉ danh từ → thêm 보이다']],
+  st:[["외국인 관광객에게 바가지 요금", "외국인 관광객에게 바가지 요금{p|을} {n|받다}", "Chỉ có danh từ, không có chữ hành động → thêm động từ mới 받다 (thu tiền); 요금 là tân ngữ → + 을."], ["불친절한 태도", "불친절한 태도{p|를} {n|보이다}", "Chỉ có danh từ → thêm động từ mới 보이다 (tỏ ra thái độ); 태도 + 를."]],
   join:'Hai gạch → <b>-고</b>.',
   md:'[[이와 같이 재방문이 감소한 이유는]] {1|외국인 관광객에게 바가지 요금을 받고} {2|불친절한 태도를 보이기} [[때문인 것으로 보인다.]]',
   vi:'Lý do khách nước ngoài ít quay lại như vậy có vẻ là vì bị chặt chém giá và gặp thái độ không thân thiện.'},
  {t:'고독사 증가',box:'이유',lines:['가족이나 이웃과의 교류 단절','경제적인 어려움'],
-  st:[['가족이나 이웃과의 교류 단절','가족이나 이웃과의 교류가 단절되다','tự xảy ra → 이/가 + 되다'],['경제적인 어려움','경제적인 어려움을 겪다','chỉ danh từ → thêm 겪다']],
+  st:[["가족이나 이웃과의 교류 단절", "가족이나 이웃과의 교류{p|가} 단절{h|되다}", "Giữ nguyên “가족이나 이웃과의”, 교류 + 가. 단절 tự xảy ra → + 되다."], ["경제적인 어려움", "경제적인 어려움{p|을} {n|겪다}", "Chỉ có danh từ → thêm động từ mới 겪다 (gặp, trải qua); 어려움 + 을."]],
   join:'Hai gạch → <b>-고</b>.',
   md:'[[이와 같이 고독사가 증가한 이유는]] {1|가족이나 이웃과의 교류가 단절되고} {2|경제적인 어려움을 겪는 사람이 많아졌기} [[때문인 것으로 보인다.]]',
   vi:'Lý do số người chết cô độc tăng như vậy có vẻ là vì giao lưu với gia đình, hàng xóm bị cắt đứt và số người gặp khó khăn kinh tế tăng lên.'},
  {t:'극장 관객 수 감소',box:'원인',lines:['극장 이외의 다양한 플랫폼 증가','영화 이외의 다양한 여가 활동'],
-  st:[['극장 이외의 다양한 플랫폼 증가','극장 이외의 다양한 플랫폼이 증가하다','증가 → 이/가 + 하다'],['영화 이외의 다양한 여가 활동','영화 이외의 다양한 여가 활동을 즐기다','chỉ danh từ → thêm 즐기다']],
+  st:[["극장 이외의 다양한 플랫폼 증가", "극장 이외의 다양한 플랫폼{p|이} 증가{h|하다}", "플랫폼 + 이 (chủ ngữ). 증가 → + 하다."], ["영화 이외의 다양한 여가 활동", "영화 이외의 다양한 여가 활동{p|을} {n|즐기다}", "Chỉ có danh từ → thêm động từ mới 즐기다 (tận hưởng); 활동 + 을."]],
   join:'Cách tách 2 câu: <b>…다음과 같다. 첫째, … 둘째, …</b>',
   md:'[[이러한 감소의 원인은 다음과 같다. 첫째,]] {1|극장 이외의 다양한 플랫폼이 증가했기} [[때문이다. 둘째,]] {2|영화 이외의 다양한 여가 활동을 즐기는 사람이 많아졌기} [[때문이다.]]',
   vi:'Nguyên nhân của sự giảm này như sau. Thứ nhất, các nền tảng ngoài rạp chiếu tăng lên. Thứ hai, số người tận hưởng các hoạt động giải trí khác ngoài phim ảnh tăng lên.'}
 ],
 g2:[
  {t:'Kỳ 83 · 인주시의 가구 수',box:'전망',lines:['2040년 1인 가구 43% 이상'],
-  st:[['1인 가구 43% 이상','1인 가구가 43% 이상이 되다','이상 là danh từ → thêm 되다']],
+  st:[["1인 가구 43% 이상", "1인 가구{p|가} 43% 이상{p|이} {n|되다}", "가구 + 가 (chủ ngữ). 이상 là danh từ → thêm 이 + động từ mới 되다 (trở thành). Sang Bước 2 mới chia tương lai: 될 것으로."]],
   join:'Năm + <b>에는</b>; tương lai <b>-(으)ㄹ 것으로 전망된다</b> hoặc <b>-(으)ㄹ 전망이다</b>.',
   md:'[[이러한 추세가 계속된다면]] {1|2040년에는} {2|1인 가구가 43% 이상이 될} [[것으로 전망된다.]]',
-  md2:'{1|2040년에는} {2|1인 가구가 43% 이상이 될} [[전망이다.]] (bài mẫu đề thật)',
+  md2:'{1|2040년에는} {2|1인 가구가 43% 이상이 될} [[전망이다.]] (bài mẫu đề thật)',vi2:'Dự báo đến năm 2040, hộ một người sẽ chiếm từ 43% trở lên.',
   vi:'Nếu xu hướng này tiếp tục, dự báo đến năm 2040 hộ một người sẽ chiếm từ 43% trở lên.'},
  {t:'Kỳ 91 · 편의점 매출액',box:'전망',lines:['2023년 매출액 편의점 > 대형 마트'],
-  st:[['편의점 > 대형 마트','편의점의 매출액이 대형 마트를 넘어서다','dấu > → A이/가 B을/를 넘어서다']],
+  st:[["편의점 > 대형 마트", "편의점의 매출액{p|이} 대형 마트{p|를} {n|넘어서다}", "Dấu > chưa phải động từ → thêm 넘어서다 (vượt qua). Bên lớn hơn + 이/가, bên bị vượt + 을/를."]],
   join:'Dấu <b>&gt;</b> → <b>넘어설 / 앞지를</b> 것으로 전망된다.',
   md:'[[이런 추세로 볼 때]] {1|2023년에는} {2|편의점의 매출액이 대형 마트를 넘어설} [[것으로 전망된다.]]',
   vi:'Với xu hướng này, dự báo năm 2023 doanh thu cửa hàng tiện lợi sẽ vượt qua siêu thị lớn.'},
  {t:'1인 가구 수',box:'기대 (2045년)',lines:['1인 가구 810만 가구'],
-  st:[['1인 가구 810만 가구','1인 가구가 810만 가구에 이르다','số cụ thể → -에 이르다']],
+  st:[["1인 가구 810만 가구", "1인 가구{p|가} 810만 가구{p|에} {n|이르다}", "가구 + 가. Con số đạt tới → số + 에 + động từ mới 이르다 (đạt đến)."]],
   join:'Đề ghi <b>기대</b> → <b>기대된다</b>; ghi <b>전망</b> → <b>전망된다</b>.',
   md:'[[이러한 영향이 계속된다면]] {1|2045년에는} {2|1인 가구가 810만 가구에 이를} [[것으로 기대된다.]]',
   vi:'Nếu ảnh hưởng này tiếp tục, đến năm 2045 số hộ một người được kỳ vọng sẽ đạt 8,1 triệu hộ.'},
  {t:'전기차 보급',box:'기대 (2055년)',lines:['전기차 보급 250,000대'],
-  st:[['전기차 보급 250,000대','전기차 보급이 25만 대에 이르다','số → -에 이르다 (250,000 = 25만)']],
+  st:[["전기차 보급 250,000대", "전기차 보급{p|이} 25만 대{p|에} {n|이르다}", "보급 + 이. 250,000 = 25만. Số + 에 + 이르다."]],
   join:'',md:'[[이러한 영향이 계속된다면]] {1|2055년에는} {2|전기차 보급이 25만 대에 이를} [[것으로 기대된다.]]',
   vi:'Nếu ảnh hưởng này tiếp tục, đến năm 2055 số xe điện được phổ biến kỳ vọng sẽ đạt 250.000 chiếc.'},
  {t:'재활용 산업 시장',box:'기대 (2030년)',lines:['재활용 산업 시장 40조 원'],
-  st:[['재활용 산업 시장 40조 원','재활용 산업 시장이 40조 원에 이르다','tiền → -에 이르다 / 규모로 성장하다']],
+  st:[["재활용 산업 시장 40조 원", "재활용 산업 시장{p|이} 40조 원 규모{p|로} {n|성장하다}", "시장 + 이. Tiền/quy mô → 규모로 + động từ mới 성장하다 (lớn lên). Viết 40조 원에 이르다 cũng đúng."]],
   join:'',md:'[[이러한 영향이 계속된다면]] {1|2030년에는} {2|재활용 산업 시장이 40조 원 규모로 성장할} [[것으로 기대된다.]]',
   vi:'Nếu ảnh hưởng này tiếp tục, đến năm 2030 thị trường ngành tái chế được kỳ vọng sẽ tăng lên quy mô 40 nghìn tỷ won.'},
  {t:'남성 육아 휴직자',box:'전망 (2035년)',lines:['남성 육아 휴직자 5만 명'],
-  st:[['남성 육아 휴직자 5만 명','남성 육아 휴직자가 5만 명에 이르다','số người → -에 이르다']],
+  st:[["남성 육아 휴직자 5만 명", "남성 육아 휴직자{p|가} 5만 명{p|에} {n|이르다}", "휴직자 + 가. Số người + 에 + 이르다."]],
   join:'',md:'[[이러한 추세가 계속된다면]] {1|2035년에는} {2|남성 육아 휴직자가 5만 명에 이를} [[것으로 전망된다.]]',
   vi:'Nếu xu hướng này tiếp tục, dự báo đến năm 2035 số nam giới nghỉ phép chăm con sẽ đạt 50.000 người.'},
  {t:'온라인 쇼핑 매출액',box:'전망 (2024년)',lines:['온라인 쇼핑 매출액 56.2%'],
-  st:[['온라인 쇼핑 매출액 56.2%','온라인 쇼핑 매출액이 56.2%에 달하다','% → -에 달하다']],
+  st:[["온라인 쇼핑 매출액 56.2%", "온라인 쇼핑 매출액{p|이} 전체의 56.2%{p|에} {n|달하다}", "매출액 + 이. Phần trăm → % + 에 + 달하다 (đạt mức); thêm 전체의 (của toàn bộ) cho rõ."]],
   join:'',md:'[[이러한 추세가 계속된다면]] {1|2024년에는} {2|온라인 쇼핑 매출액이 전체의 56.2%에 달할} [[것으로 전망된다.]]',
   vi:'Nếu xu hướng này tiếp tục, dự báo năm 2024 doanh thu mua sắm trực tuyến sẽ chiếm tới 56,2% tổng doanh thu.'},
  {t:'노인 인구와 청소년 인구 (đề cô soạn)',box:'전망',lines:['2030년 노인 인구 > 청소년 인구'],
-  st:[['노인 인구 > 청소년 인구','노인 인구가 청소년 인구를 넘어서다','dấu > → 넘어서다']],
+  st:[["노인 인구 > 청소년 인구", "노인 인구{p|가} 청소년 인구{p|를} {n|넘어서다}", "Dấu > → thêm 넘어서다. Bên lớn hơn + 가, bên bị vượt + 를."]],
   join:'',md:'[[이런 추세로 볼 때]] {1|2030년에는} {2|노인 인구가 청소년 인구를 넘어설} [[것으로 전망된다.]]',
   vi:'Với xu hướng này, dự báo năm 2030 dân số người cao tuổi sẽ vượt dân số thanh thiếu niên.'}
 ],
 g3:[
  {t:'남성 육아 휴직 이용률이 낮다',box:'해결 방안',lines:['정부 지원 확대','육아 휴직에 대한 사회 인식 개선'],
-  st:[['정부 지원 확대','정부가 지원을 확대하다','người làm → 을/를 + 하다'],['사회 인식 개선','사회의 인식을 개선하다','người làm → 을/를 + 하다']],
+  st:[["정부 지원 확대", "정부{p|가} 지원{p|을} 확대{h|하다}", "Có người làm (정부): 정부 + 가, 지원 + 을 (tân ngữ), 확대 + 하다. Đã có 을 thì không dùng 되다."], ["육아 휴직에 대한 사회 인식 개선", "육아 휴직에 대한 사회{p|의} 인식{p|을} 개선{h|하다}", "Việc phải làm → 인식 + 을, 개선 + 하다; 사회 + 의 nối hai danh từ."]],
   join:'Hai việc nối bằng <b>-고</b>, cuối câu <b>-아/어야 할 것이다</b>.',
   md:'[[이러한 문제를 해결하기 위해서는]] {1|정부가 지원을 확대하고} {2|육아 휴직에 대한 사회의 인식을 개선해야} [[할 것이다.]]',
   vi:'Để giải quyết vấn đề này, nhà nước cần mở rộng hỗ trợ và cải thiện nhận thức của xã hội về nghỉ phép chăm con.'},
  {t:'전동 킥보드 사고가 늘고 있다',box:'과제',lines:['이용자 안전 교육 강화','관련 법 마련'],
-  st:[['이용자 안전 교육 강화','이용자 안전 교육을 강화하다','người làm → 을/를 + 하다'],['관련 법 마련','관련 법을 마련하다','người làm → 을/를 + 하다']],
+  st:[["이용자 안전 교육 강화", "이용자 안전 교육{p|을} 강화{h|하다}", "Việc phải làm → 교육 + 을, 강화 + 하다."], ["관련 법 마련", "관련 법{p|을} 마련{h|하다}", "Việc phải làm → 법 + 을, 마련 + 하다."]],
   join:'Kiểu tách: <b>첫째, -아/어야 하며, 둘째, -(으)ㄹ 필요가 있다</b>.',
   md:'[[이를 위해서는 첫째,]] {1|이용자 안전 교육을 강화해야} [[하며, 둘째,]] {2|관련 법을 마련할} [[필요가 있다.]]',
   vi:'Để làm được điều đó, thứ nhất cần tăng cường giáo dục an toàn cho người dùng, thứ hai cần xây dựng luật liên quan.'},
  {t:'생활 쓰레기가 계속 늘고 있다',box:'대책',lines:['일회용품 사용 줄이기','재활용 시설 확충'],
-  st:[['일회용품 사용 줄이기','일회용품 사용을 줄이다','-기 → đổi lại -다'],['재활용 시설 확충','재활용 시설을 확충하다','người làm → 을/를 + 하다']],
+  st:[["일회용품 사용 줄이기", "일회용품 사용{p|을} 줄이{o|다}", "줄이기 là động từ ở dạng -기 → đổi lại 줄이다; 사용 + 을."], ["재활용 시설 확충", "재활용 시설{p|을} 확충{h|하다}", "Việc phải làm → 시설 + 을, 확충 + 하다."]],
   join:'Kiểu ngắn: <b>따라서 A-고 B-는 노력이 필요하다</b>.',
   md:'[[따라서]] {1|일회용품 사용을 줄이고} {2|재활용 시설을 확충하는} [[노력이 필요하다.]]',
   vi:'Vì vậy cần nỗ lực giảm dùng đồ dùng một lần và mở rộng cơ sở tái chế.'},
  {t:'지역을 찾는 관광객이 줄고 있다',box:'방안',lines:['다양한 지역 축제 개발','교통 편의 개선'],
-  st:[['다양한 지역 축제 개발','다양한 지역 축제를 개발하다','người làm → 을/를 + 하다'],['교통 편의 개선','교통 편의를 개선하다','người làm → 을/를 + 하다']],
+  st:[["다양한 지역 축제 개발", "다양한 지역 축제{p|를} 개발{h|하다}", "Việc phải làm → 축제 + 를, 개발 + 하다."], ["교통 편의 개선", "교통 편의{p|를} 개선{h|하다}", "Việc phải làm → 편의 + 를, 개선 + 하다."]],
   join:'',md:'[[이러한 문제를 해결하기 위해서는]] {1|다양한 지역 축제를 개발하고} {2|교통 편의를 개선해야} [[할 것이다.]]',
   vi:'Để giải quyết vấn đề này, cần phát triển nhiều lễ hội địa phương đa dạng và cải thiện sự thuận tiện giao thông.'},
  {t:'고독사가 늘고 있다',box:'해결 방안',lines:['노인 일자리 확대','돌봄 서비스 확충'],
-  st:[['노인 일자리 확대','노인 일자리를 확대하다','người làm → 을/를 + 하다'],['돌봄 서비스 확충','돌봄 서비스를 확충하다','người làm → 을/를 + 하다']],
+  st:[["노인 일자리 확대", "노인 일자리{p|를} 확대{h|하다}", "Việc phải làm → 일자리 + 를, 확대 + 하다."], ["돌봄 서비스 확충", "돌봄 서비스{p|를} 확충{h|하다}", "Việc phải làm → 서비스 + 를, 확충 + 하다."]],
   join:'',md:'[[이러한 문제를 해결하기 위해서는]] {1|노인 일자리를 확대하고} {2|돌봄 서비스를 확충할} [[필요가 있다.]]',
   vi:'Để giải quyết vấn đề này, cần mở rộng việc làm cho người cao tuổi và mở rộng dịch vụ chăm sóc.'}
 ]};
@@ -229,28 +233,28 @@ var FULL=[['Mở đầu + đối tượng 1','산업경제연구소의 조사에
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
 function fmt(s){return esc(s).replace(/\{(\d)\|([^}]*)\}/g,'<span class="c$1">$2</span>').replace(/\[\[([^\]]*)\]\]/g,'<b>$1</b>');}
 function plain(s){return s.replace(/\{\d\|([^}]*)\}/g,'$1').replace(/\[\[([^\]]*)\]\]/g,'$1').replace(/\s*\(bài mẫu đề thật\)/,'');}
-var SAY=[],ALL=[];
+var ALL=[];
+var MK={p:'mp',h:'mh',n:'mn',o:'mo'};
+function mk(s){return esc(s).replace(/\{([phno])\|([^}]*)\}/g,function(_,k,x){return '<span class="'+MK[k]+'">'+x+'</span>';});}
+var LEG='<div class="leg"><span class="mp">tiểu từ thêm vào</span><span class="mh">+ 하다 / 되다</span><span class="mn">động từ mới thêm vào</span><span class="mo">đổi đuôi</span></div>';
 function card(x,i,g){
-  var id=g+'-'+i;SAY[id]=plain(x.md);ALL.push(x.md);
+  var id=g+'-'+i;ALL.push([x.md,x.vi]);
   var h='<div class="card" id="C'+id+'"><div class="hd"><span>'+(i+1)+'. '+esc(x.t)+'</span><small>'+(/Kỳ/.test(x.t)?'Đề thật':'Đề luyện')+'</small></div><div class="bd">';
   h+='<div class="dbox"><b>'+esc(x.box)+'</b><br>'+x.lines.map(esc).join('<br>')+'</div>';
-  h+='<div class="lbl">Bước 1 · Mảnh → mệnh đề</div><div class="scroll"><table><tr><th>Đề cho</th><th>Viết thành</th><th>Vì sao</th></tr>'+
-     x.st.map(function(r){return '<tr><td class="k">'+esc(r[0])+'</td><td class="k"><b>'+esc(r[1])+'</b></td><td class="n">'+esc(r[2])+'</td></tr>';}).join('')+'</table></div>';
+  h+='<div class="lbl">Bước 1 · Mảnh → mệnh đề</div>'+LEG+'<div class="scroll"><table><tr><th>Đề cho</th><th>Viết thành</th><th>Giải thích</th></tr>'+
+     x.st.map(function(r){return '<tr><td class="k">'+esc(r[0])+'</td><td class="k"><b>'+mk(r[1])+'</b></td><td class="n">'+esc(r[2])+'</td></tr>';}).join('')+'</table></div>';
   if(x.join)h+='<p class="join">'+x.join+'</p>';
   h+='<div class="lbl s2">Bước 2 · Câu mẫu — đọc to 3 lần</div><div class="md">'+fmt(x.md)+'</div>';
-  if(x.md2){SAY[id+'b']=plain(x.md2);h+='<div class="md">'+fmt(x.md2)+'</div>';}
-  h+='<p class="vi">'+esc(x.vi)+'</p>';
-  h+='<div class="btns"><button class="b blue" data-say="'+id+'">🔊 Nghe</button>'+(x.md2?'<button class="b" data-say="'+id+'b">🔊 Câu 2</button>':'')+'<button class="b peek" data-peek="'+id+'">Xem câu mẫu</button></div>';
+  h+='<p class="vi"><b>Nghĩa:</b> '+esc(x.vi)+'</p>';
+  if(x.md2)h+='<div class="md">'+fmt(x.md2)+'</div><p class="vi"><b>Nghĩa câu 2:</b> '+esc(x.vi2||'')+'</p>';
+  h+='<div class="btns"><button class="b peek" data-peek="'+id+'">Xem câu mẫu</button></div>';
   return h+'</div></div>';
 }
 ['g1','g2','g3'].forEach(function(g){document.getElementById(g).innerHTML=D[g].map(function(x,i){return card(x,i,g);}).join('');});
 document.getElementById('full').innerHTML=FULL.map(function(f){return '<span class="tag">'+esc(f[0])+'</span><span'+(f[2]?' class="on"':'')+'>'+esc(f[1])+'</span> ';}).join('');
-SAY.full=FULL.map(function(f){return f[1];}).join(' ');
-document.getElementById('all').innerHTML=ALL.map(function(s,i){SAY['a'+i]=plain(s);return '<li>'+fmt(s)+' <button class="b" data-say="a'+i+'">🔊</button></li>';}).join('');
-var VO=null;function voice(){if(VO)return VO;var v=speechSynthesis.getVoices().filter(function(x){return /^ko/i.test(x.lang);});VO=v[0]||null;return VO;}
+document.getElementById('all').innerHTML=ALL.map(function(s){return '<li>'+fmt(s[0])+'<p class="vi">'+esc(s[1])+'</p></li>';}).join('');
 document.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;
-  if(b.dataset.say){if(!window.speechSynthesis)return alert('Máy em không có giọng đọc.');speechSynthesis.cancel();var u=new SpeechSynthesisUtterance(SAY[b.dataset.say]);u.lang='ko-KR';u.rate=.85;var v=voice();if(v)u.voice=v;speechSynthesis.speak(u);}
-  else if(b.dataset.peek){document.getElementById('C'+b.dataset.peek).classList.toggle('show');}
+  if(b.dataset.peek){document.getElementById('C'+b.dataset.peek).classList.toggle('show');}
 });
 var hd=document.getElementById('hide');
 try{hd.checked=localStorage.getItem('nari-53mau-hide')==='1';}catch(e){}

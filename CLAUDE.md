@@ -391,7 +391,7 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   `TK` (đề viết câu: `fr` = mảnh + đáp án hoặc id `FR1`, `md` = câu mẫu; so câu bằng LCS từng chữ, học sinh tự chấm). Đề thật kỳ 83, 91, 96, 102 lấy từ
   `thi-thu/viet/W53_*.json`; đề phương án là câu tự soạn (4 đề thật chưa có ô 방안). localStorage `nari-53`. Kết quả Buổi 1–3 gửi cô bằng chia sẻ đoạn chữ.
 - `viet-53/mau/` **Đọc mẫu trước giờ thi** (chỉ đọc, không chấm): 3 công thức, 8 đề nguyên nhân + 8 triển vọng + 5 phương án (biến `D.g1/g2/g3`:
-  khung đề → bảng mảnh → mệnh đề → câu mẫu `md` tô màu `{n|…}` / khung `[[…]]` + nghĩa Việt), bài mẫu kỳ 91 cả bài, “Đọc liền”, 🔊 máy đọc, “Che câu mẫu”.
+  khung đề → bảng mảnh → mệnh đề → câu mẫu `md` tô màu `{n|…}` / khung `[[…]]` + nghĩa Việt), bài mẫu kỳ 91 cả bài, “Đọc liền”, “Che câu mẫu”. Bảng Bước 1 tô màu phần thêm vào: `{p|…}` tiểu từ, `{h|…}` 하다/되다, `{n|…}` động từ mới, `{o|…}` đổi đuôi; mỗi câu mẫu có “Nghĩa:”. Không có loa (cô bỏ).
 
 ## Học câu 1–2 ngữ pháp trong 4 buổi (`ngu-phap-12/`)
 - Cùng khung với `viet-52/`, học theo **cặp dễ nhầm**: Buổi 1 đuôi nối thời gian/trình tự/lựa chọn (+ quy trình 3 bước), Buổi 2 mục đích/điều kiện/
