@@ -150,7 +150,7 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   ArtifactData `list` `wbank` với `out_dir` → `python3 tools/sync_viet.py <dump>` → commit + push.
 - **So với bài mẫu tại chỗ, không gọi Claude** (không tốn token; cô không muốn bước gửi Claude chấm): `wCmp(câu em, câu mẫu)` so từng chữ
   (bỏ qua dấu cách, LCS) → chữ khác bài mẫu tô vàng gạch sóng (`mark.wdm`), chữ bài mẫu có mà học sinh thiếu tô xanh (`mark.wdk`), kèm % giống.
-  53/54: câu thứ j của học sinh so với câu mẫu thứ j (không gắn ý; `x.b` = j), học sinh viết dính/tách khác thì cô “Sửa cách tách câu” cho khớp;
+  53/54: mỗi câu học sinh có ô “So với câu mẫu” (`x.b` = số thứ tự câu mẫu, -1 = không so; mặc định câu j ↔ câu mẫu j; nhiều câu cùng chọn một câu mẫu = gộp so cả cụm; `ev.bm:1` / link `#s=` item `bm:1` đánh dấu `x.b` do cô chọn — bài/link cũ không có `bm` thì vẫn câu j ↔ câu mẫu j), học sinh viết dính câu thì cô “Sửa cách tách câu”;
   trang chấm hiện câu đã tô + câu mẫu cùng số + số câu so với bài mẫu; 51/52 so với
   cách viết mẫu gần nhất (`wBest`). Sửa câu, nhãn lỗi, nhận xét từng câu (`x.n`) / từng ô (`ev:[{i, nt:[㉠,㉡]}]`), tiến bộ (`tb`) là tùy cô.
 - Bảng sửa bài `#s=` (gửi học sinh) = bảng đối chiếu từng câu **# ý | Bài mẫu | Em viết | Nhận xét** (tô màu theo `wCmp`; cột Nhận xét chỉ hiện khi cô có ghi;

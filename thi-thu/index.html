@@ -2254,7 +2254,7 @@ function wsRender(r, src){
   wShell(h);
 }
 function wsLongHTML(it, w, y){
-  var text = (it.a || [])[0] || "", rub = W_RUB[y] || [], blocks = wModelSents(w), xs = wByIdx(it.x), h = "";
+  var text = (it.a || [])[0] || "", rub = W_RUB[y] || [], blocks = wModelSents(w), xs = it.bm ? (it.x || []).map(function(x, j){ return Object.assign({}, x, {b:x.b == null ? j : +x.b}); }) : wByIdx(it.x), h = "";
   if(rub.length) h += '<div class="scroll"><table class="tbl wst"><thead><tr><th>Tiêu chí</th><th>Điểm</th></tr></thead><tbody>' +
     rub.map(function(c, j){ var v = (it.r || [])[j]; return '<tr><td>' + esc(c[1]) + ' <span class="muted">· ' + esc(c[2]) + '</span></td><td><b>' + (v == null ? "–" : v) + '</b>/' + c[3] + '</td></tr>'; }).join("") +
     '<tr><td><b>Tổng câu ' + y + '</b></td><td><b>' + (it.r || []).reduce(function(s, v){ return s + (+v || 0); }, 0) + '</b>/' + wMaxOf(y) + '</td></tr></tbody></table></div>';
@@ -2641,3 +2641,4 @@ appRun();
 </script>
 </body>
 </html>
+
