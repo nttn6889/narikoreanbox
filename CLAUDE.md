@@ -413,6 +413,15 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   `x[i]` = bẫy của đáp án sai (`C` chép chữ, `N` ngược chiều, `T` bài không nói, `P` lệch) do Claude soạn. Khối “Làm mẫu” = `<div class="demo" data-id>`.
   `MCQ` câu tự soạn (lựa chọn đầu là đáp án, trang tự đảo). Bài lưu localStorage `nari-1618`.
 
+## Học câu 19–20 phó từ nối + chủ đề (`cau-19-20/`)
+- Cùng khung với `cau-16-18/`, mỗi bài = 1 đoạn văn + câu 19 + câu 20 (câu 20 mở sau khi làm câu 19). Chiến thuật rút từ 22 đề: Bước 1 **Tìm cặp**
+  (phó từ đi cặp như 비록/만약/과연/어쩌면/차라리… mà cuối câu không có đuôi thì gạch ✕; 7/22 bài ra đáp án chỉ bằng bước này, cả kỳ 83, 91),
+  Bước 2 **Xét quan hệ** câu trước + câu có ô (오히려 = đảo dự đoán, 반면 = hai đối tượng, 그러나 = trái ý, kết luận, thêm, chuyển ý), câu 20 chủ đề nằm ở
+  câu có ô hoặc câu cuối (7/7). Buổi 1 (6 bài), Buổi 2 (10), Buổi 3 như thi (6, 1:30/bài), Ôn (6 bài/lượt), thẻ “22 bài”, Bảng tra. Link `cau-19-20/#b=1|2|3|on|all|tra`, `#b=all&q=<id đề>`.
+- Biến `R` (id = id đề): `p`, `o`, `a`, `k` (quan hệ C O B G K T H), `c` (chỗ quyết định câu 19, tô vàng), `w`, `x[i]` (lỗi P thiếu cặp / N sai chiều / S sai sắc thái / M không hợp),
+  `t` (J chủ đề / D nội dung khớp), `s`, `o2`, `a2`, `c2` (tô xanh), `w2`, `x2[i]` (H chi tiết hẹp / C chép chữ / N ngược / T không nói / A quá mức), `z` (vị trí đáp án chủ đề), `p1`, `mid`.
+  Đáp án lấy từ `bank`, riêng `Etk091` dùng đáp án đúng ③ 비록 / ① (trong `bank` đang ghi sai ① / ③). `MCQ` câu tự soạn (lựa chọn đầu là đáp án). localStorage `nari-1920`.
+
 ## Học câu 25–27 tiêu đề báo (`cau-25-27/`)
 - Cùng khung với `ngu-phap-34/`: Buổi 1 (luật rút gọn của tiêu đề, quan hệ hai nửa, chữ cuối → thời điểm, quy trình 4 bước, 6 bẫy), Buổi 2 (ẩn dụ/quán ngữ theo nhóm nghĩa, biến `GL`),
   Buổi 3 (làm như thi, 40 giây/câu), Ôn (ôn ngắt quãng 10 câu), thẻ “63 câu” (giải thích từng câu, lọc theo buổi/quan hệ, “Che đáp án”), Bảng tra. Link `cau-25-27/#b=1|2|3|on|all|tra`, `#b=all&q=<id>`.
