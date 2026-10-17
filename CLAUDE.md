@@ -405,6 +405,14 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - Biến `R` = 60 câu 3–4 từ `thi-thu/de/*.json` (bỏ Ehot1old, Entk3 câu 3 trùng Entk1) + đáp án `a` + giải thích `w` do Claude soạn; `MCQ` câu tự soạn
   (lựa chọn đầu là đáp án). Bài lưu localStorage `nari-34`.
 
+## Học câu 16–18 điền chỗ trống (`cau-16-18/`)
+- Cùng khung với `cau-25-27/`: Buổi 1 (thói quen **đọc qua ô** — 39/65 câu manh mối nằm sau ô; quy trình 3 bước; khung quanh ô → loại ý; tín hiệu ① Đảo chiều, ② Giải thích ở sau),
+  Buổi 2 (③ Ví dụ → tên chung, ④ Kết luận, ⑤ Nói lại; 4 bẫy), Buổi 3 (làm như thi, 1 phút/câu), Ôn (ôn ngắt quãng 10 câu), thẻ “65 câu”, Bảng tra. Link `cau-16-18/#b=1|2|3|on|all|tra`, `#b=all&q=<id>`.
+- Biến `R` = 65 câu 16–18 của 22 đề đọc (đoạn văn + lựa chọn từ `thi-thu/de/*.json`; bỏ Ehot3 câu 17 vì cần hiểu biết văn hóa ngoài bài). Đáp án `a` đối chiếu với `bank` (khớp 65/65);
+  tín hiệu `k` (D S V K L), vị trí manh mối `s` (t trước / s sau / h cả hai), `c` = chữ manh mối (phải có đúng trong đoạn văn, trang tô vàng), `t` ô cần gì, giải thích `w`,
+  `x[i]` = bẫy của đáp án sai (`C` chép chữ, `N` ngược chiều, `T` bài không nói, `P` lệch) do Claude soạn. Khối “Làm mẫu” = `<div class="demo" data-id>`.
+  `MCQ` câu tự soạn (lựa chọn đầu là đáp án, trang tự đảo). Bài lưu localStorage `nari-1618`.
+
 ## Học câu 25–27 tiêu đề báo (`cau-25-27/`)
 - Cùng khung với `ngu-phap-34/`: Buổi 1 (luật rút gọn của tiêu đề, quan hệ hai nửa, chữ cuối → thời điểm, quy trình 4 bước, 6 bẫy), Buổi 2 (ẩn dụ/quán ngữ theo nhóm nghĩa, biến `GL`),
   Buổi 3 (làm như thi, 40 giây/câu), Ôn (ôn ngắt quãng 10 câu), thẻ “63 câu” (giải thích từng câu, lọc theo buổi/quan hệ, “Che đáp án”), Bảng tra. Link `cau-25-27/#b=1|2|3|on|all|tra`, `#b=all&q=<id>`.
