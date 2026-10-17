@@ -405,6 +405,16 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - Biến `R` = 60 câu 3–4 từ `thi-thu/de/*.json` (bỏ Ehot1old, Entk3 câu 3 trùng Entk1) + đáp án `a` + giải thích `w` do Claude soạn; `MCQ` câu tự soạn
   (lựa chọn đầu là đáp án). Bài lưu localStorage `nari-34`.
 
+## Học câu 13–15 sắp xếp câu (`cau-13-15/`)
+- Chiến thuật rút từ 66 câu của 22 đề đọc: 65/66 câu 4 đáp án chỉ có 2 câu đầu → chọn câu đầu (loại câu có **dấu bám**: từ nối, từ chỉ, câu lý do `때문이다`/`-ㄴ 것이다`;
+  cả hai sạch thì phép thử “đứng một mình” + 4 kiểu câu đầu G/H/Q/T) → còn 2 đáp án, so đúng **một vị trí** (vị trí 2: 46, vị trí 3: 19). Câu đầu đúng không bao giờ có dấu bám (66/66).
+  Đề thật kỳ 83, 91: 5/6 câu bị loại không có dấu bám.
+- Buổi 1 (dấu bám, 18 câu làm từng bước), Buổi 2 (hai câu đều sạch, nối đuôi / thời gian, bẫy định nghĩa đứng sau hiện tượng, 20 câu từng bước), Buổi 3 (28 câu như thi, 1 phút/câu,
+  báo sai ở bước câu đầu hay bước 3), Ôn (ôn ngắt quãng 10 câu), thẻ “66 câu”, Bảng tra. Link `cau-13-15/#b=1|2|3|on|all|tra`, `#b=all&q=<id>`.
+- Biến `R` (66 câu, câu + đáp án lấy từ `thi-thu/de/*.json` và `bank` — đáp án `a` theo `bank`): `o` = 4 đáp án dạng `"나가다라"`, `f` kiểu câu đầu, `m` vì sao câu kia không đứng đầu
+  (N C L K), `k` tín hiệu bước 3 (C L N K T D), `h` = chữ được tô theo từng câu (phải có đúng trong câu), `v` nghĩa tiếng Việt, `r`/`w` giải thích bước câu đầu / bước 3 do Claude soạn.
+  Bước làm tự tính từ `o` (`stepsOf`). `MCQ` câu tự soạn (lựa chọn đầu là đáp án). Bài lưu localStorage `nari-1315`.
+
 ## Học câu 16–18 điền chỗ trống (`cau-16-18/`)
 - Cùng khung với `cau-25-27/`: Buổi 1 (thói quen **đọc qua ô** — 39/65 câu manh mối nằm sau ô; quy trình 3 bước; khung quanh ô → loại ý; tín hiệu ① Đảo chiều, ② Giải thích ở sau),
   Buổi 2 (③ Ví dụ → tên chung, ④ Kết luận, ⑤ Nói lại; 4 bẫy), Buổi 3 (làm như thi, 1 phút/câu), Ôn (ôn ngắt quãng 10 câu), thẻ “65 câu”, Bảng tra. Link `cau-16-18/#b=1|2|3|on|all|tra`, `#b=all&q=<id>`.
