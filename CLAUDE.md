@@ -96,6 +96,8 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 
 ## Lưu ý
 - Repo không được chứa tên, điểm, nhận xét của học sinh.
+- **Mỗi lần làm trang học liệu mới** (site hoặc claude.ai): tự thêm link vào trang “Mục lục học liệu Nari” (https://claude.ai/artifact/6bTfJWsvsCeMrmggceXPjQ,
+  mảng `L` theo lớp → nhóm; Artifact `read` → sửa → `publish` với `url`, đổi ngày “cập nhật”), trang cũ đã gộp thì ghi chú “Bản cũ, đã gộp vào …”, trang đã xóa thì bỏ dòng.
 
 ## Logo Nari TOPIK (`logo/`) — bản cô đã chốt
 - Tên **Nari TOPIK**, khẩu hiệu **Hiểu từng câu – Vững từng cấp**. Biểu tượng: tháp Namsan (chóp đỏ, chân là ngòi bút) cắm vào quyển sách mở
