@@ -1,0 +1,30 @@
+/* Bộ ảnh "Đề viết TOPIK II kỳ 108" (1080×1350), dùng cùng base.css */
+.eye{margin-top:22px}
+h1{font-size:64px;margin-top:8px}
+.q{margin-top:22px;padding:26px 34px}
+.q .h{font-size:22px;font-weight:700;color:var(--dim);letter-spacing:.3px}
+.q .p{font-size:28px;line-height:1.62;margin-top:10px;font-weight:500}
+.q .p .bl{display:inline-block;background:var(--vs);color:var(--v);font-weight:800;border-radius:10px;padding:0 14px;margin:0 2px}
+.q .ti{font-size:28px;font-weight:800;color:var(--v)}
+.an{margin-top:20px;padding:22px 34px 24px;border-left:12px solid var(--v)}
+.an+.an{margin-top:16px}
+.an .k{display:flex;align-items:baseline;gap:18px}
+.an .k .m{font-size:34px;font-weight:900;color:#fff;background:var(--v);border-radius:14px;padding:2px 16px;flex:none}
+.an .k .a{font-size:40px;font-weight:900;color:var(--v)}
+.an .alt{margin-top:12px;font-size:25px;line-height:1.5}
+.an .alt b{color:var(--g)}
+.an .alt span{display:inline-block;background:var(--gs);border-radius:10px;padding:2px 14px;margin:4px 6px 0 0;font-weight:700}
+.an .why{margin-top:10px;font-size:23px;line-height:1.5;color:var(--dim)}
+.an .why u{text-decoration:none;font-weight:700;color:var(--ink);background:linear-gradient(transparent 58%,#F6DE9C 58%)}
+.tip{margin-top:18px;padding:18px 30px;background:var(--gs);border-radius:22px;font-size:23px;line-height:1.5;color:#6E4F0A}
+.tip b{color:#9A6F12}
+.essay{margin-top:20px;padding:26px 34px;font-size:27px;line-height:1.75;font-weight:500;word-break:keep-all}
+.essay p{text-indent:1.1em}
+.essay p+p{margin-top:12px}
+.essay mark{background:var(--vs);color:var(--v);font-weight:800;border-radius:6px;padding:0 4px}
+.essay em{font-style:normal;background:linear-gradient(transparent 58%,#F6DE9C 58%);font-weight:700}
+.meta{display:flex;gap:14px;margin-top:16px;font-size:22px;color:var(--dim);flex-wrap:wrap}
+.meta span{background:#fff;border:2px solid var(--line);border-radius:30px;padding:6px 18px}
+.meta span b{color:var(--v)}
+.foot{position:absolute;left:72px;right:72px;bottom:46px;display:flex;justify-content:space-between;align-items:center;font-size:23px;color:var(--dim)}
+.foot b{color:var(--v)}
