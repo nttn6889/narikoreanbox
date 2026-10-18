@@ -186,6 +186,8 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   track 1 giới thiệu, track 2–21 = câu 1–20, track chẵn 22…30 = cặp 21–22…29–30 → `de/audio/Etk083n-*.mp3` (câu 1–30; 31–50 chưa có).
   Đồng bộ chỉ 2 đề này (không dump cả ngân hàng): ghi `de/Etk083*.json` bằng hàm của `sync_kho.py`, rồi sửa mục `e.Etk083`, `e.Etk083n` trong `site/kho`.
   Câu 53 kỳ 64: `W53_064` (ảnh biểu đồ cắt từ ảnh đề cô gửi, `dang:[1,3,7]`, bài mẫu chính thức 3 ý).
+  Viết kỳ 108 (18.10.2026, **đề thí sinh nhớ lại**) đủ 51–54: `W51_108`…`W54_108` (đáp án 51–52 có nhiều cách viết, bài mẫu 53–54 do Claude soạn — giống bộ ảnh `fb/de-viet-108/`;
+  ảnh `W53_108.jpg` = biểu đồ vẽ lại, chụp từ `fb/de-viet-108/4-cau-53-de.html` bỏ dấu mờ). Khi có đề công bố chính thức thì đối chiếu, sửa lại.
   Viết kỳ 83 đủ 51–54 ở `wbank` (`W53_083` ảnh biểu đồ cắt từ PDF đề, có ý “Triển vọng”; `W54_083` sáng tạo – 창의력).
 - Ngân hàng đề nằm trong cơ sở dữ liệu của trang quản lý (collection `bank`, câu hỏi ở `bank/<id>/q/<qid>`).
 - Cô gửi file đề trong phiên Code → trích nội dung → ghi thẳng vào ngân hàng bằng ArtifactData (batch), hoặc
