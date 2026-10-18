@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
+body{font-family:'Be Vietnam Pro','Noto Sans KR',sans-serif}
+svg text{font-family:'Be Vietnam Pro','Noto Sans KR'}
 /* Bộ ảnh "Đề viết TOPIK II kỳ 108" (1080×1350), dùng cùng base.css */
 .eye{margin-top:22px}
 h1{font-size:64px;margin-top:8px}
