@@ -411,6 +411,16 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - Biến `R` = 60 câu 3–4 từ `thi-thu/de/*.json` (bỏ Ehot1old, Entk3 câu 3 trùng Entk1) + đáp án `a` + giải thích `w` do Claude soạn; `MCQ` câu tự soạn
   (lựa chọn đầu là đáp án). Bài lưu localStorage `nari-34`.
 
+## Học câu 5 quảng cáo sản phẩm (`cau-5/`)
+- Cùng khung với `cau-16-18/`. Ý cô: học từ vựng gắn với cách ví von của quảng cáo, luyện **hai chiều** (đồ vật → chọn tất cả cụm của nó; quảng cáo → đồ vật).
+  Buổi 1 (bảng cụm theo 6 nhóm đồ vật dễ nhầm, “Che nghĩa”; luyện xuôi chọn nhiều + ngược theo nhóm), Buổi 2 (5 kiểu tín hiệu K kết quả / S so sánh / D động từ /
+  B chức năng / V thứ được xử lý; chuỗi suy luận 3 bước kết quả → việc → đồ vật `CH`; bẫy chữ `MCQ[2]`; 6 câu đề thật hiện từng dòng, ghi chọn ở dòng mấy),
+  Buổi 3 (16 câu như thi, 30 giây/câu), Ôn (ôn ngắt quãng thẻ cụm `c:<đồ vật>:<i>` + câu đề thật `r:<id>`), thẻ “22 câu”, Bảng tra. Link `cau-5/#b=1|2|3|on|all|tra`, `#b=all&q=<id đề>`.
+- Nghĩa tiếng Việt: bảng học hiện sẵn; trong bài luyện ẩn, chọn xong mới hiện, nút 👁 xem trước (đếm vào báo cáo, ở Ôn thì đúng mà có xem vẫn ôn lại ngày mai).
+- Biến `R` = 22 câu 5 (16 câu đề là ảnh, chữ chép tay từ ảnh; đáp án `a` 0-based, đã đối chiếu `bank/<đề>/q/q05`): `l` dòng, `v` nghĩa, `c` chữ quyết định (phải có đúng trong `l`),
+  `k` tín hiệu, `x[i]` bẫy lựa chọn sai (G cùng nhóm / C chữ bẫy / K không liên quan). `P` = 30 đồ vật {vi, n: đồ vật dễ nhầm, c:[[ko, vi, 1 = ví von]]} — mỗi cụm chỉ đồ vật đó dùng được,
+  `c[1]` là cụm phân biệt (bài ngược dùng `c[1]` + câu ví von đầu); `G` nhóm; `OV` cặp quá gần không lấy cụm của nhau làm nhiễu; `PX` nghĩa đồ vật chỉ làm lựa chọn nhiễu. localStorage `nari-5`.
+
 ## Học câu 13–15 sắp xếp câu (`cau-13-15/`)
 - Chiến thuật rút từ 66 câu của 22 đề đọc: 65/66 câu 4 đáp án chỉ có 2 câu đầu → chọn câu đầu (loại câu có **dấu bám**: từ nối, từ chỉ, câu lý do `때문이다`/`-ㄴ 것이다`;
   cả hai sạch thì phép thử “đứng một mình” + 4 kiểu câu đầu G/H/Q/T) → còn 2 đáp án, so đúng **một vị trí** (vị trí 2: 46, vị trí 3: 19). Câu đầu đúng không bao giờ có dấu bám (66/66).
