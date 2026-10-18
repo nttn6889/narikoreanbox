@@ -153,11 +153,12 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   53/54: câu thứ j của học sinh so với câu mẫu thứ j (không gắn ý; `x.b` = j), học sinh viết dính/tách khác thì cô “Sửa cách tách câu” cho khớp;
   trang chấm hiện câu đã tô + câu mẫu cùng số + số câu so với bài mẫu; 51/52 so với
   cách viết mẫu gần nhất (`wBest`). Sửa câu, nhãn lỗi, nhận xét từng câu (`x.n`) / từng ô (`ev:[{i, nt:[㉠,㉡]}]`), tiến bộ (`tb`) là tùy cô.
-- **Chấm câu 53 theo khung** (chỉ trang chấm của cô, `wGradeModal`; bảng `#s=` gửi học sinh giữ như cũ): nút “🤖 Claude chấm theo khung” (`wAiPrompt`/`wAiWire`,
-  gọi Claude trong trang, khung lấy từ biến `W_KHUNG` = tóm tắt thẻ Khung câu của `viet-53/`, sửa khung ở `viet-53/` thì chép lại vào đây). Từng câu: khung phải dùng,
-  ✅ đúng / ⚠️ lệch / ❌ sai khung + từng chỗ trừ điểm (cô bỏ tick thì không tính) → `ev.x[].k = {d, v: ok|lech|sai, m:[{c, p, t, off}]}`; câu 53 không còn so câu mẫu ở từng câu.
-  Cuối bài “Tổng kết · so toàn bài với bài mẫu”: tổng điểm trừ theo khung, nhận xét so bài mẫu (`ev.ks`), từng câu mẫu + khung + “biến thể so với khung” (`ev.km:[{d, b}]`)
-  đặt cạnh câu học sinh ghép với nó (tô `wCmp`), ô “Ghép câu học sinh ↔ câu mẫu” (đổi `x.b`). Câu 54 vẫn như cũ.
+- **Chấm câu 53 theo khung** (`wGradeModal` + bảng `#s=` gửi học sinh): nút “🤖 Claude chấm theo khung” (`wAiPrompt`/`wAiWire`, gọi Claude trong trang;
+  khung lấy từ biến `W_KHUNG` = tóm tắt thẻ Khung câu của `viet-53/`, sửa khung ở `viet-53/` thì chép lại vào đây). Mỗi câu học sinh → `ev.x[].k =
+  {d: tên khung, v: ok|lech|sai, t: khung viết ra, m:[{c, p, t, off}] chỗ trừ điểm (cô bỏ tick → off), ms: câu/đoạn bài mẫu cùng ý (Claude chép nguyên văn),
+  mn: em học được gì từ câu mẫu}`; cô sửa được ở “Sửa khung / câu mẫu”. Cuối bài: tổng điểm trừ, ô “Tổng kết so với bài mẫu” (`ev.ks`), cả bài mẫu.
+  **Không so câu thứ j với câu mẫu thứ j nữa** (máy tách câu không chuẩn, cô thấy rối). Bảng `#s=` câu 53 = `wsKhungHTML`: mỗi câu một thẻ
+  (Khung · Em viết · Cô sửa · Nhận xét | Câu mẫu cùng ý · Em học được gì), rồi “So với bài mẫu”, bài mẫu. Câu 54 vẫn bảng cũ.
 - Bảng sửa bài `#s=` (gửi học sinh) = bảng đối chiếu từng câu **# ý | Bài mẫu | Em viết | Nhận xét** (tô màu theo `wCmp`; cột Nhận xét chỉ hiện khi cô có ghi;
   câu cô sửa hiện thêm dòng “Cô sửa” so chữ `<del>/<ins>`; điện thoại: mỗi câu một thẻ), ý học sinh bỏ sót tô đỏ, thêm “Tiến bộ so với bài lần trước”. Nhận xét viết được `**đậm**`, `` `chữ Hàn` ``. Ảnh biểu đồ không tải được thì hiện `data`
   (số liệu dạng chữ; link giao bài 53/54 kèm `dt`, `thi-thu/viet/<id>.json` kèm `data`).

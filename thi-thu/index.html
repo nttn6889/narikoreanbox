@@ -502,8 +502,18 @@ mark.wdk{background:var(--ok-soft);color:var(--ok);font-weight:600;text-decorati
 .wkh.ok{border-left-color:var(--ok);background:var(--ok-soft)}.wkh.lech{border-left-color:var(--warn);background:var(--warn-soft)}.wkh.sai{border-left-color:var(--pen);background:var(--pen-soft)}
 .wkh ul{margin:4px 0 0;padding:0;list-style:none}.wkh li{display:flex;gap:6px;align-items:flex-start;margin:3px 0}.wkh li.off{opacity:.45}.wkh li input{margin-top:4px;flex:none}.wkh li .pill{flex:none}
 .wsum{border:1.5px solid var(--violet);border-radius:8px;padding:10px 12px;margin:12px 0 6px}.wsum h4{margin:0 0 6px;font-size:15.5px;color:var(--violet)}.wsum .note{margin:6px 0}
-.wsm{border-top:1px dashed var(--line);padding:8px 0}.wsm .kr{font-size:15px}.wsm .bt{font-size:14px;margin-top:3px;color:var(--violet)}
-.wmap{display:grid;gap:6px;font-size:14px;padding:4px 0}.wmap select{display:inline-block;width:auto;max-width:100%;padding:3px 6px;font-size:13.5px}
+.wkt{font-family:var(--kr);font-size:15px;background:var(--paper);border:1px dashed var(--violet);border-radius:6px;padding:4px 10px;margin:4px 0}
+.wkm{margin-top:8px;padding:8px 10px;border-radius:6px;background:var(--paper);border:1px solid var(--ok)}
+.wkm .kr{font-size:15px}.wkm .mn{margin-top:4px;font-size:14.5px}
+.wkc{border:1px solid var(--line);border-left:4px solid var(--violet);border-radius:8px;padding:10px 12px;margin:10px 0;display:grid;gap:10px}
+.wkc.ok{border-left-color:var(--ok)}.wkc.lech{border-left-color:var(--warn)}.wkc.sai{border-left-color:var(--pen)}
+.wkc .hd{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;grid-column:1 / -1}
+.wkc .lb{display:block;font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin:6px 0 2px}
+.wkc .me{font-family:var(--kr);font-size:15.5px;line-height:1.8}
+.wkc .rt{background:var(--ok-soft);border-radius:6px;padding:8px 10px}
+.wkc .rt .kr{font-size:15px;line-height:1.8}
+.wkc ul{margin:2px 0 0;padding:0;list-style:none}.wkc li{margin:3px 0}
+@media (min-width:700px){.wkc{grid-template-columns:1.15fr 1fr}}
 .wmiss{color:var(--pen);font-weight:600;font-family:var(--ui)}
 .tuko{font-family:var(--kr);font-size:21px;font-weight:700}
 .tuq .q.locked .opt{cursor:default}
@@ -1962,13 +1972,16 @@ function wFix(s, y, off){ off = off || []; var t = String(s || "");
   return t.replace(/\s{2,}/g, " ").trim(); }
 function wPt(d){ return String(d).replace(".", ","); }
 function wHitHTML(r, box){ return '<div class="wau1">' + (box || '') + '<span class="pill ' + (r.d ? 'bad' : 'warn') + '">' + W_CRN[r.c] + (r.d ? ' −' + wPt(r.d) : '') + '</span><div>' + wNoteHTML(r.m) + '</div></div>'; }
-/* Kết quả Claude chấm một câu 53 theo khung: x.k = {d: khung, v: ok|lech|sai, m: [{c: tiêu chí, p: điểm trừ, t: lý do, off: cô bỏ}]}. */
+/* Kết quả Claude chấm một câu 53 theo khung: x.k = {d: tên khung, v: ok|lech|sai, t: khung viết ra (chỗ điền […]),
+   m: [{c: tiêu chí, p: điểm trừ, t: lý do, off: cô bỏ}], ms: câu/đoạn bài mẫu cùng ý (Claude chọn, không tách câu bằng máy), mn: em học được gì từ câu mẫu}. */
 var W_KV = {ok:["good", "✅ Đúng khung"], lech:["warn", "⚠️ Lệch khung"], sai:["bad", "❌ Sai / không theo khung"]};
+function wKhPill(k){ var v = W_KV[k && k.v]; return v ? '<span class="pill ' + v[0] + '">' + v[1] + '</span>' + (k.d ? ' <span class="muted">' + esc(k.d) + '</span>' : '') : ''; }
+function wKhDed(m, box){ return (m || []).map(function(d, q){ return (box ? '<li' + (d.off ? ' class="off"' : '') + '><input type="checkbox" data-kd="' + q + '"' + (d.off ? '' : ' checked') + ' aria-label="Tính điểm trừ này">' : '<li>') +
+  '<span class="pill bad">' + esc(W_CRN[d.c] || d.c) + ' −' + wPt(d.p) + '</span> <span>' + wNoteHTML(d.t) + '</span></li>'; }).join(""); }
+function wKhModel(k){ return k && k.ms ? '<div class="wkm"><span class="wcl">Câu mẫu</span> <span class="kr">' + esc(k.ms) + '</span>' + (k.mn ? '<div class="mn">💡 ' + wNoteHTML(k.mn) + '</div>' : '') + '</div>' : ''; }
 function wKhHTML(k){
   if(!k || !W_KV[k.v]) return '<span class="muted">Chưa chấm theo khung — bấm “🤖 Claude chấm theo khung”.</span>';
-  var v = W_KV[k.v];
-  return '<span class="pill ' + v[0] + '">' + v[1] + '</span>' + (k.d ? ' <b>Khung:</b> <span class="kr">' + esc(k.d) + '</span>' : '') +
-    ((k.m || []).length ? '<ul>' + k.m.map(function(d, q){ return '<li' + (d.off ? ' class="off"' : '') + '><input type="checkbox" data-kd="' + q + '"' + (d.off ? '' : ' checked') + ' aria-label="Tính điểm trừ này"><span class="pill bad">' + esc(W_CRN[d.c] || d.c) + ' −' + wPt(d.p) + '</span><span>' + wNoteHTML(d.t) + '</span></li>'; }).join("") + '</ul>' : '');
+  return wKhPill(k) + (k.t ? '<div class="wkt">' + esc(k.t) + '</div>' : '') + ((k.m || []).length ? '<ul>' + wKhDed(k.m, true) + '</ul>' : '') + wKhModel(k);
 }
 /* Cô đã chép lỗi máy tìm / dòng “Cũng đúng” vào nhận xét thì bảng sửa bài không hiện lần nữa (so bỏ dấu cách, **, `). */
 function wInNote(n, t){ var k = function(s){ return String(s || "").replace(/[\s*`]/g, ""); }, a = k(n), b = k(t); return !!(a && b && a.indexOf(b) >= 0); }
@@ -2015,7 +2028,7 @@ function wImgHTML(src, dt){
 }
 /* ---------- Claude chấm câu 53 theo khung (gọi Claude, tốn lượt dùng của cô) ----------
    Claude chấm từng câu học sinh so với khung câu của lớp (W_KHUNG): khung nào, đúng/lệch/sai, chỗ trừ điểm (x.k), sửa câu, nhãn lỗi,
-   nhận xét ngắn, điểm 3 tiêu chí; cuối bài: bài mẫu dùng khung nào + biến thể chỗ nào (e.km), tổng kết so toàn bài với bài mẫu (e.ks).
+   nhận xét ngắn, điểm 3 tiêu chí; mỗi câu kèm câu mẫu cùng ý do Claude chọn + em học được gì (x.k.ms, x.k.mn); cuối bài tổng kết so với bài mẫu (e.ks).
    Tiết kiệm token: không gửi ảnh (gửi số liệu dạng chữ + bài mẫu), không gửi lại lỗi máy đã bắt,
    một bài = một lần gọi, trả JSON ngắn, kết quả nhớ 24 giờ (mở lại cùng bài không tốn thêm) và lưu vào bài khi cô bấm Lưu. */
 var W_AI_P = null;
@@ -2040,7 +2053,7 @@ function wAiPrompt(w, e, y, auto){
   var data = String(w.data || "").trim(), pas = String(w.passage || "").trim();
   var lines = e.x.map(function(x, j){
     var hits = wHits(x.s, y).filter(function(r){ return wOffSet(x).indexOf(r.id) < 0; });
-    return (j + 1) + ". " + x.s + (+x.b >= 0 && blocks[+x.b] ? "  [ghép với câu mẫu " + (+x.b + 1) + "]" : "") + (hits.length ? "  ⟵ máy đã bắt: " + hits.map(function(r){ return r.t; }).join(", ") : "");
+    return (j + 1) + ". " + x.s + (hits.length ? "  ⟵ máy đã bắt: " + hits.map(function(r){ return r.t; }).join(", ") : "");
   });
   return [
     "Bạn là giám khảo chấm TOPIK II 쓰기 câu 53 cho học sinh Việt Nam. Thang: " + rub.map(function(c){ return c[2] + " " + c[3]; }).join(", ") + " (tổng " + wMaxOf(y) + ").",
@@ -2048,18 +2061,17 @@ function wAiPrompt(w, e, y, auto){
     "", "KHUNG CÂU CỦA LỚP ([…] = chỗ điền; từ đồng nghĩa 늘어나다/상승하다/오르다/늘다/확대되다, 줄어들다/하락하다/떨어지다/줄다/축소되다 vẫn là đúng khung):", W_KHUNG,
     "Cách viết tương đương cũng là đúng khung: " + W_VARS.map(function(g){ return g.join(" = "); }).join("; ") + ".",
     "", "ĐỀ:" + (pas ? "\n" + pas.slice(0, 600) : "") + (data ? "\nSố liệu: " + data.slice(0, 800) : "") + ((w.nums || []).length ? "\nSố liệu bắt buộc: " + w.nums.join(", ") : ""),
-    "", "BÀI MẪU THEO CÂU (chỉ dùng cho phần m và s):" + (blocks.length ? "\n" + blocks.map(function(b, k){ return (k + 1) + ". " + (b.ko || ""); }).join("\n") : " (không có)"),
+    "", "BÀI MẪU (chỉ dùng cho ms, mn, s — không chấm theo bài mẫu):" + (((w.keys || {}).a || [])[0] ? "\n" + w.keys.a[0] : " (không có)"),
     "", "BÀI HỌC SINH (" + wLen(e.x.map(function(x){ return x.s; }).join(" ")) + "자, đã tách câu):", lines.join("\n"),
     "Lỗi 'máy đã bắt' tự gửi cho học sinh: KHÔNG ghi lại thành điểm trừ hay nhận xét (nhưng câu sửa vẫn phải sửa cả lỗi đó).",
     "Điểm máy gợi ý (chỉ đếm lỗi hay gặp, độ dài, số liệu): " + rub.map(function(c){ return c[0] + " " + auto[c[0]].s + "/" + c[3]; }).join(", ") + ". Điều chỉnh theo chất lượng thật.",
     "",
     "Việc cần làm:",
-    "1. x: MỖI câu học sinh một mục. k = khung câu này phải dùng theo thông tin của đề (vd. \"D1 · hai mốc\", \"D7 · khung A\"). v = \"ok\" (đúng khung: phần cố định, tiểu từ, đuôi đúng; số liệu, năm, xu hướng đúng với đề) | \"lech\" (đúng dạng nhưng sai/thiếu phần cố định, tiểu từ, đuôi trong khung) | \"sai\" (chọn sai khung, sai số liệu/xu hướng, hoặc không theo khung nào). d = từng chỗ trừ điểm: c = tiêu chí (c nội dung, o bố cục, l ngôn ngữ), p = điểm trừ gợi ý 0.5–2, t = lý do tiếng Việt ≤ 20 từ chỉ rõ chỗ lệch khung; câu đúng khung thì d rỗng. Câu có lỗi thì thêm f = câu sửa tối thiểu theo khung, giữ ý học sinh; e = nhãn; n = nhận xét ≤ 25 từ.",
-    "2. m: MỖI câu bài mẫu một mục: k = số câu mẫu, d = khung bài mẫu dùng, b = bài mẫu biến thể chỗ nào so với khung (đổi từ, thêm/bớt cụm, đổi đuôi, gộp câu…) ≤ 25 từ; giống hệt khung thì b rỗng.",
-    "3. s: tổng kết so toàn bài học sinh với bài mẫu: ý thiếu/thừa, thứ tự ý, chỗ bài mẫu viết hay hơn; ≤ 60 từ.",
-    "4. r: điểm 3 tiêu chí; o: nhận xét chung 1–2 câu (1 điểm tốt, 1 điểm cần sửa).",
+    "1. x: MỖI câu học sinh một mục. k = tên khung câu này phải dùng theo thông tin của đề (vd. \"D1 · hai mốc\", \"D7 · khung A\"); t = khung đó viết ra, chép từ KHUNG CÂU đúng biến thể, giữ chỗ điền […] (vd. \"A년에 X에서 B년에는 Y(으)로 증가한 것으로 나타났다.\"). v = \"ok\" (đúng khung: phần cố định, tiểu từ, đuôi đúng; số liệu, năm, xu hướng đúng với đề) | \"lech\" (đúng dạng nhưng sai/thiếu phần cố định, tiểu từ, đuôi trong khung) | \"sai\" (chọn sai khung, sai số liệu/xu hướng, hoặc không theo khung nào). d = từng chỗ trừ điểm: c = tiêu chí (c nội dung, o bố cục, l ngôn ngữ), p = điểm trừ gợi ý 0.5–2, t = lý do tiếng Việt ≤ 20 từ chỉ rõ chỗ lệch khung; câu đúng khung thì d rỗng. Câu có lỗi thì thêm f = câu sửa tối thiểu theo khung, giữ ý học sinh; e = nhãn; n = nhận xét ≤ 25 từ. ms = câu hoặc đoạn trong bài mẫu nói cùng ý với câu này, CHÉP NGUYÊN VĂN từ bài mẫu (có thể là một phần câu mẫu hoặc gộp 2 câu mẫu; bài mẫu không có ý này thì \"\"). mn = câu mẫu viết khác câu em chỗ nào, em học thêm được gì (từ, cách nối, cách viết số liệu, biến thể so với khung) ≤ 30 từ.",
+    "2. s: tổng kết so toàn bài học sinh với bài mẫu: ý bài mẫu có mà em chưa viết, thứ tự ý, điều nên học từ bài mẫu; ≤ 60 từ.",
+    "3. r: điểm 3 tiêu chí; o: nhận xét chung 1–2 câu (1 điểm tốt, 1 điểm cần sửa).",
     "Tiếng Việt, chữ Hàn đặt trong `backtick`. Chỉ trả JSON, không chữ nào khác:",
-    '{"x":[{"j":1,"k":"D5 · biến thể 3","v":"ok","d":[]},{"j":2,"k":"D7 · khung A","v":"lech","d":[{"c":"l","p":1,"t":"thiếu `기` trước `때문인`"}],"f":"câu đã sửa","e":["어미·문법"],"n":"nhận xét"}],"m":[{"k":1,"d":"D5 · biến thể 3","b":"…"}],"s":"…","r":{"c":5,"o":6,"l":12},"o":"…"}',
+    '{"x":[{"j":1,"k":"D5 · biến thể 3","t":"[기관]의 조사에 따르면 …","v":"ok","d":[],"ms":"…","mn":"…"},{"j":2,"k":"D7 · khung A","t":"이와 같이 변화한 이유는 …고, …기 때문인 것으로 보인다.","v":"lech","d":[{"c":"l","p":1,"t":"thiếu `기` trước `때문인`"}],"f":"câu đã sửa","e":["어미·문법"],"n":"nhận xét","ms":"…","mn":"…"}],"s":"…","r":{"c":5,"o":6,"l":12},"o":"…"}',
     "Nhãn e chỉ chọn trong: " + W_TAGS.map(function(t){ return t[0]; }).join(", ") + "."
   ].join("\n");
 }
@@ -2070,7 +2082,7 @@ function wAiWire(el, r, ev, paintSug, showTot, wById, repaint){
     var draw = function(msg, cls){
       var done = e.ai && e.ai.t;
       box.innerHTML = '<div class="wai1"><button type="button" class="btn sm" data-aigo>' + (done ? '🤖 Claude chấm lại theo khung' : '🤖 Claude chấm theo khung') + '</button>' +
-        '<span class="hint" data-aist>' + (msg || (done ? 'Claude đã chấm theo khung lúc ' + fmtDate(e.ai.t) + (e.ai.r ? ' · gợi ý ' + W_RUB[53].map(function(c){ return c[1] + ' ' + e.ai.r[c[0]] + '/' + c[3]; }).join(' · ') : '') + '. Cô xem lại từng câu rồi bấm Lưu.' : 'Claude chấm từng câu so với khung câu của lớp (đúng khung chưa, trừ điểm chỗ nào), sửa câu sai, gợi ý điểm; cuối bài tổng kết so với bài mẫu (bài mẫu biến thể chỗ nào). Ô cô đã viết không bị ghi đè.')) + '</span></div>';
+        '<span class="hint" data-aist>' + (msg || (done ? 'Claude đã chấm theo khung lúc ' + fmtDate(e.ai.t) + (e.ai.r ? ' · gợi ý ' + W_RUB[53].map(function(c){ return c[1] + ' ' + e.ai.r[c[0]] + '/' + c[3]; }).join(' · ') : '') + '. Cô xem lại từng câu rồi bấm Lưu.' : 'Claude chấm từng câu so với khung câu của lớp (đúng khung chưa, trừ điểm chỗ nào), sửa câu sai, chọn câu mẫu cùng ý + em học được gì, gợi ý điểm; cuối bài tổng kết so với bài mẫu. Ô cô đã viết không bị ghi đè.')) + '</span></div>';
       if(cls) box.querySelector("[data-aist]").className = cls;
       box.querySelector("[data-aigo]").onclick = go;
     };
@@ -2085,11 +2097,9 @@ function wAiWire(el, r, ev, paintSug, showTot, wById, repaint){
         var n = String(z.n || "").trim();
         if(n && !String(x.n || "").trim()){ x.n = n; sb.querySelector("[data-n]").value = n; }
         var v = String(z.v || "").trim();
-        if(W_KV[v]) x.k = {d:String(z.k || "").trim(), v:v, m:(Array.isArray(z.d) ? z.d : []).map(function(d){ return {c:W_CRN[d && d.c] ? d.c : "l", p:Math.max(0, Math.min(5, +d.p || 0)), t:String((d && d.t) || "").trim(), off:0}; }).filter(function(d){ return d.t || d.p; })};
+        if(W_KV[v]) x.k = {d:String(z.k || "").trim(), v:v, t:String(z.t || "").trim(), ms:String(z.ms || "").trim(), mn:String(z.mn || "").trim(), m:(Array.isArray(z.d) ? z.d : []).map(function(d){ return {c:W_CRN[d && d.c] ? d.c : "l", p:Math.max(0, Math.min(5, +d.p || 0)), t:String((d && d.t) || "").trim(), off:0}; }).filter(function(d){ return d.t || d.p; })};
       });
-      if(Array.isArray(res && res.m)){ var km = []; res.m.forEach(function(m){ var k = Math.round(+(m && m.k)) - 1; if(k >= 0 && k < 40) km[k] = {d:String(m.d || "").trim(), b:String(m.b || "").trim()}; });
-        for(var q = 0; q < km.length; q++) if(!km[q]) km[q] = {d:"", b:""}; e.km = km; }
-      if(res && res.s) e.ks = String(res.s).trim();
+      if(res && res.s && !String(e.ks || "").trim()) e.ks = String(res.s).trim();
       var rr = {}, ok = res && res.r && typeof res.r === "object";
       W_RUB[53].forEach(function(c){ var v = ok ? Math.round(+res.r[c[0]]) : NaN; if(isNaN(v)) return; v = Math.max(0, Math.min(c[3], v)); rr[c[0]] = v;
         var f2 = "r" + c[0]; if(typeof e[f2] !== "number"){ e[f2] = v; var sel = el.querySelector('[data-r="' + i + '"][data-f2="' + f2 + '"]'); if(sel) sel.value = String(v); } });
@@ -2293,6 +2303,7 @@ function wsRender(r, src){
   wShell(h);
 }
 function wsLongHTML(it, w, y){
+  if(+y === 53) return wsKhungHTML(it, w, y);
   var text = (it.a || [])[0] || "", rub = W_RUB[y] || [], blocks = wModelSents(w), xs = it.bm ? (it.x || []).map(function(x, j){ return Object.assign({}, x, {b:x.b == null ? j : +x.b}); }) : wByIdx(it.x), h = "";
   if(rub.length) h += '<div class="scroll"><table class="tbl wst"><thead><tr><th>Tiêu chí</th><th>Điểm</th></tr></thead><tbody>' +
     rub.map(function(c, j){ var v = (it.r || [])[j]; return '<tr><td>' + esc(c[1]) + ' <span class="muted">· ' + esc(c[2]) + '</span></td><td><b>' + (v == null ? "–" : v) + '</b>/' + c[3] + '</td></tr>'; }).join("") +
@@ -2322,6 +2333,37 @@ function wsLongHTML(it, w, y){
   if(it.tb) h += '<h4 class="wsh">Tiến bộ so với bài lần trước</h4><div class="note wtn" style="white-space:normal">' + wNoteHTML(it.tb) + '</div>';
   var model = ((w.keys || {}).a || [])[0];
   if(model) h += '<details class="pt-tx"><summary><span class="pt-more">Xem cả bài mẫu</span></summary><div class="kr wfull">' + esc(model) + '</div></details>';
+  if(text && xs.length) h += '<details class="pt-tx"><summary><span class="pt-more">Xem bài em viết (bản gốc)</span></summary><div class="kr wfull">' + esc(text) + '</div></details>';
+  return h;
+}
+/* Bảng sửa bài câu 53 (theo khung): mỗi câu em viết = khung đúng · câu em viết (+ cô sửa) · nhận xét | câu mẫu cùng ý + em học được gì.
+   Không tách/ghép câu mẫu bằng máy (cũ: so câu thứ j với câu mẫu thứ j, hay lệch). Bài chấm trước khi có khung thì chỉ hiện câu em + nhận xét. */
+function wsKhungHTML(it, w, y){
+  var text = (it.a || [])[0] || "", rub = W_RUB[y] || [], xs = it.x || [], h = "";
+  if(rub.length) h += '<div class="scroll"><table class="tbl wst"><thead><tr><th>Tiêu chí</th><th>Điểm</th></tr></thead><tbody>' +
+    rub.map(function(c, j){ var v = (it.r || [])[j]; return '<tr><td>' + esc(c[1]) + ' <span class="muted">· ' + esc(c[2]) + '</span></td><td><b>' + (v == null ? "–" : v) + '</b>/' + c[3] + '</td></tr>'; }).join("") +
+    '<tr><td><b>Tổng câu ' + y + '</b></td><td><b>' + (it.r || []).reduce(function(s, v){ return s + (+v || 0); }, 0) + '</b>/' + wMaxOf(y) + '</td></tr></tbody></table></div>';
+  var miss = wNumsMiss(text, w.nums), nk = xs.filter(function(x){ return x.k && W_KV[x.k.v]; }), nok = nk.filter(function(x){ return x.k.v === "ok"; }).length;
+  h += '<p class="wchk">' + wLenHTML(text, y) + (w.nums && w.nums.length ? (miss.length ? ' <span class="pill warn">thiếu số liệu: ' + esc(miss.join(", ")) + '</span>' : ' <span class="pill good">đủ số liệu</span>') : '') +
+    (nk.length ? ' <span class="pill ' + (nok === xs.length ? 'good' : 'warn') + '">' + nok + '/' + xs.length + ' câu đúng khung</span>' : '') + '</p>';
+  var tags = function(x){ return x.e ? String(x.e).split(",").filter(Boolean).map(function(e){ var t = W_TAGS.find(function(z){ return z[0] === e; }); return '<span class="pill bad">' + esc(t ? t[1] : e) + '</span>'; }).join(" ") : ''; };
+  if(xs.length){
+    h += '<h4 class="wsh">Từng câu em viết · đối chiếu với khung</h4>';
+    xs.forEach(function(x, j){ var k = x.k && W_KV[x.k.v] ? x.k : null, off = wOffSet(x);
+      var notes = (k ? wKhDed(k.m) : '') + wHits(x.s, y).filter(function(r){ return off.indexOf(r.id) < 0 && !wInNote(x.n, r.m); }).map(function(r){ return '<li>' + wHitHTML(r) + '</li>'; }).join("") +
+        (x.n ? '<li>' + wNoteHTML(x.n) + '</li>' : '') + (x.e ? '<li>' + tags(x) + '</li>' : '');
+      h += '<div class="wkc' + (k ? ' ' + k.v : '') + '"><div class="hd"><b>Câu ' + (j + 1) + '</b>' + (k ? wKhPill(k) : '') + '</div><div>' +
+        (k && k.t ? '<span class="lb">Khung</span><div class="wkt">' + esc(k.t) + '</div>' : '') +
+        '<span class="lb">Em viết</span><div class="me">' + esc(x.s) + '</div>' +
+        (x.f && x.f !== x.s ? '<div class="wfix"><b>Cô sửa:</b> <span class="wdiff kr">' + wDiffHTML(x.s, x.f) + '</span></div>' : '') +
+        (notes ? '<span class="lb">Nhận xét</span><ul class="wtn">' + notes + '</ul>' : '') + '</div>' +
+        (k && k.ms ? '<div class="rt"><span class="lb">Câu mẫu cùng ý</span><div class="kr">' + esc(k.ms) + '</div>' + (k.mn ? '<span class="lb">Em học được gì</span><div class="wtn">' + wNoteHTML(k.mn) + '</div>' : '') + '</div>' : '') + '</div>';
+    });
+  } else h += '<h4 class="wsh">Bài em viết</h4><div class="kr wfull">' + esc(text) + '</div>';
+  if(it.ks) h += '<h4 class="wsh">So với bài mẫu</h4><div class="note wtn" style="white-space:normal">' + wNoteHTML(it.ks) + '</div>';
+  if(it.tb) h += '<h4 class="wsh">Tiến bộ so với bài lần trước</h4><div class="note wtn" style="white-space:normal">' + wNoteHTML(it.tb) + '</div>';
+  var model = ((w.keys || {}).a || [])[0];
+  if(model) h += '<h4 class="wsh">Bài mẫu</h4><div class="kr wfull">' + esc(model) + '</div>';
   if(text && xs.length) h += '<details class="pt-tx"><summary><span class="pt-more">Xem bài em viết (bản gốc)</span></summary><div class="kr wfull">' + esc(text) + '</div></details>';
   return h;
 }
