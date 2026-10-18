@@ -399,6 +399,16 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - `viet-53/mau/` **Đọc mẫu trước giờ thi** (chỉ đọc, không chấm): 3 công thức, 8 đề nguyên nhân + 8 triển vọng + 5 phương án (biến `D.g1/g2/g3`:
   khung đề → bảng mảnh → mệnh đề → câu mẫu `md` tô màu `{n|…}` / khung `[[…]]` + nghĩa Việt), bài mẫu kỳ 91 cả bài, “Đọc liền”, “Che câu mẫu”. Bảng Bước 1 tô màu phần thêm vào: `{p|…}` tiểu từ, `{h|…}` 하다/되다, `{n|…}` động từ mới, `{o|…}` đổi đuôi; mỗi câu mẫu có “Nghĩa:”. Không có loa (cô bỏ).
 
+## Học câu 54 (`viet-54/`)
+- Cùng khung với `viet-53/`: Buổi 1 (câu 54 chấm gì 12/12/26, đề có câu dẫn + chủ đề ‘ ’ + 3 câu hỏi, **3 câu hỏi = 3 đoạn** như bài mẫu chính thức,
+  6 kiểu câu hỏi: lý do / hiện trạng / ưu điểm / vấn đề / giải pháp / điều kiện, đổi lời câu dẫn, dàn ý 2–3 ý mỗi đoạn), Buổi 2 (đuôi -ㄴ/는다, văn nói → văn viết,
+  từ thường → từ Hán, nối câu, danh từ hóa), Buổi 3 (câu dẫn, khung câu theo kiểu câu hỏi, từ nối trong/giữa đoạn), thẻ Bài mẫu (4 đề thật, từ nối + khung câu
+  tô tự động bằng danh sách `CONN`/`FRM`), Viết cả bài (dàn ý → bài → tự soát `CHECKS`, đếm chữ tính dấu cách, bấm giờ 30 phút, “Xem bài mẫu”; link gửi cô
+  `viet-54/#s=<Z + deflate-raw base64url>` = dàn ý + bài + ô tự soát, mở bản xem cho cô), Bảng tra. Link `#b=1|2|3|mau|viet|tra`, `#b=viet&e=W54_096`.
+- Đề + bài mẫu kỳ 83, 91, 96, 102 nhúng trong biến `REAL` (lấy từ `thi-thu/viet/W54_*.json` lúc soạn trang; thêm đề 54 vào `wbank` thì chép thêm vào đây),
+  ý chính tiếng Việt từng đoạn ở `IDEA`; 2 đề luyện tự soạn `PR` (`P01` thú cưng, `P02` SNS; bài mẫu do Claude soạn). `MCQ` (lựa chọn đầu là đáp án),
+  `TK` câu viết lại / viết theo khung (so LCS với câu mẫu, tự chấm). Sửa thẳng trong `viet-54/index.html`. localStorage `nari-54`.
+
 ## Học câu 1–2 ngữ pháp trong 4 buổi (`ngu-phap-12/`)
 - Cùng khung với `viet-52/`, học theo **cặp dễ nhầm**: Buổi 1 đuôi nối thời gian/trình tự/lựa chọn (+ quy trình 3 bước), Buổi 2 mục đích/điều kiện/
   nhượng bộ/lý do/quan sát, Buổi 3 đuôi kết thúc câu (trạng từ → đuôi) + tiểu từ nâng cao, Buổi 4 trộn đề, Bảng tra (luật loại trừ, đáp án đề thật). Link `ngu-phap-12/#b=1|2|3|4|tra`.
