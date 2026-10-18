@@ -188,6 +188,8 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   Câu 53 kỳ 64: `W53_064` (ảnh biểu đồ cắt từ ảnh đề cô gửi, `dang:[1,3,7]`, bài mẫu chính thức 3 ý).
   Viết kỳ 108 (18.10.2026, **đề thí sinh nhớ lại**, câu chữ theo bản của Tiếng Hàn Thầy Tư) đủ 51–54: `W51_108`…`W54_108` (đáp án 51–52 có nhiều cách viết, bài mẫu 53–54 do Claude soạn — giống bộ ảnh `fb/de-viet-108/`;
   ảnh `W53_108.jpg` = biểu đồ vẽ lại, chụp từ `fb/de-viet-108/4-cau-53-de.html` bỏ dấu mờ). Khi có đề công bố chính thức thì đối chiếu, sửa lại.
+  Câu 53 kỳ 47, 70, 72–79 (`W53_047`, `W53_070`…`W53_079`): đề theo ảnh cô gửi (bản tổng hợp, kỳ 70–79 có thể là đề nhớ lại, chưa đối chiếu đề gốc),
+  ảnh `thi-thu/viet/W53_<kỳ>.jpg` cắt bỏ dòng câu hỏi, bài mẫu + `blocks`/`hint`/`dang` do Claude soạn.
   Viết kỳ 83 đủ 51–54 ở `wbank` (`W53_083` ảnh biểu đồ cắt từ PDF đề, có ý “Triển vọng”; `W54_083` sáng tạo – 창의력).
 - Ngân hàng đề nằm trong cơ sở dữ liệu của trang quản lý (collection `bank`, câu hỏi ở `bank/<id>/q/<qid>`).
 - Cô gửi file đề trong phiên Code → trích nội dung → ghi thẳng vào ngân hàng bằng ArtifactData (batch), hoặc
