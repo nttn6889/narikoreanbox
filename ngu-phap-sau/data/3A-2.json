@@ -1,0 +1,178 @@
+{
+"b": "3A", "n": 2,
+"tong": {
+  "t": "Bài 2: chuyện ở ký túc xá – nhờ, bảo, giải thích lý do",
+  "p": "Tên bài “방을 바꿔 달라고 해 봐” chứa luôn mẫu chính: <b>-아/어 달라고 하다</b> (yêu cầu người khác làm cho mình). Bài 2 nối tiếp chuỗi thuật lại của Bài 1 (-다고 → <b>-라고</b>), và thêm hai mẫu đời sống hay dùng để <b>giải thích, xin lỗi</b>: -느라고 (mải làm nên…), -자마자 (vừa… là…).",
+  "tb": [["Mẫu", "Câu hỏi chìa khóa"], ["-자마자", "Vế sau có xảy ra NGAY không?"], ["-(으)라고 하다", "Lời gốc có phải mệnh lệnh / nhờ / khuyên?"], ["-느라고", "Hai vế cùng chủ ngữ? Vế trước tốn thời gian? Kết quả xấu?"], ["누구나 …", "Câu khẳng định “tất cả đều”? (phủ định → 아무도)"]]
+},
+"p": [
+{
+"no": 1, "id": "g_3A_02_1", "cn": "Thời gian – trình tự",
+"core": "“Vừa… là… / ngay khi…”: việc ở vế sau xảy ra ngay lập tức sau khi việc ở vế trước kết thúc.",
+"goc": "-자 (ngay khi — văn viết) + 마자 (nhấn “vừa xong”). Mẫu gắn thẳng vào gốc động từ, <b>không mang thì</b>: thì, kính ngữ, ý định đều đặt ở vế sau.",
+"chia": [["Gốc", "→"], ["가다 · 먹다", "가**자마자** · 먹**자마자**"], ["듣다 · 돕다 · 만들다", "듣**자마자** · 돕**자마자** · 만들**자마자** (không biến đổi bất quy tắc vì 자 bắt đầu bằng phụ âm)"], ["Tính từ → thêm -아/어지다", "춥다 → 추워지**자마자** (vừa trở lạnh là…)"]],
+"chiaNote": ["Không gắn -았/었-, -겠- trước -자마자: 갔자마자 (×), 가겠자마자 (×)."],
+"tinh": [
+ {"t": "Thói quen “làm ngay”", "c": "Kể nếp sinh hoạt hằng ngày.", "lv": "lịch sự", "ko": "저는 집에 오**자마자** 손을 씻어요.", "vi": "Về đến nhà là em rửa tay ngay.", "why": "Hai việc nối liền, không có việc gì chen giữa."},
+ {"t": "Kể việc gấp, cảm xúc tức thì", "c": "Kể chuyến bay sang Hàn.", "lv": "lịch sự", "ko": "비행기에서 내리**자마자** 엄마한테 전화했어요.", "vi": "Vừa xuống máy bay là em gọi cho mẹ.", "why": "Nhấn sự vội, sự mong ngóng."},
+ {"t": "Phàn nàn đồ mới hỏng", "c": "Mang đồ ra tiệm bảo hành.", "lv": "lịch sự", "ko": "이 휴대폰, 사**자마자** 고장 났어요.", "vi": "Cái điện thoại này vừa mua đã hỏng.", "why": "-자마자 làm câu phàn nàn có lực hơn (vừa mới… mà đã…)."},
+ {"t": "Dặn, đề nghị làm ngay", "c": "Dặn bạn đi đường xa.", "lv": "thân mật", "ko": "도착하**자마자** 연락해.", "vi": "Đến nơi là nhắn mình ngay nhé.", "why": "Vế sau mệnh lệnh / rủ dùng được (khác -느라고)."},
+ {"t": "Kể các mốc đời người", "c": "Giới thiệu bản thân, kể lý lịch.", "lv": "văn viết", "ko": "대학교를 졸업하**자마자** 회사에 취직했다.", "vi": "Vừa tốt nghiệp đại học là vào làm công ty.", "why": "Đúng câu đề TOPIK kỳ 35."},
+ {"t": "Phản ứng cảm xúc", "c": "Kể lại khi nghe một bài hát cũ.", "lv": "lịch sự", "ko": "그 노래를 듣**자마자** 눈물이 났어요.", "vi": "Vừa nghe bài đó là nước mắt trào ra.", "why": "Phản ứng tự nhiên, không kiểm soát."}
+],
+"rb": [["Chủ ngữ", "Hai vế khác chủ ngữ được: 엄마가 나가자마자 아이가 울기 시작했어요."], ["Thì", "Không gắn thì vào -자마자; thì ở vế sau (quá khứ, hiện tại, tương lai đều được)."], ["Vế sau", "Mệnh lệnh, rủ rê dùng được."], ["Loại từ", "Chỉ động từ. Tính từ phải thành động từ: -아/어지다."], ["Văn phong", "Nói và viết đều dùng."]],
+"sai": [
+ {"x": "집에 **갔자마자** 잤어요.", "o": "집에 **가자마자** 잤어요.", "why": "Thì quá khứ để ở vế sau (잤어요)."},
+ {"x": "날씨가 **춥자마자** 감기에 걸렸어요.", "o": "날씨가 **추워지자마자** 감기에 걸렸어요.", "why": "Tính từ không đi với -자마자."},
+ {"x": "입학하**자마자** 4년 후에 졸업했어요.", "o": "입학한 지 4년 만에 졸업했어요.", "why": "-자마자 nghĩa là ngay lập tức, không dùng cho khoảng cách dài."}
+],
+"pb": [
+ {"vs": "-고 나서", "d": "Trình tự bình thường (làm xong A rồi B), không nhấn “ngay”.", "ex": [["밥을 먹**고 나서** 산책했어요.", "Ăn xong rồi đi dạo."], ["밥을 먹**자마자** 잤어요.", "Vừa ăn xong là ngủ luôn."]]},
+ {"vs": "-는 대로", "d": "Cũng là “ngay khi”, nhưng hay dùng cho việc sắp tới + lời hứa / đề nghị, giọng công việc, lịch sự.", "ex": [["도착하**는 대로** 연락드리겠습니다.", "Đến nơi tôi sẽ liên lạc ngay."]]},
+ {"vs": "-기가 무섭게 (TOPIK câu 3–4)", "d": "Đồng nghĩa nâng cao: 졸업하기가 무섭게 취직했다 = 졸업하자마자 취직했다.", "ex": []}
+],
+"topik": [
+ {"src": "Đọc · kỳ 35 câu 2", "ko": "민수 씨는 대학교를 (졸업하**자마자**) 회사에 취직했다.", "note": "Đáp án. Các lựa chọn khác 졸업해도 / 졸업한다면 / 졸업하더라도 (dù / nếu) đều không hợp với hai việc nối tiếp nhau."},
+ {"src": "Đọc · kỳ 64 câu 3", "ko": "정부는 일자리를 __늘리고자__ 새로운 정책을 수립했다. → 늘리기 위해", "note": "Lựa chọn “늘리자마자” là <b>bẫy hình thức</b>: -고자 (để) trông giống -자마자. Đọc đủ cả đuôi."}
+],
+"hoi": [
+ {"q": "“Mai về đến nhà là em gọi cho mẹ ngay.” — “sẽ” đặt ở đâu?", "a": "Ở vế sau: 내일 집에 도착하자마자 엄마한테 전화<b>할 거예요</b>."}
+],
+"luyen": [
+ {"q": "수업이 (    ) 학생들이 교실 밖으로 나갔어요.", "o": ["끝나자마자", "끝났자마자", "끝나느라고", "끝날 텐데"], "w": "Không gắn thì trước -자마자."},
+ {"q": "Câu nào ĐÚNG?", "o": ["집에 오자마자 잤어요.", "집에 왔자마자 잤어요.", "집에 오겠자마자 잘 거예요.", "날씨가 덥자마자 에어컨을 켰어요."], "w": "Chỉ câu 1 đúng: không thì trước -자마자, không dùng tính từ."},
+ {"q": "(Kỳ 35) 민수 씨는 대학교를 (    ) 회사에 취직했다.", "o": ["졸업하자마자", "졸업해도", "졸업한다면", "졸업하더라도"], "w": "Hai việc nối tiếp nhau ngay → -자마자."},
+ {"q": "(Kỳ 64) 정부는 일자리를 __늘리고자__ 새로운 정책을 수립했다. — nghĩa giống?", "o": ["늘리기 위해", "늘리자마자", "늘리더라도", "늘리는 대신"], "w": "-고자 = -기 위해 (để). 늘리자마자 là bẫy hình thức."}
+],
+"em": ["Kể 3 việc em làm ngay khi thức dậy (일어나자마자 …).", "Kể một lần em “vừa… là…” gặp chuyện bất ngờ."],
+"co": "Trò “dây chuyền buổi sáng”: cô nói 일어나자마자, học sinh nối 세수했어요 → cô nối tiếp 세수하자마자… Nhanh dần."
+},
+{
+"no": 2, "id": "g_3A_02_2", "cn": "Thuật lại lời nói",
+"core": "Thuật lại mệnh lệnh, lời nhờ, lời khuyên: “(ai đó) bảo / dặn / nhờ (ai) hãy…”.",
+"goc": "Đuôi mệnh lệnh dùng khi thuật lại: <b>-(으)라</b> (가라, 먹으라) + 고 + 하다. Chú ý: khác với mệnh lệnh nói trực tiếp -아/어라 (먹어라!). Thuật lại luôn dùng <b>-(으)라고</b>: 먹으라고 (không phải 먹어라고). Riêng <b>주세요</b>: người nhận là người nói → <b>달라고</b>; người nhận là người khác → <b>주라고</b>.",
+"chia": [["Gốc", "→"], ["Không 받침", "가다 → 가**라고** · 보내다 → 보내**라고**"], ["Có 받침", "먹다 → 먹**으라고** · 읽다 → 읽**으라고**"], ["Gốc ㄹ", "만들다 → 만들**라고** · 열다 → 열**라고**"], ["ㄷ / ㅂ bất quy tắc", "듣다 → 들**으라고** · 돕다 → 도우**라고**"], ["Kính ngữ", "오시다 → 오시**라고** (bảo ông/bà ấy đến)"], ["Phủ định", "가**지 말라고** (không phải 가지 마라고)"], ["주세요", "(cho tôi) **달라고** · (cho người khác) **주라고**"]],
+"chiaNote": ["Rút gọn văn nói: -(으)라고 해요 → **-(으)래요**: 엄마가 일찍 오래요.", "-아/어 주세요 → -아/어 **달라고** 하다 (cho tôi) / -아/어 **주라고** 하다 (cho người khác)."],
+"tinh": [
+ {"t": "Lời dặn của bố mẹ, thầy cô", "c": "Kể với bạn vì sao phải về sớm.", "lv": "lịch sự", "ko": "엄마가 10시까지 들어오**라고 했어요**.", "vi": "Mẹ dặn phải về trước 10 giờ.", "why": "Thuật lại mệnh lệnh của người trên."},
+ {"t": "Truyền lời sếp (công sở)", "c": "Nhân viên báo cho đồng nghiệp.", "lv": "trang trọng", "ko": "과장님이 이 서류를 오늘까지 보내 **달라고 하셨어요**.", "vi": "Trưởng phòng nhờ gửi tài liệu này trong hôm nay.", "why": "Người truyền lời không tự ra lệnh — lời yêu cầu có “chủ” rõ ràng, lịch sự."},
+ {"t": "Lời khuyên của bác sĩ", "c": "Giải thích vì sao không uống rượu.", "lv": "lịch sự", "ko": "의사 선생님이 술을 마시**지 말라고 하셨어요**.", "vi": "Bác sĩ bảo đừng uống rượu.", "why": "Lời khuyên / cấm → -지 말라고. Cũng là cách từ chối khéo."},
+ {"t": "Gợi ý bạn đi yêu cầu (tên bài)", "c": "Bạn than phòng ký túc xá ồn.", "lv": "thân mật", "ko": "그럼 기숙사 사무실에 방을 바꿔 **달라고 해 봐**.", "vi": "Thế thử bảo văn phòng ký túc đổi phòng cho xem.", "why": "-아/어 달라고 하다 = đi yêu cầu được phục vụ. Rất đời sống: đổi đồ, đổi phòng, xin giảm giá."},
+ {"t": "Biển báo, chỉ dẫn viết sẵn", "c": "Đọc biển trước cửa.", "lv": "lịch sự", "ko": "여기에 주차하**지 말라고 써 있어요**.", "vi": "Ở đây ghi là đừng đỗ xe.", "why": "Thuật lại cả lời viết: -라고 써 있다 / -라고 적혀 있다."}
+],
+"rb": [["Chủ ngữ", "Người ra lệnh + 이/가 (께서); người nhận lệnh + 에게 / 한테 / 께."], ["Thì", "Thì nằm ở 하다 (했어요 / 하셨어요). Không có “quá khứ của lệnh”."], ["Loại từ", "Chỉ động từ (mệnh lệnh). Tính từ không có mệnh lệnh."], ["주다 đặc biệt", "Người được giúp = người nói → 달라고; = người khác → 주라고."]],
+"sai": [
+ {"x": "엄마가 밥을 **먹어라고** 했어요.", "o": "엄마가 밥을 **먹으라고** 했어요.", "why": "Thuật lại dùng -(으)라, không dùng -아/어라."},
+ {"x": "(Bạn xin em cây bút) 친구가 펜을 **주라고** 했어요.", "o": "친구가 펜을 **달라고** 했어요.", "why": "Bạn muốn được cho (bạn là người nhận) → 달라고."},
+ {"x": "사장님이 케이크를 **만드라고 / 만들으라고** 했어요.", "o": "사장님이 케이크를 **만들라고** 했어요.", "why": "Gốc ㄹ + 라고, không rơi ㄹ, không thêm 으."},
+ {"x": "선생님이 떠들지 **마라고** 하셨어요.", "o": "선생님이 떠들지 **말라고** 하셨어요.", "why": "-지 말다 + 라고 → -지 말라고."},
+ {"x": "친구가 내일 **간다고** 했어요. (ý: bạn bảo em đi)", "o": "친구가 (나한테) 내일 **가라고** 했어요.", "why": "간다고 = bạn nói (bạn) sẽ đi; 가라고 = bạn bảo (em) đi. Một chữ khác hẳn nghĩa."}
+],
+"pb": [
+ {"vs": "-다고 하다 ↔ -(으)라고 하다 ↔ N(이)라고 하다", "d": "-다고: thông tin. -(으)라고: mệnh lệnh. N(이)라고: danh từ (“nói là / gọi là”). 의사라고 했어요 = nói là bác sĩ — trông giống mệnh lệnh nhưng không phải.", "ex": [["친구가 간**다고** 했어요.", "Bạn nói (bạn) sẽ đi."], ["친구가 가**라고** 했어요.", "Bạn bảo (mình) đi."]]}
+],
+"topik": [
+ {"src": "Đọc · kỳ 83 câu 14 (sắp xếp câu)", "ko": "친구들은 마지막까지 퇴사를 다시 고민해 보**라고 했다**.", "note": "Nhận ra đây là lời khuyên của bạn bè (không phải ý của nhân vật) → giúp xếp thứ tự ý trong đoạn."},
+ {"src": "Nghe (hội thoại công việc)", "ko": "부장님이 회의 자료를 준비하**라고 하셨어요**.", "note": "Câu hỏi “người phụ nữ sẽ làm gì tiếp theo” hay dựa vào lời truyền chỉ thị -라고 하셨어요."}
+],
+"hoi": [
+ {"q": "Bạn nói với em: “볼펜 좀 빌려줘.” Em kể với cô thế nào?", "a": "친구가 볼펜 좀 빌려 <b>달라고</b> 했어요."},
+ {"q": "Vì sao kể lời mẹ thì dùng 엄마가 ~라고 <b>하셨어요</b>?", "a": "Người ra lệnh là người trên → kính ngữ ở 하다: 하셨어요."}
+],
+"luyen": [
+ {"q": "선생님: “책을 읽으세요.” → 선생님이 책을 (    ) 하셨어요.", "o": ["읽으라고", "읽는다고", "읽어라고", "읽자고"], "w": "Mệnh lệnh có 받침 → -으라고."},
+ {"q": "친구: “물 좀 주세요.” → 친구가 물 좀 (    ).", "o": ["달라고 했어요", "주라고 했어요", "준다고 했어요", "주냐고 했어요"], "w": "Người nhận là người nói → 달라고."},
+ {"q": "엄마: “뛰지 마.” → 엄마가 (    ).", "o": ["뛰지 말라고 했어요", "뛰지 마라고 했어요", "안 뛴다고 했어요", "뛰지 말자고 했어요"], "w": "-지 말라고."},
+ {"q": "사장님: “이 케이크를 만드세요.” → 사장님이 이 케이크를 (    ) 하셨어요.", "o": ["만들라고", "만드라고", "만들으라고", "만든다고"], "w": "Gốc ㄹ + 라고."},
+ {"q": "마이클: “이 책을 수진 씨에게 주세요.” → 마이클 씨가 이 책을 수진 씨에게 (    ).", "o": ["주라고 했어요", "달라고 했어요", "준다고 했어요", "주자고 했어요"], "w": "Người nhận là người khác (수진) → 주라고."}
+],
+"em": ["Ba lời bố mẹ hay dặn em nhất là gì? Thuật lại bằng -(으)라고 하셨어요.", "Em từng phải đi yêu cầu đổi / sửa cái gì? Kể bằng -아/어 달라고 했어요."],
+"co": "Trò “Simon says”: cô ra lệnh tiếng Hàn (일어나세요, 창문을 열어 주세요…), học sinh làm rồi thuật lại cho “người thứ ba”. Chèn câu -아/어 주세요 để luyện 달라고 / 주라고."
+},
+{
+"no": 3, "id": "g_3A_02_3", "cn": "Lý do",
+"core": "“Vì mải (làm)… nên…”: việc ở vế trước chiếm hết thời gian, sức lực → vế sau là việc không làm được hoặc kết quả không tốt.",
+"goc": "<b>-느-</b> (đang diễn ra, quá trình) + -라고. Chữ “느” là chìa khóa để hiểu mọi ràng buộc: vế trước là <b>một việc kéo dài đang diễn ra</b> → không gắn thì quá khứ, không dùng với động từ xảy ra trong tích tắc, và cùng một người làm cả hai vế (đang bận việc A nên không làm được B).",
+"chia": [["Gốc", "→"], ["가다 · 먹다", "가**느라고** · 먹**느라고**"], ["Gốc ㄹ (rơi ㄹ)", "만들다 → 만드**느라고** · 놀다 → 노**느라고** · 살다 → 사**느라고**"], ["Rút gọn", "-느라고 → **-느라**: 친구를 만나느라 늦었어요."]],
+"chiaNote": ["Không -았/었-, -겠- trước -느라고: 일했느라고 (×).", "Vế sau là tính từ thì hầu như chỉ có: 바쁘다, 힘들다, 정신없다, 피곤하다."],
+"tinh": [
+ {"t": "Xin lỗi, giải thích vì sao trễ / không làm", "c": "Đến lớp muộn.", "lv": "lịch sự", "ko": "늦어서 죄송해요. 길을 찾**느라고** 늦었어요.", "vi": "Xin lỗi em đến muộn. Em mải tìm đường nên muộn.", "why": "Tình huống quan trọng nhất của mẫu: biện minh nhẹ nhàng, lịch sự."},
+ {"t": "Than bận", "c": "Bạn hỏi dạo này sao không liên lạc.", "lv": "thân mật", "ko": "요즘 이사 준비하**느라** 정신없어.", "vi": "Dạo này bận chuẩn bị chuyển nhà, rối hết cả lên.", "why": "Vế sau là tính từ bận / mệt."},
+ {"t": "Không nghe máy", "c": "Gọi lại cho bạn.", "lv": "thân mật", "ko": "미안, 샤워하**느라고** 전화 못 받았어.", "vi": "Xin lỗi, đang tắm nên không nghe máy.", "why": "Việc đang làm khiến bỏ lỡ việc khác."},
+ {"t": "Tốn tiền, tốn sức vì việc gì", "c": "Kể chuyện mua nhà, nuôi con.", "lv": "lịch sự", "ko": "집을 사**느라고** 모은 돈을 다 썼어요.", "vi": "Mua nhà nên tiêu hết tiền tiết kiệm.", "why": "Nghĩa “để làm việc đó mà tốn…”."},
+ {"t": "Câu xã giao ghi nhận vất vả", "c": "Cảm ơn bố mẹ, đồng nghiệp sau một việc lớn.", "lv": "lịch sự", "ko": "저희 키우시**느라** 고생 많으셨어요.", "vi": "Bố mẹ đã vất vả nhiều vì nuôi chúng con.", "why": "Câu cảm ơn rất Hàn: -느라 고생하다 / 수고하다."},
+ {"t": "Mải vui nên quên", "c": "Kể buổi đi chơi.", "lv": "lịch sự", "ko": "친구들이랑 노**느라고** 시간 가는 줄 몰랐어요.", "vi": "Mải chơi với bạn nên không biết thời gian trôi.", "why": "Kết hợp với -는 줄 몰랐다 (Bài 3)."}
+],
+"rb": [["Chủ ngữ", "Hai vế phải cùng chủ ngữ."], ["Thì", "Không gắn thì trước -느라고; thì đặt ở vế sau."], ["Vế sau", "Không dùng mệnh lệnh, rủ rê (공부하느라고 TV 보지 마세요 ×). Thường là kết quả xấu: 못 -, 늦다, 바쁘다, 힘들다."], ["Động từ vế trước", "Phải là việc kéo dài (자다, 일하다, 준비하다). Việc tức thời (일어나다, 도착하다) không dùng."], ["Loại từ", "Chỉ động từ."]],
+"sai": [
+ {"x": "동생이 TV를 보**느라고** (제가) 공부를 못 했어요.", "o": "동생이 TV를 봐서 시끄러워서 공부를 못 했어요.", "why": "Khác chủ ngữ → -아/어서 hoặc -는 바람에."},
+ {"x": "늦게 일어나**느라고** 지각했어요.", "o": "늦게까지 자**느라고** 지각했어요 / 늦게 일어나**서** 지각했어요.", "why": "일어나다 xảy ra trong tích tắc, không phải quá trình."},
+ {"x": "비가 오**느라고** 소풍을 못 갔어요.", "o": "비가 와**서** 소풍을 못 갔어요.", "why": "Mưa không phải “việc em đang bận làm”, lại khác chủ ngữ."},
+ {"x": "열심히 공부하**느라고** 시험에 합격했어요.", "o": "열심히 공부해**서 / 공부한 덕분에** 합격했어요.", "why": "Kết quả tốt → không dùng -느라고."},
+ {"x": "어제 **바쁘느라고** 못 갔어요.", "o": "어제 **바빠서** 못 갔어요.", "why": "Tính từ không đi với -느라고."}
+],
+"pb": [
+ {"vs": "-아/어서", "d": "Lý do chung, mọi loại từ, khác chủ ngữ được. -느라고 hẹp hơn: bận làm việc A nên mất B.", "ex": []},
+ {"vs": "-는 바람에", "d": "Một sự cố bất ngờ gây kết quả xấu, khác chủ ngữ được.", "ex": [["버스가 고장 나**는 바람에** 늦었어요.", "Xe buýt hỏng nên tôi muộn."], ["길을 찾**느라고** 늦었어요.", "Tôi mải tìm đường nên muộn."]]},
+ {"vs": "-(으)니까", "d": "Lý do + vế sau mệnh lệnh / rủ: 바쁘니까 나중에 전화하세요.", "ex": []}
+],
+"topik": [
+ {"src": "Đọc · kỳ 96 câu 1", "ko": "감기약을 (먹고 나서) 열이 내렸다.", "note": "Lựa chọn “먹느라고” là bẫy: hạ sốt là kết quả tốt, và uống thuốc không phải “việc mải làm”. Đề hay dùng -느라고 làm bẫy với kết quả tích cực."},
+ {"src": "Đọc · kỳ 41 câu 3", "ko": "아기가 자고 있어서 __깨지 않게__ 조용히 들어갔다. → 깨지 않도록", "note": "Lựa chọn “깨지 않느라” sai: -느라고 không đi với phủ định -지 않다 (không có “mải không làm”)."}
+],
+"hoi": [
+ {"q": "“Vì trời mưa nên em không đi.” — có dùng -느라고 được không?", "a": "Không. Mưa không phải việc em bận làm, lại khác chủ ngữ → 비가 와서 안 갔어요."},
+ {"q": "“Em mải chơi game nên quên làm bài tập” nói thế nào?", "a": "게임하<b>느라고</b> 숙제하는 것을 잊어버렸어요."}
+],
+"luyen": [
+ {"q": "늦어서 죄송합니다. 길을 (    ) 늦었어요.", "o": ["찾느라고", "찾았느라고", "찾자마자", "찾을 텐데"], "w": "Mải làm việc A nên muộn → -느라고, không gắn thì."},
+ {"q": "Câu nào ĐÚNG?", "o": ["시험 준비하느라고 잠을 못 잤어요.", "비가 오느라고 소풍을 못 갔어요.", "열심히 공부하느라고 합격했어요.", "동생이 우느라고 제가 못 잤어요."], "w": "Câu 2 sai (mưa, khác chủ ngữ), câu 3 sai (kết quả tốt), câu 4 sai (khác chủ ngữ)."},
+ {"q": "(Kỳ 96) 감기약을 (    ) 열이 내렸다.", "o": ["먹고 나서", "먹느라고", "먹더라도", "먹을 텐데"], "w": "Trình tự: uống thuốc xong → hạ sốt. -느라고 không hợp với kết quả tốt."},
+ {"q": "요즘 아르바이트를 (    ) 너무 바빠요.", "o": ["하느라고", "했느라고", "하자마자", "하라고"], "w": "Vế sau 바쁘다 → -느라고."},
+ {"q": "Câu nào SAI?", "o": ["늦게 일어나느라고 지각했어요.", "늦게까지 자느라고 지각했어요.", "전화하느라고 버스를 놓쳤어요.", "친구를 만나느라 늦었어요."], "w": "일어나다 là việc tức thời."}
+],
+"em": ["Viết 3 câu xin lỗi / giải thích kiểu người Hàn: “~느라고 ~ 못 했어요. 죄송해요.”", "Viết 1 câu cảm ơn bố mẹ bằng -느라 고생 많으셨어요."],
+"co": "Biến lỗi thật thành bài: học sinh đến muộn / chưa làm bài thì phải giải thích bằng -느라고. Khi dạy ràng buộc, quay lại chữ 느 (= đang) để học sinh tự suy ra 3 luật, không học thuộc."
+},
+{
+"no": 4, "id": "g_3A_02_4", "cn": "Toàn bộ – không ngoại lệ",
+"core": "Từ để hỏi + (이)나 = “ai / lúc nào / ở đâu / cái gì … cũng”: tất cả đều như vậy, không có ngoại lệ.",
+"goc": "Từ nghi vấn (누구, 언제, 어디, 무엇, 무슨 N) + <b>(이)나</b> (“dù là … nào”). Có 받침 → 이나 (무엇이나, 무슨 음식이나), không 받침 → 나 (누구나). Trợ từ khác đứng <b>trước</b> (이)나: 누구<b>에게</b>나, 어디<b>에서</b>나, 누구<b>하고</b>나.",
+"chia": [["Từ hỏi", "+ (이)나", "Nghĩa", "Hay đi với"], ["누구", "**누구나**", "ai cũng", "할 수 있다, 좋아하다"], ["언제", "**언제나**", "lúc nào cũng", "웃다, 반갑다"], ["어디", "**어디나** · 어디에서나", "ở đâu cũng", "있다, 볼 수 있다"], ["무엇", "**무엇이나**", "cái gì cũng", "다, 잘 먹다"], ["무슨 N", "**무슨** 음식**이나**", "món gì cũng", "다 맛있다"]],
+"chiaNote": ["Văn nói hằng ngày hay thay bằng 뭐든지, 다, 아무거나.", "Câu phủ định “không ai / không gì” không dùng (이)나 mà dùng 아무도 / 아무것도 + 안 / 못 / 없다."],
+"tinh": [
+ {"t": "Thông báo, quảng cáo “ai cũng tham gia được”", "c": "Tờ rơi sự kiện.", "lv": "trang trọng", "ko": "이 행사는 **누구나** 참가할 수 있습니다.", "vi": "Ai cũng có thể tham gia sự kiện này.", "why": "Mẫu cố định của thông báo — câu 5–8 TOPIK (tờ quảng cáo) hay gặp."},
+ {"t": "Khen tính cách", "c": "Giới thiệu một người bạn.", "lv": "lịch sự", "ko": "그 사람은 **누구에게나** 친절해요.", "vi": "Người đó tử tế với tất cả mọi người.", "why": "Trợ từ 에게 đứng trước 나."},
+ {"t": "Khen tài nấu ăn, đồ dùng", "c": "Nói về mẹ.", "lv": "lịch sự", "ko": "우리 엄마는 **무슨 음식이나** 다 잘 만드세요.", "vi": "Mẹ tôi món gì cũng nấu ngon.", "why": "무슨 N(이)나 + 다."},
+ {"t": "An ủi bằng chân lý chung", "c": "Bạn buồn vì mắc lỗi.", "lv": "thân mật", "ko": "괜찮아. **누구나** 실수할 수 있어.", "vi": "Không sao. Ai cũng có thể mắc lỗi.", "why": "Câu chung chung để xoa dịu."},
+ {"t": "Nói về sự phổ biến", "c": "Kể về cuộc sống ở Hàn.", "lv": "lịch sự", "ko": "한국에서는 **어디에서나** 와이파이를 쓸 수 있어요.", "vi": "Ở Hàn chỗ nào cũng dùng được wifi.", "why": "어디에서나 = ở bất cứ đâu."},
+ {"t": "Mở bài văn nghị luận", "c": "Câu đầu bài viết 54.", "lv": "văn viết", "ko": "**누구나** 한 번쯤은 실패를 경험한 적이 있을 것이다.", "vi": "Ai cũng từng có lúc trải qua thất bại.", "why": "Câu mở bài quen thuộc, kéo người đọc vào chủ đề."}
+],
+"rb": [["Kiểu câu", "Câu khẳng định (thường + 다 / -(으)ㄹ 수 있다). Phủ định → 아무도 / 아무것도."], ["Trợ từ", "에게, 에서, 하고, 와… đứng trước (이)나."], ["Văn phong", "무엇이나, 언제나 hơi văn viết; nói hằng ngày: 뭐든지, 항상."]],
+"sai": [
+ {"x": "교실에 **누구나** 없어요.", "o": "교실에 **아무도** 없어요.", "why": "“Không có ai” là phủ định → 아무도."},
+ {"x": "**무슨 음식나** 잘 먹어요.", "o": "**무슨 음식이나** 잘 먹어요.", "why": "음식 có 받침 → 이나."},
+ {"x": "그 사람은 **누구나에게** 친절해요.", "o": "그 사람은 **누구에게나** 친절해요.", "why": "Trợ từ đứng trước (이)나."},
+ {"x": "(Được hỏi ăn gì) **무엇이나** 괜찮아요.", "o": "**아무거나** 괜찮아요.", "why": "Đúng ngữ pháp nhưng nghe cứng; trả lời gọi món người Hàn nói 아무거나."}
+],
+"pb": [
+ {"vs": "-든지 · 아무나", "d": "누구나: mọi người đều như vậy (sự thật). 누구든지: bất kỳ ai, nhấn việc tùy chọn (누구든지 오세요). 아무나: ai cũng được, hơi tùy tiện (아무나 만나면 안 돼요).", "ex": [["**누구나** 행복을 원해요.", "Ai cũng mong hạnh phúc."], ["궁금한 게 있으면 **누구든지** 물어보세요.", "Ai có thắc mắc thì cứ hỏi."]]}
+],
+"topik": [
+ {"src": "Đọc (đoạn văn câu 32–45)", "ko": "**누구나** ~(으)ㄹ 수 있다 · **누구나** 한 번쯤 ~ 경험이 있을 것이다", "note": "누구나 / 언제나 / 어디에서나 rất hay gặp trong đoạn văn của đề đọc — thường ở câu mở đoạn, dẫn vào chủ đề."},
+ {"src": "Viết câu 54 (mở bài)", "ko": "**누구나** 한 번쯤은 ~아/어 본 적이 있을 것이다.", "note": "Câu mở bài an toàn, dễ dùng cho nhiều đề."}
+],
+"hoi": [
+ {"q": "“Không ai biết chuyện đó” — 누구나 몰라요 hay 아무도 몰라요?", "a": "<b>아무도</b> 몰라요. 누구나 chỉ dùng trong câu khẳng định."}
+],
+"luyen": [
+ {"q": "이 공원은 (    ) 무료로 들어갈 수 있어요.", "o": ["누구나", "아무도", "누구도", "누가"], "w": "Khẳng định, “ai cũng” → 누구나."},
+ {"q": "교실에 (    ) 없어요.", "o": ["아무도", "누구나", "무엇이나", "어디나"], "w": "Phủ định → 아무도."},
+ {"q": "우리 언니는 (    ) 다 잘 먹어요.", "o": ["무슨 음식이나", "무슨 음식나", "무슨 음식이도", "무엇 음식이나"], "w": "무슨 + N(이)나."},
+ {"q": "마리코 씨는 (    ) 친절해요.", "o": ["누구에게나", "누구나에게", "누구를나", "아무에게도"], "w": "Trợ từ đứng trước 나."}
+],
+"em": ["Viết câu mở bài kiểu câu 54: “누구나 한 번쯤은 ~ 적이 있을 것이다.”", "Khen một người thân bằng 무슨 N(이)나 / 누구에게나."],
+"co": "Mẫu nhỏ, dạy nhanh 10 phút; dành thời gian cho cặp 누구나 ↔ 아무도 vì học sinh Việt dịch “ai cũng không” rất hay sai."
+}
+]
+}

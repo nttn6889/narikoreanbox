@@ -1,0 +1,177 @@
+{
+"b": "3A", "n": 3,
+"tong": {
+  "t": "Bài 3 khép lại chuỗi thuật lại: đủ 4 loại câu",
+  "p": "Sau Bài 3 học sinh có đủ bộ “thuật lại” cho 4 loại câu. Cách nhớ: <b>đổi câu gốc sang đuôi 한다체 của đúng loại câu đó → thêm 고 하다</b>. Dạng rút gọn văn nói theo cùng một luật: bỏ 고 하, ghép phần còn lại. Hai mẫu còn lại của bài (-(으)ㄹ 텐데, -(으)ㄹ 줄 몰랐다) đều là chuyện <b>dự đoán</b>: một cái đưa dự đoán làm nền để khuyên / mời, một cái nói dự đoán đã sai.",
+  "tb": [["Loại câu", "Câu gốc", "Thuật lại", "Rút gọn"], ["Trần thuật (Bài 1)", "“바빠요.”", "바쁘**다고** 했어요", "바쁘**대요**"], ["Hỏi (Bài 3)", "“바빠요?”", "바쁘**냐고** 했어요 / 물었어요", "바쁘**냬요**"], ["Mệnh lệnh (Bài 2)", "“가세요.”", "가**라고** 했어요", "가**래요**"], ["Rủ (Bài 3)", "“같이 가요.”", "같이 가**자고** 했어요", "같이 가**재요**"]]
+},
+"p": [
+{
+"no": 1, "id": "g_3A_03_1", "cn": "Phỏng đoán",
+"core": "“Chắc là… (nên / vậy mà)…”: người nói đưa ra một dự đoán làm nền, rồi vế sau là lời khuyên, lời mời, sự lo lắng hay tiếc nuối dựa trên dự đoán đó.",
+"goc": "-(으)ㄹ <b>터</b> (터 = điều dự tính, điều chắc sẽ thế) + 이다 + <b>-ㄴ데</b> (nêu bối cảnh) → -(으)ㄹ 텐데. Nghĩa gốc: “điều chắc sẽ xảy ra là…, mà…”. Vì có -ㄴ데 nên câu luôn <b>có vế sau</b>; nếu bỏ lửng thì thành -(으)ㄹ 텐데요 (ngụ ý điều chưa nói ra).",
+"chia": [["", "Không 받침", "Có 받침", "Quá khứ"], ["Tính từ", "나쁘다 → 나쁠 **텐데**", "좋다 → 좋을 **텐데**", "좋았을 **텐데**"], ["Động từ", "오다 → 올 **텐데**", "먹다 → 먹을 **텐데**", "먹었을 **텐데**"], ["Danh từ", "휴가 → 휴가일 **텐데**", "방학 → 방학일 **텐데**", "방학이었을 **텐데**"], ["Bất quy tắc", "춥다 → 추울 텐데 · 듣다 → 들을 텐데", "알다 → 알 텐데 · 만들다 → 만들 텐데", "힘들다 → 힘들었을 텐데"]],
+"chiaNote": ["Quá khứ -았/었을 텐데 = “chắc là đã…”: 어제 힘들었을 텐데 (chắc hôm qua vất vả lắm).", "-(으)면 -(으)ㄹ 텐데 = ước / tiếc: 시간이 있으면 갈 텐데 (có thời gian thì đã đi rồi, tiếc là không có)."],
+"tinh": [
+ {"t": "Quan tâm: đoán khó khăn của người nghe rồi mời / khuyên", "c": "Đồng nghiệp vừa đi công tác về.", "lv": "lịch sự", "ko": "피곤하**실 텐데** 오늘은 일찍 들어가세요.", "vi": "Chắc anh mệt lắm, hôm nay về sớm đi ạ.", "why": "Tình huống tiêu biểu: người tinh ý đoán trước cảm giác của người khác. Vế sau hay là -세요, -(으)ㄹ까요?"},
+ {"t": "Cảnh báo dựa trên dự đoán", "c": "Bạn định lái xe ra ngoài lúc 6 giờ chiều.", "lv": "lịch sự", "ko": "퇴근 시간이라서 길이 많이 막**힐 텐데** 지하철을 타세요.", "vi": "Giờ tan tầm chắc tắc đường lắm, đi tàu điện ngầm đi.", "why": "Dự đoán → lời khuyên."},
+ {"t": "Ghi nhận công sức (quá khứ)", "c": "Bạn vừa chuyển nhà xong.", "lv": "thân mật", "ko": "어제 이사하느라 힘들**었을 텐데** 푹 쉬어.", "vi": "Hôm qua chuyển nhà chắc mệt lắm, nghỉ cho khỏe nhé.", "why": "-았/었을 텐데 + lời khuyên. Kết hợp -느라 (Bài 2)."},
+ {"t": "Ngập ngừng trước khi hỏi", "c": "Muốn gọi cho bạn ở Mỹ.", "lv": "lịch sự", "ko": "지금 미국은 밤**일 텐데** 전화해도 괜찮을까요?", "vi": "Bên Mỹ giờ chắc là đêm, gọi có được không nhỉ?", "why": "Dự đoán làm mình lo, vế sau là câu hỏi xin ý kiến."},
+ {"t": "Ước, tiếc", "c": "Bạn rủ đi du lịch nhưng em bận.", "lv": "lịch sự", "ko": "시간이 있으면 같이 갈 **텐데**… 아쉬워요.", "vi": "Có thời gian thì đi cùng rồi… tiếc quá.", "why": "-(으)면 -(으)ㄹ 텐데 = điều trái thực tế."},
+ {"t": "Can ngăn khéo, bỏ lửng", "c": "Bạn định mua chiếc túi rất đắt.", "lv": "lịch sự", "ko": "그거 꽤 비**쌀 텐데요**…", "vi": "Cái đó chắc đắt lắm đấy…", "why": "-텐데요 cuối câu: không nói thẳng “đừng mua”, người nghe tự hiểu."}
+],
+"rb": [["Chủ ngữ", "Ai cũng được, rất hay là người nghe (đoán cảm giác của họ). Không dùng để nói cảm giác chắc chắn của chính mình."], ["Thì", "Dự đoán hiện tại / tương lai: -(으)ㄹ 텐데; dự đoán việc đã xảy ra: -았/었을 텐데."], ["Vế sau", "Rất hay là lời khuyên, mời, đề nghị, câu hỏi. Dùng được mệnh lệnh, rủ rê."], ["Loại từ", "Cả động từ, tính từ, danh từ (N일 텐데)."], ["Văn phong", "Văn nói là chính."]],
+"sai": [
+ {"x": "비가 **오는 텐데** 우산 가져가세요.", "o": "비가 **올 텐데** 우산 가져가세요.", "why": "텐데 luôn đi với -(으)ㄹ."},
+ {"x": "밖이 **춥을 텐데**…", "o": "밖이 **추울 텐데**…", "why": "ㅂ bất quy tắc."},
+ {"x": "(Nói về mình) 제가 배고**플 텐데** 먼저 먹을게요.", "o": "제가 배고**파서** 먼저 먹을게요.", "why": "Cảm giác của chính mình thì mình biết chắc, không cần đoán."},
+ {"x": "(Trời đang mưa ngoài cửa sổ) 비가 **올 텐데** 우산 가져가세요.", "o": "비가 **오는데** 우산 가져가세요.", "why": "Sự thật đang thấy → -는데. -ㄹ 텐데 chỉ dùng khi đoán."}
+],
+"pb": [
+ {"vs": "-는데 (bối cảnh, sự thật)", "d": "-는데: việc đang thấy, đã biết. -(으)ㄹ 텐데: việc mình đoán.", "ex": [["비가 오**는데** 우산 있어요?", "Trời đang mưa, có ô không?"], ["오후에 비가 **올 텐데** 우산 있어요?", "Chiều chắc sẽ mưa, có ô không?"]]},
+ {"vs": "-(으)ㄹ 것 같아서", "d": "Lý do của việc mình đã / sẽ làm. -(으)ㄹ 텐데 hướng tới người nghe (khuyên, mời).", "ex": [["비가 올 **것 같아서** 우산을 가져왔어요.", "Thấy như sắp mưa nên tôi mang ô."]]},
+ {"vs": "Nâng cao: -(으)ㄹ 테니까", "d": "“Tôi sẽ… nên (bạn)…” / “chắc sẽ… nên…”: 제가 청소할 테니까 쉬세요. Học ở cấp sau.", "ex": []}
+],
+"topik": [
+ {"src": "Đọc · kỳ 96 câu 1", "ko": "감기약을 (먹고 나서) 열이 내렸다.", "note": "Lựa chọn “먹을 텐데” sai: vế sau là sự thật đã xảy ra, không phải lời khuyên dựa trên dự đoán."},
+ {"src": "Nghe (hội thoại)", "ko": "그 시간에는 사람이 많**을 텐데요**.", "note": "-텐데요 cuối lượt nói = khuyên ngầm / phản đối nhẹ. Câu hỏi “ý định / thái độ của người nói” hay hỏi ở chỗ này."}
+],
+"hoi": [
+ {"q": "Bạn em vừa đi làm về rất muộn. Em nói một câu quan tâm bằng -(으)ㄹ 텐데.", "a": "피곤<b>할 텐데</b> 빨리 씻고 쉬어."},
+ {"q": "Vì sao -(으)ㄹ 텐데 luôn cần vế sau?", "a": "Vì trong 텐데 có -ㄴ데 (nêu bối cảnh). Bối cảnh thì phải dẫn tới điều gì đó; bỏ lửng thì người nghe tự hiểu phần còn lại."}
+],
+"luyen": [
+ {"q": "밖이 (    ) 따뜻하게 입고 나가세요.", "o": ["추울 텐데", "춥을 텐데", "추운 텐데", "추웠느라고"], "w": "춥다 → 추울 텐데."},
+ {"q": "어제 밤새 일하느라 (    ) 오늘은 좀 쉬세요.", "o": ["힘들었을 텐데", "힘들 텐데요", "힘들자마자", "힘들라고"], "w": "Đoán việc đã xảy ra → -았/었을 텐데."},
+ {"q": "퇴근 시간이라서 지금 나가면 차가 많이 (    ).", "o": ["막힐 텐데요", "막히자마자요", "막히느라고요", "막히라고요"], "w": "Bỏ lửng, cảnh báo nhẹ → -(으)ㄹ 텐데요."},
+ {"q": "시간이 있으면 같이 (    ) 아쉬워요.", "o": ["갈 텐데", "가는데", "가자마자", "가느라고"], "w": "-(으)면 -(으)ㄹ 텐데 = ước / tiếc."}
+],
+"em": ["Viết 3 câu quan tâm với người thân bằng -(으)ㄹ 텐데 + -세요 / -아/어.", "Viết 1 câu tiếc nuối bằng -(으)면 -(으)ㄹ 텐데."],
+"co": "Dạy bằng hình ảnh “người tinh ý”: cô đưa tình huống người kia đang gặp (vừa đi xa về, ôm nhiều đồ, trời nóng…) → học sinh nói câu quan tâm. Cuối buổi so sánh với -는데 bằng 2 bức ảnh: trời đang mưa / trời nhiều mây."
+},
+{
+"no": 2, "id": "g_3A_03_2", "cn": "Thuật lại lời nói",
+"core": "Thuật lại câu hỏi: “(ai đó) hỏi (là)…”.",
+"goc": "Đuôi nghi vấn 한다체 <b>-(으)냐 / -느냐</b> + 고 + 하다 / 묻다 / 물어보다. Tính từ: -(으)냐고; động từ và 있다/없다: -느냐고; danh từ: -(이)냐고. Văn nói ngày nay rất hay rút thành <b>-냐고</b> cho mọi loại từ (sách ghi đây là dạng không chuẩn nhưng thông dụng).",
+"chia": [["", "Hiện tại", "Quá khứ", "Tương lai"], ["Động từ", "가**느냐고** (가**냐고**) · 먹**느냐고**", "갔**느냐고** (갔**냐고**)", "갈 거**냐고** · 가**겠느냐고**"], ["Tính từ", "나쁘**냐고** · 좋**으냐고** (좋**냐고**)", "좋았**느냐고**", "좋을 거**냐고**"], ["Danh từ", "휴가**냐고** · 학생**이냐고**", "휴가였**느냐고** · 학생이었**느냐고**", ""], ["있다 / 없다", "있**느냐고** (있**냐고**)", "있었**느냐고**", ""]],
+"chiaNote": ["Gốc ㄹ động từ rơi ㄹ: 살다 → 사**느냐고** (사**냐고**), 만들다 → 만드**느냐고**.", "Từ để hỏi giữ nguyên: 어디에 가냐고, 뭐 먹냐고, 언제 오냐고.", "묻다 (hỏi) là ㄷ bất quy tắc: 물었어요, 물어봤어요. Kính ngữ: **여쭤보다** (hỏi người trên).", "Rút gọn: -냐고 해요 → **-냬요**: 뭐 먹냬요."],
+"tinh": [
+ {"t": "Kể lại ai hỏi mình gì", "c": "Kể với mẹ về buổi phỏng vấn.", "lv": "lịch sự", "ko": "면접관이 왜 우리 회사에 지원했**냐고** 물어봤어요.", "vi": "Người phỏng vấn hỏi vì sao em nộp đơn vào công ty.", "why": "Câu hỏi có từ để hỏi (왜) giữ nguyên."},
+ {"t": "Nhờ hỏi giúp người trên", "c": "Bạn không dám hỏi thầy, em bảo bạn hỏi.", "lv": "lịch sự", "ko": "선생님께 수업이 언제 시작하**느냐고** 여쭤 보세요.", "vi": "Bạn hỏi thầy xem khi nào lớp bắt đầu đi.", "why": "Hỏi người trên → 여쭤보다, dạng đầy đủ -느냐고 lịch sự hơn."},
+ {"t": "Nhắc lại câu hỏi khi người kia không nghe", "c": "Hỏi mấy lần mà bạn không trả lời.", "lv": "thân mật – sốt ruột", "ko": "지금 몇 시**냐고**!", "vi": "Tớ hỏi là mấy giờ rồi cơ mà!", "why": "Đuôi -냐고(요)! bỏ 하다 = nhắc lại chính câu mình đã hỏi, giọng gắt."},
+ {"t": "Thuật lại câu hỏi trách móc", "c": "Kể chuyện bị mẹ cằn nhằn.", "lv": "thân mật", "ko": "엄마가 다이어트하는 애가 뭘 그렇게 많이 먹**냐고** 잔소리하셨어.", "vi": "Mẹ cằn nhằn là đang ăn kiêng mà sao ăn nhiều thế.", "why": "Câu hỏi không cần trả lời, thực chất là trách."},
+ {"t": "Văn báo, khảo sát", "c": "Bài báo về ý kiến người dân.", "lv": "văn viết", "ko": "기자가 시민들에게 새 정책에 찬성하**느냐고** 물었다.", "vi": "Phóng viên hỏi người dân có tán thành chính sách mới không.", "why": "Dạng chuẩn -느냐고 trong văn viết."}
+],
+"rb": [["Chủ ngữ", "Người hỏi + 이/가 (께서); người được hỏi + 에게 / 한테 / 께."], ["Động từ", "하다, 묻다, 물어보다, 여쭤보다 (kính ngữ)."], ["Thì", "Thì câu hỏi gốc đặt trước 냐고 (갔냐고), thì việc hỏi ở 묻다 (물었어요)."], ["Văn phong", "-느냐고 / -(으)냐고: chuẩn, văn viết. -냐고: văn nói."]],
+"sai": [
+ {"x": "친구가 어디에 **가요냐고** 했어요.", "o": "친구가 어디에 **가냐고** 했어요.", "why": "Phải đổi đuôi -요 sang đuôi hỏi 한다체."},
+ {"x": "날씨가 **좋느냐고** 물었어요.", "o": "날씨가 **좋으냐고 / 좋냐고** 물었어요.", "why": "Tính từ không đi với -느-."},
+ {"x": "동생이 내가 **학생냐고** 물었어요.", "o": "동생이 내가 **학생이냐고** 물었어요.", "why": "Danh từ có 받침 → 이냐고."},
+ {"x": "친구가 이름을 **묻었어요**.", "o": "친구가 이름을 **물었어요**.", "why": "묻다 (hỏi) là ㄷ bất quy tắc."},
+ {"x": "엄마가 밥을 먹었**다고** 물어보셨어요.", "o": "엄마가 밥을 먹었**냐고** 물어보셨어요.", "why": "Lời gốc là câu hỏi → -냐고. -다고 + 묻다 là trộn hai loại câu."}
+],
+"pb": [
+ {"vs": "-냐고 묻다 ↔ -는지 묻다", "d": "-는지 묻다 / 알아보다 (“hỏi xem có… không”) dùng khi lồng câu hỏi vào câu dài, hay gặp trong văn viết.", "ex": [["친구에게 시간이 있**는지** 물어봤어요.", "Em hỏi bạn xem có thời gian không."]]},
+ {"vs": "Bảng 4 loại câu thuật lại", "d": "Xem bảng đầu bài: -다고 / -냐고 / -라고 / -자고.", "ex": []}
+],
+"topik": [
+ {"src": "Đọc (văn báo, nghị luận)", "ko": "~**냐는** 질문에 ~(이)라고 답했다", "note": "-냐고 하는 + N → rút thành <b>-냐는 N</b> (질문, 의견, 지적). Mẫu “-냐는 질문에” rất hay gặp trong bài đọc về phỏng vấn, khảo sát."},
+ {"src": "Nghe câu 21–30 (phỏng vấn)", "ko": "~**냐고** 묻는 분들이 많은데요", "note": "Câu mở đầu nêu câu hỏi chung → phần sau là câu trả lời = nội dung chính."}
+],
+"hoi": [
+ {"q": "Mẹ hỏi: “숙제 했어?” Em kể lại với cô thế nào?", "a": "엄마가 숙제<b>했냐고</b> 물어보셨어요."},
+ {"q": "Vì sao hỏi thầy giáo thì dùng 여쭤보다?", "a": "여쭈다 / 여쭤보다 là kính ngữ của 묻다 khi người được hỏi là người trên."}
+],
+"luyen": [
+ {"q": "친구: “어디에 살아요?” → 친구가 어디에 (    ) 물었어요.", "o": ["사냐고", "살냐고", "산다고", "살라고"], "w": "Gốc ㄹ rơi: 살다 → 사(느)냐고."},
+ {"q": "선생님: “이 책 재미있어요?” → 선생님이 그 책이 (    ) 물어보셨어요.", "o": ["재미있냐고", "재미있으라고", "재미있다고", "재미있자고"], "w": "Câu hỏi → -냐고 (있다 → 있느냐고 / 있냐고)."},
+ {"q": "동생: “형은 학생이야?” → 동생이 내가 (    ) 물었어요.", "o": ["학생이냐고", "학생냐고", "학생이라고", "학생이자고"], "w": "Danh từ có 받침 → 이냐고."},
+ {"q": "엄마: “밥 먹었어?” → 엄마가 밥을 (    ).", "o": ["먹었냐고 물어보셨어요", "먹었다고 물어보셨어요", "먹으라고 물어보셨어요", "먹었자고 물어보셨어요"], "w": "Câu hỏi quá khứ → 먹었냐고."}
+],
+"em": ["Hôm nay ai đã hỏi em điều gì? Viết 3 câu -냐고 물어봤어요.", "Viết 1 câu “-냐는 질문에 ~라고 답했어요” về một lần em được phỏng vấn / được hỏi."],
+"co": "Sau mẫu này, cho học sinh làm bảng 4 loại câu (đầu bài) bằng chính câu của các em: cô nói 4 câu (kể, hỏi, bảo, rủ), học sinh thuật lại đủ 4 dạng, rồi rút gọn (-대요 / -냬요 / -래요 / -재요)."
+},
+{
+"no": 3, "id": "g_3A_03_3", "cn": "Ngạc nhiên – không ngờ",
+"core": "“Không ngờ (là)…”: sự thật khác hẳn điều mình đã dự đoán, mong đợi → ngạc nhiên (vui hoặc buồn).",
+"goc": "-(으)ㄹ (định ngữ của việc dự đoán) + <b>줄</b> (danh từ phụ thuộc: “việc là, điều là”) + <b>모르다</b> ở quá khứ → “đã không biết là (sẽ) …”. Ngược lại -(으)ㄹ 줄 <b>알았다</b> = “cứ tưởng là…” (thực tế khác) hoặc “biết ngay mà” (đúng như đoán).",
+"chia": [["", "Không 받침", "Có 받침"], ["Tính từ", "크다 → **클 줄 몰랐다**", "작다 → 작**을 줄 몰랐다**"], ["Động từ", "오다 → **올 줄 몰랐다**", "먹다 → 먹**을 줄 몰랐다**"], ["Danh từ", "학교 → 학교**일 줄 몰랐다**", "학생 → 학생**일 줄 몰랐다**"], ["Bất quy tắc", "맵다 → 매울 줄 · 춥다 → 추울 줄", "멀다 → 멀 줄 · 만들다 → 만들 줄"]],
+"chiaNote": ["Hầu như luôn ở quá khứ: 몰랐다 / 몰랐어요 (chuyện đã xảy ra rồi mới biết).", "Hay đi với 이렇게 / 그렇게 / 저렇게; không đi với 너무 / 아주."],
+"tinh": [
+ {"t": "Cảm ơn bất ngờ", "c": "Sinh nhật, bạn bè đến đông.", "lv": "lịch sự", "ko": "이렇게 많이 와 주**실 줄 몰랐어요**. 정말 감사합니다!", "vi": "Không ngờ mọi người đến đông thế này. Cảm ơn mọi người!", "why": "Ngạc nhiên vui + cảm ơn — câu phát biểu hay dùng."},
+ {"t": "Ngạc nhiên về mức độ", "c": "Mới sang Hàn mùa đông.", "lv": "lịch sự", "ko": "한국 겨울이 이렇게 추**울 줄 몰랐어요**.", "vi": "Không ngờ mùa đông Hàn lạnh đến thế.", "why": "이렇게 + -ㄹ 줄 몰랐다 là cặp cố định."},
+ {"t": "Thất vọng, bị phụ lòng", "c": "Kể về người bạn nói dối.", "lv": "lịch sự", "ko": "그 친구가 거짓말을 **할 줄 몰랐어요**.", "vi": "Không ngờ bạn ấy lại nói dối.", "why": "Ngạc nhiên buồn — giọng trầm xuống."},
+ {"t": "Khen khéo", "c": "Ăn món đồng nghiệp nấu.", "lv": "lịch sự", "ko": "요리를 이렇게 잘하**실 줄 몰랐어요**!", "vi": "Không ngờ anh nấu ăn giỏi thế!", "why": "Khen qua sự ngạc nhiên — tự nhiên hơn khen thẳng."},
+ {"t": "Hối tiếc vì chủ quan", "c": "Ra khỏi phòng thi.", "lv": "thân mật", "ko": "시험이 이렇게 어려**울 줄 몰랐어**. 더 공부할걸.", "vi": "Không ngờ đề khó thế. Biết vậy học thêm.", "why": "Ghép -(으)ㄹ걸 (giá mà)."},
+ {"t": "“Cứ tưởng…” / “Biết ngay mà”", "c": "Mang ô mà trời không mưa; bạn đạt giải nhất.", "lv": "thân mật", "ko": "비가 **올 줄 알고** 우산을 가져왔는데 안 왔네. / 네가 1등 **할 줄 알았어**!", "vi": "Tưởng mưa nên mang ô, ai ngờ không mưa. / Biết ngay cậu sẽ đứng nhất mà!", "why": "-(으)ㄹ 줄 알았다: tùy ngữ cảnh là đoán sai (cứ tưởng) hoặc đoán đúng (biết ngay)."}
+],
+"rb": [["Chủ ngữ trong mệnh đề", "Dùng 이/가, không dùng 은/는: 한국의 겨울이 이렇게 추울 줄 몰랐어요."], ["Thì", "몰랐다 ở quá khứ. Việc đã xảy ra trước: -았/었을 줄 몰랐다 (벌써 떠났을 줄 몰랐어요)."], ["Trạng từ", "이렇게 / 그렇게 / 저렇게 — không 너무 / 아주."], ["Loại từ", "Cả động từ, tính từ, danh từ."]],
+"sai": [
+ {"x": "한국의 겨울**은** 이렇게 추울 줄 몰랐어요.", "o": "한국의 겨울**이** 이렇게 추울 줄 몰랐어요.", "why": "Chủ ngữ trong mệnh đề định ngữ dùng 이/가."},
+ {"x": "떡볶이가 **너무** 맛있을 줄 몰랐어요.", "o": "떡볶이가 **이렇게** 맛있을 줄 몰랐어요.", "why": "Sách ghi rõ: không đi với 너무 / 아주."},
+ {"x": "오늘 시험이 있을 줄 **몰라요**.", "o": "오늘 시험이 있을 줄 **몰랐어요**.", "why": "Biết rồi mới ngạc nhiên → quá khứ."},
+ {"x": "(Ý: không ngờ chị nấu giỏi) 언니가 김치를 만들 줄 몰라요.", "o": "언니가 김치를 이렇게 잘 만들 줄 몰랐어요.", "why": "만들 줄 몰라요 (hiện tại) = không biết cách làm (2A Bài 2) — nghĩa khác hẳn."}
+],
+"pb": [
+ {"vs": "-(으)ㄹ 줄 모르다 (2A Bài 2)", "d": "Khả năng: không biết cách làm, chỉ động từ, thường hiện tại. -(으)ㄹ 줄 몰랐다: không ngờ, cả 3 loại từ, quá khứ.", "ex": [["저는 수영**할 줄 몰라요**.", "Tôi không biết bơi."], ["수영장이 이렇게 **클 줄 몰랐어요**.", "Không ngờ bể bơi to thế."]]},
+ {"vs": "-는 줄 몰랐다 / -(으)ㄴ 줄 몰랐다", "d": "Không biết một sự thật đang là / đã là: 오늘이 생일인 줄 몰랐어요 (không biết hôm nay là sinh nhật). Nghĩa gần như -(으)ㄹ 줄 몰랐다.", "ex": [["오늘이 철수 씨 생일**인 줄 몰랐어요**.", "Tôi không biết hôm nay là sinh nhật Cheolsu."]]}
+],
+"topik": [
+ {"src": "Nghe · kỳ 91 câu 7", "ko": "이 작가가 처음으로 쓴 작품**인 줄 몰랐어요**.", "note": "Dạng -인 줄 몰랐다 = trước đó không biết. Thông tin mới với người nói → hay là chỗ để hỏi “nội dung giống”."},
+ {"src": "Đọc · kỳ 96 câu 4", "ko": "회의가 길어져서 약속 시간을 __미뤄야만 했다__. → 미룰 수밖에 없었다", "note": "Lựa chọn “미룰 줄 몰랐다” là bẫy: chỉ giống hình thức, nghĩa “không ngờ” chẳng liên quan đến “buộc phải”."}
+],
+"hoi": [
+ {"q": "Em mới sang Hàn, thấy đồ ăn rất đắt. Em nói gì?", "a": "한국 물가가 <b>이렇게</b> 비<b>쌀 줄 몰랐어요</b>."},
+ {"q": "“저는 운전할 줄 몰라요” và “그 사람이 운전을 할 줄 몰랐어요” khác nhau thế nào?", "a": "Câu 1: tôi không biết lái xe (khả năng). Câu 2: không ngờ người đó (lại) lái xe."}
+],
+"luyen": [
+ {"q": "비빔냉면이 (    ) 매울 줄 몰랐어요.", "o": ["이렇게", "너무", "아주", "정말 너무"], "w": "-ㄹ 줄 몰랐다 đi với 이렇게 / 그렇게."},
+ {"q": "집들이에 친구들이 그렇게 많이 (    ).", "o": ["올 줄 몰랐어요", "올 줄 몰라요", "오는 줄 몰라요", "올 줄 알아요"], "w": "Ngạc nhiên về việc đã xảy ra → quá khứ 몰랐어요."},
+ {"q": "한국의 겨울(    ) 이렇게 추울 줄 몰랐어요.", "o": ["이", "은", "을", "에"], "w": "Chủ ngữ trong mệnh đề → 이/가."},
+ {"q": "Câu nào nói về KHẢ NĂNG (không biết cách)?", "o": ["저는 수영할 줄 몰라요.", "수영장이 이렇게 클 줄 몰랐어요.", "오늘 수영 수업이 있는 줄 몰랐어요.", "친구가 수영을 그렇게 잘할 줄 몰랐어요."], "w": "V-(으)ㄹ 줄 모르다 ở hiện tại = không biết cách."},
+ {"q": "(Kỳ 96) 회의가 길어져서 약속 시간을 __미뤄야만 했다__. — nghĩa giống?", "o": ["미룰 수밖에 없었다", "미룰 줄 몰랐다", "미루기만 했다", "미루기가 어려웠다"], "w": "-아/어야만 했다 = buộc phải = -(으)ㄹ 수밖에 없었다."}
+],
+"em": ["Kể 3 điều “không ngờ” khi em học tiếng Hàn / khi đến một nơi mới.", "Viết 1 câu “cứ tưởng… nên…” bằng -(으)ㄹ 줄 알고."],
+"co": "Mở đầu bằng ảnh đối lập (món nhìn hiền mà rất cay, căn phòng nhỏ mà giá cao) → học sinh nói -ㄹ 줄 몰랐어요. Dành 5 phút cho bảng so sánh với -(으)ㄹ 줄 모르다 (2A) vì đề hay dùng làm bẫy."
+},
+{
+"no": 4, "id": "g_3A_03_4", "cn": "Thuật lại lời nói",
+"core": "Thuật lại lời rủ, lời đề nghị cùng làm: “(ai đó) rủ / đề nghị (mình) cùng…”.",
+"goc": "Đuôi rủ rê 한다체 <b>-자</b> (가자, 먹자) + 고 + 하다. Phủ định: <b>-지 말자고</b>. Rút gọn văn nói: -자고 해요 → <b>-재요</b>.",
+"chia": [["Gốc", "→"], ["만나다 · 읽다", "만나**자고** · 읽**자고**"], ["만들다 · 듣다 · 돕다", "만들**자고** · 듣**자고** · 돕**자고** (không biến đổi)"], ["Phủ định", "떠들**지 말자고**"], ["Rút gọn", "같이 가**재요** · 먹지 말**재요**"]],
+"chiaNote": ["Động từ thay cho 하다: 제안하다 (đề nghị), 약속하다 (hứa), 말하다."],
+"tinh": [
+ {"t": "Báo lời rủ của người khác", "c": "Bạn A rủ đi xem phim, em rủ thêm bạn B.", "lv": "thân mật", "ko": "민수가 주말에 같이 영화 보**자고** 했어. 너도 갈래?", "vi": "Minsu rủ cuối tuần đi xem phim. Cậu đi không?", "why": "Chuyển lời rủ để rủ thêm người."},
+ {"t": "Kể đề xuất trong cuộc họp", "c": "Báo cho đồng nghiệp vắng mặt.", "lv": "trang trọng", "ko": "부장님이 회의를 다음 주로 미루**자고 하셨어요**.", "vi": "Trưởng phòng đề nghị dời cuộc họp sang tuần sau.", "why": "Đề xuất của người trên → 하셨어요."},
+ {"t": "Kể chuyện từ chối lời rủ", "c": "Kể với bạn thân.", "lv": "thân mật", "ko": "친구가 술 마시**자고** 했는데 내일 시험이 있다고 했어.", "vi": "Bạn rủ đi nhậu mà mình bảo là mai có thi.", "why": "Ghép -자고 (Bài 3) với -다고 (Bài 1) — luyện cả chuỗi."},
+ {"t": "Lời hứa chung", "c": "Hai người làm lành sau cãi nhau.", "lv": "lịch sự", "ko": "우리 다음부터는 싸우**지 말자고** 약속했어요.", "vi": "Bọn em hứa với nhau từ giờ đừng cãi nhau nữa.", "why": "-지 말자고 + 약속하다."},
+ {"t": "Lời kêu gọi trong văn báo", "c": "Tin về phong trào môi trường.", "lv": "văn viết", "ko": "시민 단체는 일회용품 사용을 줄이**자고** 호소했다.", "vi": "Tổ chức dân sự kêu gọi giảm dùng đồ dùng một lần.", "why": "-자고 제안하다 / 호소하다 / 주장하다."}
+],
+"rb": [["Chủ ngữ", "Người rủ + 이/가; người được rủ + 에게 / 한테 (thường lược)."], ["Loại từ", "Chỉ động từ."], ["Thì", "Ở 하다 (했어요)."]],
+"sai": [
+ {"x": "친구가 같이 **가요라고** 했어요.", "o": "친구가 같이 **가자고** 했어요.", "why": "Phải đổi sang đuôi rủ 한다체 -자."},
+ {"x": "같이 밥을 **먹으자고** 했어요.", "o": "같이 밥을 **먹자고** 했어요.", "why": "-자 gắn thẳng, không thêm 으."},
+ {"x": "선생님이 떠들지 **마자고** 하셨어요.", "o": "선생님이 떠들지 **말자고** 하셨어요.", "why": "-지 말다 + 자고."},
+ {"x": "(Nghe) 친구가 같이 **가자마자** 했어요.", "o": "친구가 같이 **가자고** 했어요.", "why": "가자고 (rủ đi) và 가자마자 (vừa đi là) nghe gần giống — học sinh hay nghe / viết nhầm."}
+],
+"pb": [
+ {"vs": "-자고 ↔ -(으)라고", "d": "-자고: rủ cùng làm (cả người nói). -(으)라고: bảo người khác làm.", "ex": [["친구가 같이 공부하**자고** 했어요.", "Bạn rủ cùng học."], ["친구가 공부하**라고** 했어요.", "Bạn bảo (mình) học đi."]]}
+],
+"topik": [
+ {"src": "Đọc (văn báo câu 31–38)", "ko": "~**자고** 제안했다 / 주장했다", "note": "Lời đề xuất được trích dẫn thường là ý chính của người được phỏng vấn — đối chiếu với câu hỏi “ý đồ / thái độ”."}
+],
+"hoi": [
+ {"q": "Bạn rủ: “같이 점심 먹자.” Em kể với cô thế nào?", "a": "친구가 같이 점심 먹<b>자고</b> 했어요."}
+],
+"luyen": [
+ {"q": "친구: “같이 공부하자.” → 친구가 같이 (    ) 했어요.", "o": ["공부하자고", "공부하라고", "공부한다고", "공부하냐고"], "w": "Lời rủ → -자고."},
+ {"q": "언니: “떠들지 말자.” → 언니가 (    ).", "o": ["떠들지 말자고 했어요", "떠들지 마자고 했어요", "안 떠들라고 했어요", "떠들지 않자고 했어요"], "w": "Phủ định của rủ → -지 말자고."},
+ {"q": "친구가 같이 여행 (    ) 했는데 시간이 없어서 못 간다고 했어요.", "o": ["가자고", "가자마자", "가라고", "간다고"], "w": "Bạn rủ đi cùng → 가자고."},
+ {"q": "엄마: “일찍 자.” → 엄마가 일찍 (    ).", "o": ["자라고 하셨어요", "자자고 하셨어요", "잔다고 하셨어요", "자냐고 하셨어요"], "w": "Ôn bảng 4 loại câu: mệnh lệnh → -라고."},
+ {"q": "친구: “내일 몇 시에 와?” → 친구가 내일 몇 시에 (    ).", "o": ["오냐고 했어요", "오라고 했어요", "오자고 했어요", "온다고 했어요"], "w": "Ôn bảng 4 loại câu: câu hỏi → -냐고."}
+],
+"em": ["Thuật lại một cuộc trò chuyện ngắn (4 câu) có đủ 4 loại câu: kể, hỏi, bảo, rủ.", "Viết 1 câu hứa kiểu “우리 ~지 말자고 약속했어요”."],
+"co": "Kết thúc chuỗi Bài 1–3 bằng trò “phóng viên”: cô kể một đoạn hội thoại 6 câu trộn 4 loại câu, học sinh thuật lại toàn bộ, rồi nói lại bằng dạng rút gọn."
+}
+]
+}

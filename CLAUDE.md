@@ -319,6 +319,15 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   mọi cuốn (tên mẫu, nghĩa, ví dụ, lưu ý). Giải thích tiếng Hàn gốc ẩn, nút “Hiện tiếng Hàn” (localStorage `nari-np-ko`). Ví dụ `" / "` = lượt hội thoại, 🔊 máy đọc.
 - Trang từ vựng `seoul/` có nút chuyển Từ vựng | Ngữ pháp và dòng “Ngữ pháp bài này” dưới tên bài (đọc `ngu-phap/np.json`).
 
+## Kho ngữ pháp Nari (`ngu-phap-sau/`) — học liệu dạy sâu ngữ pháp của cô
+- Trang `noindex`, cô dùng soạn bài + trình chiếu (nút góc trên: “Bản của cô” / “Bản chiếu cho học sinh” ẩn khung “Ghi chú cho cô”, localStorage `nari-nps`).
+  Không đặt link từ trang học sinh (giống `seoul/3a-1/`). Link `#b=3A&c=2&g=3` (cùng kiểu `seoul/ngu-phap/`), `#v=cn` mục lục theo chức năng.
+- Dữ liệu `ngu-phap-sau/data/<cuốn>-<bài>.json` (thêm tên vào biến `LS` trong trang): `tong` (tổng quan bài: t, p, tb) + `p:[{no, id (= id `grammar`, vd. g_3A_02_3), cn (chức năng),
+  core, goc (cấu tạo / nghĩa gốc), chia (bảng), chiaNote, tinh:[{t, c bối cảnh, lv mức lịch sự, ko, vi, why}] (bản đồ tình huống), rb (ràng buộc), sai:[{x, o, why}],
+  pb:[{vs, d, ex}] (phân biệt), topik:[{src, ko, note}], hoi:[{q, a}] (Cô hỏi), luyen:[{q, o (lựa chọn đầu là đáp án), w}], em (Câu của em), co (ghi chú cô)}]`. `**chữ**` = tô đỏ.
+  Tên mẫu, số trang + khung “📖 Sách viết gì” lấy từ `seoul/ngu-phap/np.json` theo (cuốn, bài, no).
+- Đã soạn: Seoul 3A Bài 1–3 (12 mẫu). Cô duyệt xong thì làm tiếp 2A Bài 1–3. Câu đề TOPIK dẫn trong `topik` chỉ ghi câu đã kiểm tra trong `thi-thu/de/`.
+
 ## Kiểm tra nền tảng Seoul (`seoul/kiem-tra/`)
 - Bài chẩn đoán cho học sinh học tiếp 3A: 53 câu (A từ vựng 12 · B chia đuôi gõ 10 · C tiểu từ 6 · D ngữ pháp theo bài 1B–2B 17 ·
   E đọc 4 · F thử trước 3A 4) + tự đánh giá. Mỗi câu chọn “Chắc chắn/Đoán”, có nút “Em chưa học”. Đề nằm trong mảng `Q` của trang

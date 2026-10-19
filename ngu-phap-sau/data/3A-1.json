@@ -1,0 +1,177 @@
+{
+"b": "3A", "n": 1,
+"tong": {
+  "t": "Bài 1 mở đầu chuỗi “thuật lại” kéo dài tới Bài 3",
+  "p": "4 mẫu của bài đều xoay quanh một việc: <b>nói lại điều người khác nói / điều mình nghe được</b>. Bài 1 học câu trần thuật (-다고), Bài 2 học câu mệnh lệnh (-라고), Bài 3 học câu hỏi (-냐고) và câu rủ (-자고). Viên gạch nền bắt buộc phải vững trước khi vào bài: <b>chia đuôi 한다체</b> (간다, 먹는다, 바쁘다, 학생이다) — học sinh sai -다고 hầu hết là vì sai bước này.",
+  "tb": [["Mẫu", "Nhấn vào", "Dùng khi"], ["-다고 했어요", "người nói (ai nói)", "kể lại lời ai đó, văn nói + văn viết"], ["-다고 들었어요", "tôi là người nghe", "mở lời, xác nhận lại, nói trực tiếp với người trong tin"], ["-대요", "tin còn mới, rút gọn", "văn nói hằng ngày, chuyển lời nhanh"], ["-아/어야겠다", "quyết định ngay lúc nói", "phản ứng sau khi nghe tin / nhận ra điều gì"]]
+},
+"p": [
+{
+"no": 1, "id": "g_3A_01_1", "cn": "Thuật lại lời nói",
+"core": "Thuật lại lời nói hoặc thông tin của người khác (bạn bè, tin tức, sách báo) bằng lời của mình: “(ai đó) nói là… / nghe nói…”.",
+"goc": "Câu người ta nói → đổi sang <b>đuôi 한다체</b> (-다 / -ㄴ다 / -는다 / -(이)다) → gắn <b>고</b> (dấu trích dẫn, như “rằng”) → <b>하다</b> (nói). Ví dụ: “바빠요” → 바쁘<b>다</b> → 바쁘다<b>고</b> → 바쁘다고 <b>했어요</b>. Thì của lời gốc nằm <b>trước 고</b> (갔다고), thì của việc “nói” nằm ở <b>하다</b> (했어요 / 해요).",
+"chia": [["", "Hiện tại", "Quá khứ", "Tương lai / phỏng đoán"], ["Động từ (không 받침)", "가다 → 간**다고**", "갔**다고**", "갈 거**라고**"], ["Động từ (có 받침)", "먹다 → 먹는**다고**", "먹었**다고**", "먹을 거**라고**"], ["Tính từ", "바쁘다 → 바쁘**다고**", "바빴**다고**", "바쁠 거**라고**"], ["Danh từ", "의사 → 의사**라고** · 학생 → 학생**이라고**", "의사였**다고** · 학생이었**다고**", "의사일 거**라고**"], ["Phủ định", "안 간**다고** · 가지 않는**다고**", "학생이 아니**라고**", ""]],
+"chiaNote": ["Gốc ㄹ rơi ㄹ trước -ㄴ다: 만들다 → **만든다고**, 살다 → **산다고**, 알다 → **안다고**.", "있다 / 없다 chia như tính từ: 맛있다 → **맛있다고**, 시간이 없다 → **없다고** (không có 있는다고).", "Bất quy tắc chỉ xuất hiện ở dạng quá khứ: 듣다 → 들었다고, 춥다 → 추웠다고, 모르다 → 몰랐다고."],
+"tinh": [
+ {"t": "Chuyển lời của người thứ ba", "c": "Bạn Minsu nhờ em nhắn cô là hôm nay bạn ấy không đến được.", "lv": "lịch sự", "ko": "민수 씨가 오늘 수업에 못 온**다고 했어요**.", "vi": "Minsu nói là hôm nay không đến lớp được.", "why": "Người nghe chưa biết tin, em là người trung gian → nêu rõ ai nói (민수 씨가)."},
+ {"t": "Dẫn nguồn tin chính thức", "c": "Sáng nay xem dự báo thời tiết, em báo cho cả nhà.", "lv": "lịch sự", "ko": "뉴스에서 내일 비가 많이 온**다고 했어요**.", "vi": "Tin tức nói là mai mưa to.", "why": "Nguồn là tin tức / thông báo → -다고 했어요 nghe chắc chắn, nghiêm túc hơn -대요."},
+ {"t": "Nhắc lại lời chính mình đã nói", "c": "Em đã báo là sẽ đến muộn nhưng bạn quên, giờ lại hỏi.", "lv": "thân mật – hơi trách", "ko": "제가 아까 좀 늦는**다고 했잖아요**.", "vi": "Tôi đã nói lúc nãy là sẽ đến muộn một chút mà.", "why": "Chủ ngữ là chính mình + -잖아요 = “tôi đã bảo rồi mà”. Rất tự nhiên trong hội thoại."},
+ {"t": "Gọi tên – “gọi là…”", "c": "Hỏi tên tiếng Hàn của một món ăn / đồ vật.", "lv": "lịch sự", "ko": "이건 한국어로 뭐**라고 해요**? – 떡볶이**라고 해요**.", "vi": "Cái này tiếng Hàn gọi là gì? – Gọi là tteokbokki.", "why": "N(이)라고 하다 ở thì hiện tại không phải thuật lại ai nói, mà là “gọi là / tên là”."},
+ {"t": "Nêu ý kiến, suy nghĩ (mở rộng)", "c": "Cô hỏi ý kiến em về kế hoạch học.", "lv": "lịch sự", "ko": "저는 매일 조금씩 공부하는 게 좋**다고 생각해요**.", "vi": "Em nghĩ là mỗi ngày học một chút thì tốt.", "why": "Thay 하다 bằng 생각하다 / 믿다 / 느끼다 → cùng cách chia, dùng để nói ý kiến của mình. Câu 54 TOPIK dùng nhiều."},
+ {"t": "Tường thuật trong văn viết", "c": "Bài báo, báo cáo, nhật ký.", "lv": "văn viết", "ko": "학생들은 이번 시험이 어려웠**다고 말했다**.", "vi": "Học sinh nói là kỳ thi lần này khó.", "why": "Văn viết thay 하다 bằng 말하다 / 밝히다 / 강조하다 / 지적하다 cho rõ nghĩa."}
+],
+"rb": [["Chủ ngữ", "Ai cũng được. Người nói nêu bằng N이/가 (친구가 ~다고 했어요); người được nói với: N에게/한테."], ["Thì", "Hai lớp thì: lời gốc trước 고 (갔다고 = đã đi), việc nói ở 하다 (했어요 = đã nói)."], ["Đại từ, thời gian", "Đổi theo lúc thuật: “저는 피곤해요” → 친구가 (자기가) 피곤하다고 했어요; hôm qua bạn nói “내일” → hôm nay thuật lại là “오늘”."], ["Loại từ", "Cả động từ, tính từ, danh từ — nhưng ba cách chia khác nhau (-ㄴ/는다고, -다고, -(이)라고)."], ["Văn phong", "Dạng đầy đủ dùng được cả nói và viết. Nói nhanh hằng ngày → rút thành -대요 (mẫu 4)."]],
+"sai": [
+ {"x": "친구가 내일 가요**라고** 했어요.", "o": "친구가 내일 간**다고** 했어요.", "why": "Gắn 고 thẳng vào đuôi -요 là lỗi số 1. Phải đổi sang đuôi 한다체 trước. Muốn giữ nguyên văn thì dùng ngoặc kép: 친구가 “내일 가요.”라고 했어요."},
+ {"x": "날씨가 좋**는다고** 했어요.", "o": "날씨가 좋**다고** 했어요.", "why": "Tính từ không thêm -는-. Học sinh hay chia theo phản xạ “có 받침 thì -는다”."},
+ {"x": "그 사람이 학생**다고** 했어요.", "o": "그 사람이 학생**이라고** 했어요.", "why": "Danh từ luôn đi với -(이)라고, không phải -다고."},
+ {"x": "동생이 이 빵이 맛있**는다고** 했어요.", "o": "동생이 이 빵이 맛있**다고** 했어요.", "why": "있다/없다 trong câu thuật lại chia như tính từ."},
+ {"x": "(Bạn nói: “나는 피곤해.”) → 친구가 **내가** 피곤하다고 했어요.", "o": "친구가 (**자기가**) 피곤하다고 했어요.", "why": "“나” trong lời bạn là bạn ấy, không phải em. Người Việt dịch thẳng “bạn nói tôi mệt” nên dễ nhầm đại từ."}
+],
+"pb": [
+ {"vs": "Trích dẫn trực tiếp “…”라고 하다", "d": "Giữ nguyên văn trong ngoặc kép, chỉ thêm (이)라고 — không đổi đuôi. Gián tiếp -다고 thì đổi đuôi, đổi đại từ.", "ex": [["민수 씨가 “내일 만나요.”**라고** 했어요.", "Minsu nói: “Mai gặp nhé.”"], ["민수 씨가 내일 만난**다고** 했어요.", "Minsu nói là mai sẽ gặp."]]},
+ {"vs": "-다고 들었다 (mẫu 3) · -대요 (mẫu 4)", "d": "-다고 했어요 nhấn ai nói; -다고 들었어요 nhấn tôi đã nghe; -대요 là dạng nói rút gọn.", "ex": []}
+],
+"topik": [
+ {"src": "Đọc câu 32–45 (văn nghị luận, báo)", "ko": "전문가들은 이 문제가 심각하**다고 지적한다**.", "note": "Câu có -다고 말하다 / 지적하다 / 주장하다 là <b>ý kiến của người được trích dẫn</b>, chưa chắc là chủ đề của tác giả. Câu hỏi “chủ đề / ý chính” hay đặt bẫy ở đây."},
+ {"src": "Viết câu 53 (biểu đồ khảo sát)", "ko": "응답자의 60%가 ‘만족한다’**고 응답했다**.", "note": "Mẫu chuẩn khi viết kết quả khảo sát: N%가 ‘…다’고 응답했다 / 답했다."}
+],
+"hoi": [
+ {"q": "Mẹ nói: “밥 먹었어?” — em có thuật lại bằng -다고 했어요 được không?", "a": "Không. Đây là câu hỏi → 엄마가 밥 먹었<b>냐고</b> 물어보셨어요 (Bài 3). Mỗi loại câu có một đuôi thuật lại riêng: trần thuật -다고, hỏi -냐고, mệnh lệnh -라고, rủ -자고."},
+ {"q": "Vì sao 만들다 thành 만든다고 mà không phải 만들는다고?", "a": "만들다 gốc ㄹ: ㄹ rơi trước ㄴ, rồi coi như gốc không 받침 → 만드 + ㄴ다고 = 만든다고."}
+],
+"luyen": [
+ {"q": "친구: “오늘 너무 바빠요.” → 친구가 오늘 너무 (    ) 했어요.", "o": ["바쁘다고", "바쁜다고", "바빠요라고", "바쁘라고"], "w": "Tính từ → -다고. 바쁘라고 là câu mệnh lệnh (bảo hãy bận)."},
+ {"q": "수진: “저는 대학생이에요.” → 수진 씨가 대학생(    ) 했어요.", "o": ["이라고", "이다고", "라고", "다고"], "w": "Danh từ có 받침 → 이라고."},
+ {"q": "뉴스: “내일 눈이 와요.” → 뉴스에서 내일 눈이 (    ) 했어요.", "o": ["온다고", "오다고", "오는다고", "와요다고"], "w": "Động từ không 받침 → -ㄴ다고."},
+ {"q": "민호: “어제 영화를 봤어요.” → 민호 씨가 어제 영화를 (    ) 했어요.", "o": ["봤다고", "본다고", "봤라고", "보았다라고"], "w": "Lời gốc ở quá khứ → -았/었다고."},
+ {"q": "동생: “이 케이크를 내가 만들어.” → 동생이 이 케이크를 (    ) 했어요.", "o": ["자기가 만든다고", "내가 만든다고", "자기가 만들는다고", "내가 만들다고"], "w": "Đổi đại từ (내가 → 자기가) + gốc ㄹ rơi: 만든다고."}
+],
+"em": ["Hôm qua ai (bạn, mẹ, sếp, thầy cô) nói gì với em? Thuật lại 3 câu bằng -다고 했어요.", "Đọc một tin ngắn hôm nay, kể lại cho cô bằng “뉴스에서 ~다고 했어요”."],
+"co": "Kiểm tra 한다체 trước (10 động từ / tính từ chia -ㄴ/는다) — 5 phút, không vững thì chưa vào mẫu. Trò “người đưa tin”: cô đóng vai người thứ ba nói một câu, học sinh quay sang thuật lại cho “người khác” (cô đổi vai). Cố ý đưa câu có 저/나 để luyện đổi đại từ."
+},
+{
+"no": 2, "id": "g_3A_01_2", "cn": "Ý định – quyết định",
+"core": "Người nói vừa nhận ra cần làm việc gì và quyết định ngay lúc đó là sẽ làm: “chắc phải… mới được / phải… thôi”.",
+"goc": "-아/어야 하다 (phải) + -겠- (ý chí / phán đoán của người nói ngay lúc nói) → -아/어야 하겠다 → rút gọn <b>-아/어야겠다</b>. Hai lớp nghĩa: <b>“cần”</b> (-아/어야) + <b>“tôi quyết, ngay bây giờ”</b> (-겠-). Vì có -겠- nên mẫu này gắn chặt với <b>người nói</b> và <b>thời điểm nói</b>.",
+"chia": [["Gốc", "Ví dụ", "→"], ["ㅏ, ㅗ", "가다 · 보다", "가**야겠다** · 봐**야겠다**"], ["Nguyên âm khác", "먹다 · 쉬다", "먹어**야겠다** · 쉬어**야겠다**"], ["하다", "공부하다", "공부해**야겠다**"], ["ㄷ bất quy tắc", "듣다", "들어**야겠다**"], ["ㅂ bất quy tắc", "돕다", "도와**야겠다**"], ["으 rơi", "쓰다", "써**야겠다**"], ["르 bất quy tắc", "부르다", "불러**야겠다**"], ["Phủ định", "마시다", "마시**지 말아야겠다** / 안 마셔**야겠다**"]],
+"chiaNote": ["Đuôi câu: tự nhủ -아/어야겠다 (반말: -아/어야겠어), lịch sự -아/어야겠어요, trang trọng -아/어야겠습니다.", "Hay ghép -네(요): 가야겠네요 — mềm hơn, nghe như “vậy thì chắc phải… rồi”."],
+"tinh": [
+ {"t": "Tự nhủ khi vừa nhận ra", "c": "Đang làm việc, ngẩng lên thấy đã 10 giờ đêm.", "lv": "độc thoại", "ko": "벌써 10시네. 이제 집에 가**야겠다**.", "vi": "10 giờ rồi à. Giờ phải về thôi.", "why": "Quyết định nảy ra ngay khi thấy giờ — đúng lõi của -겠-."},
+ {"t": "Xin phép về một cách khéo léo", "c": "Đang ngồi với đồng nghiệp, em muốn về trước.", "lv": "lịch sự", "ko": "죄송한데 저 먼저 가 봐**야겠어요**.", "vi": "Xin lỗi, chắc em phải về trước ạ.", "why": "Không nói thẳng “em muốn về” mà nói như có việc cần → lịch sự. Câu cửa miệng của người Hàn."},
+ {"t": "Phản ứng ngay với tin vừa nghe", "c": "Bạn báo mai mưa.", "lv": "lịch sự", "ko": "A: 내일 비가 온대요. B: 그럼 우산을 챙겨**야겠네요**.", "vi": "Nghe nói mai mưa. – Vậy chắc phải mang ô rồi.", "why": "Nghe thông tin → quyết định. Kiểu đáp này hay là đáp án câu “nói tiếp theo” trong bài nghe."},
+ {"t": "Quyết tâm sau một chuyện không vui", "c": "Vừa biết điểm thi kém.", "lv": "lịch sự", "ko": "이번 시험을 망쳤어요. 다음부터는 미리 공부해**야겠어요**.", "vi": "Lần này thi hỏng rồi. Lần sau phải học trước mới được.", "why": "Rút kinh nghiệm, tự hứa với chính mình."},
+ {"t": "Khen bằng cách “phải quay lại”", "c": "Ăn ở quán thấy rất ngon.", "lv": "thân mật", "ko": "여기 진짜 맛있다! 다음에 가족들이랑 또 와**야겠다**.", "vi": "Ngon thật! Lần sau phải dẫn cả nhà tới mới được.", "why": "Cách khen gián tiếp rất tự nhiên của người Hàn."},
+ {"t": "Ngụ ý nhắc người khác", "c": "Mẹ bước vào phòng con thấy bừa bộn.", "lv": "thân mật – ngụ ý", "ko": "방이 이게 뭐니? 청소 좀 해**야겠다**.", "vi": "Phòng gì thế này? Phải dọn đi thôi.", "why": "Chủ ngữ ẩn là “con”, nhưng mẹ nói như tự quyết → nhắc khéo mà vẫn có lực. Ngữ điệu quyết định nghĩa."}
+],
+"rb": [["Chủ ngữ", "Người nói (tôi / chúng tôi). Ngôi 3 không dùng: 민수 씨가 가야겠어요 (×) → 가야 할 것 같아요 / 가야겠대요 (thuật lại lời Minsu)."], ["Thì", "Quyết định ở thời điểm nói. “Lẽ ra phải…” (quá khứ) là mẫu khác: -았/었어야 했다."], ["Vị trí", "Đứng cuối câu (-야겠다 / -야겠어요 / -야겠네요). Ít khi dùng giữa câu."], ["Loại từ", "Chủ yếu động từ. Tính từ dùng được với nghĩa “phải (như thế) mới được”: 건강해야겠다 — ít gặp."], ["Văn phong", "Văn nói, nhật ký. Văn nghị luận dùng -아/어야 한다."]],
+"sai": [
+ {"x": "(Vé đặt từ tháng trước) 다음 주에 부산에 가**야겠어요**.", "o": "다음 주에 부산에 가**기로 했어요** / 갈 **거예요**.", "why": "Kế hoạch đã có từ trước → không phải quyết định vừa nảy ra. -야겠어요 nghe như “à, chắc phải đi Busan thôi”."},
+ {"x": "동생이 숙제를 해**야겠어요**.", "o": "동생이 숙제를 해**야 해요** / 해**야겠대요**.", "why": "Chủ ngữ ngôi 3 → không dùng -겠- ý chí của người nói."},
+ {"x": "어제 병원에 갔어**야겠어요**.", "o": "어제 병원에 갔어**야 했어요**.", "why": "“Lẽ ra hôm qua phải đi” là tiếc nuối quá khứ → -았/었어야 했다."},
+ {"x": "(Nội quy) 학생은 교복을 입어**야겠어요**.", "o": "학생은 교복을 입어**야 해요**.", "why": "Quy định khách quan → -아/어야 하다. -야겠어요 là quyết định chủ quan."}
+],
+"pb": [
+ {"vs": "-아/어야 하다", "d": "Nghĩa vụ, quy định, việc khách quan phải làm. -아/어야겠다 = chủ quan, vừa quyết.", "ex": [["내일 출근해**야 해요**.", "Mai phải đi làm (lịch cố định)."], ["몸이 안 좋네. 오늘은 일찍 퇴근해**야겠어요**.", "Thấy người không khỏe → quyết về sớm."]]},
+ {"vs": "-(으)ㄹ게요", "d": "-ㄹ게요 = hứa / báo với người nghe, vì người nghe. -야겠어요 = tự thấy cần.", "ex": [["제가 할**게요**.", "Để tôi làm cho (nhận việc)."], ["아무도 안 하네요. 제가 해**야겠어요**.", "Chẳng ai làm, chắc tôi phải tự làm thôi."]]},
+ {"vs": "-기로 하다 · -(으)ㄹ 거예요", "d": "-기로 했어요: quyết định đã có, thường đã bàn với ai. -(으)ㄹ 거예요: kế hoạch, dự định.", "ex": []}
+],
+"topik": [
+ {"src": "Nghe câu 4–8 · kỳ 83 câu 5, kỳ 91 câu 7", "ko": "그래요? 한번 가 봐**야겠어요**. / 이 드라마 다 보면 다른 작품도 봐**야겠어요**.", "note": "Câu kiểu “nghe tin hay → chắc phải thử” xuất hiện trong lựa chọn của bài nghe “chọn câu nói tiếp theo”. Mẹo: người nghe vừa nhận thông tin mới → câu -아/어야겠어요 thường hợp lý."}
+],
+"hoi": [
+ {"q": "Trời đổ mưa to khi em sắp ra khỏi nhà. Em tự nói: 택시를 타야 해요 hay 택시를 타야겠어요?", "a": "택시를 타<b>야겠어요</b> — vừa thấy mưa, quyết định ngay. 타야 해요 nghe như vốn dĩ đã bắt buộc phải đi taxi."},
+ {"q": "Vì sao “저 먼저 가 봐야겠어요” lịch sự hơn “저 먼저 갈게요”?", "a": "-야겠어요 trình bày như có việc khiến mình phải về (không phải tự ý muốn); -ㄹ게요 là mình tự thông báo sẽ về."}
+],
+"luyen": [
+ {"q": "(Nhìn đồng hồ) 어머, 벌써 11시네! 이제 (    ).", "o": ["자야겠다", "자야 했다", "잘게", "자기로 했다"], "w": "Vừa nhận ra giờ → quyết định ngay: -야겠다."},
+ {"q": "A: 이 식당 정말 맛있지요? B: 네, 다음에 가족들하고 같이 또 (    ).", "o": ["와야겠어요", "와야 했어요", "왔어야겠어요", "와야 해요"], "w": "Ăn thấy ngon → quyết định quay lại. 와야 해요 nghe như bắt buộc."},
+ {"q": "Câu nào SAI?", "o": ["동생이 내일 일찍 일어나야겠어요.", "저는 내일 일찍 일어나야겠어요.", "늦었네. 빨리 가야겠다.", "감기에 걸렸어요. 약을 먹어야겠어요."], "w": "Chủ ngữ ngôi 3 (동생) không dùng -야겠어요."},
+ {"q": "(Nội quy công ty) 회사에서는 이름표를 꼭 (    ).", "o": ["달아야 해요", "달아야겠어요", "달게요", "달았어야겠어요"], "w": "Quy định khách quan → -아/어야 하다."},
+ {"q": "노래를 너무 많이 불렀어요. 목이 아파요. 오늘은 노래를 (    ).", "o": ["부르지 말아야겠어요", "부르지 마야겠어요", "안 불러야 했어요", "부르지 않을게요"], "w": "Phủ định: -지 말아야겠다."}
+],
+"em": ["Nhìn quanh phòng em bây giờ: có việc gì cần làm? Viết 3 câu -아/어야겠다.", "Sau buổi học hôm nay em quyết định thay đổi điều gì khi học? Viết 1 câu -아/어야겠어요."],
+"co": "Luyện phản xạ: cô đưa tình huống (ảnh, một câu tin) → học sinh đáp ngay trong 3 giây bằng -야겠어요 / -야겠네요. Nhấn ngữ điệu ở tình huống 6 (ngụ ý nhắc) cho học sinh nghe sự khác nhau."
+},
+{
+"no": 3, "id": "g_3A_01_3", "cn": "Thuật lại lời nói",
+"core": "“Tôi nghe nói là…”: nêu thông tin mình đã nghe được từ người khác / phương tiện truyền thông, nhấn vào việc <b>tôi là người đã nghe</b>.",
+"goc": "Cùng phần trước như -다고 하다 (mẫu 1), chỉ thay 하다 bằng <b>듣다</b> (nghe) ở quá khứ → <b>들었다</b> (ㄷ bất quy tắc). Người nói là chủ ngữ của 들었다 (thường lược 저는). Nguồn tin: N한테서 / N에게서 / N에서.",
+"chia": [["", "Hiện tại", "Quá khứ"], ["Động từ", "간**다고 들었어요** · 먹는**다고 들었어요**", "갔**다고 들었어요**"], ["Tính từ", "좋**다고 들었어요**", "좋았**다고 들었어요**"], ["Danh từ", "휴가**라고 들었어요** · 방학**이라고 들었어요**", "휴가였**다고 들었어요**"]],
+"chiaNote": ["듣다 → 들었어요 / 들었습니다 (ㄷ → ㄹ trước nguyên âm). Viết 듣었어요 là sai.", "Hay nối -는데 để hỏi tiếp hoặc đề nghị: ~다고 들었는데, 맞아요? / ~다고 들었는데 같이 갈래요?"],
+"tinh": [
+ {"t": "Nói trực tiếp với người trong tin", "c": "Gặp chị đồng nghiệp sắp cưới.", "lv": "lịch sự", "ko": "다음 달에 결혼하신**다고 들었어요**. 축하드려요!", "vi": "Nghe nói tháng sau chị cưới. Chúc mừng chị!", "why": "Với chính người trong tin chỉ dùng -다고 들었어요. Nói “결혼하신대요” trước mặt chị ấy là sai tình huống (대요 = kể cho người thứ ba)."},
+ {"t": "Phỏng vấn, giao tiếp trang trọng", "c": "Phỏng vấn xin việc, nói lý do chọn công ty.", "lv": "trang trọng", "ko": "이 회사는 직원 교육이 잘되어 있**다고 들었습니다**.", "vi": "Tôi được biết công ty có chương trình đào tạo nhân viên tốt.", "why": "Thể hiện mình đã tìm hiểu, nhưng không khẳng định chắc."},
+ {"t": "Kiểm tra lại tin đồn", "c": "Hỏi bạn về một quán quen.", "lv": "thân mật", "ko": "그 식당 문 닫았**다고 들었는데**, 진짜야?", "vi": "Nghe nói quán đó đóng cửa rồi, thật hả?", "why": "-다고 들었는데 + câu hỏi = cách mở chuyện để xác nhận."},
+ {"t": "Hỏi thăm, bày tỏ quan tâm", "c": "Biết mẹ của bạn bị ốm.", "lv": "lịch sự", "ko": "어머님이 편찮으시**다고 들었어요**. 좀 괜찮으세요?", "vi": "Nghe nói mẹ bạn bị ốm. Bác đỡ chưa?", "why": "Mở lời tế nhị — không cần nói ai kể cho mình."},
+ {"t": "Giữ kín người đưa tin", "c": "Không muốn nói tên người kể.", "lv": "lịch sự", "ko": "회사 사람들한테서 그렇**다고 들었어요**.", "vi": "Tôi nghe mấy người trong công ty nói vậy.", "why": "Nhấn “tôi nghe”, nguồn để chung chung."}
+],
+"rb": [["Chủ ngữ", "Của 들었다 là tôi (lược). Nguồn tin: N한테서 / N에게서, không dùng N이/가 (친구가 → thành chủ ngữ của mệnh đề trong)."], ["Thì", "들었다 hầu như luôn quá khứ (đã nghe rồi). Thì của tin nằm trước 다고."], ["Vế sau", "Hay nối -는데 rồi hỏi tiếp, đề nghị, chúc mừng."], ["Văn phong", "Lịch sự, dùng được cả nói và viết (thư, email: ~다고 들었습니다)."]],
+"sai": [
+ {"x": "친구**가** 그 영화가 재미있다고 들었어요. (ý: em nghe bạn nói)", "o": "친구**한테서** 그 영화가 재미있다고 들었어요.", "why": "친구가 sẽ thành “bạn (đã) nghe”. Nguồn tin phải là -한테서 / -에게서."},
+ {"x": "그 이야기를 **듣었어요**.", "o": "그 이야기를 **들었어요**.", "why": "듣다 là ㄷ bất quy tắc."},
+ {"x": "(Nói với chị Lan) 언니, 다음 달에 결혼**한대요**!", "o": "언니, 다음 달에 결혼**한다고 들었어요**!", "why": "-대요 dùng để kể cho người thứ ba, không nói với chính người trong tin."}
+],
+"pb": [
+ {"vs": "-다고 하다 / -대요", "d": "-다고 했어요 / -대요 nhấn <b>người nói</b> (ai nói, kể cho người khác). -다고 들었어요 nhấn <b>tôi đã nghe</b>, lịch sự hơn, nói được với chính người trong tin.", "ex": [["민수 씨가 결혼한**대요**.", "(Kể cho bạn) Nghe nói Minsu cưới."], ["(Nói với Minsu) 결혼하신**다고 들었어요**.", "Nghe nói anh sắp cưới."]]},
+ {"vs": "Nâng cao: -(ㄴ/는)다면서요?", "d": "Hỏi xác nhận “nghe nói… phải không?”, rất hay trong hội thoại, học ở cấp sau: 결혼한다면서요?", "ex": []}
+],
+"topik": [
+ {"src": "Viết câu 51 (email, thông báo)", "ko": "이번 주에 동아리 모임이 있**다고 들었습니다**. 그런데 …", "note": "Câu mở đầu email hay dùng mẫu này để nêu lý do viết thư; ô trống phía sau thường là lời xin / hỏi."},
+ {"src": "Nghe (hội thoại công sở)", "ko": "다음 주에 회의가 있**다고 들었는데요**.", "note": "Lượt mở đầu bằng -다고 들었는데요 → câu tiếp theo thường là hỏi / đề nghị. Câu hỏi “người phụ nữ sẽ làm gì” hay xoay quanh phần sau -는데."}
+],
+"hoi": [
+ {"q": "Em gặp anh đồng nghiệp vừa được thăng chức. Câu nào đúng: 승진하셨대요 hay 승진하셨다고 들었어요?", "a": "승진하셨<b>다고 들었어요</b>. 축하드려요! — nói trực tiếp với người trong tin."}
+],
+"luyen": [
+ {"q": "(Nói với chị Lan) 언니, 다음 달에 (    ). 축하해요!", "o": ["결혼한다고 들었어요", "결혼한대요", "결혼하라고 들었어요", "결혼하냐고 들었어요"], "w": "Nói với chính người trong tin → -다고 들었어요."},
+ {"q": "친구(    ) 그 영화가 재미있다고 들었어요. (em nghe bạn kể)", "o": ["한테서", "가", "를", "에"], "w": "Nguồn tin: N한테서 / N에게서."},
+ {"q": "이 근처에 맛집이 (    ) 들었는데 어디예요?", "o": ["많다고", "많는다고", "많으라고", "많아요고"], "w": "Tính từ → -다고."},
+ {"q": "어제 그 소식을 (    ).", "o": ["들었어요", "듣었어요", "드었어요", "들어었어요"], "w": "ㄷ bất quy tắc: 듣다 → 들었어요."}
+],
+"em": ["Viết 3 điều em nghe nói về trường / công ty / thành phố ở Hàn mà em muốn đến: “~다고 들었어요”.", "Viết 1 câu hỏi thăm cô bằng “~다고 들었는데 ~?”."],
+"co": "Đóng vai “gặp lại người quen sau lâu ngày”: cô đưa 3 thẻ tin (cưới, chuyển nhà, ốm) → học sinh mở lời bằng -다고 들었어요 + câu chúc / hỏi thăm."
+},
+{
+"no": 4, "id": "g_3A_01_4", "cn": "Thuật lại lời nói",
+"core": "Dạng nói rút gọn của -다고 해요: “nghe nói… / (ai đó) bảo là…”. Dùng rất nhiều trong hội thoại hằng ngày.",
+"goc": "-다고 해요 → <b>-대요</b>: 바쁘<b>다고 해</b>요 → 바쁘<b>대</b>요. Động từ: -ㄴ/는다고 해요 → <b>-ㄴ/는대요</b>; danh từ: -(이)라고 해요 → <b>-(이)래요</b>. Cách rút gọn này lặp lại ở Bài 2–3: -(으)래요 (mệnh lệnh), -냬요 (hỏi), -재요 (rủ).",
+"chia": [["", "Hiện tại", "Quá khứ", "Tương lai"], ["Động từ", "간**대요** · 먹는**대요**", "갔**대요** · 먹었**대요**", "갈 거**래요**"], ["Tính từ", "바쁘**대요** · 좋**대요**", "바빴**대요**", "바쁠 거**래요**"], ["Danh từ", "의사**래요** · 학생**이래요**", "의사였**대요** · 학생이었**대요**", "의사일 거**래요**"]],
+"chiaNote": ["반말: -대 / -래 (친구가 안 온대. / 걔 학생이래.)", "Câu hỏi siêu thông dụng: **뭐래요?** = “(Người ta) nói gì thế?”", "Đừng nhầm **-대요** (nghe người khác nói) với **-데요** (tự mình đã thấy, = -더라고요): 그 식당 맛있대요 (nghe nói ngon) ≠ 그 식당 맛있데요 (tôi ăn rồi, thấy ngon)."],
+"tinh": [
+ {"t": "Chuyển lời ngay sau cuộc gọi", "c": "Mẹ gọi điện, em quay sang báo bố.", "lv": "lịch sự trong nhà", "ko": "엄마가 저녁 먹고 오신**대요**.", "vi": "Mẹ bảo ăn tối rồi mới về.", "why": "Truyền tin nhanh, ngắn gọn → -대요."},
+ {"t": "Hỏi “người ta nói gì?”", "c": "Bạn vừa nói chuyện với thầy giáo.", "lv": "lịch sự", "ko": "A: 선생님이 뭐**래요**? B: 내일 시험 본**대요**.", "vi": "Thầy nói gì thế? – Thầy bảo mai thi.", "why": "뭐래요 là câu hỏi dùng hằng ngày, không ai nói 뭐라고 했어요 trong tình huống này."},
+ {"t": "Kể tin đồn, tin trên mạng", "c": "Đọc tin ca sĩ yêu thích.", "lv": "thân mật", "ko": "그 가수 다음 달에 콘서트 한**대**!", "vi": "Nghe nói ca sĩ đó tháng sau tổ chức concert đấy!", "why": "반말 -대, kèm cảm xúc."},
+ {"t": "Dự báo thời tiết trong đời sống", "c": "Dặn người nhà trước khi đi.", "lv": "lịch sự", "ko": "오후에 비 온**대요**. 우산 가져가세요.", "vi": "Nghe nói chiều mưa. Mang ô đi nhé.", "why": "Nguồn không cần nói rõ — ai cũng hiểu là dự báo."},
+ {"t": "Kể chuyện về người thứ ba", "c": "Nói chuyện với bạn thân.", "lv": "thân mật", "ko": "민수 여자친구 생겼**대**.", "vi": "Nghe nói Minsu có bạn gái rồi.", "why": "Tin về người vắng mặt."}
+],
+"rb": [["Người nghe", "Không dùng khi nói với chính người trong tin (→ -다고 들었어요)."], ["Thì", "Như -다고 하다: thì của tin trước 대 (갔대요, 갈 거래요)."], ["Văn phong", "Văn nói. Bài viết TOPIK (51–54) và văn trang trọng dùng -다고 한다 / -다고 하였다."], ["Sắc thái", "-대요: tin vẫn còn đúng bây giờ. -다고 했어요: nhấn lúc đó người ta đã nói."]],
+"sai": [
+ {"x": "내일 비가 **와대요**.", "o": "내일 비가 **온대요**.", "why": "Gắn 대요 vào gốc 아/어 là sai; động từ không 받침 → -ㄴ대요."},
+ {"x": "동생이 **학생대요**.", "o": "동생이 **학생이래요**.", "why": "Danh từ → -(이)래요."},
+ {"x": "날씨가 **바쁜대요 / 추운대요**.", "o": "날씨가 **춥대요**.", "why": "Tính từ → -대요, không thêm ㄴ."},
+ {"x": "(Viết bài 54) 전문가들은 이 문제가 **심각하대요**.", "o": "전문가들은 이 문제가 **심각하다고 한다**.", "why": "Văn viết không dùng dạng rút gọn văn nói."},
+ {"x": "(Ý: nghe nói) 그 영화 재미있**데요**.", "o": "그 영화 재미있**대요**.", "why": "Nghe phát âm gần giống nhưng nghĩa khác: -데요 là tự mình trải nghiệm."}
+],
+"pb": [
+ {"vs": "-대요 ↔ -데요", "d": "-대요 = 다고 해요 (người khác nói). -데요 = 더라고요 (tôi đã tự thấy).", "ex": [["그 식당 맛있**대요**.", "Nghe nói quán đó ngon."], ["그 식당 맛있**데요**.", "(Tôi ăn rồi) quán đó ngon lắm."]]},
+ {"vs": "-대요 ↔ -다고 했어요", "d": "-대요: tin mới, vẫn còn hiệu lực, nói nhanh. -다고 했어요: kể lại việc ai đó đã nói (có thể nay đã khác).", "ex": []}
+],
+"topik": [
+ {"src": "Nghe · kỳ 83 câu 7", "ko": "비가 곧 그칠 거**래요**. / 작년하고 거의 비슷할 거**래요**.", "note": "Nghe ra -거래요 = “nghe nói sẽ…”. Thông tin là của người khác (dự báo), người nói không khẳng định — câu “nội dung giống với bài nghe” hay bẫy ở chỗ ai là người nói."}
+],
+"hoi": [
+ {"q": "Bạn em vừa nói chuyện điện thoại xong. Em hỏi: 뭐라고 했어요? hay 뭐래요?", "a": "Cả hai đúng, nhưng <b>뭐래요?</b> tự nhiên hơn trong đời sống. 뭐라고 했어요? thường dùng khi không nghe rõ, muốn người ta nhắc lại."}
+],
+"luyen": [
+ {"q": "친구: “오늘 못 가요.” → 친구가 오늘 못 (    ).", "o": ["간대요", "가대요", "간데요", "가래요"], "w": "Động từ không 받침 → -ㄴ대요. 가래요 là thuật lại mệnh lệnh (bảo đi)."},
+ {"q": "수미: “저는 회사원이에요.” → 수미 씨가 회사원(    ).", "o": ["이래요", "이대요", "래요", "대요"], "w": "Danh từ có 받침 → 이래요."},
+ {"q": "A: 선생님이 (    )? B: 내일 시험 본대요.", "o": ["뭐래요", "뭐대요", "뭐예요라고요", "뭐하대요"], "w": "뭐 + (이)래요 → 뭐래요."},
+ {"q": "Câu nào hợp với bài viết TOPIK?", "o": ["전문가들은 이 문제가 심각하다고 한다.", "전문가들은 이 문제가 심각하대요.", "전문가들은 이 문제가 심각한대요.", "전문가들은 이 문제가 심각하데요."], "w": "Văn viết → -다고 한다."},
+ {"q": "뉴스: “내일 추워요.” → 내일 (    ).", "o": ["춥대요", "추운대요", "춥데요", "추워대요"], "w": "Tính từ → -대요."}
+],
+"em": ["Gọi điện / nhắn tin với một người bạn, rồi báo lại cho cô 3 câu -대요.", "Kể 2 tin em đọc được trên mạng hôm nay bằng -대요."],
+"co": "Trò “điện thoại”: cô gọi (đóng vai mẹ / bạn), học sinh nghe xong quay sang “người nhà” (cô đổi vai) thuật lại bằng -대요. Luyện thêm phân biệt nghe -대요 / -데요."
+}
+]
+}

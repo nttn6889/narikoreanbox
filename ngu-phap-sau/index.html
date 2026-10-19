@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Kho ngữ pháp Nari · Nari TOPIK</title>
+<meta name="description" content="Kho ngữ pháp dạy sâu theo giáo trình Seoul: nghĩa lõi, cấu tạo, cách chia, bản đồ tình huống sử dụng, ràng buộc, lỗi người Việt hay mắc, phân biệt mẫu gần nghĩa, liên hệ đề TOPIK, luyện chấm ngay.">
+<link rel="icon" href="../thi-thu/icon/icon-192.png">
+<style>
+:root{--ink:#111;--line:#555;--soft:#d8dde6;--sub:#f3f3f5;--muted:#666;--bg:#fff;--acc:#b0283c;--pur:#53468F;--purbg:#efeaf8;--gold:#C99A2E;--ok:#1d7a3a;--okbg:#eaf6ee;--bad:#b3261e;--badbg:#fdecea;--warn:#9a6200;--warnbg:#fff6df;--blue:#1f3c88;--bluebg:#eef2fb;--hl:#ffe9a8}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Times New Roman",Times,"Noto Serif KR","Malgun Gothic",serif}
+main{max-width:860px;margin:0 auto;padding:16px 16px 60px}
+.ko,.opt,textarea,input,code,.pt-name,table.t td{font-family:"Noto Sans KR","Malgun Gothic","Apple SD Gothic Neo",sans-serif}
+.ko{word-break:keep-all}
+.brand{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--soft)}
+.brand .logo{display:block;height:50px;width:auto;margin:0 0 2px -4px}
+.brand span{font-size:14px;color:var(--muted)}
+.brand span a{color:inherit;text-decoration:none;border-bottom:1px dotted var(--muted)}
+h1{font-size:25px;margin:4px 0 2px;line-height:1.25}
+h1 .ko{display:block;font-size:19px;color:var(--pur)}
+.lead{margin:6px 0 12px;color:#333;font-size:15px}
+nav.top{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:0 -16px 14px;padding:8px 16px;position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);z-index:5}
+nav.top .bar{display:flex;border:2px solid var(--ink);border-radius:8px;overflow:hidden;flex:1;min-width:220px}
+nav.top .bar a{flex:1;text-align:center;padding:6px 4px;color:var(--ink);text-decoration:none;font-weight:bold;font-size:15px}
+nav.top .bar a+a{border-left:2px solid var(--ink)}
+nav.top .bar a.on{background:var(--ink);color:#fff}
+nav.top .bar a.dis{color:#aaa}
+nav.top .bar a{white-space:nowrap}
+@media(max-width:480px){nav.top .bar{flex-basis:100%}nav.top .bar a{font-size:14px;padding:6px 2px}nav.top .mode{margin-left:auto}}
+.mode{font:13px Arial,sans-serif;border:1px solid var(--line);border-radius:20px;padding:5px 10px;background:#fff;cursor:pointer;white-space:nowrap}
+.mode.hs{background:var(--purbg);border-color:var(--pur);color:var(--pur)}
+body.hs .co-only{display:none!important}
+h2{font-size:23px;margin:8px 0 4px;line-height:1.3}
+h2 .ko{color:var(--pur)}
+h3{font-size:19px;margin:28px 0 8px;padding-bottom:3px;border-bottom:2px solid var(--ink);scroll-margin-top:70px}
+h3 .n{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--pur);color:#fff;font:bold 14px Arial,sans-serif;margin-right:6px;vertical-align:2px}
+h4{font-size:16.5px;margin:14px 0 4px}
+.crumb{font:13.5px Arial,sans-serif;color:var(--muted);margin:0 0 4px}
+.crumb a{color:var(--blue)}
+.pt-name{font-size:26px;font-weight:bold;color:var(--acc);margin:2px 0 6px;line-height:1.35;word-break:keep-all}
+.core{padding:10px 14px;background:var(--purbg);border-left:5px solid var(--pur);border-radius:0 8px 8px 0;font-size:17px;margin:6px 0 10px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 4px}
+.chips a{font:13px Arial,sans-serif;padding:3px 9px;border:1px solid var(--soft);border-radius:14px;color:var(--ink);text-decoration:none;background:#fff}
+.chips a:hover{border-color:var(--pur);color:var(--pur)}
+.tag{display:inline-block;font:12px Arial,sans-serif;padding:1px 8px;border-radius:10px;background:var(--sub);color:#444;vertical-align:2px}
+.goc{font-size:15.5px;padding:8px 12px;border:1px dashed var(--blue);border-radius:8px;background:#fafbff}
+table.t{border-collapse:collapse;width:100%;font-size:14.5px;margin:6px 0 10px}
+table.t th,table.t td{border:1px solid var(--line);padding:5px 7px;text-align:left;vertical-align:top}
+table.t tr:first-child td{background:var(--sub);font-weight:bold}
+table.t b,.ko b,.ex b{color:var(--acc)}
+.scroll{overflow-x:auto}
+ul.nt{margin:4px 0 10px;padding-left:20px;font-size:15px}
+ul.nt li{margin:3px 0}
+.sits{display:grid;gap:10px}
+.sit{border:1px solid var(--soft);border-radius:10px;padding:10px 12px;background:#fff}
+.sit .h{display:flex;gap:8px;align-items:baseline;justify-content:space-between;flex-wrap:wrap}
+.sit .h b{font-size:16px}
+.lv{font:12px Arial,sans-serif;padding:1px 8px;border-radius:10px;background:var(--bluebg);color:var(--blue);white-space:nowrap}
+.sit .c{font-size:14px;color:var(--muted);margin:2px 0 6px}
+.ex{margin:5px 0 3px;padding:6px 10px;background:var(--sub);border-radius:6px;font-size:15.5px}
+.ex .ko{display:block}
+.ex .vi{display:block;color:var(--muted);font-size:14px}
+.why{font-size:14.5px;margin:6px 0 0;padding-left:10px;border-left:3px solid var(--gold)}
+.why::before{content:"Vì sao dùng mẫu này: ";font-weight:bold;color:var(--warn)}
+.say{border:0;background:none;cursor:pointer;font-size:15px;padding:0 0 0 4px;vertical-align:1px}
+.rb td:first-child{width:28%;font-weight:bold;font-family:"Times New Roman",serif}
+.err{border:1px solid var(--soft);border-radius:10px;padding:8px 12px;margin:0 0 8px}
+.err .x,.err .o{font-size:15.5px}
+.err .x::before{content:"✗ ";color:var(--bad);font-weight:bold}
+.err .x{color:#5a2a26;text-decoration:line-through;text-decoration-color:rgba(179,38,30,.45)}
+.err .o::before{content:"✓ ";color:var(--ok);font-weight:bold}
+.err .w{font-size:14.5px;color:#333;margin-top:3px}
+.vs{border-left:4px solid var(--blue);background:var(--bluebg);padding:8px 12px;margin:0 0 10px;border-radius:0 8px 8px 0}
+.vs>b{color:var(--blue)}
+.tp{border:1px solid #e3c98a;background:var(--warnbg);border-radius:10px;padding:8px 12px;margin:0 0 8px}
+.tp .s{font:bold 13px Arial,sans-serif;color:var(--warn)}
+.tp .ko{display:block;margin:3px 0;font-size:15.5px}
+.tp .w{font-size:14.5px}
+details.ask{border:1px solid var(--soft);border-radius:10px;padding:8px 12px;margin:0 0 8px}
+details.ask summary{cursor:pointer;font-weight:bold}
+details.ask summary::after{content:" — bấm xem đáp án";font-weight:normal;font:12.5px Arial,sans-serif;color:var(--muted)}
+details.ask[open] summary::after{content:""}
+details.ask>div{margin-top:6px;padding:6px 10px;background:var(--okbg);border-radius:6px;font-size:15px}
+details.book{border:1px solid var(--soft);border-radius:10px;padding:6px 12px;margin:10px 0;background:#fcfcfc}
+details.book summary{cursor:pointer;font-weight:bold;color:var(--pur)}
+.q{border:1px solid var(--soft);border-radius:10px;padding:10px 12px;margin:0 0 10px}
+.q .qs{font-size:15.5px;margin-bottom:6px}
+.q .qs i{font-style:normal;font:bold 13px Arial,sans-serif;color:var(--muted);margin-right:4px}
+.opts{display:grid;gap:6px;grid-template-columns:1fr 1fr}
+@media(max-width:560px){.opts{grid-template-columns:1fr}}
+.opt{text-align:left;font-size:15px;padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:#fff;cursor:pointer;color:var(--ink)}
+.opt:hover:not(:disabled){border-color:var(--pur)}
+.opt.ok{background:var(--okbg);border-color:var(--ok)}
+.opt.no{background:var(--badbg);border-color:var(--bad)}
+.opt:disabled{cursor:default}
+.q .fb{display:none;margin-top:6px;font-size:14.5px;padding:6px 10px;border-radius:6px}
+.q.done .fb{display:block}
+.q.r .fb{background:var(--okbg)}.q.w .fb{background:var(--badbg)}
+.score{font:14px Arial,sans-serif;color:var(--muted);margin:-2px 0 8px}
+.em{margin:0 0 10px}
+.em label{display:block;font-size:15px;margin-bottom:4px}
+.em textarea{width:100%;min-height:74px;font-size:15px;padding:8px;border:1px solid var(--line);border-radius:8px;resize:vertical}
+.cobox{border:2px dashed var(--acc);border-radius:10px;padding:8px 12px;background:#fff8f8;margin:18px 0 0;font-size:15px}
+.cobox b:first-child{color:var(--acc)}
+.tong{border:1px solid var(--pur);border-radius:12px;padding:10px 14px;background:#fbfaff;margin:8px 0 14px}
+.tong>b{color:var(--pur);font-size:17px}
+.tong p{margin:6px 0}
+.cards{display:grid;gap:10px}
+a.card{display:block;border:1px solid var(--line);border-radius:10px;padding:10px 12px;text-decoration:none;color:var(--ink)}
+a.card:hover{border-color:var(--pur);background:#fbfaff}
+a.card .pt{font-family:"Noto Sans KR","Malgun Gothic",sans-serif;font-weight:bold;color:var(--acc);font-size:17px;word-break:keep-all}
+a.card .cr{font-size:15px;margin-top:2px}
+a.card .meta{font:12.5px Arial,sans-serif;color:var(--muted);margin-top:4px}
+.toc{margin:0 0 14px}
+.toc .bk{font-weight:bold;font-size:18px;margin:16px 0 6px}
+.toc summary.bk{cursor:pointer}
+.toc .ls{border:1px solid var(--soft);border-radius:10px;margin:0 0 8px;overflow:hidden}
+.toc .ls .lh{display:flex;justify-content:space-between;gap:8px;align-items:baseline;background:var(--sub);padding:6px 10px;font-weight:bold}
+.toc .ls .lh a{color:var(--ink)}
+.toc .ls.off{opacity:.55}
+.toc .ls ul{list-style:none;margin:0;padding:4px 10px 6px}
+.toc .ls li{padding:3px 0;font-size:15px;border-top:1px dotted var(--soft)}
+.toc .ls li:first-child{border-top:0}
+.toc .ls li a{color:var(--ink);text-decoration:none}
+.toc .ls li a b{font-family:"Noto Sans KR","Malgun Gothic",sans-serif;color:var(--acc)}
+.toc .ls li span{color:var(--muted);font-size:14px}
+.soon{font:12px Arial,sans-serif;color:var(--muted);font-weight:normal}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;margin:4px 0 10px}
+.seg a{padding:5px 12px;text-decoration:none;color:var(--ink);font-size:15px}
+.seg a.on{background:var(--pur);color:#fff}
+.srch{width:100%;font-size:16px;padding:8px 10px;border:1px solid var(--line);border-radius:8px;margin:4px 0 10px}
+.pn{display:flex;justify-content:space-between;gap:10px;margin:26px 0 0;flex-wrap:wrap}
+.pn a{flex:1;min-width:140px;border:1px solid var(--line);border-radius:10px;padding:8px 12px;text-decoration:none;color:var(--ink);font-size:14px}
+.pn a b{display:block;font-family:"Noto Sans KR","Malgun Gothic",sans-serif;color:var(--acc);font-size:15px}
+.pn a.nx{text-align:right}
+.how{font-size:15px}
+.how ol{padding-left:22px;margin:6px 0}
+.muted{color:var(--muted)}
+footer{margin-top:40px;padding-top:10px;border-top:1px solid var(--soft);font-size:13.5px;color:var(--muted)}
+@media print{nav.top,.say,.mode,.pn,.chips{display:none!important}details{border:0}details>*{display:block}}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <div class="brand">
+    <div><img class="logo" src="../logo/nari-topik-ngang.svg" width="148" height="50" alt="Nari TOPIK – Hiểu từng câu, Vững từng cấp"><span>Cô Ngân · Zalo: <a href="https://zalo.me/0399214554">0399.214.554</a></span></div>
+  </div>
+  <h1>Kho ngữ pháp Nari<span class="ko">문법 깊이 보기 · 서울대 한국어</span></h1>
+  <p class="lead">Mỗi mẫu ngữ pháp được mổ xẻ theo cùng một khung: <b>nghĩa lõi và cấu tạo</b> → cách chia → <b>bản đồ tình huống sử dụng</b> → ràng buộc → <b>lỗi người Việt hay mắc</b> → phân biệt mẫu gần nghĩa → trong đề TOPIK → luyện chấm ngay → câu của em.</p>
+</header>
+<nav class="top">
+  <div class="bar" id="bar"></div>
+  <button class="mode" id="mode" type="button"></button>
+</nav>
+<div id="view"><p class="muted">Đang tải…</p></div>
+<footer>Kho ngữ pháp Nari · nguồn giải thích sách: giáo trình 서울대 한국어 (bản dịch ở trang <a href="../seoul/ngu-phap/">Ngữ pháp giáo trình Seoul</a>). Phần dạy sâu do cô Ngân biên soạn.</footer>
+</main>
+<script>
+// Bài đã soạn trong kho (thêm tên file data/<cuốn>-<bài>.json vào đây)
+var LS=['3A-1','3A-2','3A-3'];
+var BOOKS=['1A','1B','2A','2B','3A','3B'];
+var D={}, NP=null, ST={};
+try{ST=JSON.parse(localStorage.getItem('nari-nps')||'{}')}catch(e){}
+ST.em=ST.em||{};
+function save(){try{localStorage.setItem('nari-nps',JSON.stringify(ST))}catch(e){}}
+function md(s){return String(s==null?'':s).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>')}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function plain(s){return String(s||'').replace(/\*\*/g,'').replace(/<[^>]+>/g,'')}
+function $(id){return document.getElementById(id)}
+
+// ---- máy đọc
+var koVoice=null;
+function pickVoice(){if(!window.speechSynthesis)return;var v=speechSynthesis.getVoices();for(var i=0;i<v.length;i++){if(/^ko/i.test(v[i].lang)){koVoice=v[i];if(/google|yuna|female|sun/i.test(v[i].name))break;}}}
+if(window.speechSynthesis){pickVoice();speechSynthesis.onvoiceschanged=pickVoice;}
+function speak(t){if(!window.speechSynthesis)return;speechSynthesis.cancel();var u=new SpeechSynthesisUtterance(t);u.lang='ko-KR';if(koVoice)u.voice=koVoice;u.rate=.9;speechSynthesis.speak(u);}
+function sayBtn(ko){var t=plain(ko).replace(/\([^)]*\)/g,' ').replace(/[A-Z]:/g,' ');return window.speechSynthesis?'<button class="say" type="button" data-say="'+esc(t)+'" title="Nghe">🔊</button>':''}
+
+// ---- tải dữ liệu
+function load(){
+  var ps=LS.map(function(k){return fetch('data/'+k+'.json').then(function(r){return r.json()}).then(function(j){D[k]=j})});
+  ps.push(fetch('../seoul/ngu-phap/np.json').then(function(r){return r.json()}).then(function(j){NP=j.b}).catch(function(){NP={}}));
+  return Promise.all(ps);
+}
+function lessonInfo(b,n){var l=(NP&&NP[b]||[]).filter(function(x){return x.n==n})[0];return l||{n:n,ko:'',vi:'',g:[]}}
+function bookPt(b,n,no){var l=lessonInfo(b,n);return (l.g||[]).filter(function(g){return g.no==no})[0]}
+function allPts(){var a=[];LS.forEach(function(k){var d=D[k];if(!d)return;d.p.forEach(function(p){a.push({k:k,d:d,p:p})})});return a}
+function ptTitle(d,p){var g=bookPt(d.b,d.n,p.no);return g?g.t:p.id}
+function hashOf(b,c,g){return '#b='+b+(c?'&c='+c:'')+(g?'&g='+g:'')}
+function parseHash(){var h={};location.hash.replace(/^#/,'').split('&').forEach(function(kv){var i=kv.indexOf('=');if(i>0)h[kv.slice(0,i)]=decodeURIComponent(kv.slice(i+1))});return h}
+
+// ---- thanh trên
+function renderBar(h){
+  var has={};LS.forEach(function(k){has[k.split('-')[0]]=1});
+  var s='<a href="#"'+(!h.b?' class="on"':'')+'>Mục lục</a>';
+  BOOKS.forEach(function(b){s+='<a href="'+hashOf(b)+'" class="'+(h.b==b?'on':'')+(has[b]?'':' dis')+'">'+b+'</a>'});
+  $('bar').innerHTML=s;
+  var m=$('mode');m.className='mode'+(ST.hs?' hs':'');m.textContent=ST.hs?'🎓 Bản chiếu cho học sinh':'👩‍🏫 Bản của cô';
+  document.body.classList.toggle('hs',!!ST.hs);
+}
+$('mode').onclick=function(){ST.hs=!ST.hs;save();renderBar(parseHash())};
+
+// ---- mục lục
+function renderToc(h){
+  var by=h.v||'bai';
+  var s='<h2>Mục lục</h2><div class="seg"><a href="#v=bai" class="'+(by=='bai'?'on':'')+'">Theo bài</a><a href="#v=cn" class="'+(by=='cn'?'on':'')+'">Theo chức năng</a></div>'+
+    '<input class="srch" id="q" placeholder="Tìm mẫu, nghĩa, câu ví dụ… (vd. 느라고, xin lỗi, nghe nói)" value="'+esc(h.q||'')+'"><div id="res"></div>';
+  $('view').innerHTML=s+'<div id="tocb"></div>';
+  $('tocb').innerHTML=by=='cn'?tocCn():tocBai();
+  $('q').oninput=function(){search(this.value)};
+  if(h.q)search(h.q);
+  $('tocb').insertAdjacentHTML('beforeend','<div class="how co-only"><h3>Cách dùng kho này</h3><ol><li>Soạn bài: mở bài sắp dạy → đọc “Tổng quan bài” → từng mẫu. Phần <b>Ghi chú cho cô</b> (khung đỏ nét đứt) chỉ hiện ở “Bản của cô”.</li><li>Lên lớp: bấm nút góc trên chuyển sang <b>“Bản chiếu cho học sinh”</b> rồi chia sẻ màn hình — ghi chú cô ẩn đi, đáp án “Cô hỏi” vẫn đóng cho tới khi bấm.</li><li>Thứ tự dạy gợi ý một mẫu: ③ Tình huống (cho học sinh đoán nghĩa từ câu) → ① Nghĩa lõi → ② Chia → ④ Ràng buộc → ⑤ Lỗi → ⑥ Phân biệt → ⑧ Cô hỏi → ⑨ Luyện → ⑩ Câu của em.</li><li>Link thẳng tới một mẫu: <code>ngu-phap-sau/#b=3A&amp;c=2&amp;g=3</code>.</li></ol></div>');
+}
+function tocBai(){
+  var s='<div class="toc">';
+  var bs=BOOKS.filter(function(b){return (NP&&NP[b]||[]).length}),cnt={};
+  bs.forEach(function(b){cnt[b]=NP[b].filter(function(l){return D[b+'-'+l.n]}).length});
+  bs.sort(function(a,b){return (cnt[b]>0)-(cnt[a]>0)});
+  bs.forEach(function(b){
+    var ls=NP[b],n=cnt[b];
+    if(!n){s+='<details><summary class="bk">Seoul '+b+' <span class="soon">· chưa soạn ('+ls.length+' bài trong sách)</span></summary>';}
+    else s+='<div class="bk">Seoul '+b+' <span class="soon">· đã soạn '+n+'/'+ls.length+' bài</span></div>';
+    ls.forEach(function(l){
+      var k=b+'-'+l.n,d=D[k];
+      s+='<div class="ls'+(d?'':' off')+'"><div class="lh"><span>'+(d?'<a href="'+hashOf(b,l.n)+'">':'')+'Bài '+l.n+' · <span class="ko">'+esc(l.ko||'')+'</span>'+(d?'</a>':'')+'</span>'+(d?'':'<span class="soon">chưa soạn</span>')+'</div><ul>';
+      (l.g||[]).forEach(function(g){
+        var ok=d&&d.p.some(function(p){return p.no==g.no});
+        s+='<li>'+(ok?'<a href="'+hashOf(b,l.n,g.no)+'">':'')+'<b>'+esc(g.t)+'</b> <span>— '+esc(plain(g.m&&g.m.vi||'')).slice(0,90)+'</span>'+(ok?'</a>':'')+'</li>';
+      });
+      s+='</ul></div>';
+    });
+    if(!n)s+='</details>';
+  });
+  return s+'</div>';
+}
+function tocCn(){
+  var g={},order=[];
+  allPts().forEach(function(x){var c=x.p.cn||'Khác';if(!g[c]){g[c]=[];order.push(c)}g[c].push(x)});
+  var s='';
+  order.forEach(function(c){s+='<h3>'+esc(c)+' <span class="soon">('+g[c].length+')</span></h3><div class="cards">'+g[c].map(card).join('')+'</div>'});
+  return s;
+}
+function card(x){return '<a class="card" href="'+hashOf(x.d.b,x.d.n,x.p.no)+'"><div class="pt">'+esc(ptTitle(x.d,x.p))+'</div><div class="cr">'+x.p.core+'</div><div class="meta">Seoul '+x.d.b+' · Bài '+x.d.n+' · '+x.p.tinh.length+' tình huống · '+x.p.sai.length+' lỗi hay sai · '+x.p.luyen.length+' câu luyện</div></a>'}
+function search(q){
+  q=q.trim().toLowerCase();var r=$('res');
+  if(!q){r.innerHTML='';$('tocb').style.display='';return}
+  var hit=allPts().filter(function(x){
+    var p=x.p,t=[ptTitle(x.d,p),p.core,p.cn,p.goc].concat(p.tinh.map(function(s){return s.t+' '+s.c+' '+s.ko+' '+s.vi}),p.sai.map(function(s){return s.x+' '+s.o+' '+s.why})).join(' ');
+    return plain(t).toLowerCase().indexOf(q)>=0;
+  });
+  $('tocb').style.display='none';
+  r.innerHTML=hit.length?'<div class="cards">'+hit.map(card).join('')+'</div>':'<p class="muted">Không tìm thấy trong các bài đã soạn.</p>';
+}
+
+// ---- một cuốn
+function renderBook(b){
+  var ls=NP&&NP[b]||[],s='<h2>Seoul '+b+'</h2>';
+  var any=ls.some(function(l){return D[b+'-'+l.n]});
+  if(!any){$('view').innerHTML=s+'<p class="muted">Cuốn này chưa soạn bài nào. Xem <a href="#">Mục lục</a>.</p>';return}
+  s+='<div class="cards">';
+  ls.forEach(function(l){var d=D[b+'-'+l.n];if(!d)return;
+    s+='<a class="card" href="'+hashOf(b,l.n)+'"><div class="pt">Bài '+l.n+' · '+esc(l.ko)+'</div><div class="cr">'+esc(l.vi)+'</div><div class="meta">'+d.p.map(function(p){return esc(ptTitle(d,p))}).join(' · ')+'</div></a>'});
+  $('view').innerHTML=s+'</div>';
+}
+
+// ---- một bài
+function renderLesson(b,n){
+  var d=D[b+'-'+n],l=lessonInfo(b,n);
+  if(!d){$('view').innerHTML='<p class="muted">Bài này chưa soạn. <a href="#">Về mục lục</a></p>';return}
+  var s='<div class="crumb"><a href="#">Mục lục</a> › <a href="'+hashOf(b)+'">Seoul '+b+'</a></div><h2>Bài '+n+' · <span class="ko">'+esc(l.ko)+'</span></h2><div class="muted">'+esc(l.vi)+'</div>';
+  if(d.tong)s+='<div class="tong"><b>'+esc(d.tong.t)+'</b><p>'+d.tong.p+'</p>'+(d.tong.tb?tbl(d.tong.tb):'')+'</div>';
+  s+='<div class="cards">'+d.p.map(function(p){return card({d:d,p:p})}).join('')+'</div>';
+  $('view').innerHTML=s;
+}
+
+// ---- một mẫu
+function tbl(rows){return '<div class="scroll"><table class="t">'+rows.map(function(r){return '<tr>'+r.map(function(c){return '<td>'+md(c)+'</td>'}).join('')+'</tr>'}).join('')+'</table></div>'}
+function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
+var SECS=[['s1','Nghĩa lõi & cấu tạo'],['s2','Kết hợp – chia'],['s3','Bản đồ tình huống'],['s4','Ràng buộc'],['s5','Lỗi hay mắc'],['s6','Phân biệt'],['s7','Trong TOPIK'],['s8','Cô hỏi'],['s9','Luyện ngay'],['s10','Câu của em']];
+function H(i,extra){return '<h3 id="'+SECS[i][0]+'"><span class="n">'+(i+1)+'</span>'+SECS[i][1]+(extra||'')+'</h3>'}
+function renderPoint(b,n,no){
+  var d=D[b+'-'+n],l=lessonInfo(b,n);
+  var p=d&&d.p.filter(function(x){return x.no==no})[0];
+  if(!p){renderLesson(b,n);return}
+  var g=bookPt(b,n,no),title=g?g.t:p.id,s='';
+  s+='<div class="crumb"><a href="#">Mục lục</a> › <a href="'+hashOf(b)+'">Seoul '+b+'</a> › <a href="'+hashOf(b,n)+'">Bài '+n+' · <span class="ko">'+esc(l.ko)+'</span></a></div>';
+  s+='<div class="pt-name">'+esc(title)+'</div><span class="tag">'+esc(p.cn)+'</span>'+(g&&g.p?' <span class="tag">Sách tr. '+g.p+'</span>':'');
+  s+='<div class="core">'+p.core+'</div>';
+  s+='<div class="chips">'+SECS.map(function(x){return '<a href="javascript:void 0" data-go="'+x[0]+'">'+x[1]+'</a>'}).join('')+'</div>';
+  // 1
+  s+=H(0)+'<div class="goc">'+p.goc+'</div>';
+  if(g)s+=bookBox(g,b,n);
+  // 2
+  s+=H(1)+tbl(p.chia)+(p.chiaNote&&p.chiaNote.length?'<ul class="nt">'+p.chiaNote.map(function(x){return '<li>'+md(x)+'</li>'}).join('')+'</ul>':'');
+  // 3
+  s+=H(2,' <span class="soon">'+p.tinh.length+' tình huống</span>')+'<div class="sits">'+p.tinh.map(function(t,i){
+    return '<div class="sit"><div class="h"><b>'+(i+1)+'. '+esc(t.t)+'</b><span class="lv">'+esc(t.lv)+'</span></div><div class="c">'+esc(t.c)+'</div><div class="ex"><span class="ko">'+md(t.ko)+sayBtn(t.ko)+'</span><span class="vi">'+esc(t.vi)+'</span></div><div class="why">'+md(t.why)+'</div></div>'}).join('')+'</div>';
+  // 4
+  s+=H(3)+'<div class="scroll"><table class="t rb">'+p.rb.map(function(r){return '<tr><td>'+esc(r[0])+'</td><td>'+md(r[1])+'</td></tr>'}).join('')+'</table></div>';
+  // 5
+  s+=H(4)+p.sai.map(function(e){return '<div class="err"><div class="x ko">'+md(e.x)+'</div><div class="o ko">'+md(e.o)+'</div><div class="w">'+md(e.why)+'</div></div>'}).join('');
+  // 6
+  s+=H(5)+p.pb.map(function(v){return '<div class="vs"><b>So với '+md(v.vs)+'</b><div>'+md(v.d)+'</div>'+(v.ex||[]).map(function(e){return '<div class="ex"><span class="ko">'+md(e[0])+sayBtn(e[0])+'</span><span class="vi">'+esc(e[1])+'</span></div>'}).join('')+'</div>'}).join('');
+  // 7
+  s+=H(6)+(p.topik||[]).map(function(t){return '<div class="tp"><div class="s">📝 '+esc(t.src)+'</div><span class="ko">'+md(t.ko)+'</span><div class="w">'+t.note+'</div></div>'}).join('');
+  // 8
+  s+=H(7)+p.hoi.map(function(q){return '<details class="ask"><summary>'+md(q.q)+'</summary><div>'+md(q.a)+'</div></details>'}).join('');
+  // 9
+  s+=H(8)+'<div class="score" id="sc"></div>'+p.luyen.map(function(q,i){
+    var o=shuffle(q.o.map(function(t,j){return {t:t,ok:j===0}}));
+    return '<div class="q" data-i="'+i+'"><div class="qs"><i>Câu '+(i+1)+'</i>'+md(q.q)+'</div><div class="opts">'+o.map(function(x){return '<button type="button" class="opt ko" data-ok="'+(x.ok?1:0)+'">'+md(x.t)+'</button>'}).join('')+'</div><div class="fb">'+md(q.w)+'</div></div>'}).join('');
+  // 10
+  s+=H(9)+p.em.map(function(e,i){var k=p.id+'_'+i;return '<div class="em"><label>✍️ '+md(e)+'</label><textarea class="ko" data-k="'+k+'" placeholder="Em viết ở đây… (lưu trên máy này)">'+esc(ST.em[k]||'')+'</textarea></div>'}).join('');
+  if(p.co)s+='<div class="cobox co-only"><b>Ghi chú cho cô</b> (không hiện ở bản chiếu cho học sinh)<div>'+md(p.co)+'</div></div>';
+  // trước / sau
+  var all=allPts(),idx=-1;all.forEach(function(x,i){if(x.p.id==p.id)idx=i});
+  s+='<div class="pn">'+(idx>0?navA(all[idx-1],'‹ Mẫu trước',''):'<span></span>')+(idx<all.length-1?navA(all[idx+1],'Mẫu sau ›','nx'):'<span></span>')+'</div>';
+  $('view').innerHTML=s;
+  wirePoint(p);
+}
+function navA(x,lab,c){return '<a class="'+c+'" href="'+hashOf(x.d.b,x.d.n,x.p.no)+'">'+lab+' · '+x.d.b+' Bài '+x.d.n+'<b>'+esc(ptTitle(x.d,x.p))+'</b></a>'}
+function bookBox(g,b,n){
+  var s='<details class="book"><summary>📖 Sách viết gì'+(g.p?' (tr. '+g.p+')':'')+'</summary>';
+  if(g.m&&g.m.vi)s+='<p>'+md(g.m.vi)+'</p>';
+  if(g.f&&g.f.vi)s+='<p class="muted">'+md(g.f.vi)+'</p>';
+  if(g.tb)s+=tbl(g.tb);
+  (g.ex||[]).forEach(function(e){s+='<div class="ex"><span class="ko">'+md(e)+'</span></div>'});
+  (g.nt||[]).forEach(function(nt){s+='<p>• '+md(nt.vi||nt.ko||'')+'</p>'+(nt.tb?tbl(nt.tb):'')+(nt.ex||[]).map(function(e){return '<div class="ex"><span class="ko">'+md(e)+'</span></div>'}).join('')});
+  s+='<p class="muted"><a href="../seoul/ngu-phap/'+hashOf(b,n,g.no)+'">Mở trang Ngữ pháp giáo trình Seoul ›</a></p></details>';
+  return s;
+}
+function wirePoint(p){
+  var v=$('view'),n=p.luyen.length,done=0,right=0;
+  function sc(){$('sc').textContent=done?('Đã làm '+done+'/'+n+' · đúng '+right):'Bấm chọn đáp án — chấm ngay.'}
+  sc();
+  v.querySelectorAll('.q').forEach(function(q){
+    q.querySelectorAll('.opt').forEach(function(b){b.onclick=function(){
+      if(q.classList.contains('done'))return;
+      var ok=b.getAttribute('data-ok')=='1';
+      q.classList.add('done',ok?'r':'w');done++;if(ok)right++;
+      q.querySelectorAll('.opt').forEach(function(x){x.disabled=true;if(x.getAttribute('data-ok')=='1')x.classList.add('ok')});
+      if(!ok)b.classList.add('no');sc();
+    }});
+  });
+  v.querySelectorAll('textarea[data-k]').forEach(function(t){t.oninput=function(){ST.em[t.getAttribute('data-k')]=t.value;save()}});
+  v.querySelectorAll('[data-go]').forEach(function(a){a.onclick=function(){var e=$(a.getAttribute('data-go'));if(e)e.scrollIntoView({behavior:'smooth'})}});
+}
+document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('[data-say]');if(b)speak(b.getAttribute('data-say'))});
+
+function route(){
+  var h=parseHash();renderBar(h);
+  if(h.b&&h.c&&h.g)renderPoint(h.b,+h.c,+h.g);
+  else if(h.b&&h.c)renderLesson(h.b,+h.c);
+  else if(h.b)renderBook(h.b);
+  else renderToc(h);
+  window.scrollTo(0,0);
+}
+window.addEventListener('hashchange',route);
+load().then(route).catch(function(e){$('view').innerHTML='<p>Không tải được dữ liệu: '+esc(e.message||e)+'</p>'});
+</script>
+</body>
+</html>
