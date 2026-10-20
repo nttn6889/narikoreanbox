@@ -374,6 +374,15 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   **Không đặt link từ `seoul/` (hay trang học sinh nào) sang `seoul/3a-1/`** — cô coi trang học liệu như giáo án của cô.
   `TV1[i][5]` = cụm hay đi với `[[ko, nghĩa Việt]…]`.
 
+## Kiểm tra sau mỗi bài Seoul 3A (`seoul/3a-kt/`)
+- Hai phần (cô chốt): **bài về nhà** học sinh làm sau buổi học ở trường (trộn đủ ngữ pháp của bài, có gõ chia đuôi + dịch Việt → Hàn, tick “Em không chắc”),
+  link `seoul/3a-kt/#b=1`; nộp xong em tự so câu dịch với câu mẫu (trùng thì máy tự nhận), “Gửi kết quả cho cô” → link `#r=<base64>` = báo cáo cho cô:
+  đúng theo từng ngữ pháp + phần trộn, lỗi quy về viên gạch (`NAME`/`GATE`: n1–n6 như `seoul/3a-1/`, `np` chọn sai mẫu, `tv` từ vựng/tiểu từ),
+  “sai mà tưởng chắc”, từng câu kèm câu dịch của em. **Cô kiểm tra trên lớp** từng ngữ pháp: `seoul/3a-kt/?co#b=1&k=lop` (chỉ hiện khi có `?co`;
+  cô hỏi miệng / dịch nói, bấm ✘ khi em sai → gom lỗi theo viên gạch, lưu trên máy cô).
+- Dữ liệu biến `K['<bài>']` = {t, g:[4 mẫu], q:[{id, t: c|y|d, g, n, …}], co:[{g, lead, q:[[hỏi, đáp, viên gạch]], vn, ear}]}; lựa chọn đầu là đáp án,
+  `x[i]` = viên gạch của lựa chọn sai i. Thêm câu dùng id mới. Đã soạn Bài 1 (21 câu). localStorage `nari-3akt`. Học sinh được gửi link này (khác `seoul/3a-1/`).
+
 ## Học liệu Seoul 2A theo bài (`seoul/2a-1/`) — lớp 1:1, đích TOPIK 3 tháng 4/2027
 - Học sinh: sinh viên ngoại ngữ (văn bằng 2 tiếng Anh), cần chứng chỉ ngoại ngữ thứ hai để tốt nghiệp; học **hết 2A → 2B rồi mới ôn TOPIK 3**.
   Cô muốn học liệu **bám theo từng trang sách**, học sâu đủ nội dung bài; điểm nào liên quan TOPIK thì chỉ ghi chú nhỏ (khung `.tp` “📝 TOPIK”),
