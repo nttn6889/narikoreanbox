@@ -427,6 +427,9 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   Tiểu từ (nhóm 1–5), Nối câu (6–10), Ý định (11–16), Phỏng đoán (17–21), Gián tiếp (22–25, kèm bảng danh từ phụ thuộc → đuôi định ngữ), Luyện.
   Mỗi nhóm một thẻ `.card id=gN` (link `#b=<thẻ>&g=gN`); cột “Sách” chỉ ghi số bài khi chắc (3A theo tên bài, 1B–2B theo `seoul/kiem-tra/`).
   Bài tập `M` (lựa chọn đầu là đáp án; bộ `l4` “tìm câu sai” thì lựa chọn đầu là câu sai), `T` (gõ). localStorage `nari-tuongdong`.
+  Cuối mỗi thẻ nhóm (cô muốn bớt lý thuyết, luyện ngay sau từng nhóm): khối “📖 Ví dụ minh họa” (`.vd`, mỗi câu có nhãn mẫu `.tag`) + “✍ Luyện nhóm N”
+  (`<div class="prac" id="pN">`, JS vẽ từ biến `P[N]` = `[loại, câu, đáp án, giải thích]`: `c` chọn (lựa chọn đầu là đáp án; “Câu nào sai?” thì lựa chọn đầu là câu sai),
+  `y` gõ, `d` dịch Việt → Hàn (câu mẫu đầu + cách khác; trùng thì máy chấm, khác thì học sinh tự chấm), xen lẫn ~10 câu/nhóm; `st.p`, báo cáo gộp vào “Gửi kết quả cho cô”).
 - Còn làm: Biến âm, Trợ từ.
 
 ## Đánh giá buổi học (`danh-gia/`)

@@ -136,6 +136,18 @@ nav .bar{overflow-x:auto;scrollbar-width:none}
 nav .bar::-webkit-scrollbar{display:none}
 nav a{flex:1 0 auto;padding:6px 8px}
 @media(max-width:560px){nav a{font-size:13.5px;padding:5px 7px}nav a small{font-size:10.5px}}
+/* ví dụ minh họa + luyện sau mỗi nhóm */
+.vd{margin:12px 0;padding:8px 10px;border:1px solid var(--ok);border-radius:8px}
+.vd>b:first-child{display:block;color:var(--ok);margin:0 0 4px}
+.ex .tag{display:block;font:bold 12px Arial,sans-serif;font-style:normal;color:var(--blue);margin:0 0 1px}
+.prac{border:2px solid var(--acc);border-radius:10px;padding:8px 10px;margin:14px 0 6px}
+.prac>h4{margin:0 0 2px;color:var(--acc)}
+.prac>.note{margin:0 0 8px}
+.kind{display:inline-block;font:bold 11.5px Arial,sans-serif;border-radius:9px;padding:1px 7px;margin-right:6px;vertical-align:1px;background:var(--sub);color:var(--muted)}
+.kind.kd{background:var(--blue);color:#fff}.kind.ky{background:var(--warnbg);color:var(--warn)}
+.typ .fb .alt{display:block;color:var(--muted);font-size:14px}
+.typ.self input.ans{border-color:var(--blue)}
+.typ.self .fb{display:block}
 </style>
 <script src="../../lam-moi.js?v=2" data-key="nari-tuongdong"></script>
 </head>
@@ -245,6 +257,15 @@ nav a{flex:1 0 auto;padding:6px 8px}
 <div class="deep"><b>Câu hai chủ ngữ</b> <span class="ko kt">이중 주어문</span>. <span class="ko">코끼리<b>는</b> 코<b>가</b> 길어요</span> = “Con voi thì vòi dài”. <span class="ko">저<b>는</b> 이름<b>이</b> 마이예요</span>, <span class="ko">저<b>는</b> 머리<b>가</b> 아파요</span>. Cấu trúc: <b>[Chủ đề 은/는] + [câu nhỏ có chủ ngữ 이/가]</b>. Tiếng Việt cũng có (“Tôi thì đầu đau”), nhưng ta hay bỏ chữ “thì”, nên khi nói tiếng Hàn hay dùng hai lần <span class="ko">은/는</span> hoặc hai lần <span class="ko">이/가</span>.</div>
 <div class="warnbox"><b>Lỗi hay gặp.</b> ① <span class="ko">제<s>는</s> 만든 음식</span> → <span class="ko">제<b>가</b> 만든 음식</span> (trong định ngữ không dùng 은/는). ② Trả lời <span class="ko">누가 했어요?</span> bằng <span class="ko">제<s>는</s> 했어요</span> → <span class="ko">제<b>가</b> 했어요</span>. ③ <span class="ko">저<b>는</b></span> + <span class="ko">가</span> = <span class="ko">제가</span> (không phải <span class="ko"><s>저가</s></span>); tương tự <span class="ko">나 → 내가</span>, <span class="ko">너 → 네가</span> (đọc <span class="pron">[니가]</span>).</div>
 <div class="ask"><b>Cô hỏi:</b> Cô hỏi cả lớp “Ai xóa bảng giúp cô?”. Vì sao em nên nói <span class="ko">제가 할게요</span> chứ không nói <span class="ko">저는 할게요</span>? <button class="b" data-tog="a1">Đáp án</button><div class="model" id="a1"><span class="ko">제가</span> trả lời câu hỏi ngầm “ai?” — “chính em làm”. <span class="ko">저는 할게요</span> mang ý đối chiếu: “còn em thì em làm (người khác thì không)”, nghe như đang so mình với bạn.</div></div>
+<div class="vd"><b>📖 Ví dụ minh họa</b>
+<div class="ex"><i class="tag">이/가 · trả lời “ai?”</i><span class="ko">A: 누가 이 케이크를 만들었어요? — B: 제<b>가</b> 만들었어요.</span><span class="vi">Ai làm cái bánh này? — (Chính) tôi làm.</span></div>
+<div class="ex"><i class="tag">은/는 · so sánh</i><span class="ko">저<b>는</b> 커피를 좋아해요. 동생<b>은</b> 차를 좋아해요.</span><span class="vi">Tôi thì thích cà phê, còn em tôi thì thích trà.</span></div>
+<div class="ex"><i class="tag">이/가 → 은/는 · lần đầu → nhắc lại</i><span class="ko">우리 반에 새 학생<b>이</b> 왔어요. 그 학생<b>은</b> 일본에서 왔어요.</span><span class="vi">Lớp có một bạn mới đến. Bạn ấy đến từ Nhật.</span></div>
+<div class="ex"><i class="tag">이/가 · trong định ngữ</i><span class="ko">어머니<b>가</b> 만든 김치가 제일 맛있어요.</span><span class="vi">Kim chi mẹ làm là ngon nhất — trong cụm “mẹ làm” không dùng 은/는.</span></div>
+<div class="ex"><i class="tag">은/는 + 이/가 · câu hai chủ ngữ</i><span class="ko">이 식당<b>은</b> 음식<b>이</b> 맛있어요.</span><span class="vi">Quán này thì đồ ăn ngon.</span></div>
+<div class="ex"><i class="tag">이/가 · 있다/없다</i><span class="ko">저는 오늘 시간<b>이</b> 없어요.</span><span class="vi">Hôm nay tôi không có thời gian.</span></div>
+</div>
+<div class="prac" id="p1" data-g="1"></div>
 </div></div>
 
 <div class="card" id="g2"><div class="hd">2 · Nơi chốn – hướng <small class="ko">에 · 에서 · (으)로</small></div><div class="bd">
@@ -261,6 +282,15 @@ nav a{flex:1 0 auto;padding:6px 8px}
 <div class="tp">📝 <b>Chính tả (으)로:</b> gốc có patchim thì <span class="ko">으로</span>, không patchim <b>hoặc patchim ㄹ</b> thì <span class="ko">로</span>: <span class="ko">서울역으로, 지하철로, 교실로, 칼로</span>.</div>
 <div class="warnbox"><b>Lỗi người Việt:</b> “học <u>ở</u> thư viện”, “sống <u>ở</u> Hà Nội”, “có <u>ở</u> trong phòng” — tiếng Việt chỉ có một chữ “ở”. <span class="ko">도서관<s>에</s> 공부해요</span> → <span class="ko">도서관<b>에서</b> 공부해요</span>. Mẹo: động từ là <b>có/không/ở yên</b> → 에; là <b>làm một việc</b> → 에서.</div>
 <div class="ask"><b>Cô hỏi:</b> Chỉ đường, vì sao nói <span class="ko">오른쪽으로 가세요</span> mà không nói <span class="ko">오른쪽에 가세요</span>? <button class="b" data-tog="a2">Đáp án</button><div class="model" id="a2">Chỉ đường là chỉ <b>hướng</b> (mũi tên) → <span class="ko">(으)로</span>. <span class="ko">오른쪽에</span> là một <b>điểm</b>: <span class="ko">은행은 오른쪽에 있어요</span> (ngân hàng ở bên phải).</div></div>
+<div class="vd"><b>📖 Ví dụ minh họa</b>
+<div class="ex"><i class="tag">에 · nơi vật ở</i><span class="ko">지갑은 가방 안<b>에</b> 있어요.</span><span class="vi">Cái ví ở trong cặp.</span></div>
+<div class="ex"><i class="tag">에 · nơi đến</i><span class="ko">내일 부산<b>에</b> 가요.</span><span class="vi">Mai tôi đi Busan.</span></div>
+<div class="ex"><i class="tag">에서 · nơi hành động diễn ra</i><span class="ko">주말에 카페<b>에서</b> 친구를 만나요.</span><span class="vi">Cuối tuần tôi gặp bạn ở quán cà phê.</span></div>
+<div class="ex"><i class="tag">에서 · điểm xuất phát</i><span class="ko">저는 베트남<b>에서</b> 왔어요.</span><span class="vi">Tôi đến từ Việt Nam.</span></div>
+<div class="ex"><i class="tag">(으)로 · hướng</i><span class="ko">이 버스는 시청<b>으로</b> 가요. · 앞<b>으로</b> 쭉 가세요.</span><span class="vi">Xe buýt này đi về phía tòa thị chính. · Cứ đi thẳng về phía trước.</span></div>
+<div class="ex"><i class="tag">(으)로 · phương tiện, công cụ</i><span class="ko">한국 사람은 숟가락<b>으로</b> 밥을 먹어요. · 지하철<b>로</b> 와요.</span><span class="vi">Người Hàn ăn cơm bằng thìa. · Tôi đến bằng tàu điện ngầm.</span></div>
+</div>
+<div class="prac" id="p2" data-g="2"></div>
 </div></div>
 
 <div class="card" id="g3"><div class="hd">3 · “Và, với” <small class="ko">하고 · 와/과 · (이)랑 · -고</small></div><div class="bd">
@@ -273,6 +303,15 @@ nav a{flex:1 0 auto;padding:6px 8px}
 <tr><td class="ko">-고</td><td>mọi văn phong</td><td>gắn vào gốc vị từ</td><td class="ko">싸<b>고</b> 맛있어요 · 밥을 먹<b>고</b> 커피를 마셔요</td></tr>
 </table></div>
 <div class="warnbox"><b>Lỗi:</b> ① Trộn văn phong: bài viết TOPIK dùng <span class="ko">하고/랑</span> → đổi thành <span class="ko">와/과</span>. ② Nối danh từ bằng <span class="ko">-고</span>: <span class="ko">학생<s>이고</s> 선생님이 왔어요</span> → <span class="ko">학생<b>과</b> 선생님이 왔어요</span>. (<span class="ko">학생이고</span> = “là học sinh, và…”.) ③ Chép từ tiếng Việt “tôi đã gặp <u>và</u> nói chuyện với bạn”: <span class="ko">친구를 만나<b>서</b> 이야기했어요</span> (xem nhóm 7), không cần chữ “và”.</div>
+<div class="vd"><b>📖 Ví dụ minh họa</b>
+<div class="ex"><i class="tag">와/과 · văn viết</i><span class="ko">이 책에는 한국의 역사<b>와</b> 문화가 나온다.</span><span class="vi">Cuốn sách này có lịch sử và văn hóa Hàn Quốc.</span></div>
+<div class="ex"><i class="tag">와/과 + 함께 · “cùng với” (viết)</i><span class="ko">주말에 가족<b>과</b> 함께 여행을 갔다.</span><span class="vi">Cuối tuần tôi đi du lịch cùng gia đình.</span></div>
+<div class="ex"><i class="tag">하고 · nói, trung tính</i><span class="ko">저는 동생<b>하고</b> 같이 살아요.</span><span class="vi">Tôi sống cùng em.</span></div>
+<div class="ex"><i class="tag">(이)랑 · nói, thân mật</i><span class="ko">어제 친구<b>랑</b> 영화 봤어.</span><span class="vi">Hôm qua tớ xem phim với bạn.</span></div>
+<div class="ex"><i class="tag">-고 · nối tính từ</i><span class="ko">이 방은 넓<b>고</b> 밝아요.</span><span class="vi">Phòng này rộng và sáng.</span></div>
+<div class="ex"><i class="tag">-고 · nối động từ</i><span class="ko">숙제를 하<b>고</b> 잤어요.</span><span class="vi">Tôi làm bài tập rồi đi ngủ.</span></div>
+</div>
+<div class="prac" id="p3" data-g="3"></div>
 </div></div>
 
 <div class="card" id="g4"><div class="hd">4 · Người nhận – nguồn <small class="ko">에게 · 한테 · 께 · 에게서 · 한테서 · 에</small></div><div class="bd">
@@ -285,6 +324,15 @@ nav a{flex:1 0 auto;padding:6px 8px}
 <div class="ex"><span class="ko">회사<b>에</b> 전화했어요. / 꽃<b>에</b> 물을 줘요.</span><span class="vi">Gọi điện cho công ty / Tưới nước cho hoa — vật, cây, tổ chức dùng 에.</span></div>
 <div class="ex"><span class="ko">친구<b>한테서</b> 편지를 받았어요. = 친구<b>한테</b> 편지를 받았어요.</span><span class="vi">Với 받다, 배우다, 듣다 khi nói có thể bỏ 서.</span></div>
 <div class="warnbox"><b>Đừng nhầm <span class="ko">께</span> và <span class="ko">께서</span>:</b> <span class="ko">께</span> = “cho/tới” người trên (thay 에게); <span class="ko">께서</span> = chủ ngữ kính ngữ (thay 이/가). <span class="ko">할머니<b>께서</b> 저<b>에게</b> 용돈을 주셨어요</span> — bà cho tôi tiền tiêu vặt.</div>
+<div class="vd"><b>📖 Ví dụ minh họa</b>
+<div class="ex"><i class="tag">한테 · nói</i><span class="ko">친구<b>한테</b> 문자를 보냈어요.</span><span class="vi">Tôi gửi tin nhắn cho bạn.</span></div>
+<div class="ex"><i class="tag">에게 · viết</i><span class="ko">학생들<b>에게</b> 설문 조사를 했다.</span><span class="vi">Đã khảo sát học sinh.</span></div>
+<div class="ex"><i class="tag">께 · người trên</i><span class="ko">주말마다 부모님<b>께</b> 전화를 드려요.</span><span class="vi">Cuối tuần nào tôi cũng gọi điện cho bố mẹ.</span></div>
+<div class="ex"><i class="tag">에 · vật, tổ chức</i><span class="ko">학교<b>에</b> 이메일을 보냈어요. · 나무<b>에</b> 물을 줬어요.</span><span class="vi">Tôi gửi email cho trường. · Tôi tưới nước cho cây.</span></div>
+<div class="ex"><i class="tag">한테서 · từ ai</i><span class="ko">언니<b>한테서</b> 생일 선물을 받았어요.</span><span class="vi">Tôi nhận quà sinh nhật từ chị.</span></div>
+<div class="ex"><i class="tag">께서 (chủ ngữ) + 에게 (người nhận)</i><span class="ko">선생님<b>께서</b> 학생들<b>에게</b> 숙제를 내 주셨어요.</span><span class="vi">Thầy giao bài tập cho học sinh.</span></div>
+</div>
+<div class="prac" id="p4" data-g="4"></div>
 </div></div>
 
 <div class="card" id="g5"><div class="hd">5 · Chỉ – cũng – không… nào <small class="ko">만 · 밖에 · 도 · 아무 N도 · 아무 N(이)나</small> <span class="badge new">3A bài 6</span></div><div class="bd">
@@ -309,6 +357,15 @@ nav a{flex:1 0 auto;padding:6px 8px}
 <div class="deep"><b>Tiểu từ đứng trước 도/(이)나:</b> <span class="ko">아무<b>한테도</b> 말하지 마세요</span> (đừng nói với ai cả), <span class="ko">아무<b>하고도</b> 안 만났어요</span>, <span class="ko">아무 데<b>서나</b> 팔아요</span>. Đây là chỗ sinh viên chuyên ngành hay bị hỏi: “도 / (이)나 luôn đứng <b>sau cùng</b>”.</div>
 <div class="warnbox"><b>Lỗi người Việt:</b> “Hôm qua tôi <u>không gặp ai</u>” → dịch chữ “ai” thành <span class="ko">누구</span>: <span class="ko"><s>누구를 안 만났어요</s></span> (= Bạn không gặp ai thế? — thành câu hỏi). Đúng: <span class="ko">아무도 안 만났어요</span>.</div>
 <div class="ask"><b>Cô hỏi:</b> Dịch: ① “Ăn gì cũng được.” ② “Cuối tuần em chẳng đi đâu cả.” ③ “Em chỉ có 2 tiếng thôi (ít quá).” <button class="b" data-tog="a5">Đáp án</button><div class="model ko" id="a5">① 아무거나 괜찮아요. / 아무거나 먹어도 돼요. ② 주말에 아무 데도 안 갔어요. ③ 두 시간밖에 없어요.</div></div>
+<div class="vd"><b>📖 Ví dụ minh họa</b>
+<div class="ex"><i class="tag">만 · trung tính</i><span class="ko">저는 주말에<b>만</b> 운동해요.</span><span class="vi">Tôi chỉ tập thể dục vào cuối tuần.</span></div>
+<div class="ex"><i class="tag">밖에 + phủ định · ít hơn mong đợi</i><span class="ko">시험까지 일주일<b>밖에</b> 안 남았어요.</span><span class="vi">Chỉ còn có một tuần là thi (ít quá).</span></div>
+<div class="ex"><i class="tag">도 · cũng</i><span class="ko">저<b>도</b> 그 영화 봤어요. · 동생은 고기<b>도</b> 안 먹어요.</span><span class="vi">Tôi cũng xem phim đó rồi. · Em tôi đến thịt cũng không ăn.</span></div>
+<div class="ex"><i class="tag">아무것도 + phủ định</i><span class="ko">아침에 바빠서 <b>아무것도</b> 못 먹었어요.</span><span class="vi">Sáng bận quá, tôi chẳng ăn được gì.</span></div>
+<div class="ex"><i class="tag">아무도 + phủ định</i><span class="ko">교실에 <b>아무도</b> 없어요.</span><span class="vi">Trong lớp không có ai cả.</span></div>
+<div class="ex"><i class="tag">아무 때나 + khẳng định</i><span class="ko">궁금한 게 있으면 <b>아무 때나</b> 물어보세요.</span><span class="vi">Có gì thắc mắc thì hỏi lúc nào cũng được.</span></div>
+</div>
+<div class="prac" id="p5" data-g="5"></div>
 </div></div>
 <h4>Kiểm tra nhanh · Tiểu từ</h4>
 <div class="set" data-set="q1"></div>
@@ -334,6 +391,17 @@ nav a{flex:1 0 auto;padding:6px 8px}
 <div class="warnbox"><b>Câu sai kinh điển:</b> <span class="ko">배가 고<s>파서</s> 밥 먹읍시다</span> → <span class="ko">배가 고<b>프니까</b> 밥 먹읍시다</span>. <span class="ko">시간이 없<s>기 때문에</s> 빨리 가세요</span> → <span class="ko">시간이 없<b>으니까</b> 빨리 가세요</span>.</div>
 <div class="tp">📝 <b>TOPIK:</b> đề đọc câu 1–2 rất hay đặt <span class="ko">-아/어서</span> cạnh vế sau là <span class="ko">-(으)세요 / -(으)ㅂ시다</span> làm bẫy. Thấy vế sau là mệnh lệnh, rủ rê → loại ngay <span class="ko">-아/어서, -기 때문에</span>.</div>
 <div class="ask"><b>Cô hỏi:</b> Vì sao <span class="ko">늦었으니까 죄송합니다</span> nghe rất kỳ, dù không sai thì? <button class="b" data-tog="a6">Đáp án</button><div class="model" id="a6"><span class="ko">-(으)니까</span> là lý do người nói <b>đưa ra để người nghe chấp nhận</b> (“vì tôi muộn rồi nên… tôi xin lỗi đấy”), nghe như đang lý sự. Xin lỗi, cảm ơn cần lý do khách quan, khiêm tốn → <span class="ko">늦어서 죄송합니다, 도와주셔서 감사합니다</span>.</div></div>
+<div class="vd"><b>📖 Ví dụ minh họa</b>
+<div class="ex"><i class="tag">-아/어서 · nguyên nhân khách quan</i><span class="ko">길이 막<b>혀서</b> 늦었어요.</span><span class="vi">Đường tắc nên tôi đến muộn.</span></div>
+<div class="ex"><i class="tag">-아/어서 · xin lỗi, cảm ơn</i><span class="ko">연락을 못 드<b>려서</b> 죄송해요. · 초대해 주<b>셔서</b> 감사합니다.</span><span class="vi">Xin lỗi vì không liên lạc được. · Cảm ơn vì đã mời tôi.</span></div>
+<div class="ex"><i class="tag">-아/어서요 · trả lời 왜요?</i><span class="ko">A: 왜 더 안 먹어요? — B: 배가 불<b>러서요</b>.</span><span class="vi">Sao không ăn nữa? — Vì no rồi ạ.</span></div>
+<div class="ex"><i class="tag">-(으)니까 · vế sau mệnh lệnh</i><span class="ko">날씨가 추<b>우니까</b> 따뜻하게 입으세요.</span><span class="vi">Trời lạnh nên mặc ấm vào nhé.</span></div>
+<div class="ex"><i class="tag">-(으)니까 · nhắc điều cả hai đều biết</i><span class="ko">내일 시험이<b>니까</b> 일찍 자.</span><span class="vi">Mai thi rồi (em biết mà), ngủ sớm đi.</span></div>
+<div class="ex"><i class="tag">-기 때문에 · văn viết</i><span class="ko">인구가 줄고 있<b>기 때문에</b> 일할 사람이 부족하다.</span><span class="vi">Vì dân số đang giảm nên thiếu người làm việc.</span></div>
+<div class="ex"><i class="tag">N 때문에 · N là nguyên nhân</i><span class="ko">감기 <b>때문에</b> 학교에 못 갔어요.</span><span class="vi">Vì cảm nên tôi không đi học được.</span></div>
+<div class="ex"><i class="tag">N(이)라서 · N là thân phận</i><span class="ko">저는 학생<b>이라서</b> 돈이 별로 없어요.</span><span class="vi">Tôi là sinh viên nên không có mấy tiền.</span></div>
+</div>
+<div class="prac" id="p6" data-g="6"></div>
 </div></div>
 
 <div class="card" id="g7"><div class="hd">7 · Trình tự <small class="ko">-고 · -아/어서 · -고 나서 · -(으)ㄴ 후에 · -기 전에</small></div><div class="bd">
@@ -352,6 +420,16 @@ nav a{flex:1 0 auto;padding:6px 8px}
 <br>• Động từ <b>di chuyển, đổi tư thế</b> (<span class="ko">가다, 오다, 들어가다, 나가다, 일어나다, 앉다, 서다, 눕다</span>) → <span class="ko">-아/어서</span>: <span class="ko">앉<b>아서</b> 기다리세요</span>, <span class="ko">명동에 가<b>서</b> 친구를 만나요</span>. Vì việc sau diễn ra <b>ở nơi/tư thế</b> do việc trước tạo ra.
 <br>• Động từ <b>mặc, mang, đi xe</b> (<span class="ko">입다, 신다, 쓰다, 끼다, 타다, 들다</span>) → <span class="ko">-고</span>: <span class="ko">모자를 쓰<b>고</b> 나갔어요</span>, <span class="ko">버스를 타<b>고</b> 가요</span>. Vì trạng thái “đang mặc, đang ngồi trên xe” <b>được giữ</b> suốt việc sau.</div>
 <div class="warnbox"><b>Lỗi:</b> <span class="ko">의자에 앉<s>고</s> 기다리세요</span> → <span class="ko">앉<b>아서</b></span>. <span class="ko">택시를 <s>타서</s> 왔어요</span> → <span class="ko">택시를 타<b>고</b> 왔어요</span>. <span class="ko">수업 <s>후에</s></span> đúng, nhưng <span class="ko"><s>수업하기 후에</s></span> sai: <span class="ko">후</span> đòi định ngữ <span class="ko">-(으)ㄴ</span>, <span class="ko">전</span> đòi <span class="ko">-기</span> (xem bảng ở nhóm 25).</div>
+<div class="vd"><b>📖 Ví dụ minh họa</b>
+<div class="ex"><i class="tag">-고 · hai việc rời nhau</i><span class="ko">저녁을 먹<b>고</b> 산책했어요.</span><span class="vi">Tôi ăn tối rồi đi dạo.</span></div>
+<div class="ex"><i class="tag">-아/어서 · việc sau ở nơi vừa đến</i><span class="ko">도서관에 가<b>서</b> 책을 빌렸어요.</span><span class="vi">Tôi đến thư viện rồi mượn sách (ở đó).</span></div>
+<div class="ex"><i class="tag">-아/어서 · dùng chính vật vừa làm ra</i><span class="ko">김밥을 만들<b>어서</b> 친구한테 줬어요.</span><span class="vi">Tôi làm kimbap rồi đưa (chỗ kimbap đó) cho bạn.</span></div>
+<div class="ex"><i class="tag">-고 · mặc, đi xe: trạng thái được giữ</i><span class="ko">코트를 입<b>고</b> 나갔어요. · 자전거를 타<b>고</b> 학교에 가요.</span><span class="vi">Mặc áo khoác rồi ra ngoài. · Đi xe đạp đến trường.</span></div>
+<div class="ex"><i class="tag">-고 나서 · làm xong hẳn</i><span class="ko">영화를 다 보<b>고 나서</b> 이야기해요.</span><span class="vi">Xem hết phim rồi hẵng nói chuyện.</span></div>
+<div class="ex"><i class="tag">-(으)ㄴ 후에 · trình tự thời gian</i><span class="ko">졸업<b>한 후에</b> 한국에서 일하고 싶어요.</span><span class="vi">Sau khi tốt nghiệp tôi muốn làm việc ở Hàn.</span></div>
+<div class="ex"><i class="tag">-기 전에 · trước khi</i><span class="ko">밥을 먹<b>기 전에</b> 손을 씻으세요.</span><span class="vi">Rửa tay trước khi ăn cơm nhé.</span></div>
+</div>
+<div class="prac" id="p7" data-g="7"></div>
 </div></div>
 
 <div class="card" id="g8"><div class="hd">8 · Đối lập – bối cảnh <small class="ko">-지만 · -(으)ㄴ/는데 · -아/어도</small></div><div class="bd">
@@ -372,6 +450,16 @@ nav a{flex:1 0 auto;padding:6px 8px}
 <div class="deep"><b><span class="ko">-는데요</span> cuối câu</b> (2A bài 9: <span class="ko">물어보고 싶은 게 있<b>는데요</b></span>) là cùng vĩ tố này, bỏ vế sau: người nói đưa ra bối cảnh rồi <b>dừng lại chờ người nghe phản ứng</b>. Đó là lý do câu này lịch sự hơn <span class="ko">물어보고 싶어요</span>: không ép người nghe. 3A bài 4 <span class="ko">-던데요</span> xây trên đúng khuôn này.</div>
 <div class="deep"><b><span class="ko">-지만</span> hay <span class="ko">-아/어도</span>?</b> <span class="ko">-지만</span> nói về <b>sự thật đã biết</b>: <span class="ko">비가 오<b>지만</b> 가요</span> (trời đang mưa, nhưng vẫn đi). <span class="ko">-아/어도</span> là <b>nhượng bộ</b>, kể cả giả định: <span class="ko">비가 <b>와도</b> 가요</span> (có mưa thì vẫn đi). Thêm <span class="ko">아무리</span> chỉ đi với <span class="ko">-아/어도</span>: <span class="ko">아무리 바<b>빠도</b> 밥은 먹어야 해요</span>.</div>
 <div class="warnbox"><b>Lỗi:</b> <span class="ko"><s>좋는데</s></span> → <span class="ko">좋은데</span>; <span class="ko"><s>맛있은데</s></span> → <span class="ko">맛있는데</span>; <span class="ko"><s>학생는데</s></span> → <span class="ko">학생인데</span>. <span class="ko">비가 오<s>지만</s> 우산 가져가세요</span> (nghe gượng) → <span class="ko">비가 오<b>는데</b> 우산 가져가세요</span>.</div>
+<div class="vd"><b>📖 Ví dụ minh họa</b>
+<div class="ex"><i class="tag">-지만 · đối lập rõ</i><span class="ko">이 옷은 예쁘<b>지만</b> 너무 비싸요.</span><span class="vi">Cái áo này đẹp nhưng đắt quá.</span></div>
+<div class="ex"><i class="tag">-(으)ㄴ/는데 · bối cảnh → nhờ</i><span class="ko">다음 주에 이사하<b>는데</b> 좀 도와줄 수 있어요?</span><span class="vi">Tuần sau mình chuyển nhà, bạn giúp mình được không?</span></div>
+<div class="ex"><i class="tag">-(으)ㄴ/는데 · bối cảnh → rủ</i><span class="ko">배가 고<b>픈데</b> 뭐 좀 먹을까요?</span><span class="vi">Đói bụng rồi, mình ăn gì đó nhé?</span></div>
+<div class="ex"><i class="tag">-(으)ㄴ/는데 · đối lập nhẹ</i><span class="ko">동생은 키가 <b>큰데</b> 저는 작아요.</span><span class="vi">Em tôi thì cao, còn tôi thì thấp.</span></div>
+<div class="ex"><i class="tag">-아/어도 · dù (giả định)</i><span class="ko">내일 눈이 <b>와도</b> 출발할 거예요.</span><span class="vi">Mai có tuyết thì vẫn xuất phát.</span></div>
+<div class="ex"><i class="tag">아무리 -아/어도</i><span class="ko"><b>아무리</b> 연습<b>해도</b> 발음이 어려워요.</span><span class="vi">Luyện bao nhiêu thì phát âm vẫn khó.</span></div>
+<div class="ex"><i class="tag">-는데요 · cuối câu, chờ phản ứng</i><span class="ko">저, 길을 좀 묻고 싶<b>은데요</b>.</span><span class="vi">Dạ, em muốn hỏi đường một chút ạ…</span></div>
+</div>
+<div class="prac" id="p8" data-g="8"></div>
 </div></div>
 
 <div class="card" id="g9"><div class="hd">9 · Lúc – trong khi – rồi <small class="ko">-(으)ㄹ 때 · -는 동안 · -(으)면서 · -다가 · -았/었다가</small> <span class="badge new">3A bài 7</span></div><div class="bd">
@@ -391,6 +479,16 @@ nav a{flex:1 0 auto;padding:6px 8px}
 <div class="deep"><b><span class="ko">갈 때</span> hay <span class="ko">갔을 때</span>?</b> <span class="ko">한국에 <b>갈 때</b> 김치를 샀어요</span> = lúc (chuẩn bị/đang trên đường) đi Hàn thì mua kim chi — mua ở Việt Nam hoặc ở sân bay. <span class="ko">한국에 <b>갔을 때</b> 김치를 샀어요</span> = khi đã sang Hàn thì mua — mua ở Hàn. <span class="ko">때</span> luôn đi với <span class="ko">-(으)ㄹ</span>; thì quá khứ nằm ở <span class="ko">-았/었-</span> trước nó.</div>
 <div class="warnbox"><b>Lỗi:</b> <span class="ko"><s>동생이 음악을 들으면서 저는 공부해요</s></span> (khác chủ ngữ) → <span class="ko">동생이 음악을 듣<b>는 동안</b> 저는 공부해요</span>.</div>
 <div class="ask"><b>Cô hỏi:</b> <span class="ko">옷을 입다가 벗었어요</span> và <span class="ko">옷을 입었다가 벗었어요</span> khác nhau thế nào? <button class="b" data-tog="a9">Đáp án</button><div class="model" id="a9">Câu 1: đang mặc dở (chưa mặc xong) thì cởi ra. Câu 2: đã mặc vào hẳn (có khi đã soi gương, đi lại) rồi mới cởi ra.</div></div>
+<div class="vd"><b>📖 Ví dụ minh họa</b>
+<div class="ex"><i class="tag">-(으)ㄹ 때 · lúc</i><span class="ko">한국에 처음 왔<b>을 때</b> 아무것도 몰랐어요.</span><span class="vi">Lúc mới sang Hàn tôi chẳng biết gì.</span></div>
+<div class="ex"><i class="tag">-는 동안 · khác chủ ngữ</i><span class="ko">제가 요리하<b>는 동안</b> 동생은 청소했어요.</span><span class="vi">Trong lúc tôi nấu ăn thì em tôi dọn dẹp.</span></div>
+<div class="ex"><i class="tag">N 동안 · suốt khoảng thời gian</i><span class="ko">방학 <b>동안</b> 아르바이트를 했어요.</span><span class="vi">Suốt kỳ nghỉ tôi làm thêm.</span></div>
+<div class="ex"><i class="tag">-(으)면서 · cùng chủ ngữ, đồng thời</i><span class="ko">운전하<b>면서</b> 전화하면 위험해요.</span><span class="vi">Vừa lái xe vừa gọi điện thì nguy hiểm.</span></div>
+<div class="ex"><i class="tag">-다가 · đang làm thì chuyển</i><span class="ko">텔레비전을 보<b>다가</b> 잠이 들었어요.</span><span class="vi">Đang xem tivi thì ngủ quên mất.</span></div>
+<div class="ex"><i class="tag">-다가 · đang làm thì gặp chuyện</i><span class="ko">계단을 내려가<b>다가</b> 넘어졌어요.</span><span class="vi">Đang xuống cầu thang thì ngã.</span></div>
+<div class="ex"><i class="tag">-았/었다가 · xong rồi đảo ngược</i><span class="ko">가방을 샀<b>다가</b> 마음에 안 들어서 바꿨어요.</span><span class="vi">Đã mua cái túi rồi nhưng không ưng nên đổi.</span></div>
+</div>
+<div class="prac" id="p9" data-g="9"></div>
 </div></div>
 
 <div class="card" id="g10"><div class="hd">10 · Điều kiện – mục đích <small class="ko">-(으)면 · -(으)려면 · -(으)러 · -(으)려고</small></div><div class="bd">
@@ -403,6 +501,15 @@ nav a{flex:1 0 auto;padding:6px 8px}
 </table></div>
 <div class="warnbox"><b>Lỗi:</b> <span class="ko">한국어를 배우<s>러</s> 책을 샀어요</span> (사다 không phải động từ di chuyển) → <span class="ko">배우<b>려고</b></span>. <span class="ko">같이 밥 먹<s>으려고</s> 갑시다</span> (vế sau rủ) → <span class="ko">먹<b>으러</b> 갑시다</span>. <span class="ko">서울역에 <s>가면</s> 몇 번 버스를 타야 해요?</span> → <span class="ko">가<b>려면</b></span>: chưa đi, đang hỏi cách để đi.</div>
 <div class="tp">📝 <span class="ko">-(으)려고</span> + <span class="ko">하다</span> = định làm (nhóm 11). Cùng hình vị <span class="ko">-(으)려-</span> = ý định: <span class="ko">-(으)려고, -(으)려면, -(으)려고 하다</span>.</div>
+<div class="vd"><b>📖 Ví dụ minh họa</b>
+<div class="ex"><i class="tag">-(으)면 · nếu</i><span class="ko">모르는 게 있<b>으면</b> 물어보세요.</span><span class="vi">Có gì không biết thì hỏi nhé.</span></div>
+<div class="ex"><i class="tag">-(으)면 · cứ khi</i><span class="ko">봄이 되<b>면</b> 꽃이 피어요.</span><span class="vi">Cứ đến mùa xuân là hoa nở.</span></div>
+<div class="ex"><i class="tag">-(으)려면 · muốn… thì phải</i><span class="ko">비자를 받<b>으려면</b> 이 서류가 필요해요.</span><span class="vi">Muốn nhận visa thì cần giấy tờ này.</span></div>
+<div class="ex"><i class="tag">-(으)러 + 가다/오다</i><span class="ko">옷을 사<b>러</b> 백화점에 가요. · 같이 점심 먹<b>으러</b> 갑시다.</span><span class="vi">Tôi đến trung tâm thương mại để mua áo. · Cùng đi ăn trưa nào.</span></div>
+<div class="ex"><i class="tag">-(으)려고 + mọi động từ</i><span class="ko">살을 빼<b>려고</b> 매일 걸어요.</span><span class="vi">Tôi đi bộ mỗi ngày để giảm cân.</span></div>
+<div class="ex"><i class="tag">-(으)려고 하다 · định</i><span class="ko">내년에 한국에 유학 가<b>려고 해요</b>.</span><span class="vi">Sang năm tôi định đi du học Hàn.</span></div>
+</div>
+<div class="prac" id="p10" data-g="10"></div>
 </div></div>
 <h4>Kiểm tra nhanh · Nối câu</h4>
 <div class="set" data-set="q2"></div>
@@ -429,6 +536,15 @@ nav a{flex:1 0 auto;padding:6px 8px}
 <div class="ex"><span class="ko">사장님: 이 일 누가 하겠어요? — 직원: 제가 <b>하겠습니다</b>.</span><span class="vi">Nhận việc trong công ty, trang trọng → -겠습니다.</span></div>
 <div class="ex"><span class="ko">운동하<b>려고 했는데</b> 비가 와서 못 했어요.</span><span class="vi">Định tập mà mưa nên không tập được — chỉ -(으)려고 하다 tự nhiên trong khuôn “định… mà không”.</span></div>
 <div class="warnbox"><b>Lỗi:</b> <span class="ko"><s>내일 올게요?</s></span> → <span class="ko">내일 올 거예요? / 내일 오실 거예요?</span> · <span class="ko"><s>민수 씨가 할게요</s></span> → <span class="ko">민수 씨가 할 거예요</span>. 2B bài 10 (<span class="ko">뭐 먹을래?</span>) — <span class="ko">-(으)ㄹ래</span> hỏi ý muốn của người nghe; không dùng với người trên: <span class="ko"><s>교수님, 뭐 드실래요?</s></span> nghe suồng sã → <span class="ko">뭐 드시겠어요?</span></div>
+<div class="vd"><b>📖 Ví dụ minh họa</b>
+<div class="ex"><i class="tag">-(으)ㄹ 거예요 · kế hoạch</i><span class="ko">이번 주말에 친구 결혼식에 <b>갈 거예요</b>.</span><span class="vi">Cuối tuần này tôi sẽ đi đám cưới bạn.</span></div>
+<div class="ex"><i class="tag">-(으)ㄹ게요 · nhận lời</i><span class="ko">A: 이 가방 좀 들어 줄 수 있어요? — B: 네, 제가 <b>들게요</b>.</span><span class="vi">Bạn xách giúp cái túi được không? — Vâng, để tôi xách.</span></div>
+<div class="ex"><i class="tag">-(으)려고 하다 · định</i><span class="ko">다음 학기부터 기숙사에서 살<b>려고 해요</b>.</span><span class="vi">Từ kỳ sau tôi định ở ký túc xá.</span></div>
+<div class="ex"><i class="tag">-겠- · nhận nhiệm vụ, trang trọng</i><span class="ko">(Trong cuộc họp) 이 일은 제가 맡<b>겠습니다</b>.</span><span class="vi">Việc này tôi xin nhận.</span></div>
+<div class="ex"><i class="tag">-(으)ㄹ래요 · ý muốn lúc nói</i><span class="ko">저는 좀 쉴<b>래요</b>. 먼저 가세요.</span><span class="vi">Mình muốn nghỉ chút. Bạn đi trước đi.</span></div>
+<div class="ex"><i class="tag">-기로 하다 · đã quyết định, đã hẹn</i><span class="ko">우리 내일부터 같이 운동하<b>기로 했어요</b>.</span><span class="vi">Bọn mình đã quyết định từ mai cùng tập thể dục.</span></div>
+</div>
+<div class="prac" id="p11" data-g="11"></div>
 </div></div>
 
 <div class="card" id="g12"><div class="hd">12 · Rủ – hỏi ý – khuyên <small class="ko">-(으)ㄹ까요? · -(으)ㅂ시다 · -자 · -(으)ㄹ래요? · -는 게 어때요? · -아/어 보세요</small></div><div class="bd">
@@ -445,6 +561,17 @@ nav a{flex:1 0 auto;padding:6px 8px}
 </table></div>
 <div class="warnbox"><b>Lỗi phép lịch sự:</b> <span class="ko">교수님, 같이 <s>갑시다</s></span> → <span class="ko">교수님, 같이 가<b>시겠어요</b>? / 같이 가<b>실래요</b>?</span> Mặc dù <span class="ko">-(으)ㅂ시다</span> có đuôi trang trọng, nó vẫn là “ra lệnh cho cả nhóm”, nên không dùng với người trên.</div>
 <div class="deep"><b><span class="ko">-는 게 어때요?</span></b> = <span class="ko">-는 것이 어때요?</span> (“việc làm A thì thế nào?”). Biến thể: <span class="ko">-(으)면 어때요?</span> (nếu… thì sao), <span class="ko">-지 그래요?</span> (sao không… đi — 3A trở lên, hơi trách). Cả nhóm 12 là <b>hành động lời nói</b> <span class="ko kt">화행</span>: hình thức là câu hỏi nhưng chức năng là rủ / khuyên / đề nghị.</div>
+<div class="vd"><b>📖 Ví dụ minh họa</b>
+<div class="ex"><i class="tag">-(으)ㄹ까요? · rủ</i><span class="ko">주말에 같이 등산 <b>갈까요</b>?</span><span class="vi">Cuối tuần cùng đi leo núi nhé?</span></div>
+<div class="ex"><i class="tag">-(으)ㄹ까요? · hỏi ý việc mình làm</i><span class="ko">창문을 좀 <b>열까요</b>?</span><span class="vi">Tôi mở cửa sổ nhé?</span></div>
+<div class="ex"><i class="tag">-(으)ㄹ까요? · hỏi phỏng đoán</i><span class="ko">이 옷이 저한테 <b>어울릴까요</b>?</span><span class="vi">Cái áo này có hợp với tôi không nhỉ?</span></div>
+<div class="ex"><i class="tag">-(으)ㅂ시다 · kêu gọi cả nhóm</i><span class="ko">(Người chủ trì) 자, 이제 회의를 <b>시작합시다</b>.</span><span class="vi">Nào, bây giờ bắt đầu họp.</span></div>
+<div class="ex"><i class="tag">-자 · 반말</i><span class="ko">배고프다. 우리 라면 먹<b>자</b>.</span><span class="vi">Đói quá. Mình ăn mì đi.</span></div>
+<div class="ex"><i class="tag">-(으)ㄹ래요? · mời, mềm</i><span class="ko">이따가 커피 한잔<b>할래요</b>?</span><span class="vi">Lát nữa uống cà phê không?</span></div>
+<div class="ex"><i class="tag">-는 게 어때요? · khuyên</i><span class="ko">피곤하면 좀 쉬<b>는 게 어때요</b>?</span><span class="vi">Mệt thì nghỉ một chút xem sao?</span></div>
+<div class="ex"><i class="tag">-아/어 보세요 · khuyên thử</i><span class="ko">이 책 재미있어요. 한번 읽<b>어 보세요</b>.</span><span class="vi">Sách này hay lắm. Đọc thử đi.</span></div>
+</div>
+<div class="prac" id="p12" data-g="12"></div>
 </div></div>
 
 <div class="card" id="g13"><div class="hd">13 · Muốn – mong <small class="ko">-고 싶다 · -고 싶어하다 · -(으)면 좋겠다</small></div><div class="bd">
@@ -456,6 +583,15 @@ nav a{flex:1 0 auto;padding:6px 8px}
 </table></div>
 <div class="deep"><b>Vì sao ngôi 3 phải đổi?</b> Tiếng Hàn tách <b>cảm giác bên trong</b> (chỉ người trong cuộc biết) và <b>biểu hiện bên ngoài</b> (người khác quan sát được). <span class="ko">싶다, 좋다, 싫다, 슬프다, 춥다</span> là cảm giác bên trong → chỉ ngôi 1 nói được. Muốn nói về người khác thì thêm <span class="ko">-아/어하다</span> (“tỏ ra”): <span class="ko">좋다 → 좋아하다, 싫다 → 싫어하다, 슬프다 → 슬퍼하다, 싶다 → 싶어하다</span>. Đây là cùng một quy luật với <span class="ko">-아/어 보이다</span> ở nhóm 17.</div>
 <div class="warnbox"><b>Lỗi:</b> <span class="ko"><s>제 친구는 한국에 가고 싶어요</s></span> → <span class="ko">가고 싶어해요</span>. Đuôi <span class="ko">-았/었으면 좋겠다</span> mạnh hơn <span class="ko">-(으)면 좋겠다</span>: điều mong như đã xảy ra rồi.</div>
+<div class="vd"><b>📖 Ví dụ minh họa</b>
+<div class="ex"><i class="tag">-고 싶다 · ngôi 1</i><span class="ko">저는 나중에 통역사가 되<b>고 싶어요</b>.</span><span class="vi">Sau này tôi muốn làm phiên dịch viên.</span></div>
+<div class="ex"><i class="tag">-고 싶다 · hỏi ngôi 2</i><span class="ko">방학에 어디에 가<b>고 싶어요</b>?</span><span class="vi">Kỳ nghỉ bạn muốn đi đâu?</span></div>
+<div class="ex"><i class="tag">-고 싶어하다 · ngôi 3</i><span class="ko">우리 아이는 피아노를 배우<b>고 싶어해요</b>.</span><span class="vi">Con tôi muốn học piano.</span></div>
+<div class="ex"><i class="tag">-(으)면 좋겠다 · mong</i><span class="ko">이번 시험에 합격하<b>면 좋겠어요</b>.</span><span class="vi">Mong là kỳ thi này đỗ.</span></div>
+<div class="ex"><i class="tag">-았/었으면 좋겠다 · mong mạnh</i><span class="ko">할머니가 오래 건강하<b>셨으면 좋겠어요</b>.</span><span class="vi">Mong bà mãi khỏe mạnh.</span></div>
+<div class="ex"><i class="tag">좋다 / 좋아하다 · cùng quy luật</i><span class="ko">저는 이 노래<b>가</b> 좋아요. · 민수 씨는 이 노래<b>를</b> 좋아해요.</span><span class="vi">Tôi thích bài này. · Minsu thích bài này (ngôi 3 → 좋아하다, tiểu từ 을/를).</span></div>
+</div>
+<div class="prac" id="p13" data-g="13"></div>
 </div></div>
 
 <div class="card" id="g14"><div class="hd">14 · Có thể – biết cách – không ngờ <small class="ko">-(으)ㄹ 수 있다 · -(으)ㄹ 줄 알다 · -(으)ㄹ 줄 몰랐다</small> <span class="badge new">3A bài 3</span></div><div class="bd">
@@ -470,6 +606,16 @@ nav a{flex:1 0 auto;padding:6px 8px}
 <div class="deep"><b>Một hình thức, hai nghĩa.</b> <span class="ko">줄</span> là danh từ phụ thuộc chỉ “cách thức / sự việc”. Ở thì hiện tại, <span class="ko">-(으)ㄹ 줄 알다</span> gần như luôn là “biết cách”. Ở thì quá khứ, có từ <span class="ko">이렇게, 정말, 벌써</span> hoặc ngữ cảnh ngạc nhiên → “không ngờ / đã tưởng”. <span class="ko">그 사람이 운전<b>할 줄 몰랐어요</b></span> có thể là “hồi đó anh ấy không biết lái xe” hoặc “tôi không ngờ anh ấy lái xe” — dựa vào ngữ cảnh. Nền cũ của 3A bài 3 chính là <b>định ngữ <span class="ko">-(으)ㄴ/는/(으)ㄹ</span></b> (2A): chọn đuôi theo thời điểm của sự việc so với lúc “không ngờ”.</div>
 <div class="warnbox"><b>Lỗi:</b> <span class="ko">바빠서 <s>갈 줄 몰라요</s></span> → <span class="ko">바빠서 <b>갈 수 없어요</b></span> (hoàn cảnh, không phải kỹ năng). <span class="ko">노래를 <b>못해요</b></span> (hát dở) ≠ <span class="ko">노래를 <b>못 해요</b></span> (không hát được, vd. đang đau họng) ≠ <span class="ko">노래를 <b>잘 못해요</b></span> (hát không hay lắm, khiêm tốn).</div>
 <div class="ask"><b>Cô hỏi:</b> Dịch: ① “Tôi tưởng hôm nay là thứ Bảy.” ② “Tôi không ngờ tiếng Hàn khó thế này.” ③ “Em không biết đi xe máy.” <button class="b" data-tog="a14">Đáp án</button><div class="model ko" id="a14">① 오늘이 토요일인 줄 알았어요. ② 한국어가 이렇게 어려울 줄 몰랐어요. ③ 오토바이를 탈 줄 몰라요.</div></div>
+<div class="vd"><b>📖 Ví dụ minh họa</b>
+<div class="ex"><i class="tag">-(으)ㄹ 수 있다 · hoàn cảnh cho phép</i><span class="ko">내일은 시간이 있어서 만<b>날 수 있어요</b>.</span><span class="vi">Mai có thời gian nên gặp được.</span></div>
+<div class="ex"><i class="tag">-(으)ㄹ 수 없다 · bị cấm, không thể</i><span class="ko">여기에서는 사진을 찍<b>을 수 없어요</b>.</span><span class="vi">Ở đây không chụp ảnh được.</span></div>
+<div class="ex"><i class="tag">-(으)ㄹ 줄 알다 · biết cách</i><span class="ko">저는 한국 요리를 <b>할 줄 알아요</b>.</span><span class="vi">Tôi biết nấu món Hàn.</span></div>
+<div class="ex"><i class="tag">-(으)ㄹ 줄 모르다 · không biết cách</i><span class="ko">할머니는 스마트폰을 <b>쓸 줄 모르세요</b>.</span><span class="vi">Bà tôi không biết dùng điện thoại thông minh.</span></div>
+<div class="ex"><i class="tag">-(으)ㄹ 줄 몰랐다 · không ngờ</i><span class="ko">시험이 이렇게 빨리 <b>끝날 줄 몰랐어요</b>.</span><span class="vi">Không ngờ bài thi xong nhanh thế.</span></div>
+<div class="ex"><i class="tag">-(으)ㄴ/는 줄 알았다 · đã tưởng</i><span class="ko">오늘이 금요일<b>인 줄 알았어요</b>.</span><span class="vi">Tôi cứ tưởng hôm nay là thứ Sáu.</span></div>
+<div class="ex"><i class="tag">-(으)ㄴ 줄 몰랐다 · không biết là đã</i><span class="ko">민수 씨가 벌써 <b>간 줄 몰랐어요</b>.</span><span class="vi">Tôi không biết là Minsu về rồi.</span></div>
+</div>
+<div class="prac" id="p14" data-g="14"></div>
 </div></div>
 
 <div class="card" id="g15"><div class="hd">15 · Phủ định – cấm <small class="ko">안 · 못 · -지 않다 · -지 못하다 · -지 마세요</small></div><div class="bd">
@@ -482,6 +628,16 @@ nav a{flex:1 0 auto;padding:6px 8px}
 <div class="ex"><span class="ko">안 가세요? / 가지 마세요.</span><span class="vi">“Anh không đi ạ?” (câu hỏi kính ngữ) / “Anh đừng đi.” — người Việt hay dịch “đừng” thành 안: sai hoàn toàn nghĩa.</span></div>
 <div class="deep"><b>Ba quy tắc vị trí và loại từ:</b> ① Động từ <span class="ko">N하다</span>: <span class="ko">안/못</span> chen vào giữa — <span class="ko">공부 <b>안</b> 해요</span>, không <span class="ko"><s>안 공부해요</s></span>. ② Tính từ chỉ dùng <span class="ko">안 / -지 않다</span>: <span class="ko">안 비싸요</span>, không <span class="ko"><s>못 비싸요</s></span>. ③ <span class="ko">있다 → 없다, 알다 → 모르다, 이다 → 아니다</span> có từ phủ định riêng: <span class="ko"><s>안 알아요</s></span> → <span class="ko">몰라요</span>.</div>
 <div class="tp">📝 <b>Phát âm:</b> <span class="ko">못 먹어요</span> <span class="pron">[몬머거요]</span>, <span class="ko">못 해요</span> <span class="pron">[모태요]</span>, <span class="ko">못 와요</span> <span class="pron">[모돠요]</span>. Nghe TOPIK hay giấu <span class="ko">못</span> trong biến âm.</div>
+<div class="vd"><b>📖 Ví dụ minh họa</b>
+<div class="ex"><i class="tag">안 · ý chí</i><span class="ko">저는 고기를 <b>안</b> 먹어요.</span><span class="vi">Tôi không ăn thịt (tự chọn không ăn).</span></div>
+<div class="ex"><i class="tag">못 · hoàn cảnh</i><span class="ko">어제 아파서 학교에 <b>못</b> 갔어요.</span><span class="vi">Hôm qua ốm nên không đi học được.</span></div>
+<div class="ex"><i class="tag">-지 않다 · văn viết</i><span class="ko">최근 젊은 사람들은 신문을 읽<b>지 않는다</b>.</span><span class="vi">Gần đây người trẻ không đọc báo.</span></div>
+<div class="ex"><i class="tag">-지 못하다 · văn viết, trang trọng</i><span class="ko">시간이 부족해서 문제를 다 풀<b>지 못했습니다</b>.</span><span class="vi">Vì thiếu thời gian nên tôi không giải hết được.</span></div>
+<div class="ex"><i class="tag">-지 마세요 · đừng</i><span class="ko">수업 시간에 휴대폰을 쓰<b>지 마세요</b>.</span><span class="vi">Đừng dùng điện thoại trong giờ học.</span></div>
+<div class="ex"><i class="tag">N하다: 안 chen giữa</i><span class="ko">오늘은 운동 <b>안</b> 했어요.</span><span class="vi">Hôm nay tôi không tập thể dục.</span></div>
+<div class="ex"><i class="tag">모르다 · phủ định riêng của 알다</i><span class="ko">그 사람 이름을 <b>몰라요</b>.</span><span class="vi">Tôi không biết tên người đó.</span></div>
+</div>
+<div class="prac" id="p15" data-g="15"></div>
 </div></div>
 
 <div class="card" id="g16"><div class="hd">16 · Phải – được – không cần <small class="ko">-아/어야 하다 · -아/어도 되다 · -(으)면 안 되다 · 안 -아/어도 되다</small></div><div class="bd">
@@ -500,6 +656,15 @@ nav a{flex:1 0 auto;padding:6px 8px}
 <tr><td class="ko">숙제를 내야 돼요?</td><td class="ko">네, 내야 돼요.</td><td class="ko">아니요, <b>안 내도 돼요</b>.</td></tr>
 </table></div>
 <div class="warnbox"><b>Bẫy “không phải”:</b> tiếng Việt “không phải nộp” = không cần → <span class="ko">안 내도 돼요</span>. Người Việt hay nói <span class="ko"><s>내면 안 돼요</s></span> = “không được nộp” — nghĩa ngược hẳn.</div>
+<div class="vd"><b>📖 Ví dụ minh họa</b>
+<div class="ex"><i class="tag">-아/어야 하다 · phải</i><span class="ko">외국인은 비자를 받<b>아야 해요</b>.</span><span class="vi">Người nước ngoài phải có visa.</span></div>
+<div class="ex"><i class="tag">-아/어야겠다 · tự quyết</i><span class="ko">시험이 다음 주네요. 오늘부터 공부해<b>야겠어요</b>.</span><span class="vi">Tuần sau thi rồi. Từ hôm nay phải học thôi.</span></div>
+<div class="ex"><i class="tag">-아/어도 되다 · được phép</i><span class="ko">이 컴퓨터 좀 써<b>도 돼요</b>?</span><span class="vi">Tôi dùng máy tính này được không?</span></div>
+<div class="ex"><i class="tag">-(으)면 안 되다 · cấm</i><span class="ko">박물관 안에서 음식을 먹<b>으면 안 돼요</b>.</span><span class="vi">Trong bảo tàng không được ăn uống.</span></div>
+<div class="ex"><i class="tag">안 -아/어도 되다 · không cần</i><span class="ko">토요일이니까 일찍 <b>안</b> 일어나<b>도 돼요</b>.</span><span class="vi">Thứ Bảy nên không cần dậy sớm.</span></div>
+<div class="ex"><i class="tag">-지 않아도 되다 · không cần (trang trọng)</i><span class="ko">회비는 내<b>지 않으셔도 됩니다</b>.</span><span class="vi">Quý vị không cần đóng hội phí.</span></div>
+</div>
+<div class="prac" id="p16" data-g="16"></div>
 </div></div>
 <h4>Kiểm tra nhanh · Ý định, khả năng</h4>
 <div class="set" data-set="q3"></div>
@@ -532,6 +697,16 @@ nav a{flex:1 0 auto;padding:6px 8px}
 <div class="ex"><span class="ko">맛있을 것 같아요.</span><span class="vi">Đoán, nhẹ nhàng: “Chắc là ngon.”</span></div>
 <div class="deep"><b>Vì sao <span class="ko">피곤할 거예요</span> nghe lạ khi nói với người trước mặt?</b> Bạn kể: “Hôm qua mình thức trắng làm bài.” Trả lời <span class="ko">피곤하<b>겠어요</b></span> (đồng cảm ngay) là tự nhiên. <span class="ko">피곤할 거예요</span> nghe như đang phân tích từ xa về một người thứ ba. Và <span class="ko"><s>저는 피곤해 보여요</s></span> sai vì không ai “nhìn bề ngoài” chính mình — giống quy luật ngôi ở nhóm 13.</div>
 <div class="warnbox"><b>Lỗi:</b> <span class="ko"><s>공부해 보여요</s></span> (động từ) → <span class="ko">공부하는 것 같아요</span>. Danh từ: <span class="ko"><s>학생해 보여요</s></span> → <span class="ko">학생처럼 보여요 / 학생 같아요</span>.</div>
+<div class="vd"><b>📖 Ví dụ minh họa</b>
+<div class="ex"><i class="tag">-겠어요 · đồng cảm ngay</i><span class="ko">A: 다음 주에 제주도에 가요. — B: 와, 좋<b>겠어요</b>!</span><span class="vi">Tuần sau mình đi Jeju. — Ôi, thích thế!</span></div>
+<div class="ex"><i class="tag">-(으)ㄹ 거예요 · suy luận từ hiểu biết</i><span class="ko">민수 씨는 지금 회의 중<b>일 거예요</b>.</span><span class="vi">Giờ này chắc Minsu đang họp (tôi biết lịch).</span></div>
+<div class="ex"><i class="tag">-는 것 같다 · quan sát</i><span class="ko">밖에 비가 오<b>는 것 같아요</b>. 우산 쓴 사람이 많아요.</span><span class="vi">Hình như ngoài trời đang mưa. Nhiều người che ô.</span></div>
+<div class="ex"><i class="tag">-(으)ㄴ 것 같다 · việc đã xảy ra</i><span class="ko">민수 씨가 벌써 퇴근<b>한 것 같아요</b>.</span><span class="vi">Hình như Minsu tan làm rồi.</span></div>
+<div class="ex"><i class="tag">-(으)ㄴ 것 같다 · nói mềm ý kiến</i><span class="ko">이 문제는 좀 어려<b>운 것 같아요</b>.</span><span class="vi">Bài này có vẻ hơi khó.</span></div>
+<div class="ex"><i class="tag">-아/어 보이다 · bề ngoài, tính từ</i><span class="ko">그 가방 무거<b>워 보여요</b>. 들어 드릴까요?</span><span class="vi">Cái túi đó trông nặng. Để tôi xách giúp nhé?</span></div>
+<div class="ex"><i class="tag">-는 편이다 · khá là</i><span class="ko">저는 매운 음식을 잘 먹<b>는 편이에요</b>.</span><span class="vi">Tôi thuộc dạng ăn cay được.</span></div>
+</div>
+<div class="prac" id="p17" data-g="17"></div>
 </div></div>
 
 <div class="card" id="g18"><div class="hd">18 · Cảm thán – hồi tưởng <small class="ko">-네요 · -군요 · -던데요 · -아/어 보니까</small> <span class="badge new">3A bài 4</span></div><div class="bd">
@@ -546,6 +721,15 @@ nav a{flex:1 0 auto;padding:6px 8px}
 <div class="warnbox"><b>Ràng buộc của <span class="ko">-더-</span></b> (<span class="ko">-던데요, -더라고요, -던</span>): người nói phải <b>tự mình chứng kiến</b>; vì vậy <b>không dùng cho hành động có chủ ý của chính mình</b>: <span class="ko"><s>제가 어제 그 영화를 보던데요</s></span>. Nhưng cảm giác của mình thì được: <span class="ko">저는 좀 춥던데요</span> (tôi thì thấy hơi lạnh). Kể về người khác, sự vật: <span class="ko">민수 씨가 노래를 잘하던데요</span> ✓.</div>
 <div class="tp">📝 <b>Mở rộng (3A–3B):</b> <span class="ko">-더라고요</span> cũng kể lại điều tự trải nghiệm nhưng <b>không</b> có ý phản hồi: <span class="ko">제주도에 가 봤는데 경치가 정말 좋더라고요</span>. <span class="ko">-던데요</span> hay dùng khi ý mình khác ý người nghe: A: <span class="ko">그 식당 별로죠?</span> B: <span class="ko">저는 맛있던데요.</span></div>
 <div class="ask"><b>Cô hỏi:</b> Bạn hỏi <span class="ko">그 영화 어때요?</span>. Em đã xem rồi, thấy hay. Trả lời bằng <span class="ko">-네요</span> được không? <button class="b" data-tog="a18">Đáp án</button><div class="model" id="a18">Không. <span class="ko">-네요</span> là ngạc nhiên trước điều <b>đang</b> thấy. Em xem từ trước, giờ kể lại → <span class="ko">재미있던데요</span> hoặc <span class="ko">봤는데 재미있었어요</span>.</div></div>
+<div class="vd"><b>📖 Ví dụ minh họa</b>
+<div class="ex"><i class="tag">-네요 · đang thấy, ngạc nhiên</i><span class="ko">(Nhìn ra cửa sổ) 와, 밖에 눈이 오<b>네요</b>!</span><span class="vi">Ôi, ngoài trời đang có tuyết!</span></div>
+<div class="ex"><i class="tag">-네요 · khen ngay lúc nghe</i><span class="ko">한국어를 정말 잘하시<b>네요</b>.</span><span class="vi">Bạn nói tiếng Hàn giỏi thật đấy.</span></div>
+<div class="ex"><i class="tag">-군요 · vừa nhận ra</i><span class="ko">A: 저 어제 이사했어요. — B: 아, 그래서 피곤하시<b>군요</b>.</span><span class="vi">Hôm qua tôi chuyển nhà. — À, ra vậy nên anh mệt.</span></div>
+<div class="ex"><i class="tag">-던데요 · đã tự trải nghiệm, ý khác</i><span class="ko">A: 그 영화 재미있죠? — B: 저는 좀 지루하<b>던데요</b>.</span><span class="vi">Phim đó hay nhỉ? — Tôi (xem rồi) thấy hơi chán.</span></div>
+<div class="ex"><i class="tag">-아/어 보니까 · thử rồi phát hiện</i><span class="ko">직접 만나 <b>보니까</b> 생각보다 좋은 사람이었어요.</span><span class="vi">Gặp trực tiếp rồi mới thấy là người tốt hơn tôi nghĩ.</span></div>
+<div class="ex"><i class="tag">-아/어 보니까 + -던데요</i><span class="ko">한국에 살아 <b>보니까</b> 겨울이 정말 춥<b>던데요</b>.</span><span class="vi">Sống ở Hàn rồi mới thấy mùa đông lạnh thật.</span></div>
+</div>
+<div class="prac" id="p18" data-g="18"></div>
 </div></div>
 
 <div class="card" id="g19"><div class="hd">19 · Thử – đã từng <small class="ko">-아/어 보다 · -아/어 본 적이 있다 · -(으)ㄴ 적이 있다</small></div><div class="bd">
@@ -558,6 +742,14 @@ nav a{flex:1 0 auto;padding:6px 8px}
 </table></div>
 <div class="ex"><span class="ko">한국 음식을 먹<b>었어요</b>? / 먹<b>어 봤어요</b>?</span><span class="vi">Bạn (đã) ăn món Hàn chưa? (vd. bữa trưa nay) / Bạn đã từng ăn món Hàn bao giờ chưa? (kinh nghiệm cả đời)</span></div>
 <div class="warnbox"><b>Lỗi:</b> <span class="ko"><s>지갑을 잃어버려 본 적이 있어요</s></span> — không ai cố ý “thử” làm mất ví → <span class="ko">잃어버린 적이 있어요</span>. <span class="ko"><s>봐 본 적</s></span> (보다 + 보다) → <span class="ko">본 적이 있어요</span>. <span class="ko">적</span> luôn đòi <span class="ko">-(으)ㄴ</span>: <span class="ko"><s>가는 적</s>, <s>갈 적</s></span>.</div>
+<div class="vd"><b>📖 Ví dụ minh họa</b>
+<div class="ex"><i class="tag">-아/어 보다 · thử</i><span class="ko">이 신발 한번 신<b>어 보세요</b>.</span><span class="vi">Đi thử đôi giày này xem.</span></div>
+<div class="ex"><i class="tag">-아/어 봤어요 · đã thử</i><span class="ko">A: 한복을 입어 봤어요? — B: 네, 경복궁에서 입<b>어 봤어요</b>.</span><span class="vi">Bạn mặc thử hanbok chưa? — Rồi, mặc ở Gyeongbokgung.</span></div>
+<div class="ex"><i class="tag">-아/어 본 적이 있다 · có chủ ý thử</i><span class="ko">저는 템플스테이를 해 <b>본 적이 있어요</b>.</span><span class="vi">Tôi từng thử ở lại chùa (temple stay).</span></div>
+<div class="ex"><i class="tag">-(으)ㄴ 적이 있다 · không chủ ý</i><span class="ko">길에서 넘어<b>진 적이 있어요</b>.</span><span class="vi">Tôi từng bị ngã ngoài đường.</span></div>
+<div class="ex"><i class="tag">-(으)ㄴ 적이 없다</i><span class="ko">저는 아직 비행기를 <b>탄 적이 없어요</b>.</span><span class="vi">Tôi chưa từng đi máy bay.</span></div>
+</div>
+<div class="prac" id="p19" data-g="19"></div>
 </div></div>
 
 <div class="card" id="g20"><div class="hd">20 · Thay đổi <small class="ko">-아/어지다 · -게 되다</small></div><div class="bd">
@@ -569,6 +761,15 @@ nav a{flex:1 0 auto;padding:6px 8px}
 <div class="ex"><span class="ko">좋<b>아졌어요</b> / 좋아하<b>게 됐어요</b></span><span class="vi">Trở nên tốt (sức khỏe, thời tiết) / Dần dần thích (người, món ăn).</span></div>
 <div class="deep"><b><span class="ko">-게 되다</span> và sự khiêm tốn.</b> Người Hàn kể tin vui về mình bằng <span class="ko">-게 됐어요</span>: <span class="ko">이번에 장학금을 받게 됐어요</span>, <span class="ko">다음 달에 결혼하게 됐어요</span> — như thể “mọi chuyện đưa đẩy thành ra vậy”, không khoe công của mình. Đây là cách nói rất hay dùng trong phỏng vấn, giới thiệu bản thân.</div>
 <div class="warnbox"><b>Lỗi:</b> <span class="ko"><s>매운 음식을 먹어졌어요</s></span> → <span class="ko">먹게 됐어요</span>. (<span class="ko">-아/어지다</span> gắn với động từ sẽ thành <b>bị động</b> — học ở 3B: <span class="ko">만들어지다, 지워지다</span>.)</div>
+<div class="vd"><b>📖 Ví dụ minh họa</b>
+<div class="ex"><i class="tag">-아/어지다 · tính từ, đổi dần</i><span class="ko">요즘 날씨가 많이 따뜻<b>해졌어요</b>.</span><span class="vi">Dạo này trời ấm lên nhiều.</span></div>
+<div class="ex"><i class="tag">-아/어지다</i><span class="ko">매일 연습하니까 발음이 좋<b>아졌어요</b>.</span><span class="vi">Luyện mỗi ngày nên phát âm tốt lên.</span></div>
+<div class="ex"><i class="tag">-게 되다 · do hoàn cảnh</i><span class="ko">회사 때문에 서울로 이사하<b>게 됐어요</b>.</span><span class="vi">Vì công ty mà tôi thành ra chuyển lên Seoul.</span></div>
+<div class="ex"><i class="tag">-게 되다 · dần dần thành</i><span class="ko">처음에는 김치를 못 먹었는데 지금은 좋아하<b>게 됐어요</b>.</span><span class="vi">Lúc đầu không ăn được kim chi, giờ thì thành ra thích.</span></div>
+<div class="ex"><i class="tag">-게 되다 · báo tin vui khiêm tốn</i><span class="ko">이번에 장학금을 받<b>게 됐어요</b>.</span><span class="vi">Lần này tôi được nhận học bổng.</span></div>
+<div class="ex"><i class="tag">so sánh: tính từ / động từ</i><span class="ko">방이 깨끗<b>해졌어요</b>. · 청소를 자주 하<b>게 됐어요</b>.</span><span class="vi">Căn phòng sạch hơn rồi. · Tôi (thành ra) hay dọn dẹp.</span></div>
+</div>
+<div class="prac" id="p20" data-g="20"></div>
 </div></div>
 
 <div class="card" id="g21"><div class="hd">21 · Tiếc – suýt <small class="ko">-(으)ㄹ걸 그랬다 · -았/었어야 했는데 · -(으)ㄹ 뻔했다</small> <span class="badge new">3A bài 5</span></div><div class="bd">
@@ -581,6 +782,14 @@ nav a{flex:1 0 auto;padding:6px 8px}
 </table></div>
 <div class="deep"><b>Nói một mình:</b> bỏ <span class="ko">그랬다</span> → <span class="ko">아, 우산을 가져올걸.</span> (đuôi xuống). Cẩn thận với <span class="ko">-(으)ㄹ걸요</span> <b>giọng lên</b> ở 3B: là phỏng đoán — <span class="ko">아마 벌써 갔을걸요?</span> (chắc đi rồi ấy). Cùng chữ <span class="ko">걸</span> (= <span class="ko">것을</span>), khác ngữ điệu, khác nghĩa.</div>
 <div class="warnbox"><b>Lỗi:</b> <span class="ko"><s>놓친 뻔했어요</s></span> → <span class="ko">놓칠 뻔했어요</span> (<span class="ko">뻔</span> luôn đòi <span class="ko">-(으)ㄹ</span>). <span class="ko">늦을 뻔했어요</span> = suýt muộn (không muộn) ≠ <span class="ko">일찍 올걸 그랬어요</span> = đã muộn rồi, tiếc.</div>
+<div class="vd"><b>📖 Ví dụ minh họa</b>
+<div class="ex"><i class="tag">-(으)ㄹ걸 그랬다 · tiếc vì đã không làm</i><span class="ko">시험이 어려웠어요. 공부를 더 <b>할걸 그랬어요</b>.</span><span class="vi">Đề khó quá. Lẽ ra nên học thêm.</span></div>
+<div class="ex"><i class="tag">-지 말걸 그랬다 · tiếc vì đã làm</i><span class="ko">배가 아파요. 많이 먹<b>지 말걸 그랬어요</b>.</span><span class="vi">Đau bụng quá. Lẽ ra đừng ăn nhiều.</span></div>
+<div class="ex"><i class="tag">-(으)ㄹ걸 · nói một mình</i><span class="ko">아, 우산을 가져<b>올걸</b>.</span><span class="vi">Ôi, lẽ ra mang ô.</span></div>
+<div class="ex"><i class="tag">-았/었어야 했는데 · tiếc mạnh</i><span class="ko">어제 엄마한테 전화<b>했어야 했는데</b> 깜빡 잊었어요.</span><span class="vi">Hôm qua lẽ ra phải gọi cho mẹ mà quên mất.</span></div>
+<div class="ex"><i class="tag">-(으)ㄹ 뻔했다 · suýt</i><span class="ko">길이 미끄러워서 넘어<b>질 뻔했어요</b>.</span><span class="vi">Đường trơn, suýt nữa thì ngã.</span></div>
+</div>
+<div class="prac" id="p21" data-g="21"></div>
 </div></div>
 <h4>Kiểm tra nhanh · Phỏng đoán, kinh nghiệm</h4>
 <div class="set" data-set="q4"></div>
@@ -614,6 +823,16 @@ nav a{flex:1 0 auto;padding:6px 8px}
 <div class="warnbox"><b>Lỗi:</b> <span class="ko"><s>학생이다고</s></span> → <span class="ko">학생이라고</span> · <span class="ko"><s>가다고</s></span> (động từ hiện tại) → <span class="ko">간다고</span> · <span class="ko"><s>좋는다고</s></span> (tính từ không có <span class="ko">-는-</span>) → <span class="ko">좋다고</span> · <span class="ko"><s>맛있는다고</s></span> → <span class="ko">맛있다고</span>.</div>
 <div class="deep"><b><span class="ko">-대요</span> khác <span class="ko">-데요</span>.</b> <span class="ko">-대요</span> (ㅐ) = <span class="ko">-다고 해요</span>, thông tin <b>nghe người khác nói</b>. <span class="ko">-데요</span> (ㅔ, 3B) = <span class="ko">-더라고요</span>, điều <b>mình tự thấy</b>. <span class="ko">그 식당이 맛있대요</span> (nghe bảo ngon) ≠ <span class="ko">그 식당이 맛있데요</span> (tôi ăn rồi, thấy ngon). Viết sai một nguyên âm là sai nguồn thông tin.</div>
 <div class="ask"><b>Cô hỏi:</b> Em đọc tin nhắn nhóm lớp: “<span class="ko">내일 수업이 없어요.</span>” Em kể lại cho bạn cùng phòng bằng ba cách (<span class="ko">-대요, -다고 들었어요</span>, và bạn cùng phòng hỏi lại bằng <span class="ko">-다고요?</span>). <button class="b" data-tog="a22">Câu mẫu</button><div class="model ko" id="a22">내일 수업이 없대요. / 내일 수업이 없다고 들었어요. — 뭐? 수업이 없다고요?</div></div>
+<div class="vd"><b>📖 Ví dụ minh họa</b>
+<div class="ex"><i class="tag">-다고 했어요 · rõ ai nói</i><span class="ko">선생님이 내일 시험이 있<b>다고 하셨어요</b>.</span><span class="vi">Cô giáo nói mai có bài kiểm tra.</span></div>
+<div class="ex"><i class="tag">-대요 · nghe nói</i><span class="ko">일기 예보에서 주말에 비가 <b>온대요</b>.</span><span class="vi">Dự báo thời tiết bảo cuối tuần có mưa.</span></div>
+<div class="ex"><i class="tag">-래요 · danh từ</i><span class="ko">저분이 새로 오신 선생님<b>이래요</b>.</span><span class="vi">Nghe nói vị kia là thầy giáo mới.</span></div>
+<div class="ex"><i class="tag">-다고 들었어요</i><span class="ko">이 근처에 좋은 카페가 생겼<b>다고 들었어요</b>.</span><span class="vi">Tôi nghe nói gần đây mới mở một quán cà phê đẹp.</span></div>
+<div class="ex"><i class="tag">-다면서요? · xác nhận</i><span class="ko">한국에 유학 <b>간다면서요</b>? 언제 가요?</span><span class="vi">Nghe nói bạn đi du học Hàn hả? Bao giờ đi?</span></div>
+<div class="ex"><i class="tag">-다고요? · hỏi lại</i><span class="ko">A: 저 회사 그만뒀어요. — B: 네? 그만<b>뒀다고요</b>?</span><span class="vi">Tôi nghỉ việc rồi. — Hả? Nghỉ việc rồi á?</span></div>
+<div class="ex"><i class="tag">-다고요 · nhấn lại lời mình</i><span class="ko">괜찮<b>다고요</b>. 걱정하지 마세요.</span><span class="vi">Đã bảo là không sao mà. Đừng lo.</span></div>
+</div>
+<div class="prac" id="p22" data-g="22"></div>
 </div></div>
 
 <div class="card" id="g23"><div class="hd">23 · Thuật lời hỏi, bảo, rủ, nhờ <small class="ko">-냐고 · -(으)라고 · -자고 · -아/어 달라고 · -아/어 주라고</small> <span class="badge new">3A bài 2</span></div><div class="bd">
@@ -630,6 +849,16 @@ nav a{flex:1 0 auto;padding:6px 8px}
 </table></div>
 <div class="deep"><b>Khi nào <span class="ko">주다</span> thành <span class="ko">달다</span>?</b> Khi người <b>nhận lợi ích = người nói câu gốc</b>. <span class="ko">수진: “(저한테) 책 좀 빌려 주세요.”</span> → <span class="ko">수진 씨가 책을 빌려 <b>달라고</b> 했어요</span>. Mẹ nói với em: “<span class="ko">동생한테 밥 좀 줘.</span>” → <span class="ko">엄마가 동생한테 밥을 <b>주라고</b> 했어요</span> (người nhận là em trai, không phải mẹ). Tên 3A bài 2 <span class="ko">방을 바꿔 달라고 해 봐</span> = “Thử bảo họ đổi phòng cho (cậu) đi” — người nhận lợi ích là người sẽ đi nói.</div>
 <div class="tp">📝 <b>Văn viết, TOPIK:</b> câu hỏi động từ có thể viết <span class="ko">-느냐고</span> (<span class="ko">가느냐고</span>), tính từ có patchim <span class="ko">-으냐고</span> (<span class="ko">좋으냐고</span>); khi nói hằng ngày đều dùng <span class="ko">-냐고</span>. Kính ngữ đặt ở <span class="ko">하다</span>: <span class="ko">선생님께서 숙제를 내라고 <b>하셨어요</b></span>.</div>
+<div class="vd"><b>📖 Ví dụ minh họa</b>
+<div class="ex"><i class="tag">-냐고 · hỏi</i><span class="ko">선생님이 저한테 고향이 어디<b>냐고</b> 물어보셨어요.</span><span class="vi">Thầy hỏi tôi quê ở đâu.</span></div>
+<div class="ex"><i class="tag">-(으)라고 · bảo</i><span class="ko">엄마가 밥 먹기 전에 손을 씻<b>으라고</b> 했어요.</span><span class="vi">Mẹ bảo rửa tay trước khi ăn.</span></div>
+<div class="ex"><i class="tag">-지 말라고 · cấm</i><span class="ko">의사가 술을 마시<b>지 말라고</b> 했어요.</span><span class="vi">Bác sĩ bảo đừng uống rượu.</span></div>
+<div class="ex"><i class="tag">-자고 · rủ</i><span class="ko">친구가 주말에 같이 등산하<b>자고</b> 했어요.</span><span class="vi">Bạn rủ cuối tuần cùng đi leo núi.</span></div>
+<div class="ex"><i class="tag">-아/어 달라고 · nhờ cho người nói</i><span class="ko">동생이 저한테 숙제를 도와 <b>달라고</b> 했어요.</span><span class="vi">Em nhờ tôi giúp làm bài tập (cho em).</span></div>
+<div class="ex"><i class="tag">-아/어 주라고 · nhờ cho người thứ ba</i><span class="ko">선생님이 이 책을 민수 씨한테 <b>주라고</b> 하셨어요.</span><span class="vi">Cô bảo đưa cuốn sách này cho Minsu.</span></div>
+<div class="ex"><i class="tag">-래요 · rút gọn của -(으)라고 해요</i><span class="ko">사장님이 내일 일찍 <b>오래요</b>.</span><span class="vi">Giám đốc bảo mai đến sớm.</span></div>
+</div>
+<div class="prac" id="p23" data-g="23"></div>
 </div></div>
 
 <div class="card" id="g24"><div class="hd">24 · Danh từ hóa – câu hỏi lồng <small class="ko">-는 것 · -기 · -는지 · -(으)ㄴ 지</small></div><div class="bd">
@@ -642,6 +871,16 @@ nav a{flex:1 0 auto;padding:6px 8px}
 </table></div>
 <div class="deep"><b>Dấu cách quyết định nghĩa:</b> <span class="ko">온 <b>지</b></span> (danh từ phụ thuộc <span class="ko">지</span> = khoảng thời gian, viết cách) ≠ <span class="ko">왔는<b>지</b></span> (vĩ tố câu hỏi lồng, viết liền). <span class="ko">한국에 온 지 1년 됐어요</span> (sang Hàn được 1 năm) — <span class="ko">언제 왔는지 몰라요</span> (không biết đã đến lúc nào). Chia <span class="ko">-는지</span>: động từ <span class="ko">-는지</span>, tính từ <span class="ko">-(으)ㄴ지</span>, quá khứ <span class="ko">-았/었는지</span>, tương lai <span class="ko">-(으)ㄹ지</span>.</div>
 <div class="warnbox"><b>Lỗi:</b> <span class="ko"><s>어디에 있는 것을 아세요?</s></span> → <span class="ko">어디에 있는지 아세요?</span> (có từ để hỏi → <span class="ko">-는지</span>). <span class="ko"><s>살는 것이 좋아요</s></span> → <span class="ko">사는 것이 좋아요 / 살기 좋아요</span> (gốc ㄹ rụng trước <span class="ko">-는</span>).</div>
+<div class="vd"><b>📖 Ví dụ minh họa</b>
+<div class="ex"><i class="tag">-는 것 · tân ngữ</i><span class="ko">저는 혼자 여행하<b>는 것</b>을 좋아해요.</span><span class="vi">Tôi thích đi du lịch một mình.</span></div>
+<div class="ex"><i class="tag">-는 것 · chủ ngữ</i><span class="ko">외국어를 배우<b>는 것</b>은 쉽지 않아요.</span><span class="vi">Học ngoại ngữ không dễ.</span></div>
+<div class="ex"><i class="tag">-기 + 편하다/좋다</i><span class="ko">이 펜은 글씨를 쓰<b>기</b> 편해요.</span><span class="vi">Cây bút này viết dễ.</span></div>
+<div class="ex"><i class="tag">-기 시작하다</i><span class="ko">작년부터 한국어를 배우<b>기</b> 시작했어요.</span><span class="vi">Từ năm ngoái tôi bắt đầu học tiếng Hàn.</span></div>
+<div class="ex"><i class="tag">-는지 · câu hỏi lồng có từ để hỏi</i><span class="ko">회의가 몇 시에 시작하<b>는지</b> 알아요?</span><span class="vi">Bạn có biết mấy giờ cuộc họp bắt đầu không?</span></div>
+<div class="ex"><i class="tag">-(으)ㄹ지 · “có… không” (tương lai)</i><span class="ko">내일 비가 <b>올지</b> 모르겠어요.</span><span class="vi">Không biết mai có mưa không.</span></div>
+<div class="ex"><i class="tag">-(으)ㄴ 지 · được bao lâu</i><span class="ko">이 회사에서 일<b>한 지</b> 3년이 됐어요.</span><span class="vi">Tôi làm ở công ty này được 3 năm rồi.</span></div>
+</div>
+<div class="prac" id="p24" data-g="24"></div>
 </div></div>
 
 <div class="card" id="g25"><div class="hd">25 · Định ngữ theo thì <small class="ko">-(으)ㄴ · -는 · -(으)ㄹ · -던 · -았/었던</small></div><div class="bd">
@@ -673,6 +912,15 @@ nav a{flex:1 0 auto;padding:6px 8px}
 <tr><td class="ko">것 같다</td><td>cả ba thì</td><td class="ko">먹은 / 먹는 / 먹을 것 같다</td><td>17</td></tr>
 </table></div>
 <div class="tp">📝 Gốc ㄹ rụng trước <span class="ko">-ㄴ, -는, -ㄹ</span>: <span class="ko">만들다 → 만든, 만드는, 만들</span>; <span class="ko">살다 → 산, 사는, 살</span>. Bất quy tắc ㅂ: <span class="ko">덥다 → 더운</span>; ㄷ: <span class="ko">듣다 → 들은</span>.</div>
+<div class="vd"><b>📖 Ví dụ minh họa</b>
+<div class="ex"><i class="tag">-(으)ㄴ · đã xong</i><span class="ko">어제 <b>본</b> 영화가 정말 재미있었어요.</span><span class="vi">Bộ phim xem hôm qua hay thật.</span></div>
+<div class="ex"><i class="tag">-는 · đang</i><span class="ko">지금 듣<b>는</b> 노래 제목이 뭐예요?</span><span class="vi">Bài đang nghe tên là gì vậy?</span></div>
+<div class="ex"><i class="tag">-(으)ㄹ · sẽ</i><span class="ko">내일 입<b>을</b> 옷을 준비했어요.</span><span class="vi">Tôi đã chuẩn bị quần áo mai sẽ mặc.</span></div>
+<div class="ex"><i class="tag">-던 · đang dở</i><span class="ko">제가 마시<b>던</b> 커피 어디 있어요?</span><span class="vi">Cốc cà phê tôi đang uống dở đâu rồi?</span></div>
+<div class="ex"><i class="tag">-았/었던 · đã từng, nay không còn</i><span class="ko">작년에 갔<b>던</b> 식당에 다시 가고 싶어요.</span><span class="vi">Tôi muốn quay lại quán ăn năm ngoái từng đến.</span></div>
+<div class="ex"><i class="tag">tính từ: -(으)ㄴ / -았/었던</i><span class="ko">조용<b>한</b> 카페 · 예전에는 조용<b>했던</b> 동네</span><span class="vi">Quán cà phê yên tĩnh · khu phố trước kia từng yên tĩnh</span></div>
+</div>
+<div class="prac" id="p25" data-g="25"></div>
 </div></div>
 <h4>Kiểm tra nhanh · Gián tiếp, định ngữ</h4>
 <div class="set" data-set="q5"></div>
@@ -842,10 +1090,333 @@ l5:[
 var TAB={bd:['q0'],tt:['q1'],nc:['q2'],yd:['q3'],pd:['q4'],gt:['q5'],lt:['l1','l2','l4','l3','l5','ck']};
 var NAMES={q0:'Năm câu hỏi',q1:'Tiểu từ',q2:'Nối câu',q3:'Ý định, khả năng',q4:'Phỏng đoán, kinh nghiệm',q5:'Gián tiếp, định ngữ',l1:'Nối câu',l2:'Hội thoại',l4:'Tìm câu sai',l3:'Thuật lại rút gọn',l5:'Định ngữ',ck:'Kiểm tra cuối'};
 
+/* ---------- luyện sau mỗi nhóm: P[nhóm] = [[loại, câu, đáp án, giải thích]] — c chọn (lựa chọn đầu là đáp án), y gõ, d dịch Việt → Hàn (câu mẫu đầu, rồi cách khác) ---------- */
+var P={"1":[
+ ["c","A: 어디가 아파요?<br>B: 머리( ) 아파요.",["가","는","를","에"],"Trả lời câu hỏi 어디가 → 이/가. Câu đầy đủ 저는 머리가 아파요 là câu hai chủ ngữ."],
+ ["y","A: 뭐가 제일 어려워요? — B: 발음( ) 제일 어려워요.",["이"],"뭐가 → trả lời bằng 이/가; 발음 có patchim → 이."],
+ ["d","Ai đã gọi điện? — <i>Bạn Minsu đã gọi.</i> (dịch câu trả lời; gọi điện: 전화하다)",["민수 씨가 전화했어요","민수 씨가 전화했습니다","민수가 전화했어요","민수 씨가 전화를 했어요"],"Trả lời câu hỏi “ai” → 이/가: 민수 씨가."],
+ ["c","( ) 만든 음식이에요. 드셔 보세요.",["제가","저는","저가","제는"],"Chủ ngữ trong định ngữ (만든 음식) → 이/가; 저 + 가 = 제가."],
+ ["y","코끼리( ) 코가 길어요.",["는"],"Câu hai chủ ngữ: chủ đề 은/는 + câu nhỏ có 이/가."],
+ ["d","Tôi thì không uống rượu. (rượu: 술; ý: người khác thì uống)",["저는 술을 안 마셔요","저는 술을 마시지 않아요","저는 술은 안 마셔요","저는 술 안 마셔요","저는 술을 안 마십니다"],"Đối chiếu bản thân với người khác → 저는."],
+ ["c","(Giới thiệu bản thân lần đầu) Câu nào tự nhiên?",["저는 마이예요.","제가 마이예요.","저를 마이예요.","저에 마이예요."],"Giới thiệu → 은/는. 제가 마이예요 chỉ dùng khi trả lời “Ai là Mai?”."],
+ ["y","A: 누가 창문을 열었어요? — B: (저) ___ 열었어요.",["제가"],"저 + 가 → 제가 (không phải 저가)."],
+ ["d","Đây là bức tranh em tôi vẽ. (vẽ tranh: 그림을 그리다)",["이건 동생이 그린 그림이에요","이것은 동생이 그린 그림이에요","이거는 동생이 그린 그림이에요","동생이 그린 그림이에요","이건 제 동생이 그린 그림이에요","이것은 제 동생이 그린 그림이에요"],"Trong định ngữ “em vẽ” → 동생이 그린, không 동생은 그린."],
+ ["c","Câu nào <b>sai</b>?",["동생은 산 옷이 예뻐요.","동생이 산 옷이 예뻐요.","동생은 옷을 샀어요.","동생이 옷을 샀어요."],"Trong định ngữ 산 옷 → chủ ngữ dùng 이/가: 동생이 산 옷."],
+ ["d","Tôi bị đau bụng. (bụng: 배)",["저는 배가 아파요","배가 아파요","저는 배가 아픕니다","배가 아픕니다"],"Câu hai chủ ngữ: 저는 + 배가 아파요."]],
+"2":[
+ ["c","저는 매일 아침 공원( ) 운동해요.",["에서","에","으로","을"],"운동하다 là hoạt động → nơi diễn ra dùng 에서."],
+ ["y","이 편지는 한국( ) 왔어요. (từ Hàn Quốc)",["에서"],"Điểm xuất phát → 에서."],
+ ["d","Em trai tôi sống ở Seoul.",["동생은 서울에 살아요","동생은 서울에서 살아요","제 동생은 서울에 살아요","제 동생은 서울에서 살아요","동생이 서울에 살아요","동생이 서울에서 살아요","남동생은 서울에 살아요","남동생은 서울에서 살아요"],"살다 dùng được cả 에 và 에서."],
+ ["c","책상 위( ) 노트북이 있어요.",["에","에서","로","으로"],"있다/없다 → nơi tồn tại dùng 에."],
+ ["y","연필( ) 쓰세요. (bằng bút chì)",["로"],"Công cụ → (으)로; 연필 kết thúc bằng ㄹ → 로."],
+ ["d","Tôi ăn trưa ở căng tin trường. (căng tin: 학생 식당; ăn trưa: 점심을 먹다)",["학생 식당에서 점심을 먹어요","저는 학생 식당에서 점심을 먹어요","학교 식당에서 점심을 먹어요","저는 학교 식당에서 점심을 먹어요"],"Nơi diễn ra hành động ăn → 에서."],
+ ["c","(Nói với tài xế) 인천공항( ) 가 주세요.",["으로","로","에서","을"],"Hướng đi → (으)로; 항 có patchim ㅇ → 으로."],
+ ["y","왼쪽( ) 가면 은행이 있어요.",["으로"],"Chỉ hướng → (으)로; 쪽 có patchim → 으로."],
+ ["d","Tôi đến trường bằng xe buýt.",["버스로 학교에 가요","버스로 학교에 와요","학교에 버스로 가요","학교에 버스로 와요","저는 버스로 학교에 가요","저는 버스로 학교에 와요","버스를 타고 학교에 가요","버스를 타고 학교에 와요"],"Phương tiện → (으)로; hoặc 버스를 타고 (nhóm 7). Nơi đến → 에."],
+ ["c","Câu nào <b>sai</b>?",["도서관에 공부해요.","도서관에서 공부해요.","도서관에 가요.","도서관으로 오세요."],"Học là hoạt động → 도서관에서 공부해요."],
+ ["d","Hãy treo áo lên móc. (móc áo: 옷걸이; treo: 걸다)",["옷을 옷걸이에 거세요","옷걸이에 옷을 거세요","옷을 옷걸이에 걸어 주세요","옷걸이에 옷을 걸어 주세요","옷을 옷걸이에 걸으세요"],"Đích của việc treo → 에. 걸다 + -(으)세요 → 거세요 (ㄹ rụng)."]],
+"3":[
+ ["c","(Bài viết TOPIK câu 53) 남자( ) 여자 모두 ‘건강’을 1위로 꼽았다.",["와","하고","랑","고"],"Văn viết → 와/과; 남자 không patchim → 와."],
+ ["y","빵( ) 우유를 샀다. (văn viết)",["과"],"Văn viết, 빵 có patchim → 과."],
+ ["d","Phòng này rộng và sạch. (rộng: 넓다; sạch: 깨끗하다)",["이 방은 넓고 깨끗해요","방이 넓고 깨끗해요","이 방은 넓고 깨끗합니다","이 방이 넓고 깨끗해요"],"Nối hai tính từ → -고."],
+ ["c","(Nhắn tin bạn thân) 어제 누나( ) 쇼핑했어.",["랑","과","와","이랑"],"Thân mật → (이)랑; 누나 không patchim → 랑. 와/과 quá trang trọng trong tin nhắn."],
+ ["y","동생( ) 같이 놀았어. (thân mật)",["이랑","하고"],"동생 có patchim → 이랑 (하고 cũng được)."],
+ ["d","Cho tôi kimbap và mì ramyeon. (gọi món)",["김밥하고 라면 주세요","김밥이랑 라면 주세요","김밥하고 라면 좀 주세요","김밥이랑 라면 좀 주세요","김밥하고 라면을 주세요"],"Văn nói → 하고 / (이)랑."],
+ ["c","Câu nào <b>sai</b>?",["책이고 공책을 샀어요.","책과 공책을 샀어요.","책하고 공책을 샀어요.","책이랑 공책을 샀어요."],"Nối hai danh từ không dùng -고; 책이고 = “là sách, và…”."],
+ ["y","이 가방은 (싸다) ___ 예뻐요.",["싸고"],"Nối hai tính từ → -고."],
+ ["c","“Tôi đã gặp bạn và cùng uống cà phê.”",["친구를 만나서 같이 커피를 마셨어요.","친구를 만나와 커피를 마셨어요.","친구를 만나랑 커피를 마셨어요.","친구와 만나과 커피를 마셨어요."],"Gặp bạn rồi cùng bạn làm việc sau → -아/어서 (nhóm 7). 와/과, (이)랑 chỉ nối danh từ."],
+ ["d","Tôi và bạn tôi học cùng lớp. (văn nói; cùng lớp: 같은 반)",["저하고 친구는 같은 반이에요","저랑 친구는 같은 반이에요","친구하고 저는 같은 반이에요","친구랑 저는 같은 반이에요","저하고 제 친구는 같은 반이에요","저랑 제 친구는 같은 반이에요","저와 친구는 같은 반이에요"],"Văn nói → 하고 / (이)랑."]],
+"4":[
+ ["c","주말마다 부모님( ) 전화를 드려요.",["께","께서","한테서","에"],"Người nhận là người trên → 께 (+ 드리다)."],
+ ["y","할머니( ) 용돈을 주셨어요. (bà là chủ ngữ)",["께서"],"Chủ ngữ kính ngữ → 께서."],
+ ["d","Tôi đã gửi email cho thầy giáo. (gửi: 보내다)",["선생님께 이메일을 보냈어요","선생님께 이메일을 보내 드렸어요","선생님께 메일을 보냈어요","선생님께 메일을 보내 드렸어요","저는 선생님께 이메일을 보냈어요","선생님께 이메일을 보냈습니다"],"Người nhận là thầy giáo → 께."],
+ ["c","고객 센터( ) 전화해서 물어보세요.",["에","한테","께","에게서"],"Tổ chức, nơi chốn → 에."],
+ ["y","저는 매일 친구( ) 문자를 보내요. (văn nói)",["한테","에게"],"Cho ai (văn nói) → 한테."],
+ ["d","Tôi đã học tiếng Hàn từ chị gái. (chị gái: 언니 / 누나)",["언니한테서 한국어를 배웠어요","누나한테서 한국어를 배웠어요","언니한테 한국어를 배웠어요","누나한테 한국어를 배웠어요","언니에게서 한국어를 배웠어요","누나에게서 한국어를 배웠어요","언니에게 한국어를 배웠어요","누나에게 한국어를 배웠어요"],"Từ ai → 한테서 / 에게서; với 배우다 khi nói có thể bỏ 서."],
+ ["c","이 이야기는 친구( ) 들었어요.",["한테서","께서","에","으로"],"Nghe từ ai → 한테서."],
+ ["y","이 소포는 미국에 사는 이모( ) 받았어요. (văn nói, “từ”)",["한테서","에게서","한테"],"Từ người → 한테서 (với 받다 có thể bỏ 서)."],
+ ["c","Câu nào <b>sai</b>?",["꽃한테 물을 줘요.","꽃에 물을 줘요.","동생한테 물을 줘요.","할머니께 물을 드려요."],"Cây, hoa là vật → 에: 꽃에 물을 줘요."],
+ ["d","Tôi gọi điện cho ngân hàng. (ngân hàng: 은행)",["은행에 전화했어요","은행에 전화해요","저는 은행에 전화했어요","은행에 전화를 했어요","은행에 전화를 해요"],"Tổ chức → 에, không dùng 한테/에게."]],
+"5":[
+ ["c","우리 반 학생은 다섯 명( ) 안 돼요.",["밖에","만","도","이나"],"Chỉ… thôi (ít) + phủ định 안 되다 → 밖에."],
+ ["y","저는 한국어( ) 할 줄 알아요. 영어는 못해요.",["만"],"Vị từ khẳng định (할 줄 알아요) → 만. Muốn dùng 밖에 thì: 한국어밖에 못해요."],
+ ["d","Hôm qua tôi không gặp ai cả.",["어제 아무도 안 만났어요","어제는 아무도 안 만났어요","어제 아무도 만나지 않았어요","어제 아무도 못 만났어요","어제는 아무도 못 만났어요"],"“Không… ai” → 아무도 + phủ định. 누구를 안 만났어요 thành câu hỏi."],
+ ["c","배가 너무 고파요. ( ) 주세요.",["아무거나","아무것도","아무도","아무 데도"],"Khẳng định, “gì cũng được” → 아무거나."],
+ ["y","방학 동안 아무 데( ) 안 갔어요.",["도"],"아무 데도 + phủ định = không đi đâu cả."],
+ ["d","Tôi chỉ có 5.000 won thôi (ít quá).",["오천 원밖에 없어요","5000원밖에 없어요","5,000원밖에 없어요","저는 오천 원밖에 없어요","저는 5000원밖에 없어요"],"Ít hơn mong đợi → 밖에 + 없다."],
+ ["c","Câu nào <b>sai</b>?",["시간이 10분밖에 있어요.","시간이 10분밖에 없어요.","시간이 10분만 있어요.","시간이 10분도 없어요."],"밖에 bắt buộc đi với phủ định."],
+ ["y","이 카드는 아무 데( ) 쓸 수 있어요. (ở đâu cũng)",["서나","에서나"],"Tiểu từ 에서 đứng trước (이)나: 아무 데서나."],
+ ["c","이 비밀은 ( ) 말하지 마세요.",["아무한테도","아무도한테","아무한테나","누구한테"],"Tiểu từ đứng trước, 도 đứng sau cùng: 아무한테도 + phủ định."],
+ ["d","Ngồi chỗ nào cũng được.",["아무 데나 앉으세요","아무 데나 앉아도 돼요","아무 데나 앉으셔도 돼요","아무 데나 앉으셔도 됩니다"],"Bất cứ đâu + khẳng định → 아무 데나."]],
+"6":[
+ ["c","날씨가 ( ) 창문을 닫을까요?",["추우니까","추워서","춥기 때문에","추웠어서"],"Vế sau rủ / hỏi ý (-ㄹ까요) → chỉ -(으)니까."],
+ ["y","A: 왜 늦었어요? — B: 버스를 (놓치다) ___. (trả lời ngắn)",["놓쳐서요"],"Trả lời 왜요 bằng lý do khách quan → -아/어서요."],
+ ["d","Vì trời mưa nên tôi không đi được.",["비가 와서 못 갔어요","비가 와서 못 가요","비 때문에 못 갔어요","비 때문에 못 가요","비가 왔기 때문에 못 갔어요","비가 오기 때문에 못 가요","비가 와서 갈 수 없었어요"],"Nguyên nhân khách quan → -아/어서 (không gắn -았-), hoặc N 때문에."],
+ ["c","(Ai đó vừa giúp em) ( ) 정말 감사합니다.",["도와주셔서","도와주시니까","도와주시기 때문에","도와주셨어서"],"Cảm ơn → -아/어서; -아/어서 không gắn -었-."],
+ ["y","저는 아직 (학생) ___ 돈이 별로 없어요. (-아/어서 với danh từ)",["학생이라서","학생이어서"],"Danh từ + -아/어서 → N(이)라서 / N이어서."],
+ ["d","Muộn rồi, chúng ta về nhà thôi. (muộn: 늦다; về nhà: 집에 가다)",["늦었으니까 집에 갑시다","늦었으니까 집에 가요","늦었으니까 이제 집에 가요","늦었으니까 이제 집에 갑시다","늦었으니까 집에 가자","늦었으니까 이제 집에 가자"],"Vế sau rủ → -(으)니까; -(으)니까 gắn được -었-."],
+ ["c","(Bài viết) 1인 가구가 ( ) 소형 가전제품의 판매가 늘었다.",["증가했기 때문에","증가했어서","증가하니까요","증가해서요"],"Văn viết, nêu lý do rõ ràng → -기 때문에."],
+ ["y","시간이 (없다) ___ 택시를 탑시다.",["없으니까"],"Vế sau rủ (-ㅂ시다) → -(으)니까."],
+ ["c","Câu nào <b>sai</b>?",["비가 왔어서 집에 있었어요.","비가 와서 집에 있었어요.","비가 왔기 때문에 집에 있었어요.","비 때문에 집에 있었어요."],"-아/어서 không gắn -았/었-."],
+ ["d","Xin lỗi vì đã liên lạc muộn. (liên lạc: 연락하다)",["늦게 연락해서 죄송해요","늦게 연락해서 죄송합니다","연락이 늦어서 죄송합니다","연락이 늦어서 죄송해요","늦게 연락드려서 죄송합니다","늦게 연락드려서 죄송해요"],"Xin lỗi → -아/어서. 늦었으니까 죄송합니다 nghe như biện minh."],
+ ["c","집에 ( ) 아무도 없었어요.",["가니까","가서","가기 때문에","갔으니까"],"Nghĩa thứ hai của -(으)니까: “làm A thì phát hiện ra B”."],
+ ["d","Vì là người nước ngoài nên tôi không biết rõ. (biết rõ: 잘 알다)",["외국 사람이라서 잘 몰라요","외국인이라서 잘 몰라요","외국인이기 때문에 잘 몰라요","외국 사람이기 때문에 잘 몰라요","저는 외국인이라서 잘 몰라요","저는 외국 사람이라서 잘 몰라요","외국인이어서 잘 몰라요"],"N là thân phận → N(이)라서 / N이기 때문에. 외국인 때문에 = “tại người nước ngoài”."]],
+"7":[
+ ["c","편지를 ( ) 보냈어요. (viết thư rồi gửi chính lá thư đó)",["써서","쓰고","쓰기 전에","쓰다가"],"Việc sau dùng chính kết quả của việc trước → -아/어서."],
+ ["y","(자다) ___ 전에 휴대폰을 보지 마세요.",["자기"],"전 đòi -기: 자기 전에."],
+ ["d","Tôi đi tàu điện ngầm đến công ty. (tàu điện ngầm: 지하철)",["지하철을 타고 회사에 가요","지하철을 타고 회사에 와요","지하철로 회사에 가요","지하철로 회사에 와요","저는 지하철을 타고 회사에 가요","지하철을 타고 출근해요"],"타다 + -고: trạng thái “đang ngồi trên tàu” được giữ."],
+ ["c","안경을 ( ) 책을 읽어요.",["쓰고","써서","쓰다가","쓴 후에"],"Đeo, mặc → -고 (trạng thái được giữ)."],
+ ["y","친구 집에 (가다) ___ 같이 숙제를 했어요. (làm ở nhà bạn)",["가서"],"Động từ di chuyển, việc sau ở nơi vừa đến → -아/어서."],
+ ["d","Tôi đến thư viện và học ở đó.",["도서관에 가서 공부해요","도서관에 가서 공부했어요","저는 도서관에 가서 공부해요","저는 도서관에 가서 공부했어요"],"Đến nơi rồi làm việc ở đó → 가서."],
+ ["c","수업이 ( ) 같이 밥 먹어요.",["끝난 후에","끝나기 후에","끝나는 후에","끝날 후에"],"후 đòi định ngữ -(으)ㄴ: 끝난 후에."],
+ ["y","숙제를 다 (하다) ___ 게임을 해요. (làm xong hẳn rồi mới)",["하고 나서","한 후에","한 다음에"],"Nhấn “xong hẳn” → -고 나서 (hoặc -(으)ㄴ 후에)."],
+ ["c","Câu nào <b>sai</b>?",["의자에 앉고 기다리세요.","의자에 앉아서 기다리세요.","모자를 쓰고 나갔어요.","손을 씻고 밥을 먹었어요."],"Đổi tư thế (앉다) → -아/어서: 앉아서 기다리세요."],
+ ["d","Trước khi sang Hàn Quốc, tôi đã học tiếng Hàn.",["한국에 가기 전에 한국어를 공부했어요","한국에 가기 전에 한국어를 배웠어요","한국에 오기 전에 한국어를 공부했어요","한국에 오기 전에 한국어를 배웠어요"],"Trước khi → -기 전에 (thì nằm ở vế sau)."]],
+"8":[
+ ["c","지금 시장에 ( ) 같이 갈래요?",["가는데","가지만","가도","간데"],"Đưa bối cảnh rồi rủ → -는데 (động từ)."],
+ ["y","내일 친구 (결혼식) ___ 뭘 입을까요?",["결혼식인데"],"Danh từ + bối cảnh → 인데."],
+ ["d","Tiếng Hàn khó nhưng thú vị.",["한국어는 어렵지만 재미있어요","한국어는 어렵지만 재미있습니다","한국어는 어려운데 재미있어요","한국어가 어렵지만 재미있어요"],"Đối lập rõ, hai vế ngang hàng → -지만."],
+ ["c","아무리 ( ) 포기하지 마세요.",["힘들어도","힘들지만","힘든데","힘들어서"],"아무리 chỉ đi với -아/어도."],
+ ["y","이 가방은 (작다) ___ 물건이 많이 들어가요.",["작은데","작지만"],"Tính từ → -(으)ㄴ데 (hoặc -지만)."],
+ ["d","Dù bận thế nào cũng phải ăn sáng. (ăn sáng: 아침을 먹다)",["아무리 바빠도 아침을 먹어야 해요","아무리 바빠도 아침은 먹어야 해요","아무리 바빠도 아침을 먹어야 돼요","아무리 바빠도 아침은 먹어야 돼요"],"아무리 + -아/어도; phải → -아/어야 하다."],
+ ["c","Câu nào <b>sai</b>?",["이 식당은 맛있은데 좀 비싸요.","이 식당은 맛있는데 좀 비싸요.","이 식당은 맛있지만 좀 비싸요.","이 식당은 비싼데 맛있어요."],"맛있다 (있다) → -는데: 맛있는데."],
+ ["y","약을 (먹다) ___ 감기가 안 나아요. (dù đã uống thuốc)",["먹어도","먹었는데","먹었지만"],"Kết quả trái với mong đợi → -아/어도 (hoặc đối lập -었는데 / -었지만)."],
+ ["c","어제는 ( ) 오늘은 따뜻해요.",["추웠는데","추운데","춥는데","추웠어도"],"Quá khứ → -았/었는데; tính từ không gắn -는데 trực tiếp."],
+ ["d","Tôi đang đi siêu thị, bạn có cần gì không? (siêu thị: 마트; cần: 필요하다)",["마트에 가는데 뭐 필요한 거 있어요?","지금 마트에 가는데 필요한 거 있어요?","마트에 가는데 필요한 거 있어요?","지금 마트에 가는데 뭐 필요한 거 있어요?","마트에 가는데 필요한 것 있어요?"],"Bối cảnh + câu hỏi → -는데 (không dùng -지만)."]],
+"9":[
+ ["c","책을 ( ) 친구가 와서 같이 나갔어요. (đang đọc dở)",["읽다가","읽었다가","읽으면서","읽는 동안"],"Đang làm dở rồi chuyển sang việc khác → -다가."],
+ ["y","(어리다) ___ 때 시골에 살았어요.",["어릴"],"때 đòi -(으)ㄹ: 어릴 때."],
+ ["d","Tôi vừa uống cà phê vừa nói chuyện với bạn.",["커피를 마시면서 친구하고 이야기했어요","커피를 마시면서 친구랑 이야기했어요","커피를 마시면서 친구와 이야기했어요","친구하고 커피를 마시면서 이야기했어요","친구랑 커피를 마시면서 이야기했어요","커피를 마시면서 친구하고 얘기했어요","친구하고 커피를 마시면서 얘기했어요","커피를 마시면서 친구랑 얘기했어요"],"Đồng thời, cùng chủ ngữ → -(으)면서."],
+ ["c","불을 ( ) 다시 켰어요.",["껐다가","끄다가","끄면서","끌 때"],"Làm xong rồi đảo ngược → -았/었다가."],
+ ["y","학교에 (가다) ___ 지갑을 놓고 온 게 생각나서 다시 집에 갔어요. (chưa tới trường)",["가다가"],"Đang đi dở → -다가."],
+ ["d","Trong khi con ngủ, mẹ nấu ăn. (con: 아이; nấu ăn: 요리하다)",["아이가 자는 동안 엄마는 요리했어요","아이가 자는 동안 엄마가 요리했어요","아이가 자는 동안 엄마는 요리를 했어요","아이가 자는 동안 엄마는 요리해요","아이가 자는 동안 엄마가 요리해요"],"Hai chủ ngữ khác nhau → -는 동안 (không dùng -(으)면서)."],
+ ["c","제가 ( ) 전화가 왔어요.",["샤워하는 동안","샤워하면서","샤워했다가","샤워하러"],"Hai chủ ngữ (제가 / 전화가), suốt khoảng thời gian → -는 동안."],
+ ["y","고등학교에 (다니다) ___ 때 한국 드라마를 처음 봤어요.",["다닐","다녔을"],"때 đòi -(으)ㄹ; quá khứ → -았/었을 때 (다닐 때 cũng được)."],
+ ["c","Câu nào <b>sai</b>?",["저는 노래를 부르면서 동생은 춤을 췄어요.","저는 노래를 부르면서 춤을 췄어요.","제가 노래를 부르는 동안 동생은 춤을 췄어요.","노래를 부를 때 동생이 들어왔어요."],"-(으)면서 bắt buộc cùng chủ ngữ."],
+ ["d","Tôi đang chạy thì bị ngã. (chạy: 뛰다; ngã: 넘어지다)",["뛰다가 넘어졌어요","뛰어가다가 넘어졌어요","달리다가 넘어졌어요","저는 뛰다가 넘어졌어요"],"Đang làm thì gặp chuyện → -다가."]],
+"10":[
+ ["c","책을 ( ) 도서관에 왔어요.",["빌리러","빌리면","빌리려면","빌려서"],"Mục đích + 오다 → -(으)러."],
+ ["y","시간이 (있다) ___ 같이 영화 봐요.",["있으면"],"Điều kiện → -(으)면."],
+ ["d","Tôi sang Hàn Quốc để học tiếng Hàn.",["한국어를 배우러 한국에 왔어요","한국어를 공부하러 한국에 왔어요","한국어를 배우려고 한국에 왔어요","한국어를 공부하려고 한국에 왔어요","한국어를 배우러 한국에 갔어요","한국어를 공부하러 한국에 갔어요","한국어를 배우려고 한국에 갔어요","한국어를 공부하려고 한국에 갔어요"],"Vế sau 오다/가다 → -(으)러 và -(으)려고 đều được."],
+ ["c","좋은 회사에 ( ) 열심히 공부해야 해요.",["들어가려면","들어가면","들어가러","들어가서"],"Muốn… thì phải… → -(으)려면."],
+ ["y","한국 친구를 (사귀다) ___ 동아리에 가입했어요.",["사귀려고"],"Vế sau 가입하다 (không phải di chuyển) → -(으)려고."],
+ ["d","Muốn khỏe thì phải tập thể dục đều đặn. (khỏe lên: 건강해지다; đều đặn: 꾸준히)",["건강해지려면 꾸준히 운동해야 해요","건강해지려면 꾸준히 운동해야 돼요","건강을 지키려면 꾸준히 운동해야 해요","건강을 지키려면 꾸준히 운동해야 돼요"],"-(으)려면 + -아/어야 하다. 건강하다 là tính từ → dùng 건강해지다."],
+ ["c","돈을 ( ) 아르바이트를 시작했어요.",["모으려고","모으러","모으려면","모으면"],"Mục đích, vế sau không phải di chuyển → -(으)려고."],
+ ["y","서울역에 (가다) ___ 몇 호선을 타야 해요?",["가려면"],"Hỏi cách để đạt mục đích → -(으)려면."],
+ ["c","Câu nào <b>sai</b>?",["선물을 사려고 같이 갑시다.","선물을 사러 같이 갑시다.","선물을 사려고 돈을 모았어요.","선물을 사러 시장에 갔어요."],"-(으)려고: vế sau không được là rủ, mệnh lệnh → 사러 갑시다."],
+ ["d","Nếu trời mưa thì chúng ta xem phim ở nhà nhé.",["비가 오면 집에서 영화를 봐요","비가 오면 집에서 영화를 봅시다","비가 오면 집에서 영화 봐요","비가 오면 집에서 영화를 보자","비가 오면 집에서 영화 보자","비가 오면 집에서 영화를 볼까요?"],"Điều kiện → -(으)면; vế sau rủ được."]],
+"11":[
+ ["c","A: 내일 몇 시까지 와야 돼요? — B: 9시까지 ( ). (hứa với người hỏi)",["올게요","올래요?","오기로 해요","오려고 했어요"],"Hứa, nhận lời ngay lúc nói → -(으)ㄹ게요."],
+ ["y","(Gọi món, ý muốn lúc nói) 저는 냉면 (먹다) ___.",["먹을래요"],"Ý muốn, thân mật → -(으)ㄹ래요."],
+ ["d","Tôi định học cao học ở Hàn Quốc. (học cao học: 대학원에 가다)",["한국에서 대학원에 가려고 해요","한국 대학원에 가려고 해요","한국에서 대학원에 다니려고 해요","한국에서 석사를 하려고 해요","저는 한국에서 대학원에 가려고 해요","저는 한국 대학원에 가려고 해요"],"Ý định trong đầu → -(으)려고 하다."],
+ ["c","Câu nào <b>sai</b>?",["민수 씨가 내일 전화할게요.","제가 내일 전화할게요.","민수 씨가 내일 전화할 거예요.","민수 씨는 내일 전화하기로 했어요."],"-(으)ㄹ게요 chỉ dùng cho ngôi 1."],
+ ["y","주말에 대청소를 (하다) ___ 했는데 너무 피곤해서 못 했어요.",["하려고"],"Định… mà không → -(으)려고 했는데."],
+ ["d","Để em làm cho. (nhận lời ngay lúc nói)",["제가 할게요","제가 해 드릴게요","제가 하겠습니다","제가 해 줄게요"],"Nhận lời vì người nghe → -(으)ㄹ게요 (trang trọng: -겠습니다)."],
+ ["c","(Phỏng vấn xin việc) 입사하면 최선을 ( ).",["다하겠습니다","다할래요","다하기로 해요","다할게?"],"Ý chí trang trọng → -겠습니다."],
+ ["y","A: 이 서류 좀 복사해 줄 수 있어요? — B: 네, 바로 (하다) ___.",["할게요","하겠습니다"],"Nhận lời → -(으)ㄹ게요 / -겠습니다."],
+ ["c","여자 친구하고 다음 달에 ( ). (hai người đã quyết định)",["결혼하기로 했어요","결혼할게요","결혼할래요","결혼하겠어요"],"Đã quyết định, đã hẹn với người khác → -기로 하다."],
+ ["d","Chúng tôi đã hẹn gặp nhau lúc 7 giờ.",["7시에 만나기로 했어요","일곱 시에 만나기로 했어요","우리는 7시에 만나기로 했어요","우리는 일곱 시에 만나기로 했어요","저희는 7시에 만나기로 했어요"],"Đã hẹn → -기로 했어요."]],
+"12":[
+ ["c","(Với giáo sư) 교수님, 이 자료를 ( )",["복사해 드릴까요?","복사합시다.","복사하자.","복사할래?"],"Hỏi ý về việc mình làm cho người trên → -아/어 드릴까요?"],
+ ["y","(반말, rủ bạn) 우리 같이 (가다) ___.",["가자"],"Rủ, 반말 → -자."],
+ ["d","Cuối tuần này cùng đi xem phim nhé? (rủ, hỏi ý)",["이번 주말에 같이 영화 볼까요?","이번 주말에 같이 영화를 볼까요?","이번 주말에 같이 영화 보러 갈까요?","이번 주말에 같이 영화를 보러 갈까요?","이번 주말에 같이 영화 볼래요?","이번 주말에 같이 영화 보러 갈래요?"],"Rủ, hỏi ý → -(으)ㄹ까요? / -(으)ㄹ래요?"],
+ ["c","A: 날씨가 좋네요. 같이 ( ) — B: 네, 좋아요.",["산책할까요?","산책했어요?","산책할게요?","산책하겠어요."],"Rủ cùng làm → -(으)ㄹ까요?"],
+ ["y","A: 짐이 많네요. 제가 좀 (들다) ___? — B: 네, 고마워요.",["들까요"],"Hỏi ý việc mình làm → -(으)ㄹ까요?; gốc ㄹ: 들까요."],
+ ["d","Bạn thử hỏi cô giáo xem sao? (hỏi: 물어보다; khuyên)",["선생님께 물어보는 게 어때요?","선생님한테 물어보는 게 어때요?","선생님께 한번 물어보세요","선생님한테 한번 물어보세요","선생님께 물어보세요","선생님한테 물어보세요","선생님께 여쭤보는 게 어때요?","선생님께 여쭤보세요"],"Khuyên → -는 게 어때요? / -아/어 보세요."],
+ ["c","(Bạn hay mất ngủ) 자기 전에 따뜻한 우유를 ( )",["마셔 보는 게 어때요?","마실까요?","마십시다.","마실게요."],"Khuyên, đề xuất → -는 게 어때요?"],
+ ["y","이 옷 예쁘네요. 한번 (입다) ___.",["입어 보세요"],"Khuyên thử → -아/어 보세요."],
+ ["c","Câu nào <b>không lịch sự</b> khi nói với giám đốc?",["사장님, 회의실로 갑시다.","사장님, 회의실로 가시겠어요?","사장님, 회의실로 가실까요?","사장님, 회의실로 가실래요?"],"-(으)ㅂ시다 là “ra lệnh cho cả nhóm”, không dùng với người trên."],
+ ["d","Để tôi mở cửa sổ nhé? (người nói làm, hỏi ý người nghe)",["제가 창문을 열까요?","창문을 열까요?","제가 창문 열까요?","창문 열까요?","제가 창문을 열어 드릴까요?"],"Hỏi ý việc mình làm → -(으)ㄹ까요?"]],
+"13":[
+ ["c","제 동생은 한국 가수를 ( ).",["만나고 싶어해요","만나고 싶어요","만나고 싶었어요","만날래요"],"Ngôi 3 → -고 싶어하다."],
+ ["y","언니는 고양이를 (키우다) ___. (ngôi 3, hiện tại)",["키우고 싶어해요","키우고 싶어 해요"],"Ngôi 3 → -고 싶어하다."],
+ ["d","Bạn tôi muốn đi du lịch Jeju. (đi du lịch Jeju: 제주도에 여행 가다)",["친구가 제주도에 여행 가고 싶어해요","제 친구는 제주도에 여행 가고 싶어해요","친구는 제주도에 여행 가고 싶어해요","제 친구가 제주도에 여행 가고 싶어해요","친구가 제주도에 여행을 가고 싶어해요","제 친구는 제주도로 여행 가고 싶어해요","제 친구는 제주도에 여행을 가고 싶어해요"],"Ngôi 3 → 싶어하다."],
+ ["c","내일은 비가 안 ( ). (mong, ngoài tầm tay)",["왔으면 좋겠어요","오고 싶어요","오고 싶어해요","올래요"],"Mong điều ngoài tầm tay → -았/었으면 좋겠다."],
+ ["y","빨리 방학이 (되다) ___ 좋겠어요.",["됐으면","되면","되었으면"],"Mong → -(으)면 좋겠다 / -았/었으면 좋겠다."],
+ ["d","Mong là bạn sớm khỏi bệnh. (khỏi bệnh: 낫다)",["빨리 나았으면 좋겠어요","빨리 나으면 좋겠어요","빨리 나으셨으면 좋겠어요","빨리 나았으면 좋겠습니다","얼른 나았으면 좋겠어요"],"Mong cho người khác → -았/었으면 좋겠다; 낫다 bất quy tắc ㅅ: 나았으면."],
+ ["c","Câu nào <b>sai</b>?",["친구가 저를 보고 싶어요.","저는 친구가 보고 싶어요.","친구가 저를 보고 싶어해요.","친구를 빨리 만났으면 좋겠어요."],"Chủ ngữ ngôi 3 (친구가) → 보고 싶어해요."],
+ ["y","(Tôi) 오늘은 일찍 집에 (가다) ___.",["가고 싶어요"],"Ngôi 1 → -고 싶다."],
+ ["d","Tôi buồn. Em tôi cũng buồn. (buồn: 슬프다)",["저는 슬퍼요. 동생도 슬퍼해요","저는 슬퍼요 동생도 슬퍼해요","슬퍼요. 동생도 슬퍼해요","저는 슬퍼요. 동생도 슬퍼하고 있어요"],"Cảm giác bên trong: ngôi 1 → 슬퍼요; ngôi 3 → 슬퍼하다."]],
+"14":[
+ ["c","감기 때문에 오늘 회의에 ( ).",["갈 수 없어요","갈 줄 몰라요","갈 줄 알아요","갈 뻔했어요"],"Do hoàn cảnh, không phải kỹ năng → -(으)ㄹ 수 없다."],
+ ["y","저는 피아노를 (치다) ___ 줄 몰라요.",["칠"],"Biết cách → -(으)ㄹ 줄 알다/모르다."],
+ ["d","Tôi không ngờ bạn lại đến. (đến: 오다)",["올 줄 몰랐어요","네가 올 줄 몰랐어","네가 올 줄 몰랐어요","오실 줄 몰랐어요","당신이 올 줄 몰랐어요"],"Không ngờ → -(으)ㄹ 줄 몰랐다."],
+ ["c","한국 겨울이 이렇게 ( ) 몰랐어요.",["추울 줄","추울 수","추운 적","추울 뻔"],"Không ngờ → -(으)ㄹ 줄 몰랐다."],
+ ["y","두 사람이 (사귀다, đang) ___ 줄 몰랐어요. (sự thật đang diễn ra)",["사귀는"],"Không biết là đang… → -는 줄 몰랐다."],
+ ["d","Bạn biết bơi không? (bơi: 수영하다)",["수영할 줄 알아요?","수영할 수 있어요?","수영할 줄 아세요?","수영할 수 있으세요?"],"Kỹ năng phải học → -(으)ㄹ 줄 알다 (hoặc -(으)ㄹ 수 있다)."],
+ ["c","(Hóa ra không phải) 저는 민수 씨가 ( ) 줄 알았어요. 그런데 회사원이었어요.",["학생인","학생이는","학생일 수 있는","학생한"],"Đã tưởng (danh từ, hiện tại) → N인 줄 알았다."],
+ ["y","내일은 바빠서 (만나다) ___ 수 없어요.",["만날"],"수 đòi -(으)ㄹ."],
+ ["c","Câu nào <b>sai</b>?",["바빠서 오늘은 갈 줄 몰라요.","바빠서 오늘은 갈 수 없어요.","저는 운전할 줄 몰라요.","이렇게 늦을 줄 몰랐어요."],"Bận là hoàn cảnh → 갈 수 없어요."],
+ ["d","Tôi tưởng bạn về nhà rồi.",["집에 간 줄 알았어요","벌써 집에 간 줄 알았어요","집에 간 줄 알았어","벌써 집에 간 줄 알았어","집에 가신 줄 알았어요"],"Đã tưởng (việc đã xong) → -(으)ㄴ 줄 알았다."]],
+"15":[
+ ["c","저는 술을 ( ). 건강 때문에 안 마시기로 했어요.",["안 마셔요","못 마셔요","마시지 마세요","마시지 못해요"],"Ý chí → 안."],
+ ["y","오늘은 피곤해서 운동 ___ 했어요. (không — tự không muốn)",["안"],"N하다: 안 chen giữa → 운동 안 했어요."],
+ ["d","Đừng đến muộn nhé. (muộn: 늦다)",["늦지 마세요","늦지 마","늦지 말아요","늦지 마십시오"],"Đừng → -지 마세요; không dùng 안."],
+ ["c","오늘 너무 바빠서 점심을 ( ).",["못 먹었어요","안 먹었어요","먹지 마세요","먹지 말아요"],"Do hoàn cảnh (bận) → 못."],
+ ["y","저는 그 사람 전화번호를 (알다, phủ định) ___.",["몰라요"],"알다 có từ phủ định riêng: 모르다."],
+ ["d","Hôm qua tôi không ngủ được. (ngủ: 자다)",["어제 못 잤어요","어제 잠을 못 잤어요","어제 자지 못했어요","어제 잠을 자지 못했어요","어제는 못 잤어요","어제는 잠을 못 잤어요"],"Không thể → 못 / -지 못하다."],
+ ["c","Câu nào <b>sai</b>?",["이 옷은 못 비싸요.","이 옷은 안 비싸요.","이 옷은 비싸지 않아요.","저는 그 옷을 못 샀어요."],"Tính từ chỉ dùng 안 / -지 않다."],
+ ["y","여기에 쓰레기를 (버리다) ___. (đừng)",["버리지 마세요"],"Cấm → -지 마세요."],
+ ["c","(Bảo bạn) 걱정 ( ). 다 잘될 거예요.",["하지 마세요","안 해요","못 해요","하지 않아요"],"“Đừng lo” → 걱정하지 마세요."],
+ ["d","Hôm nay tôi không học bài. (học: 공부하다)",["오늘 공부 안 해요","오늘은 공부 안 해요","오늘 공부를 안 해요","오늘은 공부를 안 해요","오늘 공부하지 않아요","오늘은 공부하지 않아요"],"안 chen giữa: 공부 안 해요, không 안 공부해요."]],
+"16":[
+ ["c","A: 내일 꼭 와야 돼요? — B: 아니요, 바쁘면 ( ).",["안 와도 돼요","오면 안 돼요","와야 돼요","못 와요"],"Không cần → 안 -아/어도 되다."],
+ ["y","여권을 꼭 (가져오다) ___ 해요.",["가져와야"],"Phải → -아/어야 하다."],
+ ["d","Tôi về sớm được không? (về: 가다; xin phép)",["일찍 가도 돼요?","먼저 가도 돼요?","일찍 가도 될까요?","일찍 집에 가도 돼요?","일찍 들어가도 돼요?","먼저 가도 될까요?"],"Xin phép → -아/어도 돼요?"],
+ ["c","수업 중에 큰 소리로 ( ).",["떠들면 안 돼요","떠들어도 돼요","떠들어야 돼요","안 떠들어도 돼요"],"Cấm → -(으)면 안 되다."],
+ ["y","여기서 사진을 (찍다) ___ 돼요? (xin phép)",["찍어도"],"Xin phép → -아/어도 되다."],
+ ["d","Không cần đặt chỗ trước. (đặt trước: 예약하다)",["예약 안 해도 돼요","예약하지 않아도 돼요","미리 예약 안 해도 돼요","미리 예약하지 않아도 돼요","예약을 안 해도 돼요","미리 예약을 안 해도 돼요","예약 안 하셔도 돼요"],"“Không cần” → 안 -아/어도 되다; 예약하면 안 돼요 = “không được đặt”."],
+ ["c","(Tự nhủ khi thấy đã 11 giờ đêm) 벌써 11시네. 이제 ( ).",["자야겠다","자도 돼","자면 안 돼","안 자도 돼"],"Tự quyết “phải… mới được” → -아/어야겠다."],
+ ["y","오늘은 숙제가 없어요. 숙제를 (하다, không cần) ___ 돼요.",["안 해도","하지 않아도"],"Không cần → 안 -아/어도 / -지 않아도 되다."],
+ ["c","A: 창문을 열어도 돼요? — B: 아니요, 추워서 ( ).",["열면 안 돼요","열어도 돼요","안 열어도 돼요","열어야 돼요"],"Trả lời “không” cho câu xin phép → -(으)면 안 돼요."],
+ ["d","Không được hút thuốc ở đây. (hút thuốc: 담배를 피우다)",["여기에서 담배를 피우면 안 돼요","여기서 담배를 피우면 안 돼요","여기에서 담배 피우면 안 돼요","여기서 담배 피우면 안 돼요"],"Cấm → -(으)면 안 되다."]],
+"17":[
+ ["c","A: 내일 시험이 세 개나 있어요. — B: 정말 ( ).",["힘들겠어요","힘들어 보여요","힘든 편이에요","힘들 거예요?"],"Đồng cảm ngay với điều vừa nghe → -겠어요."],
+ ["y","(Đoán sắp tới) 하늘을 보니까 곧 눈이 (오다) ___ 것 같아요.",["올"],"Sắp xảy ra → -(으)ㄹ 것 같다."],
+ ["d","Hình như cô giáo đang bận. (bận: 바쁘다)",["선생님이 바쁘신 것 같아요","선생님께서 바쁘신 것 같아요","선생님이 바쁜 것 같아요","선생님이 지금 바쁘신 것 같아요","선생님께서 지금 바쁘신 것 같아요","선생님이 지금 바쁜 것 같아요"],"Quan sát, tính từ hiện tại → -(으)ㄴ 것 같다."],
+ ["c","불이 꺼져 있네요. 민수 씨가 벌써 ( ).",["잔 것 같아요","잘 것 같아요","자 보여요","자는 편이에요"],"Việc đã xảy ra (động từ) → -(으)ㄴ 것 같다."],
+ ["y","이 케이크 정말 (맛있다) ___ 보여요.",["맛있어"],"Bề ngoài → -아/어 보이다."],
+ ["d","Trông bạn có vẻ mệt. (mệt: 피곤하다)",["피곤해 보여요","피곤해 보이네요","피곤해 보이세요","많이 피곤해 보여요","많이 피곤해 보이세요"],"Nhìn bề ngoài người khác → -아/어 보이다."],
+ ["c","Câu nào <b>sai</b>?",["저는 오늘 피곤해 보여요.","민수 씨가 오늘 피곤해 보여요.","민수 씨가 오늘 피곤한 것 같아요.","민수 씨가 많이 피곤하겠어요."],"Không ai “nhìn bề ngoài” chính mình → 저는 피곤해요."],
+ ["y","(Suy luận từ hiểu biết) 지금 서울은 (춥다) ___ 거예요.",["추울"],"Suy luận → -(으)ㄹ 거예요; bất quy tắc ㅂ: 추울."],
+ ["c","저는 다른 사람보다 말이 좀 ( ). (khá là)",["빠른 편이에요","빠르는 편이에요","빨라 보여요","빠르겠어요"],"Nhận xét xu hướng → -는 편이다; tính từ → -(으)ㄴ 편."],
+ ["d","Tôi thuộc dạng dậy sớm. (dậy: 일어나다)",["저는 일찍 일어나는 편이에요","일찍 일어나는 편이에요","저는 일찍 일어나는 편입니다"],"Khá là, thuộc dạng → -는 편이다 (động từ)."]],
+"18":[
+ ["c","(Bạn vừa đưa ảnh con) 아기가 정말 ( )!",["귀엽네요","귀엽던데요","귀여워 보니까","귀여울 거예요"],"Đang thấy, ngạc nhiên → -네요."],
+ ["y","(Ngạc nhiên ngay lúc thấy) 와, 사람이 정말 (많다) ___!",["많네요"],"Đang tận mắt thấy → -네요."],
+ ["d","Ôi, bạn nói tiếng Hàn giỏi quá! (nói giỏi: 잘하다)",["와, 한국어를 정말 잘하네요","한국어를 잘하시네요","한국어를 정말 잘하시네요","와, 한국어를 잘하시네요","한국어를 잘하네요","한국어 정말 잘하네요","한국어 정말 잘하시네요","와, 한국어를 정말 잘하시네요"],"Khen ngay lúc nghe → -네요."],
+ ["c","A: 제주도 어땠어요? — B: (em đã đi về) 바다가 정말 ( ).",["예쁘던데요","예쁘네요","예뻐 보니까요","예쁠 거예요"],"Kể lại điều mình đã tự trải nghiệm → -던데요."],
+ ["y","그 책 (읽다) ___ 보니까 정말 재미있었어요.",["읽어"],"Thử rồi phát hiện → -아/어 보니까."],
+ ["d","Sống thử ở Hàn rồi mới thấy đồ ăn đắt. (đắt: 비싸다)",["한국에 살아 보니까 음식이 비싸요","한국에 살아 보니까 음식이 비싸던데요","한국에서 살아 보니까 음식이 비싸요","한국에서 살아 보니까 음식이 비싸던데요","한국에 살아 보니까 음식이 비쌌어요","한국에서 살아 보니까 음식이 비쌌어요"],"Thử rồi phát hiện → -아/어 보니까."],
+ ["c","Câu nào <b>sai</b>?",["제가 어제 김치를 만들던데요.","민수 씨가 김치를 잘 만들던데요.","어제는 날씨가 좀 춥던데요.","그 식당 음식이 맛있던데요."],"-더- không dùng cho hành động có chủ ý của chính mình."],
+ ["y","A: 그 가게 비싸지 않아요? — B: 저는 별로 안 (비싸다) ___. (em đã tự đến, ý khác người hỏi)",["비싸던데요"],"Tự trải nghiệm, ý khác người nghe → -던데요."],
+ ["c","한국 음식을 ( ) 생각보다 안 매웠어요.",["먹어 보니까","먹어 봐서","먹으려고","먹는 동안"],"Thử rồi phát hiện → -아/어 보니까."],
+ ["d","(Kể lại) Minsu hát hay lắm đấy. (hát hay: 노래를 잘하다; em đã tự nghe)",["민수 씨가 노래를 잘하던데요","민수 씨는 노래를 잘하던데요","민수 씨가 노래를 정말 잘하던데요","민수 씨는 노래를 정말 잘하던데요"],"Kể về người khác điều mình tự thấy → -던데요."]],
+"19":[
+ ["c","휴대폰을 ( ) 적이 있어요? (không ai cố ý)",["잃어버린","잃어버려 본","잃어버리는","잃어버릴"],"Chuyện không chủ ý → -(으)ㄴ 적이 있다."],
+ ["y","이 옷 한번 (입다) ___ 보세요.",["입어"],"Thử → -아/어 보다."],
+ ["d","Bạn đã từng đến Busan chưa?",["부산에 가 본 적이 있어요?","부산에 가 봤어요?","부산에 간 적이 있어요?","부산에 가 본 적 있어요?","부산에 간 적 있어요?","부산에 가 보셨어요?"],"Kinh nghiệm → -아/어 본 적이 있다 / -아/어 봤어요."],
+ ["c","A: 김치찌개 먹어 봤어요? — B: 아니요, 아직 ( ).",["안 먹어 봤어요","먹어 보세요","못 먹어 보세요","먹은 적이 있어요"],"Chưa thử → 안 먹어 봤어요."],
+ ["y","저는 한국에 (가다) ___ 적이 없어요.",["간","가 본"],"적 đòi -(으)ㄴ."],
+ ["d","Tôi chưa từng nhìn thấy tuyết. (tuyết: 눈)",["눈을 본 적이 없어요","저는 눈을 본 적이 없어요","눈을 본 적이 한 번도 없어요","한 번도 눈을 본 적이 없어요","눈을 본 적 없어요","아직 눈을 본 적이 없어요","저는 아직 눈을 본 적이 없어요"],"보다 + 적 → 본 적 (không 봐 본 적)."],
+ ["c","Câu nào <b>sai</b>?",["그 영화를 봐 본 적이 있어요.","그 영화를 본 적이 있어요.","그 영화를 봤어요.","그 영화를 한번 보세요."],"보다 + 보다 thừa → 본 적이 있어요."],
+ ["y","어렸을 때 병원에 (입원하다) ___ 적이 있어요.",["입원한"],"Chuyện không mong muốn → -(으)ㄴ 적이 있다."],
+ ["c","이 노래 ( )? 요즘 정말 인기가 많아요.",["들어 봤어요","들을 수 있어요","듣고 싶어해요","들은 줄 알아요"],"Hỏi kinh nghiệm → -아/어 봤어요?"],
+ ["d","Hãy thử món này đi.",["이거 한번 먹어 보세요","이 음식 한번 먹어 보세요","이거 먹어 보세요","이것 좀 먹어 보세요","이거 좀 먹어 보세요","이 음식을 한번 먹어 보세요","이것 한번 먹어 보세요"],"Khuyên thử → -아/어 보세요."]],
+"20":[
+ ["c","운동을 시작한 후에 몸이 ( ).",["건강해졌어요","건강해 봤어요","건강할 뻔했어요","건강하려고 했어요"],"Tính từ + trở nên → -아/어지다."],
+ ["y","요즘 일이 많아서 (바쁘다) ___. (trở nên, quá khứ)",["바빠졌어요"],"Tính từ → -아/어지다."],
+ ["d","Thời tiết đã trở lạnh. (lạnh: 춥다)",["날씨가 추워졌어요","날씨가 많이 추워졌어요","날씨가 추워졌습니다"],"Tính từ → -아/어지다; bất quy tắc ㅂ: 추워지다."],
+ ["c","한국 친구가 생겨서 한국 문화에 관심을 ( ).",["갖게 됐어요","가져졌어요","가질 뻔했어요","가질걸 그랬어요"],"Động từ + thay đổi do hoàn cảnh → -게 되다."],
+ ["y","아는 사람의 소개로 지금 회사에 (다니다) ___ 됐어요.",["다니게"],"Động từ → -게 되다."],
+ ["d","Sau khi sang Hàn, tôi (thành ra) thích đồ ăn cay. (đồ ăn cay: 매운 음식)",["한국에 온 후에 매운 음식을 좋아하게 됐어요","한국에 온 후에 매운 음식을 좋아하게 되었어요","한국에 간 후에 매운 음식을 좋아하게 됐어요","한국에 온 후에 매운 음식이 좋아졌어요","한국에 간 후에 매운 음식이 좋아졌어요","한국에 와서 매운 음식을 좋아하게 됐어요"],"좋아하다 (động từ) → -게 되다; 좋다 (tính từ) → 좋아지다."],
+ ["c","Câu nào <b>sai</b>?",["저는 한국 음식을 잘 먹어졌어요.","저는 한국 음식을 잘 먹게 됐어요.","한국 음식이 좋아졌어요.","한국 음식을 좋아하게 됐어요."],"Động từ 먹다 → 먹게 됐어요."],
+ ["y","화장을 하니까 얼굴이 (밝다) ___. (quá khứ)",["밝아졌어요"],"Tính từ → -아/어지다."],
+ ["c","(Phỏng vấn, khiêm tốn) 다음 달부터 이 회사에서 ( ).",["일하게 됐습니다","일해졌습니다","일할걸 그랬습니다","일해 봤습니다"],"Báo tin về mình một cách khiêm tốn → -게 되다."],
+ ["d","Tôi được đi du học Hàn Quốc. (du học: 유학을 가다; dùng -게 되다)",["한국으로 유학을 가게 됐어요","한국에 유학을 가게 됐어요","한국으로 유학 가게 됐어요","한국에 유학 가게 됐어요","한국으로 유학을 가게 되었어요","한국에 유학을 가게 되었어요"],"-게 되다: kết quả do hoàn cảnh, nghe khiêm tốn."]],
+"21":[
+ ["c","버스에서 졸다가 내릴 곳을 ( ). (cuối cùng vẫn xuống kịp)",["지나칠 뻔했어요","지나칠걸 그랬어요","지나친 뻔했어요","지나쳤어야 했는데"],"Suýt (không xảy ra) → -(으)ㄹ 뻔했다."],
+ ["y","알람을 못 들어서 비행기를 (놓치다) ___ 뻔했어요.",["놓칠"],"뻔 đòi -(으)ㄹ."],
+ ["d","Lẽ ra tôi nên ngủ sớm. (ngủ: 자다)",["일찍 잘걸 그랬어요","일찍 잘걸","일찍 잤어야 했는데","좀 더 일찍 잘걸 그랬어요","일찍 잤어야 했어요","어제 일찍 잘걸 그랬어요"],"Tiếc vì đã không làm → -(으)ㄹ걸 그랬다 / -았/었어야 했는데."],
+ ["c","사진을 많이 못 찍었어요. 카메라를 ( ).",["가져갈걸 그랬어요","가져갈 뻔했어요","안 가져가도 돼요","가져가지 말걸 그랬어요"],"Đã không mang → tiếc → -(으)ㄹ걸 그랬다."],
+ ["y","이렇게 추울 줄 알았으면 코트를 (입다) ___ 그랬어요.",["입을걸"],"Tiếc vì đã không làm → -(으)ㄹ걸 그랬다."],
+ ["d","Tôi suýt nữa thì quên. (quên: 잊어버리다)",["잊어버릴 뻔했어요","잊을 뻔했어요","깜빡 잊어버릴 뻔했어요","깜빡할 뻔했어요","까먹을 뻔했어요","깜빡 잊을 뻔했어요"],"Suýt → -(으)ㄹ 뻔했다."],
+ ["c","너무 늦게 자서 피곤해요. 어젯밤에 게임을 ( ).",["하지 말걸 그랬어요","할걸 그랬어요","할 뻔했어요","하지 말 뻔했어요"],"Đã làm → tiếc → -지 말걸 그랬다."],
+ ["y","시험 날짜를 미리 (확인하다) ___ 했는데…",["확인했어야"],"Tiếc mạnh → -았/었어야 했는데."],
+ ["c","Câu nào <b>sai</b>?",["차가 갑자기 와서 사고가 난 뻔했어요.","차가 갑자기 와서 사고가 날 뻔했어요.","좀 더 조심했어야 했는데.","미리 표를 살걸 그랬어요."],"뻔 luôn đòi -(으)ㄹ: 날 뻔했어요."],
+ ["d","Lẽ ra đừng mua cái áo này. (mua: 사다)",["이 옷을 사지 말걸 그랬어요","이 옷 사지 말걸 그랬어요","이 옷을 사지 말걸","이 옷은 사지 말걸 그랬어요","이 옷을 사지 말았어야 했는데"],"Đã làm → tiếc → -지 말걸 그랬다."]],
+"22":[
+ ["c","민수 씨가 내일 파티에 ( ).",["안 온대요","안 오대요","안 온데요","안 오는대요"],"Động từ không patchim: 온다 + -고 해요 → 온대요 (ㅐ)."],
+ ["y","친구: “이 책 정말 재미있어요.” → 친구가 이 책이 정말 (재미있다) ___. (rút gọn)",["재미있대요"],"있다/없다 → 한다체 là -다 (không có -는-): 재미있대요."],
+ ["d","Nghe nói mai trời lạnh. (dùng -대요)",["내일 춥대요","내일은 춥대요","내일 날씨가 춥대요","내일은 날씨가 춥대요"],"Tính từ: 춥다 → 춥대요."],
+ ["c","(Đã nghe từ trước, giờ xác nhận) 다음 달에 ( )? 축하해요!",["결혼한다면서요","결혼한다고 들었어요","결혼하대요","결혼했대요"],"Xác nhận điều đã nghe với người nghe → -다면서요?"],
+ ["y","뉴스: “물가가 계속 올라요.” → 물가가 계속 (오르다) ___. (rút gọn)",["오른대요"],"Động từ không patchim → -ㄴ다: 오른다 → 오른대요."],
+ ["d","Tôi nghe nói quán đó đóng cửa rồi. (đóng cửa: 문을 닫다)",["그 가게가 문을 닫았다고 들었어요","그 식당이 문을 닫았다고 들었어요","그 가게는 문을 닫았다고 들었어요","그 식당은 문을 닫았다고 들었어요","그 가게 문을 닫았다고 들었어요","그 식당 문을 닫았다고 들었어요"],"Tôi nghe nói → -다고 들었어요; quá khứ → 닫았다고."],
+ ["c","Câu nào <b>sai</b>?",["그 사람은 의사이다고 했어요.","그 사람은 의사라고 했어요.","그 사람은 의사래요.","그 사람이 의사라고 들었어요."],"Danh từ + 이다 → (이)라고."],
+ ["y","수진: “저는 간호사예요.” → 수진 씨는 (간호사) ___ 했어요.",["간호사라고"],"Danh từ không patchim → 라고."],
+ ["c","A: 시험이 취소됐어요. — B: 네? 시험이 ( )",["취소됐다고요?","취소됐대요.","취소된다면서요.","취소될 거예요."],"Hỏi lại vì ngạc nhiên → -다고요?"],
+ ["d","Nghe nói bạn chuyển nhà rồi hả? (chuyển nhà: 이사하다; xác nhận)",["이사했다면서요?","이사했다면서요","이사했다면서?","이사하셨다면서요?"],"Xác nhận điều đã nghe → -다면서요?"]],
+"23":[
+ ["c","친구: “같이 밥 먹자.” → 친구가 같이 밥을 ( ) 했어요.",["먹자고","먹으라고","먹냐고","먹어 달라고"],"Rủ → -자고."],
+ ["y","선생님: “조용히 하세요.” → 선생님이 조용히 (하다) ___ 하셨어요.",["하라고"],"Bảo → -(으)라고."],
+ ["d","Mẹ bảo tôi đừng về nhà muộn. (về nhà muộn: 늦게 들어오다)",["엄마가 늦게 들어오지 말라고 했어요","엄마가 늦게 들어오지 말라고 하셨어요","어머니가 늦게 들어오지 말라고 하셨어요","어머니께서 늦게 들어오지 말라고 하셨어요","엄마가 저한테 늦게 들어오지 말라고 했어요","엄마가 늦게 오지 말라고 했어요","엄마가 늦게 오지 말라고 하셨어요"],"Cấm → -지 말라고 하다."],
+ ["c","손님: “물 좀 주세요.” (cho chính khách) → 손님이 물을 좀 ( ) 했어요.",["달라고","주라고","준다고","주자고"],"Người nhận = người nói câu gốc → -아/어 달라고."],
+ ["y","언니: “문 좀 열어 줘.” (mở cho chính chị) → 언니가 문을 좀 열어 (달다) ___ 했어요.",["달라고"],"Người nhận = người nói → 달라고."],
+ ["d","Bạn tôi hỏi tôi có thích đồ ăn Hàn không.",["친구가 한국 음식을 좋아하냐고 물어봤어요","친구가 저한테 한국 음식을 좋아하냐고 물어봤어요","친구가 한국 음식을 좋아하냐고 했어요","친구가 저한테 한국 음식을 좋아하냐고 했어요","친구가 한국 음식 좋아하냐고 물어봤어요","친구가 한국 음식을 좋아하느냐고 물었어요"],"Thuật câu hỏi → -냐고."],
+ ["c","민수: “지금 어디에 있어요?” → 민수 씨가 지금 어디에 ( ) 물어봤어요.",["있냐고","있다고","있으라고","있자고"],"Câu hỏi → -냐고."],
+ ["y","친구: “내일 시간 있어?” → 친구가 내일 시간이 (있다) ___. (rút gọn)",["있냬요"],"Câu hỏi rút gọn → -냬요."],
+ ["c","Câu nào <b>sai</b>?",["엄마가 빨리 일어나으라고 했어요.","엄마가 빨리 일어나라고 했어요.","친구가 영화 보러 가자고 했어요.","동생이 돈을 빌려 달라고 했어요."],"Gốc không patchim → -라고: 일어나라고."],
+ ["d","Su-jin rủ cùng đi xem phim. (dùng -재요)",["수진 씨가 같이 영화 보재요","수진 씨가 같이 영화를 보재요","수진 씨가 같이 영화 보러 가재요","수진 씨가 같이 영화를 보러 가재요"],"Rủ rút gọn → -재요."]],
+"24":[
+ ["c","도서관이 몇 시에 ( ) 아세요?",["문을 닫는지","문을 닫는 것을","문을 닫기","문을 닫은 지"],"Có từ để hỏi (몇 시) → -는지."],
+ ["y","제 꿈은 세계 여행을 (하다) ___ 거예요.",["하는"],"Danh từ hóa sự việc → -는 것 (-는 거)."],
+ ["d","Bạn có biết nhà vệ sinh ở đâu không? (nhà vệ sinh: 화장실)",["화장실이 어디에 있는지 알아요?","화장실이 어디 있는지 알아요?","화장실이 어디에 있는지 아세요?","화장실이 어디 있는지 아세요?"],"Câu hỏi lồng → -는지 + 알다."],
+ ["c","이 동네는 교통이 편리해서 ( ) 좋아요.",["살기","사는지","산 지","살는 것"],"-기 좋다: cụm cố định."],
+ ["y","그 사람이 왜 화가 (나다, quá khứ) ___ 모르겠어요.",["났는지"],"Câu hỏi lồng, quá khứ → -았/었는지."],
+ ["d","Tôi sang Hàn được 6 tháng rồi.",["한국에 온 지 6개월이 됐어요","한국에 온 지 육 개월이 됐어요","한국에 온 지 6개월 됐어요","한국에 온 지 여섯 달이 됐어요","한국에 온 지 6개월이 되었어요","한국에 온 지 반년이 됐어요"],"Được bao lâu → -(으)ㄴ 지 + 되다."],
+ ["c","한국어를 ( ) 1년이 됐어요.",["공부한 지","공부하는지","공부했는지","공부하기"],"Được bao lâu → -(으)ㄴ 지 (viết cách)."],
+ ["y","저는 아침에 일찍 (일어나다) ___ 힘들어요.",["일어나기","일어나는 것이","일어나는 게"],"-기 힘들다 (hoặc -는 것이 힘들다)."],
+ ["c","Câu nào <b>sai</b>?",["친구가 언제 오는 것을 몰라요.","친구가 언제 오는지 몰라요.","친구가 오는 것을 기다려요.","친구가 온 지 한 시간이 됐어요."],"Có từ để hỏi (언제) → -는지."],
+ ["d","Sở thích của tôi là nấu ăn. (nấu ăn: 요리하다)",["제 취미는 요리하는 거예요","제 취미는 요리하는 것이에요","제 취미는 요리예요","제 취미는 요리하기예요","저의 취미는 요리하는 것이에요","제 취미는 요리하는 것입니다"],"Danh từ hóa → -는 것 (-는 거)."]],
+"25":[
+ ["c","이건 제가 어제 ( ) 사진이에요.",["찍은","찍는","찍을","찍던"],"Đã làm xong → -(으)ㄴ."],
+ ["y","제가 지금 (살다) ___ 집은 좀 작아요.",["사는"],"Đang → -는; gốc ㄹ rụng: 사는."],
+ ["d","Đây là món mẹ tôi đã nấu. (nấu: 만들다)",["이건 어머니가 만든 음식이에요","이것은 어머니가 만든 음식이에요","이건 엄마가 만든 음식이에요","이것은 엄마가 만든 음식이에요","어머니가 만든 음식이에요","엄마가 만든 음식이에요","이건 어머니께서 만드신 음식이에요","이건 엄마가 만들어 준 음식이에요"],"Đã làm → -(으)ㄴ; 만들다 rụng ㄹ: 만든."],
+ ["c","다음 주에 ( ) 책을 미리 샀어요.",["읽을","읽은","읽는","읽었던"],"Sẽ làm → -(으)ㄹ."],
+ ["y","어렸을 때 자주 (놀다) ___ 놀이터가 없어졌어요. (hồi tưởng, lặp lại)",["놀던","놀았던"],"Hồi tưởng việc lặp lại → -던."],
+ ["d","Tôi có việc phải làm. (việc: 일)",["할 일이 있어요","해야 할 일이 있어요","저는 할 일이 있어요","저는 해야 할 일이 있어요"],"Việc sẽ làm → 할 일."],
+ ["c","(Đang ăn dở, đi nghe điện thoại về) 제가 ( ) 빵 누가 먹었어요?",["먹던","먹은","먹을","먹는"],"Việc dở dang trong quá khứ → -던."],
+ ["y","(길다) ___ 머리가 잘 어울려요.",["긴"],"Tính từ hiện tại → -(으)ㄴ; gốc ㄹ rụng: 긴."],
+ ["c","Câu nào <b>sai</b>?",["저는 맵는 음식을 좋아해요.","저는 매운 음식을 좋아해요.","저는 단 음식을 안 좋아해요.","저는 짠 음식을 잘 못 먹어요."],"Tính từ → -(으)ㄴ; bất quy tắc ㅂ: 매운."],
+ ["d","Tôi muốn gặp lại người bạn ngày xưa từng học cùng. (học cùng: 같이 공부하다)",["예전에 같이 공부했던 친구를 다시 만나고 싶어요","옛날에 같이 공부했던 친구를 다시 만나고 싶어요","예전에 같이 공부하던 친구를 다시 만나고 싶어요","옛날에 같이 공부하던 친구를 다시 만나고 싶어요","같이 공부했던 친구를 다시 만나고 싶어요","같이 공부하던 친구를 다시 만나고 싶어요"],"Hồi tưởng việc đã kết thúc → -았/었던 (-던 cũng được)."]]};
+var KIND={c:'Chọn',y:'Gõ',d:'Dịch Việt → Hàn'};
+function pr(g){return st.p[g]=st.p[g]||{};}
+function pOk(it,v){return it[2].some(function(a){return norm(a)===norm(v);});}
+function pItemHTML(g,i){
+  var it=P[g][i],k=it[0],r=(st.p[g]||{})[i],q='<div class="q"><span class="n">'+(i+1)+'.</span><span class="kind k'+k+'">'+KIND[k]+'</span>'+it[1]+'</div>';
+  if(k==='c'){
+    var o=it[2],ord=order(o.length,hash('p'+g+'_'+i)),done=r!=null;
+    var h='<div class="mcq'+(done?' done'+(r.k===0?'':' wrong'):'')+'">'+q+'<div class="opts'+(o[0].length>22?' one':'')+'">';
+    ord.forEach(function(x){var c='opt';if(done){if(x===0)c+=' ok';else if(x===r.k)c+=' no';}
+      h+='<button class="'+c+'" data-pg="'+g+'" data-i="'+i+'" data-k="'+x+'"><span class="ko">'+o[x]+'</span></button>';});
+    return h+'</div><div class="why">'+(done?(r.k===0?'✓ ':'✗ ')+it[3]:'')+'</div></div>';
+  }
+  var cls=r?(r.ok===true?' ok':r.ok===false?' no':' self'):'',fb='';
+  if(r){
+    var alt=it[2].length>1?'<span class="alt">Cũng đúng: <span class="ko">'+it[2].slice(1).map(esc).join(' · ')+'</span></span>':'';
+    if(k==='y')fb=r.ok?'<span class="r">✓ Đúng.</span> '+it[3]:'<span class="r">✗ Chưa đúng.</span> Đáp án: <b class="ko">'+esc(it[2][0])+'</b> — '+it[3]+alt;
+    else fb=(r.ok===true?'<span class="r">✓ '+(r.auto?'Trùng câu mẫu.':'Em tự chấm: đúng ý.')+'</span> ':r.ok===false?'<span class="r">✗ Em tự chấm: chưa đúng.</span> ':'')+
+      'Câu mẫu: <b class="ko">'+esc(it[2][0])+'</b>'+alt+'<span class="alt">'+it[3]+'</span>'+
+      (r.ok==null?'<span class="alt">So câu của em với câu mẫu (đúng mẫu ngữ pháp, đúng tiểu từ, đúng đuôi chưa?) rồi tự chấm:</span><div class="btns"><button class="b" data-pself="1" data-pg="'+g+'" data-i="'+i+'">✓ Em viết đúng ý</button><button class="b" data-pself="0" data-pg="'+g+'" data-i="'+i+'">✗ Em viết sai</button></div>':'');
+  }
+  return '<div class="typ'+cls+'">'+q+'<div class="row"><input class="ans" data-pg="'+g+'" data-i="'+i+'" value="'+esc(r?r.v:'')+'" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="'+(k==='d'?'Gõ câu tiếng Hàn':'Gõ bằng chữ Hàn')+'"><button class="b blue" data-pchk="'+g+'" data-i="'+i+'">'+(k==='d'?'Xem câu mẫu':'Kiểm tra')+'</button></div><div class="fb">'+fb+'</div></div>';
+}
+function pScore(g){var m=st.p[g]||{},n=0,ok=0;for(var i in m){n++;if(m[i].ok===true||m[i].k===0)ok++;}return {n:n,ok:ok,all:P[g].length};}
+function renderP(g){
+  var el=$('p'+g);if(!el)return;
+  var s=pScore(g),h='<h4>✍ Luyện nhóm '+g+'</h4><p class="note">Chọn · gõ · dịch Việt → Hàn xen lẫn. Câu dịch: gõ câu tiếng Hàn rồi bấm “Xem câu mẫu” — trùng câu mẫu thì máy tự chấm, khác thì em tự so rồi chấm.</p>';
+  for(var i=0;i<P[g].length;i++)h+=pItemHTML(g,i);
+  el.innerHTML=h+'<div class="score">Đúng '+s.ok+'/'+s.all+(s.n<s.all?' (còn '+(s.all-s.n)+' câu)':'')+(s.n?' · <a href="#" data-predo="'+g+'">Làm lại nhóm này</a>':'')+'</div>';
+}
+function pCheck(g,i){
+  var inp=document.querySelector('input.ans[data-pg="'+g+'"][data-i="'+i+'"]');if(!inp)return;
+  var v=inp.value.trim();if(!v)return;
+  var it=P[g][i],ok=pOk(it,v);
+  pr(g)[i]=it[0]==='y'?{v:v,ok:ok}:(ok?{v:v,ok:true,auto:1}:{v:v,ok:null});
+  save();renderP(g);renderSum();
+  var nx=document.querySelector('input.ans[data-pg="'+g+'"][data-i="'+(i+1)+'"]');if(ok&&nx)nx.focus();
+}
+function pReport(L){
+  Object.keys(P).forEach(function(g){var r=pScore(g);if(!r.n)return;L.push('  Luyện nhóm '+g+': '+r.ok+'/'+r.all+(r.n<r.all?' (làm '+r.n+')':''));
+    var m=st.p[g];P[g].forEach(function(it,i){var x=m[i];if(!x)return;
+      if(it[0]==='c'&&x.k!==0)L.push('    ✗ câu '+(i+1)+': chọn '+txt(it[2][x.k])+' → đúng '+txt(it[2][0]));
+      else if(it[0]!=='c'&&x.ok!==true)L.push('    ✗ câu '+(i+1)+' '+(it[0]==='d'?'(dịch '+txt(it[1]).replace(/\s*\(.*$/,'')+')':'')+': viết '+x.v+' → mẫu '+it[2][0]+(x.ok==null?' (chưa tự chấm)':''));});});
+}
+
 /* ---------- trạng thái ---------- */
 var KEY='nari-tuongdong', st={};
 try{st=JSON.parse(localStorage.getItem(KEY)||'{}')||{};}catch(e){st={};}
-st.m=st.m||{};st.t=st.t||{};
+st.m=st.m||{};st.t=st.t||{};st.p=st.p||{};
 function save(){try{localStorage.setItem(KEY,JSON.stringify(st));}catch(e){}}
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
 function txt(s){var d=document.createElement('div');d.innerHTML=s;return d.textContent;}
@@ -914,6 +1485,7 @@ function report(){
   Object.keys(NAMES).forEach(function(s){var r=M[s]?scoreOf(s):tScore(s);if(!r.n)return;L.push('  '+NAMES[s]+': '+r.ok+'/'+r.all+(r.n<r.all?' (làm '+r.n+')':''));});
   ['l1','l2','l4','ck'].forEach(function(s){var m=st.m[s]||{};M[s].forEach(function(it,i){if(m[i]!=null&&m[i]!==0)L.push('  ✗ '+NAMES[s]+' câu '+(i+1)+': chọn '+txt(it[1][m[i]])+' → đúng '+txt(it[1][0]));});});
   ['l3','l5'].forEach(function(s){var t=st.t[s]||{};T[s].forEach(function(it,i){if(t[i]&&!t[i].ok)L.push('  ✗ '+it[0]+': viết '+t[i].v+' → đúng '+it[1][0]);});});
+  pReport(L);
   return L.join('\n');
 }
 function renderSum(){
@@ -931,6 +1503,11 @@ function share(){
 /* ---------- sự kiện ---------- */
 document.addEventListener('click',function(e){
   var d=e.target.closest('button,a');if(!d)return;
+  if(d.classList.contains('opt')&&d.dataset.pg){
+    var pg=d.dataset.pg,pi=+d.dataset.i;if(pr(pg)[pi]!=null)return;pr(pg)[pi]={k:+d.dataset.k};save();renderP(pg);renderSum();return;}
+  if(d.dataset.pchk){pCheck(d.dataset.pchk,+d.dataset.i);return;}
+  if(d.dataset.pself){var x=pr(d.dataset.pg)[+d.dataset.i];if(x){x.ok=d.dataset.pself==='1';save();renderP(d.dataset.pg);renderSum();}return;}
+  if(d.dataset.predo){e.preventDefault();delete st.p[d.dataset.predo];save();renderP(d.dataset.predo);renderSum();return;}
   if(d.classList.contains('opt')&&d.dataset.set){
     var set=d.dataset.set,i=+d.dataset.i;st.m[set]=st.m[set]||{};
     if(st.m[set][i]!=null)return;st.m[set][i]=+d.dataset.k;save();renderM(set);renderSum();return;}
@@ -942,6 +1519,7 @@ document.addEventListener('click',function(e){
 });
 document.addEventListener('keydown',function(e){
   if(e.key!=='Enter')return;
+  if(e.target.classList.contains('ans')&&e.target.dataset.pg){e.preventDefault();pCheck(e.target.dataset.pg,+e.target.dataset.i);return;}
   if(e.target.classList.contains('ans')&&e.target.dataset.set){e.preventDefault();check(e.target.dataset.set,+e.target.dataset.i);}
 });
 document.addEventListener('input',function(e){
@@ -959,7 +1537,7 @@ function show(){
   if(el){var y=el.getBoundingClientRect().top+scrollY-document.querySelector('nav').offsetHeight-6;scrollTo(0,y);}else scrollTo(0,0);
 }
 addSay();
-Object.keys(M).forEach(renderM);Object.keys(T).forEach(renderT);renderSum();
+Object.keys(M).forEach(renderM);Object.keys(T).forEach(renderT);Object.keys(P).forEach(renderP);renderSum();
 window.addEventListener('hashchange',show);show();
 </script>
 <script src="../../danh-dau/dd.js"></script>
