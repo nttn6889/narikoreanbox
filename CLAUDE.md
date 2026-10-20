@@ -375,7 +375,8 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   `TV1[i][5]` = cụm hay đi với `[[ko, nghĩa Việt]…]`.
 
 ## Kiểm tra sau mỗi bài Seoul 3A (`seoul/3a-kt/`)
-- Hai phần (cô chốt): **bài về nhà** học sinh làm sau buổi học ở trường (trộn đủ ngữ pháp của bài, có gõ chia đuôi + dịch Việt → Hàn, tick “Em không chắc”),
+- Hai phần (cô chốt): **bài về nhà** học sinh làm sau buổi học ở trường — chia 3 phần theo dạng Chọn · Gõ · Dịch Việt → Hàn (`qs`/`SEC`), trong mỗi phần các ngữ pháp để lẫn;
+  **không có gợi ý** (cô bỏ): câu gõ phải tự đủ (câu nói trực tiếp đi trước, hoặc cho sẵn gốc từ như `찾(    )`), tick “Em không chắc”,
   link `seoul/3a-kt/#b=1`; nộp xong em tự so câu dịch với câu mẫu (trùng thì máy tự nhận), “Gửi kết quả cho cô” → link `#r=<base64>` = báo cáo cho cô:
   đúng theo từng ngữ pháp + phần trộn, lỗi quy về viên gạch (`NAME`/`GATE`: n1–n6 như `seoul/3a-1/`, `np` chọn sai mẫu, `tv` từ vựng/tiểu từ),
   “sai mà tưởng chắc”, từng câu kèm câu dịch của em. **Cô kiểm tra trên lớp** từng ngữ pháp: `seoul/3a-kt/?co#b=1&k=lop` (chỉ hiện khi có `?co`;
