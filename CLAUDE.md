@@ -474,6 +474,13 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   ý chính tiếng Việt từng đoạn ở `IDEA`; 2 đề luyện tự soạn `PR` (`P01` thú cưng, `P02` SNS; bài mẫu do Claude soạn). `MCQ` (lựa chọn đầu là đáp án),
   `TK` câu viết lại / viết theo khung (so LCS với câu mẫu, tự chấm). Sửa thẳng trong `viet-54/index.html`. localStorage `nari-54`.
 
+## Dịch đề câu 51–52 (`dich-51-52/`) — trang gửi học sinh, chỉ có đề
+- Cô muốn học sinh dịch đề để quen nội dung câu 51, 52 hay ra (không có phần chiến thuật như `viet-51/`, `viet-52/` — 2 trang đó là giáo án của cô).
+  36 đề câu 51 (kỳ 70–106, 4 nhóm: A hỏi/nhờ nơi dịch vụ, B gửi thầy cô/người quen, C bài đăng, D thông báo) + 16 đề câu 52 (S đời sống, T tâm lý – xã hội, K khoa học).
+  Ô trống điền sẵn đáp án đầu tiên (`{…}` tô vàng). Mỗi câu: em dịch → “Xem bản dịch” → tự đánh dấu Đúng ý / Gần đúng / Sai; chế độ Hàn → Việt hoặc Việt → Hàn; thẻ “Câu hay gặp”.
+- Dữ liệu biến `D` (`s:[[ko, vi]]`, `w` từ cần biết, bản dịch do Claude soạn; câu Hàn chép từ `Q` của `viet-51/`, `viet-52/`), `M51`/`M51b`/`M52`. Link `#b=51|52|mau`, `#b=51&q=W51_091`.
+  Thêm đề mới vào `wbank` thì chép thêm vào `D`. localStorage `nari-dich5152`, “Gửi kết quả cho cô” chia sẻ đoạn chữ (kèm câu em đánh dấu Sai).
+
 ## Học câu 1–2 ngữ pháp trong 4 buổi (`ngu-phap-12/`)
 - Cùng khung với `viet-52/`, học theo **cặp dễ nhầm**: Buổi 1 đuôi nối thời gian/trình tự/lựa chọn (+ quy trình 3 bước), Buổi 2 mục đích/điều kiện/
   nhượng bộ/lý do/quan sát, Buổi 3 đuôi kết thúc câu (trạng từ → đuôi) + tiểu từ nâng cao, Buổi 4 trộn đề, Bảng tra (luật loại trừ, đáp án đề thật). Link `ngu-phap-12/#b=1|2|3|4|tra`.
