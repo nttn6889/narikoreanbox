@@ -361,6 +361,11 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   = {t, ko, sub, tong, parts:[tên nửa buổi], p:[bước], co}; bước `{ref:'3A-1', no, part, m: phút, why}` dùng lại mẫu có sẵn, hoặc mẫu viết riêng cùng khung (`id` dạng `cd_…`, `t` tên,
   `src:{b,n,no}` để lấy khung “Sách viết gì”; mục nào thiếu thì trang bỏ qua). Link `#cd=` (danh sách), `#cd=gian-tiep` (giáo án buổi), `#cd=gian-tiep&g=3` (bước 3).
   Mẫu của bài có trong chuyên đề hiện nhãn “📚 Học trong chuyên đề …”.
+- Mỗi mẫu (cả mẫu trong bài và bước chuyên đề) có thể thêm 2 mục: `doi` = **Chuyển từ câu gốc** (thẻ ví dụ: `{k: Kể|Hỏi|Bảo|Cấm|Nhờ|Rủ|Hứa, c hoàn cảnh, ai, g câu gốc,
+  gv nghĩa, dh dấu hiệu nhận loại câu, b:[bước chuyển], gt câu gián tiếp, sat dịch từng chữ (gạch), vi dịch xuôi, dn ghi chú dịch}`, ô “em thử” lưu `ST.em`) và
+  `go` = **Luyện chuyển câu** (gõ, tự chấm: `{k, c, ai, g, f khung có “(    )”, a:[đáp án nhận — so bỏ dấu cách/dấu câu], vi, w}`; học sinh chọn loại câu rồi gõ, lưu `ST.go`).
+  Câu gián tiếp: `doi`/`go` ở 3A-1 mẫu 1 (kể), 3A-2 mẫu 2 (bảo/cấm/nhờ), 3A-3 mẫu 2 (hỏi), 3A-3 mẫu 4 (rủ); bước `cd_gt_lt` “Luyện tổng hợp” (cuối Nửa 1, 7 câu gốc
+  cùng động từ 가다 đổi loại câu + bảng dịch xuôi theo loại câu + 22 câu gõ trộn); bước Tổng hợp thêm `doi`/`go` đổi ngôi, thời gian, nơi chốn.
   Đã soạn `gian-tiep` (Câu gián tiếp, ~2 tiếng, 9 bước): Bước 0 한다체 + nhận loại câu (2B-18) · -다고 · -라고 · -냐고 · -자고 · rút gọn -대/-래/-냬/-재 · -다고 들었다 ·
   -다고요? (3A Bài 8) · Tổng hợp (đổi ngôi/thời gian, động từ thuật, -겠다고, bỏ -시-). Nhóm còn lại định làm: thời gian – lý do, tiểu từ, phỏng đoán, -더-, thái độ người nói,
   bị động + mục đích, nhượng bộ.

@@ -5,7 +5,7 @@
  "sub": "Gom trong một buổi: Seoul 3A Bài 1, 2, 3, 8 + ôn nền 2B Bài 18",
  "tong": {
   "t": "Một buổi gom cả câu gián tiếp của Seoul 3A",
-  "p": "Ở trường, câu gián tiếp được dạy rải qua 4 bài: Bài 1 kể (-다고), Bài 2 bảo (-라고), Bài 3 hỏi (-냐고) và rủ (-자고), Bài 8 hỏi lại (-다고요?). Buổi này gom lại để <b>học trước một lần</b>, theo đúng một công thức: <b>nhận ra loại câu → đổi sang đuôi 한다체 của loại câu đó → thêm 고 → động từ thuật</b>. Nền cần vững: <b>2B Bài 18</b> (한다체), 2A Bài 1 (N(이)라고 하다 – gọi là), 반말 2B Bài 10, -(으)세요 / -지 마세요 / -(으)ㅂ시다 / -(으)ㄹ까요 của 1A–1B. Lên lớp tới từng bài, em chỉ còn luyện thêm chứ không phải học mới.",
+  "p": "Ở trường, câu gián tiếp được dạy rải qua 4 bài: Bài 1 kể (-다고), Bài 2 bảo (-라고), Bài 3 hỏi (-냐고) và rủ (-자고), Bài 8 hỏi lại (-다고요?). Buổi này gom lại để <b>học trước một lần</b>, theo đúng một công thức: <b>nhận ra loại câu → đổi sang đuôi 한다체 của loại câu đó → thêm 고 → động từ thuật</b>. Nền cần vững: <b>2B Bài 18</b> (한다체), 2A Bài 1 (N(이)라고 하다 – gọi là), 반말 2B Bài 10, -(으)세요 / -지 마세요 / -(으)ㅂ시다 / -(으)ㄹ까요 của 1A–1B. Mỗi kiểu câu có phần <b>Chuyển từ câu gốc</b> (hoàn cảnh → nhận loại câu → từng bước chuyển → dịch cho xuôi) và bài gõ chuyển câu; cuối Nửa 1 có bước <b>Luyện tổng hợp</b> trộn đủ loại câu. Lên lớp tới từng bài, em chỉ còn luyện thêm chứ không phải học mới.",
   "tb": [
    [
     "Loại câu",
@@ -385,6 +385,568 @@
    "part": 0,
    "m": 8,
    "why": "Kiểu 4 · Rủ"
+  },
+  {
+   "id": "cd_gt_lt",
+   "t": "Luyện tổng hợp · câu gốc đủ loại → câu gián tiếp",
+   "cn": "Thuật lại lời nói",
+   "core": "Ngoài đời, câu gốc không ghi sẵn “đây là câu kể”. Bước này trộn đủ loại — <b>kể, hỏi, bảo, cấm, nhờ, rủ, hứa</b> — để em luyện đúng một quy trình: <b>đọc hoàn cảnh → nhận loại câu → đổi đuôi → đổi người, nơi chốn → chọn động từ thuật → dịch cho xuôi</b>.",
+   "goc": "<b>5 bước</b> cho mọi câu gốc: ① Ai nói với ai, trong hoàn cảnh nào? ② Câu đó là kể, hỏi, bảo, cấm, nhờ, rủ hay hứa? ③ Đổi đuôi cuối câu sang 한다체 của loại đó + 고. ④ Đổi 저/나 → 자기, 이 → 그, 여기 → 거기, bỏ -시- dành cho mình. ⑤ Chọn động từ thuật (했어요, 물었어요, 부탁했어요, 약속했어요…) rồi dịch.<br><br><b>Khó nhất là bước ②</b>, vì đuôi -아요/-어요 dùng chung cho nhiều loại câu: <b>가요.</b> (kể) · <b>가요?</b> (hỏi) · <b>같이 가요.</b> (rủ). Nhìn vào: dấu ? / từ hỏi, chữ 우리 / 같이, đuôi -(으)세요 · -지 마세요 · -아/어 주세요 · -(으)ㄹ게요, và nhất là <b>người nói muốn gì</b>.",
+   "chia": [
+    [
+     "Loại câu",
+     "Dấu hiệu ở câu gốc",
+     "Đuôi gián tiếp",
+     "Động từ thuật",
+     "Dịch xuôi tiếng Việt"
+    ],
+    [
+     "Kể",
+     "-아요 / -ㅂ니다 / -아, dấu chấm; đưa tin, kể việc",
+     "-ㄴ/는다고 · -다고 · -(이)라고",
+     "하다, 말하다",
+     "“bảo (là)…”, “nói là…”, “nghe nói…”"
+    ],
+    [
+     "Hỏi",
+     "dấu ?, từ hỏi 뭐 · 어디 · 언제 · 왜 · 누구 · 얼마",
+     "-냐고",
+     "묻다, 물어보다",
+     "“hỏi … không / chưa / có phải … không”, “hỏi … gì / đâu / sao”"
+    ],
+    [
+     "Bảo",
+     "-(으)세요, -(으)십시오, -아/어(라) bảo người nghe làm",
+     "-(으)라고",
+     "하다, 시키다",
+     "“bảo (mình) …”, “dặn …”, “giao …”"
+    ],
+    [
+     "Cấm",
+     "-지 마세요, -지 마, -지 마십시오",
+     "-지 말라고",
+     "하다",
+     "“bảo / dặn đừng …”; biển báo: “cấm …”"
+    ],
+    [
+     "Nhờ",
+     "-아/어 주세요, 주세요",
+     "cho người nói: -아/어 달라고 · cho người khác: -아/어 주라고 (드리라고)",
+     "부탁하다, 하다",
+     "“nhờ (mình) … giúp”, “xin …”, “bảo mình … cho X”"
+    ],
+    [
+     "Rủ",
+     "-자, -(으)ㅂ시다, 우리/같이 + -아요, 우리 -(으)ㄹ까요?",
+     "-자고 · -지 말자고",
+     "하다, 제안하다",
+     "“rủ (mình) …”, “bảo cả nhóm …”, “đề nghị …”"
+    ],
+    [
+     "Hứa",
+     "-(으)ㄹ게요, -겠어요",
+     "-겠다고",
+     "약속하다, 하다",
+     "“hứa (là) sẽ …”, “bảo để (mình) làm”"
+    ]
+   ],
+   "chiaNote": [
+    "**했어요 không dịch “đã nói rằng”**: người Việt nói “bảo”, “nói là”, “hỏi”, “nhờ”, “rủ”, “dặn”. Thì quá khứ để ngữ cảnh lo.",
+    "**자기** → “cậu ấy / chị ấy / anh ấy / nó” hoặc bỏ; không dịch là “mình” (người nghe sẽ tưởng là em).",
+    "Câu Hàn hay bỏ **저에게 / 나한테**; câu Việt nên thêm “mình / em / tớ” sau động từ: 친구가 같이 가자고 했어요 → “Bạn **rủ mình** đi cùng”.",
+    "Câu hỏi có–không: tiếng Việt phải có “**có … không**”, “**… chưa**”, “**có phải … không**”.",
+    "Người trên (-시-): tiếng Việt thể hiện bằng xưng hô (thầy, mẹ, trưởng phòng…), động từ “dặn”, và “ạ” khi kể với người trên."
+   ],
+   "doi": [
+    {
+     "k": "Kể",
+     "c": "Hai bạn nói chuyện. Cùng một động từ 가다, đổi ý → đổi loại câu. (1) Sujin kể kế hoạch của mình.",
+     "ai": "Sujin nói với em",
+     "g": "내일 도서관에 가요.",
+     "gv": "Mai mình đi thư viện.",
+     "dh": "dấu chấm, Sujin nói việc của Sujin → <b>kể</b>.",
+     "b": [
+      "Kể, động từ không 받침 → <b>간다고</b>.",
+      "+ 했어요."
+     ],
+     "gt": "수진 씨가 내일 도서관에 **간다고** 했어요.",
+     "sat": "Sujin đã nói rằng ngày mai đi thư viện.",
+     "vi": "Sujin bảo mai cậu ấy đi thư viện.",
+     "dn": ""
+    },
+    {
+     "k": "Hỏi",
+     "c": "(2) Sujin hỏi lịch của em.",
+     "ai": "Sujin hỏi em",
+     "g": "내일 도서관에 가요?",
+     "gv": "Mai bạn có đi thư viện không?",
+     "dh": "<b>dấu ?</b>, lên giọng → <b>hỏi</b>.",
+     "b": [
+      "Hỏi → <b>가냐고</b>.",
+      "+ 물었어요."
+     ],
+     "gt": "수진 씨가 내일 도서관에 **가냐고** 물었어요.",
+     "sat": "Sujin đã hỏi rằng ngày mai đi thư viện.",
+     "vi": "Sujin hỏi mai mình có đi thư viện không.",
+     "dn": "Thêm “có … không” khi dịch câu hỏi có–không."
+    },
+    {
+     "k": "Bảo",
+     "c": "(3) Em than không tìm được sách, Sujin khuyên.",
+     "ai": "Sujin nói với em",
+     "g": "내일 도서관에 가세요. 거기에 그 책이 있어요.",
+     "gv": "Mai bạn ra thư viện đi. Ở đó có quyển ấy.",
+     "dh": "<b>-(으)세요</b> → bảo người nghe làm.",
+     "b": [
+      "Bảo → <b>가라고</b>.",
+      "Câu thứ hai là câu kể → <b>있다고</b> — mỗi câu gốc thuật theo đúng loại của nó."
+     ],
+     "gt": "수진 씨가 내일 도서관에 **가라고** 했어요. 거기에 그 책이 **있다고** 했어요.",
+     "sat": "Sujin đã nói rằng ngày mai đi thư viện. Đã nói rằng ở đó có quyển sách đó.",
+     "vi": "Sujin bảo mai mình ra thư viện, ở đó có quyển ấy.",
+     "dn": "Tiếng Việt gộp hai câu thuật thành một cho gọn: “bảo … , (vì) ở đó có …”."
+    },
+    {
+     "k": "Rủ",
+     "c": "(4) Sujin muốn hai người cùng đi.",
+     "ai": "Sujin nói với em",
+     "g": "내일 같이 도서관에 가요.",
+     "gv": "Mai mình cùng đi thư viện nhé.",
+     "dh": "đuôi giống câu kể, nhưng có <b>같이</b> và Sujin cũng đi → <b>rủ</b>.",
+     "b": [
+      "Rủ → <b>가자고</b>."
+     ],
+     "gt": "수진 씨가 내일 같이 도서관에 **가자고** 했어요.",
+     "sat": "Sujin đã nói rằng ngày mai cùng nhau đi thư viện.",
+     "vi": "Sujin rủ mai mình đi thư viện cùng.",
+     "dn": ""
+    },
+    {
+     "k": "Nhờ",
+     "c": "(5) Sujin ngại đi một mình, nhờ em.",
+     "ai": "Sujin nói với em",
+     "g": "내일 도서관에 같이 가 주세요.",
+     "gv": "Mai đi thư viện với mình nhé (giúp mình).",
+     "dh": "<b>-아/어 주세요</b>, Sujin được lợi → <b>nhờ cho người nói</b>.",
+     "b": [
+      "Nhờ cho người nói → <b>가 달라고</b>.",
+      "+ 했어요 / 부탁했어요."
+     ],
+     "gt": "수진 씨가 내일 도서관에 같이 **가 달라고** 했어요.",
+     "sat": "Sujin đã nói rằng hãy đi cùng đến thư viện cho.",
+     "vi": "Sujin nhờ mai mình đi thư viện cùng cậu ấy.",
+     "dn": ""
+    },
+    {
+     "k": "Cấm",
+     "c": "(6) Sujin biết mai thư viện đóng cửa.",
+     "ai": "Sujin nói với em",
+     "g": "내일 도서관에 가지 마세요. 문을 닫아요.",
+     "gv": "Mai đừng đi thư viện. Đóng cửa đấy.",
+     "dh": "<b>-지 마세요</b> → cấm.",
+     "b": [
+      "Cấm → <b>가지 말라고</b>.",
+      "Câu sau là <b>lý do</b> → đưa lên trước, nối bằng -(으)니까: 문을 닫으니까."
+     ],
+     "gt": "수진 씨가 내일 도서관이 문을 닫으니까 **가지 말라고** 했어요.",
+     "sat": "Sujin đã nói rằng ngày mai thư viện đóng cửa nên đừng đi thư viện.",
+     "vi": "Sujin bảo mai thư viện đóng cửa, đừng đi.",
+     "dn": "Hai câu gốc (cấm + lý do) gộp thành một câu thuật: [lý do]-(으)니까 + [cấm]-지 말라고."
+    },
+    {
+     "k": "Hứa",
+     "c": "(7) Sujin mượn sách của em, hẹn trả.",
+     "ai": "Sujin nói với em",
+     "g": "내일 도서관에 갈게요. 거기서 책 돌려줄게요.",
+     "gv": "Mai mình sẽ ra thư viện. Mình trả sách ở đó nhé.",
+     "dh": "<b>-(으)ㄹ게요</b> → hứa / ý định.",
+     "b": [
+      "-(으)ㄹ게요 không có dạng 한다체 → đổi sang <b>-겠다고</b>.",
+      "갈게요 → <b>가겠다고</b>; 돌려줄게요 → 돌려주<b>겠다고</b>.",
+      "Động từ thuật: 했어요 / <b>약속했어요</b>."
+     ],
+     "gt": "수진 씨가 내일 도서관에 가서 책을 **돌려주겠다고** 했어요.",
+     "sat": "Sujin đã nói rằng sẽ đi thư viện ngày mai rồi trả lại sách.",
+     "vi": "Sujin hứa mai ra thư viện trả sách cho mình.",
+     "dn": "Sai hay gặp: 갈게다고 ✘. Tiếng Việt: “hứa (là) sẽ…”."
+    }
+   ],
+   "luyen": [
+    {
+     "q": "(Sujin nói, Sujin cũng ăn) “같이 저녁 먹어요.” → chuyển đúng:",
+     "o": [
+      "수진 씨가 같이 저녁을 먹자고 했어요.",
+      "수진 씨가 같이 저녁을 먹는다고 했어요.",
+      "수진 씨가 같이 저녁을 먹으라고 했어요.",
+      "수진 씨가 같이 저녁을 먹냐고 했어요."
+     ],
+     "w": "같이 + người nói cũng làm → rủ → -자고. Đuôi -어요 chỉ là bẫy."
+    },
+    {
+     "q": "(Thầy nói với em, cửa lớp ồn) “문 좀 닫아 주세요.” → chuyển đúng:",
+     "o": [
+      "선생님께서 문을 좀 닫아 달라고 하셨어요.",
+      "선생님께서 문을 좀 닫아 주라고 하셨어요.",
+      "선생님께서 문을 좀 닫는다고 하셨어요.",
+      "선생님께서 문을 좀 닫자고 하셨어요."
+     ],
+     "w": "Thầy nhờ cho thầy (người nói) → 달라고."
+    },
+    {
+     "q": "(Cả nhóm chưa ai nhận việc, Minsu nói) “제가 할게요.” → chuyển đúng:",
+     "o": [
+      "민수 씨가 자기가 하겠다고 했어요.",
+      "민수 씨가 제가 하겠다고 했어요.",
+      "민수 씨가 자기가 할게다고 했어요.",
+      "민수 씨가 하자고 했어요."
+     ],
+     "w": "-(으)ㄹ게요 → -겠다고; 제가 (= Minsu) → 자기가."
+    },
+    {
+     "q": "(Bác sĩ hỏi em) “어디가 아파요?” → chuyển đúng:",
+     "o": [
+      "의사 선생님이 어디가 아프냐고 물어보셨어요.",
+      "의사 선생님이 어디가 아프다고 하셨어요.",
+      "의사 선생님이 어디가 아프라고 하셨어요.",
+      "의사 선생님이 어디가 아픈다고 물어보셨어요."
+     ],
+     "w": "Từ hỏi 어디 → hỏi → -냐고 + 물어보다."
+    },
+    {
+     "q": "(Bạn nói) “우리 커피 마실까요?” → chuyển đúng:",
+     "o": [
+      "친구가 커피를 마시자고 했어요.",
+      "친구가 커피를 마실까냐고 했어요.",
+      "친구가 커피를 마신다고 했어요.",
+      "친구가 커피를 마시라고 했어요."
+     ],
+     "w": "우리 + -(으)ㄹ까요? = rủ → -자고."
+    },
+    {
+     "q": "Câu gốc nào là câu BẢO (dù có đuôi -아/어)?",
+     "o": [
+      "(Mẹ nói với con) “빨리 일어나.”",
+      "(Bạn kể) “나 매일 6시에 일어나.”",
+      "(Bạn hỏi) “너 몇 시에 일어나?”",
+      "(Bạn rủ) “우리 내일 일찍 일어나자.”"
+     ],
+     "w": "Mẹ muốn con làm → bảo → 엄마가 빨리 일어나라고 하셨어요."
+    },
+    {
+     "q": "Dịch xuôi: 친구가 내일 시간이 있냐고 물었어요.",
+     "o": [
+      "Bạn hỏi mai mình có rảnh không.",
+      "Bạn đã hỏi rằng ngày mai thời gian có.",
+      "Bạn bảo mai bạn ấy rảnh.",
+      "Bạn rủ mai đi chơi."
+     ],
+     "w": "Câu hỏi có–không → “có … không”; 시간이 있다 → “rảnh”."
+    },
+    {
+     "q": "Dịch xuôi: 엄마가 게임을 너무 많이 하지 말라고 하셨어요.",
+     "o": [
+      "Mẹ dặn đừng chơi game nhiều quá.",
+      "Mẹ đã nói rằng không làm game quá nhiều.",
+      "Mẹ hỏi có chơi game nhiều không.",
+      "Mẹ rủ đừng chơi game."
+     ],
+     "w": "-지 말라고 → “dặn / bảo đừng …”; 게임을 하다 = chơi game."
+    },
+    {
+     "q": "Dịch xuôi: 란 씨가 사전을 좀 빌려 달라고 했어요.",
+     "o": [
+      "Lan nhờ mình cho mượn quyển từ điển.",
+      "Lan bảo mình cho người khác mượn từ điển.",
+      "Lan bảo cô ấy cho mượn từ điển.",
+      "Lan hỏi có từ điển không."
+     ],
+     "w": "달라고 = nhờ cho người nói (Lan) → “Lan nhờ mình…”."
+    }
+   ],
+   "go": [
+    {
+     "k": "Kể",
+     "c": "Giờ nghỉ, Minho kể với em; em kể lại cho cô giáo.",
+     "ai": "민호",
+     "g": "어제 감기에 걸렸어요.",
+     "f": "민호 씨가 어제 감기에 (    ) 했어요.",
+     "a": [
+      "걸렸다고"
+     ],
+     "vi": "Minho bảo hôm qua bạn ấy bị cảm.",
+     "w": "Kể, quá khứ → 걸렸다고."
+    },
+    {
+     "k": "Hỏi",
+     "c": "Ở lễ tân khách sạn; em kể với bạn đi cùng.",
+     "ai": "직원",
+     "g": "몇 박 하실 거예요?",
+     "f": "직원이 몇 박 (    ) 물어봤어요.",
+     "a": [
+      "할 거냐고"
+     ],
+     "vi": "Nhân viên hỏi mình ở mấy đêm.",
+     "w": "하실 거예요: -시- nhân viên kính em → bỏ; 것이다 → 거냐고."
+    },
+    {
+     "k": "Bảo",
+     "c": "Thầy dặn cả lớp; em nhắn cho bạn nghỉ học.",
+     "ai": "선생님",
+     "g": "내일까지 숙제를 내세요.",
+     "f": "선생님께서 내일까지 숙제를 (    ) 하셨어.",
+     "a": [
+      "내라고"
+     ],
+     "vi": "Thầy dặn nộp bài tập trước mai.",
+     "w": "-세요 → bảo; 내다 không 받침 → 내라고."
+    },
+    {
+     "k": "Nhờ",
+     "c": "Đồng nghiệp nhờ em; tối em kể ở nhà.",
+     "ai": "동료",
+     "g": "이 서류 좀 복사해 주세요.",
+     "f": "동료가 그 서류를 좀 (    ) 했어요.",
+     "a": [
+      "복사해 달라고"
+     ],
+     "vi": "Đồng nghiệp nhờ em photo giùm tập tài liệu đó.",
+     "w": "Người được lợi là đồng nghiệp → 달라고. 이 → 그."
+    },
+    {
+     "k": "Rủ",
+     "c": "Bạn nhắn tin; em xin phép bố mẹ.",
+     "ai": "친구",
+     "g": "이번 방학에 같이 제주도에 가자.",
+     "f": "친구가 이번 방학에 같이 제주도에 (    ) 했어요.",
+     "a": [
+      "가자고"
+     ],
+     "vi": "Bạn rủ con kỳ nghỉ này đi Jeju.",
+     "w": "-자 → -자고."
+    },
+    {
+     "k": "Cấm",
+     "c": "Ở bảo tàng, nhân viên nhắc; em giải thích cho bạn.",
+     "ai": "직원",
+     "g": "여기에서 사진을 찍지 마세요.",
+     "f": "직원이 거기에서 사진을 (    ) 했어요.",
+     "a": [
+      "찍지 말라고"
+     ],
+     "vi": "Nhân viên bảo không được chụp ảnh ở chỗ đó.",
+     "w": "-지 마세요 → -지 말라고; 여기 → 거기."
+    },
+    {
+     "k": "Kể",
+     "c": "Hàng xóm mới chào em; em kể với mẹ.",
+     "ai": "새 이웃",
+     "g": "저는 옆집에 이사 온 김민지예요.",
+     "f": "새 이웃이 자기는 옆집에 이사 온 (    ) 했어요.",
+     "a": [
+      "김민지라고"
+     ],
+     "vi": "Hàng xóm mới bảo cô ấy tên Kim Minji, mới chuyển đến nhà bên.",
+     "w": "Danh từ không 받침 → 라고; 저 → 자기."
+    },
+    {
+     "k": "Hỏi",
+     "c": "Mẹ gọi điện; em kể với bạn cùng phòng.",
+     "ai": "엄마",
+     "g": "요즘 학교생활이 힘들어?",
+     "f": "엄마가 요즘 학교생활이 (    ) 물어보셨어요.",
+     "a": [
+      "힘드냐고",
+      "힘들냐고"
+     ],
+     "vi": "Mẹ hỏi dạo này đi học có vất vả không.",
+     "w": "힘들다 gốc ㄹ: sách viết 힘드냐고 (ㄹ rơi); văn nói hay nghe 힘들냐고."
+    },
+    {
+     "k": "Nhờ",
+     "c": "Mẹ dặn em trước khi đi; em nói với chính em trai.",
+     "ai": "엄마",
+     "g": "동생한테 밥 좀 차려 줘.",
+     "f": "엄마가 너한테 밥 좀 (    ) 하셨어.",
+     "a": [
+      "차려 주라고"
+     ],
+     "vi": "Mẹ bảo chị dọn cơm cho em đấy.",
+     "w": "Người được lợi là em trai (người thứ ba lúc mẹ nói) → 주라고; giờ nói với em trai nên 동생한테 → 너한테."
+    },
+    {
+     "k": "Hứa",
+     "c": "Em trai bị mẹ mắng, rồi xin lỗi.",
+     "ai": "동생",
+     "g": "다음부터는 거짓말 안 할게.",
+     "f": "동생이 다음부터는 거짓말을 안 (    ) 약속했어요.",
+     "a": [
+      "하겠다고"
+     ],
+     "vi": "Em nó hứa lần sau không nói dối nữa.",
+     "w": "-(으)ㄹ게 → -겠다고."
+    },
+    {
+     "k": "Rủ",
+     "c": "Lớp trưởng nói cuối giờ.",
+     "ai": "반장",
+     "g": "수업 끝나고 교실을 청소합시다.",
+     "f": "반장이 수업 끝나고 교실을 (    ) 했어요.",
+     "a": [
+      "청소하자고"
+     ],
+     "vi": "Lớp trưởng bảo học xong cả lớp ở lại dọn lớp.",
+     "w": "-(으)ㅂ시다 → -자고."
+    },
+    {
+     "k": "Hỏi",
+     "c": "Lên taxi; em kể với bạn ngồi cùng.",
+     "ai": "택시 기사님",
+     "g": "어디까지 가세요?",
+     "f": "기사님이 어디까지 (    ) 물어보셨어요.",
+     "a": [
+      "가냐고",
+      "가느냐고"
+     ],
+     "vi": "Bác tài hỏi mình đi đến đâu.",
+     "w": "가세요: -시- dành cho em → bỏ → 가냐고."
+    },
+    {
+     "k": "Kể",
+     "c": "Bạn đi concert về.",
+     "ai": "친구",
+     "g": "어제 콘서트 정말 재미있었어.",
+     "f": "친구가 어제 콘서트가 정말 (    ) 했어요.",
+     "a": [
+      "재미있었다고"
+     ],
+     "vi": "Bạn bảo concert hôm qua hay lắm.",
+     "w": "Quá khứ → 재미있었다고."
+    },
+    {
+     "k": "Bảo",
+     "c": "Khám bệnh xong; em kể với mẹ.",
+     "ai": "의사",
+     "g": "약을 하루에 세 번 드세요.",
+     "f": "의사 선생님이 약을 하루에 세 번 (    ) 하셨어요.",
+     "a": [
+      "먹으라고"
+     ],
+     "vi": "Bác sĩ dặn uống thuốc ngày ba lần.",
+     "w": "드세요 = 드시다 (kính ngữ của 먹다) bác sĩ dành cho em → về mình đổi lại 먹다 → 먹으라고. 약을 먹다 = uống thuốc."
+    },
+    {
+     "k": "Nhờ",
+     "c": "Em làm thêm ở quán; báo lại quản lý.",
+     "ai": "손님",
+     "g": "여기 메뉴판 좀 주세요.",
+     "f": "손님이 메뉴판 좀 (    ) 하세요.",
+     "a": [
+      "달라고"
+     ],
+     "vi": "Khách xin cái thực đơn ạ.",
+     "w": "주세요 trơn = xin cho mình → 달라고."
+    },
+    {
+     "k": "Rủ",
+     "c": "Hôm trước cả hai bị phạt vì đến muộn.",
+     "ai": "친구",
+     "g": "우리 내일은 늦지 말자.",
+     "f": "친구가 내일은 (    ) 했어요.",
+     "a": [
+      "늦지 말자고"
+     ],
+     "vi": "Bạn bảo mai hai đứa đừng đến muộn.",
+     "w": "-지 말자 → -지 말자고."
+    },
+    {
+     "k": "Kể",
+     "c": "Em hỏi bạn cùng phòng sao chưa ngủ.",
+     "ai": "룸메이트",
+     "g": "지금 시험 공부를 하고 있어.",
+     "f": "룸메이트가 지금 시험 공부를 (    ) 했어요.",
+     "a": [
+      "하고 있다고"
+     ],
+     "vi": "Bạn cùng phòng bảo đang ôn thi.",
+     "w": "-고 있어 → -고 있다고 (있다 → 있다)."
+    },
+    {
+     "k": "Hỏi",
+     "c": "Gặp anh khóa trên ở căng tin.",
+     "ai": "선배",
+     "g": "밥 먹었어?",
+     "f": "선배가 밥 (    ) 물어봤어요.",
+     "a": [
+      "먹었냐고",
+      "먹었느냐고"
+     ],
+     "vi": "Anh khóa trên hỏi mình ăn cơm chưa.",
+     "w": "Quá khứ có–không → tiếng Việt “… chưa”."
+    },
+    {
+     "k": "Rủ",
+     "c": "Đồng nghiệp nói lúc 11 giờ.",
+     "ai": "동료",
+     "g": "우리 점심에 삼계탕 먹을까요?",
+     "f": "동료가 점심에 삼계탕을 (    ) 했어요.",
+     "a": [
+      "먹자고"
+     ],
+     "vi": "Đồng nghiệp rủ trưa ăn gà tần sâm.",
+     "w": "우리 + -(으)ㄹ까요? = rủ → -자고."
+    },
+    {
+     "k": "Bảo",
+     "c": "Mẹ nói khi em vào phòng khách.",
+     "ai": "엄마",
+     "g": "창문 좀 열어.",
+     "f": "엄마가 창문 좀 (    ) 하셨어요.",
+     "a": [
+      "열라고"
+     ],
+     "vi": "Mẹ bảo mở cửa sổ ra.",
+     "w": "열다 gốc ㄹ + 라고 → 열라고 (không 열으라고)."
+    },
+    {
+     "k": "Kể",
+     "c": "Bạn kể dự định.",
+     "ai": "친구",
+     "g": "졸업하면 한국에서 일할 거예요.",
+     "f": "친구가 졸업하면 한국에서 (    ) 했어요.",
+     "a": [
+      "일할 거라고",
+      "일하겠다고"
+     ],
+     "vi": "Bạn bảo tốt nghiệp xong sẽ làm việc ở Hàn.",
+     "w": "-(으)ㄹ 거예요 → -(으)ㄹ 거라고."
+    },
+    {
+     "k": "Hỏi",
+     "c": "Bạn gọi hỏi em; em kể với mẹ.",
+     "ai": "친구",
+     "g": "너 내일 우리 집에 올 수 있어?",
+     "f": "친구가 내일 자기 집에 (    ) 물어봤어요.",
+     "a": [
+      "올 수 있냐고",
+      "올 수 있느냐고"
+     ],
+     "vi": "Bạn hỏi mai con có sang nhà bạn ấy được không.",
+     "w": "우리 집 (= nhà bạn) → 자기 집; 있다 → 있냐고."
+    }
+   ],
+   "hoi": [
+    {
+     "q": "Vì sao không nên dịch 했어요 thành “đã nói rằng”?",
+     "a": "Vì tiếng Việt có sẵn động từ cho từng loại lời: <b>bảo, hỏi, nhờ, rủ, dặn, hứa</b>. “Đã nói rằng” nghe như dịch máy và làm mất loại câu (người nghe không biết là kể hay bảo)."
+    },
+    {
+     "q": "“가요” có thể là mấy loại câu? Nhìn vào đâu để biết?",
+     "a": "Ít nhất 3: <b>가요.</b> kể · <b>가요?</b> hỏi · <b>같이 가요.</b> rủ (và trong 반말 “가!” là bảo). Nhìn dấu câu / ngữ điệu, chữ 우리·같이, và hoàn cảnh: người nói muốn <b>cho biết</b>, muốn <b>biết</b>, muốn <b>người nghe làm</b>, hay muốn <b>cùng làm</b>."
+    }
+   ],
+   "co": "Cách dạy bước này: cô đọc câu gốc (giọng đóng vai), học sinh **nói loại câu trước** rồi mới chuyển — không cho viết ngay. Phần “Chuyển từ câu gốc” là một chuỗi 7 câu cùng động từ 가다 để học sinh thấy chỉ ý người nói đổi là đuôi đổi. Phần gõ: cho làm tại lớp 8–10 câu, còn lại giao về nhà. Câu dịch: bắt học sinh nói câu tiếng Việt trước khi mở “Dịch xuôi”, sửa ngay các kiểu “đã nói rằng”, “mình” (thay vì cậu ấy).",
+   "part": 0,
+   "m": 20
   },
   {
    "id": "cd_gt_rg",
@@ -999,6 +1561,95 @@
     "Kính ngữ dành cho **chính em** thì bỏ: thầy nói với em “내일 일찍 오세요.” → 선생님이 저에게 내일 일찍 **오라고** 하셨어요 (không phải 오시라고).",
     "-아/어 주세요: người nhờ được giúp → **달라고**; người được giúp là người khác → **주라고** (3A Bài 2)."
    ],
+   "doi": [
+    {
+     "k": "Bảo",
+     "c": "Hôm qua Minsu nói với em. Hôm nay em kể với mẹ để xin đi.",
+     "ai": "Minsu nói với em (hôm qua)",
+     "g": "내일 우리 집에 와.",
+     "gv": "Mai qua nhà tớ chơi.",
+     "dh": "반말 -아/어, Minsu muốn em làm → bảo (mời).",
+     "b": [
+      "Bảo → <b>오라고</b>.",
+      "Thời gian: “내일” của hôm qua = <b>hôm nay</b> → 오늘.",
+      "Người: 우리 집 (= nhà Minsu) → <b>자기 집</b>.",
+      "+ 했어요."
+     ],
+     "gt": "민수가 오늘 **자기 집에** 오라고 했어요.",
+     "sat": "Minsu đã nói rằng hôm nay đến nhà của mình.",
+     "vi": "Minsu rủ con hôm nay sang nhà bạn ấy chơi.",
+     "dn": "Câu bảo kiểu mời → tiếng Việt dùng <b>“rủ / mời … sang chơi”</b> tự nhiên hơn “bảo đến”."
+    },
+    {
+     "k": "Kể",
+     "c": "Tuần trước thầy thông báo hai câu. Tuần này bạn mới vào lớp hỏi em.",
+     "ai": "Thầy nói (tuần trước)",
+     "g": "저는 다음 주에 출장을 가요. 그래서 수업이 없어요.",
+     "gv": "Tuần sau thầy đi công tác. Vì vậy không có buổi học.",
+     "dh": "hai câu kể.",
+     "b": [
+      "Thời gian: “다음 주” của tuần trước = <b>tuần này</b> → 이번 주.",
+      "Người: 저 (= thầy) → bỏ, đã có chủ ngữ 선생님.",
+      "Kính ngữ: thầy là người thứ ba được tôn trọng → <b>giữ -시-</b> khi nói về việc của thầy: 가<b>신</b>다.",
+      "Gộp hai câu: 출장을 가셔서 수업이 <b>없다고</b>.",
+      "+ 하셨어요."
+     ],
+     "gt": "선생님께서 이번 주에 출장을 가셔서 수업이 **없다고** 하셨어요.",
+     "sat": "Thầy đã nói rằng tuần này đi công tác nên lớp học không có.",
+     "vi": "Thầy bảo tuần này thầy đi công tác nên được nghỉ học.",
+     "dn": "“수업이 없다” → <b>“được nghỉ học / không có buổi học”</b>. Gộp hai câu gốc thành một câu thuật cho gọn."
+    },
+    {
+     "k": "Kể",
+     "c": "Bạn ở Hà Nội gọi điện cho em (em ở Seoul). Em kể với bạn cùng phòng.",
+     "ai": "Bạn nói (qua điện thoại)",
+     "g": "여기는 지금 비가 많이 와.",
+     "gv": "Ở đây đang mưa to lắm.",
+     "dh": "kể.",
+     "b": [
+      "Kể → 온다고.",
+      "Nơi chốn: 여기 (chỗ bạn) → em không ở đó → <b>거기</b>."
+     ],
+     "gt": "친구가 **거기는** 지금 비가 많이 **온다고** 했어.",
+     "sat": "Bạn đã nói rằng ở đó bây giờ mưa đến nhiều.",
+     "vi": "Bạn tớ bảo ngoài đó đang mưa to lắm.",
+     "dn": "비가 많이 오다 → “mưa to”. 거기 → “ở đó / ngoài đó / trong đó” tùy hướng."
+    },
+    {
+     "k": "Nhờ",
+     "c": "Sáng nay trưởng phòng nói với em (Kim 대리). Chiều đồng nghiệp hỏi sao em bận.",
+     "ai": "Trưởng phòng nói với em",
+     "g": "김 대리, 이 보고서를 내일까지 나한테 보내 줘요.",
+     "gv": "Kim à, gửi cho tôi bản báo cáo này trước mai nhé.",
+     "dh": "-아/어 줘요, sếp được lợi → nhờ cho người nói.",
+     "b": [
+      "Nhờ cho người nói → <b>보내 달라고</b>.",
+      "이 → <b>그</b>; 나한테 (= sếp) → bỏ (달라고 đã chỉ người nhận là sếp).",
+      "김 대리 (gọi em) → bỏ.",
+      "+ 하셨어요."
+     ],
+     "gt": "부장님께서 그 보고서를 내일까지 **보내 달라고** 하셨어요.",
+     "sat": "Trưởng phòng đã nói rằng gửi cho bản báo cáo đó đến ngày mai.",
+     "vi": "Trưởng phòng bảo tôi gửi bản báo cáo đó cho anh ấy trước mai.",
+     "dn": "Sếp nhờ → tiếng Việt dùng “bảo / giao”. 내일까지 → <b>“trước mai / hạn đến mai”</b>."
+    },
+    {
+     "k": "Hứa",
+     "c": "Em trai nói với em sau bữa tối. Mẹ hỏi ai rửa bát.",
+     "ai": "Em trai nói với em",
+     "g": "누나, 내가 설거지할게.",
+     "gv": "Chị ơi, để em rửa bát.",
+     "dh": "-(으)ㄹ게 → hứa / xung phong.",
+     "b": [
+      "-(으)ㄹ게 → <b>-겠다고</b>.",
+      "내가 (= em trai) → <b>자기가</b>; 누나 (gọi) → bỏ."
+     ],
+     "gt": "동생이 **자기가** 설거지하**겠다고** 했어요.",
+     "sat": "Em trai đã nói rằng mình sẽ rửa bát.",
+     "vi": "Em nó bảo để nó rửa bát ạ.",
+     "dn": "Lời xung phong → tiếng Việt <b>“để (nó) làm”</b> rất tự nhiên."
+    }
+   ],
    "rb": [
     [
      "Người",
@@ -1234,6 +1885,117 @@
       "hỏi có phải"
      ],
      "w": "N을/를 N(이)라고 하다 = gọi là (2A Bài 1)."
+    }
+   ],
+   "go": [
+    {
+     "k": "Kể",
+     "c": "Hôm qua Minji nói; hôm nay em kể.",
+     "ai": "민지 (hôm qua)",
+     "g": "내일 시험이 끝나요.",
+     "f": "민지 씨가 (    ) 시험이 끝난다고 했어요.",
+     "a": [
+      "오늘"
+     ],
+     "vi": "Minji bảo hôm nay cậu ấy thi xong.",
+     "w": "“내일” của hôm qua = 오늘."
+    },
+    {
+     "k": "Kể",
+     "c": "Sujin nói ở quán ăn.",
+     "ai": "수진",
+     "g": "저는 매운 음식을 못 먹어요.",
+     "f": "수진 씨가 (    ) 매운 음식을 못 먹는다고 했어요.",
+     "a": [
+      "자기는"
+     ],
+     "vi": "Sujin bảo cô ấy không ăn được đồ cay.",
+     "w": "저 (= Sujin) → 자기."
+    },
+    {
+     "k": "Hỏi",
+     "c": "Bạn gọi khi em đang ở thư viện.",
+     "ai": "친구",
+     "g": "너 지금 어디야?",
+     "f": "친구가 저한테 지금 (    ) 물어봤어요.",
+     "a": [
+      "어디냐고",
+      "어디에 있냐고"
+     ],
+     "vi": "Bạn hỏi mình đang ở đâu.",
+     "w": "어디야 = 어디 + 이야 → 어디냐고."
+    },
+    {
+     "k": "Bảo",
+     "c": "Thầy đưa sách cho em.",
+     "ai": "선생님",
+     "g": "이 책을 읽어 보세요.",
+     "f": "선생님께서 저한테 그 책을 (    ) 하셨어요.",
+     "a": [
+      "읽어 보라고"
+     ],
+     "vi": "Thầy bảo em đọc thử quyển đó.",
+     "w": "보세요: -시- dành cho em → bỏ → 보라고; 이 → 그."
+    },
+    {
+     "k": "Hứa",
+     "c": "Đồng nghiệp nhận việc.",
+     "ai": "동료",
+     "g": "제가 내일 회의 자료를 준비할게요.",
+     "f": "동료가 자기가 내일 회의 자료를 (    ) 했어요.",
+     "a": [
+      "준비하겠다고"
+     ],
+     "vi": "Đồng nghiệp bảo để anh ấy chuẩn bị tài liệu họp ngày mai.",
+     "w": "-(으)ㄹ게요 → -겠다고."
+    },
+    {
+     "k": "Rủ",
+     "c": "Hôm qua mẹ nói; hôm nay em kể với em gái.",
+     "ai": "엄마 (hôm qua)",
+     "g": "내일 할머니 댁에 가자.",
+     "f": "엄마가 오늘 할머니 댁에 (    ) 하셨어.",
+     "a": [
+      "가자고"
+     ],
+     "vi": "Mẹ bảo hôm nay cả nhà sang bà.",
+     "w": "Rủ → -자고; “내일” đã đổi thành 오늘."
+    },
+    {
+     "k": "Nhờ",
+     "c": "Khách du lịch đưa máy ảnh cho em.",
+     "ai": "관광객",
+     "g": "저희 사진 좀 찍어 주세요.",
+     "f": "관광객이 사진을 좀 (    ) 했어요.",
+     "a": [
+      "찍어 달라고"
+     ],
+     "vi": "Khách du lịch nhờ mình chụp ảnh giúp.",
+     "w": "Khách được lợi → 달라고."
+    },
+    {
+     "k": "Kể",
+     "c": "Bạn ở quê gọi điện.",
+     "ai": "친구",
+     "g": "여기는 벌써 눈이 와.",
+     "f": "친구가 (    ) 벌써 눈이 온다고 했어요.",
+     "a": [
+      "거기는"
+     ],
+     "vi": "Bạn bảo ở đó đã có tuyết rồi.",
+     "w": "여기 (chỗ bạn) → 거기."
+    },
+    {
+     "k": "Bảo",
+     "c": "Bạn mời em vào câu lạc bộ.",
+     "ai": "친구",
+     "g": "너도 우리 동아리에 들어와.",
+     "f": "친구가 저도 자기 동아리에 (    ) 했어요.",
+     "a": [
+      "들어오라고"
+     ],
+     "vi": "Bạn rủ mình vào câu lạc bộ của bạn ấy.",
+     "w": "Bảo (mời) → 들어오라고; 너 → 저, 우리 → 자기."
     }
    ],
    "em": [
