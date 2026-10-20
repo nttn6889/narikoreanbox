@@ -353,6 +353,13 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   pb:[{vs, d, ex}] (phân biệt), topik:[{src, ko, note}], hoi:[{q, a}] (Cô hỏi), luyen:[{q, o (lựa chọn đầu là đáp án), w}], em (Câu của em), co (ghi chú cô)}]`. `**chữ**` = tô đỏ.
   Tên mẫu, số trang + khung “📖 Sách viết gì” lấy từ `seoul/ngu-phap/np.json` theo (cuốn, bài, no).
 - Đã soạn: Seoul 2A Bài 1–3 + 3A Bài 1–3 (24 mẫu). Câu đề TOPIK dẫn trong `topik` chỉ ghi câu đã kiểm tra trong `thi-thu/de/`.
+- **Chuyên đề** (buổi gom các mẫu cùng chức năng nằm rải nhiều bài + ôn nền 1A–2B; cô chốt hướng học trước 3A theo nhóm): `data/cd-<id>.json` (thêm id vào biến `CDS`)
+  = {t, ko, sub, tong, parts:[tên nửa buổi], p:[bước], co}; bước `{ref:'3A-1', no, part, m: phút, why}` dùng lại mẫu có sẵn, hoặc mẫu viết riêng cùng khung (`id` dạng `cd_…`, `t` tên,
+  `src:{b,n,no}` để lấy khung “Sách viết gì”; mục nào thiếu thì trang bỏ qua). Link `#cd=` (danh sách), `#cd=gian-tiep` (giáo án buổi), `#cd=gian-tiep&g=3` (bước 3).
+  Mẫu của bài có trong chuyên đề hiện nhãn “📚 Học trong chuyên đề …”.
+  Đã soạn `gian-tiep` (Câu gián tiếp, ~2 tiếng, 9 bước): Bước 0 한다체 + nhận loại câu (2B-18) · -다고 · -라고 · -냐고 · -자고 · rút gọn -대/-래/-냬/-재 · -다고 들었다 ·
+  -다고요? (3A Bài 8) · Tổng hợp (đổi ngôi/thời gian, động từ thuật, -겠다고, bỏ -시-). Nhóm còn lại định làm: thời gian – lý do, tiểu từ, phỏng đoán, -더-, thái độ người nói,
+  bị động + mục đích, nhượng bộ.
 
 ## Kiểm tra nền tảng Seoul (`seoul/kiem-tra/`)
 - Bài chẩn đoán cho học sinh học tiếp 3A: 53 câu (A từ vựng 12 · B chia đuôi gõ 10 · C tiểu từ 6 · D ngữ pháp theo bài 1B–2B 17 ·

@@ -161,8 +161,10 @@ footer{margin-top:40px;padding-top:10px;border-top:1px solid var(--soft);font-si
 <script>
 // Bài đã soạn trong kho (thêm tên file data/<cuốn>-<bài>.json vào đây)
 var LS=['2A-1','2A-2','2A-3','3A-1','3A-2','3A-3'];
+// Chuyên đề = buổi gom nhiều mẫu (data/cd-<id>.json): bước {ref:'3A-1', no} lấy mẫu có sẵn, hoặc mẫu viết riêng (có t, src)
+var CDS=['gian-tiep'];
 var BOOKS=['1A','1B','2A','2B','3A','3B'];
-var D={}, NP=null, ST={};
+var D={}, C={}, NP=null, ST={};
 try{ST=JSON.parse(localStorage.getItem('nari-nps')||'{}')}catch(e){}
 ST.em=ST.em||{};
 function save(){try{localStorage.setItem('nari-nps',JSON.stringify(ST))}catch(e){}}
@@ -181,20 +183,32 @@ function sayBtn(ko){var t=plain(ko).replace(/\([^)]*\)/g,' ').replace(/[A-Z]:/g,
 // ---- tải dữ liệu
 function load(){
   var ps=LS.map(function(k){return fetch('data/'+k+'.json').then(function(r){return r.json()}).then(function(j){D[k]=j})});
+  CDS.forEach(function(k){ps.push(fetch('data/cd-'+k+'.json').then(function(r){return r.json()}).then(function(j){C[k]=j}).catch(function(){}))});
   ps.push(fetch('../seoul/ngu-phap/np.json').then(function(r){return r.json()}).then(function(j){NP=j.b}).catch(function(){NP={}}));
   return Promise.all(ps);
 }
 function lessonInfo(b,n){var l=(NP&&NP[b]||[]).filter(function(x){return x.n==n})[0];return l||{n:n,ko:'',vi:'',g:[]}}
 function bookPt(b,n,no){var l=lessonInfo(b,n);return (l.g||[]).filter(function(g){return g.no==no})[0]}
-function allPts(){var a=[];LS.forEach(function(k){var d=D[k];if(!d)return;d.p.forEach(function(p){a.push({k:k,d:d,p:p})})});return a}
-function ptTitle(d,p){var g=bookPt(d.b,d.n,p.no);return g?g.t:p.id}
+function allPts(){var a=[];LS.forEach(function(k){var d=D[k];if(!d)return;d.p.forEach(function(p){a.push({k:k,d:d,p:p})})});
+  CDS.forEach(function(c){cdSteps(c).forEach(function(x){if(!x.ref)a.push(x)})});return a}
+// các bước của một chuyên đề: {cd, i, p, d (bài gốc hoặc {b,n} của src), ref?, m, part, why}
+function cdSteps(c){var cd=C[c];if(!cd)return [];
+  return cd.p.map(function(st,i){
+    if(st.ref){var d=D[st.ref],p=d&&d.p.filter(function(x){return x.no==st.no})[0];return p?{cd:c,i:i,ref:st.ref,d:d,p:p,m:st.m,part:st.part,why:st.why}:null}
+    return {cd:c,i:i,d:st.src||{},p:st,m:st.m,part:st.part,why:st.why};
+  }).filter(Boolean)}
+function cdOf(id){var r=null;CDS.forEach(function(c){cdSteps(c).forEach(function(x){if(x.p.id==id&&!r)r=x})});return r}
+function ptTitle(d,p){if(p.t)return p.t;var g=bookPt(d.b,d.n,p.no);return g?g.t:p.id}
+function linkOf(x){return x.cd?'#cd='+x.cd+'&g='+(x.i+1):hashOf(x.d.b,x.d.n,x.p.no)}
+function srcLab(x){return x.d&&x.d.b?'Seoul '+x.d.b+' · Bài '+x.d.n:''}
 function hashOf(b,c,g){return '#b='+b+(c?'&c='+c:'')+(g?'&g='+g:'')}
 function parseHash(){var h={};location.hash.replace(/^#/,'').split('&').forEach(function(kv){var i=kv.indexOf('=');if(i>0)h[kv.slice(0,i)]=decodeURIComponent(kv.slice(i+1))});return h}
 
 // ---- thanh trên
 function renderBar(h){
   var has={};LS.forEach(function(k){has[k.split('-')[0]]=1});
-  var s='<a href="#"'+(!h.b?' class="on"':'')+'>Mục lục</a>';
+  var s='<a href="#"'+(!h.b&&!('cd' in h)?' class="on"':'')+'>Mục lục</a>';
+  if(CDS.length)s+='<a href="#cd="'+('cd' in h?' class="on"':'')+'>Chuyên đề</a>';
   BOOKS.forEach(function(b){s+='<a href="'+hashOf(b)+'" class="'+(h.b==b?'on':'')+(has[b]?'':' dis')+'">'+b+'</a>'});
   $('bar').innerHTML=s;
   var m=$('mode');m.className='mode'+(ST.hs?' hs':'');m.textContent=ST.hs?'🎓 Bản chiếu cho học sinh':'👩‍🏫 Bản của cô';
@@ -208,10 +222,10 @@ function renderToc(h){
   var s='<h2>Mục lục</h2><div class="seg"><a href="#v=bai" class="'+(by=='bai'?'on':'')+'">Theo bài</a><a href="#v=cn" class="'+(by=='cn'?'on':'')+'">Theo chức năng</a></div>'+
     '<input class="srch" id="q" placeholder="Tìm mẫu, nghĩa, câu ví dụ… (vd. 느라고, xin lỗi, nghe nói)" value="'+esc(h.q||'')+'"><div id="res"></div>';
   $('view').innerHTML=s+'<div id="tocb"></div>';
-  $('tocb').innerHTML=by=='cn'?tocCn():tocBai();
+  $('tocb').innerHTML=cdList()+(by=='cn'?tocCn():tocBai());
   $('q').oninput=function(){search(this.value)};
   if(h.q)search(h.q);
-  $('tocb').insertAdjacentHTML('beforeend','<div class="how co-only"><h3>Cách dùng kho này</h3><ol><li>Soạn bài: mở bài sắp dạy → đọc “Tổng quan bài” → từng mẫu. Phần <b>Ghi chú cho cô</b> (khung đỏ nét đứt) chỉ hiện ở “Bản của cô”.</li><li>Lên lớp: bấm nút góc trên chuyển sang <b>“Bản chiếu cho học sinh”</b> rồi chia sẻ màn hình — ghi chú cô ẩn đi, đáp án “Cô hỏi” vẫn đóng cho tới khi bấm.</li><li>Thứ tự dạy gợi ý một mẫu: ③ Tình huống (cho học sinh đoán nghĩa từ câu) → ① Nghĩa lõi → ② Chia → ④ Ràng buộc → ⑤ Lỗi → ⑥ Phân biệt → ⑧ Cô hỏi → ⑨ Luyện → ⑩ Câu của em.</li><li>Link thẳng tới một mẫu: <code>ngu-phap-sau/#b=3A&amp;c=2&amp;g=3</code>.</li></ol></div>');
+  $('tocb').insertAdjacentHTML('beforeend','<div class="how co-only"><h3>Cách dùng kho này</h3><ol><li>Soạn bài: mở bài sắp dạy → đọc “Tổng quan bài” → từng mẫu. Phần <b>Ghi chú cho cô</b> (khung đỏ nét đứt) chỉ hiện ở “Bản của cô”.</li><li>Lên lớp: bấm nút góc trên chuyển sang <b>“Bản chiếu cho học sinh”</b> rồi chia sẻ màn hình — ghi chú cô ẩn đi, đáp án “Cô hỏi” vẫn đóng cho tới khi bấm.</li><li>Thứ tự dạy gợi ý một mẫu: ③ Tình huống (cho học sinh đoán nghĩa từ câu) → ① Nghĩa lõi → ② Chia → ④ Ràng buộc → ⑤ Lỗi → ⑥ Phân biệt → ⑧ Cô hỏi → ⑨ Luyện → ⑩ Câu của em.</li><li>Link thẳng tới một mẫu: <code>ngu-phap-sau/#b=3A&amp;c=2&amp;g=3</code>; chuyên đề: <code>#cd=gian-tiep</code>, bước 3: <code>#cd=gian-tiep&amp;g=3</code>.</li></ol></div>');
 }
 function tocBai(){
   var s='<div class="toc">';
@@ -242,12 +256,46 @@ function tocCn(){
   order.forEach(function(c){s+='<h3>'+esc(c)+' <span class="soon">('+g[c].length+')</span></h3><div class="cards">'+g[c].map(card).join('')+'</div>'});
   return s;
 }
-function card(x){return '<a class="card" href="'+hashOf(x.d.b,x.d.n,x.p.no)+'"><div class="pt">'+esc(ptTitle(x.d,x.p))+'</div><div class="cr">'+x.p.core+'</div><div class="meta">Seoul '+x.d.b+' · Bài '+x.d.n+' · '+x.p.tinh.length+' tình huống · '+x.p.sai.length+' lỗi hay sai · '+x.p.luyen.length+' câu luyện</div></a>'}
+function card(x,pre){var p=x.p,m=[];
+  if(x.cd&&!x.ref)m.push('Chuyên đề '+esc(C[x.cd].t));
+  if(srcLab(x))m.push(x.cd&&!x.ref?'sách: '+srcLab(x):srcLab(x));
+  if(p.tinh&&p.tinh.length)m.push(p.tinh.length+' tình huống');
+  if(p.sai&&p.sai.length)m.push(p.sai.length+' lỗi hay sai');
+  if(p.luyen&&p.luyen.length)m.push(p.luyen.length+' câu luyện');
+  return '<a class="card" href="'+linkOf(x)+'">'+(pre||'')+'<div class="pt">'+esc(ptTitle(x.d,p))+'</div><div class="cr">'+p.core+'</div><div class="meta">'+m.join(' · ')+'</div></a>'}
+function cdCard(c){var cd=C[c],st=cdSteps(c),mi=st.reduce(function(a,x){return a+(x.m||0)},0);
+  return '<a class="card" href="#cd='+c+'"><div class="pt">📚 '+esc(cd.t)+' <span class="ko" style="font-weight:normal;color:var(--pur);font-size:15px">'+esc(cd.ko||'')+'</span></div><div class="cr">'+esc(cd.sub||'')+'</div><div class="meta">'+st.length+' bước · khoảng '+mi+' phút</div></a>'}
+function cdList(){var ok=CDS.filter(function(c){return C[c]});if(!ok.length)return '';
+  return '<div class="bk" style="font-weight:bold;font-size:18px;margin:6px 0">Chuyên đề · buổi gom nhiều mẫu</div><div class="cards" style="margin-bottom:14px">'+ok.map(cdCard).join('')+'</div>'}
+function renderCdList(){$('view').innerHTML='<h2>Chuyên đề</h2><p class="muted">Mỗi chuyên đề là một buổi học gom các mẫu cùng chức năng nằm rải ở nhiều bài, kèm ôn nền 1A–2B.</p>'+cdList()}
+function renderCd(c){
+  var cd=C[c];if(!cd){renderCdList();return}
+  var st=cdSteps(c),s='<div class="crumb"><a href="#">Mục lục</a> › <a href="#cd=">Chuyên đề</a></div><h2>'+esc(cd.t)+' · <span class="ko">'+esc(cd.ko||'')+'</span></h2><div class="muted">'+esc(cd.sub||'')+'</div>';
+  if(cd.tong)s+='<div class="tong"><b>'+esc(cd.tong.t)+'</b><p>'+cd.tong.p+'</p>'+(cd.tong.tb?tbl(cd.tong.tb):'')+'</div>';
+  s+='<h3>Giáo án buổi</h3><div class="scroll"><table class="t"><tr><td>#</td><td>Mẫu</td><td>Phút</td><td>Sách</td></tr>';
+  (cd.parts||['']).forEach(function(pt,j){
+    var xs=st.filter(function(x){return (x.part||0)==j});
+    if(pt)s+='<tr><td colspan="4" style="background:var(--purbg);font-weight:bold">'+esc(pt)+' <span class="soon">· '+xs.reduce(function(a,x){return a+(x.m||0)},0)+' phút</span></td></tr>';
+    xs.forEach(function(x){s+='<tr><td>'+(x.i+1)+'</td><td><a href="'+linkOf(x)+'" class="ko">'+esc(ptTitle(x.d,x.p))+'</a>'+(x.why?'<br><span class="muted" style="font-size:13.5px">'+esc(x.why)+'</span>':'')+'</td><td>'+(x.m||'')+'</td><td>'+esc(srcLab(x))+'</td></tr>'});
+  });
+  s+='</table></div>';
+  (cd.parts||['']).forEach(function(pt,j){
+    if(pt)s+='<h3>'+esc(pt)+'</h3>';
+    s+='<div class="cards">'+st.filter(function(x){return (x.part||0)==j}).map(function(x){return card(x,'<div class="meta" style="margin:0 0 2px">Bước '+(x.i+1)+(x.m?' · '+x.m+' phút':'')+(x.why?' · '+esc(x.why):'')+'</div>')}).join('')+'</div>';
+  });
+  if(cd.co)s+='<div class="cobox co-only"><b>Ghi chú cho cô</b> (không hiện ở bản chiếu cho học sinh)<div>'+md(cd.co)+'</div></div>';
+  $('view').innerHTML=s;
+}
+function renderCdStep(c,g){
+  var st=cdSteps(c),x=st[g-1];if(!x){renderCd(c);return}
+  var cd=C[c],crumb='<a href="#">Mục lục</a> › <a href="#cd=">Chuyên đề</a> › <a href="#cd='+c+'">'+esc(cd.t)+'</a> › Bước '+g+'/'+st.length;
+  drawPoint(x,crumb,st,g-1);
+}
 function search(q){
   q=q.trim().toLowerCase();var r=$('res');
   if(!q){r.innerHTML='';$('tocb').style.display='';return}
   var hit=allPts().filter(function(x){
-    var p=x.p,t=[ptTitle(x.d,p),p.core,p.cn,p.goc].concat(p.tinh.map(function(s){return s.t+' '+s.c+' '+s.ko+' '+s.vi}),p.sai.map(function(s){return s.x+' '+s.o+' '+s.why})).join(' ');
+    var p=x.p,t=[ptTitle(x.d,p),p.core,p.cn,p.goc].concat((p.tinh||[]).map(function(s){return s.t+' '+s.c+' '+s.ko+' '+s.vi}),(p.sai||[]).map(function(s){return s.x+' '+s.o+' '+s.why})).join(' ');
     return plain(t).toLowerCase().indexOf(q)>=0;
   });
   $('tocb').style.display='none';
@@ -271,7 +319,7 @@ function renderLesson(b,n){
   if(!d){$('view').innerHTML='<p class="muted">Bài này chưa soạn. <a href="#">Về mục lục</a></p>';return}
   var s='<div class="crumb"><a href="#">Mục lục</a> › <a href="'+hashOf(b)+'">Seoul '+b+'</a></div><h2>Bài '+n+' · <span class="ko">'+esc(l.ko)+'</span></h2><div class="muted">'+esc(l.vi)+'</div>';
   if(d.tong)s+='<div class="tong"><b>'+esc(d.tong.t)+'</b><p>'+d.tong.p+'</p>'+(d.tong.tb?tbl(d.tong.tb):'')+'</div>';
-  s+='<div class="cards">'+d.p.map(function(p){return card({d:d,p:p})}).join('')+'</div>';
+  s+='<div class="cards">'+d.p.map(function(p){var c=cdOf(p.id);return card({d:d,p:p},c?'<div class="meta" style="margin:0 0 2px">📚 Có trong chuyên đề '+esc(C[c.cd].t)+'</div>':'')}).join('')+'</div>';
   $('view').innerHTML=s;
 }
 
@@ -284,43 +332,52 @@ function renderPoint(b,n,no){
   var d=D[b+'-'+n],l=lessonInfo(b,n);
   var p=d&&d.p.filter(function(x){return x.no==no})[0];
   if(!p){renderLesson(b,n);return}
-  var g=bookPt(b,n,no),title=g?g.t:p.id,s='';
-  s+='<div class="crumb"><a href="#">Mục lục</a> › <a href="'+hashOf(b)+'">Seoul '+b+'</a> › <a href="'+hashOf(b,n)+'">Bài '+n+' · <span class="ko">'+esc(l.ko)+'</span></a></div>';
-  s+='<div class="pt-name">'+esc(title)+'</div><span class="tag">'+esc(p.cn)+'</span>'+(g&&g.p?' <span class="tag">Sách tr. '+g.p+'</span>':'');
+  var all=allPts().filter(function(x){return !x.cd}),idx=-1;all.forEach(function(x,i){if(x.p.id==p.id)idx=i});
+  drawPoint({d:d,p:p},'<a href="#">Mục lục</a> › <a href="'+hashOf(b)+'">Seoul '+b+'</a> › <a href="'+hashOf(b,n)+'">Bài '+n+' · <span class="ko">'+esc(l.ko)+'</span></a>',all,idx);
+}
+// x = {d, p, cd?}; list + idx = danh sách để làm nút trước / sau
+function drawPoint(x,crumb,list,idx){
+  var p=x.p,b=x.d.b,n=x.d.n,g=b?bookPt(b,n,p.no!=null?p.no:x.d.no):null,title=ptTitle(x.d,p),s='';
+  function has(k){var v=p[k];return v&&(typeof v=='string'||v.length)}
+  var on=[has('goc'),has('chia'),has('tinh'),has('rb'),has('sai'),has('pb'),has('topik'),has('hoi'),has('luyen'),has('em')];
+  s+='<div class="crumb">'+crumb+'</div>';
+  s+='<div class="pt-name">'+esc(title)+'</div><span class="tag">'+esc(p.cn||'')+'</span>'+(g&&g.p?' <span class="tag">Sách '+esc(b)+' Bài '+n+' tr. '+g.p+'</span>':'');
+  if(!x.cd){var c=cdOf(p.id);if(c)s+=' <a class="tag" style="text-decoration:none;background:var(--purbg);color:var(--pur)" href="'+linkOf(c)+'">📚 Học trong chuyên đề '+esc(C[c.cd].t)+' ›</a>'}
+  else if(x.ref)s+=' <a class="tag" style="text-decoration:none" href="'+hashOf(b,n)+'">Mẫu của Seoul '+esc(b)+' Bài '+n+' ›</a>';
   s+='<div class="core">'+p.core+'</div>';
-  s+='<div class="chips">'+SECS.map(function(x){return '<a href="javascript:void 0" data-go="'+x[0]+'">'+x[1]+'</a>'}).join('')+'</div>';
+  s+='<div class="chips">'+SECS.filter(function(z,i){return on[i]}).map(function(z){return '<a href="javascript:void 0" data-go="'+z[0]+'">'+z[1]+'</a>'}).join('')+'</div>';
   // 1
-  s+=H(0)+'<div class="goc">'+p.goc+'</div>';
+  if(on[0]||g)s+=H(0)+(on[0]?'<div class="goc">'+p.goc+'</div>':'');
   if(g)s+=bookBox(g,b,n);
   // 2
-  s+=H(1)+tbl(p.chia)+(p.chiaNote&&p.chiaNote.length?'<ul class="nt">'+p.chiaNote.map(function(x){return '<li>'+md(x)+'</li>'}).join('')+'</ul>':'');
+  if(on[1])s+=H(1)+tbl(p.chia)+(p.chiaNote&&p.chiaNote.length?'<ul class="nt">'+p.chiaNote.map(function(x){return '<li>'+md(x)+'</li>'}).join('')+'</ul>':'');
   // 3
-  s+=H(2,' <span class="soon">'+p.tinh.length+' tình huống</span>')+'<div class="sits">'+p.tinh.map(function(t,i){
+  if(on[2])s+=H(2,' <span class="soon">'+p.tinh.length+' tình huống</span>')+'<div class="sits">'+p.tinh.map(function(t,i){
     return '<div class="sit"><div class="h"><b>'+(i+1)+'. '+esc(t.t)+'</b><span class="lv">'+esc(t.lv)+'</span></div><div class="c">'+esc(t.c)+'</div><div class="ex"><span class="ko">'+md(t.ko)+sayBtn(t.ko)+'</span><span class="vi">'+esc(t.vi)+'</span></div><div class="why">'+md(t.why)+'</div></div>'}).join('')+'</div>';
   // 4
-  s+=H(3)+'<div class="scroll"><table class="t rb">'+p.rb.map(function(r){return '<tr><td>'+esc(r[0])+'</td><td>'+md(r[1])+'</td></tr>'}).join('')+'</table></div>';
+  if(on[3])s+=H(3)+'<div class="scroll"><table class="t rb">'+p.rb.map(function(r){return '<tr><td>'+esc(r[0])+'</td><td>'+md(r[1])+'</td></tr>'}).join('')+'</table></div>';
   // 5
-  s+=H(4)+p.sai.map(function(e){return '<div class="err"><div class="x ko">'+md(e.x)+'</div><div class="o ko">'+md(e.o)+'</div><div class="w">'+md(e.why)+'</div></div>'}).join('');
+  if(on[4])s+=H(4)+p.sai.map(function(e){return '<div class="err"><div class="x ko">'+md(e.x)+'</div><div class="o ko">'+md(e.o)+'</div><div class="w">'+md(e.why)+'</div></div>'}).join('');
   // 6
-  s+=H(5)+p.pb.map(function(v){return '<div class="vs"><b>So với '+md(v.vs)+'</b><div>'+md(v.d)+'</div>'+(v.ex||[]).map(function(e){return '<div class="ex"><span class="ko">'+md(e[0])+sayBtn(e[0])+'</span><span class="vi">'+esc(e[1])+'</span></div>'}).join('')+'</div>'}).join('');
+  if(on[5])s+=H(5)+p.pb.map(function(v){return '<div class="vs"><b>So với '+md(v.vs)+'</b><div>'+md(v.d)+'</div>'+(v.ex||[]).map(function(e){return '<div class="ex"><span class="ko">'+md(e[0])+sayBtn(e[0])+'</span><span class="vi">'+esc(e[1])+'</span></div>'}).join('')+'</div>'}).join('');
   // 7
-  s+=H(6)+(p.topik||[]).map(function(t){return '<div class="tp"><div class="s">📝 '+esc(t.src)+'</div><span class="ko">'+md(t.ko)+'</span><div class="w">'+t.note+'</div></div>'}).join('');
+  if(on[6])s+=H(6)+(p.topik||[]).map(function(t){return '<div class="tp"><div class="s">📝 '+esc(t.src)+'</div><span class="ko">'+md(t.ko)+'</span><div class="w">'+t.note+'</div></div>'}).join('');
   // 8
-  s+=H(7)+p.hoi.map(function(q){return '<details class="ask"><summary>'+md(q.q)+'</summary><div>'+md(q.a)+'</div></details>'}).join('');
+  if(on[7])s+=H(7)+p.hoi.map(function(q){return '<details class="ask"><summary>'+md(q.q)+'</summary><div>'+md(q.a)+'</div></details>'}).join('');
   // 9
-  s+=H(8)+'<div class="score" id="sc"></div>'+p.luyen.map(function(q,i){
+  if(on[8])s+=H(8)+'<div class="score" id="sc"></div>'+p.luyen.map(function(q,i){
     var o=shuffle(q.o.map(function(t,j){return {t:t,ok:j===0}}));
     return '<div class="q" data-i="'+i+'"><div class="qs"><i>Câu '+(i+1)+'</i>'+md(q.q)+'</div><div class="opts">'+o.map(function(x){return '<button type="button" class="opt ko" data-ok="'+(x.ok?1:0)+'">'+md(x.t)+'</button>'}).join('')+'</div><div class="fb">'+md(q.w)+'</div></div>'}).join('');
   // 10
-  s+=H(9)+p.em.map(function(e,i){var k=p.id+'_'+i;return '<div class="em"><label>✍️ '+md(e)+'</label><textarea class="ko" data-k="'+k+'" placeholder="Em viết ở đây… (lưu trên máy này)">'+esc(ST.em[k]||'')+'</textarea></div>'}).join('');
+  if(on[9])s+=H(9)+p.em.map(function(e,i){var k=p.id+'_'+i;return '<div class="em"><label>✍️ '+md(e)+'</label><textarea class="ko" data-k="'+k+'" placeholder="Em viết ở đây… (lưu trên máy này)">'+esc(ST.em[k]||'')+'</textarea></div>'}).join('');
   if(p.co)s+='<div class="cobox co-only"><b>Ghi chú cho cô</b> (không hiện ở bản chiếu cho học sinh)<div>'+md(p.co)+'</div></div>';
   // trước / sau
-  var all=allPts(),idx=-1;all.forEach(function(x,i){if(x.p.id==p.id)idx=i});
-  s+='<div class="pn">'+(idx>0?navA(all[idx-1],'‹ Mẫu trước',''):'<span></span>')+(idx<all.length-1?navA(all[idx+1],'Mẫu sau ›','nx'):'<span></span>')+'</div>';
+  var lab=x.cd?['‹ Bước trước','Bước sau ›']:['‹ Mẫu trước','Mẫu sau ›'];
+  s+='<div class="pn">'+(idx>0?navA(list[idx-1],lab[0],''):'<span></span>')+(idx<list.length-1?navA(list[idx+1],lab[1],'nx'):(x.cd?'<a class="nx" href="#cd='+x.cd+'">Hết buổi ›<b>Về giáo án buổi</b></a>':'<span></span>'))+'</div>';
   $('view').innerHTML=s;
   wirePoint(p);
 }
-function navA(x,lab,c){return '<a class="'+c+'" href="'+hashOf(x.d.b,x.d.n,x.p.no)+'">'+lab+' · '+x.d.b+' Bài '+x.d.n+'<b>'+esc(ptTitle(x.d,x.p))+'</b></a>'}
+function navA(x,lab,c){return '<a class="'+c+'" href="'+linkOf(x)+'">'+lab+(x.cd?' · Bước '+(x.i+1):' · '+x.d.b+' Bài '+x.d.n)+'<b>'+esc(ptTitle(x.d,x.p))+'</b></a>'}
 function bookBox(g,b,n){
   var s='<details class="book"><summary>📖 Sách viết gì'+(g.p?' (tr. '+g.p+')':'')+'</summary>';
   if(g.m&&g.m.vi)s+='<p>'+md(g.m.vi)+'</p>';
@@ -332,8 +389,8 @@ function bookBox(g,b,n){
   return s;
 }
 function wirePoint(p){
-  var v=$('view'),n=p.luyen.length,done=0,right=0;
-  function sc(){$('sc').textContent=done?('Đã làm '+done+'/'+n+' · đúng '+right):'Bấm chọn đáp án — chấm ngay.'}
+  var v=$('view'),n=(p.luyen||[]).length,done=0,right=0;
+  function sc(){if(!$('sc'))return;$('sc').textContent=done?('Đã làm '+done+'/'+n+' · đúng '+right):'Bấm chọn đáp án — chấm ngay.'}
   sc();
   v.querySelectorAll('.q').forEach(function(q){
     q.querySelectorAll('.opt').forEach(function(b){b.onclick=function(){
@@ -351,7 +408,8 @@ document.addEventListener('click',function(e){var b=e.target.closest&&e.target.c
 
 function route(){
   var h=parseHash();renderBar(h);
-  if(h.b&&h.c&&h.g)renderPoint(h.b,+h.c,+h.g);
+  if('cd' in h){if(h.cd&&h.g)renderCdStep(h.cd,+h.g);else if(h.cd)renderCd(h.cd);else renderCdList()}
+  else if(h.b&&h.c&&h.g)renderPoint(h.b,+h.c,+h.g);
   else if(h.b&&h.c)renderLesson(h.b,+h.c);
   else if(h.b)renderBook(h.b);
   else renderToc(h);
