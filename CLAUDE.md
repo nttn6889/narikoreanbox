@@ -352,7 +352,7 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   core, goc (cấu tạo / nghĩa gốc), chia (bảng), chiaNote, tinh:[{t, c bối cảnh, lv mức lịch sự, ko, vi, why}] (bản đồ tình huống), rb (ràng buộc), sai:[{x, o, why}],
   pb:[{vs, d, ex}] (phân biệt), topik:[{src, ko, note}], hoi:[{q, a}] (Cô hỏi), luyen:[{q, o (lựa chọn đầu là đáp án), w}], em (Câu của em), co (ghi chú cô)}]`. `**chữ**` = tô đỏ.
   Tên mẫu, số trang + khung “📖 Sách viết gì” lấy từ `seoul/ngu-phap/np.json` theo (cuốn, bài, no).
-- Đã soạn: Seoul 2A Bài 1–3 + 3A Bài 1–3 (24 mẫu). Câu đề TOPIK dẫn trong `topik` chỉ ghi câu đã kiểm tra trong `thi-thu/de/`.
+- Đã soạn: Seoul 1A Bài 1–3 + 2A Bài 1–3 + 3A Bài 1–3 (36 mẫu). Câu đề TOPIK dẫn trong `topik` chỉ ghi câu đã kiểm tra trong `thi-thu/de/`.
 
 ## Kiểm tra nền tảng Seoul (`seoul/kiem-tra/`)
 - Bài chẩn đoán cho học sinh học tiếp 3A: 53 câu (A từ vựng 12 · B chia đuôi gõ 10 · C tiểu từ 6 · D ngữ pháp theo bài 1B–2B 17 ·
