@@ -1,0 +1,222 @@
+{
+"b":"2A","n":1,
+"tong":{
+ "t":"Bài 1: làm quen – nói tên, lý do học, việc hay làm",
+ "p":"Bài 1 là bài tự giới thiệu buổi đầu. 4 mẫu xếp thành 2 cặp: <b>cặp “tên gọi + mục đích”</b> trả lời hai câu hỏi đầu tiên khi làm quen (Bạn tên gì? Bạn học tiếng Hàn để làm gì?) và <b>cặp “hoặc”</b> -거나 / (이)나 để kể thói quen, sở thích. Viên gạch nền cần vững: <b>받침 của tên tiếng Việt viết bằng Hangul</b> (란, 남, 응우옌…) và <b>gốc ㄹ</b> (만들다 → 만들려고, 만들거나). N(이)라고 하다 còn là bước đầu của chuỗi thuật lại lời nói ở 3A Bài 1–3.",
+ "tb":[["Mẫu","Gắn với","Câu hỏi chìa khóa"],
+  ["N(이)라고 하다","danh từ","Đang nói tên / tên gọi? (động, tính từ → -다고 하다, 3A Bài 1)"],
+  ["V-(으)려고","động từ","Vế sau có phải câu rủ / mệnh lệnh không? (có → -(으)러)"],
+  ["V-거나","động từ","Chọn một hay làm cả hai? (cả hai → -고)"],
+  ["N(이)나","danh từ","Động từ hay danh từ? (động từ → -거나)"]]
+},
+"p":[
+{
+ "no":1,"id":"g_2A_01_1","cn":"Giới thiệu – gọi tên",
+ "core":"Nói tên mình hoặc tên gọi của sự vật một cách trang trọng, khiêm tốn: “tôi tên là…”, “cái này gọi là…”; cũng dùng để thuật lại lời ai đó khi lời đó là một danh từ.",
+ "goc":"N + <b>(이)라고</b> (dấu trích dẫn, như chữ “là” trong “gọi là”) + <b>하다</b> (nói, gọi). 이 xuất hiện khi danh từ có 받침 (vì gốc là 이다). Nghĩa đen “저는 마리코라고 해요” = “tôi, (người ta) gọi là Mariko” → lùi một bước, không tự khẳng định, nên nghe <b>khiêm tốn, trang trọng</b> hơn 마리코예요. Đây là viên gạch đầu tiên của chuỗi thuật lại: -다고 하다 (3A Bài 1), -(으)라고 하다 (3A Bài 2).",
+ "chia":[["","받침 ×","받침 ○"],
+  ["Tên người","마이 → 마이**라고 해요**","남 → 남**이라고 해요**"],
+  ["Đồ vật, món ăn","김치 → 김치**라고 해요**","한복 → 한복**이라고 해요**"],
+  ["Trang trọng","김민수 → 김민수**라고 합니다**","응우옌 티 란 → 란**이라고 합니다**"],
+  ["Thuật lại (quá khứ)","한 시 → 한 시**라고 했어요**","토요일 → 토요일**이라고 했어요**"]],
+ "chiaNote":[
+  "Xét 받침 theo <b>chữ Hangul cuối cùng</b>, không theo chữ Latin: Lan → 란 (có ㄴ) → 란**이라고**; Hoa → 호아 → 호아**라고**; Nguyễn → 응우옌 (có ㄴ).",
+  "Danh từ tận cùng ㄹ vẫn là có 받침: 미셸 → 미셸**이라고**, 연필 → 연필**이라고** (khác -(으)려고, nơi gốc ㄹ được coi như không 받침).",
+  "Hỏi tên đồ vật: 이건 한국어로 **뭐라고** 해요? (뭐 không 받침; dạng viết đầy đủ 무엇**이라고**)."],
+ "tinh":[
+  {"t":"Tự giới thiệu buổi đầu, phỏng vấn","c":"Ngày đầu vào lớp tiếng Hàn / buổi phỏng vấn xin việc.","lv":"trang trọng","ko":"처음 뵙겠습니다. 저는 응우옌 티 란**이라고 합니다**.","vi":"Rất hân hạnh được gặp. Tôi tên là Nguyễn Thị Lan.","why":"처음 뵙겠습니다 + ~(이)라고 합니다 là cặp chào trang trọng. Những câu sau quay về 이에요/입니다 bình thường."},
+  {"t":"Giới thiệu với bạn mới","c":"Gặp bạn cùng lớp lần đầu.","lv":"lịch sự","ko":"안녕하세요. 저는 투**라고 해요**. 베트남에서 왔어요.","vi":"Chào bạn. Mình tên là Thu. Mình đến từ Việt Nam.","why":"해요 mềm hơn 합니다 nhưng vẫn lịch sự — hợp với lớp học, bạn bè mới."},
+  {"t":"Hỏi tên đồ vật bằng tiếng Hàn","c":"Em chỉ vào một đồ vật không biết tên.","lv":"lịch sự","ko":"이거 한국어로 뭐**라고 해요**? – ‘우산’**이라고 해요**.","vi":"Cái này tiếng Hàn gọi là gì? – Gọi là “usan” (cái ô).","why":"N(이)라고 하다 ở hiện tại = “gọi là”. Câu hỏi này học sinh dùng cả đời, nên thuộc nguyên câu."},
+  {"t":"Giải thích văn hóa, món ăn","c":"Giới thiệu Tết Việt Nam cho bạn Hàn.","lv":"lịch sự","ko":"베트남에서는 설날을 ‘뗏’**이라고 해요**.","vi":"Ở Việt Nam, Tết âm lịch gọi là “Tết”.","why":"Cấu trúc A을/를 B(이)라고 하다 = gọi A là B. Dạng này gặp lại trong đề đọc (định nghĩa)."},
+  {"t":"Thuật lại lời ai đó (danh từ)","c":"Bạn hỏi lịch thi, em nhắc lại lời cô.","lv":"lịch sự – kính ngữ","ko":"선생님이 시험이 다음 주 금요일**이라고 하셨어요**.","vi":"Cô nói là kỳ thi vào thứ Sáu tuần sau.","why":"Đã nói rồi → 했어요; người nói là cô → 하셨어요. Động/tính từ thì dùng -다고 하다 (3A)."},
+  {"t":"Điện thoại, công việc","c":"Gọi điện cho văn phòng / khách hàng.","lv":"trang trọng","ko":"안녕하세요? 저는 한국어 반 학생 민**이라고 합니다**.","vi":"Xin chào, em là Min, học viên lớp tiếng Hàn.","why":"Người nghe không thấy mặt → giới thiệu bằng (이)라고 합니다 cho lịch sự, rõ ràng."}],
+ "rb":[
+  ["Loại từ","Chỉ danh từ (tên, đồ vật, ngày giờ, số). Động / tính từ → -다고 하다 (3A Bài 1)."],
+  ["Thì","Tự giới thiệu, gọi tên → luôn hiện tại (해요 / 합니다). 했어요 chỉ dùng khi thuật lại lời ai đó đã nói."],
+  ["Mức lịch sự","합니다: buổi đầu, phỏng vấn, điện thoại công việc. 해요: lớp học, bạn mới."],
+  ["Nói nghề, quốc tịch","Không dùng (이)라고 하다: 저는 학생이에요 / 베트남 사람이에요."],
+  ["Hỏi tên người lớn","Không hỏi 이름이 뭐라고 해요? mà hỏi 성함이 어떻게 되세요?"]],
+ "sai":[
+  {"x":"저는 란**라고** 해요.","o":"저는 란**이라고** 해요.","why":"Lan → 란 có 받침 ㄴ → 이라고. Học sinh hay quên vì nghĩ theo tên Latin."},
+  {"x":"저는 투**이라고** 해요.","o":"저는 투**라고** 해요.","why":"투 không 받침 → 라고."},
+  {"x":"저는 대학생**이라고** 해요. (muốn nói “tôi là sinh viên”)","o":"저는 대학생**이에요**.","why":"(이)라고 하다 khi giới thiệu chỉ dùng cho tên gọi. Nghề nghiệp, quốc tịch dùng 이에요 / 입니다."},
+  {"x":"처음 뵙겠습니다. 저는 민수**라고 했습니다**.","o":"처음 뵙겠습니다. 저는 민수**라고 합니다**.","why":"했습니다 = “đã nói” (thuật lại). Tự giới thiệu luôn ở hiện tại."},
+  {"x":"친구가 내일 바쁘**라고** 했어요.","o":"친구가 내일 바쁘**다고** 했어요.","why":"Tính từ không gắn 라고 — phải dùng -다고 (3A Bài 1). Lỗi này xuất hiện khi học sinh lên 3A, nên nói trước từ bây giờ."}],
+ "pb":[
+  {"vs":"N이에요 / N입니다","d":"Nói thẳng, trung tính. N(이)라고 합니다 khiêm tốn, trang trọng — thường chỉ dùng ở câu đầu tiên khi tự giới thiệu.","ex":[["저는 란이에요. 대학생이에요.","Tôi là Lan. Tôi là sinh viên."],["처음 뵙겠습니다. 란이라고 합니다.","Rất hân hạnh. Tôi tên là Lan."]]},
+  {"vs":"-다고 하다 (3A Bài 1)","d":"Cùng là thuật lại. Danh từ → (이)라고; động từ → -ㄴ/는다고; tính từ → -다고.","ex":[["친구가 내일이 생일**이라고** 했어요.","Bạn nói mai là sinh nhật."],["친구가 내일 바쁘**다고** 했어요.","Bạn nói mai bận."]]}],
+ "topik":[
+  {"src":"Đọc · kỳ 91 câu 40","ko":"유럽과 아시아, 아프리카 대륙으로 둘러싸인 바다를 지중해**라고 한다**.","note":"A을/를 B(이)라고 하다 = gọi A là B — câu <b>định nghĩa</b>, hay đứng đầu đoạn văn giải thích. Thấy -(이)라고 한다 / 부른다 → câu đó giới thiệu khái niệm, phần sau giải thích thêm."},
+  {"src":"Đọc · kỳ 83 câu 44","ko":"서양 역사에서는 15·16세기를 '위대한 발견의 시대'**라고 부른다**.","note":"Thay 하다 bằng 부르다 (gọi) — cách gắn (이)라고 giữ nguyên. 시대 không 받침 → 라고."}],
+ "hoi":[
+  {"q":"Tên em viết bằng Hangul kết thúc bằng chữ gì? Vậy em nói “저는 … (이)라고 해요” thế nào?","a":"Xét chữ Hangul cuối: 응우옌 반 남 → 남 (받침 ㅁ) → 남<b>이라고</b> 해요; 마이 → 마이<b>라고</b> 해요; 타오 (Thảo) → 타오<b>라고</b> 해요."},
+  {"q":"Vì sao người Hàn hay nói “김철수라고 합니다” thay vì “김철수입니다” khi gặp lần đầu?","a":"-라고 합니다 nghe như “người ta gọi tôi là…” — không tự khẳng định, nên khiêm tốn và trang trọng. Hợp với buổi đầu, phỏng vấn, điện thoại công việc."},
+  {"q":"“Cái này tiếng Hàn gọi là gì?” — vì sao là 뭐라고 mà không phải 뭐이라고?","a":"뭐 không có 받침 → 라고. Dạng viết đầy đủ là 무엇<b>이라고</b> (무엇 có 받침 ㅅ)."}],
+ "luyen":[
+  {"q":"처음 뵙겠습니다. 저는 응우옌 반 남(    ) 합니다.","o":["이라고","라고","이에요","다고"],"w":"남 có 받침 ㅁ → 이라고."},
+  {"q":"저는 마이(    ) 해요. 베트남 사람이에요.","o":["라고","이라고","다고","라서"],"w":"마이 không 받침 → 라고."},
+  {"q":"가: 이거 한국어로 뭐라고 해요?  나: ‘연필’(    ).","o":["이라고 해요","라고 해요","이라고 했어요","다고 해요"],"w":"연필 có 받침 ㄹ → 이라고; gọi tên đồ vật dùng hiện tại 해요."},
+  {"q":"가: 모임이 언제예요?  나: 민수 씨가 토요일(    ).","o":["이라고 했어요","이라고 해요","라고 했어요","다고 했어요"],"w":"토요일 có 받침 → 이라고; thuật lại lời Minsu đã nói → 했어요."},
+  {"q":"Câu nào tự nhiên khi tự giới thiệu ở buổi phỏng vấn?","o":["안녕하십니까? 저는 이란이라고 합니다.","안녕하십니까? 저는 이란이라고 했습니다.","안녕하십니까? 저는 이란라고 합니다.","안녕하십니까? 저는 이란이다고 합니다."],"w":"이란 có 받침 ㄴ → 이라고; tự giới thiệu → hiện tại 합니다."}],
+ "em":[
+  "Viết 2 câu tự giới thiệu: một câu trang trọng (…(이)라고 합니다) cho buổi phỏng vấn, một câu lịch sự thường (…(이)라고 해요) cho lớp học.",
+  "Chọn 3 món ăn / ngày lễ Việt Nam, giới thiệu cho bạn Hàn: 베트남에서는 …을/를 …(이)라고 해요."],
+ "co":"Cho học sinh viết tên mình bằng Hangul trước (nhiều em viết sai tên Việt: Nguyễn → 응우옌, Thảo → 타오, Phương → 프엉) rồi tự xét 받침. Trò “đồ vật trong phòng”: cô chỉ đồ vật, học sinh hỏi 이거 한국어로 뭐라고 해요?, bạn khác đáp. Gieo mầm 3A: nói trước rằng động / tính từ sẽ dùng -다고 하다."
+},
+{
+ "no":2,"id":"g_2A_01_2","cn":"Mục đích – ý định",
+ "core":"Nêu mục đích, ý định của hành động ở vế sau: “(làm B) để A”, “vì định A nên làm B”.",
+ "goc":"Gốc động từ + <b>-(으)려</b> (ý định, muốn làm) + <b>고</b> (nối sang vế sau). Cùng gốc với <b>-(으)려고 하다</b> (định làm). Vì là “ý định của tôi”, mẫu này đòi hai vế <b>cùng một người</b> và vế sau phải là việc <b>người đó thật sự làm</b> — nên không đi với câu rủ, mệnh lệnh.",
+ "chia":[["Gốc","Ví dụ","→"],
+  ["Không 받침","보내다","보내**려고**"],
+  ["Có 받침","먹다","먹**으려고**"],
+  ["Gốc ㄹ","만들다 · 살다","만들**려고** · 살**려고** (không thêm 으)"],
+  ["ㄷ bất quy tắc","듣다","들**으려고**"],
+  ["ㅂ bất quy tắc","돕다","도**우려고**"],
+  ["하다","공부하다","공부하**려고**"]],
+ "chiaNote":[
+  "Gốc ㄹ giữ ㄹ và không thêm 으: 만들다 → **만들려고** (không 만들으려고), 놀다 → **놀려고**.",
+  "Không có quá khứ trước -려고 (×먹었으려고). Thì nằm ở vế sau: 먹**으려고** 빵을 **샀어요**.",
+  "Cuối câu: -(으)려고요 khi trả lời “để làm gì?”; -(으)려고 해요 = định làm."],
+ "tinh":[
+  {"t":"Nói lý do học tiếng Hàn","c":"Câu hỏi quen thuộc nhất khi tự giới thiệu: 왜 한국어를 배워요?","lv":"lịch sự","ko":"한국 회사에 취직하**려고** 한국어를 배워요.","vi":"Tôi học tiếng Hàn để xin việc ở công ty Hàn.","why":"Mục đích lâu dài + việc đang làm. Đây là câu học sinh sẽ nói thật ở buổi đầu."},
+  {"t":"Đi đâu để làm gì","c":"Bạn hỏi em đi đâu.","lv":"lịch sự","ko":"택배를 보내**려고** 우체국에 가요.","vi":"Tôi đến bưu điện để gửi hàng.","why":"Vế sau là 가다 (di chuyển) → dùng được cả -(으)러: 택배를 보내러 우체국에 가요."},
+  {"t":"Chuẩn bị trước cho một việc","c":"Kể việc đã mua sắm.","lv":"lịch sự","ko":"친구 생일 파티에서 입**으려고** 원피스를 샀어요.","vi":"Tôi mua váy để mặc ở tiệc sinh nhật bạn.","why":"Vế sau là 사다 (không phải di chuyển) → chỉ dùng -(으)려고, không dùng -(으)러."},
+  {"t":"Trả lời ngắn “để…”","c":"Bạn ngạc nhiên vì em dậy sớm.","lv":"thân mật – lịch sự","ko":"왜 이렇게 일찍 일어났어요? – 운동하**려고요**.","vi":"Sao dậy sớm thế? – Để tập thể dục.","why":"Vế sau đã rõ trong câu hỏi → bỏ đi, thêm 요 cho lịch sự."},
+  {"t":"Nói kế hoạch, dự định","c":"Kể kế hoạch kỳ nghỉ.","lv":"lịch sự","ko":"이번 방학에 고향에 가**려고 해요**.","vi":"Kỳ nghỉ này tôi định về quê.","why":"-(으)려고 하다 cuối câu = định làm (chưa chắc chắn như -(으)ㄹ 거예요)."}],
+ "rb":[
+  ["Loại từ","Chỉ động từ. Tính từ muốn nói “để (trở nên)…” thì đổi sang động từ: 건강하다 → 건강해지**려고** 운동해요."],
+  ["Chủ ngữ","Hai vế cùng chủ ngữ (người có ý định cũng là người làm vế sau)."],
+  ["Vế sau","Không dùng câu rủ, mệnh lệnh: ×먹으려고 갑시다 → 먹으러 갑시다."],
+  ["Thì","Không có quá khứ trước -(으)려고; thì đặt ở vế sau."],
+  ["Văn phong","Văn nói và văn viết. Văn trang trọng hơn dùng -기 위해(서) (trung cấp)."]],
+ "sai":[
+  {"x":"밥을 먹**으려고** 식당에 갑시다.","o":"밥을 먹**으러** 식당에 갑시다.","why":"Vế sau là câu rủ (-ㅂ시다) → không dùng -(으)려고."},
+  {"x":"내일 읽**으러** 책을 샀어요.","o":"내일 읽**으려고** 책을 샀어요.","why":"-(으)러 chỉ đi với động từ di chuyển (가다, 오다, 다니다)."},
+  {"x":"케이크를 만들**으려고** 밀가루를 샀어요.","o":"케이크를 만들**려고** 밀가루를 샀어요.","why":"Gốc ㄹ không thêm 으."},
+  {"x":"건강하**려고** 매일 운동해요.","o":"건강해지**려고** 매일 운동해요.","why":"건강하다 là tính từ. Mục đích là “trở nên khỏe” → 건강해지다 (động từ)."},
+  {"x":"한국 회사에 취직했**으려고** 한국어를 배웠어요.","o":"한국 회사에 취직하**려고** 한국어를 배웠어요.","why":"Mục đích là việc chưa xảy ra → không có quá khứ trước -려고."}],
+ "pb":[
+  {"vs":"-(으)러 (1B)","d":"-(으)러: chỉ trước 가다 / 오다 / 다니다, nhưng vế sau rủ, mệnh lệnh được. -(으)려고: trước mọi động từ, nhưng vế sau không rủ, không mệnh lệnh.","ex":[["한국어를 배우**러** 한국에 왔어요.","Tôi đến Hàn để học tiếng Hàn. (dùng cả -러 và -려고 đều được)"],["내일 입**으려고** 옷을 샀어요.","Tôi mua áo để mai mặc. (chỉ -려고)"],["같이 밥 먹**으러** 갑시다.","Cùng đi ăn cơm nào. (chỉ -러)"]]},
+  {"vs":"-(으)려고 하다","d":"-(으)려고 + vế sau = để. -(으)려고 하다 cuối câu = định làm. Trong đề đọc, câu kết đoạn hay là -아/어 보려고 한다 (định thử làm).","ex":[["주말에 등산을 하**려고 해요**.","Cuối tuần tôi định đi leo núi."]]}],
+ "topik":[
+  {"src":"Đọc · kỳ 52 câu 1","ko":"해가 뜨는 것을 (보려고) 아침 일찍 일어났다.","note":"Đáp án. Dậy sớm <b>để</b> ngắm mặt trời mọc. Các lựa chọn khác 보아야 / 보거나 / 보는데 — có cả -거나 (Bài 1) và -는데 (Bài 3) của 2A."},
+  {"src":"Đọc · kỳ 37 câu 1","ko":"아침에 일찍 (일어나야) 일곱 시 비행기를 탈 수 있다.","note":"Ở đây 일어나려고 là bẫy: vế sau -(으)ㄹ 수 있다 cho biết vế trước là <b>điều kiện</b> (phải… mới được) chứ không phải mục đích."},
+  {"src":"Đọc · kỳ 91 câu 48 (mục đích bài viết)","ko":"예술인 생활 보장의 필요성을 강조하**려고**","note":"Câu hỏi “mục đích người viết” luôn có 4 lựa chọn kết thúc bằng -(으)려고. Đọc động từ đứng trước -려고 (강조하다, 분석하다, 소개하다…) để so với giọng điệu cả bài."}],
+ "hoi":[
+  {"q":"“Em đến Hàn để học tiếng Hàn” — dùng -러 hay -려고?","a":"Cả hai đều được vì vế sau là 오다 (di chuyển): 배우<b>러</b> 왔어요 / 배우<b>려고</b> 왔어요."},
+  {"q":"“Chúng ta đi ăn đi” — 밥 먹으려고 갑시다 có được không?","a":"Không. Vế sau là câu rủ → 밥 먹<b>으러</b> 갑시다."},
+  {"q":"Bạn hỏi 왜 한국어를 공부해요? — trả lời ngắn bằng một cụm thế nào?","a":"한국 친구들과 이야기하<b>려고요</b>. (-려고 + 요, bỏ vế sau vì đã rõ)."}],
+ "luyen":[
+  {"q":"다음 달에 한국에 (    ) 비자를 신청했어요.","o":["가려고","가러","갔으려고","가거나"],"w":"Vế sau 신청했어요 không phải di chuyển → -려고; không có quá khứ trước -려고."},
+  {"q":"케이크를 (    ) 밀가루를 샀어요.","o":["만들려고","만들으려고","만들러","만드려고"],"w":"Gốc ㄹ giữ ㄹ, không thêm 으."},
+  {"q":"Chọn câu SAI.","o":["점심을 먹으려고 같이 갑시다.","점심을 먹으러 같이 갑시다.","책을 읽으려고 도서관에 가요.","책을 읽으러 도서관에 가요."],"w":"Vế sau là câu rủ (갑시다) → không dùng -(으)려고."},
+  {"q":"가: 왜 이렇게 일찍 왔어요?  나: 시험 준비를 (    ).","o":["하려고요","하러요","했으려고요","하거나요"],"w":"Trả lời ngắn “để…” → -(으)려고요."},
+  {"q":"음악을 (    ) 이어폰을 샀어요.","o":["들으려고","듣으려고","들려고","듣러"],"w":"듣다 bất quy tắc ㄷ: trước 으 đổi ㄷ → ㄹ: 들으려고."}],
+ "em":[
+  "Viết 3 câu: em học tiếng Hàn để làm gì? (…(으)려고 한국어를 배워요.)",
+  "Hôm nay em đã mua / chuẩn bị gì, để làm gì? Viết 2 câu với -(으)려고 + quá khứ ở vế sau."],
+ "co":"Đây là câu hỏi tự giới thiệu thật của bài (왜 한국어를 배워요?) → cho học sinh trả lời thật, cô sửa ngay. Hỏi nhanh -러 hay -려고 bằng thẻ: cô nói vế sau (가요 / 샀어요 / 갑시다), học sinh chọn. Học sinh hay sai gốc ㄹ (만들으려고) và ㄷ (듣으려고) — cài vào bài luyện."
+},
+{
+ "no":3,"id":"g_2A_01_3","cn":"Lựa chọn",
+ "core":"Nối hai (hay nhiều) hành động, chọn một trong số đó: “…hoặc…”, thường để kể thói quen, việc hay làm.",
+ "goc":"Gốc động từ + <b>-거나</b>, luôn một dạng, không phụ thuộc 받침. Câu có -거나 thường đi với từ chỉ thói quen: <b>보통, 주말에, 시간이 있으면, 심심할 때</b>. Nghĩa: lúc thì A, lúc thì B — không làm cả hai cùng lúc (đó là -고).",
+ "chia":[["Gốc","Ví dụ","→"],
+  ["Không 받침","쓰다","쓰**거나**"],
+  ["Có 받침","읽다","읽**거나**"],
+  ["ㄷ (không đổi)","듣다","듣**거나**"],
+  ["Gốc ㄹ (giữ ㄹ)","만들다","만들**거나**"],
+  ["하다","운동하다","운동하**거나**"]],
+ "chiaNote":[
+  "Không có bất quy tắc: -거나 bắt đầu bằng phụ âm ㄱ nên gốc giữ nguyên: 듣**거나**, 돕**거나**, 만들**거나** (ㄷ chỉ đổi thành ㄹ trước nguyên âm).",
+  "Thì nằm ở cuối câu: 주말에 영화를 보**거나** 쇼핑을 **했어요**.",
+  "Nối nhiều hơn hai: 가**거나** 하**거나** 해요. Dạng V-거나 하다 = “thường làm những việc như…”."],
+ "tinh":[
+  {"t":"Kể thói quen cuối tuần","c":"Bạn hỏi 주말에 보통 뭐 해요?","lv":"lịch sự","ko":"주말에는 보통 친구를 만나**거나** 집에서 쉬어요.","vi":"Cuối tuần tôi thường gặp bạn hoặc nghỉ ở nhà.","why":"보통 + -거나 = lúc thế này, lúc thế kia — câu trả lời tự nhiên nhất."},
+  {"t":"Nói việc làm lúc rảnh","c":"Hỏi về sở thích.","lv":"lịch sự","ko":"시간이 있으면 음악을 듣**거나** 드라마를 봐요.","vi":"Có thời gian thì tôi nghe nhạc hoặc xem phim truyền hình.","why":"시간이 있으면 (nếu có thời gian) + -거나 — khung câu hay gặp."},
+  {"t":"Đưa lựa chọn cho người khác","c":"Dặn bạn cách liên lạc.","lv":"lịch sự","ko":"궁금한 게 있으면 저한테 전화하**거나** 문자 보내세요.","vi":"Có gì thắc mắc thì gọi hoặc nhắn tin cho tôi nhé.","why":"Vế sau là mệnh lệnh vẫn được (khác -(으)려고)."},
+  {"t":"Liên lạc với gia đình","c":"Kể về cuộc sống du học.","lv":"lịch sự","ko":"부모님께 자주 전화하**거나** 영상 통화를 해요.","vi":"Tôi hay gọi điện hoặc gọi video cho bố mẹ.","why":"Hai cách liên lạc ngang hàng, chọn một tùy hôm."},
+  {"t":"“Thường làm những việc như…”","c":"Kể việc làm khi buồn chán.","lv":"lịch sự","ko":"심심할 때는 게임을 하**거나 해요**.","vi":"Lúc buồn chán tôi hay chơi game chẳng hạn.","why":"V-거나 하다: chỉ nêu một việc làm ví dụ, ngầm hiểu còn việc khác."}],
+ "rb":[
+  ["Loại từ","Động từ (theo sách). Danh từ dùng N(이)나 (mẫu 4)."],
+  ["Chủ ngữ","Thường cùng chủ ngữ."],
+  ["Thì","Không cần quá khứ trước -거나; thì đặt ở cuối câu."],
+  ["Vế sau","Câu kể, hỏi, mệnh lệnh, rủ đều được."],
+  ["Nghĩa","Chọn một — khác -고 (làm cả hai) và -지만 (đối lập)."]],
+ "sai":[
+  {"x":"아침에 커피**거나** 차를 마셔요.","o":"아침에 커피**나** 차를 마셔요.","why":"커피, 차 là danh từ → (이)나."},
+  {"x":"시간이 있으면 음악을 들**거나** 영화를 봐요.","o":"시간이 있으면 음악을 듣**거나** 영화를 봐요.","why":"ㄷ chỉ đổi thành ㄹ trước nguyên âm; -거나 bắt đầu bằng phụ âm nên giữ 듣."},
+  {"x":"저녁을 먹**거나** 숙제를 했어요. (muốn nói ăn xong rồi làm bài)","o":"저녁을 먹**고** 숙제를 했어요.","why":"Làm cả hai việc → -고. -거나 chỉ chọn một."},
+  {"x":"주말에 청소하**지만** 빨래를 해요. (muốn nói “hoặc”)","o":"주말에 청소하**거나** 빨래를 해요.","why":"-지만 = nhưng (đối lập). Người Việt đôi khi nhầm khi dịch “hay là”."}],
+ "pb":[
+  {"vs":"N(이)나 (mẫu 4)","d":"Động từ → -거나; danh từ → (이)나. Cùng nghĩa “hoặc”.","ex":[["아침에 빵**이나** 과일을 먹어요.","Sáng tôi ăn bánh mì hoặc hoa quả."],["아침에 빵을 먹**거나** 과일을 먹어요.","Sáng tôi ăn bánh mì hoặc ăn hoa quả."]]},
+  {"vs":"-고","d":"-고 = làm cả hai (và / rồi). -거나 = chỉ một trong hai.","ex":[["주말에 청소하**고** 빨래해요.","Cuối tuần tôi dọn nhà và giặt đồ (làm cả hai)."],["주말에 청소하**거나** 빨래해요.","Cuối tuần tôi dọn nhà hoặc giặt đồ."]]}],
+ "topik":[
+  {"src":"Đọc · kỳ 64 câu 1","ko":"나는 주말에는 보통 영화를 (보거나) 운동을 한다.","note":"Đáp án. 보통 + cuối tuần → thói quen, chọn một trong hai việc. Bẫy 보려고 (để) và 보지만 (nhưng) không hợp nghĩa."},
+  {"src":"Đọc · kỳ 83 câu 1","ko":"책을 많이 (읽으면) 지식을 쌓을 수 있다.","note":"Ở đây 읽거나 là bẫy: không có việc thứ hai ngang hàng để chọn. -거나 cần hai hành động cùng vai trò."},
+  {"src":"Đọc · kỳ 91 câu 13","ko":"기업은 이 임시 매장을 이용해 주로 특정 제품을 팔**거나** 홍보를 한다.","note":"Đoạn văn giải thích chức năng, cách dùng thường liệt kê bằng -거나 (lúc thì A, lúc thì B)."}],
+ "hoi":[
+  {"q":"“Sáng em ăn bánh mì hoặc cơm” — dùng -거나 hay (이)나?","a":"Danh từ → 아침에 빵<b>이나</b> 밥을 먹어요. Muốn dùng -거나 phải lặp động từ: 빵을 먹<b>거나</b> 밥을 먹어요."},
+  {"q":"Vì sao 듣다 + 거나 = 듣거나, nhưng 듣다 + 어요 = 들어요?","a":"ㄷ chỉ đổi thành ㄹ trước nguyên âm (어요, 으려고, 은). 거나 bắt đầu bằng phụ âm ㄱ nên giữ ㄷ."}],
+ "luyen":[
+  {"q":"저는 스트레스를 받으면 노래를 (    ) 잠을 자요.","o":["부르거나","부르나","불러거나","부르려고"],"w":"Động từ → -거나, gốc giữ nguyên: 부르거나."},
+  {"q":"시간이 있으면 음악을 (    ) 책을 읽어요.","o":["듣거나","들거나","들으거나","듣나"],"w":"-거나 bắt đầu bằng phụ âm → 듣 giữ nguyên."},
+  {"q":"Câu nào có nghĩa “Cuối tuần em đi leo núi hoặc đi bơi”?","o":["주말에 등산을 하거나 수영을 해요.","주말에 등산을 하고 수영을 해요.","주말에 등산을 하지만 수영을 해요.","주말에 등산을 하려고 수영을 해요."],"w":"“Hoặc” giữa hai hành động → -거나."},
+  {"q":"주말에 영화를 (    ) 쇼핑을 했어요.","o":["보거나","보아서","보려고","보나"],"w":"Thì quá khứ đặt ở cuối câu (했어요); 보나 sai vì (이)나 chỉ gắn vào danh từ."}],
+ "em":[
+  "Cuối tuần / lúc rảnh em thường làm gì? Viết 3 câu với -거나.",
+  "Khi buồn hoặc căng thẳng em làm gì? 기분이 안 좋으면 …거나 …아/어요."],
+ "co":"Hỏi vòng tròn “주말에 보통 뭐 해요?” — bắt buộc trả lời có -거나; bạn sau nhắc lại câu bạn trước bằng (이)나 nếu được (영화나 쇼핑). Ghép luôn với mẫu 4 trong cùng buổi."
+},
+{
+ "no":4,"id":"g_2A_01_4","cn":"Lựa chọn",
+ "core":"Nối hai (hay nhiều) danh từ, chọn một: “…hoặc…”. Sách ghi “1” vì sau này còn gặp nghĩa khác của (이)나.",
+ "goc":"Danh từ + <b>나</b> (không 받침) / <b>이나</b> (có 받침) — cùng quy luật thêm 이 như (이)라고. (이)나 <b>thay chỗ</b> tiểu từ 이/가, 을/를 của danh từ đứng trước; tiểu từ của cả cụm gắn sau danh từ cuối: 빵이나 과일<b>을</b>.",
+ "chia":[["","받침 ×","받침 ○"],
+  ["Danh từ","사과 → 사과**나**","책 → 책**이나**"],
+  ["Đồ uống","커피**나** 녹차","물**이나** 주스"],
+  ["Thời gian","다음 주**나** 다음 달","토요일**이나** 일요일"],
+  ["Nơi chốn","카페**나** 도서관에서","집**이나** 학교에서"]],
+ "chiaNote":[
+  "받침 ㄹ vẫn là có 받침: 물**이나**, 서울**이나**, 토요일**이나**.",
+  "Không gắn 을/를, 이/가 trước (이)나: 빵**이나** 과일을 (×빵을이나).",
+  "Tiểu từ khác có thể giữ: 도서관에서**나** 카페에서 공부해요 — nhưng nói gọn 도서관**이나** 카페에서 tự nhiên hơn."],
+ "tinh":[
+  {"t":"Hỏi đồ uống ở quán","c":"Gọi món ở quán cà phê.","lv":"lịch sự","ko":"커피**나** 녹차 있어요?","vi":"Có cà phê hoặc trà xanh không?","why":"Đưa hai lựa chọn, cái nào cũng được — lịch sự, linh hoạt."},
+  {"t":"Kể thói quen ăn uống","c":"Bạn hỏi sáng em ăn gì.","lv":"lịch sự","ko":"아침에 보통 빵**이나** 과일을 먹어요.","vi":"Sáng tôi thường ăn bánh mì hoặc hoa quả.","why":"Tiểu từ 을 chỉ gắn sau danh từ cuối (과일을)."},
+  {"t":"Hẹn thời gian","c":"Rủ bạn gặp cuối tuần.","lv":"thân mật – lịch sự","ko":"토요일**이나** 일요일에 만날까요?","vi":"Mình gặp nhau thứ Bảy hoặc Chủ nhật nhé?","why":"Đưa hai lựa chọn khi hẹn — người nghe dễ nhận lời."},
+  {"t":"Gợi ý quà tặng","c":"Bàn với bạn quà sinh nhật.","lv":"lịch sự","ko":"생일 선물로 책**이나** 꽃이 어때요?","vi":"Quà sinh nhật tặng sách hoặc hoa thì sao?","why":"Hai danh từ làm chủ ngữ → 이/가 gắn sau danh từ cuối (꽃이)."},
+  {"t":"Lời mời nhẹ nhàng (mở rộng)","c":"Rủ đồng nghiệp nghỉ giải lao.","lv":"thân mật","ko":"우리 차**나** 한잔할까요?","vi":"Mình uống chén trà hay gì đó nhé?","why":"Chỉ có một danh từ: (이)나 làm lời mời mềm hơn, ngầm “cái gì đó cũng được”. Nghĩa này gặp nhiều trong hội thoại."}],
+ "rb":[
+  ["Loại từ","Chỉ danh từ (kể cả từ chỉ thời gian, nơi chốn). Động từ → -거나."],
+  ["Tiểu từ","이/가, 을/를 không đứng trước (이)나; đặt sau danh từ cuối."],
+  ["Số lượng","Nối được 3 danh từ trở lên (사과나 배나 귤), nhưng thường dùng 2."],
+  ["Nghĩa khác","Sau từ chỉ số lượng: 세 시간**이나** 기다렸어요 = “chờ tận 3 tiếng” — nghĩa khác (học sau), đừng nhầm với “hoặc”."]],
+ "sai":[
+  {"x":"아침에 빵**을이나** 과일을 먹어요.","o":"아침에 빵**이나** 과일을 먹어요.","why":"(이)나 thay chỗ 을/를 của danh từ trước."},
+  {"x":"물**나** 주스 주세요.","o":"물**이나** 주스 주세요.","why":"물 có 받침 ㄹ → 이나."},
+  {"x":"주말에 영화를 보**나** 쇼핑을 해요.","o":"주말에 영화를 보**거나** 쇼핑을 해요.","why":"보다 là động từ → -거나."},
+  {"x":"저는 커피**나** 녹차를 둘 다 좋아해요.","o":"저는 커피**하고** 녹차를 둘 다 좋아해요.","why":"Cả hai (둘 다) → 하고 / 와·과. (이)나 chỉ chọn một."}],
+ "pb":[
+  {"vs":"N하고 / N와·과","d":"하고, 와/과 = và (cả hai); (이)나 = hoặc (một trong hai).","ex":[["빵**하고** 우유를 샀어요.","Tôi mua bánh mì và sữa."],["빵**이나** 우유를 사 오세요.","Mua bánh mì hoặc sữa về nhé."]]},
+  {"vs":"N(이)나 sau số lượng (học sau)","d":"Sau số lượng, (이)나 = “những, tận” (nhiều hơn mong đợi).","ex":[["친구를 한 시간**이나** 기다렸어요.","Tôi chờ bạn tận một tiếng."]]}],
+ "topik":[
+  {"src":"Đọc · kỳ 91 câu 15","ko":"빵**이나** 고기를 구울 때 갈색으로 바뀌는 것이 그 예이다.","note":"Ví dụ liệt kê bằng (이)나. Câu có “그 예이다” (đó là ví dụ) nói về một khái niệm đã nêu trước — khi sắp xếp câu (câu 13–15), nó không đứng đầu."},
+  {"src":"Đọc · kỳ 91 câu 16","ko":"위험**이나** 위기를 모르는 척 피하는 사람을 타조에 비유하곤 한다.","note":"Hai danh từ gần nghĩa nối bằng (이)나 — đọc như một cụm “nguy hiểm, khủng hoảng”."},
+  {"src":"Đọc · kỳ 91 câu 30","ko":"경제 성장의 중심 산업인 제조업**이나** 서비스업 등에 투자를 하지 않게 되는 것이다.","note":"N이나 N 등 = “như… hay…” — cách liệt kê rất hay gặp trong văn báo."}],
+ "hoi":[
+  {"q":"Ở quán cà phê, em hỏi “Có trà xanh hoặc nước cam không?” thế nào?","a":"녹차<b>나</b> 오렌지 주스 있어요? (녹차 không 받침 → 나)."},
+  {"q":"“Tôi uống cả cà phê và trà” có dùng (이)나 không?","a":"Không — cả hai: 커피<b>하고</b> 차를 다 마셔요."}],
+ "luyen":[
+  {"q":"점심에 김밥(    ) 라면을 먹어요.","o":["이나","나","거나","을이나"],"w":"김밥 có 받침 ㅂ → 이나."},
+  {"q":"주말에 친구(    ) 가족을 만나요.","o":["나","이나","거나","를나"],"w":"친구 không 받침 → 나."},
+  {"q":"생일 선물로 (    ) 사고 싶어요.","o":["지갑이나 가방을","지갑을이나 가방을","지갑나 가방을","지갑거나 가방을"],"w":"지갑 có 받침 → 이나; 을 chỉ gắn sau danh từ cuối."},
+  {"q":"Chọn câu SAI.","o":["주말에 청소하나 빨래를 해요.","주말에 청소나 빨래를 해요.","주말에 청소하거나 빨래를 해요.","주말에 청소를 하거나 빨래를 해요."],"w":"청소하다 là động từ → 청소하거나; danh từ 청소 + 나 thì được."}],
+ "em":[
+  "Ở quán ăn / quán cà phê: viết 2 câu gọi món có (이)나.",
+  "Hẹn bạn: đưa 2 lựa chọn thời gian và 2 lựa chọn địa điểm bằng (이)나."],
+ "co":"Dạy chung với mẫu 3: bảng 2 cột “động từ → -거나 / danh từ → (이)나”, cô đọc nhanh từ (커피, 마시다, 영화, 보다, 물, 운동하다), học sinh chỉ cột. Nhắc 받침 ㄹ (물, 서울) vẫn là có 받침 → 이나 — ngược với -(으)려고 nơi gốc ㄹ coi như không 받침."
+}
+]
+}
