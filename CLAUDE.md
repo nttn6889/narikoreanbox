@@ -352,7 +352,7 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   core, goc (cấu tạo / nghĩa gốc), chia (bảng), chiaNote, tinh:[{t, c bối cảnh, lv mức lịch sự, ko, vi, why}] (bản đồ tình huống), rb (ràng buộc), sai:[{x, o, why}],
   pb:[{vs, d, ex}] (phân biệt), topik:[{src, ko, note}], hoi:[{q, a}] (Cô hỏi), luyen:[{q, o (lựa chọn đầu là đáp án), w}], em (Câu của em), co (ghi chú cô)}]`. `**chữ**` = tô đỏ.
   Tên mẫu, số trang + khung “📖 Sách viết gì” lấy từ `seoul/ngu-phap/np.json` theo (cuốn, bài, no).
-- Đã soạn: Seoul 2A Bài 1–3 + 3A Bài 1–3 (24 mẫu). Câu đề TOPIK dẫn trong `topik` chỉ ghi câu đã kiểm tra trong `thi-thu/de/`.
+- Đã soạn: Seoul 1A Bài 1–3 + 2A Bài 1–3 + 3A Bài 1–3 (36 mẫu). Câu đề TOPIK dẫn trong `topik` chỉ ghi câu đã kiểm tra trong `thi-thu/de/`.
 - **Chuyên đề** (buổi gom các mẫu cùng chức năng nằm rải nhiều bài + ôn nền 1A–2B; cô chốt hướng học trước 3A theo nhóm): `data/cd-<id>.json` (thêm id vào biến `CDS`)
   = {t, ko, sub, tong, parts:[tên nửa buổi], p:[bước], co}; bước `{ref:'3A-1', no, part, m: phút, why}` dùng lại mẫu có sẵn, hoặc mẫu viết riêng cùng khung (`id` dạng `cd_…`, `t` tên,
   `src:{b,n,no}` để lấy khung “Sách viết gì”; mục nào thiếu thì trang bỏ qua). Link `#cd=` (danh sách), `#cd=gian-tiep` (giáo án buổi), `#cd=gian-tiep&g=3` (bước 3).

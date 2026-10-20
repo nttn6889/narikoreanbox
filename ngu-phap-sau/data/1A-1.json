@@ -1,0 +1,974 @@
+{
+ "b": "1A",
+ "n": 1,
+ "tong": {
+  "t": "Bài 1: chào hỏi và nói “tôi là…”",
+  "p": "Bài đầu tiên của sơ cấp: lời chào và câu <b>“A là B”</b> ở hai mức lịch sự, khẳng định và phủ định. 4 điểm xếp theo hai trục: <b>mức lịch sự</b> (해요체 이에요/예요 ↔ 합니다체 입니다) và <b>khẳng định ↔ phủ định</b> (이에요 ↔ 이/가 아니에요). Viên gạch nền phải vững ngay từ buổi này: <b>nhìn chữ Hangul cuối có 받침 hay không</b> để chọn 은/는, 이에요/예요, 이/가 — luật này đi theo học sinh tới hết trung cấp. Gieo mầm sớm: văn viết TOPIK dùng <b>이다 / 아니다</b>, không dùng 이에요 hay 입니다.",
+  "tb": [
+   [
+    "Mẫu",
+    "Mức",
+    "Câu hỏi chìa khóa"
+   ],
+   [
+    "인사말",
+    "mọi mức",
+    "Gặp hay chia tay? Chia tay thì người nghe đi hay ở lại?"
+   ],
+   [
+    "N은/는 N이에요/예요",
+    "lịch sự thường",
+    "Chữ cuối của danh từ có 받침 không?"
+   ],
+   [
+    "N입니다 / 입니까?",
+    "trang trọng",
+    "Đang phát biểu, phỏng vấn, thông báo? (không cần xét 받침)"
+   ],
+   [
+    "N이/가 아닙니다",
+    "phủ định",
+    "Phủ định danh từ → 이/가 아니다, không dùng 안"
+   ]
+  ]
+ },
+ "p": [
+  {
+   "no": 1,
+   "id": "g_1A_01_1",
+   "cn": "Chào hỏi",
+   "core": "Câu chào cố định: <b>안녕하세요</b> dùng khi gặp, bất kể sáng – trưa – tối; chia tay thì chọn theo người nghe: <b>안녕히 가세요</b> (người nghe đi) hay <b>안녕히 계세요</b> (người nghe ở lại); gặp lần đầu thêm <b>만나서 반가워요</b>.",
+   "goc": "안녕 (安寧 – an ninh, bình an) + 하세요 → nghĩa đen “Anh/chị vẫn bình an chứ?”. Hỏi thăm sự bình an không phụ thuộc giờ trong ngày nên <b>một câu dùng cả ngày</b>, không có “chào buổi sáng / buổi tối” riêng. 안녕히 (một cách bình an) + <b>가세요</b> (xin hãy đi) / <b>계세요</b> (xin hãy ở — kính ngữ của 있다) → chia tay chọn theo <b>người kia đi hay ở</b>, khác tiếng Việt chỉ có một câu “tạm biệt”. 만나서 반가워요 = “gặp (nên) vui” — 반갑다 là niềm vui khi gặp được người / thứ mình mong.",
+   "chia": [
+    [
+     "",
+     "Lịch sự thường (해요)",
+     "Trang trọng (합니다)",
+     "Thân (반말 – chỉ cần nghe hiểu)"
+    ],
+    [
+     "Gặp",
+     "안녕하세요?",
+     "안녕하십니까?",
+     "안녕?"
+    ],
+    [
+     "Gặp lần đầu",
+     "만나서 반가워요.",
+     "만나서 반갑습니다. / 처음 뵙겠습니다.",
+     "만나서 반가워."
+    ],
+    [
+     "Người nghe đi",
+     "안녕히 가세요.",
+     "안녕히 가십시오.",
+     "잘 가."
+    ],
+    [
+     "Người nghe ở lại (mình đi)",
+     "안녕히 계세요.",
+     "안녕히 계십시오.",
+     "잘 있어."
+    ]
+   ],
+   "chiaNote": [
+    "Hai người cùng rời đi (gặp ngoài đường rồi chia tay) → cả hai nói **안녕히 가세요**.",
+    "Mình về, người kia ở lại (rời nhà bạn, rời lớp) → mình nói **안녕히 계세요**, người ở lại đáp **안녕히 가세요**.",
+    "Phát âm: 안녕하세요 nối 안-녕 cho rõ ㄴ; 안녕히 khi nói nhanh ㅎ yếu đi [안녕이].",
+    "Cột 반말 chỉ để nghe hiểu khi xem phim; với người mới quen, thầy cô luôn dùng 해요 hoặc 합니다."
+   ],
+   "tinh": [
+    {
+     "t": "Vào lớp buổi sáng",
+     "c": "Gặp cô giáo ở cửa lớp lúc 8 giờ sáng.",
+     "lv": "lịch sự",
+     "ko": "선생님, **안녕하세요**? – 네, 안녕하세요.",
+     "vi": "Em chào cô ạ. – Ừ, chào em.",
+     "why": "Một câu cho mọi buổi trong ngày. Người kia đáp lại bằng chính câu đó."
+    },
+    {
+     "t": "Gặp bạn mới lần đầu",
+     "c": "Ngày đầu tiên vào lớp tiếng Hàn.",
+     "lv": "lịch sự",
+     "ko": "**만나서 반가워요**. 저는 투예요. – 반가워요. 저는 민수예요.",
+     "vi": "Rất vui được gặp bạn. Mình là Thu. – Rất vui. Mình là Minsu.",
+     "why": "반가워요 đứng một mình cũng được. Sau lời chào là nói tên (mẫu ② của bài)."
+    },
+    {
+     "t": "Phát biểu, phỏng vấn",
+     "c": "Đứng trước lớp / trước người phỏng vấn.",
+     "lv": "trang trọng",
+     "ko": "여러분, **안녕하십니까**? **처음 뵙겠습니다**.",
+     "vi": "Xin chào mọi người. Rất hân hạnh được gặp.",
+     "why": "Trước đông người, người trên → 합니다체. 처음 뵙겠습니다 = chào lần đầu kiểu khiêm tốn (뵙다 = gặp người trên)."
+    },
+    {
+     "t": "Tan học, em về trước",
+     "c": "Em ra về, cô vẫn ở lại lớp.",
+     "lv": "lịch sự",
+     "ko": "선생님, **안녕히 계세요**. – 네, **안녕히 가세요**.",
+     "vi": "Em chào cô ạ. – Ừ, em về nhé.",
+     "why": "Em đi, cô ở → em nói 계세요 (cô ở lại bình an), cô nói 가세요 (em đi bình an)."
+    },
+    {
+     "t": "Hai bạn chia tay ở bến xe",
+     "c": "Cùng ra khỏi lớp, mỗi người đi một hướng.",
+     "lv": "lịch sự",
+     "ko": "**안녕히 가세요**. – 네, 안녕히 가세요.",
+     "vi": "Tạm biệt. – Ừ, tạm biệt.",
+     "why": "Cả hai cùng đi → cả hai nói 가세요."
+    },
+    {
+     "t": "Bạn thân cùng tuổi",
+     "c": "Nhắn tin / gặp bạn thân.",
+     "lv": "thân mật (반말)",
+     "ko": "**안녕**! 내일 봐.",
+     "vi": "Chào nhé! Mai gặp.",
+     "why": "안녕 dùng cả lúc gặp lẫn lúc chia tay với bạn thân. 1A chưa học 반말 — chỉ cần nghe hiểu, không dùng với thầy cô."
+    }
+   ],
+   "rb": [
+    [
+     "Thời điểm",
+     "Không phân biệt sáng / trưa / tối: 안녕하세요 dùng cả ngày."
+    ],
+    [
+     "Đi hay ở",
+     "Chọn theo người nghe: người nghe đi → 가세요; người nghe ở lại → 계세요."
+    ],
+    [
+     "Lần đầu",
+     "만나서 반가워요 / 처음 뵙겠습니다 dùng ở lần gặp đầu; gặp lại thì 안녕하세요 (lâu ngày mới gặp: 다시 만나서 반가워요)."
+    ],
+    [
+     "Mức lịch sự",
+     "합니다: trước lớp, phỏng vấn, công việc. 해요: hằng ngày với người mới quen, người lớn tuổi hơn. 반말: bạn thân."
+    ],
+    [
+     "Gọi điện",
+     "Nhấc máy nói 여보세요 (alo) trước, rồi mới chào 안녕하세요."
+    ]
+   ],
+   "sai": [
+    {
+     "x": "(Em rời nhà bạn) 안녕히 **가세요**.",
+     "o": "안녕히 **계세요**.",
+     "why": "Bạn ở lại nhà → 계세요. Người Việt chỉ có một câu “tạm biệt” nên hay dùng 가세요 cho mọi trường hợp."
+    },
+    {
+     "x": "(Gặp lại cô lần thứ hai) 선생님, **만나서 반가워요**.",
+     "o": "선생님, **안녕하세요**?",
+     "why": "만나서 반가워요 là lời chào lần đầu. Gặp lại hằng ngày chỉ cần 안녕하세요."
+    },
+    {
+     "x": "선생님, **안녕**!",
+     "o": "선생님, **안녕하세요**?",
+     "why": "안녕 là 반말 — nói với thầy cô, người lớn là thất lễ."
+    },
+    {
+     "x": "(Sáng gặp cô) **좋은 아침**이에요.",
+     "o": "**안녕하세요**?",
+     "why": "좋은 아침 dịch từ “good morning”, chỉ dùng thân mật / vui đùa; lời chào lịch sự chuẩn vẫn là 안녕하세요."
+    }
+   ],
+   "pb": [
+    {
+     "vs": "안녕히 가세요 / 안녕히 계세요",
+     "d": "Cùng là “tạm biệt”, chọn theo người nghe. Mẹo: <b>가</b> = đi, <b>계</b> = ở (kính ngữ của 있다).",
+     "ex": [
+      [
+       "(Chủ nhà nói với khách đang về) 안녕히 가세요.",
+       "Anh/chị về nhé."
+      ],
+      [
+       "(Khách nói với chủ nhà) 안녕히 계세요.",
+       "Em xin phép về ạ."
+      ]
+     ]
+    },
+    {
+     "vs": "반갑다 / 기쁘다",
+     "d": "반갑다 = vui vì gặp được người, nhận được tin mong đợi; 기쁘다 = vui nói chung (đỗ thi, được quà). Khi chào chỉ dùng 반갑다.",
+     "ex": [
+      [
+       "만나서 반가워요.",
+       "Rất vui được gặp bạn."
+      ],
+      [
+       "시험에 합격해서 기뻐요.",
+       "Tôi vui vì đỗ kỳ thi."
+      ]
+     ]
+    }
+   ],
+   "topik": [
+    {
+     "src": "Đọc · kỳ 83 câu 23 (lựa chọn ①)",
+     "ko": "**반갑고** 감격스럽다",
+     "note": "반갑다 không chỉ dùng khi chào: nhân vật bất ngờ tìm thấy cuốn nhật ký của người cha đã mất → <b>vui vì gặp lại</b> thứ thân thương + xúc động. Hiểu đúng 반갑다 = “vui khi gặp” giúp chọn tâm trạng ở câu 23."
+    }
+   ],
+   "hoi": [
+    {
+     "q": "안녕하세요 nghĩa đen là gì? Vì sao không cần “chào buổi sáng / buổi tối”?",
+     "a": "안녕 = 安寧 (bình an) → “Anh/chị vẫn bình an chứ?”. Hỏi thăm bình an không phụ thuộc giờ trong ngày nên một câu dùng cả ngày."
+    },
+    {
+     "q": "Em đến nhà bạn chơi rồi về. Em nói gì, bạn nói gì?",
+     "a": "Em (người đi): <b>안녕히 계세요</b>. Bạn (người ở): <b>안녕히 가세요</b>."
+    },
+    {
+     "q": "Khi nào dùng 안녕하십니까 thay cho 안녕하세요?",
+     "a": "Tình huống trang trọng: phát biểu trước lớp, phỏng vấn, chào khách ở công ty, mở đầu bản tin."
+    }
+   ],
+   "luyen": [
+    {
+     "q": "(Em ra về, cô ở lại lớp) 선생님, (    ).",
+     "o": [
+      "안녕히 계세요",
+      "안녕히 가세요",
+      "만나서 반가워요",
+      "안녕"
+     ],
+     "w": "Em đi, cô ở lại → 계세요. 안녕 là 반말."
+    },
+    {
+     "q": "(Gặp bạn mới lần đầu) 안녕하세요? (    ). 저는 마이예요.",
+     "o": [
+      "만나서 반가워요",
+      "안녕히 가세요",
+      "안녕히 계세요",
+      "안녕하십니까"
+     ],
+     "w": "Gặp lần đầu → 만나서 반가워요."
+    },
+    {
+     "q": "(Phỏng vấn xin việc) (    ) 저는 응우옌 반 남입니다.",
+     "o": [
+      "안녕하십니까?",
+      "안녕?",
+      "안녕히 계세요.",
+      "잘 가."
+     ],
+     "w": "Phỏng vấn → trang trọng: 안녕하십니까."
+    },
+    {
+     "q": "(Hai bạn cùng ra bến xe rồi mỗi người một hướng) 가: 안녕히 가세요.  나: (    )",
+     "o": [
+      "안녕히 가세요.",
+      "안녕히 계세요.",
+      "만나서 반가워요.",
+      "처음 뵙겠습니다."
+     ],
+     "w": "Cả hai cùng đi → cả hai nói 가세요."
+    },
+    {
+     "q": "Câu nào <b>không</b> nên nói với thầy cô?",
+     "o": [
+      "선생님, 안녕!",
+      "선생님, 안녕하세요?",
+      "선생님, 안녕히 계세요.",
+      "선생님, 안녕히 가세요."
+     ],
+     "w": "안녕 là 반말 — không dùng với người trên."
+    }
+   ],
+   "em": [
+    "Viết đoạn hội thoại 4 câu: em gặp bạn mới ở lớp (chào lần đầu + nói tên) rồi chia tay ở cửa (em về, bạn ở lại).",
+    "Viết 1 câu chào trang trọng để mở đầu bài thuyết trình trước lớp."
+   ],
+   "co": "Đóng vai ở cửa lớp: một người đứng yên (ở lại), một người đi ra — đổi vai liên tục để học sinh phản xạ 가세요 / 계세요 theo “ai đi”. Dạy cúi chào (고개 숙이기) cùng lúc với câu chào. Học sinh hay đọc 안녕 dính thành một âm: tách 안-녕 cho rõ ㄴ."
+  },
+  {
+   "no": 2,
+   "id": "g_1A_01_2",
+   "cn": "Giới thiệu – nói “là”",
+   "core": "Câu “A là B” lịch sự thường: <b>은/는</b> nêu chủ đề (nói về ai, cái gì), <b>이에요/예요</b> = “là” đặt ở cuối câu. Câu hỏi và câu trả lời giống hệt nhau, chỉ khác ngữ điệu.",
+   "goc": "Hai mảnh: <b>은/는</b> = tiểu từ chủ đề (“về… thì”, “còn… thì”) + <b>이에요/예요</b> = 이다 (là) chia đuôi 해요. Tiếng Việt “Tôi là Lan” đặt “là” ở giữa; tiếng Hàn đặt “là” ở <b>cuối</b> và dính liền danh từ: 저는 란이에요 = “Tôi thì — Lan-là”. 예요 chính là 이에요 rút gọn sau nguyên âm (나나이에요 → 나나예요). Vì 이다 bám vào danh từ nên <b>viết liền, không cách</b>: 학생이에요.",
+   "chia": [
+    [
+     "",
+     "받침 ×",
+     "받침 ○"
+    ],
+    [
+     "은/는",
+     "저 → 저**는**, 투 → 투**는**",
+     "란 → 란**은**, 선생님 → 선생님**은**"
+    ],
+    [
+     "이에요/예요",
+     "의사 → 의사**예요**, 마이 → 마이**예요**",
+     "학생 → 학생**이에요**, 한국 사람 → 한국 사람**이에요**"
+    ],
+    [
+     "Hỏi (↗)",
+     "기자**예요**?",
+     "회사원**이에요**?"
+    ]
+   ],
+   "chiaNote": [
+    "Cùng một luật: chữ Hangul cuối **có 받침** → 은, 이에요; **không 받침** → 는, 예요.",
+    "Đọc nối âm: 학생이에요 [학쌩이에요], 선생님은 [선생니믄], 란이에요 [라니에요].",
+    "Nói về mình dùng 저 (khiêm tốn); 나 chỉ dùng với bạn thân (học sau).",
+    "Chủ ngữ đã rõ thì bỏ: (저는) 베트남 사람이에요."
+   ],
+   "tinh": [
+    {
+     "t": "Tự giới thiệu ở lớp",
+     "c": "Buổi học đầu tiên, lần lượt từng bạn đứng lên.",
+     "lv": "lịch sự",
+     "ko": "저**는** 투**예요**. 베트남 사람**이에요**.",
+     "vi": "Mình là Thu. Mình là người Việt Nam.",
+     "why": "Câu 2 bỏ 저는 vì đã rõ đang nói về mình — người Hàn rất hay bỏ chủ ngữ."
+    },
+    {
+     "t": "Hỏi nghề",
+     "c": "Hỏi bạn mới quen làm nghề gì.",
+     "lv": "lịch sự",
+     "ko": "마이클 씨**는** 기자**예요**? – 네, 기자**예요**.",
+     "vi": "Michael là phóng viên à? – Vâng, tôi là phóng viên.",
+     "why": "Câu hỏi và câu trả lời giống hệt; câu hỏi lên giọng cuối (↗), câu trả lời xuống giọng (↘)."
+    },
+    {
+     "t": "Giới thiệu người khác",
+     "c": "Giới thiệu thầy giáo với bạn.",
+     "lv": "lịch sự",
+     "ko": "이분**은** 김 선생님**이에요**.",
+     "vi": "Đây là thầy Kim.",
+     "why": "이분 = vị này (kính trọng). 선생님 có 받침 → 이에요."
+    },
+    {
+     "t": "Hỏi quốc tịch",
+     "c": "Bạn Hàn hỏi em đến từ nước nào.",
+     "lv": "lịch sự",
+     "ko": "어느 나라 사람**이에요**? – 저**는** 베트남 사람**이에요**.",
+     "vi": "Bạn là người nước nào? – Mình là người Việt Nam.",
+     "why": "Câu hỏi có từ để hỏi (어느 나라) vẫn kết thúc bằng 이에요/예요."
+    },
+    {
+     "t": "Đối chiếu hai người",
+     "c": "Giới thiệu gia đình.",
+     "lv": "lịch sự",
+     "ko": "저**는** 학생**이에요**. 언니**는** 회사원**이에요**.",
+     "vi": "Tôi là sinh viên, còn chị tôi là nhân viên công ty.",
+     "why": "은/는 còn nghĩa “còn… thì” — đặt hai chủ đề cạnh nhau để so. Nghĩa đối chiếu này gặp rất nhiều trong đề đọc."
+    }
+   ],
+   "rb": [
+    [
+     "Loại từ",
+     "이에요/예요 chỉ gắn sau danh từ. Động từ có đuôi riêng (Bài 3: -아요/어요)."
+    ],
+    [
+     "Mức lịch sự",
+     "해요체: lịch sự, mềm — dùng hằng ngày. Phát biểu, phỏng vấn → 입니다 (mẫu ③)."
+    ],
+    [
+     "Gọi người",
+     "Bạn cùng lớp: tên + 씨 (마이클 씨). Không dùng 씨 cho chính mình; thầy cô gọi 선생님."
+    ],
+    [
+     "Chính tả",
+     "은/는 và 이에요/예요 đều viết liền với danh từ: 저는, 학생이에요."
+    ]
+   ],
+   "sai": [
+    {
+     "x": "저는 란**예요**.",
+     "o": "저는 란**이에요**.",
+     "why": "란 có 받침 ㄴ → 이에요. Học sinh hay xét theo chữ Latin “Lan” hoặc quên xét."
+    },
+    {
+     "x": "저**은** 학생이에요.",
+     "o": "저**는** 학생이에요.",
+     "why": "저 không 받침 → 는."
+    },
+    {
+     "x": "저는 학생 **이에요**.",
+     "o": "저는 학생**이에요**.",
+     "why": "이에요 là 이다 chia đuôi — viết liền với danh từ."
+    },
+    {
+     "x": "저는 마이 **씨**예요.",
+     "o": "저는 마이예요.",
+     "why": "씨 là cách gọi tôn trọng người khác, không dùng cho chính mình."
+    },
+    {
+     "x": "저는 **이에요** 학생.",
+     "o": "저는 학생**이에요**.",
+     "why": "Tiếng Việt đặt “là” ở giữa; tiếng Hàn “là” luôn ở cuối câu."
+    }
+   ],
+   "pb": [
+    {
+     "vs": "이에요 / 예요",
+     "d": "Một từ, hai dạng: sau nguyên âm 이에요 rút gọn thành 예요 cho dễ đọc. Không phải hai nghĩa khác nhau.",
+     "ex": [
+      [
+       "저는 의사예요.",
+       "Tôi là bác sĩ. (의사 không 받침)"
+      ],
+      [
+       "저는 회사원이에요.",
+       "Tôi là nhân viên công ty. (원 có 받침)"
+      ]
+     ]
+    },
+    {
+     "vs": "은/는 và 이/가 (Bài 2)",
+     "d": "은/는 = nêu chủ đề, đối chiếu (“còn… thì”); 이/가 = chủ ngữ của 있다/없다, thông tin mới. Câu giới thiệu “A là B” dùng 은/는.",
+     "ex": [
+      [
+       "저는 학생이에요.",
+       "Tôi là sinh viên."
+      ],
+      [
+       "우산이 있어요.",
+       "Có ô."
+      ]
+     ]
+    }
+   ],
+   "topik": [
+    {
+     "src": "Đọc · kỳ 83 câu 48",
+     "ko": "**그것은** 행복에 대해 가지는 믿음과 태도**이다**.",
+     "note": "Văn viết TOPIK dùng <b>이다</b> (= 이에요 của văn nói). Khung “N은/는 … N이다” là câu định nghĩa / kết luận: đọc chủ đề (trước 은/는) và phần giải thích (trước 이다) trước tiên."
+    },
+    {
+     "src": "Đọc · kỳ 83 câu 37",
+     "ko": "반면 호모 사피엔스**는** 서로를 포용하고 보호하는 친화력을 무기로 살아남았다.",
+     "note": "은/는 đối chiếu: câu trước nói về người Neanderthal, câu này “<b>còn</b> Homo sapiens thì…”. Gặp 반면 + N은/는 → đoạn văn đang so sánh hai đối tượng."
+    }
+   ],
+   "hoi": [
+    {
+     "q": "“Tôi là Lan” — tiếng Việt “là” đứng giữa câu, tiếng Hàn đứng ở đâu?",
+     "a": "Ở cuối, dính vào danh từ: 저는 란<b>이에요</b>."
+    },
+    {
+     "q": "Vì sao 마이 dùng 예요 mà 란 dùng 이에요?",
+     "a": "Xét chữ cuối: 이 không 받침 → 예요 (이에요 rút gọn); 란 có 받침 ㄴ → 이에요, ㄴ nối sang đọc [라니에요]."
+    },
+    {
+     "q": "“마이 씨는 학생이에요.” và “마이 씨는 학생이에요?” khác nhau thế nào khi nói?",
+     "a": "Chữ giống hệt; câu hỏi lên giọng cuối (↗), câu kể xuống giọng (↘)."
+    }
+   ],
+   "luyen": [
+    {
+     "q": "저(    ) 응우옌 반 남이에요.",
+     "o": [
+      "는",
+      "은",
+      "이",
+      "가"
+     ],
+     "w": "저 không 받침 → 는."
+    },
+    {
+     "q": "저는 베트남 사람(    ).",
+     "o": [
+      "이에요",
+      "예요",
+      "입니까",
+      "은"
+     ],
+     "w": "람 có 받침 ㅁ → 이에요."
+    },
+    {
+     "q": "가: 마이 씨는 의사(    )?  나: 네, 의사예요.",
+     "o": [
+      "예요",
+      "이에요",
+      "는",
+      "은"
+     ],
+     "w": "의사 không 받침 → 예요."
+    },
+    {
+     "q": "가: 란 씨(    ) 학생이에요?  나: 네, 학생이에요.",
+     "o": [
+      "은",
+      "는",
+      "예요",
+      "이에요"
+     ],
+     "w": "란 có 받침 ㄴ → 은."
+    },
+    {
+     "q": "Câu nào đúng?",
+     "o": [
+      "저는 회사원이에요.",
+      "저는 회사원 이에요.",
+      "저은 회사원이에요.",
+      "저는 회사원예요."
+     ],
+     "w": "저 → 는; 원 có 받침 → 이에요, viết liền."
+    }
+   ],
+   "em": [
+    "Viết 3 câu giới thiệu bản thân: tên, quốc tịch, nghề (저는 …이에요/예요).",
+    "Giới thiệu một người trong gia đình bằng câu đối chiếu: 저는 …이에요/예요. 언니[형/동생]는/은 …이에요/예요."
+   ],
+   "co": "Luyện phản xạ 받침: cô đọc nhanh từ (학생, 의사, 회사원, 가수, 선생님…), học sinh giơ tay trái = 이에요/은, tay phải = 예요/는. Cho học sinh viết tên mình bằng Hangul trước (응우옌, 투, 란…) rồi tự giới thiệu. Ngữ điệu ↗/↘: cả lớp đọc cùng một câu hai lần."
+  },
+  {
+   "no": 3,
+   "id": "g_1A_01_3",
+   "cn": "Giới thiệu – trang trọng",
+   "core": "Dạng trang trọng của “là”: <b>입니다</b> (kể, trả lời), <b>입니까?</b> (hỏi). Gắn y nguyên sau mọi danh từ, không cần xét 받침.",
+   "goc": "입니다 = 이다 + đuôi trang trọng -ㅂ니다; 입니까 = 이다 + -ㅂ니까. Cùng nghĩa với 이에요/예요, chỉ khác <b>mức trang trọng</b>: 합니다체 dùng khi đứng trước đông người, phỏng vấn, bản tin, thông báo, công ty, quân đội. Dễ hơn 이에요/예요 vì <b>không xét 받침</b>: 나나입니다, 학생입니다. Phát âm: ㅂ đứng trước ㄴ đọc thành ㅁ → 입니다 [임니다], 입니까 [임니까].",
+   "chia": [
+    [
+     "",
+     "받침 ×",
+     "받침 ○"
+    ],
+    [
+     "Kể / trả lời",
+     "기자 → 기자**입니다**",
+     "학생 → 학생**입니다**"
+    ],
+    [
+     "Hỏi",
+     "기자 → 기자**입니까**?",
+     "학생 → 학생**입니까**?"
+    ],
+    [
+     "So với 해요",
+     "기자예요 ↔ 기자**입니다**",
+     "학생이에요 ↔ 학생**입니다**"
+    ]
+   ],
+   "chiaNote": [
+    "Phát âm luôn là [임니다], [임니까] (mũi hóa: ㅂ + ㄴ → ㅁ + ㄴ). Cùng luật: 감사합니다 [감사함니다].",
+    "Câu hỏi đã có đuôi -까 nên không phụ thuộc ngữ điệu như 이에요?.",
+    "Một bài nói nên giữ một mức: đã mở đầu bằng 합니다 thì giữ tới hết phần trang trọng."
+   ],
+   "tinh": [
+    {
+     "t": "Tự giới thiệu đầu khóa",
+     "c": "Đứng trước lớp giới thiệu bản thân.",
+     "lv": "trang trọng",
+     "ko": "안녕하십니까? 저는 응우옌 티 마이**입니다**. 베트남 사람**입니다**.",
+     "vi": "Xin chào. Tôi là Nguyễn Thị Mai. Tôi là người Việt Nam.",
+     "why": "Đứng trước lớp → 합니다체 từ câu chào tới hết."
+    },
+    {
+     "t": "Phỏng vấn",
+     "c": "Người phỏng vấn hỏi thông tin.",
+     "lv": "trang trọng",
+     "ko": "가: 학생**입니까**?  나: 네, 하노이대학교 학생**입니다**.",
+     "vi": "Bạn là sinh viên à? – Vâng, tôi là sinh viên Đại học Hà Nội.",
+     "why": "Bị hỏi bằng 입니까 → đáp bằng 입니다. Đáp 이에요 không sai nhưng kém trang trọng."
+    },
+    {
+     "t": "Thông báo trên tàu điện",
+     "c": "Loa thông báo ga sắp tới.",
+     "lv": "trang trọng",
+     "ko": "이번 역은 서울역**입니다**.",
+     "vi": "Ga sắp tới là ga Seoul.",
+     "why": "Thông báo, bản tin, hướng dẫn trên loa luôn dùng 합니다체."
+    },
+    {
+     "t": "Gọi điện tới cơ quan",
+     "c": "Em gọi tới trung tâm tiếng Hàn.",
+     "lv": "trang trọng",
+     "ko": "여보세요? 거기 한국어학원**입니까**?",
+     "vi": "Alo, đó có phải trung tâm tiếng Hàn không ạ?",
+     "why": "거기 = chỗ đó (đầu dây bên kia). Gọi tới cơ quan → 입니까."
+    },
+    {
+     "t": "Giới thiệu trong công việc",
+     "c": "Gặp đối tác lần đầu.",
+     "lv": "trang trọng",
+     "ko": "처음 뵙겠습니다. 저는 김민수**입니다**. 회사원**입니다**.",
+     "vi": "Rất hân hạnh. Tôi là Kim Minsu. Tôi là nhân viên công ty.",
+     "why": "Chào trang trọng + 입니다: bộ câu chuẩn khi gặp đối tác, khách hàng."
+    }
+   ],
+   "rb": [
+    [
+     "Loại từ",
+     "Chỉ sau danh từ. Động/tính từ trang trọng: -ㅂ니다/습니다 (Bài 7)."
+    ],
+    [
+     "Khi dùng",
+     "Phát biểu, phỏng vấn, công việc, bản tin, thông báo."
+    ],
+    [
+     "Không dùng",
+     "Nói chuyện thân với bạn bè — nghe cứng, xa cách."
+    ],
+    [
+     "Văn viết",
+     "Bài viết TOPIK (câu 53, 54) không dùng 입니다 mà dùng 이다: 학생이다."
+    ]
+   ],
+   "sai": [
+    {
+     "x": "저는 학생 **입니다**.",
+     "o": "저는 학생**입니다**.",
+     "why": "입니다 là 이다 chia đuôi — viết liền với danh từ."
+    },
+    {
+     "x": "저는 마이**ㅂ니다**.",
+     "o": "저는 마이**입니다**.",
+     "why": "Sau danh từ luôn là 입니다 (이다 + ㅂ니다), kể cả danh từ không 받침. -ㅂ니다 gắn thẳng chỉ dành cho gốc động/tính từ (가다 → 갑니다)."
+    },
+    {
+     "x": "입니다 → đọc [입-니-다]",
+     "o": "입니다 → đọc [**임**니다]",
+     "why": "ㅂ + ㄴ → ㅁ (mũi hóa). Đọc rõ ㅂ nghe rất “ngoại quốc”."
+    },
+    {
+     "x": "(Bài viết câu 54) 이것은 중요한 문제**입니다**.",
+     "o": "이것은 중요한 문제**이다**.",
+     "why": "Bài viết TOPIK dùng 한다체 (이다); dùng 입니다 / 이에요 là sai văn phong, bị trừ điểm."
+    }
+   ],
+   "pb": [
+    {
+     "vs": "이에요/예요",
+     "d": "Cùng nghĩa “là”. 입니다: trang trọng, cứng, không xét 받침. 이에요/예요: lịch sự mềm, hằng ngày, xét 받침.",
+     "ex": [
+      [
+       "저는 마이예요.",
+       "Mình là Mai. (trong lớp, với bạn mới)"
+      ],
+      [
+       "저는 마이입니다.",
+       "Tôi là Mai. (phát biểu, phỏng vấn)"
+      ]
+     ]
+    },
+    {
+     "vs": "이다 (văn viết)",
+     "d": "Báo, sách, đề TOPIK dùng 이다 / 이었다. Gặp 이다 trong đề = 입니다 / 이에요 của văn nói.",
+     "ex": [
+      [
+       "오늘은 시험 날이다.",
+       "Hôm nay là ngày thi. (văn viết)"
+      ]
+     ]
+    }
+   ],
+   "topik": [
+    {
+     "src": "Đọc · kỳ 83 câu 31",
+     "ko": "'가면 증후군'이란 사회적으로 인정을 받고 있지만 그것이 자신의 진짜 실력 때문이 아니라는 생각으로 괴로워하는 현상**이다**.",
+     "note": "Văn viết dùng <b>이다</b> thay cho 입니다. Khung “N(이)란 … N이다” = câu định nghĩa; trong bài nghe trang trọng (bản tin, bài giảng) cùng câu đó sẽ được nói là … 현상<b>입니다</b>."
+    }
+   ],
+   "hoi": [
+    {
+     "q": "Vì sao 입니다 dễ hơn 이에요/예요?",
+     "a": "Không cần xét 받침: mọi danh từ + 입니다."
+    },
+    {
+     "q": "입니다 đọc thế nào? Vì sao?",
+     "a": "[임니다]: ㅂ đứng trước ㄴ đọc thành ㅁ. Tương tự 합니다 [함니다], 감사합니다 [감사함니다]."
+    },
+    {
+     "q": "Buổi phỏng vấn, câu nào hợp hơn: 저는 란이에요 hay 저는 란입니다?",
+     "a": "<b>란입니다</b> — trang trọng. 란이에요 không sai nhưng mềm, hợp lớp học hơn."
+    }
+   ],
+   "luyen": [
+    {
+     "q": "(Phỏng vấn) 저는 대학생(    ).",
+     "o": [
+      "입니다",
+      "이에요",
+      "예요",
+      "입니까"
+     ],
+     "w": "Phỏng vấn → trang trọng, câu kể → 입니다."
+    },
+    {
+     "q": "가: 마이클 씨는 미국 사람(    )?  나: 네, 미국 사람입니다.",
+     "o": [
+      "입니까",
+      "입니다",
+      "이에요",
+      "예요"
+     ],
+     "w": "Câu hỏi trang trọng → 입니까."
+    },
+    {
+     "q": "Chọn câu viết đúng.",
+     "o": [
+      "저는 의사입니다.",
+      "저는 의사ㅂ니다.",
+      "저는 의사 입니다.",
+      "저는 의사이입니다."
+     ],
+     "w": "Danh từ + 입니다, viết liền."
+    },
+    {
+     "q": "입니다 đọc là:",
+     "o": [
+      "[임니다]",
+      "[입니다]",
+      "[이니다]",
+      "[임미다]"
+     ],
+     "w": "ㅂ + ㄴ → ㅁ + ㄴ."
+    },
+    {
+     "q": "(Thông báo trên tàu điện) 이번 역은 시청역(    ).",
+     "o": [
+      "입니다",
+      "이에요",
+      "예요",
+      "이야"
+     ],
+     "w": "Thông báo → 합니다체."
+    }
+   ],
+   "em": [
+    "Viết 3 câu phát biểu tự giới thiệu trang trọng: chào + tên + quốc tịch / nghề (…입니다).",
+    "Đổi 3 câu em viết ở mẫu ② (…이에요/예요) sang …입니다."
+   ],
+   "co": "Cho học sinh đứng dậy “phát biểu” thật — tư thế + 합니다체 — để cảm được khác biệt mức lịch sự. Sửa phát âm [임니다] ngay từ buổi đầu (học sinh hay đọc rõ ㅂ). Gieo mầm: TOPIK đọc / viết dùng 이다, không phải 입니다."
+  },
+  {
+   "no": 4,
+   "id": "g_1A_01_4",
+   "cn": "Phủ định danh từ",
+   "core": "“Không phải là N”: <b>N이/가 아닙니다</b> (trang trọng), <b>N이/가 아니에요</b> (lịch sự thường) — phủ định của 입니다 / 이에요.",
+   "goc": "아니다 = “không phải” — một <b>từ riêng</b>, đối của 이다. Danh từ đứng trước nhận 이/가 (có 받침 + 이, không 받침 + 가). Vì 아니다 tách khỏi danh từ nên <b>viết cách</b>: 학생이 아니에요. Phủ định danh từ <b>không dùng 안</b> (안 학생이에요 ✕) — 안 chỉ đứng trước động/tính từ (Bài 3). Câu trả lời phủ định thường: 아니요 (không) + N이/가 아니에요 + thông tin đúng.",
+   "chia": [
+    [
+     "",
+     "받침 ×",
+     "받침 ○"
+    ],
+    [
+     "Trang trọng",
+     "의사 → 의사**가 아닙니다**",
+     "학생 → 학생**이 아닙니다**"
+    ],
+    [
+     "Lịch sự thường",
+     "의사 → 의사**가 아니에요**",
+     "학생 → 학생**이 아니에요**"
+    ],
+    [
+     "Hỏi",
+     "의사**가 아닙니까**?",
+     "학생**이 아니에요**?"
+    ],
+    [
+     "Văn viết",
+     "의사**가 아니다**",
+     "학생**이 아니다**"
+    ]
+   ],
+   "chiaNote": [
+    "Luật 받침 giống 이에요/예요: có 받침 → **이**, không 받침 → **가**.",
+    "아닙니다 đọc [아님니다] (cùng luật mũi hóa với 입니다).",
+    "Khi nói hay bỏ 이/가: 저 학생 아니에요.",
+    "Trả lời phủ định tự nhiên = phủ định + thông tin đúng: 아니요, 의사가 아니에요. 간호사예요."
+   ],
+   "tinh": [
+    {
+     "t": "Sửa thông tin sai",
+     "c": "Bạn đoán nhầm quốc tịch của em.",
+     "lv": "lịch sự",
+     "ko": "가: 일본 사람이에요?  나: 아니요, 일본 사람**이 아니에요**. 베트남 사람이에요.",
+     "vi": "Bạn là người Nhật à? – Không, mình không phải người Nhật. Mình là người Việt Nam.",
+     "why": "Phủ định + nói ngay thông tin đúng = cách trả lời tự nhiên nhất."
+    },
+    {
+     "t": "Nhận nhầm người (trang trọng)",
+     "c": "Ở công ty, có người gọi nhầm tên.",
+     "lv": "trang trọng",
+     "ko": "가: 김민수 씨입니까?  나: 아니요, 저는 김민수**가 아닙니다**. 이준호입니다.",
+     "vi": "Anh là Kim Minsu phải không? – Không, tôi không phải Kim Minsu. Tôi là Lee Junho.",
+     "why": "Hỏi 입니까 → đáp 아닙니다."
+    },
+    {
+     "t": "Nhầm đồ vật",
+     "c": "Bạn đưa nhầm túi.",
+     "lv": "lịch sự",
+     "ko": "이거 제 가방**이 아니에요**.",
+     "vi": "Cái này không phải túi của mình.",
+     "why": "Mẫu này dùng cả với đồ vật (nối sang Bài 2: 이거)."
+    },
+    {
+     "t": "Đáp lời cảm ơn",
+     "c": "Người Hàn cảm ơn em.",
+     "lv": "lịch sự",
+     "ko": "가: 감사합니다.  나: **아니에요**.",
+     "vi": "Cảm ơn bạn. – Không có gì.",
+     "why": "아니에요 đứng một mình = “không có gì / đâu có”, đáp lời cảm ơn, xin lỗi, lời khen. Dùng hằng ngày."
+    },
+    {
+     "t": "Văn viết",
+     "c": "Câu trong sách, báo, đề TOPIK.",
+     "lv": "văn viết",
+     "ko": "그것은 쉬운 일**이 아니다**.",
+     "vi": "Đó không phải việc dễ.",
+     "why": "Văn viết dùng 아니다. Gặp rất nhiều trong đề đọc."
+    }
+   ],
+   "rb": [
+    [
+     "Loại từ",
+     "Chỉ phủ định danh từ. Động/tính từ phủ định bằng 안 (Bài 3) / -지 않다."
+    ],
+    [
+     "Tiểu từ",
+     "Luôn N이/가 아니다 (không phải 을/를). Khi nói có thể bỏ."
+    ],
+    [
+     "Mức lịch sự",
+     "아닙니다: trang trọng · 아니에요: lịch sự thường · 아니다: văn viết."
+    ],
+    [
+     "Từ trả lời",
+     "아니요 (= “không”, đối của 네) khác 아니에요 (= “không phải là”)."
+    ]
+   ],
+   "sai": [
+    {
+     "x": "저는 학생**가** 아니에요.",
+     "o": "저는 학생**이** 아니에요.",
+     "why": "학생 có 받침 → 이."
+    },
+    {
+     "x": "저는 **안** 의사예요.",
+     "o": "저는 의사**가 아니에요**.",
+     "why": "안 không đứng trước danh từ. Lỗi do dịch từng chữ “không phải” → 안."
+    },
+    {
+     "x": "저는 학생**이아니에요**.",
+     "o": "저는 학생**이 아니에요**.",
+     "why": "아니다 là từ riêng → viết cách sau 이/가."
+    },
+    {
+     "x": "가: 학생이에요?  나: **아니에요**, 학생이 아니에요.",
+     "o": "**아니요**, 학생이 아니에요.",
+     "why": "Đầu câu trả lời dùng 아니요 (đối của 네); 아니에요 là vị ngữ “không phải”."
+    }
+   ],
+   "pb": [
+    {
+     "vs": "안 + động từ (Bài 3)",
+     "d": "아니다 phủ định danh từ (“không phải là”); 안 phủ định hành động (“không làm”).",
+     "ex": [
+      [
+       "저는 학생이 아니에요.",
+       "Tôi không phải là học sinh."
+      ],
+      [
+       "저는 공부 안 해요.",
+       "Tôi không học."
+      ]
+     ]
+    },
+    {
+     "vs": "아니요 / 아니에요",
+     "d": "아니요 = “không” (trả lời có/không), đứng đầu câu; 아니에요 = “không phải”, đứng cuối câu — đứng một mình còn nghĩa “không có gì”.",
+     "ex": [
+      [
+       "아니요, 의사가 아니에요.",
+       "Không, tôi không phải bác sĩ."
+      ],
+      [
+       "고마워요. – 아니에요.",
+       "Cảm ơn. – Không có gì."
+      ]
+     ]
+    }
+   ],
+   "topik": [
+    {
+     "src": "Đọc · kỳ 91 câu 18",
+     "ko": "그런데 뇌를 사용하는 방식이 이전과 달라졌을 뿐 사용량이 줄어든 것**이 아니다**.",
+     "note": "“… 것이 아니다” = phủ định một suy nghĩ thường gặp. Câu trước nói điều “người ta có thể nghĩ”, câu có 이/가 아니다 là chỗ tác giả <b>sửa lại hiểu lầm</b> — đọc kỳ chỗ này."
+    },
+    {
+     "src": "Đọc · kỳ 83 câu 44",
+     "ko": "그러나 이 시대에 이루어진 발견의 진정한 의미는 대륙의 발견**이 아니라** 바다의 발견이었다.",
+     "note": "A이/가 아니라 B = không phải A mà là B → ý tác giả nằm ở <b>B</b>. Mẫu này học ở trình độ cao hơn, nhưng gốc vẫn là 이/가 아니다."
+    }
+   ],
+   "hoi": [
+    {
+     "q": "Vì sao không nói 안 학생이에요?",
+     "a": "안 chỉ đứng trước động/tính từ. Danh từ phủ định bằng từ 아니다: 학생<b>이 아니에요</b>."
+    },
+    {
+     "q": "아니요 và 아니에요 khác nhau thế nào?",
+     "a": "아니요 = “không” (đối của 네), đứng đầu câu trả lời; 아니에요 = “không phải là…”, đứng cuối câu."
+    },
+    {
+     "q": "Người Hàn cảm ơn em, em đáp thế nào?",
+     "a": "<b>아니에요</b> (không có gì)."
+    }
+   ],
+   "luyen": [
+    {
+     "q": "저는 의사(    ) 아닙니다.",
+     "o": [
+      "가",
+      "이",
+      "는",
+      "를"
+     ],
+     "w": "의사 không 받침 → 가."
+    },
+    {
+     "q": "가: 중국 사람이에요?  나: 아니요, 중국 사람(    ).",
+     "o": [
+      "이 아니에요",
+      "가 아니에요",
+      "이에요",
+      "안 이에요"
+     ],
+     "w": "람 có 받침 → 이 아니에요."
+    },
+    {
+     "q": "가: 김 선생님입니까?  나: (    ), 저는 김 선생님이 아닙니다.",
+     "o": [
+      "아니요",
+      "네",
+      "예",
+      "맞아요"
+     ],
+     "w": "Trả lời phủ định → 아니요."
+    },
+    {
+     "q": "Câu nào đúng?",
+     "o": [
+      "이거 제 책이 아니에요.",
+      "이거 제 책가 아니에요.",
+      "이거 안 제 책이에요.",
+      "이거 제 책이아니에요."
+     ],
+     "w": "책 có 받침 → 이; viết cách 아니에요; không dùng 안 với danh từ."
+    },
+    {
+     "q": "가: 고마워요.  나: (    ).",
+     "o": [
+      "아니에요",
+      "아니요",
+      "안녕히 가세요",
+      "반가워요"
+     ],
+     "w": "Đáp lời cảm ơn: 아니에요 = không có gì."
+    }
+   ],
+   "em": [
+    "Viết 2 cặp hỏi – đáp sửa thông tin sai về em: 가: …이에요/예요? 나: 아니요, …이/가 아니에요. …이에요/예요.",
+    "Viết 1 câu trang trọng: 저는 …이/가 아닙니다. …입니다."
+   ],
+   "co": "Trò “Đúng hay sai?”: cô cầm thẻ hình nghề nghiệp / quốc kỳ, cố ý nói sai (이 사람은 의사예요?) để học sinh sửa bằng 아니요, …이/가 아니에요. …예요. Nhấn 3 lỗi: 안 + danh từ, 이/가 theo 받침, 아니요 ≠ 아니에요."
+  }
+ ]
+}

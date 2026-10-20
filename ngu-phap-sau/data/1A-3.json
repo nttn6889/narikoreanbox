@@ -1,0 +1,976 @@
+{
+ "b": "1A",
+ "n": 3,
+ "tong": {
+  "t": "Bài 3: kể việc mình làm – câu động từ đầu tiên",
+  "p": "Đến Bài 3 học sinh mới có <b>câu động từ</b>: ai – ở đâu – làm gì. 4 mẫu lắp thành một câu hoàn chỉnh: 저는 도서관<b>에서</b> 책<b>을</b> 읽<b>어요</b> / 저는 커피를 <b>안</b> 마셔요. Viên gạch nền quan trọng nhất của cả sơ cấp: <b>chia -아요/어요</b> theo nguyên âm cuối của gốc (ㅏ, ㅗ → 아요; còn lại → 어요; 하다 → 해요) và <b>rút gọn nguyên âm</b> (가아요 → 가요, 보아요 → 봐요, 마시어요 → 마셔요). Sai bước này thì mọi đuôi sau (-았/었어요, -아서, -아/어 보다…) đều sai theo. Trật tự câu khác tiếng Việt: <b>động từ luôn ở cuối</b>, tiểu từ cho biết vai của từng danh từ.",
+  "tb": [
+   [
+    "Mẫu",
+    "Gắn với",
+    "Câu hỏi chìa khóa"
+   ],
+   [
+    "V-아요/어요",
+    "gốc động từ",
+    "Nguyên âm cuối của gốc? ㅏ, ㅗ → 아요; còn lại → 어요; 하다 → 해요"
+   ],
+   [
+    "N을/를",
+    "danh từ",
+    "Danh từ có bị hành động tác động không? (có 받침 → 을)"
+   ],
+   [
+    "N에서",
+    "nơi chốn",
+    "Ở đó diễn ra hành động? (chỉ có mặt / đi tới → 에, Bài 4)"
+   ],
+   [
+    "안 V",
+    "động từ",
+    "Động từ dạng N + 하다? → 안 đặt giữa: 공부 안 해요"
+   ]
+  ]
+ },
+ "p": [
+  {
+   "no": 1,
+   "id": "g_1A_03_1",
+   "cn": "Đuôi câu hiện tại",
+   "core": "Đuôi câu lịch sự thường cho động từ: kể việc đang làm, thói quen, cả việc sắp làm. Chia theo <b>nguyên âm cuối của gốc</b>: ㅏ, ㅗ → <b>-아요</b>; còn lại → <b>-어요</b>; 하다 → <b>해요</b>.",
+   "goc": "Động từ trong từ điển có đuôi -다 (가다, 먹다). Bỏ 다 → <b>gốc</b> (가, 먹) → nhìn <b>nguyên âm của âm tiết cuối</b>: ㅏ, ㅗ (nguyên âm “sáng”) + 아요; các nguyên âm khác (“tối”) + 어요; 하다 → 해요. Đây là quy luật <b>hài hòa nguyên âm</b> của tiếng Hàn. Gốc kết thúc bằng nguyên âm thì hai nguyên âm gặp nhau sẽ <b>rút gọn</b>: 가+아요 → 가요, 보+아요 → 봐요, 배우+어요 → 배워요, 마시+어요 → 마셔요. Đuôi không đổi theo ngôi (저는 가요, 친구는 가요) và một đuôi dùng cho hiện tại, thói quen, tương lai gần.",
+   "chia": [
+    [
+     "Quy tắc",
+     "Gốc có 받침",
+     "Gốc không 받침 (rút gọn)"
+    ],
+    [
+     "ㅏ, ㅗ + 아요",
+     "앉다 → 앉**아요**, 놀다 → 놀**아요**",
+     "가다 → **가요**, 보다 → **봐요**, 오다 → **와요**"
+    ],
+    [
+     "ㅓ, ㅜ, ㅡ, ㅣ… + 어요",
+     "먹다 → 먹**어요**, 읽다 → 읽**어요**",
+     "서다 → **서요**, 배우다 → **배워요**, 마시다 → **마셔요**, 쉬다 → 쉬**어요**"
+    ],
+    [
+     "하다 → 해요",
+     "공부하다 → 공부**해요**",
+     "일하다 → 일**해요**, 운동하다 → 운동**해요**"
+    ]
+   ],
+   "chiaNote": [
+    "Rút gọn: ㅏ+아 → ㅏ (가요) · ㅗ+아 → ㅘ (봐요) · ㅓ+어 → ㅓ (서요) · ㅜ+어 → ㅝ (배워요) · ㅣ+어 → ㅕ (마셔요) · ㅐ+어 → ㅐ (보내요). ㅟ không rút: 쉬어요.",
+    "Gốc nhiều âm tiết: chỉ nhìn **âm tiết cuối** — 만들다 → 들 (ㅡ) → 만들어요; 기다리다 → 리 (ㅣ) → 기다려요.",
+    "Đọc nối âm: 먹어요 [머거요], 읽어요 [일거요], 앉아요 [안자요].",
+    "Câu hỏi = câu kể + lên giọng: 공부해요?(↗) – 네, 공부해요.(↘)"
+   ],
+   "tinh": [
+    {
+     "t": "Đang làm gì",
+     "c": "Bạn gọi điện hỏi.",
+     "lv": "lịch sự",
+     "ko": "지금 뭐 **해요**? – 친구를 만나**요**.",
+     "vi": "Bây giờ bạn đang làm gì? – Mình đang gặp bạn.",
+     "why": "Một đuôi cho hành động đang diễn ra; tiếng Việt phải thêm “đang”."
+    },
+    {
+     "t": "Thói quen",
+     "c": "Kể sinh hoạt hằng ngày.",
+     "lv": "lịch sự",
+     "ko": "저는 매일 신문을 읽**어요**.",
+     "vi": "Ngày nào tôi cũng đọc báo.",
+     "why": "매일 (mỗi ngày) + hiện tại = thói quen."
+    },
+    {
+     "t": "Tương lai gần",
+     "c": "Hỏi kế hoạch ngày mai.",
+     "lv": "lịch sự",
+     "ko": "내일 뭐 **해요**? – 아르바이트**해요**.",
+     "vi": "Mai bạn làm gì? – Mai mình đi làm thêm.",
+     "why": "Có từ chỉ thời gian tương lai (내일, 주말에) → -아요/어요 vẫn dùng được."
+    },
+    {
+     "t": "Giới thiệu bản thân",
+     "c": "Nối với Bài 1.",
+     "lv": "lịch sự",
+     "ko": "저는 학생이에요. 한국어를 공부**해요**.",
+     "vi": "Tôi là sinh viên. Tôi học tiếng Hàn.",
+     "why": "Danh từ → 이에요; động từ → 아요/어요."
+    },
+    {
+     "t": "Trả lời “có”",
+     "c": "Bạn hỏi em có uống cà phê không.",
+     "lv": "lịch sự",
+     "ko": "커피 마**셔요**? – 네, 마**셔요**.",
+     "vi": "Bạn uống cà phê không? – Có, mình uống.",
+     "why": "Trả lời “có” bằng cách lặp lại động từ — tiếng Hàn không có chữ “có” riêng như tiếng Việt."
+    }
+   ],
+   "rb": [
+    [
+     "Loại từ",
+     "Động từ (tính từ ở Bài 7 chia y hệt). Danh từ → 이에요/예요."
+    ],
+    [
+     "Thì",
+     "Hiện tại, thói quen, tương lai gần. Quá khứ → -았/었어요 (Bài 5)."
+    ],
+    [
+     "Mức lịch sự",
+     "해요체: lịch sự, mềm — dùng nhiều nhất. Trang trọng → -ㅂ니다/습니다 (Bài 7)."
+    ],
+    [
+     "Ngôi",
+     "Không đổi theo chủ ngữ: 저는 / 친구는 / 우리는 가요."
+    ]
+   ],
+   "sai": [
+    {
+     "x": "보다 → 보**어요**",
+     "o": "보다 → **봐요**",
+     "why": "Nguyên âm ㅗ → 아요, rồi rút gọn ㅗ+ㅏ → ㅘ."
+    },
+    {
+     "x": "마시다 → 마시**아요**",
+     "o": "마시다 → **마셔요**",
+     "why": "ㅣ → 어요; ㅣ+ㅓ rút gọn thành ㅕ."
+    },
+    {
+     "x": "공부하다 → 공부하**아요**",
+     "o": "공부하다 → 공부**해요**",
+     "why": "하다 là trường hợp riêng: luôn 해요."
+    },
+    {
+     "x": "만들다 → 만들**아요**",
+     "o": "만들다 → 만들**어요**",
+     "why": "Nhìn âm tiết cuối của gốc (들 → ㅡ), không nhìn âm đầu (만 → ㅏ)."
+    },
+    {
+     "x": "저는 밥을 먹**다**.",
+     "o": "저는 밥을 먹**어요**.",
+     "why": "Dạng -다 là dạng từ điển, không dùng khi nói chuyện."
+    }
+   ],
+   "pb": [
+    {
+     "vs": "-ㅂ니다/습니다 (Bài 7)",
+     "d": "Cùng nghĩa, khác mức: 해요 mềm, hằng ngày; 합니다 trang trọng, phát biểu, bản tin.",
+     "ex": [
+      [
+       "저는 한국어를 공부해요.",
+       "Mình học tiếng Hàn."
+      ],
+      [
+       "저는 한국어를 공부합니다.",
+       "Tôi học tiếng Hàn. (trang trọng)"
+      ]
+     ]
+    },
+    {
+     "vs": "이에요/예요 (Bài 1)",
+     "d": "Danh từ + 이에요/예요; động từ + 아요/어요. Không gắn 예요 vào động từ.",
+     "ex": [
+      [
+       "저는 학생이에요.",
+       "Tôi là học sinh."
+      ],
+      [
+       "저는 공부해요.",
+       "Tôi học."
+      ]
+     ]
+    }
+   ],
+   "topik": [
+    {
+     "src": "Nghe · kỳ 96 câu 8",
+     "ko": "수선을 잘해 주셔서 감사**해요**.",
+     "note": "Nghe câu 4–8: các lựa chọn đều là câu văn nói đuôi -아요/어요 (감사하다 → 감사해요). Chia và nhận diện đuôi phải thành phản xạ thì mới nghe kịp."
+    },
+    {
+     "src": "Nghe · kỳ 102 câu 6",
+     "ko": "아르바이트 경험이 다양**해요**.",
+     "note": "Tính từ 다양하다 cũng → 해요 (tính từ học ở Bài 7, chia y như động từ)."
+    }
+   ],
+   "hoi": [
+    {
+     "q": "Vì sao 가다 → 가요 mà không phải 가아요?",
+     "a": "ㅏ + 아: hai ㅏ gặp nhau rút còn một → 가요."
+    },
+    {
+     "q": "만들다 chia thế nào? Nhìn nguyên âm nào?",
+     "a": "Gốc 만들 → âm tiết cuối 들 → ㅡ → 어요: <b>만들어요</b>."
+    },
+    {
+     "q": "“Ngày mai tôi làm việc” — có cần đuôi tương lai không?",
+     "a": "Không bắt buộc: 내일 일해요. Từ 내일 đã cho biết là tương lai."
+    }
+   ],
+   "luyen": [
+    {
+     "q": "저는 영화를 (보다 →    ).",
+     "o": [
+      "봐요",
+      "보어요",
+      "보요",
+      "봐어요"
+     ],
+     "w": "ㅗ + 아요 → 봐요."
+    },
+    {
+     "q": "친구가 커피를 (마시다 →    ).",
+     "o": [
+      "마셔요",
+      "마시어요",
+      "마시아요",
+      "마샤요"
+     ],
+     "w": "ㅣ + 어요 → 마셔요."
+    },
+    {
+     "q": "저는 매일 책을 (읽다 →    ).",
+     "o": [
+      "읽어요",
+      "읽아요",
+      "읽요",
+      "일거요"
+     ],
+     "w": "ㅣ → 어요; 일거요 chỉ là cách đọc, không phải cách viết."
+    },
+    {
+     "q": "가: 내일 뭐 해요?  나: 친구를 (만나다 →    ).",
+     "o": [
+      "만나요",
+      "만나아요",
+      "만나어요",
+      "만나해요"
+     ],
+     "w": "ㅏ + 아요 → 만나요; có 내일 nên hiện tại = tương lai gần."
+    },
+    {
+     "q": "저는 도서관에서 한국어를 (공부하다 →    ).",
+     "o": [
+      "공부해요",
+      "공부하아요",
+      "공부하요",
+      "공부해어요"
+     ],
+     "w": "하다 → 해요."
+    }
+   ],
+   "em": [
+    "Viết 5 câu về một ngày của em, mỗi câu một động từ khác (만나다, 보다, 마시다, 읽다, 공부하다).",
+    "Viết 2 cặp hỏi – đáp: …아요/어요? – 네, …아요/어요."
+   ],
+   "co": "Bảng chia 3 cột (ㅏㅗ / còn lại / 하다) để trên bảng suốt khóa. Luyện “nhìn âm tiết cuối của gốc” bằng từ dài (만들다, 가르치다, 기다리다). Cho học sinh tự đọc nhanh 보아요 → 봐요, 마시어요 → 마셔요 để thấy rút gọn là tự nhiên. Đây là viên gạch của -았/었-, -아서, -아/어 보다 — dành thời gian luyện kỹ."
+  },
+  {
+   "no": 2,
+   "id": "g_1A_03_2",
+   "cn": "Tân ngữ",
+   "core": "Đánh dấu <b>tân ngữ</b> — thứ chịu tác động của động từ: ăn <b>cơm</b>, đọc <b>sách</b>, gặp <b>bạn</b>. Có 받침 + <b>을</b>, không 받침 + <b>를</b>.",
+   "goc": "Tiếng Việt xếp “Tôi ăn cơm” theo trật tự chủ – động – tân nên không cần tiểu từ. Tiếng Hàn đặt động từ cuối (저는 밥을 먹어요) và dùng tiểu từ để biết vai: 을/를 = “cái bị làm”. Nhờ tiểu từ, trật tự có thể đổi mà nghĩa giữ nguyên. Khi nói hay bỏ 을/를 nếu rõ nghĩa. Một số động từ tiếng Việt đi thẳng với danh từ nhưng tiếng Hàn <b>bắt buộc 을/를</b>: 친구를 만나다 (gặp bạn), 버스를 타다 (đi xe buýt), 커피를 좋아하다 (thích cà phê).",
+   "chia": [
+    [
+     "",
+     "받침 ×",
+     "받침 ○"
+    ],
+    [
+     "을/를",
+     "커피 → 커피**를**, 영화 → 영화**를**",
+     "밥 → 밥**을**, 책 → 책**을**"
+    ],
+    [
+     "Trong câu",
+     "커피**를** 마셔요",
+     "책**을** 읽어요"
+    ],
+    [
+     "N을/를 하다 = N하다",
+     "운동**을** 해요 = 운동해요",
+     "공부**를** 해요 = 공부해요"
+    ]
+   ],
+   "chiaNote": [
+    "Đọc nối âm: 밥을 [바블], 책을 [채글].",
+    "Khi nói thường bỏ: 뭐 해요? – 영화 봐요.",
+    "N하다 tách được: 공부해요 = 공부를 해요 (nhấn hơn, chêm được từ).",
+    "Không dùng 을/를 với 있다/없다 (→ 이/가, Bài 2) và 이다."
+   ],
+   "tinh": [
+    {
+     "t": "Ăn sáng",
+     "c": "Kể bữa sáng.",
+     "lv": "lịch sự",
+     "ko": "저는 아침에 빵**을** 먹어요.",
+     "vi": "Buổi sáng tôi ăn bánh mì.",
+     "why": "Thứ được ăn → 을 (빵 có 받침 ㅇ)."
+    },
+    {
+     "t": "Hẹn gặp",
+     "c": "Kể kế hoạch cuối tuần.",
+     "lv": "lịch sự",
+     "ko": "주말에 친구**를** 만나요.",
+     "vi": "Cuối tuần tôi gặp bạn.",
+     "why": "만나다 cần 을/를. Tiếng Việt “gặp bạn” không có từ nối nên học sinh hay viết 친구가 만나요 (✕)."
+    },
+    {
+     "t": "Văn nói",
+     "c": "Bạn hỏi đang làm gì.",
+     "lv": "lịch sự",
+     "ko": "뭐 해요? – 영화 봐요.",
+     "vi": "Đang làm gì đó? – Xem phim.",
+     "why": "Văn nói bỏ 을/를 khi đã rõ."
+    },
+    {
+     "t": "Đối chiếu",
+     "c": "Từ chối cà phê, chọn trà.",
+     "lv": "lịch sự",
+     "ko": "커피**는** 안 마셔요. 차**를** 마셔요.",
+     "vi": "Cà phê thì tôi không uống. Tôi uống trà.",
+     "why": "Đổi 를 → 는 trên tân ngữ = “còn… thì” (đối chiếu)."
+    },
+    {
+     "t": "N을 하다",
+     "c": "Kể thói quen tập thể dục.",
+     "lv": "lịch sự",
+     "ko": "저는 매일 운동**을** 해요.",
+     "vi": "Ngày nào tôi cũng tập thể dục.",
+     "why": "운동해요 = 운동을 해요; tách ra nghe nhấn hơn."
+    }
+   ],
+   "rb": [
+    [
+     "Động từ",
+     "Động từ có tân ngữ (먹다, 보다, 만나다, 공부하다…). 가다 / 오다 (đi tới) dùng 에 (Bài 4)."
+    ],
+    [
+     "Không dùng",
+     "있다 / 없다, 이다: 우산이 있어요, 학생이에요."
+    ],
+    [
+     "Lược bỏ",
+     "Nói: hay bỏ. Viết: giữ đủ."
+    ],
+    [
+     "Khác tiếng Việt",
+     "만나다, 타다, 좋아하다, 기다리다 đều cần 을/를."
+    ]
+   ],
+   "sai": [
+    {
+     "x": "(Muốn nói: tôi gặp bạn) 친구**가** 만나요.",
+     "o": "친구**를** 만나요.",
+     "why": "친구가 만나요 = bạn (là người) gặp… — đổi hẳn nghĩa."
+    },
+    {
+     "x": "커피**을** 마셔요.",
+     "o": "커피**를** 마셔요.",
+     "why": "커피 không 받침 → 를."
+    },
+    {
+     "x": "저는 우산**을** 있어요.",
+     "o": "저는 우산**이** 있어요.",
+     "why": "있다 không có tân ngữ (Bài 2)."
+    },
+    {
+     "x": "저는 먹어요 밥을.",
+     "o": "저는 밥을 먹어요.",
+     "why": "Động từ luôn đứng cuối câu."
+    }
+   ],
+   "pb": [
+    {
+     "vs": "이/가",
+     "d": "을/를 = cái bị làm; 이/가 = chủ ngữ (ai làm / cái gì có). Đổi tiểu từ là đổi vai.",
+     "ex": [
+      [
+       "동생이 친구를 만나요.",
+       "Em tôi gặp bạn."
+      ],
+      [
+       "친구가 동생을 만나요.",
+       "Bạn gặp em tôi."
+      ]
+     ]
+    },
+    {
+     "vs": "에 (Bài 4)",
+     "d": "Đi tới đâu dùng 에 (학교에 가요); làm gì với cái gì dùng 을/를.",
+     "ex": [
+      [
+       "학교에 가요.",
+       "Đi tới trường."
+      ],
+      [
+       "학교에서 책을 읽어요.",
+       "Đọc sách ở trường."
+      ]
+     ]
+    }
+   ],
+   "topik": [
+    {
+     "src": "Đọc · kỳ 83 câu 23",
+     "ko": "두근거리는 마음으로 거실로 나와 일기장**을** 펼쳤다.",
+     "note": "Văn viết giữ đủ 을/를. Đọc nhanh: tìm cặp <b>N을/를 + động từ</b> = “làm gì với cái gì” của câu (일기장을 펼치다 = mở cuốn nhật ký)."
+    },
+    {
+     "src": "Đọc · kỳ 41 câu 4",
+     "ko": "한국어 실력**을** 늘리고자 한국 신문과 방송**을** 자주 봤다.",
+     "note": "Câu có hai tân ngữ: 실력을 (늘리다), 신문과 방송을 (보다) — mỗi 을/를 đi với động từ của nó."
+    }
+   ],
+   "hoi": [
+    {
+     "q": "Vì sao tiếng Việt không cần 을/를 mà tiếng Hàn cần?",
+     "a": "Tiếng Việt dựa vào trật tự từ (chủ – động – tân). Tiếng Hàn động từ ở cuối, trật tự linh hoạt → cần tiểu từ để biết ai làm, cái gì bị làm."
+    },
+    {
+     "q": "친구가 만나요 và 친구를 만나요 khác nhau thế nào?",
+     "a": "친구가 = bạn là người gặp; 친구를 = bạn là người được (tôi) gặp."
+    },
+    {
+     "q": "운동해요 và 운동을 해요 có khác nhau không?",
+     "a": "Cùng nghĩa; 운동을 해요 nhấn hơn và chêm được từ: 운동을 많이 해요."
+    }
+   ],
+   "luyen": [
+    {
+     "q": "저는 물(    ) 마셔요.",
+     "o": [
+      "을",
+      "를",
+      "이",
+      "가"
+     ],
+     "w": "물 có 받침 ㄹ → 을."
+    },
+    {
+     "q": "동생은 사과(    ) 먹어요.",
+     "o": [
+      "를",
+      "을",
+      "가",
+      "는"
+     ],
+     "w": "사과 không 받침 → 를."
+    },
+    {
+     "q": "(Tôi gặp bạn) 저는 친구(    ) 만나요.",
+     "o": [
+      "를",
+      "가",
+      "이",
+      "에"
+     ],
+     "w": "만나다 cần tân ngữ → 를."
+    },
+    {
+     "q": "Câu nào đúng?",
+     "o": [
+      "저는 한국 음식을 좋아해요.",
+      "저는 한국 음식이 좋아해요.",
+      "저는 한국 음식를 좋아해요.",
+      "저는 좋아해요 한국 음식을."
+     ],
+     "w": "좋아하다 cần 을/를; 식 có 받침 → 을; động từ ở cuối."
+    },
+    {
+     "q": "Câu nào đúng?",
+     "o": [
+      "저는 책이 있어요. 그리고 책을 읽어요.",
+      "저는 책을 있어요. 그리고 책을 읽어요.",
+      "저는 책이 있어요. 그리고 책이 읽어요.",
+      "저는 책를 있어요. 그리고 책을 읽어요."
+     ],
+     "w": "있다 → 이/가; 읽다 → 을/를."
+    }
+   ],
+   "em": [
+    "Viết 4 câu: em ăn gì, uống gì, xem gì, gặp ai trong tuần.",
+    "Viết 1 câu đối chiếu: …은/는 안 …아요/어요. …을/를 …아요/어요."
+   ],
+   "co": "Trò đổi vai: cùng hai danh từ (동생, 친구), học sinh đổi 이/가 – 을/를 rồi nói nghĩa. Đưa danh sách động từ “tiếng Việt không có giới từ mà tiếng Hàn cần 을/를”: 만나다, 타다, 좋아하다, 기다리다."
+  },
+  {
+   "no": 3,
+   "id": "g_1A_03_3",
+   "cn": "Nơi diễn ra hành động",
+   "core": "“Ở, tại” — nơi một <b>hành động</b> diễn ra: 도서관<b>에서</b> 공부해요. Gắn sau danh từ nơi chốn, không xét 받침.",
+   "goc": "에서 = 에 (điểm) + 서 → nơi xảy ra một <b>hành động</b>. Tiếng Việt “ở” dùng chung cho “tôi ở nhà” (có mặt) và “tôi học ở nhà” (hành động); tiếng Hàn tách đôi: có mặt → 에 (집에 있어요, Bài 4), hành động → 에서 (집에서 공부해요). 에서 còn nghĩa <b>“từ”</b> (điểm xuất phát): 베트남에서 왔어요 = tôi đến từ Việt Nam — câu học sinh đã thuộc khi tự giới thiệu.",
+   "chia": [
+    [
+     "",
+     "받침 ×",
+     "받침 ○"
+    ],
+    [
+     "에서",
+     "학교 → 학교**에서**, 회사 → 회사**에서**",
+     "집 → 집**에서**, 식당 → 식당**에서**"
+    ],
+    [
+     "Câu đủ",
+     "저는 + nơi**에서** + N을/를 + V",
+     "저는 도서관**에서** 책을 읽어요."
+    ],
+    [
+     "Hỏi",
+     "어디**에서** …?",
+     "어디**에서** 일해요? (nói: 어디서)"
+    ]
+   ],
+   "chiaNote": [
+    "Đọc nối âm: 집에서 [지베서], 식당에서 [식땅에서].",
+    "Văn nói hay rút: 어디서, 여기서, 거기서.",
+    "Thứ tự hay gặp: chủ ngữ – thời gian – nơi에서 – tân ngữ – động từ."
+   ],
+   "tinh": [
+    {
+     "t": "Học",
+     "c": "Kể chỗ em hay học.",
+     "lv": "lịch sự",
+     "ko": "저는 도서관**에서** 공부해요.",
+     "vi": "Tôi học ở thư viện.",
+     "why": "Học là hành động → 에서."
+    },
+    {
+     "t": "Hỏi nơi làm việc",
+     "c": "Làm quen với người mới.",
+     "lv": "lịch sự",
+     "ko": "어디**에서** 일해요? – 은행**에서** 일해요.",
+     "vi": "Bạn làm việc ở đâu? – Mình làm ở ngân hàng.",
+     "why": "Câu cơ bản khi làm quen."
+    },
+    {
+     "t": "Ăn ngoài",
+     "c": "Kể bữa trưa.",
+     "lv": "lịch sự",
+     "ko": "오늘은 식당**에서** 밥을 먹어요.",
+     "vi": "Hôm nay tôi ăn cơm ở quán.",
+     "why": "Đủ 3 tiểu từ trong một câu: 은/는 – 에서 – 을/를."
+    },
+    {
+     "t": "Đến từ đâu",
+     "c": "Tự giới thiệu.",
+     "lv": "lịch sự",
+     "ko": "베트남**에서** 왔어요.",
+     "vi": "Tôi đến từ Việt Nam.",
+     "why": "에서 = “từ” khi đi với 오다. Thuộc nguyên câu (왔어요 là quá khứ, Bài 5)."
+    },
+    {
+     "t": "Hẹn gặp",
+     "c": "Kể kế hoạch cuối tuần.",
+     "lv": "lịch sự",
+     "ko": "주말**에** 카페**에서** 친구를 만나요.",
+     "vi": "Cuối tuần tôi gặp bạn ở quán cà phê.",
+     "why": "Thời gian + 에, nơi hành động + 에서 — đừng lẫn."
+    }
+   ],
+   "rb": [
+    [
+     "Danh từ",
+     "Danh từ nơi chốn (집, 학교, 회사, 어디…)."
+    ],
+    [
+     "Động từ",
+     "Động từ hành động (공부하다, 먹다, 만나다). Có mặt 있다 / 없다 → 에; đi tới 가다 / 오다 → 에."
+    ],
+    [
+     "Nghĩa “từ”",
+     "N에서 오다 / 출발하다 = từ N."
+    ],
+    [
+     "Văn nói",
+     "어디서, 여기서 rút gọn."
+    ]
+   ],
+   "sai": [
+    {
+     "x": "저는 집**에** 공부해요.",
+     "o": "저는 집**에서** 공부해요.",
+     "why": "Học là hành động → 에서. Tiếng Việt “ở” chung một chữ nên học sinh hay dùng 에 cho mọi trường hợp."
+    },
+    {
+     "x": "저는 지금 집**에서** 있어요.",
+     "o": "저는 지금 집**에** 있어요.",
+     "why": "있다 = có mặt → 에 (học kỹ ở Bài 4)."
+    },
+    {
+     "x": "(Muốn nói: đi đến trường) 학교**에서** 가요.",
+     "o": "학교**에** 가요.",
+     "why": "가다 (đi tới) → 에. 학교에서 가요 = đi từ trường."
+    },
+    {
+     "x": "주말**에서** 영화를 봐요.",
+     "o": "주말**에** 영화를 봐요.",
+     "why": "Thời gian → 에, không phải 에서."
+    }
+   ],
+   "pb": [
+    {
+     "vs": "에 (Bài 4)",
+     "d": "에 = một điểm: nơi có mặt (에 있다), đích đến (에 가다), thời gian (주말에). 에서 = nơi hành động diễn ra, hoặc điểm xuất phát (“từ”).",
+     "ex": [
+      [
+       "도서관에 가요.",
+       "Tôi đi tới thư viện."
+      ],
+      [
+       "도서관에서 공부해요.",
+       "Tôi học ở thư viện."
+      ]
+     ]
+    },
+    {
+     "vs": "“ở” trong tiếng Việt",
+     "d": "Tự hỏi: “ở đó” là <b>đang có mặt</b> hay <b>đang làm gì</b>? Có mặt → 에, làm gì → 에서.",
+     "ex": [
+      [
+       "친구가 카페에 있어요.",
+       "Bạn đang ở quán cà phê."
+      ],
+      [
+       "친구가 카페에서 커피를 마셔요.",
+       "Bạn uống cà phê ở quán."
+      ]
+     ]
+    }
+   ],
+   "topik": [
+    {
+     "src": "Đọc · kỳ 91 câu 19",
+     "ko": "안**에서** 몸을 데운 펭귄은 밖으로 나가고 밖**에서** 추위에 떨던 펭귄은 안으로 들어오는 것이다.",
+     "note": "에서 = nơi diễn ra hành động (sưởi ấm ở trong, run rét ở ngoài); (으)로 = hướng đi (ra ngoài, vào trong). Phân biệt được hai tiểu từ này là hiểu được chuyển động trong đoạn văn."
+    },
+    {
+     "src": "Đọc · kỳ 91 câu 35 (lựa chọn)",
+     "ko": "소행성**에서** 자원을 가져오는 것은 실현 가능성이 희박하다.",
+     "note": "에서 = <b>“từ”</b> (lấy tài nguyên từ tiểu hành tinh), không phải “ở”. Động từ 가져오다 (mang về) cho biết đây là điểm xuất phát."
+    },
+    {
+     "src": "Nghe · kỳ 96 câu 17 (lựa chọn)",
+     "ko": "영화관**에서** 팝콘을 먹는 것이 좋다.",
+     "note": "Câu ý kiến của người nói: nơi (영화관에서) + hành động (팝콘을 먹다) — đúng khuôn nơi에서 + N을 + V của bài."
+    }
+   ],
+   "hoi": [
+    {
+     "q": "“Tôi ở nhà” và “Tôi học ở nhà” — tiểu từ khác nhau thế nào?",
+     "a": "집<b>에</b> 있어요 (có mặt → 에); 집<b>에서</b> 공부해요 (hành động → 에서)."
+    },
+    {
+     "q": "베트남에서 왔어요 — 에서 ở đây nghĩa là gì?",
+     "a": "“Từ” — điểm xuất phát, đi với 오다."
+    },
+    {
+     "q": "“Cuối tuần tôi gặp bạn ở quán cà phê” nói thế nào?",
+     "a": "주말<b>에</b> 카페<b>에서</b> 친구를 만나요. (thời gian 에 – nơi hành động 에서)"
+    }
+   ],
+   "luyen": [
+    {
+     "q": "저는 회사(    ) 일해요.",
+     "o": [
+      "에서",
+      "에",
+      "를",
+      "이"
+     ],
+     "w": "Làm việc là hành động → 에서."
+    },
+    {
+     "q": "가: 어디(    ) 밥을 먹어요?  나: 학생 식당에서 먹어요.",
+     "o": [
+      "에서",
+      "에",
+      "을",
+      "가"
+     ],
+     "w": "Hỏi nơi ăn → 어디에서."
+    },
+    {
+     "q": "저는 내일 학교(    ) 가요.",
+     "o": [
+      "에",
+      "에서",
+      "를",
+      "이"
+     ],
+     "w": "가다 (đi tới) → 에."
+    },
+    {
+     "q": "Câu nào đúng?",
+     "o": [
+      "친구가 집에서 영화를 봐요.",
+      "친구가 집에 영화를 봐요.",
+      "친구가 집을 영화를 봐요.",
+      "친구가 집에서 영화가 봐요."
+     ],
+     "w": "Nơi xem phim → 에서; phim là tân ngữ → 를."
+    },
+    {
+     "q": "Câu nào đúng?",
+     "o": [
+      "저는 지금 도서관에 있어요.",
+      "저는 지금 도서관에서 있어요.",
+      "저는 지금 도서관을 있어요.",
+      "저는 지금 도서관에서 있다요."
+     ],
+     "w": "있다 (có mặt) → 에."
+    }
+   ],
+   "em": [
+    "Viết 4 câu: em làm gì ở 4 nơi (집, 학교, 카페, 도서관).",
+    "Viết hỏi – đáp: 어디에서 …아요/어요? – …에서 …아요/어요."
+   ],
+   "co": "Vẽ hai cột “Có mặt (에)” / “Làm gì (에서)” trên bảng — lỗi 에 / 에서 kéo dài tới trung cấp, nên chặn từ đầu. Sang Bài 4 học 에 thì quay lại bảng này."
+  },
+  {
+   "no": 4,
+   "id": "g_1A_03_4",
+   "cn": "Phủ định",
+   "core": "“Không (làm)”: đặt <b>안</b> ngay trước động từ — 안 먹어요. Động từ dạng <b>N + 하다</b> thì 안 đứng giữa: 공부 안 해요.",
+   "goc": "안 là rút gọn của 아니 (không). Đây là phủ định ngắn của văn nói: đặt <b>sát trước động từ</b>, giống “không” của tiếng Việt nên dễ học. Chỗ khác: động từ <b>N + 하다</b> (운동하다, 공부하다) thì 안 chen vào giữa, vì 운동 là danh từ, chỉ 하다 mới là động từ → 운동 안 해요. Dạng dài, trang trọng hơn và dùng trong văn viết là -지 않다 (2A Bài 2): 먹지 않아요. Danh từ thì không dùng 안 → 이/가 아니에요 (Bài 1).",
+   "chia": [
+    [
+     "Loại động từ",
+     "Ví dụ",
+     "Phủ định"
+    ],
+    [
+     "Động từ thường",
+     "먹다, 가다, 만나다",
+     "**안** 먹어요, **안** 가요, **안** 만나요"
+    ],
+    [
+     "N + 하다 (N là danh từ hoạt động)",
+     "공부하다, 운동하다, 일하다",
+     "공부 **안** 해요, 운동 **안** 해요, 일 **안** 해요"
+    ],
+    [
+     "하다 nhưng phần trước không phải danh từ",
+     "좋아하다, 싫어하다",
+     "**안** 좋아해요, **안** 싫어해요"
+    ],
+    [
+     "Có tân ngữ",
+     "커피를 마시다",
+     "커피를 **안** 마셔요"
+    ]
+   ],
+   "chiaNote": [
+    "안 đứng **sát** động từ: 커피를 안 마셔요 (không phải 안 커피를 마셔요).",
+    "N하다 tách được khi N là danh từ chỉ hoạt động (공부, 운동, 일, 숙제, 청소). 좋아 không phải danh từ → 안 좋아해요.",
+    "안 là từ riêng → viết cách: 안 먹어요.",
+    "Ngoại lệ: 있다 ↔ 없다, 알다 ↔ 모르다 (không nói 안 있다, 안 알다)."
+   ],
+   "tinh": [
+    {
+     "t": "Thói quen ăn uống",
+     "c": "Giới thiệu bạn ăn chay.",
+     "lv": "lịch sự",
+     "ko": "히엔 씨는 고기를 **안** 먹어요.",
+     "vi": "Hiền không ăn thịt.",
+     "why": "안 sát động từ, sau tân ngữ."
+    },
+    {
+     "t": "Trả lời “không”",
+     "c": "Bạn hỏi em có làm bài tập không.",
+     "lv": "lịch sự",
+     "ko": "숙제해요? – 아니요, 숙제 **안** 해요.",
+     "vi": "Bạn làm bài tập không? – Không, mình không làm.",
+     "why": "숙제하다 = N + 하다 → 숙제 안 해요."
+    },
+    {
+     "t": "Từ chối nhẹ",
+     "c": "Bạn mời cà phê.",
+     "lv": "lịch sự",
+     "ko": "커피 마셔요? – 아니요, 저는 커피를 **안** 마셔요. 차를 마셔요.",
+     "vi": "Bạn uống cà phê không? – Không, mình không uống cà phê. Mình uống trà.",
+     "why": "Phủ định + nói thứ mình làm thay → tự nhiên, lịch sự."
+    },
+    {
+     "t": "Cuối tuần",
+     "c": "Kể lịch làm việc.",
+     "lv": "lịch sự",
+     "ko": "주말에는 일 **안** 해요.",
+     "vi": "Cuối tuần thì tôi không làm việc.",
+     "why": "주말에는 = cuối tuần thì (đối chiếu với ngày thường)."
+    },
+    {
+     "t": "Hỏi phủ định",
+     "c": "Ngạc nhiên vì bạn chưa đi học.",
+     "lv": "lịch sự",
+     "ko": "오늘 학교에 **안** 가요?",
+     "vi": "Hôm nay bạn không đi học à?",
+     "why": "Hỏi bằng câu phủ định khi ngạc nhiên hoặc đoán."
+    }
+   ],
+   "rb": [
+    [
+     "Loại từ",
+     "Động từ (và tính từ, học sau). Danh từ → 이/가 아니다."
+    ],
+    [
+     "Vị trí",
+     "Sát trước động từ; N하다 → giữa N và 하다."
+    ],
+    [
+     "Văn phong",
+     "안: văn nói, ngắn. -지 않다: viết, trang trọng (bài viết TOPIK dùng -지 않다)."
+    ],
+    [
+     "Ngoại lệ",
+     "있다 → 없다, 알다 → 모르다."
+    ]
+   ],
+   "sai": [
+    {
+     "x": "스티븐 씨는 **안** 운동해요.",
+     "o": "스티븐 씨는 운동 **안** 해요.",
+     "why": "운동하다 = 운동 (danh từ) + 하다 → 안 đứng trước 하다. (Sách nhắc riêng lỗi này.)"
+    },
+    {
+     "x": "저는 **안** 커피를 마셔요.",
+     "o": "저는 커피를 **안** 마셔요.",
+     "why": "“Không” phải sát động từ; động từ tiếng Hàn ở cuối nên 안 cũng ra gần cuối."
+    },
+    {
+     "x": "저는 **안** 학생이에요.",
+     "o": "저는 학생이 **아니에요**.",
+     "why": "Danh từ không dùng 안."
+    },
+    {
+     "x": "좋아 **안** 해요.",
+     "o": "**안** 좋아해요.",
+     "why": "좋아 không phải danh từ → không tách."
+    }
+   ],
+   "pb": [
+    {
+     "vs": "-지 않다 (2A Bài 2)",
+     "d": "Cùng nghĩa. 안: ngắn, văn nói. -지 않다: dài, văn viết, trang trọng hơn.",
+     "ex": [
+      [
+       "커피를 안 마셔요.",
+       "Tôi không uống cà phê."
+      ],
+      [
+       "커피를 마시지 않아요.",
+       "Tôi không uống cà phê. (trang trọng hơn)"
+      ]
+     ]
+    },
+    {
+     "vs": "못 (1B)",
+     "d": "안 = không làm (vì không muốn, không có thói quen); 못 = không làm được (vì không thể).",
+     "ex": [
+      [
+       "술을 안 마셔요.",
+       "Tôi không uống rượu (không muốn)."
+      ],
+      [
+       "술을 못 마셔요.",
+       "Tôi không uống được rượu."
+      ]
+     ]
+    }
+   ],
+   "topik": [
+    {
+     "src": "Đọc · kỳ 37 câu 3",
+     "ko": "서둘러 나온 탓에 책상 위에 있는 지갑을 **안** 가지고 나왔다.",
+     "note": "Đề đọc ít dùng 안 (văn viết chuộng -지 않다) nhưng vẫn gặp: 안 đứng sát 가지고 나오다, sau tân ngữ 지갑을."
+    },
+    {
+     "src": "Nghe · kỳ 96 câu 4",
+     "ko": "약을 **안** 먹어서 그런 거 아니에요?",
+     "note": "Nghe câu 4–8: văn nói dùng 안 rất nhiều. 약을 안 먹다 = không uống thuốc."
+    },
+    {
+     "src": "Đọc · kỳ 83 câu 13",
+     "ko": "(나) 사람들은 보통 이를 닦을 때 순서에 별로 신경 쓰**지 않는다**.",
+     "note": "Văn viết → -지 않다 (dạng dài của 안). 별로 + phủ định = không… lắm."
+    }
+   ],
+   "hoi": [
+    {
+     "q": "Phủ định 운동하다 — vì sao 안 đứng giữa?",
+     "a": "운동 là danh từ, 하다 mới là động từ. 안 phủ định động từ → 운동 <b>안</b> 해요."
+    },
+    {
+     "q": "안 먹어요 và 못 먹어요 khác nhau thế nào?",
+     "a": "안 = không ăn (chọn không ăn); 못 = không ăn được (dị ứng, no quá…)."
+    },
+    {
+     "q": "Viết bài TOPIK nên dùng 안 hay -지 않다?",
+     "a": "<b>-지 않다</b> — văn viết, trang trọng."
+    }
+   ],
+   "luyen": [
+    {
+     "q": "저는 오늘 일 (    ).",
+     "o": [
+      "안 해요",
+      "안 일해요",
+      "일 안요",
+      "안 일 해요"
+     ],
+     "w": "일하다 = N + 하다 → 일 안 해요."
+    },
+    {
+     "q": "Chọn câu đúng: “Tôi không ăn thịt.”",
+     "o": [
+      "저는 고기를 안 먹어요.",
+      "저는 안 고기를 먹어요.",
+      "저는 고기를 먹어요 안.",
+      "저는 고기 안이에요."
+     ],
+     "w": "안 sát trước động từ."
+    },
+    {
+     "q": "가: 공부해요?  나: 아니요, (    ).",
+     "o": [
+      "공부 안 해요",
+      "안 공부해요",
+      "공부해요",
+      "공부 아니에요"
+     ],
+     "w": "공부하다 → 공부 안 해요."
+    },
+    {
+     "q": "가: 커피를 좋아해요?  나: 아니요, (    ).",
+     "o": [
+      "안 좋아해요",
+      "좋아 안 해요",
+      "좋아해요",
+      "안 좋아요해요"
+     ],
+     "w": "좋아 không phải danh từ → 안 좋아해요."
+    },
+    {
+     "q": "가: 영화를 봐요?  나: 아니요, 영화는 (    ). 책을 읽어요.",
+     "o": [
+      "안 봐요",
+      "안 보어요",
+      "봐요",
+      "보 안 해요"
+     ],
+     "w": "안 + 봐요 (보다 → 봐요)."
+    }
+   ],
+   "em": [
+    "Viết 4 câu về những việc em không làm (ít nhất 1 câu có N하다).",
+    "Viết hỏi – đáp: …아요/어요? – 아니요, 안 …아요/어요. …을/를 …아요/어요."
+   ],
+   "co": "Cô nói nhanh động từ, học sinh phủ định ngay (먹다 → 안 먹어요, 청소하다 → 청소 안 해요, 좋아하다 → 안 좋아해요). Tách hai nhóm N하다 tách được / không tách được. Gieo mầm -지 않다 cho văn viết."
+  }
+ ]
+}

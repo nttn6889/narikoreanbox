@@ -1,0 +1,990 @@
+{
+ "b": "1A",
+ "n": 2,
+ "tong": {
+  "t": "Bài 2: đồ vật quanh em – có / không, cái này / cái kia, xin, và",
+  "p": "Bài 2 đưa câu “A là B” vào thế giới đồ vật: hỏi tên (이거는 뭐예요?), nói có / không có (이/가 있어요 / 없어요), xin đồ (N 주세요) và nối hai danh từ (하고, 과/와). Viên gạch nền: <b>tiểu từ đi theo 받침</b> — sau bài này học sinh đã gặp 은/는, 이/가, 을/를 (qua 주세요) và 과/와 (luật ngược cảm giác: có 받침 + 과). Hai chỗ người Việt hay vấp: <b>vật được “có” nhận 이/가</b> (không phải 을/를), và <b>그거</b> = gần người nghe / thứ vừa nhắc (không phải “cái đó ở xa”).",
+  "tb": [
+   [
+    "Mẫu",
+    "Gắn với",
+    "Câu hỏi chìa khóa"
+   ],
+   [
+    "N이/가 있어요 / 없어요",
+    "danh từ",
+    "Có / không có cái gì? Vật được có là chủ ngữ → 이/가"
+   ],
+   [
+    "이거 / 그거 / 저거",
+    "đồ vật",
+    "Gần ai? Gần mình → 이, gần người nghe → 그, xa cả hai → 저"
+   ],
+   [
+    "N 주세요",
+    "danh từ",
+    "Xin, mua, gọi món (thêm 좀 cho mềm)"
+   ],
+   [
+    "N하고 N / N과/와 N",
+    "danh từ",
+    "Nói hay viết? Nói → 하고, (이)랑; viết, trang trọng → 과/와"
+   ]
+  ]
+ },
+ "p": [
+  {
+   "no": 1,
+   "id": "g_1A_02_1",
+   "cn": "Sở hữu – có / không có",
+   "core": "“Có / không có N”: <b>N이/가 있어요</b>, <b>N이/가 없어요</b>. Thứ được “có” là chủ ngữ của 있다/없다 nên nhận <b>이/가</b>.",
+   "goc": "있다 = có / ở, 없다 = không có / không ở — hai từ đối nhau (không nói 안 있어요). Tiếng Việt “Tôi có ô” coi “ô” là tân ngữ; tiếng Hàn coi ô là <b>chủ ngữ</b>: 저는 우산이 있어요 = “Về phần tôi, ô thì có”. Vì vậy dùng <b>이/가</b>, không phải 을/를 — lỗi số một của người Việt. Câu thường có hai lớp: <b>người</b> + 은/는 (chủ đề) và <b>vật</b> + 이/가. Bài 4 sẽ học nghĩa thứ hai “ở” (N에 있어요).",
+   "chia": [
+    [
+     "",
+     "받침 ×",
+     "받침 ○"
+    ],
+    [
+     "Có",
+     "남자 친구 → 남자 친구**가 있어요**",
+     "우산 → 우산**이 있어요**"
+    ],
+    [
+     "Không có",
+     "지우개 → 지우개**가 없어요**",
+     "돈 → 돈**이 없어요**"
+    ],
+    [
+     "Hỏi",
+     "컴퓨터**가 있어요**?",
+     "동전**이 있어요**?"
+    ],
+    [
+     "Trang trọng",
+     "시계**가 있습니다**",
+     "책**이 없습니다**"
+    ]
+   ],
+   "chiaNote": [
+    "Đọc nối âm: 있어요 [이써요], 없어요 [업써요].",
+    "Khi nói hay bỏ 이/가: 동전 있어요? 시간 없어요.",
+    "Phủ định của 있다 là **없다**, không nói 안 있다.",
+    "저 + 가 → **제가** (không có 저가) — khi “tôi” là chủ ngữ cần 가."
+   ],
+   "tinh": [
+    {
+     "t": "Hỏi mượn đồ",
+     "c": "Trong lớp, em quên bút.",
+     "lv": "lịch sự",
+     "ko": "혹시 볼펜**이 있어요**? – 네, 있어요. 여기요.",
+     "vi": "Bạn có bút bi không? – Có. Đây.",
+     "why": "혹시 (không biết là…) làm câu hỏi mềm. Trả lời ngắn 있어요 / 없어요, không cần lặp danh từ."
+    },
+    {
+     "t": "Hỏi chuyện người yêu",
+     "c": "Bạn bè nói chuyện riêng.",
+     "lv": "lịch sự",
+     "ko": "나나 씨는 남자 친구**가 있어요**? – 아니요, **없어요**.",
+     "vi": "Nana có bạn trai chưa? – Chưa, không có.",
+     "why": "Người (chủ đề) + 은/는, người / vật được có + 이/가."
+    },
+    {
+     "t": "Hỏi món ở quán",
+     "c": "Hỏi nhân viên có cola không.",
+     "lv": "lịch sự",
+     "ko": "콜라**가 있어요**? – 죄송합니다. 콜라**는 없어요**.",
+     "vi": "Có cola không? – Xin lỗi, cola thì không có.",
+     "why": "Câu trả lời đổi 가 → 는: nhấn “còn cola <b>thì</b> không có” (gợi ý chọn món khác) — 은/는 đối chiếu."
+    },
+    {
+     "t": "Rủ đi chơi",
+     "c": "Hỏi bạn hôm nay rảnh không.",
+     "lv": "lịch sự",
+     "ko": "오늘 시간**이 있어요**? – 미안해요. 오늘은 시간**이 없어요**.",
+     "vi": "Hôm nay bạn rảnh không? – Xin lỗi, hôm nay mình bận.",
+     "why": "시간이 있다 / 없다 = rảnh / bận — câu mở đầu lời rủ rê rất hay dùng."
+    },
+    {
+     "t": "Cuối buổi thuyết trình",
+     "c": "Người nói hỏi khán giả.",
+     "lv": "trang trọng",
+     "ko": "질문**이 있습니까**? – 네, 질문**이 있습니다**.",
+     "vi": "Có ai có câu hỏi không? – Vâng, tôi có câu hỏi.",
+     "why": "Trang trọng → 있습니다 / 있습니까."
+    }
+   ],
+   "rb": [
+    [
+     "Tiểu từ",
+     "Thứ được có / không có → 이/가 (không phải 을/를). Người sở hữu → 은/는."
+    ],
+    [
+     "Phủ định",
+     "Dùng 없다; không nói 안 있다."
+    ],
+    [
+     "Mức lịch sự",
+     "있어요 / 없어요 hằng ngày; 있습니다 / 없습니다 trang trọng."
+    ],
+    [
+     "Hai nghĩa",
+     "있다 = có (bài này) và ở (Bài 4: 교실에 있어요)."
+    ]
+   ],
+   "sai": [
+    {
+     "x": "저는 우산**을** 있어요.",
+     "o": "저는 우산**이** 있어요.",
+     "why": "Tiếng Việt “có ô” khiến học sinh tưởng ô là tân ngữ. Với 있다 / 없다, vật nhận 이/가."
+    },
+    {
+     "x": "저는 시간이 **안 있어요**.",
+     "o": "저는 시간이 **없어요**.",
+     "why": "Đối của 있다 là 없다."
+    },
+    {
+     "x": "볼펜**가** 있어요?",
+     "o": "볼펜**이** 있어요?",
+     "why": "볼펜 có 받침 ㄴ → 이."
+    },
+    {
+     "x": "**저가** 동생이 있어요.",
+     "o": "**저는** 동생이 있어요.",
+     "why": "Chủ đề “tôi” → 저는. 저가 không tồn tại; khi cần chủ ngữ “tôi” + 가 thì đổi thành 제가."
+    }
+   ],
+   "pb": [
+    {
+     "vs": "은/는 và 이/가",
+     "d": "Trong câu có / không: người (chủ đề) + 은/는, vật + 이/가. Muốn đối chiếu “cái này có, còn cái kia thì không” → vật + 은/는.",
+     "ex": [
+      [
+       "저는 우산이 없어요.",
+       "Tôi không có ô."
+      ],
+      [
+       "우산은 없어요. 비옷은 있어요.",
+       "Ô thì không có. Áo mưa thì có."
+      ]
+     ]
+    },
+    {
+     "vs": "N을/를 (Bài 3)",
+     "d": "을/를 đánh dấu tân ngữ của động từ hành động (사다, 먹다). 있다 / 없다 không phải hành động nên không có tân ngữ.",
+     "ex": [
+      [
+       "우산을 사요.",
+       "Tôi mua ô."
+      ],
+      [
+       "우산이 있어요.",
+       "Tôi có ô."
+      ]
+     ]
+    }
+   ],
+   "topik": [
+    {
+     "src": "Đọc · kỳ 83 câu 34",
+     "ko": "아이가 '엄마' 다음으로 빨리 배우는 말 중에는 '이것'과 같이 여러 물건을 가리키는 지시어**가 있다**.",
+     "note": "“N 중에는 … N이/가 있다” = “trong số … có …” — câu mở đầu giới thiệu chủ đề đoạn văn. Chủ ngữ dài đến đâu thì danh từ cuối (지시어) vẫn nhận 가 trước 있다."
+    },
+    {
+     "src": "Đọc · kỳ 83 câu 48",
+     "ko": "따라서 행복하려면 행복이 무한한 것이라는 믿음을 가질 필요**가 있다**.",
+     "note": "-(으)ㄹ 필요가 있다 = cần phải… — 필요 nhận 가 vì là chủ ngữ của 있다. 따라서 + 필요가 있다 thường là câu kết luận / ý chính."
+    },
+    {
+     "src": "Nghe · kỳ 96 câu 8",
+     "ko": "이 바지로 한 치수 큰 거 **없어요**?",
+     "note": "Nghe câu 4–8: khách hỏi đổi hàng bằng “… 없어요?” (có … không?) — hỏi phủ định nghe mềm hơn. Văn nói bỏ 가."
+    }
+   ],
+   "hoi": [
+    {
+     "q": "“Tôi có ô” — vì sao tiếng Hàn là 우산이 chứ không phải 우산을?",
+     "a": "있다 không phải hành động tác động lên vật. Câu Hàn hiểu là “(về phần tôi) ô thì có” → ô là chủ ngữ → 이/가."
+    },
+    {
+     "q": "Nói “Hôm nay tôi bận” bằng 있다 / 없다?",
+     "a": "오늘은 시간이 <b>없어요</b>."
+    },
+    {
+     "q": "Nhân viên trả lời 콜라는 없어요 (dùng 는). Ý họ là gì?",
+     "a": "Cola thì không có (nhưng có thứ khác) — 은/는 đối chiếu, ngầm gợi ý chọn món khác."
+    }
+   ],
+   "luyen": [
+    {
+     "q": "저는 동생(    ) 있어요.",
+     "o": [
+      "이",
+      "가",
+      "을",
+      "는"
+     ],
+     "w": "동생 có 받침 ㅇ → 이."
+    },
+    {
+     "q": "가: 지우개(    ) 있어요?  나: 네, 있어요.",
+     "o": [
+      "가",
+      "이",
+      "를",
+      "은"
+     ],
+     "w": "지우개 không 받침 → 가."
+    },
+    {
+     "q": "가: 오늘 시간이 있어요?  나: 아니요, (    ).",
+     "o": [
+      "없어요",
+      "안 있어요",
+      "아니에요",
+      "있어요"
+     ],
+     "w": "Đối của 있다 là 없다."
+    },
+    {
+     "q": "Câu nào đúng?",
+     "o": [
+      "저는 컴퓨터가 없어요.",
+      "저는 컴퓨터를 없어요.",
+      "저가 컴퓨터가 없어요.",
+      "저는 컴퓨터 안 있어요."
+     ],
+     "w": "Vật + 이/가 + 없어요; chủ đề “tôi” = 저는."
+    },
+    {
+     "q": "(Cuối buổi thuyết trình) 질문(    )?",
+     "o": [
+      "이 있습니까",
+      "을 있습니까",
+      "가 있습니까",
+      "이 아닙니까"
+     ],
+     "w": "질문 có 받침 → 이; trang trọng → 있습니까."
+    }
+   ],
+   "em": [
+    "Viết 4 câu về đồ trong cặp / phòng em: 2 thứ em có, 2 thứ em không có.",
+    "Viết hội thoại hỏi mượn đồ: 혹시 …이/가 있어요? – 네, … / 아니요, …"
+   ],
+   "co": "Trò “Trong cặp cô có gì”: học sinh đoán bằng …이/가 있어요? Sửa lỗi 을 있어요 ngay lần đầu — để lâu thành thói quen, kéo sang cả 필요가 있다, 관심이 있다 ở trung cấp. Dạy luôn 저 + 가 → 제가."
+  },
+  {
+   "no": 2,
+   "id": "g_1A_02_2",
+   "cn": "Chỉ đồ vật",
+   "core": "Chỉ đồ vật theo vị trí: <b>이거</b> (gần mình), <b>그거</b> (gần người nghe / thứ vừa nhắc), <b>저거</b> (xa cả hai). Hỏi tên: 이거는 뭐예요?",
+   "goc": "이 / 그 / 저 = này / đó / kia + 거 (rút gọn của 것 = cái, thứ): 이것 → 이거. Khác tiếng Việt ở chữ <b>그</b>: “đó” của tiếng Việt chỉ hơi xa mình, còn 그 là <b>gần người nghe</b> hoặc <b>thứ cả hai đã biết, vừa nhắc</b>. Văn viết và trang trọng dùng dạng đầy đủ 이것은, 그것은 (đề đọc TOPIK có rất nhiều 그것은 = điều đó, thứ vừa nói). Khi nói, 이거는 rút thành 이건; 뭐 = 무엇 (cái gì) rút gọn.",
+   "chia": [
+    [
+     "",
+     "Gần mình",
+     "Gần người nghe / đã nhắc",
+     "Xa cả hai"
+    ],
+    [
+     "Nói",
+     "이거(는) / 이건",
+     "그거(는) / 그건",
+     "저거(는) / 저건"
+    ],
+    [
+     "Viết, trang trọng",
+     "이것은",
+     "그것은",
+     "저것은"
+    ],
+    [
+     "Trước danh từ",
+     "이 책",
+     "그 책",
+     "저 책"
+    ],
+    [
+     "Nơi chốn (Bài 4)",
+     "여기",
+     "거기",
+     "저기"
+    ]
+   ],
+   "chiaNote": [
+    "Hỏi tên: 이거(는) 뭐예요? — trang trọng: 이것은 무엇입니까?",
+    "Trước danh từ bỏ 거: **이** 가방 (cái túi này), không nói 이거 가방.",
+    "Người kia hỏi về vật trong tay họ (이거), mình đáp bằng **그거**.",
+    "이거 + 가 → **이게** (이게 뭐예요? = Cái gì đây?) — nghe rất nhiều trong phim, hội thoại."
+   ],
+   "tinh": [
+    {
+     "t": "Hỏi tên đồ trong lớp",
+     "c": "Cô cầm cục tẩy, hỏi học sinh ngồi xa.",
+     "lv": "lịch sự",
+     "ko": "**이거는** 뭐**예요**? – **그거는** 지우개**예요**.",
+     "vi": "Cái này là gì? – Cái đó là cục tẩy.",
+     "why": "Người hỏi cầm vật (이거) → người trả lời gọi là 그거 (gần người nghe)."
+    },
+    {
+     "t": "Chỉ vật ở xa",
+     "c": "Hai người đứng trên đồi nhìn ra xa.",
+     "lv": "lịch sự",
+     "ko": "**저거는** 뭐예요? – **저거는** 남산타워예요.",
+     "vi": "Cái kia là gì? – Cái kia là tháp Namsan.",
+     "why": "Vật xa cả hai người → cả hai đều dùng 저거."
+    },
+    {
+     "t": "Mua hàng",
+     "c": "Người bán đang cầm món đồ.",
+     "lv": "lịch sự",
+     "ko": "**그거** 주세요.",
+     "vi": "Cho tôi cái đó.",
+     "why": "Vật trong tay người bán → 그거 (nối sang mẫu ③ N 주세요)."
+    },
+    {
+     "t": "Nhắc lại thứ vừa nói",
+     "c": "Bạn khoe sách mới.",
+     "lv": "lịch sự",
+     "ko": "가: 이거 제 한국어 책이에요.  나: **그거** 새 책이에요?",
+     "vi": "Đây là sách tiếng Hàn của mình. – Cái đó là sách mới à?",
+     "why": "그거 = thứ người kia vừa nói tới."
+    },
+    {
+     "t": "Trang trọng",
+     "c": "Câu hỏi – đáp trong sách, phát biểu.",
+     "lv": "trang trọng",
+     "ko": "**그것은** 무엇입니까? – **이것은** 제 한국어 책입니다.",
+     "vi": "Đó là cái gì? – Đây là sách tiếng Hàn của tôi.",
+     "why": "Dạng đầy đủ 것 + 은 dùng khi trang trọng và trong văn viết."
+    }
+   ],
+   "rb": [
+    [
+     "Khoảng cách",
+     "Tính theo cả người nói và người nghe: gần người nghe → 그."
+    ],
+    [
+     "Trước danh từ",
+     "이 / 그 / 저 + danh từ (이 책); 이거 / 그거 / 저거 đứng một mình."
+    ],
+    [
+     "Nói / viết",
+     "Nói: 이거, 이건. Viết, trang trọng: 이것은. Bài văn TOPIK không viết 이거는."
+    ],
+    [
+     "Người",
+     "Không gọi người bằng 이거: dùng 이 사람, lịch sự 이분 (vị này)."
+    ]
+   ],
+   "sai": [
+    {
+     "x": "(Bạn đang cầm cây bút) **저거는** 뭐예요?",
+     "o": "**그거는** 뭐예요?",
+     "why": "Vật gần người nghe → 그거. Người Việt chọn theo khoảng cách với mình nên hay nói 저거."
+    },
+    {
+     "x": "**이거** 책은 제 책이에요.",
+     "o": "**이** 책은 제 책이에요.",
+     "why": "Trước danh từ chỉ dùng 이 / 그 / 저."
+    },
+    {
+     "x": "(Giới thiệu bạn) **이거는** 제 친구예요.",
+     "o": "**이 사람은** 제 친구예요.",
+     "why": "거 / 것 chỉ dùng cho đồ vật."
+    },
+    {
+     "x": "이거는 뭐**이에요**?",
+     "o": "이거는 뭐**예요**?",
+     "why": "뭐 không 받침 → 예요."
+    }
+   ],
+   "pb": [
+    {
+     "vs": "그 (tiếng Hàn) và “đó” (tiếng Việt)",
+     "d": "Tiếng Việt chọn này / đó / kia theo khoảng cách với mình. Tiếng Hàn: 그 gắn với <b>người nghe</b> hoặc với <b>điều đã nói</b>. Trong bài đọc, 그것 / 그 + N gần như luôn chỉ điều vừa nhắc ở câu trước.",
+     "ex": [
+      [
+       "가: 이거 맛있어요.  나: 그거 뭐예요?",
+       "Cái này ngon lắm. – Cái đó là gì vậy?"
+      ]
+     ]
+    },
+    {
+     "vs": "이건 / 이게",
+     "d": "이거 + 는 (chủ đề) → 이건: hỏi lần lượt từng thứ; 이거 + 가 (chủ ngữ) → 이게: hỏi thứ vừa thấy, hơi ngạc nhiên.",
+     "ex": [
+      [
+       "이건 뭐예요?",
+       "Còn cái này là gì?"
+      ],
+      [
+       "이게 뭐예요?",
+       "Cái gì đây?"
+      ]
+     ]
+    }
+   ],
+   "topik": [
+    {
+     "src": "Đọc · kỳ 83 câu 23",
+     "ko": "**그것은** 바로 어렸을 때 돌아가신 아버지의 일기장이었다.",
+     "note": "Câu trước kể “một cuốn vở rơi ra” → 그것은 = <b>thứ vừa nhắc</b>. “그것은 바로 N이다” = “đó chính là…” — chỗ người viết hé lộ điều quan trọng."
+    },
+    {
+     "src": "Đọc · kỳ 83 câu 34",
+     "ko": "… '**이것**'과 같이 여러 물건을 가리키는 지시어가 있다.",
+     "note": "Cả đoạn văn nói về 지시어 (từ chỉ định) như 이것: trẻ em học rất sớm vì chỉ tay + 이것 là cách kéo sự chú ý của người lớn — y như cách em học: 이거 뭐예요?"
+    }
+   ],
+   "hoi": [
+    {
+     "q": "Cô cầm quyển sách, em ngồi xa. Cô hỏi “이거는 뭐예요?”, em trả lời bắt đầu bằng gì?",
+     "a": "<b>그거는</b> … — vì quyển sách ở gần cô (người nghe của em)."
+    },
+    {
+     "q": "Vì sao không nói 이거 책?",
+     "a": "이거 = 이 + 거 (cái) — đã có “cái” rồi. Trước danh từ chỉ dùng 이: <b>이 책</b>."
+    },
+    {
+     "q": "Trong bài đọc gặp 그것은, em tìm nghĩa của nó ở đâu?",
+     "a": "Ở câu ngay trước — 그것 chỉ thứ vừa được nhắc."
+    }
+   ],
+   "luyen": [
+    {
+     "q": "(Em đang cầm quyển vở) (    ) 제 공책이에요.",
+     "o": [
+      "이거는",
+      "그거는",
+      "저거는",
+      "여기는"
+     ],
+     "w": "Vật trong tay mình → 이거."
+    },
+    {
+     "q": "(Bạn đang cầm điện thoại) 가: (    ) 뭐예요?  나: 이거는 제 휴대폰이에요.",
+     "o": [
+      "그거는",
+      "이거는",
+      "저거는",
+      "거기는"
+     ],
+     "w": "Vật gần người nghe → 그거."
+    },
+    {
+     "q": "(Tòa nhà ở xa) 가: 저거는 뭐예요?  나: (    ) 도서관이에요.",
+     "o": [
+      "저거는",
+      "이거는",
+      "그거는",
+      "이 사람은"
+     ],
+     "w": "Xa cả hai → 저거."
+    },
+    {
+     "q": "Câu nào đúng?",
+     "o": [
+      "이 가방은 제 가방이에요.",
+      "이거 가방은 제 가방이에요.",
+      "이것 가방은 제 가방이에요.",
+      "이거는 가방은 제 가방이에요."
+     ],
+     "w": "Trước danh từ dùng 이."
+    },
+    {
+     "q": "Nói trang trọng: “Cái đó là gì?”",
+     "o": [
+      "그것은 무엇입니까?",
+      "그거는 뭐예요?",
+      "그건 뭐야?",
+      "저것은 뭐예요?"
+     ],
+     "w": "Trang trọng: 그것은 무엇입니까?"
+    }
+   ],
+   "em": [
+    "Chọn 3 đồ trong phòng em, viết hỏi – đáp: 이거는 뭐예요? – 그거는 …이에요/예요.",
+    "Viết 2 câu chỉ vật ở xa nhìn từ cửa sổ nhà em: 저거는 …이에요/예요."
+   ],
+   "co": "Đặt đồ vật ở 3 chỗ (tay cô, tay học sinh, cuối lớp) rồi hỏi ngẫu nhiên — học sinh phải chọn theo người nghe. Nhấn 그 = “đã nhắc” vì sau này là chìa khóa đọc hiểu (그것은, 그 결과, 그래서)."
+  },
+  {
+   "no": 3,
+   "id": "g_1A_02_3",
+   "cn": "Xin – yêu cầu",
+   "core": "“Cho tôi N”: <b>N 주세요</b> — xin đồ, mua hàng, gọi món. Thêm <b>좀</b> cho mềm, số lượng đứng sau danh từ.",
+   "goc": "주세요 = 주다 (cho) + -(으)세요 (đuôi đề nghị lịch sự, kính trọng) → nghĩa đen “xin hãy cho”. Danh từ đứng trước là tân ngữ (커피를 주세요) nhưng khi nói <b>thường bỏ 을/를</b>. 좀 (= 조금, một chút) làm lời xin nhẹ, khiêm tốn hơn. Sau này 주세요 còn gắn sau động từ: 도와주세요 (giúp tôi), 말씀해 주세요 (xin hãy nói) — đề nghe dùng rất nhiều.",
+   "chia": [
+    [
+     "",
+     "Khuôn",
+     "Ví dụ"
+    ],
+    [
+     "Cơ bản",
+     "N 주세요",
+     "물 **주세요**."
+    ],
+    [
+     "Mềm hơn",
+     "N 좀 주세요",
+     "물 **좀 주세요**."
+    ],
+    [
+     "Có số lượng",
+     "N + số + đơn vị + 주세요",
+     "커피 두 잔 **주세요**."
+    ],
+    [
+     "Nhiều thứ",
+     "N하고 N 주세요",
+     "김밥하고 라면 **주세요**."
+    ],
+    [
+     "Đầy đủ (viết)",
+     "N을/를 주세요",
+     "영수증**을 주세요**."
+    ]
+   ],
+   "chiaNote": [
+    "Số lượng đứng **sau** danh từ: 커피 두 잔, 비빔밥 하나.",
+    "주세요 đã có kính ngữ, dùng được với nhân viên, người lạ, người lớn.",
+    "Đưa đồ cho người khác nói **여기 있어요** / **여기요** (đây ạ), không nói 주세요."
+   ],
+   "tinh": [
+    {
+     "t": "Gọi món",
+     "c": "Ở quán ăn Hàn.",
+     "lv": "lịch sự",
+     "ko": "비빔밥 하나 **주세요**.",
+     "vi": "Cho tôi một bát bibimbap.",
+     "why": "Ở quán, đếm bằng 하나 / 둘 đặt sau tên món."
+    },
+    {
+     "t": "Xin đồ trong lớp",
+     "c": "Em hết giấy, xin cô.",
+     "lv": "lịch sự",
+     "ko": "선생님, 종이 **좀 주세요**.",
+     "vi": "Cô ơi, cho em xin tờ giấy ạ.",
+     "why": "Xin người trên → thêm 좀."
+    },
+    {
+     "t": "Siêu thị",
+     "c": "Tính tiền ở quầy.",
+     "lv": "lịch sự",
+     "ko": "봉투 **주세요**. – 네, 여기 있어요.",
+     "vi": "Cho tôi cái túi. – Vâng, đây ạ.",
+     "why": "Người đưa đồ đáp 여기 있어요."
+    },
+    {
+     "t": "Quán cà phê",
+     "c": "Gọi đồ uống cho hai người.",
+     "lv": "lịch sự",
+     "ko": "아이스 아메리카노 두 잔 **주세요**.",
+     "vi": "Cho tôi hai ly Americano đá.",
+     "why": "잔 = cốc / ly — đơn vị đếm đồ uống."
+    },
+    {
+     "t": "Gọi nhân viên",
+     "c": "Cần thêm nước ở quán.",
+     "lv": "lịch sự",
+     "ko": "저기요! 물 **좀 주세요**.",
+     "vi": "Anh/chị ơi! Cho xin chút nước.",
+     "why": "저기요 / 여기요 = cách gọi nhân viên quán."
+    }
+   ],
+   "rb": [
+    [
+     "Người nhận",
+     "Người nói xin cho mình (hoặc cho người đi cùng)."
+    ],
+    [
+     "Mức lịch sự",
+     "Lịch sự, dùng với người lạ. Rất trang trọng: 주십시오."
+    ],
+    [
+     "Tiểu từ",
+     "Khi nói thường bỏ 을/를; viết thì giữ."
+    ],
+    [
+     "Đơn vị đếm",
+     "하나, 둘 / 잔, 개, 병… (học kỹ ở Bài 6)."
+    ]
+   ],
+   "sai": [
+    {
+     "x": "(Xin nhân viên) 물 **줘요**.",
+     "o": "물 **주세요**.",
+     "why": "줘요 không có kính ngữ, nghe như nói ngang hàng — kém lịch sự với nhân viên, người lạ."
+    },
+    {
+     "x": "**두** 커피 주세요.",
+     "o": "커피 **두 잔** 주세요.",
+     "why": "Số lượng + đơn vị đứng sau danh từ."
+    },
+    {
+     "x": "(Đưa sách cho bạn) 여기 **주세요**.",
+     "o": "여기 **있어요**.",
+     "why": "주세요 = xin cho mình. Đưa cho người khác nói 여기 있어요 / 여기요."
+    },
+    {
+     "x": "펜**이** 주세요.",
+     "o": "펜 주세요. / 펜**을** 주세요.",
+     "why": "Thứ được cho là tân ngữ → 을/를 (khác 있다 → 이/가)."
+    }
+   ],
+   "pb": [
+    {
+     "vs": "N이/가 있어요?",
+     "d": "Hỏi có không trước, rồi mới xin. Hai tiểu từ khác nhau: 볼펜<b>이</b> 있어요 / 볼펜<b>을</b> 주세요.",
+     "ex": [
+      [
+       "지우개 있어요? – 네.",
+       "Có tẩy không? – Có."
+      ],
+      [
+       "그럼 지우개 좀 주세요.",
+       "Vậy cho mình xin cục tẩy."
+      ]
+     ]
+    },
+    {
+     "vs": "V-아/어 주세요 (1B)",
+     "d": "Xin đồ → N 주세요; nhờ làm việc → động từ + 아/어 주세요.",
+     "ex": [
+      [
+       "물 주세요.",
+       "Cho tôi nước."
+      ],
+      [
+       "다시 말해 주세요.",
+       "Xin nói lại giúp tôi."
+      ]
+     ]
+    }
+   ],
+   "topik": [
+    {
+     "src": "Nghe · kỳ 102 câu 8",
+     "ko": "네. 받으실 주소를 말씀해 **주세요**.",
+     "note": "Nghe câu 4–8: nhân viên yêu cầu khách bằng V-아/어 주세요 (lịch sự). Gốc vẫn là 주세요 em học hôm nay; 을/를 giữ đủ vì câu dài."
+    },
+    {
+     "src": "Nghe · kỳ 83 câu 4",
+     "ko": "재미있는 책 **좀** 추천해 줘.",
+     "note": "Văn nói thân mật: 좀 + 줘 (dạng 반말 của 주세요) = nhờ bạn. 좀 làm lời nhờ mềm hơn — y như 물 좀 주세요."
+    }
+   ],
+   "hoi": [
+    {
+     "q": "주세요 nghĩa đen là gì?",
+     "a": "주다 (cho) + -세요 (xin hãy, kính trọng) → “xin hãy cho”."
+    },
+    {
+     "q": "Vì sao thêm 좀?",
+     "a": "좀 = 조금 (một chút) → lời xin nhẹ, khiêm tốn hơn."
+    },
+    {
+     "q": "Gọi 2 cốc cà phê nói thế nào?",
+     "a": "커피 <b>두 잔</b> 주세요."
+    }
+   ],
+   "luyen": [
+    {
+     "q": "(Ở quán) 저기요, 물 (    ) 주세요.",
+     "o": [
+      "좀",
+      "은",
+      "가",
+      "하고"
+     ],
+     "w": "좀 làm lời xin mềm hơn."
+    },
+    {
+     "q": "Gọi “một bát mì ramyeon”:",
+     "o": [
+      "라면 하나 주세요.",
+      "하나 라면 주세요.",
+      "라면 하나 있어요.",
+      "라면이 주세요."
+     ],
+     "w": "Số lượng sau danh từ; xin → 주세요."
+    },
+    {
+     "q": "(Đưa sách cho bạn) 가: 그 책 좀 주세요.  나: 네, (    ).",
+     "o": [
+      "여기 있어요",
+      "주세요",
+      "없어요",
+      "아니에요"
+     ],
+     "w": "Đưa đồ → 여기 있어요."
+    },
+    {
+     "q": "Câu nào đúng?",
+     "o": [
+      "우산을 주세요.",
+      "우산이 주세요.",
+      "우산 줘요 주세요.",
+      "우산은 주세요."
+     ],
+     "w": "Tân ngữ → 을/를 (hoặc bỏ)."
+    },
+    {
+     "q": "가: 볼펜 있어요?  나: 네, 있어요.  가: 그럼 볼펜 좀 (    ).",
+     "o": [
+      "주세요",
+      "있어요",
+      "없어요",
+      "예요"
+     ],
+     "w": "Có rồi thì xin: 좀 주세요."
+    }
+   ],
+   "em": [
+    "Viết đoạn gọi món ở quán ăn Hàn: gọi nhân viên + 2 món có số lượng.",
+    "Viết 2 câu xin đồ trong lớp, có 좀."
+   ],
+   "co": "Đóng vai quán ăn với thực đơn có ảnh. Dạy 저기요 / 여기요, 여기 있어요 cùng lúc. Gieo mầm: 주세요 sau này gắn sau động từ (V-아/어 주세요, 1B) — đề nghe dùng rất nhiều."
+  },
+  {
+   "no": 4,
+   "id": "g_1A_02_4",
+   "cn": "Liệt kê – nối danh từ",
+   "core": "Nối hai danh từ “A và B”: <b>하고</b> (nói), <b>과/와</b> (viết, trang trọng), <b>(이)랑</b> (nói thân mật). Chỉ nối danh từ, không nối câu.",
+   "goc": "하고 vốn từ 하다 + -고 đã thành tiểu từ, luôn bắt đầu bằng ㅎ nên <b>không xét 받침</b>. 과/와 là tiểu từ của văn viết, luật 받침 <b>ngược cảm giác</b>: có 받침 + 과 (책과), không 받침 + 와 (커피와) — để âm đọc trơn. Ba tiểu từ còn nghĩa “cùng với” (친구하고 같이, học sau). Nối hai <b>câu</b> thì dùng 그리고 — sách nhắc riêng lỗi dùng 하고 thay 그리고.",
+   "chia": [
+    [
+     "",
+     "받침 ×",
+     "받침 ○",
+     "Dùng khi"
+    ],
+    [
+     "하고",
+     "커피**하고** 우유",
+     "빵**하고** 우유",
+     "nói hằng ngày"
+    ],
+    [
+     "과/와",
+     "커피**와** 우유",
+     "빵**과** 우유",
+     "viết, trang trọng"
+    ],
+    [
+     "(이)랑",
+     "커피**랑** 우유",
+     "빵**이랑** 우유",
+     "nói thân mật"
+    ]
+   ],
+   "chiaNote": [
+    "Nhớ 과/와: có 받침 + **과** (책과, 빵과, 학생과); không 받침 + **와** (우유와, 커피와).",
+    "Tiểu từ của cả cụm gắn sau danh từ **cuối**: 빵하고 우유**를** 사요, 빵하고 우유**가** 있어요.",
+    "Liệt kê 3 thứ: A하고 B하고 C (nói); A, B와 C (viết)."
+   ],
+   "tinh": [
+    {
+     "t": "Đi chợ",
+     "c": "Mua trái cây.",
+     "lv": "lịch sự",
+     "ko": "사과**하고** 바나나 주세요.",
+     "vi": "Cho tôi táo và chuối.",
+     "why": "Nói chuyện → 하고 (nối với mẫu ③)."
+    },
+    {
+     "t": "Giới thiệu gia đình",
+     "c": "Kể anh chị em.",
+     "lv": "lịch sự",
+     "ko": "저는 언니**하고** 오빠**가** 있어요.",
+     "vi": "Tôi có chị gái và anh trai.",
+     "why": "Kết hợp mẫu ①: 가 gắn sau danh từ cuối của cụm."
+    },
+    {
+     "t": "Thông báo",
+     "c": "Thông báo ở trường.",
+     "lv": "trang trọng / viết",
+     "ko": "학생**과** 선생님은 강당으로 오십시오.",
+     "vi": "Học sinh và giáo viên mời đến hội trường.",
+     "why": "Thông báo, văn bản → 과/와. 학생 có 받침 → 과."
+    },
+    {
+     "t": "Nói với bạn thân",
+     "c": "Mua đồ ở cửa hàng tiện lợi cùng bạn.",
+     "lv": "thân mật",
+     "ko": "지우개**랑** 연필 주세요.",
+     "vi": "Cho mình cục tẩy với cây bút chì.",
+     "why": "(이)랑 nghe thân, trẻ trung; không dùng trong văn viết."
+    },
+    {
+     "t": "Viết nhật ký / bài văn",
+     "c": "Kể việc mua sắm trong bài viết.",
+     "lv": "văn viết",
+     "ko": "빵**과** 우유를 샀다.",
+     "vi": "Tôi đã mua bánh mì và sữa.",
+     "why": "Văn viết → 과/와; đuôi 한다체 (샀다)."
+    }
+   ],
+   "rb": [
+    [
+     "Loại từ",
+     "Chỉ nối danh từ. Nối hai câu → 그리고."
+    ],
+    [
+     "Văn phong",
+     "하고, (이)랑: nói · 과/와: viết, trang trọng. Một câu không trộn lẫn."
+    ],
+    [
+     "받침",
+     "하고 không xét; 과/와 và (이)랑 xét 받침."
+    ],
+    [
+     "Tiểu từ khác",
+     "Tiểu từ của cả cụm (을/를, 이/가…) gắn sau danh từ cuối."
+    ]
+   ],
+   "sai": [
+    {
+     "x": "이거는 책상이에요. **하고** 저거는 의자예요.",
+     "o": "이거는 책상이에요. **그리고** 저거는 의자예요.",
+     "why": "하고 chỉ nối danh từ; nối hai câu dùng 그리고. (Sách nhắc riêng lỗi này.)"
+    },
+    {
+     "x": "빵**와** 우유",
+     "o": "빵**과** 우유",
+     "why": "빵 có 받침 ㅇ → 과."
+    },
+    {
+     "x": "커피**과** 주스",
+     "o": "커피**와** 주스",
+     "why": "커피 không 받침 → 와."
+    },
+    {
+     "x": "책**을 하고** 공책을 사요.",
+     "o": "책**하고** 공책을 사요.",
+     "why": "Danh từ đầu chỉ gắn 하고; 을 đặt sau danh từ cuối."
+    }
+   ],
+   "pb": [
+    {
+     "vs": "하고 / 과·와 / (이)랑",
+     "d": "Cùng nghĩa “và”, khác văn phong. Nói với cô: 하고. Viết bài: 과/와. Nhắn tin bạn bè: (이)랑.",
+     "ex": [
+      [
+       "빵하고 우유를 사요.",
+       "Tôi mua bánh mì và sữa. (nói)"
+      ],
+      [
+       "빵과 우유를 샀다.",
+       "Đã mua bánh mì và sữa. (viết)"
+      ]
+     ]
+    },
+    {
+     "vs": "그리고",
+     "d": "그리고 đứng đầu câu, nối hai câu. 하고 / 과 / 와 dính sau danh từ.",
+     "ex": [
+      [
+       "사과하고 배가 있어요.",
+       "Có táo và lê."
+      ],
+      [
+       "사과가 있어요. 그리고 배도 있어요.",
+       "Có táo. Và cũng có lê."
+      ]
+     ]
+    }
+   ],
+   "topik": [
+    {
+     "src": "Đọc · kỳ 83 câu 23",
+     "ko": "일기장에 적혀 있는 곳을 인터넷으로 찾아보니 자주 가시던 빵집**과** 국숫집이 아직도 그대로 있었다.",
+     "note": "Văn viết → 과/와. 빵집 có 받침 ㅂ → 과. Tiểu từ 이 của cả cụm gắn sau danh từ cuối (국숫집이)."
+    },
+    {
+     "src": "Đọc · kỳ 83 câu 17",
+     "ko": "여권은 국제 신분증으로 통할 뿐만 아니라 한 국가의 정체성**과** 문화를 드러내기도 한다.",
+     "note": "정체성 có 받침 → 과; 를 gắn sau 문화. Bài đọc TOPIK gần như chỉ dùng 과/와 để nối danh từ."
+    },
+    {
+     "src": "Đọc · kỳ 41 câu 4",
+     "ko": "한국어 실력을 늘리고자 한국 신문**과** 방송을 자주 봤다.",
+     "note": "신문 có 받침 → 과; cả cụm “신문과 방송” là tân ngữ của 보다 → 을 gắn sau 방송."
+    }
+   ],
+   "hoi": [
+    {
+     "q": "Vì sao 하고 không cần xét 받침 mà 과/와 lại cần?",
+     "a": "하고 luôn bắt đầu bằng phụ âm ㅎ nên đọc trơn sau mọi âm. 과/와 chọn theo âm trước: có 받침 + 과, không 받침 + 와."
+    },
+    {
+     "q": "Viết bài văn (câu 53, 54) nên dùng 하고 hay 과/와?",
+     "a": "<b>과/와</b> — văn viết."
+    },
+    {
+     "q": "“Đây là bàn. Và kia là ghế.” — nối hai câu bằng gì?",
+     "a": "<b>그리고</b>: 이거는 책상이에요. 그리고 저거는 의자예요."
+    }
+   ],
+   "luyen": [
+    {
+     "q": "(Văn viết) 빵(    ) 우유를 샀다.",
+     "o": [
+      "과",
+      "와",
+      "를",
+      "이"
+     ],
+     "w": "빵 có 받침 → 과."
+    },
+    {
+     "q": "(Văn viết) 커피(    ) 주스가 있다.",
+     "o": [
+      "와",
+      "과",
+      "이",
+      "을"
+     ],
+     "w": "커피 không 받침 → 와."
+    },
+    {
+     "q": "(Nói với nhân viên) 김밥(    ) 라면 주세요.",
+     "o": [
+      "하고",
+      "와",
+      "이",
+      "을"
+     ],
+     "w": "Văn nói → 하고. (김밥 có 받침 nên nếu viết thì là 과, không phải 와.)"
+    },
+    {
+     "q": "Câu nào đúng?",
+     "o": [
+      "이거는 책이에요. 그리고 저거는 공책이에요.",
+      "이거는 책이에요. 하고 저거는 공책이에요.",
+      "이거는 책이에요하고 저거는 공책이에요.",
+      "이거는 책하고이에요. 저거는 공책이에요."
+     ],
+     "w": "Nối hai câu → 그리고."
+    },
+    {
+     "q": "Câu nào đúng?",
+     "o": [
+      "저는 형하고 누나가 있어요.",
+      "저는 형가하고 누나가 있어요.",
+      "저는 형과하고 누나가 있어요.",
+      "저는 형와 누나가 있어요."
+     ],
+     "w": "하고 gắn thẳng; 가 sau danh từ cuối. 형 có 받침 → 과 (không phải 와)."
+    }
+   ],
+   "em": [
+    "Viết 2 câu liệt kê đồ trong cặp: một câu văn nói (하고), một câu văn viết (과/와).",
+    "Viết câu gọi 2 món ở quán: … 하고 … 주세요."
+   ],
+   "co": "Cho học sinh đổi 3 câu văn nói (하고) sang văn viết (과/와) để tách văn phong ngay từ 1A — rất có ích khi lên câu 53–54. Sửa ngay lỗi “. 하고 …” nối câu."
+  }
+ ]
+}
