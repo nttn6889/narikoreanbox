@@ -1,0 +1,1819 @@
+# Nghĩa cụm “N을/를 V” trong đề (tools/tu_de.py ghi cả cụm thay vì chỉ danh từ). Một dòng: cụm<TAB>nghĩa. Nghĩa “x” = không ghép cụm (máy tách sai).
+# Cụm mới chưa có nghĩa: tu_de.py ghép tạm “nghĩa động từ + nghĩa danh từ” và in ra <dump>/cum_de_thieu.tsv để bổ sung vào đây.
+영향을 미치다	gây ảnh hưởng
+역할을 하다	đóng vai trò
+문제를 해결하다	giải quyết vấn đề
+영향을 주다	gây ảnh hưởng, tác động
+도움을 주다	giúp đỡ, giúp ích
+감동을 주다	gây xúc động
+인기를 끌다	được ưa chuộng
+관심을 가지다	quan tâm
+감정을 표현하다	bày tỏ cảm xúc
+어려움을 겪다	gặp khó khăn
+관심을 끌다	thu hút sự quan tâm
+삶을 살다	sống (một cuộc đời)
+신청서를 작성하다	điền đơn đăng ký
+정치를 하다	làm chính trị
+피해를 주다	gây thiệt hại
+명품을 구매하다	mua hàng hiệu
+화를 내다	nổi giận
+신경을 쓰다	để tâm, bận tâm
+영향을 끼치다	gây ảnh hưởng
+조화를 이루다	hài hòa với nhau
+물건을 사다	mua đồ
+제품을 구매하다	mua sản phẩm
+생활을 즐기다	tận hưởng cuộc sống
+계획을 세우다	lập kế hoạch
+주장을 반박하다	phản bác ý kiến
+상품을 구매하다	mua hàng
+여부를 결정하다	quyết định có … hay không
+화면을 보다	nhìn màn hình
+광고를 보다	xem quảng cáo
+문제점을 지적하다	chỉ ra vấn đề
+기회를 제공하다	tạo cơ hội
+화를 참다	nén giận
+고개를 돌리다	quay đầu đi, ngoảnh mặt
+건강을 해치다	hại sức khỏe
+성과를 내다	đạt thành quả
+어려움을 느끼다	thấy khó khăn
+피해를 보다	bị thiệt hại
+고통을 느끼다	cảm thấy đau đớn
+능력을 가지다	có năng lực
+상태를 확인하다	kiểm tra tình trạng
+노력을 기울이다	dồn sức nỗ lực
+관심을 갖다	quan tâm
+사용을 줄이다	giảm sử dụng
+비용을 줄이다	cắt giảm chi phí
+사회를 만들다	xây dựng xã hội
+건강을 지키다	giữ gìn sức khỏe
+차를 운전하다	lái xe
+재미를 느끼다	thấy thú vị
+마음을 열다	mở lòng
+명품을 구입하다	mua hàng hiệu
+교실을 운영하다	mở lớp (học)
+방법을 설명하다	giải thích cách làm
+기술을 이용하다	sử dụng công nghệ
+기술을 적용하다	áp dụng công nghệ
+주장을 관철시키다	bảo vệ ý kiến đến cùng
+올림픽을 개최하다	đăng cai Thế vận hội
+책임을 하다	x
+인상을 남기다	để lại ấn tượng
+정보를 알다	biết thông tin
+법을 제정하다	ban hành luật
+목표를 이루다	đạt mục tiêu
+담배를 피우다	hút thuốc
+정보를 찾다	tìm thông tin
+마음을 가지다	có tấm lòng, có suy nghĩ
+관계를 유지하다	duy trì mối quan hệ
+의문을 제기하다	đặt nghi vấn
+감정을 느끼다	cảm nhận cảm xúc
+꿈을 꾸다	mơ, mơ ước
+공연을 하다	biểu diễn
+영향을 분석하다	phân tích ảnh hưởng
+냄새를 맡다	ngửi mùi
+태도를 취하다	tỏ thái độ
+즐거움을 느끼다	cảm thấy vui
+식물을 활용하다	tận dụng cây cối
+발전을 이루다	đạt được sự phát triển
+지식을 활용하다	vận dụng kiến thức
+농사를 망치다	mất mùa, hỏng vụ
+자녀를 두다	có con
+스스로를 고립시키다	tự cô lập mình
+모습을 보이다	thể hiện, cho thấy dáng vẻ
+습관을 가지다	có thói quen
+영양을 섭취하다	nạp dinh dưỡng
+에너지를 소비하다	tiêu tốn năng lượng
+프로그램을 운영하다	tổ chức chương trình
+기회를 주다	cho cơ hội
+의미를 잃어버리다	mất ý nghĩa
+제품을 소비하다	tiêu dùng sản phẩm
+반응을 보이다	có phản ứng
+뉴스를 보다	xem tin tức
+실험을 실시하다	tiến hành thí nghiệm
+실험을 하다	làm thí nghiệm
+상품을 구입하다	mua hàng
+수면을 취하다	ngủ
+호기심을 가지다	tò mò
+시선을 의식하다	để ý ánh mắt người khác
+습관을 갖다	có thói quen
+대화를 하다	trò chuyện
+인상을 주다	tạo ấn tượng
+상처를 주다	làm tổn thương
+휴식을 취하다	nghỉ ngơi
+문화를 즐기다	thưởng thức văn hóa
+여가를 즐기다	tận hưởng thời gian rảnh
+시설을 이용하다	sử dụng cơ sở vật chất
+차를 타다	đi xe, lên xe
+문제를 다루다	đề cập vấn đề
+능력을 키우다	nâng cao năng lực
+상황을 분석하다	phân tích tình hình
+공연을 보다	xem biểu diễn
+경기를 하다	thi đấu
+개성을 표현하다	thể hiện cá tính
+상품을 판매하다	bán hàng
+정보를 공유하다	chia sẻ thông tin
+행복을 결정하다	quyết định hạnh phúc
+행복을 느끼다	cảm thấy hạnh phúc
+성장을 방해하다	cản trở sự phát triển
+권리를 침해하다	xâm phạm quyền lợi
+방법을 제시하다	đưa ra cách giải quyết
+희망을 주다	mang lại hy vọng
+기업을 만들다	lập doanh nghiệp
+제품을 사용하다	dùng sản phẩm
+책임을 지다	chịu trách nhiệm
+방법을 찾다	tìm cách
+전략을 세우다	lập chiến lược
+결정을 내리다	đưa ra quyết định
+소리를 내다	phát ra tiếng
+음료를 마시다	uống nước (đồ uống)
+땀을 쥐다	hồi hộp (손에 땀을 쥐다)
+오염을 일으키다	gây ô nhiễm
+주식을 사다	mua cổ phiếu
+사실을 알리다	cho biết sự thật
+사실을 알다	biết sự thật
+원인을 파악하다	nắm rõ nguyên nhân
+언어를 학습하다	học ngôn ngữ
+언어를 사용하다	sử dụng ngôn ngữ
+갈등을 해결하다	giải quyết mâu thuẫn
+피해를 예방하다	phòng tránh thiệt hại
+인류를 위협하다	đe dọa nhân loại
+물질을 내뿜다	thải ra chất (độc)
+상품을 개발하다	phát triển sản phẩm
+장애인을 배려하다	quan tâm người khuyết tật
+잘못을 지적하다	chỉ ra lỗi sai
+암을 예방하다	phòng ngừa ung thư
+도움을 청하다	nhờ giúp đỡ
+원인을 분석하다	phân tích nguyên nhân
+권리를 가지다	có quyền
+참여를 유도하다	khuyến khích tham gia
+물건을 가지다	có đồ, mang đồ
+법을 위반하다	vi phạm pháp luật
+가치를 지니다	có giá trị
+과정을 거치다	trải qua quá trình
+자세를 가지다	có thái độ
+변화를 주다	tạo thay đổi
+제도를 시행하다	thực thi chế độ
+기술을 사용하다	sử dụng kỹ thuật
+욕망을 줄이다	giảm ham muốn
+정보를 기억하다	ghi nhớ thông tin
+대책을 마련하다	đưa ra biện pháp
+범죄를 저지르다	phạm tội
+호기심을 자극하다	kích thích sự tò mò
+연구를 하다	nghiên cứu
+지원을 확대하다	mở rộng hỗ trợ
+방법을 소개하다	giới thiệu cách làm
+뇌를 사용하다	dùng não
+활동을 포기하다	từ bỏ hoạt động
+사고를 줄이다	giảm tai nạn
+감정을 파악하다	nắm bắt cảm xúc
+잘못을 인정하다	nhận lỗi
+수도를 사용하다	dùng nước máy
+부담을 느끼다	thấy áp lực, ngại
+부담을 주다	gây áp lực
+능력을 발휘하다	phát huy năng lực
+장점을 살리다	phát huy ưu điểm
+기술을 습득하다	học được kỹ thuật
+가정을 이루다	lập gia đình
+당뇨병을 유발하다	gây bệnh tiểu đường
+소비를 줄이다	giảm tiêu dùng
+문제를 풀다	giải bài, giải quyết vấn đề
+상자를 나르다	khiêng thùng
+전통을 이해하다	hiểu truyền thống
+역사를 배우다	học lịch sử
+월세를 깎다	giảm tiền thuê nhà
+생선을 고르다	chọn cá
+근처를 찾다	tìm quanh đó
+요소를 알아보다	tìm hiểu yếu tố
+양을 담그다	x
+비용을 절약하다	tiết kiệm chi phí
+경기를 관람하다	xem thi đấu
+피로를 푸다	giải tỏa mệt mỏi
+피로를 회복하다	hồi phục sau mệt mỏi
+정보를 찾아보다	tra cứu thông tin
+물건을 배달하다	giao hàng
+차이를 느끼다	cảm thấy khác biệt
+삶을 다루다	nói về cuộc sống
+문화를 있다	x
+현실을 보이다	cho thấy hiện thực
+사례를 들다	đưa ra ví dụ
+명품을 선호하다	chuộng hàng hiệu
+유행을 따르다	chạy theo mốt
+명품을 사다	mua hàng hiệu
+재료를 가지다	có nguyên liệu
+감각을 발달시키다	phát triển giác quan
+참여를 원하다	muốn tham gia
+프로그램을 안내하다	giới thiệu chương trình
+감사를 전하다	gửi lời cảm ơn
+태도를 버리다	bỏ thái độ
+건강을 되찾다	lấy lại sức khỏe
+상황을 막다	ngăn tình huống
+부작용을 나타내다	gây tác dụng phụ
+대화를 시작하다	bắt đầu cuộc trò chuyện
+대화를 끌어가다	dẫn dắt cuộc trò chuyện
+호감을 사다	gây thiện cảm
+사실을 기억하다	nhớ sự thật
+기록을 겨루다	thi thành tích
+한계를 극복하다	vượt qua giới hạn
+올림픽을 보다	xem Thế vận hội
+현상을 분석하다	phân tích hiện tượng
+구매를 늘리다	tăng mua sắm
+화면을 제공하다	cung cấp màn hình
+주장을 나열하다	liệt kê ý kiến
+자유를 들다	x
+영향력을 가지다	có sức ảnh hưởng
+전통을 바꾸다	thay đổi truyền thống
+정보를 올리다	đăng thông tin
+문제를 극복하다	vượt qua vấn đề
+흥미를 끄다	thu hút sự hứng thú
+여가를 보내다	dành thời gian rảnh
+방법을 모르다	không biết cách
+피해를 막다	ngăn thiệt hại
+변화를 겪다	trải qua thay đổi
+질병을 유발하다	gây bệnh
+광고를 만들다	làm quảng cáo
+물질을 만들다	tạo ra chất
+기기를 이용하다	sử dụng thiết bị
+규제를 풀다	nới lỏng quy định
+모양을 확인하다	kiểm tra hình dạng
+차를 가지다	có xe
+차를 두다	để xe lại
+기회를 잃어버리다	đánh mất cơ hội
+차이를 생각하다	nghĩ về sự khác biệt
+메뉴를 바꾸다	đổi thực đơn
+메뉴를 확인하다	xem thực đơn
+내용을 확인하다	kiểm tra nội dung
+메뉴를 알아보다	tìm hiểu thực đơn
+신화를 가지다	có thần thoại
+모습을 담다	ghi lại hình ảnh
+신화를 읽다	đọc thần thoại
+방법을 알아보다	tìm hiểu cách làm
+취직을 희망하다	mong muốn xin việc
+목표를 강요하다	áp đặt mục tiêu
+주장을 비판하다	phê phán ý kiến
+인식을 심다	gieo nhận thức
+전통을 보존하다	bảo tồn truyền thống
+유형을 설명하다	giải thích các loại
+경험을 소개하다	giới thiệu trải nghiệm
+성과를 보고하다	báo cáo thành quả
+문화를 모르다	không biết văn hóa
+직원을 선호하다	ưu tiên nhân viên
+활동을 벌이다	triển khai hoạt động
+비율을 기부하다	quyên góp một tỷ lệ
+사업을 지원하다	hỗ trợ dự án
+기업을 살찌우다	làm giàu cho doanh nghiệp
+거품을 줄이다	giảm giá ảo, giảm bọt
+이윤을 추구하다	theo đuổi lợi nhuận
+활동을 펼치다	triển khai hoạt động
+이윤을 증가시키다	tăng lợi nhuận
+현실을 감안하다	tính đến thực tế
+편견을 깨다	phá bỏ định kiến
+치매를 앓다	mắc chứng mất trí nhớ
+노인을 부양하다	phụng dưỡng người già
+제도를 도입하다	áp dụng chế độ mới
+점을 감안하다	tính đến điểm (này)
+간을 하다	nêm nếm
+간을 짜다	x
+주장을 펴다	đưa ra ý kiến
+직원을 신뢰하다	tin tưởng nhân viên
+사례를 비교하다	so sánh các trường hợp
+책임을 밝히다	làm rõ trách nhiệm
+미래를 전망하다	dự báo tương lai
+방안을 제시하다	đưa ra phương án
+물건을 바꾸다	đổi đồ
+처벌을 강화하다	tăng cường xử phạt
+흥미를 찾다	tìm thấy hứng thú
+학습을 하다	học tập
+방법을 배우다	học cách
+의미를 이해하다	hiểu ý nghĩa
+서로를 이해하다	hiểu nhau
+기능을 하다	có chức năng, làm chức năng
+사례를 참조하다	tham khảo trường hợp
+문제를 제기하다	nêu vấn đề
+변화를 촉구하다	kêu gọi thay đổi
+영상을 찍다	quay video
+사용량을 줄이다	giảm lượng sử dụng
+수익을 기대하다	mong có lợi nhuận
+감동을 느끼다	cảm động
+식품을 먹다	ăn thực phẩm
+투자를 하다	đầu tư
+욕구를 충족하다	thỏa mãn nhu cầu
+변화를 가져오다	mang lại thay đổi
+일자리를 만들다	tạo việc làm
+불만을 가지다	bất mãn
+관심을 두다	quan tâm đến
+매력을 지니다	có sức hút
+잡지를 판매하다	bán tạp chí
+상품을 사용하다	dùng sản phẩm
+가치를 알다	biết giá trị
+문화를 이해하다	hiểu văn hóa
+세상을 떠나다	qua đời
+결과를 보이다	cho thấy kết quả
+에너지를 만들다	tạo ra năng lượng
+체온을 유지하다	giữ thân nhiệt
+위험을 알리다	cảnh báo nguy hiểm
+호르몬을 분비하다	tiết hormone
+꼬리를 흔들다	vẫy đuôi
+구멍을 만들다	tạo lỗ
+방송을 규제하다	quản lý phát sóng
+작업을 하다	làm việc (công đoạn)
+문제를 낳다	gây ra vấn đề
+혼란을 겪다	bị rối loạn, gặp hỗn loạn
+비만을 해결하다	giải quyết béo phì
+성공을 이루다	đạt thành công
+자신감을 주다	tạo sự tự tin
+인생을 살다	sống cuộc đời
+화를 조절하다	kiềm chế cơn giận
+정보를 거르다	sàng lọc thông tin
+수분을 보충하다	bổ sung nước
+노폐물을 배출하다	thải chất cặn bã
+문제를 해소하다	giải quyết vấn đề
+차를 마시다	uống trà
+공연을 관람하다	xem biểu diễn
+태도를 보이다	tỏ thái độ
+의미를 찾다	tìm ý nghĩa
+자신을 사랑하다	yêu bản thân
+우울증을 치료하다	điều trị trầm cảm
+공격을 당하다	bị tấn công
+먹이를 발견하다	phát hiện thức ăn
+먹이를 찾다	tìm thức ăn
+생명체를 만들다	tạo ra sinh vật
+생명체를 창조하다	tạo ra sinh vật
+물건을 팔다	bán đồ
+정보를 제공하다	cung cấp thông tin
+활동을 즐기다	thích hoạt động
+능력을 기르다	rèn năng lực
+취업을 하다	có việc làm, xin được việc
+취업을 준비하다	chuẩn bị xin việc
+기회를 갖다	có cơ hội
+목소리를 높이다	lên tiếng mạnh mẽ
+모습을 보다	nhìn thấy hình ảnh
+우울증을 예방하다	phòng ngừa trầm cảm
+경기를 즐기다	thưởng thức trận đấu
+수표를 읽다	đọc séc
+출산을 하다	sinh con
+화장품을 바르다	bôi mỹ phẩm
+문화를 누리다	hưởng thụ văn hóa
+결혼식을 올리다	tổ chức đám cưới
+정책을 수립하다	xây dựng chính sách
+감각을 느끼다	cảm nhận
+성격을 바꾸다	thay đổi tính cách
+동전을 모으다	gom tiền xu
+차를 추월하다	vượt xe
+진로를 방해하다	cản đường đi
+속도를 줄이다	giảm tốc độ
+삶을 살아가다	sống cuộc đời
+카페인을 피하다	tránh caffeine
+절반을 넘다	vượt quá một nửa
+인사를 전하다	gửi lời chào
+놀이를 하다	chơi trò chơi
+식물을 키우다	trồng cây
+특징을 발견하다	phát hiện đặc điểm
+한계를 뛰어넘다	vượt qua giới hạn
+상품을 수입하다	nhập khẩu hàng hóa
+하락을 막다	ngăn sụt giảm
+갈등을 초래하다	gây mâu thuẫn
+제품을 만들다	làm sản phẩm
+생물을 들여오다	đưa sinh vật vào
+정보를 생산하다	tạo ra thông tin
+비용을 지원하다	hỗ trợ chi phí
+호기심을 해결하다	giải đáp sự tò mò
+사물을 구별하다	phân biệt sự vật
+양을 조절하다	điều chỉnh lượng
+지식을 쌓다	tích lũy kiến thức
+수분을 저장하다	trữ nước
+금액을 지급하다	chi trả số tiền
+평등을 줄이다	giảm bình đẳng
+제품을 선택하다	chọn sản phẩm
+마음을 치유하다	chữa lành tâm hồn
+고개를 떨구다	cúi gằm mặt
+이유를 알리다	cho biết lý do
+부담을 줄이다	giảm gánh nặng
+지원을 강화하다	tăng cường hỗ trợ
+피부를 보호하다	bảo vệ da
+믿음을 가지다	có niềm tin
+휴가를 즐기다	tận hưởng kỳ nghỉ
+근무를 하다	làm việc
+만족도를 높이다	nâng mức độ hài lòng
+흐름을 놓치다	mất mạch, lỡ dòng
+실험을 진행하다	tiến hành thí nghiệm
+만족감을 높이다	tăng cảm giác hài lòng
+효과를 알다	biết hiệu quả
+속도를 준수하다	tuân thủ tốc độ
+제품을 즐기다	thích dùng sản phẩm
+설탕을 대신하다	thay thế đường
+장애를 유발하다	gây rối loạn
+정책을 마련하다	đưa ra chính sách
+취업을 포기하다	từ bỏ xin việc
+미래를 만들다	tạo nên tương lai
+조사를 실시하다	tiến hành khảo sát
+자원봉사를 하다	làm tình nguyện
+사생활을 침해하다	xâm phạm đời tư
+감정을 이해하다	hiểu cảm xúc
+크기를 키우다	làm to ra
+소비를 키우다	kích thích tiêu dùng
+부작용을 낳다	gây tác dụng phụ
+목소리를 알아채다	nhận ra giọng
+식품을 구매하다	mua thực phẩm
+검진을 실시하다	tiến hành khám
+여부를 확인하다	kiểm tra có … hay không
+방법을 기억하다	nhớ cách làm
+의도를 파악하다	nắm ý đồ
+추억을 만들다	tạo kỷ niệm
+결과를 낳다	đem lại kết quả
+모습을 표현하다	thể hiện hình ảnh
+사업을 시작하다	bắt đầu kinh doanh
+상담을 진행하다	tiến hành tư vấn
+경우를 보다	xem trường hợp
+균형을 이루다	cân bằng
+발전을 저해하다	cản trở phát triển
+에너지를 개발하다	phát triển năng lượng
+변화를 유도하다	thúc đẩy thay đổi
+촬영을 하다	quay phim, chụp ảnh
+공간을 빌리다	thuê địa điểm
+문제점을 우려하다	lo ngại vấn đề
+변화를 기대하다	mong đợi thay đổi
+나뭇잎을 먹다	ăn lá cây
+상황을 고려하다	cân nhắc tình hình
+수준을 높이다	nâng cao trình độ
+활동을 증명하다	chứng minh hoạt động
+내용을 담다	chứa nội dung
+화면을 사용하다	dùng màn hình
+자료를 복사하다	sao chép tài liệu
+내용을 전달하다	truyền đạt nội dung
+인식을 바꾸다	thay đổi nhận thức
+원인을 유추하다	suy ra nguyên nhân
+선물을 드리다	tặng quà (kính ngữ)
+상황을 만들다	tạo tình huống
+훈련을 반복하다	luyện tập lặp lại
+효과를 보다	có hiệu quả
+연구를 수행하다	thực hiện nghiên cứu
+단속을 강화하다	tăng cường kiểm tra, xử lý
+사고를 감소시키다	giảm tai nạn
+피부를 압박하다	chèn ép da
+경기를 마련하다	tổ chức trận đấu
+생활을 분석하다	phân tích sinh hoạt
+숲을 만들다	tạo rừng
+규모를 늘리다	mở rộng quy mô
+행사를 하다	tổ chức sự kiện
+소금을 수확하다	thu hoạch muối
+결정을 모으다	x
+집중을 막다	cản trở tập trung
+인물을 추천하다	tiến cử người
+경영진을 견제하다	kiểm soát ban điều hành
+방법을 개선하다	cải tiến cách làm
+자료를 제공하다	cung cấp tài liệu
+활동을 시작하다	bắt đầu hoạt động
+생활을 좋아하다	thích cuộc sống (…)
+대회를 개최하다	tổ chức cuộc thi
+자신을 보호하다	bảo vệ bản thân
+소비자를 고려하다	tính đến người tiêu dùng
+일상을 보이다	cho thấy đời thường
+정을 나누다	chia sẻ tình cảm
+원리를 이용하다	ứng dụng nguyên lý
+행복을 추구하다	theo đuổi hạnh phúc
+사건을 검토하다	xem xét vụ việc
+차를 사다	mua xe
+법을 배우다	học luật
+메뉴를 보다	xem thực đơn
+자신을 표현하다	thể hiện bản thân
+관리를 강화하다	tăng cường quản lý
+전쟁을 일으키다	gây chiến tranh
+기능을 없애다	bỏ chức năng
+행동을 따르다	làm theo hành động
+일자리를 원하다	muốn có việc làm
+잘못을 숨기다	che giấu lỗi
+불안감을 느끼다	cảm thấy bất an
+전공을 살리다	làm đúng chuyên ngành
+화장품을 사용하다	dùng mỹ phẩm
+고민을 들어주다	lắng nghe nỗi lòng
+문화를 지니다	mang nét văn hóa
+미래를 걱정하다	lo lắng cho tương lai
+구매를 유도하다	kích thích mua hàng
+사은품을 선택하다	chọn quà tặng kèm
+영양을 보충하다	bổ sung dinh dưỡng
+에너지를 소비시키다	làm tiêu hao năng lượng
+상자를 모으다	gom thùng hộp
+관광지를 찾다	đến điểm du lịch
+휴가를 앞두다	sắp đến kỳ nghỉ
+관광객을 끌다	thu hút khách du lịch
+채용을 확대하다	mở rộng tuyển dụng
+이익을 당하다	x
+면을 파악하다	nắm được mặt (vấn đề)
+진학을 준비하다	chuẩn bị học lên
+힘을 기울이다	dồn sức
+인생을 좌우하다	quyết định cuộc đời
+이미지를 바꾸다	thay đổi hình ảnh
+제품을 개발하다	phát triển sản phẩm
+수입을 벌어들이다	kiếm được thu nhập
+계획을 공개하다	công bố kế hoạch
+상품을 홍보하다	quảng bá sản phẩm
+문화를 수용하다	tiếp nhận văn hóa
+문제점을 보완하다	khắc phục điểm yếu
+역사를 가지다	có lịch sử
+모습을 가지다	có dáng vẻ
+미래를 예측하다	dự đoán tương lai
+목적을 실현하다	thực hiện mục đích
+사회를 예측하다	dự đoán xã hội
+목적을 달성하다	đạt mục đích
+세상을 만들다	tạo nên thế giới
+재산을 물려주다	để lại tài sản
+고기를 재다	ướp thịt
+당뇨병을 일으키다	gây bệnh tiểu đường
+이상을 찾다	tìm lý tưởng
+안정을 추구하다	theo đuổi sự ổn định
+목표를 실현하다	hiện thực hóa mục tiêu
+문제를 이해하다	hiểu vấn đề
+지식을 통합하다	tích hợp kiến thức
+관심을 나타내다	tỏ ra quan tâm
+성적을 나타내다	thể hiện thành tích
+취업을 원하다	muốn có việc làm
+변화를 알리다	báo hiệu thay đổi
+사례를 소개하다	giới thiệu trường hợp
+기준을 분석하다	phân tích tiêu chí
+종류를 설명하다	giải thích các loại
+변화를 따라가다	theo kịp thay đổi
+변화를 파악하다	nắm bắt thay đổi
+경험을 나누다	chia sẻ kinh nghiệm
+세상을 경험하다	trải nghiệm thế giới
+언어를 배우다	học ngôn ngữ
+언어를 모르다	không biết ngôn ngữ
+모습을 잃어버리다	mất đi diện mạo
+유행을 따라가다	chạy theo mốt
+개성을 나타내다	thể hiện cá tính
+잘못을 하다	làm sai, mắc lỗi
+실수를 줄이다	giảm sai sót
+문제를 피하다	tránh vấn đề
+실력을 갖추다	có thực lực
+능력을 갖추다	có năng lực
+두통을 참다	chịu đau đầu
+마음을 알아주다	hiểu lòng
+갈등을 가져오다	gây mâu thuẫn
+장점을 찾다	tìm ưu điểm
+갈등을 일으키다	gây mâu thuẫn
+개발을 제한하다	hạn chế phát triển
+위기를 극복하다	vượt qua khủng hoảng
+습관을 버리다	bỏ thói quen
+습관을 바꾸다	thay đổi thói quen
+행사를 개최하다	tổ chức sự kiện
+문제를 야기하다	gây ra vấn đề
+생활을 누리다	tận hưởng cuộc sống
+평등을 지향하다	hướng tới bình đẳng
+평등을 실현하다	thực hiện bình đẳng
+고통을 가져오다	gây đau khổ
+시선을 고려하다	để ý ánh nhìn
+마음을 빼앗기다	bị cuốn hút
+방법을 변경하다	thay đổi cách làm
+효과를 부각시키다	làm nổi bật hiệu quả
+면을 강조하다	nhấn mạnh mặt (vấn đề)
+판매를 높이다	tăng doanh số
+호수를 만들다	tạo hồ
+전체를 파괴하다	phá hủy toàn bộ
+힘을 갖다	có sức mạnh
+인간을 포함하다	bao gồm con người
+피해를 끼치다	gây thiệt hại
+결과를 가져오다	đem lại kết quả
+모습을 연구하다	nghiên cứu hình dáng
+사실을 찾아내다	tìm ra sự thật
+주인공을 물색하다	tìm nhân vật chính
+주의를 가지다	chú ý
+세기를 살아가다	sống trong thế kỷ
+크기를 재다	đo kích thước
+지출을 늘리다	tăng chi tiêu
+조건을 갖추다	đáp ứng điều kiện
+위기를 맞다	gặp khủng hoảng
+규모를 키우다	mở rộng quy mô
+장점을 알리다	quảng bá ưu điểm
+투자를 유도하다	thu hút đầu tư
+이유를 분석하다	phân tích lý do
+어려움을 설명하다	trình bày khó khăn
+해외여행을 떠나다	đi du lịch nước ngoài
+상품을 사다	mua hàng
+상품을 찾다	tìm hàng
+박람회를 찾다	đến hội chợ
+화폐를 만들다	tạo ra tiền tệ
+경쟁을 하다	cạnh tranh
+규칙을 만들다	đặt ra quy tắc
+냄새를 없애다	khử mùi
+시력을 교정하다	điều chỉnh thị lực
+빛을 막다	chắn ánh sáng
+행위를 하다	có hành vi
+물건을 떨어뜨리다	làm rơi đồ
+내용을 공개하다	công khai nội dung
+물건을 준비하다	chuẩn bị đồ
+환자를 살리다	cứu bệnh nhân
+금액을 원하다	muốn số tiền
+분야를 접하다	tiếp xúc lĩnh vực
+경험을 쌓다	tích lũy kinh nghiệm
+전반을 장악하다	nắm toàn bộ
+청소년을 뜻하다	có nghĩa là thanh thiếu niên
+영향력을 미치다	gây sức ảnh hưởng
+프로그램을 이용하다	dùng chương trình
+목표를 성취하다	đạt được mục tiêu
+발달을 가져오다	đem lại sự phát triển
+사회를 성장시키다	làm xã hội phát triển
+기본을 하다	x
+문화를 계승하다	kế thừa văn hóa
+자신을 여기다	coi bản thân (là…)
+재능을 키우다	phát triển tài năng
+재능을 개발하다	phát triển tài năng
+규칙을 습득하다	học được quy tắc
+규칙을 익히다	làm quen quy tắc
+학습을 마치다	học xong
+고개를 내밀다	thò đầu ra
+주변을 두리번거리다	nhìn quanh quất
+방식을 결정하다	quyết định cách thức
+상황을 예측하다	dự đoán tình hình
+단계를 거치다	trải qua các bước
+근무를 포함하다	bao gồm làm việc
+정책을 도입하다	áp dụng chính sách
+판매를 금지하다	cấm bán
+범죄를 막다	ngăn tội phạm
+정책을 설명하다	giải thích chính sách
+규제를 요구하다	yêu cầu quản lý chặt
+기기를 판매하다	bán thiết bị
+상가를 만들다	lập khu cửa hàng
+단어를 모으다	thu thập từ
+단어를 선정하다	chọn từ
+단어를 분석하다	phân tích từ
+장을 담그다	làm tương
+시대를 대표하다	tiêu biểu cho thời đại
+방학을 맞다	được nghỉ hè/nghỉ đông
+인간을 앞지르다	vượt con người
+능력을 넘다	vượt quá khả năng
+마음을 가다듬다	trấn tĩnh lại
+일자리를 잃다	mất việc
+문제를 발생시키다	làm phát sinh vấn đề
+암을 유발하다	gây ung thư
+장치를 걸다	cài thiết bị
+성과를 거두다	đạt thành quả
+지역을 통과하다	đi qua khu vực
+피해를 키우다	làm thiệt hại lớn hơn
+피해를 유발하다	gây thiệt hại
+성장을 이루다	đạt tăng trưởng
+질을 떨어뜨리다	làm giảm chất lượng
+자원을 이용하다	sử dụng tài nguyên
+학습을 지원하다	hỗ trợ học tập
+기회를 확대하다	mở rộng cơ hội
+프로그램을 만들다	tạo chương trình
+이상을 일으키다	gây bất thường
+성장을 막다	cản trở tăng trưởng
+문제를 일으키다	gây ra vấn đề
+만족감을 느끼다	cảm thấy hài lòng
+질서를 어지럽히다	làm rối trật tự
+규제를 중시하다	coi trọng quy định
+혼란을 막다	ngăn hỗn loạn
+질서를 유지하다	giữ trật tự
+영양소를 섭취하다	hấp thụ chất dinh dưỡng
+정보를 지키다	bảo vệ thông tin
+죽음을 원하다	muốn chết
+비용을 모으다	gom chi phí
+차원을 넘다	vượt khỏi phạm vi
+자신을 잃어버리다	đánh mất bản thân
+목표를 세우다	đặt mục tiêu
+여유를 갖다	có thời gian thư thả
+마음을 들여다보다	nhìn vào lòng mình
+의미를 설명하다	giải thích ý nghĩa
+특성을 분석하다	phân tích đặc tính
+질병을 나열하다	liệt kê bệnh
+증상을 설명하다	mô tả triệu chứng
+물건을 두다	để đồ
+욕구를 채우다	thỏa mãn nhu cầu
+여유를 가지다	có sự thư thả
+암을 발견하다	phát hiện ung thư
+손가락을 돌리다	xoay ngón tay
+소금을 뿌리다	rắc muối
+어려움을 극복하다	vượt qua khó khăn
+가치를 창조하다	tạo ra giá trị
+이윤을 확대하다	tăng lợi nhuận
+혼란을 빚다	gây hỗn loạn
+수입을 중단하다	ngừng nhập khẩu
+사고를 가지다	có lối suy nghĩ
+삶을 사랑하다	yêu cuộc sống
+감정을 무시하다	phớt lờ cảm xúc
+경제를 하다	x
+경제를 살리다	vực dậy kinh tế
+자신감을 회복하다	lấy lại tự tin
+판매를 억제하다	hạn chế bán
+단점을 표시하다	ghi rõ nhược điểm
+고객을 차다	x
+고객을 줄이다	giảm khách hàng
+가치를 높이다	nâng cao giá trị
+상품을 등장시키다	tung ra sản phẩm
+광고를 이용하다	tận dụng quảng cáo
+현실을 변형하다	biến đổi hiện thực
+규제를 마련하다	đưa ra quy định
+인생을 존경하다	kính trọng cuộc đời (ai đó)
+삶을 마감하다	kết thúc cuộc đời
+문화를 알다	biết văn hóa
+우울증을 동반하다	kèm theo trầm cảm
+문제를 예방하다	phòng ngừa vấn đề
+혼란을 초래하다	gây hỗn loạn
+자원을 낭비하다	lãng phí tài nguyên
+이산화탄소를 흡수하다	hấp thụ CO₂
+산소를 배출하다	thải ra oxy
+가치를 나타내다	thể hiện giá trị
+체온을 측정하다	đo thân nhiệt
+면역력을 높이다	tăng sức đề kháng
+시스템을 밝혀내다	làm sáng tỏ cơ chế
+공격을 막다	chặn tấn công
+호르몬을 내보내다	tiết hormone
+과정을 관리하다	quản lý quá trình
+진행을 리드하다	dẫn dắt tiến trình
+상황을 조율하다	điều phối tình hình
+요소를 설명하다	giải thích yếu tố
+변비를 예방하다	phòng táo bón
+감정을 가지다	có cảm xúc
+채소를 나르다	chở rau
+도구를 정리하다	dọn dẹp dụng cụ
+과제를 던지다	đặt ra vấn đề
+재미를 더하다	thêm thú vị
+행동을 바꾸다	thay đổi hành vi
+변화를 이끌다	dẫn dắt thay đổi
+전체를 숨기다	giấu toàn bộ
+컵을 사용하다	dùng cốc
+결과를 생각하다	nghĩ đến kết quả
+사용을 금지하다	cấm sử dụng
+나뭇가지를 엮다	đan cành cây
+방향을 돌리다	đổi hướng
+나뭇가지를 가져오다	mang cành cây về
+둥지를 지키다	giữ tổ
+방송을 하다	phát sóng
+피부병을 겪다	bị bệnh da
+증상을 줄이다	giảm triệu chứng
+장치를 조작하다	vận hành thiết bị
+상태를 안정시키다	ổn định tình trạng
+기능을 갖추다	có chức năng
+신호를 감지하다	nhận biết tín hiệu
+꿈을 분석하다	phân tích giấc mơ
+교육을 알다	x
+법을 개발하다	phát triển cách làm
+인식을 제공하다	x
+폭을 넓히다	mở rộng phạm vi
+예술을 이해하다	hiểu nghệ thuật
+활동을 활용하다	tận dụng hoạt động
+배경을 추구하다	x
+삶을 사다	x
+분야를 개척하다	khai phá lĩnh vực
+활동을 좇다	theo đuổi hoạt động
+움직임을 보다	quan sát chuyển động
+신호를 처리하다	xử lý tín hiệu
+사실을 확인하다	xác nhận sự thật
+당뇨병을 치료하다	điều trị tiểu đường
+요인을 없애다	loại bỏ yếu tố
+비만을 예방하다	phòng ngừa béo phì
+활동을 장려하다	khuyến khích hoạt động
+상태를 유지하다	duy trì trạng thái
+주변을 맴돌다	quanh quẩn gần đó
+자녀를 보호하다	bảo vệ con cái
+부작용을 생기다	x
+능력을 잃다	mất khả năng
+마음을 쓰다	để tâm, quan tâm
+삶을 조각하다	tạc nên cuộc đời
+유전자를 물려주다	di truyền gen
+연구를 진행하다	tiến hành nghiên cứu
+패스트푸드를 갖다	x
+우려를 나타내다	bày tỏ lo ngại
+기준을 갖다	có tiêu chuẩn
+사회를 살아가다	sống trong xã hội
+화를 일으키다	gây họa
+감정을 조절하다	kiểm soát cảm xúc
+언어를 하다	x
+기능을 향상시키다	nâng cao chức năng
+단어를 암기하다	học thuộc từ
+뇌를 강화하다	tăng cường trí não
+지식을 외우다	học thuộc kiến thức
+집중력을 높이다	tăng khả năng tập trung
+수분을 유지하다	giữ ẩm, giữ nước
+칼슘을 감소시키다	làm giảm canxi
+휴식을 하다	nghỉ ngơi
+시설을 활용하다	tận dụng cơ sở vật chất
+어린이집을 이용하다	gửi con ở nhà trẻ
+해외여행을 하다	du lịch nước ngoài
+건강을 생각하다	nghĩ đến sức khỏe
+차를 선택하다	chọn xe
+변화를 시도하다	thử thay đổi
+차량을 이동시키다	di chuyển xe
+사실을 밝혀내다	làm sáng tỏ sự thật
+도전을 즐기다	thích thử thách
+호기심을 느끼다	cảm thấy tò mò
+스스로를 사랑하다	yêu bản thân
+자신을 자책하다	tự trách mình
+삶을 변화시키다	thay đổi cuộc sống
+고개를 들다	ngẩng đầu
+불을 켜다	bật đèn
+자신감을 잃다	mất tự tin
+피해를 줄이다	giảm thiệt hại
+문제점을 가져오다	gây ra vấn đề
+차별을 없애다	xóa bỏ phân biệt đối xử
+일자리를 마련하다	tạo việc làm
+감정을 흥분시키다	làm cảm xúc kích động
+과일을 찾다	tìm trái cây
+먹이를 먹다	ăn mồi
+부족을 인지하다	nhận ra sự thiếu hụt
+의사소통을 하다	giao tiếp
+점을 찍다	chấm điểm, đánh dấu chấm
+방법을 사용하다	dùng cách
+상품을 파다	x
+흐름을 확인하다	xem dòng chảy, xu hướng
+요구를 분석하다	phân tích nhu cầu
+방법을 고안하다	nghĩ ra cách
+주의를 끄다	thu hút sự chú ý
+방법을 조사하다	tìm hiểu cách làm
+요구를 조사하다	khảo sát nhu cầu
+방법을 모색하다	tìm kiếm giải pháp
+조사를 활용하다	tận dụng khảo sát
+지원자를 고용하다	tuyển ứng viên
+직원을 승진시키다	thăng chức cho nhân viên
+요소를 평가하다	đánh giá yếu tố
+질서를 이해하다	hiểu trật tự
+질서를 존중하다	tôn trọng trật tự
+형태를 하다	có hình dạng
+계산서를 작성하다	lập hóa đơn
+바람을 타다	theo trào lưu; gặp gió
+포인트를 적립하다	tích điểm
+정책을 하다	x
+이익을 높이다	tăng lợi ích
+이윤을 높이다	tăng lợi nhuận
+정책을 실시하다	thực hiện chính sách
+만족도를 매기다	chấm mức hài lòng
+장점을 악용하다	lợi dụng ưu điểm
+침해를 단속하다	xử lý vi phạm
+침해를 신고하다	tố giác vi phạm
+문제를 대처하다	đối phó vấn đề
+사용을 지지하다	ủng hộ việc sử dụng
+원인을 예측하다	dự đoán nguyên nhân
+문제점을 비판하다	phê phán vấn đề
+방법을 요구하다	đòi hỏi biện pháp
+공간을 누리다	tận hưởng không gian
+사용을 자제하다	hạn chế sử dụng
+도로를 통과하다	đi qua đường
+관계를 맺다	thiết lập quan hệ
+과일을 먹다	ăn trái cây
+과일을 올리다	bày trái cây
+현상을 예방하다	ngăn ngừa hiện tượng
+곰팡이를 제거하다	diệt nấm mốc
+습기를 없애다	khử ẩm
+기회를 지원하다	hỗ trợ cơ hội
+신뢰를 주다	tạo niềm tin
+태도를 바꾸다	thay đổi thái độ
+성격을 알다	biết tính cách
+원인을 알아내다	tìm ra nguyên nhân
+조사를 나가다	đi khảo sát
+자원을 절약하다	tiết kiệm tài nguyên
+잘못을 저지르다	phạm sai lầm
+골목을 따르다	đi theo con hẻm
+행복을 주다	mang lại hạnh phúc
+계획을 알리다	thông báo kế hoạch
+황사를 막다	chặn bụi vàng
+좌석을 설치하다	lắp ghế ngồi
+물건을 들다	cầm đồ, xách đồ
+문화를 이루다	tạo nên văn hóa
+가치관을 부활시키다	làm sống lại giá trị quan
+현상을 해결하다	giải quyết hiện tượng
+암을 일으키다	gây ung thư
+차이를 알다	biết sự khác biệt
+물질을 피하다	tránh chất (độc hại)
+물질을 구분하다	phân biệt các chất
+수준을 무시하다	coi thường trình độ
+감정을 참다	kìm nén cảm xúc
+감정을 해소하다	giải tỏa cảm xúc
+스트레스를 이완시키다	giải tỏa căng thẳng
+마음을 표현하다	bày tỏ tấm lòng
+제한을 두다	đặt giới hạn
+상황을 살피다	xem xét tình hình
+자유를 주다	cho tự do
+입장을 무시하다	phớt lờ lập trường
+실력을 칭찬하다	khen năng lực
+실력을 갈다	mài giũa năng lực
+시기를 정하다	định thời điểm
+존재를 뜻하다	nghĩa là sự tồn tại
+휴가를 가다	đi nghỉ
+먼지를 닦다	lau bụi
+면역력을 떨어뜨리다	làm giảm sức đề kháng
+스트레스를 주다	gây căng thẳng
+기기를 활용하다	tận dụng thiết bị
+정보를 찾아내다	tìm ra thông tin
+피로를 가져오다	gây mệt mỏi
+증상을 보이다	có triệu chứng
+수표를 세다	đếm séc
+정신을 가다듬다	tập trung tinh thần
+잔고를 확인하다	kiểm tra số dư
+법을 만들다	làm luật
+휴가를 주다	cho nghỉ phép
+공기를 즐기다	tận hưởng không khí
+문화를 가르치다	dạy văn hóa
+조사를 보다	xem khảo sát
+광고를 찍다	quay quảng cáo
+모양을 유지하다	giữ hình dạng
+기능을 가지다	có chức năng
+상대방을 존중하다	tôn trọng đối phương
+피해를 내다	gây thiệt hại
+개발을 중지하다	ngừng phát triển
+종류를 사용하다	dùng loại (…)
+태도를 갖다	có thái độ
+연기를 보이다	thể hiện diễn xuất
+수도를 떠나다	rời thủ đô
+마음을 진정시키다	trấn an tâm trạng
+가치관을 공유하다	chia sẻ giá trị quan
+영향력을 행사하다	gây ảnh hưởng
+능력을 배양하다	bồi dưỡng năng lực
+자세를 갖다	có thái độ
+입장을 설명하다	giải thích lập trường
+원목을 사용하다	dùng gỗ nguyên khối
+공간을 늘리다	mở rộng không gian
+상담을 환영하다	hoan nghênh tư vấn
+검색을 하다	tìm kiếm
+흥미를 가지다	có hứng thú
+불을 사용하다	dùng lửa
+위치를 느끼다	cảm nhận vị trí
+자녀를 성숙하다	x
+도구를 이용하다	dùng dụng cụ
+환경을 보호하다	bảo vệ môi trường
+성격을 요구하다	đòi hỏi tính cách
+성격을 맞추다	hợp tính nhau
+상황을 정리하다	thu xếp tình hình
+쇼핑백을 들다	xách túi mua sắm
+동전을 담다	bỏ tiền xu vào
+동전을 쓸다	x
+정책을 펼치다	triển khai chính sách
+자신을 앞지르다	vượt lên chính mình
+상대방을 위협하다	đe dọa đối phương
+상처를 악화시키다	làm vết thương nặng thêm
+피부를 자극하다	kích ứng da
+먹이를 주다	cho ăn
+충격을 주다	gây sốc
+고통을 지켜보다	chứng kiến nỗi đau
+고통을 나누다	chia sẻ nỗi đau
+섭취를 줄이다	giảm ăn vào
+한계를 알다	biết giới hạn
+가치를 배우다	học giá trị
+기기를 사용하다	dùng thiết bị
+동영상을 찍다	quay video
+방법을 원하다	muốn có cách
+습관을 지키다	giữ thói quen
+세상을 알다	hiểu đời
+문제점을 분석하다	phân tích vấn đề
+지식을 배우다	học kiến thức
+생활을 시작하다	bắt đầu cuộc sống (mới)
+인상을 결정하다	quyết định ấn tượng
+내용을 요약하다	tóm tắt nội dung
+상태를 알다	biết tình trạng
+기대를 반영하다	phản ánh kỳ vọng
+물품을 기억하다	nhớ đồ vật
+점을 알리다	cho biết điểm (…)
+집안일을 하다	làm việc nhà
+균형을 감지하다	cảm nhận thăng bằng
+정보를 알아내다	tìm ra thông tin
+정보를 수집하다	thu thập thông tin
+개념을 설명하다	giải thích khái niệm
+종이컵을 사용하다	dùng cốc giấy
+단점을 보완하다	khắc phục nhược điểm
+밀가루를 혼합하다	trộn bột mì
+숟가락을 만들다	làm thìa
+의식을 잃다	mất ý thức, ngất
+자신을 구하다	cứu bản thân
+불을 끄다	tắt đèn, dập lửa
+습기를 조절하다	điều chỉnh độ ẩm
+역할을 모르다	không biết vai trò
+관계를 이용하다	lợi dụng quan hệ
+기체를 가열하다	đun nóng chất khí
+재테크를 합치다	x
+행위를 뜻하다	nghĩa là hành vi
+생물을 모방하다	mô phỏng sinh vật
+특징을 모방하다	mô phỏng đặc điểm
+장치를 개발하다	phát triển thiết bị
+음식물을 먹다	ăn thức ăn
+일부를 자르다	cắt một phần
+일부를 절단하다	cắt bỏ một phần
+암을 극복하다	vượt qua ung thư
+기록을 세우다	lập kỷ lục
+개념을 생성하다	tạo khái niệm
+움직임을 예상하다	đoán trước chuyển động
+방법을 실행하다	thực hiện cách
+움직임을 숨기다	giấu chuyển động
+움직임을 무시하다	bỏ qua chuyển động
+움직임을 과장되다	x
+행동을 보이다	có hành động
+행동을 원하다	muốn hành động
+행동을 요구하다	đòi hỏi hành động
+반응을 일으키다	gây phản ứng
+효과를 보이다	cho thấy hiệu quả
+기록을 경신하다	phá kỷ lục
+기록을 넘어서다	vượt kỷ lục
+생활을 대비하다	chuẩn bị cho cuộc sống
+수명을 연장시키다	kéo dài tuổi thọ
+생활을 보내다	sống (một quãng)
+배경을 가지다	có bối cảnh
+문제를 발생하다	phát sinh vấn đề
+필요를 충족하다	đáp ứng nhu cầu
+기준을 찾다	tìm tiêu chuẩn
+문제점을 없애다	loại bỏ vấn đề
+의지를 기르다	rèn ý chí
+방식을 사용하다	dùng phương thức
+비판을 담다	chứa sự phê phán
+문제를 비판하다	phê phán vấn đề
+감정을 아우르다	bao hàm cảm xúc
+문화를 향유하다	hưởng thụ văn hóa
+양반을 존중하다	tôn trọng tầng lớp quý tộc
+내용을 포함하다	bao gồm nội dung
+영향을 이해하다	hiểu ảnh hưởng
+활동을 찾다	tìm hoạt động
+오염을 이기다	chống chịu ô nhiễm
+서식지를 바꾸다	đổi môi trường sống
+의욕을 감소시키다	làm giảm động lực
+평등을 발생시키다	x
+영향력을 인식하다	nhận thức sức ảnh hưởng
+환경을 조성하다	tạo môi trường
+특징을 분석하다	phân tích đặc điểm
+입장을 소개하다	giới thiệu lập trường
+의욕을 고취하다	khơi dậy động lực
+특징을 설명하다	giải thích đặc điểm
+개념을 이해하다	hiểu khái niệm
+권리를 주장하다	đòi quyền lợi
+평등을 없애다	x
+자세를 유지하다	giữ tư thế
+마음을 쉬다	cho tâm hồn nghỉ ngơi
+온도를 유지하다	giữ nhiệt độ
+방향을 알리다	chỉ hướng
+방향을 찾다	tìm hướng
+희망을 품다	ôm hy vọng
+방향을 잃다	mất phương hướng
+문화를 퍼트리다	lan tỏa văn hóa
+의미를 가지다	có ý nghĩa
+사실을 의미하다	có nghĩa là
+바람을 담다	gửi gắm mong ước
+희망을 제공하다	đem lại hy vọng
+희망을 전하다	gửi hy vọng
+목적을 가지다	có mục đích
+희망을 전달하다	truyền hy vọng
+물건을 알다	biết đồ vật
+공연을 지켜보다	xem biểu diễn
+모습을 기다리다	chờ hình ảnh
+역할을 맡다	đảm nhận vai trò
+법을 모르다	không biết luật
+방법을 교육하다	dạy cách làm
+상품을 선택하다	chọn sản phẩm
+상품을 만들다	làm sản phẩm
+과정을 살펴보다	xem xét quá trình
+규칙을 따르다	tuân theo quy tắc
+언어를 만들다	tạo ngôn ngữ
+이미지를 처리하다	xử lý hình ảnh
+감정을 담아내다	thể hiện cảm xúc
+행동을 조절하다	điều chỉnh hành vi
+관계를 개선하다	cải thiện quan hệ
+신뢰를 쌓다	xây dựng niềm tin
+먹이를 소화하다	tiêu hóa thức ăn
+영양소를 제공하다	cung cấp chất dinh dưỡng
+지원을 제공하다	cung cấp hỗ trợ
+금액을 정하다	định số tiền
+경험을 반영하다	phản ánh kinh nghiệm
+문화를 평가하다	đánh giá văn hóa
+경험을 받아들이다	đón nhận trải nghiệm
+제품을 생산하다	sản xuất sản phẩm
+제품을 선호하다	chuộng sản phẩm
+이미지를 만들다	tạo hình ảnh
+단백질을 추출하다	chiết xuất protein
+생명체를 모방하다	mô phỏng sinh vật
+비밀을 풀다	giải mã bí mật
+상처를 치유하다	chữa lành vết thương
+정서를 배출하다	giải tỏa cảm xúc
+화를 누르다	nén giận
+강의를 계속하다	tiếp tục bài giảng
+상품을 맞바꾸다	đổi hàng
+노력을 들이다	bỏ công sức
+물건을 발견하다	phát hiện đồ vật
+차이를 비교하다	so sánh sự khác biệt
+가치를 적용하다	áp dụng giá trị
+크기를 측정하다	đo kích thước
+가치를 저장하다	lưu trữ giá trị
+물건을 보관하다	cất giữ đồ
+물건을 교환하다	đổi đồ
+피해를 증가시키다	làm tăng thiệt hại
+구조를 변화시키다	thay đổi cấu trúc
+변화를 낙관하다	lạc quan về thay đổi
+의도를 감추다	giấu ý đồ
+흐름을 끊다	cắt ngang mạch
+문제를 안다	x
+여부를 선택하다	chọn có … hay không
+사실을 인식하다	nhận thức sự thật
+광고를 막다	chặn quảng cáo
+참여를 비판하다	phê phán việc tham gia
+의도를 띠다	mang ý đồ
+대중교통을 타다	đi phương tiện công cộng
+사업을 확대하다	mở rộng kinh doanh
+정책을 검토하다	xem xét chính sách
+콘센트를 사용하다	dùng ổ cắm
+영상을 분석하다	phân tích video
+충격을 흡수하다	hấp thụ va chạm
+온도를 낮추다	hạ nhiệt độ
+체온을 조절하다	điều hòa thân nhiệt
+혈액을 보내다	đưa máu đi
+체온을 낮추다	hạ thân nhiệt
+봉지를 채우다	làm đầy túi
+모양을 보호하다	giữ hình dạng
+부피를 줄이다	giảm thể tích
+압력을 유지하다	giữ áp suất
+빛을 발하다	tỏa sáng, phát huy
+힘을 선물하다	tiếp thêm sức mạnh
+형태를 뜻하다	nghĩa là hình thức
+호기심을 선호하다	x
+상품을 준비하다	chuẩn bị hàng
+타인을 인지하다	nhận biết người khác
+증상을 의미하다	nghĩa là triệu chứng
+유행을 선두하다	dẫn đầu xu hướng
+물질을 결합시키다	kết hợp các chất
+효과를 발휘하다	phát huy hiệu quả
+거품을 생성하다	tạo bọt
+기름을 생성하다	tạo dầu
+회전을 하다	xoay vòng
+경기를 이끌다	dẫn dắt trận đấu
+사실을 밝히다	làm rõ sự thật
+영상을 촬영하다	quay video
+통증을 알아채다	nhận ra cơn đau
+사실을 뜻하다	nghĩa là sự thật
+고통을 호소하다	kêu đau, than khổ
+고통을 담당하다	x
+성과를 이루다	đạt thành quả
+물건을 구매하다	mua đồ
+문제를 유발하다	gây ra vấn đề
+평생을 따라다니다	đi theo suốt đời
+결과를 일으키다	gây ra kết quả
+태도를 가지다	có thái độ
+상대방을 배려하다	quan tâm đối phương
+모습을 상상하다	tưởng tượng hình ảnh
+욕구를 충족시키다	thỏa mãn nhu cầu
+집중력을 떨어뜨리다	làm giảm tập trung
+결과를 초래하다	dẫn đến kết quả
+피로를 해소하다	giải tỏa mệt mỏi
+부담을 초래하다	gây gánh nặng
+심리를 이해하다	hiểu tâm lý
+습관을 돌아보다	nhìn lại thói quen
+지출을 줄이다	giảm chi tiêu
+효과를 활용하다	tận dụng hiệu quả
+행동을 막다	ngăn hành vi
+행동을 자제하다	kiềm chế hành vi
+움직임을 분석하다	phân tích chuyển động
+이동을 파악하다	nắm sự di chuyển
+공간을 없애다	bỏ khoảng trống
+효과를 누리다	được hưởng hiệu quả
+도로를 건너다	băng qua đường
+사고를 예방하다	phòng tránh tai nạn
+장애를 일으키다	gây rối loạn
+씨름을 즐기다	thích môn đấu vật
+습관을 고치다	sửa thói quen
+부작용을 알다	biết tác dụng phụ
+질을 향상하다	nâng cao chất lượng
+산업을 육성하다	phát triển ngành công nghiệp
+가치를 창출하다	tạo ra giá trị
+효과를 기대하다	kỳ vọng hiệu quả
+기술을 포함하다	bao gồm kỹ thuật
+기술을 활용하다	ứng dụng công nghệ
+갈등을 해소하다	giải quyết mâu thuẫn
+홈페이지를 이용하다	dùng trang web
+장을 이용하다	dùng chợ
+음료를 즐기다	thưởng thức đồ uống
+음료를 주문하다	gọi đồ uống
+감소를 기록하다	ghi nhận sụt giảm
+집중력을 키우다	tăng khả năng tập trung
+상대를 공격하다	tấn công đối phương
+형태를 찾아보다	tìm hình dạng
+산사태를 막다	ngăn sạt lở đất
+홍수를 조절하다	điều tiết lũ
+가뭄을 예방하다	phòng hạn hán
+숲을 가꾸다	chăm sóc rừng
+기능을 추가하다	thêm chức năng
+기능을 고려하다	tính đến chức năng
+이익을 가지다	có lợi ích
+권리를 보호하다	bảo vệ quyền lợi
+재능을 기부하다	đóng góp tài năng
+관심을 기울이다	dành sự quan tâm
+선물을 숨기다	giấu quà
+농사를 포기하다	bỏ nghề nông
+보상을 요구하다	đòi bồi thường
+신호를 보내다	gửi tín hiệu
+호르몬을 증가시키다	tăng hormone
+원인을 알다	biết nguyên nhân
+설탕을 조절하다	điều chỉnh lượng đường
+호르몬을 치료하다	x
+신호를 점검하다	kiểm tra tín hiệu
+섭취를 방해하다	cản trở việc hấp thụ
+피로를 호소하다	kêu mệt
+내면을 발견하다	khám phá nội tâm
+마음을 수련하다	rèn luyện tâm
+발생을 증가시키다	làm tăng phát sinh
+관심을 유발하다	gây sự quan tâm
+고통을 위로하다	an ủi nỗi đau
+물질을 털다	phủi chất bẩn
+선물을 보내다	gửi quà
+자외선을 차단하다	chống tia cực tím
+발표를 시작하다	bắt đầu thuyết trình
+혜택을 설명하다	giải thích ưu đãi
+소비를 고려하다	cân nhắc tiêu dùng
+참여를 줄이다	giảm tham gia
+투자를 계획하다	lên kế hoạch đầu tư
+상대를 위로하다	an ủi đối phương
+스트레스를 피하다	tránh căng thẳng
+행복을 갖다	có hạnh phúc
+소비를 늘리다	tăng tiêu dùng
+정보를 전하다	truyền thông tin
+정보를 접하다	tiếp cận thông tin
+경험을 갖다	có kinh nghiệm
+차이를 이해하다	hiểu sự khác biệt
+짝꿍을 탄생시키다	tạo ra cặp đôi
+한계를 느끼다	thấy giới hạn
+정보를 결합하다	kết hợp thông tin
+징검다리를 놓다	làm cầu nối
+지식을 추가하다	bổ sung kiến thức
+시대를 살아가다	sống trong thời đại
+문제를 우려하다	lo ngại vấn đề
+식품을 수입하다	nhập khẩu thực phẩm
+성분을 지정하다	quy định thành phần
+목록을 발표하다	công bố danh sách
+목록을 확인하다	kiểm tra danh sách
+섭취를 경고하다	cảnh báo việc ăn
+상황을 조사하다	điều tra tình hình
+수입을 신고하다	khai báo thu nhập
+방법을 알리다	chỉ cách
+제도를 이용하다	tận dụng chế độ
+정보를 신고하다	khai báo thông tin
+시청을 방문하다	đến tòa thị chính
+표지판을 세우다	dựng biển báo
+목적을 강조하다	nhấn mạnh mục đích
+가치를 정하다	định giá trị
+스트레스를 해소하다	giải tỏa căng thẳng
+업무를 처리하다	xử lý công việc
+과제를 해결하다	giải quyết nhiệm vụ
+방법을 터득하다	nắm được cách
+정보를 전달하다	truyền đạt thông tin
+형태를 띠다	mang hình thức
+인류를 멸망시키다	hủy diệt nhân loại
+제도를 만들다	lập chế độ
+생활을 변화시키다	thay đổi cuộc sống
+물건을 비교하다	so sánh đồ
+골목을 지나다	đi qua hẻm
+희망을 느끼다	thấy hy vọng
+관심을 모으다	thu hút sự quan tâm
+산을 뚫다	xuyên núi
+도로를 건설하다	xây đường
+서식지를 연결하다	nối liền môi trường sống
+양식을 추구하다	theo đuổi phong cách
+위험을 감지하다	nhận biết nguy hiểm
+위험을 피하다	tránh nguy hiểm
+장애를 가지다	bị khuyết tật
+환경을 추구하다	hướng tới môi trường
+점을 찾아내다	tìm ra điểm (…)
+사항을 반영하다	phản ánh các điều khoản
+디자인을 만들다	tạo thiết kế
+정보를 모으다	thu thập thông tin
+정보를 검색하다	tìm kiếm thông tin
+사건을 탐구하다	tìm hiểu sự kiện
+역사를 있다	x
+사건을 다루다	đề cập sự kiện
+인물을 표현하다	khắc họa nhân vật
+배경을 알다	biết bối cảnh
+현상을 가리키다	chỉ hiện tượng
+영향력을 끼치다	gây ảnh hưởng
+연예인을 좋아하다	thích người nổi tiếng
+상품을 광고하다	quảng cáo sản phẩm
+이미지를 심다	tạo dựng hình ảnh
+제품을 갖다	có sản phẩm
+욕망을 불러일으키다	khơi dậy ham muốn
+매출을 늘리다	tăng doanh thu
+부족을 해결하다	giải quyết thiếu hụt
+기회를 부여하다	trao cơ hội
+기대를 가지다	có kỳ vọng
+전망을 가지다	có triển vọng
+전통을 계승하다	kế thừa truyền thống
+도구를 사다	mua dụng cụ
+성적을 거두다	đạt thành tích
+세상을 바라보다	nhìn thế giới
+시대를 살아오다	sống qua thời đại
+내면을 보이다	bộc lộ nội tâm
+권리를 인정하다	công nhận quyền
+보호를 강화하다	tăng cường bảo vệ
+자유를 침해하다	xâm phạm tự do
+정보를 없애다	xóa thông tin
+사례를 보다	xem trường hợp
+질서를 파괴하다	phá vỡ trật tự
+행동을 비판하다	phê phán hành vi
+지갑을 가지다	có ví
+잘못을 알다	biết lỗi
+실력을 늘리다	nâng cao năng lực
+방송을 보다	xem chương trình
+일자리를 늘리다	tăng việc làm
+퇴사를 고민하다	đắn đo nghỉ việc
+크기를 높이다	tăng kích cỡ
+영역을 제한하다	giới hạn phạm vi
+문화를 드러내다	thể hiện văn hóa
+국가를 상징하다	tượng trưng cho quốc gia
+요소를 내세우다	đưa ra yếu tố
+요구를 확인하다	xác nhận yêu cầu
+요소를 포함하다	bao gồm yếu tố
+상황을 접하다	gặp tình huống
+문제를 겪다	gặp vấn đề
+조사를 마치다	khảo sát xong
+요소를 추가하다	thêm yếu tố
+대책을 수립하다	lập đối sách
+전략을 쓰다	dùng chiến lược
+방법을 쓰다	dùng cách
+편의점을 재현하다	tái hiện cửa hàng tiện lợi
+능력을 의심하다	nghi ngờ năng lực
+소리를 맞추다	chỉnh âm thanh
+결과를 확인하다	kiểm tra kết quả
+물건을 가리키다	chỉ vào đồ vật
+관심을 끄다	thu hút sự quan tâm
+상황을 공유하다	chia sẻ tình hình
+의미를 전달하다	truyền đạt ý nghĩa
+서로를 포용하다	bao dung lẫn nhau
+집단을 형성하다	hình thành nhóm
+삶을 돌아보다	nhìn lại cuộc đời
+역사를 만나다	gặp gỡ lịch sử
+변화를 살펴보다	xem xét thay đổi
+움직임을 관장하다	điều khiển cử động
+전체를 그리다	vẽ toàn cảnh
+재능을 발견하다	phát hiện tài năng
+물건을 매매하다	mua bán đồ
+땅을 찾다	tìm đất
+기록을 남기다	để lại ghi chép
+세계를 연결시키다	kết nối thế giới
+개발을 주도하다	dẫn đầu phát triển
+투자를 줄이다	giảm đầu tư
+특성을 파악하다	nắm đặc tính
+행복을 측정하다	đo lường hạnh phúc
+과일을 자르다	cắt trái cây
+설탕을 가져오다	mang đường đến
+안내문을 읽다	đọc thông báo hướng dẫn
+동전을 바꾸다	đổi tiền xu
+물건을 가져오다	mang đồ đến
+원인을 조사하다	điều tra nguyên nhân
+작업을 시작하다	bắt đầu công việc
+시절을 기억하다	nhớ thời (…)
+진로를 결정하다	quyết định hướng đi
+문화를 반영하다	phản ánh văn hóa
+자연을 가리키다	chỉ thiên nhiên
+주제를 바꾸다	đổi chủ đề
+영향을 알아보다	tìm hiểu ảnh hưởng
+조사를 선택하다	chọn trợ từ / chọn khảo sát
+내용을 계획하다	lên kế hoạch nội dung
+유형을 나누다	phân loại
+방법을 결정하다	quyết định cách làm
+환경을 생각하다	nghĩ đến môi trường
+공간을 마련하다	chuẩn bị không gian
+판매를 시작하다	bắt đầu bán
+결과를 알리다	thông báo kết quả
+서류를 문의하다	hỏi về giấy tờ
+공간을 활용하다	tận dụng không gian
+서류를 제출하다	nộp giấy tờ
+효과를 넣다	thêm hiệu ứng
+개선을 결정하다	quyết định cải tiến
+효율을 높이다	nâng hiệu suất
+속도를 강조하다	nhấn mạnh tốc độ
+업무를 관리하다	quản lý công việc
+프로그램을 활용하다	tận dụng chương trình
+방안을 요구하다	yêu cầu phương án
+동전을 보관하다	cất tiền xu
+성공을 거두다	thành công
+건축을 다짐하다	quyết tâm xây dựng
+시설을 소개하다	giới thiệu cơ sở vật chất
+지원을 부탁하다	nhờ hỗ trợ
+기대를 밝히다	bày tỏ kỳ vọng
+발전을 이끌다	dẫn dắt sự phát triển
+마음을 모으다	đồng lòng
+환경을 평가하다	đánh giá môi trường
+소득을 늘리다	tăng thu nhập
+기계를 구동하다	vận hành máy
+바퀴를 보다	nhìn bánh xe
+표면을 달리다	chạy trên bề mặt
+부분을 펼치다	mở rộng phần (…)
+바퀴를 변형하다	biến đổi bánh xe
+장치를 활용하다	tận dụng thiết bị
+인상을 쓰다	nhăn mặt
+형식을 갖추다	đủ hình thức
+기관을 두다	đặt cơ quan
+과정을 요약하다	tóm tắt quá trình
+역할을 설명하다	giải thích vai trò
+정도를 측정하다	đo mức độ
+비용을 요구하다	đòi chi phí
+신뢰를 측정하다	đo mức tin cậy
+가치를 평가하다	đánh giá giá trị
+방안을 검토하다	xem xét phương án
+영향을 우려하다	lo ngại ảnh hưởng
+권리를 보장하다	đảm bảo quyền lợi
+법을 해석하다	giải thích luật
+지역을 방문하다	đến thăm khu vực
+제품을 팔다	bán sản phẩm
+행사를 열다	tổ chức sự kiện
+위기를 모르다	không biết khủng hoảng
+움직임을 알다	biết chuyển động
+먹이를 구하다	kiếm mồi
+막을 씌우다	phủ màng
+향기를 없애다	làm mất mùi thơm
+뇌를 쓰다	dùng não
+정보를 처리하다	xử lý thông tin
+기기를 쓰다	dùng thiết bị
+위치를 바꾸다	đổi vị trí
+정보를 알리다	thông báo thông tin
+관심을 끊다	thôi quan tâm
+화분을 사다	mua chậu cây
+화분을 옮기다	chuyển chậu cây
+관중을 모으다	thu hút khán giả
+막을 벗기다	bóc lớp màng
+효과를 살리다	phát huy hiệu quả
+능력을 높이다	nâng cao năng lực
+자원을 생산하다	sản xuất tài nguyên
+모습을 생각하다	nghĩ về hình ảnh
+이미지를 주다	tạo hình ảnh
+지식을 탐색하다	tìm tòi kiến thức
+분야를 정리하다	sắp xếp lĩnh vực
+자원을 확보하다	đảm bảo nguồn tài nguyên
+자원을 가져오다	mang về tài nguyên
+상황을 초래하다	gây ra tình huống
+투자를 늘리다	tăng đầu tư
+혜택을 제공하다	cung cấp ưu đãi
+변화를 요구하다	đòi thay đổi
+경기를 진행하다	tiến hành trận đấu
+잘못을 모르다	không biết lỗi
+연주를 알다	biết chơi nhạc
+왕을 물리치다	đánh đuổi nhà vua
+특성을 지니다	mang đặc tính
+정보를 담다	chứa thông tin
+국가를 이루다	hình thành quốc gia
+의식을 반영하다	phản ánh ý thức
+질서를 확립하다	thiết lập trật tự
+영향을 부정하다	phủ nhận ảnh hưởng
+문화를 창조하다	sáng tạo văn hóa
+문화를 보존하다	bảo tồn văn hóa
+수익을 내다	tạo lợi nhuận
+조치를 마련하다	đưa ra biện pháp
+어려움을 토로하다	giãi bày khó khăn
+활동을 설명하다	giải thích hoạt động
+날짜를 확인하다	kiểm tra ngày
+차를 수리하다	sửa xe
+순서를 설명하다	giải thích thứ tự
+무대를 점검하다	kiểm tra sân khấu
+지갑을 잃어버리다	mất ví
+지갑을 보관하다	giữ ví
+지갑을 분실하다	đánh mất ví
+상태를 관찰하다	quan sát tình trạng
+사항을 알리다	thông báo nội dung
+장점을 드러내다	bộc lộ ưu điểm
+내용을 기록하다	ghi lại nội dung
+종이를 줄이다	giảm giấy
+종이를 사용하다	dùng giấy
+위치를 확인하다	xác định vị trí
+특징을 활용하다	tận dụng đặc điểm
+기념품을 제작하다	làm quà lưu niệm
+사례를 검토하다	xem xét trường hợp
+시설을 늘리다	tăng cơ sở vật chất
+비용을 들이다	bỏ chi phí
+도로를 정비하다	sửa sang đường
+상황을 촬영하다	quay lại tình huống
+상황을 알리다	thông báo tình hình
+정보를 안내하다	hướng dẫn thông tin
+내용을 준비하다	chuẩn bị nội dung
+원고를 작성하다	viết bản thảo
+상황을 보다	xem tình hình
+근무를 시작하다	bắt đầu làm việc
+활동을 통제하다	kiểm soát hoạt động
+저하를 막다	ngăn suy giảm
+과정을 보고하다	báo cáo quá trình
+발전을 도모하다	thúc đẩy phát triển
+영역을 확장하다	mở rộng lĩnh vực
+변화를 도모하다	tìm cách thay đổi
+시스템을 마련하다	xây dựng hệ thống
+염증을 일으키다	gây viêm
+기능을 강화하다	tăng cường chức năng
+사실을 설명하다	giải thích sự thật
+기준을 제시하다	đưa ra tiêu chuẩn
+비용을 메우다	bù chi phí
+방안을 제안하다	đề xuất phương án
+효과를 낙관하다	lạc quan về hiệu quả
+감정을 배제하다	gạt bỏ cảm xúc
+이웃을 도와주다	giúp hàng xóm
+감정을 고려하다	tính đến cảm xúc
+점을 생각하다	nghĩ đến điểm (…)
+가치를 과대평가하다	đánh giá quá cao giá trị
+부분을 자르다	cắt phần (…)
+크기를 줄이다	thu nhỏ kích thước
+결과를 가지다	có kết quả
+선물을 주다	tặng quà
+행사를 진행하다	tiến hành sự kiện
+원인을 찾다	tìm nguyên nhân
+현장을 방문하다	đến hiện trường
+원인을 밝히다	làm rõ nguyên nhân
+흥미를 갖다	có hứng thú
+디자인을 유지하다	giữ thiết kế
+관람을 예약하다	đặt chỗ tham quan
+설명을 수정하다	sửa lời giải thích
+상황을 가정하다	giả định tình huống
+반응을 알리다	cho biết phản ứng
+스포츠를 홍보하다	quảng bá thể thao
+교육을 실시하다	tổ chức giáo dục
+제도를 개선하다	cải thiện chế độ
+주장을 일관되다	x
+건강을 위협하다	đe dọa sức khỏe
+증상을 완화하다	làm dịu triệu chứng
+생활을 마치다	kết thúc cuộc sống (…)
+시설을 확충하다	mở rộng cơ sở vật chất
+심리를 상담하다	tư vấn tâm lý
+전문가를 충원하다	bổ sung chuyên gia
+양식을 보이다	thể hiện phong cách
+소금을 생산하다	sản xuất muối
+소금을 관리하다	quản lý muối
+압력을 높이다	tăng áp lực
+결과를 예상하다	dự đoán kết quả
+자료를 분석하다	phân tích tài liệu
+개념을 규정하다	định nghĩa khái niệm
+이유를 나열하다	liệt kê lý do
+원리를 알리다	giới thiệu nguyên lý
+한계를 지적하다	chỉ ra hạn chế
+내용을 언급하다	đề cập nội dung
+관심을 호소하다	kêu gọi quan tâm
+문제를 예측하다	dự đoán vấn đề
+종이를 넣다	cho giấy vào
+택배를 주문하다	đặt giao hàng
+자료를 만들다	làm tài liệu
+효과를 높이다	tăng hiệu quả
+종류를 알아보다	tìm hiểu các loại
+공연을 마치다	biểu diễn xong
+신청을 부탁하다	nhờ đăng ký
+경험을 공유하다	chia sẻ kinh nghiệm
+비용을 내다	trả chi phí
+발전소를 운영하다	vận hành nhà máy điện
+안전을 점검하다	kiểm tra an toàn
+시설을 찾아다니다	đi tìm các cơ sở
+문제점을 밝히다	làm rõ vấn đề
+해결을 촉구하다	kêu gọi giải quyết
+지원을 호소하다	kêu gọi hỗ trợ
+공간을 고치다	sửa không gian
+도구를 개발하다	phát triển công cụ
+신뢰를 잃다	mất lòng tin
+분야를 선택하다	chọn lĩnh vực
+모습을 유지하다	giữ diện mạo
+속도를 높이다	tăng tốc độ
+자료를 종합하다	tổng hợp tài liệu
+전략을 요약하다	tóm tắt chiến lược
+유형을 분류하다	phân loại
+장점을 설명하다	giải thích ưu điểm
+노력을 촉구하다	kêu gọi nỗ lực
+개념을 적용하다	áp dụng khái niệm
+개념을 정의하다	định nghĩa khái niệm
+사례를 분석하다	phân tích trường hợp
+대회를 열다	tổ chức cuộc thi
+상품을 주다	trao giải thưởng
+휴가를 이용하다	tận dụng kỳ nghỉ
+활동을 준비하다	chuẩn bị hoạt động
+즐거움을 주다	mang lại niềm vui
+프로그램을 계획하다	lên kế hoạch chương trình
+기술을 익히다	học kỹ thuật
+상품을 보다	xem hàng
+주장을 받아들이다	chấp nhận ý kiến
+조건을 달다	đặt điều kiện
+공기를 마시다	hít thở không khí
+차량을 선택하다	chọn xe
+차를 소유하다	sở hữu xe
+장점을 가지다	có ưu điểm
+단점을 가지다	có nhược điểm
+운전자를 보다	nhìn người lái xe
+운전자를 배려하다	quan tâm người lái xe
+서로를 배려하다	quan tâm lẫn nhau
+남을 배려하다	quan tâm người khác
+세대를 뛰어넘다	vượt qua thế hệ
+상품을 기억하다	nhớ sản phẩm
+상품을 갖다	có sản phẩm
+재산을 잃다	mất tài sản
+치료를 병행하다	kết hợp điều trị
+유행을 중시하다	coi trọng xu hướng
+상품을 내놓다	tung sản phẩm ra
+취향을 중시하다	coi trọng sở thích
+휴가를 신청하다	xin nghỉ phép
+상대를 다치다	x
+위험을 높이다	tăng nguy cơ
+자극을 유지시키다	duy trì kích thích
+저하를 방지하다	ngăn suy giảm
+기능을 유지하다	duy trì chức năng
+경향을 반영하다	phản ánh xu hướng
+일상을 찾다	tìm lại đời thường
+재미를 포함하다	có yếu tố thú vị
+분야를 통합하다	hợp nhất lĩnh vực
+지식을 습득하다	tiếp thu kiến thức
+지식을 가르치다	dạy kiến thức
+분야를 접목하다	kết hợp lĩnh vực
+흥미를 이끌다	khơi gợi hứng thú
+산업을 보호하다	bảo vệ ngành công nghiệp
+점을 개선하다	cải thiện điểm (…)
+경쟁을 막다	ngăn cạnh tranh
+반응을 줄이다	giảm phản ứng
+불안을 야기하다	gây bất an
+욕구를 불러일으키다	khơi dậy nhu cầu
+경쟁을 심화시키다	làm cạnh tranh gay gắt hơn
+성과를 낳다	đem lại thành quả
+성과를 높이다	nâng cao thành quả
+장애인을 도와주다	giúp người khuyết tật
+도움을 거절하다	từ chối sự giúp đỡ
+막을 내리다	hạ màn, kết thúc
+정책을 제안하다	đề xuất chính sách
+연봉을 삭감하다	cắt giảm lương
+부담을 안다	gánh áp lực
+국가를 수립하다	thành lập quốc gia
+생활을 영위하다	duy trì cuộc sống
+서로를 받아들이다	chấp nhận nhau
+모습을 살펴보다	xem xét hình ảnh
+흐름을 설명하다	giải thích xu hướng
+인류를 걱정하다	lo cho nhân loại
+물건을 놓다	đặt đồ
+호수를 따르다	đi dọc hồ
+유전자를 공유하다	có chung gen
+영향을 염려하다	lo ngại ảnh hưởng
+노력을 절약하다	tiết kiệm công sức
+모양을 보다	nhìn hình dạng
+저하를 가져오다	gây suy giảm
+성적을 높이다	nâng điểm số
+성적을 떨어뜨리다	làm giảm điểm số
+속도를 늦추다	giảm tốc
+비율을 높이다	tăng tỷ lệ
+고기를 요리하다	nấu thịt
+고기를 이용하다	dùng thịt
+간식을 챙기다	mang đồ ăn vặt
+편견을 갖다	có định kiến
+기회를 차단하다	chặn cơ hội
+자신을 주목하다	chú ý đến bản thân
+소금을 넣다	cho muối
+고기를 넣다	cho thịt vào
+밭을 갈다	cày ruộng
+의식을 행하다	cử hành nghi lễ
+능력을 과시하다	khoe khả năng
+농사를 여기다	coi trọng nghề nông
+보호자를 동반하다	đi cùng người giám hộ
+프로그램을 마련하다	chuẩn bị chương trình
+생명을 위협하다	đe dọa tính mạng
+의식을 고취하다	nâng cao ý thức
+속도를 정하다	định tốc độ
+경향을 보이다	có xu hướng
+형태를 좋아하다	thích hình thức (…)
+마음을 알다	hiểu lòng
+방안을 안내하다	hướng dẫn phương án
+제품을 지속하다	x
+부작용을 일으키다	gây tác dụng phụ
+여부를 따지다	xem xét có … hay không
+도구를 사용하다	dùng dụng cụ
+공연을 좌우하다	quyết định buổi diễn
+열기를 높이다	làm không khí sôi nổi
+반응을 낳다	tạo phản ứng
+집중력을 발휘하다	phát huy sự tập trung
+관계를 망치다	làm hỏng quan hệ
+상황을 견디다	chịu đựng tình huống
+현상을 방치하다	bỏ mặc hiện tượng
+구조를 개선하다	cải thiện cấu trúc
+정책을 내놓다	đưa ra chính sách
+평등을 해결하다	x
+현상을 개선하다	cải thiện hiện tượng
+모습을 바꾸다	thay đổi diện mạo
+강의를 마치다	kết thúc bài giảng
+자녀를 부양하다	nuôi con
+고통을 바라보다	nhìn nỗi đau
+구입을 유도하다	kích thích mua
+정책을 집행하다	thi hành chính sách
+정책을 추진하다	đẩy mạnh chính sách
+사용을 허용하다	cho phép sử dụng
+사용을 촉구하다	kêu gọi sử dụng
+반대를 주장하다	lên tiếng phản đối
+사항을 제시하다	đưa ra điều khoản
+문제를 줄이다	giảm vấn đề
+원리를 이해하다	hiểu nguyên lý
+촬영을 삼가다	hạn chế quay chụp
+대중교통을 이용하다	đi phương tiện công cộng
+재료를 사다	mua nguyên liệu
+지역을 대표하다	đại diện cho địa phương
+특징을 살리다	phát huy đặc điểm
+세균을 옮기다	lây vi khuẩn
+세균을 제거하다	diệt vi khuẩn
+세균을 전염시키다	lây truyền vi khuẩn
+법을 고민하다	cân nhắc cách
+세대를 연결하다	kết nối các thế hệ
+질서를 지키다	giữ trật tự
+차이를 좁히다	thu hẹp khoảng cách
+제품을 사다	mua sản phẩm
+제품을 전시하다	trưng bày sản phẩm
+이미지를 알리다	quảng bá hình ảnh
+습관을 이야기하다	nói về thói quen
+손가락을 끼우다	xỏ ngón tay
+분노를 불러일으키다	gây phẫn nộ
+자신감을 없애다	làm mất tự tin
+능력을 보유하다	có năng lực
+지식을 나누다	chia sẻ kiến thức
+기업을 연결하다	kết nối doanh nghiệp
+조건을 따지다	xét điều kiện
+충격을 감지하다	cảm nhận va chạm
+개봉을 앞두다	sắp ra mắt (phim)
+강의를 채택하다	chọn bài giảng
+강의를 하다	giảng bài
+표현을 활용하다	vận dụng cách diễn đạt
+연예인을 지망하다	mơ làm người nổi tiếng
+의미를 갖다	có ý nghĩa
+관심을 돌리다	chuyển sự quan tâm
+투자를 망설이다	ngần ngại đầu tư
+개성을 파악하다	nắm cá tính
+상황을 안타까워하다	tiếc cho tình cảnh
+업체를 지원하다	hỗ trợ doanh nghiệp
+물질을 낮추다	giảm chất (…)
+관리를 책임지다	chịu trách nhiệm quản lý
+관리를 지원하다	hỗ trợ quản lý
+시설을 가동하다	vận hành cơ sở
+진학을 지원하다	hỗ trợ học lên
+상황을 타파하다	phá vỡ tình thế
+전쟁을 선택하다	chọn chiến tranh
+전쟁을 방지하다	ngăn chiến tranh
+관심을 보이다	tỏ ra quan tâm
+즐거움을 선사하다	mang lại niềm vui
+공연을 좋아하다	thích biểu diễn
+체험을 보이다	x
+제품을 구하다	tìm mua sản phẩm
+이유를 알다	biết lý do
+상황을 선호하다	thích tình huống (…)
+전염병을 이기다	đánh bại dịch bệnh
+성과를 보이다	cho thấy thành quả
+대문을 열다	mở cổng
+필요를 느끼다	thấy cần thiết
+배경을 의심하다	nghi ngờ bối cảnh
+빛을 내다	phát sáng
+단풍을 보다	ngắm lá đỏ
+평균을 분석하다	phân tích mức trung bình
+도구를 만들다	làm dụng cụ
+도구를 변형시키다	biến đổi dụng cụ
+기름을 정제하다	tinh chế dầu
+영양분을 끌어내다	hút chất dinh dưỡng
+땅을 만들다	tạo đất
+유형을 조사하다	khảo sát loại hình
+심리를 파헤치다	đào sâu tâm lý
+방식을 채택하다	chọn phương thức
+참여를 강요하다	ép tham gia
+폭을 제한하다	giới hạn phạm vi
+페트병을 개봉하다	mở chai nhựa
+위험을 극복하다	vượt qua nguy hiểm
+의미를 되새기다	ngẫm lại ý nghĩa
+점을 보다	xem bói; xem điểm
+의미를 지니다	mang ý nghĩa
+생명체를 중시하다	coi trọng sự sống
+소득을 감소시키다	làm giảm thu nhập
+사회를 안정시키다	ổn định xã hội
+경우를 생각하다	nghĩ đến trường hợp
+감소를 불러오다	dẫn đến sụt giảm
+발전을 주도하다	dẫn đầu phát triển
+일자리를 빼앗기다	bị mất việc làm
+평등을 심화시키다	x
+모습을 알리다	giới thiệu hình ảnh
+부작용을 비교하다	so sánh tác dụng phụ
+감소를 고발하다	cảnh báo sự sụt giảm
+평등을 야기하다	x
+차례를 지키다	giữ trật tự lượt
+고기를 싸다	gói thịt
+박람회를 개최하다	tổ chức hội chợ
+참가를 희망하다	muốn tham gia
+프로그램을 보다	xem chương trình
+피해를 남기다	để lại thiệt hại
+예술을 보다	xem nghệ thuật
+환자를 치료하다	chữa bệnh nhân
+혈관을 수축시키다	làm co mạch máu
+양을 줄이다	giảm lượng
+체온을 떨어뜨리다	làm giảm thân nhiệt
+상태를 지속시키다	duy trì trạng thái
+행동을 보다	quan sát hành vi
+방법을 보이다	chỉ cách
+방법을 밝히다	công bố cách
+방법을 가르치다	dạy cách
+바탕을 마련하다	tạo nền tảng
+즐거움을 제공하다	mang lại niềm vui
+힘을 발휘하다	phát huy sức mạnh
+잘못을 고백하다	thú nhận lỗi
+양을 중시하다	coi trọng số lượng
+자신을 무서워하다	sợ chính mình
+감정을 처리하다	xử lý cảm xúc
+취향을 지니다	có sở thích
+성공을 상징하다	tượng trưng cho thành công
+특성을 이용하다	tận dụng đặc tính
+생명체를 탐사하다	tìm kiếm sự sống
+계획을 발표하다	công bố kế hoạch
+존재를 조사하다	tìm hiểu sự tồn tại
+계획을 고안하다	vạch kế hoạch
+경제를 상징하다	tượng trưng cho kinh tế
+에너지를 활용하다	tận dụng năng lượng
+광고를 시청하다	xem quảng cáo
+에너지를 이용하다	sử dụng năng lượng
+물건을 옮기다	chuyển đồ
+질병을 의심하다	nghi mắc bệnh
+장애를 의심하다	nghi bị rối loạn
+전문가를 찾다	tìm chuyên gia
+동영상을 만들다	làm video
+요구를 파악하다	nắm nhu cầu
+사실을 평가하다	đánh giá sự thật
+설명을 덧붙이다	giải thích thêm
+유치원을 건너뛰다	bỏ qua mẫu giáo
+생활을 경험하다	trải nghiệm cuộc sống
+운동장을 보다	nhìn sân vận động
+차이를 보이다	cho thấy sự khác biệt
+계획을 가지다	có kế hoạch
+방안을 논의하다	bàn phương án
+부족을 야기하다	gây thiếu hụt
+문제를 둘러싸다	xoay quanh vấn đề
+방안을 설명하다	giải thích phương án

@@ -18,14 +18,21 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - Giao bài thi thử **không cần đồng bộ**: link `thi-thu/#d=<base64>.<sum>` chứa mã bài, mã đề (`e`) và phạm vi câu (`f`,`t`);
   đề trộn thì chứa danh sách câu gốc `q:[[đề, câu],…]` và trang học sinh tự ghép lại bằng `mixQs` (giống hệt trang quản lý).
   Nội dung đề lấy từ `thi-thu/de/<id>.json`. Link cũ `?bai=MÃ` (bài nhúng trong index.html) vẫn chạy.
-- **Bài luyện tập / thi thật** (Giao bài → “Kiểu bài”; mặc định Luyện tập 20 từ): luyện tập ghi `lt` (số từ trắc nghiệm) vào `assigns` và link `#d=`.
-  Trang học sinh (`tuStage`/`tuTable`/`tuWire`, ngoài khối Admin): trắc nghiệm nghĩa (Hàn → Việt, đúng sai hiện ngay) các từ trong những câu được giao →
-  bảng từ theo câu → làm đề; trong đề từ được tô gạch chấm, chạm xem nghĩa, nút “Tách từng câu” (xuống dòng sau mỗi câu), nút “Bảng từ”.
-  Từ đã chọn đúng ở bài luyện tập trước không hỏi lại (localStorage `nari-tu-ok`). Mã nộp `NT2-` thêm `v:[đúng, số từ]`, `vw` (≤12 từ sai) →
+- **Bài luyện tập / thi thật** (Giao bài → “Kiểu bài”, `LT_KINDS`; mặc định luyện tập 10 từ/câu): luyện tập ghi `lt` vào `assigns` và link `#d=`
+  (`lt` = số từ trắc nghiệm **mỗi câu**: 5/15; 20 (mặc định, giá trị cũ) hoặc 30 = 10 từ/câu — `tuPer`).
+  Trang học sinh **làm từng câu** (`tuStage`/`tuTable`/`tuNext`/`tuWire`, ngoài khối Admin): với mỗi lượt `A.grp` (một câu; câu dùng chung đoạn văn
+  `share` hoặc chung file nghe như 21–22 đi cùng một lượt) → trắc nghiệm nghĩa (Hàn → Việt, đúng sai hiện ngay) ≤ 10 từ của câu đó (từ đã hỏi ở lượt trước
+  không hỏi lại) → bảng từ của câu → làm câu (câu đã làm vẫn hiện ở trên, sửa được) → “Câu tiếp ›” → … → lượt cuối mới có “Nộp bài”.
+  Trạng thái ở `ST.vg = {i, ph: v|t|x, g:[{items, ans}], tx}`; giờ làm bài chỉ tính lúc làm câu. Bài làm dở theo kiểu cũ (`ST.vq`, từ vựng cả bài) đã qua
+  phần từ thì làm tiếp như cũ, chưa qua thì làm lại theo từng câu. Trong đề từ được tô gạch chấm, chạm xem nghĩa, nút “Tách từng câu”, nút “Bảng từ”.
+  Từ đã chọn đúng ở bài luyện tập trước không hỏi lại (localStorage `nari-tu-ok`). Mã nộp `NT2-` thêm `v:[đúng, số từ]` (cộng mọi lượt), `vw` (≤12 từ sai) →
   `results.vq`/`vw`, hiện ở phần chấm. Thi thật (không `lt`) như cũ. Bài hằng ngày theo Khung luyện tập (`ltCreate`) luôn là luyện tập (`lt:20`).
   Bảng từ theo câu: `python3 tools/tu_de.py [<dump>]` → `thi-thu/de/tu/<id>.json` ({w:[[từ gốc, nghĩa, số đề gặp, [chữ trong đề]]], q:{câu:[chỉ số]}};
   kiwipiepy, nghĩa như Từ cốt lõi, bỏ từ sơ cấp/`STOP`; đề nghe lấy thêm kịch bản ở đề `…k`, bài luyện nghe cùng file nghe, hoặc `explain` trong dump
-  `bank/<id>/q`). **Chạy lại sau mỗi lần đồng bộ đề.**
+  `bank/<id>/q` — dump cần ít nhất `bank/Etk083n/q`, `bank/Etk091n/q`, thiếu thì 2 đề này mất nửa số từ). **Chạy lại sau mỗi lần đồng bộ đề.**
+  Danh từ làm tân ngữ ghi cả cụm động từ: “N을/를 (phó từ) V” → `N을/를 V다` (도움을 주다), “N을 하다” → `N하다` nếu có từ đó (공부를 하다 → 공부하다);
+  không ghép với động từ mẫu ngữ pháp (`GRAM_V`: 을 통해, 을 위해…). Nghĩa cụm ở `tools/cum_de.tsv` (Claude soạn; `x` = không ghép), rồi mục “N을 V” của kho từ;
+  cụm mới chưa có nghĩa thì script ghép tạm “nghĩa động từ + nghĩa danh từ” và ghi `<dump>/cum_de_thieu.tsv` → soạn nghĩa, thêm vào `cum_de.tsv`, chạy lại.
 - **Đồng bộ ngân hàng đề + kho từ** (khi cô nhập/sửa đề hoặc thêm từ — cô nhắn “đồng bộ đề”/“đồng bộ kho từ”):
   1. ArtifactData `list` với `out_dir` (không đọc nội dung vào hội thoại): `bank`, từng `bank/<id>/q`, `vocab` → một thư mục dump.
   2. `python3 tools/sync_kho.py <dump>` — ghi `thi-thu/de/*.json` (bỏ đáp án, giải thích; bỏ đề trộn), `thi-thu/vocab.json`,

@@ -126,6 +126,7 @@ input.code{text-transform:uppercase;letter-spacing:.18em;font-weight:700;font-si
 .cell small{display:block;color:var(--muted);font-size:10.5px}
 .cell b{display:block;font-size:14px;color:var(--violet);min-height:17px}
 .cell.done{background:var(--violet-soft);border-color:var(--violet)}
+.cell.off{opacity:.35;cursor:default}
 .cell:focus-visible{outline:2px solid var(--violet)}
 .clock{font-size:12px;color:var(--muted);text-align:center;flex:none}
 .metaline{display:flex;flex-wrap:wrap;gap:6px 16px;justify-content:center;font-size:14px;color:var(--muted);margin-top:-8px;margin-bottom:10px}
@@ -880,17 +881,22 @@ function startTest(code, name){
   var saved = lsGet(key);
   ST = saved && saved.code === code ? saved : {code:code, name:name, ans:{}, start:Date.now(), submitted:null};
   ST.name = name; ST._key = key;
-  if(A.lt && !ST.submitted && !(ST.vq && ST.vq.seen)){ saveTest(); return ST.vq && ST.vq.done ? tuTable() : tuStage(); }
-  var qs = A.qs || [];
+  if(A.lt && !ST.submitted){
+    if(ST.vq && !ST.vq.seen && !ST.vg) delete ST.vq;  /* bài làm dở theo kiểu cũ (từ vựng cả bài) → làm lại theo từng câu */
+    if(!ST.vq && !ST.vg) ST.vg = {i:0, ph:"v", g:[], tx:0};
+    if(ST.vg && ST.vg.ph !== "x"){ saveTest(); return ST.vg.ph === "t" ? tuTable() : tuStage(); }
+  }
+  var qs = A.qs || [], step = tuMode(), cur = step ? A.grp[ST.vg.i] : null, upto = cur ? cur[cur.length-1] : 1e9;
   var h = '<div class="wrap">' + headerHTML() + previewBar() + '<main class="paper" id="exam"><div class="title"><h1>TOPIK II 모의고사</h1><p>' + esc(A.examTitle) + '</p></div>' +
     '<div class="metaline"><span>Câu <strong>' + A.from + '–' + A.to + '</strong> (' + qs.length + ' câu)</span><span>Học sinh: <strong>' + esc(name) + '</strong></span>' + (A.minutes ? '<span>Thời gian gợi ý: <strong>' + A.minutes + ' phút</strong></span>' : '') + '</div>' +
     (A.lt ? tuBar() : '') +
-    '<div id="quiz">' + qs.map(qHTML).join("") + '</div>' +
+    '<div id="quiz">' + qs.filter(function(q){ return q.n <= upto; }).map(qHTML).join("") + '</div>' +
+    (step && tuMore() ? '<div class="panel" id="tuNx"><h2>Xong ' + tuLabel(cur) + '?</h2><p>Bấm sang ' + tuLabel(A.grp[ST.vg.i+1]) + ': em làm trắc nghiệm từ vựng, xem bảng từ của câu đó rồi làm câu. Câu đã làm vẫn ở trên, em sửa lại được.</p><button class="btn wide" id="tuNxB">Sang ' + tuLabel(A.grp[ST.vg.i+1]) + ' ›</button></div>' : '') +
     '<div id="result" class="panel" hidden><h2>Em đã nộp bài</h2><p>Bấm “Sao chép” rồi dán vào tin nhắn Zalo gửi cho cô. Cô sẽ chấm và chữa bài cho em.</p><div id="msgbox"></div></div>' +
     '<div class="row" style="justify-content:center;margin-top:18px"><button class="lnk" id="otherCode">Làm bài khác (nhập mã khác)</button></div>' +
     '</main></div>' +
     '<nav class="strip" aria-label="Phiếu trả lời"><div class="in"><div class="cells" id="cells">' +
-    qs.map(function(q){ return '<button class="cell" data-go="' + q.n + '" aria-label="Đi tới câu ' + q.n + '"><small>' + q.n + '</small><b></b></button>'; }).join("") +
+    qs.map(function(q){ return '<button class="cell' + (q.n > upto ? ' off' : '') + '" data-go="' + q.n + '" aria-label="Đi tới câu ' + q.n + '"' + (q.n > upto ? ' disabled' : '') + '><small>' + q.n + '</small><b></b></button>'; }).join("") +
     '</div><div class="clock" id="clock"></div><button class="btn" id="submit">Nộp bài</button></div></nav>';
   app.innerHTML = h;
   wirePreviewBar();
@@ -902,12 +908,15 @@ function startTest(code, name){
     var c = e.target.closest(".cell"); if(!c) return;
     var t = document.getElementById("q" + c.dataset.go); if(t) t.scrollIntoView({behavior:"smooth", block:"center"});
   });
-  $("#submit").onclick = submitTest;
+  $("#submit").onclick = function(){ if(tuMore()) tuNext(); else submitTest(); };
+  if($("#tuNxB")) $("#tuNxB").onclick = tuNext;
   $("#otherCode").onclick = function(){ studentLanding({code:""}); };
   saveTest(); paintTest(); paintKeys();
   if(A.lt) tuWire(A);
   if(!ST.submitted) startClock();
-  $("#exam").scrollIntoView({block:"start"});
+  var top = cur && ST.vg.i ? document.getElementById("q" + cur[0]) : null;
+  if(top && top.previousElementSibling && top.previousElementSibling.classList.contains("grp")) top = top.previousElementSibling;
+  (top || $("#exam")).scrollIntoView({block:"start"});
 }
 function saveTest(){ lsSet(ST._key, ST); }
 function paintTest(){
@@ -915,7 +924,7 @@ function paintTest(){
   $$(".cell").forEach(function(c){ var a = ST.ans[c.dataset.go]; c.querySelector("b").textContent = a ? CIRC[a-1] : ""; c.classList.toggle("done", !!a); });
   var locked = !!ST.submitted;
   $("#quiz").classList.toggle("locked", locked);
-  $("#submit").textContent = locked ? "Đã nộp" : "Nộp bài";
+  $("#submit").textContent = locked ? "Đã nộp" : tuMore() ? "Câu tiếp ›" : "Nộp bài";
   $("#submit").disabled = locked;
   if(locked) showSubmitted();
 }
@@ -939,10 +948,10 @@ function submitTest(){
 function showSubmitted(){
   var A = DATA.assign[ST.code];
   var a = A.qs.map(function(q){ return ST.ans[q.n] || 0; }).join("");
-  var o = {c:ST.code, n:ST.name, a:a, t:Math.round((ST.submitted - ST.start)/1000), d:ST.submitted}, V = ST.vq;
+  var o = {c:ST.code, n:ST.name, a:a, t:Math.round((ST.submitted - ST.start)/1000), d:ST.submitted}, V = tuAll();
   if(V && V.items && V.items.length){ o.v = [V.items.filter(function(it, i){ return V.ans[i] === it.a; }).length, V.items.length]; var bw = tuWrong(); if(bw.length) o.vw = bw.slice(0, 12).join(","); }
   var code = encode(o);
-  var msg = (A.lt ? "BÀI LUYỆN TẬP TOPIK II" : "BÀI LÀM THI THỬ TOPIK II") + "\nĐề: " + A.examTitle + " (câu " + A.from + "–" + A.to + ")\nHọ tên: " + ST.name + (o.v ? "\nTừ vựng trước đề: " + o.v[0] + "/" + o.v[1] : "") + "\nNộp lúc: " + fmtDate(ST.submitted) + "\nMã bài làm: " + code;
+  var msg = (A.lt ? "BÀI LUYỆN TẬP TOPIK II" : "BÀI LÀM THI THỬ TOPIK II") + "\nĐề: " + A.examTitle + " (câu " + A.from + "–" + A.to + ")\nHọ tên: " + ST.name + (o.v ? "\nTừ vựng (trắc nghiệm trước từng câu): " + o.v[0] + "/" + o.v[1] : "") + "\nNộp lúc: " + fmtDate(ST.submitted) + "\nMã bài làm: " + code;
   $("#msgbox").innerHTML = (ST.code === "__PREVIEW__" ? '<p class="hint">Đây là bản xem trước nên tin nhắn này không chấm được. Học sinh thật sẽ nhận tin nhắn có mã bài.</p>' : '') + copyBox(msg, 6);
   wireCopy($("#msgbox"));
   $("#result").hidden = false;
@@ -983,7 +992,9 @@ function examBoot(){
     var A = DATA.assign[p.c] = {code:p.c, examTitle:p.x || "Thi thử TOPIK II", from:p.f, to:p.t, minutes:p.m || 0, qs:qs};
     if(!p.lt) return studentLanding({code:p.c, link:true});
     /* bài luyện tập: câu trong bài → câu gốc (đề trộn) để lấy bảng từ; câu đầu dùng chung đoạn văn thì lấy cả từ của câu có đoạn văn */
-    A.lt = p.lt > 1 ? p.lt : 20; A.src = [];
+    A.lt = p.lt > 1 ? p.lt : 20; A.src = []; A.grp = [];
+    /* làm từng câu: câu dùng chung đoạn văn (share) hoặc chung file nghe (21–22…) đi cùng một lượt */
+    qs.forEach(function(q){ var d = qm[q.n] || {}, pv = qm[q.n-1] || {}; if(A.grp.length && (q.share || (d.audio && d.audio === pv.audio))) A.grp[A.grp.length-1].push(q.n); else A.grp.push([q.n]); });
     qs.forEach(function(q){ var d = qm[q.n] || {}, it = d._it || {e:p.e, n:q.n}; A.src.push([q.n, it.e, it.n]); });
     var q0 = p.q ? null : BANK[p.e][p.f];
     if(q0 && q0.share){ var j = p.f; while(j > 1 && BANK[p.e][j] && BANK[p.e][j].share) j--; A.src.unshift([p.f, p.e, j]); }
@@ -994,7 +1005,7 @@ function examBoot(){
 }
 
 /* ---------- Bài luyện tập (link có lt = số từ trắc nghiệm) ----------
-   Trước khi làm đề: trắc nghiệm nghĩa các từ có trong những câu cô giao → bảng từ theo câu → vào làm đề.
+   Làm từng câu: với mỗi câu (câu chung đoạn văn / file nghe đi cùng nhau) trắc nghiệm nghĩa ≤ 10 từ của câu đó → bảng từ của câu → làm câu → câu sau.
    Trong đề: từ trong bảng được tô, chạm vào xem nghĩa; có nút tách đoạn văn thành từng câu.
    Từ theo câu lấy từ de/tu/<đề>.json (tools/tu_de.py). Từ em đã chọn đúng ở bài luyện tập trước không hỏi lại
    (localStorage nari-tu-ok), vẫn có trong bảng từ. Đề thi thật (không có lt) làm như cũ. */
@@ -1020,9 +1031,25 @@ function tuWords(A){
   return out;
 }
 function tuKnown(){ return lsGet("nari-tu-ok") || {}; }
+/* Kiểu bài (trang quản lý). lt = số từ trắc nghiệm mỗi câu; 20 (mặc định, cũng là giá trị đã lưu từ trước) và 30 = 10 từ/câu. */
+var LT_KINDS = [[20, "Luyện tập từng câu — mỗi câu: trắc nghiệm 10 từ → bảng từ → làm câu"], [5, "Luyện tập từng câu — 5 từ mỗi câu"], [15, "Luyện tập từng câu — 15 từ mỗi câu"], [0, "Thi thật — chỉ có đề, không kèm từ vựng"]];
+/* Làm từng câu: A.grp = [[câu…]…] (câu dùng chung đoạn văn / file nghe đi cùng một lượt), ST.vg = {i: lượt đang làm,
+   ph: "v" trắc nghiệm từ | "t" bảng từ | "x" làm câu, g: [{items, ans}] trắc nghiệm từng lượt, tx: thời gian làm câu (ms)}.
+   Bài làm theo kiểu cũ (ST.vq: từ vựng cả bài rồi làm cả đề) vẫn mở/nộp được. */
+function tuMode(){ var A = DATA.assign[ST.code]; return !!(A.lt && ST.vg && A.grp && A.grp.length && !ST.submitted); }
+function tuMore(){ return tuMode() && ST.vg.i < DATA.assign[ST.code].grp.length - 1; }
+function tuPer(A){ return A.lt > 0 && A.lt <= 15 ? A.lt : 10; }
+function tuLabel(G){ return G.length > 1 ? "câu " + G[0] + "–" + G[G.length-1] : "câu " + G[0]; }
+function tuGW(A, G){ return (A.words || []).filter(function(w){ return w.ns.some(function(n){ return G.indexOf(n) >= 0; }); }); }
+function tuAll(){
+  if(!ST.vg) return ST.vq || {items:[], ans:{}};
+  var items = [], ans = {};
+  ST.vg.g.forEach(function(g){ if(!g) return; g.items.forEach(function(it, j){ if(g.ans[j] != null) ans[items.length] = g.ans[j]; items.push(it); }); });
+  return {items:items, ans:ans};
+}
 /* Chọn từ để hỏi: chưa từng đúng, rải đều các câu, trong mỗi câu ưu tiên từ hay gặp trong đề thi
-   (từ gặp ở gần như mọi đề — d ≥ 22 trên ~38 đề — thường đã quen, xếp sau). */
-function tuQuiz(W, N){
+   (từ gặp ở gần như mọi đề — d ≥ 22 trên ~38 đề — thường đã quen, xếp sau). P = kho nghĩa để lấy lựa chọn nhiễu. */
+function tuQuiz(W, N, P){
   var K = tuKnown(), by = {}, order = [];
   W.forEach(function(w){ if(K[w.ko]) return; var n = w.ns[0]; if(!by[n]){ by[n] = []; order.push(n); } by[n].push(w); });
   var rank = function(w){ return w.d >= 22 ? w.d - 100 : w.d; };
@@ -1033,29 +1060,36 @@ function tuQuiz(W, N){
     order.forEach(function(n){ if(pick.length < N && by[n][r]){ pick.push(by[n][r]); any = true; } });
     if(!any) break;
   }
-  var vis = []; W.forEach(function(w){ if(vis.indexOf(w.vi) < 0) vis.push(w.vi); });
+  var vis = []; (P || W).forEach(function(w){ if(vis.indexOf(w.vi) < 0) vis.push(w.vi); });
   return pick.map(function(w){
     var wrong = vShuffle(vis.filter(function(v){ return v !== w.vi; })).slice(0, 3);
     var o = vShuffle([w.vi].concat(wrong));
     return {ko:w.ko, o:o, a:o.indexOf(w.vi)};
   });
 }
-function tuShell(inner){
+function tuShell(inner, step){
   stopClock();
-  app.innerHTML = '<div class="wrap">' + headerHTML() + '<main class="paper" id="tuPage"><div class="title"><h1>단어 먼저</h1><p>Từ vựng trước khi làm đề · ' + esc(DATA.assign[ST.code].examTitle) + '</p></div>' + inner + '</main></div>';
+  var A = DATA.assign[ST.code], G = A.grp[ST.vg.i];
+  var st = ["Trắc nghiệm từ", "Bảng từ", "Làm " + tuLabel(G)].map(function(t, i){ return '<span class="pill' + (i === step ? '' : i < step ? ' good' : '') + '"' + (i > step ? ' style="background:transparent;color:var(--muted)"' : '') + '>' + (i+1) + '. ' + t + '</span>'; }).join(" ");
+  app.innerHTML = '<div class="wrap">' + headerHTML() + '<main class="paper" id="tuPage"><div class="title"><h1>' + esc(tuLabel(G).replace(/^c/, "C")) + '</h1><p>Lượt ' + (ST.vg.i+1) + '/' + A.grp.length + ' · ' + esc(A.examTitle) + '</p></div>' +
+    '<div class="metaline" style="margin-bottom:14px">' + st + '</div>' + inner + '</main></div>';
 }
 function tuStage(){
-  var A = DATA.assign[ST.code], W = A.words || [];
-  if(!ST.vq){ ST.vq = {items:tuQuiz(W, A.lt), ans:{}}; saveTest(); }
-  var V = ST.vq;
-  if(!V.items.length){ V.done = V.done || Date.now(); ST.start = V.done; saveTest(); return tuTable(); }
+  var A = DATA.assign[ST.code], i = ST.vg.i, G = A.grp[i];
+  var V = ST.vg.g[i];
+  if(!V){
+    var asked = {}; ST.vg.g.forEach(function(g, k){ if(g && k < i) g.items.forEach(function(it){ asked[it.ko] = 1; }); });
+    V = ST.vg.g[i] = {items:tuQuiz(tuGW(A, G).filter(function(w){ return !asked[w.ko]; }), tuPer(A), A.words || []), ans:{}};
+    saveTest();
+  }
+  if(!V.items.length){ ST.vg.ph = "t"; saveTest(); return tuTable(); }
   var done = function(){ return Object.keys(V.ans).length; };
-  tuShell('<p class="hint" style="margin:0 0 10px">Đây là bài <strong>luyện tập</strong>. Trước khi làm đề, em chọn nghĩa đúng của ' + V.items.length + ' từ có trong các câu cô giao. Chọn xong là biết đúng sai ngay; làm hết sẽ hiện bảng từ để em xem lại rồi vào làm đề.</p>' +
+  tuShell('<p class="hint" style="margin:0 0 10px">Trước khi làm ' + tuLabel(G) + ', em chọn nghĩa đúng của ' + V.items.length + ' từ có trong ' + (G.length > 1 ? 'các câu này' : 'câu này') + '. Chọn xong là biết đúng sai ngay; làm hết sẽ hiện bảng từ để em xem lại rồi vào làm câu.</p>' +
     '<div class="tuq" id="tuq">' + V.items.map(function(it, i){
       return '<section class="q" id="tq' + i + '"><p class="stem"><b>' + (i+1) + '.</b><span class="tuko">' + esc(it.ko) + '</span></p><div class="opts two">' +
         it.o.map(function(o, j){ return '<button type="button" class="opt" data-i="' + i + '" data-j="' + j + '"><span class="num">' + (j+1) + '</span><span style="font-family:var(--ui)">' + esc(o) + '</span></button>'; }).join("") + '</div></section>';
     }).join("") + '</div>' +
-    '<div class="panel" id="tuEnd" hidden><h2 id="tuSc"></h2><p>Em xem bảng từ của các câu trong đề rồi bấm “Vào làm đề”.</p><button class="btn wide" id="tuGo">Xem bảng từ vựng ›</button></div>');
+    '<div class="panel" id="tuEnd" hidden><h2 id="tuSc"></h2><p>Em xem bảng từ của ' + tuLabel(G) + ' rồi bấm “Làm ' + tuLabel(G) + '”.</p><button class="btn wide" id="tuGo">Xem bảng từ ›</button></div>', 0);
   var paint = function(){
     V.items.forEach(function(it, i){
       var x = V.ans[i];
@@ -1067,8 +1101,7 @@ function tuStage(){
       });
       $('#tq' + i).classList.toggle("locked", x != null);
     });
-    var n = done();
-    if(n === V.items.length){
+    if(done() === V.items.length){
       var ok = V.items.filter(function(it, i){ return V.ans[i] === it.a; }).length;
       $("#tuSc").textContent = "Em đúng " + ok + "/" + V.items.length + " từ";
       $("#tuEnd").hidden = false;
@@ -1080,38 +1113,48 @@ function tuStage(){
     V.ans[i] = +b.dataset.j; saveTest(); paint();
     var nx = document.getElementById("tq" + (i + 1));
     if(nx && V.ans[i+1] == null) setTimeout(function(){ nx.scrollIntoView({behavior:"smooth", block:"center"}); }, 350);
-    else if(done() === V.items.length) setTimeout(function(){ $("#tuEnd").scrollIntoView({behavior:"smooth", block:"center"}); }, 350);
+    else if(done() === V.items.length) setTimeout(function(){ var e = $("#tuEnd"); if(e) e.scrollIntoView({behavior:"smooth", block:"center"}); }, 350);
   });
   $("#tuGo").onclick = function(){
     var K = tuKnown();
     V.items.forEach(function(it, i){ if(V.ans[i] === it.a) K[it.ko] = 1; else delete K[it.ko]; });
     lsSet("nari-tu-ok", K);
-    V.done = Date.now(); ST.start = V.done; saveTest();
+    ST.vg.ph = "t"; saveTest();
     tuTable();
   };
   paint();
   $("#tuPage").scrollIntoView({block:"start"});
 }
-function tuWrong(){ var V = ST.vq || {items:[], ans:{}}; return V.items.filter(function(it, i){ return V.ans[i] != null && V.ans[i] !== it.a; }).map(function(it){ return it.ko; }); }
-function tuTableHTML(A){
-  var W = A.words || [], bad = tuWrong(), h = '';
-  if(bad.length) h += '<h3 class="tuh">Từ em vừa chọn sai</h3><table class="tbl tut"><tbody>' + W.filter(function(w){ return bad.indexOf(w.ko) >= 0; }).map(function(w){
-    return '<tr class="bad"><td class="kr">' + esc(w.ko) + '</td><td>' + esc(w.vi) + '</td><td class="muted">câu ' + w.ns.join(", ") + '</td></tr>'; }).join("") + '</tbody></table>';
-  var byN = {}; W.forEach(function(w){ var n = w.ns[0]; (byN[n] = byN[n] || []).push(w); });
-  Object.keys(byN).map(Number).sort(function(a, b){ return a - b; }).forEach(function(n){
-    h += '<h3 class="tuh">Câu ' + n + '</h3><table class="tbl tut"><tbody>' + byN[n].map(function(w){
+function tuWrong(){ var V = tuAll(); return V.items.filter(function(it, i){ return V.ans[i] != null && V.ans[i] !== it.a; }).map(function(it){ return it.ko; }); }
+/* Bảng từ theo câu; only = [câu…] chỉ hiện từ của những câu đó (null = cả bài). */
+function tuTableHTML(A, only){
+  var W = A.words || [], bad = tuWrong(), h = '', byN = {};
+  W.forEach(function(w){ var ns = only ? w.ns.filter(function(n){ return only.indexOf(n) >= 0; }) : w.ns; if(ns.length) (byN[ns[0]] = byN[ns[0]] || []).push(w); });
+  var ks = Object.keys(byN).map(Number).sort(function(a, b){ return a - b; });
+  ks.forEach(function(n){
+    if(ks.length > 1 || !only) h += '<h3 class="tuh">Câu ' + n + '</h3>';
+    h += '<table class="tbl tut"><tbody>' + byN[n].map(function(w){
       return '<tr' + (bad.indexOf(w.ko) >= 0 ? ' class="bad"' : '') + '><td class="kr">' + esc(w.ko) + '</td><td>' + esc(w.vi) + '</td></tr>'; }).join("") + '</tbody></table>';
   });
   return h || '<p class="hint">Các câu này chưa có bảng từ.</p>';
 }
 function tuTable(){
-  var A = DATA.assign[ST.code], V = ST.vq || {items:[], ans:{}};
+  var A = DATA.assign[ST.code], G = A.grp[ST.vg.i], V = ST.vg.g[ST.vg.i] || {items:[], ans:{}};
+  var go = function(){ ST.vg.ph = "x"; ST.start = Date.now() - (ST.vg.tx || 0); saveTest(); startTest(ST.code, ST.name); };
+  if(!tuGW(A, G).length) return go();
   var ok = V.items.filter(function(it, i){ return V.ans[i] === it.a; }).length;
-  tuShell((V.items.length ? '<div class="metaline"><span>Trắc nghiệm: <strong>' + ok + '/' + V.items.length + '</strong> từ đúng</span><span>Bảng có <strong>' + (A.words || []).length + '</strong> từ</span></div>' : '') +
-    '<p class="hint" style="margin:0 0 6px">Từ vựng trong các câu em sắp làm, xếp theo câu. Lúc làm đề, từ trong bảng được tô gạch chấm — em chạm vào để xem nghĩa.</p>' +
-    tuTableHTML(A) + '<div class="row"><button class="btn wide" id="tuStart">Vào làm đề ›</button></div>');
-  $("#tuStart").onclick = function(){ ST.vq.seen = 1; saveTest(); startTest(ST.code, ST.name); };
+  tuShell((V.items.length ? '<div class="metaline"><span>Trắc nghiệm: <strong>' + ok + '/' + V.items.length + '</strong> từ đúng</span><span>Bảng có <strong>' + tuGW(A, G).length + '</strong> từ</span></div>' : '') +
+    '<p class="hint" style="margin:0 0 6px">Từ vựng trong ' + tuLabel(G) + ' (dòng tô đỏ là từ em vừa chọn sai). Lúc làm câu, từ trong bảng được tô gạch chấm — em chạm vào để xem nghĩa.</p>' +
+    tuTableHTML(A, G) + '<div class="row"><button class="btn wide" id="tuStart">Làm ' + tuLabel(G) + ' ›</button></div>', 1);
+  $("#tuStart").onclick = go;
   $("#tuPage").scrollIntoView({block:"start"});
+}
+function tuNext(){
+  var A = DATA.assign[ST.code], G = A.grp[ST.vg.i];
+  var miss = G.filter(function(n){ return !ST.ans[n]; });
+  var go = function(){ ST.vg.tx = Date.now() - ST.start; ST.vg.i++; ST.vg.ph = "v"; saveTest(); tuStage(); };
+  if(!miss.length) return go();
+  ask("Em chưa chọn đáp án câu " + miss.join(", ") + ". Vẫn sang câu tiếp? Em vẫn quay lại sửa được trước khi nộp bài.", "Sang câu tiếp", "Làm tiếp").then(function(ok){ if(ok) go(); });
 }
 function tuOpt(){ var o = lsGet("nari-tt-opt") || {}; return {mark:o.mark !== false, split:!!o.split}; }
 function tuBar(){
@@ -1189,7 +1232,7 @@ function tuWire(A){
   var re = function(k){ var v = lsGet("nari-tt-opt") || {}; v[k] = !tuOpt()[k]; lsSet("nari-tt-opt", v); var y = window.scrollY; startTest(ST.code, ST.name); window.scrollTo(0, y); };
   $("#tuMk").onclick = function(){ re("mark"); };
   $("#tuSp").onclick = function(){ re("split"); };
-  $("#tuTb").onclick = function(){ info("Bảng từ vựng", '<div style="max-height:60vh;overflow:auto">' + tuTableHTML(A) + '</div>'); };
+  $("#tuTb").onclick = function(){ var G = tuMode() ? [].concat.apply([], A.grp.slice(0, ST.vg.i + 1)) : null; info("Bảng từ vựng", '<div style="max-height:60vh;overflow:auto">' + tuTableHTML(A, G) + '</div>'); };
 }
 
 /* =====================================================================
