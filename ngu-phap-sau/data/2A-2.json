@@ -1,0 +1,226 @@
+{
+"b":"2A","n":2,
+"tong":{
+ "t":"Bài 2: sở thích – biến hành động thành danh từ và định ngữ",
+ "p":"Chủ đề 취미 kéo theo hai “công cụ ghép câu” quan trọng nhất của sơ – trung cấp: <b>-는 것</b> (biến hành động thành “việc…”) và <b>-(으)ㄴ N</b> (đặt cả hành động trước danh từ). Cả hai cùng họ đuôi định ngữ -(으)ㄴ / -는 / -(으)ㄹ (-(으)ㄹ N học ở Bài 3; -(으)ㄹ 줄 알다 của bài này cũng thuộc họ đó). Hai mẫu còn lại nói năng lực và phủ định: -(으)ㄹ 줄 알다/모르다 (biết làm) và -지 않다 (không). Viên gạch nền: <b>gốc ㄹ rơi trước ㄴ</b> (만드는 것, 만든 케이크) và <b>phần bổ nghĩa đứng trước danh từ</b> — ngược với tiếng Việt.",
+ "tb":[["Mẫu","Câu hỏi chìa khóa"],
+  ["V-는 것","Cần một danh từ (sở thích, chủ ngữ, tân ngữ) từ một hành động?"],
+  ["V-(으)ㄹ 줄 알다[모르다]","Việc cần học, cần kỹ năng? (khả năng trong tình huống cụ thể → -(으)ㄹ 수 있다)"],
+  ["V-(으)ㄴ N","Hành động đã xảy ra, đứng trước danh từ? (đang / thường → -는)"],
+  ["A/V-지 않다","Phủ định động / tính từ? (danh từ → 아니다, mệnh lệnh → -지 마세요)"]]
+},
+"p":[
+{
+ "no":1,"id":"g_2A_02_1","cn":"Danh từ hóa",
+ "core":"Biến một cụm động từ thành danh từ “việc…” để làm chủ ngữ, tân ngữ hoặc vị ngữ — nhất là khi nói sở thích: 제 취미는 사진 찍는 거예요.",
+ "goc":"<b>-는</b> (đuôi định ngữ hiện tại: đang / thường làm) + <b>것</b> (danh từ phụ thuộc “cái, việc”). Nghĩa đen 사진 찍는 것 = “cái việc (mà) chụp ảnh”. Vì 것 là danh từ, cả cụm gắn được mọi tiểu từ: 것<b>이</b> / 것<b>을</b> / 것<b>은</b> / 것<b>이에요</b>. Văn nói 것 → 거 và rút gọn: <b>게 / 걸 / 건 / 거예요</b>.",
+ "chia":[["Gốc","Ví dụ","→"],
+  ["Không 받침","보다","보**는 것**"],
+  ["Có 받침","먹다","먹**는 것**"],
+  ["Gốc ㄹ (rơi ㄹ)","만들다 · 놀다","만드**는 것** · 노**는 것**"],
+  ["ㄷ / ㅂ (không đổi)","듣다 · 돕다","듣**는 것** · 돕**는 것**"],
+  ["하다","운동하다","운동하**는 것**"]],
+ "chiaNote":[
+  "Gốc ㄹ rơi trước -는: 살다 → 사**는 것**, 알다 → 아**는 것**, 만들다 → 만드**는 것**.",
+  "Văn nói: 것이 → **게**, 것을 → **걸**, 것은 → **건**, 것이에요 → **거예요**.",
+  "Phát âm (mũi hóa): 먹는 [멍는], 찍는 [찡는], 읽는 [잉는], 듣는 [든는]."],
+ "tinh":[
+  {"t":"Nói sở thích","c":"Câu hỏi tên bài: 취미가 뭐예요?","lv":"lịch sự","ko":"제 취미는 사진 찍**는 거예요**.","vi":"Sở thích của tôi là chụp ảnh.","why":"N은 V-는 것이에요: vị ngữ phải là danh từ, nên động từ cần -는 것."},
+  {"t":"Thích / ghét làm gì","c":"Kể về bản thân.","lv":"lịch sự","ko":"저는 요리하**는 걸** 좋아해요.","vi":"Tôi thích nấu ăn.","why":"좋아하다 / 싫어하다 cần tân ngữ → 것을 → nói 걸."},
+  {"t":"Nhận xét việc gì khó, vui","c":"Cô hỏi học tiếng Hàn khó nhất ở đâu.","lv":"lịch sự","ko":"한국어로 말하**는 게** 제일 어려워요.","vi":"Nói bằng tiếng Hàn là khó nhất.","why":"Chủ ngữ + tính từ cảm nhận (어렵다, 재미있다, 힘들다) → 것이 → 게."},
+  {"t":"Lời khuyên","c":"Nói chuyện về sức khỏe.","lv":"lịch sự","ko":"일찍 자**는 것이** 건강에 좋아요.","vi":"Ngủ sớm tốt cho sức khỏe.","why":"V-는 것이 좋다 = làm… thì tốt / nên làm… — gặp rất nhiều trong đề đọc."},
+  {"t":"Đang xem / nghe người khác làm","c":"Bạn hỏi em đang làm gì.","lv":"lịch sự","ko":"아이들이 노**는 것을** 보고 있어요.","vi":"Tôi đang xem bọn trẻ chơi.","why":"Tân ngữ của 보다 / 듣다 là cả một hành động → -는 것을."},
+  {"t":"Văn viết, nêu ý kiến","c":"Đoạn văn về học ngoại ngữ.","lv":"văn viết","ko":"외국어를 배우**는 것은** 쉽지 않다.","vi":"Học ngoại ngữ không dễ.","why":"Văn viết giữ nguyên 것은 / 것이; đuôi -다 (한다체)."}],
+ "rb":[
+  ["Loại từ","Động từ (và 있다/없다). Tính từ cần dạng khác (-(으)ㄴ 것, -기) — học sau."],
+  ["Thì","-는 것 = việc nói chung, hiện tại, thói quen. Việc đã xảy ra → -(으)ㄴ 것 (cùng họ với mẫu 3)."],
+  ["Tiểu từ","것 là danh từ → 이/가, 을/를, 은/는, 이다 gắn như mọi danh từ."],
+  ["Văn phong","Văn viết: 것이, 것을. Văn nói: 게, 걸, 거예요."]],
+ "sai":[
+  {"x":"제 취미는 사진을 찍**어요**.","o":"제 취미는 사진 찍**는 거예요**.","why":"Người Việt dịch thẳng “sở thích của tôi là chụp ảnh” và quên -는 것. 취미는 … phải kết thúc bằng danh từ."},
+  {"x":"저는 노래를 부르다**를** 좋아해요.","o":"저는 노래를 부르**는 것을** 좋아해요.","why":"Động từ nguyên dạng không làm tân ngữ được — phải danh từ hóa."},
+  {"x":"케이크를 만들**는 것**이 재미있어요.","o":"케이크를 만드**는 것**이 재미있어요.","why":"Gốc ㄹ rơi trước -는."},
+  {"x":"저는 수영하는 **게 좋아해요**.","o":"저는 수영하는 **걸 좋아해요**. / 수영하는 **게 좋아요**.","why":"좋아하다 (động từ) cần 을/를 → 걸; 좋다 (tính từ) đi với 이/가 → 게."},
+  {"x":"운동하는 **것는** 건강에 좋아요.","o":"운동하는 **것은** 건강에 좋아요.","why":"것 có 받침 ㅅ → 은 (văn nói: 건)."}],
+ "pb":[
+  {"vs":"V-기","d":"-기 cũng danh từ hóa, hay đi với 좋아하다 / 싫어하다, 쉽다 / 어렵다 và trong danh sách (취미: 독서하기). -는 것 dùng rộng hơn trong câu.","ex":[["저는 책 읽**기**를 좋아해요.","Tôi thích đọc sách."],["저는 책 읽**는 것**을 좋아해요.","Tôi thích (việc) đọc sách."]]},
+  {"vs":"좋다 ↔ 좋아하다","d":"좋다 (tính từ, 이/가): thấy tốt, thích. 좋아하다 (động từ, 을/를): thích (sở thích lâu dài).","ex":[["저는 운동하는 **게 좋아요**.","Tôi thấy tập thể dục thích / tốt."],["저는 운동하는 **걸 좋아해요**.","Tôi thích tập thể dục."]]},
+  {"vs":"-(으)ㄴ 것 · -(으)ㄹ 것","d":"Cùng khung, khác thì: 먹은 것 (đã ăn), 먹는 것 (ăn – nói chung), 먹을 것 (sẽ ăn / đồ để ăn).","ex":[["어제 먹**은 것**이 뭐예요?","Hôm qua bạn đã ăn gì?"],["먹**을 것** 좀 있어요?","Có gì để ăn không?"]]}],
+ "topik":[
+  {"src":"Đọc · kỳ 83 câu 13","ko":"그러나 이를 닦을 때는 순서에 맞춰 닦**는 것이** 좋다.","note":"V-는 것이 좋다 = nên làm… — câu nêu lời khuyên, thường là ý chính. Thấy -는 것이 좋다 / 중요하다 / 필요하다 → ứng viên ý chính của đoạn."},
+  {"src":"Đọc · kỳ 52 câu 2","ko":"무슨 일을 (하든지) 열심히 하**는 것이** 중요하다.","note":"Đáp án là 하든지; vế sau -는 것이 중요하다 là cấu trúc kết luận rất hay gặp."},
+  {"src":"Đọc · kỳ 52 câu 1","ko":"해가 뜨**는 것을** (보려고) 아침 일찍 일어났다.","note":"-는 것을 보다 = nhìn (việc) … — giống câu sách 아이들이 노는 것을 보고 있어요."}],
+ "hoi":[
+  {"q":"“Sở thích của em là nghe nhạc” nói thế nào? Văn nói thì sao?","a":"제 취미는 음악을 듣<b>는 것이에요</b> → nói: 음악 듣<b>는 거예요</b>."},
+  {"q":"Vì sao 수영하는 것이 좋아요 đúng mà 수영하는 것이 좋아해요 sai?","a":"좋다 là tính từ → chủ ngữ + 이/가. 좋아하다 là động từ → tân ngữ + 을/를: 수영하는 것<b>을</b> 좋아해요."},
+  {"q":"만들다 → 만드는 것, nhưng ở Bài 1 만들다 → 만들거나. Vì sao?","a":"Gốc ㄹ rơi trước <b>ㄴ, ㅂ, ㅅ</b>. -는 bắt đầu bằng ㄴ → rơi; -거나 bắt đầu bằng ㄱ → giữ."}],
+ "luyen":[
+  {"q":"제 취미는 영화를 (    ).","o":["보는 거예요","봐요","보는 걸","보다예요"],"w":"취미는 … + danh từ → 보는 것이에요 → 보는 거예요."},
+  {"q":"저는 케이크 (    ) 좋아해요.","o":["만드는 걸","만들는 걸","만드는 게","만들어서"],"w":"Gốc ㄹ rơi; 좋아하다 cần 을/를 → 걸."},
+  {"q":"한국어로 (    ) 제일 어려워요.","o":["말하는 게","말하는 걸","말해요","말하는 것을"],"w":"어렵다 là tính từ → chủ ngữ 것이 → 게."},
+  {"q":"아침 일찍 (    ) 힘들어요.","o":["일어나는 게","일어나는 걸","일어나요","일어난다"],"w":"힘들다 (tính từ) → V-는 것이 / 게."}],
+ "em":[
+  "Viết 3 câu giới thiệu sở thích: 제 취미는 …는 거예요. 저는 …는 걸 좋아해요. …는 게 재미있어요.",
+  "Khi học tiếng Hàn, việc gì khó nhất với em? …는 게 제일 어려워요."],
+ "co":"Bắt đầu bằng câu hỏi tên bài “취미가 뭐예요?” — đa số học sinh trả lời bằng động từ nguyên dạng hoặc 좋아해요 + 게 → lỗi tự lộ ra, cô sửa. Bảng 게 / 걸 / 건 / 거예요 cho học sinh đọc to 3 lần. Gieo cầu nối: -는 것 là cửa vào định ngữ (mẫu 3 và Bài 3)."
+},
+{
+ "no":2,"id":"g_2A_02_2","cn":"Khả năng – kỹ năng",
+ "core":"Nói mình biết / không biết cách làm một việc cần học, cần kỹ năng: “biết (bơi, lái xe, nấu…)”, “không biết…”.",
+ "goc":"<b>-(으)ㄹ</b> (đuôi định ngữ) + <b>줄</b> (danh từ phụ thuộc: “cách, phương pháp”) + <b>알다 / 모르다</b>. Nghĩa đen “biết cách làm”. Vì là “cách”, mẫu này nói về <b>năng lực đã học được</b>, không nói về hoàn cảnh hôm nay. Sau này (3A Bài 3) gặp -(으)ㄹ 줄 몰랐다 = “không ngờ” — nghĩa khác hẳn.",
+ "chia":[["Gốc","Ví dụ","→"],
+  ["Không 받침","수영하다 · 타다","수영**할 줄 알다** · **탈 줄 모르다**"],
+  ["Có 받침","읽다","읽**을 줄 알다**"],
+  ["Gốc ㄹ","만들다","만들 **줄 알다** (không thêm 을)"],
+  ["ㅂ bất quy tắc","굽다 (nướng)","구**울 줄 알다**"],
+  ["Kính ngữ, câu hỏi","운전하다","운전**할 줄 아세요**?"]],
+ "chiaNote":[
+  "알다 chia: 알아요, 압니다, 아세요 (ㄹ rơi trước ㅅ). 모르다 bất quy tắc 르: 몰라요, 몰랐어요.",
+  "Gốc ㄹ: ㄹ của gốc chính là ㄹ của đuôi → 만들 줄, 놀 줄.",
+  "Phát âm: 할 줄 [할 쭐], 읽을 줄 [일글 쭐] — 줄 sau -(으)ㄹ đọc căng."],
+ "tinh":[
+  {"t":"Kể kỹ năng (sở thích)","c":"Giới thiệu bản thân trong lớp.","lv":"lịch sự","ko":"저는 기타를 칠 **줄 알아요**.","vi":"Tôi biết chơi guitar.","why":"Chơi nhạc cụ là kỹ năng phải học → 줄 알다 rất tự nhiên."},
+  {"t":"Hỏi khả năng một cách lịch sự","c":"Hỏi người lớn tuổi / người mới quen.","lv":"kính ngữ","ko":"운전**할 줄 아세요**? – 네, 조금 **할 줄 알아요**.","vi":"Anh / chị biết lái xe không? – Vâng, tôi biết một chút.","why":"Kính ngữ gắn vào 알다 → 아세요."},
+  {"t":"Thừa nhận không biết","c":"Bạn rủ đi bơi.","lv":"lịch sự","ko":"저는 수영**할 줄 몰라요**. 그래서 배우고 싶어요.","vi":"Tôi không biết bơi. Nên tôi muốn học.","why":"Phủ định = 모르다 (không dùng 안 알다)."},
+  {"t":"Nấu ăn","c":"Nói chuyện với bạn Hàn về món ăn.","lv":"lịch sự","ko":"김치찌개를 끓**일 줄 알아요**?","vi":"Bạn biết nấu canh kimchi không?","why":"끓이다 → 끓일. Nấu một món cụ thể là kỹ năng."},
+  {"t":"Ngôn ngữ, chữ viết","c":"Hỏi về chữ Hán.","lv":"lịch sự","ko":"한자를 읽**을 줄 알아요**?","vi":"Bạn biết đọc chữ Hán không?","why":"Đọc được một loại chữ = kỹ năng đã học."},
+  {"t":"Phỏng vấn, hồ sơ xin việc","c":"Trả lời nhà tuyển dụng.","lv":"trang trọng","ko":"엑셀 같은 컴퓨터 프로그램을 사용**할 줄 압니다**.","vi":"Tôi biết sử dụng các chương trình máy tính như Excel.","why":"알다 → 압니다 (đuôi trang trọng)."}],
+ "rb":[
+  ["Loại từ","Chỉ động từ."],
+  ["Loại việc","Việc cần học, cần kỹ năng (bơi, lái xe, nấu ăn, ngoại ngữ, nhạc cụ). Việc ai cũng làm được (걷다, 먹다, 자다) → dùng -(으)ㄹ 수 있다."],
+  ["Tình huống","Chỉ hỏi năng lực nói chung, không hỏi “bây giờ / hôm nay có làm được không”: ×지금 출발할 줄 알아요? → 지금 출발할 수 있어요?"],
+  ["Phủ định","Dùng 모르다: 할 줄 몰라요 (không 할 줄 안 알아요)."]],
+ "sai":[
+  {"x":"저는 걸**을 줄 알아요**.","o":"저는 걸**을 수 있어요**.","why":"Đi bộ không cần học → -(으)ㄹ 수 있다. (Nếu nói về người vừa phục hồi chấn thương mới dùng được.)"},
+  {"x":"내일 만날 **줄 알아요**?","o":"내일 만날 **수 있어요**?","why":"Hỏi khả năng trong một tình huống cụ thể → -(으)ㄹ 수 있다."},
+  {"x":"저는 수영 **줄 알아요**.","o":"저는 수영**할 줄** 알아요.","why":"수영 là danh từ → cần 하다: 수영하다 → 수영할 줄."},
+  {"x":"저는 운전**할 줄 안 알아요**.","o":"저는 운전**할 줄 몰라요**.","why":"Phủ định của 알다 là 모르다."},
+  {"x":"한국 음식을 만들**을 줄** 알아요.","o":"한국 음식을 만들 **줄** 알아요.","why":"Gốc ㄹ không thêm 을."}],
+ "pb":[
+  {"vs":"-(으)ㄹ 수 있다[없다] (1B)","d":"줄 알다: biết cách (năng lực đã học), chỉ hỏi năng lực. 수 있다: làm được — cả việc không cần kỹ năng và khả năng trong tình huống cụ thể.","ex":[["저는 운전**할 줄 알아요**. 그런데 오늘은 술을 마셔서 운전**할 수 없어요**.","Tôi biết lái xe. Nhưng hôm nay uống rượu nên không lái được."]]},
+  {"vs":"알다 + N","d":"한국어를 알아요 = biết (kiến thức về) tiếng Hàn; 한국어를 할 줄 알아요 = biết nói tiếng Hàn (kỹ năng).","ex":[["그 노래를 알아요.","Tôi biết bài hát đó (đã nghe)."],["그 노래를 부를 **줄 알아요**.","Tôi biết hát bài đó."]]},
+  {"vs":"-(으)ㄹ 줄 몰랐다 (3A Bài 3)","d":"Quá khứ + nói về sự việc → “không ngờ”, dùng cả tính từ.","ex":[["저는 수영할 **줄 몰라요**.","Tôi không biết bơi."],["한국어가 이렇게 어려울 **줄 몰랐어요**.","Không ngờ tiếng Hàn khó thế."]]}],
+ "topik":[
+  {"src":"Đọc · kỳ 96 câu 4","ko":"회의가 길어져서 약속 시간을 (미뤄야만 했다) → 미룰 수밖에 없었다","note":"Lựa chọn “미룰 줄 몰랐다” là bẫy hình thức: -(으)ㄹ 줄 모르다 = không biết cách (2A), -(으)ㄹ 줄 몰랐다 = không ngờ (3A) — đều không phải “buộc phải”."}],
+ "hoi":[
+  {"q":"“Em biết lái xe nhưng hôm nay mệt nên không lái được” — chỗ nào dùng 줄 알다, chỗ nào 수 있다?","a":"운전할 <b>줄 알지만</b> 오늘은 피곤해서 운전할 <b>수 없어요</b>. Năng lực → 줄 알다; hoàn cảnh hôm nay → 수 없다."},
+  {"q":"Vì sao không nói 저는 밥을 먹을 줄 알아요?","a":"Ăn cơm không phải kỹ năng phải học → nghe buồn cười (như trẻ con khoe). Chỉ tự nhiên khi việc đó cần học: 젓가락을 사용할 줄 알아요 (biết dùng đũa)."}],
+ "luyen":[
+  {"q":"가: 기타를 (    )?  나: 아니요, 못 쳐요.","o":["칠 줄 아세요","칠 줄 알아세요","치을 줄 아세요","칠 줄 안 아세요"],"w":"치다 không 받침 → 칠 줄; kính ngữ 알다 → 아세요."},
+  {"q":"저는 한국 음식을 (    ) 몰라요.","o":["만들 줄","만들을 줄","만드는 줄","만들 수"],"w":"Gốc ㄹ → 만들 줄; 수 đi với 있다/없다, không đi với 모르다."},
+  {"q":"Câu nào tự nhiên?","o":["저는 운전할 줄 알지만 오늘은 피곤해서 운전할 수 없어요.","저는 운전할 수 알지만 오늘은 운전할 줄 없어요.","저는 걸을 줄 알아요.","지금 출발할 줄 알아요?"],"w":"Năng lực → 줄 알다; hoàn cảnh hôm nay → 수 없다."},
+  {"q":"가: 한자를 (    )?  나: 네, 조금 읽을 줄 알아요.","o":["읽을 줄 알아요","읽는 줄 알아요","읽을 줄이에요","읽을 줄 해요"],"w":"V-(으)ㄹ 줄 알다; 읽다 có 받침 → 읽을."}],
+ "em":[
+  "Viết 3 việc em biết làm và 2 việc em không biết làm (…(으)ㄹ 줄 알아요 / 몰라요).",
+  "Viết một câu hỏi lịch sự cho cô: 선생님, …(으)ㄹ 줄 아세요?"],
+ "co":"Trò “phỏng vấn tìm bạn”: mỗi học sinh có phiếu 6 kỹ năng (수영, 운전, 요리, 기타, 자전거, 한자), hỏi nhau -(으)ㄹ 줄 아세요?. Kết thúc bằng câu đối chiếu “biết – nhưng hôm nay không thể” để chốt 줄 알다 ↔ 수 있다. Báo trước: 3A sẽ gặp lại 줄 몰랐다 = không ngờ."
+},
+{
+ "no":3,"id":"g_2A_02_3","cn":"Định ngữ – quá khứ",
+ "core":"Biến một hành động đã xảy ra thành phần bổ nghĩa đứng trước danh từ: “(cái máy tính) đã mua tháng trước”, “(người) vừa gọi điện”.",
+ "goc":"Gốc động từ + <b>-(으)ㄴ</b> (đuôi định ngữ quá khứ) + danh từ. Trật tự <b>ngược tiếng Việt</b>: Việt “máy tính <i>(mà) tôi mua tháng trước</i>” → Hàn “<i>지난달에 산</i> 컴퓨터” — toàn bộ phần bổ nghĩa đứng <b>trước</b> danh từ chính. Họ định ngữ của động từ: -(으)ㄴ (đã), -는 (đang / thường), -(으)ㄹ (sẽ, Bài 3).",
+ "chia":[["Gốc","Ví dụ","→"],
+  ["Không 받침","사다 · 보다","**산** · **본**"],
+  ["Có 받침","먹다 · 읽다","먹**은** · 읽**은**"],
+  ["Gốc ㄹ (rơi ㄹ)","만들다 · 걸다","만**든** · **건**"],
+  ["ㄷ bất quy tắc","듣다","들**은**"],
+  ["ㅂ bất quy tắc","돕다","도**운**"],
+  ["하다","공부하다","공부**한**"]],
+ "chiaNote":[
+  "Gốc ㄹ: 만들다 → **만든** (không 만들은), 걸다 → **건**, 살다 → **산** — trùng với 사다 → 산: “đã sống” hay “đã mua” phải dựa vào ngữ cảnh.",
+  "Với <b>động từ</b>, -(으)ㄴ = quá khứ. Với <b>tính từ</b> (작은 가방, 큰 집) -(으)ㄴ là hiện tại — đã học, đừng nhầm.",
+  "Chủ ngữ trong cụm định ngữ dùng 이/가: **제가** 만든 케이크, **친구가** 추천한 책."],
+ "tinh":[
+  {"t":"Kể đồ đã mua có vấn đề","c":"Than với bạn.","lv":"lịch sự","ko":"지난달에 **산** 노트북이 벌써 고장이 났어요.","vi":"Cái laptop mua tháng trước đã hỏng rồi.","why":"Cụm 지난달에 산 bổ nghĩa cho 노트북; tiểu từ 이 gắn sau danh từ chính."},
+  {"t":"Hỏi lại điều đã quên","c":"Muốn gọi lại món đã ăn.","lv":"lịch sự","ko":"어제 먹**은** 음식 이름이 뭐였죠?","vi":"Món hôm qua mình ăn tên là gì nhỉ?","why":"먹다 có 받침 → 먹은."},
+  {"t":"Nhận diện người","c":"Có người gọi đến khi em vắng mặt.","lv":"lịch sự","ko":"조금 전에 전화를 **건** 사람이 누구예요?","vi":"Người vừa gọi điện lúc nãy là ai?","why":"걸다 gốc ㄹ → 건."},
+  {"t":"Giới thiệu ảnh, đồ mình làm","c":"Khoe ảnh chụp cuối tuần (chủ đề sở thích).","lv":"lịch sự","ko":"이건 제가 지난 주말에 찍**은** 사진이에요.","vi":"Đây là ảnh tôi chụp cuối tuần trước.","why":"Chủ ngữ trong cụm là 제가 (không 저는)."},
+  {"t":"Hỏi cảm nhận","c":"Hỏi bạn về bộ phim.","lv":"thân mật – lịch sự","ko":"어제 **본** 영화 어땠어요?","vi":"Phim hôm qua xem thế nào?","why":"보다 → 본; câu nói bỏ tiểu từ 은 cho tự nhiên."}],
+ "rb":[
+  ["Loại từ","Động từ (bài này). Tính từ: A-(으)ㄴ N là hiện tại. Danh từ: N인 N."],
+  ["Thì","Đã xảy ra → -(으)ㄴ; đang / thường → -는; chưa xảy ra → -(으)ㄹ."],
+  ["Vị trí","Cả cụm đứng ngay trước danh từ chính; tiểu từ của câu gắn sau danh từ: 어제 산 책**을** 읽어요."],
+  ["Chủ ngữ trong cụm","Dùng 이/가, không dùng 은/는: 제가 만든 음식 (×저는 만든 음식)."]],
+ "sai":[
+  {"x":"컴퓨터 **산** 지난달에 고장 났어요.","o":"지난달에 **산** 컴퓨터가 고장 났어요.","why":"Dịch theo thứ tự Việt “máy tính mua tháng trước”. Phần bổ nghĩa phải đứng trước danh từ."},
+  {"x":"어제 만들**은** 케이크예요.","o":"어제 만**든** 케이크예요.","why":"Gốc ㄹ rơi trước ㄴ."},
+  {"x":"어제 보**는** 영화가 재미있었어요.","o":"어제 **본** 영화가 재미있었어요.","why":"Đã xem hôm qua → -(으)ㄴ, không phải -는."},
+  {"x":"**저는** 만든 음식이에요.","o":"**제가** 만든 음식이에요.","why":"Chủ ngữ trong cụm định ngữ dùng 이/가."},
+  {"x":"어제 듣**은** 노래가 좋았어요.","o":"어제 들**은** 노래가 좋았어요.","why":"듣다 bất quy tắc ㄷ: trước 으 → ㄹ."}],
+ "pb":[
+  {"vs":"V-는 N (hiện tại)","d":"-는: đang / thường làm; -(으)ㄴ: đã làm.","ex":[["제가 자주 가**는** 식당이에요.","Quán tôi hay đến."],["제가 어제 **간** 식당이에요.","Quán tôi đến hôm qua."]]},
+  {"vs":"A-(으)ㄴ N (tính từ)","d":"Cùng hình thức, khác thì: 작은 가방 (túi nhỏ — hiện tại), 산 가방 (túi đã mua — quá khứ).","ex":[["**작은** 가방을 **샀어요**.","Tôi đã mua cái túi nhỏ."],["어제 **산** 가방이 작아요.","Cái túi mua hôm qua nhỏ."]]},
+  {"vs":"-던 (trung cấp)","d":"-(으)ㄴ: việc đã xong. -던: hồi tưởng việc kéo dài / lặp lại trong quá khứ.","ex":[["10년 동안 다니**던** 회사","công ty tôi đã làm suốt 10 năm (đề kỳ 83 câu 14)"]]}],
+ "topik":[
+  {"src":"Đọc · kỳ 83 câu 14","ko":"하지만 나는 오랫동안 생각해 **온** 사업을 시작해 보려고 한다.","note":"생각해 온 = -아/어 오다 + -(으)ㄴ: “đã ấp ủ (từ trước tới giờ)”. Cụm định ngữ dài trước danh từ là kiểu câu chuẩn của đề đọc — tìm danh từ chính (사업) trước, rồi đọc ngược lên."},
+  {"src":"Đọc · kỳ 91 câu 40","ko":"유럽과 아시아, 아프리카 대륙으로 둘러싸**인** 바다를 지중해라고 한다.","note":"둘러싸이다 → 둘러싸인 (được bao quanh). Cả cụm “được bao quanh bởi châu Âu, châu Á, châu Phi” bổ nghĩa cho 바다."},
+  {"src":"Đọc · kỳ 91 câu 1","ko":"나는 오래전에 설악산을 (등산**한** 적이 있다).","note":"Đáp án. -(으)ㄴ 적이 있다 (đã từng) cũng là -(으)ㄴ + danh từ 적 — gặp lại ở Bài 3 (-아/어 보다)."}],
+ "hoi":[
+  {"q":"“Bộ phim em xem hôm qua” viết thế nào? Danh từ chính là gì?","a":"어제 <b>본</b> 영화. Danh từ chính 영화 đứng cuối; mọi thứ bổ nghĩa đứng trước."},
+  {"q":"산 trong “서울에서 산 사람” là “đã mua” hay “đã sống”?","a":"“Đã sống” (살다 → 산): người đã sống ở Seoul. “Mua” không hợp với 사람."}],
+ "luyen":[
+  {"q":"이건 제가 어제 (    ) 케이크예요.","o":["만든","만들은","만드는","만들"],"w":"Đã làm hôm qua → -(으)ㄴ; gốc ㄹ rơi → 만든."},
+  {"q":"어제 (    ) 노래 제목이 뭐예요?","o":["들은","듣은","들는","듣는"],"w":"듣다 bất quy tắc ㄷ → 들은."},
+  {"q":"지난주에 친구가 (    ) 책을 다 읽었어요.","o":["빌려준","빌려주는","빌려줄","빌려줬은"],"w":"Bạn đã cho mượn tuần trước → -(으)ㄴ."},
+  {"q":"Câu nào đúng: “Món tôi nấu hôm qua ngon.”","o":["어제 제가 만든 음식이 맛있었어요.","어제 저는 만든 음식이 맛있었어요.","음식 어제 제가 만든 맛있었어요.","어제 제가 만드는 음식이 맛있었어요."],"w":"Chủ ngữ trong cụm dùng 제가; cụm đứng trước danh từ; đã nấu → 만든."}],
+ "em":[
+  "Mở điện thoại, chọn 3 ảnh và giới thiệu bằng -(으)ㄴ N: 이건 제가 …에서 찍은 사진이에요.",
+  "Kể 2 đồ vật em mua gần đây: 지난주에 산 …이/가 …아/어요."],
+ "co":"Cho học sinh “xây cụm” từ trong ra ngoài: 영화 → 본 영화 → 어제 본 영화 → 친구와 어제 본 영화 → 친구와 어제 본 영화가 재미있었어요. Viết hai trật tự Việt / Hàn lên bảng có mũi tên. Đây là nền cho mọi câu dài trong đề đọc TOPIK."
+},
+{
+ "no":4,"id":"g_2A_02_4","cn":"Phủ định",
+ "core":"Phủ định hành động hay trạng thái: “không…” — dạng dài của 안.",
+ "goc":"<b>-지</b> + <b>않다</b> (rút từ 아니하다 = “không làm”). 안 먹어요 = 먹지 않아요, cùng nghĩa; dạng dài nghe <b>trang trọng hơn, dùng nhiều trong văn viết</b>. Thì, kính ngữ, đuôi câu gắn vào 않다. Phủ định khả năng 못 cũng có dạng dài tương ứng: <b>-지 못하다</b>.",
+ "chia":[["","Hiện tại","Quá khứ","Trang trọng"],
+  ["Động từ 가다","가**지 않아요**","가**지 않았어요**","가**지 않습니다**"],
+  ["Động từ 먹다","먹**지 않아요**","먹**지 않았어요**","먹**지 않습니다**"],
+  ["Tính từ 크다","크**지 않아요**","크**지 않았어요**","크**지 않습니다**"],
+  ["하다","공부하**지 않아요**","공부하**지 않았어요**","공부하**지 않습니다**"],
+  ["Thêm trợ từ","먹고 싶**지는 않아요**","보**지도 않았어요**",""]],
+ "chiaNote":[
+  "Không có bất quy tắc ở gốc: -지 bắt đầu bằng phụ âm → 듣**지 않아요**, 덥**지 않아요**, 만들**지 않아요**.",
+  "Viết đúng chính tả: 않다 (có ㅎ) — không phải 안다 / 안아요. 안 (trạng từ) viết riêng: 안 가요.",
+  "Phát âm: 않아요 [아나요], 않다 [안타], 않습니다 [안씀니다]."],
+ "tinh":[
+  {"t":"Nhận xét nhẹ nhàng","c":"Thử giày ở cửa hàng.","lv":"lịch sự","ko":"이 구두는 별로 편하**지 않아요**.","vi":"Đôi giày này không thoải mái lắm.","why":"별로 + -지 않다 = “không… lắm” — mềm hơn nói thẳng 불편해요."},
+  {"t":"Văn viết, nêu ý kiến","c":"Bài viết về học ngoại ngữ.","lv":"văn viết","ko":"외국어를 배우는 것은 쉽**지 않다**.","vi":"Học ngoại ngữ không dễ.","why":"Văn viết dùng dạng dài -지 않다 nhiều hơn 안."},
+  {"t":"Từ chối khéo","c":"Bạn mời ăn món em không thích.","lv":"lịch sự","ko":"배는 고프지만 그 음식을 먹고 싶**지는 않아요**.","vi":"Đói thì đói, nhưng tôi không muốn ăn món đó.","why":"-지는 않다: 는 thêm ý đối chiếu “thì không…” → nghe mềm, không phủ nhận hết."},
+  {"t":"Trách, phàn nàn","c":"Kể về người không lịch sự.","lv":"thân mật","ko":"그 사람은 내 얼굴을 보**지도 않았어요**.","vi":"Người đó thậm chí còn không nhìn mặt tôi.","why":"-지도 않다 = “cũng không / thậm chí không” → nhấn mạnh."},
+  {"t":"Hỏi han, quan tâm","c":"Thấy bạn mặc áo mỏng.","lv":"lịch sự","ko":"춥**지 않아요**? 창문 닫을까요?","vi":"Bạn không lạnh à? Mình đóng cửa sổ nhé?","why":"Câu hỏi phủ định để hỏi han, gợi ý — rất tự nhiên."},
+  {"t":"Không thể (dạng 못)","c":"Giải thích vì sao không gặp bạn.","lv":"lịch sự","ko":"어제는 바빠서 친구를 만나**지 못했어요**.","vi":"Hôm qua bận nên tôi không gặp bạn được.","why":"-지 못하다 = 못 + V: không thể (dù muốn)."}],
+ "rb":[
+  ["Loại từ","Động từ, tính từ. Danh từ → N이/가 아니다."],
+  ["N + 하다","Dạng ngắn: 안 chen giữa (공부 안 해요). Dạng dài: gắn cuối (공부하지 않아요)."],
+  ["Từ có phủ định riêng","알다 → 모르다, 있다 → 없다 (không dùng 알지 않아요 trong câu bình thường)."],
+  ["Câu rủ, mệnh lệnh","Không dùng -지 않다 → -지 마세요 / -지 맙시다."]],
+ "sai":[
+  {"x":"저는 학생**지 않아요**.","o":"저는 학생이 **아니에요**.","why":"Danh từ phủ định bằng 이/가 아니다."},
+  {"x":"그 사람을 알**지 않아요**.","o":"그 사람을 **몰라요**.","why":"알다 có từ phủ định riêng là 모르다."},
+  {"x":"여기에서 담배를 피우**지 않으세요**. (muốn cấm)","o":"여기에서 담배를 피우**지 마세요**.","why":"Mệnh lệnh phủ định → -지 마세요."},
+  {"x":"오늘은 춥지 **안아요**.","o":"오늘은 춥지 **않아요**.","why":"Lỗi chính tả rất hay gặp: 않다 có ㅎ (vì từ 아니하다)."},
+  {"x":"공부하**지 안 해요**.","o":"공부하**지 않아요** / 공부 **안** 해요.","why":"Trộn hai dạng phủ định. Chọn một: dạng ngắn 안 hoặc dạng dài -지 않다."}],
+ "pb":[
+  {"vs":"안 + V/A","d":"Cùng nghĩa. 안: ngắn, văn nói hằng ngày. -지 않다: dài, văn viết, trang trọng hơn.","ex":[["오늘은 **안** 바빠요.","Hôm nay không bận."],["오늘은 바쁘**지 않아요**.","Hôm nay không bận."]]},
+  {"vs":"-지 못하다 / 못","d":"않다: không (không muốn hoặc thực tế không). 못하다: không thể (dù muốn).","ex":[["술을 마시**지 않아요**.","Tôi không uống rượu (chọn không uống)."],["술을 마시**지 못해요**.","Tôi không uống được rượu."]]},
+  {"vs":"-지 마세요","d":"Phủ định trong câu mệnh lệnh / rủ.","ex":[["걱정하**지 마세요**.","Đừng lo."]]}],
+ "topik":[
+  {"src":"Đọc · kỳ 83 câu 13","ko":"사람들은 보통 이를 닦을 때 순서에 별로 신경 쓰**지 않는다**.","note":"“Thường người ta không…” → câu sau hay đảo chiều bằng 그러나 (그러나 이를 닦을 때는 순서에 맞춰 닦는 것이 좋다). Thấy 보통 + -지 않는다 → chờ ý ngược lại, ý đó mới là ý chính."},
+  {"src":"Đọc · kỳ 41 câu 3","ko":"아기가 자고 있어서 (깨지 않게) 조용히 방 안으로 들어갔다. → 깨지 않도록","note":"-지 않다 + -게 = “để không…”. Câu 3–4 hay giữ nguyên phần -지 않 và chỉ đổi đuôi phía sau."},
+  {"src":"Đọc · kỳ 91 câu 23","ko":"죽을 것 같은 모습을 눈앞에서 보고 싶**지 않았다**.","note":"-고 싶지 않다 = không muốn — câu tả tâm trạng nhân vật trong đoạn tùy bút / truyện ngắn."}],
+ "hoi":[
+  {"q":"“Hôm nay không lạnh” — viết hai cách.","a":"오늘은 <b>안</b> 추워요 / 오늘은 춥<b>지 않아요</b>."},
+  {"q":"먹고 싶지 않아요 và 먹고 싶지는 않아요 khác gì?","a":"는 thêm ý đối chiếu: “muốn thì không muốn (còn chuyện khác thì…)” — hay đi với vế trước -지만: 배는 고프지만 먹고 싶<b>지는</b> 않아요."},
+  {"q":"Vì sao không nói 학생지 않아요?","a":"Danh từ phủ định bằng <b>이/가 아니다</b>: 학생이 아니에요. -지 않다 chỉ gắn vào động / tính từ."}],
+ "luyen":[
+  {"q":"이 영화는 별로 (    ).","o":["재미있지 않아요","재미있지 안아요","재미있지 마세요","재미있지 않았아요"],"w":"않다 có ㅎ; 않 + 았어요 → 않았어요. Tính từ không dùng 마세요."},
+  {"q":"저는 그 사람을 (    ).","o":["몰라요","알지 않아요","안 알아요","알지 마요"],"w":"알다 → phủ định bằng 모르다."},
+  {"q":"가: 커피 마실래요?  나: 아니요, 지금은 (    ).","o":["마시고 싶지 않아요","마시지 마세요","마시고 싶지 아니에요","안 마시고 싶지 않아요"],"w":"-고 싶지 않다 = không muốn."},
+  {"q":"(Cô dặn học sinh) 도서관에서는 큰 소리로 이야기하(    ).","o":["지 마세요","지 않으세요","지 않아요","지 안 해요"],"w":"Lời dặn, cấm → -지 마세요."}],
+ "em":[
+  "Viết 3 câu về những việc em không làm / không thích bằng -지 않아요.",
+  "Từ chối khéo một lời mời bằng …지는 않아요."],
+ "co":"Dạng dài không mới (học sinh đã biết 안), trọng tâm: ① không có bất quy tắc, ② -지는 / -지도, ③ không dùng với 알다 / danh từ / mệnh lệnh, ④ chính tả 않 (có ㅎ). Dùng đề kỳ 83 câu 13 (đánh răng) cho học sinh thấy -지 않는다 trong đề thật dẫn tới 그러나 và ý chính."
+}
+]
+}
