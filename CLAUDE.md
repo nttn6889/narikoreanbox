@@ -271,9 +271,10 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   quán ngữ → `V21_07`…`V21_12`, tượng thanh/tượng hình → `V42_03`…`V42_09` (Câu 42–43), tục ngữ → `V54_06`…`V54_08`,
   12 địa điểm → `VN04_12`…`VN04_26` (Nghe 4–12). Phần 1–3 (đồng nghĩa/đa nghĩa/trái nghĩa) và phần 8 (55 chủ đề) chưa đưa vào;
   cô định làm thẻ “Chủ đề” cùng với 10 chủ đề lớn × 12 chủ điểm ở https://claude.ai/artifact/ExdBDgYYhxrysxqHEDB27S.
-- Thẻ Câu 25–27 của `tu-vung/`: dưới bảng mỗi nhóm `V25_*` có khung “📰 Tiêu đề trong đề có nhóm …” (tiêu đề của `cau-25-27/` tô chữ liên quan, nghĩa, link
-  “Xem giải thích ›” → `cau-25-27/#b=all&q=<id>`), từ có trong tiêu đề hiện 📰N. Ghép tay ở `tools/tieu_de_tu.tsv` (câu, nhóm, chữ trong tiêu đề, từ trong kho
-  hoặc trống = cùng chủ đề, ghi chú ≈ cách nói khác) → `python3 tools/tieu_de_tu.py` → `tu-vung/tieu-de.json`. Thêm câu vào `R` hoặc sửa nhóm V25 thì chạy lại.
+- `tu-vung/tieu-de/` (trang học sinh, trang `tu-vung/` giữ nguyên, không đặt link sang): 63 tiêu đề câu 25–27 xếp theo nhóm từ `V25_*` (thứ tự như kho từ; câu ghép
+  nhiều nhóm nằm ở nhóm số nhỏ nhất, còn lại “Chủ đề khác”), tô chữ của nhóm + nghĩa từ, tách khúc, 4 đáp án + bẫy, “Che đáp án” (localStorage `nari-2527td`).
+  Không link sang `cau-25-27/` (giáo án của cô). Ghép tay ở `tools/tieu_de_tu.tsv` (câu, nhóm, chữ trong tiêu đề, từ trong kho hoặc trống = cùng chủ đề,
+  ghi chú ≈ cách nói khác) → `python3 tools/tieu_de_tu.py` → `tu-vung/tieu-de/de.json` (lấy câu từ biến `R` của `cau-25-27/`). Sửa `R` hoặc nhóm V25 thì chạy lại.
 - Trang `tu-vung/` lọc phần nghe bằng `#c=n4`, `#c=n15`, `#c=n4-31` (phần “Nghe …” có số câu +100 để không lẫn với câu đọc).
 - Trang `tu-vung/` luôn có 3 thẻ Đọc (câu 1–50) / Nghe (phần `Nghe …`, nút ghi “Câu 4–12”) / Viết (câu ≥ 51); `#k=nghe`, `#k=viet` mở thẻ.
   `#c=` chỉ lọc trong thẻ có câu khớp (vd. `#c=1-12` lọc thẻ Đọc, thẻ Nghe/Viết vẫn hiện đủ) và thêm nút “Xem tất cả ›” để bỏ lọc.
