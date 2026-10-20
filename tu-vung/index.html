@@ -75,18 +75,6 @@ h4{font-size:14px;margin:12px 0 4px;color:var(--muted)}
 .chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px}
 .chips a{border:1px solid var(--acc);color:var(--acc);border-radius:14px;padding:2px 10px;font-size:14px;text-decoration:none;font-family:"Noto Sans KR","Malgun Gothic",sans-serif}
 .blk{margin:0 0 18px}
-.td{margin:8px 0 18px;border:1px solid var(--line);border-left:4px solid var(--acc);background:#fdfafa}
-.td>b{display:block;padding:5px 10px;font-family:Arial,sans-serif;font-size:14px;color:var(--acc);border-bottom:1px solid var(--line)}
-.td li{padding:6px 10px;border-bottom:1px dotted #bbb;list-style:none}
-.td li:last-child{border-bottom:0}
-.td ul{margin:0;padding:0}
-.td .h{font-family:"Noto Sans KR","Malgun Gothic","Apple SD Gothic Neo",sans-serif;font-size:16px}
-.td mark{background:#ffe58a;color:inherit;padding:0 1px}
-.td .vi{display:block;font-size:14.5px;color:#333;margin-top:2px}
-.td .m{display:block;font:12.5px Arial,sans-serif;color:var(--muted);margin-top:2px}
-.td .m i{font-style:normal;color:var(--acc)}
-.td .m a{color:var(--acc)}
-.tdn{font-family:Arial,sans-serif;font-size:11px;color:var(--muted);white-space:nowrap;margin-left:4px}
 .blk h3{margin:0;padding:6px 10px;background:var(--ink);color:#fff;font-size:17px;font-family:"Noto Sans KR","Malgun Gothic",sans-serif}
 .blk h3 small{font-weight:normal;font-size:13px;opacity:.85;font-family:"Times New Roman",serif}
 .blk .tb .h{background:var(--sub)}
@@ -138,7 +126,7 @@ h4{font-size:14px;margin:12px 0 4px;color:var(--muted)}
                {k: 'uu', t: '⭐ Cốt lõi', s: 'Từ đề nào cũng có'}, {k: 'cd', t: 'Chủ đề', s: '11 chủ đề'}];
   // tu-vung/de.json (tools/thong_ke_de.py): thống kê từ trong các đề thi thử; tu-vung/chu-de.json: từ vựng theo chủ đề
   // CORE: phần “Cốt lõi · Tầng …” của kho từ (tools/cot_loi_kho.py) — từ lặp lại trong 20 đề đọc, cũng là từ của lộ trình hằng ngày
-  var DE = null, CD = null, TD = null, CORE = [];
+  var DE = null, CD = null, CORE = [];
   function star(n){ return n ? '<span class="st' + (n < 3 ? ' lo' : '') + '" title="Gặp trong ' + n + ' đề">' + (n >= 3 ? '★' : '') + n + ' đề</span>' : ''; }
   function partOf(sec){ return /^Nghe/.test(sec) ? 'nghe' : secNum(sec) >= 51 ? 'viet' : 'doc'; }
   function hashArg(name){ var m = new RegExp('[#&]' + name + '=([^&]*)', 'i').exec(location.hash); return m ? m[1] : ''; }
@@ -185,10 +173,10 @@ h4{font-size:14px;margin:12px 0 4px;color:var(--muted)}
           h += '<div class="tb">' +
                '<div class="h">Từ vựng</div><div class="h">Nghĩa tiếng Việt</div>' +
                '<div class="h wide">Từ vựng</div><div class="h wide">Nghĩa tiếng Việt</div>';
-          g.w.forEach(function(w){ h += '<div class="ko">' + esc(w[1]) + star(DE && DE.kho[w[0]]) + tdN(g, w[0]) + '</div><div class="vi">' + esc(w[2]) + '</div>'; });
+          g.w.forEach(function(w){ h += '<div class="ko">' + esc(w[1]) + star(DE && DE.kho[w[0]]) + '</div><div class="vi">' + esc(w[2]) + '</div>'; });
           if (g.w.length % 2) h += '<div class="pad"></div><div class="pad"></div>';
         }
-        h += '</div>' + tdHTML(g);
+        h += '</div>';
       });
       h += (lt ? '<p class="done">Học xong rồi? Làm bài luôn nhé:</p>' + lt : '') + '</section>';
     });
@@ -196,33 +184,6 @@ h4{font-size:14px;margin:12px 0 4px;color:var(--muted)}
     nav.innerHTML = secs.length > 1 || filtered ? nv : '';
     out.innerHTML = h;
     show(Math.min(cur, secs.length - 1));
-  }
-  // Câu 25–27: tiêu đề báo trong đề có từ / cùng chủ đề của nhóm (tieu-de.json, sinh bằng tools/tieu_de_tu.py)
-  function tdN(g, wid){
-    var n = 0;
-    ((TD && TD.g[g.id]) || []).forEach(function(q){ if (q[1].some(function(x){ return x[1] === wid; })) n++; });
-    return n ? '<span class="tdn" title="Có trong ' + n + ' tiêu đề đề thi (xem dưới bảng)">📰' + n + '</span>' : '';
-  }
-  function tdHTML(g){
-    var qs = TD && TD.g[g.id];
-    if (!qs) return '';
-    var wk = {};
-    g.w.forEach(function(w){ wk[w[0]] = w; });
-    var h = '<div class="td"><b>📰 Tiêu đề trong đề có nhóm “' + esc(g.ko) + '” · ' + qs.length + ' câu</b><ul>';
-    qs.forEach(function(q){
-      var d = TD.q[q[0]], t = esc(d[0]), tags = [];
-      q[1].forEach(function(x){
-        var c = esc(x[0]);
-        t = t.split(c).join('\u0001' + c + '\u0002');
-        var w = wk[x[1]];
-        if (x[2]) tags.push('<i>' + c + '</i> ' + esc(x[2]));  // cách nói khác cùng nghĩa với từ trong bảng
-        else if (w) tags.push('<i>' + c + '</i>' + (w[1] === x[0] ? '' : ' ← ' + esc(w[1])) + ': ' + esc(w[2]));
-      });
-      t = t.replace(/\u0001(\u0001)*/g, '<mark>').replace(/\u0002(\u0002)*/g, '</mark>');
-      h += '<li><span class="h">' + t + '</span><span class="vi">' + esc(d[1]) + '</span><span class="m">' + (tags.length ? tags.join(' · ') + ' · ' : '') +
-           esc(d[2]) + ' câu ' + d[3] + ' · <a href="../cau-25-27/#b=all&q=' + encodeURIComponent(q[0]) + '">Xem giải thích ›</a></span></li>';
-    });
-    return h + '</ul></div>';
   }
   function cells(rows){
     // rows: [[ko-html, vi]] → bảng 2 cột (4 cột trên màn hình rộng) như các thẻ câu
@@ -326,9 +287,9 @@ h4{font-size:14px;margin:12px 0 4px;color:var(--muted)}
     if (cache) return render(cache);
     function get(u){ return fetch(u, {cache: 'no-cache'}).then(function(r){ return r.json(); }); }
     var opt = function(u){ return get(u).catch(function(){ return null; }); };  // thống kê không có thì trang vẫn chạy
-    Promise.all([get('../thi-thu/vocab.json'), opt('de.json'), opt('chu-de.json'), opt('tieu-de.json')])
+    Promise.all([get('../thi-thu/vocab.json'), opt('de.json'), opt('chu-de.json')])
       .then(function(r){
-        DE = r[1]; CD = r[2]; TD = r[3]; cache = r[0];
+        DE = r[1]; CD = r[2]; cache = r[0];
         CORE = cache.g.filter(function(g){ return /^Cốt lõi /.test(g.sec); }).sort(function(a, b){ return (a.so - b.so) || (a.o - b.o); });
         cache.g = cache.g.filter(function(g){ return !/^(Seoul|Cốt lõi) /.test(g.sec); });  // từ giáo trình Seoul ở trang ../seoul/; từ cốt lõi ở thẻ ⭐ Cốt lõi
         upd(cache); render(cache);
