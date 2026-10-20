@@ -73,6 +73,22 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   “Bài riêng cô giao”. Đã nộp = localStorage `nari-v-|nari-n-|nari-tt-<mã bài>-<tên>` có `submitted`. Học sinh vẫn gửi mã nộp qua
   Zalo (có nút “Gửi qua Zalo…” dùng bảng chia sẻ của máy).
 
+## Đánh dấu đã dạy → Tiến độ dạy (`danh-dau/`)
+- Lớp 1:1 nhiều em cùng tiến độ: trong học liệu, cạnh tiêu đề từng phần/mục có nút 📌 (chỉ máy cô thấy), bấm → tick tên em, ngày tự ghi (sửa được ô “Ngày dạy”).
+  Nút “📌 Cả phần” ở tiêu đề buổi (h2) đánh dấu / bỏ hết các mục của buổi. Nút 📌 trên thanh chọn buổi (cạnh “↺ Làm mới”; trang không có thanh thì nổi góc trái dưới):
+  số dấu chưa gửi, “Chép mã gửi trang quản lý”, link bảng giảng Google Docs của buổi, “Ẩn nút khi chiếu cho học sinh” (localStorage `nari-dd-hide`).
+- `danh-dau/dd.js` gắn cuối trang (`<script src="../danh-dau/dd.js"></script>`; đã gắn ở cau-5, 13-15, 16-18, 19-20, 25-27, ngu-phap-12/34, viet-51…54,
+  viet-53/mau, seoul/2a-1, 3a-1, so-dem, tuong-dong, so-cap/noi-am). Trang học liệu mới thì gắn thêm dòng này. Tự tìm mục: `section.sec` = phần (h2),
+  h3 con trực tiếp + h2 trong `.tab-page` = mục (phần không có mục thì cả phần là một mục); không có `section.sec` thì mỗi h2 là một mục.
+  Khóa mục = id phần + tiêu đề bỏ số thứ tự → đổi tiêu đề thì dấu cũ hiện ở nhóm “Mục cũ” trong trang quản lý.
+- Tên học sinh **không** vào repo: trang quản lý → Lớp học → lớp → thẻ “Tiến độ dạy” → “Cài tên học sinh vào máy cô” tạo link `danh-dau/#n=<base64 {s:[[id, tên ngắn]], m:[[trang, mục, id, ngày]]}>`
+  → lưu localStorage máy cô (`nari-dd-st`, dấu `nari-dd-m`, chưa gửi `nari-dd-q`/`nari-dd-b`, mục lục trang `nari-dd-c`). Trang `danh-dau/` = cài đặt + xem dấu trên máy.
+- Mã `ND1-<base64 {v, e:[[trang, mục, id, ngày, lúc, xóa?]], b:[[id, ngày, link, lúc]], c:{trang:{t, s:[[id phần, tên, #link, [[mục, tên]]]]}}}>-<sum>` → cô dán ở tab Chấm bài
+  (`chamDay`) → collection `daydau`: `M<sum(trang|mục)>_<id em>` {k:"m", st, p, i, d, at}, `C<sum(trang)>` mục lục {k:"c", p, t, s:[{id, t, h, it:[{k, t}]}]},
+  `B<id em>_<ngày>` link bảng giảng {k:"b", st, d, u, at}. Dấu mới hơn (`at`) thắng.
+- Trang quản lý: thẻ “Tiến độ dạy” (bảng phần/mục × em, bấm ô để đánh dấu tay, lọc mục còn em chưa học), hồ sơ em → Lịch học: dưới mỗi buổi hiện đã dạy gì + bảng giảng,
+  thẻ “Ngày có dấu đã dạy nhưng chưa ghi buổi” → “Ghi buổi” (điền sẵn nội dung + link). Code trong `tools/nangluc.js` (khối NLA, `td…`), móc bằng `nangluc.py`.
+
 ## Đánh giá năng lực (tab "Đánh giá" trong trang quản lý)
 - Gom đề thi (`results`), từ vựng (`vresults`), nghe (`nresults`) theo từng học sinh. Số liệu tính lại trong trình duyệt,
   không lưu thêm gì. Chỉ lưu nhận xét (`notes/<id>.text`, dùng chung với Sổ điểm) và việc cần làm (`nlnotes/<id>.next`).

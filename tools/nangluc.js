@@ -375,10 +375,14 @@ function reportBoot(){
       }
       h += '<div class="card"><h2 class="lhsec">Tổng kết theo tháng</h2><p class="hint">Mỗi tháng cần 4 tuần × ' + need + ' buổi. Tuần thiếu buổi được ghi nợ; buổi vượt ở các tuần sau tính là học bù cho tuần nợ cũ nhất.</p>' + blocks.reverse().join("") + '</div>';
     } else h += '<div class="card"><p class="hint">Ghi ngày bắt đầu khóa và số buổi/tuần (Sửa thông tin) để trang tính đủ / thiếu buổi theo tuần, tháng.</p></div>';
+    tdCss();
+    var tdMiss = {}; tdDocs("m").concat(tdDocs("b")).forEach(function(x){ if(x.st === st.id && !ls.some(function(l){ return l.date === x.d; })) tdMiss[x.d] = 1; });
+    if(Object.keys(tdMiss).length) h += '<div class="card" style="border-left:4px solid var(--warn)"><h2 class="lhsec" style="font-size:18px">Ngày có dấu đã dạy nhưng chưa ghi buổi</h2>' +
+      Object.keys(tdMiss).sort().reverse().map(function(d){ return '<div class="lhl" style="grid-template-columns:1fr auto"><div><div class="dt">' + fmtYMD(d) + '</div>' + tdDayHTML(st.id, d) + '</div><div class="act"><button class="btn sm" data-tdlh="' + esc(d) + '">Ghi buổi</button></div></div>'; }).join("") + '</div>';
     h += '<div class="card"><div class="row" style="margin:0 0 6px;justify-content:space-between;align-items:center"><h2 class="lhsec">Lịch học theo ngày (' + ls.length + ' buổi)</h2><button class="btn sm" id="lhNew">+ Thêm buổi học</button></div>' +
       (ls.length ? ls.slice().reverse().map(function(l){
         return '<div class="lhl"><div class="no"><small>Buổi</small>' + l.no + '</div><div><div class="dt">' + LH_DL[l.d.getDay()] + ', ' + lhDm(l.d) + '/' + l.d.getFullYear() + (l.tm ? ' · ' + esc(l.tm) : '') + (l.mk ? ' · <span class="pill warn">học bù tuần ' + lhDm(l.mk.mon) + '</span>' : '') + '</div><h4>' + esc(l.topic || "(chưa ghi nội dung)") + '</h4>' +
-          ((l.links || []).length ? '<div class="lhlk">' + l.links.map(function(k){ return '<a href="' + esc(k.url) + '" target="_blank" rel="noopener">' + esc(k.label || "Link") + '</a>'; }).join("") + '</div>' : '') +
+          ((l.links || []).length ? '<div class="lhlk">' + l.links.map(function(k){ return '<a href="' + esc(k.url) + '" target="_blank" rel="noopener">' + esc(k.label || "Link") + '</a>'; }).join("") + '</div>' : '') + tdDayHTML(st.id, l.date) +
           '</div><div class="act"><button class="btn sm ghost" data-lhed="' + esc(l.id) + '">Sửa</button><button class="btn sm danger" data-lhdel="' + esc(l.id) + '">Xóa</button></div></div>';
       }).join("") : '<p class="hint">Chưa có buổi nào. Cô bấm “+ Thêm buổi học”, hoặc gửi lịch cho Claude để nhập tự động.</p>') + '</div>';
     return h;
@@ -386,12 +390,13 @@ function reportBoot(){
   function lhWire(body, st){
     var nb = $("#lhNew"); if(nb) nb.onclick = function(){ lhEdit(st, null); };
     var sy = $("#lhSync"); if(sy) sy.onclick = function(){ lhSync(st); };
+    $$("[data-tdlh]", body).forEach(function(b){ b.onclick = function(){ tdNewBuoi(st, b.dataset.tdlh); }; });
     $$("[data-lhed]", body).forEach(function(b){ b.onclick = function(){ var l = (S.buoi || []).find(function(x){ return x.id === b.dataset.lhed; }); if(l) lhEdit(st, l); }; });
     $$("[data-lhdel]", body).forEach(function(b){ b.onclick = function(){ var l = (S.buoi || []).find(function(x){ return x.id === b.dataset.lhdel; }); if(!l) return;
       ask("Xóa buổi " + (l.no || "") + " ngày " + fmtYMD(l.date) + "?", "Xóa").then(function(ok){ if(ok) db.doc("buoi/" + l.id).delete(); }); }; });
   }
-  function lhEdit(st, l){
-    var x = l || {date:lhIso(new Date()), topic:"", links:[]};
+  function lhEdit(st, l, pre){
+    var x = l || pre || {date:lhIso(new Date()), topic:"", links:[]};
     var md = modal('<h3>' + (l ? 'Sửa buổi ' + (l.no || '') : 'Thêm buổi học') + ' · ' + esc(st.name) + '</h3>' +
       '<div class="grid2"><div><label class="l" for="lhDate">Ngày học</label><input class="t" id="lhDate" type="date" value="' + esc(x.date) + '"></div><div></div></div>' +
       '<label class="l" for="lhTopic">Nội dung buổi học</label><input class="t" id="lhTopic" data-focus value="' + esc(x.topic || "") + '" placeholder="VD: Chiến thuật giải câu 9–12">' +
@@ -970,4 +975,163 @@ function reportBoot(){
         wireCopy(md.el);
       });
     };
+  }
+
+  /* ===== Đánh dấu đã dạy (nút 📌 trong học liệu trên site, danh-dau/dd.js). Cô dán mã ND1- ở tab Chấm bài →
+     daydau/M<sum(trang|mục)>_<id em> {k:"m", st, p: trang, i: mục, d: ngày, at};
+     daydau/C<sum(trang)> {k:"c", p, t: tên trang, s:[{id, t, h: #link phần, it:[{k, t}]}]} = mục lục trang (để thấy cả mục chưa dạy);
+     daydau/B<id em>_<ngày> {k:"b", st, d, u: link bảng giảng, at}.
+     Lớp học → lớp → thẻ “Tiến độ dạy”; hồ sơ em → Lịch học hiện đã dạy gì ở từng buổi. ===== */
+  var TD_SITE = "https://hoc.naritopik.com/";
+  function tdDocs(k){ return (S.daydau || []).filter(function(x){ return x.k === k; }); }
+  function tdCat(p){ return tdDocs("c").find(function(c){ return c.p === p; }) || null; }
+  function tdMid(p, i, st){ return "M" + sum(p + "|" + i) + "_" + st; }
+  function tdShort(st){ var w = cleanName(st.name).split(" "); return w[w.length - 1] || st.name; }
+  function tdDm(iso){ var d = lhD(iso); return d ? lhDm(d) : ""; }
+  function tdLink(p, g){ return TD_SITE + p + (g && g.h ? g.h : ""); }
+  function tdFind(p, i){ var c = tdCat(p); if(c) for(var a = 0; a < c.s.length; a++) for(var b = 0; b < c.s[a].it.length; b++) if(c.s[a].it[b].k === i) return {c:c, g:c.s[a], it:c.s[a].it[b]}; return null; }
+  /* Đã dạy gì cho em st trong ngày d: [{p, t, link, parts:[tên phần (mục…)]}] */
+  function tdDay(stId, d){
+    var by = {};
+    tdDocs("m").filter(function(x){ return x.st === stId && x.d === d; }).forEach(function(x){
+      var f = tdFind(x.p, x.i), pg = by[x.p] = by[x.p] || {p:x.p, t:(f ? f.c.t : x.p), g:{}, order:[]};
+      var gk = f ? f.g.id : "?", g = pg.g[gk];
+      if(!g){ g = pg.g[gk] = {t:f ? f.g.t : x.i, link:tdLink(x.p, f && f.g), it:[], self:f && f.g.it.length === 1 && f.g.it[0].k === f.g.id, n:f ? f.g.it.length : 0}; pg.order.push(gk); }
+      if(f && !g.self) g.it.push(f.it.t);
+    });
+    return Object.keys(by).map(function(p){ var pg = by[p]; return {p:p, t:pg.t, parts:pg.order.map(function(k){ return pg.g[k]; })}; });
+  }
+  function tdDayText(stId, d){ return tdDay(stId, d).map(function(pg){ return pg.t + ": " + pg.parts.map(function(g){ return g.t; }).join(", "); }).join("; "); }
+  function tdDayHTML(stId, d){
+    var a = tdDay(stId, d), b = tdDocs("b").filter(function(x){ return x.st === stId && x.d === d; });
+    if(!a.length && !b.length) return "";
+    return '<div class="tdday">' + a.map(function(pg){ return '📌 <b>' + esc(pg.t) + '</b>: ' + pg.parts.map(function(g){
+        return '<a href="' + esc(g.link) + '" target="_blank" rel="noopener">' + esc(g.t) + '</a>' + (g.self ? '' : g.it.length === g.n ? ' <span class="muted">(cả phần)</span>' : ' <span class="muted">(' + g.it.map(esc).join(" · ") + ')</span>'); }).join("; "); }).join("<br>") +
+      b.map(function(x){ return (a.length ? '<br>' : '') + '📄 <a href="' + esc(x.u) + '" target="_blank" rel="noopener">Bảng giảng</a>'; }).join("") + '</div>';
+  }
+  function tdCss(){
+    if(document.getElementById("tdCss")) return;
+    var s = document.createElement("style"); s.id = "tdCss";
+    s.textContent = '.tdday{font-size:13.5px;margin:4px 0 2px;padding:6px 10px;border-left:3px solid var(--ok);background:var(--ok-soft);border-radius:0 6px 6px 0;line-height:1.6}.tdday a{color:var(--violet)}' +
+      '.tdt td,.tdt th{padding:5px 6px}.tdt td.c,.tdt th.c{text-align:center;white-space:nowrap}.tdt tr.g td{background:var(--violet-soft);font-weight:700}.tdt tr.g td a{color:var(--violet)}' +
+      '.tdc{all:unset;cursor:pointer;display:inline-block;min-width:44px;border-radius:8px;padding:1px 6px;font-size:13px;font-weight:600;color:var(--muted);border:1px dashed var(--line)}' +
+      '.tdc.on{background:var(--ok-soft);color:var(--ok);border:1px solid var(--ok)}.tdc:hover{border-color:var(--violet)}.tdc:focus-visible{outline:2px solid var(--violet)}' +
+      'details.tdp{border:1px solid var(--line);border-radius:8px;margin:8px 0}details.tdp>summary{cursor:pointer;padding:9px 12px;font-weight:600;display:flex;flex-wrap:wrap;gap:4px 12px;justify-content:space-between}details.tdp .scroll{padding:0 8px 8px}';
+    document.head.appendChild(s);
+  }
+
+  /* Chấm bài: mã ND1- */
+  function chamDay(fd){
+    tdCss();
+    var out = $("#cDay"), cats = [], ev = {}, boards = {}, bad = fd.bad, unknown = 0, now = Date.now();
+    fd.codes.forEach(function(code){
+      var m = String(code).match(/^ND1-([A-Za-z0-9_-]+)-([0-9a-z]{4})$/), o = null;
+      if(m && sum(m[1]) === m[2]) try{ o = b64d(m[1]); }catch(e){}
+      if(!o){ bad++; return; }
+      Object.keys(o.c || {}).forEach(function(p){ var c = o.c[p]; cats.push(["C" + sum(p), {k:"c", p:p, t:c.t, s:(c.s || []).map(function(g){ return {id:g[0], t:g[1], h:g[2] || "", it:g[3].map(function(x){ return {k:x[0], t:x[1]}; })}; }), at:now}]); });
+      (o.e || []).forEach(function(e){ var id = tdMid(e[0], e[1], e[2]); if(!ev[id] || ev[id][4] <= e[4]) ev[id] = e; });
+      (o.b || []).forEach(function(e){ var id = "B" + e[0] + "_" + e[1]; if(!boards[id] || boards[id][3] <= e[3]) boards[id] = e; });
+    });
+    var stOf = function(id){ return S.students.find(function(st){ return st.id === id; }); };
+    var ops = [], done = [], local = {};
+    var put = function(id, doc){ local[id] = doc; ops.push(db.doc("daydau/" + id).set(doc)); };
+    cats.forEach(function(c){ put(c[0], c[1]); });
+    Object.keys(ev).forEach(function(id){
+      var e = ev[id], ex = (S.daydau || []).find(function(x){ return x.id === id; });
+      if(!stOf(e[2])){ unknown++; return; }
+      if(ex && (ex.at || 0) > e[4]) return;
+      if(e[5]){ if(ex){ local[id] = null; ops.push(db.doc("daydau/" + id).delete()); } return; }
+      put(id, {k:"m", st:e[2], p:e[0], i:e[1], d:e[3], at:e[4]});
+      done.push(e);
+    });
+    Object.keys(boards).forEach(function(id){ var e = boards[id]; if(!stOf(e[0])){ unknown++; return; } put(id, {k:"b", st:e[0], d:e[1], u:e[2], at:e[3]}); done.push([null, null, e[0], e[1]]); });
+    if(!ops.length && !bad){ out.innerHTML = '<div class="card"><h2>Đánh dấu đã dạy</h2><p class="hint">Mã không có dấu mới (đã dán trước đó rồi).</p></div>'; return; }
+    busy(true, "Đang ghi dấu đã dạy…");
+    Promise.all(ops).then(function(){
+      busy(false);
+      /* cập nhật ngay S.daydau (chưa chờ onSnapshot) để báo cáo dưới đây có đủ dấu mới */
+      var cur = (S.daydau || []).filter(function(x){ return !(x.id in local); });
+      Object.keys(local).forEach(function(id){ if(local[id]) cur.push(Object.assign({id:id}, local[id])); });
+      S.daydau = cur;
+      var days = {}; done.forEach(function(e){ days[e[2] + "|" + e[3]] = 1; });
+      var rows = Object.keys(days).sort(function(a, b){ return a.split("|")[1] < b.split("|")[1] ? 1 : -1; }).map(function(k){
+        var st = stOf(k.split("|")[0]), d = k.split("|")[1], has = (S.buoi || []).some(function(l){ return l.st === st.id && l.date === d; });
+        return '<div class="lhl" style="grid-template-columns:1fr auto"><div><div class="dt">' + esc(st.name) + ' · ' + fmtYMD(d) + (has ? '' : ' · <span class="pill warn">chưa có buổi trong Lịch học</span>') + '</div>' + tdDayHTML(st.id, d) + '</div>' +
+          (has ? '' : '<div class="act"><button class="btn sm" data-tdlh="' + esc(st.id) + '|' + esc(d) + '">Ghi buổi</button></div>') + '</div>';
+      }).join("");
+      out.innerHTML = '<div class="card"><h2>Đánh dấu đã dạy</h2><p class="okmsg">Đã ghi ' + Object.keys(days).length + ' buổi dạy (' + done.length + ' dấu).</p>' +
+        (unknown ? '<p class="err">' + unknown + ' dấu của học sinh không còn trong danh sách nên bỏ qua.</p>' : '') + (bad ? '<p class="err">' + bad + ' mã đánh dấu bị cắt hoặc sai, cô chép lại mã trong học liệu (nút 📌 cạnh “↺ Làm mới” → “Chép lại”).</p>' : '') +
+        rows + '<p class="hint">Xem tổng hợp ở Lớp học → lớp → “Tiến độ dạy”, hoặc hồ sơ từng em → Lịch học.</p></div>';
+      $$("[data-tdlh]", out).forEach(function(b){ b.onclick = function(){ var a = b.dataset.tdlh.split("|"), st = stOf(a[0]); tdNewBuoi(st, a[1]); }; });
+    }, function(e){ busy(false); out.innerHTML = '<div class="card"><p class="err">Không ghi được (' + esc((e && e.code) || e) + ').</p></div>'; });
+  }
+  function tdNewBuoi(st, d){
+    var b = tdDocs("b").filter(function(x){ return x.st === st.id && x.d === d; });
+    var links = tdDay(st.id, d).map(function(pg){ return {label:pg.t, url:pg.parts[0].link}; }).concat(b.map(function(x){ return {label:"Bảng giảng", url:x.u}; }));
+    lhEdit(st, null, {date:d, topic:tdDayText(st.id, d), links:links});
+  }
+
+  /* Thẻ “Tiến độ dạy” trong trang lớp */
+  function tdCard(c){
+    tdCss();
+    var mem = clsMembers(c), ids = mem.map(function(st){ return st.id; }), M = {};
+    tdDocs("m").forEach(function(x){ if(ids.indexOf(x.st) >= 0) M[x.p + "|" + x.i + "|" + x.st] = x; });
+    var last = {}; Object.keys(M).forEach(function(k){ var x = M[k]; last[x.p] = Math.max(last[x.p] || 0, x.at || 0); });
+    var pl = Object.keys(last).sort(function(a, b){ return last[b] - last[a]; });
+    tdDocs("c").forEach(function(c){ if(pl.indexOf(c.p) < 0) pl.push(c.p); }); /* trang cô đã mở trên máy dạy nhưng chưa có dấu của lớp này */
+    S.tdOpen = S.tdOpen || {};
+    var h = '<div class="card" id="tdc"><div class="row" style="margin-top:0;justify-content:space-between"><h2 style="margin:0">Tiến độ dạy</h2><span><button class="btn sm ghost" id="tdInst">Cài tên học sinh vào máy cô</button></span></div>' +
+      '<p class="hint">Trong học liệu, cạnh tiêu đề từng phần/mục có nút 📌: bấm, tick tên em, ngày tự ghi. Cuối buổi bấm nút 📌 cạnh “↺ Làm mới” ở đầu trang → “Chép mã gửi trang quản lý” → dán vào tab Chấm bài. Bấm vào ô trong bảng để đánh dấu / bỏ dấu tay.</p>';
+    if(!mem.length) h += '<p class="hint">Lớp chưa có học sinh.</p>';
+    else if(!pl.length) h += '<p class="hint">Chưa có dấu đã dạy nào. Lần đầu: bấm “Cài tên học sinh vào máy cô”, mở link đó trên máy dùng để dạy.</p>';
+    else {
+      h += '<label class="check" style="margin:4px 0 6px"><input type="checkbox" id="tdGap"' + (S.tdGap ? ' checked' : '') + '> Chỉ hiện mục còn em chưa học</label>';
+      pl.forEach(function(p, pi){
+        var cat = tdCat(p) || {t:p, s:[]}, groups = cat.s.slice();
+        /* dấu của mục không còn trong mục lục (trang đã sửa tiêu đề) → nhóm “Mục cũ” */
+        var known = {}; groups.forEach(function(g){ g.it.forEach(function(it){ known[it.k] = 1; }); });
+        var old = {}; Object.keys(M).forEach(function(k){ var x = M[k]; if(x.p === p && !known[x.i]) old[x.i] = 1; });
+        if(Object.keys(old).length) groups.push({id:"_old", t:"Mục cũ (trang đã đổi tiêu đề)", h:"", it:Object.keys(old).map(function(i){ return {k:i, t:i.split("/").pop()}; })});
+        var all = []; groups.forEach(function(g){ g.it.forEach(function(it){ all.push(it.k); }); });
+        var cnt = function(list, id){ return list.filter(function(k){ return M[p + "|" + k + "|" + id]; }).length; };
+        var cell = function(k, st){ var x = M[p + "|" + k + "|" + st.id]; return '<td class="c"><button class="tdc' + (x ? ' on' : '') + '" data-tdp="' + esc(p) + '" data-tdi="' + esc(k) + '" data-tds="' + esc(st.id) + '" title="' + esc(st.name) + '">' + (x ? tdDm(x.d) : '–') + '</button></td>'; };
+        var open = S.tdOpen[p] != null ? S.tdOpen[p] : pi === 0;
+        h += '<details class="tdp" data-tdo="' + esc(p) + '"' + (open ? ' open' : '') + '><summary><span>' + esc(cat.t) + '</span><span class="muted" style="font-weight:400">' + mem.map(function(st){ return esc(tdShort(st)) + ' ' + cnt(all, st.id) + '/' + all.length; }).join(" · ") + '</span></summary>' +
+          '<div class="scroll"><table class="tbl tdt"><thead><tr><th>Phần · mục</th>' + mem.map(function(st){ return '<th class="c">' + esc(tdShort(st)) + '</th>'; }).join("") + '</tr></thead><tbody>' +
+          groups.map(function(g){
+            var self = g.it.length === 1 && g.it[0].k === g.id, ks = g.it.map(function(it){ return it.k; });
+            var gap = function(k){ return mem.some(function(st){ return !M[p + "|" + k + "|" + st.id]; }); };
+            if(S.tdGap && !ks.some(gap)) return "";
+            var head = '<tr class="g"><td><a href="' + esc(tdLink(p, g)) + '" target="_blank" rel="noopener">' + esc(g.t) + '</a></td>' +
+              (self ? mem.map(function(st){ return cell(g.id, st); }).join("") : mem.map(function(st){ var n = cnt(ks, st.id); return '<td class="c">' + n + '/' + ks.length + '</td>'; }).join("")) + '</tr>';
+            return head + (self ? "" : g.it.filter(function(it){ return !S.tdGap || gap(it.k); }).map(function(it){ return '<tr><td>' + esc(it.t) + '</td>' + mem.map(function(st){ return cell(it.k, st); }).join("") + '</tr>'; }).join(""));
+          }).join("") + '</tbody></table></div></details>';
+      });
+    }
+    return h + '</div>';
+  }
+  function tdWire(c, body){
+    var ib = $("#tdInst", body); if(ib) ib.onclick = function(){ tdInstall(c); };
+    var gp = $("#tdGap", body); if(gp) gp.onchange = function(){ S.tdGap = gp.checked; renderTab(); };
+    $$("[data-tdo]", body).forEach(function(d){ d.addEventListener("toggle", function(){ S.tdOpen[d.dataset.tdo] = d.open; }); });
+    $$("[data-tdi]", body).forEach(function(b){ b.onclick = function(){ tdEditCell(b.dataset.tdp, b.dataset.tdi, b.dataset.tds); }; });
+  }
+  function tdEditCell(p, i, stId){
+    var st = S.students.find(function(x){ return x.id === stId; }), id = tdMid(p, i, stId), ex = (S.daydau || []).find(function(x){ return x.id === id; }), f = tdFind(p, i);
+    var md = modal('<h3>' + esc(st ? st.name : stId) + '</h3><p class="hint">' + esc(f ? f.c.t + ' · ' + f.g.t + (f.g.id === i ? '' : ' · ' + f.it.t) : i) + '</p>' +
+      '<label class="l" for="tdD">Ngày dạy</label><input class="t" type="date" id="tdD" value="' + esc(ex ? ex.d : ymdToday(0)) + '" style="width:auto">' +
+      '<p class="err" id="tdE" hidden></p><div class="row"><button class="btn" id="tdOk">' + (ex ? 'Lưu ngày' : 'Đánh dấu đã dạy') + '</button>' + (ex ? '<button class="btn danger" id="tdDel">Bỏ dấu</button>' : '') + '<button class="btn ghost" data-close>Hủy</button></div>');
+    var q = function(s2){ return md.el.querySelector(s2); };
+    q("#tdOk").onclick = function(){ var d = q("#tdD").value; if(!lhD(d)){ q("#tdE").textContent = "Cô chọn ngày nhé."; q("#tdE").hidden = false; return; }
+      db.doc("daydau/" + id).set({k:"m", st:stId, p:p, i:i, d:d, at:Date.now()}).then(function(){ md.close(); }, function(e){ q("#tdE").textContent = "Không lưu được (" + (e && e.code) + ")."; q("#tdE").hidden = false; }); };
+    if(ex) q("#tdDel").onclick = function(){ db.doc("daydau/" + id).delete().then(function(){ md.close(); }); };
+  }
+  function tdInstall(c){
+    var mem = clsMembers(c), ids = mem.map(function(st){ return st.id; });
+    var m = tdDocs("m").filter(function(x){ return ids.indexOf(x.st) >= 0; }).map(function(x){ return [x.p, x.i, x.st, x.d]; });
+    var url = TD_SITE + "danh-dau/#n=" + b64e({s:mem.map(function(st){ return [st.id, tdShort(st)]; }), m:m});
+    var md = modal('<h3>Cài tên học sinh vào máy cô · ' + esc(c.name) + '</h3><p>Cô mở link này <b>một lần</b> trên máy dùng để dạy (máy khác thì mở lại trên máy đó). Từ đó học liệu hiện nút 📌 với tên ' + mem.map(function(st){ return '<b>' + esc(tdShort(st)) + '</b>'; }).join(", ") + '. Tên chỉ lưu trong trình duyệt máy cô.</p>' +
+      '<p class="hint">Link kèm các dấu đã dạy đang có ở đây, nên mở lại link cũng cập nhật dấu cho máy đó. <b>Không gửi link này cho học sinh</b> (có tên các bạn).</p>' + copyBox(url, 3) +
+      '<div class="row"><a class="btn ghost" href="' + esc(url) + '" target="_blank" rel="noopener">Mở link</a><button class="btn ghost" data-close>Đóng</button></div>', true);
+    wireCopy(md.el);
   }

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Chèn module "Đánh giá năng lực" (tools/nangluc.js) vào trang.
+"""Chèn module "Đánh giá năng lực" (tools/nangluc.js) vào trang — kèm Lịch học, Học phí, Đánh dấu đã dạy (Tiến độ dạy).
 
 Cách dùng:
   python3 tools/nangluc.py <file-html-trang-quan-ly>   # sửa tại chỗ: phần chung + khối Admin + tab "Đánh giá"
@@ -29,6 +29,15 @@ HOOKS = [  # (đã có thì bỏ qua, chưa có thì thay)
     # Sửa thông tin học viên không làm mất cách tính học phí
     ('if(x.fee) doc.fee = x.fee;', '      if(x.app) doc.app = x.app;\n      var id = st ? st.id : "H"',
      '      if(x.app) doc.app = x.app;\n      if(x.fee) doc.fee = x.fee;\n      var id = st ? st.id : "H"'),
+    # Đánh dấu đã dạy (danh-dau/dd.js): tải collection daydau, mã ND1- ở Chấm bài, thẻ “Tiến độ dạy” trong trang lớp
+    ('db.collection("daydau")', BUOI_LINE, BUOI_LINE +
+     '    db.collection("daydau").onSnapshot(function(s){ S.daydau = s.docs.map(function(d){ var x = Object.assign({}, d.data()); x.id = d.id; return x; }); softRender("daydau"); }, dbErr);\n'),
+    ('<div id="cDay"></div>', '<div id="cViet"></div>', '<div id="cViet"></div><div id="cDay"></div>'),
+    ('if(fd.codes.length) chamDay(fd)', '      if(!f.codes.length && (fv.codes.length || fn.codes.length || fw.codes.length))',
+     '      var fd = findAllCodes($("#cPaste").value, "ND1-");\n      if(fd.codes.length) chamDay(fd); else $("#cDay").innerHTML = "";\n'
+     '      if(!f.codes.length && (fv.codes.length || fn.codes.length || fw.codes.length || fd.codes.length))'),
+    ('h += tdCard(c);', '    h += appClassCard(c, today);\n', '    h += appClassCard(c, today);\n    h += tdCard(c);\n'),
+    ('    tdWire(c, body);', '    wireHw(c, D, body);\n', '    wireHw(c, D, body);\n    tdWire(c, body);\n'),
 ]
 
 

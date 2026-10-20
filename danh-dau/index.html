@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="vi" data-dd-page="1">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Đánh dấu đã dạy · Nari TOPIK</title>
+<link rel="icon" href="../thi-thu/icon/icon-192.png">
+<style>
+body{margin:0;background:#fff;color:#1D1A2C;font:16px/1.55 Arial,sans-serif}
+main{max-width:860px;margin:0 auto;padding:16px 16px 60px}
+.logo{display:block;height:50px;width:auto;margin:0 0 6px -4px}
+h1{font-size:24px;color:#53468F;margin:6px 0 4px}h2{font-size:19px;color:#53468F;margin:24px 0 6px;border-bottom:2px solid #53468F;padding-bottom:4px}
+.hint{color:#646079;font-size:14.5px}.ok{color:#1d7a3a;font-weight:600}.bad{color:#E0313F;font-weight:600}
+.box{border:1px solid #D9D6E6;border-radius:10px;padding:12px 14px;margin:10px 0;background:#faf9fd}
+.st{display:flex;gap:8px;align-items:center;padding:6px 0;border-bottom:1px solid #E6E3EF}
+.st input{font:16px Arial,sans-serif;padding:5px 8px;border:1px solid #999;border-radius:6px;width:160px}
+button{font:600 14px Arial,sans-serif;border:0;border-radius:8px;padding:8px 14px;background:#53468F;color:#fff;cursor:pointer}
+button.gh{background:#fff;color:#53468F;border:1.5px solid #53468F}button.sm{padding:4px 10px;font-size:13px}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14px}th,td{border-bottom:1px solid #E6E3EF;padding:5px 6px;text-align:left;vertical-align:top}
+th{font-size:12.5px;color:#646079}td.c{text-align:center;white-space:nowrap}tr.g td{background:#EFEAF8;font-weight:700}
+.d{display:inline-block;background:#E3F3EA;color:#1d7a3a;border-radius:8px;padding:0 6px;font-weight:600}
+details{margin:8px 0;border:1px solid #D9D6E6;border-radius:8px}summary{cursor:pointer;padding:8px 12px;font-weight:700}details .scroll{padding:0 8px 8px}
+</style>
+</head>
+<body>
+<main>
+<img class="logo" src="../logo/nari-topik-ngang.svg" width="148" height="50" alt="Nari TOPIK">
+<h1>📌 Đánh dấu đã dạy</h1>
+<p class="hint">Trang của cô. Tên học sinh chỉ lưu trong trình duyệt máy này, không lên mạng. Ở mỗi trang học liệu, cạnh tiêu đề từng phần, từng mục có nút 📌: bấm vào, tick tên em, ngày tự ghi. Đầu trang, cạnh nút “↺ Làm mới”, có nút 📌 để chép mã gửi về trang quản lý (dán vào tab Chấm bài).</p>
+<div id="out"></div>
+</main>
+<script src="dd.js"></script>
+<script>
+(function(){
+var D=window.NariDD,esc=D.esc,out=document.getElementById('out'),msg=D.install();
+function draw(){
+  var s=D.sts(),h='';
+  if(msg==='bad')h+='<p class="bad">Link cài tên bị lỗi hoặc bị cắt. Cô mở lại link từ trang quản lý.</p>';
+  else if(msg)h+='<p class="ok">Đã cài '+msg.n+' học sinh vào máy này'+(msg.m?' (kèm dấu đã dạy đang có ở trang quản lý)':'')+'.</p>';
+  h+='<h2>Học sinh trên máy này</h2>';
+  if(!s.length)h+='<div class="box">Máy này chưa có tên học sinh nên học liệu chưa hiện nút 📌. Cô mở trang quản lý → <b>Lớp học</b> → lớp → thẻ <b>“Tiến độ dạy”</b> → <b>“Cài tên học sinh vào máy cô”</b>, rồi mở link đó trên máy dùng để dạy.</div>';
+  else h+='<div class="box">'+s.map(function(x,i){return '<div class="st"><input value="'+esc(x[1])+'" data-n="'+i+'" aria-label="Tên hiện trên nút"><button class="sm gh" data-del="'+i+'">Bỏ khỏi máy này</button></div>';}).join('')+
+    '<p class="hint">Tên ngắn hiện trên nút 📌 (khi chiếu cho học sinh, cô bấm “Ẩn nút khi chiếu…” trong nút 📌 cạnh “↺ Làm mới” ở đầu trang).</p></div>';
+  var n=D.unsent();
+  h+='<h2>Gửi về trang quản lý</h2><div class="box">'+(n?'<b>'+n+' dấu chưa gửi.</b> ':'<span class="ok">Không còn dấu nào chưa gửi.</span> ')+'<button class="sm" data-dock>Mở bảng gửi</button></div>';
+  var C=D.get(D.K.c,{}),M=D.get(D.K.m,{});
+  var pages=Object.keys(C).filter(function(p){return Object.keys(M).some(function(k){return k.indexOf(p+'|')===0;});});
+  h+='<h2>Đã dạy (theo dấu trên máy này)</h2>';
+  if(!pages.length)h+='<p class="hint">Chưa có dấu nào.</p>';
+  pages.forEach(function(p){
+    var c=C[p];
+    h+='<details open><summary>'+esc(c.t)+'</summary><div class="scroll"><table><thead><tr><th>Mục</th>'+s.map(function(x){return '<th class="c">'+esc(x[1])+'</th>';}).join('')+'</tr></thead><tbody>'+
+      c.s.map(function(g){
+        var rows=g[3].length===1&&g[3][0][0]===g[0]?[]:g[3];
+        var cell=function(k){var r=M[p+'|'+k]||{};return s.map(function(x){return '<td class="c">'+(r[x[0]]?'<span class="d">'+D.dm(r[x[0]])+'</span>':'–')+'</td>';}).join('');};
+        var cnt=s.map(function(x){var n=g[3].filter(function(it){return (M[p+'|'+it[0]]||{})[x[0]];}).length;return '<td class="c">'+(rows.length?n+'/'+g[3].length:(n?'<span class="d">'+D.dm((M[p+'|'+g[3][0][0]]||{})[x[0]])+'</span>':'–'))+'</td>';}).join('');
+        return '<tr class="g"><td><a href="../'+esc(p)+esc(g[2])+'">'+esc(g[1])+'</a></td>'+cnt+'</tr>'+rows.map(function(it){return '<tr><td>'+esc(it[1])+'</td>'+cell(it[0])+'</tr>';}).join('');
+      }).join('')+'</tbody></table></div></details>';
+  });
+  out.innerHTML=h;
+  [].forEach.call(out.querySelectorAll('[data-n]'),function(i){i.onchange=function(){var s=D.sts();s[+i.dataset.n][1]=i.value.trim()||s[+i.dataset.n][1];D.setSts(s);};});
+  [].forEach.call(out.querySelectorAll('[data-del]'),function(b){b.onclick=function(){var s=D.sts();if(!confirm('Bỏ '+s[+b.dataset.del][1]+' khỏi máy này? (Dấu đã gửi vẫn còn ở trang quản lý.)'))return;s.splice(+b.dataset.del,1);D.setSts(s);msg=null;draw();};});
+  out.querySelector('[data-dock]').onclick=function(){D.popDock();var t=setInterval(function(){if(!document.querySelector('.dd-pop')){clearInterval(t);draw();}},400);};
+}
+draw();
+})();
+</script>
+</body>
+</html>
