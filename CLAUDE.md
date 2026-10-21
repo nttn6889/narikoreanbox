@@ -443,6 +443,18 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   “Gửi đánh giá cho cô…” chia sẻ đoạn chữ qua Zalo (không lưu lên mạng); nháp ở localStorage `nari-dg-<khóa>`.
 - Trang riêng cho buổi bất kỳ: `danh-gia/#t=<tên buổi>&p=<phần 1>|<phần 2>`. `seoul/so-dem/` có sẵn phiếu thu gọn cuối trang (`#b=dg` mở thẳng).
 
+## Giáo trình Cool TOPIK 쓰기 (câu 51–54) — Tài liệu gốc + thẻ “Cool TOPIK” ở viet-51/52/54
+- File cô gửi 21/10/2026: Part 1 (51), Part 2 (52), Part 4 (54; tr.7–75 là ảnh scan), Part 5 (5 đề thi thử 51–54, **không có đáp án**). Part 3 (53) đã dùng trước cho `viet-53/`.
+- Tài liệu gốc: `docs/Dcool`; ngữ pháp/biểu hiện `grammar/g_COOL_<51|52|54>_<nn>` (src `COOL`, 39 điểm: lưu ý 51, 16 cặp hô ứng + từ nối + đuôi -는다 của 52,
+  dạng đề / khung mở–thân–kết / 글말 / 20 câu sửa lỗi của 54); đề viết `wbank`: `WC51_A01…A10` (bài “chọn tất cả”, đáp án = lựa chọn đúng theo sách),
+  `WC51_01…10`, `WC52_01…10` (dự đoán), `WC54_P1…P5` (luyện dàn ý), `WC54_T1…T3` (30 phút), `WC54_B01…B10` (phụ lục, dàn ý sách trong `hint.a[0]`),
+  `WC5x_M1…M5` (thi thử; ảnh câu 53 `thi-thu/viet/WC53_M<n>.jpg` cắt từ PDF), đề thật sách dẫn `W51_035`, `W51_060`, `W54_037`, `047`, `052`, `060`, `064`
+  (bài mẫu chính thức 47/52/60 chép từ sách; còn lại đáp án / bài mẫu do Claude soạn, ghi ở `note`). Id `WC…` không có `round` nên đứng đầu danh sách Đề viết.
+- `viet-51/#b=4`, `viet-52/#b=4`, `viet-54/#b=c` = thẻ **Cool TOPIK**: chiến lược theo sách + luyện chấm ngay. 51: bài “chọn tất cả” (`PK`, `st.pk`) +
+  viết 5 phút (`PLAN[4]`, đề nhúng trong `QC`). 52: hô ứng / từ nối (`CQ`, trắc nghiệm, lựa chọn đầu là đáp án), viết nốt câu / đổi -는다 (`TY`, gõ, tự so),
+  viết 5 phút (`PLAN[4]`). 54: văn viết + Cool TIP (`CQ.gm`), sửa câu (`TY.fix`), 28 đề sách (`CB`) thêm vào thẻ “Viết cả bài” (dàn ý sách `ol`, bài mẫu `model`).
+  Bài lưu chung `st` của trang (nút “↺ Làm mới” xóa cả). Sửa đề trong `wbank` thì chép lại vào `QC`/`CB` của trang.
+
 ## Học câu 52 trong 3 buổi (`viet-52/`)
 - Trang học liệu gửi học sinh: Buổi 1 (ô cuối câu, 5 nhóm từ nối: 47, 41, 52, 92, 96, 36, 37), Buổi 2 (“Chép hay Lật” = tìm ý cho ô; đề 60, 83, 91, 64, 35),
   Buổi 3 (làm như thi, 6 phút/câu, không gợi ý: 93, 94, 95, 102), thẻ Bảng tra (9 nhóm tín hiệu → mẫu). Link `viet-52/#b=1|2|3|tra`.

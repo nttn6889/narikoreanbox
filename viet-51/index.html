@@ -68,6 +68,11 @@ table.t td.ko{font-size:14px}
 .opt.no{background:#fbecee;border-color:var(--acc);color:var(--acc);text-decoration:line-through}
 .mcq .why{display:none;margin:6px 0 0;font-size:14px;color:#333}
 .mcq.done .why{display:block}
+.opt2{font-size:15px;text-align:left;padding:7px 10px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);cursor:pointer;font-family:"Noto Sans KR","Malgun Gothic","Apple SD Gothic Neo",sans-serif}
+.opt2.sel{border-color:var(--blue);background:var(--bluebg);font-weight:bold}
+.opt2.ok{background:var(--okbg);border-color:var(--ok);color:var(--ok);font-weight:bold}
+.opt2.ok.miss{background:var(--bg);font-weight:normal;outline:2px dashed var(--ok)}
+.opt2.no{background:#fbecee;border-color:var(--acc);color:var(--acc);text-decoration:line-through}
 .score{font:bold 15px Arial,sans-serif;color:var(--blue);margin:4px 0 12px}
 /* đề thật */
 .task{border:2px solid var(--ink);border-radius:10px;margin:0 0 18px;overflow:hidden}
@@ -133,6 +138,7 @@ footer a{color:var(--muted)}
   <a href="#b=1" data-k="1">Buổi 1<small>Ô cuối câu</small></a>
   <a href="#b=2" data-k="2">Buổi 2<small>Ô giữa câu</small></a>
   <a href="#b=3" data-k="3">Buổi 3<small>Làm như thi</small></a>
+  <a href="#b=4" data-k="4">Cool TOPIK<small>Theo sách</small></a>
   <a href="#b=tra" data-k="tra">Bảng tra<small>Ôn nhanh</small></a>
 </div></nav>
 
@@ -279,6 +285,60 @@ footer a{color:var(--muted)}
 </section>
 
 <!-- ================= BẢNG TRA ================= -->
+<!-- ================= COOL TOPIK ================= -->
+<section class="sec" id="s4">
+<h2>Chiến lược câu 51 theo sách Cool TOPIK 쓰기</h2>
+<p class="goal"><b>Ý chính của sách:</b> câu 51 là <b>văn bản đời sống có mục đích</b> (thông báo, tuyển, tặng đồ, hỏi, nhờ, mời). Ô trống gần như luôn nói <b>mục đích của bài</b> hoặc <b>điều người viết muốn người đọc làm</b>. Vì vậy đọc <b>tiêu đề trước</b>, rồi mới đến từng ô.</p>
+
+<h3>1. Năm bước làm một đề (5 phút)</h3>
+<ol class="steps">
+  <li><b>Tiêu đề / loại văn bản → mục đích.</b> <span class="ko">무료로 드립니다, 모집, 일정 변경 안내, 문의, 초대합니다, 구함, 잃어버린 물건을 찾습니다</span>… Ô đầu tiên thường nói đúng mục đích này. Viết ngược tiêu đề là mất điểm (tiêu đề «무료로 드립니다» mà viết «싸게 팔겠습니다»).</li>
+  <li><b>Văn phong của cả bài.</b> Bài dùng <span class="mau">-습니다</span> thì ô cũng <span class="mau">-습니다 / -(으)십시오 / -(으)시기 바랍니다</span>; tin nhắn bạn bè dùng 반말 thì ô cũng 반말 (<span class="ko">-아/어, -(으)ㄹ게</span>). Lệch đuôi là bị trừ điểm.</li>
+  <li><b>Dấu câu ngay sau ô.</b> <b>?</b> → câu hỏi. <b>.</b> → không viết câu hỏi. Chữ đi tiếp → ô giữa câu, viết nối liền.</li>
+  <li><b>Câu trước – câu sau + từ nối.</b> <span class="ko">그래서, 그런데, 그래도, 그 대신에, 덕분에, -(으)려면, 물어보니</span>… cho biết ô cần nói gì. Câu sau ô thường là “lời giải” cho ô.</li>
+  <li><b>Viết trọn 1 câu cấp 3–4, rồi soát.</b> Một câu thôi (2 câu = 0 điểm), viết đến hết câu (bỏ dở = 0 điểm), tránh câu cấp 1 như <span class="ko">다 좋습니다</span>. Soát: đuôi, dấu, tiểu từ, kết hợp từ.</li>
+</ol>
+
+<h3>2. Tín hiệu → mẫu câu (theo các bài trong sách)</h3>
+<table class="t">
+<tr><th>Thấy trong đề</th><th>Ô cần nói</th><th>Viết</th></tr>
+<tr><td>Tiêu đề <span class="ko">모집, 무료로 드립니다, 초대, 안내</span> + ô đầu bài</td><td>Mục đích, kế hoạch</td><td class="ko">-(으)려고 합니다</td></tr>
+<tr><td class="ko">관심이 있으신 분은 / 필요하신 분은 / 참석 여부를 …로</td><td>Nhờ người đọc làm gì</td><td class="ko">-아/어 주시기 바랍니다 · -아/어 주십시오</td></tr>
+<tr><td class="ko">친구에게 물어보니 · 선배에게 물어보니 · …에 의하면</td><td>Thuật lại lời người khác</td><td class="ko">-다고 합니다 · -아/어야 한다고 합니다</td></tr>
+<tr><td class="ko">-(으)려면 ( )?</td><td>Hỏi phải làm thế nào</td><td class="ko">어떻게 해야 합니까?</td></tr>
+<tr><td class="ko">혹시 / 죄송하지만 + ( )?</td><td>Nhờ người trên, xin phép</td><td class="ko">-아/어 주실 수 있을까요? · -아/어도 될까요?</td></tr>
+<tr><td class="ko">미안한데 · 죄송합니다 · 갑자기 일이 생겨서</td><td>Báo việc khó xử (nói mềm)</td><td class="ko">-(으)ㄹ 것 같습니다 · -지 못할 것 같습니다</td></tr>
+<tr><td class="ko">마음에 ( ) · 모두 참석</td><td>Mong muốn</td><td class="ko">-았/었으면 좋겠습니다 · -(으)실지 모르겠습니다</td></tr>
+<tr><td class="ko">-아/어도 ( ) · 그래도</td><td>Kết quả khác điều dự đoán</td><td class="ko">-지 않으면 … · 걱정하지 마십시오</td></tr>
+<tr><td class="ko">덕분에 ( )</td><td>Kết quả tốt đã đạt được</td><td class="ko">-게 되었습니다 · -(으)ㄹ 수 있었습니다</td></tr>
+</table>
+
+<h3>3. Những lỗi sách đánh dấu “bị trừ điểm”</h3>
+<table class="t">
+<tr><th>Sai</th><th>Đúng</th><th>Vì sao</th></tr>
+<tr><td class="ko">짐 정리할 겁니다</td><td class="ko">짐을 정리하려고 합니다</td><td>Thiếu tiểu từ; kế hoạch → -(으)려고 하다</td></tr>
+<tr><td class="ko">무료로 드릴 거예요 · 연락해 주시기 바라요</td><td class="ko">드리려고 합니다 · 연락해 주시기 바랍니다</td><td>Lệch đuôi -습니다 của cả bài</td></tr>
+<tr><td class="ko">춤을 잘 못 춥니다. (ô trước dấu ?)</td><td class="ko">춤을 잘 못 추십니까?</td><td>Dấu ? → phải là câu hỏi</td></tr>
+<tr><td class="ko">일정을 바꿨습니다</td><td class="ko">일정이 바뀌었습니다 / 변경되었습니다</td><td>Chủ ngữ tự đổi → 이/가 바뀌다; văn bản chính thức dùng từ Hán</td></tr>
+<tr><td class="ko">공지사항을 유의해 주십시오</td><td class="ko">공지사항을 확인해 주십시오</td><td>유의하다 đi với 에</td></tr>
+<tr><td class="ko">대중교통을 사용해 주십시오</td><td class="ko">대중교통을 이용해 주십시오</td><td>이용하다: xe buýt, tàu điện, thư viện · 사용하다: bút, cốc, dao</td></tr>
+<tr><td class="ko">보관함에서 보관되어 있습니다</td><td class="ko">보관함에 보관되어 있습니다</td><td>Trạng thái ở đâu → 에</td></tr>
+<tr><td class="ko">춤을 하다</td><td class="ko">춤을 추다</td><td>Kết hợp từ cố định</td></tr>
+<tr><td class="ko">알려 주세요? · 6시에 만날 수 없어</td><td class="ko">알려 주실 수 있을까요? · 만날 수 없을 것 같아</td><td>Nhờ thì nói mềm; báo tin xấu thì nói vòng</td></tr>
+<tr><td class="ko">다 좋습니다</td><td class="ko">본인의 짐만 챙기고 오시면 됩니다</td><td>Không sai nhưng câu cấp 1 → điểm thấp</td></tr>
+</table>
+<p class="note">Đề thật kỳ 35–106 đều viết đuôi <span class="ko">-ㅂ니다</span>. Sách có thêm vài bài tin nhắn 반말 để luyện thói quen “theo văn phong cả bài”.</p>
+
+<h3>4. Luyện 1 · Chọn <u>tất cả</u> câu điền được (10 bài trong sách)</h3>
+<p class="note">Mỗi ô có thể có 1, 2 hoặc 3 câu đúng. Bấm chọn mọi câu em thấy điền được rồi bấm <b>Kiểm tra</b>: câu đúng tô xanh, câu em chọn sai tô đỏ, câu đúng em bỏ sót có viền xanh nét đứt, kèm lý do sách đưa ra.</p>
+<div id="pick"></div>
+
+<h3>5. Luyện 2 · Viết trong 5 phút (10 đề dự đoán + 5 đề thi thử của sách)</h3>
+<p class="note">Bấm <b>Bắt đầu</b> rồi viết như thi. Nộp xong mới xem gợi ý và đáp án mẫu (sách không in đáp án; đáp án do cô soạn), rồi tự chấm 0–5 mỗi ô.</p>
+<div id="t4"></div>
+<div class="sum" id="sum4"></div>
+</section>
+
 <section class="sec" id="stra">
 <h2>Bảng tra nhanh câu 51</h2>
 <p class="note">Thống kê 72 ô của 36 đề thật (kỳ 70, 72–106). 12 nhóm này chiếm gần 90% số ô. In ra hoặc chụp màn hình để ôn trước khi thi.</p>
@@ -386,16 +446,16 @@ function passageHTML(q,id){
   var r=rec(id),seen=[];
   ['a','b'].forEach(function(s,bi){(q.hint[s]||[]).slice(0,r.h[bi]).forEach(function(t){(t.match(/«([^»]+)»/g)||[]).forEach(function(m){seen.push(m.slice(1,-1));});});});
   seen.forEach(function(w){var e=esc(w);if(e.length>1&&p.indexOf(e)>=0)p=p.split(e).join('<mark>'+e+'</mark>');});
-  return p;
+  return p.replace(/\n\n+/g,'\n').replace(/\n/g,'<br>');
 }
 function hintHTML(t){return esc(t).replace(/«([^»]+)»/g,'<span class="ko">«$1»</span>');}
 function after(q,s){ // chữ ngay sau ô
   var m=q.passage.split(s==='a'?'㉠':'㉡')[1]||'';m=m.replace(/^\s*\)\s*/,'');return m.slice(0,1)===','?'가':m.slice(0,1);}
 function taskHTML(id,mode,no){
-  var q=Q[id],r=rec(id),exam=mode===3,done=!!r.done;
+  var q=Q[id],r=rec(id),exam=mode>=3,done=!!r.done;
   var locked=exam&&!r.t0&&!done;
-  var h='<div class="task'+(locked?' locked':'')+'" id="T'+id+'"><div class="hd"><b>'+no+'. Câu 51 · Kỳ '+q.round+'</b><span class="st'+(done&&tot(id)===10?' full':'')+'">'+(done?'Tự chấm '+tot(id)+'/10':'Chưa làm')+'</span></div><div class="bd">';
-  if(exam){h+='<div class="timer" data-id="'+id+'"><span>⏱ <span class="clk">'+fmt(TIME)+'</span></span>'+(r.t0||done?'':'<button class="b blue" data-start="'+id+'">Bắt đầu</button>')+'</div>';}
+  var h='<div class="task'+(locked?' locked':'')+'" id="T'+id+'"><div class="hd"><b>'+no+'. Câu 51 · '+esc(qlab(q))+'</b><span class="st'+(done&&tot(id)===10?' full':'')+'">'+(done?'Tự chấm '+tot(id)+'/10':'Chưa làm')+'</span></div><div class="bd">';
+  if(exam){h+='<div class="timer" data-id="'+id+'"><span>⏱ <span class="clk">'+fmt(tl(id))+'</span></span>'+(r.t0||done?'':'<button class="b blue" data-start="'+id+'">Bắt đầu</button>')+'</div>';}
   h+='<div class="psg">'+passageHTML(q,id)+'</div>';
   ['a','b'].forEach(function(s,bi){
     var lab=s==='a'?'㉠':'㉡',mid=/[가-힣]/.test(after(q,s));
@@ -448,18 +508,19 @@ document.addEventListener('click',function(e){
 });
 setInterval(function(){
   document.querySelectorAll('.timer').forEach(function(t){var r=rec(t.dataset.id);if(!r.t0)return;
-    var used=r.done?(r.used||0):Math.round((Date.now()-r.t0)/1000),left=TIME-used;
+    var used=r.done?(r.used||0):Math.round((Date.now()-r.t0)/1000),left=tl(t.dataset.id)-used;
     t.querySelector('.clk').textContent=r.done?('Làm trong '+fmt(used).replace('+','')):fmt(left);
     t.classList.toggle('over',!r.done&&left<0);});
 },1000);
 
 /* ---- tổng kết + gửi cô ---- */
 function report(k){
-  var ks=k==='all'?[1,2,3]:[+k],L=['Câu 51 · '+(k==='all'?'Cả 3 buổi':'Buổi '+k)+' · '+(st.name||'(chưa ghi tên)')];
+  var ks=k==='all'?[1,2,3]:[+k],L=['Câu 51 · '+(k==='all'?'Cả 3 buổi':k==4?'Cool TOPIK':'Buổi '+k)+' · '+(st.name||'(chưa ghi tên)')];
   ks.forEach(function(kk){
+    if(kk===4)L.push(pkLine());
     if(MCQ[kk]){var m=st['m'+kk]||{},n=0,ok=0;for(var i in m){n++;if(m[i]===0)ok++;}L.push('Buổi '+kk+' – nhận diện: '+ok+'/'+MCQ[kk].length+(n<MCQ[kk].length?' (làm '+n+')':''));}
-    PLAN[kk].forEach(function(id){var r=st[id],q=Q[id];if(!r||!r.done){L.push('Kỳ '+q.round+': chưa làm');return;}
-      L.push('Kỳ '+q.round+': '+tot(id)+'/10'+(r.used?' · '+fmt(r.used).replace('+','')+' phút':'')+' · gợi ý '+r.h.join('+'));
+    PLAN[kk].forEach(function(id){var r=st[id],q=Q[id];if(!r||!r.done){L.push(qlab(q)+': chưa làm');return;}
+      L.push(qlab(q)+': '+tot(id)+'/10'+(r.used?' · '+fmt(r.used).replace('+','')+' phút':'')+' · gợi ý '+r.h.join('+'));
       L.push('  ㉠ '+(r.a[0]||'—')+'  ['+(r.s[0]==null?'?':r.s[0])+']');
       L.push('  ㉡ '+(r.a[1]||'—')+'  ['+(r.s[1]==null?'?':r.s[1])+']');});
   });
@@ -469,7 +530,7 @@ function renderSum(k){
   var el=$('sum'+k);if(!el)return;el.dataset.k=k;
   var ks=k==='all'?[1,2,3]:[+k],done=0,all=0,pts=0;
   ks.forEach(function(kk){PLAN[kk].forEach(function(id){all++;if(st[id]&&st[id].done){done++;pts+=tot(id);}});});
-  el.innerHTML='<h4>'+(k==='all'?'Kết quả cả 3 buổi':'Kết quả Buổi '+k)+': '+done+'/'+all+' câu · '+pts+'/'+(done*10)+' điểm</h4>'+
+  el.innerHTML='<h4>'+(k==='all'?'Kết quả cả 3 buổi':k==4?'Kết quả Cool TOPIK':'Kết quả Buổi '+k)+': '+done+'/'+all+' câu · '+pts+'/'+(done*10)+' điểm</h4>'+
     '<p class="note">Làm xong, ghi tên rồi bấm gửi cho cô qua Zalo (hoặc chép đoạn dưới gửi cô).</p>'+
     '<input class="nm" placeholder="Tên em" value="'+esc(st.name||'')+'"><div class="btns"><button class="b main" data-share="'+k+'">Gửi kết quả cho cô…</button></div><pre>'+esc(report(k))+'</pre>';
 }
@@ -480,6 +541,41 @@ function share(k){
   else prompt('Chép đoạn này gửi cô:',t);
 }
 
+/* ---- Cool TOPIK (thẻ 4): đề sách + bài “chọn tất cả” ---- */
+var QC = {"WC51_01": {"src": "Sách · đề dự đoán 1", "passage": "게시판\n무료로 드립니다\n\n제가 회사 일 때문에 지방으로 이사를 가게 됐습니다. 그래서 ( ㉠ ). 침대, 책상, 그릇 등이 있는데 택배로 보내기가 힘들기 때문에 직접 가지고 가셔야 합니다. ( ㉡ ). 제 연락처는 010-1234-1234입니다.", "keys": {"a": ["제가 쓰던 물건들을 무료로 드리려고 합니다", "필요 없는 물건들을 무료로 나눠 드리려고 합니다"], "b": ["필요하신 분은 저에게 연락해 주시기 바랍니다", "관심이 있으신 분은 연락해 주십시오"]}, "hint": {"a": ["Tiêu đề «무료로 드립니다» + «이사를 가게 됐습니다. 그래서» → kế hoạch với đồ đạc.", "-(으)려고 합니다.", "Từ: 쓰던 물건, 무료로 드리다."], "b": ["Sau ô là số điện thoại → nhờ liên lạc.", "-아/어 주시기 바랍니다 / -아/어 주십시오.", "Từ: 필요하신 분, 연락하다."]}, "pat": {"a": "-(으)려고 하다", "b": "-아/어 주시기 바랍니다"}}, "WC51_02": {"src": "Sách · đề dự đoán 2", "passage": "게시판\n경복궁 전통 문화 체험 프로그램 문의\n\n서울에 살고 있는 외국인입니다. 저는 경복궁 전통 문화 체험 프로그램에 관심이 있습니다. 한국인 친구에게 물어보니까 이 프로그램에 신청하려면 먼저 사이트에서 회원 가입을 ( ㉠ ). 그런데 제가 한국말이 아직 ( ㉡ )? 그래도 괜찮다면 이 프로그램을 신청하고 싶습니다.", "keys": {"a": ["해야 한다고 합니다", "해야 된다고 합니다"], "b": ["서툰데 프로그램에 참여할 수 있습니까", "서툰데 신청해도 됩니까", "서툰데 괜찮습니까"]}, "hint": {"a": ["«친구에게 물어보니까» + «-(으)려면» → thuật lại điều kiện phải làm.", "-아/어야 한다고 합니다.", "Từ: 회원 가입을 하다."], "b": ["«한국말이 아직» + «?» + «그래도 괜찮다면» → hỏi tiếng Hàn kém có được không.", "-(으)ㄴ데 … -아/어도 됩니까? / -(으)ㄹ 수 있습니까?", "Từ: 서투르다 → 서툰데, 잘 못하다."]}, "pat": {"a": "-아/어야 한다고 하다", "b": "-(으)ㄴ데 … -아/어도 됩니까?"}}, "WC51_03": {"src": "Sách · đề dự đoán 3", "passage": "E-mail\nTo. 전정국 교수님께\n\n안녕하세요? 경영학과 3학년 제임스입니다. 내일 교수님을 찾아뵙기로 했는데요. 그런데 교수님, ( ㉠ ). 정말 죄송합니다. 교수님, 죄송하지만 혹시 ( ㉡ )? 답장 기다리겠습니다.\n제임스 올림", "keys": {"a": ["갑자기 일이 생겨서 내일 찾아뵙지 못할 것 같습니다", "제가 내일 갑자기 일이 생겨서 찾아뵐 수 없을 것 같습니다"], "b": ["다른 날로 약속을 바꿔 주실 수 있을까요", "다음 주에 찾아뵈어도 될까요"]}, "hint": {"a": ["«찾아뵙기로 했는데요. 그런데» + «정말 죄송합니다» → không đến được như hẹn.", "Báo việc khó xử: -지 못할 것 같습니다.", "Từ: 일이 생기다, 찾아뵙다."], "b": ["«죄송하지만 혹시» + «?» → nhờ đổi lịch.", "-아/어 주실 수 있을까요? / -아/어도 될까요?", "Từ: 약속을 바꾸다, 다른 날."]}, "pat": {"a": "-(으)ㄹ 것 같다", "b": "-아/어 주실 수 있을까요?, -아/어도 될까요?"}}, "WC51_04": {"src": "Sách · đề dự đoán 4", "passage": "지민아, 어제 나 때문에 화가 많이 났지? 정말 미안해. 어제 점심 때까지는 우리 약속을 기억하고 있었는데 일하느라고 ( ㉠ ). 약속을 못 지켜서 정말 미안해.\n다음 주 토요일, 일요일 중에 ( ㉡ )? 나는 주말에는 언제든지 괜찮아. 연락 기다릴게.", "keys": {"a": ["약속을 깜빡 잊어버렸어", "약속을 잊어버리고 말았어"], "b": ["언제 시간이 괜찮아", "언제 만날 수 있어", "언제가 좋아"]}, "hint": {"a": ["«기억하고 있었는데 일하느라고» → kết quả ngược: quên mất.", "-아/어 버렸어 (반말, cả tin nhắn dùng 반말).", "Từ: 깜빡 잊다."], "b": ["«토요일, 일요일 중에» + «?» + «나는 언제든지 괜찮아» → hỏi bạn khi nào rảnh.", "Câu hỏi 반말: -아/어?", "Từ: 시간이 괜찮다, 만나다."]}, "pat": {"a": "-아/어 버리다", "b": "언제 … -아/어?"}}, "WC51_05": {"src": "Sách · đề dự đoán 5", "passage": "신년회에 초대합니다\n\n새로운 해가 시작되었습니다. 우리 학생회에서는 새해를 맞이하는 기념 행사로 1월에 ( ㉠ ). 기억에 남는 신년회가 되기 위해서 다양한 행사를 준비했습니다. 바쁘시겠지만 꼭 참석해서 자리를 빛내 주시기 바랍니다. 원활한 행사 진행을 위해 참석 여부를 아래의 메일로 ( ㉡ ).\n김석진 올림\ncooltopik@hangul.co.kr", "keys": {"a": ["신년회를 열려고 합니다", "신년회를 하려고 합니다", "신년회를 개최하려고 합니다"], "b": ["알려 주시기 바랍니다", "보내 주시기 바랍니다", "알려 주십시오"]}, "hint": {"a": ["Tiêu đề «신년회에 초대합니다» → ô nói sự kiện sẽ tổ chức.", "-(으)려고 합니다.", "Từ: 신년회를 열다(개최하다)."], "b": ["«참석 여부를 아래의 메일로» → nhờ báo qua email.", "-아/어 주시기 바랍니다.", "Từ: 알리다, 보내다."]}, "pat": {"a": "-(으)려고 하다", "b": "-아/어 주시기 바랍니다"}}, "WC51_06": {"src": "Sách · đề dự đoán 6", "passage": "E-mail\nTo. 김남준 선생님께\n\n안녕하세요? 선생님. 박지민입니다. 바쁘셨을 텐데 추천서를 써 주셔서 감사합니다. 선생님 덕분에 ( ㉠ ). 그래서 찾아뵙고 감사 인사를 드리고 싶습니다. ( ㉡ )? 편하신 날짜와 시간을 말씀해 주세요. 저는 언제든지 괜찮습니다.\n박지민 올림", "keys": {"a": ["원하던 회사에 합격했습니다", "대학원에 합격할 수 있었습니다", "장학금을 받게 되었습니다"], "b": ["언제 찾아뵈면 될까요", "언제 시간이 괜찮으십니까", "언제 찾아뵈면 좋을까요"]}, "hint": {"a": ["«추천서» + «선생님 덕분에» → kết quả tốt nhờ thư giới thiệu.", "-았/었습니다 / -(으)ㄹ 수 있었습니다.", "Từ: 합격하다, 취직하다."], "b": ["«?» + sau ô «편하신 날짜와 시간을 말씀해 주세요» → hỏi khi nào đến gặp được.", "-(으)면 될까요? (kính ngữ với thầy cô).", "Từ: 찾아뵙다 → 찾아뵈면."]}, "pat": {"a": "N 덕분에 -(으)ㄹ 수 있었다", "b": "-(으)면 될까요?"}}, "WC51_07": {"src": "Sách · đề dự đoán 7", "passage": "게시판\n언어 교환 구함\n\n안녕하세요? 저는 한국인 23살 남자입니다. 취직 준비 때문에 영어를 공부하고 있는데 ( ㉠ ). 저는 한국대학교에서 한국어를 전공하고 있어서 ( ㉡ ). 한국 문화에 관심이 있고 한국어를 배우고 싶으신 분은 연락 주세요. 제 연락처는 010-1234-1234입니다.", "keys": {"a": ["저와 언어 교환을 할 분을 찾고 있습니다", "영어를 가르쳐 주실 분을 찾고 있습니다"], "b": ["한국어를 잘 가르쳐 드릴 수 있습니다", "한국어를 정확하게 가르쳐 드릴 수 있습니다"]}, "hint": {"a": ["Tiêu đề «언어 교환 구함» → tìm người trao đổi ngôn ngữ (mình học tiếng Anh).", "-(으)ㄹ 분을 찾고 있습니다.", "Từ: 언어 교환, 영어를 가르쳐 주다."], "b": ["«한국어를 전공하고 있어서» → điều mình đem lại cho đối phương.", "-아/어 드릴 수 있습니다.", "Từ: 한국어를 가르치다."]}, "pat": {"a": "-(으)ㄹ N을/를 찾고 있다", "b": "-아/어 드릴 수 있다"}}, "WC51_08": {"src": "Sách · đề dự đoán 8", "passage": "게시판\n자원 봉사자 모집\n\n도움이 필요한 곳으로 함께 봉사 활동을 떠나고 싶으십니까? 이번에 우리 어학당에서는 자원 봉사자를 모집하려고 합니다. 우리 학교 어학당 학생이라면 ( ㉠ ). 신청하고 싶으신 분은 ( ㉡ ). 신청 접수는 이메일만 받습니다.\n• 모집 기간: 2025. 1. 5. ~ 1. 9.\n• 신청 방법: 어학당 홈페이지에서 다운받은 신청서 작성 후 전자우편 접수 (cooltopik@hangul.co.kr)", "keys": {"a": ["누구든지 신청할 수 있습니다", "누구나 지원할 수 있습니다"], "b": ["홈페이지에서 신청서를 다운받아 이메일로 보내 주시기 바랍니다", "신청서를 작성해서 이메일로 보내 주십시오"]}, "hint": {"a": ["«학생이라면» → ai cũng đăng ký được (điều kiện).", "누구든지 -(으)ㄹ 수 있습니다.", "Từ: 신청하다, 지원하다."], "b": ["«신청하고 싶으신 분은» + mục «신청 방법» → nói cách đăng ký.", "-아/어서 … -아/어 주시기 바랍니다 (lấy thông tin trong mục 신청 방법).", "Từ: 신청서를 작성하다, 이메일로 보내다."]}, "pat": {"a": "-(이)라면 누구든지 -(으)ㄹ 수 있다", "b": "-아/어서 … -아/어 주시기 바랍니다"}}, "WC51_09": {"src": "Sách · đề dự đoán 9", "passage": "제목: 연말 파티\n\n1반 친구들아! 2025년 한 해도 추억 속으로 저물어 가고 있구나. 한 해가 다 가기 전에 ( ㉠ ). 따뜻한 음식과 와인, 재미있는 이야기가 준비되어 있으니 우리 반 친구들 모두 참석했으면 좋겠어. ( ㉡ )? 그 시간에 참석이 가능한지 연락 줘.", "keys": {"a": ["우리 반 친구들끼리 연말 파티를 하려고 해", "연말 파티를 열려고 해"], "b": ["이번 주 토요일 저녁 7시 어때", "다음 주 금요일 저녁에 시간 괜찮아"]}, "hint": {"a": ["Tiêu đề «연말 파티» + «한 해가 다 가기 전에» → kế hoạch mở tiệc.", "-(으)려고 해 (반말 — cả thư gửi bạn cùng lớp).", "Từ: 연말 파티를 하다/열다."], "b": ["«?» + sau ô «그 시간에 참석이 가능한지» → ô phải nêu một thời gian cụ thể.", "N 어때? / 시간 괜찮아?", "Từ: 이번 주 토요일, 저녁 7시."]}, "pat": {"a": "-(으)려고 하다 (반말)", "b": "N 어때?"}}, "WC51_10": {"src": "Sách · đề dự đoán 10", "passage": "게시판\n마스크 의무 착용 안내\n\n안녕하세요? 고객님. 저희 매장은 코로나 바이러스 감염 방지를 위해 마스크를 반드시 ( ㉠ ). 마스크 미착용 시 매장 이용이 ( ㉡ ). 안전한 환경 유지를 위하여 협조와 양해 부탁드립니다. 그리고 매장 출입 시 고객님의 주소, 전화번호를 적어 주시기 바랍니다. 개인 정보는 역학 조사에만 이용되고 4주 후 폐기됩니다.", "keys": {"a": ["착용해 주시기 바랍니다", "착용하셔야 합니다", "착용해 주십시오"], "b": ["불가능합니다", "제한됩니다", "어렵습니다", "불가능하오니 양해 바랍니다"]}, "hint": {"a": ["Tiêu đề «의무 착용» + «반드시» → yêu cầu đeo khẩu trang.", "-아/어 주시기 바랍니다 / -(으)셔야 합니다.", "Từ: 착용하다."], "b": ["«미착용 시 매장 이용이» → hệ quả: không được vào.", "N이/가 + tính từ/bị động: 불가능합니다, 제한됩니다.", "Từ: 불가능하다, 제한되다."]}, "pat": {"a": "-아/어 주시기 바랍니다", "b": "N이/가 불가능하다(제한되다)"}}, "WC51_M1": {"src": "Sách · thi thử 1", "passage": "게시판\n외국어 교실 수강생 모집\n\n원어민에게 외국어를 쉽고 재미있게 배우고 싶습니까? 이번에 서울시에서 ( ㉠ ). 외국어에 관심 있는 분이라면 누구든지 신청이 가능합니다. 모집 인원은 선착순입니다. 관심이 있으신 분은 ( ㉡ ).\n• 모집 기간: 2025. 1. 5. ~ 1. 10.\n• 신청 방법: cooltopik@hangul.co.kr로 접수", "keys": {"a": ["외국어 교실 수강생을 모집하려고 합니다", "외국어 교실을 열려고 합니다"], "b": ["1월 10일까지 이메일로 신청해 주시기 바랍니다", "이메일로 신청해 주십시오"]}, "hint": {"a": ["Tiêu đề «수강생 모집» → ô nói mục đích.", "-(으)려고 합니다.", "Từ: 수강생, 모집하다."], "b": ["«관심이 있으신 분은» + mục 신청 방법/기간 → cách đăng ký.", "-아/어 주시기 바랍니다.", "Từ: 이메일로 신청하다, 1월 10일까지."]}, "pat": {"a": "-(으)려고 하다", "b": "-아/어 주시기 바랍니다"}}, "WC51_M2": {"src": "Sách · thi thử 2", "passage": "제목: 공연 관람 문의 드립니다\n\n안녕하세요? 서울 시립 미술관에서 단체 관람 예약을 하려고 하는데요. 홈페이지에 안내된 내용에 의하면 20명 이상일 경우에는 ( ㉠ ). 예약을 하고 싶은데 ( ㉡ )? 답변 기다리겠습니다. 감사합니다.", "keys": {"a": ["미리 예약을 해야 한다고 합니다", "할인을 받을 수 있다고 합니다", "단체 예약을 해야 한다고 합니다"], "b": ["어떻게 하면 됩니까", "어떻게 해야 합니까", "어떤 방법으로 신청해야 합니까"]}, "hint": {"a": ["«안내된 내용에 의하면» → thuật lại thông tin trên trang web.", "에 의하면 đi với -다고 합니다.", "Từ: 단체 예약, 할인을 받다."], "b": ["«예약을 하고 싶은데» + «?» → hỏi cách đặt.", "어떻게 하면 됩니까? / 어떻게 해야 합니까?", "Từ: 예약하다."]}, "pat": {"a": "N에 의하면 -다고 하다", "b": "어떻게 -(으)면 됩니까?"}}, "WC51_M3": {"src": "Sách · thi thử 3", "passage": "엘리베이터 정기 점검 안내\n\n고장이나 안전사고 대비를 위하여 ( ㉠ ). 정기 점검을 하는 동안에는 계단을 이용해 주시기 바랍니다. 정기 점검을 아래와 같이 실시하오니 주민 여러분께서는 ( ㉡ ). 자세한 사항은 아파트 관리실에 문의하시기 바랍니다.\n• 일시: 2022년 12월 2일(수) 10:00~12:00\n• 장소: 전층 엘리베이터", "keys": {"a": ["엘리베이터 정기 점검을 실시하려고 합니다", "엘리베이터 정기 점검을 실시합니다"], "b": ["이용에 참고하시기 바랍니다", "불편하시더라도 양해해 주시기 바랍니다", "점검 시간에는 엘리베이터를 이용하지 마시기 바랍니다"]}, "hint": {"a": ["Tiêu đề «정기 점검 안내» + «대비를 위하여» → nói việc sẽ làm.", "-(으)려고 합니다 / -ㅂ니다.", "Từ: 정기 점검을 실시하다."], "b": ["«실시하오니 주민 여러분께서는» → nhờ cư dân lưu ý/thông cảm.", "-(으)시기 바랍니다.", "Từ: 참고하다, 양해하다."]}, "pat": {"a": "-(으)려고 하다", "b": "-(으)시기 바랍니다"}}, "WC51_M4": {"src": "Sách · thi thử 4", "passage": "잃어버린 물건을 찾습니다.\n\n3월 25일 오후 4시쯤에 도서관 1층 열람실에서 ( ㉠ ). 정신 없이 가방을 챙기다가 지갑을 흘린 것 같습니다. 지갑은 약간 오래된 갈색 가죽 지갑입니다. 지갑 안에 신용카드와 증명사진 몇 장이 있습니다. 이 지갑을 ( ㉡ ). 찾아 주시는 분께는 꼭 감사의 마음을 전하겠습니다. 제 연락처는 010-1234-1234입니다.", "keys": {"a": ["지갑을 잃어버렸습니다", "제 지갑을 잃어버렸습니다"], "b": ["보신 분은 저에게 연락해 주시기 바랍니다", "찾으신 분은 연락해 주십시오"]}, "hint": {"a": ["Tiêu đề «잃어버린 물건을 찾습니다» + thời gian, địa điểm → mất cái gì.", "-았/었습니다.", "Từ: 지갑을 잃어버리다."], "b": ["«이 지갑을» + sau ô số điện thoại → nhờ ai thấy thì liên lạc.", "-(으)신 분은 … -아/어 주시기 바랍니다.", "Từ: 보다, 찾다, 연락하다."]}, "pat": {"a": "-아/어 버리다", "b": "-아/어 주시기 바랍니다"}}, "WC51_M5": {"src": "Sách · thi thử 5", "passage": "E-mail\n\n지민아, 지난번에 카메라를 ( ㉠ ). 네 덕분에 여행 가서 좋은 사진을 많이 찍을 수 있었어. 그런데 카메라를 언제 ( ㉡ )? 날짜와 시간을 알려 주면 내가 직접 네게 찾아가서 돌려줄게. 답장 기다릴게.", "keys": {"a": ["빌려줘서 고마워", "빌려줘서 정말 고마웠어"], "b": ["돌려주면 될까", "돌려주면 돼", "돌려줄까"]}, "hint": {"a": ["«네 덕분에 … 사진을 많이 찍을 수 있었어» → cảm ơn vì cho mượn.", "-아/어 줘서 고마워 (반말).", "Từ: 빌려주다."], "b": ["«언제» + «?» + «날짜와 시간을 알려 주면» → hỏi khi nào trả.", "-(으)면 될까? / -(으)면 돼?", "Từ: 돌려주다."]}, "pat": {"a": "-아/어 줘서 고맙다", "b": "-(으)면 될까?"}}};
+for(var _k in QC)Q[_k]=QC[_k];
+PLAN[4]=["WC51_01", "WC51_02", "WC51_03", "WC51_04", "WC51_05", "WC51_06", "WC51_07", "WC51_08", "WC51_09", "WC51_10", "WC51_M1", "WC51_M2", "WC51_M3", "WC51_M4", "WC51_M5"];
+var PK = [{"p": "무료로 드립니다\n\n저는 5년 동안의 유학 생활을 마치고 다음 달에 고향으로 돌아갑니다. 그래서 ( ㉠ ). 책상, 그릇, 한국어 책 등이 있습니다. 관심이 있으신 분은 ( ㉡ ). 제 연락처는 010-1234-1234입니다.", "b": [{"o": ["짐 정리할 겁니다.", "무료로 드릴 거예요.", "그동안 사용했던 물건들을 싸게 팔겠습니다.", "원하시는 분들에게 제가 쓰던 물건들을 무료로 드리려고 합니다."], "c": [3], "w": {"0": "Thiếu tiểu từ 을; kế hoạch → -(으)려고 하다: 짐을 정리하려고 합니다.", "1": "Cả bài dùng -습니다 → viết -어요 bị trừ điểm.", "2": "Tiêu đề «무료로 드립니다» → không thể «싸게 팔겠습니다»."}}, {"o": ["저에게 연락을 합니다.", "이메일로 연락해 주시기 바라요.", "언제든지 저에게 연락을 주십시오.", "이번 주까지 문자 메시지를 남겨 주시기 바랍니다."], "c": [2, 3], "w": {"0": "Ô phải là lời nhờ: 저에게 연락을 주십시오.", "1": "Sau ô là số điện thoại, không phải email; «바라요» lệch đuôi -습니다."}}]}, {"p": "모집\n\nK-POP 댄스 동아리 '보라'입니다. 이번에 ( ㉠ ). K-POP 댄스에 관심이 있는 회원이라면 누구든지 신청할 수 있습니다. ( ㉡ )? 그래도 걱정하지 마십시오. 선배들이 하나에서 열까지 하나하나 가르쳐 드립니다. 다음 주 화요일까지 korean@dmail.com으로 신청하십시오.", "b": [{"o": ["춤 공연을 합니다.", "댄스 강의 신청을 받습니다.", "새로 신입 회원을 모집하려고 합니다.", "저희가 인기 가수의 안무를 배우려고 합니다."], "c": [2], "w": {"0": "Tiêu đề «모집» → không nói 공연.", "1": "Tiêu đề «모집» → không nói 강의 신청.", "3": "Tiêu đề «모집» → không nói 안무; nói mục đích tuyển người."}}, {"o": ["초보자예요?", "춤을 잘 못 춥니다.", "춤을 춰 본 적이 없습니까?", "춤을 해 본 적이 없습니까?"], "c": [2], "w": {"0": "Lệch đuôi: 초보자입니까? (초보자이십니까?)", "1": "Ô trước dấu ? → phải là câu hỏi: 춤을 잘 못 춥니까?", "3": "춤을 하다 ✗ → 춤을 추다."}}]}, {"p": "한국어능력시험 일정 변경 안내\n\n안녕하세요? 한국어능력시험센터입니다. 제70회 한국어능력시험 연기에 따라 2032년 한국어능력시험 일정이 ( ㉠ ). 제70회 한국어능력시험 연기에 따른 취소, 환불에 대한 문의는 공지사항을 ( ㉡ ).\n\n[변경 전 → 변경 후 시험일 / 접수 기간(국내) / 성적 발표일]\n제69회: 4.11.(토)~4.12.(일) → 5.23.(토)~5.24.(일) / 3.23.~3.27. / 6.30.(화)\n제70회: 5.23.(토)~5.24.(일) → 7.11.(토)~7.12.(일) / 5.29.~6.4. / 8.20.(목)\n제71회: 7.12.(토) → 8.23.(토) / 7.3.~7.8. / 9.29.(화)", "b": [{"o": ["바꿨습니다.", "바뀌었습니다.", "변경되었음을 알립니다.", "변경되었으니 아래의 일정을 확인해 주십시오."], "c": [1, 2, 3], "w": {"0": "«일정이» + 바꾸다 ✗ → 이/가 바뀌다. Văn bản chính thức nên dùng 변경되다."}}, {"o": ["확인해 주십시오.", "확인해 주시기 바랍니다.", "유의해 주시기 바랍니다.", "다시 안내해 드리겠습니다."], "c": [0, 1], "w": {"2": "Trước ô có 을 → 유의하다 đi với 에, không đi với 을.", "3": "«…환불에 대한 문의는» không nối nghĩa với «다시 안내해 드리겠습니다»."}}]}, {"p": "Q&A 게시판\n도서관 이용 방법 문의\n\n마포구에 살고 있는 외국인인데요. 마포 중앙 도서관에서 책을 빌리고 싶습니다. 한국인 친구에게 물어보니 외국인이 도서관을 이용하려면 회원증이 ( ㉠ ). 회원증을 만들려면 ( ㉡ )? 방법을 알려 주시면 감사하겠습니다.", "b": [{"o": ["필요하대요.", "있어야 해요.", "필요하다고 합니다.", "있어야 한다고 합니다."], "c": [2, 3], "w": {"0": "Bài hỏi đáp → không dùng văn nói -대요.", "1": "«친구에게 물어보니» → phải thuật lại (-다고 합니다); -어요 cũng lệch đuôi."}}, {"o": ["어떻게 합니까?", "어떻게 해야 하나요?", "어떻게 해야 됩니까?", "어떻게 해야 할 겁니까?"], "c": [1, 2], "w": {"0": "-(으)려면 đi với -아/어야 하다(되다).", "3": "-(으)려면 đi với -아/어야 하다(되다), không dùng -(으)ㄹ 겁니까."}}]}, {"p": "정국아, 전화를 안 받아서 문자를 보내.\n정국아~ 미안한데, 오늘 회사에 갑자기 일이 생겨서 ( ㉠ ). 6시 말고 8시에 보는 건 어때? 갑자기 약속 시간을 바꿔서 미안해. 그 대신에 ( ㉡ ). 먹고 싶은 거 있으면 뭐든지 말해. 문자 보면 답장 꼭 줘.", "b": [{"o": ["6시에 만날 수 없어.", "약속 시간을 늦췄으면 해.", "오늘 만날 수 없을 것 같아.", "제시간에 퇴근을 못 할 것 같아."], "c": [1, 3], "w": {"0": "Báo việc khó xử nên nói mềm: 만날 수 없을 것 같아.", "2": "Câu sau «6시 말고 8시에 보는 건 어때?» → không hủy hẹn."}}, {"o": ["내가 밥을 사 줄까?", "밥은 내가 살 거예요.", "내가 오늘 저녁을 살게.", "제가 오늘 저녁을 사겠어."], "c": [2], "w": {"0": "Ô kết thúc bằng dấu chấm → không viết câu hỏi.", "1": "Tin nhắn 반말 → không dùng -예요.", "3": "반말 → «내가», không «제가»."}}]}, {"p": "김태형 ♡ 정다움\n\n오래 전부터 기다려 왔던 사람을 드디어 만났습니다. 먼 길 힘드시겠지만 꼭 오셔서 ( ㉠ ). 여러분들이 걸어 오셨던 인생의 지혜와 용기를 저희에게 나눠 주십시오.\n* 결혼식장은 주차 공간이 부족하니 ( ㉡ ). 그리고 화환은 받지 않습니다.", "b": [{"o": ["축하합니다.", "축하하세요.", "축하해 주세요.", "축하해 주시기 바랍니다."], "c": [3], "w": {"0": "Người viết là người được chúc → 축하해 주다.", "1": "Người viết là người được chúc → 축하해 주다.", "2": "Bài dùng -습니다 → «주십시오/주시기 바랍니다» tốt hơn «주세요»."}}, {"o": ["미리 양해 부탁드립니다.", "대중교통을 이용해 주십시오.", "대중교통을 사용해 주십시오.", "대중교통을 이용해 주시기 바랍니다."], "c": [0, 1, 3], "w": {"2": "대중교통을 사용하다 ✗ → 이용하다 (사용하다: 볼펜, 컵, 칼; 이용하다: 버스, 지하철, 도서관)."}}]}, {"p": "아주머니, 그동안 감사했습니다.\n저는 내일이면 미국으로 일을 ( ㉠ ). 제가 하고 싶은 일을 하게 되어서 기쁘지만 4년 동안 지내온 하숙집을 떠나야 한다고 생각하니까 많이 아쉽습니다. 작은 선물을 준비했는데 선물이 아주머니 마음에 ( ㉡ ).", "b": [{"o": ["하러 가요.", "시작합니다.", "하러 갑니다.", "하러 가야 합니다."], "c": [2, 3], "w": {"0": "Đuôi -습니다 → 하러 갑니다.", "1": "«미국으로» có tiểu từ chỉ hướng → cần động từ 가다."}}, {"o": ["드세요?", "들면 좋겠습니다.", "드실지 모르겠습니다.", "들었으면 좋겠습니다."], "c": [2, 3], "w": {"0": "Ô kết thúc bằng dấu chấm → không viết câu hỏi.", "1": "Mong ước → -았/었으면 좋겠다."}}]}, {"p": "To. 김석진 교수님께\n\n교수님 안녕하세요? 경제학 수업을 듣고 있는 경영학과 23학번 박지민입니다. 다름이 아니라 이번 학기 경제학 성적이 제가 예상했던 것보다 ( ㉠ ). 바쁘시겠지만 제가 어떤 부분이 부족했는지 ( ㉡ )? 부족한 부분을 학업에 참고하여 보완하고 싶습니다. 저는 화/목 9:30~2:00를 제외하고 언제든 가능합니다.\n날이 추운데 감기 조심하세요.\n박지민 올림", "b": [{"o": ["낮아요.", "점수가 높습니다.", "점수가 낮은 것 같습니다.", "점수가 낮아서 메일을 드립니다."], "c": [2, 3], "w": {"0": "-어요 lệch đuôi; nên nói vòng: 낮은 것 같습니다.", "1": "Câu sau muốn bổ sung chỗ còn thiếu → điểm thấp, không phải cao."}}, {"o": ["알려 주세요?", "알고 싶습니다.", "알려 주실 수 있을까요?", "가르쳐 주실 수 있으세요?"], "c": [2, 3], "w": {"0": "Nhờ thầy cô → nói mềm: -(으)ㄹ 수 있을까요? (không thêm ? vào mệnh lệnh).", "1": "Ô có dấu ? → phải là câu hỏi."}}]}, {"p": "분실물 보관함 안내\n\n본 스포츠 센터 방문 시 분실하신 물건들은 ( ㉠ ). 분실물의 보관 기간은 습득일 기준으로 1개월입니다. 1개월이 지나도 ( ㉡ ). 분실물 관련 문의는 안내 데스크에서 해 주시기 바랍니다.", "b": [{"o": ["데스크에 보관 중입니다.", "분실물 센터에서 찾을 수 있습니다.", "분실물 보관함에서 보관하고 있습니다.", "분실물 보관함에서 보관되어 있습니다."], "c": [0, 2], "w": {"1": "«분실물 센터» không hợp: đồ được giữ ở hộp/quầy trong trung tâm thể thao.", "3": "Trạng thái ở đâu → 보관함에 보관되어 있습니다."}}, {"o": ["가져가세요.", "물건은 폐기합니다.", "가져가지 않으면 모두 폐기합니다.", "찾아가지 않는 물건들은 불우 이웃을 돕는 데에 이용하겠습니다."], "c": [2, 3], "w": {"0": "«1개월이 지나도» → cần ý «vẫn không đến lấy thì…».", "1": "«1개월이 지나도» → cần ý «vẫn không đến lấy thì…»."}}]}, {"p": "룸메이트 구함\n\n1월~6월 단기간 ( ㉠ ). 집 안에 가구, 가전제품이 모두 갖춰져 있어서 ( ㉡ ). 월세는 50만 원인데 둘이 나눠서 냈으면 좋겠습니다. 친구처럼 편하게 룸메이트 하실 분만 연락 주세요. 평일에는 학교 수업 때문에 전화를 못 받습니다. 가능한 한 문의는 문자 메시지로 해 주시기 바랍니다.", "b": [{"o": ["학생을 구합니다.", "집을 빌려 드립니다.", "룸메이트를 찾습니다.", "함께 할 룸메이트를 찾습니다."], "c": [2, 3], "w": {"0": "Không rõ tìm học sinh để làm gì.", "1": "Bài tìm bạn ở chung, không phải cho thuê nhà."}}, {"o": ["다 좋습니다.", "생활하기가 편리할 거예요.", "본인의 짐만 챙기고 오시면 됩니다.", "그냥 몸만 들어와서 사시면 됩니다."], "c": [2, 3], "w": {"0": "Không sai nhưng là câu cấp 1 → điểm thấp.", "1": "-어요 lệch đuôi -습니다."}}]}];
+function tl(id){return modeOf(id)===4?300:TIME;}
+function qlab(q){return q.round?'Kỳ '+q.round:q.src;}
+function pkRec(i){var p=st.pk||(st.pk={});return p[i]||(p[i]={a:[[],[]]});}
+function pkOk(i,bi){var r=pkRec(i),c=PK[i].b[bi].c,a=r.a[bi];return a.length===c.length&&c.every(function(x){return a.indexOf(x)>=0;});}
+function pkHTML(i){
+  var it=PK[i],r=pkRec(i),done=!!r.done,p=esc(it.p).replace(/\(\s*㉠\s*\)/,'<span class="gap">( ㉠ )</span>').replace(/\(\s*㉡\s*\)/,'<span class="gap">( ㉡ )</span>');
+  var h='<div class="task" id="PK'+i+'"><div class="hd"><b>'+(i+1)+'. Bài làm quen '+(i+1)+'</b><span class="st'+(done&&pkOk(i,0)&&pkOk(i,1)?' full':'')+'">'+(done?'Đúng '+((pkOk(i,0)?1:0)+(pkOk(i,1)?1:0))+'/2 ô':'Chưa làm')+'</span></div><div class="bd"><div class="psg">'+p.replace(/\n/g,'<br>')+'</div>';
+  it.b.forEach(function(b,bi){
+    h+='<div class="blank"><label>'+(bi?'㉡':'㉠')+' <small style="font-weight:normal;color:var(--muted)">chọn tất cả câu điền được</small></label><div class="opts">';
+    b.o.forEach(function(o,oi){var sel=r.a[bi].indexOf(oi)>=0,c=b.c.indexOf(oi)>=0,cl='';
+      if(done)cl=c?(sel?' ok':' ok miss'):(sel?' no':'');else if(sel)cl=' sel';
+      h+='<button class="opt2'+cl+'" data-pk="'+i+'" data-b="'+bi+'" data-o="'+oi+'"'+(done?' disabled':'')+'>'+'①②③④'[oi]+' '+esc(o)+'</button>';});
+    h+='</div>';
+    if(done){var w=[];b.o.forEach(function(o,oi){if(b.w[oi])w.push('<li><b>'+'①②③④'[oi]+'</b> '+esc(b.w[oi])+'</li>');});
+      h+='<div class="res '+(pkOk(i,bi)?'ok':'rv')+'">'+(pkOk(i,bi)?'✅ Chọn đúng và đủ.':'Đáp án: '+b.c.map(function(x){return '①②③④'[x];}).join(', '))+(w.length?'<ul class="keys">'+w.join('')+'</ul>':'')+'</div>';}
+    h+='</div>';
+  });
+  h+='<div class="btns">'+(done?'<button class="b" data-pkredo="'+i+'">Làm lại</button>':'<button class="b main" data-pkcheck="'+i+'">Kiểm tra</button>')+'</div></div></div>';
+  return h;
+}
+function renderPick(){$('pick').innerHTML=PK.map(function(x,i){return pkHTML(i);}).join('');}
+function pkRe(i){$('PK'+i).outerHTML=pkHTML(i);renderSum(4);}
+function pkLine(){var n=0,ok=0;PK.forEach(function(x,i){var r=(st.pk||{})[i];if(!r||!r.done)return;n++;[0,1].forEach(function(bi){if(pkOk(i,bi))ok++;});});return 'Chọn tất cả (10 bài sách): '+ok+'/'+(n*2)+' ô đúng'+(n<PK.length?' (làm '+n+'/10 bài)':'');}
+document.addEventListener('click',function(e){
+  var b=e.target.closest('button');if(!b)return;var d=b.dataset;
+  if(d.pk!=null){var r=pkRec(+d.pk),a=r.a[+d.b],o=+d.o,j=a.indexOf(o);if(r.done)return;if(j>=0)a.splice(j,1);else a.push(o);save();pkRe(+d.pk);}
+  else if(d.pkcheck!=null){var r=pkRec(+d.pkcheck);if(!r.a[0].length&&!r.a[1].length&&!confirm('Em chưa chọn câu nào. Vẫn xem đáp án?'))return;r.done=1;save();pkRe(+d.pkcheck);}
+  else if(d.pkredo!=null){st.pk[d.pkredo]={a:[[],[]]};save();pkRe(+d.pkredo);}
+});
+
 /* ---- điều hướng ---- */
 function show(){
   var m=location.hash.match(/b=(\w+)/),k=m?m[1]:(st.tab||'1');if(!$('s'+k))k='1';
@@ -487,7 +583,7 @@ function show(){
   document.querySelectorAll('nav a').forEach(function(a){a.classList.toggle('on',a.dataset.k===k);});
   st.tab=k;save();
 }
-renderMcq(1);renderMcq(2);renderTasks(1);renderTasks(2);renderTasks(3);renderSum('all');
+renderMcq(1);renderMcq(2);renderTasks(1);renderTasks(2);renderTasks(3);renderTasks(4);renderPick();renderSum('all');
 window.addEventListener('hashchange',function(){show();scrollTo(0,0);});show();
 </script>
 <script src="../danh-dau/dd.js"></script>
