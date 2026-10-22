@@ -532,6 +532,12 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - Đề + bài mẫu kỳ 83, 91, 96, 102 nhúng trong biến `REAL` (lấy từ `thi-thu/viet/W54_*.json` lúc soạn trang; thêm đề 54 vào `wbank` thì chép thêm vào đây),
   ý chính tiếng Việt từng đoạn ở `IDEA`; 2 đề luyện tự soạn `PR` (`P01` thú cưng, `P02` SNS; bài mẫu do Claude soạn). `MCQ` (lựa chọn đầu là đáp án),
   `TK` câu viết lại / viết theo khung (so LCS với câu mẫu, tự chấm). Sửa thẳng trong `viet-54/index.html`. localStorage `nari-54`.
+- Thẻ **Khung đoạn** (`#b=k`, section `sk`; cô muốn “học tới đâu viết được tới đó” như khung câu 53): đơn vị học là **một đoạn ~200 chữ = khung 4 câu** (câu 1 trả lời câu hỏi + 3 tầng
+  `먼저 · 또한 · 나아가/마지막으로`, câu kết tùy chọn). 29 câu hỏi của 10 đề (kỳ 37–108) chia 6 kiểu đoạn: ① Giải pháp 9/10 đề · ② Vấn đề 6 · ③ Ưu điểm 5 · ④ Lý do/nguyên nhân 5 ·
+  ⑤ Hiện trạng/đặc điểm 3 · ⑥ Tán thành/phản đối 1. Ý đi theo **thang 3 tầng** (`KFR`): A gần → xa (cá nhân → tổ chức → nhà nước), B theo cách (luật → giáo dục → công nghệ),
+  C một người 3 việc (hiểu biết → thái độ → thói quen). Đã soạn **① Giải pháp** (cô duyệt rồi mới làm ② ③): `KREAL` đoạn giải pháp bài mẫu chính thức 102, 96, 91, 83, 52 tách câu theo tầng,
+  làm mẫu đề SNS, `CQ.gpt` chọn thang, `TY.gp` ghép câu, `KW` viết ngay đoạn (064, P01, 108, 037, 047; `ix` ý gợi ý, `md` 5 câu mẫu theo khung do Claude soạn) → `st.kd[id] = {v:[5 câu], h, sh, s}`,
+  so từng câu với câu mẫu cùng chỗ (LCS). Báo cáo `renderSum('k')`/`kdRep`.
 
 ## Dịch đề câu 51–52 (`dich-51-52/`) — trang gửi học sinh, chỉ có đề
 - Cô muốn học sinh dịch đề để quen nội dung câu 51, 52 hay ra (không có phần chiến thuật như `viet-51/`, `viet-52/` — 2 trang đó là giáo án của cô).

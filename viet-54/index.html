@@ -26,12 +26,13 @@ main{max-width:860px;margin:0 auto;padding:16px 16px 48px}
 h1{font-size:26px;margin:4px 0 2px}
 .lead{margin:0 0 12px;color:#333;font-size:15px}
 nav{margin:0 -16px 14px;padding:8px 16px;position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);z-index:3}
-nav .bar{display:grid;grid-template-columns:repeat(6,1fr);border:2px solid var(--ink);border-radius:8px;overflow:hidden}
+nav .bar{display:grid;grid-template-columns:repeat(4,1fr);border:2px solid var(--ink);border-radius:8px;overflow:hidden}
 nav a{text-align:center;padding:6px 3px;color:var(--ink);text-decoration:none;font-weight:bold;font-size:15px;line-height:1.2;border-left:2px solid var(--ink)}
 nav a:first-child{border-left:0}
 nav a small{display:block;font-weight:normal;font-size:12px}
 nav a.on{background:var(--ink);color:#fff}
-@media(max-width:600px){nav a small{font-size:11px}nav .bar{grid-template-columns:repeat(3,1fr)}nav a:nth-child(4){border-left:0}nav a:nth-child(n+4){border-top:2px solid var(--ink)}}
+@media(min-width:601px){nav a:nth-child(5){border-left:0}nav a:nth-child(n+5){border-top:2px solid var(--ink)}}
+@media(max-width:600px){nav a small{font-size:11px}nav .bar{grid-template-columns:repeat(3,1fr)}nav a:nth-child(3n+1){border-left:0}nav a:nth-child(n+4){border-top:2px solid var(--ink)}}
 .sec{display:none}.sec.on{display:block}
 h2{font-size:23px;margin:6px 0 4px}
 h3{font-size:19px;margin:24px 0 8px;padding-bottom:3px;border-bottom:2px solid var(--ink)}
@@ -197,6 +198,31 @@ details.more{margin:8px 0}
 details.more summary{cursor:pointer;font-weight:bold;color:var(--blue)}
 .gcard{border:1px solid var(--soft);border-radius:8px;padding:8px 10px;margin:0 0 10px}
 .gcard h4{margin:0 0 4px}
+/* khung đoạn */
+.sl{background:#e3ecff;color:var(--blue);border-radius:3px;padding:0 3px;font-weight:bold}
+.kfr{border:2px solid var(--ink);border-radius:10px;padding:8px 12px;margin:0 0 12px}
+.kfr h4{margin:0 0 6px}
+.kfr ol{margin:0;padding-left:0;list-style:none}
+.kfr li{display:flex;gap:8px;align-items:baseline;padding:4px 0;border-top:1px dashed var(--soft)}
+.kfr li:first-child{border-top:0}
+.kfr li .tg{flex:none;width:118px;font:bold 12.5px Arial,sans-serif;color:var(--muted)}
+.kfr li .ko{font-size:15.5px;line-height:1.7}
+@media(max-width:560px){.kfr li{flex-direction:column;gap:0}.kfr li .tg{width:auto}}
+.kex{border:1px solid var(--line);border-radius:10px;padding:8px 12px;margin:0 0 12px}
+.kex .hd{font-weight:bold;margin:0 0 4px}
+.kex .q{font-size:14.5px;margin:0 0 6px}
+.kex li .tg{width:150px}
+.step{margin:6px 0;padding:6px 10px;border-left:4px solid var(--blue);background:#fafbff}
+.step b.sn{font:bold 13px Arial,sans-serif;color:var(--blue);display:block}
+.kslot{margin:8px 0 0}
+.kslot .lbl{margin:6px 0 2px}
+.kslot .kf{font-size:13.5px;color:var(--muted);margin:0 0 3px}
+.kslot textarea{min-height:52px}
+.kpar{margin:10px 0 0;padding:8px 10px;background:#fafafa;border:1px solid var(--soft);border-radius:6px;font-size:15.5px;line-height:1.8}
+.kcmp{margin:4px 0 8px;font-size:15px}
+.ty .kw{display:block;margin:3px 0 0;font-size:13.5px;color:var(--blue)}
+.ty .pat{margin:4px 0 0;font-size:14px;color:#333}
+.kcmp .pc{font:bold 12.5px Arial,sans-serif;color:var(--ok);margin:4px 0 0}
 </style>
 <script src="../lam-moi.js?v=2" data-key="nari-54"></script>
 </head>
@@ -214,6 +240,7 @@ details.more summary{cursor:pointer;font-weight:bold;color:var(--blue)}
   <a href="#b=1" data-k="1">Buổi 1<small>Đọc đề · Dàn ý</small></a>
   <a href="#b=2" data-k="2">Buổi 2<small>Văn viết</small></a>
   <a href="#b=3" data-k="3">Buổi 3<small>Khung từng đoạn</small></a>
+  <a href="#b=k" data-k="k">Khung đoạn<small>Học là viết được</small></a>
   <a href="#b=mau" data-k="mau">Bài mẫu<small>4 đề thật</small></a>
   <a href="#b=viet" data-k="viet">Viết cả bài<small>Gửi cô chấm</small></a>
   <a href="#b=c" data-k="c">Cool TOPIK<small>Theo sách</small></a>
@@ -428,6 +455,91 @@ details.more summary{cursor:pointer;font-weight:bold;color:var(--blue)}
 <h3>5. Em thử: viết câu theo khung</h3>
 <div id="tk3"></div>
 <div class="sum" id="sum3"></div>
+<a class="go" href="#b=k">Học khung đoạn: học xong khung nào viết luôn đoạn đó →</a>
+</section>
+
+<!-- ================= KHUNG ĐOẠN ================= -->
+<section class="sec" id="sk">
+<h2>Khung đoạn · học khung nào, viết luôn đoạn đó</h2>
+<p class="goal"><b>Cách học:</b> cả bài 600–700 chữ = <b>3 đoạn, mỗi đoạn ~200 chữ</b>. Đề nào cũng chỉ hỏi vài kiểu câu hỏi. Mỗi kiểu câu hỏi có <b>một khung đoạn 4 câu</b>. Học xong khung nào là viết được ngay đoạn đó trong đề thật, giống học khung câu 53.</p>
+
+<h3>1. 6 kiểu đoạn trong 10 đề thật (29 câu hỏi)</h3>
+<div class="scroll"><table class="t">
+<tr><th>Kiểu đoạn</th><th>Chữ khóa trong câu hỏi</th><th>Số lần ra</th><th></th></tr>
+<tr><td><b>① Giải pháp</b> · nỗ lực · phương pháp</td><td class="ko">방안 · 방법 · 노력 · 어떻게 해야 · 해결</td><td><b>9/10 đề</b></td><td><a href="#b=k" data-kgo="kgp">Học ngay ↓</a></td></tr>
+<tr><td>② Vấn đề · ảnh hưởng xấu</td><td class="ko">문제 · 문제점 · 부정적 · 부작용</td><td>6</td><td class="note">Sắp có</td></tr>
+<tr><td>③ Ưu điểm · được gì · thành quả</td><td class="ko">장점 · 긍정적 · 성과 · 얻다</td><td>5</td><td class="note">Sắp có</td></tr>
+<tr><td>④ Lý do quan trọng · nguyên nhân</td><td class="ko">이유 · 왜 · 필요성 · 배경</td><td>5</td><td class="note">Sắp có</td></tr>
+<tr><td>⑤ Hiện trạng · đặc điểm</td><td class="ko">어떻게 활용 · 특징 · 어떤 사람</td><td>3</td><td class="note">Sắp có</td></tr>
+<tr><td>⑥ Tán thành / phản đối</td><td class="ko">찬성하는가, 반대하는가</td><td>1</td><td class="note">Sắp có</td></tr>
+</table></div>
+<p class="note">Chỉ cần ① + ② + ③ là viết được 20/29 đoạn. Các đề kỳ 47, 96, 108 cả bài chỉ là ③ → ② → ①.</p>
+
+<h2 id="kgp" style="margin-top:22px">① Đoạn giải pháp</h2>
+<p class="goal">Ra ở 9/10 đề, hầu như luôn là <b>đoạn cuối</b>. Học xong phần này em viết được đoạn 3 của gần như mọi đề.</p>
+
+<h3>2. Nhận ra câu hỏi giải pháp</h3>
+<div class="scroll"><table class="t">
+<tr><th>Kỳ</th><th>Câu hỏi trong đề</th></tr>
+<tr><td>83</td><td class="ko">창의력을 기르기 위해서 어떠한 <b>노력</b>을 할 수 있는가?</td></tr>
+<tr><td>91</td><td class="ko">이런 문제들을 <b>해결하기 위해서</b> 어떤 <b>방안</b>이 필요한가?</td></tr>
+<tr><td>96</td><td class="ko">이런 문제를 해결하기 위해서는 <b>어떻게 해야</b> 하는가?</td></tr>
+<tr><td>102</td><td class="ko">디지털 소외 문제를 해결하기 위해 <b>개인과 사회</b>는 어떻게 해야 하는가?</td></tr>
+<tr><td>108</td><td class="ko">학교 교육에서 추구하는 바람직한 경쟁 <b>방법</b>은 무엇인가?</td></tr>
+<tr><td>37 · 47 · 52 · 64</td><td class="ko">인재가 되기 위한 노력 · 효과적인 칭찬의 방법 · 의사소통을 원활하게 하는 방법 · 올바른 성장을 돕기 위한 노력</td></tr>
+</table></div>
+
+<h3>3. Chọn thang 3 tầng: ý không cần nghĩ, chỉ cần đi theo thang</h3>
+<p>Em hay kẹt vì “không nghĩ ra ý”. Bài mẫu chính thức nào cũng xếp 3 ý theo một trong 3 thang dưới đây. Đọc câu hỏi → chọn thang → mỗi tầng một câu.</p>
+<div class="scroll"><table class="t">
+<tr><th>Thang</th><th>Dùng khi</th><th>Tầng 1</th><th>Tầng 2</th><th>Tầng 3</th></tr>
+<tr><td><b>A · Gần → xa</b></td><td>Câu hỏi nêu nhiều bên (<span class="ko">개인과 사회</span>, <span class="ko">가정·학교</span>) hoặc vấn đề chung của xã hội</td><td>Cá nhân / gia đình<br><span class="ko">개인 · 부모 · 학생</span></td><td>Tổ chức<br><span class="ko">학교 · 기업 · 지역 사회</span></td><td>Nhà nước / xã hội<br><span class="ko">정부 · 사회</span></td></tr>
+<tr><td><b>B · Theo cách làm</b></td><td>Vấn đề xã hội cần ngăn chặn (<span class="ko">가짜 뉴스</span>, <span class="ko">음주 운전</span>…)</td><td>Luật, chế độ<br><span class="ko">제도 · 법 · 규제</span></td><td>Giáo dục, tuyên truyền<br><span class="ko">교육 · 캠페인</span></td><td>Công nghệ, môi trường<br><span class="ko">기술 · 시설 · 환경</span></td></tr>
+<tr><td><b>C · Một người, 3 việc</b></td><td>Câu hỏi về nỗ lực của <b>một người</b> (<span class="ko">인재가 되기 위해</span>, <span class="ko">창의력을 기르기 위해</span>, cách khen, cách giao tiếp)</td><td>Hiểu biết, kinh nghiệm<br><span class="ko">지식 · 경험</span></td><td>Thái độ<br><span class="ko">~는 태도/자세</span></td><td>Thói quen, hành động<br><span class="ko">~는 습관 · 실천</span></td></tr>
+</table></div>
+<p class="note">A dùng được cho gần như mọi đề. Phân vân thì chọn A.</p>
+<h4>Em thử: câu hỏi này đi theo thang nào?</h4>
+<div id="cq_gpt"></div>
+
+<h3>4. Khung 4 câu cho từng thang</h3>
+<p class="legend"><span class="sl">[ô xanh]</span> = em thay chữ của đề vào. Chữ đen giữ nguyên. Câu 1 trả lời thẳng câu hỏi, 3 câu sau là 3 tầng, nối bằng <b class="cn">먼저</b> · <b class="cn">또한</b> · <b class="cn">나아가 / 마지막으로</b>.</p>
+<div id="kFrames"></div>
+<div class="warnbox"><b>Câu 1 lấy từ câu hỏi:</b> đổi “<span class="ko">… 위해(서) 어떤 노력이 필요한가?</span>” thành “<span class="ko">… 위해서는 … 노력이 필요하다.</span>”. Bài mẫu kỳ 83 cũng mở đoạn đúng như vậy: <span class="ko">창의력을 기르기 위해서는 …</span></div>
+<h4>Chia đuôi -아/어야 한다 (chỗ em hay viết sai)</h4>
+<div class="scroll"><table class="t">
+<tr><th>Gốc</th><th>-아/어야 한다</th><th>Gốc</th><th>-아/어야 한다</th></tr>
+<tr><td class="ko">마련하다</td><td class="ko">마련<b>해야</b> 한다</td><td class="ko">돕다</td><td class="ko"><b>도와야</b> 한다 <span class="x">돕아야</span></td></tr>
+<tr><td class="ko">만들다</td><td class="ko">만들<b>어야</b> 한다 <span class="x">만들야</span></td><td class="ko">기르다</td><td class="ko"><b>길러야</b> 한다</td></tr>
+<tr><td class="ko">줄이다 · 늘리다</td><td class="ko"><b>줄여야</b> · <b>늘려야</b> 한다</td><td class="ko">알리다</td><td class="ko"><b>알려야</b> 한다</td></tr>
+<tr><td class="ko">가지다</td><td class="ko"><b>가져야</b> 한다</td><td class="ko">기울이다</td><td class="ko"><b>기울여야</b> 한다</td></tr>
+</table></div>
+
+<h3>5. Đề thật cũng viết đúng như vậy</h3>
+<p>Đoạn giải pháp trong bài mẫu chính thức, tách từng câu, ghi câu đó ở tầng nào. <b class="cn">Chữ xanh</b> = từ nối, <span class="fm">nền vàng</span> = đuôi khung.</p>
+<div id="kReal"></div>
+<p class="note">Bài mẫu thật đôi khi gộp câu 1 vào tầng 1 (kỳ 83, 96), hoặc thêm 1 câu giải thích sau mỗi ý (kỳ 52) để đủ chữ. Em mới học thì cứ viết đủ 4 câu riêng, thiếu chữ thì thêm câu kết.</p>
+
+<h3>6. Làm mẫu cùng cô: đề “SNS” (đề luyện 2)</h3>
+<div id="kDemo"></div>
+
+<h3>7. Kho cụm cho từng tầng</h3>
+<p>Có ý tiếng Việt mà không biết nói tiếng Hàn thì lấy cụm ở đây, thay danh từ của đề vào.</p>
+<div class="scroll"><table class="t">
+<tr><th>Tầng</th><th>Cụm hay dùng</th></tr>
+<tr><td>Cá nhân</td><td class="ko">인식을 바꾸다 (đổi nhận thức) · 스스로 노력하다 · 책임감을 가지다 · 관심을 가지다 · 사용법을 익히다 · 올바르게 이용하다 · 사용 시간을 줄이다 · 배려하다 · 적극적으로 참여하다</td></tr>
+<tr><td>Gia đình · trường · công ty</td><td class="ko">대화를 나누다 · 귀를 기울이다 (lắng nghe) · 교육을 실시하다 · 교육 프로그램을 운영하다 · 기회를 제공하다 · 환경을 조성하다 · 분위기를 만들다 · 상담을 지원하다</td></tr>
+<tr><td>Nhà nước · xã hội</td><td class="ko">제도를 마련하다 / 개선하다 · 지원 정책을 마련하다 · 법을 강화하다 · 규제를 강화하다 · 예산을 늘리다 · 시설을 확충하다 (mở rộng) · 캠페인을 벌이다</td></tr>
+<tr><td>Kết quả (sau <span class="ko">-도록</span>)</td><td class="ko">누구나 ~을/를 누릴 수 있도록 · 소외되는 사람이 없도록 · 문제가 반복되지 않도록 · 피해를 입지 않도록 · 건강하게 성장할 수 있도록 · 함부로 ~지 못하도록</td></tr>
+<tr><td>Câu kết (không bắt buộc)</td><td class="ko">이처럼 개인과 사회가 함께 노력한다면 ~(으)ㄹ 수 있을 것이다.</td></tr>
+</table></div>
+
+<h3>8. Em thử: ghép từng câu theo khung</h3>
+<div id="ty_gp"></div>
+
+<h3>9. Viết ngay: đoạn giải pháp của đề thật</h3>
+<p>Mỗi đề: đọc câu hỏi → nhìn thang → viết 4 câu theo khung (bí ý thì bấm “💡 Ý gợi ý”) → “So với đoạn mẫu”. Đoạn của em nên được <b>180–250 chữ</b>.</p>
+<div id="kWrite"></div>
+<div class="sum" id="sumk"></div>
 </section>
 
 <!-- ================= BÀI MẪU ================= -->
@@ -775,6 +887,7 @@ function renderOl(){$('ol1').innerHTML=PR.map(function(e){return olHTML(e,false)
 function mcqLine(k){var m=st['m'+k]||{},n=0,ok=0;for(var i in m){n++;if(m[i]===0)ok++;}return 'Trắc nghiệm: '+ok+'/'+MCQ[k].length+(n<MCQ[k].length?' (làm '+n+')':'');}
 function report(k){
   if(k==='c')return coolRep();
+  if(k==='k')return kdRep();
   var L=['Câu 54 · Buổi '+k+' · '+(st.name||'(chưa ghi tên)'),mcqLine(k)];
   if(k==1)PR.forEach(function(e){var o=st.o[e.id]||[];if(!o.some(function(x){return x&&x.trim();}))return;
     L.push('Dàn ý '+e.src+' ('+e.title+'):');o.forEach(function(x,i){if(x&&x.trim())L.push('  Đoạn '+(i+1)+': '+x.replace(/\s+/g,' '));});});
@@ -784,7 +897,7 @@ function report(k){
 }
 function renderSum(k){
   var el=$('sum'+k);if(!el)return;el.dataset.k=k;
-  el.innerHTML='<h4>'+(k==='c'?'Kết quả Cool TOPIK':'Kết quả Buổi '+k)+'</h4><p class="note">Làm xong, ghi tên rồi bấm gửi cho cô qua Zalo (hoặc chép đoạn dưới gửi cô).</p>'+
+  el.innerHTML='<h4>'+(k==='c'?'Kết quả Cool TOPIK':k==='k'?'Kết quả Khung đoạn':'Kết quả Buổi '+k)+'</h4><p class="note">Làm xong, ghi tên rồi bấm gửi cho cô qua Zalo (hoặc chép đoạn dưới gửi cô).</p>'+
     '<input class="nm" placeholder="Tên em" value="'+esc(st.name||'')+'"><div class="btns"><button class="b main" data-share="'+k+'">Gửi kết quả cho cô…</button></div><pre>'+esc(report(k))+'</pre>';
 }
 function shareText(t){
@@ -953,7 +1066,7 @@ function tyHTML(k,i){
 function tyOk(k,i){var q=TY[k][i],r=tyRec(k)[i]||{};if(!r.d)return null;return q[1].some(function(a){return tyNorm(a)===tyNorm(r.v||'');})?1:(r.s==null?null:r.s);}
 function renderTy(k){$('ty_'+k).innerHTML=TY[k].map(function(q,i){return tyHTML(k,i);}).join('');}
 function tyLine(k,lab){var n=0,ok=0;TY[k].forEach(function(q,i){var v=tyOk(k,i);if((tyRec(k)[i]||{}).d)n++;if(v===1)ok++;});return lab+': '+ok+'/'+TY[k].length+' đúng'+(n<TY[k].length?' (làm '+n+')':'');}
-function coolRe(){if(typeof renderSum==='function')renderSum('c');}
+function coolRe(){if(typeof renderSum==='function'){renderSum('c');renderSum('k');}}
 document.addEventListener('input',function(e){var t=e.target;if(t.classList.contains('tyi')){var r=tyRec(t.dataset.ty);(r[t.dataset.i]||(r[t.dataset.i]={})).v=t.value;save();}});
 document.addEventListener('keydown',function(e){var t=e.target;if(e.key==='Enter'&&t.classList.contains('tyi')){var b=t.parentNode.querySelector('[data-tyck]');if(b)b.click();}});
 document.addEventListener('click',function(e){
@@ -963,6 +1076,148 @@ document.addEventListener('click',function(e){
   else if(d.tyck){var r=tyRec(d.tyck),x=r[d.i]||(r[d.i]={});if(!(x.v||'').trim())return;x.d=1;save();$('TY'+d.tyck+d.i).outerHTML=tyHTML(d.tyck,+d.i);coolRe();}
   else if(d.tys){var x=tyRec(d.tys)[d.i];x.s=+d.v;save();$('TY'+d.tys+d.i).outerHTML=tyHTML(d.tys,+d.i);coolRe();}
   else if(d.tyredo){delete tyRec(d.tyredo)[d.i];save();$('TY'+d.tyredo+d.i).outerHTML=tyHTML(d.tyredo,+d.i);coolRe();}
+});
+
+/* ---- Khung đoạn (thẻ k): ① Giải pháp ---- */
+var KFR={
+ A:{n:'Thang A · Gần → xa',t:['Câu 1 · trả lời câu hỏi','Tầng 1 · cá nhân, gia đình','Tầng 2 · trường, công ty','Tầng 3 · nhà nước, xã hội','Câu kết (không bắt buộc)'],
+  f:['[mục tiêu]-기 위해서는 [bên 1]와/과 [bên 2] 모두의 노력이 필요하다.','먼저 [cá nhân]은/는 [việc làm]-아/어야 한다.','또한 [tổ chức]은/는 [ai]이/가 [việc tốt]-(으)ㄹ 수 있도록 [hỗ trợ gì]-아/어야 한다.','나아가 [정부]은/는 [제도 / 정책]을/를 마련하여 [kết quả]-도록 해야 할 것이다.','이처럼 [các bên]이/가 함께 노력한다면 [điều tốt]-(으)ㄹ 수 있을 것이다.']},
+ B:{n:'Thang B · Theo cách làm',t:['Câu 1 · trả lời câu hỏi','Tầng 1 · luật, chế độ','Tầng 2 · giáo dục, tuyên truyền','Tầng 3 · công nghệ, môi trường','Câu kết (không bắt buộc)'],
+  f:['[vấn đề / mục tiêu]-기 위해서는 여러 방면의 노력이 필요하다.','먼저 제도적으로 [quy định / cách làm]을/를 마련하여 [việc xấu]을/를 막아야 한다.','또한 [교육 / 캠페인]을/를 통해 [N의 위험성 / 중요성]을/를 알리는 것도 필요하다.','나아가 [기술 / 환경]을/를 [개발 / 조성]하여 [kết quả]-도록 하는 것도 좋은 방법일 것이다.','이처럼 [điều kiện]-ㄴ다면 [điều tốt]-(으)ㄹ 수 있을 것이다.']},
+ C:{n:'Thang C · Một người, 3 việc',t:['Câu 1 · trả lời câu hỏi','Việc 1 · hiểu biết, kinh nghiệm','Việc 2 · thái độ','Việc 3 · thói quen, hành động','Câu kết (không bắt buộc)'],
+  f:['[mục tiêu]-기 위해서는 무엇보다 [꾸준한 노력 / 자세]이/가 필요하다.','먼저 [học / trải nghiệm gì]-아/어야 한다.','또한 [thái độ gì]-는 태도를 가져야 한다.','마지막으로 [làm gì]-는 습관을 기르는 것이 중요하다.','이처럼 꾸준히 노력한다면 [điều tốt]-(으)ㄹ 수 있을 것이다.']}
+};
+var KREAL=[
+ {src:'Kỳ 102 · thang A',q:'디지털 소외 문제를 해결하기 위해 개인과 사회는 어떻게 해야 하는가?',s:[
+  ['Câu 1','이러한 문제를 해결하기 위해서는 개인과 사회 모두가 노력해야 한다.'],
+  ['Tầng 1 · cá nhân','개인의 경우 처음에는 익숙하지 않더라도 변화하는 시대에 뒤처지지 않게 디지털 기기의 사용법을 익히도록 해야 한다.'],
+  ['Tầng 3 · nhà nước','이를 위해서 정부에서는 디지털 소외 계층을 위한 지원 정책을 마련해서 모든 국민들이 일상에서 디지털 기술을 활용할 수 있게 하여 소외되는 사람들이 없도록 해야 한다.'],
+  ['Tầng 3 · thêm ý','그리고 디지털 인프라를 확충하여 지역과 계층에 무관하게 많은 사람들이 디지털 기술 발달의 혜택을 고르게 누릴 수 있도록 해야 한다.']]},
+ {src:'Kỳ 96 · thang A',q:'이런 문제를 해결하기 위해서는 어떻게 해야 하는가?',s:[
+  ['Câu 1 + tầng 1 · cá nhân','이러한 문제를 해결하기 위해서는 직장 내 개개인이 자율성을 가지면서도 업무를 수행할 때는 최대한 동료와 협업하고 서로를 배려하는 마음을 가질 필요가 있다.'],
+  ['Tầng 2 · công ty','또한 조직은 구성원의 자율성을 높이면서 조직의 목표를 성취하는 데 도움이 되는 방안을 고민해야 한다.'],
+  ['Tầng 2 · thêm ý','나아가 효율적인 의사소통 방안을 마련하여 구성원 간 원활한 협력이 가능하도록 해야 할 것이다.']]},
+ {src:'Kỳ 91 · thang B',q:'이런 문제들을 해결하기 위해서 어떤 방안이 필요한가?',s:[
+  ['Câu 1 + tầng 1 · luật','가짜 뉴스를 근절하기 위해서는 우선 제도적으로 가짜 뉴스의 생산과 유통이 불법적 행위임을 규정하고, 가짜 뉴스 단속을 위한 기구를 만들어 가짜 뉴스가 확산되지 않도록 규제를 강화해야 한다.'],
+  ['Tầng 2 · giáo dục','또한 각종 캠페인이나 교육을 통해 가짜 뉴스의 위험성과 위법성을 알리는 것 역시 필요하다.'],
+  ['Tầng 3 · công nghệ','나아가 정보의 진위를 판단하는 기술을 개발해 가짜 뉴스가 정보 수용자에게 전달되는 것을 방지하는 것도 좋은 방법일 것이다.']]},
+ {src:'Kỳ 83 · thang C',q:'창의력을 기르기 위해서 어떠한 노력을 할 수 있는가?',s:[
+  ['Câu 1 + việc 1 · hiểu biết','창의력을 기르기 위해서는 먼저 독서 및 다양한 경험을 통해 사고의 폭을 넓혀야 한다.'],
+  ['Việc 2 · thái độ','또한 눈에 보이는 현상에만 집중하는 것이 아니라 현상 뒤에 숨겨진 원인을 탐색하고 새로운 관점으로 문제에 접근하는 태도를 가져야 한다.'],
+  ['Việc 3 · thói quen','마지막으로 기존의 정답에만 머무는 것이 아니라 비판적 사고를 바탕으로 새로운 해결 방안이 없는지를 모색하는 노력을 기울여야 한다.']]},
+ {src:'Kỳ 52 · thang C',q:'의사소통을 원활하게 하는 방법은 무엇인가?',s:[
+  ['Câu 1','따라서 원활한 의사소통을 위한 적극적인 노력이 필요하다.'],
+  ['Việc 1 · nói','우선 상대를 배려하는 입장에서 말을 하는 자세가 필요하다. 나의 말이 상대를 불편하게 만드는 것은 아닌지 항상 생각하며 이야기하여야 한다.'],
+  ['Việc 2 · nghe','다음으로 다른 사람의 말을 잘 듣는 자세가 필요하다. 마음을 열고 다른 사람의 이야기를 듣는 것은 상대를 이해하는 데에 꼭 필요하기 때문이다.'],
+  ['Việc 3 · nhìn','마지막으로 서로의 입장에서 현상을 바라보는 자세가 필요하다. 이는 서로가 가질 수 있는 편견과 오해를 해결할 수 있는 역할을 하기 때문이다.']]}
+];
+var KW=[
+ {id:'K064',src:'Đề thật kỳ 64',t:'청소년기의 중요성',q:'청소년의 올바른 성장을 돕기 위해 어떤 노력이 필요한가?',qv:'Cần nỗ lực gì để giúp thanh thiếu niên trưởng thành đúng hướng?',th:'A',
+  ix:[['Tầng 1 · gia đình','Bố mẹ trò chuyện, lắng nghe con thay vì kiểm soát con','부모 · 통제하다 · 대화를 통해 · 고민에 귀를 기울이다'],['Tầng 2 · trường','Cho học sinh trải nghiệm nhiều hoạt động để tìm ra năng khiếu','학교 · 다양한 활동을 경험하다 · 적성을 찾다 · 돕다'],['Tầng 3 · nhà nước','Làm không gian văn hóa, chương trình tư vấn cho thanh thiếu niên','정부 · 문화 공간 · 상담 프로그램을 마련하다 · 건강하게 성장하다']],
+  md:['청소년의 올바른 성장을 돕기 위해서는 가정과 학교, 사회 모두의 노력이 필요하다.','먼저 부모는 자녀를 통제하기보다 대화를 통해 자녀의 고민에 귀를 기울여야 한다.','또한 학교는 학생들이 다양한 활동을 경험하며 자신의 적성을 찾을 수 있도록 도와야 한다.','나아가 정부는 청소년을 위한 문화 공간과 상담 프로그램을 마련하여 청소년들이 건강하게 성장하도록 해야 할 것이다.','이처럼 모두가 함께 노력한다면 청소년들은 혼란을 이겨 내고 건강한 어른으로 자랄 수 있을 것이다.']},
+ {id:'KP01',src:'Đề luyện 1',t:'반려동물을 키우는 사람의 증가',q:'반려동물 양육으로 생기는 문제를 해결하기 위해서 어떤 노력이 필요한가?',qv:'Cần nỗ lực gì để giải quyết các vấn đề do nuôi thú cưng gây ra (bỏ rơi thú nuôi, tiếng ồn, mâu thuẫn với hàng xóm)?',th:'A',
+  ix:[['Tầng 1 · người nuôi','Suy nghĩ kỹ xem có chịu trách nhiệm tới cùng được không rồi mới nhận nuôi','키우려는 사람 · 끝까지 책임지다 · 충분히 생각하다 · 입양하다'],['Tầng 2 · địa phương','Mở lớp dạy cách nuôi đúng (vệ sinh, giữ yên lặng)','지역 사회 · 올바른 양육 방법 · 교육 프로그램을 운영하다'],['Tầng 3 · nhà nước','Siết chế độ đăng ký thú nuôi để không ai bỏ rơi bừa bãi','정부 · 등록 제도를 강화하다 · 함부로 버리지 못하다']],
+  md:['반려동물 양육으로 생기는 문제를 해결하기 위해서는 주인과 사회 모두의 노력이 필요하다.','먼저 반려동물을 키우려는 사람은 끝까지 책임질 수 있는지 충분히 생각한 후에 입양해야 한다.','또한 지역 사회는 주인들이 올바른 양육 방법을 배울 수 있도록 교육 프로그램을 운영해야 한다.','나아가 정부는 반려동물 등록 제도를 강화하여 동물을 함부로 버리지 못하도록 해야 할 것이다.','이처럼 주인과 사회가 함께 노력한다면 사람과 동물이 더불어 행복하게 살 수 있을 것이다.']},
+ {id:'K108',src:'Đề kỳ 108 (đề nhớ lại)',t:'학생들의 바람직한 경쟁',q:'학교 교육에서 추구하는 바람직한 경쟁 방법은 무엇인가?',qv:'Cách cạnh tranh lành mạnh mà giáo dục ở trường nên hướng tới là gì?',th:'B',
+  ix:[['Tầng 1 · chế độ','Đánh giá cả quá trình và nỗ lực, không chỉ kết quả → bớt chạy theo điểm số','평가하는 방식을 마련하다 · 과정과 노력 · 지나친 성적 경쟁을 막다'],['Tầng 2 · giáo dục','Dạy thái độ giữ luật, cạnh tranh công bằng','교육을 통해 · 규칙을 지키다 · 공정하게 경쟁하다 · 중요성을 알리다'],['Tầng 3 · môi trường','Tạo lớp học hợp tác (bài tập nhóm) để cùng tiến bộ','모둠 과제 · 협력하는 수업 환경을 조성하다 · 함께 성장하다']],
+  md:['학교에서 바람직한 경쟁이 이루어지기 위해서는 여러 방면의 노력이 필요하다.','먼저 제도적으로 결과뿐만 아니라 과정과 노력을 평가하는 방식을 마련하여 지나친 성적 경쟁을 막아야 한다.','또한 교육을 통해 규칙을 지키며 공정하게 경쟁하는 태도의 중요성을 알리는 것도 필요하다.','나아가 모둠 과제처럼 친구와 협력하는 수업 환경을 조성하여 학생들이 경쟁 속에서도 함께 성장하도록 하는 것도 좋은 방법일 것이다.','이처럼 경쟁이 건강하게 이루어진다면 경쟁은 학생들을 성장시키는 좋은 자극이 될 수 있을 것이다.']},
+ {id:'K037',src:'Đề thật kỳ 37',t:'현대 사회에서 필요한 인재',q:'그러한 인재가 되기 위해서 어떤 노력이 필요합니까?',qv:'Để trở thành nhân tài như vậy (giỏi ngoại ngữ, có chuyên môn, hiểu văn hóa khác) cần nỗ lực gì?',th:'C',
+  ix:[['Việc 1 · hiểu biết','Học ngoại ngữ, tích lũy kiến thức chuyên ngành','외국어를 익히다 · 전문 분야 · 지식을 쌓다'],['Việc 2 · thái độ','Tôn trọng, chịu tìm hiểu văn hóa khác và người khác','다른 문화 · 존중하다 · 이해하려는 태도'],['Việc 3 · thói quen','Không sợ cái mới, học suốt đời','두려움을 갖지 않다 · 평생 배우는 습관을 기르다']],
+  md:['이러한 인재가 되기 위해서는 무엇보다 꾸준한 노력이 필요하다.','먼저 외국어를 익히고 자신의 전문 분야에 대한 지식을 꾸준히 쌓아야 한다.','또한 다른 문화와 다양한 사람을 존중하고 이해하려는 태도를 가져야 한다.','마지막으로 새로운 것을 배우는 데 두려움을 갖지 않고 평생 배우는 습관을 기르는 것이 중요하다.','이처럼 꾸준히 노력한다면 현대 사회가 원하는 인재로 성장할 수 있을 것이다.']},
+ {id:'K047',src:'Đề thật kỳ 47',t:'칭찬',q:'효과적인 칭찬의 방법은 무엇입니까?',qv:'Cách khen hiệu quả là gì?',th:'C',
+  ix:[['Việc 1','Khen quá trình, nỗ lực hơn là kết quả','결과보다는 · 과정과 노력을 칭찬하다'],['Việc 2 · thái độ','Nói cụ thể làm tốt điều gì, đừng khen chung chung','막연하게 · 구체적으로 말해 주다 · 태도'],['Việc 3 · thói quen','Khen ngay lúc đó, khen chân thành','바로 · 진심을 담아 · 칭찬하는 습관']],
+  md:['칭찬이 좋은 효과를 내기 위해서는 무엇보다 올바른 방법으로 칭찬하는 자세가 필요하다.','먼저 결과보다는 그 일을 해내기까지의 과정과 노력을 칭찬해야 한다.','또한 막연하게 칭찬하기보다 무엇을 잘했는지 구체적으로 말해 주는 태도를 가져야 한다.','마지막으로 칭찬할 일이 생겼을 때 바로 진심을 담아 칭찬하는 습관을 기르는 것이 중요하다.','이처럼 올바른 방법으로 칭찬한다면 칭찬은 상대를 성장시키는 큰 힘이 될 수 있을 것이다.']}
+];
+var KWID={};KW.forEach(function(it){KWID[it.id]=it;});
+(function(){var OA='A · Gần → xa (cá nhân → tổ chức → nhà nước)',OB='B · Theo cách làm (luật → giáo dục → công nghệ)',OC='C · Một người, 3 việc (hiểu biết → thái độ → thói quen)';
+CQ.gpt=[
+ ['청소년의 올바른 성장을 돕기 위해 가정, 학교, 사회는 어떻게 해야 하는가?',[OA,OB,OC],'Câu hỏi nêu sẵn 3 bên 가정 → 학교 → 사회, đúng 3 tầng của thang A.'],
+ ['외국어 실력을 높이기 위해서 어떤 노력을 할 수 있는가?',[OC,OA,OB],'Nỗ lực của một người → thang C: học gì (어휘, 문법) → thái độ (실수를 두려워하지 않다) → thói quen (매일 꾸준히).'],
+ ['음주 운전을 줄이기 위한 방안은 무엇인가?',[OB,OA,OC],'Hành vi xấu cần ngăn → thang B: 처벌을 강화하다 → 캠페인 → 기술 (술을 마시면 시동이 걸리지 않는 장치). Thang A cũng viết được.'],
+ ['노인 문제를 해결하기 위해 개인과 사회는 어떻게 해야 하는가?',[OA,OB,OC],'Câu hỏi nêu 개인과 사회 → thang A.'],
+ ['좋은 부모가 되기 위해서는 어떤 노력이 필요한가?',[OC,OA,OB],'Nỗ lực của một người (부모) → thang C: hiểu con → thái độ tôn trọng → thói quen dành thời gian trò chuyện.'],
+ ['사이버 폭력 문제를 해결하기 위해서 어떤 방안이 필요한가?',[OB,OA,OC],'Vấn đề cần ngăn chặn → thang B: 법으로 처벌하다 → 인터넷 윤리 교육 → 악성 댓글을 걸러 내는 기술. Thang A cũng được.'],
+ ['환경을 보호하기 위해서 개인과 기업, 정부는 어떻게 해야 하는가?',[OA,OB,OC],'3 bên 개인 → 기업 → 정부 = đúng 3 tầng của thang A.'],
+ ['효과적인 칭찬의 방법은 무엇인가? (kỳ 47)',[OC,OA,OB],'Hỏi “cách làm” của một người → thang C: 3 cách khen.']
+];})();
+TY.gp=[
+ ['Câu 1 · câu hỏi: 환경을 보호하기 위해 개인과 사회는 어떻게 해야 하는가?',['환경을 보호하기 위해서는 개인과 사회 모두의 노력이 필요하다.','환경을 보호하기 위해서는 개인과 사회 모두가 노력해야 한다.'],'Đổi “-기 위해 … 어떻게 해야 하는가?” thành “-기 위해서는 … 모두의 노력이 필요하다.”','…기 위해서는 … 모두의 노력이 필요하다'],
+ ['Tầng 1: 개인 / 일회용품 사용을 줄이다',['먼저 개인은 일회용품 사용을 줄여야 한다.'],'줄이다 → 줄여야 한다. Ý đầu mở bằng 먼저.','먼저 …은/는 …아/어야 한다'],
+ ['Tầng 2: 학교 / 학생들 / 스스로 공부하다 / 환경을 만들다',['또한 학교는 학생들이 스스로 공부할 수 있도록 환경을 만들어야 한다.'],'A은/는 B이/가 …(으)ㄹ 수 있도록 …아/어야 한다: 학교 làm việc gì để 학생들 làm được việc gì. 만들다 → 만들어야.','또한 …은/는 …이/가 …(으)ㄹ 수 있도록 …아/어야 한다'],
+ ['Tầng 3: 정부 / 지원 정책 / 노인들이 편하게 생활하다',['나아가 정부는 지원 정책을 마련하여 노인들이 편하게 생활하도록 해야 할 것이다.','나아가 정부는 지원 정책을 마련하여 노인들이 편하게 생활할 수 있도록 해야 할 것이다.'],'…을/를 마련하여 …도록 해야 할 것이다. Trước -도록 chỉ để gốc động từ: 생활하도록 (không viết 생활했도록).','나아가 …은/는 …을/를 마련하여 …도록 해야 할 것이다'],
+ ['Thang B · tầng 2: 캠페인 / 가짜 뉴스의 위험성 / 알리다',['또한 캠페인을 통해 가짜 뉴스의 위험성을 알리는 것도 필요하다.','또한 캠페인을 통해 가짜 뉴스의 위험성을 알려야 한다.'],'N을/를 통해 = thông qua N. 알리다 → 알리는 것도 필요하다 / 알려야 한다.','또한 …을/를 통해 …을/를 알리는 것도 필요하다'],
+ ['Thang C · việc 2: 실패를 두려워하지 않다 / thái độ',['또한 실패를 두려워하지 않는 태도를 가져야 한다.'],'Động từ + -는 태도: 두려워하지 않는 태도. 가지다 → 가져야.','또한 …는 태도를 가져야 한다'],
+ ['Thang C · việc 3: 매일 책을 읽다 / thói quen',['마지막으로 매일 책을 읽는 습관을 기르는 것이 중요하다.','마지막으로 매일 책을 읽는 습관을 길러야 한다.'],'…는 습관을 기르다 = tập thói quen …. Ý cuối của thang C mở bằng 마지막으로.','마지막으로 …는 습관을 기르는 것이 중요하다'],
+ ['Câu kết: 개인과 사회 / 함께 노력하다 / 다음 세대에게 깨끗한 환경을 물려주다',['이처럼 개인과 사회가 함께 노력한다면 다음 세대에게 깨끗한 환경을 물려줄 수 있을 것이다.'],'-ㄴ다면 … -(으)ㄹ 수 있을 것이다 = nếu … thì sẽ có thể …. Câu kết không bắt buộc, dùng khi đoạn còn thiếu chữ.','이처럼 …이/가 함께 노력한다면 …(으)ㄹ 수 있을 것이다']
+];
+function frameHTML(s){return esc(s).replace(/\[([^\]]+)\]/g,'<span class="sl">$1</span>');}
+function kfrHTML(th){var F=KFR[th];return '<div class="kfr"><h4>'+esc(F.n)+'</h4><ol>'+F.f.map(function(f,i){return '<li><span class="tg">'+esc(F.t[i])+'</span><span class="ko">'+frameHTML(f)+'</span></li>';}).join('')+'</ol></div>';}
+function kRealHTML(e){return '<div class="kex"><div class="hd">'+esc(e.src)+'</div><p class="q ko">• '+esc(e.q)+'</p><div class="kfr" style="border-width:1px;margin:0"><ol>'+
+  e.s.map(function(x){return '<li><span class="tg">'+esc(x[0])+'</span><span class="ko">'+hi(x[1])+'</span></li>';}).join('')+'</ol></div></div>';}
+function kDemoHTML(){
+  var md=['SNS를 바르게 사용하기 위해서는 개인과 사회 모두의 노력이 필요하다.','먼저 개인은 사용 시간을 스스로 정하고, 정보를 공유하기 전에 사실인지 확인해야 한다.','또한 가정과 학교는 청소년들이 SNS를 올바르게 이용할 수 있도록 미디어 교육을 실시해야 한다.','나아가 정부와 기업은 관련 제도를 마련하여 가짜 정보나 유해한 내용이 퍼지지 않도록 해야 할 것이다.','이처럼 개인과 사회가 함께 노력한다면 SNS는 더욱 유익한 소통의 도구가 될 수 있을 것이다.'];
+  return '<div class="de"><p class="q">• SNS를 바르게 사용하기 위해서는 어떻게 해야 하는가?</p></div>'+
+  '<div class="step"><b class="sn">Bước 1 · Nhận ra kiểu đoạn, chọn thang (10 giây)</b><span class="ko">어떻게 해야 하는가</span> = giải pháp. Chuyện chung của xã hội, không phải của một người → <b>thang A</b>.</div>'+
+  '<div class="step"><b class="sn">Bước 2 · Mỗi tầng một ý, nghĩ bằng tiếng Việt (1 phút)</b>Cá nhân: tự đặt giờ dùng, kiểm tra tin trước khi chia sẻ · Gia đình, trường: dạy trẻ cách dùng đúng · Nhà nước, công ty mạng: có quy định để tin giả, nội dung độc hại không lan ra.</div>'+
+  '<div class="step"><b class="sn">Bước 3 · Tìm cụm Hàn (mục 7)</b><span class="ko">사용 시간을 정하다 · 사실인지 확인하다 · 올바르게 이용하다 · 교육을 실시하다 · 제도를 마련하다 · 퍼지지 않도록</span></div>'+
+  '<div class="step"><b class="sn">Bước 4 · Lắp vào khung thang A</b><div class="kfr" style="border-width:1px;margin:6px 0 0"><ol>'+
+  md.map(function(s,i){return '<li><span class="tg">'+esc(KFR.A.t[i])+'</span><span class="ko">'+hi(s)+'</span></li>';}).join('')+'</ol></div>'+
+  '<p class="note">4 câu đầu = '+nch(md.slice(0,4).join(' '))+' chữ, thêm câu kết = '+nch(md.join(' '))+' chữ. Ba đoạn như vậy là đủ 600–700 chữ.</p></div>';
+}
+function kRec(id){var k=st.kd||(st.kd={});return k[id]||(k[id]={});}
+function kJoin(v){return (v||[]).filter(function(x){return x&&x.trim();}).map(function(x){return x.trim();}).join(' ');}
+function kParHTML(v){var p=kJoin(v),n=nch(p),c=n<180?'lo':(n<=250?'okc':'hi');
+  return p?'<div class="lbl">Đoạn của em</div><div class="kpar ko">'+esc(p)+'</div><div class="cnt"><span>Nên 180–250 chữ</span><b class="'+c+'">'+n+' chữ</b></div>':'';}
+function kwHTML(it){
+  var r=kRec(it.id),v=r.v||[],F=KFR[it.th],n=nch(kJoin(v));
+  var stt=r.s!=null?(r.s?'✅ Tự chấm: đạt':'Tự chấm: chưa đạt'):(r.sh?'Đã so mẫu':(n?n+' chữ':'Chưa viết'));
+  var h='<div class="task" id="KW'+it.id+'"><div class="hd"><b>'+esc(it.src)+' · <span class="ko">'+esc(it.t)+'</span></b><span class="st'+(r.s?' full':'')+'">'+stt+'</span></div><div class="bd">';
+  h+='<div class="de" style="margin-top:0"><p class="q">• '+esc(it.q)+'</p></div><p class="note">'+esc(it.qv)+'</p>';
+  h+='<p style="margin:4px 0">Đi theo <b>'+esc(F.n)+'</b>.</p><div class="btns"><button class="b" data-kidea="'+it.id+'">💡 '+(r.h?'Ẩn ý gợi ý':'Ý gợi ý')+'</button></div>';
+  if(r.h)h+='<div class="scroll"><table class="t"><tr><th>Tầng</th><th>Ý (tiếng Việt)</th><th>Cụm dùng được</th></tr>'+it.ix.map(function(x){return '<tr><td>'+esc(x[0])+'</td><td>'+esc(x[1])+'</td><td class="ko">'+esc(x[2])+'</td></tr>';}).join('')+'</table></div>';
+  F.f.forEach(function(f,i){
+    h+='<div class="kslot"><div class="lbl">'+esc(F.t[i])+'</div><div class="kf ko">'+frameHTML(f)+'</div><textarea class="ko" data-kd="'+it.id+'" data-ki="'+i+'" placeholder="Viết câu theo khung…">'+esc(v[i]||'')+'</textarea></div>';
+  });
+  h+='<div id="KP'+it.id+'">'+kParHTML(v)+'</div>';
+  h+='<div class="btns"><button class="b main" data-kcmp="'+it.id+'">'+(r.sh?'Ẩn đoạn mẫu':'So với đoạn mẫu')+'</button>';
+  if(r.sh)h+=' Em tự chấm: <button class="b'+(r.s===1?' on':'')+'" data-kself="'+it.id+'" data-v="1">Đạt</button><button class="b'+(r.s===0?' on':'')+'" data-kself="'+it.id+'" data-v="0">Chưa đạt</button>';
+  h+=' <button class="b" data-kredo="'+it.id+'">Viết lại</button></div>';
+  if(r.sh){
+    h+='<div class="model"><p class="pc">Từng câu so với câu mẫu cùng chỗ (vàng = em viết khác mẫu, xanh = mẫu có mà em chưa có; khác mẫu mà đúng ý vẫn được):</p>';
+    it.md.forEach(function(m,i){var e=(v[i]||'').trim();
+      h+='<div class="kcmp"><p class="pc">'+esc(F.t[i])+'</p>';
+      if(e){var c=cmp(e,m);h+='<p class="ko">Em ('+c.p+'%): '+marked(e,c.a,'wdm')+'</p><p class="ko">Mẫu: '+marked(m,c.b,'wdk')+'</p>';}
+      else h+='<p class="ko">Mẫu: '+esc(m)+'</p>';
+      h+='</div>';});
+    h+='<p class="pc">Cả đoạn mẫu ('+nch(it.md.join(' '))+' chữ):</p><p class="ko">'+hi(it.md.join(' '))+'</p></div>';
+  }
+  return h+'</div></div>';
+}
+function rerenderKw(id){$('KW'+id).outerHTML=kwHTML(KWID[id]);renderSum('k');}
+function kdRep(){
+  var L=['Câu 54 · Khung đoạn ① Giải pháp · '+(st.name||'(chưa ghi tên)'),cqLine('gpt','Chọn thang'),tyLine('gp','Ghép câu theo khung')];
+  TY.gp.forEach(function(q,i){var r=tyRec('gp')[i];if(r&&r.d&&tyOk('gp',i)!==1)L.push('  '+(i+1)+'. '+(r.v||'—')+' ['+(tyOk('gp',i)===0?'chưa đúng':'?')+']');});
+  KW.forEach(function(it){var r=(st.kd||{})[it.id];if(!r)return;var p=kJoin(r.v);if(!p)return;
+    L.push(it.src+' ('+it.t+') · '+nch(p)+' chữ'+(r.s!=null?' · tự chấm: '+(r.s?'đạt':'chưa đạt'):'')+':');L.push('  '+p);});
+  return L.join('\n');
+}
+function renderK(){
+  $('kFrames').innerHTML=kfrHTML('A')+kfrHTML('B')+kfrHTML('C');
+  $('kReal').innerHTML=KREAL.map(kRealHTML).join('');
+  $('kDemo').innerHTML=kDemoHTML();
+  $('kWrite').innerHTML=KW.map(kwHTML).join('');
+  renderCq('gpt');renderTy('gp');renderSum('k');
+}
+document.addEventListener('input',function(e){var t=e.target,d=t.dataset;if(d.kd==null)return;
+  var r=kRec(d.kd);r.v=r.v||[];r.v[+d.ki]=t.value;save();$('KP'+d.kd).innerHTML=kParHTML(r.v);
+  var s=document.querySelector('#sumk pre');if(s)s.textContent=report('k');});
+document.addEventListener('click',function(e){
+  var a=e.target.closest('[data-kgo]');if(a){e.preventDefault();var el=$(a.dataset.kgo);if(el)scrollTo(0,el.getBoundingClientRect().top+scrollY-70);return;}
+  var b=e.target.closest('button');if(!b)return;var d=b.dataset;
+  if(d.kidea){var r=kRec(d.kidea);r.h=r.h?0:1;save();rerenderKw(d.kidea);}
+  else if(d.kcmp){var r2=kRec(d.kcmp);if(!r2.sh&&nch(kJoin(r2.v))<40&&!confirm('Em chưa viết đoạn. Vẫn xem đoạn mẫu?'))return;r2.sh=r2.sh?0:1;save();rerenderKw(d.kcmp);}
+  else if(d.kself){kRec(d.kself).s=+d.v;save();rerenderKw(d.kself);}
+  else if(d.kredo){if(!confirm('Xóa đoạn em đã viết ở đề này để viết lại?'))return;st.kd[d.kredo]={};save();rerenderKw(d.kredo);}
 });
 
 /* ---- điều hướng ---- */
@@ -982,7 +1237,7 @@ function show(){
   st.tab=k;save();
 }
 $('ideaDemo').outerHTML=ideaHTML('W54_096');
-renderMcq(1);renderMcq(2);renderMcq(3);renderOl();renderTk(2);renderTk(3);renderSum(1);renderSum(2);renderSum(3);renderMau();renderCq('gm');renderTy('fix');renderCool();renderSum('c');
+renderMcq(1);renderMcq(2);renderMcq(3);renderOl();renderTk(2);renderTk(3);renderSum(1);renderSum(2);renderSum(3);renderMau();renderCq('gm');renderTy('fix');renderCool();renderSum('c');renderK();
 window.addEventListener('hashchange',function(){show();scrollTo(0,0);});show();
 </script>
 <script src="../danh-dau/dd.js"></script>
