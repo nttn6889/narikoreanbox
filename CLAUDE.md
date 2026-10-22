@@ -568,9 +568,9 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   Bảng kiến thức: câu ví dụ có nghĩa Việt (biến `EXV` theo id mẫu trong kho từ, `[…]` = phần ứng với mẫu); mỗi nhóm có nhãn `GN[id nhóm] = [T|C|L, ghi chú]`
   (T thay thế được · C thay được có điều kiện · L liệt kê, không thay cho nhau — mọi nhóm câu 1–2 là L, ghi rõ cặp nào trong nhóm thay được).
   Thêm/sửa mẫu trong nhóm `V01_*`/`V03_*` của kho từ thì thêm nghĩa vào `EXV` (mẫu chưa có nghĩa chỉ hiện câu Hàn).
-  Ngày 1–11 có phần **“2. Dịch câu”** (trước phần Luyện; cô muốn chiều **Hàn → Việt**): 3 câu ví dụ của nhóm hôm nay (`trPick`: nhóm câu 3–4 lấy mẫu đầu nhóm,
-  câu 1–2 lấy câu ngắn nhất), câu Hàn gạch chân ngữ pháp, học sinh gõ nghĩa tiếng Việt → “Xem bản dịch” (bản dịch `EXV` + nghĩa mẫu) → tự chấm Đúng ý / Chưa đúng
-  (`D.tr[id] = {t, c, m}`). Câu đang dịch mà chưa xem bản dịch thì bảng kiến thức tạm che nghĩa câu đó (`TRHIDE`).
+  Ngày 1–11 có phần **“2. Dịch câu · luyện chỗ hay nhầm”** (trước phần Luyện; chiều **Hàn → Việt**; cô muốn bám đúng “Chỗ hay nhầm” của ngày):
+  biến `TR[ngày] = [[câu Hàn có __ngữ pháp__, bản dịch có [phần ứng với mẫu], mẫu, nghĩa mẫu]]` (7–10 câu/ngày, Claude soạn; mỗi mẫu nêu trong `tip` một câu,
+  cặp dễ nhầm đứng cạnh nhau) → học sinh gõ nghĩa tiếng Việt → “Xem bản dịch” → tự chấm Đúng ý / Chưa đúng (`D.tr['t<ngày>_<i>'] = {t, c, m}`). Sửa `tip` thì sửa `TR` theo.
 
 ## Học câu 5 quảng cáo sản phẩm (`cau-5/`)
 - Cùng khung với `cau-16-18/`. Ý cô: học từ vựng gắn với cách ví von của quảng cáo, luyện **hai chiều** (đồ vật → chọn tất cả cụm của nó; quảng cáo → đồ vật).
