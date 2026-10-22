@@ -88,3 +88,32 @@ Học từ qua chữ Hán Việt giúp người Việt nhớ nhanh gấp đôi. 
 1. Đổi ảnh bìa, sửa tiểu sử.
 2. Đăng bài ghim, ghim lên đầu.
 3. Đăng #1, #2, #3 cách nhau 1–2 ngày, xen 1 bài ảnh lớp học thật. Sau đó mới đi comment đấu giá.
+
+---
+
+# Loạt "Đọc tiêu đề báo · Câu 25–27"
+
+Mỗi bài một nhóm nghĩa, chỉ chọn những cụm hay ra. Không đăng cả danh sách từ, không đặt link trang học liệu.
+Chụp ảnh: `node tools/chup_anh.js fb/ca-nhan/td-*.html` (khung `td.css`).
+
+## 5. Đọc tiêu đề báo #1 — Tăng – giảm (ảnh: td-01-tang-giam → td-01b-thu)
+
+Câu 25–27 TOPIK II là dạng nhiều em "sợ" nhất phần đầu đề đọc. Từ nào cũng biết mà ghép lại vẫn không hiểu tiêu đề nói gì.
+
+Lý do là báo Hàn rất ít khi viết 올랐다 hay 떨어졌다. Họ viết 껑충, 고공행진, 하늘 높은 줄 모르는…, đọc theo nghĩa đen thì chẳng thấy chữ "tăng" nào cả.
+
+Cô xem lại 63 tiêu đề câu 25–27 trong 21 đề đọc: **23 tiêu đề** là chuyện giá cả, tăng – giảm. Cứ 3 câu thì có hơn 1 câu rơi vào nhóm này.
+
+Ảnh 1 là 14 cách nói tăng – giảm hay gặp nhất. Ảnh 2 là câu 27 trong **đề thật TOPIK kỳ 91**. Em thử đọc rồi comment số đáp án nhé. Cô hỏi thêm một chữ: 기지개 nghĩa là gì? 😉
+
+Tối nay cô đăng đáp án và cách tách tiêu đề ở comment.
+
+#DocTieuDeBao #TOPIK2 #TuVungTOPIK #NariTOPIK
+
+**Comment đáp án** (đăng sau vài giờ, kèm ảnh `td-01c-dap-an.png`):
+
+Đáp án ① 대출 금리가 떨어지면서 부동산 시장이 살아나기 시작했다.
+기지개 là cái vươn vai sau khi ngủ dậy. Trên báo, 기지개(를 켜다) nghĩa là thị trường bắt đầu "tỉnh dậy", khởi sắc trở lại.
+Bạn nào chọn ③ là bị bẫy chiều ngược: 거래가 줄어들다 (giao dịch giảm) thì trái nghĩa với 기지개.
+Mẹo: dấu phẩy giữa hai nửa tiêu đề thường là **nguyên nhân → kết quả**.
+Bài sau cô viết tiếp về nhóm "được yêu thích, đông người" (열풍, 구름 관중, 북새통…) nhé. 💙
