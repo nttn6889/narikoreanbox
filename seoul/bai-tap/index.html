@@ -104,7 +104,7 @@ td.n{text-align:center;white-space:nowrap}
    thêm 5 từ gõ (E) và câu soạn tay `v` trong data/<cuốn>-<bài>.json (F).
    Ngữ pháp = `q` của data: t:'c' chọn (o[0] là đáp án, trang tự đảo; x[i] = ghi chú khi chọn lựa chọn i), t:'y' gõ (a: đáp án nhận, e: {sai hay gặp: ghi chú}, h: gợi ý),
    t:'d' dịch Việt → Hàn (a: câu mẫu, trùng thì máy tự nhận, khác thì em tự so). g = số thứ tự ngữ pháp (0 = tổng hợp). Thêm câu thì dùng id mới. */
-var LS=['1A-1','1A-2','1A-3'];
+var LS=['1A-1','1A-2','1A-3','2A-1','2A-2','2A-3'];
 var KEY='nari-sbt';
 var S=load();
 var VOC=null,BAI={},DATA={};
@@ -186,10 +186,12 @@ function renderHome(){
   document.querySelector('nav').hidden=true;
   var h='<ul class="intro"><li>Mỗi bài có 2 phần: <b>Từ vựng</b> (nghe, nghĩa, điền câu, gõ từ) và <b>Ngữ pháp</b> (chọn, gõ, dịch Việt → Hàn).</li>'+
     '<li>Làm câu nào máy chấm câu đó, có giải thích. Làm xong vào thẻ <b>Kết quả</b> bấm “Gửi kết quả cho cô”.</li>'+
-    '<li>Học lại từ: <a href="../#b=1A">bảng từ vựng Seoul</a> · ngữ pháp: <a href="../ngu-phap/#b=1A">giải thích ngữ pháp Seoul</a>.</li></ul>';
-  h+='<h2>Seoul 1A</h2><div class="lessons">';
+    '<li>Học lại từ: <a href="../">bảng từ vựng Seoul</a> · ngữ pháp: <a href="../ngu-phap/">giải thích ngữ pháp Seoul</a>.</li></ul>';
+  var bk='';
   LS.forEach(function(k){
-    var L=lesson(k),R=st(k),vs=vItems(L,R.sd),D=L.D;
+    var L=lesson(k);
+    if(L.b!==bk){h+=(bk?'</div>':'')+'<h2>Seoul '+L.b+'</h2><div class="lessons">';bk=L.b}
+    var R=st(k),vs=vItems(L,R.sd),D=L.D;
     var nv=vs.length+D.v.length,dv=vs.filter(function(it){return R.v[it.key]}).length+D.v.filter(function(q){return R.g[q.id]!=null}).length;
     var dg=D.q.filter(function(q){return R.g[q.id]!=null}).length;
     h+='<div class="ls"><b>Bài '+L.n+' · <span class="ko">'+esc(L.ko)+'</span></b><div class="note">'+esc(L.vi)+' · Từ vựng '+dv+'/'+nv+' · Ngữ pháp '+dg+'/'+D.q.length+'</div>'+
