@@ -493,6 +493,18 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   viết 5 phút (`PLAN[4]`). 54: văn viết + Cool TIP (`CQ.gm`), sửa câu (`TY.fix`), 28 đề sách (`CB`) thêm vào thẻ “Viết cả bài” (dàn ý sách `ol`, bài mẫu `model`).
   Bài lưu chung `st` của trang (nút “↺ Làm mới” xóa cả). Sửa đề trong `wbank` thì chép lại vào `QC`/`CB` của trang.
 
+## Giáo trình Quick TOPIK 쓰기 câu 54 (`viet-54/quick/` + thẻ “Quick TOPIK” ở viet-54)
+- File cô gửi 22/10/2026 (PDF scan): Unit 4 쓰기 54번 tr.138–177 (필수 표현 도입/전개/마무리, 6 문제 연습, Pass 전략, 어휘 연습 1–6) + Chapter 5 tr.180–237
+  (12 분야 주제 × 2 đề; 출제 비중 높은 어휘 경제 85 · 사회 115 · 삶과 생활 100 · 과학·IT 100 · 환경 100 · 교육 chỉ tới câu 52 — các chủ đề sau chưa có file).
+- Tài liệu gốc: `docs/Dquick`; `grammar/g_QUICK_54_01…24` = 24 nhóm biểu hiện (có dịch câu ví dụ), `25` Pass 전략, `26` Pass 정보, `27` 12 chủ đề, `28` 어휘 연습 1–6 (đáp án),
+  `29…34` từ vựng theo chủ đề; đề viết `wbank/WQ54_01…06` (6 đề luyện, sách không in bài mẫu → bài mẫu Claude soạn bằng biểu hiện của sách), đã đồng bộ `thi-thu/viet/`.
+- Trang `viet-54/quick/` (`noindex`; dữ liệu `data.js` biến `Q` = {G nhóm biểu hiện, E 6 đề, T 12 chủ đề, W từ vựng theo chủ đề, V bài từ 1–6, PASS}, sinh bằng script từ bản chép tay
+  — sửa thẳng `data.js` được): `#b=bh&g=<id nhóm d1…m5>` Biểu hiện (★ mẫu hay dùng, ví dụ tô vàng, “Em thử” 3 câu/nhóm) · `#b=lb` Luyện (12 câu chọn biểu hiện + 6 câu dịch Việt → Hàn tự chấm)
+  · `#b=de&e=WQ54_0n` 6 đề (bảng 생각해 보기, dàn ý gợi ý, bài mẫu tô biểu hiện, nút sang “Viết cả bài” của viet-54) · `#b=cd` 24 đề theo chủ đề (Claude tách 3 câu hỏi + gợi ý dàn ý)
+  · `#b=tu` Từ vựng (mỗi phần 20 câu, chạm câu rồi chạm từ trong hộp) · `#b=pass` Chiến lược + “Gửi kết quả cho cô”. localStorage `nari-54q`.
+- Đáp án bài từ 1–6 do Claude soạn (bài 3 sách in nhầm “문제2”; bài 3 câu 17 nhận cả 보완/정비; bài 6 hộp có “입장” thừa, “차이가 나다” dùng 2 lần).
+- viet-54 thẻ `#b=q` “Quick TOPIK”: Pass 정보, bảng biểu hiện của sách theo kiểu đoạn (link sang `quick/#b=bh&g=…`), 6 đề vào “Viết cả bài” (biến `QK`, cùng khuôn `CB`). Nav viet-54 giờ 9 thẻ (5 cột).
+
 ## Học câu 52 trong 3 buổi (`viet-52/`)
 - Trang học liệu gửi học sinh: Buổi 1 (ô cuối câu, 5 nhóm từ nối: 47, 41, 52, 92, 96, 36, 37), Buổi 2 (“Chép hay Lật” = tìm ý cho ô; đề 60, 83, 91, 64, 35),
   Buổi 3 (làm như thi, 6 phút/câu, không gợi ý: 93, 94, 95, 102), thẻ Bảng tra (9 nhóm tín hiệu → mẫu). Link `viet-52/#b=1|2|3|tra`.
