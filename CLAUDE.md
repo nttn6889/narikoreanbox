@@ -382,7 +382,7 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   core, goc (cấu tạo / nghĩa gốc), chia (bảng), chiaNote, tinh:[{t, c bối cảnh, lv mức lịch sự, ko, vi, why}] (bản đồ tình huống), rb (ràng buộc), sai:[{x, o, why}],
   pb:[{vs, d, ex}] (phân biệt), topik:[{src, ko, note}], hoi:[{q, a}] (Cô hỏi), luyen:[{q, o (lựa chọn đầu là đáp án), w}], em (Câu của em), co (ghi chú cô)}]`. `**chữ**` = tô đỏ.
   Tên mẫu, số trang + khung “📖 Sách viết gì” lấy từ `seoul/ngu-phap/np.json` theo (cuốn, bài, no).
-- Đã soạn: Seoul 1A Bài 1–3 + 2A Bài 1–3 + 3A Bài 1–3 (36 mẫu). Câu đề TOPIK dẫn trong `topik` chỉ ghi câu đã kiểm tra trong `thi-thu/de/`.
+- Đã soạn: Seoul 1A Bài 1–3 + 2A Bài 1–3 + 3A Bài 1–3 (36 mẫu) + 3 chuyên đề. Câu đề TOPIK dẫn trong `topik` chỉ ghi câu đã kiểm tra trong `thi-thu/de/`.
 - **Chuyên đề** (buổi gom các mẫu cùng chức năng nằm rải nhiều bài + ôn nền 1A–2B; cô chốt hướng học trước 3A theo nhóm): `data/cd-<id>.json` (thêm id vào biến `CDS`)
   = {t, ko, sub, tong, parts:[tên nửa buổi], p:[bước], co}; bước `{ref:'3A-1', no, part, m: phút, why}` dùng lại mẫu có sẵn, hoặc mẫu viết riêng cùng khung (`id` dạng `cd_…`, `t` tên,
   `src:{b,n,no}` để lấy khung “Sách viết gì”; mục nào thiếu thì trang bỏ qua). Link `#cd=` (danh sách), `#cd=gian-tiep` (giáo án buổi), `#cd=gian-tiep&g=3` (bước 3).
@@ -398,6 +398,10 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   `thoi-gian-ly-do` (Thời gian – lý do, ~1 tiếng 45, 8 bước): Nửa 1 thời gian = Bước 0 nền -고/-아서/-고 나서/-다가/-(으)면서 (2A-7) · -자마자 · -았다가 (3A-7);
   Nửa 2 lý do = Bước 0 nền -아서/-(으)니까/-기 때문에/N(이)라서 (2B-13) · -느라고 · -다(가) nguyên nhân (3A-8) · -거든요 (3A-6, phân biệt -거든 “nếu… thì” — lựa chọn nhiễu
   câu 1–2 kỳ 41, 91) · Tổng hợp (bảng chọn đuôi, 3 bẫy, 12 câu gồm câu 1–2 kỳ 35, 41, 60, 91, 96). Đáp án câu đề thật lấy theo `R` của `ngu-phap-12/`.
+  `tieu-tu` (Tiểu từ, ~1 tiếng 30, 7 bước): Nửa 1 phạm vi = Bước 0 nền 도 / 만 / 밖에 (+ phủ định) / số lượng + (이)나 (src 2A-9, cặp 70점이나 ↔ 70점밖에) ·
+  누구나 / 무슨 N(이)나 (ref 3A-2 mẫu 4) · 아무 N도 (3A-6; bảng 아무도 / 아무나 / 누구나, lỗi “ai cũng không” → 누구나 안); Nửa 2 chọn lựa = Bước 0 (이)나 “hoặc” + 4 nghĩa
+  của (이)나 (2A-1) · N(이)나 chọn tạm, rủ nhẹ (3A-4) · N(이)라도 (3A-5, phân biệt với (이)나, 만 / 밖에 / 조차) · Tổng hợp (bảng chọn tiểu từ, 12 câu gồm câu 1–2
+  Yonsei 3, HOT 2, HOT 5, kỳ 52). Câu dẫn trong đoạn văn lấy từ đề luyện trong `thi-thu/de/` (kỳ thật chỉ có kỳ 64 câu 1, kỳ 52 câu 2, kỳ 91 câu 38).
 
 ## Kiểm tra nền tảng Seoul (`seoul/kiem-tra/`)
 - Bài chẩn đoán cho học sinh học tiếp 3A: 53 câu (A từ vựng 12 · B chia đuôi gõ 10 · C tiểu từ 6 · D ngữ pháp theo bài 1B–2B 17 ·

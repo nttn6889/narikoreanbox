@@ -1,0 +1,1482 @@
+{
+ "id": "tieu-tu",
+ "t": "Tiểu từ",
+ "ko": "조사 · 서울대 한국어 3A",
+ "sub": "Gom trong một buổi: Seoul 3A Bài 2 (누구나 / 언제나 / 무슨 N(이)나), Bài 4 (N(이)나), Bài 5 (N(이)라도), Bài 6 (아무 N도) + ôn nền N도 / N만 / N밖에 / N(이)나 1–2",
+ "tong": {
+  "t": "Bốn tiểu từ 3A dựng trên tiểu từ 1A–2B",
+  "p": "Ở trường, 4 mẫu này rải qua Bài 2, 4, 5, 6. Gom lại vì đều là <b>tiểu từ gắn sau danh từ</b> và đều mọc từ tiểu từ đã học: <b>(이)나</b> xuất hiện 4 lần với 4 nghĩa (hoặc · những · ai cũng · hay là), <b>도</b> thành <b>아무 N도</b>. Buổi chia hai nửa: <b>phạm vi</b> (chỉ / cũng / tất cả / không gì) rồi <b>chọn lựa</b> (hoặc / tạm ổn / đành vậy). Thói quen cần tập: <b>nhìn vế sau</b> — khẳng định hay phủ định? rủ / đề nghị? — cũng là cách loại đáp án câu 1–2 TOPIK.",
+  "tb": [
+   [
+    "Mẫu 3A",
+    "Nghĩa",
+    "Dễ nhầm với",
+    "Sách"
+   ],
+   [
+    "누구나, 언제나, 무슨 N(이)나",
+    "ai / lúc nào / N gì cũng (khẳng định)",
+    "아무도, 아무나, -든지",
+    "3A Bài 2"
+   ],
+   [
+    "아무 N도 (아무도, 아무것도, 아무 데도)",
+    "không… nào cả (phủ định)",
+    "누구나, 아무거나",
+    "3A Bài 6"
+   ],
+   [
+    "N(이)나",
+    "hay là… (chọn tạm, rủ nhẹ)",
+    "(이)나 “hoặc” (2A-1), “những” (2B-18)",
+    "3A Bài 4"
+   ],
+   [
+    "N(이)라도",
+    "… cũng được (đành chọn, mức tối thiểu)",
+    "(이)나, N(이)라서, 밖에",
+    "3A Bài 5"
+   ]
+  ]
+ },
+ "parts": [
+  "Nửa 1 · Phạm vi: chỉ – cũng – tất cả – không gì",
+  "Nửa 2 · Chọn lựa: hoặc – hay là – đành vậy"
+ ],
+ "co": "Buổi khoảng 1 tiếng 30; lớp 1:1 có thể tách hai nửa. Nửa 1 học trước khi trường dạy Bài 2; 아무 N도 (Bài 6) học trước khá xa → tới Bài 6 mở lại bước đó, làm lại Luyện ngay. Nửa 2 trước Bài 4. Lỗi người Việt cần sửa ngay trên lớp: **누구나 + phủ định** (dịch “ai cũng không”), **아무것도 괜찮아요** (“gì cũng được”), **밖에 quên phủ định**.",
+ "p": [
+  {
+   "id": "cd_tt_nen1",
+   "t": "Bước 0 · Nền: N도 · N만 · N밖에 · số lượng + (이)나",
+   "cn": "Nền: cũng – chỉ – nhiều / ít",
+   "src": {
+    "b": "2A",
+    "n": 9,
+    "no": 4
+   },
+   "core": "Bốn tiểu từ cho biết người nói <b>nhìn sự việc thế nào</b>: <b>도</b> thêm vào (cũng); <b>만</b> giới hạn (chỉ); <b>밖에</b> “chỉ… thôi” — thấy ít, <b>luôn đi với phủ định</b>; số lượng + <b>(이)나</b> — thấy nhiều (những, tận). Cùng một con số: 70점<b>밖에</b> 안 돼요 (ít quá) ↔ 70점<b>이나</b> 돼요 (nhiều thế).",
+   "goc": "<b>도, 만</b> đứng thay 은/는, 이/가, 을/를 (không chồng: 저는도 ✗); với 에, 에서, 하고 thì gắn sau: 시장<b>에도</b>, 한국<b>에만</b>. <b>밖에</b> vốn là 밖 (bên ngoài) + 에: “ngoài cái đó ra thì <b>không</b>…” → vì vậy vế sau bắt buộc phủ định. Buổi này đi tiếp từ đây: 도 → <b>아무 N도</b> (không gì cả), (이)나 → <b>누구나</b> (ai cũng), (이)나 “hay là” và (이)라도 “… cũng được”.",
+   "chia": [
+    [
+     "Tiểu từ",
+     "Nghĩa",
+     "Vế sau",
+     "Ví dụ"
+    ],
+    [
+     "N도",
+     "cũng (thêm vào)",
+     "khẳng định / phủ định",
+     "저**도** 학생이에요."
+    ],
+    [
+     "N만",
+     "chỉ (giới hạn, trung tính)",
+     "khẳng định / phủ định",
+     "목은 안 아프고 기침**만** 해요."
+    ],
+    [
+     "N밖에",
+     "chỉ… thôi (thấy ít)",
+     "**chỉ phủ định**: 안, 못, 없다, 모르다",
+     "냉장고에 주스**밖에** 없어요."
+    ],
+    [
+     "số lượng + (이)나",
+     "những, tận (thấy nhiều)",
+     "khẳng định",
+     "영화를 열 **번이나** 봤어요."
+    ]
+   ],
+   "chiaNote": [
+    "**밖에** + khẳng định là sai: 물밖에 있어요 ✗ → 물**밖에** 없어요 / 물**만** 있어요.",
+    "Không chồng với 은/는, 이/가, 을/를: 저는도 ✗, 콜라를만 ✗. Với 에, 에서, 하고, (으)로 thì ghép: 학교**에도**, 집**에서만**, 친구**하고밖에**.",
+    "Số lượng + (이)나: có 받침 → 이나 (열 번**이나**), không → 나 (네 마리**나**). Sau số lượng hỏi: 몇 개**나** = “tận mấy cái” / “khoảng bao nhiêu”."
+   ],
+   "tinh": [
+    {
+     "t": "Gọi thêm",
+     "c": "Ở quán ăn, đã gọi canh.",
+     "lv": "lịch sự",
+     "ko": "김치찌개 하나 주세요. 공깃밥**도** 하나 주세요.",
+     "vi": "Cho một canh kimchi. Cho thêm một bát cơm nữa.",
+     "why": "Thêm vào thứ đã gọi → 도."
+    },
+    {
+     "t": "Đi khám",
+     "c": "Bác sĩ hỏi có sốt không.",
+     "lv": "lịch sự",
+     "ko": "열은 없어요. 기침**만** 조금 해요.",
+     "vi": "Không sốt. Chỉ hơi ho thôi.",
+     "why": "Giới hạn vào một triệu chứng, câu khẳng định → 만."
+    },
+    {
+     "t": "Than hết tiền",
+     "c": "Bạn rủ đi ăn đắt.",
+     "lv": "thân mật",
+     "ko": "미안, 지갑에 만 원**밖에** 없어.",
+     "vi": "Xin lỗi, trong ví tớ chỉ còn có 10.000 won.",
+     "why": "Thấy ít + 없다 → 밖에."
+    },
+    {
+     "t": "Phàn nàn chờ lâu",
+     "c": "Kể với bạn về xe buýt.",
+     "lv": "lịch sự",
+     "ko": "버스를 한 시간**이나** 기다렸어요.",
+     "vi": "Tôi đã chờ xe buýt tận một tiếng.",
+     "why": "Thấy nhiều, bực → số lượng + 이나."
+    }
+   ],
+   "rb": [
+    [
+     "Vị trí",
+     "Thay 은/는, 이/가, 을/를; đứng sau 에, 에서, 하고, (으)로."
+    ],
+    [
+     "밖에",
+     "Vế sau luôn phủ định (안, 못, 없다, 모르다, 아니다)."
+    ],
+    [
+     "Số lượng + (이)나",
+     "Nói “nhiều hơn mong đợi”, kèm ngạc nhiên / phàn nàn / khen. Thấy ít → 밖에 / 만."
+    ]
+   ],
+   "sai": [
+    {
+     "x": "저는**도** 커피를 좋아해요.",
+     "o": "저**도** 커피를 좋아해요.",
+     "why": "도 thay cho 는, không chồng."
+    },
+    {
+     "x": "냉장고에 물**밖에** 있어요.",
+     "o": "냉장고에 물**밖에** 없어요. / 물**만** 있어요.",
+     "why": "밖에 cần phủ định."
+    },
+    {
+     "x": "한국어를 1년**밖에** 배웠어요.",
+     "o": "한국어를 1년**밖에** 안 배웠어요.",
+     "why": "Quên 안 — lỗi hay gặp nhất."
+    },
+    {
+     "x": "(ý: chỉ có 1.000 won, ít) 돈이 천 원**이나** 없어요.",
+     "o": "돈이 천 원**밖에** 없어요.",
+     "why": "Thấy ít → 밖에. 이나 là thấy nhiều."
+    }
+   ],
+   "pb": [
+    {
+     "vs": "N만 ↔ N밖에",
+     "d": "Cùng nghĩa “chỉ”. <b>만</b> trung tính, dùng cả câu khẳng định lẫn phủ định. <b>밖에</b> nhấn “chỉ có thế, ít quá”, chỉ đi với phủ định.",
+     "ex": [
+      [
+       "냉장고에 물**만** 있어요.",
+       "Trong tủ lạnh chỉ có nước."
+      ],
+      [
+       "냉장고에 물**밖에** 없어요.",
+       "Tủ lạnh chẳng có gì ngoài nước."
+      ],
+      [
+       "냉장고에 물**만** 없어요.",
+       "Tủ lạnh chỉ thiếu mỗi nước (thứ khác có đủ)."
+      ]
+     ]
+    },
+    {
+     "vs": "N밖에 ↔ số lượng + (이)나",
+     "d": "Cùng một sự thật, thái độ ngược nhau: 밖에 + phủ định = thấy ít; (이)나 = thấy nhiều.",
+     "ex": [
+      [
+       "물이 반**밖에** 없어요.",
+       "Nước chỉ còn có một nửa."
+      ],
+      [
+       "물이 반**이나** 있어요.",
+       "Nước còn những một nửa."
+      ]
+     ]
+    }
+   ],
+   "topik": [
+    {
+     "src": "Đọc câu 29 · đề luyện New TOPIK (Đề 1)",
+     "ko": "시험에서 똑같이 70점을 받아도 ‘점수가 70점**이나** 된다.’라고 말하는 사람이 있고 ‘70점**밖에** 안 된다.’라고 말하는 사람이 있다.",
+     "note": "Cùng điểm, hai thái độ: 이나 thấy nhiều (lạc quan), 밖에 + 안 thấy ít. Đoạn văn nói về cách nhìn tích cực / tiêu cực — hiểu cặp này là hiểu ý đoạn."
+    },
+    {
+     "src": "Đọc câu 21 · đề luyện Yonsei (Đề 2)",
+     "ko": "‘반**밖에** 없는’ 물이 ‘반**이나** 있는’ 물로 바뀔 수 있는 것이다.",
+     "note": "Cốc nước nửa vơi – nửa đầy: đổi 밖에 없다 → 이나 있다 = đổi cách nhìn."
+    },
+    {
+     "src": "Đọc câu 42 · đề luyện Yonsei (Đề 2)",
+     "ko": "등록금 마련을 위해 이번 학기에 아르바이트를 몇 개**나** 하고 있지만 …",
+     "note": "몇 개나 = tận mấy việc làm thêm — người kể thấy nhiều, thương bạn vất vả."
+    }
+   ],
+   "hoi": [
+    {
+     "q": "Bạn hỏi “돈 있어?”, em chỉ có 5.000 won và muốn nói “ít lắm”. Nói thế nào?",
+     "a": "5천 원<b>밖에</b> 없어. (Hoặc 5천 원<b>만</b> 있어 — trung tính hơn.) Không nói 5천 원이나 있어 — nghe như khoe nhiều."
+    },
+    {
+     "q": "커피를 세 잔이나 마셨어요 ↔ 커피를 세 잔만 마셨어요 khác nhau thế nào?",
+     "a": "<b>이나</b>: người nói thấy 3 cốc là nhiều (uống nhiều quá). <b>만</b>: chỉ 3 cốc, không hơn."
+    }
+   ],
+   "luyen": [
+    {
+     "q": "냉장고에 우유(    ) 없어요. 다른 건 하나도 없어요.",
+     "o": [
+      "밖에",
+      "만",
+      "도",
+      "이나"
+     ],
+     "w": "Ngoài sữa không có gì → 밖에 + 없다. 우유만 없어요 = chỉ thiếu sữa (ngược nghĩa)."
+    },
+    {
+     "q": "주말에 영화를 다섯 편(    ) 봤어요. 그래서 눈이 너무 아파요.",
+     "o": [
+      "이나",
+      "밖에",
+      "만",
+      "도"
+     ],
+     "w": "Thấy nhiều (xem nhiều đến đau mắt) → 이나."
+    },
+    {
+     "q": "A: 그 영화 정말 재미있었어요. B: 저(    ) 봤어요. 정말 재미있었죠?",
+     "o": [
+      "도",
+      "만",
+      "밖에",
+      "이나"
+     ],
+     "w": "Thêm vào: tôi cũng xem → 도."
+    },
+    {
+     "q": "시험이 내일인데 단어를 반(    ) 못 외웠어요.",
+     "o": [
+      "밖에",
+      "이나",
+      "도",
+      "만이"
+     ],
+     "w": "Thấy ít + 못 → 밖에."
+    },
+    {
+     "q": "Câu nào **sai**?",
+     "o": [
+      "한국어를 6개월밖에 배웠어요.",
+      "한국어를 6개월밖에 안 배웠어요.",
+      "한국어를 6개월만 배웠어요.",
+      "한국어를 6개월이나 배웠어요."
+     ],
+     "w": "밖에 phải có phủ định (안 배웠어요)."
+    }
+   ],
+   "em": [
+    "Viết hai câu về cùng một con số trong đời em: một câu thấy nhiều (이나), một câu thấy ít (밖에 + 안 / 없다). Ví dụ: 어제 잠을 다섯 시간…"
+   ],
+   "co": "Ôn nhanh: cô nói một con số (“한국어 1년”, “돈 만 원”, “잠 4시간”), em nói hai câu: thấy nhiều (이나) và thấy ít (밖에 + phủ định). Bẫy lớn nhất: quên phủ định sau 밖에. Bước này dẫn sang 아무 N도 (cũng phủ định) và các nghĩa khác của (이)나.",
+   "part": 0,
+   "m": 15
+  },
+  {
+   "ref": "3A-2",
+   "no": 4,
+   "part": 0,
+   "m": 10,
+   "why": "Từ hỏi + (이)나 = ai / lúc nào / gì cũng — không ngoại lệ"
+  },
+  {
+   "id": "cd_tt_amu",
+   "t": "아무 N도 (아무도 · 아무것도 · 아무 데도)",
+   "cn": "Phủ định toàn bộ",
+   "src": {
+    "b": "3A",
+    "n": 6,
+    "no": 2
+   },
+   "core": "<b>아무</b> (bất kỳ) + N + <b>도</b> + <b>phủ định</b> = “không… nào cả”: <b>아무도</b> (không ai), <b>아무것도</b> (không gì), <b>아무 데도</b> (không đâu), <b>아무</b> N<b>도</b> (không N nào). Là mặt phủ định của 누구나 / 무엇이나.",
+   "goc": "<b>아무</b> = “bất kỳ (ai / cái gì), không chỉ định”. + <b>도</b> (cũng) + phủ định: “bất kỳ ai cũng không” = không ai. + <b>(이)나</b> + khẳng định: <b>아무나</b>, <b>아무거나</b> = ai / cái gì cũng được (tùy). Tiếng Việt “ai cũng không biết” dịch từng chữ thành 누구나 몰라요 — lỗi người Việt hay mắc nhất ở mẫu này.",
+   "chia": [
+    [
+     "Hỏi về",
+     "Phủ định (… 도 + 안 / 못 / 없다)",
+     "“… cũng được” (… (이)나)",
+     "“tất cả” (từ hỏi + (이)나)"
+    ],
+    [
+     "người",
+     "**아무도** 안 왔어요",
+     "**아무나** 오세요",
+     "**누구나** 알아요"
+    ],
+    [
+     "vật",
+     "**아무것도** 없어요",
+     "**아무거나** 주세요",
+     "**무엇이나** 잘 먹어요"
+    ],
+    [
+     "nơi",
+     "**아무 데도** 안 가요",
+     "**아무 데나** 앉으세요",
+     "**어디나** 사람이 많아요"
+    ],
+    [
+     "N",
+     "**아무** 말**도** 안 해요",
+     "**아무** 말**이나** 하세요",
+     "**무슨** 말**이나** 다 해요"
+    ]
+   ],
+   "chiaNote": [
+    "Có trợ từ khác thì gắn trước 도: **아무에게도** 말하지 마 · **아무하고도** 이야기하지 않아요.",
+    "아무도 đã thay 이/가, 을/를: 아무가도 ✗, 아무를도 ✗ → **아무도**.",
+    "Phủ định gồm cả 아니다, 모르다, -지 말다: **아무것도** 아니에요 (không có gì đâu), **아무** 말**도** 하지 마세요.",
+    "Văn viết: **아무런** N**도** (아무런 문제도 없다), **아무런** N 없이 (không có bất kỳ… nào)."
+   ],
+   "tinh": [
+    {
+     "t": "Được rủ cuối tuần",
+     "c": "Bạn hỏi Chủ nhật có rảnh không (tên Bài 6).",
+     "lv": "lịch sự",
+     "ko": "일요일에는 **아무** 약속**도** 없어요.",
+     "vi": "Chủ nhật tôi không có hẹn gì cả.",
+     "why": "Nhấn “không có hẹn nào” → rủ được."
+    },
+    {
+     "t": "Đói cả ngày",
+     "c": "Về nhà, nói với mẹ.",
+     "lv": "thân mật",
+     "ko": "엄마, 하루 종일 **아무것도** 못 먹었어.",
+     "vi": "Mẹ ơi, cả ngày con chưa ăn được gì.",
+     "why": "아무것도 + 못."
+    },
+    {
+     "t": "Giữ bí mật",
+     "c": "Kể chuyện riêng cho bạn thân.",
+     "lv": "thân mật",
+     "ko": "이건 비밀이니까 **아무에게도** 말하지 마.",
+     "vi": "Đây là bí mật nên đừng nói với ai nhé.",
+     "why": "Trợ từ 에게 trước 도; -지 말다 cũng là phủ định."
+    },
+    {
+     "t": "Gọi món",
+     "c": "Bạn hỏi muốn ăn gì.",
+     "lv": "thân mật",
+     "ko": "난 **아무거나** 괜찮아.",
+     "vi": "Tớ món gì cũng được.",
+     "why": "Khẳng định “gì cũng được” → 아무거나, không phải 아무것도."
+    },
+    {
+     "t": "Giấu đồ",
+     "c": "Bạn thấy em cầm gì đó, hỏi “뭐예요?”.",
+     "lv": "lịch sự",
+     "ko": "이거요? **아무것도** 아니에요.",
+     "vi": "Cái này á? Không có gì đâu.",
+     "why": "Phủ định bằng 아니다."
+    }
+   ],
+   "rb": [
+    [
+     "Vế sau",
+     "Luôn phủ định: 안 / 못, 없다, 모르다, 아니다, -지 말다. Khẳng định → 아무나 / 아무거나 / 누구나."
+    ],
+    [
+     "Trợ từ",
+     "아무도, 아무것도 thay 이/가, 을/를. Trợ từ khác đứng trước 도: 아무에게도, 아무하고도."
+    ],
+    [
+     "Viết",
+     "아무것 viết liền; 아무 데, 아무 말, 아무 일 viết cách."
+    ]
+   ],
+   "sai": [
+    {
+     "x": "(ý: không ai biết) **누구나** 몰라요.",
+     "o": "**아무도** 몰라요.",
+     "why": "Dịch “ai cũng không biết” từng chữ. Phủ định → 아무도."
+    },
+    {
+     "x": "(ý: gì cũng được) **아무것도** 괜찮아요.",
+     "o": "**아무거나** 괜찮아요.",
+     "why": "Khẳng định → 아무거나."
+    },
+    {
+     "x": "주말에 **아무 데도** 갔어요.",
+     "o": "주말에 **아무 데도** 안 갔어요.",
+     "why": "Thiếu phủ định."
+    },
+    {
+     "x": "(ý: đừng nói với ai cả) **아무에게나** 말하지 마.",
+     "o": "**아무에게도** 말하지 마.",
+     "why": "아무에게나 말하지 마 = đừng nói bừa với bất kỳ ai (người tin cậy thì được) — nghĩa khác."
+    }
+   ],
+   "pb": [
+    {
+     "vs": "아무도 ↔ 아무나 ↔ 누구나",
+     "d": "<b>아무도</b> + phủ định: không ai. <b>아무나</b> + khẳng định: ai cũng được (không chọn, đôi khi “tùy tiện”). <b>누구나</b> + khẳng định: mọi người đều (sự thật chung).",
+     "ex": [
+      [
+       "**아무도** 안 왔어요.",
+       "Không ai đến cả."
+      ],
+      [
+       "**아무나** 들어오세요.",
+       "Ai vào cũng được."
+      ],
+      [
+       "**누구나** 들어올 수 있어요.",
+       "Ai cũng vào được (mọi người đều có quyền)."
+      ]
+     ]
+    },
+    {
+     "vs": "아무것도 ↔ 하나도 / 전혀",
+     "d": "<b>아무것도</b> đứng ở chỗ danh từ (chủ ngữ / tân ngữ). <b>하나도</b> (không chút nào), <b>전혀</b> (hoàn toàn không) là phó từ, đi được với tính từ.",
+     "ex": [
+      [
+       "**아무것도** 안 먹었어요.",
+       "Không ăn gì cả."
+      ],
+      [
+       "**하나도** 안 매워요.",
+       "Chẳng cay chút nào."
+      ]
+     ]
+    }
+   ],
+   "topik": [
+    {
+     "src": "Đọc câu 23 · đề luyện Yonsei (Đề 5)",
+     "ko": "나는 집에 돌아와서 불편한 마음으로 한동안 **아무** 말**도** 없이 방에 혼자 있었던 기억이 있다.",
+     "note": "Đây là câu gạch chân câu 23 (tâm trạng): 아무 말도 없이 + 혼자 → khó chịu, áy náy."
+    },
+    {
+     "src": "Đọc câu 42 · đề luyện HOT TOPIK (Đề 1)",
+     "ko": "누구라도 엄마의 눈빛을 봤다면 절대로 **아무** 말**도** 하지 못할 것이다.",
+     "note": "아무 말도 못 하다 = cứng họng (sợ, choáng). Câu có cả 누구라도 (dù là ai) — Nửa 2."
+    },
+    {
+     "src": "Đọc câu 12 · đề luyện TOPIK 300⁺ (Đề 2)",
+     "ko": "지난 주말 **아무것도** 하지 않기 위해 모인 사람들이 있다.",
+     "note": "Câu mở đoạn tin: sự kiện “không làm gì cả” — hiểu 아무것도 + 않다 là nắm chủ đề."
+    },
+    {
+     "src": "Đọc câu 48 · đề luyện HOT TOPIK (Đề 1)",
+     "ko": "… 초소형 카메라가 **아무런** 제약 없이 판매되고 있기 때문이다.",
+     "note": "Văn báo: 아무런 + N + 없이 = không có bất kỳ … nào."
+    }
+   ],
+   "hoi": [
+    {
+     "q": "“Gì cũng được” và “không có gì” — 아무거나 hay 아무것도?",
+     "a": "Gì cũng được → <b>아무거나</b> (khẳng định). Không có gì → <b>아무것도</b> + 없어요 / 아니에요."
+    },
+    {
+     "q": "이 얘기는 아무에게도 하지 마 ↔ 아무에게나 하지 마 khác gì?",
+     "a": "<b>아무에게도</b>: đừng nói với ai cả. <b>아무에게나</b>: đừng nói bừa với bất kỳ ai."
+    }
+   ],
+   "luyen": [
+    {
+     "q": "방학 때 (    ) 안 가고 집에서 쉬었어요.",
+     "o": [
+      "아무 데도",
+      "아무 데나",
+      "어디나",
+      "어디에서나"
+     ],
+     "w": "안 가다 (phủ định) → 아무 데도."
+    },
+    {
+     "q": "배고파. 냉장고에 먹을 게 (    ) 없어?",
+     "o": [
+      "아무것도",
+      "아무거나",
+      "무엇이나",
+      "뭐든지"
+     ],
+     "w": "없다 → 아무것도."
+    },
+    {
+     "q": "A: 뭐 마실래? B: (    ) 괜찮아.",
+     "o": [
+      "아무거나",
+      "아무것도",
+      "누구나",
+      "아무 데도"
+     ],
+     "w": "Khẳng định “gì cũng được” → 아무거나."
+    },
+    {
+     "q": "이 일은 비밀이에요. (    ) 말하지 마세요.",
+     "o": [
+      "아무에게도",
+      "아무에게나",
+      "누구에게나",
+      "아무도에게"
+     ],
+     "w": "Phủ định (-지 말다), trợ từ 에게 trước 도."
+    },
+    {
+     "q": "Câu nào **đúng**?",
+     "o": [
+      "하루 종일 아무것도 못 먹었어요.",
+      "하루 종일 아무것도 먹었어요.",
+      "하루 종일 누구나 못 먹었어요.",
+      "하루 종일 아무거나 못 먹었어요."
+     ],
+     "w": "아무것도 + 못 = không ăn được gì."
+    }
+   ],
+   "em": [
+    "Kể một ngày em “không làm gì cả” bằng 3 câu: 아무것도 / 아무도 / 아무 데도 + phủ định.",
+    "Trả lời bạn hỏi “주말에 시간 있어?” bằng 아무 약속도 없어 + lời rủ."
+   ],
+   "co": "Cô hỏi nhanh (뭐 먹었어요? 누구 만났어요? 어디 갔어요?) — em trả lời phủ định hết: 아무것도 안…, 아무도 안…, 아무 데도 안…. Rồi đổi: “뭐 먹을래요?” → em phải chuyển sang 아무거나. Lỗi người Việt: 누구나 + phủ định (dịch “ai cũng không”), 아무것도 괜찮아요. Bài 6 sách còn -거든요 (chuyên đề Thời gian – lý do) và bị động (chuyên đề 7).",
+   "part": 0,
+   "m": 15
+  },
+  {
+   "id": "cd_tt_nen2",
+   "t": "Bước 0 · Nền chọn lựa: N(이)나 “hoặc” và bốn nghĩa của (이)나",
+   "cn": "Nền: lựa chọn",
+   "src": {
+    "b": "2A",
+    "n": 1,
+    "no": 4
+   },
+   "core": "(이)나 2A Bài 1 = “hoặc”: N(이)나 N, chọn một trong các thứ giống nhau. Đến 3A, cùng hình thức <b>(이)나</b> có <b>4 nghĩa</b> — phân biệt bằng <b>chỗ đứng</b> (sau hai danh từ, sau số lượng, sau từ hỏi, sau một danh từ) và <b>vế sau</b>.",
+   "goc": "Gốc chung của (이)나 là “chọn một, không cố định”: chọn một trong hai (<b>hoặc</b>) → chọn cái nào cũng vậy (<b>누구나</b> — ai cũng) → chọn tạm cái này cũng được (<b>hay là</b>, 3A Bài 4). Còn số lượng + (이)나 (2B Bài 18) mang thái độ “nhiều thế”. Động / tính từ “hoặc” dùng <b>-거나</b>.",
+   "chia": [
+    [
+     "Chỗ đứng",
+     "Nghĩa",
+     "Ví dụ",
+     "Sách"
+    ],
+    [
+     "N(이)나 N",
+     "hoặc",
+     "커피**나** 녹차 있어요?",
+     "2A Bài 1"
+    ],
+    [
+     "số lượng + (이)나",
+     "những, tận (thấy nhiều)",
+     "세 시간**이나** 기다렸어요.",
+     "2B Bài 18"
+    ],
+    [
+     "từ hỏi + (이)나",
+     "ai / gì / đâu… cũng",
+     "**누구나** 할 수 있어요.",
+     "3A Bài 2"
+    ],
+    [
+     "một N + (이)나 + rủ / định",
+     "hay là… (chọn tạm)",
+     "주말에 영화**나** 볼까요?",
+     "3A Bài 4"
+    ]
+   ],
+   "chiaNote": [
+    "Có 받침 → 이나, không → 나: 빵**이나**, 사과**나**.",
+    "Động / tính từ “hoặc” → **-거나**: 영화를 보**거나** 운동을 해요 (kỳ 64 câu 1).",
+    "(이)나 đứng thay 을/를, 이/가 ở danh từ trước; trợ từ đặt ở danh từ cuối: 빵**이나** 과일**을** 먹어요."
+   ],
+   "tinh": [
+    {
+     "t": "Hỏi quán",
+     "c": "Vào quán cà phê nhỏ.",
+     "lv": "lịch sự",
+     "ko": "커피**나** 녹차 있어요?",
+     "vi": "Có cà phê hoặc trà xanh không ạ?",
+     "why": "Hai danh từ → hoặc."
+    },
+    {
+     "t": "Kể thói quen",
+     "c": "Bạn hỏi cuối tuần làm gì.",
+     "lv": "lịch sự",
+     "ko": "주말에는 보통 영화를 보**거나** 운동을 해요.",
+     "vi": "Cuối tuần tôi thường xem phim hoặc tập thể dục.",
+     "why": "Động từ → -거나."
+    },
+    {
+     "t": "Rủ nhẹ (xem trước Bài 4)",
+     "c": "Chiều chán, nhắn bạn.",
+     "lv": "thân mật",
+     "ko": "심심한데 영화**나** 볼까?",
+     "vi": "Chán quá, hay là xem phim nhỉ?",
+     "why": "Một danh từ + lời rủ → hay là."
+    }
+   ],
+   "rb": [
+    [
+     "Loại từ",
+     "Chỉ danh từ. Động / tính từ “hoặc”: -거나."
+    ],
+    [
+     "Nhận nghĩa",
+     "Hai danh từ nối nhau → hoặc; sau số lượng → nhiều; sau từ hỏi → tất cả; một danh từ + rủ / định → hay là."
+    ]
+   ],
+   "sai": [
+    {
+     "x": "영화를 **보나** 운동을 해요.",
+     "o": "영화를 보**거나** 운동을 해요.",
+     "why": "Động từ → -거나."
+    },
+    {
+     "x": "아침에 빵**나** 과일을 먹어요.",
+     "o": "아침에 빵**이나** 과일을 먹어요.",
+     "why": "빵 có 받침 → 이나."
+    }
+   ],
+   "pb": [
+    {
+     "vs": "N(이)나 ↔ V-거나",
+     "d": "Cùng nghĩa “hoặc”: danh từ dùng (이)나, động / tính từ dùng -거나.",
+     "ex": [
+      [
+       "주말에는 영화**나** 연극을 봐요.",
+       "Cuối tuần tôi xem phim hoặc kịch."
+      ],
+      [
+       "주말에는 영화를 보**거나** 쉬어요.",
+       "Cuối tuần tôi xem phim hoặc nghỉ ngơi."
+      ]
+     ]
+    }
+   ],
+   "topik": [
+    {
+     "src": "Đọc · kỳ 64 câu 1",
+     "ko": "나는 주말에는 보통 영화를 (**보거나**) 운동을 한다. · nhiễu: 보지만 / 보려고 / 보더니",
+     "note": "“Hoặc” ở động từ → -거나. 보통 cho biết là thói quen chọn một trong hai."
+    },
+    {
+     "src": "Đọc câu 42 · đề luyện New TOPIK (Đề 3)",
+     "ko": "… 아직 결정권이 없으니 시킨 일**이나** 열심히 하라는 대답만 들었다.",
+     "note": "(이)나 nghĩa “thôi cứ… đi” (3A Bài 4) — giọng coi nhẹ: nhân vật bị gạt đi, thất vọng."
+    }
+   ],
+   "hoi": [
+    {
+     "q": "Đoán nghĩa (이)나: ① 두 시간이나 기다렸어요 ② 빵이나 떡을 사요 ③ 누구나 알아요 ④ 차나 한잔할까요?",
+     "a": "① nhiều (2B-18) · ② hoặc (2A-1) · ③ tất cả (3A-2) · ④ hay là (3A-4)."
+    }
+   ],
+   "luyen": [
+    {
+     "q": "주말에 등산(    ) 수영을 하고 싶어요.",
+     "o": [
+      "이나",
+      "나",
+      "도",
+      "밖에"
+     ],
+     "w": "등산 có 받침 → 이나 (hoặc)."
+    },
+    {
+     "q": "“커피를 다섯 잔이나 마셨어요” nghĩa là gì?",
+     "o": [
+      "Uống tận 5 cốc (thấy nhiều)",
+      "Uống 5 cốc hoặc hơn",
+      "Uống cà phê hoặc thứ khác",
+      "Chỉ uống 5 cốc thôi"
+     ],
+     "w": "Số lượng + (이)나 = thấy nhiều."
+    },
+    {
+     "q": "주말에는 책을 (    ) 음악을 들어요.",
+     "o": [
+      "읽거나",
+      "읽이나",
+      "읽나",
+      "읽어나"
+     ],
+     "w": "Động từ → -거나."
+    },
+    {
+     "q": "Câu nào có (이)나 = “gì cũng”?",
+     "o": [
+      "무슨 음식이나 잘 먹어요.",
+      "사과나 배를 살까요?",
+      "사과를 열 개나 샀어요.",
+      "사과나 먹을까요?"
+     ],
+     "w": "Sau 무슨 N → tất cả."
+    }
+   ],
+   "em": [
+    "Viết 4 câu, mỗi câu dùng (이)나 theo một nghĩa: hoặc · nhiều · tất cả · hay là."
+   ],
+   "co": "8 phút: cô viết 4 câu có (이)나 lên bảng, em gọi tên nghĩa. Đây là “bản đồ” cho cả Nửa 2.",
+   "part": 1,
+   "m": 8
+  },
+  {
+   "id": "cd_tt_na",
+   "t": "N(이)나 (chọn tạm · rủ nhẹ)",
+   "cn": "Chọn tạm – đề nghị nhẹ",
+   "src": {
+    "b": "3A",
+    "n": 4,
+    "no": 2
+   },
+   "core": "Gắn sau danh từ để nói “thôi thì… / hay là… đi”: chọn một phương án <b>không phải tốt nhất nhưng tạm ổn</b>, hoặc rủ / đề nghị <b>nhẹ nhàng, không ép</b>. Vế sau thường là rủ (-(으)ㄹ까요?, -자), ý định (-아야겠다, -(으)ㄹ래요).",
+   "goc": "Từ nghĩa “hoặc” (2A): 영화나 (뭐) 볼까요? = xem phim hoặc gì đó → “hay là xem phim” — không khẳng định chắc, để người nghe dễ từ chối, nên lời rủ <b>mềm</b> đi. Nói về việc của người khác thì thành giọng <b>coi nhẹ</b>: 잠이나 자 (thôi đi ngủ đi), 시킨 일이나 해 (làm việc được giao đi, đừng lắm chuyện).",
+   "chia": [
+    [
+     "Danh từ",
+     "+ (이)나",
+     "Ví dụ"
+    ],
+    [
+     "không 받침",
+     "나",
+     "영화 → 영화**나** 볼까요?"
+    ],
+    [
+     "có 받침",
+     "이나",
+     "점심 → 점심**이나** 먹어요."
+    ],
+    [
+     "N + 하다",
+     "N(이)나 하다",
+     "산책**이나** 할까요? · 공부**나** 해야겠다."
+    ],
+    [
+     "thay 을/를",
+     "",
+     "차**나** 한잔해요 (không nói 차를나)"
+    ]
+   ],
+   "chiaNote": [
+    "Hay đi với: 그냥, 심심한데, 할 일도 없는데, 시간 있으면 + -(으)ㄹ까요? / -아야겠다 / -(으)ㄹ래요? / -자.",
+    "Câu quen: **차나** 한잔해요, **밥이나** 먹자, **잠이나** 자야겠다.",
+    "Mời người trên: 이거나 드세요 nghe như “ăn tạm cái này đi” → thiếu lễ. Mời thì 이거 좀 드세요; khi xin lỗi vì không có gì hơn → 이거**라도** 드세요 (bước sau)."
+   ],
+   "tinh": [
+    {
+     "t": "Rủ sau giờ học",
+     "c": "Nói với bạn cùng lớp.",
+     "lv": "lịch sự",
+     "ko": "수업 끝나고 같이 떡볶이**나** 먹을래요?",
+     "vi": "Học xong mình đi ăn tteokbokki nhé?",
+     "why": "Rủ nhẹ, không ép."
+    },
+    {
+     "t": "Kế hoạch hỏng",
+     "c": "Mưa, không đi chơi được.",
+     "lv": "lịch sự",
+     "ko": "비가 오니까 집에서 영화**나** 봐야겠어요.",
+     "vi": "Mưa rồi, thôi ở nhà xem phim vậy.",
+     "why": "Tốt nhất là đi chơi → chọn tạm."
+    },
+    {
+     "t": "Mời đồng nghiệp",
+     "c": "Nhắn tin giờ nghỉ.",
+     "lv": "lịch sự",
+     "ko": "이따가 커피**나** 한잔할까요?",
+     "vi": "Lát nữa mình uống cà phê nhé?",
+     "why": "Câu mời quen thuộc."
+    },
+    {
+     "t": "Bố mẹ cằn nhằn",
+     "c": "Con chơi game cả tối.",
+     "lv": "thân mật",
+     "ko": "게임 그만하고 공부**나** 해!",
+     "vi": "Thôi chơi game đi, lo mà học đi!",
+     "why": "Giọng coi nhẹ / ra lệnh, chỉ nói với người dưới."
+    },
+    {
+     "t": "Tự nhủ",
+     "c": "Chủ nhật không có việc gì.",
+     "lv": "độc thoại",
+     "ko": "할 일도 없는데 잠**이나** 자야겠다.",
+     "vi": "Chẳng có việc gì, thôi đi ngủ vậy.",
+     "why": "Chọn tạm cho qua."
+    }
+   ],
+   "rb": [
+    [
+     "Vế sau",
+     "Thường là rủ, đề nghị, ý định. Kể quá khứ chỉ khi muốn nói “làm cho qua thời gian”: 할 일이 없어서 TV나 봤어요."
+    ],
+    [
+     "Thái độ",
+     "Phương án tạm ổn. Lựa chọn số một (ước mơ, việc quan trọng) → không dùng. Còn mỗi một lựa chọn cuối → (이)라도."
+    ],
+    [
+     "Lịch sự",
+     "Cẩn thận với người trên: nghe như coi thường thứ mình mời."
+    ]
+   ],
+   "sai": [
+    {
+     "x": "(Mời thầy) 선생님, 이 과일**이나** 드세요.",
+     "o": "선생님, 이 과일 좀 드세요.",
+     "why": "(이)나 làm món mời thành “ăn tạm” → thiếu lễ."
+    },
+    {
+     "x": "(ý: ước mơ từ lâu) 꼭 제주도**나** 가 보고 싶어요.",
+     "o": "꼭 제주도**에** 가 보고 싶어요.",
+     "why": "Lựa chọn số một → không dùng (이)나."
+    },
+    {
+     "x": "영화를**나** 볼까요?",
+     "o": "영화**나** 볼까요?",
+     "why": "(이)나 thay 을/를."
+    },
+    {
+     "x": "(Chỉ còn 10.000 won, bạn cần 100.000) 그럼 만 원**이나** 빌려줘.",
+     "o": "그럼 만 원**이라도** 빌려줘.",
+     "why": "Lựa chọn cuối cùng, đành phải → (이)라도. 만 원이나 còn nghe như “tận 10.000”."
+    }
+   ],
+   "pb": [
+    {
+     "vs": "(이)나 “hoặc” (2A Bài 1)",
+     "d": "Hai danh từ: hoặc. Một danh từ + rủ: hay là.",
+     "ex": [
+      [
+       "커피**나** 녹차를 마실까요?",
+       "Uống cà phê hoặc trà nhé? (chọn một trong hai)"
+      ],
+      [
+       "커피**나** 마실까요?",
+       "Hay là uống cà phê nhỉ? (rủ nhẹ)"
+      ]
+     ]
+    },
+    {
+     "vs": "(이)나 “những” (2B Bài 18)",
+     "d": "Sau số lượng: thấy nhiều. Sau danh từ thường + rủ: chọn tạm (ví dụ của sách).",
+     "ex": [
+      [
+       "녹차가 없으니까 커피**나** 마시자.",
+       "Không có trà thì uống cà phê vậy."
+      ],
+      [
+       "커피를 세 잔**이나** 마셨어.",
+       "Tớ uống những 3 cốc cà phê rồi."
+      ]
+     ]
+    }
+   ],
+   "topik": [
+    {
+     "src": "Đọc câu 42 · đề luyện New TOPIK (Đề 3)",
+     "ko": "… 회의에서 그가 낸 의견은 __아직 결정권이 없으니 시킨 일**이나** 열심히 하라__는 대답만 들었다.",
+     "note": "Câu gạch chân: (이)나 coi nhẹ (“lo làm việc được giao đi”) → ý kiến của nhân vật bị gạt bỏ; câu hỏi tâm trạng chọn thất vọng / bực."
+    }
+   ],
+   "hoi": [
+    {
+     "q": "Bạn rủ “주말에 영화나 볼까?” — bạn ấy có rất muốn xem phim không?",
+     "a": "Không hẳn. (이)나 chỉ là gợi ý nhẹ, “xem phim chẳng hạn”; em đề xuất việc khác cũng được."
+    },
+    {
+     "q": "Mẹ nói “잠이나 자!” khác “자!” thế nào?",
+     "a": "<b>잠이나 자</b>: “thôi đừng làm gì nữa, đi ngủ đi” — hơi bực / coi nhẹ việc em đang làm."
+    }
+   ],
+   "luyen": [
+    {
+     "q": "비가 와서 산에 못 가겠네요. 집에서 (    ) 볼까요?",
+     "o": [
+      "영화나",
+      "영화를나",
+      "영화밖에",
+      "영화조차"
+     ],
+     "w": "Kế hoạch hỏng → chọn tạm + rủ → 영화나."
+    },
+    {
+     "q": "A: 피곤하지요? B: 네, 오늘은 일찍 가서 (    ) 자야겠어요.",
+     "o": [
+      "잠이나",
+      "잠이라서",
+      "잠밖에",
+      "잠도나"
+     ],
+     "w": "Ý định chọn tạm → 잠이나 자야겠다."
+    },
+    {
+     "q": "“이따가 차나 한잔할까요?” có ý gì?",
+     "o": [
+      "Rủ nhẹ: hay là uống trà",
+      "Uống trà hoặc thứ khác, phải chọn một",
+      "Uống tận nhiều trà",
+      "Chỉ uống trà thôi"
+     ],
+     "w": "Một danh từ + rủ → hay là."
+    },
+    {
+     "q": "Câu nào dùng (이)나 **không** tự nhiên?",
+     "o": [
+      "(Mời giáo sư) 교수님, 이 차나 드세요.",
+      "심심한데 산책이나 할까?",
+      "할 일도 없는데 청소나 해야겠다.",
+      "주말에 같이 밥이나 먹어요."
+     ],
+     "w": "Mời người trên bằng (이)나 → nghe như “uống tạm”."
+    }
+   ],
+   "em": [
+    "Nhắn tin rủ một người bạn 2 việc nhẹ nhàng bằng N(이)나 + -(으)ㄹ래? / -(으)ㄹ까?"
+   ],
+   "co": "Cô đóng vai bạn buồn chán / trời mưa / được nghỉ bất ngờ — em rủ bằng N(이)나. Rồi cô đổi tình huống “hết sạch, chỉ còn…” → em chuyển sang (이)라도 (bước sau). Bài 4 sách còn -나 보다 (chuyên đề Phỏng đoán), -아 보니까, -던데요 (chuyên đề -더-).",
+   "part": 1,
+   "m": 12
+  },
+  {
+   "id": "cd_tt_rd",
+   "t": "N(이)라도",
+   "cn": "Chọn bất đắc dĩ – mức tối thiểu",
+   "src": {
+    "b": "3A",
+    "n": 5,
+    "no": 4
+   },
+   "core": "“… cũng được / dù chỉ là … thôi”: cái mình muốn không có, hoàn cảnh không cho phép, nên <b>đành chọn</b> phương án còn lại — thường nhỏ hơn, ít hơn. Mạnh hơn (이)나 ở chỗ: đây là <b>lựa chọn cuối cùng còn lại</b>.",
+   "goc": "<b>이다</b> + <b>-라도</b> (≈ -아도/어도 “dù”): “dù là N đi nữa (cũng được)”. Anh em cùng gốc: <b>아무리 N(이)라도</b> (dù N thế nào), <b>누구라도</b> (dù là ai), -더라도 (dù… đi nữa). Trước câu thường có bối cảnh “thiếu”: …밖에 없는데, … 다 떨어졌는데, 시간이 없으면, 못 가니까.",
+   "chia": [
+    [
+     "Danh từ",
+     "+ (이)라도",
+     "Ví dụ"
+    ],
+    [
+     "không 받침",
+     "라도",
+     "커피 → 커피**라도** 드릴까요?"
+    ],
+    [
+     "có 받침",
+     "이라도",
+     "빵 → 빵**이라도** 먹어요."
+    ],
+    [
+     "sau trợ từ khác",
+     "에라도, 에서라도, (으)로라도",
+     "주말**에라도** 쉬세요 · 전화**로라도** 연락하세요."
+    ],
+    [
+     "mức nhỏ",
+     "잠깐이라도, 조금이라도, 한 번이라도",
+     "잠깐**이라도** 누워 있어요."
+    ]
+   ],
+   "chiaNote": [
+    "Khuôn hội thoại sách: A: …밖에 없는데요. → B: 그럼 그거**라도** 주세요.",
+    "Sau từ chỉ mức nhỏ (잠깐, 조금, 한 번, 하루) = “dù chỉ… thôi” — rất hay gặp trong đề đọc: 잠깐**이라도**, 조금씩**이라도**.",
+    "Sau từ hỏi: 누구**라도** (dù là ai), 언제**라도** (bất cứ lúc nào) — gần 누구나, 언제든지 nhưng thêm ý “dù… đi nữa”.",
+    "Đừng nhầm với N(이)라서 (vì là N) và N(이)라고 (câu gián tiếp)."
+   ],
+   "tinh": [
+    {
+     "t": "Hết món",
+     "c": "Quán hết cơm, chỉ còn mì.",
+     "lv": "lịch sự",
+     "ko": "밥이 없으면 라면**이라도** 주세요.",
+     "vi": "Không có cơm thì cho tôi mì cũng được.",
+     "why": "Còn mỗi lựa chọn này → (이)라도."
+    },
+    {
+     "t": "Không về quê được",
+     "c": "Tết bận, không về.",
+     "lv": "lịch sự",
+     "ko": "고향에 못 가니까 전화**라도** 자주 드려야겠어요.",
+     "vi": "Không về quê được nên ít nhất phải gọi điện thường xuyên.",
+     "why": "Không gặp được → mức tối thiểu là gọi điện."
+    },
+    {
+     "t": "Bạn ốm vẫn làm",
+     "c": "Đồng nghiệp sốt vẫn ngồi làm.",
+     "lv": "lịch sự",
+     "ko": "잠깐**이라도** 누워서 쉬세요.",
+     "vi": "Nằm nghỉ một chút thôi cũng được.",
+     "why": "Mức nhỏ + lời khuyên."
+    },
+    {
+     "t": "Mời khách",
+     "c": "Nước ép đã hết.",
+     "lv": "lịch sự",
+     "ko": "주스는 다 떨어졌는데 물**이라도** 드릴까요?",
+     "vi": "Nước ép hết rồi, tôi mời anh nước lọc nhé?",
+     "why": "Lịch sự, xin lỗi vì chỉ có nước."
+    },
+    {
+     "t": "Hẹn gặp",
+     "c": "Người yêu bận cả tuần.",
+     "lv": "thân mật",
+     "ko": "평일엔 바쁘니까 주말**에라도** 잠깐 만나자.",
+     "vi": "Ngày thường bận thì cuối tuần gặp chút cũng được.",
+     "why": "Trợ từ 에 + 라도."
+    }
+   ],
+   "rb": [
+    [
+     "Bối cảnh",
+     "Có cái “thiếu / không được” (nói ra hoặc hiểu ngầm): …밖에 없다, 다 떨어지다, 시간이 없다, 못 가다."
+    ],
+    [
+     "Vế sau",
+     "Đề nghị, yêu cầu, ý định, mong muốn: -(으)세요, -(으)ㄹ까요?, -아야겠다, -(으)면 좋겠다. Đề đọc có cả câu kể: 잠깐이라도 볼 수 있어서 행복했다."
+    ],
+    [
+     "Loại từ",
+     "Danh từ (và trạng từ, số lượng). Động / tính từ “dù” → -아도/어도, -더라도."
+    ]
+   ],
+   "sai": [
+    {
+     "x": "(Chỉ còn 10.000 won) 그럼 만 원**이나** 빌려줘.",
+     "o": "그럼 만 원**이라도** 빌려줘.",
+     "why": "Lựa chọn cuối cùng → (이)라도 (ví dụ của sách)."
+    },
+    {
+     "x": "(Bạn hỏi sao ngân hàng đóng) 오늘은 휴일**이라도** 은행이 문을 안 열어요.",
+     "o": "오늘은 휴일**이라서** 은행이 문을 안 열어요.",
+     "why": "“Vì là ngày nghỉ” → (이)라서."
+    },
+    {
+     "x": "시간이 없으면 전화를**라도** 하세요.",
+     "o": "시간이 없으면 전화**라도** 하세요.",
+     "why": "(이)라도 thay 을/를."
+    },
+    {
+     "x": "(Món gì cũng có, chọn món ngon nhất) 제일 맛있는 불고기**라도** 먹어요.",
+     "o": "제일 맛있는 불고기를 먹어요.",
+     "why": "Không phải lựa chọn bất đắc dĩ → không dùng (이)라도."
+    }
+   ],
+   "pb": [
+    {
+     "vs": "(이)나 ↔ (이)라도 (3A Bài 4 ↔ Bài 5)",
+     "d": "Cả hai dùng để đề nghị nhẹ (차나 / 차라도 한잔하자 đều được). Khác: <b>(이)라도</b> = còn lại cuối cùng, đành phải; <b>(이)나</b> = tạm ổn, không dùng khi chỉ còn một lựa chọn.",
+     "ex": [
+      [
+       "밥이 없는데 어떡하지? – 그럼 라면**이나** 끓여 주세요.",
+       "Không có cơm à? – Vậy nấu mì đi. (mì cũng ổn)"
+      ],
+      [
+       "라면도 다 떨어졌어. 과자밖에 없는데. – 그럼 과자**라도** 주세요.",
+       "Mì cũng hết, chỉ còn bánh. – Vậy cho con bánh cũng được. (còn mỗi cái đó)"
+      ]
+     ]
+    },
+    {
+     "vs": "(이)라도 ↔ 만 · 밖에 · 조차",
+     "d": "<b>(이)라도</b>: dù chỉ… cũng (mức tối thiểu, vẫn đủ / vẫn mong). <b>밖에</b>: chỉ… + phủ định (tiếc). <b>조차</b>: ngay cả… (tiêu cực, thường phủ định).",
+     "ex": [
+      [
+       "얼굴을 잠깐**이라도** 볼 수 있어서 행복했다.",
+       "Dù chỉ thấy mặt một chút cũng hạnh phúc."
+      ],
+      [
+       "얼굴을 잠깐**밖에** 못 봤다.",
+       "Chỉ thấy mặt được một chút (tiếc)."
+      ],
+      [
+       "얼굴**조차** 못 봤다.",
+       "Đến mặt cũng không thấy."
+      ]
+     ]
+    }
+   ],
+   "topik": [
+    {
+     "src": "Đọc câu 1 · đề luyện Yonsei (Đề 3)",
+     "ko": "좋아하는 가수의 얼굴을 잠깐(**이라도**) 볼 수 있어서 참 행복했다. · Lựa chọn: 만 / 조차 / 밖에 / 이라도",
+     "note": "Vế sau tích cực (행복했다) → loại 밖에 (cần phủ định), 조차 (tiêu cực). “Chỉ một chút mà vẫn hạnh phúc” = mức tối thiểu → 이라도."
+    },
+    {
+     "src": "Đọc câu 21 · đề luyện New TOPIK (Đề 2)",
+     "ko": "SNS 피로 증후군은 잠깐**이라도** SNS의 글을 확인하지 않으면 궁금해서 일이 손에 잡히지 않는 …",
+     "note": "잠깐이라도 = dù chỉ một lát. Đề đọc gặp rất nhiều: 조금이라도, 잠시라도, 조금씩이라도."
+    },
+    {
+     "src": "Đọc câu 11 · đề luyện New TOPIK (Đề 1)",
+     "ko": "많은 사람들이 출퇴근 시간**만이라도** 입석을 가능하게 해야 한다고 주장했다.",
+     "note": "만이라도 = ít nhất là… thôi cũng được — yêu cầu tối thiểu."
+    },
+    {
+     "src": "Đọc · kỳ 91 câu 38",
+     "ko": "하지만 아무리 획기적인 혁신**이라도** 고객에게 낯설고 커다란 행동 변화를 요구한다면 외면당하기 쉽다.",
+     "note": "Nghĩa anh em: 아무리 N(이)라도 = dù N có… đến đâu. Câu 하지만 + 아무리 … 라도 ở đây chính là câu chủ đề."
+    }
+   ],
+   "hoi": [
+    {
+     "q": "Em muốn mượn 100.000 won, bạn chỉ có 10.000. Em nói gì?",
+     "a": "그럼 만 원<b>이라도</b> 빌려줘. (Không nói 만 원이나 — nghe như “tận 10.000”, cũng không có ý đành chịu.)"
+    },
+    {
+     "q": "“주말에라도 좀 쉬세요” — người nói nghĩ gì về ngày thường của người nghe?",
+     "a": "Ngày thường bận quá, không nghỉ được → ít nhất cuối tuần hãy nghỉ."
+    }
+   ],
+   "luyen": [
+    {
+     "q": "A: 아이스 아메리카노 주세요. B: 죄송합니다. 얼음이 다 떨어졌는데요. A: 그럼 따뜻한 (    ) 주세요.",
+     "o": [
+      "거라도",
+      "거라서",
+      "거밖에",
+      "거조차"
+     ],
+     "w": "Hết đá, đành chọn cốc nóng → 거라도 (= 것이라도)."
+    },
+    {
+     "q": "너무 바쁘면 (    ) 쉬세요.",
+     "o": [
+      "잠깐이라도",
+      "잠깐밖에",
+      "잠깐이라서",
+      "잠깐조차"
+     ],
+     "w": "Mức nhỏ + lời khuyên → 잠깐이라도."
+    },
+    {
+     "q": "(Đề luyện Yonsei 3, câu 1) 좋아하는 가수의 얼굴을 잠깐(    ) 볼 수 있어서 참 행복했다.",
+     "o": [
+      "이라도",
+      "만",
+      "조차",
+      "밖에"
+     ],
+     "w": "Tích cực, mức tối thiểu → 이라도."
+    },
+    {
+     "q": "Câu nào **đúng**?",
+     "o": [
+      "돈이 만 원밖에 없는데 그거라도 빌려줄까?",
+      "돈이 만 원밖에 없는데 그거나 빌려줄까?",
+      "돈이 만 원밖에 있는데 그거라도 빌려줄까?",
+      "돈이 만 원이라도 없는데 그거라도 빌려줄까?"
+     ],
+     "w": "밖에 + 없다; còn mỗi chừng đó → 그거라도."
+    }
+   ],
+   "em": [
+    "Viết hai đoạn hội thoại ngắn kiểu sách: A xin X → B: X는 없는데 Y밖에 없어요 → A: 그럼 Y(이)라도 …"
+   ],
+   "co": "Trò chơi “cửa hàng sắp hết hàng”: em gọi món, cô (người bán) nói món đó hết. Còn nhiều món → em đáp “그럼 …(이)나…”; chỉ còn một món → “그럼 …(이)라도…”. Bài 5 sách còn -(으)ㄹ까 말까, -지그래요?, -(으)ㄹ걸 그랬다 (chưa xếp chuyên đề).",
+   "part": 1,
+   "m": 12
+  },
+  {
+   "id": "cd_tt_th",
+   "t": "Tổng hợp · chọn tiểu từ",
+   "cn": "Tiểu từ",
+   "core": "Gặp chỗ trống sau danh từ, làm theo thứ tự: <b>(1) nhìn vế sau</b> — phủ định hay khẳng định? lời rủ / đề nghị? tích cực hay tiêu cực? → <b>(2) nhìn trước ô</b> — từ hỏi (누구, 무슨), 아무, số lượng, hay danh từ thường? → <b>(3) thái độ</b> — thấy nhiều / ít, tạm ổn / đành vậy.",
+   "goc": "Ba bẫy hay gặp nhất: <b>밖에</b> mà vế sau khẳng định → sai; <b>누구나</b> đi với phủ định (dịch “ai cũng không”) → phải 아무도; <b>(이)나</b> khi chỉ còn một lựa chọn cuối → (이)라도. Câu 1 TOPIK có ra tiểu từ ở mức nâng cao (만, 조차, 밖에, 이라도, 치고, 나마, 커녕) — cách loại giống hệt.",
+   "chia": [
+    [
+     "Trước ô / bối cảnh",
+     "Vế sau",
+     "Chọn",
+     "Ví dụ"
+    ],
+    [
+     "danh từ",
+     "thêm vào",
+     "도",
+     "저**도** 갈래요."
+    ],
+    [
+     "danh từ",
+     "giới hạn (khẳng định / phủ định)",
+     "만",
+     "물**만** 마셔요."
+    ],
+    [
+     "danh từ, số lượng",
+     "phủ định, thấy ít",
+     "밖에",
+     "천 원**밖에** 없어요."
+    ],
+    [
+     "số lượng",
+     "thấy nhiều",
+     "(이)나",
+     "두 시간**이나** 기다렸어요."
+    ],
+    [
+     "từ hỏi",
+     "khẳng định",
+     "(이)나",
+     "**누구나** 할 수 있어요."
+    ],
+    [
+     "아무 (+ N)",
+     "phủ định",
+     "도",
+     "**아무도** 없어요."
+    ],
+    [
+     "아무 (+ N)",
+     "khẳng định “… cũng được”",
+     "(이)나",
+     "**아무거나** 괜찮아요."
+    ],
+    [
+     "danh từ (tạm ổn)",
+     "rủ / ý định",
+     "(이)나",
+     "영화**나** 볼까?"
+    ],
+    [
+     "danh từ (còn mỗi cái này)",
+     "đề nghị / mong muốn",
+     "(이)라도",
+     "물**이라도** 주세요."
+    ],
+    [
+     "mức nhỏ (잠깐, 조금)",
+     "tích cực / lời khuyên",
+     "(이)라도",
+     "잠깐**이라도** 쉬세요."
+    ]
+   ],
+   "chiaNote": [
+    "**Bắt buộc phủ định**: 밖에, 아무 N도 (조차 cũng thường phủ định).",
+    "**Khẳng định**: 누구나 / 무엇이나, 아무나 / 아무거나, số lượng + (이)나.",
+    "**Đi với lời rủ / đề nghị**: (이)나 (3A Bài 4), (이)라도."
+   ],
+   "rb": [
+    [
+     "Bước 1 · Vế sau",
+     "Phủ định → 밖에, 아무 N도. Khẳng định → loại hai cái đó. Rủ / đề nghị → (이)나, (이)라도. Tích cực → loại 조차, 밖에."
+    ],
+    [
+     "Bước 2 · Trước ô",
+     "Từ hỏi → (이)나 (hoặc -든지 ở động từ). 아무 → 도 / (이)나 theo vế sau. Số lượng → (이)나 / 밖에 / 만."
+    ],
+    [
+     "Bước 3 · Thái độ",
+     "Nhiều ↔ ít; tạm ổn ↔ đành vậy."
+    ]
+   ],
+   "sai": [
+    {
+     "x": "주말에 **어디나** 안 갔어요.",
+     "o": "주말에 **아무 데도** 안 갔어요.",
+     "why": "Phủ định → 아무 데도."
+    },
+    {
+     "x": "물**밖에** 마셨어요.",
+     "o": "물**밖에** 안 마셨어요. / 물**만** 마셨어요.",
+     "why": "밖에 cần phủ định."
+    },
+    {
+     "x": "(Chỉ còn bánh) 그럼 과자**나** 주세요.",
+     "o": "그럼 과자**라도** 주세요.",
+     "why": "Còn mỗi một lựa chọn → (이)라도."
+    },
+    {
+     "x": "(ý: thi tận 3 lần, nhiều) 시험을 세 번**밖에** 봤어요.",
+     "o": "시험을 세 번**이나** 봤어요.",
+     "why": "Thấy nhiều → (이)나; 밖에 lại thiếu phủ định."
+    },
+    {
+     "x": "(ý: gì cũng được) **아무것도** 좋아요.",
+     "o": "**아무거나** 좋아요.",
+     "why": "Khẳng định → 아무거나."
+    }
+   ],
+   "pb": [
+    {
+     "vs": "Tiểu từ nâng cao ở câu 1 TOPIK: (이)라도 · (으로)나마 · 치고",
+     "d": "<b>(으로)나마</b> ≈ (이)라도 + ý “không đủ nhưng vẫn quý” (văn viết). <b>N치고</b> + phủ định = hễ là N thì ai cũng (≈ N(이)라면 누구나).",
+     "ex": [
+      [
+       "**전화로나마** 어머니 목소리를 들어 기분이 좋아졌었다.",
+       "Dù chỉ qua điện thoại, nghe giọng mẹ cũng thấy vui."
+      ],
+      [
+       "부모**치고** 자식 사랑하지 않는 사람은 없다.",
+       "Đã là cha mẹ thì không ai không thương con (= 부모라면 누구나 자식을 사랑한다)."
+      ]
+     ]
+    }
+   ],
+   "topik": [
+    {
+     "src": "Đọc câu 1 · đề luyện Yonsei (Đề 3)",
+     "ko": "좋아하는 가수의 얼굴을 잠깐(**이라도**) 볼 수 있어서 참 행복했다. · 만 / 조차 / 밖에 / 이라도",
+     "note": "Bước 1: tích cực, khẳng định → loại 밖에, 조차. Bước 3: mức tối thiểu → 이라도."
+    },
+    {
+     "src": "Đọc câu 2 · đề luyện HOT TOPIK (Đề 5)",
+     "ko": "(**전화로나마**) 어머니 목소리를 들어 기분이 좋아졌었다. · 전화뿐 / 전화만큼 / 전화같이 / 전화로나마",
+     "note": "(으로)나마 = (이)라도 bản văn viết: không gặp được, nghe giọng qua điện thoại thôi cũng vui."
+    },
+    {
+     "src": "Đọc câu 1 · đề luyện HOT TOPIK (Đề 2)",
+     "ko": "부모(**치고**) 자식 사랑하지 않는 사람은 없다. · 커녕 / 대로 / 치고 / 나마",
+     "note": "N치고 + phủ định kép = mọi N đều — bản nâng cao của 누구나."
+    },
+    {
+     "src": "Đọc câu 3 · đề luyện EBS (Đề 2)",
+     "ko": "사람은 **누구나** 성공하기를 __원하는 법이다__.",
+     "note": "누구나 + -는 법이다 / -기 마련이다: chân lý chung. Câu 3 hỏi -는 법이다 = -기 마련이다."
+    },
+    {
+     "src": "Đọc · kỳ 52 câu 2",
+     "ko": "**무슨** 일을 (**하든지**) 열심히 하는 것이 중요하다. · nhiễu: 하도록 / 하다가 / 하더니",
+     "note": "무슨 N(이)나 ở động từ thành 무슨 N을 V-든지 (dù làm gì cũng). Thấy 무슨 / 어떤 / 누구 trước ô → nghĩ ngay -든지 / (이)나."
+    }
+   ],
+   "hoi": [
+    {
+     "q": "Câu 1: “좋아하는 가수의 얼굴을 잠깐(    ) 볼 수 있어서 참 행복했다” — 만 / 조차 / 밖에 / 이라도. Loại thế nào?",
+     "a": "Bước 1: vế sau tích cực, khẳng định → loại 밖에 (cần phủ định), 조차 (tiêu cực). Bước 3: “chỉ chút xíu mà vẫn hạnh phúc” = mức tối thiểu → 이라도."
+    },
+    {
+     "q": "Dịch nhanh: “Không ai biết.” / “Ai cũng biết.” / “Ai đến cũng được.”",
+     "a": "아무도 몰라요. / 누구나 알아요. / 아무나 와도 돼요."
+    }
+   ],
+   "luyen": [
+    {
+     "q": "(Đề luyện Yonsei 3, câu 1) 좋아하는 가수의 얼굴을 잠깐(    ) 볼 수 있어서 참 행복했다.",
+     "o": [
+      "이라도",
+      "만",
+      "조차",
+      "밖에"
+     ],
+     "w": "Tích cực, mức tối thiểu → 이라도."
+    },
+    {
+     "q": "(Đề luyện HOT 5, câu 2) (    ) 어머니 목소리를 들어 기분이 좋아졌었다.",
+     "o": [
+      "전화로나마",
+      "전화뿐",
+      "전화만큼",
+      "전화같이"
+     ],
+     "w": "Dù chỉ qua điện thoại → (으로)나마."
+    },
+    {
+     "q": "(Đề luyện HOT 2, câu 1) 부모(    ) 자식 사랑하지 않는 사람은 없다.",
+     "o": [
+      "치고",
+      "커녕",
+      "대로",
+      "나마"
+     ],
+     "w": "N치고 + phủ định = mọi N đều."
+    },
+    {
+     "q": "(Kỳ 52 câu 2) 무슨 일을 (    ) 열심히 하는 것이 중요하다.",
+     "o": [
+      "하든지",
+      "하도록",
+      "하다가",
+      "하더니"
+     ],
+     "w": "무슨 + V-든지 = dù làm gì cũng."
+    },
+    {
+     "q": "방에 (    ) 없어요. 다들 나갔나 봐요.",
+     "o": [
+      "아무도",
+      "누구나",
+      "아무나",
+      "누구든지"
+     ],
+     "w": "Phủ định → 아무도."
+    },
+    {
+     "q": "그 식당은 음식이 맛있어서 (    ) 손님이 많아요.",
+     "o": [
+      "언제나",
+      "아무 때도",
+      "언제밖에",
+      "언제만"
+     ],
+     "w": "Khẳng định, “lúc nào cũng” → 언제나."
+    },
+    {
+     "q": "어제 두 시간(    ) 못 잤어요. 너무 피곤해요.",
+     "o": [
+      "밖에",
+      "이나",
+      "이라도",
+      "도"
+     ],
+     "w": "Thấy ít + 못 → 밖에."
+    },
+    {
+     "q": "친구를 한 시간(    ) 기다렸어요. 너무 화가 나요.",
+     "o": [
+      "이나",
+      "밖에",
+      "이라도",
+      "만"
+     ],
+     "w": "Thấy nhiều, bực → 이나."
+    },
+    {
+     "q": "A: 우유 있어요? B: 우유는 없고 주스밖에 없는데요. A: 그럼 주스(    ) 주세요.",
+     "o": [
+      "라도",
+      "나",
+      "밖에",
+      "만이"
+     ],
+     "w": "Còn mỗi nước ép → 라도."
+    },
+    {
+     "q": "할 일도 없는데 공원에서 산책(    ) 할까?",
+     "o": [
+      "이나",
+      "밖에",
+      "조차",
+      "만이"
+     ],
+     "w": "Rủ nhẹ, chọn tạm → 이나."
+    },
+    {
+     "q": "Câu nào **sai**?",
+     "o": [
+      "아무것도 괜찮아요.",
+      "아무거나 괜찮아요.",
+      "아무것도 안 먹었어요.",
+      "누구나 할 수 있어요."
+     ],
+     "w": "“Gì cũng được” là khẳng định → 아무거나."
+    },
+    {
+     "q": "Câu nào **sai**?",
+     "o": [
+      "돈이 천 원밖에 있어요.",
+      "돈이 천 원밖에 없어요.",
+      "돈이 천 원만 있어요.",
+      "돈이 만 원이나 있어요."
+     ],
+     "w": "밖에 phải đi với phủ định."
+    }
+   ],
+   "em": [
+    "Viết đoạn 5 câu kể “một ngày không như ý”, dùng ít nhất 4 trong các tiểu từ của buổi: 밖에, 아무 N도, 누구나, (이)나, (이)라도."
+   ],
+   "co": "20 phút: 12 câu luyện (4 câu đầu dạng câu 1–2 đề thật / đề luyện) → em nói to 3 bước khi chọn. Cuối buổi cô đọc nhanh câu Việt (“không ai”, “ai cũng”, “ai cũng được”, “chỉ có… thôi”, “tận…”, “hay là…”, “… cũng được”) → em nói tiểu từ.",
+   "part": 1,
+   "m": 20
+  }
+ ]
+}
