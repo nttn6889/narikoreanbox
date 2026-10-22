@@ -234,6 +234,10 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - Bài từ vựng nằm ngay trong link học sinh: `thi-thu/#v=<base64>.<sum>` → giao bài **không cần đồng bộ**.
   Học sinh nộp → mã `NV1-…` gửi Zalo → cô dán vào tab Chấm bài (chấm chung với mã `NT2-…` của đề thi).
 - Code phía học sinh (vocabBoot, vEntry, vRender…) nằm ngoài khối Admin nên `sync_thi_thu.py` giữ lại.
+- Mọi bài từ vựng (link `#v=`, lộ trình `#l=`, app) có **Bước 0 “Học từ trước”** (`vLearnHTML`): bảng từ + nghĩa + câu ví dụ, 🔊 từ/câu; học sinh chép vào vở rồi bấm
+  “Em chép xong · Bắt đầu làm bài” (`VS.learned`, đồng hồ `VS.start` tính từ lúc đó; vào bài không xem lại bảng). Bài làm dở từ trước (đã có đáp án) bỏ qua bước này.
+  Dạng `cau` có nút **💡 Gợi ý** từng câu (`vHints`: mức 1 số âm tiết + chữ đầu, từ 1 âm tiết thì phụ âm đầu; mức 2 hiện hết trừ âm tiết cuối; `VS.hint[ô]`),
+  không trừ điểm, tin nhắn kết quả ghi “Dùng gợi ý: N từ” (mã nộp không đổi).
 - **Lộ trình hàng ngày** (Lớp học → lớp → Khung luyện tập → “Lộ trình từ vựng”; trước nằm ở tab Từ vựng): collection `vroutes` (code, title, secs[thứ tự phần], per, type,
   start YYYY-MM-DD, review). Link cố định `thi-thu/#l=<base64>.<sum>`; trang tự tính “ngày k” từ ngày bắt đầu, lấy từ trong
   `thi-thu/vocab.json` theo thứ tự phần → nhóm (order) → từ. Từ sai được nhớ trong localStorage máy học sinh và tự thêm vào
@@ -311,6 +315,19 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   xếp vào 10 chủ đề lớn + “Đời sống hằng ngày” (`DS`: gia đình, gọi món, chào hỏi, vị trí… — ít gặp ở bài đọc) (`topics[].m` = số mục;
   “Khác” = `KHAC` chỉ còn Lịch sử). Thẻ “Chủ đề” = từ khóa gặp trong đề + các mục EBS của chủ đề đó.
 
+## Từ vựng TOPIK trung cấp 30 ngày (`tu-30/`) — giáo trình “TOPIK Intermediate Vocabulary in 30 days” (박이정)
+- Sách 30 Day × 33 từ (+ khung từ dễ nhầm, bài 복습). File cô gửi 22/10/2026 là PDF scan, chỉ tới Day 09; đã nhập **Day 1–3**. Cô dùng để luyện tập nên lấy
+  nguyên câu ví dụ trong sách. Chưa có file mp3 của sách (track 01…) — cô tìm được thì thay máy đọc bằng file thật.
+- Nguồn soạn tay `tools/t30/dNN.json` (từ: `ko, p 명/동/형/부, vi, hv, ex` câu sách có `__chữ__`, `exv` dịch, `r` 관련어, `tip`, `note` 출제 경향; `cf` khung dễ nhầm;
+  `x` bài luyện sâu Claude soạn: `g` h họ từ / k kết hợp / c dễ nhầm, lựa chọn đầu là đáp án; `rv` bài 복습 của sách) → `python3 tools/t30.py <thư mục>` (cần kiwipiepy)
+  → `tu-30/data/dNN.json` (thêm `k` số đề đọc có từ, `de` ≤ 2 câu trong 22 đề đọc, ưu tiên kỳ 83/91) + `<thư mục>/vocab/T30NN_1|2.json`
+  → ArtifactData batch `set` collection `vocab` → đồng bộ kho từ `--vocab-only` (bỏ `VCD*`; khi `update` `site/kho` giữ dấu các phần cũ không có trong dump).
+- Kho từ: phần `TOPIK 30 ngày · Day NN` (secOrder 200 + NN), nhóm Phần 1 = từ 1–17, Phần 2 = 18–33 (học sinh chia 2 ngày được), id `t30NN_MM` cố định.
+  Trang `tu-vung/` bỏ các phần này. Giao hằng ngày: Lộ trình từ vựng chọn các phần `TOPIK 30 ngày`, 33 từ/ngày (hoặc 17 nếu chia 2 ngày), dạng nên có “Điền từ vào câu” (`cau`, dùng câu sách).
+- Trang `tu-30/` (gửi học sinh, `#d=1&b=<bước>&p=all|1|2`): ① Học (thẻ từ, 🔊, 관련어, Tip, ★ số đề + câu trong đề, “Em thuộc”, “Che nghĩa”) · ② Nghĩa · ③ Điền câu sách ·
+  ④ Họ từ · Kết hợp · ⑤ Dễ nhầm (khung sách + bài) · ⑥ Câu trong đề · ⑦ Dịch Việt → Hàn (câu sách ngắn, so LCS, tự chấm) · ⑧ Ôn (bài 복습 của sách); “Gửi kết quả cho cô”.
+  localStorage `nari-t30`. Thêm Day: soạn `tools/t30/dNN.json`, chạy script (tự thêm vào `days.json`), ghi `vocab`, đồng bộ kho từ.
+
 ## Từ vựng giáo trình Seoul (`seoul/`) — lớp trung cấp 3 (Seoul 3A/3B) + ôn nền tảng 1A–2B
 - Nguồn soạn tay: `tools/seoul/<cuốn>.tsv` (`# bài | tên Hàn | tên Việt`, `## nhóm Việt | nhóm Hàn`, dòng từ
   `ko<TAB>nghĩa<TAB>Hán Việt<TAB>câu ví dụ có __từ đã chia__`). Theo file cô gửi lần 2 (“từ vựng chính thức phần 번역 từng bài”,
@@ -348,6 +365,15 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - Trang: thẻ cuốn → “Mục lục” (mọi mẫu của cuốn + nghĩa) hoặc từng bài; link `#b=3A`, `#b=3A&c=1`, `#b=3A&c=1&g=2` (mẫu thứ 2). Ô tìm kiếm tìm trong
   mọi cuốn (tên mẫu, nghĩa, ví dụ, lưu ý). Giải thích tiếng Hàn gốc ẩn, nút “Hiện tiếng Hàn” (localStorage `nari-np-ko`). Ví dụ `" / "` = lượt hội thoại, 🔊 máy đọc.
 - Trang từ vựng `seoul/` có nút chuyển Từ vựng | Ngữ pháp và dòng “Ngữ pháp bài này” dưới tên bài (đọc `ngu-phap/np.json`).
+
+## Bài tập Seoul theo bài (`seoul/bai-tap/`) — trang học sinh, đã có 1A Bài 1–3
+- Link `seoul/bai-tap/#b=1A&c=1&t=v|g|r` (Từ vựng | Ngữ pháp | Kết quả); không có `c` = danh sách bài. Trang `seoul/` hiện dòng “Bài tập: Từ vựng · Ngữ pháp”
+  dưới bài có trong biến `BT`. Chấm ngay từng câu, kèm giải thích; thẻ Kết quả → “Gửi kết quả cho cô” = link `#r=<base64>` (báo cáo: từ còn sai, đúng theo từng ngữ pháp, từng câu).
+- **Từ vựng tự sinh** từ `thi-thu/vocab.json` (phần `Seoul 1A · Bài N · …`): mỗi từ vào đúng một dạng A Nghe – chọn từ (máy đọc) / B Hàn → Việt / C Việt → Hàn /
+  D chọn từ điền câu ví dụ (`__…__`), thêm E gõ 5 từ; “Làm lại phần này” tăng `sd` → từ đổi dạng. F = câu soạn tay `v` trong data.
+- **Ngữ pháp** soạn tay ở `seoul/bai-tap/data/<cuốn>-<bài>.json` = `{g:[tên 4 mẫu], v:[câu từ vựng F], q:[…]}`; câu `t:'c'` chọn (o[0] là đáp án, `x[i]` ghi chú lựa chọn sai),
+  `t:'y'` gõ (`a` đáp án nhận, `e` {sai hay gặp: ghi chú}, `h` gợi ý), `t:'d'` dịch Việt → Hàn (`a` câu mẫu, khác thì em tự so); `g` = mẫu 1–4, 0 = tổng hợp. Chỉ dùng từ / ngữ pháp
+  đã học tới bài đó. Thêm bài: soạn data, thêm vào `LS` của trang và `BT` của `seoul/index.html`. localStorage `nari-sbt`. Thêm câu dùng id mới.
 
 ## Kho ngữ pháp Nari (`ngu-phap-sau/`) — học liệu dạy sâu ngữ pháp của cô
 - Trang `noindex`, cô dùng soạn bài + trình chiếu (nút góc trên: “Bản của cô” / “Bản chiếu cho học sinh” ẩn khung “Ghi chú cho cô”, localStorage `nari-nps`).
@@ -519,6 +545,19 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - Tham khảo giáo án “Giáo án TOPIK II” (Claude Docs, https://claude.ai/artifact/1ZXx9PXJjapaWdjJMSjTPn): dấu hiệu nhận biết, quy tắc loại trừ, bẫy.
 - Biến `R` = 60 câu 3–4 từ `thi-thu/de/*.json` (bỏ Ehot1old, Entk3 câu 3 trùng Entk1) + đáp án `a` + giải thích `w` do Claude soạn; `MCQ` câu tự soạn
   (lựa chọn đầu là đáp án). Bài lưu localStorage `nari-34`.
+
+## Tự luyện ngữ pháp câu 1–4 trong 20 ngày (`ngu-phap-luyen/`)
+- Trang gửi học sinh trước kỳ thi (cô chọn “cách 2”): cô gửi **mỗi ngày một link** `ngu-phap-luyen/#d=1…20` qua Zalo; học sinh chỉ thấy các ngày tới link
+  đã mở (`st.max`), ngày sau hiện 🔒. Trang của cô `ngu-phap-luyen/?co` (thẻ “Tin nhắn”) có sẵn 20 tin nhắn + nút Chép, mở trước mọi ngày.
+- Lộ trình: Ngày 1–11 mỗi ngày một nhóm chức năng (biến `PLAN`: tên, nhóm kho từ `V01_*`/`V03_*` đọc từ `thi-thu/vocab.json`, “Chỗ hay nhầm” `tip`)
+  → kiến thức + ≤ 14 câu của nhóm + ≤ 6 câu ôn đến hạn; Ngày 12 ôn, 13 kiểm tra 1 (đề thật kỳ 83, 91, 8 câu, 4 phút, chấm khi nộp), 14–17 trộn 10 câu
+  (câu đến hạn, câu dư `m:1` của các nhóm, câu chưa làm), 18 ôn câu sai, 19 kiểm tra 2 (kỳ 96, 102), 20 về đích (Bảng tra + 10 câu yếu nhất).
+  Bài của ngày tạo lúc mở lần đầu rồi giữ nguyên (`st.d[ngày] = {ids, rv, a, t0, sub, dur}`); ôn ngắt quãng `st.q[id] = {b, due, n, w, ok}` (sai → mai; đúng → 3, 7, 14 ngày; đúng lần thứ 4 = thuộc).
+  Thẻ Kiến thức = 2 bảng ngữ pháp câu 1–2 / 3–4 của kho từ (giống `tu-vung/`, `#k=kt&c=12|34`), thẻ Bảng tra = mọi `tip`. localStorage `nari-np20`.
+- Biến `R` (173 câu, sinh một lần): 61 câu `R` của `ngu-phap-12/` + 60 của `ngu-phap-34/` (giữ id, `w`) + 80 câu trang “Luyện tập Ngữ pháp TOPIK II”
+  (https://claude.ai/artifact/1mkNvmWjkjFwgxHinJfiXk, id `L<số>`, giải thích HTML `e`), bỏ 27 câu trùng và 1 câu lỗi (gạch chân không khớp đáp án).
+  4 câu sách 3급 sai đáp án đã sửa ở đây (L11 열리는데, L14 나오느라고, L17 아프거나, L23 맡게 됐다; trang claude.ai gốc chưa sửa).
+  `k` 12|34, `d` ngày học, `x` 13|19 = câu kiểm tra (không vào ngày học), `m` câu dư dành cho ngày trộn. Lựa chọn giữ thứ tự gốc.
 
 ## Học câu 5 quảng cáo sản phẩm (`cau-5/`)
 - Cùng khung với `cau-16-18/`. Ý cô: học từ vựng gắn với cách ví von của quảng cáo, luyện **hai chiều** (đồ vật → chọn tất cả cụm của nó; quảng cáo → đồ vật).

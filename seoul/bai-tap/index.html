@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bài tập Seoul theo bài · Nari TOPIK</title>
+<meta name="description" content="Bài tập từ vựng và ngữ pháp giáo trình tiếng Hàn Seoul theo từng bài: nghe – chọn từ, nghĩa, điền câu, gõ từ, ngữ pháp, dịch Việt → Hàn. Chấm ngay, gửi kết quả cho cô.">
+<meta property="og:title" content="Bài tập Seoul theo bài – Nari TOPIK">
+<meta property="og:description" content="Từ vựng + ngữ pháp giáo trình Seoul từng bài, chấm ngay. Zalo: 0399.214.554">
+<meta property="og:image" content="https://hoc.naritopik.com/logo/nari-topik-logo-nen-trang.jpg">
+<meta property="og:url" content="https://hoc.naritopik.com/seoul/bai-tap/">
+<meta property="og:type" content="website">
+<link rel="icon" href="../../thi-thu/icon/icon-192.png">
+<script src="../../lam-moi.js" data-key="nari-sbt"></script>
+<style>
+:root{--ink:#111;--line:#555;--soft:#d8dde6;--sub:#f3f4f6;--muted:#666;--bg:#fff;--acc:#1f5c8a;--ok:#1d7a3a;--okbg:#e7f5ec;--bad:#b0283c;--badbg:#fbe9ec;--warn:#9a6400;--warnbg:#fff4dc}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Arial,"Noto Sans KR","Malgun Gothic",sans-serif}
+main{max-width:760px;margin:0 auto;padding:16px 16px 64px}
+.brand{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--soft)}
+.brand .logo{display:block;height:50px;width:auto;margin:0 0 2px -4px}
+.brand span{font-size:14px;color:var(--muted)}
+.brand span a{color:inherit;text-decoration:none;border-bottom:1px dotted var(--muted)}
+.co{flex:none;display:flex;flex-direction:column;align-items:center;gap:3px;text-decoration:none;color:var(--muted);font-size:12px}
+.co i{width:40px;height:40px;border-radius:50%;background:#1f3c88;color:#fff;display:grid;place-items:center;font:bold 17px Georgia,serif;font-style:normal}
+h1{font-size:24px;margin:6px 0 2px}
+h1 small{display:block;font-size:17px;font-weight:normal;color:var(--acc)}
+h2{font-size:20px;margin:26px 0 6px;padding-top:8px;border-top:2px solid var(--ink)}
+h3{font-size:17px;margin:20px 0 4px;display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap}
+h3 a{font-size:14px;font-weight:normal;color:var(--acc);text-decoration:none}
+.ko{font-family:"Noto Sans KR","Malgun Gothic","Apple SD Gothic Neo",sans-serif;word-break:keep-all}
+.intro{color:#333;padding-left:20px}.intro li{margin:2px 0}
+nav{display:flex;margin:0 -16px 12px;padding:8px 16px;position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);z-index:3}
+nav[hidden]{display:none!important}
+nav .bar{display:flex;flex:1;border:2px solid var(--ink);border-radius:8px;overflow:hidden}
+nav a{flex:1;text-align:center;padding:6px 2px;color:var(--ink);text-decoration:none;font-weight:bold;font-size:15px;line-height:1.2}
+nav a+a{border-left:2px solid var(--ink)}
+nav a small{display:block;font-weight:normal;font-size:11.5px}
+nav a.on{background:var(--ink);color:#fff}
+.card{border:1px solid var(--soft);border-radius:10px;padding:12px 14px;margin:12px 0;background:#fff}
+.card.ok{border-color:var(--ok)}.card.bad{border-color:var(--bad)}
+.qn{font-size:13px;color:var(--muted);margin-bottom:4px}
+.qt{font-size:17px;margin:0 0 8px;white-space:pre-wrap}
+.qt.big{font-size:22px;font-weight:bold}
+.vi{font-size:17px;font-weight:bold;margin:0 0 4px}
+.hint{font-size:14px;color:var(--muted);margin:0 0 6px}
+.opt{display:block;width:100%;text-align:left;margin:5px 0;padding:8px 10px;border:1px solid var(--soft);border-radius:8px;background:#fff;font:inherit;font-size:16.5px;cursor:pointer;color:var(--ink)}
+.opt:hover:not(:disabled){border-color:var(--acc)}
+.opt.right{border-color:var(--ok);background:var(--okbg)}
+.opt.wrong{border-color:var(--bad);background:var(--badbg)}
+.opt:disabled{cursor:default;color:var(--ink)}
+.row{display:flex;gap:8px;align-items:stretch}
+input.ans,textarea.ans{width:100%;font:inherit;font-size:17px;padding:8px 10px;border:1px solid var(--line);border-radius:8px}
+textarea.ans{min-height:64px;resize:vertical}
+.fb{margin-top:8px;padding:8px 10px;border-radius:8px;font-size:15px}
+.fb.ok{background:var(--okbg)}.fb.bad{background:var(--badbg)}.fb.mid{background:var(--warnbg)}
+.fb .m{display:block;margin:2px 0}
+.fb u{text-underline-offset:3px;font-weight:bold}
+.self{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;align-items:center}
+.btn{display:inline-block;padding:9px 16px;border:2px solid var(--ink);border-radius:8px;background:var(--ink);color:#fff;font:bold 15px Arial,sans-serif;cursor:pointer;text-decoration:none}
+.btn.ghost{background:#fff;color:var(--ink)}
+.btn.sm{padding:5px 10px;font-size:14px}
+.btn.on{background:var(--acc);border-color:var(--acc);color:#fff}
+.say{border:1px solid var(--soft);background:var(--sub);border-radius:6px;padding:1px 7px;font-size:14px;cursor:pointer;margin-left:4px;vertical-align:1px}
+.listen{font-size:20px;padding:10px 18px}
+.share{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.prog{position:sticky;bottom:0;background:var(--bg);border-top:1px solid var(--soft);padding:8px 0;display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;justify-content:space-between;margin-top:16px;font-size:15px}
+table.t{border-collapse:collapse;width:100%;font-size:15px;margin:6px 0 12px}
+table.t th,table.t td{border:1px solid var(--soft);padding:5px 7px;text-align:left;vertical-align:top}
+table.t th{background:var(--sub)}
+td.n{text-align:center;white-space:nowrap}
+.tiles{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+.tile{flex:1 1 140px;border:1px solid var(--soft);border-radius:10px;padding:8px 10px}
+.tile b{display:block;font-size:24px}
+.tile span{font-size:13px;color:var(--muted)}
+.weak{padding:8px 12px;background:var(--warnbg);border-left:4px solid var(--warn);margin:10px 0}
+.good{padding:8px 12px;background:var(--okbg);border-left:4px solid var(--ok);margin:10px 0}
+.note{font-size:14px;color:var(--muted)}
+.bar2{height:8px;border-radius:4px;background:var(--soft);overflow:hidden;min-width:60px}
+.bar2 i{display:block;height:100%;background:var(--ok)}
+.lessons{display:grid;gap:10px;margin:12px 0}
+.ls{border:1px solid var(--soft);border-radius:10px;padding:10px 14px}
+.ls b{font-size:18px}
+.ls .note{margin:2px 0 8px}
+.ls .btn{margin:2px 6px 2px 0}
+@media print{nav,.share,.prog,.noprint{display:none!important}.card{break-inside:avoid}}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <div class="brand">
+    <div><img class="logo" src="../../logo/nari-topik-ngang.svg" width="148" height="50" alt="Nari TOPIK – Hiểu từng câu, Vững từng cấp"><span>Cô Ngân · Quỳnh Lưu, Nghệ An · Zalo: <a href="https://zalo.me/0399214554">0399.214.554</a></span></div>
+    <a class="co" href="../../ve-co/"><i>N</i>Về cô</a>
+  </div>
+  <h1 id="h1">Bài tập Seoul theo bài</h1>
+</header>
+<nav hidden><div class="bar" id="tabs"></div></nav>
+<div id="app"><p class="note">Đang tải…</p></div>
+</main>
+<script>
+/* Bài tập Seoul theo bài: #b=1A&c=1 (&t=v Từ vựng | g Ngữ pháp | r Kết quả & gửi cô). Link #r=<base64> = báo cáo cho cô.
+   Từ vựng tự sinh từ thi-thu/vocab.json (phần “Seoul 1A · Bài N · …”): mỗi từ vào đúng một dạng A–D (đổi dạng khi em “Làm lại”),
+   thêm 5 từ gõ (E) và câu soạn tay `v` trong data/<cuốn>-<bài>.json (F).
+   Ngữ pháp = `q` của data: t:'c' chọn (o[0] là đáp án, trang tự đảo; x[i] = ghi chú khi chọn lựa chọn i), t:'y' gõ (a: đáp án nhận, e: {sai hay gặp: ghi chú}, h: gợi ý),
+   t:'d' dịch Việt → Hàn (a: câu mẫu, trùng thì máy tự nhận, khác thì em tự so). g = số thứ tự ngữ pháp (0 = tổng hợp). Thêm câu thì dùng id mới. */
+var LS=['1A-1','1A-2','1A-3'];
+var KEY='nari-sbt';
+var S=load();
+var VOC=null,BAI={},DATA={};
+var YN={n:'A. Nghe – chọn từ',k:'B. Nghĩa: Hàn → Việt',v:'C. Nghĩa: Việt → Hàn',c:'D. Chọn từ điền vào câu',t:'E. Gõ từ tiếng Hàn',f:'F. Dùng từ'};
+var YS={n:'Nghe',k:'Hàn → Việt',v:'Việt → Hàn',c:'Điền câu',t:'Gõ từ',f:'Dùng từ'};
+
+function $(s){return document.querySelector(s)}
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function b64e(o){return btoa(unescape(encodeURIComponent(JSON.stringify(o)))).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'')}
+function b64d(r){var b=String(r).replace(/-/g,'+').replace(/_/g,'/');while(b.length%4)b+='=';return JSON.parse(decodeURIComponent(escape(atob(b))))}
+function load(){try{return JSON.parse(localStorage.getItem(KEY))||{}}catch(e){return {}}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+function hash(s){var h=7;for(var i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))%233280;return h}
+function rng(seed){var x=seed%233280||7;return function(){x=(x*9301+49297)%233280;return x/233280}}
+function shuf(a,r){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(r()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
+function norm(s){return String(s||'').normalize('NFC').replace(/[\s.,!?~“”"'’‘·…()]/g,'')}
+function ul(s){return esc(s).replace(/__(.+?)__/g,'<u>$1</u>')}
+function arg(n){var m=new RegExp('[#&]'+n+'=([^&]*)').exec(location.hash);return m?decodeURIComponent(m[1]):''}
+function cur(){var b=arg('b').toUpperCase(),c=arg('c'),k=b+'-'+c;return LS.indexOf(k)>=0?k:''}
+function st(k){S.L=S.L||{};var R=S.L[k]=S.L[k]||{};R.sd=R.sd||0;R.v=R.v||{};R.g=R.g||{};R.s=R.s||{};R.dr=R.dr||{};return R}
+
+/* ===== Máy đọc ===== */
+var KOV=null;
+function pickVoice(){if(!window.speechSynthesis)return;var v=speechSynthesis.getVoices().filter(function(x){return /^ko/i.test(x.lang)});KOV=v[0]||null}
+if(window.speechSynthesis){pickVoice();speechSynthesis.onvoiceschanged=pickVoice}
+function say(t){
+  if(!window.speechSynthesis){alert('Máy em chưa đọc được tiếng Hàn.');return}
+  speechSynthesis.cancel();var u=new SpeechSynthesisUtterance(String(t).replace(/__/g,''));u.lang='ko-KR';u.rate=.85;if(KOV)u.voice=KOV;speechSynthesis.speak(u);
+}
+function sayBtn(t){return '<button class="say" data-say="'+esc(t)+'" title="Nghe">🔊</button>'}
+document.addEventListener('click',function(e){var b=e.target.closest('[data-say]');if(b){e.preventDefault();say(b.dataset.say)}});
+
+/* ===== Dữ liệu ===== */
+function getJSON(u){return fetch(u,{cache:'no-cache'}).then(function(r){if(!r.ok)throw r.status;return r.json()})}
+function lesson(k){
+  var p=k.split('-'),pre='Seoul '+p[0]+' · Bài '+p[1]+' · ',ws=[],ko='';
+  VOC.g.filter(function(g){return g.sec.indexOf(pre)===0}).sort(function(a,b){return a.o-b.o}).forEach(function(g){
+    ko=g.sec.slice(pre.length);
+    g.w.forEach(function(w){ws.push({id:w[0],ko:w[1],vi:w[2],ex:w[3]||'',hv:w[4]||'',gr:g.id})});
+  });
+  return {k:k,b:p[0],n:+p[1],ko:ko,vi:BAI[k]||'',words:ws,D:DATA[k]};
+}
+function wordById(L,id){for(var i=0;i<L.words.length;i++)if(L.words[i].id===id)return L.words[i];return null}
+function blank(ex){var m=/__(.+?)__/.exec(ex);return m?m[1]:''}
+
+/* Từ vựng tự sinh. sd = lượt (đổi khi em làm lại) → cùng lượt thì câu, lựa chọn giữ nguyên. */
+function vItems(L,sd){
+  var r=rng(hash(L.k)+sd*977+1),ws=shuf(L.words,r),n=ws.length,q=Math.ceil(n/4),T=['n','k','v','c'],out=[];
+  function others(w,f){
+    var same=shuf(L.words.filter(function(x){return x!==w&&x.gr===w.gr}),r),rest=shuf(L.words.filter(function(x){return x!==w&&x.gr!==w.gr}),r),seen={},o=[];
+    seen[f(w)]=1;same.concat(rest).forEach(function(x){var t=f(x);if(t&&!seen[t]&&o.length<3){seen[t]=1;o.push(t)}});
+    return o;
+  }
+  ws.forEach(function(w,i){
+    var y=T[Math.min(3,Math.floor(i/q))];if(y==='c'&&!blank(w.ex))y='k';
+    var f=y==='k'?function(x){return x.vi}:y==='c'?function(x){return blank(x.ex)}:function(x){return x.ko};
+    var a=f(w),o=[a].concat(others(w,f));
+    out.push({key:y+':'+w.id,y:y,w:w,a:a,o:shuf(o,r)});
+  });
+  out.sort(function(a,b){return T.indexOf(a.y)-T.indexOf(b.y)});
+  out.filter(function(it){return it.y==='k'}).slice(0,5).forEach(function(it){out.push({key:'t:'+it.w.id,y:'t',w:it.w,a:it.w.ko})});
+  return out;
+}
+
+/* ===== Chấm ===== */
+function gGrade(q,v,self){ // → true | false | null (câu dịch chưa tự so)
+  if(v==null||v==='')return false;
+  if(q.t==='c')return v===0;
+  var hit=q.a.some(function(a){return norm(a)===norm(v)});
+  if(q.t==='y'||hit)return hit;
+  return self===1?true:self===0?false:null;
+}
+function wrongNote(q,v){if(q.e){var k=norm(v);for(var w in q.e)if(norm(w)===k)return q.e[w]}return ''}
+function order(n,seed){var r=rng(seed),a=[];for(var i=0;i<n;i++)a.push(i);return shuf(a,r)}
+
+/* ===== Trang đầu: danh sách bài ===== */
+function renderHome(){
+  $('#h1').innerHTML='Bài tập Seoul theo bài<small>Từ vựng + ngữ pháp từng bài, chấm ngay</small>';
+  document.querySelector('nav').hidden=true;
+  var h='<ul class="intro"><li>Mỗi bài có 2 phần: <b>Từ vựng</b> (nghe, nghĩa, điền câu, gõ từ) và <b>Ngữ pháp</b> (chọn, gõ, dịch Việt → Hàn).</li>'+
+    '<li>Làm câu nào máy chấm câu đó, có giải thích. Làm xong vào thẻ <b>Kết quả</b> bấm “Gửi kết quả cho cô”.</li>'+
+    '<li>Học lại từ: <a href="../#b=1A">bảng từ vựng Seoul</a> · ngữ pháp: <a href="../ngu-phap/#b=1A">giải thích ngữ pháp Seoul</a>.</li></ul>';
+  h+='<h2>Seoul 1A</h2><div class="lessons">';
+  LS.forEach(function(k){
+    var L=lesson(k),R=st(k),vs=vItems(L,R.sd),D=L.D;
+    var nv=vs.length+D.v.length,dv=vs.filter(function(it){return R.v[it.key]}).length+D.v.filter(function(q){return R.g[q.id]!=null}).length;
+    var dg=D.q.filter(function(q){return R.g[q.id]!=null}).length;
+    h+='<div class="ls"><b>Bài '+L.n+' · <span class="ko">'+esc(L.ko)+'</span></b><div class="note">'+esc(L.vi)+' · Từ vựng '+dv+'/'+nv+' · Ngữ pháp '+dg+'/'+D.q.length+'</div>'+
+      '<a class="btn sm" href="#b='+L.b+'&c='+L.n+'&t=v">Từ vựng</a><a class="btn sm" href="#b='+L.b+'&c='+L.n+'&t=g">Ngữ pháp</a><a class="btn sm ghost" href="#b='+L.b+'&c='+L.n+'&t=r">Kết quả</a></div>';
+  });
+  h+='</div>';
+  $('#app').innerHTML=h;
+}
+
+/* ===== Một bài ===== */
+function tabs(L,t){
+  var nav=document.querySelector('nav');nav.hidden=false;
+  var u='#b='+L.b+'&c='+L.n+'&t=';
+  $('#tabs').innerHTML='<a href="#">‹ Bài<small>Danh sách</small></a>'+
+    '<a href="'+u+'v"'+(t==='v'?' class="on"':'')+'>Từ vựng<small>'+L.words.length+' từ</small></a>'+
+    '<a href="'+u+'g"'+(t==='g'?' class="on"':'')+'>Ngữ pháp<small>'+L.D.g.length+' mẫu</small></a>'+
+    '<a href="'+u+'r"'+(t==='r'?' class="on"':'')+'>Kết quả<small>Gửi cô</small></a>';
+}
+function head(L){$('#h1').innerHTML='Bài tập Seoul '+L.b+' · Bài '+L.n+'<small class="ko">'+esc(L.ko)+' <span style="font-family:Arial">· '+esc(L.vi)+'</span></small>'}
+
+function renderVocab(L){
+  var R=st(L.k),vs=vItems(L,R.sd),h='<ul class="intro"><li>Mỗi từ của bài xuất hiện ở một dạng A–D. Chọn xong máy chấm ngay, hiện nghĩa + câu ví dụ (bấm 🔊 để nghe).</li>'+
+    '<li>Chưa thuộc từ thì xem lại <a href="../#b='+L.b+'&c='+L.n+'">bảng từ Bài '+L.n+'</a> trước. Làm lại thì các từ sẽ đổi sang dạng khác.</li></ul>',prev='',i=0;
+  vs.forEach(function(it){
+    if(it.y!==prev){h+='<h3>'+YN[it.y]+'</h3>';if(it.y==='n')h+='<p class="note">Bấm 🔊 Nghe, chọn từ em nghe được. Máy không đọc được thì bấm “Xem chữ”.</p>';if(it.y==='t')h+='<p class="note">Gõ từ tiếng Hàn theo nghĩa (cần bàn phím tiếng Hàn: trong Gboard / Laban Key thêm ngôn ngữ 한국어).</p>';prev=it.y}
+    h+=vCard(it,R,++i);
+  });
+  if(L.D.v.length){h+='<h3>'+YN.f+'</h3>';L.D.v.forEach(function(q){h+=gCard(q,R,++i)})}
+  h+=progBar(L,'v');
+  $('#app').innerHTML=h;
+  wire(L);
+}
+function vCard(it,R,i){
+  var w=it.w,v=R.v[it.key],done=!!v,h='<div class="card'+(done?(v.ok?' ok':' bad'):'')+'" id="c_'+esc(it.key)+'"><div class="qn">Câu '+i+'</div>';
+  if(it.y==='n')h+='<div class="qt"><button class="btn ghost listen" data-say="'+esc(w.ko)+'">🔊 Nghe</button> <button class="btn sm ghost" data-peek="'+esc(it.key)+'">Xem chữ</button> <span class="ko qt big" id="pk_'+esc(it.key)+'" hidden>'+esc(w.ko)+'</span></div>';
+  else if(it.y==='k')h+='<div class="qt big ko">'+esc(w.ko)+sayBtn(w.ko)+'</div>';
+  else if(it.y==='v'||it.y==='t')h+='<div class="qt"><b>'+esc(w.vi)+'</b>'+(w.hv&&it.y==='t'?' <span class="note">(Hán Việt: '+esc(w.hv)+')</span>':'')+'</div>';
+  else if(it.y==='c')h+='<div class="qt ko">'+esc(w.ex).replace(/__(.+?)__/,'(        )')+'</div><p class="hint">'+esc(w.vi)+'</p>';
+  if(it.y==='t'){
+    h+='<div class="row"><input class="ans ko" data-vt="'+esc(it.key)+'" autocomplete="off" value="'+esc(done?v.a:'')+'"'+(done?' disabled':'')+'>'+(done?'':'<button class="btn" data-vchk="'+esc(it.key)+'">Kiểm tra</button>')+'</div>';
+  }else{
+    it.o.forEach(function(o){
+      var c='opt'+(it.y==='k'?'':' ko');
+      if(done){if(o===it.a)c+=' right';else if(o===v.a)c+=' wrong'}
+      h+='<button class="'+c+'" data-vk="'+esc(it.key)+'" data-o="'+esc(o)+'"'+(done?' disabled':'')+'>'+esc(o)+'</button>';
+    });
+  }
+  if(done){
+    h+='<div class="fb '+(v.ok?'ok':'bad')+'"><span class="m">'+(v.ok?'✔ Đúng. ':'✘ Đáp án: ')+'<b class="ko">'+esc(w.ko)+'</b>'+sayBtn(w.ko)+' = '+esc(w.vi)+(w.hv?' <span class="note">('+esc(w.hv)+')</span>':'')+'</span>'+
+      (w.ex?'<span class="m ko">'+ul(w.ex)+sayBtn(w.ex)+'</span>':'')+'</div>';
+  }
+  return h+'</div>';
+}
+function renderGram(L){
+  var R=st(L.k),D=L.D,h='<ul class="intro"><li>Làm lần lượt từng ngữ pháp, cuối cùng là phần dịch Việt → Hàn (dùng cả 4 ngữ pháp).</li>'+
+    '<li>Câu gõ: gõ phần còn thiếu rồi bấm “Kiểm tra”. Câu dịch: viết xong bấm “Xem câu mẫu”, rồi tự so câu của em.</li></ul>',i=0;
+  D.g.concat(['Tổng hợp · Dịch Việt → Hàn']).forEach(function(g,gi){
+    var gn=gi<D.g.length?gi+1:0,qs=D.q.filter(function(q){return q.g===gn});if(!qs.length)return;
+    h+='<h3><span class="ko">'+esc(g)+'</span>'+(gn?'<a href="../ngu-phap/#b='+L.b+'&c='+L.n+'&g='+gn+'">Xem lại giải thích ›</a>':'')+'</h3>';
+    qs.forEach(function(q){h+=gCard(q,R,++i)});
+  });
+  h+=progBar(L,'g');
+  $('#app').innerHTML=h;
+  wire(L);
+}
+function gCard(q,R,i){
+  var v=R.g[q.id],done=v!=null,ok=done?gGrade(q,v,R.s[q.id]):null;
+  var h='<div class="card'+(done?(ok===true?' ok':ok===false?' bad':''):'')+'" id="c_'+q.id+'"><div class="qn">Câu '+i+' · '+(q.t==='c'?'Chọn':q.t==='y'?'Gõ':'Dịch Việt → Hàn')+'</div>';
+  if(q.t==='d'){
+    h+='<div class="vi">'+esc(q.vi)+'</div>'+(q.h?'<p class="hint ko">Từ gợi ý: '+esc(q.h)+'</p>':'');
+    h+='<textarea class="ans ko" data-dr="'+q.id+'" placeholder="Viết câu tiếng Hàn…"'+(done?' disabled':'')+'>'+esc(done?v:(R.dr[q.id]||''))+'</textarea>';
+    if(!done)h+='<div class="self"><button class="btn" data-dchk="'+q.id+'">Xem câu mẫu</button></div>';
+  }else{
+    h+='<div class="qt ko">'+q.q+'</div>';
+    if(q.t==='y'){
+      if(q.h)h+='<p class="hint">'+esc(q.h)+'</p>';
+      h+='<div class="row"><input class="ans ko" data-gy="'+q.id+'" autocomplete="off" value="'+esc(done?v:'')+'"'+(done?' disabled':'')+'>'+(done?'':'<button class="btn" data-gchk="'+q.id+'">Kiểm tra</button>')+'</div>';
+    }else{
+      order(q.o.length,hash(q.id)).forEach(function(k){
+        var c='opt ko';if(done){if(k===0)c+=' right';else if(v===k)c+=' wrong'}
+        h+='<button class="'+c+'" data-gk="'+q.id+'" data-k="'+k+'"'+(done?' disabled':'')+'>'+q.o[k]+'</button>';
+      });
+    }
+  }
+  if(done){
+    var f='';
+    if(q.t==='c'){f+='<span class="m">'+(ok?'✔ Đúng.':'✘ Đáp án: <b class="ko">'+q.o[0]+'</b>')+'</span>';if(!ok&&q.x&&q.x[v])f+='<span class="m">'+q.x[v]+'</span>'}
+    if(q.t==='y'){f+='<span class="m">'+(ok?'✔ Đúng.':'✘ Đáp án: <b class="ko">'+esc(q.a[0])+'</b>')+'</span>';var wn=!ok&&wrongNote(q,v);if(wn)f+='<span class="m">'+esc(wn)+'</span>'}
+    if(q.t==='d'){
+      if(q.a.some(function(a){return norm(a)===norm(v)}))f+='<span class="m">✔ Trùng câu mẫu.</span>';
+      else{
+        f+='<span class="m"><b>Câu mẫu</b> (đúng ý là được, không cần giống từng chữ):</span>'+q.a.slice(0,3).map(function(a){return '<span class="m ko">• '+esc(a)+sayBtn(a)+'</span>'}).join('');
+        f+='<div class="self"><span>Em so câu của em:</span><button class="btn sm ghost'+(R.s[q.id]===1?' on':'')+'" data-s="'+q.id+'" data-v="1">Đúng ý, ngữ pháp đúng</button><button class="btn sm ghost'+(R.s[q.id]===0?' on':'')+'" data-s="'+q.id+'" data-v="0">Em viết sai</button></div>';
+      }
+    }
+    f+='<span class="m note">'+q.w+'</span>';
+    h+='<div class="fb '+(ok===true?'ok':ok===false?'bad':'mid')+'">'+f+'</div>';
+  }
+  return h+'</div>';
+}
+function progBar(L,t){
+  var s=score(L,st(L.k)),x=t==='v'?s.v:s.g;
+  return '<div class="prog"><span id="pg">Đã làm '+x.done+'/'+x.n+' · đúng '+x.ok+'</span><span><button class="btn sm ghost" data-redo="'+t+'">Làm lại phần này</button> <a class="btn sm" href="#b='+L.b+'&c='+L.n+'&t='+(t==='v'?'g':'r')+'">'+(t==='v'?'Sang Ngữ pháp ›':'Xem kết quả ›')+'</a></span></div>';
+}
+
+/* Gắn sự kiện; mỗi lần trả lời chỉ vẽ lại thẻ của câu đó. */
+function wire(L){
+  var R=st(L.k),vs=vItems(L,R.sd),VI={},i=0;vs.forEach(function(it){VI[it.key]=it});
+  function redraw(id,html){var el=document.getElementById('c_'+id);if(el){var n=el.querySelector('.qn').textContent.match(/\d+/)[0];el.outerHTML=html(+n);var pg=$('#pg');if(pg){var s=score(L,R),x=arg('t')==='g'?s.g:s.v;pg.textContent='Đã làm '+x.done+'/'+x.n+' · đúng '+x.ok}wire(L)}}
+  function vAns(key,a){var it=VI[key];if(!it||R.v[key])return;R.v[key]={a:a,ok:it.y==='t'?(norm(a)===norm(it.a)?1:0):(a===it.a?1:0)};save();redraw(key,function(n){return vCard(it,R,n)})}
+  function gq(id){return L.D.q.concat(L.D.v).filter(function(q){return q.id===id})[0]}
+  function gAns(id,v){var q=gq(id);if(R.g[id]!=null)return;R.g[id]=v;save();redraw(id,function(n){return gCard(q,R,n)})}
+  document.querySelectorAll('[data-vk]').forEach(function(el){el.onclick=function(){vAns(el.dataset.vk,el.dataset.o)}});
+  document.querySelectorAll('[data-vchk]').forEach(function(el){var k=el.dataset.vchk,inp=document.querySelector('[data-vt="'+k+'"]');
+    el.onclick=function(){if(inp.value.trim())vAns(k,inp.value.trim())};inp.onkeydown=function(e){if(e.key==='Enter'&&!e.isComposing)el.click()}});
+  document.querySelectorAll('[data-peek]').forEach(function(el){el.onclick=function(){var p=document.getElementById('pk_'+el.dataset.peek);if(p)p.hidden=false}});
+  document.querySelectorAll('[data-gk]').forEach(function(el){el.onclick=function(){gAns(el.dataset.gk,+el.dataset.k)}});
+  document.querySelectorAll('[data-gchk]').forEach(function(el){var id=el.dataset.gchk,inp=document.querySelector('[data-gy="'+id+'"]');
+    el.onclick=function(){if(inp.value.trim())gAns(id,inp.value.trim())};inp.onkeydown=function(e){if(e.key==='Enter'&&!e.isComposing)el.click()}});
+  document.querySelectorAll('[data-dr]').forEach(function(el){el.oninput=function(){R.dr[el.dataset.dr]=el.value;save()}});
+  document.querySelectorAll('[data-dchk]').forEach(function(el){el.onclick=function(){var id=el.dataset.dchk,t=document.querySelector('[data-dr="'+id+'"]').value.trim();if(!t){alert('Em viết câu tiếng Hàn trước nhé.');return}gAns(id,t)}});
+  document.querySelectorAll('[data-s]').forEach(function(el){el.onclick=function(){var id=el.dataset.s;R.s[id]=+el.dataset.v;save();redraw(id,function(n){return gCard(gq(id),R,n)})}});
+  document.querySelectorAll('[data-redo]').forEach(function(el){el.onclick=function(){
+    if(!confirm('Xóa bài đã làm của phần này để làm lại?'))return;
+    if(el.dataset.redo==='v'){R.v={};R.sd++;L.D.v.forEach(function(q){delete R.g[q.id]})}
+    else L.D.q.forEach(function(q){delete R.g[q.id];delete R.s[q.id];delete R.dr[q.id]});
+    save();render();scrollTo(0,0);
+  }});
+}
+
+/* ===== Điểm ===== */
+function score(L,R){
+  var vs=vItems(L,R.sd),v={n:0,done:0,ok:0,y:{}},g={n:0,done:0,ok:0,pend:0,gs:L.D.g.map(function(){return {n:0,ok:0}}),mix:{n:0,ok:0}};
+  vs.forEach(function(it){var x=R.v[it.key],Y=v.y[it.y]=v.y[it.y]||{n:0,ok:0};v.n++;Y.n++;if(x){v.done++;if(x.ok){v.ok++;Y.ok++}}});
+  L.D.v.forEach(function(q){var a=R.g[q.id],Y=v.y.f=v.y.f||{n:0,ok:0};v.n++;Y.n++;if(a!=null){v.done++;if(gGrade(q,a)){v.ok++;Y.ok++}}});
+  L.D.q.forEach(function(q){var a=R.g[q.id],G=q.g?g.gs[q.g-1]:g.mix;g.n++;G.n++;if(a==null)return;g.done++;var ok=gGrade(q,a,R.s[q.id]);if(ok===null)g.pend++;if(ok){g.ok++;G.ok++}});
+  return {v:v,g:g};
+}
+function row(lbl,s){var p=s.n?Math.round(s.ok/s.n*100):0;return '<tr><td>'+lbl+'</td><td class="n">'+s.ok+'/'+s.n+'</td><td><div class="bar2"><i style="width:'+p+'%"></i></div></td></tr>'}
+
+/* Bảng kết quả: P = {k, n, v:[[key, câu trả lời, đúng 0|1]], g:{id: trả lời}, s:{id: 0|1}, d}. Dùng cho thẻ Kết quả và link #r= của cô. */
+function payload(L){
+  var R=st(L.k),vs=vItems(L,R.sd),v=[];
+  vs.forEach(function(it){var x=R.v[it.key];if(x)v.push([it.key,x.a,x.ok])});
+  var g={};Object.keys(R.g).forEach(function(id){g[id]=R.g[id]});
+  return {k:L.k,n:S.n||'',v:v,sd:R.sd,g:g,s:R.s,d:Date.now()};
+}
+function reportHTML(L,P,teacher){
+  var R={sd:P.sd||0,v:{},g:P.g||{},s:P.s||{}};
+  (P.v||[]).forEach(function(x){R.v[x[0]]={a:x[1],ok:x[2]}});
+  var s=score(L,R),D=L.D,h='';
+  h+='<div class="tiles"><div class="tile"><b>'+s.v.ok+'/'+s.v.n+'</b><span>Từ vựng đúng'+(s.v.done<s.v.n?' (làm '+s.v.done+')':'')+'</span></div>'+
+     '<div class="tile"><b>'+s.g.ok+'/'+s.g.n+'</b><span>Ngữ pháp đúng'+(s.g.done<s.g.n?' (làm '+s.g.done+')':'')+(s.g.pend?' · '+s.g.pend+' câu dịch chưa so':'')+'</span></div></div>';
+  h+='<h2>Từ vựng</h2><table class="t"><tr><th>Dạng</th><th>Đúng</th><th style="width:30%"></th></tr>';
+  ['n','k','v','c','t','f'].forEach(function(y){if(s.v.y[y])h+=row(YS[y],s.v.y[y])});
+  h+='</table>';
+  var bad=(P.v||[]).filter(function(x){return !x[2]});
+  if(bad.length){
+    h+='<div class="weak"><b>Từ còn sai ('+bad.length+'):</b></div><table class="t"><tr><th>Từ</th><th>Nghĩa</th><th>Dạng · em chọn / gõ</th></tr>';
+    bad.forEach(function(x){var p=x[0].split(':'),w=wordById(L,p[1]);if(!w)return;h+='<tr><td class="ko">'+esc(w.ko)+sayBtn(w.ko)+'</td><td>'+esc(w.vi)+'</td><td><span class="note">'+YS[p[0]]+':</span> <span class="ko">'+esc(x[1])+'</span></td></tr>'});
+    h+='</table>';
+  }else if(s.v.done)h+='<div class="good">Không sai từ nào ở các dạng A–E.</div>';
+  var fb=D.v.filter(function(q){var a=R.g[q.id];return a!=null&&!gGrade(q,a)});
+  if(fb.length)h+='<p class="note">Dùng từ (F) sai: '+fb.map(function(q){return '<span class="ko">'+q.o[0]+'</span>'}).join(', ')+'</p>';
+  h+='<h2>Ngữ pháp</h2><table class="t"><tr><th>Ngữ pháp</th><th>Đúng</th><th style="width:30%"></th></tr>';
+  D.g.forEach(function(g,k){h+=row('<span class="ko">'+esc(g)+'</span>',s.g.gs[k])});
+  h+=row('Dịch Việt → Hàn (tổng hợp)',s.g.mix)+'</table>';
+  var weak=D.g.filter(function(g,k){var x=s.g.gs[k];return x.n&&x.ok/x.n<.7});
+  if(weak.length)h+='<div class="weak"><b>Cần ôn lại:</b> <span class="ko">'+weak.map(esc).join(', ')+'</span></div>';
+  if(teacher){
+    h+='<h3>Từng câu ngữ pháp</h3><table class="t"><tr><th>#</th><th>Câu · em làm</th><th></th></tr>';
+    D.q.forEach(function(q,i){
+      var a=R.g[q.id],ok=a==null?false:gGrade(q,a,R.s[q.id]);
+      var ans=a==null?'(chưa làm)':q.t==='c'?q.o[a]:esc(a);
+      var cell=(q.t==='d'?'<div class="note">'+esc(q.vi)+'</div>':'<div class="note ko">'+q.q+'</div>')+'<span class="ko">'+ans+'</span>';
+      if(ok!==true)cell+='<div class="note ko">Đúng: '+(q.t==='c'?q.o[0]:esc(q.a[0]))+'</div>';
+      h+='<tr><td class="n">'+(i+1)+'</td><td>'+cell+'</td><td class="n">'+(ok===true?'✔':ok===false?'✘':'<b style="color:var(--warn)">cô chấm</b>')+'</td></tr>';
+    });
+    h+='</table>';
+    if(P.d)h+='<p class="note">Gửi lúc '+new Date(P.d).toLocaleString('vi-VN')+'.</p>';
+  }
+  return h;
+}
+function renderResult(L){
+  var R=st(L.k),s=score(L,R);
+  var h='<p><label>Tên em: <input id="nm" class="ans" style="max-width:260px;font-size:16px;padding:6px 8px" value="'+esc(S.n||'')+'"></label></p>';
+  if(s.v.done<s.v.n||s.g.done<s.g.n)h+='<p class="note">Em còn '+(s.v.n-s.v.done)+' câu từ vựng, '+(s.g.n-s.g.done)+' câu ngữ pháp chưa làm. Làm xong rồi gửi cô nhé (vẫn gửi được khi chưa xong).</p>';
+  h+=reportHTML(L,payload(L),false);
+  h+='<div class="share noprint"><button class="btn" id="send">Gửi kết quả cho cô</button><a class="btn ghost" href="#b='+L.b+'&c='+L.n+'&t=v">Từ vựng</a><a class="btn ghost" href="#b='+L.b+'&c='+L.n+'&t=g">Ngữ pháp</a></div>';
+  $('#app').innerHTML=h;
+  $('#nm').oninput=function(){S.n=this.value.trim();save()};
+  $('#send').onclick=function(){
+    if(!S.n){alert('Em ghi tên trước khi gửi nhé.');$('#nm').focus();return}
+    var link=location.origin+location.pathname+'#r='+b64e(payload(L));
+    var text='Cô ơi, em là '+S.n+', em gửi kết quả bài tập Seoul '+L.b+' Bài '+L.n+': '+link;
+    if(navigator.share){navigator.share({title:'Kết quả bài tập',text:text}).catch(function(){})}
+    else if(navigator.clipboard){navigator.clipboard.writeText(text).then(function(){alert('Đã chép link kết quả. Em dán vào Zalo gửi cô nhé.')},function(){prompt('Em chép link này gửi cô:',text)})}
+    else prompt('Em chép link này gửi cô:',text);
+  };
+}
+
+/* ===== Khởi động ===== */
+function render(){
+  var m=location.hash.match(/#r=([\w-]+)/);
+  if(m){try{var P=b64d(m[1]),L=lesson(P.k);document.querySelector('nav').hidden=true;document.title='Kết quả · '+(P.n||'');
+    $('#h1').innerHTML='Kết quả · '+esc(P.n||'Học viên')+'<small class="ko">Bài tập Seoul '+L.b+' Bài '+L.n+' · '+esc(L.ko)+'</small>';
+    $('#app').innerHTML=reportHTML(L,P,true)+'<div class="share noprint"><button class="btn ghost" onclick="print()">In / lưu PDF</button></div>';return}catch(e){}}
+  var k=cur();if(!k){renderHome();return}
+  var L=lesson(k),t=arg('t')||'v';
+  head(L);tabs(L,t);
+  if(t==='g')renderGram(L);else if(t==='r')renderResult(L);else renderVocab(L);
+}
+window.addEventListener('hashchange',function(){render();scrollTo(0,0)});
+Promise.all([getJSON('../../thi-thu/vocab.json'),getJSON('../bai.json').catch(function(){return {}})].concat(LS.map(function(k){return getJSON('data/'+k+'.json')})))
+  .then(function(r){VOC=r[0];BAI=r[1];LS.forEach(function(k,i){DATA[k]=r[i+2]});render()})
+  .catch(function(){$('#app').innerHTML='<p class="note">Không tải được bài tập. Em kiểm tra mạng rồi tải lại trang.</p>'});
+</script>
+</body>
+</html>
