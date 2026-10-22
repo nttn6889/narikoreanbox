@@ -464,6 +464,11 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   Cuối mỗi thẻ nhóm (cô muốn bớt lý thuyết, luyện ngay sau từng nhóm): khối “📖 Ví dụ minh họa” (`.vd`, mỗi câu có nhãn mẫu `.tag`) + “✍ Luyện nhóm N”
   (`<div class="prac" id="pN">`, JS vẽ từ biến `P[N]` = `[loại, câu, đáp án, giải thích]`: `c` chọn (lựa chọn đầu là đáp án; “Câu nào sai?” thì lựa chọn đầu là câu sai),
   `y` gõ, `d` dịch Việt → Hàn (câu mẫu đầu + cách khác; trùng thì máy chấm, khác thì học sinh tự chấm), xen lẫn ~10 câu/nhóm; `st.p`, báo cáo gộp vào “Gửi kết quả cho cô”).
+- `seoul/tu-de-hoi/` Từ để hỏi (học sinh lớp 3A hay nhầm): thẻ 10 từ hỏi (`#b=cb`, bản đồ + 5 nhóm), Vị trí & tiểu từ (`vt`: thay đúng chỗ, từ hỏi chủ ngữ luôn 이/가,
+  bảng tiểu từ, rút gọn khẩu ngữ), Dễ nhầm (`nh`: 무슨/어느/어떤, 몇/얼마/얼마나/며칠, 어떻게/어때요/어떤, “sao” = 왜/어떻게/무슨 일로/웬일, 언제/몇 시…),
+  Lịch sự (`ls`: “어떻게 되세요”, 4 kiểu đuôi hỏi, câu hỏi đề viết 54), Mở rộng (`md`: nghĩa bất định + ngữ điệu, 누구나/아무나/아무도, -는지/-냐고, câu tu từ), Luyện (`lt`).
+  Cùng khuôn `so-dem/`: sau mỗi ý có ✋ Em thử (bộ `a1…f4`, danh sách `EM`, báo cáo gộp theo chữ cái đầu), 🗣 Nói to, 🎲 Quay câu (`HOI`/`VN`/`KN`).
+  `M` trắc nghiệm (lựa chọn đầu là đáp án; `l3` tìm câu sai thì lựa chọn đầu là câu sai; `l4` phần tử 4 = câu máy đọc), `T` gõ (phần tử 4 `'d'` = khác đáp án thì em tự chấm “Em viết đúng / Em sai”). localStorage `nari-tdh`.
 - Còn làm: Biến âm, Trợ từ.
 
 ## Đánh giá buổi học (`danh-gia/`)
