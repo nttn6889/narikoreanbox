@@ -520,6 +520,19 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - Biến `R` = 60 câu 3–4 từ `thi-thu/de/*.json` (bỏ Ehot1old, Entk3 câu 3 trùng Entk1) + đáp án `a` + giải thích `w` do Claude soạn; `MCQ` câu tự soạn
   (lựa chọn đầu là đáp án). Bài lưu localStorage `nari-34`.
 
+## Tự luyện ngữ pháp câu 1–4 trong 20 ngày (`ngu-phap-luyen/`)
+- Trang gửi học sinh trước kỳ thi (cô chọn “cách 2”): cô gửi **mỗi ngày một link** `ngu-phap-luyen/#d=1…20` qua Zalo; học sinh chỉ thấy các ngày tới link
+  đã mở (`st.max`), ngày sau hiện 🔒. Trang của cô `ngu-phap-luyen/?co` (thẻ “Tin nhắn”) có sẵn 20 tin nhắn + nút Chép, mở trước mọi ngày.
+- Lộ trình: Ngày 1–11 mỗi ngày một nhóm chức năng (biến `PLAN`: tên, nhóm kho từ `V01_*`/`V03_*` đọc từ `thi-thu/vocab.json`, “Chỗ hay nhầm” `tip`)
+  → kiến thức + ≤ 14 câu của nhóm + ≤ 6 câu ôn đến hạn; Ngày 12 ôn, 13 kiểm tra 1 (đề thật kỳ 83, 91, 8 câu, 4 phút, chấm khi nộp), 14–17 trộn 10 câu
+  (câu đến hạn, câu dư `m:1` của các nhóm, câu chưa làm), 18 ôn câu sai, 19 kiểm tra 2 (kỳ 96, 102), 20 về đích (Bảng tra + 10 câu yếu nhất).
+  Bài của ngày tạo lúc mở lần đầu rồi giữ nguyên (`st.d[ngày] = {ids, rv, a, t0, sub, dur}`); ôn ngắt quãng `st.q[id] = {b, due, n, w, ok}` (sai → mai; đúng → 3, 7, 14 ngày; đúng lần thứ 4 = thuộc).
+  Thẻ Kiến thức = 2 bảng ngữ pháp câu 1–2 / 3–4 của kho từ (giống `tu-vung/`, `#k=kt&c=12|34`), thẻ Bảng tra = mọi `tip`. localStorage `nari-np20`.
+- Biến `R` (173 câu, sinh một lần): 61 câu `R` của `ngu-phap-12/` + 60 của `ngu-phap-34/` (giữ id, `w`) + 80 câu trang “Luyện tập Ngữ pháp TOPIK II”
+  (https://claude.ai/artifact/1mkNvmWjkjFwgxHinJfiXk, id `L<số>`, giải thích HTML `e`), bỏ 27 câu trùng và 1 câu lỗi (gạch chân không khớp đáp án).
+  4 câu sách 3급 sai đáp án đã sửa ở đây (L11 열리는데, L14 나오느라고, L17 아프거나, L23 맡게 됐다; trang claude.ai gốc chưa sửa).
+  `k` 12|34, `d` ngày học, `x` 13|19 = câu kiểm tra (không vào ngày học), `m` câu dư dành cho ngày trộn. Lựa chọn giữ thứ tự gốc.
+
 ## Học câu 5 quảng cáo sản phẩm (`cau-5/`)
 - Cùng khung với `cau-16-18/`. Ý cô: học từ vựng gắn với cách ví von của quảng cáo, luyện **hai chiều** (đồ vật → chọn tất cả cụm của nó; quảng cáo → đồ vật).
   Buổi 1 (bảng cụm theo 6 nhóm đồ vật dễ nhầm, “Che nghĩa”; luyện xuôi chọn nhiều + ngược theo nhóm), Buổi 2 (5 kiểu tín hiệu K kết quả / S so sánh / D động từ /
