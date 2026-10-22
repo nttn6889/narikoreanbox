@@ -1,0 +1,1583 @@
+{
+ "id": "thoi-gian-ly-do",
+ "t": "Thời gian – lý do",
+ "ko": "시간 · 이유 연결 표현 · 서울대 한국어 3A",
+ "sub": "Gom trong một buổi: Seoul 3A Bài 2 (-자마자, -느라고), Bài 6 (-거든요), Bài 7 (-았다가), Bài 8 (-다가) + ôn nền -고 / -아서 / -다가 / -(으)니까 / -기 때문에",
+ "tong": {
+  "t": "Hai nhóm đuôi nối học chung một buổi",
+  "p": "Ở trường, 5 mẫu này rải qua Bài 2, 6, 7, 8. Gom lại vì chúng đều nối <b>hai việc</b> và học sinh hay nhầm với các đuôi đã học ở 1A–2B (-고, -아서, -다가, -(으)니까…). Buổi chia hai nửa: <b>thời gian</b> (việc trước xong chưa, việc sau đến lúc nào) rồi <b>lý do</b> (vế sau là gì). <b>-다가</b> là cầu nối: cùng một hình thức vừa là “đang… thì chuyển” (2A) vừa là “đang… thì bị” (3A Bài 8). Thói quen cần tập: <b>nhìn vế sau trước</b> — cũng là cách làm TOPIK câu 1–2.",
+  "tb": [
+   [
+    "Mẫu 3A",
+    "Nghĩa",
+    "Dễ nhầm với",
+    "Sách"
+   ],
+   [
+    "-자마자",
+    "vừa… là… ngay",
+    "-고 나서, -다가",
+    "3A Bài 2"
+   ],
+   [
+    "-았/었다가",
+    "đã… rồi lại (đổi ngược)",
+    "-다가 (2A Bài 7), -아서",
+    "3A Bài 7"
+   ],
+   [
+    "-느라고",
+    "mải… nên (không làm được / mệt, muộn)",
+    "-아서, -는 바람에",
+    "3A Bài 2"
+   ],
+   [
+    "-다(가)",
+    "đang… thì bị (kết quả xấu)",
+    "-다가 (2A Bài 7), -느라고",
+    "3A Bài 8"
+   ],
+   [
+    "-거든요",
+    "là vì… đấy (giải thích, cuối câu)",
+    "-거든 (nếu… thì), -잖아요",
+    "3A Bài 6"
+   ]
+  ]
+ },
+ "parts": [
+  "Nửa 1 · Thời gian: việc trước xong chưa, việc sau đến lúc nào",
+  "Nửa 2 · Lý do: nhìn vế sau trước"
+ ],
+ "p": [
+  {
+   "id": "cd_tl_nen1",
+   "t": "Bước 0 · Nền thời gian: -고 · -아서 · -고 나서 · -다가 · -(으)면서",
+   "cn": "Nền: nối câu theo thời gian",
+   "src": {
+    "b": "2A",
+    "n": 7,
+    "no": 4
+   },
+   "core": "Nối hai việc theo thời gian, tiếng Hàn luôn hỏi <b>3 câu</b>: (1) việc trước <b>đã xong chưa</b>? (2) xong rồi thì việc sau đến <b>ngay</b> hay sau một lúc? (3) hai vế có <b>cùng chủ ngữ</b> không? Mỗi đuôi là một câu trả lời. 3A thêm hai đuôi: <b>-자마자</b> (xong là ngay lập tức) và <b>-았/었다가</b> (xong rồi lại đổi sang việc ngược lại / liên quan).",
+   "goc": "Hình dung một trục thời gian A → B: <b>-(으)면서</b> A và B chạy cùng lúc · <b>-다가</b> A đang dở thì rẽ sang B · <b>-고 / -아서</b> A rồi B · <b>-고 나서</b> A xong hẳn rồi mới B · <b>-자마자</b> A vừa xong là B ngay · <b>-았다가</b> A xong rồi quay sang B (thường ngược A). Chỉ <b>-았다가</b> có sẵn -았- (đã xong) trong đuôi; các đuôi còn lại không gắn quá khứ, thì của cả câu nằm ở vế sau.",
+   "chia": [
+    [
+     "Đuôi",
+     "Việc trước",
+     "Việc sau đến khi nào",
+     "Ví dụ",
+     "Sách"
+    ],
+    [
+     "-(으)면서",
+     "đang diễn ra",
+     "cùng lúc",
+     "음악을 들**으면서** 공부해요.",
+     "1B-16"
+    ],
+    [
+     "-다가",
+     "**chưa xong**, bỏ dở",
+     "giữa chừng",
+     "숙제를 하**다가** 잠이 들었어요.",
+     "2A-7"
+    ],
+    [
+     "-고",
+     "xong",
+     "sau đó (liệt kê)",
+     "밥을 먹**고** 커피를 마셨어요.",
+     "1A-5"
+    ],
+    [
+     "-아서/어서",
+     "xong, B dựa vào A",
+     "ngay sau, cùng chỗ / cùng đồ vật",
+     "친구를 만나**서** 영화를 봤어요.",
+     "1B-10"
+    ],
+    [
+     "-고 나서",
+     "**xong hẳn**",
+     "sau đó",
+     "숙제를 다 하**고 나서** 게임을 했어요.",
+     "2A-5"
+    ],
+    [
+     "-(으)ㄴ 후에 / -기 전에",
+     "mốc trước / sau",
+     "có thể cách lâu",
+     "졸업**한 후에** 취직했어요.",
+     "2B-15"
+    ],
+    [
+     "-자마자",
+     "xong",
+     "**ngay lập tức**",
+     "집에 오**자마자** 잤어요.",
+     "3A-2"
+    ],
+    [
+     "-았/었다가",
+     "xong",
+     "rồi đổi sang việc ngược / liên quan",
+     "문을 열**었다가** 닫았어요.",
+     "3A-7"
+    ]
+   ],
+   "chiaNote": [
+    "Không gắn -았- trước -고 나서, -아서, -자마자, -다가: **가서** (không phải 갔어서), **먹자마자** (không phải 먹었자마자). Thì quá khứ đặt ở cuối câu.",
+    "**Cùng chủ ngữ bắt buộc**: -아서 (trình tự), -다가, -(으)면서, -았다가. **Khác chủ ngữ được**: -자마자, -고 나서, -(으)ㄴ 후에 (내가 집에 도착하**자마자** 비가 왔어요).",
+    "-아서 trình tự = việc sau diễn ra **ở nơi / với đồ vật** của việc trước: 학교에 가**서** 공부해요 (học ở trường), 사과를 씻**어서** 먹어요 (ăn chính quả táo đó)."
+   ],
+   "tinh": [
+    {
+     "t": "Xong hẳn rồi mới làm",
+     "c": "Mẹ hỏi con đã làm bài chưa mà chơi game.",
+     "lv": "lịch sự trong nhà",
+     "ko": "숙제를 다 하**고 나서** 게임을 했어요.",
+     "vi": "Con làm xong hết bài rồi mới chơi game.",
+     "why": "Nhấn “xong hẳn” → -고 나서 (thường có 다)."
+    },
+    {
+     "t": "Đang dở thì chuyển",
+     "c": "Kể lý do chưa làm xong bài.",
+     "lv": "lịch sự",
+     "ko": "숙제를 하**다가** 친구 전화를 받았어요.",
+     "vi": "Đang làm bài thì nhận điện thoại của bạn.",
+     "why": "Bài chưa xong, bị chen ngang → -다가."
+    },
+    {
+     "t": "Vừa xong là ngay",
+     "c": "Kể ngày mệt mỏi.",
+     "lv": "lịch sự",
+     "ko": "집에 오**자마자** 잤어요.",
+     "vi": "Vừa về đến nhà là ngủ luôn.",
+     "why": "Không có khoảng nghỉ giữa hai việc → -자마자."
+    },
+    {
+     "t": "Xong rồi đổi ngược",
+     "c": "Phòng lạnh quá.",
+     "lv": "lịch sự",
+     "ko": "창문을 열**었다가** 너무 추워서 다시 닫았어요.",
+     "vi": "Mở cửa sổ ra rồi lạnh quá nên lại đóng.",
+     "why": "Mở xong hẳn rồi làm việc ngược lại (đóng) → -았다가."
+    }
+   ],
+   "rb": [
+    [
+     "Câu hỏi 1",
+     "Việc trước xong chưa? Chưa → -다가 / -(으)면서. Xong → các đuôi còn lại."
+    ],
+    [
+     "Câu hỏi 2",
+     "Việc sau đến ngay? → -자마자. Việc sau ngược / liên quan việc trước → -았다가. Chỉ là trình tự → -고, -아서, -고 나서."
+    ],
+    [
+     "Câu hỏi 3",
+     "Hai vế khác chủ ngữ? → không dùng -아서, -다가, -(으)면서, -았다가."
+    ]
+   ],
+   "sai": [
+    {
+     "x": "학교에 **갔어서** 친구를 만났어요.",
+     "o": "학교에 **가서** 친구를 만났어요.",
+     "why": "-아서 không gắn quá khứ; 만났어요 đã cho biết là quá khứ."
+    },
+    {
+     "x": "밥을 다 **먹다가** 커피를 마셨어요. (ý: ăn xong rồi)",
+     "o": "밥을 다 **먹고 나서** 커피를 마셨어요.",
+     "why": "다 = xong hết; -다가 = chưa xong. Hai ý mâu thuẫn."
+    },
+    {
+     "x": "저는 숙제를 **하다가** 동생이 잤어요.",
+     "o": "제가 숙제를 하**는 동안** 동생이 잤어요.",
+     "why": "-다가 phải cùng chủ ngữ. Hai người làm hai việc cùng lúc → -는 동안."
+    },
+    {
+     "x": "음악을 **듣으면서** 공부해요.",
+     "o": "음악을 **들으면서** 공부해요.",
+     "why": "ㄷ bất quy tắc trước nguyên âm: 듣 → 들."
+    }
+   ],
+   "pb": [
+    {
+     "vs": "-고 ↔ -아서 (trình tự)",
+     "d": "-아서 nối chặt: việc sau làm ở chỗ đó / với thứ đó. -고 chỉ kể hai việc nối nhau.",
+     "ex": [
+      [
+       "사과를 씻**어서** 먹었어요.",
+       "Rửa táo rồi ăn (chính quả táo đó)."
+      ],
+      [
+       "손을 씻**고** 밥을 먹었어요.",
+       "Rửa tay rồi ăn cơm."
+      ]
+     ]
+    }
+   ],
+   "topik": [
+    {
+     "src": "Đọc · kỳ 60 câu 1",
+     "ko": "휴대 전화를 (**보다가**) 내려야 할 역을 지나쳤다.",
+     "note": "Đang xem điện thoại thì lỡ ga → -다가. Đề luyện có tới 3 câu cùng khung “…다가 내려야 할 역을 지나쳤다”."
+    },
+    {
+     "src": "Đọc · kỳ 91 câu 2",
+     "ko": "새집으로 (**이사하고 나서**) 가구를 새로 샀다.",
+     "note": "Chuyển nhà xong rồi mới mua đồ → -고 나서. Lựa chọn nhiễu 이사하거든 (sẽ gặp ở bước -거든요)."
+    }
+   ],
+   "hoi": [
+    {
+     "q": "음악을 들으면서 공부해요 ↔ 음악을 듣다가 공부해요 khác gì?",
+     "a": "-(으)면서: vừa nghe vừa học (cùng lúc). -다가: đang nghe nhạc thì thôi, chuyển sang học."
+    },
+    {
+     "q": "“Đi siêu thị mua sữa” nói 마트에 가고 우유를 샀어요 hay 마트에 가서 우유를 샀어요?",
+     "a": "<b>가서</b>: mua sữa ở chính siêu thị đó → -아서 trình tự."
+    }
+   ],
+   "luyen": [
+    {
+     "q": "집에 (    ) 바로 샤워를 했어요. (vừa về đến nhà là tắm ngay)",
+     "o": [
+      "오자마자",
+      "오다가",
+      "왔다가",
+      "오면서"
+     ],
+     "w": "Hai việc liền nhau, không khoảng nghỉ → -자마자."
+    },
+    {
+     "q": "숙제를 (    ) 잠이 들었어요. (bài chưa xong)",
+     "o": [
+      "하다가",
+      "하고 나서",
+      "하자마자",
+      "했다가"
+     ],
+     "w": "Chưa xong mà chuyển sang ngủ → -다가."
+    },
+    {
+     "q": "숙제를 다 (    ) 게임을 했어요.",
+     "o": [
+      "하고 나서",
+      "하다가",
+      "하면서",
+      "했다가"
+     ],
+     "w": "다 = xong hẳn → -고 나서."
+    },
+    {
+     "q": "도서관에 (    ) 책을 빌렸어요.",
+     "o": [
+      "가서",
+      "가고",
+      "갔어서",
+      "가다가"
+     ],
+     "w": "Mượn sách ở chính thư viện đó → -아서."
+    },
+    {
+     "q": "운전을 (    ) 전화하면 위험해요.",
+     "o": [
+      "하면서",
+      "하고 나서",
+      "하자마자",
+      "했다가"
+     ],
+     "w": "Hai việc cùng lúc → -(으)면서."
+    },
+    {
+     "q": "Câu nào **sai**?",
+     "o": [
+      "밥을 먹었자마자 나갔어요.",
+      "밥을 먹자마자 나갔어요.",
+      "밥을 먹고 나서 나갔어요.",
+      "밥을 먹다가 나갔어요."
+     ],
+     "w": "-자마자 không gắn -었-: 먹자마자."
+    }
+   ],
+   "em": [
+    "Kể buổi sáng hôm nay của em bằng 4 câu, mỗi câu dùng một đuôi: -자마자, -고 나서, -다가, -(으)면서."
+   ],
+   "co": "Vẽ trục thời gian lên bảng (A ━━ B), cô đọc câu, em chỉ tay vào chỗ B bắt đầu: giữa A (-다가), sau A ngay (-자마자), sau A một lúc (-고 나서), cùng A (-면서). Nhanh, 5 phút, trước khi vào -자마자.",
+   "part": 0,
+   "m": 15
+  },
+  {
+   "ref": "3A-2",
+   "no": 1,
+   "part": 0,
+   "m": 10,
+   "why": "A xong là B ngay"
+  },
+  {
+   "id": "cd_tl_ad",
+   "t": "V-았다가/었다가",
+   "cn": "Thời gian – chuyển hành động",
+   "src": {
+    "b": "3A",
+    "n": 7,
+    "no": 1
+   },
+   "core": "Làm A <b>xong hẳn</b> rồi lại chuyển sang B — B thường <b>ngược với A</b> (mở ↔ đóng, đi ↔ về, mặc ↔ cởi) hoặc là việc <b>liên quan</b> nảy ra sau khi A đã xong: “đã… rồi lại…”.",
+   "goc": "<b>-았/었-</b> (đã xong) + <b>-다가</b> (chuyển sang). Đây là điểm khác -다가 của 2A: có -았- nên A đã hoàn thành. 시장에 <b>갔다가</b> = đã đến chợ rồi; 시장에 가<b>다가</b> = đang trên đường đến chợ. Hay gặp với 가다/오다: <b>갔다(가) 오다</b> = đi đâu đó rồi về (화장실에 갔다 올게요).",
+   "chia": [
+    [
+     "Gốc",
+     "-았/었다가",
+     "Ví dụ"
+    ],
+    [
+     "ㅏ, ㅗ",
+     "가다 → **갔다가** · 오다 → **왔다가**",
+     "잠깐 밖에 나**갔다가** 들어왔어요."
+    ],
+    [
+     "하다",
+     "**했다가**",
+     "약속**했다가** 취소했어요."
+    ],
+    [
+     "còn lại",
+     "입다 → **입었다가** · 쓰다 → **썼다가**",
+     "옷을 입**었다가** 벗었어요."
+    ],
+    [
+     "Bất quy tắc",
+     "눕다 → **누웠다가** · 듣다 → **들었다가**",
+     "잠깐 누**웠다가** 일어났어요."
+    ],
+    [
+     "Rút gọn",
+     "갔다가 → **갔다**",
+     "편의점에 **갔다** 올게요."
+    ]
+   ],
+   "chiaNote": [
+    "Cặp hay đi với -았다가: 열다 ↔ 닫다, 켜다 ↔ 끄다, 입다/신다 ↔ 벗다, 타다 ↔ 내리다, 앉다 ↔ 일어서다, 눕다 ↔ 일어나다, 가다 ↔ 오다, 사다 ↔ 바꾸다/환불하다, 쓰다 ↔ 지우다, 약속하다 ↔ 취소하다.",
+    "Vế sau dùng được mệnh lệnh, rủ: **껐다가 다시 켜 보세요** (tên Bài 7).",
+    "갔다 오다 = **다녀오다**: 은행에 갔다 올게요 = 은행에 다녀올게요."
+   ],
+   "tinh": [
+    {
+     "t": "Hướng dẫn sửa máy",
+     "c": "Bạn nói máy tính bị đơ.",
+     "lv": "lịch sự",
+     "ko": "컴퓨터를 **껐다가** 다시 켜 보세요.",
+     "vi": "Thử tắt máy rồi bật lại xem.",
+     "why": "Tắt xong hẳn rồi làm việc ngược lại (bật) → -았다가; vế sau là lời khuyên vẫn được."
+    },
+    {
+     "t": "Đi một lát rồi về",
+     "c": "Đang làm việc, xin ra ngoài.",
+     "lv": "lịch sự",
+     "ko": "잠깐 편의점에 **갔다** 올게요.",
+     "vi": "Em ra cửa hàng tiện lợi một lát rồi về.",
+     "why": "갔다(가) 오다 = đi rồi quay về."
+    },
+    {
+     "t": "Mua rồi lại đổi",
+     "c": "Kể chuyện mua sắm.",
+     "lv": "lịch sự",
+     "ko": "이 옷을 **샀다가** 사이즈가 안 맞아서 바꿨어요.",
+     "vi": "Mua cái áo này rồi vì không vừa nên đổi.",
+     "why": "Mua xong (A) → đổi (B liên quan, gần như ngược)."
+    },
+    {
+     "t": "Đến nơi rồi đổi kế hoạch",
+     "c": "Thư viện hôm nay đóng cửa.",
+     "lv": "lịch sự",
+     "ko": "도서관에 **갔다가** 문이 닫혀 있어서 카페에 갔어요.",
+     "vi": "Đến thư viện rồi, thấy đóng cửa nên đi quán cà phê.",
+     "why": "Đã đến thư viện (xong) rồi mới phát hiện và đổi → 갔다가. Nếu đổi ý giữa đường → 가다가."
+    },
+    {
+     "t": "Hẹn rồi hủy",
+     "c": "Giải thích với bạn.",
+     "lv": "thân mật",
+     "ko": "주말에 만나기로 **했다가** 일이 생겨서 취소했어.",
+     "vi": "Đã hẹn cuối tuần gặp rồi mà có việc nên hủy.",
+     "why": "Đã quyết định xong → làm điều ngược lại (hủy)."
+    }
+   ],
+   "rb": [
+    [
+     "Chủ ngữ",
+     "Hai vế cùng chủ ngữ: 나는 불을 껐다가 (내가) 다시 켰어요. Người khác làm vế sau → không dùng."
+    ],
+    [
+     "Quan hệ hai vế",
+     "B ngược hoặc liên quan đến A. Hai việc không dính nhau (숙제를 했다가 전화를 받았어요) → sai."
+    ],
+    [
+     "Loại từ",
+     "Động từ (sách 3A)."
+    ],
+    [
+     "Thì",
+     "-았- đã nằm trong đuôi; thì của cả câu ở vế sau (닫았어요 / 닫을게요 / 닫으세요)."
+    ]
+   ],
+   "sai": [
+    {
+     "x": "밥을 **먹었다가** 전화를 받았어요.",
+     "o": "밥을 **먹다가** 전화를 받았어요.",
+     "why": "Đang ăn (chưa xong) thì nghe điện thoại → -다가. Nghe điện thoại cũng không ngược / liên quan với ăn."
+    },
+    {
+     "x": "나는 불을 **껐다가** 동생이 다시 켰어요.",
+     "o": "내가 불을 **껐는데** 동생이 다시 켰어요.",
+     "why": "-았다가 phải cùng chủ ngữ. Khác người → -는데."
+    },
+    {
+     "x": "신발을 **신었다가** 들어갔어요.",
+     "o": "신발을 **신고** 들어갔어요. / 신발을 신**었다가** 벗었어요.",
+     "why": "Đi giày rồi vào nhà không phải việc ngược lại → -고. -았다가 cần cặp như 신다 ↔ 벗다."
+    },
+    {
+     "x": "(ý: đến chợ, mua đồ ở đó) 시장에 **갔다가** 과일을 샀어요.",
+     "o": "시장에 **가서** 과일을 샀어요.",
+     "why": "Mua ở chính chợ đó → -아서. -았다가 là xong rồi “chuyển”, thường rời chỗ đó / quay về."
+    }
+   ],
+   "pb": [
+    {
+     "vs": "-다가 (2A Bài 7)",
+     "d": "-았다가: A <b>đã xong</b> rồi chuyển; B phải ngược / liên quan. -다가: A <b>đang dở</b> thì dừng; B tự do.",
+     "ex": [
+      [
+       "시장에 **갔다가** 급한 약속이 생각나서 학교로 갔다.",
+       "Đến chợ rồi mới nhớ ra hẹn gấp nên đi đến trường."
+      ],
+      [
+       "시장에 가**다가** 급한 약속이 생각나서 학교로 갔다.",
+       "Đang trên đường ra chợ thì nhớ ra hẹn gấp nên đi đến trường."
+      ]
+     ]
+    },
+    {
+     "vs": "-아서 (trình tự)",
+     "d": "-아서: đến nơi rồi làm việc ở đó. -았다가: đến nơi rồi chuyển / quay về.",
+     "ex": [
+      [
+       "친구 집에 **가서** 놀았어요.",
+       "Đến nhà bạn chơi."
+      ],
+      [
+       "친구 집에 **갔다가** 왔어요.",
+       "Đã đến nhà bạn rồi về."
+      ]
+     ]
+    }
+   ],
+   "topik": [
+    {
+     "src": "Đọc câu 1 · đề luyện Yonsei",
+     "ko": "지난 여름 방학 때 부모님과 함께 제주도에 (**갔다가**) 왔다. · Lựa chọn: 가다가 / 가다니 / 갔는데 / 갔다가",
+     "note": "Bẫy chính là 가다가 ↔ 갔다가. Vế sau 왔다 (về) ngược với 가다 và chuyến đi đã xong → 갔다가."
+    }
+   ],
+   "hoi": [
+    {
+     "q": "문을 열다가 닫았어요 ↔ 문을 열었다가 닫았어요?",
+     "a": "열다가: đang mở dở (mới hé) thì đóng lại. 열었다가: đã mở hẳn ra rồi mới đóng."
+    },
+    {
+     "q": "Đồng nghiệp nói “은행에 갔다 올게요.” Họ sẽ làm gì?",
+     "a": "Ra ngân hàng một lát rồi quay lại (= 다녀올게요)."
+    }
+   ],
+   "luyen": [
+    {
+     "q": "더워서 에어컨을 (    ) 추워서 다시 껐어요.",
+     "o": [
+      "켰다가",
+      "켜다가",
+      "켜서",
+      "켜자마자"
+     ],
+     "w": "Bật xong rồi tắt (ngược lại) → -았다가."
+    },
+    {
+     "q": "잠깐 화장실에 (    ) 올게요.",
+     "o": [
+      "갔다",
+      "가다",
+      "가서",
+      "가고"
+     ],
+     "w": "갔다(가) 오다 = đi rồi về."
+    },
+    {
+     "q": "버스를 (    ) 지갑을 두고 온 게 생각나서 다시 내렸어요.",
+     "o": [
+      "탔다가",
+      "타다가",
+      "타서",
+      "타면서"
+     ],
+     "w": "Đã lên xe rồi lại xuống (ngược) → 탔다가."
+    },
+    {
+     "q": "책을 (    ) 전화가 와서 잠깐 멈췄어요.",
+     "o": [
+      "읽다가",
+      "읽었다가",
+      "읽고 나서",
+      "읽자마자"
+     ],
+     "w": "Đang đọc dở thì có điện thoại → -다가, không phải -았다가."
+    },
+    {
+     "q": "Câu nào **đúng**?",
+     "o": [
+      "옷을 입었다가 너무 커서 벗었어요.",
+      "옷을 입었다가 친구를 만났어요.",
+      "옷을 입다가 너무 커서 벗었어요.",
+      "내가 옷을 입었다가 동생이 벗었어요."
+     ],
+     "w": "Mặc xong (thấy rộng) rồi cởi: ngược nghĩa, cùng chủ ngữ."
+    },
+    {
+     "q": "회의를 내일 하기로 (    ) 오늘 하게 됐어요.",
+     "o": [
+      "했다가",
+      "하다가",
+      "해서",
+      "하자마자"
+     ],
+     "w": "Đã quyết định xong rồi thay đổi → 했다가."
+    }
+   ],
+   "em": [
+    "Kể 3 lần em “làm rồi lại thôi / lại đổi” trong tuần này bằng -았/었다가 (mở – đóng, mua – đổi, hẹn – hủy…)."
+   ],
+   "co": "Cô làm động tác (mở hộp bút rồi đóng, đứng lên rồi ngồi, cầm áo khoác mặc rồi cởi) — em nói câu -았다가 ngay. Sau đó cô làm động tác dở dang (đang mở thì dừng) → em phải đổi sang -다가. Bài 7 sách cũng có -더니 (chuyên đề -더-) — chưa dạy ở đây.",
+   "part": 0,
+   "m": 15
+  },
+  {
+   "id": "cd_tl_nen2",
+   "t": "Bước 0 · Nền lý do: -아서 · -(으)니까 · -기 때문에 · N(이)라서",
+   "cn": "Nền: lý do",
+   "src": {
+    "b": "2B",
+    "n": 13,
+    "no": 3
+   },
+   "core": "1A–2B đã có 4 cách nói lý do; chúng khác nhau chủ yếu ở <b>vế sau</b>: -아서 không đi với lời bảo / rủ và không gắn quá khứ; <b>-(으)니까</b> đi được với lời bảo / rủ; <b>-기 때문에</b> nhấn mạnh nguyên nhân, hợp văn viết. 3A thêm 3 cách nói lý do có “điều kiện riêng”: <b>-느라고</b>, <b>-다가</b>, <b>-거든요</b>.",
+   "goc": "Mẹo chọn: <b>nhìn vế sau trước</b>. Vế sau là lời bảo / rủ (-세요, -(으)ㅂ시다, -(으)ㄹ까요) → -(으)니까. Vế sau là xin lỗi / cảm ơn → -아서. Viết báo cáo, bài luận → -기 때문에. Lý do là một danh từ (휴일, 학생) → N(이)라서 / N이기 때문에 / N 때문에.",
+   "chia": [
+    [
+     "Đuôi",
+     "Gắn quá khứ?",
+     "Vế sau bảo / rủ?",
+     "Dùng khi",
+     "Ví dụ"
+    ],
+    [
+     "-아서/어서",
+     "✗ (늦어서)",
+     "✗",
+     "lý do tự nhiên, xin lỗi, cảm ơn",
+     "늦**어서** 죄송합니다."
+    ],
+    [
+     "-(으)니까",
+     "○ (늦었으니까)",
+     "○",
+     "lý do người nói đưa ra để khuyên / đề nghị",
+     "늦었**으니까** 택시를 탑시다."
+    ],
+    [
+     "-기 때문에",
+     "○ (늦었기 때문에)",
+     "✗ (nghe gượng)",
+     "nhấn nguyên nhân, văn viết",
+     "길이 막혔**기 때문에** 늦었다."
+    ],
+    [
+     "N(이)라서",
+     "✗",
+     "✗",
+     "vì là N",
+     "휴일**이라서** 은행이 문을 안 열어요."
+    ],
+    [
+     "N 때문에",
+     "–",
+     "△",
+     "vì N (thường chuyện không hay)",
+     "비 **때문에** 못 갔어요."
+    ]
+   ],
+   "chiaNote": [
+    "Cảm ơn / xin lỗi luôn dùng **-아서**: 도와주**셔서** 감사합니다 (không nói 도와주시니까).",
+    "-(으)니까 còn nghĩa “làm… thì (phát hiện)” (2A-5): 집에 도착하**니까** 비가 내리기 시작했다 (kỳ 41 câu 2).",
+    "N 때문에 (vì N) ≠ V-기 때문에 (vì làm V): 동생 **때문에** (vì em) / 동생이 아프**기 때문에** (vì em ốm)."
+   ],
+   "tinh": [
+    {
+     "t": "Xin lỗi",
+     "c": "Đến muộn buổi họp.",
+     "lv": "trang trọng",
+     "ko": "길이 막혀**서** 늦었습니다. 죄송합니다.",
+     "vi": "Tắc đường nên tôi đến muộn. Xin lỗi.",
+     "why": "Xin lỗi → -아서; giải thích nhẹ nhàng, không biện minh."
+    },
+    {
+     "t": "Khuyên",
+     "c": "Bạn sắp ra ngoài.",
+     "lv": "lịch sự",
+     "ko": "비가 오**니까** 우산을 가져가세요.",
+     "vi": "Trời mưa nên mang ô đi.",
+     "why": "Vế sau là lời khuyên → chỉ -(으)니까 đi được."
+    },
+    {
+     "t": "Văn viết",
+     "c": "Báo cáo / bài đọc.",
+     "lv": "văn viết",
+     "ko": "원료 가격이 올랐**기 때문에** 제품 가격도 올랐다.",
+     "vi": "Vì giá nguyên liệu tăng nên giá sản phẩm cũng tăng.",
+     "why": "Nhấn nguyên nhân, văn phong viết → -기 때문에."
+    },
+    {
+     "t": "Lý do là danh từ",
+     "c": "Bạn hỏi sao ngân hàng đóng cửa.",
+     "lv": "lịch sự",
+     "ko": "오늘은 휴일**이라서** 은행이 문을 안 열어요.",
+     "vi": "Hôm nay là ngày nghỉ nên ngân hàng không mở cửa.",
+     "why": "Lý do = “là ngày nghỉ” → N(이)라서."
+    }
+   ],
+   "rb": [
+    [
+     "Vế sau",
+     "Bảo / rủ → -(으)니까. -아서, -기 때문에, N(이)라서 thì không."
+    ],
+    [
+     "Thì",
+     "-아서, N(이)라서 không gắn quá khứ; -(으)니까, -기 때문에 gắn được (왔으니까, 왔기 때문에)."
+    ],
+    [
+     "Văn phong",
+     "-기 때문에 hợp văn viết, tin tức; -아서, -(으)니까 dùng nhiều khi nói."
+    ]
+   ],
+   "sai": [
+    {
+     "x": "비가 **와서** 우산을 가져가세요.",
+     "o": "비가 **오니까** 우산을 가져가세요.",
+     "why": "Vế sau là lời khuyên → -(으)니까."
+    },
+    {
+     "x": "**늦었어서** 죄송해요.",
+     "o": "**늦어서** 죄송해요.",
+     "why": "-아서 không gắn quá khứ."
+    },
+    {
+     "x": "**도와주시니까** 감사합니다.",
+     "o": "**도와주셔서** 감사합니다.",
+     "why": "Cảm ơn / xin lỗi → -아서."
+    },
+    {
+     "x": "시간이 **없기 때문에** 빨리 갑시다.",
+     "o": "시간이 **없으니까** 빨리 갑시다.",
+     "why": "-기 때문에 + lời rủ nghe gượng → -(으)니까."
+    }
+   ],
+   "pb": [
+    {
+     "vs": "-아서 ↔ -(으)니까",
+     "d": "-아서: nêu lý do khách quan, tự nhiên. -(으)니까: lý do người nói đưa ra làm căn cứ cho lời khuyên, yêu cầu; nghe chủ quan hơn.",
+     "ex": [
+      [
+       "배가 고파**서** 라면을 먹었어요.",
+       "Đói bụng nên ăn mì."
+      ],
+      [
+       "배가 고프**니까** 라면 먹자.",
+       "Đói rồi, ăn mì đi."
+      ]
+     ]
+    }
+   ],
+   "topik": [
+    {
+     "src": "Đọc · kỳ 83 câu 21",
+     "ko": "소방관은 재난 현장에서 끔찍한 상황을 자주 접하**기 때문에** 정신 건강에 위험이 따른다.",
+     "note": "Văn tin tức dùng -기 때문에. Câu chứa -기 때문에 thường chính là câu trả lời cho câu hỏi “vì sao” / nội dung giống."
+    },
+    {
+     "src": "Đọc · kỳ 41 câu 2",
+     "ko": "집에 (**도착하니까**) 비가 내리기 시작했다.",
+     "note": "-(으)니까 nghĩa “làm… thì (thấy)”, không phải lý do. Lựa chọn nhiễu 도착하거든."
+    }
+   ],
+   "hoi": [
+    {
+     "q": "Xin lỗi thầy vì nộp bài muộn: “바빠서 늦었어요” hay “바쁘니까 늦었어요”?",
+     "a": "<b>바빠서</b>. -(으)니까 nghe như “tại em bận chứ sao” — biện minh, thiếu lễ phép."
+    }
+   ],
+   "luyen": [
+    {
+     "q": "날씨가 (    ) 창문 좀 닫아 주세요.",
+     "o": [
+      "추우니까",
+      "추워서",
+      "춥기 때문에",
+      "추운데도"
+     ],
+     "w": "Vế sau là lời nhờ → -(으)니까."
+    },
+    {
+     "q": "선물을 (    ) 감사합니다.",
+     "o": [
+      "주셔서",
+      "주시니까",
+      "주시기 때문에",
+      "주셨으니까"
+     ],
+     "w": "Cảm ơn → -아서."
+    },
+    {
+     "q": "오늘은 (    ) 사람이 많아요.",
+     "o": [
+      "주말이라서",
+      "주말이라도",
+      "주말이라면",
+      "주말인데도"
+     ],
+     "w": "Danh từ + (이)라서."
+    },
+    {
+     "q": "Câu nào hợp với bài báo?",
+     "o": [
+      "인구가 줄었기 때문에 학교가 문을 닫았다.",
+      "인구가 줄었으니까 학교가 문을 닫읍시다.",
+      "인구가 줄어서요.",
+      "인구가 줄었어서 학교가 문을 닫았다."
+     ],
+     "w": "Văn viết, nhấn nguyên nhân → -기 때문에."
+    }
+   ],
+   "em": [
+    "Viết 3 câu: một câu xin lỗi (-아서), một câu khuyên bạn (-(으)니까), một câu giải thích kiểu bài báo (-기 때문에)."
+   ],
+   "co": "Ôn nhanh 7–10 phút: cô nói vế sau trước (“…우산을 가져가세요”, “…죄송합니다”, “…늦었다”), em chọn đuôi lý do hợp. Đây là thói quen “nhìn vế sau trước” dùng tiếp cho -느라고 / -다가 / -거든요.",
+   "part": 1,
+   "m": 10
+  },
+  {
+   "ref": "3A-2",
+   "no": 3,
+   "part": 1,
+   "m": 12,
+   "why": "Mải A nên không làm được B"
+  },
+  {
+   "id": "cd_tl_dg",
+   "t": "V-다(가) (nguyên nhân dẫn tới kết quả xấu)",
+   "cn": "Lý do – kết quả xấu",
+   "src": {
+    "b": "3A",
+    "n": 8,
+    "no": 1
+   },
+   "core": "Đang làm A (hoặc cứ làm A mãi) thì xảy ra chuyện <b>không hay</b> B, và A chính là nguyên nhân: “đang… thì bị…”, “cứ… nên…”. 아이가 놀<b>다가</b> 넘어졌어요 = đang chơi thì ngã (vì chơi mà ngã).",
+   "goc": "Cùng hình thức với <b>-다가</b> của 2A Bài 7 (đang làm thì chuyển). Ở 3A, việc “chen vào” là <b>sự cố / kết quả xấu do chính A gây ra</b>: đang chạy → ngã, ăn vội → đau bụng, mải xem điện thoại → lỡ ga. Rút gọn được thành <b>-다</b>: 놀<b>다</b> 다쳤어요. Nối sang cảnh báo: <b>그러다(가)</b> = cứ thế thì…: 그러다 감기 걸려요.",
+   "chia": [
+    [
+     "Gốc",
+     "-다가",
+     "Ví dụ"
+    ],
+    [
+     "không 받침",
+     "가다 → 가**다가**",
+     "버스를 타고 가**다가** 멀미를 했어요."
+    ],
+    [
+     "có 받침",
+     "먹다 → 먹**다가**",
+     "급하게 먹**다가** 체했어요."
+    ],
+    [
+     "gốc ㄹ",
+     "놀다 → 놀**다가**",
+     "공원에서 놀**다가** 넘어졌어요."
+    ],
+    [
+     "Rút gọn",
+     "하다가 → 하**다**",
+     "밤늦게까지 게임을 하**다** 숙제를 못 했어요."
+    ],
+    [
+     "Lo lắng / cảnh báo",
+     "-다가 … -(으)면 어떡해요? · 그러다(가)",
+     "쉬지 않고 일만 하**다가** 병이 나면 어떡해요? · 그러**다** 감기 걸려요."
+    ]
+   ],
+   "chiaNote": [
+    "Vế sau hay là: 다치다, 넘어지다, 사고가 나다, 병이 나다, 배탈이 나다, 멀미를 하다, 지각하다, 잃어버리다, 혼나다, (역을) 지나치다.",
+    "Không gắn -았- trước -다가 (đã có cách khác: -았다가 ở bước 3 là nghĩa khác).",
+    "그러다(가) = 그렇게 하다가: câu phản ứng rất hay gặp trong hội thoại — “cứ thế thì sẽ…”."
+   ],
+   "tinh": [
+    {
+     "t": "Tai nạn nhỏ",
+     "c": "Kể chuyện con ở công viên.",
+     "lv": "lịch sự",
+     "ko": "아이가 공원에서 놀**다가** 넘어져서 얼굴을 다쳤어요.",
+     "vi": "Bé đang chơi ở công viên thì ngã, bị thương ở mặt.",
+     "why": "Đang chơi (A) → ngã (sự cố, do chơi) → -다가."
+    },
+    {
+     "t": "Lỡ ga",
+     "c": "Giải thích vì sao đến muộn.",
+     "lv": "lịch sự",
+     "ko": "휴대 전화를 보**다가** 내릴 역을 지나쳤어요.",
+     "vi": "Mải xem điện thoại nên đi quá ga.",
+     "why": "Đang xem → lỡ ga (kết quả xấu do việc đang làm)."
+    },
+    {
+     "t": "Ăn vội",
+     "c": "Kể với bạn.",
+     "lv": "thân mật",
+     "ko": "점심을 너무 급하게 먹**다가** 체했어.",
+     "vi": "Ăn trưa vội quá nên bị đầy bụng.",
+     "why": "Cách làm A (vội) gây ra B."
+    },
+    {
+     "t": "Lo cho người làm quá sức",
+     "c": "Đồng nghiệp làm thêm giờ cả tuần.",
+     "lv": "lịch sự",
+     "ko": "이렇게 쉬지 않고 일만 하**다가** 병이 나면 어떡해요? 좀 쉬세요.",
+     "vi": "Cứ làm không nghỉ thế này mà đổ bệnh thì sao? Nghỉ chút đi.",
+     "why": "Cứ làm A mãi → có thể dẫn tới B xấu (lo lắng)."
+    },
+    {
+     "t": "Cảnh báo",
+     "c": "Bạn mặc áo mỏng giữa trời lạnh.",
+     "lv": "thân mật",
+     "ko": "그렇게 얇게 입고 다니다**가** 감기 걸려. / 그러**다** 감기 걸려.",
+     "vi": "Cứ mặc mỏng thế mà đi thì cảm đấy.",
+     "why": "Cảnh báo kết quả xấu nếu cứ tiếp tục."
+    }
+   ],
+   "rb": [
+    [
+     "Chủ ngữ",
+     "Hai vế cùng một người (vế sau thường lược chủ ngữ): 샤오밍 씨가 뛰다가 (샤오밍 씨가) 넘어졌다."
+    ],
+    [
+     "Vế sau",
+     "Kết quả <b>xấu</b>. Kết quả tốt → -아서 (열심히 공부해서 합격했어요)."
+    ],
+    [
+     "Kiểu câu",
+     "Không dùng mệnh lệnh / rủ ở vế sau (빨리 달리다가 사고를 내세요 ✗)."
+    ],
+    [
+     "Loại từ",
+     "Chỉ động từ. Tính từ → -아서: 날씨가 계속 추**워서** 감기에 걸렸어요."
+    ]
+   ],
+   "sai": [
+    {
+     "x": "날씨가 계속 **춥다가** 감기에 걸렸어요.",
+     "o": "날씨가 계속 **추워서** 감기에 걸렸어요.",
+     "why": "Tính từ không đi với -다가 nguyên nhân."
+    },
+    {
+     "x": "열심히 공부하**다가** 시험에 합격했어요.",
+     "o": "열심히 공부**해서** 시험에 합격했어요.",
+     "why": "Kết quả tốt → -아서. -다가 chỉ dẫn tới chuyện không hay."
+    },
+    {
+     "x": "샤오밍 씨가 뛰어가**다가** 유진 씨가 다쳤어요.",
+     "o": "샤오밍 씨가 뛰어가**다가** 넘어졌어요.",
+     "why": "Người gặp chuyện phải là người làm A."
+    },
+    {
+     "x": "**넘어졌다가** 다쳤어요.",
+     "o": "뛰**다가** 넘어져서 다쳤어요.",
+     "why": "-았다가 là “làm xong rồi đổi sang việc ngược”, không chỉ nguyên nhân."
+    }
+   ],
+   "pb": [
+    {
+     "vs": "-다가 (2A Bài 7, chuyển việc)",
+     "d": "Cùng hình thức. 2A: đang làm thì chuyển sang việc khác, vế sau tự do (cả mệnh lệnh). 3A: việc đang làm gây ra chuyện xấu, vế sau không mệnh lệnh.",
+     "ex": [
+      [
+       "똑바로 가**다가** 오른쪽으로 도세요.",
+       "Đi thẳng rồi rẽ phải. (2A)"
+      ],
+      [
+       "쉬지 않고 운동하**다가** 몸살이 났어요.",
+       "Tập không nghỉ nên bị ốm mệt. (3A)"
+      ]
+     ]
+    },
+    {
+     "vs": "-느라고 (3A Bài 2)",
+     "d": "-느라고: dồn thời gian vào A nên <b>không làm được</b> B / mệt, muộn. -다가: <b>đang làm A thì sự cố B</b> xảy ra.",
+     "ex": [
+      [
+       "게임을 하**느라고** 숙제를 못 했어요.",
+       "Mải chơi game nên không làm bài."
+      ],
+      [
+       "게임을 하**다가** 휴대폰을 떨어뜨렸어요.",
+       "Đang chơi game thì làm rơi điện thoại."
+      ]
+     ]
+    },
+    {
+     "vs": "-는 바람에 (TOPIK câu 3–4)",
+     "d": "-는 바람에: một sự việc bất ngờ gây kết quả xấu, hai vế khác chủ ngữ cũng được. -다가: phải là việc đang làm của chính người đó.",
+     "ex": [
+      [
+       "아침에 늦게 일어나**는 바람에** 기차를 놓쳤다.",
+       "Vì sáng dậy muộn nên lỡ tàu. (kỳ 47 câu 3)"
+      ]
+     ]
+    }
+   ],
+   "topik": [
+    {
+     "src": "Đọc · kỳ 91 câu 12",
+     "ko": "최근 김 씨는 피자를 배달하러 가**다가** 오토바이가 빗길에 미끄러지는 사고를 당했다. · Lựa chọn: 김 씨는 피자를 시킨 고객에게 연락하**다** 사고가 났다.",
+     "note": "Bài đọc: gặp tai nạn <b>khi đang đi giao</b>. Lựa chọn đổi thành “đang liên lạc với khách thì gặp tai nạn” (연락하다 = 연락하다가, rút gọn) → sai. Câu 12 hay bẫy đúng ở chỗ “đang làm gì thì xảy ra chuyện”."
+    },
+    {
+     "src": "Đọc · kỳ 60 câu 1",
+     "ko": "휴대 전화를 (**보다가**) 내려야 할 역을 지나쳤다.",
+     "note": "Đang xem điện thoại → lỡ ga: vừa là -다가 chuyển việc, vừa là kết quả xấu do việc đang làm."
+    }
+   ],
+   "hoi": [
+    {
+     "q": "Bạn em cứ thức khuya chơi game. Em cảnh báo bằng một câu ngắn?",
+     "a": "그러<b>다(가)</b> 건강 나빠져! / 그렇게 밤새 게임만 하<b>다가</b> 병 나."
+    },
+    {
+     "q": "Vì sao 열심히 공부하다가 합격했어요 sai?",
+     "a": "-다가 nguyên nhân chỉ đi với kết quả không hay. Kết quả tốt → 공부<b>해서</b> 합격했어요."
+    }
+   ],
+   "luyen": [
+    {
+     "q": "계단에서 (    ) 넘어졌어요.",
+     "o": [
+      "뛰다가",
+      "뛰어서요",
+      "뛰었다가",
+      "뛰자마자"
+     ],
+     "w": "Đang chạy (A) → ngã (sự cố) → -다가."
+    },
+    {
+     "q": "급하게 밥을 (    ) 체했어요.",
+     "o": [
+      "먹다가",
+      "먹느라고",
+      "먹고 나서",
+      "먹었다가"
+     ],
+     "w": "Ăn vội gây ra đầy bụng → -다가. -느라고 cần vế sau là việc không làm được / mệt, muộn."
+    },
+    {
+     "q": "열심히 (    ) 시험에 합격했어요.",
+     "o": [
+      "공부해서",
+      "공부하다가",
+      "공부하느라고",
+      "공부했다가"
+     ],
+     "w": "Kết quả tốt → -아서."
+    },
+    {
+     "q": "A: 요즘 매일 새벽 3시에 자요. B: (    ) 건강이 나빠져요.",
+     "o": [
+      "그러다가",
+      "그래서",
+      "그런데",
+      "그러니까"
+     ],
+     "w": "Cảnh báo “cứ thế thì…” → 그러다가."
+    },
+    {
+     "q": "Câu nào **đúng**?",
+     "o": [
+      "아이가 놀다가 다쳤어요.",
+      "날씨가 춥다가 감기에 걸렸어요.",
+      "아이가 놀다가 엄마가 다쳤어요.",
+      "빨리 달리다가 넘어지세요."
+     ],
+     "w": "Cùng chủ ngữ, động từ, kết quả xấu, không mệnh lệnh."
+    }
+   ],
+   "em": [
+    "Kể 2 “tai nạn nhỏ” của em hoặc người quen bằng -다가 (đang làm gì thì bị gì).",
+    "Viết một câu cảnh báo bạn bằng 그러다(가)."
+   ],
+   "co": "Nối bước 2 (-다가 trình tự) với bước này: cô viết 2 câu cạnh nhau (가다가 오른쪽으로 도세요 / 가다가 넘어졌어요) cho em tự nói khác nhau ở đâu. Rồi chơi “đổ lỗi”: cô nêu kết quả xấu (지각했어요, 다쳤어요, 휴대폰이 고장 났어요), em bịa nguyên nhân bằng -다가.",
+   "part": 1,
+   "m": 12
+  },
+  {
+   "id": "cd_tl_gd",
+   "t": "A/V-거든(요), N(이)거든(요)",
+   "cn": "Lý do – giải thích",
+   "src": {
+    "b": "3A",
+    "n": 6,
+    "no": 1
+   },
+   "core": "Đặt ở <b>cuối câu</b> để cho người nghe biết <b>lý do / thông tin họ chưa biết</b>: “là vì… đấy”, “… mà”. Chỉ dùng khi nói. Lên giọng nhẹ ở cuối thì thành câu <b>mở chuyện</b>, nói tiếp câu sau.",
+   "goc": "-거든 (đuôi kết thúc) + 요. Người nói ngầm cho rằng: “bạn chưa biết chuyện này — để tôi nói cho”. Vì vậy -거든요 thường đứng <b>sau</b> một câu hỏi “sao vậy?” hoặc ở câu thứ hai khi giải thích. Khác các đuôi lý do ở bước trước: -거든요 <b>không nối hai vế</b> trong một câu.",
+   "chia": [
+    [
+     "Loại từ",
+     "Hiện tại",
+     "Quá khứ",
+     "Tương lai"
+    ],
+    [
+     "Động từ",
+     "오**거든요** · 먹**거든요**",
+     "왔**거든요** · 먹었**거든요**",
+     "올 거**거든요**"
+    ],
+    [
+     "Tính từ",
+     "바쁘**거든요** · 좋**거든요**",
+     "바빴**거든요**",
+     "바쁠 거**거든요**"
+    ],
+    [
+     "Danh từ",
+     "휴가**거든요** · 방학**이거든요**",
+     "휴가였**거든요** · 방학이었**거든요**",
+     ""
+    ],
+    [
+     "반말",
+     "바쁘**거든** · 휴가**거든**",
+     "왔**거든**",
+     ""
+    ]
+   ],
+   "chiaNote": [
+    "Hai cách dùng: (1) trả lời “왜?”: A: 왜 창문을 닫았어요? B: 먼지가 많이 들어오**거든요**. (2) mở chuyện (giọng lên nhẹ): 제가 지금 막 지하철을 탔**거든요**. 1시간쯤 후에 도착할 거예요.",
+    "Với người trên, dùng ít: nghe như “anh/chị không biết à”. Lịch sự hơn: **-아서요**, **-기 때문이에요** (길이 막혀**서요**).",
+    "**-거든 giữa câu là đuôi khác hẳn**: “nếu / khi… thì” + vế sau là lời bảo, rủ, ý định: 집에 도착하**거든** 연락해 (về đến nhà thì gọi nhé). Trong TOPIK câu 1–2 nó thường là lựa chọn nhiễu."
+   ],
+   "tinh": [
+    {
+     "t": "Trả lời “sao vậy?”",
+     "c": "Bạn hỏi sao em luôn học ở quán đó.",
+     "lv": "lịch sự",
+     "ko": "A: 왜 항상 그 카페에서 숙제를 해요? B: 커피가 맛있고 조용하**거든요**.",
+     "vi": "Vì cà phê ngon mà lại yên tĩnh.",
+     "why": "Người hỏi chưa biết lý do → em giải thích bằng -거든요."
+    },
+    {
+     "t": "Từ chối khéo",
+     "c": "Bạn rủ đi chơi tối nay.",
+     "lv": "lịch sự",
+     "ko": "오늘은 못 갈 것 같아요. 내일 시험이 있**거든요**.",
+     "vi": "Hôm nay chắc em không đi được. Mai em có bài thi.",
+     "why": "Câu 1 từ chối, câu 2 dùng -거든요 nói lý do người kia chưa biết — mềm hơn nhiều so với chỉ từ chối."
+    },
+    {
+     "t": "Mở chuyện",
+     "c": "Giới thiệu sở thích.",
+     "lv": "lịch sự",
+     "ko": "제가 요즘 요리를 배우**거든요**. 그래서 주말마다 친구들을 초대해요.",
+     "vi": "Dạo này em đang học nấu ăn. Vậy nên cuối tuần nào em cũng mời bạn bè.",
+     "why": "Giọng lên nhẹ ở -거든요 → báo trước “còn tiếp”, câu sau mới là ý chính."
+    },
+    {
+     "t": "Với bạn thân",
+     "c": "Em mời bạn ăn.",
+     "lv": "thân mật",
+     "ko": "오늘은 내가 살게. 첫 월급 받았**거든**.",
+     "vi": "Hôm nay để tớ trả. Tớ vừa nhận lương tháng đầu mà.",
+     "why": "반말 -거든: lý do của lời mời."
+    },
+    {
+     "t": "Cãi lại (giọng gắt)",
+     "c": "Bị coi là không biết làm.",
+     "lv": "thân mật – gắt",
+     "ko": "나도 할 수 있**거든**?",
+     "vi": "Tớ cũng làm được đấy nhé?",
+     "why": "-거든(요)? lên giọng mạnh = “cậu tưởng tớ không biết à” — nghe khó chịu, chỉ dùng với bạn thân."
+    }
+   ],
+   "rb": [
+    [
+     "Vị trí",
+     "Cuối câu (đuôi kết thúc). Không nối hai vế trong một câu."
+    ],
+    [
+     "Người nghe",
+     "Chưa biết thông tin / lý do. Người nghe đã biết → -잖아요."
+    ],
+    [
+     "Văn phong",
+     "Chỉ văn nói. Bài viết dùng -기 때문이다."
+    ],
+    [
+     "Người trên",
+     "Dễ nghe thiếu lễ phép; thay bằng -아서요 / -기 때문이에요."
+    ],
+    [
+     "Thì",
+     "Gắn quá khứ, tương lai được: 왔거든요, 올 거거든요."
+    ]
+   ],
+   "sai": [
+    {
+     "x": "(Với sếp) 늦었**거든요**. 죄송합니다.",
+     "o": "길이 막혀**서** 늦었습니다. 죄송합니다.",
+     "why": "Xin lỗi người trên mà dùng -거든요 nghe như biện minh “anh không biết à”."
+    },
+    {
+     "x": "비가 오**거든요** 우산을 가져가세요.",
+     "o": "비가 오**니까** 우산을 가져가세요.",
+     "why": "-거든요 là đuôi kết câu, không nối với vế sau. (비가 오**거든** 우산을 가져가세요 = nếu trời mưa thì… — nghĩa khác.)"
+    },
+    {
+     "x": "다음 주가 **방학거든요**.",
+     "o": "다음 주가 **방학이거든요**.",
+     "why": "Danh từ có 받침 → 이거든요."
+    },
+    {
+     "x": "(Viết câu 54) 환경 문제가 심각하**거든요**.",
+     "o": "환경 문제가 심각하**기 때문이다**.",
+     "why": "Văn viết không dùng -거든요."
+    }
+   ],
+   "pb": [
+    {
+     "vs": "-거든 (giữa câu: nếu / khi… thì)",
+     "d": "-거든요 cuối câu = lý do người nghe chưa biết. -거든 giữa câu = điều kiện, vế sau phải là bảo / rủ / ý định — không đi với vế sau quá khứ.",
+     "ex": [
+      [
+       "집에 도착하**거든** 연락해.",
+       "Về đến nhà thì nhắn tớ nhé."
+      ],
+      [
+       "집에 도착했**거든**. 걱정하지 마.",
+       "Tớ về đến nhà rồi. Đừng lo."
+      ]
+     ]
+    },
+    {
+     "vs": "-잖아요",
+     "d": "-거든요: người nghe chưa biết. -잖아요: người nghe đã biết, nhắc lại.",
+     "ex": [
+      [
+       "내일 시험이 있**거든요**.",
+       "(Bạn chưa biết) mai tôi có bài thi."
+      ],
+      [
+       "내일 시험이 있**잖아요**.",
+       "Mai có bài thi mà (bạn biết rồi đấy)."
+      ]
+     ]
+    }
+   ],
+   "topik": [
+    {
+     "src": "Đọc · kỳ 91 câu 2 · kỳ 41 câu 2",
+     "ko": "새집으로 (이사하고 나서) 가구를 새로 샀다. — nhiễu: 이사하**거든** · 집에 (도착하니까) 비가 내리기 시작했다. — nhiễu: 도착하**거든**",
+     "note": "-거든 giữa câu là “nếu / khi… thì”, cần vế sau là lời bảo / ý định. Vế sau quá khứ (샀다, 시작했다) → loại ngay. Đừng nhầm với -거든요 lý do."
+    },
+    {
+     "src": "Nghe · đề luyện EBS",
+     "ko": "드디어 오늘 기다리던 첫 월급을 받았**거든**.",
+     "note": "Trong bài nghe, câu -거든(요) là lý do của lời mời / hành động → manh mối cho câu hỏi “vì sao người nói…”."
+    }
+   ],
+   "hoi": [
+    {
+     "q": "Bạn hỏi: “왜 안 먹어?” Em vừa ăn rồi. Trả lời thế nào?",
+     "a": "아까 먹었<b>거든</b>. / 방금 먹었<b>거든요</b>."
+    },
+    {
+     "q": "“집에 도착하거든 전화하세요” — -거든 ở đây có phải “vì” không?",
+     "a": "Không. -거든 giữa câu = “khi / nếu… thì”: về đến nhà thì gọi điện nhé."
+    }
+   ],
+   "luyen": [
+    {
+     "q": "A: 왜 그렇게 피곤해 보여요? B: 어젯밤에 잠을 못 (    ).",
+     "o": [
+      "잤거든요",
+      "자거든요",
+      "잤잖아요",
+      "자느라고요"
+     ],
+     "w": "Lý do người hỏi chưa biết, đã xảy ra → 잤거든요. -잖아요 dùng khi người nghe đã biết."
+    },
+    {
+     "q": "A: 주말에 같이 등산 갈래요? B: 미안해요. 주말에 친구 (    ).",
+     "o": [
+      "결혼식이거든요",
+      "결혼식거든요",
+      "결혼식이잖아요",
+      "결혼식이라면요"
+     ],
+     "w": "Danh từ có 받침 → 이거든요."
+    },
+    {
+     "q": "집에 (    ) 꼭 연락해.",
+     "o": [
+      "도착하거든",
+      "도착했거든요",
+      "도착하거든요",
+      "도착했거든"
+     ],
+     "w": "Giữa câu, vế sau là lời dặn → -거든 (khi… thì)."
+    },
+    {
+     "q": "Câu nào lịch sự nhất khi giải thích với thầy cô?",
+     "o": [
+      "버스를 잘못 타서 늦었습니다.",
+      "버스를 잘못 탔거든요.",
+      "버스를 잘못 탔거든.",
+      "버스를 잘못 탔잖아요."
+     ],
+     "w": "Với người trên: -아서 + 습니다. -거든요 dễ nghe như biện minh."
+    },
+    {
+     "q": "(Câu 1 kiểu TOPIK) 배가 (    ) 라면을 끓여 먹었다.",
+     "o": [
+      "고프길래",
+      "고프거든",
+      "고프다가",
+      "고파야지"
+     ],
+     "w": "Vế sau quá khứ → loại -거든 (điều kiện). -길래 = thấy… nên (đề luyện HOT TOPIK)."
+    }
+   ],
+   "em": [
+    "Viết 3 cặp hỏi – đáp: bạn hỏi “왜…?”, em trả lời bằng -거든요.",
+    "Viết 1 câu mở chuyện bằng -거든요 rồi nói tiếp ý chính."
+   ],
+   "co": "Trò “hỏi vì sao”: cô nêu một việc lạ (선생님은 매일 6시에 일어나요, 저는 요즘 커피를 안 마셔요…), em hỏi “왜요?”, cô trả lời bằng -거든요; đổi vai. Sau đó cho em nghe lại câu có -거든 giữa câu (도착하거든 연락해) để tách rõ hai đuôi.",
+   "part": 1,
+   "m": 12
+  },
+  {
+   "id": "cd_tl_th",
+   "t": "Tổng hợp · chọn đuôi nối thời gian – lý do",
+   "cn": "Thời gian – lý do",
+   "core": "Gặp chỗ trống giữa hai vế, làm theo thứ tự: <b>(1) nhìn vế sau</b> (quá khứ? lời bảo / rủ? kết quả tốt hay xấu?) → <b>(2) quan hệ</b> là thời gian hay lý do → <b>(3) kiểm tra ràng buộc</b> (cùng chủ ngữ, động / tính từ, có gắn -았- không). Đây cũng là quy trình làm TOPIK câu 1–2.",
+   "goc": "Ba bẫy hay gặp nhất: <b>-거든</b> (điều kiện) đặt trước vế sau quá khứ → sai; <b>-느라고 / -다가</b> đi với kết quả tốt → sai; <b>-아서 / -느라고</b> đi với lời bảo / rủ → sai. Nhớ ba bẫy này là loại được 1–2 lựa chọn ngay.",
+   "chia": [
+    [
+     "Quan hệ",
+     "Đuôi",
+     "Ràng buộc chính",
+     "Ví dụ"
+    ],
+    [
+     "A xong → B ngay",
+     "-자마자",
+     "động từ; khác chủ ngữ được",
+     "졸업하**자마자** 취직했다."
+    ],
+    [
+     "A xong → B ngược / liên quan",
+     "-았/었다가",
+     "cùng chủ ngữ",
+     "불을 **껐다가** 다시 켰다."
+    ],
+    [
+     "A đang dở → chuyển B",
+     "-다가",
+     "cùng chủ ngữ",
+     "책을 읽**다가** 잤다."
+    ],
+    [
+     "A xong hẳn → B",
+     "-고 나서",
+     "không gắn -았-",
+     "숙제를 하**고 나서** 놀았다."
+    ],
+    [
+     "Mải A → không làm được B / mệt, muộn",
+     "-느라고",
+     "cùng chủ ngữ, động từ, không bảo / rủ",
+     "게임을 하**느라고** 숙제를 못 했다."
+    ],
+    [
+     "Đang A → sự cố B",
+     "-다가",
+     "cùng chủ ngữ, kết quả xấu",
+     "뛰**다가** 넘어졌다."
+    ],
+    [
+     "Việc bất ngờ → kết quả xấu",
+     "-는 바람에",
+     "khác chủ ngữ được (TOPIK câu 3–4)",
+     "늦게 일어나**는 바람에** 기차를 놓쳤다."
+    ],
+    [
+     "Lý do + lời bảo / rủ",
+     "-(으)니까",
+     "",
+     "비가 오**니까** 우산을 가져가세요."
+    ],
+    [
+     "Xin lỗi, cảm ơn, lý do tự nhiên",
+     "-아서/어서",
+     "không gắn -았-",
+     "늦**어서** 죄송합니다."
+    ],
+    [
+     "Văn viết, nhấn nguyên nhân",
+     "-기 때문에",
+     "",
+     "길이 막혔**기 때문에** 늦었다."
+    ],
+    [
+     "Giải thích cuối câu",
+     "-거든요",
+     "văn nói, người nghe chưa biết",
+     "시험이 있**거든요**."
+    ]
+   ],
+   "chiaNote": [
+    "**Cùng chủ ngữ bắt buộc**: -느라고, -다가, -았다가, -아서 (trình tự), -(으)면서.",
+    "**Chỉ động từ**: -자마자, -느라고, -다가, -았다가, -고 나서.",
+    "**Không gắn -았- phía trước**: -자마자, -느라고, -다가, -아서, -고 나서."
+   ],
+   "rb": [
+    [
+     "Bước 1 · Vế sau",
+     "Quá khứ → loại -거든, -(으)려면. Lời bảo / rủ → loại -아서, -느라고, -다가 (nguyên nhân), -기 때문에. Kết quả tốt → loại -느라고, -다가, -는 바람에."
+    ],
+    [
+     "Bước 2 · Quan hệ",
+     "Hai việc nối thời gian, hay việc trước là lý do của việc sau?"
+    ],
+    [
+     "Bước 3 · Ràng buộc",
+     "Cùng chủ ngữ? Động từ hay tính từ? Có gắn -았- không?"
+    ]
+   ],
+   "sai": [
+    {
+     "x": "집에 **도착하거든** 비가 왔어요.",
+     "o": "집에 **도착하니까** / **도착하자마자** 비가 왔어요.",
+     "why": "-거든 giữa câu = “khi… thì”, cần vế sau là lời bảo / ý định, không đi với quá khứ."
+    },
+    {
+     "x": "열심히 공부하**느라고** 합격했어요.",
+     "o": "열심히 공부**해서** 합격했어요.",
+     "why": "Kết quả tốt → -아서."
+    },
+    {
+     "x": "문을 **열다가** 닫았어요. (ý: mở hẳn rồi đóng)",
+     "o": "문을 **열었다가** 닫았어요.",
+     "why": "Mở xong rồi đóng → -았다가."
+    },
+    {
+     "x": "늦게 **일어나자마자** 지각했어요.",
+     "o": "늦게 일어**나서** / 일어나**는 바람에** 지각했어요.",
+     "why": "Đây là quan hệ lý do (dậy muộn → đi trễ), không phải “vừa… là”."
+    },
+    {
+     "x": "숙제하**느라고** 같이 놀자.",
+     "o": "숙제 다 **하고 나서** 같이 놀자.",
+     "why": "-느라고 không đi với lời rủ."
+    }
+   ],
+   "pb": [
+    {
+     "vs": "Ba cách nói “kết quả xấu”: -느라고 · -다가 · -는 바람에",
+     "d": "-느라고: dồn sức vào A nên bỏ lỡ B. -다가: đang làm A thì A gây ra sự cố. -는 바람에: một việc bất ngờ (có thể của người khác) gây kết quả xấu.",
+     "ex": [
+      [
+       "게임을 하**느라고** 숙제를 못 했다.",
+       "Mải chơi game nên không làm bài."
+      ],
+      [
+       "휴대 전화를 보**다가** 역을 지나쳤다.",
+       "Đang xem điện thoại thì đi quá ga."
+      ],
+      [
+       "버스를 잘못 타**는 바람에** 수업에 늦었다.",
+       "Lên nhầm xe buýt nên muộn học. (kỳ 96 câu 3)"
+      ]
+     ]
+    }
+   ],
+   "topik": [
+    {
+     "src": "Đọc · kỳ 35 câu 2",
+     "ko": "민수 씨는 대학교를 (**졸업하자마자**) 회사에 취직했다.",
+     "note": "Câu kể quá khứ, hai việc liền nhau → -자마자. -아도 / -더라도 / -ㄴ다면 loại vì không kể chuyện đã xảy ra."
+    },
+    {
+     "src": "Đọc · kỳ 96 câu 1",
+     "ko": "감기약을 (**먹고 나서**) 열이 내렸다. · nhiễu: 먹느라고",
+     "note": "Hạ sốt là kết quả tốt → loại -느라고 ngay ở bước 1."
+    },
+    {
+     "src": "Đọc · kỳ 96 câu 3",
+     "ko": "버스를 잘못 __타는 바람에__ 수업에 늦었다.",
+     "note": "-는 바람에 (sự cố → kết quả xấu) ≈ -아서/어서 / -는 탓에. Câu 3–4 hỏi mẫu tương đồng."
+    }
+   ],
+   "hoi": [
+    {
+     "q": "Gặp câu “(    ) 수업에 늦었다”, bốn lựa chọn: 타느라고 / 타다가 / 타는 바람에 / 탔다가 — làm sao chọn?",
+     "a": "Bước 1: vế sau là kết quả xấu → cả ba đầu đều có thể. Bước 2–3: xem vế trước nói gì — “mải đi xe” (-느라고), “đang đi xe thì” (-다가), “lên nhầm xe” = sự cố bất ngờ (-는 바람에). 탔다가 chỉ đúng khi vế sau là việc ngược lại (내렸다)."
+    }
+   ],
+   "luyen": [
+    {
+     "q": "(Kỳ 35 câu 2) 민수 씨는 대학교를 (    ) 회사에 취직했다.",
+     "o": [
+      "졸업하자마자",
+      "졸업해도",
+      "졸업한다면",
+      "졸업하더라도"
+     ],
+     "w": "Câu kể quá khứ, hai việc liền nhau → -자마자."
+    },
+    {
+     "q": "(Kỳ 60 câu 1) 휴대 전화를 (    ) 내려야 할 역을 지나쳤다.",
+     "o": [
+      "보다가",
+      "보든지",
+      "보려면",
+      "보고서"
+     ],
+     "w": "Đang xem thì lỡ ga → -다가."
+    },
+    {
+     "q": "(Kỳ 96 câu 1) 감기약을 (    ) 열이 내렸다.",
+     "o": [
+      "먹고 나서",
+      "먹느라고",
+      "먹더라도",
+      "먹을 텐데"
+     ],
+     "w": "Uống thuốc xong → hạ sốt (kết quả tốt) → -고 나서."
+    },
+    {
+     "q": "(Kỳ 91 câu 2) 새집으로 (    ) 가구를 새로 샀다.",
+     "o": [
+      "이사하고 나서",
+      "이사한 지",
+      "이사하거든",
+      "이사하려면"
+     ],
+     "w": "Vế sau quá khứ → loại -거든, -려면; -ㄴ 지 cần khoảng thời gian."
+    },
+    {
+     "q": "(Kỳ 41 câu 2) 집에 (    ) 비가 내리기 시작했다.",
+     "o": [
+      "도착하니까",
+      "도착하거나",
+      "도착하거든",
+      "도착하려고"
+     ],
+     "w": "Về đến nhà thì (thấy) mưa → -(으)니까 phát hiện."
+    },
+    {
+     "q": "(Đề luyện) 그 친구는 요즘 새로운 일에 (    ) 매우 바쁘다.",
+     "o": [
+      "적응하느라고",
+      "적응하기가",
+      "적응한다며",
+      "적응하는 바람에"
+     ],
+     "w": "Bận vì mải thích nghi → -느라고. -는 바람에 dành cho sự cố bất ngờ."
+    },
+    {
+     "q": "더워서 창문을 (    ) 시끄러워서 다시 닫았어요.",
+     "o": [
+      "열었다가",
+      "열다가",
+      "열자마자",
+      "열느라고"
+     ],
+     "w": "Mở xong rồi đóng (ngược lại) → -았다가."
+    },
+    {
+     "q": "아이가 장난을 (    ) 컵을 깼어요.",
+     "o": [
+      "치다가",
+      "치느라고",
+      "쳐서요",
+      "쳤다가"
+     ],
+     "w": "Đang nghịch thì làm vỡ cốc (sự cố do việc đang làm) → -다가."
+    },
+    {
+     "q": "A: 왜 전화 안 받았어? B: 미안, 회의 중이었(    ).",
+     "o": [
+      "거든",
+      "니까",
+      "어서",
+      "다가"
+     ],
+     "w": "Giải thích cho người chưa biết, cuối câu → -거든."
+    },
+    {
+     "q": "어제 이사 준비를 (    ) 친구 생일 파티에 못 갔어요.",
+     "o": [
+      "하느라고",
+      "하다가",
+      "했다가",
+      "하자마자"
+     ],
+     "w": "Dồn thời gian vào chuẩn bị chuyển nhà → không đi được tiệc → -느라고."
+    },
+    {
+     "q": "Câu nào **sai**?",
+     "o": [
+      "비가 와서 우산을 가져가세요.",
+      "비가 오니까 우산을 가져가세요.",
+      "비가 와서 집에 있었어요.",
+      "비 때문에 집에 있었어요."
+     ],
+     "w": "-아서 không đi với lời khuyên."
+    },
+    {
+     "q": "Câu nào **sai**?",
+     "o": [
+      "늦었어서 죄송합니다.",
+      "늦어서 죄송합니다.",
+      "늦게 와서 죄송합니다.",
+      "늦게 일어나는 바람에 늦었습니다."
+     ],
+     "w": "-아서 không gắn quá khứ."
+    }
+   ],
+   "em": [
+    "Kể một ngày xui xẻo của em (hoặc bịa) bằng 5 câu, dùng đủ: -자마자, -다가, -느라고, -았다가, -거든요.",
+    "Viết lại 2 câu đề thật ở trên, thay đuôi đúng bằng một đuôi khác cũng đúng ngữ pháp và nói nghĩa thay đổi thế nào."
+   ],
+   "co": "Chốt buổi 15–20 phút: phát 12 câu luyện ở trên như bài thi nhỏ (30 giây/câu), em nói to bước loại trừ nào dùng cho từng lựa chọn bị loại (vế sau quá khứ / kết quả tốt / lời rủ / khác chủ ngữ). Bài về nhà: “Câu của em” + kể lại một ngày bằng 5 đuôi.",
+   "part": 1,
+   "m": 20
+  }
+ ],
+ "co": "Buổi khoảng 1 tiếng 45; lớp 1:1 có thể tách hai nửa. Nửa 1 trước khi trường dạy Bài 2; nửa 2 có -거든요 (Bài 6) và -다가 (Bài 8) học trước khá xa → khi tới Bài 6, 8 mở lại đúng bước đó, làm lại Luyện ngay. Bài 7 sách còn -는데도 (chuyên đề Nhượng bộ), -더니 (chuyên đề -더-), -도록 하다 (Thái độ người nói)."
+}
