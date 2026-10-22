@@ -111,7 +111,7 @@ button.b.main{background:var(--acc);border-color:var(--acc);color:#fff;font-weig
 .hint b,.fb .mn b{background:var(--hl);border-radius:3px;padding:0 2px}
 .opt.out{opacity:.45;text-decoration:line-through}
 .fb .mn{margin:4px 0 0;color:#333}
-.trin{width:100%;font-size:16px;padding:6px 8px;border:1px solid var(--line);border-radius:6px;margin:2px 0 4px;resize:vertical}
+.trin{width:100%;font:16px/1.45 "Times New Roman",Times,serif;padding:6px 8px;border:1px solid var(--line);border-radius:6px;margin:2px 0 4px;resize:vertical}
 .model{margin:6px 0 0;padding:5px 10px;background:var(--bluebg);border-left:4px solid var(--blue);font-size:15.5px}
 .model u{text-decoration:none;background:var(--hl);border-radius:3px;padding:0 2px}
 button.b.on{background:var(--blue);border-color:var(--blue);color:#fff}
@@ -318,30 +318,31 @@ function trPick(d){
     var g=VG[gid];if(!g)return;var best=null;
     /* nhóm câu 3–4: lấy mẫu chính (đứng đầu nhóm); nhóm câu 1–2: lấy câu ngắn nhất */
     var v3=gid.indexOf('V03')===0;
-    g.w.forEach(function(w){if(!w[3]||!EXV[w[0]])return;var L=w[3].replace(/__/g,'').length;if(L<=(v3?40:34)&&(!best||(!v3&&L<best.L)))best={id:w[0],L:L,p:w[1],ko:w[3]};});
+    g.w.forEach(function(w){if(!w[3]||!EXV[w[0]])return;var L=w[3].replace(/__/g,'').length;if(L<=(v3?45:40)&&(!best||(!v3&&L<best.L)))best={id:w[0],L:L,p:w[1],m:w[2],ko:w[3]};});
     if(best)c.push(best);
   });
   var out=[],n=c.length;for(var i=0;i<Math.min(3,n);i++)out.push(c[Math.floor(i*n/Math.min(3,n))]);
   return out;
 }
-function trNorm(s){return String(s||'').replace(/__/g,'').replace(/[\s.,!?~“”"'…·]/g,'');}
 function trHTML(d,D){
   if(!VG)return '<p class="note">Đang tải câu…</p>';
   var L=trPick(d);if(!L.length)return '';D.tr=D.tr||{};
   return L.map(function(x,i){
-    var t=D.tr[x.id]||{},same=t.c&&trNorm(t.t)===trNorm(x.ko);
-    var h='<div class="it" id="tr-'+x.id+'"><div class="q"><b>'+(i+1)+'.</b>Dịch sang tiếng Hàn · dùng mẫu <span class="ko" style="color:var(--ink);font-weight:bold">'+esc(x.p)+'</span></div>'+
-      '<div class="s">'+esc(viPlain(EXV[x.id]))+'</div><textarea class="trin ko" rows="2" data-tr="'+x.id+'" placeholder="Em gõ câu tiếng Hàn…">'+esc(t.t||'')+'</textarea>';
-    if(!t.c)h+='<div class="btns"><button class="b" data-trc="'+x.id+'">Xem câu mẫu</button></div>';
+    var t=D.tr[x.id]||{};
+    var h='<div class="it" id="tr-'+x.id+'"><div class="q"><b>'+(i+1)+'.</b>Dịch sang tiếng Việt · chú ý phần gạch chân</div>'+
+      '<div class="s ko">'+exHTML(x.ko)+'</div><textarea class="trin" rows="2" data-tr="'+x.id+'" placeholder="Em gõ nghĩa tiếng Việt…">'+esc(t.t||'')+'</textarea>';
+    if(!t.c)h+='<div class="btns"><button class="b" data-trc="'+x.id+'">Xem bản dịch</button></div>';
     else{
-      h+='<div class="model ko">Câu mẫu: '+exHTML(x.ko)+'</div>';
-      if(same)h+='<div class="fb y"><div class="hd">✔ Giống câu mẫu</div></div>';
-      else h+='<div class="btns"><span class="note" style="margin:0 4px 0 0">Em tự chấm:</span><button class="b'+(t.m===1?' on':'')+'" data-trm="'+x.id+'" data-v="1">Đúng ý</button><button class="b'+(t.m===0?' on':'')+'" data-trm="'+x.id+'" data-v="0">Chưa đúng</button></div>';
+      h+='<div class="model">Bản dịch: '+viHTML(EXV[x.id])+'<br><span class="ko">'+esc(x.p)+'</span> = '+esc(x.m)+'</div>';
+      h+='<div class="btns"><span class="note" style="margin:0 4px 0 0">Em tự chấm:</span><button class="b'+(t.m===1?' on':'')+'" data-trm="'+x.id+'" data-v="1">Đúng ý</button><button class="b'+(t.m===0?' on':'')+'" data-trm="'+x.id+'" data-v="0">Chưa đúng</button></div>';
     }
     return h+'</div>';
   }).join('');
 }
-function trCount(d,D){var n=0,ok=0;if(!VG||!D.tr)return {n:0,ok:0,all:0};var L=trPick(d);L.forEach(function(x){var t=D.tr[x.id];if(t&&t.c){n++;if(t.m===1||trNorm(t.t)===trNorm(x.ko))ok++;}});return {n:n,ok:ok,all:L.length};}
+function trCount(d,D){var n=0,ok=0;if(!VG||!D.tr)return {n:0,ok:0,all:0};var L=trPick(d);L.forEach(function(x){var t=D.tr[x.id];if(t&&t.c){n++;if(t.m===1)ok++;}});return {n:n,ok:ok,all:L.length};}
+/* câu ví dụ đang dùng ở phần Dịch câu mà em chưa xem bản dịch thì bảng kiến thức tạm che nghĩa */
+var TRHIDE={};
+function trHide(d,D){TRHIDE={};if(!VG)return;trPick(d).forEach(function(x){if(!(D.tr&&D.tr[x.id]&&D.tr[x.id].c))TRHIDE[x.id]=1;});}
 function cnt(ids,a){var n=0,ok=0;ids.forEach(function(id){if(a[id]!=null){n++;if(a[id]===BY[id].a)ok++;}});return {n:n,ok:ok};}
 
 /* ---- trang một ngày ---- */
@@ -352,11 +353,11 @@ function renderDay(){
   clearInterval(tick);
   h+='<h2>Ngày '+d+'/'+DAYN+' · '+esc(I.t)+'</h2>';
   if(I.kind==='learn'){
-    h+='<div class="how"><b>Hôm nay em làm '+(D.rv.length?4:3)+' phần (khoảng 15–20 phút):</b><ol><li><b>Đọc kiến thức</b> bên dưới (chỗ dễ nhầm + bảng mẫu có nghĩa từng câu).</li><li><b>Dịch 3 câu</b> sang tiếng Hàn, rồi so với câu mẫu.</li><li><b>Luyện</b> '+D.ids.length+' câu: chọn xong là biết đúng sai. Bí thì bấm <b>💡 Gợi ý</b>.</li>'+
+    h+='<div class="how"><b>Hôm nay em làm '+(D.rv.length?4:3)+' phần (khoảng 15–20 phút):</b><ol><li><b>Đọc kiến thức</b> bên dưới (chỗ dễ nhầm + bảng mẫu có nghĩa từng câu).</li><li><b>Dịch 3 câu</b> tiếng Hàn sang tiếng Việt, chú ý ngữ pháp gạch chân.</li><li><b>Luyện</b> '+D.ids.length+' câu: chọn xong là biết đúng sai. Bí thì bấm <b>💡 Gợi ý</b>.</li>'+
       (D.rv.length?'<li><b>Ôn câu cũ</b>: '+D.rv.length+' câu những ngày trước em làm sai hoặc đến lúc hỏi lại.</li>':'')+'</ol>Cuối bài bấm <b>“Gửi kết quả cho cô”</b>.</div>';
     h+='<h3>1. Kiến thức hôm nay</h3><div class="tip"><b>Chỗ hay nhầm</b><ul>'+PLAN[d].tip.map(function(t){return '<li>'+t+'</li>';}).join('')+'</ul></div>';
-    h+=GLEG+'<div id="dayg">'+groupsHTML(PLAN[d].g,true)+'</div>';
-    h+='<h3>2. Dịch câu</h3><p class="note">Đọc câu tiếng Việt, gõ câu tiếng Hàn dùng đúng mẫu ngữ pháp được cho (đừng nhìn bảng ở trên). Gõ xong bấm “Xem câu mẫu”. Câu của em khác câu mẫu mà vẫn đúng ý thì chọn “Đúng ý”.</p><div id="trbox">'+trHTML(d,D)+'</div>';
+    trHide(d,D);h+=GLEG+'<div id="dayg">'+groupsHTML(PLAN[d].g,true)+'</div>';TRHIDE={};
+    h+='<h3>2. Dịch câu</h3><p class="note">Đọc câu tiếng Hàn, gõ nghĩa tiếng Việt. Chú ý phần gạch chân: đó là ngữ pháp vừa học, em dịch đúng nghĩa của nó. Gõ xong bấm “Xem bản dịch”, em dịch khác chữ mà vẫn đúng ý thì chọn “Đúng ý”.</p><div id="trbox">'+trHTML(d,D)+'</div>';
     h+='<h3>3. Luyện</h3>'+listHTML(D.ids,D.a,'live',1,D.h);
     if(D.rv.length)h+='<h3>4. Ôn câu cũ</h3><p class="note">Câu những ngày trước: sai (hoặc đúng mà phải xem gợi ý) thì mai hỏi lại, đúng thì 3, 7, 14 ngày sau mới hỏi lại.</p>'+listHTML(D.rv,D.a,'live',D.ids.length+1,D.h);
   }else if(I.kind==='test'){
@@ -380,7 +381,7 @@ function renderDay(){
   h+='<div class="sum" id="sumday"></div>';
   h+='<div class="dnav">'+(d>1?'<a href="#d='+(d-1)+'">‹ Ngày '+(d-1)+'</a>':'<span></span>')+(d<maxDay()?'<a href="#d='+(d+1)+'">Ngày '+(d+1)+' ›</a>':'<span></span>')+'</div>';
   $('sday').innerHTML=h;renderSum();
-  if(I.kind==='learn'&&!VG)loadV(function(){var g=$('dayg');if(g&&cur===d){g.innerHTML=groupsHTML(PLAN[d].g,true);$('trbox').innerHTML=trHTML(d,D);renderSum();}});
+  if(I.kind==='learn'&&!VG)loadV(function(){var g=$('dayg');if(g&&cur===d){trHide(d,D);g.innerHTML=groupsHTML(PLAN[d].g,true);TRHIDE={};$('trbox').innerHTML=trHTML(d,D);renderSum();}});
   if(I.kind==='test'&&D.t0&&!D.sub){var lim2=D.ids.length*30,f=function(){var el=$('timer');if(!el){clearInterval(tick);return;}var s=(Date.now()-D.t0)/1000;
     el.textContent='⏱ '+fmt(s)+' / '+fmt(lim2)+(s>lim2?' · hết giờ, em nộp bài nhé':'');el.classList.toggle('over',s>lim2);};f();tick=setInterval(f,1000);}
   $('navday').innerHTML='Hôm nay<small>Ngày '+d+'</small>';
@@ -402,7 +403,7 @@ var GLAB={T:'⇄ Thay thế được cho nhau',C:'≈ Thay được, có điều
 var GLEG='<p class="note">Mỗi nhóm có nhãn: <span class="tg T">'+GLAB.T+'</span> <span class="tg C">'+GLAB.C+'</span> <span class="tg L">'+GLAB.L+'</span> — nhóm “liệt kê” chỉ là các mẫu cùng chủ đề, mỗi mẫu một nghĩa, <b>không</b> thay cho nhau được.</p>';
 function groupHTML(g,open){
   var n=GN[g.id]||['L',''];
-  var rows=g.w.map(function(w){return '<tr><td class="ko">'+esc(w[1])+'</td><td>'+esc(w[2])+'</td><td class="ex"><span class="ko">'+exHTML(w[3])+'</span>'+(EXV[w[0]]?'<span class="exv">'+viHTML(EXV[w[0]])+'</span>':'')+'</td></tr>';}).join('');
+  var rows=g.w.map(function(w){return '<tr><td class="ko">'+esc(w[1])+'</td><td>'+esc(w[2])+'</td><td class="ex"><span class="ko">'+exHTML(w[3])+'</span>'+(EXV[w[0]]?'<span class="exv">'+(TRHIDE[w[0]]?'<i>(nghĩa câu này: em tự dịch ở phần 2)</i>':viHTML(EXV[w[0]]))+'</span>':'')+'</td></tr>';}).join('');
   return '<details class="grp"'+(open?' open':'')+'><summary><span class="ko">'+esc(g.ko)+'</span> · '+esc(g.vi)+'<span class="tg '+n[0]+'">'+GLAB[n[0]]+'</span>'+(G2D[g.id]&&!open?'<span class="tg b">Ngày '+G2D[g.id]+'</span>':'')+
     ' <span class="note">('+g.w.length+' mẫu)</span></summary>'+(n[1]?'<div class="gn '+n[0]+'"><b>'+GLAB[n[0]]+':</b> '+esc(n[1])+'</div>':'')+'<table class="g"><tr><th>Mẫu</th><th>Nghĩa</th><th>Ví dụ</th></tr>'+rows+'</table></details>';
 }
@@ -500,7 +501,7 @@ document.addEventListener('click',function(e){
   var b=e.target.closest('button');if(!b)return;
   var D3=st.d[cur];
   if(b.dataset.hint&&D3){var hid=b.dataset.hint;D3.h=D3.h||{};D3.h[hid]=(D3.h[hid]||0)+1;save();$('it-'+hid).outerHTML=item(noOf(D3,hid),BY[hid],null,'live',D3.h[hid]);renderSum();return;}
-  if(b.dataset.trc&&D3){var tid=b.dataset.trc,ta=document.querySelector('textarea[data-tr="'+tid+'"]');D3.tr=D3.tr||{};var t=D3.tr[tid]||(D3.tr[tid]={});t.t=ta?ta.value:'';t.c=1;save();$('trbox').innerHTML=trHTML(cur,D3);renderSum();return;}
+  if(b.dataset.trc&&D3){var tid=b.dataset.trc,ta=document.querySelector('textarea[data-tr="'+tid+'"]');D3.tr=D3.tr||{};var t=D3.tr[tid]||(D3.tr[tid]={});t.t=ta?ta.value:'';t.c=1;save();$('trbox').innerHTML=trHTML(cur,D3);trHide(cur,D3);$('dayg').innerHTML=groupsHTML(PLAN[cur].g,true);TRHIDE={};renderSum();return;}
   if(b.dataset.trm&&D3){var t2=D3.tr[b.dataset.trm];if(t2){t2.m=+b.dataset.v;save();$('trbox').innerHTML=trHTML(cur,D3);renderSum();}return;}
   if(b.id==='tstart'){st.d[cur].t0=Date.now();save();renderDay();}
   else if(b.id==='tsub'){
