@@ -1,0 +1,100 @@
+{
+"e": "Etk091", "n": [19, 20],
+"t": "Chim cánh cụt hoàng đế cùng nhau chống rét",
+"cd": "Khoa học – tự nhiên",
+"y": "Mùa đông Nam Cực, chim cánh cụt hoàng đế đứng sát nhau, cả đàn xoay vòng để con ngoài và con trong liên tục đổi chỗ; chuyển động chậm nhưng không ngừng nên không con nào phải chịu gió lạnh mãi → cả đàn cùng sống sót.",
+"doc": [
+  {"t": "Đọc câu hỏi trước", "d": "Câu 19: 4 lựa chọn đều là **phó từ đi cặp** (혹시, 또는, 비록, 만약) → chỉ cần tìm đuôi đi cặp trong câu có ô. Câu 20: chủ đề → để ý câu cuối.", "s": []},
+  {"t": "Câu có ô", "d": "Ô đứng đầu câu, cuối vế có **-지만** → cặp **비록 ~지만** (tuy … nhưng). Xong câu 19 mà chưa cần đọc cả bài.", "s": [3]},
+  {"t": "Câu cuối · chủ đề", "d": "**그렇게** = tóm lại cả bài → “cả đàn cùng nhau sống sót” chính là chủ đề (câu 20).", "s": [4]},
+  {"t": "Câu 1–3 để hiểu cách làm", "d": "Câu 1 hiện tượng, câu 2–3 giải thích cách đổi chỗ (câu 3 kết bằng -는 것이다 = tức là).", "s": [0, 1, 2]}
+],
+"l": [
+  ["남극의 겨울,", "TG", "bối cảnh thời gian, nơi chốn"],
+  ["돌면서", "TG", "-면서: hai việc diễn ra cùng lúc"],
+  ["들어오는 것이다", "GT", "-는 것이다: câu 3 giải thích câu 2"],
+  ["그 움직임", "CH", "chỉ lại việc đổi chỗ ở câu 2–3"],
+  ["느리지만", "DL", "-지만: đối lập → cặp với 비록"],
+  ["그렇게", "KL", "tóm lại cả bài → câu chủ đề"]
+],
+"s": [
+  {"c": [["매서운 남극의 겨울,", "TR", "vào mùa đông khắc nghiệt của Nam Cực,", 1], ["황제펭귄들은", "CN", "chim cánh cụt hoàng đế", 2], ["겹겹이 붙어", "VP", "đứng sát nhau thành nhiều lớp,", 3], ["서로의 체온으로", "TR", "bằng thân nhiệt của nhau", 6], ["추위를", "TN", "cái lạnh", 5], ["견딘다.", "VN", "chống chọi", 4]],
+   "g": "황제펭귄들은 추위를 견딘다", "gv": "Chim cánh cụt hoàng đế chống chọi với cái lạnh",
+   "r": "Mở · Hiện tượng", "y": "Chim cánh cụt đứng sát nhau, chống rét bằng thân nhiệt.",
+   "vi": "Vào mùa đông khắc nghiệt của Nam Cực, chim cánh cụt hoàng đế đứng sát vào nhau thành nhiều lớp, chống chọi với cái lạnh bằng thân nhiệt của nhau.",
+   "tip": "Cụm thời gian / nơi chốn đứng đầu câu dịch trước, giống tiếng Việt. **붙어** (-아/어) = làm việc này rồi / bằng cách đó làm việc sau."},
+  {"c": [["무리 전체가", "CN", "cả đàn", 1], ["돌면서", "VP", "vừa xoay vòng,", 2], ["바깥쪽과 안쪽에 있는", "DN", "ở phía ngoài và phía trong", 4], ["펭귄들이", "CN", "những con", 3], ["계속", "TR", "liên tục", 5], ["서로의 위치를", "TN", "vị trí cho nhau", 7], ["바꾼다.", "VN", "đổi", 6]],
+   "g": "무리가 돌면서 펭귄들이 위치를 바꾼다", "gv": "Cả đàn xoay vòng, các con đổi chỗ",
+   "r": "Giải thích cách làm (1)", "y": "Cả đàn xoay vòng, con ngoài – con trong đổi chỗ.",
+   "vi": "Cả đàn vừa xoay vòng, những con ở phía ngoài và phía trong vừa liên tục đổi chỗ cho nhau.",
+   "tip": "Câu có **2 chủ ngữ** (무리 전체가, 펭귄들이) → 2 vế, ngắt ở **-면서**. Dịch từng vế theo thứ tự."},
+  {"c": [["안에서 몸을 데운", "DN", "đã ấm người ở bên trong", 2], ["펭귄은", "CN", "con", 1], ["밖으로 나가고", "VP", "đi ra ngoài,", 3], ["밖에서 추위에 떨던", "DN", "đang run vì lạnh ở bên ngoài", 5], ["펭귄은", "CN", "còn con", 4], ["안으로 들어오는 것이다.", "VN", "thì đi vào trong (tức là)", 6]],
+   "g": "펭귄은 나가고 펭귄은 들어오는 것이다", "gv": "Con này ra, con kia vào",
+   "r": "Giải thích cách làm (2)", "y": "Con đã ấm ra ngoài, con đang lạnh vào trong.",
+   "vi": "Tức là con đã ấm người ở bên trong thì đi ra ngoài, còn con đang run rẩy vì lạnh ở bên ngoài thì đi vào trong.",
+   "tip": "Hai vế đối xứng nối bằng **-고**: “안 → 밖” và “밖 → 안”. **-던** (떨던) = đang … dở trong quá khứ. **-는 것이다** = tức là."},
+  {"c": [["(    )", "NOI", "tuy", 1], ["그 움직임은", "CN", "sự di chuyển ấy", 2], ["아주 느리지만", "VP", "rất chậm nhưng", 3], ["쉬지 않고", "TR", "không ngừng", 5], ["이루어져", "VP", "diễn ra, nên", 4], ["한 마리의 펭귄이 줄곧 찬바람을 맞고 서 있는", "DN", "một con cứ đứng hứng gió lạnh mãi", 8], ["일이", "CN", "chuyện", 7], ["없다.", "VN", "không có", 6]],
+   "g": "그 움직임은 느리지만 … 일이 없다", "gv": "Sự di chuyển ấy chậm nhưng … không có chuyện …",
+   "r": "Câu có ô · nhấn mạnh", "y": "Chậm nhưng không ngừng nên không con nào chịu rét mãi.",
+   "vi": "Tuy sự di chuyển ấy rất chậm nhưng diễn ra không ngừng, nên không có chuyện một con chim cánh cụt phải đứng hứng gió lạnh mãi.",
+   "tip": "**비록 ~지만** là cặp: thấy -지만 cuối vế → ô đầu câu là 비록. **…는 일이 없다** = không có chuyện … → dịch “không có chuyện” trước, phần định ngữ dài sau."},
+  {"c": [["그렇게", "TR", "như thế", 3], ["쉼 없이", "TR", "không ngừng nghỉ", 2], ["둥글게 돌면서", "VP", "nhờ xoay vòng tròn", 1], ["펭귄들은", "CN", "đàn chim cánh cụt", 4], ["다 함께", "TR", "cùng nhau", 5], ["살아남는다.", "VN", "sống sót", 6]],
+   "g": "펭귄들은 다 함께 살아남는다", "gv": "Đàn chim cánh cụt cùng nhau sống sót",
+   "r": "Kết · Chủ đề (câu 20)", "y": "Nhờ xoay vòng, cả đàn cùng sống sót.",
+   "vi": "Nhờ cứ xoay vòng tròn không ngừng nghỉ như thế, đàn chim cánh cụt cùng nhau sống sót.",
+   "tip": "Câu cuối có **그렇게** (tóm lại cả bài) → câu chủ đề. -면서 ở đây là cách làm: dịch “nhờ …”."}
+],
+"w": [
+  ["매섭다", "khắc nghiệt (rét, gió); sắc lạnh", "", "매서운"],
+  ["남극", "Nam Cực", "nam cực 南極", "남극"],
+  ["황제펭귄", "chim cánh cụt hoàng đế", "hoàng đế 皇帝", "황제펭귄"],
+  ["겹겹이", "nhiều lớp, lớp lớp", "", "겹겹이"],
+  ["붙다", "dính, sát vào", "", "붙어"],
+  ["체온", "thân nhiệt", "thể ôn 體溫", "체온"],
+  ["견디다", "chịu đựng, chống chọi", "", "견딘다"],
+  ["무리", "đàn, bầy", "", "무리"],
+  ["전체", "toàn thể, cả", "toàn thể 全體", "전체"],
+  ["바깥쪽", "phía ngoài", "", "바깥쪽"],
+  ["위치를 바꾸다", "đổi vị trí, đổi chỗ", "vị trí 位置", "위치를 바꾼"],
+  ["데우다", "làm ấm, hâm nóng", "", "데운"],
+  ["떨다", "run", "", "떨던"],
+  ["움직임", "sự di chuyển, chuyển động", "", "움직임"],
+  ["이루어지다", "được thực hiện, diễn ra", "", "이루어져"],
+  ["줄곧", "suốt, mãi", "", "줄곧"],
+  ["찬바람을 맞다", "hứng gió lạnh", "", "찬바람을 맞고"],
+  ["쉼 없이", "không ngừng nghỉ", "", "쉼 없이"],
+  ["둥글다", "tròn", "", "둥글게"],
+  ["살아남다", "sống sót", "", "살아남는다"]
+],
+"wo": [
+  ["혹시", "liệu, nhỡ (đi với câu hỏi, -(으)면)", "", "", "câu 19 ①"],
+  ["또는", "hoặc (nối 2 danh từ / 2 vế)", "", "", "câu 19 ②"],
+  ["비록", "tuy, dù (đi với -지만, -더라도, -(으)ㄹ지라도)", "", "", "câu 19 ③ · đáp án"],
+  ["만약", "nếu (đi với -(으)면, -다면)", "vạn nhất 萬若", "", "câu 19 ④"],
+  ["맞서다", "đương đầu, chống lại", "", "", "câu 20 ①"],
+  ["생존하다", "sinh tồn", "sinh tồn 生存", "", "câu 20 ①"],
+  ["경쟁", "cạnh tranh", "cạnh tranh 競爭", "", "câu 20 ④"]
+],
+"g": [
+  {"p": "N(으)로 (cách thức)", "m": "bằng N", "f": "체온으로", "d": "서로의 체온으로 견디다 = chống chọi bằng thân nhiệt của nhau.", "ex": []},
+  {"p": "-아/어 (nối tiếp)", "m": "… rồi / bằng cách …", "f": "붙어", "d": "Động tác trước là cách thức hoặc nền cho động tác sau: 붙어 견디다 = đứng sát nhau mà chống rét.", "ex": []},
+  {"p": "-(으)면서", "m": "vừa … vừa; nhờ … (cách làm)", "f": "돌면서", "d": "Hai việc cùng diễn ra. Ở câu cuối, -면서 chỉ cách làm → dịch “nhờ …”.", "ex": [["음악을 들으면서 공부한다.", "Vừa nghe nhạc vừa học."]]},
+  {"p": "-던", "m": "đang … (dở dang, trước đó)", "f": "떨던", "d": "떨던 펭귄 = con vốn đang run vì lạnh (trước khi vào trong).", "ex": [["내가 읽던 책", "cuốn sách tôi đang đọc dở"]]},
+  {"p": "-는 것이다", "m": "tức là", "f": "들어오는 것이다", "d": "Câu 3 giải thích rõ câu 2.", "ex": []},
+  {"p": "비록 -지만", "m": "tuy … nhưng", "f": "느리지만", "d": "Phó từ 비록 luôn đi cặp với đuôi nhượng bộ: -지만, -더라도, -(으)ㄹ지라도.", "ex": [["비록 작지만 편한 집이다.", "Tuy nhỏ nhưng là ngôi nhà tiện nghi."]]},
+  {"p": "-지 않고", "m": "không …, không ngừng", "f": "쉬지 않고", "d": "쉬지 않고 = không nghỉ, liên tục.", "ex": []},
+  {"p": "-아/어서 (nguyên nhân)", "m": "… nên", "f": "이루어져", "d": "이루어지다 + -어서 → 이루어져(서): diễn ra không ngừng **nên** không có chuyện …", "ex": []},
+  {"p": "-는 일이 없다", "m": "không có chuyện …, không bao giờ …", "f": "서 있는 일이 없다", "d": "Định ngữ dài + 일이 없다: dịch “không có chuyện” trước.", "ex": [["그는 약속에 늦는 일이 없다.", "Anh ấy không bao giờ trễ hẹn."]]},
+  {"p": "-게 (trạng từ)", "m": "một cách …", "f": "둥글게", "d": "Tính từ + -게 → trạng từ: 둥글게 돌다 = xoay thành vòng tròn.", "ex": []}
+],
+"qa": {
+  "19": {"a": 2, "w": "Ô đứng đầu câu, cuối vế có **-지만** → 비록 ~지만: tuy di chuyển rất chậm nhưng không ngừng.", "x": ["혹시 đi với câu hỏi / -(으)면 (liệu, nhỡ); câu không có.", "또는 = hoặc; không đứng đầu câu kiểu này.", null, "만약 cần -(으)면 / -다면; câu không có."]},
+  "20": {"a": 0, "w": "Câu cuối: 다 함께 살아남는다, cả bài nói đổi chỗ để sưởi ấm cho nhau → giúp nhau chống rét mà sống sót ①.", "x": [null, "Bài không nói đến thông tin thời tiết.", "Chuyển động chậm không phải để sống sót; bài không nói “chậm đi”.", "Bài nói giúp nhau, không nói cạnh tranh."]}
+},
+"hoi": [
+  {"q": "Chim cánh cụt chống rét bằng gì?", "a": "Bằng thân nhiệt của nhau (서로의 체온으로), đứng sát thành nhiều lớp."},
+  {"q": "Con nào đi ra, con nào đi vào?", "a": "Con đã ấm ở trong (안에서 몸을 데운 펭귄) đi ra; con đang run ở ngoài (밖에서 추위에 떨던 펭귄) đi vào."},
+  {"q": "“그 움직임” là chuyển động nào?", "a": "Cả đàn xoay vòng, con ngoài – con trong đổi chỗ (câu 2–3)."},
+  {"q": "Vì sao không con nào phải chịu gió lạnh mãi?", "a": "Vì chuyển động tuy chậm nhưng không ngừng (쉬지 않고 이루어져)."}
+]
+}

@@ -1,0 +1,99 @@
+{
+"e": "Etk091", "n": [21, 22],
+"t": "Triển lãm tranh sao chép chạy theo tiền",
+"cd": "Văn hóa – nghệ thuật",
+"y": "Triển lãm trưng bày bản sao mà không nói rõ, chỉ để thu tiền vé → khán giả đến nơi mới biết, bất mãn → chuyên gia lo kiểu làm này sẽ níu chân sự phát triển của giới mỹ thuật, vì người xem thất vọng có thể thôi quan tâm đến mỹ thuật.",
+"doc": [
+  {"t": "Đọc câu hỏi trước", "d": "Câu 21: điền **quán ngữ** vào ô (4 lựa chọn đều là cụm 신체 + 동사). Câu 22: chọn nội dung giống bài → gạch từ khóa 4 lựa chọn: 입장료, 많지 않다, 줄고 있다, 모르고 방문한.", "s": []},
+  {"t": "Câu có ô + câu ngay sau", "d": "Câu 4 có ô, câu 5 mở đầu bằng lý do (**-기 때문이다**). Người xem thất vọng sẽ thôi quan tâm đến mỹ thuật → ô mang nghĩa **xấu**, hợp với 우려하다: cản trở sự phát triển → 발목을 잡다.", "s": [3, 4]},
+  {"t": "Câu 1 · câu chủ đề", "d": "Hiện tượng: nhu cầu tăng kéo theo triển lãm chạy theo tiền tăng.", "s": [0]},
+  {"t": "Câu 2–3 để làm câu 22", "d": "Câu 2 giải thích (không ghi rõ là bản sao, chỉ thu tiền vé). Câu 3: khán giả **đến nơi mới biết** → khớp lựa chọn ④.", "s": [1, 2]}
+],
+"l": [
+  ["증가하면서", "TG", "-면서: hai xu hướng đi cùng nhau (nhu cầu tăng → triển lãm kiếm tiền tăng)"],
+  ["챙기는 것이다", "GT", "-는 것이다: câu này giải thích cho câu 1"],
+  ["이런 사실", "CH", "chỉ lại nội dung câu 2 (là bản sao, chỉ thu tiền)"],
+  ["이런 전시 행태", "CH", "chỉ lại cách làm ở câu 1–3"],
+  ["우려한다", "TD", "thái độ lo ngại → ô phải mang nghĩa tiêu cực"],
+  ["있기 때문이다", "NN", "lý do của câu 4 → đọc cùng câu có ô"]
+],
+"s": [
+  {"c": [["최근", "TR", "gần đây", 1], ["미술 전시회 수요가", "CN", "nhu cầu (xem) triển lãm mỹ thuật", 2], ["증가하면서", "VP", "tăng lên, kéo theo đó", 3], ["돈벌이에 급급한", "DN", "chỉ chăm chăm kiếm tiền", 5], ["전시회가", "CN", "những triển lãm", 4], ["늘고 있다.", "VN", "đang tăng lên", 6]],
+   "g": "전시회가 늘고 있다", "gv": "Triển lãm đang tăng lên",
+   "r": "Mở · Hiện tượng", "y": "Triển lãm chạy theo tiền đang tăng.",
+   "vi": "Gần đây, cùng với nhu cầu xem triển lãm mỹ thuật tăng lên, những triển lãm chỉ chăm chăm kiếm tiền cũng ngày càng nhiều.",
+   "tip": "Hai vế nối bằng **-면서** → dịch vế trước “cùng với việc …”, rồi vế sau. Định ngữ **돈벌이에 급급한** đứng trước danh từ 전시회 → tiếng Việt đặt **sau** danh từ: “triển lãm + chỉ chăm chăm kiếm tiền”."},
+  {"c": [["일부 전시 관계자들이", "CN", "một số người tổ chức triển lãm", 1], ["전시 포스터 등 홍보 자료에", "TR", "trên áp phích và các tài liệu quảng bá", 3], ["복제품 전시임을", "TN", "rằng đây là triển lãm bản sao", 4], ["밝히지 않고", "VP", "không nói rõ", 2], ["입장료 수입만을", "TN", "chỉ mỗi tiền vé vào cửa", 6], ["챙기는 것이다.", "VN", "(tức là) lo thu về", 5]],
+   "g": "관계자들이 밝히지 않고 수입만을 챙기는 것이다", "gv": "Người tổ chức không nói rõ mà chỉ lo thu tiền",
+   "r": "Giải thích câu 1", "y": "Không nói rõ là bản sao, chỉ lo thu tiền vé.",
+   "vi": "Tức là một số người tổ chức không nói rõ trên áp phích hay tài liệu quảng bá rằng đó là triển lãm bản sao, mà chỉ lo thu tiền vé.",
+   "tip": "Đuôi **-는 것이다** cuối câu = “tức là / thực ra là” → câu này không thêm ý mới, chỉ nói rõ câu 1. **복제품 전시임을** = 전시**이다** + **-ㅁ** (biến cả cụm thành danh từ) + 을: “việc (đây) là triển lãm bản sao”."},
+  {"c": [["전시장을 찾아와서야", "DN", "phải đến tận nơi triển lãm rồi mới", 2], ["이런 사실을 알게 된", "DN", "biết được sự thật này", 3], ["관람객들은", "CN", "những khán giả", 1], ["불만을", "TN", "sự bất mãn", 5], ["쏟아 내고 있다.", "VN", "đang trút ra", 4]],
+   "g": "관람객들은 불만을 쏟아 내고 있다", "gv": "Khán giả đang trút bất mãn",
+   "r": "Hậu quả 1 · khán giả", "y": "Khán giả đến nơi mới biết, bất mãn.",
+   "vi": "Những khán giả phải đến tận nơi triển lãm mới biết sự thật này đang thi nhau than phiền.",
+   "tip": "Định ngữ dài (từ 전시장을 tới 알게 **된**) bổ nghĩa cho **관람객들** → tìm danh từ đứng ngay sau đuôi -ㄴ/-은/-는, dịch danh từ trước rồi mới dịch phần bổ nghĩa. **-아서야** = “phải … rồi mới” (biết muộn)."},
+  {"c": [["전문가들은", "CN", "các chuyên gia", 1], ["이런 전시 행태가", "CN", "kiểu làm triển lãm như thế này", 3], ["미술계 발전의", "TN", "sự phát triển của giới mỹ thuật", 5], ["(    ) 수 있다고", "VP", "có thể ( … )", 4], ["우려한다.", "VN", "lo ngại rằng", 2]],
+   "g": "전문가들은 … (    ) 수 있다고 우려한다", "gv": "Chuyên gia lo ngại rằng … có thể ( )",
+   "r": "Ý chính · câu có ô", "y": "Chuyên gia lo nó cản trở sự phát triển của mỹ thuật.",
+   "vi": "Các chuyên gia lo ngại rằng kiểu làm triển lãm như thế này có thể níu chân sự phát triển của giới mỹ thuật.",
+   "tip": "Gặp **-다고 + động từ nói/nghĩ** (우려하다, 말하다, 생각하다): dịch “**Ai + lo ngại rằng**” TRƯỚC, rồi mới dịch phần nội dung đứng trước -다고."},
+  {"c": [["전시회에 실망한", "DN", "thất vọng vì triển lãm", 3], ["사람들이", "CN", "những người", 2], ["미술에 대한", "DN", "đối với mỹ thuật", 7], ["관심을", "TN", "sự quan tâm", 6], ["아예", "TR", "hẳn", 5], ["끊을 수 있기", "VN", "có thể cắt đứt", 4], ["때문이다.", "NOI", "(là) bởi vì", 1]],
+   "g": "사람들이 관심을 끊을 수 있기 때문이다", "gv": "Vì người ta có thể thôi quan tâm",
+   "r": "Lý do của câu 4", "y": "Vì người xem thất vọng có thể bỏ hẳn mỹ thuật.",
+   "vi": "Bởi vì những người thất vọng vì triển lãm có thể thôi hẳn quan tâm đến mỹ thuật.",
+   "tip": "**-기 때문이다** đứng cuối một câu riêng = lý do của câu **ngay trước** → dịch “Bởi vì …” ở đầu câu. Khi làm câu điền ô, luôn đọc câu này cùng câu có ô."}
+],
+"w": [
+  ["수요", "nhu cầu", "nhu yếu 需要", "수요"],
+  ["증가하다", "gia tăng", "tăng gia 增加", "증가하면서"],
+  ["돈벌이", "việc kiếm tiền", "", "돈벌이"],
+  ["급급하다", "chỉ chăm chăm, cuống cuồng lo (một việc)", "cấp cấp 汲汲", "급급한", "N에 급급하다 · luôn mang ý chê"],
+  ["관계자", "người liên quan, người phụ trách", "quan hệ giả 關係者", "관계자들"],
+  ["홍보", "quảng bá, PR", "hoằng báo 弘報", "홍보"],
+  ["복제품", "bản sao, đồ phục chế", "phục chế phẩm 複製品", "복제품"],
+  ["밝히다", "nói rõ, công bố", "", "밝히지"],
+  ["입장료", "phí vào cửa, tiền vé", "nhập trường liệu 入場料", "입장료"],
+  ["수입", "khoản thu, thu nhập", "thu nhập 收入", "수입"],
+  ["챙기다", "thu về, bỏ túi (ý chê: chỉ lo lấy cho mình)", "", "챙기는"],
+  ["전시장", "nơi triển lãm, phòng trưng bày", "triển thị trường 展示場", "전시장"],
+  ["관람객", "khách tham quan, người xem", "quan lãm khách 觀覽客", "관람객들"],
+  ["불만을 쏟아 내다", "trút sự bất mãn, than phiền dồn dập", "", "불만을 쏟아 내고"],
+  ["행태", "kiểu hành xử, cách làm (thường ý chê)", "hành thái 行態", "행태"],
+  ["미술계", "giới mỹ thuật", "mỹ thuật giới 美術界", "미술계"],
+  ["우려하다", "lo ngại", "ưu lự 憂慮", "우려한다"],
+  ["실망하다", "thất vọng", "thất vọng 失望", "실망한"],
+  ["관심을 끊다", "thôi quan tâm, cắt đứt sự quan tâm", "", "관심을 아예 끊을"],
+  ["아예", "hẳn, hoàn toàn (ngay từ đầu)", "", "아예"]
+],
+"wo": [
+  ["입맛에 맞다", "hợp khẩu vị, hợp ý", "", "", "câu 21 ①"],
+  ["가슴을 울리다", "làm xúc động", "", "", "câu 21 ②"],
+  ["발목을 잡다", "níu chân, cản trở (bước tiến)", "", "", "câu 21 ③ · đáp án"],
+  ["손을 맞잡다", "bắt tay, chung sức", "", "", "câu 21 ④"],
+  ["방문하다", "đến thăm", "phỏng vấn 訪問", "", "câu 22 ④"]
+],
+"g": [
+  {"p": "-(으)면서", "m": "cùng với việc …; vừa … vừa", "f": "증가하면서", "d": "Trong bài báo, -면서 hay nối **xu hướng A** với **hiện tượng B đi kèm**: 수요가 증가하면서 … 늘고 있다 = nhu cầu tăng kéo theo … tăng.", "ex": [["가격이 오르면서 소비가 줄었다.", "Cùng với việc giá tăng, tiêu dùng giảm."]]},
+  {"p": "N에 급급하다", "m": "chỉ chăm chăm / cuống cuồng lo N", "f": "돈벌이에 급급한", "d": "Mang ý chê: chỉ lo cái trước mắt, bỏ qua việc quan trọng hơn.", "ex": [["눈앞의 이익에 급급하다", "chỉ chăm chăm vào lợi ích trước mắt"]]},
+  {"p": "N임을 (N이다 + -ㅁ)", "m": "rằng là N, việc là N", "f": "전시임을", "d": "**-ㅁ/음** biến cả cụm thành danh từ (văn viết). 복제품 전시임을 밝히지 않다 = không nói rõ rằng đó là triển lãm bản sao.", "ex": [["그가 범인임이 밝혀졌다.", "Đã làm rõ rằng anh ta là thủ phạm."]]},
+  {"p": "-지 않고", "m": "không … mà (lại) …", "f": "밝히지 않고", "d": "Bỏ việc nên làm, làm việc khác thay vào.", "ex": [["숙제를 하지 않고 게임만 했다.", "Không làm bài tập mà chỉ chơi game."]]},
+  {"p": "-는 것이다", "m": "tức là / thực ra là", "f": "챙기는 것이다", "d": "Câu kết bằng -는 것이다 thường **giải thích** câu trước, không đưa ý mới. Khi dịch thêm “tức là”.", "ex": []},
+  {"p": "-아/어서야", "m": "phải … rồi mới (muộn)", "f": "찾아와서야", "d": "Nhấn mạnh việc biết / làm muộn hơn lẽ ra.", "ex": [["집에 와서야 지갑을 잃어버린 걸 알았다.", "Về đến nhà tôi mới biết mình mất ví."]]},
+  {"p": "-게 되다", "m": "rốt cuộc thì, trở nên (không chủ động)", "f": "알게 된", "d": "알게 되다 = biết ra, phát hiện ra.", "ex": []},
+  {"p": "-아/어 내다", "m": "làm … ra hết, dồn dập", "f": "쏟아 내고", "d": "쏟다 (đổ) + 내다 → trút ra.", "ex": []},
+  {"p": "-(으)ㄹ 수 있다고 우려하다", "m": "lo ngại rằng có thể …", "f": "수 있다고 우려한다", "d": "-다고 + động từ nói/nghĩ = câu gián tiếp. Nội dung lo ngại đứng **trước** -다고, khi dịch đặt **sau** “lo ngại rằng”.", "ex": []},
+  {"p": "N에 대한", "m": "về N, đối với N", "f": "미술에 대한", "d": "Bổ nghĩa cho danh từ đứng sau (관심).", "ex": []},
+  {"p": "-기 때문이다", "m": "là vì, bởi vì", "f": "있기 때문이다", "d": "Đứng cuối một câu riêng → lý do của câu **ngay trước**.", "ex": []}
+],
+"qa": {
+  "21": {"a": 2, "w": "Câu 5: người xem thất vọng có thể thôi quan tâm đến mỹ thuật → kiểu triển lãm này **cản trở** sự phát triển của giới mỹ thuật: 발목을 잡다 (níu chân).", "x": ["Hợp khẩu vị / hợp ý — nghĩa tốt, ngược với 우려하다.", "Làm xúc động — nghĩa tốt, không hợp với lo ngại.", null, "Bắt tay chung sức — nghĩa tốt."]},
+  "22": {"a": 3, "w": "Câu 3: 전시장을 찾아와서야 이런 사실을 알게 된 관람객들 = có khán giả đến nơi mới biết là bản sao → ④.", "x": ["Sai: họ chỉ lo thu tiền vé (입장료 수입만을 챙기다).", "Sai: 수요가 증가 — người đi xem nhiều lên.", "Sai: 늘고 있다 — đang tăng chứ không giảm.", null]}
+},
+"hoi": [
+  {"q": "Ai làm sai trong bài?", "a": "일부 전시 관계자들 — một số người tổ chức triển lãm."},
+  {"q": "Họ giấu điều gì, để làm gì?", "a": "Giấu việc đó là triển lãm bản sao (복제품 전시임), để thu tiền vé (입장료 수입)."},
+  {"q": "Chuyên gia lo điều gì? Vì sao?", "a": "Lo kiểu làm này níu chân sự phát triển của giới mỹ thuật, vì người xem thất vọng sẽ thôi quan tâm đến mỹ thuật."},
+  {"q": "Tìm 2 cụm “이런 …” và nói chúng chỉ lại câu nào.", "a": "이런 사실 = câu 2; 이런 전시 행태 = cách làm ở câu 1–3."}
+]
+}
