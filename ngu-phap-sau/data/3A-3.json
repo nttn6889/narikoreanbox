@@ -52,9 +52,9 @@
 {
 "no": 2, "id": "g_3A_03_2", "cn": "Thuật lại lời nói",
 "core": "Thuật lại câu hỏi: “(ai đó) hỏi (là)…”.",
-"goc": "Đuôi nghi vấn 한다체 <b>-(으)냐 / -느냐</b> + 고 + 하다 / 묻다 / 물어보다. Tính từ: -(으)냐고; động từ và 있다/없다: -느냐고; danh từ: -(이)냐고. Văn nói ngày nay rất hay rút thành <b>-냐고</b> cho mọi loại từ (sách ghi đây là dạng không chuẩn nhưng thông dụng).",
-"chia": [["", "Hiện tại", "Quá khứ", "Tương lai"], ["Động từ", "가**느냐고** (가**냐고**) · 먹**느냐고**", "갔**느냐고** (갔**냐고**)", "갈 거**냐고** · 가**겠느냐고**"], ["Tính từ", "나쁘**냐고** · 좋**으냐고** (좋**냐고**)", "좋았**느냐고**", "좋을 거**냐고**"], ["Danh từ", "휴가**냐고** · 학생**이냐고**", "휴가였**느냐고** · 학생이었**느냐고**", ""], ["있다 / 없다", "있**느냐고** (있**냐고**)", "있었**느냐고**", ""]],
-"chiaNote": ["Gốc ㄹ động từ rơi ㄹ: 살다 → 사**느냐고** (사**냐고**), 만들다 → 만드**느냐고**.", "Từ để hỏi giữ nguyên: 어디에 가냐고, 뭐 먹냐고, 언제 오냐고.", "묻다 (hỏi) là ㄷ bất quy tắc: 물었어요, 물어봤어요. Kính ngữ: **여쭤보다** (hỏi người trên).", "Rút gọn: -냐고 해요 → **-냬요**: 뭐 먹냬요."],
+"goc": "Đuôi nghi vấn 한다체 <b>-(으)냐 / -느냐</b> + 고 + 하다 / 묻다 / 물어보다. Tính từ: -(으)냐고; động từ và 있다/없다: -느냐고; danh từ: -(이)냐고. Văn nói ngày nay dùng <b>-냐고</b> cho mọi loại từ, mọi thì: 가냐고, 갔냐고, 좋냐고, 춥냐고, 학생이었냐고 (Viện Quốc ngữ đã công nhận -냐 là chuẩn từ 2017; sách vẫn dạy dạng đầy đủ). Bảng dưới: dạng sách trước, dạng văn nói trong ( ) — các ví dụ, bài luyện trong trang dùng dạng văn nói, gõ dạng nào cũng được chấm đúng.",
+"chia": [["", "Hiện tại", "Quá khứ", "Tương lai"], ["Động từ", "가**느냐고** (가**냐고**) · 먹**느냐고**", "갔**느냐고** (갔**냐고**)", "갈 거**냐고** · 가**겠느냐고**"], ["Tính từ", "나쁘**냐고** · 좋**으냐고** (좋**냐고**) · 추**우냐고** (춥**냐고**)", "좋았**느냐고** (좋았**냐고**)", "좋을 거**냐고**"], ["Danh từ", "휴가**냐고** · 학생**이냐고**", "휴가였**느냐고** (휴가였**냐고**) · 학생이었**느냐고** (학생이었**냐고**)", ""], ["있다 / 없다", "있**느냐고** (있**냐고**)", "있었**느냐고** (있었**냐고**)", ""]],
+"chiaNote": ["Tính từ ㅂ bất quy tắc: dạng sách -(으)냐고 có 으 nên ㅂ → 우: 춥다 → 추**우냐고**, 덥다 → 더**우냐고**, 어렵다 → 어려**우냐고**. Dạng văn nói -냐고 không có 으 (bắt đầu bằng phụ âm) nên ㅂ giữ nguyên: 춥**냐고**, 덥**냐고**, 어렵**냐고**. Hai dạng đều đúng.", "Quá khứ của mọi loại từ đều là -았/었느냐고 (sách) hoặc -았/었냐고 (văn nói): 갔냐고, 좋았냐고, 학생이었냐고.", "Gốc ㄹ động từ rơi ㄹ: 살다 → 사**느냐고** (사**냐고**), 만들다 → 만드**느냐고**.", "Từ để hỏi giữ nguyên: 어디에 가냐고, 뭐 먹냐고, 언제 오냐고.", "묻다 (hỏi) là ㄷ bất quy tắc: 물었어요, 물어봤어요. Kính ngữ: **여쭤보다** (hỏi người trên).", "Rút gọn: -냐고 해요 → **-냬요**: 뭐 먹냬요."],
 "tinh": [
  {"t": "Kể lại ai hỏi mình gì", "c": "Kể với mẹ về buổi phỏng vấn.", "lv": "lịch sự", "ko": "면접관이 왜 우리 회사에 지원했**냐고** 물어봤어요.", "vi": "Người phỏng vấn hỏi vì sao em nộp đơn vào công ty.", "why": "Câu hỏi có từ để hỏi (왜) giữ nguyên."},
  {"t": "Nhờ hỏi giúp người trên", "c": "Bạn không dám hỏi thầy, em bảo bạn hỏi.", "lv": "lịch sự", "ko": "선생님께 수업이 언제 시작하**느냐고** 여쭤 보세요.", "vi": "Bạn hỏi thầy xem khi nào lớp bắt đầu đi.", "why": "Hỏi người trên → 여쭤보다, dạng đầy đủ -느냐고 lịch sự hơn."},
@@ -102,7 +102,7 @@
  {"k": "Hỏi", "c": "Bạn gọi điện hỏi; em kể với bạn ngồi cạnh.", "ai": "친구", "g": "지금 뭐 해?", "f": "친구가 지금 뭐 (    ) 물어봤어요.", "a": ["하냐고", "하느냐고"], "vi": "Bạn hỏi mình đang làm gì.", "w": "Hỏi, động từ → 하냐고 (sách: 하느냐고)."},
  {"k": "Hỏi", "c": "Đồng nghiệp hỏi sáng thứ hai.", "ai": "동료", "g": "주말에 뭐 했어요?", "f": "동료가 주말에 뭐 (    ) 물어봤어요.", "a": ["했냐고", "했느냐고"], "vi": "Đồng nghiệp hỏi cuối tuần em làm gì.", "w": "Quá khứ → 했냐고."},
  {"k": "Hỏi", "c": "Thầy hỏi về một từ trong bài; bạn nghỉ hỏi lại em.", "ai": "선생님", "g": "이 단어가 무슨 뜻이에요?", "f": "선생님께서 그 단어가 무슨 (    ) 물어보셨어요.", "a": ["뜻이냐고"], "vi": "Thầy hỏi từ đó nghĩa là gì.", "w": "Danh từ có 받침 → 이냐고. 이 → 그."},
- {"k": "Hỏi", "c": "Chị gái hỏi khi thấy em mặc áo mới.", "ai": "언니", "g": "그 옷 비싸?", "f": "언니가 그 옷이 (    ) 물어봤어요.", "a": ["비싸냐고", "비싸느냐고"], "vi": "Chị hỏi cái áo đó có đắt không.", "w": "Tính từ hỏi → 비싸냐고; tiếng Việt cần “có … không”."}
+ {"k": "Hỏi", "c": "Chị gái hỏi khi thấy em mặc áo mới.", "ai": "언니", "g": "그 옷 비싸?", "f": "언니가 그 옷이 (    ) 물어봤어요.", "a": ["비싸냐고"], "vi": "Chị hỏi cái áo đó có đắt không.", "w": "Tính từ hỏi → 비싸냐고 (tính từ không có -느-: 비싸느냐고 ✘); tiếng Việt cần “có … không”."}
 ],
 "em": ["Hôm nay ai đã hỏi em điều gì? Viết 3 câu -냐고 물어봤어요.", "Viết 1 câu “-냐는 질문에 ~라고 답했어요” về một lần em được phỏng vấn / được hỏi."],
 "co": "Sau mẫu này, cho học sinh làm bảng 4 loại câu (đầu bài) bằng chính câu của các em: cô nói 4 câu (kể, hỏi, bảo, rủ), học sinh thuật lại đủ 4 dạng, rồi rút gọn (-대요 / -냬요 / -래요 / -재요)."
