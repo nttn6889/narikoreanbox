@@ -557,6 +557,7 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - Biến `R` (173 câu, sinh một lần): 61 câu `R` của `ngu-phap-12/` + 60 của `ngu-phap-34/` (giữ id, `w`) + 80 câu trang “Luyện tập Ngữ pháp TOPIK II”
   (https://claude.ai/artifact/1mkNvmWjkjFwgxHinJfiXk, id `L<số>`, giải thích HTML `e`), bỏ 27 câu trùng và 1 câu lỗi (gạch chân không khớp đáp án).
   4 câu sách 3급 sai đáp án đã sửa ở đây (L11 열리는데, L14 나오느라고, L17 아프거나, L23 맡게 됐다; trang claude.ai gốc chưa sửa).
+  L47 (셈이다 → 편이다), L51 (편이다 → 셈이다) giữ lại theo ý cô: không trùng nghĩa nhưng 3 đáp án kia sai hẳn → giải thích “chọn đáp án gần nghĩa nhất”.
   `k` 12|34, `d` ngày học, `x` 13|19 = câu kiểm tra (không vào ngày học), `m` câu dư dành cho ngày trộn. Lựa chọn giữ thứ tự gốc.
 - Bổ sung (cô góp ý 22/10): mỗi câu có `v` = nghĩa tiếng Việt (câu 1–2 để “(…)” chỗ trống; câu 3–4 `[…]` = nghĩa phần gạch chân, tô vàng).
   **💡 Gợi ý** 2 mức trên 4 đáp án (`D.h[id]`): mức 1 hiện nghĩa câu, mức 2 bỏ 2 đáp án sai (`outOf`, cố định theo id); đúng mà có xem gợi ý → mai ôn lại
