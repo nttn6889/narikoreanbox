@@ -392,9 +392,12 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   `go` = **Luyện chuyển câu** (gõ, tự chấm: `{k, c, ai, g, f khung có “(    )”, a:[đáp án nhận — so bỏ dấu cách/dấu câu], vi, w}`; học sinh chọn loại câu rồi gõ, lưu `ST.go`).
   Câu gián tiếp: `doi`/`go` ở 3A-1 mẫu 1 (kể), 3A-2 mẫu 2 (bảo/cấm/nhờ), 3A-3 mẫu 2 (hỏi), 3A-3 mẫu 4 (rủ); bước `cd_gt_lt` “Luyện tổng hợp” (cuối Nửa 1, 7 câu gốc
   cùng động từ 가다 đổi loại câu + bảng dịch xuôi theo loại câu + 22 câu gõ trộn); bước Tổng hợp thêm `doi`/`go` đổi ngôi, thời gian, nơi chốn.
-  Đã soạn `gian-tiep` (Câu gián tiếp, ~2 tiếng, 9 bước): Bước 0 한다체 + nhận loại câu (2B-18) · -다고 · -라고 · -냐고 · -자고 · rút gọn -대/-래/-냬/-재 · -다고 들었다 ·
-  -다고요? (3A Bài 8) · Tổng hợp (đổi ngôi/thời gian, động từ thuật, -겠다고, bỏ -시-). Nhóm còn lại định làm: thời gian – lý do, tiểu từ, phỏng đoán, -더-, thái độ người nói,
-  bị động + mục đích, nhượng bộ.
+  Thứ tự cô chốt (làm từng chuyên đề, cô duyệt rồi mới làm tiếp): 1 gián tiếp · 2 thời gian – lý do · 3 tiểu từ · 4 phỏng đoán · 5 -더- · 6 thái độ người nói · 7 bị động + mục đích · 8 nhượng bộ.
+  Đã soạn `gian-tiep` (Câu gián tiếp, ~2 tiếng, 10 bước): Bước 0 한다체 + nhận loại câu (2B-18) · -다고 · -라고 · -냐고 · -자고 · Luyện tổng hợp câu gốc → gián tiếp ·
+  rút gọn -대/-래/-냬/-재 · -다고 들었다 · -다고요? (3A Bài 8) · Tổng hợp (đổi ngôi/thời gian, động từ thuật, -겠다고, bỏ -시-).
+  `thoi-gian-ly-do` (Thời gian – lý do, ~1 tiếng 45, 8 bước): Nửa 1 thời gian = Bước 0 nền -고/-아서/-고 나서/-다가/-(으)면서 (2A-7) · -자마자 · -았다가 (3A-7);
+  Nửa 2 lý do = Bước 0 nền -아서/-(으)니까/-기 때문에/N(이)라서 (2B-13) · -느라고 · -다(가) nguyên nhân (3A-8) · -거든요 (3A-6, phân biệt -거든 “nếu… thì” — lựa chọn nhiễu
+  câu 1–2 kỳ 41, 91) · Tổng hợp (bảng chọn đuôi, 3 bẫy, 12 câu gồm câu 1–2 kỳ 35, 41, 60, 91, 96). Đáp án câu đề thật lấy theo `R` của `ngu-phap-12/`.
 
 ## Kiểm tra nền tảng Seoul (`seoul/kiem-tra/`)
 - Bài chẩn đoán cho học sinh học tiếp 3A: 53 câu (A từ vựng 12 · B chia đuôi gõ 10 · C tiểu từ 6 · D ngữ pháp theo bài 1B–2B 17 ·
