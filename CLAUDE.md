@@ -115,7 +115,7 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - Lưu bài tìm gia sư học sinh đăng + 2 comment của cô (comment ngoài: giới thiệu cô ngắn gọn + trả lời; comment trả lời bên trong: lộ trình chi tiết)
   để lần sau tìm bài tương tự, “Dùng làm mẫu” rồi sửa; ô “Bản QnA” soạn sẵn bài hỏi – đáp cho trang Nari TOPIK (không tên người hỏi).
 - Collection `tuvan/<id>` {date, st: chua|inbox|hoc|khong, kase (tóm tắt), tags, src, post, outer, inner, qna}. Code `renderTuVan`/`tvForm` trong khối Admin.
-- Văn phong cô chốt cho comment ngoài: ngắn, 3–4 câu (ĐH Daegu, gần 10 năm sống và làm biên phiên dịch tại Hàn, dạy TOPIK online → trả lời câu hỏi →
+- Văn phong cô chốt cho comment ngoài: ngắn, 3–4 câu (ĐH Daegu, gần 10 năm sống và làm biên phiên dịch tại Hàn, 7 năm dạy tiếng Hàn ở trường THPT và luyện thi TOPIK online → trả lời câu hỏi →
   “Học thử miễn phí, em inbox cô”). Lộ trình để ở comment trả lời, giữ nguyên chữ cô đã duyệt.
 - **Mỗi lần cô nhờ trả lời comment đấu giá / bài tìm gia sư:** soạn xong (cô duyệt bản cuối) thì tự lưu luôn, không cần cô nhắc:
   ArtifactData `set` collection `tuvan`, doc `T<yyyymmdd><a|b|c…>` (trang quản lý https://claude.ai/artifact/7EWoCB9sEomX2FHY8d1QY8),
