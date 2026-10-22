@@ -1398,7 +1398,7 @@ function vStart(a, name){
   if(saved && saved.c === a.c && saved.n === n && (saved.y ? saved.y === a.y : st.length === 1)) VS = saved;
   else{
     var idx = a.w.map(function(_, i){ return i; });
-    VS = {c:a.c, n:n, y:a.y, ans:{}, start:Date.now(), submitted:null, order:vShuffle(idx), ords:[], step:0, opts:{}, mo:[]};
+    VS = {c:a.c, n:n, y:a.y, ans:{}, start:Date.now(), submitted:null, order:vShuffle(idx), ords:[], step:0, opts:{}, mo:[], learned:0, hint:{}};
     st.forEach(function(t, s){
       var ord = s ? vShuffle(idx) : VS.order; VS.ords.push(ord);
       if(t === "kv" || t === "vk" || t === "nk"){
@@ -1411,7 +1411,8 @@ function vStart(a, name){
       if(t === "match"){ var per = Math.ceil(ord.length / Math.ceil(ord.length / 8)); for(var k = 0; k < ord.length; k += per) VS.mo.push(vShuffle(ord.slice(k, k + per))); VS.per = per; }
     });
   }
-  VS.ords = VS.ords || [VS.order]; VS.step = VS.step || 0; VS.y = a.y;
+  VS.ords = VS.ords || [VS.order]; VS.step = VS.step || 0; VS.y = a.y; VS.hint = VS.hint || {};
+  if(VS.learned == null) VS.learned = VS.submitted || Object.keys(VS.ans).length ? 1 : 0;  // bài làm dở từ trước khi có trang học từ
   VS.a = a; VS.name = name; VS.key = key; VS.sel = null;
   vSave(); vRender();
   window.scrollTo(0, 0);
@@ -1457,12 +1458,13 @@ function vStepHTML(t, s, locked){
         }).join("") + '</div></section>';
     });
   } else if(t === "cau"){
-    h += '<p class="hint" style="margin-bottom:6px">Điền từ trong ngoặc vào chỗ trống, <strong>chia đúng đuôi</strong> cho hợp với câu (VD: 먹다 → 먹었어요).</p>';
+    h += '<p class="hint" style="margin-bottom:6px">Điền từ trong ngoặc vào chỗ trống, <strong>chia đúng đuôi</strong> cho hợp với câu (VD: 먹다 → 먹었어요). Bí thì bấm <strong>💡 Gợi ý</strong> (mỗi lần bấm hiện thêm một chút).</p>';
     ord.forEach(function(i, k){
       var it = items[i], good = locked && ok(i), ex = String(it[2] || ""), m = ex.match(/__(.+?)__/);
       var inp = box(i, m ? 'width:9em;max-width:100%' : '', m ? '' : 'Gõ từ tiếng Hàn');
       h += '<section class="q"><p class="stem"><b>' + (k+1) + '.</b><span' + (m ? ' style="line-height:2.2"' : ' style="font-family:var(--ui)"') + '>' + (m ? esc(ex.slice(0, m.index)) + '<span class="nblank">' + inp + '</span>' + esc(ex.slice(m.index + m[0].length)) : esc(it[1])) + '</span></p>' +
         (m ? '<p class="hint" style="margin:-4px 0 0 2.2em">(<span style="font-family:var(--kr);font-weight:600">' + esc(it[0]) + '</span> · ' + esc(it[1]) + ')</p>' : '<div class="vtype">' + inp + '</div>') +
+        vHintHTML(vCauKey(it), off + i, locked) +
         (locked && !good ? '<span class="vfix">Đáp án: <span style="font-family:var(--kr)">' + esc(vCauKey(it)) + '</span></span>' : '') + '</section>';
     });
   } else if(t === "nc"){
@@ -1505,9 +1507,52 @@ function vStepHTML(t, s, locked){
   }
   return h;
 }
+/* Gợi ý dạng "cau" (từ đã chia): mức 1 = số âm tiết + chữ đầu (từ 1 âm tiết: phụ âm đầu), mức 2 = hiện hết trừ âm tiết cuối.
+   VS.hint[ô] = số mức đã mở; nộp bài ghi số từ có dùng gợi ý vào tin nhắn gửi cô. */
+function vHints(key){
+  var w = String(key || ""), syl = w.replace(/\s/g, ""), n = syl.length, out = [];
+  if(!n) return out;
+  if(n === 1){ var c = syl.charCodeAt(0) - 0xAC00; out.push("1 âm tiết, phụ âm đầu 「" + (c >= 0 && c < 11172 ? "ㄱㄲㄴㄷㄸㄹㅁㅂㅃㅅㅆㅇㅈㅉㅊㅋㅌㅍㅎ".charAt(Math.floor(c / 588)) : syl) + "」"); return out; }
+  out.push(n + " âm tiết, bắt đầu bằng 「" + syl.charAt(0) + "」");
+  if(n >= 3){ var k = 0, sh = ""; for(var x = 0; x < w.length; x++){ if(/\s/.test(w[x])){ sh += " "; continue; } k++; sh += k < n ? w[x] : "□"; } out.push(sh); }
+  return out;
+}
+function vHintHTML(key, j, locked){
+  var H = vHints(key), lv = Math.min(VS.hint[j] || 0, H.length);
+  if(!H.length || (locked && !lv)) return '';
+  var shown = H.slice(0, lv).map(function(x, z){ return '<span style="font-family:var(--kr);font-weight:600;margin-right:10px">💡 ' + (z + 1) + ': ' + esc(x) + '</span>'; }).join("");
+  if(locked) return '<p class="hint" style="margin:2px 0 0 2.2em">' + shown + '<span class="muted">(em đã dùng gợi ý)</span></p>';
+  return '<p class="hint" style="margin:4px 0 0 2.2em">' + shown + (lv < H.length ? '<button type="button" class="vsay" data-hint="' + j + '" style="padding:2px 12px;font-size:13.5px">💡 Gợi ý' + (lv ? ' thêm' : '') + '</button>' : '') + '</p>';
+}
+function vHintCount(){ return Object.keys(VS.hint || {}).filter(function(j){ return VS.hint[j] > 0; }).length; }
+/* Trang học từ trước khi làm bài (mọi bài từ vựng): bảng từ + nghĩa + câu ví dụ, 🔊 đọc từ / câu.
+   Học sinh chép vào vở rồi bấm “Bắt đầu làm bài” (VS.learned); đồng hồ tính từ lúc đó. */
+function vLearnHTML(){
+  var a = VS.a, items = a.w, rows = items.map(function(it, i){
+    var ex = String(it[2] || ""), exh = esc(ex).replace(/__(.+?)__/, '<b style="color:var(--violet)">$1</b>');
+    return '<tr><td class="muted" style="width:2em">' + (i + 1) + '</td><td><div style="display:flex;flex-wrap:wrap;align-items:center;gap:6px"><span style="font-family:var(--kr);font-weight:700;font-size:17px">' + esc(it[0]) + '</span>' +
+      '<button type="button" class="vsay" data-lsay="' + i + '" style="padding:1px 10px;font-size:13px" aria-label="Nghe từ ' + (i + 1) + '">🔊</button></div>' +
+      (ex ? '<div style="font-family:var(--kr);font-size:14.5px;margin-top:4px;line-height:1.6">' + exh + ' <button type="button" class="vsay" data-lsay="' + i + '" data-full="1" style="padding:0 8px;font-size:12px" aria-label="Nghe câu ' + (i + 1) + '">🔊 câu</button></div>' : '') + '</td>' +
+      '<td style="font-family:var(--ui)">' + esc(it[1]) + '</td></tr>';
+  }).join("");
+  return '<div class="grp vstep"><span class="tag">Bước 0</span>Học từ trước</div>' +
+    '<div class="note" style="white-space:normal;margin-top:0">Em <strong>chép các từ dưới đây vào vở</strong> (từ, nghĩa' + (items.some(function(it){ return it[2]; }) ? ', câu ví dụ' : '') + '), bấm 🔊 nghe và đọc to theo. ' +
+    'Chép xong em bấm <strong>“Em chép xong · Bắt đầu làm bài”</strong> ở dưới. Vào bài rồi thì không xem lại bảng này được, đồng hồ cũng chỉ tính từ lúc em bắt đầu làm.</div>' +
+    '<div class="scroll"><table class="tbl" style="background:var(--paper)"><thead><tr><th>#</th><th>Từ vựng</th><th>Nghĩa</th></tr></thead><tbody>' + rows + '</tbody></table></div>';
+}
 function vRender(){
   var a = VS.a, items = a.w, n = items.length, st = vtSteps(a.y), multi = st.length > 1, locked = !!VS.submitted, cur = locked ? -1 : VS.step, h = "";
   var head = function(s, extra){ return '<div class="grp vstep"><span class="tag">Bước ' + (s+1) + '/' + st.length + '</span>' + esc(VTYPES[st[s]]) + (extra || '') + '</div>'; };
+  if(!locked && !VS.learned){
+    app.innerHTML = '<div class="wrap">' + headerHTML() + '<main class="paper" id="exam"><div class="title"><h1>단어 시험</h1><p>' + esc(a.t || "Bài từ vựng") + '</p></div>' +
+      '<div class="metaline"><span>' + esc(vtName(a.y)) + ' · <strong>' + n + '</strong> từ</span><span>Học sinh: <strong>' + esc(VS.name) + '</strong></span></div>' +
+      '<div id="vq">' + vLearnHTML() + '</div></main></div>' +
+      '<nav class="strip" aria-label="Học từ"><div class="in"><div style="flex:1;font-weight:600">Học ' + n + ' từ</div><button class="btn" id="vlearn">Em chép xong · Bắt đầu làm bài ›</button></div></nav>';
+    $$("[data-lsay]", $("#vq")).forEach(function(b){ b.onclick = function(){ var it = a.w[+b.dataset.lsay]; vSay(b.dataset.full ? String(it[2] || "").replace(/__/g, "") : it[0], !!b.dataset.full, false); }; });
+    $("#vlearn").onclick = function(){ VS.learned = Date.now(); VS.start = Date.now(); vSave(); vRender(); window.scrollTo(0, 0); };
+    vStopClock();
+    return;
+  }
   if(multi && !locked) h += '<div class="note" style="white-space:normal;margin-top:0">Bài có <strong>' + st.length + ' bước</strong> với cùng ' + n + ' từ: ' + st.map(function(t, s){ return (s+1) + ') ' + esc(VTYPES[t]); }).join(" · ") + '. Làm xong một bước em bấm “Sang bước …” ở dưới (không quay lại sửa được). Kết quả cả bài hiện khi em nộp.</div>';
   st.forEach(function(t, s){
     if(!multi){ h += vStepHTML(t, s, locked); return; }
@@ -1530,6 +1575,8 @@ function vWire(){
   $$("[data-say]", q).forEach(function(b){ b.onclick = function(){ var it = a.w[+b.dataset.say]; vSay(b.dataset.full ? it[2] : it[0], !!b.dataset.full, !!b.dataset.slow); }; });
   if(VS.submitted) return;
   q.addEventListener("click", function(e){
+    var hb = e.target.closest("[data-hint]");
+    if(hb){ var hj = hb.dataset.hint; VS.hint[hj] = (VS.hint[hj] || 0) + 1; vSave(); vRepaint(); return; }
     var b = e.target.closest(".opt");
     if(b){ VS.ans[b.dataset.i] = +b.dataset.o; vSave(); $$('.opt[data-i="' + b.dataset.i + '"]', q).forEach(function(o){ o.setAttribute("aria-checked", o === b ? "true" : "false"); }); $("#vcount").textContent = vCount(); return; }
     var l = e.target.closest("[data-li]"), r = e.target.closest("[data-ri]");
@@ -1579,7 +1626,8 @@ function vShowResult(){
   if(a.route){ pl.k = a.k; pl.y = a.y; pl.w = a.ids; }
   var code = encodeV(pl);
   var per = st.length > 1 ? R.steps.map(function(x){ return VTYPES[x[0]] + " " + x[1] + "/" + x[2]; }).join(" · ") : "";
-  var msg = "BÀI TỪ VỰNG\nBài: " + (a.t || "Từ vựng") + " (" + vtName(a.y) + ")\nHọ tên: " + VS.name + "\nĐiểm: " + sc + "/" + R.total + (per ? "\n" + per : "") + "\nNộp lúc: " + fmtDate(VS.submitted) + "\nMã bài làm: " + code;
+  var nh = vHintCount();
+  var msg = "BÀI TỪ VỰNG\nBài: " + (a.t || "Từ vựng") + " (" + vtName(a.y) + ")\nHọ tên: " + VS.name + "\nĐiểm: " + sc + "/" + R.total + (per ? "\n" + per : "") + (nh ? "\nDùng gợi ý: " + nh + " từ" : "") + "\nNộp lúc: " + fmtDate(VS.submitted) + "\nMã bài làm: " + code;
   $("#vres").innerHTML = '<div class="panel" id="result"><h2>Em đúng ' + sc + '/' + R.total + (st.length > 1 ? '' : ' từ') + '</h2>' + (per ? '<p>' + esc(per) + '</p>' : '') +
     (wrong.length ? '<p>Các từ cần ôn lại:</p><div class="scroll"><table class="tbl" style="background:var(--paper)"><tbody>' + wrong.map(function(i){ return '<tr><td style="font-family:var(--kr);font-weight:600">' + esc(items[i][0]) + (hasEx && /__/.test(items[i][2] || "") ? ' → ' + esc(vCauKey(items[i])) : '') + '</td><td>' + esc(items[i][1]) + '</td><td class="muted" style="font-size:13px">' + esc(vBadText(a.y, items, i, ans, R.bad[i]) ? 'em làm: ' + vBadText(a.y, items, i, ans, R.bad[i]) : 'chưa làm') + '</td></tr>'; }).join("") + '</tbody></table></div>' : '<p class="okmsg">Xuất sắc! Em không sai từ nào.</p>') +
     '<p style="margin-top:12px">Bấm “Sao chép” rồi dán vào tin nhắn Zalo gửi cho cô.</p><div id="vmsg">' + copyBox(msg, 6) + '</div>' +
