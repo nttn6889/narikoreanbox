@@ -614,6 +614,21 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   `t` (J chủ đề / D nội dung khớp), `s`, `o2`, `a2`, `c2` (tô xanh), `w2`, `x2[i]` (H chi tiết hẹp / C chép chữ / N ngược / T không nói / A quá mức), `z` (vị trí đáp án chủ đề), `p1`, `mid`.
   Đáp án lấy từ `bank`, riêng `Etk091` dùng đáp án đúng ③ 비록 / ① (trong `bank` đang ghi sai ① / ③). `MCQ` câu tự soạn (lựa chọn đầu là đáp án). localStorage `nari-1920`.
 
+## Học câu 23–24 tâm trạng trong tùy bút (`cau-23-24/`) và câu 42–43 tiểu thuyết (`cau-42-43/`)
+- Hai trang riêng, cùng khung với `cau-19-20/` (một bài = đoạn văn + 2 câu; câu sau mở khi làm câu trước; ✕ gạch lựa chọn; Buổi 1–3, Ôn ngắt quãng 5 bài/lượt,
+  thẻ tất cả bài, Bảng tra; 23–24: 2 phút/bài, localStorage `nari-2324`; 42–43: 2:30/bài, `nari-4243`). Link `#b=1|2|3|on|all|tra`, `#b=all&q=<id đề>`.
+- Chiến thuật rút từ đề: câu gạch chân không chứa sẵn từ trong đáp án, là phản ứng cơ thể / quán ngữ / hành động / lời nói / cảnh → tìm **nguyên nhân** câu trước
+  (9/22 bài phải đọc cả câu sau; gạch chân là cảnh thì cảm xúc ở câu sau) → chia + / − → chọn sắc thái (10 cặp dễ nhầm `CONF`). 42–43 thêm: khoanh tên nhân vật
+  (7/19 bài hỏi người khác “tôi”; đề thật 83 hỏi ‘부모님’, 91 hỏi ‘미연’), đúng người – đúng lúc, gạch từ tả tính cách, câu 43 đáp án diễn đạt lại / suy ra.
+- Dữ liệu `R` trong trang (22 bài 23–24 từ 22 đề đọc; 19 bài 42–43 — bỏ `Eebs1` vì đề không có câu gạch chân, kỳ 83/91 không công bố đoạn văn, chỉ để câu hỏi + lựa chọn
+  ở Bảng tra): đoạn văn, câu hỏi, lựa chọn lấy từ `thi-thu/de/*.json`; đáp án `a`/`a2` (0-based) theo `bank`, **trừ `Etk091` câu 23–24** (bank ghi ④/①, đề thật là ① 의심스럽다 / ④).
+  Chú giải Claude soạn: `u` dạng câu gạch chân (B cơ thể, Q quán ngữ, H hành động, L lời / suy nghĩ, C cảnh), `k` họ cảm xúc (`FAM`: S bất ngờ, F lo sợ, H xấu hổ – áy náy,
+  B buồn – tiếc, A bực – oán, D nghi ngờ, P vui – yên tâm, T thái độ), `s` nguyên nhân ở t trước / s sau / h cả hai, `v` nghĩa câu gạch chân, `c` nguyên nhân (tô vàng, phải có
+  đúng trong đoạn văn), `m` nghĩa 4 lựa chọn, `x[i]` bẫy (V ngược chiều, L khác loại, M gần nghĩa, G sai lúc, A sai người, K không phải cảm xúc, N ngược bài), `c2` chỗ chứa
+  đáp án câu sau (tô xanh), `x2[i]` (N, T bài không nói, S đổi người, C đổi chi tiết, A quá mức, K chép chữ), `pp` đáp án câu sau diễn đạt lại, `wh` người được hỏi (khi câu hỏi
+  không có tên trong ‘ ’), `tp` tên tác phẩm (chỉ ghi khi chắc). `BODY` (biểu hiện → cảm xúc), `EMO` (từ theo họ), `CONF`, `MCQ` (câu tự soạn, lựa chọn đầu là đáp án) dùng chung
+  hai trang. Sửa thẳng trong `index.html` của từng trang (code giống nhau, sửa một trang thì sửa cả trang kia).
+
 ## Học câu 25–27 tiêu đề báo (`cau-25-27/`)
 - Cùng khung với `ngu-phap-34/`: Buổi 1 (luật rút gọn của tiêu đề, quan hệ hai nửa, chữ cuối → thời điểm, quy trình 4 bước, 6 bẫy), Buổi 2 (ẩn dụ/quán ngữ theo nhóm nghĩa, biến `GL`),
   Buổi 3 (làm như thi, 40 giây/câu), Ôn (ôn ngắt quãng 10 câu), thẻ “63 câu” (giải thích từng câu, lọc theo buổi/quan hệ, “Che đáp án”), Bảng tra. Link `cau-25-27/#b=1|2|3|on|all|tra`, `#b=all&q=<id>`.
