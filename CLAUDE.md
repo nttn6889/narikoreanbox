@@ -234,6 +234,10 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - Bài từ vựng nằm ngay trong link học sinh: `thi-thu/#v=<base64>.<sum>` → giao bài **không cần đồng bộ**.
   Học sinh nộp → mã `NV1-…` gửi Zalo → cô dán vào tab Chấm bài (chấm chung với mã `NT2-…` của đề thi).
 - Code phía học sinh (vocabBoot, vEntry, vRender…) nằm ngoài khối Admin nên `sync_thi_thu.py` giữ lại.
+- Mọi bài từ vựng (link `#v=`, lộ trình `#l=`, app) có **Bước 0 “Học từ trước”** (`vLearnHTML`): bảng từ + nghĩa + câu ví dụ, 🔊 từ/câu; học sinh chép vào vở rồi bấm
+  “Em chép xong · Bắt đầu làm bài” (`VS.learned`, đồng hồ `VS.start` tính từ lúc đó; vào bài không xem lại bảng). Bài làm dở từ trước (đã có đáp án) bỏ qua bước này.
+  Dạng `cau` có nút **💡 Gợi ý** từng câu (`vHints`: mức 1 số âm tiết + chữ đầu, từ 1 âm tiết thì phụ âm đầu; mức 2 hiện hết trừ âm tiết cuối; `VS.hint[ô]`),
+  không trừ điểm, tin nhắn kết quả ghi “Dùng gợi ý: N từ” (mã nộp không đổi).
 - **Lộ trình hàng ngày** (Lớp học → lớp → Khung luyện tập → “Lộ trình từ vựng”; trước nằm ở tab Từ vựng): collection `vroutes` (code, title, secs[thứ tự phần], per, type,
   start YYYY-MM-DD, review). Link cố định `thi-thu/#l=<base64>.<sum>`; trang tự tính “ngày k” từ ngày bắt đầu, lấy từ trong
   `thi-thu/vocab.json` theo thứ tự phần → nhóm (order) → từ. Từ sai được nhớ trong localStorage máy học sinh và tự thêm vào
