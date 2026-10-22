@@ -366,14 +366,14 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   mọi cuốn (tên mẫu, nghĩa, ví dụ, lưu ý). Giải thích tiếng Hàn gốc ẩn, nút “Hiện tiếng Hàn” (localStorage `nari-np-ko`). Ví dụ `" / "` = lượt hội thoại, 🔊 máy đọc.
 - Trang từ vựng `seoul/` có nút chuyển Từ vựng | Ngữ pháp và dòng “Ngữ pháp bài này” dưới tên bài (đọc `ngu-phap/np.json`).
 
-## Bài tập Seoul theo bài (`seoul/bai-tap/`) — trang học sinh, đã có 1A Bài 1–3
+## Bài tập Seoul theo bài (`seoul/bai-tap/`) — trang học sinh, đã có 1A Bài 1–3, 2A Bài 1–3
 - Link `seoul/bai-tap/#b=1A&c=1&t=v|g|r` (Từ vựng | Ngữ pháp | Kết quả); không có `c` = danh sách bài. Trang `seoul/` hiện dòng “Bài tập: Từ vựng · Ngữ pháp”
   dưới bài có trong biến `BT`. Chấm ngay từng câu, kèm giải thích; thẻ Kết quả → “Gửi kết quả cho cô” = link `#r=<base64>` (báo cáo: từ còn sai, đúng theo từng ngữ pháp, từng câu).
 - **Từ vựng tự sinh** từ `thi-thu/vocab.json` (phần `Seoul 1A · Bài N · …`): mỗi từ vào đúng một dạng A Nghe – chọn từ (máy đọc) / B Hàn → Việt / C Việt → Hàn /
   D chọn từ điền câu ví dụ (`__…__`), thêm E gõ 5 từ; “Làm lại phần này” tăng `sd` → từ đổi dạng. F = câu soạn tay `v` trong data.
 - **Ngữ pháp** soạn tay ở `seoul/bai-tap/data/<cuốn>-<bài>.json` = `{g:[tên 4 mẫu], v:[câu từ vựng F], q:[…]}`; câu `t:'c'` chọn (o[0] là đáp án, `x[i]` ghi chú lựa chọn sai),
   `t:'y'` gõ (`a` đáp án nhận, `e` {sai hay gặp: ghi chú}, `h` gợi ý), `t:'d'` dịch Việt → Hàn (`a` câu mẫu, khác thì em tự so); `g` = mẫu 1–4, 0 = tổng hợp. Chỉ dùng từ / ngữ pháp
-  đã học tới bài đó. Thêm bài: soạn data, thêm vào `LS` của trang và `BT` của `seoul/index.html`. localStorage `nari-sbt`. Thêm câu dùng id mới.
+  đã học tới bài đó. Thêm bài: soạn data, thêm vào `LS` của trang và `BT` của `seoul/index.html` (trang đầu tự chia nhóm theo cuốn). localStorage `nari-sbt`. Thêm câu dùng id mới.
 
 ## Kho ngữ pháp Nari (`ngu-phap-sau/`) — học liệu dạy sâu ngữ pháp của cô
 - Trang `noindex`, cô dùng soạn bài + trình chiếu (nút góc trên: “Bản của cô” / “Bản chiếu cho học sinh” ẩn khung “Ghi chú cho cô”, localStorage `nari-nps`).
