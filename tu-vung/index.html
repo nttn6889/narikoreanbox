@@ -291,7 +291,7 @@ h4{font-size:14px;margin:12px 0 4px;color:var(--muted)}
       .then(function(r){
         DE = r[1]; CD = r[2]; cache = r[0];
         CORE = cache.g.filter(function(g){ return /^Cốt lõi /.test(g.sec); }).sort(function(a, b){ return (a.so - b.so) || (a.o - b.o); });
-        cache.g = cache.g.filter(function(g){ return !/^(Seoul|Cốt lõi) /.test(g.sec); });  // từ giáo trình Seoul ở trang ../seoul/; từ cốt lõi ở thẻ ⭐ Cốt lõi
+        cache.g = cache.g.filter(function(g){ return !/^(Seoul|Cốt lõi|TOPIK 30 ngày) /.test(g.sec); });  // từ giáo trình Seoul ở trang ../seoul/; từ cốt lõi ở thẻ ⭐ Cốt lõi; giáo trình 30 ngày ở ../tu-30/
         upd(cache); render(cache);
       })
       .catch(function(){ msg.textContent = 'Không tải được từ vựng. Kiểm tra mạng rồi tải lại trang.'; });

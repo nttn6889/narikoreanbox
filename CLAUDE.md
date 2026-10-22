@@ -311,6 +311,19 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   xếp vào 10 chủ đề lớn + “Đời sống hằng ngày” (`DS`: gia đình, gọi món, chào hỏi, vị trí… — ít gặp ở bài đọc) (`topics[].m` = số mục;
   “Khác” = `KHAC` chỉ còn Lịch sử). Thẻ “Chủ đề” = từ khóa gặp trong đề + các mục EBS của chủ đề đó.
 
+## Từ vựng TOPIK trung cấp 30 ngày (`tu-30/`) — giáo trình “TOPIK Intermediate Vocabulary in 30 days” (박이정)
+- Sách 30 Day × 33 từ (+ khung từ dễ nhầm, bài 복습). File cô gửi 22/10/2026 là PDF scan, chỉ tới Day 09; đã nhập **Day 1–3**. Cô dùng để luyện tập nên lấy
+  nguyên câu ví dụ trong sách. Chưa có file mp3 của sách (track 01…) — cô tìm được thì thay máy đọc bằng file thật.
+- Nguồn soạn tay `tools/t30/dNN.json` (từ: `ko, p 명/동/형/부, vi, hv, ex` câu sách có `__chữ__`, `exv` dịch, `r` 관련어, `tip`, `note` 출제 경향; `cf` khung dễ nhầm;
+  `x` bài luyện sâu Claude soạn: `g` h họ từ / k kết hợp / c dễ nhầm, lựa chọn đầu là đáp án; `rv` bài 복습 của sách) → `python3 tools/t30.py <thư mục>` (cần kiwipiepy)
+  → `tu-30/data/dNN.json` (thêm `k` số đề đọc có từ, `de` ≤ 2 câu trong 22 đề đọc, ưu tiên kỳ 83/91) + `<thư mục>/vocab/T30NN_1|2.json`
+  → ArtifactData batch `set` collection `vocab` → đồng bộ kho từ `--vocab-only` (bỏ `VCD*`; khi `update` `site/kho` giữ dấu các phần cũ không có trong dump).
+- Kho từ: phần `TOPIK 30 ngày · Day NN` (secOrder 200 + NN), nhóm Phần 1 = từ 1–17, Phần 2 = 18–33 (học sinh chia 2 ngày được), id `t30NN_MM` cố định.
+  Trang `tu-vung/` bỏ các phần này. Giao hằng ngày: Lộ trình từ vựng chọn các phần `TOPIK 30 ngày`, 33 từ/ngày (hoặc 17 nếu chia 2 ngày), dạng nên có “Điền từ vào câu” (`cau`, dùng câu sách).
+- Trang `tu-30/` (gửi học sinh, `#d=1&b=<bước>&p=all|1|2`): ① Học (thẻ từ, 🔊, 관련어, Tip, ★ số đề + câu trong đề, “Em thuộc”, “Che nghĩa”) · ② Nghĩa · ③ Điền câu sách ·
+  ④ Họ từ · Kết hợp · ⑤ Dễ nhầm (khung sách + bài) · ⑥ Câu trong đề · ⑦ Dịch Việt → Hàn (câu sách ngắn, so LCS, tự chấm) · ⑧ Ôn (bài 복습 của sách); “Gửi kết quả cho cô”.
+  localStorage `nari-t30`. Thêm Day: soạn `tools/t30/dNN.json`, chạy script (tự thêm vào `days.json`), ghi `vocab`, đồng bộ kho từ.
+
 ## Từ vựng giáo trình Seoul (`seoul/`) — lớp trung cấp 3 (Seoul 3A/3B) + ôn nền tảng 1A–2B
 - Nguồn soạn tay: `tools/seoul/<cuốn>.tsv` (`# bài | tên Hàn | tên Việt`, `## nhóm Việt | nhóm Hàn`, dòng từ
   `ko<TAB>nghĩa<TAB>Hán Việt<TAB>câu ví dụ có __từ đã chia__`). Theo file cô gửi lần 2 (“từ vựng chính thức phần 번역 từng bài”,
