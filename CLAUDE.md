@@ -549,6 +549,14 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   (https://claude.ai/artifact/1mkNvmWjkjFwgxHinJfiXk, id `L<số>`, giải thích HTML `e`), bỏ 27 câu trùng và 1 câu lỗi (gạch chân không khớp đáp án).
   4 câu sách 3급 sai đáp án đã sửa ở đây (L11 열리는데, L14 나오느라고, L17 아프거나, L23 맡게 됐다; trang claude.ai gốc chưa sửa).
   `k` 12|34, `d` ngày học, `x` 13|19 = câu kiểm tra (không vào ngày học), `m` câu dư dành cho ngày trộn. Lựa chọn giữ thứ tự gốc.
+- Bổ sung (cô góp ý 22/10): mỗi câu có `v` = nghĩa tiếng Việt (câu 1–2 để “(…)” chỗ trống; câu 3–4 `[…]` = nghĩa phần gạch chân, tô vàng).
+  **💡 Gợi ý** 2 mức trên 4 đáp án (`D.h[id]`): mức 1 hiện nghĩa câu, mức 2 bỏ 2 đáp án sai (`outOf`, cố định theo id); đúng mà có xem gợi ý → mai ôn lại
+  (`srs(id, ok, hinted)`), báo cáo ghi số câu xem gợi ý; ngày kiểm tra không có gợi ý. Sau khi chọn luôn hiện “Nghĩa:”.
+  Bảng kiến thức: câu ví dụ có nghĩa Việt (biến `EXV` theo id mẫu trong kho từ, `[…]` = phần ứng với mẫu); mỗi nhóm có nhãn `GN[id nhóm] = [T|C|L, ghi chú]`
+  (T thay thế được · C thay được có điều kiện · L liệt kê, không thay cho nhau — mọi nhóm câu 1–2 là L, ghi rõ cặp nào trong nhóm thay được).
+  Thêm/sửa mẫu trong nhóm `V01_*`/`V03_*` của kho từ thì thêm nghĩa vào `EXV` (mẫu chưa có nghĩa chỉ hiện câu Hàn).
+  Ngày 1–11 có phần **“2. Dịch câu”** (trước phần Luyện): 3 câu ví dụ của nhóm hôm nay (`trPick`: nhóm câu 3–4 lấy mẫu đầu nhóm, câu 1–2 lấy câu ngắn nhất),
+  học sinh gõ câu Hàn theo mẫu cho sẵn → “Xem câu mẫu” → trùng (bỏ dấu cách, dấu câu) thì tự đúng, khác thì tự chấm Đúng ý / Chưa đúng (`D.tr[id] = {t, c, m}`).
 
 ## Học câu 5 quảng cáo sản phẩm (`cau-5/`)
 - Cùng khung với `cau-16-18/`. Ý cô: học từ vựng gắn với cách ví von của quảng cáo, luyện **hai chiều** (đồ vật → chọn tất cả cụm của nó; quảng cáo → đồ vật).
