@@ -366,6 +366,15 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   mọi cuốn (tên mẫu, nghĩa, ví dụ, lưu ý). Giải thích tiếng Hàn gốc ẩn, nút “Hiện tiếng Hàn” (localStorage `nari-np-ko`). Ví dụ `" / "` = lượt hội thoại, 🔊 máy đọc.
 - Trang từ vựng `seoul/` có nút chuyển Từ vựng | Ngữ pháp và dòng “Ngữ pháp bài này” dưới tên bài (đọc `ngu-phap/np.json`).
 
+## Bài tập Seoul theo bài (`seoul/bai-tap/`) — trang học sinh, đã có 1A Bài 1–3
+- Link `seoul/bai-tap/#b=1A&c=1&t=v|g|r` (Từ vựng | Ngữ pháp | Kết quả); không có `c` = danh sách bài. Trang `seoul/` hiện dòng “Bài tập: Từ vựng · Ngữ pháp”
+  dưới bài có trong biến `BT`. Chấm ngay từng câu, kèm giải thích; thẻ Kết quả → “Gửi kết quả cho cô” = link `#r=<base64>` (báo cáo: từ còn sai, đúng theo từng ngữ pháp, từng câu).
+- **Từ vựng tự sinh** từ `thi-thu/vocab.json` (phần `Seoul 1A · Bài N · …`): mỗi từ vào đúng một dạng A Nghe – chọn từ (máy đọc) / B Hàn → Việt / C Việt → Hàn /
+  D chọn từ điền câu ví dụ (`__…__`), thêm E gõ 5 từ; “Làm lại phần này” tăng `sd` → từ đổi dạng. F = câu soạn tay `v` trong data.
+- **Ngữ pháp** soạn tay ở `seoul/bai-tap/data/<cuốn>-<bài>.json` = `{g:[tên 4 mẫu], v:[câu từ vựng F], q:[…]}`; câu `t:'c'` chọn (o[0] là đáp án, `x[i]` ghi chú lựa chọn sai),
+  `t:'y'` gõ (`a` đáp án nhận, `e` {sai hay gặp: ghi chú}, `h` gợi ý), `t:'d'` dịch Việt → Hàn (`a` câu mẫu, khác thì em tự so); `g` = mẫu 1–4, 0 = tổng hợp. Chỉ dùng từ / ngữ pháp
+  đã học tới bài đó. Thêm bài: soạn data, thêm vào `LS` của trang và `BT` của `seoul/index.html`. localStorage `nari-sbt`. Thêm câu dùng id mới.
+
 ## Kho ngữ pháp Nari (`ngu-phap-sau/`) — học liệu dạy sâu ngữ pháp của cô
 - Trang `noindex`, cô dùng soạn bài + trình chiếu (nút góc trên: “Bản của cô” / “Bản chiếu cho học sinh” ẩn khung “Ghi chú cho cô”, localStorage `nari-nps`).
   Không đặt link từ trang học sinh (giống `seoul/3a-1/`). Link `#b=3A&c=2&g=3` (cùng kiểu `seoul/ngu-phap/`), `#v=cn` mục lục theo chức năng.
@@ -606,6 +615,21 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - Biến `R` = 63 câu 25–27 của 21 đề đọc đủ 50 câu (`Etk091` + 20 đề luyện; tiêu đề + lựa chọn lấy từ `thi-thu/de/*.json`) + đáp án `a`, tách khúc `t`, nghĩa `v`,
   giải thích `w`, `x[i]` = bẫy của đáp án sai (`N` nghĩa đen, `D` đảo nhân quả, `G` sai thời điểm, `C` ngược nghĩa, `T` thêm ý, `P` sai đối tượng) do Claude soạn.
   Đề thật giữ thứ tự ①–④; `MCQ` câu tự soạn (lựa chọn đầu là đáp án, trang tự đảo). Bài lưu localStorage `nari-2527`.
+
+## Đọc hiểu đoạn văn (`doc-hieu/`) — bản trình chiếu của cô (dạy trên lớp, không giao bài)
+- Trang `noindex`, không đặt link từ trang học sinh. Chọn đề → đoạn văn (đọc thẳng `thi-thu/de/<id>.json`, đoạn = câu có `passage` + các câu `share` theo sau;
+  câu 1–4 lấy `stem`; câu ảnh hiện ảnh). Link `doc-hieu/#e=Etk091&n=21&b=tu|np|doc|tach|doan|cau&s=<câu>`. Nút A−/A+, “⛶ Chiếu” (toàn màn hình, chữ to; localStorage `nari-dh`).
+- 6 thẻ: ① Từ vựng (che nghĩa, chạm ô để hiện) · ② Ngữ pháp (mẫu + câu trong bài) · ③ Thứ tự đọc (bấm bước → tô câu cần đọc, tín hiệu logic tô màu, bản đồ vai trò từng câu)
+  · ④ Tách câu (mở dần 6 bước: câu gốc → khung câu → tách cụm theo vai trò → nghĩa từng cụm → xếp theo thứ tự tiếng Việt → câu dịch; phím ← → bước, ↑ ↓ câu)
+  · ⑤ Cả đoạn (bật/tắt tô từ, ngữ pháp, tín hiệu, số câu, dịch song song, “Cô hỏi”) · ⑥ Câu hỏi (đáp án + vì sao sai). Chạm từ gạch chấm → nghĩa.
+- Đoạn **chưa phân tích**: từ vựng tự lấy từ `thi-thu/de/tu/<id>.json` (★ số đề), câu tự tách; các thẻ khác báo “nhắn Claude: phân tích đề X câu Y”.
+- **Phân tích** (cô nhắn “phân tích đề <id> câu <n>”): Claude soạn `doc-hieu/data/<đề>-<câu đầu>.json` = {e, n:[câu], t, cd, y ý chính,
+  doc:[{t, d, s:[chỉ số câu cần tô]}] thứ tự đọc, l:[[chữ, loại TG|GT|CH|TD|NN|DL|KL|VD|TH, giải thích]] tín hiệu,
+  s:[{c:[[cụm, vai trò CN|TN|VN|VP|DN|TR|NOI, nghĩa, thứ tự trong câu dịch 1…]], g khung câu, gv, r vai trò câu, y ý câu, vi câu dịch, tip mẹo dịch}],
+  w:[[từ gốc, nghĩa trong bài, Hán Việt, chữ trong bài (| ngăn), ghi chú]], wo (từ trong câu hỏi/lựa chọn, cùng dạng), g:[{p mẫu, m nghĩa, f chữ trong bài, d, ex:[[ko, vi]]}],
+  qa:{câu:{a (0-based), w, x:[vì sao sai]}}, hoi:[{q, a}]}; `**chữ**` = in đậm. Đáp án đối chiếu `bank` (trong `thi-thu/de/` không có đáp án).
+  Rồi `python3 tools/doc_hieu.py` (kiểm tra cụm ghép lại đúng từng câu và đúng đoạn văn, chữ cần tô có trong đoạn; ghi `doc-hieu/index.json`). Chạy lại cả sau khi đồng bộ đề.
+- Đã phân tích: kỳ 91 câu 19–20, 21–22.
 
 ## Facebook (`fb/`)
 - `fb/ca-nhan/`: bài cho trang cá nhân "Tiếng Hàn Ngân Nguyễn" (cô có ảnh đại diện thật, giọng văn kể chuyện, lồng từ Hàn). `bia.html` ảnh bìa 1640×924
