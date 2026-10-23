@@ -546,6 +546,13 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - Dữ liệu biến `D` (`s:[[ko, vi]]`, `w` từ cần biết, bản dịch do Claude soạn; câu Hàn chép từ `Q` của `viet-51/`, `viet-52/`), `M51`/`M51b`/`M52`. Link `#b=51|52|mau`, `#b=51&q=W51_091`.
   Thêm đề mới vào `wbank` thì chép thêm vào `D`. localStorage `nari-dich5152`, “Gửi kết quả cho cô” chia sẻ đoạn chữ (kèm câu em đánh dấu Sai).
 
+## Dấu hiệu nhận biết câu 51–52 (`dau-hieu-51-52/`) — trang gửi học sinh
+- `viet-51/`, `viet-52/` là bản trình chiếu của cô; trang này chỉ gom **dấu hiệu nhận biết** (thấy chữ gì quanh ô → viết mẫu gì) cho học sinh tự học.
+  Thẻ Câu 51 (chữ sau ô · ô cuối câu 6 nhóm · ô giữa câu · tiêu đề/kính ngữ/thì · bảng tóm tắt 72 ô), Câu 52 (chữ sau ô · từ nối → đuôi 7 nhóm · ô giữa câu ·
+  Chép hay Lật · từ đi theo cặp · bảng tóm tắt 32 ô), Luyện nhanh (38 câu = `MCQ` Buổi 1–2 của `viet-51/` + `viet-52/`, lựa chọn đầu là đáp án; “Gửi kết quả cho cô”).
+  Nút “Che mẫu cần viết” để tự kiểm tra. Link `#b=51|52|luyen`, `#b=luyen&s=51a|51b|52a|52b`. localStorage `nari-dh5152`.
+  Sửa dấu hiệu / câu luyện ở `viet-51/`, `viet-52/` thì chép lại vào đây.
+
 ## Học câu 1–2 ngữ pháp trong 4 buổi (`ngu-phap-12/`)
 - Cùng khung với `viet-52/`, học theo **cặp dễ nhầm**: Buổi 1 đuôi nối thời gian/trình tự/lựa chọn (+ quy trình 3 bước), Buổi 2 mục đích/điều kiện/
   nhượng bộ/lý do/quan sát, Buổi 3 đuôi kết thúc câu (trạng từ → đuôi) + tiểu từ nâng cao, Buổi 4 trộn đề, Bảng tra (luật loại trừ, đáp án đề thật). Link `ngu-phap-12/#b=1|2|3|4|tra`.
