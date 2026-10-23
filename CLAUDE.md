@@ -562,6 +562,16 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   câu 6–10, 21–22 soạn mới (đáp án theo bank). `python3 tools/dau_hieu.py [<dump>]` kiểm tra chữ tô, so đáp án với bank (dump `bank/<id>/q`), ghi `dau-hieu/data/*.json` + `index.json`. Đoạn văn trang đọc thẳng `thi-thu/de/`.
 - Khi soát (23/10/2026) phát hiện bank `Etk091` sai đáp án 14 câu (19–34 trừ 27, 33; đúng: 19③ 20① 21③ 22④ 23① 24④ 25① 26③ 28① 29② 30③ 31③ 32④ 34②) và `Entk3` câu 2 (bank ①, đúng ④ 적응하느라고) — đã báo cô, chưa sửa bank.
 
+## Chuyên đề Đồng nghĩa – trái nghĩa (`dong-trai/`) — bản nghiên cứu của cô (`noindex`, không đặt link từ trang học sinh)
+- Câu hỏi của cô: có dấu hiệu đồng nghĩa / trái nghĩa giúp chọn đúng, loại sai không. Nghiên cứu 241 câu “nội dung khớp” (t = n trong `tools/dau_hieu`: câu 9–12, 20, 22, 24, 32–34, 43, 47, 50)
+  của 22 đề đọc: đáp án đúng nói lại bằng chữ khác (90%; chỉ 25 câu chép gần nguyên), lựa chọn sai giữ chữ của bài đổi một chỗ (349 lựa chọn, 84% số câu có).
+- Thẻ: Tổng quan · Đáp án đúng (7 cách: D đồng nghĩa, H Hán ↔ thuần Hàn, U suy ra, K gói chung, P nói ngược + phủ định, S tính số, C chép) + 30 cặp đồng nghĩa từ đề ·
+  Bẫy đổi chữ (T trái nghĩa, F thêm/bỏ phủ định, B đảo so sánh, L phạm vi, G thời điểm/số; + S, R, O) + bảng cặp trái nghĩa · Chữ tín hiệu (tỉ lệ lựa chọn có chữ X là đáp án:
+  전혀 0/7, 관계없다 2/19, 항상 1/11, 처음/이미 2/16, -기도 하다/-ㄹ 수도 있다 11/12; 모두/만 ≈ ngẫu nhiên) + tiền tố Hán phủ định · Cách làm 4 bước (mẫu kỳ 91 câu 32) ·
+  Luyện (“Cùng ý hay khác ý?” 10 cặp/lượt; câu đề, tô cặp chữ sau khi chọn). Link `#b=tong|dung|bay|tu|cach|luyen`, `#b=luyen&m=de&n=32`, `#b=luyen&m=de&id=Etk091-32`. localStorage `nari-dongtrai`.
+- Dữ liệu soạn tay `tools/dong_trai/*.txt`, mỗi dòng: `<đề> <câu> | <cách đáp án nói lại> | bài=>đáp án ; … | <i>:<kiểu> bài=>lựa chọn i ; …` (chữ phải có đúng trong đề / `tx`)
+  → `python3 tools/dong_trai.py` (kiểm tra, thống kê, đếm chữ tín hiệu `SIG`) → `dong-trai/data.json`. Số trong phần chữ tĩnh của trang (90%, 25/241…) viết tay — chạy lại script thì đối chiếu.
+
 ## Dấu hiệu nhận biết câu 51–52 (`dau-hieu-51-52/`) — trang gửi học sinh
 - `viet-51/`, `viet-52/` là bản trình chiếu của cô; trang này chỉ gom **dấu hiệu nhận biết** (thấy chữ gì quanh ô → viết mẫu gì) cho học sinh tự học.
   Thẻ Câu 51 (chữ sau ô · ô cuối câu 6 nhóm · ô giữa câu · tiêu đề/kính ngữ/thì · bảng tóm tắt 72 ô), Câu 52 (chữ sau ô · từ nối → đuôi 7 nhóm · ô giữa câu ·
