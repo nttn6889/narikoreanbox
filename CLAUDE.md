@@ -546,6 +546,20 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - Dữ liệu biến `D` (`s:[[ko, vi]]`, `w` từ cần biết, bản dịch do Claude soạn; câu Hàn chép từ `Q` của `viet-51/`, `viet-52/`), `M51`/`M51b`/`M52`. Link `#b=51|52|mau`, `#b=51&q=W51_091`.
   Thêm đề mới vào `wbank` thì chép thêm vào `D`. localStorage `nari-dich5152`, “Gửi kết quả cho cô” chia sẻ đoạn chữ (kèm câu em đánh dấu Sai).
 
+## Chuyên đề dấu hiệu nhận biết Đọc câu 8–50 (`dau-hieu/`) — bản nghiên cứu của cô (`noindex`, không đặt link từ trang học sinh)
+- Cô muốn tổng kết thành một chuyên đề, đầy đủ và sâu (không rút gọn như bản gửi học sinh), có cả các dạng chưa có trang riêng; **các trang cũ giữ nguyên**.
+- 5 họ dấu hiệu, mã chung cho mọi dạng: A Hô ứng `H` · B Từ nối 7 quan hệ `D` đảo chiều, `N` nhân quả, `T` thêm, `V` ví dụ, `L` nói lại, `K` kết luận, `C` chuyển ý ·
+  C Dấu bám `B` (+ chuỗi từ khóa `W`) · D Ý chính `Y` (vị trí `y`: l câu cuối, d sau 그러나…, f câu đầu, m giữa, g tổng hợp) + thái độ / mục đích ·
+  E bẫy của lựa chọn sai `x`: N ngược một chữ, T bài không nói, C chép chữ ghép sai, S đổi đối tượng, G đổi thời điểm / số liệu, A quá mức, H chi tiết hẹp, R ý bị lật / nhượng bộ, P lệch.
+  Bảng đối chiếu nhãn cũ (16–18, 19–20, 52, 13–15, 25–27, 23–24) ↔ mã chung nằm trong thẻ B và E.
+- Thẻ: Tổng quan (bản đồ dạng × họ, số liệu, bảng nhiệt, thứ tự dạy 8 buổi) · A · B · C · D · E · Dạng câu (`#b=dang&t=28-31`, 17 thẻ, nút viền đỏ = dạng mới:
+  28–31, 32–34, 35–38, 39–41, 44–45, 46–47, 48–50) · Luyện chéo (`#b=luyen&t=…&k=HD&id=Etk091-39`, lọc dạng / đề / mã) · Bảng tra. localStorage `nari-dhcd`.
+- Dữ liệu soạn tay `tools/dau_hieu/<dạng>.json` (606 câu của 22 đề đọc: 28–31, 32–34, 35–38, 39–41, 44–45, 46–47, 48–50, 11–12 đủ 22 đề; `8-27` = kỳ 83, 91 câu 8–27)
+  = `[{e, n, a (0-based), t (s sắp xếp, o ô, y chủ đề, n nội dung, e tâm trạng, h tiêu đề, g loại văn bản, c chèn câu, d thái độ, m mục đích), k mã dấu hiệu, p vị trí manh mối
+  (t trước ô, s sau ô, h hai bên, b trong <보기>), y, c:[[chữ, mã]] (phải có đúng trong đề), w giải thích, x:{chỉ số lựa chọn sai: mã bẫy}, chk:1 = đáp án sách đáng ngờ}]`.
+  `python3 tools/dau_hieu.py [<dump>]` kiểm tra chữ tô có trong `thi-thu/de/`, so đáp án với bank (dump `bank/<id>/q`), ghi `dau-hieu/data/*.json` + `index.json` (số liệu). Đoạn văn trang đọc thẳng `thi-thu/de/`.
+- Khi soát (23/10/2026) phát hiện bank `Etk091` sai đáp án 14 câu (19–34 trừ 27, 33; đúng: 19③ 20① 21③ 22④ 23① 24④ 25① 26③ 28① 29② 30③ 31③ 32④ 34②) — đã báo cô, chưa sửa bank.
+
 ## Dấu hiệu nhận biết câu 51–52 (`dau-hieu-51-52/`) — trang gửi học sinh
 - `viet-51/`, `viet-52/` là bản trình chiếu của cô; trang này chỉ gom **dấu hiệu nhận biết** (thấy chữ gì quanh ô → viết mẫu gì) cho học sinh tự học.
   Thẻ Câu 51 (chữ sau ô · ô cuối câu 6 nhóm · ô giữa câu · tiêu đề/kính ngữ/thì · bảng tóm tắt 72 ô), Câu 52 (chữ sau ô · từ nối → đuôi 7 nhóm · ô giữa câu ·
