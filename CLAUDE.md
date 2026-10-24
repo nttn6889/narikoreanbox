@@ -109,7 +109,12 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   Tháng đầu vào giữa tháng = số buổi có lịch từ `from` đến hết tháng × đơn giá (hạn = buổi đầu tiên); từ tháng sau đóng đầu tháng (hạn ngày `due`).
   `hocphi/<id học viên>_<YYYY-MM>` = {n, rate, base, how (chốt khi “Đánh dấu đã gửi”/ghi đóng tiền), adj, adjNote, paid, paidAt, note, sent};
   `hocphi/_cfg` = {due, bank, note, sign}. Thẻ Học sinh → Học phí (bảng theo tháng) + hồ sơ → Học phí; “Thông báo” tạo tin nhắn Zalo.
-- `nangluc.py` móc thêm 2 chỗ ngoài khối NLA: listener `hocphi`, và `editStudent` giữ `fee` khi cô sửa thông tin.
+- **Lịch theo tuần** (lịch có thể giữ vài tuần hoặc đổi từng tuần): `students.slotsH = [{w: thứ Hai "YYYY-MM-DD" ("" = từ đầu khóa), s: ca học}]`, mỗi mục dùng
+  từ tuần `w` tới mục sau; `students.slots` = lịch tuần hiện tại (`lhNormAll` tính lại khi tải). Học sinh → Lịch tuần có nút ‹ › chọn tuần; bấm “+” trong ô, chọn
+  “Từ tuần này trở đi” / “Từ tuần sau trở đi” / “Chỉ tuần này” (`lhHEdit`, `S.lichScope`). Mọi chỗ tính lịch (`lhPlanOn`, học phí, đủ/thiếu buổi theo tuần `lhNeedW`,
+  tổng kết tháng) dùng lịch của đúng tuần đó (`lhSlotsAt`). Nút “Ghi N buổi đã học tuần này vào hồ sơ học viên” (`lhWeekSync`) tạo `buoi` (`plan:1`) theo lịch của tuần đang xem,
+  cô bỏ chọn buổi em nghỉ. Hồ sơ → Lịch học → “Lịch theo tuần” liệt kê các lần đổi (tuần này / sắp áp dụng). Sửa thông tin → Ca học = thêm/bỏ ca từ tuần này (`lhKeepH`).
+- `nangluc.py` móc thêm các chỗ ngoài khối NLA: listener `hocphi`, `editStudent` giữ `fee` + `slotsH` khi cô sửa thông tin, listener `students` gọi `lhNormAll`.
 
 ## Tư vấn (tab "Tư vấn" trong trang quản lý, chỉ cô xem)
 - Lưu bài tìm gia sư học sinh đăng + 2 comment của cô (comment ngoài: giới thiệu cô ngắn gọn + trả lời; comment trả lời bên trong: lộ trình chi tiết)

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Chèn module "Đánh giá năng lực" (tools/nangluc.js) vào trang — kèm Lịch học, Học phí, Đánh dấu đã dạy (Tiến độ dạy).
+"""Chèn module "Đánh giá năng lực" (tools/nangluc.js) vào trang — kèm Lịch học, Lịch theo tuần, Học phí, Đánh dấu đã dạy (Tiến độ dạy).
 
 Cách dùng:
   python3 tools/nangluc.py <file-html-trang-quan-ly>   # sửa tại chỗ: phần chung + khối Admin + tab "Đánh giá"
@@ -38,6 +38,11 @@ HOOKS = [  # (đã có thì bỏ qua, chưa có thì thay)
      '      if(!f.codes.length && (fv.codes.length || fn.codes.length || fw.codes.length || fd.codes.length))'),
     ('h += tdCard(c);', '    h += appClassCard(c, today);\n', '    h += appClassCard(c, today);\n    h += tdCard(c);\n'),
     ('    tdWire(c, body);', '    wireHw(c, D, body);\n', '    wireHw(c, D, body);\n    tdWire(c, body);\n'),
+    # Lịch theo tuần (students.slotsH): khi tải, slots = lịch của tuần này; Sửa thông tin → Ca học giữ lịch sử, đổi từ tuần này
+    ('lhNormAll(); canonNames();', 'S.loaded.st = true; canonNames();', 'S.loaded.st = true; lhNormAll(); canonNames();'),
+    ('lhKeepH(st, doc);', '      if(x.fee) doc.fee = x.fee;\n', '      if(x.fee) doc.fee = x.fee;\n      lhKeepH(st, doc);\n'),
+    ('đổi ca ở đây là đổi lịch từ tuần này', 'Thêm hoặc sửa giờ các ca ở Học sinh → Lịch tuần (nút “+ Thêm ca”).</p>',
+     'Thêm hoặc sửa giờ các ca ở Học sinh → Lịch tuần (nút “+ Thêm ca”). Với học viên đang học, đổi ca ở đây là đổi lịch từ tuần này (các tuần trước giữ lịch cũ); muốn đổi từ tuần sau hoặc chỉ một tuần thì sửa ở Lịch tuần.</p>'),
 ]
 
 
