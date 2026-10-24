@@ -508,6 +508,9 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   Buổi 2 (ô giữa câu, 13 kỳ: 75, 76, 77, 81, 83–86, 88–90, 92, 93), Buổi 3 (làm như thi, 4 phút/câu: 96–102, 104–106), thẻ Bảng tra (12 nhóm, thống kê 72 ô). Link `viet-51/#b=1|2|3|tra`.
 - Đề + gợi ý nhúng trong biến `Q` (lấy từ `wbank` W51_*; sửa trong trang quản lý thì chép lại). Cảnh báo đuôi: ô cuối câu viết -다 / -요, ô giữa câu viết -ㅂ니다.
   Bài lưu localStorage `nari-51`.
+- Thẻ **Từ vựng** (`viet-51/#b=tu`, chỉ trong giáo án, không đưa vào trang gửi học sinh): thống kê động từ đáp án lấy từ đâu (78 ô: có sẵn trong bài 37 · danh từ trước ô gọi
+  động từ đi cặp 31 · suy ra 9 · trái nghĩa 1), 4 bước soi đề, bảng cặp danh từ → động từ theo hoàn cảnh (nút “Che động từ”), luyện gõ động từ dạng gốc cho 72 ô
+  (biến `TU` {'<kỳ><a|b>': [C|K|S|D, động từ nhận (|), chữ, giải thích có «chữ trong đề»]}, `st.tu`). `viet-52/` Bảng tra có khung ngắn: 28/32 ô câu 52 dùng lại từ trong bài.
 
 ## Học câu 53 (`viet-53/`)
 - Gộp 2 trang cũ trên claude.ai: “Khung câu 53 — 10 dạng” (https://claude.ai/artifact/3D57egxtLffpyYHR4ZbGWt) → thẻ **Khung câu** (`#b=khung&d=d1…d10`;

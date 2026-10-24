@@ -118,6 +118,16 @@ button.b:disabled{opacity:.45;cursor:default}
 .chk{list-style:none;padding:0;margin:6px 0}
 .chk li{padding:3px 0 3px 26px;position:relative}
 .chk li::before{content:"☐";position:absolute;left:4px;top:2px;font-size:17px}
+/* thẻ Từ vựng */
+.vb{font-family:"Noto Sans KR","Malgun Gothic",sans-serif;font-weight:bold;color:var(--acc)}
+.hidev .vb{color:transparent;background:var(--soft);border-radius:4px;cursor:pointer}
+.hidev .vb.open{color:var(--acc);background:none}
+.hidev td:nth-child(3){display:none}
+.tuf{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 10px}
+.tuf button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.tuq .psg .gap.off{border-color:var(--soft);color:var(--muted)}
+.tuq .lab{font:bold 12px Arial,sans-serif;border-radius:10px;padding:1px 8px;background:#fff;color:var(--ink)}
+.tuq .res b.ko{font-family:"Noto Sans KR","Malgun Gothic",sans-serif}
 footer{margin-top:40px;font-size:13px;color:var(--muted);text-align:center}
 footer a{color:var(--muted)}
 @media print{nav,.btns,.self,.timer,.sum,footer,.co{display:none}.sec{display:block!important}.locked .psg,.locked .blank{filter:none}.task,.card{break-inside:avoid}}
@@ -138,6 +148,7 @@ footer a{color:var(--muted)}
   <a href="#b=1" data-k="1">Buổi 1<small>Ô cuối câu</small></a>
   <a href="#b=2" data-k="2">Buổi 2<small>Ô giữa câu</small></a>
   <a href="#b=3" data-k="3">Buổi 3<small>Làm như thi</small></a>
+  <a href="#b=tu" data-k="tu">Từ vựng<small>Lôi động từ</small></a>
   <a href="#b=4" data-k="4">Cool TOPIK<small>Theo sách</small></a>
   <a href="#b=tra" data-k="tra">Bảng tra<small>Ôn nhanh</small></a>
 </div></nav>
@@ -285,6 +296,93 @@ footer a{color:var(--muted)}
 </section>
 
 <!-- ================= BẢNG TRA ================= -->
+<!-- ================= TỪ VỰNG ================= -->
+<section class="sec" id="stu">
+<h2>Lôi động từ cho ô trống</h2>
+<p class="goal">Học xong dấu hiệu, em đã chọn được <b>mẫu ngữ pháp</b>. Phần còn lại là <b>động từ đặt trước mẫu</b>. Gần một nửa số ô có sẵn động từ trong bài, 40% chỉ có <b>danh từ đứng ngay trước ô</b>: em phải biết danh từ đó đi với động từ nào.</p>
+
+<h3>1. Động từ trong đáp án lấy từ đâu? (78 ô, kỳ 35, 60, 70–106, 108)</h3>
+<table class="t">
+<tr><th>Nguồn</th><th>Số ô</th><th>Ví dụ đề thật</th></tr>
+<tr><td><b>Có sẵn trong bài</b>, chỉ đổi đuôi (hoặc danh từ Hán + 하다)</td><td>37 · 47%</td><td>Câu sau ô 19 lần, câu trước ô 16, tiêu đề 8 (một ô có thể có ở nhiều chỗ). <span class="ko">맞는 전공 → 안 <b>맞</b>았습니다</span> (72) · tiêu đề <span class="ko">변경 → <b>변경하</b>고 싶습니다</span> (91)</td></tr>
+<tr><td><b>Danh từ trước ô</b> gọi ra động từ đi cặp</td><td>31 · 40%</td><td><span class="ko">인사를 ( ) → <b>드리</b>고 싶습니다</span> (77) · <span class="ko">시간이 30분쯤 더 ( ) → <b>걸릴</b> 것 같습니다</span> (87)</td></tr>
+<tr><td><b>Suy ra từ hoàn cảnh</b> (bài không có chữ)</td><td>9 · 12%</td><td><span class="ko">중요한 ( ) 못 가게 → 일이 <b>생겨서</b></span> (81) · <span class="ko">노트북을 ( ) 5년 → <b>산</b> 지</span> (88)</td></tr>
+<tr><td>Trái nghĩa với từ trong bài</td><td>1</td><td><span class="ko">불편했습니다 → 가장 <b>편리합</b>니다</span> (79)</td></tr>
+</table>
+<p class="note">Câu 52 thì khác: 28/32 ô dùng lại từ trong đoạn văn (thường ở câu ngay sau ô), 3 ô dùng từ trái nghĩa (<span class="ko">긍정 → 부정, 높다 → 낮다, 아침 → 저녁</span>, “다 같이 모아서” → <span class="ko">다르다</span>), 1 ô phải tự nghĩ (kỳ 35 ㉡). Vì vậy dạy thẻ này chủ yếu cho câu 51.</p>
+
+<h3>2. Bốn bước soi đề tìm động từ</h3>
+<ol class="steps">
+  <li><b>Câu sau ô.</b> Câu sau thường nhắc lại động từ: <span class="ko">아직 ( ㉠ ). … 지금 곧 <b>출발하</b>겠습니다 → 출발하지 못했습니다</span> (80) · <span class="ko">많은 학생이 ( ㉠ ). <b>참여할</b> 학생은… → 참여하면 좋겠습니다</span> (101).</li>
+  <li><b>Tiêu đề + câu trước ô.</b> Tiêu đề có danh từ Hán thì thêm <span class="mau">하다/되다</span>: <span class="ko">주문 변경 요청 → 변경할 수 있습니까</span> (78, 84, 91: cả 3 đề có “변경” trong tiêu đề đều ra 바꾸다/변경하다) · <span class="ko">개인 물건 정리 요청 → 정리해야 합니다</span> (102).</li>
+  <li><b>Danh từ + tiểu từ ngay trước ô</b> → tra bảng cặp ở mục 3: <span class="ko">소리가 ( ) → 나다</span>, <span class="ko">면접을 ( ) → 보다</span>, <span class="ko">비용을 ( ) → 내다</span>.</li>
+  <li><b>Không có chữ nào</b> → đoán theo hoàn cảnh của bài (mục 3, dòng “suy ra”). Chỉ khoảng 1/10 số ô.</li>
+</ol>
+<div class="warnbox">Bước 1–2 giải được khoảng một nửa số ô, bước 3 thêm 40%. Học thuộc khoảng 30 cặp ở mục 3 là xử lý được gần 9/10 ô câu 51. Cô hỏi nhanh: “<span class="ko">인사를…?</span>” → học sinh đáp “<span class="ko">드리다</span>”.</div>
+
+<h3>3. Cặp danh từ → động từ theo hoàn cảnh (đã ra trong đề)</h3>
+<div class="btns"><button class="b blue" data-hidev>Che động từ</button></div>
+<p class="note">Bấm “Che động từ” để kiểm tra miệng; bấm vào ô bị che để mở từng từ. Số trong ngoặc = kỳ thi.</p>
+<div id="tuTable">
+<div class="card"><div class="hd">Nói với thầy cô, người lớn <small>· 77, 86, 92, 72, 100, 105</small></div><div class="bd">
+<table class="t">
+<tr><td class="ko">인사를 · 연락을 · 말씀을</td><td><span class="vb">드리다</span></td><td class="ko">인사를 드리고 싶습니다 · 연락을 드리지 못해서 · 말씀을 드리지 못했습니다</td></tr>
+<tr><td class="ko">선생님을 · 교수님을</td><td><span class="vb">뵙다</span></td><td class="ko">꼭 뵙고 싶습니다 (câu khác có 뵈러)</td></tr>
+<tr><td class="ko">상담을 · 도움을</td><td><span class="vb">받다</span></td><td class="ko">상담을 받을 수 있습니까? · 도움을 꼭 받고 싶습니다</td></tr>
+<tr><td class="ko">도움이</td><td><span class="vb">되다</span></td><td class="ko">큰 도움이 될 것 같습니다</td></tr>
+<tr><td class="ko">결혼을 · 졸업을</td><td><span class="vb">축하하다</span></td><td class="ko">직접 오셔서 결혼을 축하해 주시고 (câu trước có 축하를 받고)</td></tr>
+</table></div></div>
+<div class="card"><div class="hd">Đặt chỗ, đổi lịch, đổi đồ <small>· 78, 84, 89, 91, 94, 104, 103, 108</small></div><div class="bd">
+<table class="t">
+<tr><td class="ko">주문을 · 예약을 · 방을 N(으)로 · 순서를 · 새 것으로</td><td><span class="vb">바꾸다 / 변경하다</span></td><td>Động từ ra nhiều nhất câu 51 (6 ô). <span class="ko">N(으)로 ( )</span> gần như luôn là 바꾸다.</td></tr>
+<tr><td class="ko">예약이 · 이날이</td><td><span class="vb">안 되다</span></td><td class="ko">만약 이날 예약이 안 되면</td></tr>
+<tr><td class="ko">방을 · 표를</td><td><span class="vb">예약하다</span></td><td class="ko">방을 예약하기 전에</td></tr>
+<tr><td class="ko">N을 단체로 · N 50개를 N(으)로</td><td><span class="vb">주문하다 · 배달하다</span></td><td class="ko">햄버거 50개를 학생회관으로 배달해 주실 수 있습니까?</td></tr>
+<tr><td class="ko">비용을 · 돈을</td><td><span class="vb">내다</span></td><td class="ko">비용을 더 내야 합니까?</td></tr>
+</table></div></div>
+<div class="card"><div class="hd">Hỏi, xin thông tin <small>· 77, 84, 98, 60, 95, 105, 85, 96</small></div><div class="bd">
+<table class="t">
+<tr><td class="ko">시간을 · 무엇이 가능한지 · (sau ô: 감사하겠습니다)</td><td><span class="vb">알려 주시면</span></td><td class="ko">괜찮은 시간을 알려 주시면 · 가능한지 알려 주시면 감사하겠습니다</td></tr>
+<tr><td class="ko">이 이메일로 · 문자를</td><td><span class="vb">보내다</span></td><td class="ko">이 이메일로 보내 주시면 · 저에게 문자를 보내 주십시오</td></tr>
+<tr><td class="ko">-(으)려면 ( )? · 어떻게</td><td><span class="vb">하다</span></td><td class="ko">어떻게 해야 합니까? · 공부를 어떻게 해야 할지</td></tr>
+<tr><td class="ko">어느 + N</td><td><span class="vb">좋다 / 괜찮다</span></td><td class="ko">어느 반이 좋은지 · 어느 동네가 좋은지</td></tr>
+<tr><td class="ko">출입증이 · 서류가</td><td><span class="vb">필요하다</span></td><td class="ko">출입증이 필요하다고 합니다</td></tr>
+</table></div></div>
+<div class="card"><div class="hd">Đến muộn, lỡ hẹn <small>· 80, 81, 87, 91, 94, 74</small></div><div class="bd">
+<table class="t">
+<tr><td class="ko">(급한 · 중요한)</td><td><span class="vb">일이 생기다</span></td><td>Lý do không đi được — cụm cố định, <b>bài không có chữ</b> (81; 91 cũng có 급한 일이 생겨서).</td></tr>
+<tr><td class="ko">시간이 30분쯤</td><td><span class="vb">걸리다</span></td><td class="ko">시간이 30분쯤 더 걸릴 것 같습니다</td></tr>
+<tr><td class="ko">약속 시간보다 · 30분쯤</td><td><span class="vb">늦다</span></td><td class="ko">더 많이 늦을 것 같습니다</td></tr>
+<tr><td class="ko">회의가 · 수업이</td><td><span class="vb">끝나다</span></td><td class="ko">늦어도 회의가 끝나기 전에</td></tr>
+<tr><td class="ko">약속 장소로 · 모임에 못</td><td><span class="vb">출발하다 · 가다</span></td><td class="ko">아직 출발하지 못했습니다 · 못 갈 것 같습니다</td></tr>
+</table></div></div>
+<div class="card"><div class="hd">Bán đồ, cho đồ, đồ hỏng <small>· 35, 82, 88, 89, 104, 106</small></div><div class="bd">
+<table class="t">
+<tr><td class="ko">노트북을 · 운동 기구는 ( ) N년/한 달</td><td><span class="vb">사다 → 산 지</span></td><td>Bài không có chữ 사다 (88, 106) — đồ vật + <span class="ko">-(으)ㄴ 지</span> thì nghĩ ngay 산 지 / 구입한 지.</td></tr>
+<tr><td class="ko">사용한 지 일 년밖에 · 수술을 ( ) 얼마 안</td><td><span class="vb">안 되다 · 받다</span></td><td class="ko">일 년밖에 안 됐습니다 · 수술을 받은 지</td></tr>
+<tr><td class="ko">마음에</td><td><span class="vb">들다</span></td><td class="ko">분명 마음에 드실 겁니다</td></tr>
+<tr><td class="ko">소리가</td><td><span class="vb">나다</span></td><td class="ko">소리가 전혀 나지 않았습니다</td></tr>
+<tr><td class="ko">세탁기를 1대밖에</td><td><span class="vb">쓰다 / 사용하다</span></td><td class="ko">1대밖에 쓸 수 없어서</td></tr>
+<tr><td class="ko">물건을 (về nước, cho đồ)</td><td><span class="vb">정리하다</span></td><td class="ko">제 물건을 정리하려고 합니다 · 필요하신 분은 연락 주세요 (35)</td></tr>
+</table></div></div>
+<div class="card"><div class="hd">Giới thiệu, kinh nghiệm, sự kiện <small>· 70, 73, 75, 83, 93, 96, 97, 99, 100, 101</small></div><div class="bd">
+<table class="t">
+<tr><td class="ko">별을 · 면접을</td><td><span class="vb">보다</span></td><td>Luôn đi với <span class="ko">-(으)ㄴ 적이 있다/없다</span>: 본 적이 한 번도 없습니다</td></tr>
+<tr><td class="ko">경험을 · 이사를 · 수영을</td><td><span class="vb">하다</span></td><td class="ko">경험을 다시 해 보고 싶습니다 · 이사를 하려고 합니다 · 수영을 하지 못했습니다</td></tr>
+<tr><td class="ko">한국어를 ( ) 얼마 안 된</td><td><span class="vb">배우다</span></td><td class="ko">한국어를 배운 지 얼마 안 된</td></tr>
+<tr><td class="ko">서비스를 · 도서관을</td><td><span class="vb">이용하다</span></td><td class="ko">도서 대출 서비스를 이용하려고 했는데</td></tr>
+<tr><td class="ko">이메일이 · 연락이</td><td><span class="vb">오다</span></td><td class="ko">아직 이메일이 안 왔습니다</td></tr>
+<tr><td class="ko">생선 구이를 · 음식을</td><td><span class="vb">먹다</span></td><td class="ko">꼭 먹어 보라고 했습니다</td></tr>
+<tr><td class="ko">우리 대학교에 ( ) 한 달 · 환영회에</td><td><span class="vb">입학하다 · 참석하다</span></td><td class="ko">입학한 지 · 참석하지 못한 분</td></tr>
+</table></div></div>
+</div>
+
+<h3>4. Luyện · Em lôi được động từ không? (72 ô, kỳ 70–106)</h3>
+<p class="note">Đọc bài, nhìn ô tô đỏ, gõ <b>động từ dạng gốc</b> (vd. <span class="ko">드리다</span>, không cần chia đuôi). Bấm <b>Kiểm tra</b>: máy chấm ngay, tô chỗ chứa động từ trong bài và ghi em lấy từ ở bước nào.</p>
+<div class="tuf" id="tuf"></div>
+<div id="tuList"></div>
+</section>
+
 <!-- ================= COOL TOPIK ================= -->
 <section class="sec" id="s4">
 <h2>Chiến lược câu 51 theo sách Cool TOPIK 쓰기</h2>
@@ -576,6 +674,127 @@ document.addEventListener('click',function(e){
   else if(d.pkredo!=null){st.pk[d.pkredo]={a:[[],[]]};save();pkRe(+d.pkredo);}
 });
 
+/* ---- Từ vựng: lôi động từ (C có sẵn · K danh từ trước ô · S suy ra · D trái nghĩa) ---- */
+var TU = {
+'070a':['K','하다','수영을','«수영을» ngay trước ô → 수영을 하다.'],
+'070b':['S','좋아하다|선택하다','','Khách hài lòng + người coi trọng cảnh đẹp → “chắc chắn sẽ thích”.'],
+'072a':['C','맞다','맞는 전공','Câu sau «맞는 전공» → 맞다.'],
+'072b':['C','받다','상담을 받고 싶습니다','Tiêu đề «상담을 받고 싶습니다» → 받다.'],
+'073a':['C','배우다|공부하다','배운 것을','Câu sau «배운 것을» → 배우다.'],
+'073b':['C','가르치다','가르치고','Câu sau «가르치고» → 가르치다.'],
+'074a':['C','가다','출장을 가게','«모임에 못 ( )» + câu trước «가게» → 가다.'],
+'074b':['C','하다','발표를 할','«발표를 할 사람», «대신 발표를 하겠습니다» → 하다.'],
+'075a':['K','먹다','생선 구이를','Món ăn «생선 구이를» → 먹다.'],
+'075b':['C','소개하다','소개해 주시면','Tiêu đề + câu sau «소개해 주시면» → 소개하다.'],
+'076a':['C','오다','한국에 온 지','Câu đầu «한국에 온 지» → 오다.'],
+'076b':['C','있다','설명회가 있다고','Câu trước «설명회가 있다고 합니다» → 있다.'],
+'077a':['K','드리다','인사를','«인사를» → 인사를 드리다 (với thầy cô).'],
+'077b':['K','알리다|말씀하다','괜찮은 시간을','«괜찮은 시간을» ( ) + «찾아뵙겠습니다» → 알려 주시면.'],
+'078a':['C','바꾸다|변경하다','변경','Tiêu đề «주문 변경 요청» → 변경하다 / 바꾸다.'],
+'078b':['C','보내다|배송하다','보내 주십시오','Câu khách «빨간색으로 보내 주십시오» → 보내다.'],
+'079a':['D','편리하다|편하다|좋다','불편했습니다','Trái nghĩa của «불편했습니다» → 편리하다.'],
+'079b':['C','사용하다|쓰다','사용하기에','«사용하기에», «사용한 앱들» → 사용하다.'],
+'080a':['C','출발하다|가다','출발하겠습니다','Câu sau «출발하겠습니다» → 출발하다.'],
+'080b':['S','늦다','약속 시간보다','«약속 시간보다 더 많이» + 죄송합니다 → 늦다.'],
+'081a':['S','생기다','','Lý do không đi được → cụm cố định 일이 생기다.'],
+'081b':['C','보내다','보낸 사람','«문자를» + câu sau «보낸 사람» → 보내다.'],
+'082a':['K','되다','일 년밖에','«사용한 지 일 년밖에» ( ) → 안 되다.'],
+'082b':['K','들다','마음에','«마음에» → 마음에 들다.'],
+'083a':['C','보다','별도 보고','«별을» + câu sau «별도 보고» → 보다.'],
+'083b':['K','하다','경험을','«경험을» → 경험을 하다.'],
+'084a':['C','바꾸다|변경하다','변경','Tiêu đề «예약 변경 문의» + «방을 3인실로» → 바꾸다.'],
+'084b':['K','알리다|답장하다','무엇이 가능한지','«무엇이 가능한지» ( ) «감사하겠습니다» → 알려 주시면.'],
+'085a':['C','등록하다','함께 등록하면','Câu trước «함께 등록하면» → 등록하다.'],
+'085b':['C','좋다|괜찮다','다 괜찮습니다','«어느 ( )» + câu trước «다 괜찮습니다» → 반이 괜찮은지.'],
+'086a':['K','드리다|하다','연락을','«연락을» → 연락을 드리다.'],
+'086b':['C','뵙다|만나다','뵈러','Câu trước «뵈러 가려고» → 뵙다.'],
+'087a':['K','걸리다','시간이 30분쯤','«시간이 30분쯤 더» → 걸리다.'],
+'087b':['K','끝나다','회의가','«회의가» + «늦어도» → 끝나기 전에.'],
+'088a':['K','나다','소리가','«소리가» → 소리가 나다.'],
+'088b':['S','사다|구입하다|구매하다','','Đồ vật + «( ) 5년» → 산 지. Bài không có chữ 사다.'],
+'089a':['K','쓰다|사용하다','1대밖에','«세탁기를 1대밖에» → 쓸 수 없어서.'],
+'089b':['K','바꾸다','새 것으로','«새 것으로» → N(으)로 바꾸다.'],
+'090a':['C','시작되다|시작하다','시작된 후','«시작됩니다», câu sau «시작된 후» → 시작되다.'],
+'090b':['C','받다','받을 수 없으니','Cùng câu «간식을 받을 수 없으니» → 받다.'],
+'091a':['C','변경하다|바꾸다','변경 가능한지','Tiêu đề «예약 변경 문의», câu cuối «변경 가능한지» → 변경하다.'],
+'091b':['K','되다|불가능하다','예약이','«만약 이날 예약이» → 안 되면.'],
+'092a':['K','드리다|하다','말씀을','«말씀을» → 말씀을 드리다.'],
+'092b':['C','축하하다','축하를 받고','Câu trước «축하를 받고» → 축하하다.'],
+'093a':['K','이용하다','서비스를','«서비스를» → 이용하다.'],
+'093b':['K','오다','이메일이','«이메일이» → 오다.'],
+'094a':['C','늦다','늦게','Câu sau «좀 늦게 발표하고» → 늦다.'],
+'094b':['K','바꾸다','순서를','«발표 순서를» → 바꾸다.'],
+'095a':['C','도착하다','도착하지 않았습니다','Câu sau «도착하지 않았습니다» → 도착하다.'],
+'095b':['K','하다','-려면','«확인하려면» ( )? → 어떻게 해야 합니까.'],
+'096a':['K','하다','이사를','«이사를» (tiêu đề «이사하는») → 하다.'],
+'096b':['C','좋다','동네면 좋겠습니다','«어느 ( )» + câu trước «동네면 좋겠습니다» → 동네가 좋은지.'],
+'097a':['K','배우다|공부하다','한국어를','«한국어를» ( ) «얼마 안 된» → 배운 지.'],
+'097b':['C','읽다','읽었습니다','Câu trước «읽었습니다» → 읽다.'],
+'098a':['C','조사하다','조사를','Câu sau «조사를 부탁드려» → 조사하다.'],
+'098b':['K','보내다|알리다','이 이메일로','«이 이메일로» → 보내 주시면.'],
+'099a':['S','입학하다|들어오다','','Thư mời tân sinh viên + «우리 대학교에 ( ) 한 달» → 입학한 지.'],
+'099b':['C','참석하다|오다','참석 바랍니다','Câu trước «많은 참석 바랍니다» → 참석하다.'],
+'100a':['K','보다','면접을','«면접을» → 면접을 보다.'],
+'100b':['K','받다','도움을','«도움을» → 도움을 받다.'],
+'101a':['C','참여하다|오다','참여할 학생은','Câu sau «참여할 학생은» → 참여하다.'],
+'101b':['C','응원하다','응원해야','Câu đầu «응원해야» → 응원하다.'],
+'102a':['C','정리하다','정리','Tiêu đề «개인 물건 정리 요청» → 정리하다.'],
+'102b':['C','시작되다','시작됩니다','Câu trước «공사가 시작됩니다» → 방학이 시작되다.'],
+'103a':['C','주문하다','주문하겠습니다','Tiêu đề «단체 주문», câu sau «주문하겠습니다» → 주문하다.'],
+'103b':['S','배달하다|보내다','','«학생회관으로 햄버거 50개를» = đưa đồ ăn tới nơi → 배달하다.'],
+'104a':['C','받다','수술을 받았습니다','Câu trước «수술을 받았습니다» → 받은 지.'],
+'104b':['K','바꾸다|옮기다','1층으로','«1층으로 방을» → 바꾸다 / 옮기다.'],
+'105a':['K','하다','공부를','«공부를 어떻게» → 해야 할지.'],
+'105b':['K','되다','도움이','«큰 도움이» → 되다.'],
+'106a':['S','사다|구매하다|구입하다','','Đồ vật + «( ) 한 달밖에» → 산 지. Bài không có chữ 사다.'],
+'106b':['C','옮기다|오다','옮기려면','Cùng câu «옮기려면» → 옮겨야 합니다.']
+};
+var TU_SRC={C:'Bước 1–2 · Có sẵn trong bài',K:'Bước 3 · Danh từ trước ô',S:'Bước 4 · Suy ra từ hoàn cảnh',D:'Từ trái nghĩa'};
+var TU_SET=[['all','Tất cả'],['C','Có sẵn trong bài'],['K','Danh từ trước ô'],['S','Suy ra + trái nghĩa']];
+function tuSt(){return st.tu||(st.tu={f:'K',a:{}});}
+function tuIds(f){return Object.keys(TU).filter(function(k){var t=TU[k][0];return f==='all'||t===f||(f==='S'&&t==='D');});}
+function tuNorm(x){return norm(x).replace(/다$/,'');}
+function tuOk(k,v){var t=TU[k],a=tuNorm(v);if(!a)return false;
+  if(t[1].split('|').some(function(w){w=tuNorm(w);return w===a||(w.length>1&&a.indexOf(w)===0);}))return true;
+  var q=Q['W51_'+k.slice(0,3)];return matches(v,q.keys[k[3]]);}
+function tuPsg(k,done){
+  var q=Q['W51_'+k.slice(0,3)],b=k[3],t=TU[k];
+  var p=esc(q.passage).replace(/\(\s*㉠\s*\)/,'<span class="gap'+(b==='a'?'':' off')+'">( ㉠ )</span>').replace(/\(\s*㉡\s*\)/,'<span class="gap'+(b==='b'?'':' off')+'">( ㉡ )</span>');
+  if(done){(t[3].match(/«([^»]+)»/g)||[]).forEach(function(m){var w=esc(m.slice(1,-1));if(w.length>1&&p.indexOf(w)>=0)p=p.split(w).join('<mark>'+w+'</mark>');});}
+  return p.replace(/\n\n+/g,'\n').replace(/\n/g,'<br>');
+}
+function renderTu(){
+  var S=tuSt(),ids=tuIds(S.f),h='',ok=0,n=0;
+  $('tuf').innerHTML=TU_SET.map(function(x){return '<button class="b'+(S.f===x[0]?' on':'')+'" data-tuf="'+x[0]+'">'+x[1]+' ('+tuIds(x[0]).length+')</button>';}).join('');
+  ids.forEach(function(k,i){
+    var t=TU[k],q=Q['W51_'+k.slice(0,3)],r=S.a[k],done=!!r;
+    if(done){n++;if(r.ok)ok++;}
+    h+='<div class="task tuq" id="U'+k+'"><div class="hd"><b>'+(i+1)+'. Kỳ '+q.round+' · ô '+(k[3]==='a'?'㉠':'㉡')+'</b><span class="lab">'+(done?(r.ok?'✔ Đúng':'✘ Chưa đúng'):'Chưa làm')+'</span></div><div class="bd">';
+    h+='<div class="psg">'+tuPsg(k,done)+'</div>';
+    h+='<div class="blank"><label>Động từ dạng gốc cho ô '+(k[3]==='a'?'㉠':'㉡')+':</label><input class="ans" data-tu="'+k+'" value="'+esc(done?r.v:'')+'" autocomplete="off" autocapitalize="off" spellcheck="false" lang="ko"'+(done?' disabled':'')+'></div>';
+    if(!done)h+='<div class="btns"><button class="b main" data-tuchk="'+k+'">Kiểm tra</button><button class="b" data-tugive="'+k+'">Xem đáp án</button></div>';
+    else h+='<div class="res '+(r.ok?'ok':'rv')+'"><div>Động từ: <b class="ko">'+esc(t[1].split('|').join(' / '))+'</b> · Đáp án trong đề: <b class="ko">'+esc(q.keys[k[3]][0])+'</b></div><div class="pat"><b>'+TU_SRC[t[0]]+'.</b> '+hintHTML(t[3])+'</div><div class="btns"><button class="b" data-turedo="'+k+'">Làm lại câu này</button></div></div>';
+    h+='</div></div>';
+  });
+  h+='<div class="score">Đúng '+ok+'/'+ids.length+(n<ids.length?' (còn '+(ids.length-n)+' ô)':'')+(n?' · <a href="#" data-tuall="1">Làm lại bộ này</a>':'')+'</div>';
+  $('tuList').innerHTML=h;
+}
+function tuDo(k,give){var S=tuSt(),inp=document.querySelector('input[data-tu="'+k+'"]'),v=inp?inp.value.trim():'';
+  if(!give&&!v){inp&&inp.focus();return;}
+  S.a[k]={v:v,ok:give?false:tuOk(k,v)};save();var y=scrollY;renderTu();scrollTo(0,y);}
+document.addEventListener('click',function(e){
+  var d=e.target.closest('[data-tuf],[data-tuchk],[data-tugive],[data-turedo],[data-tuall],[data-hidev],#tuTable .vb');if(!d)return;
+  var S=tuSt(),x=d.dataset;
+  if(x.tuf){S.f=x.tuf;save();renderTu();}
+  else if(x.tuchk)tuDo(x.tuchk,0);
+  else if(x.tugive)tuDo(x.tugive,1);
+  else if(x.turedo){delete S.a[x.turedo];save();var y=scrollY;renderTu();scrollTo(0,y);}
+  else if(x.tuall){e.preventDefault();tuIds(S.f).forEach(function(k){delete S.a[k];});save();renderTu();}
+  else if(x.hidev!=null){var on=$('tuTable').classList.toggle('hidev');d.textContent=on?'Hiện động từ':'Che động từ';document.querySelectorAll('#tuTable .vb.open').forEach(function(v){v.classList.remove('open');});}
+  else d.classList.toggle('open');
+});
+document.addEventListener('keydown',function(e){var i=e.target.closest&&e.target.closest('input[data-tu]');if(i&&e.key==='Enter')tuDo(i.dataset.tu,0);});
+
 /* ---- điều hướng ---- */
 function show(){
   var m=location.hash.match(/b=(\w+)/),k=m?m[1]:(st.tab||'1');if(!$('s'+k))k='1';
@@ -583,7 +802,7 @@ function show(){
   document.querySelectorAll('nav a').forEach(function(a){a.classList.toggle('on',a.dataset.k===k);});
   st.tab=k;save();
 }
-renderMcq(1);renderMcq(2);renderTasks(1);renderTasks(2);renderTasks(3);renderTasks(4);renderPick();renderSum('all');
+renderMcq(1);renderMcq(2);renderTasks(1);renderTasks(2);renderTasks(3);renderTasks(4);renderPick();renderTu();renderSum('all');
 window.addEventListener('hashchange',function(){show();scrollTo(0,0);});show();
 </script>
 <script src="../danh-dau/dd.js"></script>
