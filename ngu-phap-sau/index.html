@@ -197,7 +197,7 @@ footer{margin-top:40px;padding-top:10px;border-top:1px solid var(--soft);font-si
 // Bài đã soạn trong kho (thêm tên file data/<cuốn>-<bài>.json vào đây)
 var LS=['1A-1','1A-2','1A-3','2A-1','2A-2','2A-3','3A-1','3A-2','3A-3'];
 // Chuyên đề = buổi gom nhiều mẫu (data/cd-<id>.json): bước {ref:'3A-1', no} lấy mẫu có sẵn, hoặc mẫu viết riêng (có t, src)
-var CDS=['gian-tiep','thoi-gian-ly-do','tieu-tu'];
+var CDS=['gian-tiep','thoi-gian-ly-do','tieu-tu','dinh-ngu'];
 var BOOKS=['1A','1B','2A','2B','3A','3B'];
 var D={}, C={}, NP=null, ST={};
 try{ST=JSON.parse(localStorage.getItem('nari-nps')||'{}')}catch(e){}
@@ -298,7 +298,7 @@ function card(x,pre){var p=x.p,m=[];
   if(p.tinh&&p.tinh.length)m.push(p.tinh.length+' tình huống');
   if(p.sai&&p.sai.length)m.push(p.sai.length+' lỗi hay sai');
   if(p.luyen&&p.luyen.length)m.push(p.luyen.length+' câu luyện');
-  if(p.go&&p.go.length)m.push(p.go.length+' câu gõ chuyển');
+  if(p.go&&p.go.length)m.push(p.go.length+(p.go.some(function(q){return q.k})?' câu gõ chuyển':' câu gõ'));
   return '<a class="card" href="'+linkOf(x)+'">'+(pre||'')+'<div class="pt">'+esc(ptTitle(x.d,p))+'</div><div class="cr">'+p.core+'</div><div class="meta">'+m.join(' · ')+'</div></a>'}
 function cdCard(c){var cd=C[c],st=cdSteps(c),mi=st.reduce(function(a,x){return a+(x.m||0)},0);
   return '<a class="card" href="#cd='+c+'"><div class="pt">📚 '+esc(cd.t)+' <span class="ko" style="font-weight:normal;color:var(--pur);font-size:15px">'+esc(cd.ko||'')+'</span></div><div class="cr">'+esc(cd.sub||'')+'</div><div class="meta">'+st.length+' bước · khoảng '+mi+' phút</div></a>'}
@@ -365,8 +365,8 @@ function tbl(rows){return '<div class="scroll"><table class="t">'+rows.map(funct
 function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
 // [id mục, tên, trường dữ liệu] — số thứ tự mục theo vị trí trong mảng
 var SECS=[['s1','Nghĩa lõi & cấu tạo','goc'],['s2','Kết hợp – chia','chia'],['sd','Chuyển từ câu gốc','doi'],['s3','Bản đồ tình huống','tinh'],['s4','Ràng buộc','rb'],['s5','Lỗi hay mắc','sai'],['s6','Phân biệt','pb'],['s7','Trong TOPIK','topik'],['s8','Cô hỏi','hoi'],['s9','Luyện ngay','luyen'],['sg','Luyện chuyển câu','go'],['s10','Câu của em','em']];
-function H(i,extra){return '<h3 id="'+SECS[i][0]+'"><span class="n">'+(i+1)+'</span>'+SECS[i][1]+(extra||'')+'</h3>'}
-function Hk(k,extra){for(var i=0;i<SECS.length;i++)if(SECS[i][0]==k)return H(i,extra)}
+function H(i,extra,name){return '<h3 id="'+SECS[i][0]+'"><span class="n">'+(i+1)+'</span>'+(name||SECS[i][1])+(extra||'')+'</h3>'}
+function Hk(k,extra,name){for(var i=0;i<SECS.length;i++)if(SECS[i][0]==k)return H(i,extra,name)}
 // loại câu gốc → nhãn màu
 var KK={'Kể':'ke','Hỏi':'hoi','Bảo':'bao','Cấm':'cam','Nhờ':'nho','Rủ':'ru','Hứa':'hua'};
 var KLIST=['Kể','Hỏi','Bảo','Cấm','Nhờ','Rủ','Hứa'];
@@ -382,13 +382,14 @@ function doiHTML(p){
       '<div class="gt"><span class="ko">'+md(e.gt)+sayBtn(e.gt)+'</span></div>'+
       '<div class="tr">'+(e.sat?'<span class="l">Dịch từng chữ</span><span class="sat">'+md(e.sat)+'</span>':'')+'<span class="l">Dịch xuôi</span><span class="xuoi">'+md(e.vi)+'</span></div>'+
       (e.dn?'<div class="dn">💬 '+md(e.dn)+'</div>':'')+'</details></div>'}).join('')}
-// go: {k loại, c hoàn cảnh, ai, g câu gốc, f khung có (    ), a:[đáp án nhận], vi dịch xuôi, w giải thích}
+// go: {k loại (bỏ trống = bài gõ thường, không chọn loại câu), c hoàn cảnh, ai, g câu gốc, f khung có (    ), a:[đáp án nhận], vi dịch xuôi, w giải thích}
 function goHTML(p){
-  return '<p class="muted" style="margin:0 0 8px">Câu gốc các loại để lẫn. Bước 1 chọn loại câu, bước 2 gõ phần còn thiếu trong ngoặc → “Kiểm tra”. Máy so chữ (bỏ qua dấu cách, dấu câu); em viết khác mà đúng thì bấm “Em đúng (cách khác)”.</p><div class="score" id="gsc"></div>'+
+  var kk=p.go.some(function(q){return q.k});
+  return '<p class="muted" style="margin:0 0 8px">'+(kk?'Câu gốc các loại để lẫn. Bước 1 chọn loại câu, bước 2 gõ phần còn thiếu trong ngoặc':'Gõ phần còn thiếu trong ngoặc')+' → “Kiểm tra”. Máy so chữ (bỏ qua dấu cách, dấu câu); em viết khác mà đúng thì bấm “Em đúng (cách khác)”.</p><div class="score" id="gsc"></div>'+
     p.go.map(function(q,i){var k=p.id+'_g'+i,v=ST.go[k]||{};
     return '<div class="gq" data-i="'+i+'" data-k="'+k+'"><div class="c"><i style="font:bold 13px Arial,sans-serif;font-style:normal;color:var(--muted)">Câu '+(i+1)+'</i> · '+md(q.c)+'</div>'+
       '<div class="g ko">'+(q.ai?'<span class="muted" style="font-size:14px">'+esc(q.ai)+':</span> ':'')+md(q.g)+sayBtn(q.g)+'</div>'+
-      '<div class="ks">Loại câu: '+KLIST.map(function(t){return '<button type="button" data-kk="'+esc(t)+'">'+esc(t)+'</button>'}).join('')+'</div>'+
+      (q.k?'<div class="ks">Loại câu: '+KLIST.map(function(t){return '<button type="button" data-kk="'+esc(t)+'">'+esc(t)+'</button>'}).join('')+'</div>':'')+
       '<div class="f ko">→ '+md(q.f).replace('(    )','<b style="color:var(--pur)">(&nbsp;……&nbsp;)</b>')+'</div>'+
       '<input class="ko" placeholder="Gõ phần trong ngoặc…" value="'+esc(v.v||'')+'">'+
       '<div class="bt"><button type="button" data-act="chk">Kiểm tra</button><button type="button" class="ghost" data-act="see">Xem đáp án</button></div>'+
@@ -411,7 +412,7 @@ function drawPoint(x,crumb,list,idx){
   if(!x.cd){var c=cdOf(p.id);if(c)s+=' <a class="tag" style="text-decoration:none;background:var(--purbg);color:var(--pur)" href="'+linkOf(c)+'">📚 Học trong chuyên đề '+esc(C[c.cd].t)+' ›</a>'}
   else if(x.ref)s+=' <a class="tag" style="text-decoration:none" href="'+hashOf(b,n)+'">Mẫu của Seoul '+esc(b)+' Bài '+n+' ›</a>';
   s+='<div class="core">'+p.core+'</div>';
-  s+='<div class="chips">'+SECS.filter(function(z){return on[z[0]]||(z[0]=='s1'&&g)}).map(function(z){return '<a href="javascript:void 0" data-go="'+z[0]+'">'+z[1]+'</a>'}).join('')+'</div>';
+  s+='<div class="chips">'+SECS.filter(function(z){return on[z[0]]||(z[0]=='s1'&&g)}).map(function(z){return '<a href="javascript:void 0" data-go="'+z[0]+'">'+(z[0]=='sg'&&p.goT||z[1])+'</a>'}).join('')+'</div>';
   if(on.s1||g)s+=Hk('s1')+(on.s1?'<div class="goc">'+p.goc+'</div>':'');
   if(g)s+=bookBox(g,b,n);
   if(on.s2)s+=Hk('s2')+tbl(p.chia)+(p.chiaNote&&p.chiaNote.length?'<ul class="nt">'+p.chiaNote.map(function(x){return '<li>'+md(x)+'</li>'}).join('')+'</ul>':'');
@@ -426,7 +427,7 @@ function drawPoint(x,crumb,list,idx){
   if(on.s9)s+=Hk('s9')+'<div class="score" id="sc"></div>'+p.luyen.map(function(q,i){
     var o=shuffle(q.o.map(function(t,j){return {t:t,ok:j===0}}));
     return '<div class="q" data-i="'+i+'"><div class="qs"><i>Câu '+(i+1)+'</i>'+md(q.q)+'</div><div class="opts">'+o.map(function(x){return '<button type="button" class="opt ko" data-ok="'+(x.ok?1:0)+'">'+md(x.t)+'</button>'}).join('')+'</div><div class="fb">'+md(q.w)+'</div></div>'}).join('');
-  if(on.sg)s+=Hk('sg',' <span class="soon">'+p.go.length+' câu</span>')+goHTML(p);
+  if(on.sg)s+=Hk('sg',' <span class="soon">'+p.go.length+' câu</span>',p.goT)+goHTML(p);
   if(on.s10)s+=Hk('s10')+p.em.map(function(e,i){var k=p.id+'_'+i;return '<div class="em"><label>✍️ '+md(e)+'</label><textarea class="ko" data-k="'+k+'" placeholder="Em viết ở đây… (lưu trên máy này)">'+esc(ST.em[k]||'')+'</textarea></div>'}).join('');
   if(p.co)s+='<div class="cobox co-only"><b>Ghi chú cho cô</b> (không hiện ở bản chiếu cho học sinh)<div>'+md(p.co)+'</div></div>';
   // trước / sau
@@ -469,7 +470,7 @@ function wireGo(p){
   function sc(){var d=0,r=0;qs.forEach(function(q,i){var o=ST.go[p.id+'_g'+i];if(o&&o.ok!=null){d++;if(o.ok)r++}});var e=$('gsc');if(e)e.textContent=d?('Đã làm '+d+'/'+qs.length+' · đúng '+r):'Chưa làm câu nào.'}
   function show(box,q,o){
     box.classList.remove('r','w');box.classList.add('done');if(o.ok!=null)box.classList.add(o.ok?'r':'w');
-    box.querySelector('.fb').innerHTML=(o.ok==1?'✔ Đúng. ':o.ok===0?'✘ Chưa đúng. ':'')+'Loại câu: '+kTag(q.k)+'<span class="ko">'+md(q.f.replace('(    )','**'+q.a[0]+'**'))+'</span>'+(q.a.length>1?'<div class="muted">Cũng được: <span class="ko" style="display:inline">'+q.a.slice(1).map(esc).join(' · ')+'</span></div>':'')+
+    box.querySelector('.fb').innerHTML=(o.ok==1?'✔ Đúng. ':o.ok===0?'✘ Chưa đúng. ':'')+(q.k?'Loại câu: '+kTag(q.k):'')+'<span class="ko">'+md(q.f.replace('(    )','**'+q.a[0]+'**'))+'</span>'+(q.a.length>1?'<div class="muted">Cũng được: <span class="ko" style="display:inline">'+q.a.slice(1).map(esc).join(' · ')+'</span></div>':'')+
       (q.vi?'<div><b>Dịch xuôi:</b> '+md(q.vi)+'</div>':'')+(q.w?'<div>'+md(q.w)+'</div>':'')+
       (o.ok===0?'<div class="bt"><button type="button" class="ghost" data-act="self">Em đúng (cách khác)</button><button type="button" class="ghost" data-act="redo">Làm lại</button></div>':'');
   }

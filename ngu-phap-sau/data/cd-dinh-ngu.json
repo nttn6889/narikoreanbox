@@ -1,0 +1,652 @@
+{
+ "id": "dinh-ngu",
+ "t": "Định ngữ",
+ "ko": "관형형 -(으)ㄴ · -는 · -(으)ㄹ · -던",
+ "sub": "Gom trong một chuyên đề: 1B Bài 14–15 (A-(으)ㄴ N, V-는 N), 2A Bài 2–3 (V-(으)ㄴ N, V-(으)ㄹ N), các mẫu “định ngữ + danh từ phụ thuộc” rải ở 2A–3A, và -던 / -았던 (trung cấp 3A–3B)",
+ "tong": {
+  "t": "Một hệ đuôi, rải từ 1B đến 3B",
+  "p": "Ở trường, định ngữ được dạy lẻ từng đuôi qua nhiều cuốn, nên học sinh nhớ từng mẫu mà không thấy <b>hệ thống</b>. Chuyên đề gom lại thành một câu hỏi duy nhất: <b>đứng trước danh từ thì đổi đuôi gì?</b> — trả lời bằng <b>loại từ</b> (động / tính từ, 있다·없다, 이다) và <b>thời gian của hành động</b> (đã · đang · chưa · nhìn lại). Ba nửa buổi: <b>Nửa 1</b> bộ đuôi cơ bản (ôn 1B + 2A), <b>Nửa 2</b> ghép câu, đọc câu dài và các mẫu cố định (2A–3A, nối sang câu 3–4 TOPIK), <b>Nửa 3</b> hồi tưởng -던 / -았던. Lỗi gốc của người Việt: tiếng Việt đặt phần bổ nghĩa <b>sau</b> danh từ (“người <i>tôi gặp hôm qua</i>”), tiếng Hàn đặt <b>trước</b>.",
+  "tb": [
+   ["Đuôi", "Nghĩa", "Loại từ", "Sách"],
+   ["A-(으)ㄴ N", "đặc điểm đang có: **큰** 집", "tính từ (있다/없다 → -는, 이다 → 인)", "1B Bài 14"],
+   ["V-는 N", "đang / thường / sự thật: 자주 가**는** 곳", "động từ, 있다 / 없다", "1B Bài 15"],
+   ["V-(으)ㄴ N", "đã xong: 어제 **본** 영화", "động từ", "2A Bài 2"],
+   ["V-(으)ㄹ N", "chưa xảy ra / để làm: 내일 **입을** 옷", "động từ", "2A Bài 3"],
+   ["+ 것, 수, 적, 중, 지, 때, 바람에…", "mẫu cố định, mỗi danh từ “ưa” một đuôi", "", "rải 1B–3A"],
+   ["-던 N", "nhìn lại: kéo dài, lặp lại, dở dang: 먹**던** 빵", "động / tính từ, 이다", "trung cấp (-던데요 3A Bài 4)"],
+   ["-았/었던 N", "nhìn lại: đã kết thúc: 작년에 **갔던** 곳", "động / tính từ, 이다", "trung cấp"]
+  ]
+ },
+ "parts": ["Nửa 1 · Bộ đuôi cơ bản: đã – đang – sẽ", "Nửa 2 · Ghép câu, đọc câu dài, mẫu cố định", "Nửa 3 · Nhìn lại: -던 · -았/었던"],
+ "co": "Cả chuyên đề khoảng 2 tiếng 20 — nên tách theo nửa: **Nửa 1** cho lớp đang học 2A (ôn 1B, học trước 2A Bài 2–3); **Nửa 2** khi tới 2B–3A (nhiều mẫu -는 중, -(으)ㄴ 적, -(으)ㄴ 지, -는 바람에 xuất hiện ở đây); **Nửa 3** trước khi gặp -던 ở trung cấp. Ngữ pháp 3B chưa nhập vào kho (collection `grammar`) nên bước -던 / -았던 chưa có khung “📖 Sách viết gì” — nhập 3B rồi thì thêm `src`. Lỗi người Việt cần sửa ngay trên lớp: **đặt định ngữ sau danh từ** (dịch theo tiếng Việt), **맛있은 / 재미있은**, **좋는**, **저는 + định ngữ** (phải 제가), **탄 바람에** (phải 타는 바람에), **먹은 빵** cho bánh đang ăn dở (phải 먹던).",
+ "p": [
+  {
+   "id": "cd_dn_nen",
+   "t": "Bước 0 · Định ngữ là gì · A-(으)ㄴ N · N인 N",
+   "cn": "Nền: định ngữ",
+   "src": {"b": "1B", "n": 14, "no": 2},
+   "part": 0,
+   "m": 15,
+   "why": "Trật tự ngược tiếng Việt + tính từ đứng trước danh từ",
+   "core": "Định ngữ = phần đứng <b>trước</b> danh từ để nói danh từ đó <b>thế nào / làm gì</b>. Tiếng Việt đặt sau (“cà phê <i>nóng</i>”, “người <i>tôi gặp</i>”), tiếng Hàn đặt <b>trước</b> và đổi đuôi của động / tính từ: 따뜻<b>한</b> 커피, 어제 만<b>난</b> 사람.",
+   "goc": "Động / tính từ không thể đứng trước danh từ ở dạng -다 hay -아요 (따뜻해요 커피 ✗). Muốn bổ nghĩa cho danh từ, phải đổi sang <b>đuôi định ngữ</b> (관형형). Cả họ chỉ có ba đuôi, đều mang phụ âm <b>ㄴ</b> hoặc <b>ㄹ</b>: <b>-(으)ㄴ</b>, <b>-는</b>, <b>-(으)ㄹ</b>. Bước này học trường hợp dễ nhất: <b>tính từ + -(으)ㄴ</b> = đặc điểm <b>đang có</b> (큰 집 = nhà to, bây giờ vẫn to). Hai ngoại lệ phải nhớ ngay: từ có <b>있다 / 없다</b> dùng <b>-는</b> (재미있<b>는</b>, 맛없<b>는</b>); <b>이다</b> thành <b>인</b> (의사<b>인</b> 언니 = chị gái là bác sĩ), <b>아니다</b> thành <b>아닌</b>.",
+   "chia": [
+    ["Loại", "Gốc", "→ định ngữ", "Ví dụ"],
+    ["Tính từ, không 받침", "크다 · 예쁘다", "**큰** · 예**쁜**", "**큰** 가방"],
+    ["Tính từ, có 받침", "작다 · 좋다", "작**은** · 좋**은**", "좋**은** 친구"],
+    ["Gốc ㄹ (rơi ㄹ)", "길다 · 멀다", "**긴** · **먼**", "머리가 **긴** 사람"],
+    ["ㅂ bất quy tắc", "춥다 · 맵다 · 어렵다", "추**운** · 매**운** · 어려**운**", "매**운** 음식"],
+    ["ㅎ bất quy tắc", "하얗다 · 빨갛다 · 그렇다", "하**얀** · 빨**간** · 그**런**", "하**얀** 눈"],
+    ["있다 / 없다", "재미있다 · 맛없다", "재미있**는** · 맛없**는**", "재미있**는** 영화"],
+    ["이다 / 아니다", "학생이다 · 학생이 아니다", "학생**인** · 학생이 **아닌**", "학생**인** 동생"]
+   ],
+   "chiaNote": [
+    "Tính từ + -(으)ㄴ là **hiện tại**: 큰 집 = nhà (đang) to. Đừng dịch “đã”.",
+    "Từ có **있다 / 없다** dù là tính từ vẫn dùng **-는**: 맛있**는**, 멋있**는**, 재미없**는** (✗ 맛있은).",
+    "좋다 không phải ㅎ bất quy tắc: 좋**은** (✗ 존). ㅎ bất quy tắc là tính từ màu sắc, hình dáng và 그렇다 / 이렇다 / 저렇다, 어떻다 (→ 어떤).",
+    "Danh từ + danh từ thường ghép thẳng (한국 음식, 학교 친구). **N인 N** dùng khi danh từ trước là “thân phận / tư cách” của danh từ sau: 가수**인** 친구 = người bạn là ca sĩ."
+   ],
+   "tinh": [
+    {"t": "Gọi đồ uống", "c": "Ở quán cà phê, trời lạnh.", "lv": "lịch sự", "ko": "따뜻**한** 아메리카노 한 잔 주세요.", "vi": "Cho tôi một ly americano nóng.", "why": "따뜻하다 → 따뜻한. Danh từ chính 아메리카노 đứng sau."},
+    {"t": "Tả người để chỉ ra", "c": "Chỉ cho bạn thấy em trai mình trong đám đông.", "lv": "lịch sự", "ko": "저기 키가 **큰** 사람이 제 동생이에요.", "vi": "Người cao cao đằng kia là em tôi.", "why": "키가 크다 có chủ ngữ riêng (키가) — trong cụm định ngữ vẫn giữ 이/가: 키가 큰 사람."},
+    {"t": "Hỏi đồ rẻ hơn", "c": "Đi mua sắm, thấy đắt.", "lv": "lịch sự", "ko": "더 **싼** 거 없어요?", "vi": "Có cái nào rẻ hơn không?", "why": "싸다 → 싼; 거 = 것 (cái). Định ngữ + 거 rất hay dùng khi mua bán."},
+    {"t": "Giới thiệu bạn", "c": "Giới thiệu bạn thân với mẹ.", "lv": "lịch sự", "ko": "엄마, 이쪽은 제 제일 친**한** 친구예요.", "vi": "Mẹ ơi, đây là bạn thân nhất của con.", "why": "친하다 → 친한 (thân)."},
+    {"t": "Nói sở thích", "c": "Bạn hỏi thích phim gì.", "lv": "lịch sự", "ko": "저는 재미있**는** 영화를 좋아해요.", "vi": "Tôi thích phim hay.", "why": "재미있다 → 재미있는 (ngoại lệ 있다 → -는)."},
+    {"t": "Nói tư cách", "c": "Kể ai cho vé xem ca nhạc.", "lv": "lịch sự", "ko": "가수**인** 친구가 콘서트 표를 줬어요.", "vi": "Người bạn làm ca sĩ cho tôi vé xem hòa nhạc.", "why": "가수이다 → 가수인: bạn là ca sĩ (khác 가수의 친구 = bạn của ca sĩ)."}
+   ],
+   "rb": [
+    ["Vị trí", "Đứng ngay trước danh từ, không đứng cuối câu: 커피가 따뜻한. ✗ → 커피가 따뜻해요."],
+    ["Tính từ", "-(으)ㄴ = đặc điểm đang có (hiện tại)."],
+    ["있다 / 없다", "Luôn -는: 맛있는, 재미없는."],
+    ["Danh từ", "N인 N (là…), N이/가 아닌 N (không phải…)."],
+    ["Chủ ngữ trong cụm", "이/가: 키가 큰 사람, 머리가 긴 여자."]
+   ],
+   "sai": [
+    {"x": "커피 **따뜻한** 주세요.", "o": "**따뜻한** 커피 주세요.", "why": "Dịch theo trật tự Việt “cà phê nóng”. Phần bổ nghĩa phải đứng trước danh từ."},
+    {"x": "**재미있은** 영화를 봤어요.", "o": "**재미있는** 영화를 봤어요.", "why": "있다 / 없다 luôn -는."},
+    {"x": "**좋는** 사람이에요.", "o": "**좋은** 사람이에요.", "why": "Tính từ không dùng -는 (trừ 있다 / 없다)."},
+    {"x": "**춥은** 날씨가 싫어요.", "o": "**추운** 날씨가 싫어요.", "why": "ㅂ bất quy tắc: ㅂ → 우 + ㄴ."},
+    {"x": "**길은** 머리", "o": "**긴** 머리", "why": "Gốc ㄹ rơi ㄹ trước ㄴ, không thêm 으."},
+    {"x": "**하얗은** 눈", "o": "**하얀** 눈", "why": "ㅎ bất quy tắc: rơi ㅎ, không thêm 으."}
+   ],
+   "pb": [
+    {"vs": "A-아/어요 (vị ngữ) ↔ A-(으)ㄴ N (định ngữ)", "d": "Cùng nghĩa, khác chỗ đứng. Cuối câu = <b>nhận xét</b> về một thứ đã biết; trước danh từ = <b>đặc điểm để chọn / gọi tên</b>.", "ex": [["이 가방이 **작아요**.", "Cái túi này nhỏ."], ["**작은** 가방 있어요?", "Có túi nhỏ không?"]]},
+    {"vs": "N의 N ↔ N인 N", "d": "<b>의</b> = của (sở hữu, quan hệ). <b>인</b> = là (danh từ trước chính là danh từ sau).", "ex": [["친구**의** 언니", "chị của bạn tôi"], ["친구**인** 수진 씨", "Sujin, người là bạn tôi"]]}
+   ],
+   "topik": [
+    {"src": "Đọc · kỳ 91 câu 3", "ko": "**어려운** 이웃을 돕고자 매년 봉사 활동에 참여하고 있다.", "note": "어렵다 (ㅂ) → 어려운: “những người hàng xóm khó khăn”. Câu 3–4 TOPIK gạch chân phần khác (돕고자), nhưng phải hiểu được định ngữ mới đọc trôi câu."},
+    {"src": "Đọc · kỳ 64 câu 3", "ko": "정부는 일자리를 늘리고자 **새로운** 정책을 수립했다.", "note": "새롭다 (ㅂ) → 새로운 정책 = chính sách mới."},
+    {"src": "Đọc · kỳ 91 câu 48", "ko": "많은 예술인이 기본 생활이 **불가능한 적은** 수입 탓에 예술 활동을 포기한다.", "note": "Hai tính từ chồng lên 수입: 기본 생활이 불가능한 (không đủ sống cơ bản) + 적은 (ít). Danh từ chính 수입 (thu nhập) → dịch “vì thu nhập ít ỏi, không đủ cho cuộc sống cơ bản”."}
+   ],
+   "hoi": [
+    {"q": "Vì sao 맛있다 thành 맛있는, không phải 맛있은?", "a": "Từ có 있다 / 없다 đi theo động từ: luôn <b>-는</b> (맛있는, 재미없는, 멋있는)."},
+    {"q": "큰 집 — nhà <i>đã</i> to hay <i>đang</i> to?", "a": "Đang to. Tính từ + -(으)ㄴ là hiện tại. “Đã” chỉ có khi -(으)ㄴ gắn với <b>động từ</b> (본 영화 = phim đã xem)."},
+    {"q": "“Cái áo màu trắng” nói thế nào?", "a": "<b>하얀</b> 옷 (하얗다, ㅎ rơi) — hoặc 흰 옷 (từ 희다)."},
+    {"q": "가수인 친구 và 가수의 친구 khác gì?", "a": "가수<b>인</b> 친구: bạn tôi, bạn ấy là ca sĩ. 가수<b>의</b> 친구: bạn của một ca sĩ."}
+   ],
+   "luyen": [
+    {"q": "날씨가 추워서 (    ) 옷을 입었어요.", "o": ["따뜻한", "따뜻하는", "따뜻은", "따뜻해"], "w": "Tính từ 따뜻하다 → 따뜻한."},
+    {"q": "저는 (    ) 음식을 못 먹어요.", "o": ["매운", "맵은", "맵는", "매워"], "w": "맵다 (ㅂ) → 매운."},
+    {"q": "어제 정말 (    ) 영화를 봤어요.", "o": ["재미있는", "재미있은", "재미있한", "재미있게"], "w": "있다 / 없다 → -는."},
+    {"q": "머리가 (    ) 사람이 제 언니예요.", "o": ["긴", "길은", "길는", "길"], "w": "길다 gốc ㄹ → 긴."},
+    {"q": "가: 어떤 사람을 좋아해요?  나: (    ) 사람을 좋아해요.", "o": ["친절한", "친절는", "친절하은", "친절해서"], "w": "친절하다 → 친절한."},
+    {"q": "회사원(    ) 형은 매일 늦게 와요. (Anh trai tôi làm nhân viên công ty)", "o": ["인", "의", "은", "이"], "w": "N인 N = N là… Anh trai là nhân viên công ty."},
+    {"q": "Câu nào đúng: “Tôi muốn sống ở một ngôi nhà to.”", "o": ["큰 집에서 살고 싶어요.", "집 큰에서 살고 싶어요.", "크는 집에서 살고 싶어요.", "큰은 집에서 살고 싶어요."], "w": "Định ngữ đứng trước danh từ; 크다 → 큰."}
+   ],
+   "em": [
+    "Tả 3 đồ vật trong phòng em bằng tính từ + danh từ (vd. 작은 책상, 하얀 벽).",
+    "Tả một người em quý bằng 3 câu: 2 câu có tính từ định ngữ, 1 câu có N인 N."
+   ],
+   "co": "Mở buổi bằng trò “dịch ngược”: cô nói cụm Việt (cà phê nóng, phim hay, người cao, quán rẻ), em nói tiếng Hàn — ép thói quen danh từ chính đứng sau. Lỗi cần sửa ngay: 맛있은 / 재미있은, 춥은, 좋는."
+  },
+  {
+   "id": "cd_dn_neun",
+   "t": "V-는 N (đang · thường · sự thật chung)",
+   "cn": "Định ngữ – hiện tại",
+   "src": {"b": "1B", "n": 15, "no": 2},
+   "part": 0,
+   "m": 12,
+   "why": "Động từ đang / hay làm → -는",
+   "core": "Động từ + <b>-는</b> + N: hành động <b>đang</b> diễn ra, <b>thường / hay</b> làm, hoặc sự thật chung: 지금 보<b>는</b> 영화, 제가 자주 가<b>는</b> 식당, 한국어를 가르치<b>는</b> 선생님.",
+   "goc": "-는 là “dấu hiện tại” của động từ — cùng họ với -는다 (2B Bài 18), -는데, -는 것. Gốc động từ + -는, không phân biệt 받침: 가<b>는</b>, 먹<b>는</b>, 읽<b>는</b>. Hai điểm cần nhớ: <b>gốc ㄹ rơi ㄹ</b> (만들다 → 만드<b>는</b>, 살다 → 사<b>는</b>, 알다 → 아<b>는</b>) và <b>phát âm mũi hóa</b> (먹는 [멍는], 읽는 [잉는], 있는 [인는]). Bất quy tắc ㄷ / ㅂ / ㅅ <b>không đổi</b> vì -는 bắt đầu bằng phụ âm: 듣<b>는</b>, 돕<b>는</b>, 짓<b>는</b>.",
+   "chia": [
+    ["Gốc", "Ví dụ", "→"],
+    ["Không / có 받침", "가다 · 먹다", "가**는** · 먹**는** [멍는]"],
+    ["Gốc ㄹ (rơi ㄹ)", "만들다 · 살다 · 알다", "만드**는** · 사**는** · 아**는**"],
+    ["ㄷ, ㅂ, ㅅ bất quy tắc", "듣다 · 돕다 · 짓다", "듣**는** · 돕**는** · 짓**는** (giữ nguyên)"],
+    ["하다", "공부하다", "공부하**는**"],
+    ["있다 / 없다", "있다 · 없다", "있**는** [인는] · 없**는** [엄는]"]
+   ],
+   "chiaNote": [
+    "Bất quy tắc ㄷ / ㅂ / ㅅ chỉ đổi khi sau gốc là nguyên âm (으, 아/어). -는 là phụ âm → giữ nguyên: 듣**는** (khác 들**은**), 돕**는** (khác 도**운**).",
+    "사는 có hai nghĩa: “đang sống” (살다) và “mua” (사다) — 서울에 사는 사람 / 빵을 사는 사람.",
+    "Kể chuyện quá khứ vẫn dùng -는 nếu hành động đang diễn ra **lúc đó**: 어제 길에서 **우는** 아이를 봤어요 (thấy một đứa bé đang khóc)."
+   ],
+   "tinh": [
+    {"t": "Quán quen", "c": "Dẫn bạn đến quán mình hay ngồi.", "lv": "lịch sự", "ko": "여기가 제가 자주 가**는** 카페예요.", "vi": "Đây là quán cà phê tôi hay đến.", "why": "자주 (thường) → thói quen → -는."},
+    {"t": "Hỏi về người", "c": "Thấy một người hát hay ở công viên.", "lv": "lịch sự", "ko": "저기 노래하**는** 사람이 누구예요?", "vi": "Người đang hát đằng kia là ai vậy?", "why": "Đang hát → -는."},
+    {"t": "Tìm người giúp", "c": "Cần người biết tiếng Hàn để dịch giấy tờ.", "lv": "lịch sự", "ko": "한국어를 잘 아**는** 사람이 있어요?", "vi": "Có ai biết tiếng Hàn giỏi không?", "why": "알다 gốc ㄹ → 아는."},
+    {"t": "Kể nơi ở", "c": "Bạn hỏi khu em ở thế nào.", "lv": "lịch sự", "ko": "제가 사**는** 동네는 조용해요.", "vi": "Khu tôi sống yên tĩnh.", "why": "살다 → 사는; chủ ngữ trong cụm là 제가."},
+    {"t": "Món yêu thích", "c": "Giới thiệu bản thân.", "lv": "lịch sự", "ko": "제가 제일 좋아하**는** 음식은 김치찌개예요.", "vi": "Món tôi thích nhất là canh kim chi.", "why": "좋아하다 là động từ → -는 (khác 좋은 của tính từ 좋다)."},
+    {"t": "Kể cảnh đã thấy", "c": "Kể chuyện đi dạo hôm qua.", "lv": "lịch sự", "ko": "어제 공원에서 운동하**는** 사람을 많이 봤어요.", "vi": "Hôm qua tôi thấy nhiều người đang tập thể dục ở công viên.", "why": "Lúc thấy, họ đang tập → -는, dù câu kể quá khứ."}
+   ],
+   "rb": [
+    ["Loại từ", "Động từ (+ 있다 / 없다). Tính từ không dùng -는."],
+    ["Nghĩa", "Đang làm, hay làm, sự thật chung."],
+    ["Thì của câu", "Không phụ thuộc: -는 nói hành động diễn ra cùng lúc với thời điểm được nói tới."],
+    ["Chủ ngữ trong cụm", "이/가: 제가 좋아하는 음식 (✗ 저는 좋아하는)."]
+   ],
+   "sai": [
+    {"x": "제가 **살는** 집이에요.", "o": "제가 **사는** 집이에요.", "why": "Gốc ㄹ rơi ㄹ trước -는."},
+    {"x": "엄마가 **만들는** 빵", "o": "엄마가 **만드는** 빵", "why": "Gốc ㄹ rơi ㄹ."},
+    {"x": "음악을 **들는** 사람", "o": "음악을 **듣는** 사람", "why": "ㄷ chỉ đổi thành ㄹ trước nguyên âm; trước -는 giữ ㄷ."},
+    {"x": "**저는** 좋아하는 가수예요.", "o": "**제가** 좋아하는 가수예요.", "why": "Chủ ngữ trong cụm định ngữ dùng 이/가."},
+    {"x": "**예쁘는** 꽃", "o": "**예쁜** 꽃", "why": "Tính từ → -(으)ㄴ."},
+    {"x": "**모른** 사람이 인사했어요.", "o": "**모르는** 사람이 인사했어요.", "why": "모르다 là động từ → -는 (“người không quen”)."}
+   ],
+   "pb": [
+    {"vs": "V-는 N ↔ V-(으)ㄴ N (2A Bài 2)", "d": "-는: đang / vẫn còn làm; -(으)ㄴ: đã làm xong.", "ex": [["제가 다니**는** 학교", "trường tôi đang học"], ["제가 다**닌** 학교", "trường tôi đã học (đã ra trường)"]]},
+    {"vs": "V-는 N ↔ V-고 있는 N", "d": "-는 đã đủ nghĩa “đang”; -고 있는 nhấn việc đang diễn ra ngay lúc này.", "ex": [["지금 읽**고 있는** 책", "cuốn sách đang đọc (dở)"]]},
+    {"vs": "V-는 것 (2A Bài 2)", "d": "-는 + 것 = “việc…”: cả cụm thành danh từ.", "ex": [["한국 음식을 만드**는 것**을 좋아해요.", "Tôi thích (việc) nấu món Hàn."]]}
+   ],
+   "topik": [
+    {"src": "Đọc · kỳ 91 câu 16", "ko": "그래서 위험이나 위기를 **모르는** 척 **피하는** 사람을 타조에 비유하곤 한다.", "note": "Hai lớp: 모르는 척 (giả vờ không biết) + 피하는 사람 (người né tránh). Danh từ chính 사람 → “người giả vờ không biết nguy hiểm mà né tránh”."},
+    {"src": "Đọc · kỳ 91 câu 16", "ko": "시각보다 청각이 발달한 타조는 땅에서 **울리는** 발소리를 듣고 …", "note": "울리다 → 울리는 발소리: tiếng bước chân (đang) vang dưới đất. Câu đọc hiểu đầy định ngữ — tìm danh từ chính (발소리) trước."}
+   ],
+   "hoi": [
+    {"q": "“Người sống ở Hà Nội” nói thế nào?", "a": "하노이에 <b>사는</b> 사람 (살다 → 사는)."},
+    {"q": "듣다: “người đang nghe nhạc” / “bài hát đã nghe hôm qua”?", "a": "음악을 <b>듣는</b> 사람 / 어제 <b>들은</b> 노래. Trước -는 giữ ㄷ, trước -은 đổi ㄹ."},
+    {"q": "Vì sao 제가 자주 가는 식당 mà không phải 저는 자주 가는 식당?", "a": "Trong cụm định ngữ, chủ ngữ dùng 이/가. 은/는 dành cho chủ đề của cả câu: 제가 자주 가는 식당<b>은</b> 비싸요."}
+   ],
+   "luyen": [
+    {"q": "제가 지금 (    ) 동네는 아주 조용해요.", "o": ["사는", "살는", "산", "살은"], "w": "Đang sống → -는; gốc ㄹ rơi → 사는."},
+    {"q": "저기 음악을 (    ) 사람이 제 동생이에요.", "o": ["듣는", "들는", "듣은", "들을"], "w": "Đang nghe → 듣는 (ㄷ giữ nguyên trước -는)."},
+    {"q": "이건 우리 엄마가 자주 (    ) 음식이에요.", "o": ["만드는", "만들는", "만들은", "만들"], "w": "자주 → thói quen → -는; 만들다 → 만드는."},
+    {"q": "한국어를 잘 (    ) 친구가 있어요?", "o": ["아는", "알는", "알은", "알을"], "w": "알다 → 아는."},
+    {"q": "어제 길에서 (    ) 아이를 봤어요. 엄마를 잃어버렸대요.", "o": ["우는", "울는", "울은", "울을"], "w": "Lúc thấy, đứa bé đang khóc → 우는 (울다, rơi ㄹ)."},
+    {"q": "Câu nào đúng: “Món tôi thích nhất là phở.”", "o": ["제가 제일 좋아하는 음식은 쌀국수예요.", "저는 제일 좋아하는 음식은 쌀국수예요.", "제가 제일 좋은 음식은 쌀국수예요.", "음식 제가 제일 좋아하는 쌀국수예요."], "w": "제가 (chủ ngữ trong cụm) + 좋아하는 (động từ → -는) + danh từ chính."},
+    {"q": "(    ) 사람이 길을 물어봤어요. (người lạ, không quen)", "o": ["모르는", "모른", "모를", "몰른"], "w": "모르다 là động từ → 모르는."}
+   ],
+   "em": [
+    "Viết 3 câu giới thiệu: 제가 사는 곳 · 제가 자주 가는 곳 · 제가 제일 좋아하는 것."
+   ],
+   "co": "Hoạt động “Ai đấy?”: cô cho ảnh / tả cảnh nhiều người đang làm việc khác nhau, em hỏi – đáp bằng 저기 ___는 사람이 누구예요? Luyện luôn phát âm 먹는 [멍는], 읽는 [잉는], 있는 [인는]."
+  },
+  {"ref": "2A-2", "no": 3, "part": 0, "m": 10, "why": "Động từ đã xong → -(으)ㄴ (khác tính từ -(으)ㄴ = hiện tại)"},
+  {"ref": "2A-3", "no": 4, "part": 0, "m": 10, "why": "Chưa xảy ra / để làm → -(으)ㄹ; hoàn thành bộ ba của động từ"},
+  {
+   "id": "cd_dn_bang",
+   "t": "Bảng tổng: đã – đang – sẽ × động từ / tính từ / 이다",
+   "cn": "Định ngữ – bảng chia",
+   "part": 0,
+   "m": 15,
+   "why": "Một bảng để chọn đuôi + luyện gõ các gốc bất quy tắc",
+   "core": "Chọn đuôi bằng hai câu hỏi: <b>loại từ gì</b> (động / tính từ, 있다·없다, 이다) và — nếu là động từ — <b>hành động xảy ra lúc nào</b> so với danh từ: đã xong <b>-(으)ㄴ</b> · đang / thường <b>-는</b> · chưa / để làm <b>-(으)ㄹ</b>.",
+   "goc": "Mẹo nhớ bằng phụ âm: <b>ㄴ</b> = sự việc đã thành (động từ đã xảy ra, hoặc đặc điểm tính từ đang có), <b>는</b> = đang chạy, <b>ㄹ</b> = chưa thành (sẽ, để, có thể). Vì vậy cùng -(으)ㄴ mà động từ là “đã” còn tính từ là “đang”. Tính từ / 이다 muốn nói “hồi trước từng…” thì không dùng -(으)ㄴ mà dùng <b>-던 / -았던</b> — học ở Nửa 3.",
+   "chia": [
+    ["", "Đã (xong)", "Đang / thường", "Chưa / để làm"],
+    ["가다", "**간** 곳", "가**는** 곳", "**갈** 곳"],
+    ["먹다", "먹**은** 음식", "먹**는** 음식", "먹**을** 음식"],
+    ["만들다 (ㄹ)", "만**든** 빵", "만드**는** 빵", "만**들** 빵"],
+    ["듣다 (ㄷ)", "들**은** 노래", "듣**는** 노래", "들**을** 노래"],
+    ["돕다 (ㅂ)", "도**운** 사람", "돕**는** 사람", "도**울** 사람"],
+    ["짓다 (ㅅ)", "지**은** 집", "짓**는** 집", "지**을** 집"],
+    ["크다 · 춥다 (tính từ)", "→ -던 / -았던 (Nửa 3)", "**큰** 가방 · 추**운** 날", "(chỉ trong mẫu: 클 거예요, 추울 때)"],
+    ["재미있다 (있다)", "→ -던 / -았던", "재미있**는** 책", "—"],
+    ["학생이다 (이다)", "→ -이던 / -이었던", "학생**인** 동생", "(학생일 때)"]
+   ],
+   "chiaNote": [
+    "Thứ tự chọn: (1) loại từ? (2) động từ thì hành động xảy ra trước, cùng lúc hay sau thời điểm được nói tới? (3) chia theo gốc.",
+    "Phát âm: sau -(으)ㄹ phụ âm đầu từ sau đọc căng — 갈 데 [갈 떼], 먹을 거 [머글 꺼]; -는 sau gốc có 받침 mũi hóa — 먹는 [멍는], 받는 [반는].",
+    "Gốc ㄹ rơi ㄹ trước cả ba đuôi: 만든 · 만드는 · 만들 (✗ 만들은, 만들을). 살다 → 산 · 사는 · 살 — trùng với 사다, phải dựa ngữ cảnh.",
+    "ㅅ bất quy tắc: 짓다 → 지은 / 지을 (rơi ㅅ trước 으), nhưng 짓는. 웃다, 씻다 là quy tắc: 웃은, 씻은."
+   ],
+   "tinh": [
+    {"t": "Kể lại", "c": "Kể bữa ăn cuối tuần.", "lv": "lịch sự", "ko": "지난 주말에 **간** 식당이 정말 맛있었어요.", "vi": "Quán đi cuối tuần trước ngon lắm.", "why": "Đã đi → -(으)ㄴ."},
+    {"t": "Hiện tại", "c": "Kể nơi học thêm.", "lv": "lịch sự", "ko": "요즘 제가 다니**는** 학원은 학교 근처에 있어요.", "vi": "Trung tâm tôi đang học dạo này ở gần trường.", "why": "Dạo này vẫn đi → -는."},
+    {"t": "Kế hoạch", "c": "Bạn hỏi nghỉ hè đi đâu.", "lv": "lịch sự", "ko": "방학 때 **갈** 곳을 아직 못 정했어요.", "vi": "Tôi chưa chọn được chỗ đi dịp nghỉ.", "why": "Chưa đi → -(으)ㄹ."},
+    {"t": "Hai thời gian trong một câu", "c": "Khoe sách mới.", "lv": "lịch sự", "ko": "제가 어제 **산** 책은 내일 수업에서 **읽을** 책이에요.", "vi": "Cuốn sách tôi mua hôm qua là cuốn sẽ đọc trong giờ học ngày mai.", "why": "Mỗi định ngữ theo thời gian của hành động của nó: mua (đã) → 산, đọc (chưa) → 읽을."}
+   ],
+   "rb": [
+    ["Bước 1", "Loại từ: tính từ → -(으)ㄴ; 있다/없다 → -는; 이다 → 인; động từ → bước 2."],
+    ["Bước 2", "Động từ: đã xong → -(으)ㄴ; đang / thường / sự thật → -는; chưa xảy ra / mục đích → -(으)ㄹ."],
+    ["Bước 3", "Chia theo gốc: 받침, ㄹ, ㄷ, ㅂ, ㅅ, ㅎ, 하다."]
+   ],
+   "sai": [
+    {"x": "**덥는** 날에는 집에 있어요.", "o": "**더운** 날에는 집에 있어요.", "why": "덥다 là tính từ → -(으)ㄴ, ㅂ → 우: 더운."},
+    {"x": "엄마가 **짓은** 밥", "o": "엄마가 **지은** 밥", "why": "짓다 (ㅅ) rơi ㅅ trước 으."},
+    {"x": "내일 **듣을** 수업", "o": "내일 **들을** 수업", "why": "듣다 (ㄷ) → ㄹ trước 으."},
+    {"x": "(ý: khu tôi đang sống) 지금 제가 **산** 동네", "o": "지금 제가 **사는** 동네", "why": "산 = đã sống / đã mua. Đang sống → 사는."},
+    {"x": "**빨갛은** 사과", "o": "**빨간** 사과", "why": "ㅎ bất quy tắc: rơi ㅎ, không thêm 으."}
+   ],
+   "pb": [
+    {"vs": "-(으)ㄴ của động từ ↔ -(으)ㄴ của tính từ", "d": "Cùng đuôi, khác thì: động từ = đã xảy ra, tính từ = đang như vậy.", "ex": [["**작은** 방", "căn phòng nhỏ (bây giờ)"], ["**잔** 방", "căn phòng (tôi) đã ngủ (자다 → 잔)"]]}
+   ],
+   "topik": [
+    {"src": "Đọc · kỳ 83 câu 23", "ko": "그것은 바로 어렸을 때 **돌아가신** 아버지의 일기장이었다.", "note": "돌아가시다 (qua đời, kính ngữ) + -ㄴ = đã mất. 어렸을 때 = 어리다 + -았을 때. Chuỗi: [어렸을 때 돌아가신] 아버지의 일기장 → “cuốn nhật ký của người bố đã mất khi tôi còn nhỏ”."},
+    {"src": "Đọc · kỳ 83 câu 23", "ko": "30년 전 날짜가 **적힌** 일기장의 누렇게 **변한** 페이지마다 아버지의 하루하루가 적혀 있었다.", "note": "적히다 → 적힌 (được ghi), 변하다 → 변한 (đã đổi màu): cả hai động từ → -(으)ㄴ = đã xảy ra. Một câu, hai định ngữ cho hai danh từ khác nhau (일기장, 페이지)."}
+   ],
+   "hoi": [
+    {"q": "살 집 có mấy cách hiểu?", "a": "Hai: nhà <b>để ở</b> (살다 → 살) và nhà <b>sẽ mua</b> (사다 → 살). Ngữ cảnh quyết định."},
+    {"q": "“Áo đã mặc hôm qua / áo đang mặc / áo sẽ mặc ngày mai”?", "a": "어제 <b>입은</b> 옷 / 지금 <b>입는</b> 옷 (hoặc 입고 있는 옷) / 내일 <b>입을</b> 옷."},
+    {"q": "Tính từ muốn nói “hồi đó…” (căn phòng hồi đó nhỏ) thì dùng gì?", "a": "Không dùng 작은 (= đang nhỏ). Dùng <b>작았던 / 작던</b> 방 — học ở Nửa 3."}
+   ],
+   "luyen": [
+    {"q": "날씨가 (    ) 날에는 밖에 안 나가요.", "o": ["더운", "덥는", "덥은", "더울는"], "w": "Tính từ 덥다 (ㅂ) → 더운."},
+    {"q": "내일 (    ) 노래를 미리 들어 봤어요. (bài sẽ hát ngày mai)", "o": ["부를", "부른", "부르는", "불를"], "w": "Chưa hát → -(으)ㄹ: 부를."},
+    {"q": "할아버지가 직접 (    ) 집이에요.", "o": ["지은", "짓은", "짓는은", "질"], "w": "Đã xây → -(으)ㄴ; ㅅ rơi → 지은."},
+    {"q": "지금 (    ) 책이 정말 재미있어요.", "o": ["읽는", "읽은", "읽을", "일는"], "w": "Đang đọc → -는."},
+    {"q": "Chọn đúng bộ ba: bánh đã làm / bánh đang làm / bánh sẽ làm.", "o": ["만든 빵 / 만드는 빵 / 만들 빵", "만들은 빵 / 만들는 빵 / 만들을 빵", "만든 빵 / 만들 빵 / 만드는 빵", "만드는 빵 / 만든 빵 / 만들 빵"], "w": "Gốc ㄹ rơi trước cả ba đuôi."},
+    {"q": "Câu nào sai?", "o": ["재미있은 책을 빌렸어요.", "내일 입을 옷을 샀어요.", "제가 자주 듣는 노래예요.", "하얀 눈이 내려요."], "w": "Câu sai: 재미있은 → 재미있는. (Câu này lựa chọn đúng là câu sai.)"}
+   ],
+   "goT": "Luyện gõ đuôi định ngữ",
+   "go": [
+    {"c": "Tính từ · đang có", "g": "덥다", "f": "(    ) 날에는 밖에 안 나가요.", "a": ["더운"], "vi": "Những ngày nóng tôi không ra ngoài.", "w": "ㅂ → 우 + ㄴ."},
+    {"c": "Động từ · đang / thường", "g": "살다", "f": "제가 (    ) 동네는 조용해요.", "a": ["사는"], "vi": "Khu tôi sống yên tĩnh.", "w": "Gốc ㄹ rơi trước -는."},
+    {"c": "Động từ · đã xong", "g": "만들다", "f": "이건 어제 제가 (    ) 빵이에요.", "a": ["만든"], "vi": "Đây là bánh tôi làm hôm qua.", "w": "Gốc ㄹ rơi trước -ㄴ."},
+    {"c": "Động từ · chưa / để làm", "g": "읽다", "f": "주말에 (    ) 책을 샀어요.", "a": ["읽을"], "vi": "Tôi đã mua sách để đọc cuối tuần.", "w": "Có 받침 → -을."},
+    {"c": "Động từ · đã xong", "g": "듣다", "f": "어제 (    ) 노래 제목이 뭐예요?", "a": ["들은"], "vi": "Bài hát nghe hôm qua tên là gì?", "w": "ㄷ → ㄹ trước 으."},
+    {"c": "Động từ · đang", "g": "듣다", "f": "지금 (    ) 노래가 좋아요.", "a": ["듣는", "듣고 있는"], "vi": "Bài đang nghe hay quá.", "w": "Trước -는 giữ ㄷ."},
+    {"c": "있다 / 없다", "g": "맛있다", "f": "(    ) 음식을 먹고 싶어요.", "a": ["맛있는"], "vi": "Tôi muốn ăn món ngon.", "w": "있다 → -는."},
+    {"c": "Tính từ · ㅎ bất quy tắc", "g": "하얗다", "f": "(    ) 눈이 내려요.", "a": ["하얀"], "vi": "Tuyết trắng đang rơi.", "w": "Rơi ㅎ: 하얀."},
+    {"c": "이다", "g": "의사이다", "f": "(    ) 언니가 있어요.", "a": ["의사인"], "vi": "Tôi có chị gái làm bác sĩ.", "w": "이다 → 인."},
+    {"c": "Động từ ㅂ · chưa", "g": "돕다", "f": "저를 (    ) 사람이 있어요?", "a": ["도울", "도와줄"], "vi": "Có ai giúp tôi không?", "w": "ㅂ → 우 + ㄹ: 도울."},
+    {"c": "Động từ ㅅ · đã xong", "g": "짓다", "f": "할아버지가 (    ) 집이에요.", "a": ["지은"], "vi": "Đây là ngôi nhà ông tôi đã xây.", "w": "Rơi ㅅ trước 으."},
+    {"c": "Tính từ gốc ㄹ", "g": "멀다", "f": "(    ) 곳에 살아서 자주 늦어요.", "a": ["먼"], "vi": "Tôi sống ở chỗ xa nên hay bị muộn.", "w": "Gốc ㄹ rơi: 먼."}
+   ],
+   "em": [
+    "Viết 3 câu về cùng một đồ vật với 3 thời gian: đồ đã mua · đồ đang dùng · đồ sẽ mua."
+   ],
+   "co": "Bảng này là “bản đồ” cả buổi — để trên màn hình khi làm các bước sau. Hoạt động nhanh: cô đọc động từ + thời gian (만들다 · đã), em nói cụm định ngữ (만든 빵). 12 câu gõ: em làm trước, cô chữa theo gốc (ㄹ, ㄷ, ㅂ, ㅅ, ㅎ)."
+  },
+  {
+   "id": "cd_dn_ghep",
+   "t": "Ghép hai câu thành một · đọc câu định ngữ dài",
+   "cn": "Định ngữ – ghép câu, dịch",
+   "part": 1,
+   "m": 15,
+   "why": "Bỏ danh từ trùng + tiểu từ; chiều đọc: tìm danh từ chính rồi dịch ngược",
+   "core": "Hai câu có chung một danh từ → bỏ danh từ trùng (và tiểu từ của nó) ở câu bổ nghĩa, đổi đuôi thành định ngữ, đặt trước danh từ chính: 어제 책을 샀어요 + 그 책이 재미있어요 → <b>어제 산 책</b>이 재미있어요. Chiều đọc / dịch: tìm <b>danh từ ngay sau đuôi -ㄴ / -는 / -ㄹ / -던</b>, dịch danh từ đó trước rồi lùi lên.",
+   "goc": "Danh từ trùng có thể giữ nhiều vai trong câu bổ nghĩa: chủ ngữ (친구가 왔어요 → <b>온</b> 친구), tân ngữ (친구를 만났어요 → <b>만난</b> 친구), nơi chốn (식당에서 먹었어요 → 밥을 <b>먹은</b> 식당), người cùng làm (친구하고 여행했어요 → 같이 <b>여행한</b> 친구). Tiểu từ của nó <b>biến mất</b> — người nghe tự suy ra vai từ nghĩa. Tiếng Việt thường chèn “mà”, “nơi”, “người”: 제가 어제 먹은 음식 = <i>món (mà) tôi ăn hôm qua</i>. Chủ ngữ riêng của cụm định ngữ luôn đi với <b>이/가</b>; 은/는 để cho chủ đề cả câu: <b>제가</b> 만든 케이크<b>는</b> 맛있어요.",
+   "chia": [
+    ["Câu bổ nghĩa", "Câu chính", "Ghép"],
+    ["친구가 한국에서 **왔어요**.", "그 친구는 제 룸메이트예요.", "한국에서 **온** 친구는 제 룸메이트예요."],
+    ["제가 케이크를 **만들었어요**.", "그 케이크가 맛있어요.", "제가 **만든** 케이크가 맛있어요."],
+    ["우리가 그 식당에서 밥을 **먹었어요**.", "그 식당이 문을 닫았어요.", "우리가 밥을 **먹은** 식당이 문을 닫았어요."],
+    ["사람들이 매일 그 길로 **다녀요**.", "그 길이 위험해요.", "사람들이 매일 **다니는** 길이 위험해요."],
+    ["내일 그 장소에서 회의를 **해요**.", "장소를 아직 못 찾았어요.", "내일 회의를 **할** 장소를 아직 못 찾았어요."]
+   ],
+   "chiaNote": [
+    "Thời gian của câu bổ nghĩa quyết định đuôi: đã → -(으)ㄴ, đang / thường → -는, chưa → -(으)ㄹ. Đuôi -아요 / -았어요 của nó mất hẳn.",
+    "Cụm định ngữ dài bao nhiêu cũng được: **작년에 한국에서 처음 만난** 친구. Mọi thứ bổ nghĩa đứng trước, danh từ chính đứng cuối cụm.",
+    "Hai tính từ cho một danh từ → nối bằng -고: **싸고 맛있는** 식당 (✗ 싼 맛있는). Định ngữ khác loại thì xếp liền: 제가 자주 가는 **작은** 카페."
+   ],
+   "tinh": [
+    {"t": "Giới thiệu bạn", "c": "Cho bạn xem ảnh.", "lv": "lịch sự", "ko": "이 사람은 제가 한국에서 처음 사**귄** 친구예요.", "vi": "Đây là người bạn đầu tiên tôi quen ở Hàn.", "why": "사귀다 → 사귄. Danh từ chính 친구."},
+    {"t": "Hỏi lại tên quán", "c": "Muốn rủ bạn quay lại quán cũ.", "lv": "lịch sự", "ko": "지난번에 우리가 같이 **간** 식당 이름이 뭐였죠?", "vi": "Quán lần trước bọn mình đi cùng tên là gì nhỉ?", "why": "우리가 그 식당에 같이 갔어요 → 같이 간 식당."},
+    {"t": "Tìm quán", "c": "Hỏi người địa phương.", "lv": "lịch sự", "ko": "이 근처에 싸고 맛있**는** 식당 있어요?", "vi": "Gần đây có quán nào rẻ mà ngon không?", "why": "Hai tính từ nối -고, đuôi định ngữ ở từ cuối."},
+    {"t": "Đọc thông báo", "c": "Thông báo ở thư viện (văn viết).", "lv": "trang trọng", "ko": "도서관에서 빌**린** 책은 2주 안에 반납해야 합니다.", "vi": "Sách mượn ở thư viện phải trả trong vòng 2 tuần.", "why": "Định ngữ làm chủ đề cả câu: [도서관에서 빌린 책]은…"}
+   ],
+   "rb": [
+    ["Danh từ trùng", "Chỉ giữ ở câu chính; bỏ ở câu bổ nghĩa cùng tiểu từ của nó."],
+    ["Đuôi", "Theo thời gian của câu bổ nghĩa."],
+    ["Chủ ngữ của cụm", "이/가; 은/는 chỉ cho chủ đề cả câu."],
+    ["Đọc câu dài", "Gặp -ㄴ / -는 / -ㄹ / -던 + danh từ → gạch danh từ chính, dịch nó trước, rồi dịch cụm phía trước."]
+   ],
+   "sai": [
+    {"x": "제가 **그 케이크를** 만든 케이크가 맛있어요.", "o": "제가 만든 케이크가 맛있어요.", "why": "Danh từ trùng (케이크를) phải bỏ ở cụm định ngữ."},
+    {"x": "**저는** 만든 케이크는 맛있어요.", "o": "**제가** 만든 케이크는 맛있어요.", "why": "Chủ ngữ trong cụm dùng 이/가."},
+    {"x": "한국에서 **왔은** 친구", "o": "한국에서 **온** 친구", "why": "Bỏ -았-, gắn -(으)ㄴ vào gốc: 오다 → 온."},
+    {"x": "**싼 맛있는** 식당", "o": "**싸고 맛있는** 식당", "why": "Hai tính từ cùng bổ nghĩa nối bằng -고."},
+    {"x": "제가 어제 만난 친구가 의사예요. → “Tôi đã gặp người bạn hôm qua là bác sĩ.”", "o": "→ “Người bạn tôi gặp hôm qua là bác sĩ.”", "why": "Dịch sai vì không tìm danh từ chính. 친구 là chủ ngữ của cả câu; 제가 어제 만난 chỉ là định ngữ."}
+   ],
+   "pb": [
+    {"vs": "Định ngữ + danh từ ↔ định ngữ + 것", "d": "Định ngữ + danh từ thật (책, 사람) = “cái / người … ấy”. Định ngữ + 것 = “cái mà…” hoặc “việc …”.", "ex": [["제가 산 **것**이에요.", "Đây là cái tôi mua."], ["책을 읽는 **것**을 좋아해요.", "Tôi thích (việc) đọc sách."]]}
+   ],
+   "topik": [
+    {"src": "Đọc · kỳ 83 câu 14", "ko": "(다) 내일은 내가 10년 동안 **다니던** 회사를 그만**두는** 날이다.", "note": "Hai lớp định ngữ: [내가 10년 동안 다니던] 회사 → [회사를 그만두는] 날. Đọc ngược: 날 (ngày) → ngày nghỉ việc ở công ty → công ty tôi đã làm 10 năm. Dịch: “Mai là ngày tôi nghỉ việc ở công ty đã gắn bó 10 năm.”"},
+    {"src": "Đọc · kỳ 91 câu 48", "ko": "이런 상황에서 올해 예술 활동을 증명하지 못해 지원을 못 **받았던** 예술인을 위해 예술인 복지법이 개정되었다.", "note": "Cụm dài trước 예술인: [올해 예술 활동을 증명하지 못해 지원을 못 받았던] 예술인 = “những nghệ sĩ năm nay không chứng minh được hoạt động nghệ thuật nên không nhận được hỗ trợ”. Tìm 예술인 trước, câu thành dễ."},
+    {"src": "Đọc · kỳ 83 câu 23", "ko": "며칠 전 창고 선반 위에 올려 **둔** 가방을 꺼내는데 …", "note": "올려 두다 (để sẵn lên) → 올려 둔 가방: cái túi (tôi) đã để trên kệ kho."}
+   ],
+   "hoi": [
+    {"q": "Dịch: 제가 지난주에 도서관에서 빌린 책", "a": "Danh từ chính 책 → “cuốn sách (mà) tôi mượn ở thư viện tuần trước”."},
+    {"q": "Ghép: 친구가 선물을 줬어요 + 그 선물이 마음에 들어요.", "a": "친구가 <b>준</b> 선물이 마음에 들어요."},
+    {"q": "Trong câu kỳ 83 câu 14, danh từ chính của cả câu là gì?", "a": "날 (ngày): 내일은 … 날이다. 회사 chỉ là danh từ chính của lớp định ngữ bên trong."}
+   ],
+   "luyen": [
+    {"q": "Ghép: 친구가 케이크를 만들었어요. + 케이크가 맛있어요.", "o": ["친구가 만든 케이크가 맛있어요.", "친구가 케이크를 만든 케이크가 맛있어요.", "친구는 만든 케이크가 맛있어요.", "케이크 친구가 만든 맛있어요."], "w": "Bỏ 케이크를 ở cụm; chủ ngữ cụm 친구가."},
+    {"q": "Ghép: 저는 매일 그 버스를 타요. + 그 버스가 오늘 안 와요.", "o": ["제가 매일 타는 버스가 오늘 안 와요.", "저는 매일 타는 버스가 오늘 안 와요.", "제가 매일 탈 버스가 오늘 안 와요.", "버스를 제가 매일 타는 오늘 안 와요."], "w": "매일 → thói quen → -는; chủ ngữ cụm 제가."},
+    {"q": "(    ) 식당을 알아요? (rẻ và ngon)", "o": ["싸고 맛있는", "싼 맛있는", "싸서 맛있는", "싸고 맛있은"], "w": "Hai tính từ nối -고; 맛있다 → 맛있는."},
+    {"q": "Danh từ chính của cụm: 어제 우리 반에 새로 온 학생", "o": ["학생", "우리 반", "어제", "온"], "w": "Danh từ đứng ngay sau đuôi định ngữ (온) là danh từ chính."},
+    {"q": "내일 발표할 자료를 아직 못 만들었어요. — 발표할 자료 là:", "o": ["tài liệu để thuyết trình ngày mai", "tài liệu đã thuyết trình hôm qua", "tài liệu đang thuyết trình", "ngày mai thuyết trình tài liệu"], "w": "-(으)ㄹ = chưa xảy ra / để làm."},
+    {"q": "Dịch đúng: 한국에서 처음 사귄 친구", "o": ["người bạn đầu tiên tôi quen ở Hàn", "lần đầu tôi kết bạn ở Hàn", "người bạn lần đầu đến Hàn", "bạn ở Hàn quen tôi lần đầu"], "w": "Danh từ chính 친구; 사귀다 (kết bạn) → 사귄."}
+   ],
+   "goT": "Luyện ghép câu",
+   "go": [
+    {"c": "Ghép hai câu", "g": "친구가 선물을 줬어요. + 그 선물이 마음에 들어요.", "f": "친구가 (    ) 선물이 마음에 들어요.", "a": ["준"], "vi": "Tôi thích món quà bạn tặng.", "w": "Đã tặng → 주다 + ㄴ = 준."},
+    {"c": "Ghép hai câu", "g": "제가 매일 그 카페에 가요. + 그 카페는 조용해요.", "f": "제가 매일 (    ) 카페는 조용해요.", "a": ["가는"], "vi": "Quán cà phê tôi đến mỗi ngày yên tĩnh.", "w": "Thói quen → -는."},
+    {"c": "Ghép hai câu", "g": "다음 주에 그 영화를 볼 거예요. + 영화표를 샀어요.", "f": "다음 주에 (    ) 영화표를 샀어요.", "a": ["볼"], "vi": "Tôi đã mua vé bộ phim sẽ xem tuần sau.", "w": "Chưa xem → -(으)ㄹ."},
+    {"c": "Ghép hai câu", "g": "어제 그 식당에서 밥을 먹었어요. + 그 식당이 문을 닫았어요.", "f": "어제 밥을 (    ) 식당이 문을 닫았어요.", "a": ["먹은"], "vi": "Quán hôm qua ăn đã đóng cửa.", "w": "Đã ăn → 먹은; 에서 biến mất cùng danh từ trùng."},
+    {"c": "Ghép hai câu", "g": "동생이 그 노래를 자주 불러요. + 그 노래는 옛날 노래예요.", "f": "동생이 자주 (    ) 노래는 옛날 노래예요.", "a": ["부르는"], "vi": "Bài em tôi hay hát là bài hát cũ.", "w": "Thói quen → 부르는."},
+    {"c": "Ghép hai câu", "g": "저는 그 사람을 몰라요. + 그 사람이 저에게 인사했어요.", "f": "(    ) 사람이 저에게 인사했어요.", "a": ["모르는"], "vi": "Một người lạ chào tôi.", "w": "모르다 động từ → 모르는 (✗ 모른)."},
+    {"c": "Ghép hai câu", "g": "주말에 그 친구하고 같이 여행할 거예요. + 그 친구를 소개할게요.", "f": "주말에 같이 (    ) 친구를 소개할게요.", "a": ["여행할", "여행 갈"], "vi": "Tôi giới thiệu người bạn sẽ đi du lịch cùng cuối tuần.", "w": "Chưa đi → -(으)ㄹ; 하고 biến mất."},
+    {"c": "Ghép hai câu (kính ngữ)", "g": "할머니가 그 집에서 사셨어요. + 그 집은 시골에 있어요.", "f": "할머니가 (    ) 집은 시골에 있어요.", "a": ["사신", "사시던", "사셨던", "살던", "살았던"], "vi": "Ngôi nhà bà từng sống ở quê.", "w": "살다 + 시 + ㄴ = 사신 (gốc ㄹ rơi trước 시). -던 / -았던 cũng đúng (Nửa 3)."}
+   ],
+   "em": [
+    "Viết 3 câu, mỗi câu ghép từ hai câu đơn về một người / đồ vật / nơi chốn trong đời em.",
+    "Chép một câu dài trong đề đọc, gạch danh từ chính, rồi dịch."
+   ],
+   "co": "Thao tác trên bảng: viết hai câu, gạch danh từ trùng, xóa danh từ + tiểu từ ở câu bổ nghĩa, đổi đuôi, đẩy lên trước danh từ chính. Dạy chiều đọc bằng câu kỳ 83 câu 14 (hai lớp định ngữ): khoanh 날 → 회사 → đọc ngược."
+  },
+  {
+   "id": "cd_dn_mau",
+   "t": "Định ngữ + danh từ phụ thuộc (것 · 수 · 적 · 중 · 지 · 때 · 바람에…)",
+   "cn": "Định ngữ – mẫu cố định",
+   "part": 1,
+   "m": 15,
+   "why": "Mỗi danh từ phụ thuộc “ưa” một đuôi — nối sang câu 3–4 TOPIK",
+   "core": "Rất nhiều mẫu ngữ pháp 1B–3A thật ra là <b>định ngữ + danh từ phụ thuộc</b>: -(으)ㄹ <b>수</b> 있다, -(으)ㄴ <b>적</b>이 있다, -는 <b>중</b>이다, -(으)ㄴ <b>지</b>, -(으)ㄹ <b>때</b>, -는 <b>바람</b>에… Mỗi danh từ “ưa” một đuôi riêng — học theo nhóm đuôi thì không phải nhớ rời từng mẫu.",
+   "goc": "Danh từ phụ thuộc (의존 명사) không đứng một mình được (적이 있어요 ✗), nên luôn cần định ngữ phía trước. Đuôi nào đi với nó là do nghĩa: <b>-(으)ㄹ</b> cho thứ <b>chưa có</b> (khả năng 수, cách làm 줄, thời điểm 때, suýt 뻔, sẽ 거); <b>-(으)ㄴ</b> cho thứ <b>đã có rồi</b> (kinh nghiệm 적, sau khi 후, thời gian trôi qua 지); <b>-는</b> cho thứ <b>đang chạy</b> (중, 동안, 길에) — riêng <b>바람에</b> luôn -는 dù chuyện đã xảy ra. Nhóm còn lại <b>đổi theo thì / loại từ</b> như định ngữ thường: 것 같다, 편이다, 척하다, 대로, 모양이다, 셈이다, 탓에.",
+   "chia": [
+    ["Đuôi", "Danh từ / mẫu", "Nghĩa", "Ví dụ"],
+    ["chỉ -(으)ㄹ", "수 있다/없다 · 줄 알다/모르다", "có thể · biết cách", "수영**할** 수 있어요 · 운전**할** 줄 알아요"],
+    ["", "때 · 뻔하다", "khi · suýt", "어**릴** 때 · 넘어**질** 뻔했어요"],
+    ["", "거예요 (= 것이에요) · 리가 없다", "sẽ · không lẽ nào", "**갈** 거예요 · 그**럴** 리가 없어요"],
+    ["chỉ -(으)ㄴ", "적이 있다/없다", "đã từng / chưa từng", "가 **본** 적이 있어요"],
+    ["", "후에 · 다음에 · 지 (+ thời gian)", "sau khi · đã được (bao lâu)", "밥을 먹**은** 후에 · 한국에 **온** 지 1년"],
+    ["chỉ -는", "중이다 · 동안 · 길에", "đang · trong lúc · trên đường", "회의하**는** 중이에요 · 집에 가**는** 길에"],
+    ["", "바람에", "vì (chuyện bất ngờ, kết quả xấu)", "늦게 일어나**는** 바람에 (dù đã xảy ra)"],
+    ["theo thì / loại từ", "것 같다", "hình như", "**온** 것 같아요 · 오**는** 것 같아요 · **올** 것 같아요"],
+    ["", "편이다", "thuộc loại, khá", "많이 먹**는** 편 (động) · 키가 **큰** 편 (tính)"],
+    ["", "척하다 · 대로 · 탓에", "giả vờ · theo như · tại vì", "모르**는** 척 · 들**은** 대로 · 늦게 **온** 탓에"]
+   ],
+   "chiaNote": [
+    "**바람에** chỉ nhận -는, kể cả chuyện đã xảy ra: 버스를 잘못 타**는** 바람에 늦었어요 (✗ 탄 바람에). **탓에** đổi theo thì: 잘못 **탄** 탓에 (đã đi nhầm).",
+    "**때**: -(으)ㄹ 때 = lúc (đang / sắp) làm; muốn nói rõ việc đã xong → -았/었을 때 (2B Bài 14): 한국에 **갔을** 때 친구를 만났어요.",
+    "**-(으)ㄴ 지** + thời gian + 되다 / 지나다: 이사를 **온** 지 1년이 됐어요 (kỳ 102 câu 1; đề in liền “온지”). Đừng nhầm với -는지 / -(으)ㄴ지 “không biết có… không”.",
+    "**편이다**: động từ -는 편, tính từ -(으)ㄴ 편: 많이 먹**는** 편 · 키가 **큰** 편 (✗ 크는 편)."
+   ],
+   "tinh": [
+    {"t": "Kể kinh nghiệm", "c": "Bạn hỏi đã đến Jeju chưa.", "lv": "lịch sự", "ko": "네, 제주도에 가 **본** 적이 있어요.", "vi": "Vâng, tôi đã từng đi Jeju.", "why": "적 = kinh nghiệm đã có → -(으)ㄴ."},
+    {"t": "Đang bận", "c": "Nghe máy giữa cuộc họp.", "lv": "lịch sự", "ko": "지금 회의하**는** 중이에요. 이따가 전화할게요.", "vi": "Tôi đang họp. Lát tôi gọi lại.", "why": "중 = đang → -는."},
+    {"t": "Xin lỗi vì muộn", "c": "Đến lớp muộn.", "lv": "lịch sự", "ko": "버스를 잘못 타**는** 바람에 늦었어요. 죄송해요.", "vi": "Em đi nhầm xe buýt nên đến muộn. Em xin lỗi.", "why": "바람에 luôn -는, dù đã đi nhầm."},
+    {"t": "Thời gian ở Hàn", "c": "Người quen hỏi sang Hàn lâu chưa.", "lv": "lịch sự", "ko": "한국에 **온** 지 벌써 2년이 됐어요.", "vi": "Tôi sang Hàn đã được 2 năm rồi.", "why": "-(으)ㄴ 지 + thời gian + 되다."},
+    {"t": "Suýt ngã", "c": "Kể đường trơn.", "lv": "lịch sự", "ko": "길이 미끄러워서 넘어**질** 뻔했어요.", "vi": "Đường trơn nên tôi suýt ngã.", "why": "뻔하다 → -(으)ㄹ (chuyện chưa thành)."},
+    {"t": "Đoán thời tiết", "c": "Nhìn trời qua cửa sổ.", "lv": "lịch sự", "ko": "하늘이 어두워요. 비가 **올** 것 같아요.", "vi": "Trời tối sầm. Hình như sắp mưa.", "why": "것 같다 đổi theo thì: chưa mưa → 올."}
+   ],
+   "rb": [
+    ["Danh từ phụ thuộc", "Không đứng một mình → luôn có định ngữ phía trước."],
+    ["Chỉ -(으)ㄹ", "수, 줄, 때, 뻔, 거 (것)예요, 리."],
+    ["Chỉ -(으)ㄴ", "적, 후, 다음, 지 (+ thời gian)."],
+    ["Chỉ -는", "중, 동안, 길, 바람에."],
+    ["Theo thì / loại từ", "것 같다, 편, 척, 대로, 모양, 셈, 탓."]
+   ],
+   "sai": [
+    {"x": "버스를 잘못 **탄** 바람에 늦었어요.", "o": "버스를 잘못 **타는** 바람에 늦었어요.", "why": "바람에 chỉ đi với -는."},
+    {"x": "제주도에 가 **보는** 적이 있어요.", "o": "제주도에 가 **본** 적이 있어요.", "why": "적 = kinh nghiệm → -(으)ㄴ."},
+    {"x": "수영을 **하는** 수 있어요.", "o": "수영을 **할** 수 있어요.", "why": "수 luôn đi với -(으)ㄹ."},
+    {"x": "지금 회의를 **한** 중이에요.", "o": "지금 회의를 하**는** 중이에요.", "why": "중 → -는."},
+    {"x": "밥을 **먹는** 후에 약을 드세요.", "o": "밥을 **먹은** 후에 약을 드세요.", "why": "후 (sau khi) → -(으)ㄴ."},
+    {"x": "한국에 **오는** 지 1년이 됐어요.", "o": "한국에 **온** 지 1년이 됐어요.", "why": "Thời gian trôi qua từ một việc đã xảy ra → -(으)ㄴ 지."},
+    {"x": "저는 키가 **크는** 편이에요.", "o": "저는 키가 **큰** 편이에요.", "why": "크다 (cao) là tính từ → -(으)ㄴ 편."}
+   ],
+   "pb": [
+    {"vs": "-는 바람에 ↔ -(으)ㄴ 탓에 (câu 3 TOPIK)", "d": "Cùng “vì … nên (kết quả xấu)”. <b>바람에</b>: luôn -는, nhấn sự việc bất ngờ ngoài ý muốn. <b>탓에</b>: -(으)ㄴ cho việc đã xảy ra, có ý đổ lỗi.", "ex": [["늦게 일어나**는** 바람에 기차를 놓쳤어요.", "Vì dậy muộn nên lỡ tàu."], ["늦게 일어**난** 탓에 기차를 놓쳤어요.", "Tại dậy muộn nên lỡ tàu."]]},
+    {"vs": "-(으)ㄹ 때 ↔ -았/었을 때", "d": "-(으)ㄹ 때: lúc (đang / sắp) làm. -았/었을 때: khi việc đó đã xong.", "ex": [["한국에 **갈** 때 선물을 샀어요.", "Lúc chuẩn bị đi Hàn, tôi mua quà (mua trước khi đi)."], ["한국에 **갔을** 때 선물을 샀어요.", "Khi sang tới Hàn, tôi mua quà (mua ở Hàn)."]]},
+    {"vs": "-(으)ㄴ / -는 / -(으)ㄹ 것 같다 (2A Bài 4, 6, 7)", "d": "Cùng danh từ 것, đổi đuôi = đổi thời gian của việc mình đoán.", "ex": [["비가 **온** 것 같아요.", "Hình như (vừa) mưa rồi."], ["비가 오**는** 것 같아요.", "Hình như đang mưa."], ["비가 **올** 것 같아요.", "Hình như sắp mưa."]]}
+   ],
+   "topik": [
+    {"src": "Đọc · kỳ 96 câu 3", "ko": "버스를 잘못 __타는 바람에__ 수업에 늦었다. · đáp án: **탄 탓에**", "note": "Hai mẫu cùng nghĩa, khác đuôi: 바람에 luôn -는, 탓에 theo thì (đã đi nhầm → 탄). Nhiễu 타는 김에, 탄 반면에, 타는 대신에 — đúng hình thức nhưng sai nghĩa."},
+    {"src": "Đọc · kỳ 37 câu 3", "ko": "서둘러 __나온 탓에__ 책상 위에 **있는** 지갑을 안 가지고 나왔다. · đáp án: **나오는 바람에**", "note": "Chiều ngược của kỳ 96: 나온 탓에 = 나오는 바람에. Trong câu còn một định ngữ thường: 책상 위에 있는 지갑."},
+    {"src": "Đọc · kỳ 102 câu 1", "ko": "이 동네로 이사를 (**온지**) 일 년이 됐다.", "note": "-(으)ㄴ 지 + thời gian + 되다. Nhiễu 올 때: hình thức đúng (때 + -(으)ㄹ) nhưng nghĩa “lúc chuyển đến” không hợp với “được một năm”."},
+    {"src": "Đọc · kỳ 47 câu 1", "ko": "내일 친구와 함께 놀이공원에 (**가기로 했다**). · nhiễu: 가는 편이다 · 가는 중이다 · 간 적이 있다", "note": "Ba lựa chọn nhiễu đều là định ngữ + danh từ phụ thuộc. Loại bằng thời gian: 내일 (chưa xảy ra) ↔ 간 적 (đã từng), 가는 중 (đang đi) đều sai."},
+    {"src": "Đọc · kỳ 60 câu 3", "ko": "동생은 차를 __타기만 하면__ 멀미를 한다. · đáp án: **탈 때마다**", "note": "때 → -(으)ㄹ: 탈 때마다 = mỗi khi đi xe."}
+   ],
+   "hoi": [
+    {"q": "Vì sao “늦게 일어나는 바람에” mà không phải “일어난 바람에”, dù việc đã xảy ra?", "a": "바람에 chỉ nhận <b>-는</b> — đây là đặc điểm riêng của danh từ 바람, không theo thì. Muốn dùng -(으)ㄴ thì đổi sang 탓에: 늦게 일어<b>난</b> 탓에."},
+    {"q": "“Em học tiếng Hàn được 6 tháng rồi.”", "a": "한국어를 <b>배운</b> 지 6개월이 됐어요."},
+    {"q": "키가 크는 편이에요 sai ở đâu?", "a": "크다 (cao) là tính từ → <b>큰</b> 편. -는 편 chỉ cho động từ (많이 먹는 편)."}
+   ],
+   "luyen": [
+    {"q": "지금 회의를 (    ) 중이에요.", "o": ["하는", "한", "할", "했는"], "w": "중 → -는."},
+    {"q": "저는 김치를 만들어 (    ) 적이 있어요.", "o": ["본", "보는", "볼", "봤은"], "w": "적 → -(으)ㄴ."},
+    {"q": "길이 미끄러워서 넘어(    ) 뻔했어요.", "o": ["질", "진", "지는", "졌을"], "w": "뻔하다 → -(으)ㄹ."},
+    {"q": "늦게 (    ) 바람에 비행기를 놓쳤어요.", "o": ["일어나는", "일어난", "일어날", "일어났는"], "w": "바람에 → luôn -는."},
+    {"q": "한국어를 (    ) 지 1년이 됐어요.", "o": ["배운", "배우는", "배울", "배웠는"], "w": "-(으)ㄴ 지 + thời gian."},
+    {"q": "밥을 (    ) 후에 산책해요.", "o": ["먹은", "먹는", "먹을", "먹었을"], "w": "후에 → -(으)ㄴ."},
+    {"q": "저는 많이 먹는 (    )이에요. (thuộc loại ăn nhiều)", "o": ["편", "중", "적", "수"], "w": "-는 편이다 = thuộc loại…"},
+    {"q": "(Kỳ 96 câu 3) 버스를 잘못 __타는 바람에__ 수업에 늦었다. — gần nghĩa nhất", "o": ["탄 탓에", "타는 김에", "탄 반면에", "타는 대신에"], "w": "바람에 = 탓에 (vì, kết quả xấu). 김에 nhân tiện, 반면에 ngược lại, 대신에 thay vì."},
+    {"q": "(Kỳ 102 câu 1) 이 동네로 이사를 (    ) 일 년이 됐다.", "o": ["온지", "올 때", "오거나", "오다가"], "w": "-(으)ㄴ 지 + 일 년이 되다."}
+   ],
+   "goT": "Luyện gõ: đuôi theo danh từ phụ thuộc",
+   "go": [
+    {"c": "đã từng", "g": "가다 + 적이 있다", "f": "부산에 가 (    ) 적이 있어요.", "a": ["본"], "vi": "Tôi đã từng đi Busan.", "w": "적 → -(으)ㄴ: 보다 → 본."},
+    {"c": "đang", "g": "통화하다 + 중", "f": "지금 (    ) 중이에요.", "a": ["통화하는", "통화 중"], "vi": "Tôi đang nói chuyện điện thoại.", "w": "중 → -는."},
+    {"c": "vì (chuyện bất ngờ)", "g": "고장 나다 + 바람에", "f": "차가 고장 (    ) 바람에 늦었어요.", "a": ["나는"], "vi": "Xe hỏng nên tôi đến muộn.", "w": "바람에 → luôn -는."},
+    {"c": "đã được bao lâu", "g": "결혼하다 + 지", "f": "(    ) 지 5년이 됐어요.", "a": ["결혼한"], "vi": "Chúng tôi cưới nhau được 5 năm rồi.", "w": "-(으)ㄴ 지."},
+    {"c": "khi", "g": "자다 + 때", "f": "(    ) 때 휴대폰을 꺼요.", "a": ["잘"], "vi": "Khi ngủ tôi tắt điện thoại.", "w": "때 → -(으)ㄹ."},
+    {"c": "hình như (sắp)", "g": "오다 + 것 같다", "f": "하늘이 어두워요. 비가 (    ) 것 같아요.", "a": ["올"], "vi": "Trời tối sầm. Hình như sắp mưa.", "w": "Chưa mưa → -(으)ㄹ."},
+    {"c": "thuộc loại (tính từ)", "g": "조용하다 + 편이다", "f": "우리 동네는 (    ) 편이에요.", "a": ["조용한"], "vi": "Khu tôi khá yên tĩnh.", "w": "Tính từ → -(으)ㄴ 편."},
+    {"c": "giả vờ", "g": "모르다 + 척하다", "f": "알면서 (    ) 척했어요.", "a": ["모르는"], "vi": "Biết mà giả vờ không biết.", "w": "Động từ hiện tại → -는 척."}
+   ],
+   "em": [
+    "Viết 4 câu về bản thân, mỗi câu một nhóm đuôi: -(으)ㄹ 수 있다 · -(으)ㄴ 적이 있다 · -는 중이다 · -(으)ㄴ 지 … 됐다."
+   ],
+   "co": "Bước nối sang câu 1–4 TOPIK: lựa chọn nhiễu rất hay là “định ngữ + danh từ phụ thuộc”. Tập thói quen: thấy danh từ phụ thuộc → kiểm tra đuôi trước (loại hình thức sai), rồi mới xét nghĩa. Bẫy kinh điển: 바람에 chỉ -는; -(으)ㄹ 때 ↔ -았을 때."
+  },
+  {
+   "id": "cd_dn_deon",
+   "t": "-던 N (nhìn lại việc kéo dài · lặp lại · dở dang)",
+   "cn": "Định ngữ – hồi tưởng",
+   "part": 2,
+   "m": 15,
+   "why": "Khác -(으)ㄴ: việc chưa chắc đã xong, hoặc thói quen ngày trước",
+   "core": "<b>-던</b> + N: nhìn lại một việc trong quá khứ <b>kéo dài, lặp lại</b> hoặc <b>bỏ dở</b>: 제가 다니<b>던</b> 학교 (trường tôi từng học), 먹<b>던</b> 빵 (cái bánh đang ăn dở), 자주 가<b>던</b> 식당 (quán hồi trước hay đến).",
+   "goc": "<b>-더-</b> (hồi tưởng: “tôi nhớ lại / tôi đã thấy”, cùng gốc với -더라, -던데요 ở 3A Bài 4) + <b>-ㄴ</b> (định ngữ). Người nói <b>kéo một cảnh cũ</b> đặt trước danh từ: hành động lúc đó <b>đang diễn ra / thường xuyên</b> và <b>chưa chắc đã xong</b>. So với -(으)ㄴ (đã xong): 먹<b>은</b> 빵 = bánh đã ăn; 먹<b>던</b> 빵 = bánh đang ăn dở (còn lại). -던 gắn được cả <b>tính từ</b> và <b>이다</b> — hai loại này không có định ngữ quá khứ riêng, nên -던 / -았던 lấp chỗ trống: 조용하<b>던</b> 동네 (khu phố hồi đó yên tĩnh), 학생이<b>던</b> 시절 (thời còn là học sinh).",
+   "chia": [
+    ["Loại", "Gốc", "+ 던", "Ví dụ"],
+    ["Động từ", "가다 · 먹다 · 만들다 · 듣다", "가**던** · 먹**던** · 만들**던** · 듣**던**", "제가 다니**던** 학교"],
+    ["Tính từ", "조용하다 · 춥다", "조용하**던** · 춥**던**", "그렇게 춥**던** 날씨가 풀렸어요"],
+    ["있다 / 없다", "재미있다", "재미있**던**", "재미있**던** 드라마가 끝났어요"],
+    ["이다", "학생이다", "학생이**던**", "학생이**던** 시절"]
+   ],
+   "chiaNote": [
+    "Không phân biệt 받침, không có bất quy tắc: gốc + 던 (만들던, 듣던, 돕던, 짓던).",
+    "Hay đi với: 자주, 매일, 늘, 동안, 옛날에, 어렸을 때, 예전에, 아까 — dấu hiệu “cảnh cũ / thói quen cũ / việc dở”.",
+    "-던 thường ngầm “bây giờ không còn như vậy”: 제가 살던 집 (nhà tôi từng sống — giờ không ở nữa)."
+   ],
+   "tinh": [
+    {"t": "Đồ ăn dở", "c": "Quay lại bàn không thấy bánh.", "lv": "lịch sự", "ko": "제가 먹**던** 빵 어디 있어요? 아까 반만 먹었는데.", "vi": "Cái bánh tôi đang ăn đâu rồi? Lúc nãy mới ăn nửa thôi.", "why": "Ăn dở → -던 (먹은 빵 = bánh đã ăn)."},
+    {"t": "Thăm trường cũ", "c": "Kể chuyến về quê.", "lv": "lịch sự", "ko": "어렸을 때 다니**던** 초등학교에 가 봤어요.", "vi": "Tôi đã ghé thăm trường tiểu học hồi nhỏ từng học.", "why": "Đi học suốt nhiều năm, giờ không còn → -던."},
+    {"t": "Quán quen ngày xưa", "c": "Gặp lại bạn đại học.", "lv": "thân mật – lịch sự", "ko": "학생 때 자주 가**던** 식당이 아직 있어요.", "vi": "Quán hồi sinh viên hay đến vẫn còn đấy.", "why": "자주 + thói quen cũ → -던."},
+    {"t": "Thay đổi", "c": "Than phiền khu phố.", "lv": "lịch sự", "ko": "그렇게 조용하**던** 동네가 시끄러워졌어요.", "vi": "Khu phố từng yên tĩnh thế mà giờ ồn ào rồi.", "why": "Tính từ, quá khứ → -던 (조용한 동네 = khu đang yên tĩnh)."},
+    {"t": "Làm nốt việc", "c": "Đồng nghiệp rủ về.", "lv": "lịch sự", "ko": "하**던** 일을 마저 하고 갈게요.", "vi": "Tôi làm nốt việc đang dở rồi đi.", "why": "Việc dở dang → -던."},
+    {"t": "Tin về người cũ", "c": "Kể với bạn.", "lv": "thân mật", "ko": "같이 일하**던** 동료가 결혼한대.", "vi": "Nghe nói đồng nghiệp từng làm cùng sắp cưới đấy.", "why": "Từng làm cùng một thời gian → -던."}
+   ],
+   "rb": [
+    ["Thời gian", "Quá khứ, nhìn lại; việc kéo dài / lặp lại / dở dang."],
+    ["Loại từ", "Động từ, tính từ, 있다 / 없다, 이다 đều dùng được."],
+    ["Dấu hiệu", "자주, 매일, 늘, 동안, 어렸을 때, 예전에, 아까."],
+    ["Không dùng", "Việc một lần đã xong hẳn: 어제 산 책 (✗ 어제 사던 책)."]
+   ],
+   "sai": [
+    {"x": "어제 **사던** 책을 다 읽었어요.", "o": "어제 **산** 책을 다 읽었어요.", "why": "Mua một lần, đã xong → -(으)ㄴ."},
+    {"x": "제가 **먹은** 빵 버리지 마세요. 아직 반 남았어요.", "o": "제가 먹**던** 빵 버리지 마세요. 아직 반 남았어요.", "why": "Còn một nửa = dở dang → -던."},
+    {"x": "**재미있었는** 영화", "o": "재미있**던** 영화 / 재미있**었던** 영화", "why": "Không có đuôi -었는. Quá khứ của tính từ / 있다 → -던, -았/었던."},
+    {"x": "옛날에 여기 **사는** 사람이에요.", "o": "옛날에 여기 살**던** 사람이에요.", "why": "옛날에 → quá khứ, kéo dài → -던."}
+   ],
+   "pb": [
+    {"vs": "-(으)ㄴ ↔ -던", "d": "-(으)ㄴ: việc đã xong (kể sự kiện). -던: cảnh cũ đang diễn ra / thói quen / dở dang (nhìn lại).", "ex": [["먹**은** 빵", "bánh đã ăn (hết)"], ["먹**던** 빵", "bánh đang ăn dở"], ["입**은** 옷", "áo đã mặc (một lần)"], ["입**던** 옷", "áo hồi trước hay mặc"]]},
+    {"vs": "-던 N ↔ -던데요 (3A Bài 4)", "d": "Cùng -더- (tôi nhớ lại / tôi đã thấy). -던데요 đứng cuối câu kể điều mình đã thấy; -던 + N đứng trước danh từ.", "ex": [["그 식당 음식이 맛있**던데요**.", "Món ăn quán đó ngon lắm (tôi ăn rồi, thấy vậy)."], ["맛있**던** 식당이 문을 닫았어요.", "Cái quán (hồi đó) ngon đã đóng cửa."]]}
+   ],
+   "topik": [
+    {"src": "Đọc · kỳ 91 câu 19", "ko": "안에서 몸을 **데운** 펭귄은 밖으로 나가고 밖에서 추위에 **떨던** 펭귄은 안으로 들어오는 것이다.", "note": "Cặp mẫu hoàn hảo: 데운 (đã sưởi ấm xong → -(으)ㄴ) ↔ 떨던 (đang run một lúc lâu → -던). Hai nhóm chim cánh cụt phân biệt chỉ bằng đuôi định ngữ."},
+    {"src": "Đọc · kỳ 83 câu 14", "ko": "(다) 내일은 내가 10년 동안 **다니던** 회사를 그만두는 날이다.", "note": "10년 동안 (kéo dài) → 다니던: công ty tôi đã làm suốt 10 năm, sắp nghỉ."},
+    {"src": "Đọc · kỳ 83 câu 23", "ko": "일기장에 적혀 있는 곳을 인터넷으로 찾아보니 자주 **가시던** 빵집과 국숫집이 아직도 그대로 있었다.", "note": "가다 + 시 + 던: những quán bố (đã mất) ngày xưa hay đến. 자주 + -던 = thói quen cũ."}
+   ],
+   "hoi": [
+    {"q": "“Cuốn sách em đang đọc dở để đâu rồi nhỉ?”", "a": "제가 <b>읽던</b> 책 어디 있지?"},
+    {"q": "Kỳ 91 câu 19: vì sao 데운 펭귄 mà 떨던 펭귄?", "a": "Nhóm bên trong <b>đã sưởi ấm xong</b> (데운) → ra ngoài; nhóm bên ngoài <b>đang run một lúc</b> (떨던) → vào trong. -(으)ㄴ = đã xong, -던 = đang diễn ra trong quá khứ."},
+    {"q": "다니던 회사 và 다닌 회사 khác gì?", "a": "Cả hai đều quá khứ. 다니<b>던</b>: nhìn lại quãng thời gian đi làm (kéo dài, thường còn cảm xúc). 다<b>닌</b>: kể sự kiện đã làm ở đó. Đề đọc TOPIK hay dùng -던."}
+   ],
+   "luyen": [
+    {"q": "아까 (    ) 커피 어디 있어요? 반밖에 안 마셨는데.", "o": ["마시던", "마신", "마실", "마시는"], "w": "Uống dở → -던."},
+    {"q": "어렸을 때 자주 (    ) 공원에 다시 가 봤어요.", "o": ["놀던", "놀은", "놀", "노는"], "w": "Thói quen hồi nhỏ → -던."},
+    {"q": "어제 (    ) 책을 벌써 다 읽었어요.", "o": ["산", "사던", "살", "사는"], "w": "Mua một lần, đã xong → -(으)ㄴ."},
+    {"q": "그렇게 (    ) 날씨가 갑자기 추워졌어요.", "o": ["따뜻하던", "따뜻한", "따뜻할", "따뜻하는"], "w": "Trước đây ấm (tính từ, quá khứ) → -던. 따뜻한 날씨 = thời tiết đang ấm, mâu thuẫn với 추워졌어요."},
+    {"q": "(    ) 시절이 그리워요. (thời còn là học sinh)", "o": ["학생이던", "학생인", "학생일", "학생이는"], "w": "이다 quá khứ, hồi tưởng → 이던."},
+    {"q": "(Kỳ 91 câu 19) 밖에서 추위에 떨던 펭귄 — 떨던 cho biết gì?", "o": ["Những con đã run một lúc ngoài trời (rồi mới vào trong)", "Những con đã hết lạnh", "Những con sắp ra ngoài run", "Những con không bao giờ run"], "w": "-던: hành động đang diễn ra (kéo dài) trong quá khứ."}
+   ],
+   "em": [
+    "Kể về một nơi hồi nhỏ em hay đến bằng 3 câu: có -던 với động từ và -던 với tính từ."
+   ],
+   "co": "Gợi trí nhớ: cô kể về trường cũ / nhà cũ của mình, em hỏi bằng -던 (선생님이 다니던 학교예요?). Nhấn cặp 먹은 빵 / 먹던 빵 bằng đồ thật (cái bánh cắn dở). Câu kỳ 91 câu 19 (데운 ↔ 떨던) là ví dụ đẹp nhất để chiếu."
+  },
+  {
+   "id": "cd_dn_atdeon",
+   "t": "-았/었던 N (nhìn lại việc đã kết thúc)",
+   "cn": "Định ngữ – hồi tưởng",
+   "part": 2,
+   "m": 12,
+   "why": "Đã xong + nhìn lại; quá khứ của tính từ và 이다",
+   "core": "<b>-았/었던</b> + N: nhìn lại một việc / trạng thái <b>đã kết thúc</b> trong quá khứ, thường kèm cảm giác “hồi đó…, bây giờ thì khác”: 작년에 <b>갔던</b> 곳 (nơi năm ngoái đã đến), 사막이<b>었던</b> 지중해 (Địa Trung Hải từng là sa mạc — kỳ 91).",
+   "goc": "-았/었- (đã xong) + -던 (nhìn lại). So với <b>-던</b> (đang / lặp / có thể dở dang): -았던 nhấn <b>đã hoàn tất, đã chấm dứt</b>. So với <b>-(으)ㄴ</b>: cả hai đều “đã”, nhưng -았던 thêm sắc thái <b>nhìn lại, cách xa hiện tại</b>, và dùng được cho <b>tính từ / 이다</b> (-(으)ㄴ của tính từ là hiện tại): 작<b>았던</b> 방 (căn phòng hồi đó nhỏ), 의사<b>였던</b> 할아버지 (ông ngày trước là bác sĩ).",
+   "chia": [
+    ["Loại", "Gốc", "→ -았/었던", "Ví dụ"],
+    ["Động từ ㅏ / ㅗ", "가다 · 보다", "**갔던** · **봤던**", "작년에 **갔던** 곳"],
+    ["Động từ khác", "먹다 · 듣다", "먹**었던** · 들**었던**", "그때 들**었던** 노래"],
+    ["하다", "좋아하다", "좋아**했던**", "제가 좋아**했던** 가수"],
+    ["Tính từ", "작다 · 춥다", "작**았던** · 추**웠던**", "제일 추**웠던** 날"],
+    ["이다", "사막이다 · 의사이다", "사막이**었던** · 의사**였던**", "사막이**었던** 지중해"]
+   ],
+   "chiaNote": [
+    "Chia -았/었- như quá khứ bình thường (bất quy tắc vẫn giữ: 들었던, 도왔던, 지었던) rồi thêm 던.",
+    "Danh từ không 받침 + 였던, có 받침 + 이었던: 의사**였던**, 학생**이었던**.",
+    "Với việc lặp lại, -던 và -았던 nhiều khi thay được cho nhau (자주 가던 / 자주 갔던 곳). Khác rõ ở hai chỗ: **dở dang** → chỉ -던 (먹던 빵); **một lần đã xong** → -았던 hoặc -(으)ㄴ (어제 갔던 / 어제 간 곳, ✗ 어제 가던 곳 = chỗ đang đi dở)."
+   ],
+   "tinh": [
+    {"t": "Kể chuyến đi", "c": "Bạn hỏi đi đâu thích nhất.", "lv": "lịch sự", "ko": "작년에 **갔던** 제주도가 제일 기억에 남아요.", "vi": "Chuyến Jeju năm ngoái là đáng nhớ nhất.", "why": "Chuyến đi đã xong, nhìn lại → -았던."},
+    {"t": "Gặp lại bạn cũ", "c": "Kể với đồng nghiệp.", "lv": "lịch sự", "ko": "고등학교 때 친**했던** 친구를 10년 만에 만났어요.", "vi": "Tôi gặp lại người bạn từng thân hồi cấp ba sau 10 năm.", "why": "친하다 (tính từ), quá khứ → 친했던. 친한 친구 = bạn (đang) thân."},
+    {"t": "Thay đổi", "c": "Về quê thấy khác.", "lv": "lịch sự", "ko": "그렇게 조용**했던** 동네에 큰 마트가 생겼어요.", "vi": "Khu phố từng yên tĩnh thế mà giờ mọc lên siêu thị lớn.", "why": "Tính từ, trạng thái cũ đã chấm dứt → -았던."},
+    {"t": "Nhớ món mẹ nấu", "c": "Đi du học, nhớ nhà.", "lv": "lịch sự", "ko": "엄마가 해 주**셨던** 음식이 그리워요.", "vi": "Con nhớ những món mẹ từng nấu cho.", "why": "해 주다 + 시 + 었던."},
+    {"t": "Tư cách cũ", "c": "Nói về một người nổi tiếng.", "lv": "lịch sự", "ko": "가수**였던** 그 사람이 지금은 배우가 됐어요.", "vi": "Người từng là ca sĩ ấy giờ thành diễn viên.", "why": "이다 quá khứ: 가수 (không 받침) → 가수였던."}
+   ],
+   "rb": [
+    ["Nghĩa", "Đã xong / đã chấm dứt, nhìn lại."],
+    ["Loại từ", "Động từ, tính từ, 이다."],
+    ["Khác -던", "-던: đang / lặp / dở dang; -았던: đã kết thúc."],
+    ["Khác -(으)ㄴ", "Thêm sắc thái hồi tưởng, xa hiện tại; dùng được cho tính từ / 이다."]
+   ],
+   "sai": [
+    {"x": "의사**이었던** 할아버지", "o": "의사**였던** 할아버지", "why": "Không 받침 → 였던."},
+    {"x": "아까 제가 **마셨던** 커피 버리지 마세요. 아직 남았어요.", "o": "아까 제가 마시**던** 커피 버리지 마세요. 아직 남았어요.", "why": "Còn dở → -던, không -았던 (đã uống xong)."},
+    {"x": "(ý: hồi đó phòng nhỏ, giờ đã sửa rộng) **작은** 방이 넓어졌어요.", "o": "**작았던** 방이 넓어졌어요.", "why": "작은 = đang nhỏ, mâu thuẫn với 넓어졌어요. Trạng thái cũ → -았던."},
+    {"x": "작년에 **가던** 여행지", "o": "작년에 **갔던** 여행지", "why": "Một chuyến đã xong → -았던 (가던 = đang đi dở / hay đi)."}
+   ],
+   "pb": [
+    {"vs": "-(으)ㄴ ↔ -던 ↔ -았/었던", "d": "Cùng “quá khứ” với động từ, khác cách nhìn.", "ex": [["제가 읽**은** 책", "sách tôi đã đọc (kể sự việc)"], ["제가 읽**던** 책", "sách tôi đang đọc dở / hồi đó hay đọc"], ["제가 읽**었던** 책", "sách tôi từng đọc (đọc xong, nhìn lại)"]]},
+    {"vs": "Tính từ: -(으)ㄴ ↔ -던 / -았던", "d": "Tính từ -(으)ㄴ = hiện tại; quá khứ chỉ có -던 / -았던.", "ex": [["**친한** 친구", "bạn thân (bây giờ)"], ["친**했던** 친구", "người bạn từng thân (giờ không còn như trước)"]]}
+   ],
+   "topik": [
+    {"src": "Đọc · kỳ 91 câu 40", "ko": "( ㉡ ) 그런데 지중해는 오래전 사막이**었던** 적이 있었다. … ( ㉣ ) 사막이**었던** 지중해에 이후 큰 홍수가 발생하면서 다시 오늘날과 같은 바다가 되었다.", "note": "이다 quá khứ → 이었던: “Địa Trung Hải từng là sa mạc”. Câu ㉡ còn ghép với danh từ phụ thuộc 적 (-았던 적이 있다 = đã từng có lúc)."},
+    {"src": "Đọc · kỳ 91 câu 31", "ko": "그런데 의사 가운이 처음부터 흰색이**었던** 것은 아니다.", "note": "흰색이다 + 었던 + 것: “không phải ngay từ đầu áo blouse đã là màu trắng” — sau đó bài kể áo đen thời Trung cổ."},
+    {"src": "Đọc · kỳ 83 câu 23", "ko": "내가 초등학교에 **입학한** 날, **여행한** 날, **혼났던** 날…….", "note": "입학한, 여행한: kể sự kiện (-(으)ㄴ). 혼났던: kỷ niệm bị mắng — nhìn lại (-았던). Cả ba đều đúng; tác giả chọn -았던 cho kỷ niệm mang cảm xúc."}
+   ],
+   "hoi": [
+    {"q": "“Ông tôi ngày trước là giáo viên” — nói gọn bằng định ngữ trước 할아버지?", "a": "선생님이<b>었던</b> 할아버지 (선생님 có 받침 → 이었던)."},
+    {"q": "먹은 빵 · 먹던 빵 · 먹었던 빵 khác nhau thế nào?", "a": "먹<b>은</b>: bánh đã ăn (kể). 먹<b>던</b>: bánh đang ăn dở / hồi đó hay ăn. 먹<b>었던</b>: bánh từng ăn (ăn xong rồi, nhìn lại)."}
+   ],
+   "luyen": [
+    {"q": "작년 여름에 (    ) 바다에 또 가고 싶어요.", "o": ["갔던", "가던", "갈", "가는"], "w": "Chuyến đi đã xong → 갔던."},
+    {"q": "어렸을 때는 키가 (    ) 동생이 지금은 180이에요.", "o": ["작았던", "작은", "작을", "작는"], "w": "Tính từ, trạng thái cũ đã thay đổi → -았던."},
+    {"q": "가수(    ) 그 사람은 지금 선생님이 됐어요.", "o": ["였던", "이었던", "인", "일"], "w": "가수 không 받침 → 였던."},
+    {"q": "아까 (    ) 숙제를 마저 해야 해요.", "o": ["하던", "했던", "한", "할"], "w": "마저 (làm nốt) → việc dở → -던."},
+    {"q": "(Kỳ 91 câu 40) 사막이었던 지중해 — nghĩa là:", "o": ["Địa Trung Hải từng là sa mạc (nay là biển)", "Địa Trung Hải đang là sa mạc", "Địa Trung Hải sẽ thành sa mạc", "Sa mạc nằm gần Địa Trung Hải"], "w": "이다 + 었던 = từng là (đã chấm dứt)."}
+   ],
+   "em": [
+    "Kể một chuyến đi đã qua bằng 3 câu có -았/었던 (nơi đã đến, món đã ăn, người đã gặp).",
+    "Viết 1 câu về một người “ngày xưa là…, bây giờ là…” bằng N이었던 / N였던."
+   ],
+   "co": "Viết bộ ba 읽은 / 읽던 / 읽었던 lên bảng, em đặt câu cho từng cái. Đừng sa vào tranh luận -던 hay -았던 ở câu lặp lại (cả hai đều dùng được) — giữ hai điểm chắc: dở dang → -던; tính từ / 이다 quá khứ hoặc một lần đã xong → -았던."
+  },
+  {
+   "id": "cd_dn_th",
+   "t": "Tổng hợp · chọn đuôi định ngữ",
+   "cn": "Định ngữ",
+   "part": 2,
+   "m": 20,
+   "why": "Quy trình 3 câu hỏi + câu 3–4 đề thật",
+   "core": "Gặp chỗ trống trước danh từ, hỏi theo thứ tự: <b>(1)</b> loại từ gì? <b>(2)</b> danh từ sau có “ưa” đuôi riêng không (수, 적, 중, 지, 바람에…)? <b>(3)</b> hành động xảy ra lúc nào: đã xong <b>-(으)ㄴ</b> · đang / thường <b>-는</b> · chưa <b>-(으)ㄹ</b> · nhìn lại việc kéo dài / dở dang <b>-던</b> · nhìn lại việc đã kết thúc <b>-았/었던</b>?",
+   "goc": "Năm bẫy hay gặp nhất: <b>있다/없다</b> dùng -는 (맛있는); <b>tính từ</b> không dùng -는 (좋은, ✗ 좋는); <b>gốc ㄹ</b> rơi (만든, 사는, 살 집); <b>바람에</b> chỉ -는; <b>dở dang</b> → -던, không -(으)ㄴ (먹던 빵).",
+   "chia": [
+    ["Hỏi", "Trả lời", "Chọn", "Ví dụ"],
+    ["1 · Loại từ?", "tính từ (hiện tại)", "-(으)ㄴ", "**좋은** 사람"],
+    ["", "있다 / 없다", "-는", "맛있**는** 음식"],
+    ["", "이다", "인", "학생**인** 동생"],
+    ["2 · Danh từ sau?", "수, 줄, 때, 뻔, 거", "-(으)ㄹ", "**할** 수 있다"],
+    ["", "적, 후, 지", "-(으)ㄴ", "가 **본** 적"],
+    ["", "중, 동안, 바람에", "-는", "하**는** 중"],
+    ["3 · Thời gian?", "đã xong", "-(으)ㄴ", "어제 **산** 책"],
+    ["", "đang / thường / sự thật", "-는", "자주 가**는** 곳"],
+    ["", "chưa / để làm", "-(으)ㄹ", "내일 **입을** 옷"],
+    ["", "nhìn lại: kéo dài, lặp, dở dang", "-던", "먹**던** 빵"],
+    ["", "nhìn lại: đã kết thúc (+ tính từ, 이다)", "-았/었던", "작년에 **갔던** 곳"]
+   ],
+   "chiaNote": [
+    "Đọc câu dài (đề đọc TOPIK): đuôi -ㄴ / -는 / -ㄹ / -던 + danh từ → gạch danh từ chính, dịch từ đó ngược lên."
+   ],
+   "rb": [
+    ["Bước 1", "Loại từ."],
+    ["Bước 2", "Danh từ phụ thuộc có đuôi cố định?"],
+    ["Bước 3", "Thời gian của hành động (và có nhìn lại không)."],
+    ["Bước 4", "Chia theo gốc (ㄹ, ㄷ, ㅂ, ㅅ, ㅎ)."]
+   ],
+   "sai": [
+    {"x": "맛있**은** 빵", "o": "맛있**는** 빵", "why": "있다 → -는."},
+    {"x": "**좋는** 날씨", "o": "**좋은** 날씨", "why": "Tính từ → -(으)ㄴ."},
+    {"x": "넘어**진** 뻔했어요.", "o": "넘어**질** 뻔했어요.", "why": "뻔하다 → -(으)ㄹ."},
+    {"x": "(ý: nhà sẽ mua) 제가 **사던** 집", "o": "제가 **살** 집", "why": "Chưa mua → -(으)ㄹ."},
+    {"x": "어렸을 때 **사는** 동네", "o": "어렸을 때 살**던** 동네", "why": "Quá khứ, kéo dài → -던 (hoặc 살았던)."}
+   ],
+   "pb": [
+    {"vs": "Năm đuôi trên một động từ 먹다", "d": "Một động từ, năm cách nhìn thời gian.", "ex": [["먹**은** 음식", "món đã ăn"], ["먹**는** 음식", "món đang / hay ăn"], ["먹**을** 음식", "món sẽ ăn / để ăn"], ["먹**던** 음식", "món đang ăn dở / hồi đó hay ăn"], ["먹**었던** 음식", "món đã từng ăn (nhìn lại)"]]}
+   ],
+   "topik": [
+    {"src": "Đọc · kỳ 37 câu 4", "ko": "후배가 한 잘못을 알고 있었지만 미안해할까 봐 __모르는 척했다__. · đáp án: **모르는 체했다**", "note": "Một câu, hai định ngữ: 후배가 한 잘못 (lỗi em khóa dưới đã gây ra → -(으)ㄴ), 모르는 척 (-는 + danh từ phụ thuộc 척). Nhiễu: 모르는 듯했다 (có vẻ), 모르는 편이다 (thuộc loại)."},
+    {"src": "Đọc · kỳ 102 câu 4", "ko": "전문가들이 __예상한 대로__ 농산물 가격이 떨어지고 있다. · đáp án: **예상한 것과 같이**", "note": "대로 đổi theo thì: dự đoán đã có → 예상한 대로 = 예상한 것과 같이 (y như đã dự đoán)."},
+    {"src": "Đọc · kỳ 83 câu 3", "ko": "시험이 시작되자 교실은 숨소리가 __들릴 만큼__ 조용해졌다. · đáp án: **들릴 정도로**", "note": "만큼 / 정도 (mức độ) ở đây đi với -(으)ㄹ: đến mức nghe được cả tiếng thở."}
+   ],
+   "hoi": [
+    {"q": "“Cái quán hồi sinh viên tôi hay đến (giờ đóng cửa rồi)” — chọn đuôi nào cho 가다?", "a": "대학생 때 자주 가<b>던</b> 식당 (hoặc 갔던): thói quen ngày trước, nhìn lại."},
+    {"q": "Câu 3 TOPIK: lựa chọn “간 적이 있다” sai hình thức hay sai nghĩa khi câu có 내일?", "a": "Hình thức đúng (적 + -(으)ㄴ) nhưng <b>sai nghĩa / thời gian</b>: 내일 là chưa xảy ra. Bước 2 loại hình thức, bước 3 loại thời gian."}
+   ],
+   "luyen": [
+    {"q": "(    ) 음식은 다 맛있어요. (món mẹ hay nấu)", "o": ["엄마가 만드는", "엄마가 만들는", "엄마는 만드는", "엄마가 만들은"], "w": "Thói quen → -는; gốc ㄹ rơi; chủ ngữ cụm 엄마가."},
+    {"q": "내일 (    ) 옷을 골랐어요.", "o": ["입을", "입은", "입는", "입던"], "w": "Chưa mặc → -(으)ㄹ."},
+    {"q": "이 근처에 (    ) 식당이 있어요?", "o": ["싸고 맛있는", "싸고 맛있은", "싼 맛있는", "싸서 맛있는"], "w": "Hai tính từ nối -고; 맛있다 → -는."},
+    {"q": "차가 (    ) 바람에 늦었어요.", "o": ["막히는", "막힌", "막힐", "막혔던"], "w": "바람에 → luôn -는."},
+    {"q": "아까 (    ) 이야기를 계속해 주세요.", "o": ["하던", "한", "할", "하는"], "w": "Câu chuyện đang kể dở → -던."},
+    {"q": "저는 한국에 (    ) 적이 없어요.", "o": ["가 본", "가 보는", "가 볼", "가 보던"], "w": "적 → -(으)ㄴ."},
+    {"q": "어렸을 때 (    ) 동네에 다시 가 보고 싶어요.", "o": ["살던", "사는", "살", "살는"], "w": "Quá khứ kéo dài → -던."},
+    {"q": "의사(    ) 할아버지는 지금 시골에서 농사를 지으세요.", "o": ["였던", "인", "일", "이었는"], "w": "Ngày trước là bác sĩ (nay làm nông) → 였던."},
+    {"q": "(Kỳ 37 câu 3) 서둘러 __나온 탓에__ 책상 위에 있는 지갑을 안 가지고 나왔다. — gần nghĩa", "o": ["나오는 바람에", "나오는 김에", "나오는 사이에", "나오는 대신에"], "w": "탓에 = 바람에 (vì, kết quả xấu); 바람에 luôn -는."},
+    {"q": "(Kỳ 37 câu 4) 후배가 미안해할까 봐 __모르는 척했다__. — gần nghĩa", "o": ["모르는 체했다", "모르는 듯했다", "모르는 편이다", "모르기 마련이다"], "w": "척하다 = 체하다 (giả vờ). 듯하다 = có vẻ (đoán)."},
+    {"q": "(Kỳ 102 câu 4) 전문가들이 __예상한 대로__ 농산물 가격이 떨어지고 있다. — gần nghĩa", "o": ["예상한 것과 같이", "예상한 탓에", "예상하는 동안에", "예상하기만 하면"], "w": "-(으)ㄴ 대로 = y như, theo như."},
+    {"q": "(Kỳ 83 câu 3) 교실은 숨소리가 __들릴 만큼__ 조용해졌다. — gần nghĩa", "o": ["들릴 정도로", "들리다가", "들리더라도", "들릴 때까지"], "w": "-(으)ㄹ 만큼 = -(으)ㄹ 정도로 (đến mức)."}
+   ],
+   "goT": "Luyện gõ tổng hợp",
+   "go": [
+    {"c": "người lạ", "g": "모르다", "f": "(    ) 사람이 길을 물어봤어요.", "a": ["모르는"], "vi": "Một người lạ hỏi đường tôi.", "w": "Động từ → -는."},
+    {"c": "tính từ · đã qua (năm ngoái)", "g": "춥다", "f": "작년에 제일 (    ) 날이 언제였어요?", "a": ["추웠던", "춥던"], "vi": "Năm ngoái ngày lạnh nhất là ngày nào?", "w": "Tính từ quá khứ → -았/었던 (hoặc -던)."},
+    {"c": "đang đọc dở", "g": "읽다", "f": "제가 (    ) 책 못 봤어요?", "a": ["읽던"], "vi": "Có thấy cuốn sách tôi đang đọc dở không?", "w": "Dở dang → -던."},
+    {"c": "sẽ gặp", "g": "만나다", "f": "주말에 (    ) 사람이 없어요.", "a": ["만날"], "vi": "Cuối tuần chẳng có ai để gặp.", "w": "Chưa → -(으)ㄹ."},
+    {"c": "người tôi biết", "g": "알다", "f": "제가 (    ) 사람 중에서 제일 친절해요.", "a": ["아는"], "vi": "Là người tốt bụng nhất trong số những người tôi biết.", "w": "Gốc ㄹ rơi → 아는."},
+    {"c": "đã được bao lâu", "g": "시작하다 + 지", "f": "한국어를 (    ) 지 얼마나 됐어요?", "a": ["시작한", "배운"], "vi": "Em bắt đầu học tiếng Hàn được bao lâu rồi?", "w": "-(으)ㄴ 지."}
+   ],
+   "em": [
+    "Viết đoạn 5 câu kể về “nơi em từng sống”, dùng ít nhất 4 đuôi khác nhau: -(으)ㄴ, -는, -(으)ㄹ, -던 / -았던."
+   ],
+   "co": "20 phút: 12 câu luyện (4 câu cuối là câu 3 đề thật) + 6 câu gõ. Em sai câu nào → quay lại bảng Bước 5 (chia theo gốc) hoặc bảng nhóm đuôi ở Bước 7 (danh từ phụ thuộc). Bài về nhà: đoạn 5 câu “nơi em từng sống”."
+  }
+ ]
+}
