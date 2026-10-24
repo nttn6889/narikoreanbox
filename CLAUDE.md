@@ -508,7 +508,7 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   Buổi 2 (ô giữa câu, 13 kỳ: 75, 76, 77, 81, 83–86, 88–90, 92, 93), Buổi 3 (làm như thi, 4 phút/câu: 96–102, 104–106), thẻ Bảng tra (12 nhóm, thống kê 72 ô). Link `viet-51/#b=1|2|3|tra`.
 - Đề + gợi ý nhúng trong biến `Q` (lấy từ `wbank` W51_*; sửa trong trang quản lý thì chép lại). Cảnh báo đuôi: ô cuối câu viết -다 / -요, ô giữa câu viết -ㅂ니다.
   Bài lưu localStorage `nari-51`.
-- Thẻ **Từ vựng** (`viet-51/#b=tu`; bản chép ở `dau-hieu-51-52/#b=tu`): thống kê động từ đáp án lấy từ đâu (78 ô: có sẵn trong bài 37 · danh từ trước ô gọi
+- Thẻ **Từ vựng** (`viet-51/#b=tu`; trang học sinh `dau-hieu-51-52/#b=tu` chỉ có bảng cặp): thống kê động từ đáp án lấy từ đâu (78 ô: có sẵn trong bài 37 · danh từ trước ô gọi
   động từ đi cặp 31 · suy ra 9 · trái nghĩa 1), 4 bước soi đề, bảng cặp danh từ → động từ theo hoàn cảnh (nút “Che động từ”), luyện gõ động từ dạng gốc cho 72 ô
   (biến `TU` {'<kỳ><a|b>': [C|K|S|D, động từ nhận (|), chữ, giải thích có «chữ trong đề»]}, `st.tu`). `viet-52/` Bảng tra có khung ngắn: 28/32 ô câu 52 dùng lại từ trong bài.
 
@@ -581,8 +581,8 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   Chép hay Lật · từ đi theo cặp · bảng tóm tắt 32 ô), Luyện nhanh (38 câu = `MCQ` Buổi 1–2 của `viet-51/` + `viet-52/`, lựa chọn đầu là đáp án; “Gửi kết quả cho cô”).
   Nút “Che mẫu cần viết” để tự kiểm tra. Link `#b=51|52|luyen`, `#b=luyen&s=51a|51b|52a|52b`. localStorage `nari-dh5152`.
   Sửa dấu hiệu / câu luyện ở `viet-51/`, `viet-52/` thì chép lại vào đây.
-  Thẻ **Từ vựng** (`#b=tu`) chép từ thẻ cùng tên của `viet-51/` (bỏ câu “Cô hỏi”; đoạn văn + đáp án 36 kỳ nhúng trong biến `Q` rút gọn, `TU` giống hệt),
-  kết quả gộp vào báo cáo “Gửi kết quả cho cô” của thẻ Luyện nhanh (`st.tu`). Sửa `TU` / bảng cặp ở `viet-51/` thì chép lại vào đây.
+  Thẻ **Từ vựng** (`#b=tu`): chỉ liệt kê bảng cặp danh từ → động từ theo hoàn cảnh (chép từ thẻ Từ vựng của `viet-51/`, nút “Che động từ”);
+  thống kê + bài luyện chỉ có ở giáo án `viet-51/` (cô không muốn đưa vào trang học sinh). Sửa bảng cặp ở `viet-51/` thì chép lại vào đây.
 
 ## Học câu 1–2 ngữ pháp trong 4 buổi (`ngu-phap-12/`)
 - Cùng khung với `viet-52/`, học theo **cặp dễ nhầm**: Buổi 1 đuôi nối thời gian/trình tự/lựa chọn (+ quy trình 3 bước), Buổi 2 mục đích/điều kiện/

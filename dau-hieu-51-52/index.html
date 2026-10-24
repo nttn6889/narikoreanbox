@@ -86,46 +86,15 @@ button.b.main{background:var(--acc);border-color:var(--acc);color:#fff;font-weig
 .sum h4{margin:0 0 6px;font-size:16px}
 .sum input{font:inherit;font-size:16px;padding:6px 8px;border:1px solid var(--line);border-radius:6px;width:100%;max-width:320px}
 .sum pre{white-space:pre-wrap;font:13px/1.5 "Noto Sans KR",Arial,sans-serif;background:var(--sub);padding:8px;border-radius:6px;max-height:220px;overflow:auto}
-/* thẻ Từ vựng (chép từ viet-51) */
-.steps{counter-reset:s;list-style:none;padding:0;margin:8px 0 14px}
-.steps li{counter-increment:s;position:relative;padding:6px 8px 6px 42px;margin:0 0 6px;border:1px solid var(--soft);border-radius:8px}
-.steps li::before{content:counter(s);position:absolute;left:8px;top:6px;width:26px;height:26px;border-radius:50%;background:var(--acc);color:#fff;display:grid;place-items:center;font:bold 14px Arial,sans-serif}
-.task{border:2px solid var(--ink);border-radius:10px;margin:0 0 18px;overflow:hidden}
-.task .hd{display:flex;justify-content:space-between;align-items:center;gap:8px;background:var(--ink);color:#fff;padding:6px 10px}
-.task .hd b{font-size:16px}
-.task .bd{padding:10px 12px}
-.psg{font-size:16px;line-height:1.85;margin:0 0 10px;padding:8px 10px;background:#fafafa;border:1px solid var(--soft);border-radius:6px}
-.psg .gap{display:inline-block;padding:0 6px;border:2px solid var(--acc);border-radius:5px;color:var(--acc);font-weight:bold;background:#fff}
-.psg mark{background:var(--hl);padding:0 1px}
-.blank{margin:0 0 12px}
-.blank label{display:block;font-weight:bold;margin:0 0 3px}
-input.ans{width:100%;font-size:17px;padding:8px 10px;border:1.5px solid var(--line);border-radius:6px}
-input.ans:focus{outline:2px solid var(--blue);border-color:var(--blue)}
-input.ans:disabled{background:#f6f6f6;color:var(--ink)}
-.hints{margin:6px 0 0;padding:0;list-style:none}
-.hints li{margin:0 0 4px;padding:5px 9px;background:var(--bluebg);border-radius:6px;font-size:14.5px}
-.hints li b{color:var(--blue);font:bold 12px Arial,sans-serif;margin-right:4px}
-.res{margin:8px 0 0;padding:8px 10px;border-radius:6px;font-size:15px}
-.res.ok{background:var(--okbg);border:1px solid var(--ok)}
-.res.rv{background:var(--warnbg);border:1px solid var(--warn)}
-.res .pat{font-size:14px}
-button.b.blue{background:var(--blue);border-color:var(--blue);color:#fff}
-button.b:disabled{opacity:.45;cursor:default}
-h4{font-size:16px;margin:14px 0 4px}
 /* thẻ Từ vựng */
 .vb{font-family:"Noto Sans KR","Malgun Gothic",sans-serif;font-weight:bold;color:var(--acc)}
 .hidev .vb{color:transparent;background:var(--soft);border-radius:4px;cursor:pointer}
 .hidev .vb.open{color:var(--acc);background:none}
 .hidev td:nth-child(3){display:none}
-.tuf{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 10px}
-.tuf button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
-.tuq .psg .gap.off{border-color:var(--soft);color:var(--muted)}
-.tuq .lab{font:bold 12px Arial,sans-serif;border-radius:10px;padding:1px 8px;background:#fff;color:var(--ink)}
-.tuq .res b.ko{font-family:"Noto Sans KR","Malgun Gothic",sans-serif}
-.psg,input.ans{font-family:"Noto Sans KR","Malgun Gothic","Apple SD Gothic Neo",sans-serif}
+button.b.blue{background:var(--blue);border-color:var(--blue);color:#fff}
 footer{margin-top:40px;font-size:13px;color:var(--muted);text-align:center}
 footer a{color:var(--muted)}
-@media print{nav,.btns,.tool,.sum,footer,.co,#sluyen,#tuList,#tuf{display:none!important}.sec{display:block!important}.card{break-inside:avoid}body.che .sec .mau{color:inherit;background:var(--hl)}body.che .ex{display:block}}
+@media print{nav,.btns,.tool,.sum,footer,.co,#sluyen{display:none!important}.sec{display:block!important}.card{break-inside:avoid}body.che .sec .mau{color:inherit;background:var(--hl)}body.che .ex{display:block}}
 </style>
 <script src="../lam-moi.js?v=2" data-key="nari-dh5152"></script>
 </head>
@@ -142,7 +111,7 @@ footer a{color:var(--muted)}
 <nav><div class="bar">
   <a href="#b=51" data-k="51">Câu 51<small>Thư, tin nhắn</small></a>
   <a href="#b=52" data-k="52">Câu 52<small>Đoạn văn</small></a>
-  <a href="#b=tu" data-k="tu">Từ vựng<small>Lôi động từ</small></a>
+  <a href="#b=tu" data-k="tu">Từ vựng<small>Cặp hay gặp</small></a>
   <a href="#b=luyen" data-k="luyen">Luyện nhanh<small>38 câu</small></a>
 </div></nav>
 
@@ -365,29 +334,8 @@ footer a{color:var(--muted)}
 
 <!-- ================= TỪ VỰNG ================= -->
 <section class="sec" id="stu">
-<h2>Lôi động từ cho ô trống</h2>
-<p class="goal">Học xong dấu hiệu, em đã chọn được <b>mẫu ngữ pháp</b>. Phần còn lại là <b>động từ đặt trước mẫu</b>. Gần một nửa số ô có sẵn động từ trong bài, 40% chỉ có <b>danh từ đứng ngay trước ô</b>: em phải biết danh từ đó đi với động từ nào.</p>
-
-<h3>1. Động từ trong đáp án lấy từ đâu? (78 ô, kỳ 35, 60, 70–106, 108)</h3>
-<table class="t">
-<tr><th>Nguồn</th><th>Số ô</th><th>Ví dụ đề thật</th></tr>
-<tr><td><b>Có sẵn trong bài</b>, chỉ đổi đuôi (hoặc danh từ Hán + 하다)</td><td>37 · 47%</td><td>Câu sau ô 19 lần, câu trước ô 16, tiêu đề 8 (một ô có thể có ở nhiều chỗ). <span class="ko">맞는 전공 → 안 <b>맞</b>았습니다</span> (72) · tiêu đề <span class="ko">변경 → <b>변경하</b>고 싶습니다</span> (91)</td></tr>
-<tr><td><b>Danh từ trước ô</b> gọi ra động từ đi cặp</td><td>31 · 40%</td><td><span class="ko">인사를 ( ) → <b>드리</b>고 싶습니다</span> (77) · <span class="ko">시간이 30분쯤 더 ( ) → <b>걸릴</b> 것 같습니다</span> (87)</td></tr>
-<tr><td><b>Suy ra từ hoàn cảnh</b> (bài không có chữ)</td><td>9 · 12%</td><td><span class="ko">중요한 ( ) 못 가게 → 일이 <b>생겨서</b></span> (81) · <span class="ko">노트북을 ( ) 5년 → <b>산</b> 지</span> (88)</td></tr>
-<tr><td>Trái nghĩa với từ trong bài</td><td>1</td><td><span class="ko">불편했습니다 → 가장 <b>편리합</b>니다</span> (79)</td></tr>
-</table>
-<p class="note">Câu 52 thì khác: 28/32 ô dùng lại từ trong đoạn văn (thường ở câu ngay sau ô), 3 ô dùng từ trái nghĩa (<span class="ko">긍정 → 부정, 높다 → 낮다, 아침 → 저녁</span>, “다 같이 모아서” → <span class="ko">다르다</span>), 1 ô phải tự nghĩ (kỳ 35 ㉡). Vì vậy thẻ này chủ yếu dành cho câu 51.</p>
-
-<h3>2. Bốn bước soi đề tìm động từ</h3>
-<ol class="steps">
-  <li><b>Câu sau ô.</b> Câu sau thường nhắc lại động từ: <span class="ko">아직 ( ㉠ ). … 지금 곧 <b>출발하</b>겠습니다 → 출발하지 못했습니다</span> (80) · <span class="ko">많은 학생이 ( ㉠ ). <b>참여할</b> 학생은… → 참여하면 좋겠습니다</span> (101).</li>
-  <li><b>Tiêu đề + câu trước ô.</b> Tiêu đề có danh từ Hán thì thêm <span class="mau">하다/되다</span>: <span class="ko">주문 변경 요청 → 변경할 수 있습니까</span> (78, 84, 91: cả 3 đề có “변경” trong tiêu đề đều ra 바꾸다/변경하다) · <span class="ko">개인 물건 정리 요청 → 정리해야 합니다</span> (102).</li>
-  <li><b>Danh từ + tiểu từ ngay trước ô</b> → tra bảng cặp ở mục 3: <span class="ko">소리가 ( ) → 나다</span>, <span class="ko">면접을 ( ) → 보다</span>, <span class="ko">비용을 ( ) → 내다</span>.</li>
-  <li><b>Không có chữ nào</b> → đoán theo hoàn cảnh của bài (mục 3, dòng “suy ra”). Chỉ khoảng 1/10 số ô.</li>
-</ol>
-<div class="warnbox">Bước 1–2 giải được khoảng một nửa số ô, bước 3 thêm 40%. Học thuộc khoảng 30 cặp ở mục 3 là xử lý được gần 9/10 ô câu 51. Tự kiểm tra: che động từ, nhìn “<span class="ko">인사를…</span>” → nói ngay “<span class="ko">드리다</span>”.</div>
-
-<h3>3. Cặp danh từ → động từ theo hoàn cảnh (đã ra trong đề)</h3>
+<h2>Từ vựng hay gặp ở ô trống câu 51</h2>
+<p class="goal">Thấy <b>danh từ đứng ngay trước ô</b> → nghĩ ngay <b>động từ đi cặp</b> với nó, rồi chia theo mẫu ngữ pháp. Các cặp dưới đây đều đã ra trong đề thật.</p>
 <div class="btns"><button class="b blue" data-hidev>Che động từ</button></div>
 <p class="note">Bấm “Che động từ” để tự kiểm tra; bấm vào ô bị che để mở từng từ. Số trong ngoặc = kỳ thi.</p>
 <div id="tuTable">
@@ -444,11 +392,6 @@ footer a{color:var(--muted)}
 </table></div></div>
 </div>
 
-<h3>4. Luyện · Em lôi được động từ không? (72 ô, kỳ 70–106)</h3>
-<p class="note">Đọc bài, nhìn ô tô đỏ, gõ <b>động từ dạng gốc</b> (vd. <span class="ko">드리다</span>, không cần chia đuôi). Bấm <b>Kiểm tra</b>: máy chấm ngay, tô chỗ chứa động từ trong bài và ghi em lấy từ ở bước nào.</p>
-<div class="tuf" id="tuf"></div>
-<div id="tuList"></div>
-<p class="note">Kết quả phần này được gộp vào ô “Gửi kết quả cho cô” ở cuối thẻ <a href="#b=luyen">Luyện nhanh</a>.</p>
 </section>
 
 <!-- ================= LUYỆN NHANH ================= -->
@@ -546,8 +489,6 @@ function report(){
   SETS.forEach(function(s){var r=stat(s),m=st.m[s.id]||{},wr=[];
     s.q.forEach(function(x,i){if(m[i]!=null&&m[i]!==0)wr.push(i+1);});
     L.push('- '+s.t+': '+(r.n?r.ok+'/'+r.n+' đúng'+(r.n<r.all?' (làm '+r.n+'/'+r.all+')':''):'chưa làm')+(wr.length?' · sai câu '+wr.join(', '):''));});
-  var ta=(st.tu&&st.tu.a)||{},tk=Object.keys(ta),tw=tk.filter(function(k){return !ta[k].ok;});
-  if(tk.length)L.push('- Từ vựng (lôi động từ câu 51): '+(tk.length-tw.length)+'/'+tk.length+' đúng'+(tw.length?' · sai: '+tw.map(function(k){return 'kỳ '+k.slice(0,3).replace(/^0/,'')+(k[3]==='a'?'㉠':'㉡');}).join(', '):''));
   return L.join('\n');
 }
 function renderSum(){
@@ -573,131 +514,12 @@ document.addEventListener('click',function(e){
   if(d.share){share();}
 });
 document.addEventListener('input',function(e){if(e.target.id==='nm'){st.name=e.target.value.trim();save();var p=$('sum').querySelector('pre');if(p)p.textContent=report();}});
-var Q = {"W51_070":{"round":70,"passage":"[HOTEL 이용 후기]\n\n인주 호텔 만족스러웠습니다.\n수영장이 있지만 공사 중이라서 수영을 ( ㉠ ).\n호텔 근처에 있는 경관도 매우 좋아졌습니다. 여기 경치를 중요하게 생각하신 분이라면\n분명 이 호텔을 ( ㉡ ).","keys":{"a":["하지 못했습니다","할 수 없었습니다","못 했습니다"],"b":["좋아하실 겁니다","좋아하실 것입니다","선택하실 겁니다"]}},"W51_072":{"round":72,"passage":"제목: 상담을 받고 싶습니다\n\n선생님 안녕하십니까?\n저는 경영학과에 다니고 있는 외국인 학생 마이클입니다.\n제가 요즘 전공 때문에 고민이 많습니다. 지난 학기에 전공 수업을 들었는데 저에게\n잘 ( ㉠ ). 저에게 맞는 전공을 찾고 싶습니다. 다음 주 수요일에 선생님께 상담을 ( ㉡ )?\n부탁드립니다.","keys":{"a":["안 맞았습니다","맞지 않았습니다"],"b":["받을 수 있습니까","받아도 됩니까","받을 수 있겠습니까"]}},"W51_073":{"round":73,"passage":"제목: 언어 교환할 친구를 찾습니다\n작성자: 마이클   작성일: 2020.09.06\n\n유학생 마이클입니다.\n저는 인주대학교에서 6월부터 지금까지 한국어를 ( ㉠ ). 학교에서 배운 것을 한국\n친구와 연습하고 싶습니다. 저는 전에 한 번 한국인에게 영어를 ( ㉡ ). 서로 가르치고\n배우면서 실력을 키울 겁니다. 관심 있으면 연락주세요.","keys":{"a":["공부하고 있습니다","배우고 있습니다","공부했습니다"],"b":["가르친 적이 있습니다","가르쳐 봤습니다","가르쳐 본 적이 있습니다"]}},"W51_074":{"round":74,"passage":"[발표 모임 채팅방]\n\n안녕하세요? 이번 주에 제가 발표를 할 사람인데 갑자기 다음 주부터 제가 출장을 가게\n되었습니다.\n그래서 이번 모임에 못 ( ㉠ ). 가능한 분이 계시면 저 대신 발표를 ( ㉡ ).\n감사합니다.\n→ 그럼 제가 대신 발표를 하겠습니다.","keys":{"a":["갈 것 같습니다","가게 되었습니다","갑니다"],"b":["해 주시면 좋겠습니다","해 주시기 바랍니다","부탁드리겠습니다"]}},"W51_075":{"round":75,"passage":"제목: 제주도 맛집을 소개해 주십시오!\n\n안녕하세요? 저는 다음 달에 제주도에 가려고 합니다.\n친구들이 저에게 제주도에 가면 생선 구이를 꼭 ( ㉠ )고 했습니다.\n그런데 저는 아는 집이 없습니다.\n맛있는 집을 아시면 ( ㉡ )?\n맛집을 소개해 주시면 감사하겠습니다.","keys":{"a":["먹어 보라","먹어 봐야 한다","먹어야 한다"],"b":["소개해 주시겠습니까","소개해 주실 수 있습니까","알려 주시겠습니까"]}},"W51_076":{"round":76,"passage":"제목: 도서관을 이용하고 싶습니다\n작성자: 타넷 (2018-10-20)\n\n안녕하세요? 한국에 온 지 1년이 된 유학생입니다.\n작년에 제가 처음 한국에 ( ㉠ ) 도서관 이용 방법을 잘 몰랐습니다.\n그래서 첫 학기에는 도서관을 이용하기 어려웠습니다.\n다른 학교에는 유학생을 위한 도서관 이용 설명회가 있다고 합니다.\n우리 학교에도 설명회가 ( ㉡ ).","keys":{"a":["왔을 때","와서","왔기 때문에"],"b":["있으면 좋겠습니다","있었으면 좋겠습니다","열리면 좋겠습니다"]}},"W51_077":{"round":77,"passage":"받는 사람: kimmh@hankuk.uni.kr\n보낸 사람: micheal@hankuk.uni.kr\n제목: 교수님을 뵙고 싶습니다.\n\n교수님께\n안녕하십니까? 다음 주에 졸업식이 끝나고 저는 미국으로 돌아갑니다.\n미국에 가기 전에 교수님을 뵙고 인사를 ( ㉠ ).\n언제 시간이 괜찮으십니까? 괜찮은 시간을 ( ㉡ ) 교수님 연구실로 찾아뵙겠습니다.\n그럼 답장을 기다리겠습니다.\n안녕히 계십시오.\n마이클 올림.","keys":{"a":["드리고 싶습니다","드리려고 합니다"],"b":["알려 주시면","말씀해 주시면"]}},"W51_078":{"round":78,"passage":"제목: 주문 변경 요청\n\n[질문]\n안녕하세요?\n저는 노란색 원피스를 주문했습니다.\n그런데 빨간색으로 주문을 ( ㉠ )?\n만약 가능하면 빨간색으로 보내 주십시오.\n\n[답변]\n네, 가능합니다.\n그러면 빨간색 옷을 바꿔서 ( ㉡ ).","keys":{"a":["바꿀 수 있습니까","변경할 수 있습니까","바꿔도 됩니까"],"b":["보내 드리겠습니다","배송해 드리겠습니다"]}},"W51_079":{"round":79,"passage":"제목: 가나다 앱 추천합니다.\n\n지금까지 구매한 앱들 중에서 이 앱이 사용하기에 ( ㉠ ).\n이전에 사용한 앱들은 갑자기 느려질 때가 많아서 불편했습니다.\n그런데 이 앱은 속도도 빠르고 단어도 쉽게 찾을 수 있습니다.\n한국어를 공부하고 싶은 분들은 이 앱을 한 번 ( ㉡ ).","keys":{"a":["가장 편리합니다","제일 편합니다","가장 좋습니다"],"b":["사용해 보십시오","사용해 보시기 바랍니다","써 보세요"]}},"W51_080":{"round":80,"passage":"수미 씨,\n전화를 안 받으셔서 문자를 남깁니다.\n회사에서 일이 방금 끝났습니다. 그래서 약속 장소로 아직 ( ㉠ ).\n아무래도 약속 시간보다 더 많이 ( ㉡ ). 지금 곧 출발하겠습니다. 정말 죄송합니다.","keys":{"a":["출발하지 못했습니다","못 갔습니다","출발하지 않았습니다"],"b":["늦을 것 같습니다","늦겠습니다"]}},"W51_081":{"round":81,"passage":"제목: K-POP 콘서트 티켓을 무료로 드립니다.\n\n4월 12일 한강에서 K-POP 콘서트가 열릴 예정입니다.\n저는 꼭 가려고 했는데 그날 갑자기 중요한 ( ㉠ ) 못 가게 되었습니다.\n콘서트에 가고 싶으신 분은 저에게 문자를 ( ㉡ ).\n제일 먼저 보낸 사람에게 티켓을 보내드리겠습니다.","keys":{"a":["일이 생겨서","약속이 생겨서"],"b":["보내 주십시오","보내 주시기 바랍니다","보내 주세요"]}},"W51_082":{"round":82,"passage":"제목: 책상을 판매합니다.\n\n이사를 가게 돼서 판매합니다.\n사용한 지 일 년밖에 ( ㉠ ). 깨끗하게 사용해서 거의 새 책상 같습니다.\n직접 보시면 분명 마음에 ( ㉡ ). 관심이 있는 분은 연락해 주시기 바랍니다.\n📞 010-1234-5678","keys":{"a":["안 됐습니다","되지 않았습니다","안 되었습니다"],"b":["드실 겁니다","드실 것입니다","들 겁니다"]}},"W51_083":{"round":83,"passage":"제목: 축제 관련 문의\n\n지난 주말 '인주시 별빛 축제'에 갔던 외국인입니다.\n지금까지 살면서 이렇게 많은 별을 ( ㉠ ) 한 번도 없었습니다.\n이번 축제에서 별도 보고 공연도 볼 수 있어서 정말 좋았습니다.\n혹시 축제가 언제 또 있습니까? 있다면 이런 멋진 경험을 다시 ( ㉡ ) 싶습니다.","keys":{"a":["본 적이","본 경험이"],"b":["해 보고","하고"]}},"W51_084":{"round":84,"passage":"제목: 예약 변경 문의\n\n이름: 유나\n숙박 시간: 2022.10.18 ~ 10.19\n방 종류: 2인실 (1개)\n\n2인실을 예약했는데 3명이 가게 되었습니다.\n혹시 방을 3인실로 ( ㉠ )? 안 되면 추가로 방을 하나 더 예약하고 싶습니다.\n둘 중 무엇이 가능한지 ( ㉡ ) 감사하겠습니다.","keys":{"a":["바꿀 수 있습니까","변경할 수 있습니까","바꿔 주실 수 있습니까"],"b":["알려 주시면","답장해 주시면"]}},"W51_085":{"round":85,"passage":"제목: 요가 수업을 같이 할 사람을 찾습니다.\n\n집 근처 요가 학원에서 요가를 배우려고 합니다.\n다른 사람과 함께 등록하면 할인을 받을 수 있다고 합니다.\n할인을 받으려면 학원에 같이 가서 ( ㉠ ).\n수업은 오전반과 오후반이 있는데 저는 다 괜찮습니다.\n연락하실 때 둘 중 어느 ( ㉡ ) 알려 주시면 감사하겠습니다.","keys":{"a":["등록해야 합니다","등록해야 한다고 합니다"],"b":["반이 좋은지","반이 괜찮은지","반을 원하시는지"]}},"W51_086":{"round":86,"passage":"제목: 보고 싶은 선생님께\n\n안녕하세요, 선생님. 그동안 잘 지내셨습니까?\n자주 연락을 ( ㉠ ) 죄송합니다. 다음 주 수요일에 제가 서울로 출장을 갑니다.\n그날 오후에 선생님을 뵈러 가려고 하는데 혹시 시간이 괜찮으십니까?\n오랜만에 선생님을 꼭 ( ㉡ ).\n그럼 답장을 기다리겠습니다.\n안녕히 계십시오.","keys":{"a":["드리지 못해서","못 드려서","드리지 못하여"],"b":["뵙고 싶습니다","만나 뵙고 싶습니다"]}},"W51_087":{"round":87,"passage":"팀장님, 안녕하세요. 마이클입니다.\n회의 자료를 집에 놓고 와서 다시 돌아가는 중입니다.\n회사에 도착하려면 아마 시간이 30분쯤 더 ( ㉠ ).\n먼저 회의를 하고 계시면 제가 빨리 가겠습니다.\n늦어도 회의가 ( ㉡ ) 도착할 수 있습니다.\n시간을 못 지켜서 정말 죄송합니다.","keys":{"a":["걸릴 것 같습니다","걸릴 겁니다"],"b":["끝나기 전에","끝나기 전까지"]}},"W51_088":{"round":88,"passage":"요즘 제 노트북이 계속 이상했습니다.\n화면이 자꾸 어두워지고 가끔은 소리가 전혀 ( ㉠ ).\n그래서 오늘 서비스 센터에 갔는데 김민철 기사님께서 노트북을 금방 고쳐 주시고\n친절하게 설명도 해 주셨습니다.\n사실 제 노트북은 좀 오래된 것입니다.\n노트북을 ( ㉡ ) 5년 정도 될 것 같습니다.\n이렇게 오래된 노트북을 고쳐 주신 김민철 기사님 감사합니다.","keys":{"a":["나지 않았습니다","안 났습니다","들리지 않았습니다"],"b":["산 지","구입한 지","구매한 지"]}},"W51_089":{"round":89,"passage":"안녕하십니까?\n여자 기숙사에 있는 세탁기 2대 중 1대가 고장이 났습니다.\n세탁기를 고친 지 일주일도 안 됐는데 또 고장이 났습니다.\n세탁기를 1대밖에 ( ㉠ ) 너무 불편합니다.\n이번 기회에 고장 난 세탁기를 새 것으로 ( ㉡ ). 꼭 부탁드립니다.","keys":{"a":["쓸 수 없어서","사용할 수 없어서","못 써서"],"b":["바꿔 주시기 바랍니다","바꿔 주십시오","바꿔 주시면 좋겠습니다"]}},"W51_090":{"round":90,"passage":"제목: 중간고사 간식 행사 안내\n\n안녕하세요? 유학생회 회장 마이클입니다.\n곧 중간고사가 시작됩니다. 시험 기간 동안 유학생회에서 여러분을 위해 맛있는 간식을\n준비했습니다.\n아침 7시부터 1교시가 ( ㉠ ) 도서관 앞에서 간식을 나눠 드릴 예정입니다.\n1교시가 시작된 후에는 간식을 받을 수 없으니 그전에 간식을 ( ㉡ ).","keys":{"a":["시작되기 전까지","시작될 때까지","시작하기 전까지"],"b":["받아 가시기 바랍니다","받아 가십시오","가져가시기 바랍니다"]}},"W51_091":{"round":91,"passage":"수신: 인주 병원\n제목: 예약 변경 문의\n\n11월 12일에 진료 예약을 했습니다. 죄송합니다만, 11월 12일에 급한 일이 생겨서\n예약을 13일 오후로 ( ㉠ ). 만약 이날 예약이 ( ㉡ ) 15일 오전 10시도\n괜찮습니다. 변경 가능한지 확인해 주시기 바랍니다.","keys":{"a":["변경하고 싶습니다","바꾸고 싶습니다","변경하려고 합니다"],"b":["안 되면","불가능하면","안 된다면"]}},"W51_092":{"round":92,"passage":"선배님, 안녕하십니까? 마이클입니다.\n제 결혼식에 와 주셔서 감사합니다.\n사실 선배님께 축하를 받고 싶었지만 결혼식에 오시라는 말씀을 ( ㉠ ).\n그런데 직접 오셔서 결혼을 ( ㉡ ), 선물까지 주셔서 정말 기뻤습니다.\n다음에 아내와 같이 찾아뵙고 다시 인사를 드리겠습니다.","keys":{"a":["드리지 못했습니다","못 드렸습니다"],"b":["축하해 주시고","축하해 주셨고"]}},"W51_093":{"round":93,"passage":"안녕하세요?\n저는 도서 대출 서비스를 ( ㉠ ) 비밀번호를 잊어버렸습니다.\n그래서 제 이메일로 임시 비밀번호를 신청했습니다.\n그런데 아직까지 저한테 이메일이 ( ㉡ ).\n확인해 주시기 바랍니다.","keys":{"a":["이용하려고 했는데","이용하려고 하는데","이용하고 싶은데"],"b":["안 왔습니다","오지 않았습니다"]}},"W51_094":{"round":94,"passage":"교수님, 안녕하세요. 한국어학과 4학년 미나입니다.\n제가 다음 주 '한국문화' 수업에서 첫 번째 발표를 하기로 했습니다.\n그런데 그날 병원에 갔다 와야 해서 30분쯤 ( ㉠ ).\n괜찮다고 하시면 좀 늦게 발표하고 싶습니다.\n또한, 제가 다른 친구와 발표 순서를 ( ㉡ )?\n정말 죄송합니다.","keys":{"a":["늦을 것 같습니다","늦게 갈 것 같습니다","지각할 것 같습니다"],"b":["바꿔도 되겠습니까","바꿔도 됩니까","바꿀 수 있겠습니까"]}},"W51_095":{"round":95,"passage":"안녕하십니까?\n저는 일본으로 물건을 보냈습니다.\n우체국 직원이 10일 내에 물건이 ( ㉠ ). 그런데 물건이 아직 도착하지 않았습니다.\n저의 물건이 어디에 있는지 확인하려면 ( ㉡ )?\n확인 방법을 알려 주시면 감사하겠습니다.","keys":{"a":["도착할 거라고 했습니다","도착할 것이라고 했습니다","도착한다고 했습니다"],"b":["어떻게 해야 합니까","어떻게 하면 됩니까"]}},"W51_096":{"round":96,"passage":"[자유 게시판 · 인주대학교]\n제목: 어디로 이사하는 것이 좋을까요?   (작성자: 에르덴)\n\n안녕하세요. 외국인 유학생입니다.\n기숙사 생활이 불편해서 이번 방학에 이사를 ( ㉠ ).\n집값이 싸고 좀 깨끗한 동네면 좋겠습니다.\n그런데 어느 ( ㉡ ) 잘 모르겠습니다.\n좋은 곳을 아시면 추천 부탁드립니다.","keys":{"a":["하려고 합니다","하고 싶습니다"],"b":["동네가 좋은지","동네가 좋을지","곳으로 갈지"]}},"W51_097":{"round":97,"passage":"이 책은 한국 문화에 대해 쉽게 설명되어 있습니다.\n어휘와 문법이 어렵지 않습니다.\n그래서 한국어를 ( ㉠ ) 얼마 안 된 외국인들도 읽을 수 있습니다.\n저는 한국어를 잘 못하지만 재미있게 읽었습니다.\n이 책을 꼭 한번 ( ㉡ ).","keys":{"a":["배운 지","공부한 지","시작한 지"],"b":["읽어 보십시오","읽어 보시기 바랍니다","읽어 보세요"]}},"W51_098":{"round":98,"passage":"안녕하십니까? 마리아입니다.\n이번 유학생 모임에서 먹을 점심 메뉴를 ( ㉠ ).\n갑자기 조사를 부탁드려 죄송합니다. 저번에 조사할 때 빠뜨렸습니다.\n아래 사이트에서 원하는 메뉴를 고르신 후, 이 이메일로 ( ㉡ ) 감사하겠습니다.","keys":{"a":["조사하려고 합니다","조사하고 있습니다","조사하겠습니다"],"b":["보내 주시면","알려 주시면"]}},"W51_099":{"round":99,"passage":"제목: 신입생 환영회에 여러분을 초대합니다.\n\n여러분, 안녕하십니까?\n유학생 대표 호영아이유입니다.\n여러분이 우리 대학교에 ( ㉠ ) 벌써 한 달이 되었습니다.\n여러분을 축하하기 위해서 이번 주 금요일 오후 5시에 신입생 환영회를 준비했습니다.\n신입생을 위한 기념품도 준비되어 있으니 많은 참석 바랍니다.\n*환영회에 ( ㉡ ) 분께는 다음 주에 기념품을 전달해 드리겠습니다.","keys":{"a":["입학한 지","입학하신 지","들어온 지"],"b":["참석하지 못한","참석하지 못하신","못 오신"]}},"W51_100":{"round":100,"passage":"To: 센터 선생님\nSubject: 면접 도움 부탁\n\n안녕하십니까?\n이번 학기에 졸업하는 관광학과 허예인이라고 합니다.\n이제 제가 지원하는 회사에서 면접에 오라는 연락이 왔습니다.\n그런데 제가 면접을 한 번도 ( ㉠ ) 없습니다.\n2주 후에 면접이 있는데 어떻게 준비해야 할지 모르겠습니다.\n그래서 가능하면 다음 주 안에 센터 선생님한테서 도움을 꼭 ( ㉡ ).\n답변 기다리겠습니다.","keys":{"a":["본 적이","본 경험이"],"b":["받고 싶습니다","받았으면 좋겠습니다"]}},"W51_101":{"round":101,"passage":"이번 주 토요일에 축구 경기가 있습니다.\n응원해야 하니까 많은 학생이 ( ㉠ ).\n참여할 학생은 학교 경기장에 오시기 바랍니다.\n경기장에서 우리 팀을 ( ㉡ ) 학교 티셔츠를 입으려고 합니다.","keys":{"a":["참여하면 좋겠습니다","참여해 주시기 바랍니다","와 주면 좋겠습니다"],"b":["응원하기 위해서","응원하기 위해","응원하려고"]}},"W51_102":{"round":102,"passage":"[Email] 제목: 개인 물건 정리 요청   (2025.10.10.(금))\n\n안녕하세요. 동아리 회장 흐엉입니다.\n학생회관 공사 때문에 동아리 방을 옮기게 되었습니다.\n그런데 현재 개인 물건들이 너무 많습니다.\n동아리 방을 옮기려면 이 물건들부터 먼저 ( ㉠ ).\n방학을 하자마자 공사가 시작됩니다.\n방학이 ( ㉡ ) 개인 물건을 모두 가져가 주십시오.","keys":{"a":["정리해야 합니다"],"b":["시작되기 전에"]}},"W51_103":{"round":103,"passage":"제목: 햄버거 단체 주문 문의\n\n안녕하세요.\n저는 햄버거를 단체로 ( ㉠ ).\n다음 주 화요일 5시까지 학생회관으로 햄버거 50개를 ( ㉡ )?\n가능한지 연락해 주시면 바로 주문하겠습니다.\n감사합니다.","keys":{"a":["주문하고 싶습니다","주문하려고 합니다"],"b":["배달해 주실 수 있습니까","배달해 주시겠습니까","보내 주실 수 있습니까"]}},"W51_104":{"round":104,"passage":"제목: 방 관련 문의\n\n안녕하세요?\n기숙사 403호에 사는 안나입니다.\n저는 다리를 다쳐서 수술을 받았습니다.\n수술을 ( ㉠ ) 얼마 안 되어서 걸을 때 힘듭니다.\n그래서 1층으로 방을 ( ㉡ ).\n답변 부탁드립니다.","keys":{"a":["받은 지","한 지"],"b":["바꾸고 싶습니다","옮기고 싶습니다","바꿔 주시면 좋겠습니다"]}},"W51_105":{"round":105,"passage":"제목: 상담을 받고 싶습니다\n\n교수님, 안녕하십니까? 경영학과 1학년 쿠이입니다.\n이번 학기에 들은 '경영학의 이해' 수업이 너무 어려웠습니다.\n앞으로 공부를 어떻게 ( ㉠ ) 잘 모르겠습니다.\n교수님께 상담을 받으면 저에게 큰 도움이 ( ㉡ ).\n가능하시다면 상담 시간을 알려 주시면 감사하겠습니다. 감사합니다.","keys":{"a":["해야 할지","하면 좋을지","해야 하는지"],"b":["될 것 같습니다","될 것입니다"]}},"W51_106":{"round":106,"passage":"제목: 무료 나눔\n작성자: 타이\n\n안녕하세요. 경영학과 4학년 타이입니다.\n운동 기구를 무료로 드리려고 합니다.\n운동 기구는 ( ㉠ ) 한 달밖에 안 됐습니다.\n기구가 무거워서 옮기려면 두 사람이 같이 ( ㉡ ).\n필요하신 분은 댓글을 남겨 주십시오.","keys":{"a":["산 지","구매한 지","구입한 지"],"b":["와야 합니다","옮겨야 합니다","들어야 합니다"]}}};
-function norm(s){return String(s).replace(/[\s.,!?·~"'“”‘’]/g,'');}
-function matches(ans,keys){var a=norm(ans);if(!a)return false;return keys.some(function(k){return [k.replace(/[()]/g,''),k.replace(/\([^)]*\)/g,'')].map(norm).indexOf(a)>=0;});}
-function hintHTML(t){return esc(t).replace(/«([^»]+)»/g,'<span class="ko">«$1»</span>');}
-/* ---- Từ vựng: lôi động từ (C có sẵn · K danh từ trước ô · S suy ra · D trái nghĩa) ---- */
-var TU = {
-'070a':['K','하다','수영을','«수영을» ngay trước ô → 수영을 하다.'],
-'070b':['S','좋아하다|선택하다','','Khách hài lòng + người coi trọng cảnh đẹp → “chắc chắn sẽ thích”.'],
-'072a':['C','맞다','맞는 전공','Câu sau «맞는 전공» → 맞다.'],
-'072b':['C','받다','상담을 받고 싶습니다','Tiêu đề «상담을 받고 싶습니다» → 받다.'],
-'073a':['C','배우다|공부하다','배운 것을','Câu sau «배운 것을» → 배우다.'],
-'073b':['C','가르치다','가르치고','Câu sau «가르치고» → 가르치다.'],
-'074a':['C','가다','출장을 가게','«모임에 못 ( )» + câu trước «가게» → 가다.'],
-'074b':['C','하다','발표를 할','«발표를 할 사람», «대신 발표를 하겠습니다» → 하다.'],
-'075a':['K','먹다','생선 구이를','Món ăn «생선 구이를» → 먹다.'],
-'075b':['C','소개하다','소개해 주시면','Tiêu đề + câu sau «소개해 주시면» → 소개하다.'],
-'076a':['C','오다','한국에 온 지','Câu đầu «한국에 온 지» → 오다.'],
-'076b':['C','있다','설명회가 있다고','Câu trước «설명회가 있다고 합니다» → 있다.'],
-'077a':['K','드리다','인사를','«인사를» → 인사를 드리다 (với thầy cô).'],
-'077b':['K','알리다|말씀하다','괜찮은 시간을','«괜찮은 시간을» ( ) + «찾아뵙겠습니다» → 알려 주시면.'],
-'078a':['C','바꾸다|변경하다','변경','Tiêu đề «주문 변경 요청» → 변경하다 / 바꾸다.'],
-'078b':['C','보내다|배송하다','보내 주십시오','Câu khách «빨간색으로 보내 주십시오» → 보내다.'],
-'079a':['D','편리하다|편하다|좋다','불편했습니다','Trái nghĩa của «불편했습니다» → 편리하다.'],
-'079b':['C','사용하다|쓰다','사용하기에','«사용하기에», «사용한 앱들» → 사용하다.'],
-'080a':['C','출발하다|가다','출발하겠습니다','Câu sau «출발하겠습니다» → 출발하다.'],
-'080b':['S','늦다','약속 시간보다','«약속 시간보다 더 많이» + 죄송합니다 → 늦다.'],
-'081a':['S','생기다','','Lý do không đi được → cụm cố định 일이 생기다.'],
-'081b':['C','보내다','보낸 사람','«문자를» + câu sau «보낸 사람» → 보내다.'],
-'082a':['K','되다','일 년밖에','«사용한 지 일 년밖에» ( ) → 안 되다.'],
-'082b':['K','들다','마음에','«마음에» → 마음에 들다.'],
-'083a':['C','보다','별도 보고','«별을» + câu sau «별도 보고» → 보다.'],
-'083b':['K','하다','경험을','«경험을» → 경험을 하다.'],
-'084a':['C','바꾸다|변경하다','변경','Tiêu đề «예약 변경 문의» + «방을 3인실로» → 바꾸다.'],
-'084b':['K','알리다|답장하다','무엇이 가능한지','«무엇이 가능한지» ( ) «감사하겠습니다» → 알려 주시면.'],
-'085a':['C','등록하다','함께 등록하면','Câu trước «함께 등록하면» → 등록하다.'],
-'085b':['C','좋다|괜찮다','다 괜찮습니다','«어느 ( )» + câu trước «다 괜찮습니다» → 반이 괜찮은지.'],
-'086a':['K','드리다|하다','연락을','«연락을» → 연락을 드리다.'],
-'086b':['C','뵙다|만나다','뵈러','Câu trước «뵈러 가려고» → 뵙다.'],
-'087a':['K','걸리다','시간이 30분쯤','«시간이 30분쯤 더» → 걸리다.'],
-'087b':['K','끝나다','회의가','«회의가» + «늦어도» → 끝나기 전에.'],
-'088a':['K','나다','소리가','«소리가» → 소리가 나다.'],
-'088b':['S','사다|구입하다|구매하다','','Đồ vật + «( ) 5년» → 산 지. Bài không có chữ 사다.'],
-'089a':['K','쓰다|사용하다','1대밖에','«세탁기를 1대밖에» → 쓸 수 없어서.'],
-'089b':['K','바꾸다','새 것으로','«새 것으로» → N(으)로 바꾸다.'],
-'090a':['C','시작되다|시작하다','시작된 후','«시작됩니다», câu sau «시작된 후» → 시작되다.'],
-'090b':['C','받다','받을 수 없으니','Cùng câu «간식을 받을 수 없으니» → 받다.'],
-'091a':['C','변경하다|바꾸다','변경 가능한지','Tiêu đề «예약 변경 문의», câu cuối «변경 가능한지» → 변경하다.'],
-'091b':['K','되다|불가능하다','예약이','«만약 이날 예약이» → 안 되면.'],
-'092a':['K','드리다|하다','말씀을','«말씀을» → 말씀을 드리다.'],
-'092b':['C','축하하다','축하를 받고','Câu trước «축하를 받고» → 축하하다.'],
-'093a':['K','이용하다','서비스를','«서비스를» → 이용하다.'],
-'093b':['K','오다','이메일이','«이메일이» → 오다.'],
-'094a':['C','늦다','늦게','Câu sau «좀 늦게 발표하고» → 늦다.'],
-'094b':['K','바꾸다','순서를','«발표 순서를» → 바꾸다.'],
-'095a':['C','도착하다','도착하지 않았습니다','Câu sau «도착하지 않았습니다» → 도착하다.'],
-'095b':['K','하다','-려면','«확인하려면» ( )? → 어떻게 해야 합니까.'],
-'096a':['K','하다','이사를','«이사를» (tiêu đề «이사하는») → 하다.'],
-'096b':['C','좋다','동네면 좋겠습니다','«어느 ( )» + câu trước «동네면 좋겠습니다» → 동네가 좋은지.'],
-'097a':['K','배우다|공부하다','한국어를','«한국어를» ( ) «얼마 안 된» → 배운 지.'],
-'097b':['C','읽다','읽었습니다','Câu trước «읽었습니다» → 읽다.'],
-'098a':['C','조사하다','조사를','Câu sau «조사를 부탁드려» → 조사하다.'],
-'098b':['K','보내다|알리다','이 이메일로','«이 이메일로» → 보내 주시면.'],
-'099a':['S','입학하다|들어오다','','Thư mời tân sinh viên + «우리 대학교에 ( ) 한 달» → 입학한 지.'],
-'099b':['C','참석하다|오다','참석 바랍니다','Câu trước «많은 참석 바랍니다» → 참석하다.'],
-'100a':['K','보다','면접을','«면접을» → 면접을 보다.'],
-'100b':['K','받다','도움을','«도움을» → 도움을 받다.'],
-'101a':['C','참여하다|오다','참여할 학생은','Câu sau «참여할 학생은» → 참여하다.'],
-'101b':['C','응원하다','응원해야','Câu đầu «응원해야» → 응원하다.'],
-'102a':['C','정리하다','정리','Tiêu đề «개인 물건 정리 요청» → 정리하다.'],
-'102b':['C','시작되다','시작됩니다','Câu trước «공사가 시작됩니다» → 방학이 시작되다.'],
-'103a':['C','주문하다','주문하겠습니다','Tiêu đề «단체 주문», câu sau «주문하겠습니다» → 주문하다.'],
-'103b':['S','배달하다|보내다','','«학생회관으로 햄버거 50개를» = đưa đồ ăn tới nơi → 배달하다.'],
-'104a':['C','받다','수술을 받았습니다','Câu trước «수술을 받았습니다» → 받은 지.'],
-'104b':['K','바꾸다|옮기다','1층으로','«1층으로 방을» → 바꾸다 / 옮기다.'],
-'105a':['K','하다','공부를','«공부를 어떻게» → 해야 할지.'],
-'105b':['K','되다','도움이','«큰 도움이» → 되다.'],
-'106a':['S','사다|구매하다|구입하다','','Đồ vật + «( ) 한 달밖에» → 산 지. Bài không có chữ 사다.'],
-'106b':['C','옮기다|오다','옮기려면','Cùng câu «옮기려면» → 옮겨야 합니다.']
-};
-var TU_SRC={C:'Bước 1–2 · Có sẵn trong bài',K:'Bước 3 · Danh từ trước ô',S:'Bước 4 · Suy ra từ hoàn cảnh',D:'Từ trái nghĩa'};
-var TU_SET=[['all','Tất cả'],['C','Có sẵn trong bài'],['K','Danh từ trước ô'],['S','Suy ra + trái nghĩa']];
-function tuSt(){return st.tu||(st.tu={f:'K',a:{}});}
-function tuIds(f){return Object.keys(TU).filter(function(k){var t=TU[k][0];return f==='all'||t===f||(f==='S'&&t==='D');});}
-function tuNorm(x){return norm(x).replace(/다$/,'');}
-function tuOk(k,v){var t=TU[k],a=tuNorm(v);if(!a)return false;
-  if(t[1].split('|').some(function(w){w=tuNorm(w);return w===a||(w.length>1&&a.indexOf(w)===0);}))return true;
-  var q=Q['W51_'+k.slice(0,3)];return matches(v,q.keys[k[3]]);}
-function tuPsg(k,done){
-  var q=Q['W51_'+k.slice(0,3)],b=k[3],t=TU[k];
-  var p=esc(q.passage).replace(/\(\s*㉠\s*\)/,'<span class="gap'+(b==='a'?'':' off')+'">( ㉠ )</span>').replace(/\(\s*㉡\s*\)/,'<span class="gap'+(b==='b'?'':' off')+'">( ㉡ )</span>');
-  if(done){(t[3].match(/«([^»]+)»/g)||[]).forEach(function(m){var w=esc(m.slice(1,-1));if(w.length>1&&p.indexOf(w)>=0)p=p.split(w).join('<mark>'+w+'</mark>');});}
-  return p.replace(/\n\n+/g,'\n').replace(/\n/g,'<br>');
-}
-function renderTu(){
-  var S=tuSt(),ids=tuIds(S.f),h='',ok=0,n=0;
-  $('tuf').innerHTML=TU_SET.map(function(x){return '<button class="b'+(S.f===x[0]?' on':'')+'" data-tuf="'+x[0]+'">'+x[1]+' ('+tuIds(x[0]).length+')</button>';}).join('');
-  ids.forEach(function(k,i){
-    var t=TU[k],q=Q['W51_'+k.slice(0,3)],r=S.a[k],done=!!r;
-    if(done){n++;if(r.ok)ok++;}
-    h+='<div class="task tuq" id="U'+k+'"><div class="hd"><b>'+(i+1)+'. Kỳ '+q.round+' · ô '+(k[3]==='a'?'㉠':'㉡')+'</b><span class="lab">'+(done?(r.ok?'✔ Đúng':'✘ Chưa đúng'):'Chưa làm')+'</span></div><div class="bd">';
-    h+='<div class="psg">'+tuPsg(k,done)+'</div>';
-    h+='<div class="blank"><label>Động từ dạng gốc cho ô '+(k[3]==='a'?'㉠':'㉡')+':</label><input class="ans" data-tu="'+k+'" value="'+esc(done?r.v:'')+'" autocomplete="off" autocapitalize="off" spellcheck="false" lang="ko"'+(done?' disabled':'')+'></div>';
-    if(!done)h+='<div class="btns"><button class="b main" data-tuchk="'+k+'">Kiểm tra</button><button class="b" data-tugive="'+k+'">Xem đáp án</button></div>';
-    else h+='<div class="res '+(r.ok?'ok':'rv')+'"><div>Động từ: <b class="ko">'+esc(t[1].split('|').join(' / '))+'</b> · Đáp án trong đề: <b class="ko">'+esc(q.keys[k[3]][0])+'</b></div><div class="pat"><b>'+TU_SRC[t[0]]+'.</b> '+hintHTML(t[3])+'</div><div class="btns"><button class="b" data-turedo="'+k+'">Làm lại câu này</button></div></div>';
-    h+='</div></div>';
-  });
-  h+='<div class="score">Đúng '+ok+'/'+ids.length+(n<ids.length?' (còn '+(ids.length-n)+' ô)':'')+(n?' · <a href="#" data-tuall="1">Làm lại bộ này</a>':'')+'</div>';
-  $('tuList').innerHTML=h;
-}
-function tuDo(k,give){var S=tuSt(),inp=document.querySelector('input[data-tu="'+k+'"]'),v=inp?inp.value.trim():'';
-  if(!give&&!v){inp&&inp.focus();return;}
-  S.a[k]={v:v,ok:give?false:tuOk(k,v)};save();var y=scrollY;renderTu();scrollTo(0,y);}
+/* thẻ Từ vựng: che / mở động từ */
 document.addEventListener('click',function(e){
-  var d=e.target.closest('[data-tuf],[data-tuchk],[data-tugive],[data-turedo],[data-tuall],[data-hidev],#tuTable .vb');if(!d)return;
-  var S=tuSt(),x=d.dataset;
-  if(x.tuf){S.f=x.tuf;save();renderTu();}
-  else if(x.tuchk)tuDo(x.tuchk,0);
-  else if(x.tugive)tuDo(x.tugive,1);
-  else if(x.turedo){delete S.a[x.turedo];save();var y=scrollY;renderTu();scrollTo(0,y);}
-  else if(x.tuall){e.preventDefault();tuIds(S.f).forEach(function(k){delete S.a[k];});save();renderTu();}
-  else if(x.hidev!=null){var on=$('tuTable').classList.toggle('hidev');d.textContent=on?'Hiện động từ':'Che động từ';document.querySelectorAll('#tuTable .vb.open').forEach(function(v){v.classList.remove('open');});}
+  var d=e.target.closest('[data-hidev],#tuTable .vb');if(!d)return;
+  if(d.dataset.hidev!=null){var on=$('tuTable').classList.toggle('hidev');d.textContent=on?'Hiện động từ':'Che động từ';document.querySelectorAll('#tuTable .vb.open').forEach(function(v){v.classList.remove('open');});}
   else d.classList.toggle('open');
 });
-document.addEventListener('keydown',function(e){var i=e.target.closest&&e.target.closest('input[data-tu]');if(i&&e.key==='Enter')tuDo(i.dataset.tu,0);});
-
 function applyChe(){
   document.body.classList.toggle('che',!!st.che);
   $('che').classList.toggle('on',!!st.che);$('che').textContent=st.che?'Hiện lại mẫu':'Che mẫu cần viết';
@@ -714,7 +536,6 @@ function show(){
   $('tool').style.display=(k==='luyen'||k==='tu')?'none':'';
   st.tab=k;save();
   if(k==='luyen')renderLuyen();
-  if(k==='tu')renderTu();
 }
 applyChe();
 window.addEventListener('hashchange',function(){show();scrollTo(0,0);});show();
