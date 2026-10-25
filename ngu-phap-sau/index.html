@@ -305,8 +305,8 @@ function sayBtn(ko){var t=plain(ko).replace(/\([^)]*\)/g,' ').replace(/[A-Z]:/g,
 
 // ---- tải dữ liệu
 function load(){
-  var ps=LS.map(function(k){return fetch('data/'+k+'.json').then(function(r){return r.json()}).then(function(j){D[k]=j})});
-  CDS.forEach(function(k){ps.push(fetch('data/cd-'+k+'.json').then(function(r){return r.json()}).then(function(j){C[k]=j}).catch(function(){}))});
+  var ps=LS.map(function(k){return fetch('data/'+k+'.json',{cache:'no-cache'}).then(function(r){return r.json()}).then(function(j){D[k]=j})});
+  CDS.forEach(function(k){ps.push(fetch('data/cd-'+k+'.json',{cache:'no-cache'}).then(function(r){return r.json()}).then(function(j){C[k]=j}).catch(function(){}))});
   ps.push(fetch('../seoul/ngu-phap/np.json').then(function(r){return r.json()}).then(function(j){NP=j.b}).catch(function(){NP={}}));
   return Promise.all(ps);
 }
