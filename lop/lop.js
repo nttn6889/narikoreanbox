@@ -5,11 +5,12 @@
    Site công khai nên đây chỉ là “cửa có khóa”, không phải bảo mật thật: ai có link trang học liệu bên trong vẫn mở được trang đó. */
 (function(){
   var H = {
+    '4a': 'b0ba0946fe96e4a4a74f1dce3cd8e26edcd34b0e0b57ef7c3c2e14ae322bdefe',
     '3a': 'fe48d386ddd83e92c88238533220eaaded537ef46f2044e6e4759bdabecb7dfa',
     '2a': '44bd1aace4607271946bfe2a140b03177ced8ce7f395749d10c1c9b0d80fd238',
     '1a': 'b358a72c2afc5a45a97be7e9e2e46b7603832dc314c713fc02cdf3f91e58c18d'
   };
-  var LOP = [['3a', 'Seoul 3A'], ['2a', 'Seoul 2A'], ['1a', 'Seoul 1A']];
+  var LOP = [['4a', 'Seoul 4A'], ['3a', 'Seoul 3A'], ['2a', 'Seoul 2A'], ['1a', 'Seoul 1A']];
   var KEY = 'nari-lop';
   var me = document.currentScript, root = (me && me.getAttribute('data-root')) || '', here = (me && me.getAttribute('data-lop')) || '';
   function load(){ try{ return JSON.parse(localStorage.getItem(KEY)) || {}; }catch(e){ return {}; } }

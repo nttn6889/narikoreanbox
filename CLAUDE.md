@@ -11,7 +11,7 @@ trang thi thử học sinh + chỉ dữ liệu 3 bài (Ehot1, N001 + file nghe) 
 Giáo án / bản trình chiếu của cô (`seoul/2a-1/`, `seoul/3a-1/`…) gắn `<meta name="robots" content="noindex">` để Google không đưa lên tìm kiếm.
 Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối không đưa dữ liệu học sinh vào repo.
 
-## Trang chủ học sinh (`index.html` ở gốc = https://hoc.naritopik.com/) + trang lớp (`lop/3a|2a|1a/`)
+## Trang chủ học sinh (`index.html` ở gốc = https://hoc.naritopik.com/) + trang lớp (`lop/4a|3a|2a|1a/`)
 - Một link gửi học sinh. Đầu trang = logo to + menu lớp (`lop/lop.js` vẽ vào `#lopnav`): **TOPIK II** + chỉ những lớp Seoul máy này đã mở bằng mã + **Khóa học ›**
   (tạm trỏ `hoc-cung-co/`, sau đổi sang naritopik.com) + nút “Về cô” tím (`ve-co/`). CSS chung `trang.css` (giao diện theo `tu-vung/`, màu tím logo).
   Chưa đưa “Bài cô giao” (app) vào — cô tính sau.
@@ -30,6 +30,11 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   - **Đề thi** (`#k=de&s=doc|nghe|viet&e=<đề | kỳ>`): làm cả đề. Đọc = 22 đề đủ 50 câu (`DOC_DE`, đáp án `dau-hieu/data/`), chọn hết rồi “Nộp bài” → chấm, điểm ≈ số câu × 2,
     bài làm ở localStorage `nari-home-de` (không gửi cô). Nghe = đề trong `NGHE` (chỉ câu có file nghe, không chấm). Viết = theo kỳ (`thi-thu/viet/index.json`), xem đáp án / bài mẫu.
     Thêm đề đọc mới vào `DOC_DE` sau khi có đáp án trong `dau-hieu/data/`.
+- **Tiêu đề + khẩu hiệu** (cô chốt 25/10, khối `.hd` trong `trang.css`): tên `<h1>` “Động từ + cấp (sách)”, khẩu hiệu lớp 3 vế × 3 chữ (màu vàng), dòng nguyên tắc chung
+  “Học có chiến thuật · Luyện có mục tiêu · Sửa đến khi hiểu”. Trang chủ: Chinh phục TOPIK II (Cấp 3–6) · Đúng chiến thuật – Chắc từng câu – Vững điểm số;
+  `lop/1a` Xây nền Sơ cấp 1 (Seoul 1A–1B) · Chuẩn phát âm – Hiểu cấu trúc – Vững từng câu; `lop/2a` Hoàn thiện Sơ cấp 2 (Seoul 2A–2B) · Rõ cấu trúc – Mượt câu văn – Vững giao tiếp;
+  `lop/3a` Bứt phá Trung cấp 1 (Seoul 3A–3B) · Sâu ngữ pháp – Rộng vốn từ – Vững đọc viết; `lop/4a` Làm chủ Trung cấp 2 (Seoul 4A–4B) · Chuẩn văn viết – Giàu thành ngữ – Vững lập luận
+  (trang 4A đã tạo, có mã lớp, chưa có học liệu — repo chưa nhập từ vựng / ngữ pháp Seoul 4). 5A, 6A (Cao cấp) tính sau, cùng khuôn.
 - Trang lớp `lop/<lớp>/` hiện chỉ là danh sách học liệu học sinh có sẵn (Seoul từ vựng / ngữ pháp / bài tập…), làm tiếp sau trang TOPIK.
 - Không đưa giáo án / bản trình chiếu của cô (trang `noindex`, `viet-51/`, `viet-52/`, `viet-53/`, `cau-25-27/`, `seoul/so-dem|tuong-dong|tu-de-hoi/`, `seoul/2a-1|3a-1/`, `ngu-phap-sau/`).
 
