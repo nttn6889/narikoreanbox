@@ -621,8 +621,8 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   C Dấu bám `B` (+ chuỗi từ khóa `W`) · D Ý chính `Y` (vị trí `y`: l câu cuối, d sau 그러나…, f câu đầu, m giữa, g tổng hợp) + thái độ / mục đích ·
   E bẫy của lựa chọn sai `x`: N ngược một chữ, T bài không nói, C chép chữ ghép sai, S đổi đối tượng, G đổi thời điểm / số liệu, A quá mức, H chi tiết hẹp, R ý bị lật / nhượng bộ, P lệch.
   Bảng đối chiếu nhãn cũ (16–18, 19–20, 52, 13–15, 25–27, 23–24) ↔ mã chung nằm trong thẻ B và E.
-- Thẻ A (cô góp ý 25/10: “lý thuyết đến đâu thực hành đến đó”, cuối buổi mới trộn): mỗi nhóm A1–A10 = bảng → câu thật (`.exs`) → “✋ Luyện nhanh” (`PA.pa1…pa10`,
-  câu `[câu, lựa chọn (đầu là đáp án), giải thích, câu hỏi?]`, `st.h['paN_i']`); đầu thẻ thanh lộ trình `#hoNav` (điểm từng nhóm), cuối thẻ “Bài trộn cuối buổi” `HQM`
+- Thẻ A (cô góp ý 25/10: “lý thuyết đến đâu thực hành đến đó”, cuối buổi mới trộn): mỗi nhóm A1–A11 = bảng → câu thật (`.exs`) → “✋ Luyện nhanh” (`PA.pa1…pa10`,
+  câu `[câu, lựa chọn (đầu là đáp án), giải thích, câu hỏi?]`, `st.h['paN_i']`); đầu thẻ thanh lộ trình `#hoNav` (điểm từng nhóm), nhóm A11 “Cùng đuôi, khác phó từ” (chép từ mục 3d của `cau-19-20/`); cuối thẻ “Bài trộn cuối buổi” `HQM`
   (16 câu khác câu luyện nhanh, phần tử 5 = nhóm → báo “Cần ôn lại” nhóm sai). Các thẻ B–E chưa làm theo khuôn này.
 - Thẻ: Tổng quan (bản đồ dạng × họ, số liệu, bảng nhiệt, thứ tự dạy) · A · B · C · D · E · Dạng câu (`#b=dang&t=1-2`, 19 thẻ: 1-2, 3-4, 5-8, 9-10, 11-12 … 48-50; mỗi thẻ có
   “Số liệu dạng này” tính từ `index.json` + câu đề thi thật) · Luyện chéo (`#b=luyen&t=…&k=HD&id=Etk091-39`, lọc dạng / đề / mã) · Bảng tra. localStorage `nari-dhcd`.
@@ -741,6 +741,7 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - Lý thuyết đến đâu luyện đến đó: Buổi 1 bảng phó từ chia 3 nhóm (`PAIRS[i][4]` = 1 đuôi nối / 2 câu hỏi – đoán / 3 thái độ – phủ định), sau mỗi nhóm và sau phần câu 20
   có ô “✋ Luyện nhanh” `MCQ['1a'|'1b'|'1c'|'1e'|'1f']`; Buổi 2 sau từng quan hệ `MCQ['2a'|'2b'|'2c']` + gọi tên lỗi `MCQ['2d']`; `MCQ[1]`, `MCQ[2]` = “Bài trộn cuối buổi”.
   Câu `[đoạn, lựa chọn (đầu là đáp án), giải thích, câu hỏi?]` (có câu hỏi thì không điền ô); tên trong báo cáo ở `MNAME`.
+  Mục 3d “Cùng một đuôi, nhiều phó từ” (bảng đuôi → các phó từ → cách phân biệt + `MCQ['1d']` 13 câu); cùng bảng + câu ở `dau-hieu/` thẻ A nhóm A11 (`PA.pa11`), sửa một bên thì chép sang bên kia.
   Nghĩa tiếng Việt từng câu luyện ở `MV[<bộ>][i]` (cùng thứ tự với `MCQ`, `[…]` = chỗ ô trống, tô vàng), hiện “Nghĩa:” sau khi chọn; thêm câu vào `MCQ` thì thêm nghĩa vào `MV`.
   Đáp án lấy từ `bank`, riêng `Etk091` dùng đáp án đúng ③ 비록 / ① (trong `bank` đang ghi sai ① / ③). `MCQ` câu tự soạn (lựa chọn đầu là đáp án). localStorage `nari-1920`.
 
