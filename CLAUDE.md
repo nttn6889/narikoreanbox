@@ -479,6 +479,10 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   Cuối mỗi thẻ nhóm (cô muốn bớt lý thuyết, luyện ngay sau từng nhóm): khối “📖 Ví dụ minh họa” (`.vd`, mỗi câu có nhãn mẫu `.tag`) + “✍ Luyện nhóm N”
   (`<div class="prac" id="pN">`, JS vẽ từ biến `P[N]` = `[loại, câu, đáp án, giải thích]`: `c` chọn (lựa chọn đầu là đáp án; “Câu nào sai?” thì lựa chọn đầu là câu sai),
   `y` gõ, `d` dịch Việt → Hàn (câu mẫu đầu + cách khác; trùng thì máy chấm, khác thì học sinh tự chấm), xen lẫn ~10 câu/nhóm; `st.p`, báo cáo gộp vào “Gửi kết quả cho cô”).
+- `seoul/tieu-tu/` **Tiểu từ dễ nhầm** — bản gửi học sinh, tách từ thẻ Tiểu từ (nhóm 1–5) của `seoul/tuong-dong/` (trang đó giữ nguyên làm giáo án của cô):
+  thẻ Bài học (`#b=tt`, `&g=g1…g5` nhảy tới nhóm; HTML nhóm 1–5 + `P[1…5]` + `M.q1` chép nguyên, sửa ở `tuong-dong/` thì chép lại) · thẻ Luyện tập (`#b=lt`, bài mới:
+  `M.l1` chọn tiểu từ 13, `T.l2` gõ tiểu từ 13, `M.l3` tìm câu sai 9 (lựa chọn đầu là câu sai), `T.l4` đoạn văn của Mai 10 chỗ trống, `M.ck` kiểm tra cuối 13; giải thích ghi số nhóm),
+  “Gửi kết quả cho cô” gộp cả bài luyện sau từng nhóm. localStorage `nari-tieutu`.
 - `seoul/tu-de-hoi/` Từ để hỏi (học sinh lớp 3A hay nhầm): thẻ 10 từ hỏi (`#b=cb`, bản đồ + 5 nhóm), Vị trí & tiểu từ (`vt`: thay đúng chỗ, từ hỏi chủ ngữ luôn 이/가,
   bảng tiểu từ, rút gọn khẩu ngữ), Dễ nhầm (`nh`: 무슨/어느/어떤, 몇/얼마/얼마나/며칠, 어떻게/어때요/어떤, “sao” = 왜/어떻게/무슨 일로/웬일, 언제/몇 시…),
   Lịch sự (`ls`: “어떻게 되세요”, 4 kiểu đuôi hỏi, câu hỏi đề viết 54), Mở rộng (`md`: nghĩa bất định + ngữ điệu, 누구나/아무나/아무도, -는지/-냐고, câu tu từ), Luyện (`lt`).
@@ -578,6 +582,9 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   C Dấu bám `B` (+ chuỗi từ khóa `W`) · D Ý chính `Y` (vị trí `y`: l câu cuối, d sau 그러나…, f câu đầu, m giữa, g tổng hợp) + thái độ / mục đích ·
   E bẫy của lựa chọn sai `x`: N ngược một chữ, T bài không nói, C chép chữ ghép sai, S đổi đối tượng, G đổi thời điểm / số liệu, A quá mức, H chi tiết hẹp, R ý bị lật / nhượng bộ, P lệch.
   Bảng đối chiếu nhãn cũ (16–18, 19–20, 52, 13–15, 25–27, 23–24) ↔ mã chung nằm trong thẻ B và E.
+- Thẻ A (cô góp ý 25/10: “lý thuyết đến đâu thực hành đến đó”, cuối buổi mới trộn): mỗi nhóm A1–A10 = bảng → câu thật (`.exs`) → “✋ Luyện nhanh” (`PA.pa1…pa10`,
+  câu `[câu, lựa chọn (đầu là đáp án), giải thích, câu hỏi?]`, `st.h['paN_i']`); đầu thẻ thanh lộ trình `#hoNav` (điểm từng nhóm), cuối thẻ “Bài trộn cuối buổi” `HQM`
+  (16 câu khác câu luyện nhanh, phần tử 5 = nhóm → báo “Cần ôn lại” nhóm sai). Các thẻ B–E chưa làm theo khuôn này.
 - Thẻ: Tổng quan (bản đồ dạng × họ, số liệu, bảng nhiệt, thứ tự dạy) · A · B · C · D · E · Dạng câu (`#b=dang&t=1-2`, 19 thẻ: 1-2, 3-4, 5-8, 9-10, 11-12 … 48-50; mỗi thẻ có
   “Số liệu dạng này” tính từ `index.json` + câu đề thi thật) · Luyện chéo (`#b=luyen&t=…&k=HD&id=Etk091-39`, lọc dạng / đề / mã) · Bảng tra. localStorage `nari-dhcd`.
 - Dữ liệu `tools/dau_hieu/<dạng>.json` (1.126 câu, đủ 22 đề đọc cho mọi dạng; câu 1–4 thêm 9 kỳ thật Etk035…Etk102 trong `thi-thu/de/`)
@@ -647,6 +654,10 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   Ngày 1–11 có phần **“2. Dịch câu · luyện chỗ hay nhầm”** (trước phần Luyện; chiều **Hàn → Việt**; cô muốn bám đúng “Chỗ hay nhầm” của ngày):
   biến `TR[ngày] = [[câu Hàn có __ngữ pháp__, bản dịch có [phần ứng với mẫu], mẫu, nghĩa mẫu]]` (7–10 câu/ngày, Claude soạn; mỗi mẫu nêu trong `tip` một câu,
   cặp dễ nhầm đứng cạnh nhau) → học sinh gõ nghĩa tiếng Việt → “Xem bản dịch” → tự chấm Đúng ý / Chưa đúng (`D.tr['t<ngày>_<i>'] = {t, c, m}`). Sửa `tip` thì sửa `TR` theo.
+  **Phần Dịch câu đang ẩn** (cô bảo để dùng lúc khác: `TR_ON = true` là hiện lại, dữ liệu `TR` giữ nguyên). Thay bằng **“2. Trắc nghiệm nhớ mẫu”** (`mqList`/`mqHTML`, tự sinh từ bảng mẫu
+  `V01_*`/`V03_*` của ngày, theo từng nhóm, cố định theo ngày): `m` mẫu → nghĩa (kèm câu ví dụ), `r` nghĩa → mẫu, `s` tương đồng (câu ví dụ của nhóm câu 3–4, đáp án = mẫu cùng câu ví dụ,
+  nhiễu lấy ở ngày khác). Nhiễu không lấy mẫu cùng gốc đồng nghĩa (`mqSyn`, bắc cầu qua các nhóm V03), nghĩa trùng chữ ≥ 50% hoặc cùng họ nghĩa `MQFAM` (đoán / dù / vì / nếu / để).
+  Bài lưu `D.mq[id câu]`, báo cáo ghi “Trắc nghiệm nhớ mẫu” + câu sai.
 
 ## Học câu 5 quảng cáo sản phẩm (`cau-5/`)
 - Cùng khung với `cau-16-18/`. Ý cô: học từ vựng gắn với cách ví von của quảng cáo, luyện **hai chiều** (đồ vật → chọn tất cả cụm của nó; quảng cáo → đồ vật).
@@ -688,6 +699,9 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   câu có ô hoặc câu cuối (7/7). Buổi 1 (6 bài), Buổi 2 (10), Buổi 3 như thi (6, 1:30/bài), Ôn (6 bài/lượt), thẻ “22 bài”, Bảng tra. Link `cau-19-20/#b=1|2|3|on|all|tra`, `#b=all&q=<id đề>`.
 - Biến `R` (id = id đề): `p`, `o`, `a`, `k` (quan hệ C O B G K T H), `c` (chỗ quyết định câu 19, tô vàng), `w`, `x[i]` (lỗi P thiếu cặp / N sai chiều / S sai sắc thái / M không hợp),
   `t` (J chủ đề / D nội dung khớp), `s`, `o2`, `a2`, `c2` (tô xanh), `w2`, `x2[i]` (H chi tiết hẹp / C chép chữ / N ngược / T không nói / A quá mức), `z` (vị trí đáp án chủ đề), `p1`, `mid`.
+- Lý thuyết đến đâu luyện đến đó: Buổi 1 bảng phó từ chia 3 nhóm (`PAIRS[i][4]` = 1 đuôi nối / 2 câu hỏi – đoán / 3 thái độ – phủ định), sau mỗi nhóm và sau phần câu 20
+  có ô “✋ Luyện nhanh” `MCQ['1a'|'1b'|'1c'|'1e'|'1f']`; Buổi 2 sau từng quan hệ `MCQ['2a'|'2b'|'2c']` + gọi tên lỗi `MCQ['2d']`; `MCQ[1]`, `MCQ[2]` = “Bài trộn cuối buổi”.
+  Câu `[đoạn, lựa chọn (đầu là đáp án), giải thích, câu hỏi?]` (có câu hỏi thì không điền ô); tên trong báo cáo ở `MNAME`.
   Đáp án lấy từ `bank`, riêng `Etk091` dùng đáp án đúng ③ 비록 / ① (trong `bank` đang ghi sai ① / ③). `MCQ` câu tự soạn (lựa chọn đầu là đáp án). localStorage `nari-1920`.
 
 ## Học câu 23–24 tâm trạng trong tùy bút (`cau-23-24/`) và câu 42–43 tiểu thuyết (`cau-42-43/`)
