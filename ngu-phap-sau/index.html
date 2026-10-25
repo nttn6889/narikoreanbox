@@ -199,6 +199,33 @@ table.vi td:first-child{font-weight:bold;font-family:"Times New Roman",serif;col
 .bq ol.chain{margin:4px 0 6px;padding-left:22px;font-size:15px}
 .bq ol.chain li{margin:2px 0}
 .bq .ng{font-size:14.5px;background:var(--bluebg);border-radius:6px;padding:5px 9px;margin-top:6px}
+/* sơ đồ chia + luyện chia miệng */
+.cv{border:1px solid var(--soft);border-radius:12px;padding:10px 12px;background:#fff;margin:4px 0 10px}
+.cvs{display:flex;gap:8px;align-items:baseline;font-size:16px;margin:2px 0 8px}
+.cvs .st{flex:none;font:bold 12.5px Arial,sans-serif;background:var(--pur);color:#fff;border-radius:10px;padding:2px 9px}
+.cvg{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
+.cvc{border:2px solid var(--pur);border-radius:12px;text-align:center;padding:8px 8px 10px;background:#fbfaff}
+.cvc .if{font-size:15px;font-weight:bold}
+.cvc .if small{display:block;font:12px Arial,sans-serif;color:var(--muted);font-weight:normal}
+.cvc .ar{color:var(--muted);font-size:16px;line-height:1.2}
+.cvc .add{display:inline-block;font:bold 21px "Noto Sans KR","Malgun Gothic",sans-serif;color:#fff;background:var(--acc);border-radius:10px;padding:2px 14px}
+.cvc .eg{font-size:15.5px;margin-top:6px;line-height:1.7}
+.cvc .eg b{color:var(--acc)}
+.dr{border:1px solid #e3c98a;background:#fffdf5;border-radius:10px;padding:8px 10px;margin:8px 0 12px}
+.drh{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-bottom:6px}
+.drh b{color:var(--warn)}
+.drh .sp{flex:1}
+.drh button{font:12.5px Arial,sans-serif;border:1px solid var(--soft);border-radius:12px;background:#fff;padding:3px 10px;cursor:pointer}
+.drg{display:grid;gap:6px;grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+.dw{border:1px solid var(--line);border-radius:10px;background:#fff;padding:6px 8px;cursor:pointer;text-align:center;font-family:"Noto Sans KR","Malgun Gothic",sans-serif;color:var(--ink)}
+.dw .g{display:block;font-size:17px}
+.dw .g i{font-style:normal;font:11px Arial,sans-serif;color:var(--muted);margin-left:3px}
+.dw .a{display:none;font-size:16px;font-weight:bold;color:var(--acc)}
+.dw .a::before{content:"→ ";color:var(--muted);font-weight:normal}
+.dw.open{background:var(--okbg);border-color:var(--ok)}
+.dw.open .a{display:block}
+.dw .dq{display:block;font:12px Arial,sans-serif;color:var(--muted);padding:2px 0}
+.dw.open .dq{display:none}
 /* bài luyện nhỏ */
 .lx{border:1px solid #c9c1e6;background:#fbfaff;border-radius:10px;padding:8px 10px;margin:8px 0 12px}
 .sit .lx{margin:10px 0 2px}
@@ -507,8 +534,8 @@ function drawPoint(x,crumb,list,idx){
   s+='<div class="chips">'+SECS.filter(function(z){return on[z[0]]||(z[0]=='s1'&&g)}).map(function(z){return '<a href="javascript:void 0" data-go="'+z[0]+'">'+(z[0]=='sg'&&p.goT||z[1])+'</a>'}).join('')+'</div>';
   if(on.s1||g)s+=Hk('s1')+(p.yn?ynHTML(p):on.s1?'<div class="goc">'+p.goc+'</div>':'');
   if(g)s+=bookBox(g,b,n);
-  if(on.s2)s+=Hk('s2')+tbl(p.chia)+(p.chiaNote&&p.chiaNote.length?'<ul class="nt">'+p.chiaNote.map(function(x){return '<li>'+md(x)+'</li>'}).join('')+'</ul>':'')+
-    (p.bqt||[]).map(function(q,i){return bqHTML(q,p.id+'_bq'+i)}).join('')+lxBlock(p.chiaLt,p.id+'_ch',p.bqt&&p.bqt.length?'✍ Luyện chia trộn (quy tắc + bất quy tắc)':'✍ Luyện chia','Gõ dạng đã chia (không cần gõ dấu cách) → “Kiểm tra”. Bí thì bấm 💡 Gợi ý.');
+  if(on.s2)s+=Hk('s2')+(p.chiaV?cvHTML(p.chiaV):tbl(p.chia))+(p.chiaNote&&p.chiaNote.length?'<ul class="nt">'+p.chiaNote.map(function(x){return '<li>'+md(x)+'</li>'}).join('')+'</ul>':'')+
+    (p.chiaDs||[]).map(drHTML).join('')+(p.bqt||[]).map(function(q,i){return bqHTML(q,p.id+'_bq'+i)}).join('')+lxBlock(p.chiaLt,p.id+'_ch',p.bqt&&p.bqt.length?'✍ Luyện chia trộn (quy tắc + bất quy tắc)':'✍ Luyện chia','Gõ dạng đã chia (không cần gõ dấu cách) → “Kiểm tra”. Bí thì bấm 💡 Gợi ý.');
   if(on.sd)s+=Hk('sd',' <span class="soon">'+p.doi.length+' câu gốc</span>')+doiHTML(p);
   if(on.s3)s+=Hk('s3',' <span class="soon">'+p.tinh.length+' tình huống</span>')+'<div class="sits">'+p.tinh.map(function(t,i){
     return '<div class="sit"><div class="h"><b>'+(i+1)+'. '+esc(t.t)+'</b><span class="lv">'+esc(t.lv)+'</span></div><div class="c">'+esc(t.c)+'</div><div class="ex"><span class="ko">'+md(t.ko)+sayBtn(t.ko)+'</span><span class="vi">'+esc(t.vi)+'</span></div><div class="why">'+md(t.why)+'</div>'+lxBlock(t.lt,p.id+'_t'+i,'✍ Luyện tình huống này')+'</div>'}).join('')+'</div>';
@@ -559,6 +586,19 @@ function ynHTML(p){var y=p.yn,s='<div class="yn">';
   if(y.vi)s+='<h4>🇻🇳 Nghĩa tiếng Việt tương đương</h4>'+(y.viN?'<p class="muted" style="margin:0 0 4px;font-size:14.5px">'+md(y.viN)+'</p>':'')+'<div class="scroll"><table class="t vi"><tr><td>Tiếng Việt</td><td>Dùng khi</td><td>Ví dụ</td></tr>'+y.vi.map(function(r){return '<tr><td>'+md(r[0])+'</td><td>'+md(r[1])+'</td><td><span class="ko">'+md(r[2])+'</span>'+(r[3]?'<br><span class="muted">'+md(r[3])+'</span>':'')+'</td></tr>'}).join('')+'</table></div>';
   if(p.goc)s+='<div class="goc" style="margin-top:10px"><b class="gh">Vì sao có nghĩa này?</b> '+p.goc+'</div>';
   return s+'</div>'}
+// chiaV = sơ đồ chia: {b:[[nhãn bước, nội dung]], r:[{k điều kiện, s chú thích nhỏ, e đuôi thêm, g ví dụ}], tbT, tb bảng phụ}
+function cvHTML(v){return '<div class="cv">'+(v.b||[]).map(function(x){return '<div class="cvs"><span class="st">'+md(x[0])+'</span><span>'+md(x[1])+'</span></div>'}).join('')+
+  '<div class="cvg">'+v.r.map(function(r){return '<div class="cvc"><div class="if ko">'+md(r.k)+(r.s?'<small>'+md(r.s)+'</small>':'')+'</div><div class="ar">↓</div><div class="add">'+md(r.e)+'</div><div class="eg ko">'+md(r.g)+'</div></div>'}).join('')+'</div>'+
+  (v.tb?'<h4 style="margin:12px 0 4px">'+md(v.tbT||'')+'</h4>'+tbl(v.tb):'')+'</div>'}
+// chiaDs = luyện chia miệng: [{t tên, d hướng dẫn, w:[[từ, đáp án, nhãn nhỏ?]]}] — học sinh đọc, cô bấm thẻ để hiện đáp án
+function drHTML(x){return '<div class="dr"><div class="drh"><b>🗣 '+md(x.t)+'</b><span class="sp"></span><button type="button" data-dr="mix">🔀 Trộn</button><button type="button" data-dr="all">Hiện hết</button><button type="button" data-dr="none">Ẩn hết</button></div>'+
+  (x.d?'<div class="lxsub" style="margin-bottom:6px">'+md(x.d)+'</div>':'')+'<div class="drg">'+x.w.map(function(w){return '<button type="button" class="dw"><span class="g">'+md(w[0])+(w[2]?'<i>'+esc(w[2])+'</i>':'')+'</span><span class="dq">bấm xem đáp án</span><span class="a">'+md(w[1])+'</span></button>'}).join('')+'</div></div>'}
+document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('.dr button');if(!b)return;
+  if(b.classList.contains('dw')){b.classList.toggle('open');return}
+  var dr=b.closest('.dr'),g=dr.querySelector('.drg'),a=b.getAttribute('data-dr');
+  if(a=='mix')shuffle([].slice.call(g.children)).forEach(function(c){g.appendChild(c)});
+  else g.querySelectorAll('.dw').forEach(function(c){c.classList.toggle('open',a=='all')});
+});
 // bqt: {t tên, r quy tắc, b:[bước chia một từ], ex:[[gốc, đã chia, nghĩa]], ng ngoại lệ / mẹo, lt bài luyện của nhóm}
 function bqHTML(q,key){return '<div class="bq"><b>'+md(q.t)+'</b><div class="r">'+md(q.r)+'</div>'+(q.b?'<ol class="chain">'+q.b.map(function(x){return '<li>'+md(x)+'</li>'}).join('')+'</ol>':'')+
   (q.ex?'<div class="scroll"><table class="t"><tr><td>Gốc</td><td>Chia</td><td>Nghĩa</td></tr>'+q.ex.map(function(e){return '<tr><td class="ko">'+md(e[0])+'</td><td class="ko">'+md(e[1])+'</td><td>'+md(e[2]||'')+'</td></tr>'}).join('')+'</table></div>':'')+(q.ng?'<div class="ng">'+md(q.ng)+'</div>':'')+lxBlock(q.lt,key,'✍ Luyện nhóm này','Có câu bẫy: từ trông giống nhưng theo quy tắc, hoặc đuôi bắt đầu bằng phụ âm.')+'</div>'}

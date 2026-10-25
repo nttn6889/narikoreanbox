@@ -421,7 +421,8 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - **Khung mới (cô góp ý 25/10, làm thử ở 2A Bài 3; bài cũ vẫn chạy theo khung cũ, làm lại dần):** “học tới đâu luyện tới đó”. Trường thêm của mẫu:
   `yn` = mục **Ý nghĩa và cấu trúc** (tên cũ “Nghĩa lõi & cấu tạo”): `ct:[[mảnh, tên, ví dụ]]` + `kq` (công thức dạng ô), `m:[{t, k khi nào, ko, vi, later}]` các nghĩa, `tbT`/`tb` bảng phụ,
   `vi:[[nghĩa tiếng Việt tương đương, dùng khi, ví dụ Hàn, dịch]]` (liệt kê hết), `goc` hiện thành “Vì sao có nghĩa này?”; `chia` thêm cột câu ví dụ,
-  `bqt:[{t, r quy tắc, b:[bước chia một từ], ex:[[gốc, chia, nghĩa]], ng ngoại lệ, lt luyện riêng nhóm đó (có câu bẫy)}]` (bảng `chia` chỉ giữ dạng theo quy tắc, bất quy tắc chỉ nằm ở `bqt`), `chiaLt` luyện chia trộn; `tinh[i].lt` luyện từng tình huống
+  `bqt:[{t, r quy tắc, b:[bước chia một từ], ex:[[gốc, chia, nghĩa]], ng ngoại lệ, lt luyện riêng nhóm đó (có câu bẫy)}]` (bảng `chia` chỉ giữ dạng theo quy tắc, bất quy tắc chỉ nằm ở `bqt`), `chiaLt` luyện chia trộn; `chiaV` = sơ đồ chia thay bảng `chia` (`b:[[Bước, nội dung]]`, `r:[{k điều kiện, s chú thích, e đuôi thêm, g ví dụ}]`, `tbT`/`tb`; không có câu ví dụ — ví dụ nằm ở bảng nghĩa tiếng Việt),
+  `chiaDs:[{t, d, w:[[từ, đáp án, nhãn nhỏ]]}]` = **luyện chia miệng** (học sinh đọc, cô bấm thẻ hiện đáp án, “Hiện hết” / “Trộn”; danh sách 2 = trộn cả bất quy tắc); `tinh[i].lt` luyện từng tình huống
   (1 câu Hàn → Việt + 1 câu Việt → Hàn hoặc chọn); `rb` dạng thẻ `[{k, d, ex, lt}]` (dạng bảng cũ vẫn nhận); `sai[i].h` (câu cô hỏi gợi ý), `.k` (loại lỗi) → lỗi **mở từng bước**
   (câu chưa đánh dấu → 🔍 chỗ sai tô đỏ + loại lỗi → ❓ vì sao → ✓ câu đúng; “Mở hết” chỉ ở bản của cô), `saiLy` lý thuyết trước, `saiLt` em tự sửa câu; `pb[i].bang` bảng so sánh + `pb[i].lt`;
   `em[i]` = chuỗi hoặc `{q, tip, gy:[[ko, vi]]}` (nút “Xem câu gợi ý” sau khi viết). Bài: `tron` = luyện trộn cả bài (trang bài, `#b=2A&c=3&t=tron`; câu có `g` = số mẫu).
