@@ -749,9 +749,22 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   Mục 3d “Cùng một đuôi, nhiều phó từ” (bảng đuôi → các phó từ → cách phân biệt + `MCQ['1d']` 13 câu); cùng bảng + câu ở `dau-hieu/` thẻ A nhóm A11 (`PA.pa11`), sửa một bên thì chép sang bên kia.
   Nghĩa tiếng Việt từng câu luyện ở `MV[<bộ>][i]` (cùng thứ tự với `MCQ`, `[…]` = chỗ ô trống, tô vàng), hiện “Nghĩa:” sau khi chọn; thêm câu vào `MCQ` thì thêm nghĩa vào `MV`.
 - Thẻ **“Buổi 1 mới”** (`#b=1n`, section `s1n`; cô thấy phần kiến thức 3a–3c khó khi học sinh chưa nhớ nghĩa phó từ lẫn đuôi; thẻ Buổi 1 cũ giữ nguyên vì học sinh đang học dở):
-  học phó từ đi cặp qua **cặp từ tiếng Việt** (Tuy … nhưng = 비록 … -지만, Nếu … thì, Liệu … không?, Biết đâu … cũng nên, Thà … còn hơn…), hai đầu cặp tô cùng màu (`.cp`).
-  3 nhóm, mỗi nhóm 4 bước: ① điền cặp tiếng Việt `MCQ['1nA1…3']` · ② ôn đuôi đã học `1nB*` (phần tử 4 = câu hỏi) · ③ bảng ghép (★ = từng là đáp án) · ④ luyện câu Hàn `1nD*` (+ `MV`);
+  học phó từ đi cặp qua **cặp từ tiếng Việt** (Tuy … nhưng = 비록 … -지만, Nếu … thì, Liệu … không?, Biết đâu … cũng nên, Thà … còn hơn…), hai đầu cặp in đậm gạch chân (`.cp`).
+  Cô chốt: học liệu đen trắng cho tập trung (không tô tím); đã bỏ bước điền cặp tiếng Việt và ôn đuôi. 3 nhóm, mỗi nhóm 3 bước: ① thẻ từng phó từ (cô yêu cầu làm kỹ: biến `ADV` =
+  {g nhóm, w, s ★ từng là đáp án, m, d nghĩa, p:[[đuôi, nghĩa đuôi, cặp Hàn, cặp Việt, giải thích, [[ví dụ Hàn, dịch]×2]]]}, `{…}` = hai đầu cặp tô `.cp`; `renderAdv` vẽ vào `#adv1…3`;
+  14 phó từ, 34 cặp) · ② thấy đuôi → chọn phó từ `1nD*` (+ `MV`) · ③ thấy phó từ → chọn đuôi `1nE*`;
   bảng cặp tổng “Che phó từ” (`#cpAll`), bài trộn `1nM`, rồi link sang Buổi 1 mục 4 (`#b=1&g=m14`; `g=` cuộn tới id trong thẻ) — mục 3d để dành sau. Báo cáo riêng `sum1n` (`lines1n`).
+- Thẻ **“Buổi 2 mới”** (`#b=2n`, section `s2n`; cô thấy Buổi 2 “xét quan hệ” còn mông lung lý thuyết, ít ví dụ; thẻ Buổi 2 cũ giữ nguyên), đen trắng như Buổi 1 mới:
+  bảng “câu sau làm gì → tiếng Việt hay nói → từ nối”, rồi 3 nhóm (ngược chiều 오히려 · 반면 · 그러나 / kết luận 따라서 · 그래서 · 이처럼 / thêm – chuyển – hỏi 또한 · 게다가 · 그런데 · 그러면),
+  mỗi nhóm: ① thẻ từ nối `REL2` {g, w, m, d, sig:[[ở đâu, dấu hiệu]], ex:[[ko, vi, vì sao]]} · ② bảng đặt cạnh nhau `CMP2` {g, t, base?, r:[[từ nối, câu sau, dịch, vì sao]]}
+  (`[chữ]` = từ nối đóng khung `.cn`, `{chữ}` = dấu hiệu `.cp`; `renderRel2`) · ③ gọi tên quan hệ `MCQ['2nN*']` (phần tử 4 = câu hỏi, lựa chọn = tên quan hệ) · ④ chọn từ nối `2nD*`; bài trộn `2nM`,
+  link sang Buổi 2 mục 5–6, 8 (`#b=2&g=m25|m28`). Báo cáo `sum2n` (`lines1n(L, pre, '2n')` dùng chung cho mọi thẻ `<buổi>n`).
+  Buổi 2 mới mục 5 (`#b=2n&g=m2nk`) “Đọc hai câu mà không hiểu thì làm sao?”: Cách 1 che từ khó đọc khung (bảng chữ → từ nối), Cách 2 dấu + / −, Cách 3 điều kiện của từ nối,
+  luyện `2nK` (câu che từ khó bằng ▢▢, giải thích kèm câu đầy đủ).
+- Thẻ **“Câu 20”** (`#b=c20`, section `sc20`; cô thấy câu 20 chưa có chiến lược rõ): dạng A chủ đề (4 bước: câu có ô / câu cuối → “cái gì + nói gì” → lựa chọn nói lại đủ 2 mảnh →
+  phép thử “làm tiêu đề”; bảng câu nào là / không là câu chủ đề; làm mẫu kỳ 91, 83) · dạng B nội dung khớp (gạch Quá mức → đọc lựa chọn trước → dò từ khóa, so vị ngữ → không có thì gạch);
+  luyện `20a` tìm câu chủ đề (lựa chọn = câu trong bài), `20b` chọn chủ đề, `20c` gọi tên bẫy, `20d` chọn nội dung khớp; rồi câu 20 của 22 bài (ô 19 điền sẵn; dạng A bấm câu chủ đề trước,
+  đúng = câu chứa `c2`), lưu `st.z`/`st.zs`, không vào lịch Ôn. Báo cáo `linesC20`.
   Đáp án lấy từ `bank`, riêng `Etk091` dùng đáp án đúng ③ 비록 / ① (trong `bank` đang ghi sai ① / ③). `MCQ` câu tự soạn (lựa chọn đầu là đáp án). localStorage `nari-1920`.
 
 ## Học câu 23–24 tâm trạng trong tùy bút (`cau-23-24/`) và câu 42–43 tiểu thuyết (`cau-42-43/`)
