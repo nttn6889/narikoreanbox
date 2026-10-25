@@ -21,7 +21,7 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   Chỉ là “cửa có khóa”: các trang học liệu bên trong (`seoul/…`) vẫn công khai, ai có link thẳng vẫn mở được. Trang lớp có `noindex`.
 - Menu trang chủ (`PARTS`): **Đọc · Nghe · Viết · Từ vựng · Ngữ pháp · Đề thi** (cô chốt 25/10; trang `tu-vung/` không cần mở nữa).
   - Đọc / Nghe / Viết → thanh dạng câu (`DANG`) → 3 thẻ: **Từ vựng** (vẽ thẳng từ `thi-thu/vocab.json`, phần `Câu …`/`Nghe …` có số câu trùng dạng),
-    **Học liệu** (`HL['<phần>:<câu đầu>'] = [[loại, tên, link, mô tả]]` — làm trang học sinh mới thì thêm vào đây), **Câu đề thi** (Đọc: câu trong `thi-thu/de/<đề>.json`,
+    **Học liệu** (`HL['<phần>:<câu đầu>'] = [[loại, tên, link, mô tả]]` — **chỉ thêm khi cô bảo**, xem mục Lưu ý), **Câu đề thi** (Đọc: câu trong `thi-thu/de/<đề>.json`,
     đáp án lấy từ `dau-hieu/data/<dạng>.json` (bấm chọn → đúng/sai, chưa hiện giải thích); Nghe: đề trong `NGHE` có file nghe, không có đáp án; Viết: `thi-thu/viet/index.json`
     (do `sync_viet.py` ghi; `--index` ghi lại) → đề thật, nút xem đáp án / bài mẫu). Link `#k=doc|nghe|viet&c=<câu đầu>&t=tu|hl|de`.
   - **Từ vựng** (`#k=tu&s=uu|cd&i=<tầng / chủ đề>`): ⭐ Từ cốt lõi (phần `Cốt lõi · Tầng …` của kho từ, mỗi tầng một thẻ) và Từ theo chủ đề (`tu-vung/chu-de.json` + từ khóa,
@@ -153,6 +153,9 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - Trang học liệu lưu bài làm ở localStorage (`var KEY` của trang) → mở lại vẫn hiện câu đã chọn. Mọi trang có `KEY` gắn `lam-moi.js`
   (`<script src="../lam-moi.js" data-key="<KEY>">` trong `<head>`): nút “↺ Làm mới” cuối thanh chọn buổi (đầu trang) xóa bài đã làm trên máy đó; link có `?moi`
   (vd. `viet-51/?moi#b=1`) tự xóa khi mở — cô dùng khi giảng. Trang học liệu mới cũng gắn script này.
+- **Không tự đưa học liệu mới lên trang học sinh** (cô chốt 25/10): học liệu Claude soạn là bản giáo án của cô; cô sẽ làm bản rút gọn riêng cho học sinh.
+  Từ nay làm/sửa trang học liệu thì **không** thêm link vào trang chủ học sinh (`HL` trong `index.html`), trang lớp `lop/<lớp>/`, hay danh sách trên trang học sinh
+  (`TS`/`BT`/`SAU` của `seoul/`…) — chỉ cập nhật khi cô nói. Link mới vẫn ghi vào “Mục lục học liệu Nari” (bên dưới) để cô dùng. Link đã có trên trang học sinh giữ nguyên.
 - **Mỗi lần làm trang học liệu mới** (site hoặc claude.ai): tự thêm link vào trang “Mục lục học liệu Nari” (https://claude.ai/artifact/6bTfJWsvsCeMrmggceXPjQ,
   mảng `L` theo lớp → nhóm; Artifact `read` → sửa → `publish` với `url`, đổi ngày “cập nhật”), trang cũ đã gộp thì ghi chú “Bản cũ, đã gộp vào …”, trang đã xóa thì bỏ dòng.
 
