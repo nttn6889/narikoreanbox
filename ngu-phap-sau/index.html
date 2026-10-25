@@ -173,8 +173,94 @@ a.card .meta{font:12.5px Arial,sans-serif;color:var(--muted);margin-top:4px}
 .how{font-size:15px}
 .how ol{padding-left:22px;margin:6px 0}
 .muted{color:var(--muted)}
+/* Ý nghĩa và cấu trúc */
+.yn h4{margin:14px 0 6px;color:var(--pur)}
+.ct{display:flex;flex-wrap:wrap;align-items:stretch;gap:6px;margin:6px 0 4px}
+.ct .cp{border:2px solid var(--pur);border-radius:10px;padding:6px 10px;background:#fff;text-align:center;min-width:84px}
+.ct .cp.res{border-color:var(--acc);background:#fff8f8}
+.ct .cpk{font-size:19px;font-weight:bold;color:var(--pur)}
+.ct .cp.res .cpk{color:var(--acc)}
+.ct .cpl{font:12.5px Arial,sans-serif;color:var(--muted)}
+.ct .cpe{font-size:14px;color:#333;margin-top:2px}
+.ct .pl{align-self:center;font:bold 22px Arial,sans-serif;color:var(--muted)}
+.ynm{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.ynm .m{border:1px solid var(--soft);border-top:4px solid var(--pur);border-radius:10px;padding:8px 12px;background:#fff}
+.ynm .m.later{border-top-color:#aaa;opacity:.85}
+.ynm .m b.t{display:block;font-size:16.5px}
+.ynm .m .k{font-size:14px;color:var(--muted);margin:2px 0 4px}
+table.vi td:first-child{font-weight:bold;font-family:"Times New Roman",serif;color:var(--blue);width:30%}
+.goc b.gh{color:var(--blue)}
+/* Cách chia: quy tắc / bất quy tắc */
+.bq{border:1px solid var(--soft);border-left:4px solid var(--gold);border-radius:10px;padding:8px 12px;margin:0 0 10px;background:#fffdf7}
+.bq>b{font-size:16.5px}
+.bq .r{margin:4px 0;font-size:15.5px}
+.bq ol.chain{margin:4px 0 6px;padding-left:22px;font-size:15px}
+.bq ol.chain li{margin:2px 0}
+.bq .ng{font-size:14.5px;background:var(--bluebg);border-radius:6px;padding:5px 9px;margin-top:6px}
+/* bài luyện nhỏ */
+.lx{border:1px solid #c9c1e6;background:#fbfaff;border-radius:10px;padding:8px 10px;margin:8px 0 12px}
+.sit .lx{margin:10px 0 2px}
+.lxh{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+.lxh b{color:var(--pur)}
+.lxs{font:13px Arial,sans-serif;color:var(--muted)}
+.lxr{margin-left:auto;font:12.5px Arial,sans-serif;border:1px solid var(--soft);border-radius:12px;background:#fff;padding:2px 9px;cursor:pointer;color:var(--muted)}
+.lxsub{font-size:14px;color:var(--muted);margin:2px 0 4px}
+.lq{border-top:1px dashed #d5cfec;padding:8px 0 4px}
+.lq:first-of-type{border-top:0}
+.lqh{display:flex;gap:6px;align-items:center;margin-bottom:3px}
+.lqn{display:inline-grid;place-items:center;min-width:22px;height:22px;border-radius:50%;background:var(--sub);font:bold 12.5px Arial,sans-serif;color:#444}
+.lqt{font:bold 12px Arial,sans-serif;color:var(--pur);background:var(--purbg);border-radius:10px;padding:1px 8px}
+.lqg{font:12px Arial,sans-serif;color:var(--muted);border:1px solid var(--soft);border-radius:10px;padding:0 7px}
+.lq .qs{font-size:15.5px;margin:2px 0 6px}
+.lqk{font-size:17px;margin:2px 0 4px}
+.lqx{color:#5a2a26}
+.lqf{font-size:16.5px;margin:2px 0}
+.lqf .blank{color:var(--pur)}
+.lq input,.lq textarea{width:100%;font-size:16px;padding:7px 9px;border:1px solid var(--line);border-radius:8px;margin:4px 0;font-family:inherit}
+.lq input.ko,.lq textarea{font-family:"Noto Sans KR","Malgun Gothic",sans-serif}
+.lq .bt{display:flex;gap:6px;flex-wrap:wrap;margin-top:2px}
+.lq .bt button{font-size:14px;padding:5px 11px;border:1px solid var(--pur);border-radius:8px;background:var(--pur);color:#fff;cursor:pointer}
+.lq .bt button.ghost{background:#fff;color:var(--pur)}
+.lq .lhint{display:none;font-size:14.5px;background:var(--warnbg);border-radius:6px;padding:4px 9px;margin-top:4px}
+.lq.hinted .lhint{display:block}
+.lq .fb{display:none;margin-top:6px;font-size:14.5px;padding:6px 10px;border-radius:6px;background:var(--sub)}
+.lq.done .fb{display:block}
+.lq.r .fb{background:var(--okbg)}.lq.w .fb{background:var(--badbg)}
+.lq .fb .ko{display:block;font-size:16px;margin:2px 0}
+/* lỗi hay mắc: mở từng bước */
+.ly{font-size:15px;padding:8px 12px;border-radius:8px;background:var(--warnbg);margin:0 0 10px}
+.e2{border:1px solid var(--soft);border-radius:10px;padding:8px 12px;margin:0 0 10px;background:#fff}
+.e2 .eh{display:flex;gap:6px;align-items:center;flex-wrap:wrap;font:13.5px Arial,sans-serif;color:var(--muted)}
+.e2 .eh .sp{flex:1}
+.e2 .eh button{font:13.5px Arial,sans-serif;padding:4px 10px;border:1px solid var(--pur);border-radius:8px;background:var(--pur);color:#fff;cursor:pointer}
+.e2 .eh button.ghost{background:#fff;color:var(--pur)}
+.e2 .es{font-size:18px;margin:6px 0 2px}
+.e2 .es b{color:inherit;font-weight:normal}
+.e2.s1 .es b,.e2.s2 .es b,.e2.s3 .es b{background:var(--badbg);color:var(--bad);font-weight:bold;text-decoration:underline wavy var(--bad);text-underline-offset:4px}
+.e2 .eq{display:none;font-size:14.5px;background:var(--bluebg);border-radius:6px;padding:4px 9px;margin-top:4px}
+.e2.hq .eq{display:block}
+.e2 .e-k,.e2 .e-w,.e2 .e-o{display:none;margin-top:6px}
+.e2.s1 .e-k,.e2.s2 .e-k,.e2.s3 .e-k{display:block}
+.e2.s2 .e-w,.e2.s3 .e-w{display:block}
+.e2.s3 .e-o{display:block}
+.e2 .e-k span{font:bold 12.5px Arial,sans-serif;background:var(--badbg);color:var(--bad);border-radius:10px;padding:2px 9px}
+.e2 .e-w{font-size:15px;padding-left:10px;border-left:3px solid var(--gold)}
+.e2 .e-o{font-size:17px;padding:6px 10px;background:var(--okbg);border-radius:6px}
+.e2 .e-o::before{content:"✓ ";color:var(--ok);font-weight:bold}
+/* ràng buộc dạng thẻ */
+.rbc{border:1px solid var(--soft);border-radius:10px;padding:8px 12px;margin:0 0 10px;background:#fff}
+.rbc .h{display:flex;gap:8px;align-items:center;margin-bottom:3px}
+.rbc .h b{font-size:16px}
+.rbc>.d{font-size:15.5px}
+.vs table.t{background:#fff}
+.vs .lx{background:#fff}
+.em .gy{display:none;margin-top:6px;padding:8px 10px;border-radius:8px;background:var(--okbg);font-size:15px}
+.em.open .gy{display:block}
+.em .gy .ex{background:#fff}
+.em .gb{font-size:14px;padding:5px 11px;border:1px solid var(--ok);border-radius:8px;background:#fff;color:var(--ok);cursor:pointer;margin-top:4px}
+.tron{margin-top:18px}
 footer{margin-top:40px;padding-top:10px;border-top:1px solid var(--soft);font-size:13.5px;color:var(--muted)}
-@media print{nav.top,.say,.mode,.pn,.chips{display:none!important}details{border:0}details>*{display:block}}
+@media print{nav.top,.say,.mode,.pn,.chips,.lx{display:none!important}details{border:0}details>*{display:block}.e2 .e-k,.e2 .e-w,.e2 .e-o{display:block}}
 </style>
 </head>
 <body>
@@ -184,7 +270,7 @@ footer{margin-top:40px;padding-top:10px;border-top:1px solid var(--soft);font-si
     <div><img class="logo" src="../logo/nari-topik-ngang.svg" width="148" height="50" alt="Nari TOPIK – Hiểu từng câu, Vững từng cấp"><span>Cô Ngân · Zalo: <a href="https://zalo.me/0399214554">0399.214.554</a></span></div>
   </div>
   <h1>Kho ngữ pháp Nari<span class="ko">문법 깊이 보기 · 서울대 한국어</span></h1>
-  <p class="lead">Mỗi mẫu ngữ pháp được mổ xẻ theo cùng một khung: <b>nghĩa lõi và cấu tạo</b> → cách chia → <b>bản đồ tình huống sử dụng</b> → ràng buộc → <b>lỗi người Việt hay mắc</b> → phân biệt mẫu gần nghĩa → trong đề TOPIK → luyện chấm ngay → câu của em.</p>
+  <p class="lead">Mỗi mẫu ngữ pháp được mổ xẻ theo cùng một khung: <b>ý nghĩa và cấu trúc</b> → cách chia → <b>bản đồ tình huống sử dụng</b> → ràng buộc → <b>lỗi người Việt hay mắc</b> → phân biệt mẫu gần nghĩa → trong đề TOPIK → luyện chấm ngay → câu của em. Học tới đâu luyện tới đó: dưới mỗi phần có bài luyện nhỏ.</p>
 </header>
 <nav class="top">
   <div class="bar" id="bar"></div>
@@ -201,9 +287,9 @@ var CDS=['gian-tiep','thoi-gian-ly-do','tieu-tu','dinh-ngu'];
 var BOOKS=['1A','1B','2A','2B','3A','3B'];
 var D={}, C={}, NP=null, ST={};
 try{ST=JSON.parse(localStorage.getItem('nari-nps')||'{}')}catch(e){}
-ST.em=ST.em||{};ST.go=ST.go||{};
+ST.em=ST.em||{};ST.go=ST.go||{};ST.lx=ST.lx||{};
 function save(){try{localStorage.setItem('nari-nps',JSON.stringify(ST))}catch(e){}}
-function md(s){return String(s==null?'':s).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>')}
+function md(s){return String(s==null?'':s).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>').replace(/~~(.+?)~~/g,'<s>$1</s>')}
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
 function plain(s){return String(s||'').replace(/\*\*/g,'').replace(/<[^>]+>/g,'')}
 function $(id){return document.getElementById(id)}
@@ -260,7 +346,7 @@ function renderToc(h){
   $('tocb').innerHTML=cdList()+(by=='cn'?tocCn():tocBai());
   $('q').oninput=function(){search(this.value)};
   if(h.q)search(h.q);
-  $('tocb').insertAdjacentHTML('beforeend','<div class="how co-only"><h3>Cách dùng kho này</h3><ol><li>Soạn bài: mở bài sắp dạy → đọc “Tổng quan bài” → từng mẫu. Phần <b>Ghi chú cho cô</b> (khung đỏ nét đứt) chỉ hiện ở “Bản của cô”.</li><li>Lên lớp: bấm nút góc trên chuyển sang <b>“Bản chiếu cho học sinh”</b> rồi chia sẻ màn hình — ghi chú cô ẩn đi, đáp án “Cô hỏi” vẫn đóng cho tới khi bấm.</li><li>Thứ tự dạy gợi ý một mẫu: ③ Tình huống (cho học sinh đoán nghĩa từ câu) → ① Nghĩa lõi → ② Chia → ④ Ràng buộc → ⑤ Lỗi → ⑥ Phân biệt → ⑧ Cô hỏi → ⑨ Luyện → ⑩ Câu của em.</li><li>Link thẳng tới một mẫu: <code>ngu-phap-sau/#b=3A&amp;c=2&amp;g=3</code>; chuyên đề: <code>#cd=gian-tiep</code>, bước 3: <code>#cd=gian-tiep&amp;g=3</code>.</li></ol></div>');
+  $('tocb').insertAdjacentHTML('beforeend','<div class="how co-only"><h3>Cách dùng kho này</h3><ol><li>Soạn bài: mở bài sắp dạy → đọc “Tổng quan bài” → từng mẫu. Phần <b>Ghi chú cho cô</b> (khung đỏ nét đứt) chỉ hiện ở “Bản của cô”.</li><li>Lên lớp: bấm nút góc trên chuyển sang <b>“Bản chiếu cho học sinh”</b> rồi chia sẻ màn hình — ghi chú cô ẩn đi, đáp án “Cô hỏi” vẫn đóng cho tới khi bấm.</li><li>Thứ tự dạy gợi ý một mẫu: ③ Tình huống (cho học sinh đoán nghĩa từ câu) → ① Ý nghĩa và cấu trúc → ② Chia → ④ Ràng buộc → ⑤ Lỗi → ⑥ Phân biệt → ⑧ Cô hỏi → ⑨ Luyện → ⑩ Câu của em. Bài đã soạn theo khung mới (Seoul 2A Bài 3) có bài luyện nhỏ ngay dưới phần chia, từng tình huống, từng ràng buộc, từng cặp phân biệt; phần Lỗi mở từng bước (chỗ sai → lỗi gì → câu đúng); cuối bài có Luyện trộn cả bài.</li><li>Link thẳng tới một mẫu: <code>ngu-phap-sau/#b=3A&amp;c=2&amp;g=3</code>; chuyên đề: <code>#cd=gian-tiep</code>, bước 3: <code>#cd=gian-tiep&amp;g=3</code>.</li></ol></div>');
 }
 function tocBai(){
   var s='<div class="toc">';
@@ -357,14 +443,18 @@ function renderLesson(b,n){
   var s='<div class="crumb"><a href="#">Mục lục</a> › <a href="'+hashOf(b)+'">Seoul '+b+'</a></div><h2>Bài '+n+' · <span class="ko">'+esc(l.ko)+'</span></h2><div class="muted">'+esc(l.vi)+'</div>';
   if(d.tong)s+='<div class="tong"><b>'+esc(d.tong.t)+'</b><p>'+d.tong.p+'</p>'+(d.tong.tb?tbl(d.tong.tb):'')+'</div>';
   s+='<div class="cards">'+d.p.map(function(p){var c=cdOf(p.id);return card({d:d,p:p},c?'<div class="meta" style="margin:0 0 2px">📚 Có trong chuyên đề '+esc(C[c.cd].t)+'</div>':'')}).join('')+'</div>';
+  if(d.tron&&d.tron.length)s+='<div class="tron" id="tron"><h3>🔀 Luyện trộn cả bài <span class="soon">'+d.tron.length+' câu · '+d.p.length+' mẫu để lẫn</span></h3>'+
+    '<p class="muted" style="margin:0 0 6px">Làm sau khi học xong cả '+d.p.length+' mẫu: '+d.p.map(function(p){return '<b class="ko" style="color:var(--acc)">'+esc(ptTitle(d,p))+'</b> (Mẫu '+p.no+')'}).join(', ')+'. Nhãn “Mẫu N” hiện sau khi làm để biết mẫu nào còn yếu.</p>'+
+    lxBlock(d.tron,'tron_'+b+'-'+n,'✍ Trộn 4 dạng: chọn · gõ · sửa câu · dịch')+'</div>';
   $('view').innerHTML=s;
+  lxRestore();
 }
 
 // ---- một mẫu
 function tbl(rows){return '<div class="scroll"><table class="t">'+rows.map(function(r){return '<tr>'+r.map(function(c){return '<td>'+md(c)+'</td>'}).join('')+'</tr>'}).join('')+'</table></div>'}
 function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
 // [id mục, tên, trường dữ liệu] — số thứ tự mục theo vị trí trong mảng
-var SECS=[['s1','Nghĩa lõi & cấu tạo','goc'],['s2','Kết hợp – chia','chia'],['sd','Chuyển từ câu gốc','doi'],['s3','Bản đồ tình huống','tinh'],['s4','Ràng buộc','rb'],['s5','Lỗi hay mắc','sai'],['s6','Phân biệt','pb'],['s7','Trong TOPIK','topik'],['s8','Cô hỏi','hoi'],['s9','Luyện ngay','luyen'],['sg','Luyện chuyển câu','go'],['s10','Câu của em','em']];
+var SECS=[['s1','Ý nghĩa và cấu trúc','goc'],['s2','Kết hợp – chia','chia'],['sd','Chuyển từ câu gốc','doi'],['s3','Bản đồ tình huống','tinh'],['s4','Ràng buộc','rb'],['s5','Lỗi hay mắc','sai'],['s6','Phân biệt','pb'],['s7','Trong TOPIK','topik'],['s8','Cô hỏi','hoi'],['s9','Luyện ngay','luyen'],['sg','Luyện chuyển câu','go'],['s10','Câu của em','em']];
 function H(i,extra,name){return '<h3 id="'+SECS[i][0]+'"><span class="n">'+(i+1)+'</span>'+(name||SECS[i][1])+(extra||'')+'</h3>'}
 function Hk(k,extra,name){for(var i=0;i<SECS.length;i++)if(SECS[i][0]==k)return H(i,extra,name)}
 // loại câu gốc → nhãn màu
@@ -413,28 +503,33 @@ function drawPoint(x,crumb,list,idx){
   else if(x.ref)s+=' <a class="tag" style="text-decoration:none" href="'+hashOf(b,n)+'">Mẫu của Seoul '+esc(b)+' Bài '+n+' ›</a>';
   s+='<div class="core">'+p.core+'</div>';
   s+='<div class="chips">'+SECS.filter(function(z){return on[z[0]]||(z[0]=='s1'&&g)}).map(function(z){return '<a href="javascript:void 0" data-go="'+z[0]+'">'+(z[0]=='sg'&&p.goT||z[1])+'</a>'}).join('')+'</div>';
-  if(on.s1||g)s+=Hk('s1')+(on.s1?'<div class="goc">'+p.goc+'</div>':'');
+  if(on.s1||g)s+=Hk('s1')+(p.yn?ynHTML(p):on.s1?'<div class="goc">'+p.goc+'</div>':'');
   if(g)s+=bookBox(g,b,n);
-  if(on.s2)s+=Hk('s2')+tbl(p.chia)+(p.chiaNote&&p.chiaNote.length?'<ul class="nt">'+p.chiaNote.map(function(x){return '<li>'+md(x)+'</li>'}).join('')+'</ul>':'');
+  if(on.s2)s+=Hk('s2')+tbl(p.chia)+(p.chiaNote&&p.chiaNote.length?'<ul class="nt">'+p.chiaNote.map(function(x){return '<li>'+md(x)+'</li>'}).join('')+'</ul>':'')+
+    (p.bqt||[]).map(bqHTML).join('')+lxBlock(p.chiaLt,p.id+'_ch','✍ Luyện chia','Gõ dạng đã chia (không cần gõ dấu cách) → “Kiểm tra”. Bí thì bấm 💡 Gợi ý.');
   if(on.sd)s+=Hk('sd',' <span class="soon">'+p.doi.length+' câu gốc</span>')+doiHTML(p);
   if(on.s3)s+=Hk('s3',' <span class="soon">'+p.tinh.length+' tình huống</span>')+'<div class="sits">'+p.tinh.map(function(t,i){
-    return '<div class="sit"><div class="h"><b>'+(i+1)+'. '+esc(t.t)+'</b><span class="lv">'+esc(t.lv)+'</span></div><div class="c">'+esc(t.c)+'</div><div class="ex"><span class="ko">'+md(t.ko)+sayBtn(t.ko)+'</span><span class="vi">'+esc(t.vi)+'</span></div><div class="why">'+md(t.why)+'</div></div>'}).join('')+'</div>';
-  if(on.s4)s+=Hk('s4')+'<div class="scroll"><table class="t rb">'+p.rb.map(function(r){return '<tr><td>'+esc(r[0])+'</td><td>'+md(r[1])+'</td></tr>'}).join('')+'</table></div>';
-  if(on.s5)s+=Hk('s5')+p.sai.map(function(e){return '<div class="err"><div class="x ko">'+md(e.x)+'</div><div class="o ko">'+md(e.o)+'</div><div class="w">'+md(e.why)+'</div></div>'}).join('');
-  if(on.s6)s+=Hk('s6')+p.pb.map(function(v){return '<div class="vs"><b>So với '+md(v.vs)+'</b><div>'+md(v.d)+'</div>'+(v.ex||[]).map(function(e){return '<div class="ex"><span class="ko">'+md(e[0])+sayBtn(e[0])+'</span><span class="vi">'+esc(e[1])+'</span></div>'}).join('')+'</div>'}).join('');
+    return '<div class="sit"><div class="h"><b>'+(i+1)+'. '+esc(t.t)+'</b><span class="lv">'+esc(t.lv)+'</span></div><div class="c">'+esc(t.c)+'</div><div class="ex"><span class="ko">'+md(t.ko)+sayBtn(t.ko)+'</span><span class="vi">'+esc(t.vi)+'</span></div><div class="why">'+md(t.why)+'</div>'+lxBlock(t.lt,p.id+'_t'+i,'✍ Luyện tình huống này')+'</div>'}).join('')+'</div>';
+  if(on.s4)s+=Hk('s4')+(Array.isArray(p.rb[0])?'<div class="scroll"><table class="t rb">'+p.rb.map(function(r){return '<tr><td>'+esc(r[0])+'</td><td>'+md(r[1])+'</td></tr>'}).join('')+'</table></div>':
+    p.rb.map(function(r,i){return '<div class="rbc"><div class="h"><span class="lqn">'+(i+1)+'</span><b>'+md(r.k)+'</b></div><div class="d">'+md(r.d)+'</div>'+exList(r.ex)+lxBlock(r.lt,p.id+'_rb'+i,'✍ Thử ngay')+'</div>'}).join(''));
+  if(on.s5)s+=Hk('s5')+(p.sai.some(function(e){return e.h||e.k})?saiHTML(p):p.sai.map(function(e){return '<div class="err"><div class="x ko">'+md(e.x)+'</div><div class="o ko">'+md(e.o)+'</div><div class="w">'+md(e.why)+'</div></div>'}).join(''))+lxBlock(p.saiLt,p.id+'_sl','✍ Em tự sửa câu','Câu sai (có thể nhiều hơn một lỗi) → gõ lại cả câu cho đúng.');
+  if(on.s6)s+=Hk('s6')+p.pb.map(function(v,i){return '<div class="vs"><b>So với '+md(v.vs)+'</b><div>'+md(v.d)+'</div>'+(v.bang?tbl(v.bang):'')+exList(v.ex)+lxBlock(v.lt,p.id+'_pb'+i,'✍ Phân biệt ngay')+'</div>'}).join('');
   if(on.s7)s+=Hk('s7')+(p.topik||[]).map(function(t){return '<div class="tp"><div class="s">📝 '+esc(t.src)+'</div><span class="ko">'+md(t.ko)+'</span><div class="w">'+t.note+'</div></div>'}).join('');
   if(on.s8)s+=Hk('s8')+p.hoi.map(function(q){return '<details class="ask"><summary>'+md(q.q)+'</summary><div>'+md(q.a)+'</div></details>'}).join('');
-  if(on.s9)s+=Hk('s9')+'<div class="score" id="sc"></div>'+p.luyen.map(function(q,i){
+  if(on.s9)s+=Hk('s9')+(!x.cd&&x.d.tron&&x.d.tron.length?'<p class="muted" style="margin:0 0 6px">Học xong cả bài → <a href="'+hashOf(b,n)+'&t=tron">🔀 Luyện trộn cả bài ('+x.d.tron.length+' câu, '+x.d.p.length+' mẫu để lẫn) ›</a></p>':'')+'<div class="score" id="sc"></div>'+p.luyen.map(function(q,i){
     var o=shuffle(q.o.map(function(t,j){return {t:t,ok:j===0}}));
     return '<div class="q" data-i="'+i+'"><div class="qs"><i>Câu '+(i+1)+'</i>'+md(q.q)+'</div><div class="opts">'+o.map(function(x){return '<button type="button" class="opt ko" data-ok="'+(x.ok?1:0)+'">'+md(x.t)+'</button>'}).join('')+'</div><div class="fb">'+md(q.w)+'</div></div>'}).join('');
   if(on.sg)s+=Hk('sg',' <span class="soon">'+p.go.length+' câu</span>',p.goT)+goHTML(p);
-  if(on.s10)s+=Hk('s10')+p.em.map(function(e,i){var k=p.id+'_'+i;return '<div class="em"><label>✍️ '+md(e)+'</label><textarea class="ko" data-k="'+k+'" placeholder="Em viết ở đây… (lưu trên máy này)">'+esc(ST.em[k]||'')+'</textarea></div>'}).join('');
+  if(on.s10)s+=Hk('s10')+p.em.map(function(e,i){var k=p.id+'_'+i;if(typeof e=='string')e={q:e};
+    return '<div class="em"><label>✍️ '+md(e.q)+'</label>'+(e.tip?'<div class="muted" style="font-size:14px;margin:-2px 0 4px">Bí ý? '+md(e.tip)+'</div>':'')+'<textarea class="ko" data-k="'+k+'" placeholder="Em viết ở đây… (lưu trên máy này)">'+esc(ST.em[k]||'')+'</textarea>'+
+      (e.gy&&e.gy.length?'<button type="button" class="gb" data-gy="1">💡 Viết xong rồi? Xem câu gợi ý</button><div class="gy"><b>Câu gợi ý</b> — em so với câu của mình, lấy thêm ý hay:'+exList(e.gy)+'</div>':'')+'</div>'}).join('');
   if(p.co)s+='<div class="cobox co-only"><b>Ghi chú cho cô</b> (không hiện ở bản chiếu cho học sinh)<div>'+md(p.co)+'</div></div>';
   // trước / sau
   var lab=x.cd?['‹ Bước trước','Bước sau ›']:['‹ Mẫu trước','Mẫu sau ›'];
   s+='<div class="pn">'+(idx>0?navA(list[idx-1],lab[0],''):'<span></span>')+(idx<list.length-1?navA(list[idx+1],lab[1],'nx'):(x.cd?'<a class="nx" href="#cd='+x.cd+'">Hết buổi ›<b>Về giáo án buổi</b></a>':'<span></span>'))+'</div>';
   $('view').innerHTML=s;
   wirePoint(p);
+  lxRestore();
 }
 function navA(x,lab,c){return '<a class="'+c+'" href="'+linkOf(x)+'">'+lab+(x.cd?' · Bước '+(x.i+1):' · '+x.d.b+' Bài '+x.d.n)+'<b>'+esc(ptTitle(x.d,x.p))+'</b></a>'}
 function bookBox(g,b,n){
@@ -447,6 +542,89 @@ function bookBox(g,b,n){
   s+='<p class="muted"><a href="../seoul/ngu-phap/'+hashOf(b,n,g.no)+'">Mở trang Ngữ pháp giáo trình Seoul ›</a></p></details>';
   return s;
 }
+function exList(ex){return (ex||[]).map(function(e){return '<div class="ex"><span class="ko">'+md(e[0])+sayBtn(e[0])+'</span>'+(e[1]?'<span class="vi">'+md(e[1])+'</span>':'')+'</div>'}).join('')}
+// yn = {ct:[[mảnh, tên, ví dụ]], kq:[kết quả, nghĩa], m:[{t, k khi nào, ko, vi, later}], tbT, tb (bảng), vi:[[nghĩa tiếng Việt, dùng khi, ví dụ Hàn, dịch]]}
+function ynHTML(p){var y=p.yn,s='<div class="yn">';
+  if(y.ct){s+='<h4>Cấu trúc</h4><div class="ct">'+y.ct.map(function(c,i){return (i?'<span class="pl">+</span>':'')+'<div class="cp"><div class="cpk ko">'+md(c[0])+'</div><div class="cpl">'+md(c[1])+'</div>'+(c[2]?'<div class="cpe ko">'+md(c[2])+'</div>':'')+'</div>'}).join('')+
+    (y.kq?'<span class="pl">=</span><div class="cp res"><div class="cpk ko">'+md(y.kq[0])+'</div><div class="cpl">'+md(y.kq[1])+'</div></div>':'')+'</div>'}
+  if(y.m)s+='<h4>Ý nghĩa</h4><div class="ynm">'+y.m.map(function(m,i){return '<div class="m'+(m.later?' later':'')+'"><b class="t">'+(i+1)+'. '+md(m.t)+'</b><div class="k">'+md(m.k||'')+'</div>'+(m.ko?'<div class="ex"><span class="ko">'+md(m.ko)+sayBtn(m.ko)+'</span><span class="vi">'+md(m.vi||'')+'</span></div>':'')+'</div>'}).join('')+'</div>';
+  if(y.tb)s+='<h4>'+md(y.tbT||'')+'</h4>'+tbl(y.tb);
+  if(y.vi)s+='<h4>🇻🇳 Nghĩa tiếng Việt tương đương</h4>'+(y.viN?'<p class="muted" style="margin:0 0 4px;font-size:14.5px">'+md(y.viN)+'</p>':'')+'<div class="scroll"><table class="t vi"><tr><td>Tiếng Việt</td><td>Dùng khi</td><td>Ví dụ</td></tr>'+y.vi.map(function(r){return '<tr><td>'+md(r[0])+'</td><td>'+md(r[1])+'</td><td><span class="ko">'+md(r[2])+'</span>'+(r[3]?'<br><span class="muted">'+md(r[3])+'</span>':'')+'</td></tr>'}).join('')+'</table></div>';
+  if(p.goc)s+='<div class="goc" style="margin-top:10px"><b class="gh">Vì sao có nghĩa này?</b> '+p.goc+'</div>';
+  return s+'</div>'}
+// bqt: {t tên, r quy tắc, b:[bước chia một từ], ex:[[gốc, đã chia, nghĩa]], ng ngoại lệ / mẹo}
+function bqHTML(q){return '<div class="bq"><b>'+md(q.t)+'</b><div class="r">'+md(q.r)+'</div>'+(q.b?'<ol class="chain">'+q.b.map(function(x){return '<li>'+md(x)+'</li>'}).join('')+'</ol>':'')+
+  (q.ex?'<div class="scroll"><table class="t"><tr><td>Gốc</td><td>Chia</td><td>Nghĩa</td></tr>'+q.ex.map(function(e){return '<tr><td class="ko">'+md(e[0])+'</td><td class="ko">'+md(e[1])+'</td><td>'+md(e[2]||'')+'</td></tr>'}).join('')+'</table></div>':'')+(q.ng?'<div class="ng">'+md(q.ng)+'</div>':'')+'</div>'}
+// Lỗi hay mắc: câu (chưa đánh dấu) → ① chỗ sai (tô đỏ phần **…**) + loại lỗi → ② vì sao → ③ câu đúng; e.h = câu cô hỏi gợi ý
+var ESTEP=['🔍 Chỉ chỗ sai','❓ Lỗi gì?','✓ Câu đúng','Xong'];
+function saiHTML(p){
+  return (p.saiLy?'<div class="ly">'+md(p.saiLy)+'</div>':'')+
+    '<p class="muted" style="margin:0 0 8px;font-size:14.5px">Cô đọc câu → học sinh tìm chỗ sai, nói lỗi gì, sửa miệng → cô mở từng bước để đối chiếu. <button type="button" id="errAll" class="lxr co-only" style="margin-left:6px">Mở hết (cô soạn bài)</button></p>'+
+    p.sai.map(function(e,i){return '<div class="e2" data-s="0"><div class="eh"><span class="lqn">'+(i+1)+'</span><span class="sp">Câu này sai ở đâu?</span>'+(e.h?'<button type="button" class="ghost" data-e="q">🗨 Gợi ý</button>':'')+'<button type="button" data-e="n">'+ESTEP[0]+'</button></div>'+
+      '<div class="es ko">'+md(e.x)+'</div>'+(e.h?'<div class="eq">🗨 '+md(e.h)+'</div>':'')+
+      '<div class="e-k">'+(e.k?'<span>Lỗi: '+esc(e.k)+'</span>':'')+'</div><div class="e-w">'+md(e.why)+'</div><div class="e-o ko">'+md(e.o)+sayBtn(e.o)+'</div></div>'}).join('')}
+function errSet(e,st){e.setAttribute('data-s',st);e.classList.remove('s1','s2','s3');if(st)e.classList.add('s'+st);var b=e.querySelector('[data-e=n]');b.textContent=ESTEP[st];b.disabled=st>=3;b.className=st>=3?'ghost':''}
+
+// ---- bài luyện nhỏ dùng chung (chia, tình huống, ràng buộc, lỗi, phân biệt, trộn cả bài)
+// {t:'c', q, o:[đáp án đúng, nhiễu…], w} chọn · {t:'y', q?, f? khung có "(    )", a:[đáp án nhận], h? gợi ý, w} gõ
+// {t:'s', x câu sai, a:[câu đúng], h?, w} sửa câu · {t:'vk', vi, a:[câu Hàn nhận], h?, w} dịch Việt → Hàn (máy so, khác thì em tự chấm)
+// {t:'kv', ko, a bản dịch mẫu, w} dịch Hàn → Việt (em tự chấm) · g = số mẫu (bài trộn)
+// ST.lx[khóa] = {v chữ em gõ, ok 1|0|null, j lựa chọn (chỉ số gốc), h đã xem gợi ý}
+var LX={},LXT={c:'Chọn',y:'Gõ',s:'Sửa câu',vk:'Dịch Việt → Hàn',kv:'Dịch Hàn → Việt'};
+function lxBlock(list,key,title,sub){
+  if(!list||!list.length)return '';
+  return '<div class="lx" data-key="'+key+'"><div class="lxh"><b>'+(title||'✍ Luyện ngay')+'</b><span class="lxs"></span><button type="button" class="lxr" data-lx="reset">↺ Làm lại</button></div>'+(sub?'<div class="lxsub">'+sub+'</div>':'')+
+    list.map(function(q,i){return lxItem(q,key+'_'+i,i)}).join('')+'</div>'}
+function lxItem(q,k,i){
+  LX[k]=q;var t=q.t||'c',s='<div class="lq t-'+t+'" data-k="'+k+'" data-i="'+i+'"><div class="lqh"><span class="lqn">'+(i+1)+'</span><span class="lqt">'+LXT[t]+'</span>'+(q.g?'<span class="lqg">Mẫu '+q.g+'</span>':'')+'</div>';
+  if(t=='c'){var o=shuffle(q.o.map(function(x,j){return {x:x,j:j}}));
+    s+='<div class="qs">'+md(q.q)+'</div><div class="opts">'+o.map(function(x){return '<button type="button" class="opt ko" data-j="'+x.j+'">'+md(x.x)+'</button>'}).join('')+'</div>'}
+  else if(t=='kv')s+='<div class="lqk ko">'+md(q.ko)+sayBtn(q.ko)+'</div><textarea rows="2" placeholder="Em dịch sang tiếng Việt (nói miệng hoặc gõ)…"></textarea><div class="bt"><button type="button" data-lx="see">Xem bản dịch</button></div>';
+  else s+=(t=='s'?'<div class="lqk ko lqx">✗ '+md(q.x)+'</div>':t=='vk'?'<div class="lqk">🇻🇳 '+md(q.vi)+'</div>':'')+(q.q?'<div class="qs ko">'+md(q.q)+'</div>':'')+
+      (q.f?'<div class="lqf ko">'+md(q.f).replace('(    )','<b class="blank">(&nbsp;……&nbsp;)</b>')+'</div>':'')+
+      '<input class="ko" placeholder="'+(t=='s'?'Gõ lại cả câu cho đúng…':t=='vk'?'Gõ câu tiếng Hàn…':q.f?'Gõ phần trong ngoặc…':'Gõ đáp án…')+'">'+
+      '<div class="bt"><button type="button" data-lx="chk">Kiểm tra</button>'+(q.h?'<button type="button" class="ghost" data-lx="hint">💡 Gợi ý</button>':'')+'<button type="button" class="ghost" data-lx="see">Xem đáp án</button></div>'+(q.h?'<div class="lhint">💡 '+md(q.h)+'</div>':'');
+  return s+'<div class="fb"></div></div>'}
+function lxAns(q){return q.f?q.f.replace('(    )','**'+q.a[0]+'**'):q.a[0]}
+function lxShow(box,q,o){
+  var t=q.t||'c',fb=box.querySelector('.fb'),s='';
+  box.classList.remove('done','r','w');box.classList.toggle('hinted',!!o.h);
+  if(t=='c'){if(o.j==null){fb.innerHTML='';return}
+    box.querySelectorAll('.opt').forEach(function(b){var j=+b.getAttribute('data-j');b.disabled=true;b.classList.toggle('ok',j===0);b.classList.toggle('no',j===o.j&&j!==0)});
+    o.ok=o.j===0?1:0;s=(o.ok?'✔ Đúng. ':'✘ Chưa đúng. Đáp án: <b class="ko" style="display:inline">'+md(q.o[0])+'</b>. ')+md(q.w||'')}
+  else if(t=='kv'){if(!o.seen){fb.innerHTML='';return}
+    s='<b>Bản dịch mẫu:</b> '+md(q.a)+(q.w?'<div>'+md(q.w)+'</div>':'')+(o.ok==null?'<div class="bt"><button type="button" class="ghost" data-lx="self">Em dịch đúng ý</button><button type="button" class="ghost" data-lx="no">Em dịch chưa đúng</button></div>':'<div>'+(o.ok?'✔ Em đánh dấu: đúng ý.':'✘ Em đánh dấu: chưa đúng — đọc lại câu mẫu.')+'</div>')}
+  else{if(o.ok==null&&!o.seen){fb.innerHTML='';return}
+    s=(o.ok==1?'✔ Đúng. ':o.ok===0?(t=='vk'?'Máy chưa nhận ra câu của em — so với câu mẫu. ':'✘ Chưa đúng. '):'')+'<span class="ko">'+md(lxAns(q))+'</span>'+
+      (q.a.length>1?'<div class="muted">Cũng được: <span class="ko" style="display:inline">'+q.a.slice(1).map(function(a){return esc(q.f?a:a)}).join(' · ')+'</span></div>':'')+(q.w?'<div>'+md(q.w)+'</div>':'')+
+      (o.ok===0?'<div class="bt"><button type="button" class="ghost" data-lx="self">Em đúng (cách khác)</button><button type="button" class="ghost" data-lx="redo">Làm lại</button></div>':'')}
+  fb.innerHTML=s;box.classList.add('done');if(o.ok!=null)box.classList.add(o.ok?'r':'w');
+}
+function lxScore(blk){var d=0,r=0,n=0;blk.querySelectorAll('.lq').forEach(function(b){n++;var o=ST.lx[b.getAttribute('data-k')];if(o&&o.ok!=null){d++;if(o.ok)r++}});
+  blk.querySelector('.lxs').textContent=d?('· đã làm '+d+'/'+n+', đúng '+r):'· '+n+' câu, chấm ngay'}
+function lxRestore(){
+  document.querySelectorAll('.lq').forEach(function(box){var k=box.getAttribute('data-k'),o=ST.lx[k],q=LX[k];if(!o||!q)return;
+    var inp=box.querySelector('input,textarea');if(inp&&o.v)inp.value=o.v;lxShow(box,q,o)});
+  document.querySelectorAll('.lx').forEach(lxScore);
+}
+document.addEventListener('input',function(e){var box=e.target.closest&&e.target.closest('.lq');if(!box)return;var k=box.getAttribute('data-k');(ST.lx[k]=ST.lx[k]||{}).v=e.target.value;save()});
+document.addEventListener('keydown',function(e){if(e.key!='Enter'||e.target.tagName!='INPUT')return;var box=e.target.closest('.lq');if(!box)return;var b=box.querySelector('[data-lx=chk]');if(b)b.click()});
+document.addEventListener('click',function(e){
+  var b=e.target.closest&&e.target.closest('.lx button');if(!b||b.hasAttribute('data-say'))return;
+  var blk=b.closest('.lx'),box=b.closest('.lq'),act=b.getAttribute('data-lx');
+  if(act=='reset'){blk.querySelectorAll('.lq').forEach(function(x){var k=x.getAttribute('data-k');delete ST.lx[k];x.outerHTML=lxItem(LX[k],k,+x.getAttribute('data-i'))});save();lxScore(blk);return}
+  if(!box)return;
+  var k=box.getAttribute('data-k'),q=LX[k],o=ST.lx[k]=ST.lx[k]||{},inp=box.querySelector('input,textarea');
+  if(b.classList.contains('opt')){if(o.j!=null)return;o.j=+b.getAttribute('data-j')}
+  else if(act=='hint'){o.h=1}
+  else if(act=='chk'){if(!norm(inp.value)){inp.focus();return}o.v=inp.value;o.ok=q.a.some(function(a){return norm(a)==norm(inp.value)})?1:0}
+  else if(act=='see'){o.seen=1;if(inp)o.v=inp.value;if(q.t!='kv'&&o.ok==null)o.ok=0}
+  else if(act=='self')o.ok=1;
+  else if(act=='no')o.ok=0;
+  else if(act=='redo'){delete ST.lx[k];box.outerHTML=lxItem(q,k,+box.getAttribute('data-i'));save();lxScore(blk);return}
+  else return;
+  lxShow(box,q,o);save();lxScore(blk);
+});
 function wirePoint(p){
   var v=$('view'),n=(p.luyen||[]).length,done=0,right=0;
   function sc(){if(!$('sc'))return;$('sc').textContent=done?('Đã làm '+done+'/'+n+' · đúng '+right):'Bấm chọn đáp án — chấm ngay.'}
@@ -462,6 +640,11 @@ function wirePoint(p){
   });
   v.querySelectorAll('textarea[data-k],input[data-k]').forEach(function(t){t.oninput=function(){ST.em[t.getAttribute('data-k')]=t.value;save()}});
   wireGo(p);
+  v.querySelectorAll('[data-gy]').forEach(function(b){b.onclick=function(){var e=b.parentNode;e.classList.toggle('open');b.textContent=e.classList.contains('open')?'Ẩn câu gợi ý':'💡 Viết xong rồi? Xem câu gợi ý'}});
+  v.querySelectorAll('.e2').forEach(function(e){e.onclick=function(ev){var b=ev.target.closest('button');if(!b)return;var a=b.getAttribute('data-e');
+    if(a=='q'){e.classList.toggle('hq');return}
+    var st=+e.getAttribute('data-s');st=a=='all'?3:a=='back'?0:Math.min(3,st+1);errSet(e,st)}});
+  var ea=$('errAll');if(ea)ea.onclick=function(){var o=ea.getAttribute('data-o')!='1';ea.setAttribute('data-o',o?'1':'');ea.textContent=o?'Đóng hết':'Mở hết (cô soạn bài)';v.querySelectorAll('.e2').forEach(function(e){errSet(e,o?3:0)})};
   v.querySelectorAll('[data-go]').forEach(function(a){a.onclick=function(){var e=$(a.getAttribute('data-go'));if(e)e.scrollIntoView({behavior:'smooth'})}});
 }
 // bài gõ chuyển câu: ST.go[k] = {v: chữ em gõ, ok: 1 đúng | 0 sai | null chưa, kk: loại em chọn}
@@ -500,7 +683,7 @@ function route(){
   var h=parseHash();renderBar(h);
   if('cd' in h){if(h.cd&&h.g)renderCdStep(h.cd,+h.g);else if(h.cd)renderCd(h.cd);else renderCdList()}
   else if(h.b&&h.c&&h.g)renderPoint(h.b,+h.c,+h.g);
-  else if(h.b&&h.c)renderLesson(h.b,+h.c);
+  else if(h.b&&h.c){renderLesson(h.b,+h.c);if(h.t&&$(h.t)){$(h.t).scrollIntoView();return}}
   else if(h.b)renderBook(h.b);
   else renderToc(h);
   window.scrollTo(0,0);
