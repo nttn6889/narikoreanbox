@@ -32,7 +32,7 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
     Thêm đề đọc mới vào `DOC_DE` sau khi có đáp án trong `dau-hieu/data/`.
 - **Tiêu đề + khẩu hiệu** (cô chốt 25/10, khối `.hd` trong `trang.css`): tên `<h1>` “Động từ + cấp (sách)”, khẩu hiệu lớp 3 vế × 3 chữ (màu vàng), dòng nguyên tắc chung
   “Học có chiến thuật · Luyện có mục tiêu · Sửa đến khi hiểu”. Trang chủ: Chinh phục TOPIK II (Cấp 3–6) · Đúng chiến thuật – Chắc từng câu – Vững điểm số;
-  `lop/1a` Xây nền Sơ cấp 1 (Seoul 1A–1B) · Chuẩn phát âm – Hiểu cấu trúc – Vững từng câu; `lop/2a` Hoàn thiện Sơ cấp 2 (Seoul 2A–2B) · Rõ cấu trúc – Mượt câu văn – Vững giao tiếp;
+  `lop/1a` Xây nền Sơ cấp 1 (Seoul 1A–1B) · Chuẩn phát âm – Hiểu ngữ pháp – Vững câu đơn; `lop/2a` Hoàn thiện Sơ cấp 2 (Seoul 2A–2B) · Rõ cấu trúc – Mượt câu văn – Vững giao tiếp;
   `lop/3a` Bứt phá Trung cấp 1 (Seoul 3A–3B) · Sâu ngữ pháp – Rộng vốn từ – Vững đọc viết; `lop/4a` Làm chủ Trung cấp 2 (Seoul 4A–4B) · Chuẩn văn viết – Giàu thành ngữ – Vững lập luận
   (trang 4A đã tạo, có mã lớp, chưa có học liệu — repo chưa nhập từ vựng / ngữ pháp Seoul 4). 5A, 6A (Cao cấp) tính sau, cùng khuôn.
 - Trang lớp `lop/<lớp>/` hiện chỉ là danh sách học liệu học sinh có sẵn (Seoul từ vựng / ngữ pháp / bài tập…), làm tiếp sau trang TOPIK.
