@@ -26,7 +26,7 @@
 <p class="sl">Đúng chiến thuật – Chắc từng câu – Vững điểm số</p>
 <p class="nt">Học có chiến thuật · Luyện có mục tiêu · Sửa đến khi hiểu</p>
 </div>
-<p class="intro">Chọn Đọc · Nghe · Viết rồi chọn dạng câu: mỗi dạng có <b>Từ vựng</b> (học trước), <b>Học liệu</b> (chiến thuật, bài luyện của cô) và <b>Câu đề thi</b>. Thẻ <b>Từ vựng</b> có Từ cốt lõi và từ theo chủ đề, <b>Ngữ pháp</b> có bảng ngữ pháp câu 1–4, <b>Đề thi</b> để làm cả đề rồi chấm điểm.</p>
+<p class="intro">Chọn Đọc · Nghe · Viết rồi chọn dạng câu: mỗi dạng có <b>Từ vựng</b> (học trước) và <b>Câu đề thi</b>. Thẻ <b>Từ vựng</b> có Từ cốt lõi và từ theo chủ đề, <b>Ngữ pháp</b> có bảng ngữ pháp câu 1–4, <b>Đề thi</b> để làm cả đề rồi chấm điểm.</p>
 <div class="parts" id="parts"></div>
 <nav class="dang" id="nav"></nav>
 <div id="out"></div>
@@ -53,23 +53,9 @@
     np: [['12', 'Câu 1–2 · Ngữ pháp điền'], ['34', 'Câu 3–4 · Ngữ pháp tương đồng']],
     de: [['doc', 'Đề đọc'], ['nghe', 'Đề nghe'], ['viet', 'Đề viết']]
   };
-  /* Học liệu theo dạng: '<phần>:<câu đầu>' → [[loại, tên, link, mô tả]] — chỉ trang dành cho học sinh (không đưa giáo án / bản trình chiếu của cô) */
-  var HL = {
-    'doc:1': [['Chiến thuật','Học câu 1–2 theo cặp dễ nhầm','ngu-phap-12/','4 buổi: đuôi nối, đuôi câu, tiểu từ, trộn đề'],['Luyện tập','Tự luyện ngữ pháp câu 1–4 · 20 ngày','ngu-phap-luyen/#d=1','Mỗi ngày một nhóm, ôn ngắt quãng']],
-    'doc:3': [['Chiến thuật','Học câu 3–4 theo tần suất đề thật','ngu-phap-34/','Cặp hay ra, quy trình 3 bước, bẫy'],['Luyện tập','Tự luyện ngữ pháp câu 1–4 · 20 ngày','ngu-phap-luyen/#d=1','Mỗi ngày một nhóm, ôn ngắt quãng']],
-    'doc:5': [['Chiến thuật','Học câu 5 · Quảng cáo sản phẩm','cau-5/','Cụm từ theo đồ vật, tín hiệu, bẫy chữ'],['Luyện tập','Luyện câu 5 như thi','cau-5/#b=3','16 câu, 30 giây/câu']],
-    'doc:13': [['Chiến thuật','Học câu 13–15 · Sắp xếp câu','cau-13-15/','Dấu bám, chọn câu đầu, so một vị trí'],['Luyện tập','Tự luyện 66 câu sắp xếp','cau-13-15/luyen/','Làm 2 bước, có gợi ý']],
-    'doc:16': [['Chiến thuật','Học câu 16–18 · Điền chỗ trống','cau-16-18/','Đọc qua ô, 5 tín hiệu, 4 bẫy'],['Luyện tập','Luyện câu 16–18 như thi','cau-16-18/#b=3','1 phút/câu']],
-    'doc:19': [['Chiến thuật','Học câu 19–20','cau-19-20/','Tìm cặp → xét quan hệ → chủ đề'],['Luyện tập','Luyện câu 19–20 như thi','cau-19-20/#b=3','1 phút 30/bài']],
-    'doc:23': [['Chiến thuật','Học câu 23–24 · Tâm trạng','cau-23-24/','Tìm nguyên nhân, chia + / −, sắc thái'],['Luyện tập','Luyện câu 23–24 như thi','cau-23-24/#b=3','2 phút/bài']],
-    'doc:25': [['Luyện tập','63 tiêu đề báo theo chủ đề','tu-vung/tieu-de/','Tách khúc, nghĩa từ, che đáp án']],
-    'doc:42': [['Chiến thuật','Học câu 42–43 · Tiểu thuyết','cau-42-43/','Đúng người, đúng lúc, nguyên nhân'],['Luyện tập','Luyện câu 42–43 như thi','cau-42-43/#b=3','2 phút 30/bài']],
-    'viet:51': [['Chiến thuật','Dấu hiệu nhận biết câu 51','dau-hieu-51-52/#b=51','Thấy chữ gì quanh ô → viết mẫu gì'],['Từ vựng','Cặp danh từ → động từ','dau-hieu-51-52/#b=tu','Đoán động từ cho ô trống'],
-      ['Luyện tập','Dịch đề câu 51','dich-51-52/#b=51','36 đề, tự chấm'],['Luyện tập','Luyện nhanh dấu hiệu 51–52','dau-hieu-51-52/#b=luyen','38 câu trắc nghiệm']],
-    'viet:52': [['Chiến thuật','Dấu hiệu nhận biết câu 52','dau-hieu-51-52/#b=52','Từ nối → đuôi, Chép hay Lật'],['Từ vựng','Cặp danh từ → động từ','dau-hieu-51-52/#b=tu','Đoán động từ cho ô trống'],
-      ['Luyện tập','Dịch đề câu 52','dich-51-52/#b=52','16 đề, tự chấm'],['Luyện tập','Luyện nhanh dấu hiệu 51–52','dau-hieu-51-52/#b=luyen','38 câu trắc nghiệm']],
-    'viet:54': [['Chiến thuật','Học câu 54','viet-54/','Dàn ý 3 đoạn, văn viết, khung đoạn'],['Luyện tập','Viết cả bài câu 54','viet-54/#b=viet','Bấm giờ 30 phút, gửi bài cho cô']]
-  };
+  /* Học liệu theo dạng: '<phần>:<câu đầu>' → [[loại, tên, link, mô tả]] — chỉ trang dành cho học sinh (không đưa giáo án / bản trình chiếu của cô).
+     Cô gỡ hết 25/10 để soạn lại bản rút gọn cho học sinh; chỉ thêm lại khi cô bảo. Dạng nào trống thì thẻ “Học liệu” tự ẩn. */
+  var HL = {};
   /* Đề nghe có file nghe (mới trước) */
   var NGHE = ['Etk096n', 'Etk091n', 'Etk083n'];
   var NGHE_NOTE = {Etk096n: 'đủ 50 câu có file nghe', Etk091n: 'câu 1–30 có file nghe', Etk083n: 'câu 1–30 có file nghe'};
@@ -245,8 +231,9 @@
     var d = cur(); S.c = d[0];
     nav.innerHTML = DANG[S.k].map(function(x){ return '<a href="#k=' + S.k + '&c=' + x[0] + '" data-c="' + x[0] + '"' + (x[0] === S.c ? ' class="on"' : '') + '>' + cauTxt(x) + '</a>'; }).join('');
     var hasTu = vocab && vocabFor(S.k, d).length, hasHl = (HL[S.k + ':' + S.c] || []).length;
+    if(S.t === 'hl' && !hasHl) S.t = '';
     if(!S.t) S.t = hasTu ? 'tu' : hasHl ? 'hl' : 'de';
-    var h = '<h2>' + cauTxt(d) + ' <small>· ' + esc(d[2]) + '</small></h2><div class="tabs">' + TAB.map(function(t){
+    var h = '<h2>' + cauTxt(d) + ' <small>· ' + esc(d[2]) + '</small></h2><div class="tabs">' + TAB.filter(function(t){ return t[0] !== 'hl' || hasHl; }).map(function(t){
       var n = t[0] === 'hl' ? hasHl : 0;
       return '<button type="button" data-t="' + t[0] + '"' + (t[0] === S.t ? ' class="on"' : '') + '>' + t[1] + (n ? ' <small>(' + n + ')</small>' : '') + '</button>';
     }).join('') + '</div>';
@@ -301,7 +288,7 @@
   function renderNp(){
     var d = S.s === '34' ? [3, 4] : [1, 2];
     out.innerHTML = '<h2>' + cauTxt(d) + ' <small>· ' + (d[0] === 1 ? 'Ngữ pháp điền chỗ trống' : 'Ngữ pháp tương đồng') + '</small></h2>' +
-      '<h3>Học liệu</h3>' + hlHTML('doc:' + d[0]) +
+      ((HL['doc:' + d[0]] || []).length ? '<h3>Học liệu</h3>' + hlHTML('doc:' + d[0]) : '') +
       '<p class="tools"><a href="#k=doc&c=' + d[0] + '&t=de">Làm câu ' + d[0] + '–' + d[1] + ' trong các đề thi ›</a></p>' +
       '<h3>Bảng ngữ pháp theo nhóm</h3>' + tuHTML('doc', d, true);
   }

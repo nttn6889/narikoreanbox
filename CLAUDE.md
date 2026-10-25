@@ -21,12 +21,12 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   Chỉ là “cửa có khóa”: các trang học liệu bên trong (`seoul/…`) vẫn công khai, ai có link thẳng vẫn mở được. Trang lớp có `noindex`.
 - Menu trang chủ (`PARTS`): **Đọc · Nghe · Viết · Từ vựng · Ngữ pháp · Đề thi** (cô chốt 25/10; trang `tu-vung/` không cần mở nữa).
   - Đọc / Nghe / Viết → thanh dạng câu (`DANG`) → 3 thẻ: **Từ vựng** (vẽ thẳng từ `thi-thu/vocab.json`, phần `Câu …`/`Nghe …` có số câu trùng dạng),
-    **Học liệu** (`HL['<phần>:<câu đầu>'] = [[loại, tên, link, mô tả]]` — **chỉ thêm khi cô bảo**, xem mục Lưu ý), **Câu đề thi** (Đọc: câu trong `thi-thu/de/<đề>.json`,
+    **Học liệu** (`HL['<phần>:<câu đầu>'] = [[loại, tên, link, mô tả]]`; **cô gỡ hết 25/10** để soạn lại bản rút gọn cho học sinh, `HL = {}` — dạng nào trống thì thẻ tự ẩn; chỉ thêm khi cô bảo, xem mục Lưu ý), **Câu đề thi** (Đọc: câu trong `thi-thu/de/<đề>.json`,
     đáp án lấy từ `dau-hieu/data/<dạng>.json` (bấm chọn → đúng/sai, chưa hiện giải thích); Nghe: đề trong `NGHE` có file nghe, không có đáp án; Viết: `thi-thu/viet/index.json`
     (do `sync_viet.py` ghi; `--index` ghi lại) → đề thật, nút xem đáp án / bài mẫu). Link `#k=doc|nghe|viet&c=<câu đầu>&t=tu|hl|de`.
   - **Từ vựng** (`#k=tu&s=uu|cd&i=<tầng / chủ đề>`): ⭐ Từ cốt lõi (phần `Cốt lõi · Tầng …` của kho từ, mỗi tầng một thẻ) và Từ theo chủ đề (`tu-vung/chu-de.json` + từ khóa,
     dấu ★ từ `tu-vung/de.json`) — chuyển từ trang `tu-vung/` về; `tu-vung/#k=uu|cd` tự chuyển sang đây. Trang `tu-vung/` vẫn giữ thẻ Đọc/Nghe/Viết cho link cũ `tu-vung/#c=…` của các trang học liệu.
-  - **Ngữ pháp** (`#k=np&s=12|34`): học liệu câu 1–2 / 3–4 (`HL['doc:1']`, `HL['doc:3']`) + bảng mẫu theo nhóm (phần `Câu 1–2 · 문법`, `Câu 3–4 · 유사 문법`).
+  - **Ngữ pháp** (`#k=np&s=12|34`): học liệu câu 1–2 / 3–4 (`HL['doc:1']`, `HL['doc:3']`; đang trống nên không hiện) + bảng mẫu theo nhóm (phần `Câu 1–2 · 문법`, `Câu 3–4 · 유사 문법`).
   - **Đề thi** (`#k=de&s=doc|nghe|viet&e=<đề | kỳ>`): làm cả đề. Đọc = 22 đề đủ 50 câu (`DOC_DE`, đáp án `dau-hieu/data/`), chọn hết rồi “Nộp bài” → chấm, điểm ≈ số câu × 2,
     bài làm ở localStorage `nari-home-de` (không gửi cô). Nghe = đề trong `NGHE` (chỉ câu có file nghe, không chấm). Viết = theo kỳ (`thi-thu/viet/index.json`), xem đáp án / bài mẫu.
     Thêm đề đọc mới vào `DOC_DE` sau khi có đáp án trong `dau-hieu/data/`.
