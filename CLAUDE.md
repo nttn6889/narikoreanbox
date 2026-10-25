@@ -749,6 +749,11 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   {g nhóm, w, s ★ từng là đáp án, m, d nghĩa, p:[[đuôi, nghĩa đuôi, cặp Hàn, cặp Việt, giải thích, [[ví dụ Hàn, dịch]×2]]]}, `{…}` = hai đầu cặp tô `.cp`; `renderAdv` vẽ vào `#adv1…3`;
   14 phó từ, 34 cặp) · ② thấy đuôi → chọn phó từ `1nD*` (+ `MV`) · ③ thấy phó từ → chọn đuôi `1nE*`;
   bảng cặp tổng “Che phó từ” (`#cpAll`), bài trộn `1nM`, rồi link sang Buổi 1 mục 4 (`#b=1&g=m14`; `g=` cuộn tới id trong thẻ) — mục 3d để dành sau. Báo cáo riêng `sum1n` (`lines1n`).
+- Thẻ **“Buổi 2 mới”** (`#b=2n`, section `s2n`; cô thấy Buổi 2 “xét quan hệ” còn mông lung lý thuyết, ít ví dụ; thẻ Buổi 2 cũ giữ nguyên), đen trắng như Buổi 1 mới:
+  bảng “câu sau làm gì → tiếng Việt hay nói → từ nối”, rồi 3 nhóm (ngược chiều 오히려 · 반면 · 그러나 / kết luận 따라서 · 그래서 · 이처럼 / thêm – chuyển – hỏi 또한 · 게다가 · 그런데 · 그러면),
+  mỗi nhóm: ① thẻ từ nối `REL2` {g, w, m, d, sig:[[ở đâu, dấu hiệu]], ex:[[ko, vi, vì sao]]} · ② bảng đặt cạnh nhau `CMP2` {g, t, base?, r:[[từ nối, câu sau, dịch, vì sao]]}
+  (`[chữ]` = từ nối đóng khung `.cn`, `{chữ}` = dấu hiệu `.cp`; `renderRel2`) · ③ gọi tên quan hệ `MCQ['2nN*']` (phần tử 4 = câu hỏi, lựa chọn = tên quan hệ) · ④ chọn từ nối `2nD*`; bài trộn `2nM`,
+  link sang Buổi 2 mục 5–6, 8 (`#b=2&g=m25|m28`). Báo cáo `sum2n` (`lines1n(L, pre, '2n')` dùng chung cho mọi thẻ `<buổi>n`).
   Đáp án lấy từ `bank`, riêng `Etk091` dùng đáp án đúng ③ 비록 / ① (trong `bank` đang ghi sai ① / ③). `MCQ` câu tự soạn (lựa chọn đầu là đáp án). localStorage `nari-1920`.
 
 ## Học câu 23–24 tâm trạng trong tùy bút (`cau-23-24/`) và câu 42–43 tiểu thuyết (`cau-42-43/`)

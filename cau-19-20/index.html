@@ -175,6 +175,12 @@ h4.sub{font-size:17px;margin:18px 0 6px;padding:3px 9px;border-left:5px solid va
 .pr .pt{font-weight:bold;font-size:15.5px;margin:0 0 2px}
 .pr .note{margin:2px 0 4px}
 .pr .ex{background:#fff}
+.cn{display:inline-block;border:1.5px solid var(--ink);border-radius:4px;padding:0 5px;font-weight:bold;line-height:1.3}
+.ex .why{display:block;font-size:14px;color:#333;margin-top:2px}
+.cmp{border:1px solid var(--line);border-radius:8px;padding:8px 10px;margin:0 0 12px}
+.cmp .ct{font-weight:bold;font-size:16px;margin:0 0 6px}
+.cmp table.t{margin:6px 0 2px}
+.cmp .ex b{color:inherit}
 #cpAll.hideadv td.adv{color:transparent;background:#ddd;cursor:pointer}
 #cpAll.hideadv td.adv.show{color:inherit;background:var(--okbg)}
 </style>
@@ -194,6 +200,7 @@ h4.sub{font-size:17px;margin:18px 0 6px;padding:3px 9px;border-left:5px solid va
   <a href="#b=1" data-k="1">Buổi 1<small>Tìm cặp</small></a>
   <a href="#b=1n" data-k="1n">Buổi 1 mới<small>Cặp tiếng Việt</small></a>
   <a href="#b=2" data-k="2">Buổi 2<small>Xét quan hệ</small></a>
+  <a href="#b=2n" data-k="2n">Buổi 2 mới<small>Qua ví dụ</small></a>
   <a href="#b=3" data-k="3">Buổi 3<small>Như thi</small></a>
   <a href="#b=on" data-k="on">Ôn<small>Trộn đề</small></a>
   <a href="#b=all" data-k="all">22 bài<small>Giải thích</small></a>
@@ -391,7 +398,7 @@ h4.sub{font-size:17px;margin:18px 0 6px;padding:3px 9px;border-left:5px solid va
 </div>
 <div class="prac"><div class="ph">✋ Luyện nhanh 4 · Thêm ý, chuyển ý, hỏi</div><div id="mcq2c"></div></div>
 
-<h3>5. Lựa chọn sai câu 19 sai vì đâu</h3>
+<h3 id="m25">5. Lựa chọn sai câu 19 sai vì đâu</h3>
 <div id="traps19"></div>
 <h3>6. Lựa chọn sai câu 20 sai vì đâu</h3>
 <div id="traps20"></div>
@@ -401,10 +408,71 @@ h4.sub{font-size:17px;margin:18px 0 6px;padding:3px 9px;border-left:5px solid va
 <p class="note">Trộn cả 6 quan hệ (ngược chiều, kết luận, thêm, chuyển ý). Câu cô tự soạn. Trước khi chọn, nói thầm: câu sau làm gì với câu trước?</p>
 <div id="mcq2"></div>
 
-<h3>8. Đề: 10 bài</h3>
+<h3 id="m28">8. Đề: 10 bài</h3>
 <p class="note">Làm theo 3 bước: ✕ gạch lựa chọn thiếu cặp → gọi tên quan hệ → câu 20 đọc câu có ô / câu cuối.</p>
 <div id="r2"></div>
 <div class="sum" id="sum2"></div>
+</section>
+
+<!-- ================= BUỔI 2 · BẢN MỚI (học qua ví dụ) ================= -->
+<section class="sec" id="s2n">
+<h2>Buổi 2 · bản mới · Xét quan hệ qua ví dụ</h2>
+<p class="goal"><b>Mục tiêu:</b> khi Bước 1 còn 2–3 lựa chọn, đọc <b>câu trước + câu có ô</b> rồi gọi tên được: câu sau làm gì với câu trước? Mỗi từ nối học qua nhiều ví dụ có dịch, đặt cạnh nhau để thấy khác nhau ở đâu, rồi luyện ngay.</p>
+
+<h3>1. Câu 19 hỏi: câu sau làm gì với câu trước?</h3>
+<p>Tiếng Việt cũng nối hai câu bằng từ nối: “Trái lại…”, “Trong khi đó…”, “Vì vậy…”, “Như vậy…”. Em đã dùng đúng từ nhỏ mà không cần học luật. Câu 19 chỉ là: <b>dịch thầm hai câu sang tiếng Việt → tự hỏi mình sẽ nối bằng chữ gì → tìm từ nối tiếng Hàn có nghĩa đó</b>.</p>
+<div class="tw"><table class="t">
+<tr><th>Câu sau làm gì với câu trước?</th><th>Tiếng Việt hay nói</th><th>Từ nối</th></tr>
+<tr><td>Đảo hẳn điều người ta tưởng / mong</td><td>Trái lại, ngược lại</td><td class="ko">오히려</td></tr>
+<tr><td>Chuyển sang đối tượng khác để so sánh</td><td>Trong khi đó, còn … thì</td><td class="ko">반면</td></tr>
+<tr><td>Nói điều trái ý câu trước</td><td>Nhưng</td><td class="ko">그러나 · 하지만</td></tr>
+<tr><td>Rút ra kết luận, lời khuyên</td><td>Vì vậy, do đó</td><td class="ko">따라서</td></tr>
+<tr><td>Kể kết quả đã xảy ra</td><td>Vì thế, nên</td><td class="ko">그래서</td></tr>
+<tr><td>Gói các ví dụ thành ý chung</td><td>Như vậy</td><td class="ko">이처럼</td></tr>
+<tr><td>Thêm ý cùng chiều</td><td>Ngoài ra · Hơn nữa, lại còn</td><td class="ko">또한 · 게다가 · 더구나</td></tr>
+<tr><td>Chuyển sang chuyện mới</td><td>Thế rồi, nhưng mà</td><td class="ko">그런데</td></tr>
+<tr><td>Nêu vấn đề rồi hỏi cách giải quyết</td><td>Vậy thì</td><td class="ko">그러면</td></tr>
+</table></div>
+<p class="note">Trong ví dụ dưới đây: <span class="cn">từ nối</span> đóng khung, <span class="cp">dấu hiệu</span> in đậm gạch chân. Mỗi nhóm học 4 bước: ① từng từ nối · ② đặt cạnh nhau · ③ gọi tên quan hệ · ④ chọn từ nối.</p>
+
+<h3>2. Nhóm 1 · Ngược chiều: 오히려 · 반면 · 그러나</h3>
+<h4 class="sub">① Từng từ nối: nghĩa → dấu hiệu → ví dụ</h4>
+<div id="rel1"></div>
+<h4 class="sub">② Đặt cạnh nhau: câu sau khác → từ nối khác</h4>
+<div id="cmp1"></div>
+<div class="tip"><b>Hỏi lần lượt 3 câu:</b> ① Câu trước có ai <b>nghĩ / mong / dự đoán</b> điều gì, và câu sau <b>ngược hẳn</b> (hay có 더)? → <span class="ko">오히려</span>. ② Câu sau có <b>đổi sang người / vật / thời kỳ khác</b>? → <span class="ko">반면</span>. ③ Không phải hai trường hợp trên → <span class="ko">그러나 / 하지만</span>.</div>
+<h4 class="sub">③ Luyện: gọi tên quan hệ</h4>
+<div class="prac"><div class="ph">✋ Câu sau làm gì với câu trước?</div><div id="mcq2nN1"></div></div>
+<h4 class="sub">④ Luyện: chọn từ nối</h4>
+<div class="prac"><div class="ph">✋ Chọn từ nối</div><div id="mcq2nD1"></div></div>
+
+<h3>3. Nhóm 2 · Kết luận, tóm: 따라서 · 그래서 · 이처럼</h3>
+<h4 class="sub">① Từng từ nối: nghĩa → dấu hiệu → ví dụ</h4>
+<div id="rel2"></div>
+<h4 class="sub">② Đặt cạnh nhau: câu sau khác → từ nối khác</h4>
+<div id="cmp2"></div>
+<h4 class="sub">③ Luyện: gọi tên quan hệ</h4>
+<div class="prac"><div class="ph">✋ Câu sau làm gì với câu trước?</div><div id="mcq2nN2"></div></div>
+<h4 class="sub">④ Luyện: chọn từ nối</h4>
+<div class="prac"><div class="ph">✋ Chọn từ nối</div><div id="mcq2nD2"></div></div>
+
+<h3>4. Nhóm 3 · Thêm, chuyển, hỏi: 또한 · 게다가 · 그런데 · 그러면</h3>
+<h4 class="sub">① Từng từ nối: nghĩa → dấu hiệu → ví dụ</h4>
+<div id="rel3"></div>
+<h4 class="sub">② Đặt cạnh nhau: câu sau khác → từ nối khác</h4>
+<div id="cmp3"></div>
+<h4 class="sub">③ Luyện: gọi tên quan hệ</h4>
+<div class="prac"><div class="ph">✋ Câu sau làm gì với câu trước?</div><div id="mcq2nN3"></div></div>
+<h4 class="sub">④ Luyện: chọn từ nối</h4>
+<div class="prac"><div class="ph">✋ Chọn từ nối</div><div id="mcq2nD3"></div></div>
+
+<h3>5. Bài trộn cả 3 nhóm</h3>
+<p class="note">Trước khi chọn, dịch thầm hai câu rồi nói: câu sau làm gì với câu trước?</p>
+<div id="mcq2nM"></div>
+
+<h3>6. Học tiếp</h3>
+<p>Học xong phần này, em làm tiếp ở thẻ <b>Buổi 2</b>: <a href="#b=2&amp;g=m25">mục 5–6 · Lựa chọn sai vì đâu</a> và <a href="#b=2&amp;g=m28">mục 8 · 10 bài đề</a>.</p>
+<div class="sum" id="sum2n"></div>
 </section>
 
 <!-- ================= BUỔI 3 ================= -->
@@ -829,10 +897,162 @@ MCQ['1nE3']=[
 MV['1nE1']=['Tuy dáng người [thấp nhưng] chơi bóng rổ rất giỏi.','Nếu [có thể] sinh ra lần nữa [thì] bạn muốn trở thành gì?','Đến lúc [định] đi du lịch một mình [thật thì] bắt đầu thấy lo.','Dù có [trượt] kỳ thi này [đi nữa] tôi cũng không bỏ cuộc.'];
 MV['1nE2']=['Liệu thuốc này có thật sự hiệu quả [không]?','Biết đâu tin đồn đó [là thật cũng nên].','Lẽ nào người tốt như thế lại làm chuyện đó — [không thể nào].','Lỡ [trời mưa thì sao], mang ô theo nhé.'];
 MV['1nE3']=['Đằng nào mai cũng [phải làm] nên hôm nay chuẩn bị trước đi.','Khổ thế này thì thà ngay từ đầu [không làm còn hơn].','Quán đó nổi tiếng nhưng đồ ăn [không ngon lắm].','Nội dung ai cũng biết rồi nên không nhất thiết [phải giải thích] lại.'];
+/* Buổi 2 mới: REL2 = thẻ từ nối {g, w, m, d, sig:[[ở đâu, dấu hiệu]], ex:[[ko, vi, vì sao]]}; CMP2 = bảng đặt cạnh nhau {g, t, base:[ko, vi]?, r:[[từ nối, câu sau (hoặc cả đoạn), dịch, vì sao]]}.
+   [chữ] = từ nối (đóng khung), {chữ} = dấu hiệu (in đậm gạch chân) */
+var REL2=[
+{g:1,w:'오히려',m:'trái lại, ngược lại (còn … hơn)',d:'Câu trước nêu điều người ta <b>tưởng / mong / dự đoán</b> (hoặc một khẳng định, phủ định). Câu sau nói điều <b>ngược hẳn</b>, thường còn mạnh hơn. Muốn chọn 오히려 phải chỉ ra được: <b>điều gì bị đảo?</b> Không chỉ ra được thì không phải 오히려 — đây là bẫy số 1 của câu 19.',
+ sig:[['Câu trước','생각하다 · 예상하다 · 기대하다 · -ㄹ 줄 알았다 · -ㄹ 것이라고 여기다 (tưởng, mong) · -지 않다 / -는 것이 아니다 (phủ định)'],['Câu sau','kết quả ngược hẳn, hay có 더 (còn … hơn)'],['Vị trí','đầu câu hoặc giữa câu']],
+ ex:[['사람들은 비가 오면 손님이 줄 것이라고 {생각했다}. [오히려] 비 오는 날에 손님이 {더 많았다}.','Mọi người {nghĩ} trời mưa thì khách sẽ giảm. [Trái lại] ngày mưa khách {còn đông hơn}.','Dự đoán “khách giảm” bị đảo thành “khách đông hơn”.'],
+  ['약을 먹으면 감기가 나을 줄 {알았다}. [오히려] 약을 먹고 나서 몸이 {더 안 좋아졌다}.','{Tưởng} uống thuốc thì khỏi cảm. [Trái lại] uống xong người {còn mệt hơn}.','Mong đợi “khỏi” → thực tế “tệ hơn”.'],
+  ['실수는 부끄러운 일이 {아니다}. [오히려] 실수를 통해 {더 많이} 배울 수 있다.','Mắc lỗi {không phải} điều đáng xấu hổ. [Ngược lại] qua lỗi sai ta {còn học được nhiều hơn}.','Câu trước phủ định một suy nghĩ thường gặp; câu sau nói điều ngược lại, mạnh hơn.'],
+  ['칭찬을 많이 하면 아이가 자신감을 가질 것이라고 {기대한다}. 그런데 지나친 칭찬은 [오히려] 아이에게 {부담이 된다}.','Người ta {mong} khen nhiều thì trẻ sẽ tự tin. Nhưng khen quá mức [trái lại] {thành gánh nặng} cho trẻ.','오히려 đứng giữa câu cũng được. Điều bị đảo: “tự tin” → “gánh nặng”.']]},
+{g:1,w:'반면(에)',m:'trong khi đó, còn … thì',d:'Đặt <b>hai đối tượng</b> (hai người, hai nơi, hai thời kỳ) hoặc <b>hai mặt</b> (ưu – nhược) cạnh nhau để so sánh. Không có ai dự đoán gì bị đảo cả: chỉ là A thế này, còn B thế kia. Giữa câu dùng dạng <span class="ko">-는 반면(에)</span>.',
+ sig:[['Câu trước – câu sau','chủ ngữ đổi: 형은 … / 동생은 …; 도시는 … / 시골은 …; 과거에는 … / 요즘은 …; 장점 … / 단점 … (hay có 은/는 ở cả hai câu)']],
+ ex:[['{형은} 말이 많고 활발하다. [반면] {동생은} 조용하고 혼자 있는 것을 좋아한다.','{Anh trai} nói nhiều, năng động. [Trong khi đó] {em trai} trầm, thích ở một mình.','Hai người đặt cạnh nhau: A ↔ B.'],
+  ['{도시는} 편리한 시설이 많다. [반면] {시골은} 공기가 맑고 조용하다.','{Thành phố} nhiều tiện ích. [Còn] {nông thôn} thì không khí trong lành, yên tĩnh.','Hai nơi, mỗi nơi một điểm riêng — không có gì bị đảo.'],
+  ['온라인 수업은 시간과 장소에 구애받지 않는다는 {장점이} 있다. [반면] 집중하기 어렵다는 {단점도} 있다.','Học online có {ưu điểm} là không bị giới hạn thời gian, địa điểm. [Mặt khác] cũng có {nhược điểm} là khó tập trung.','Hai mặt của cùng một việc: ưu ↔ nhược.'],
+  ['{과거에는} 집에서 아이를 낳는 경우가 많았다. [반면] {요즘은} 대부분 병원에서 아이를 낳는다.','{Ngày xưa} nhiều người sinh con ở nhà. [Trong khi đó] {ngày nay} phần lớn sinh ở bệnh viện.','Hai thời kỳ đặt cạnh nhau.']]},
+{g:1,w:'그러나 · 하지만',m:'nhưng',d:'Ý sau <b>trái với ý trước</b> nói chung, thường vẫn cùng một người / một vật. Dùng khi không phải hai trường hợp trên: không có dự đoán bị đảo hẳn, cũng không đổi sang đối tượng khác. 그러나 hay dùng trong văn viết, 하지만 dùng cả nói và viết.',
+ sig:[['Câu trước – câu sau','cùng một chủ thể: điểm tốt → điểm chưa tốt; cố gắng → kết quả không như ý; biết → không làm']],
+ ex:[['이 가방은 디자인이 {예쁘다}. [하지만] 너무 {무거워서} 들고 다니기 힘들다.','Cái túi này thiết kế {đẹp}. [Nhưng] {nặng} quá nên mang theo vất vả.','Cùng một cái túi: tốt → chưa tốt. Không ai dự đoán gì, không có hai đối tượng.'],
+  ['그는 매일 열심히 {연습했다}. [그러나] 대회에서 {상을 받지 못했다}.','Anh ấy ngày nào cũng {chăm luyện tập}. [Nhưng] ở cuộc thi {không đoạt giải}.','Kết quả không như mong muốn — nhưng không phải “ngược hẳn, còn hơn” → 그러나.'],
+  ['환경 보호가 중요하다는 것은 누구나 {알고 있다}. [그러나] 실제로 {실천하는} 사람은 많지 않다.','Ai cũng {biết} bảo vệ môi trường là quan trọng. [Nhưng] người {thực hiện} thật thì không nhiều.','Biết ↔ làm: ý sau trái ý trước.']]},
+{g:2,w:'따라서',m:'vì vậy, do đó (văn nghị luận)',d:'Câu sau là <b>kết luận / lời khuyên rút ra</b> từ câu trước. Hay gặp trong bài giải thích, nghị luận — đúng loại bài của câu 19–20.',
+ sig:[['Câu trước','lý do, sự thật, kết quả nghiên cứu'],['Câu sau','-아/어야 한다 · -는 것이 좋다 · -(으)ㄹ 필요가 있다 · -다고 할 수 있다']],
+ ex:[['잠이 부족하면 {집중력이 떨어지고 면역력도 약해진다}. [따라서] 하루에 7시간 이상 {자야 한다}.','Thiếu ngủ thì {giảm tập trung, miễn dịch yếu đi}. [Vì vậy] mỗi ngày {nên ngủ} trên 7 tiếng.','Câu trước = lý do, câu sau = lời khuyên rút ra.'],
+  ['이 지역은 여름에 비가 많이 와서 {자주 홍수가 난다}. [따라서] 장마철 전에 {대비를 해야 한다}.','Vùng này mùa hè mưa nhiều nên {hay bị lũ}. [Do đó] {phải chuẩn bị} trước mùa mưa.','Sự thật → việc phải làm.'],
+  ['책을 읽으면 {어휘력과 사고력이 함께 자란다}. [따라서] 독서는 공부에 큰 도움이 {된다고 할 수 있다}.','Đọc sách giúp {vốn từ và tư duy cùng phát triển}. [Vì vậy] {có thể nói} đọc sách giúp ích lớn cho việc học.','Câu sau kết thúc bằng -다고 할 수 있다 = kết luận.']]},
+{g:2,w:'그래서',m:'vì thế, nên (chuyện kể)',d:'Câu trước là nguyên nhân, câu sau là <b>kết quả đã xảy ra</b>. Dùng trong chuyện kể, văn nói. Khác 따라서: 그래서 <b>kể sự việc</b>; 따라서 <b>rút kết luận, lời khuyên</b>.',
+ sig:[['Câu sau','kể việc đã xảy ra (đuôi quá khứ -았다/었다)']],
+ ex:[['어제 늦게까지 {일을 했다}. [그래서] 오늘 아침에 {늦잠을 잤다}.','Hôm qua {làm việc} đến khuya. [Vì thế] sáng nay {ngủ dậy muộn}.','Nguyên nhân → kết quả đã xảy ra.'],
+  ['길이 많이 {막혔다}. [그래서] 약속 시간에 {늦었다}.','Đường {tắc} quá. [Nên] tôi {đến muộn} giờ hẹn.','Chuyện kể hằng ngày → 그래서.']]},
+{g:2,w:'이처럼',m:'như vậy, như thế',d:'Câu trước <b>kể ra một hoặc vài ví dụ</b>; câu sau <b>gói lại thành ý chung</b>. Thứ tự: ví dụ <b>đứng trước</b>, ý chung đứng sau.',
+ sig:[['Câu trước','ví dụ cụ thể (A는 …, B는 …; 어떤 사람은 …, 어떤 사람은 …)'],['Câu sau','chữ khái quát: 다양한, 여러, 마다, -이/가 담겨 있다, 중요한 역할을 한다']],
+ ex:[['{김치는 배추로, 깍두기는 무로, 오이소박이는 오이로} 만든다. [이처럼] 김치에는 {다양한 종류가} 있다.','{Kim chi làm từ cải thảo, kkakdugi từ củ cải, oisobagi từ dưa chuột}. [Như vậy] kim chi có {nhiều loại}.','Ba ví dụ → gói lại thành “nhiều loại”.'],
+  ['{어떤 사람은 음악을 들으며 쉬고, 어떤 사람은 산책을 하며} 쉰다. [이처럼] {사람마다} 쉬는 방법이 다르다.','{Có người nghe nhạc để nghỉ, có người đi dạo}. [Như vậy] {mỗi người} một cách nghỉ ngơi.','Hai ví dụ → ý chung “mỗi người mỗi khác”.'],
+  ['한국에서는 {생일에 미역국을 먹고, 이사한 날에는 짜장면을} 먹는다. [이처럼] 특별한 날에 먹는 {음식이 정해져 있는} 경우가 많다.','Ở Hàn, {sinh nhật ăn canh rong biển, ngày chuyển nhà ăn mì tương đen}. [Như vậy] nhiều ngày đặc biệt {có món ăn riêng}.','Ví dụ trước, ý chung sau.']]},
+{g:3,w:'또한',m:'ngoài ra, cũng',d:'Thêm một ý <b>cùng chiều, ngang hàng</b> với ý trước (thêm một ưu điểm, một lý do, một tác dụng…).',
+ sig:[['Câu trước – câu sau','cùng tốt hoặc cùng xấu; câu sau hay có -도 (cũng)']],
+ ex:[['자전거를 타면 {건강에 좋다}. [또한] {환경 오염도} 줄일 수 있다.','Đi xe đạp {tốt cho sức khỏe}. [Ngoài ra] {cũng} giảm được ô nhiễm môi trường.','Hai lợi ích ngang hàng.'],
+  ['이 앱은 {무료로} 사용할 수 있다. [또한] {사용 방법도} 간단하다.','Ứng dụng này {dùng miễn phí}. [Ngoài ra] cách dùng {cũng} đơn giản.','Thêm một ưu điểm, có -도.']]},
+{g:3,w:'게다가 · 더구나',m:'hơn nữa, lại còn',d:'Thêm ý cùng chiều nhưng <b>chồng thêm, mạnh hơn</b>: đã A, lại còn B. Hay đi với -까지, 더, -도. 더구나 hay dùng khi chuyện xấu chồng chất.',
+ sig:[['Câu sau','-까지 · 더 · -도 (lại còn, nữa)']],
+ ex:[['오늘은 {비가 많이 온다}. [게다가] {바람까지} 세게 분다.','Hôm nay {mưa to}. [Lại còn] gió thổi mạnh {nữa}.','Xấu chồng thêm xấu, có -까지.'],
+  ['그는 {일을 잃었다}. [더구나] {몸까지} 아파서 더 힘들었다.','Anh ấy {mất việc}. [Hơn nữa] người {lại còn} ốm nên càng khổ.','Chuyện xấu chồng chất → 더구나.']]},
+{g:3,w:'그런데',m:'thế rồi, nhưng mà (chuyển ý)',d:'Chuyển sang một <b>thông tin mới</b> hoặc một diễn biến bất ngờ của cùng câu chuyện. Không nhất thiết trái ý câu trước.',
+ sig:[['Câu sau','chuyện mới, bất ngờ (우연히, 마침…) hoặc mở sang khía cạnh mới (-다고 한다)']],
+ ex:[['어제 친구와 영화를 보러 갔다. [그런데] 극장에서 {우연히} 초등학교 선생님을 만났다.','Hôm qua đi xem phim với bạn. [Thế rồi] ở rạp {tình cờ} gặp lại cô giáo tiểu học.','Không trái ý — chỉ là chuyện mới, bất ngờ.'],
+  ['요즘 많은 사람들이 커피를 마신다. [그런데] 커피를 마시는 {시간에 따라} 몸에 주는 영향이 {다르다고 한다}.','Dạo này nhiều người uống cà phê. [Nhưng mà] nghe nói uống {vào lúc nào} thì ảnh hưởng tới cơ thể {khác nhau}.','Mở sang thông tin mới về cùng chủ đề.']]},
+{g:3,w:'그러면',m:'vậy thì, nếu vậy thì',d:'Câu trước nêu <b>vấn đề / tình huống</b>; câu có ô <b>hỏi cách giải quyết</b> (어떻게 …? 무엇을 …?) hoặc đưa ra đề nghị “nếu vậy thì …”.',
+ sig:[['Câu trước','vấn đề, tình huống'],['Câu sau','어떻게 … -(으)ㄹ까? · 무엇을 해야 할까? · lời rủ -자']],
+ ex:[['쓰레기가 너무 많이 나와서 {문제가 되고 있다}. [그러면] 쓰레기를 줄이려면 {어떻게 해야 할까?}','Rác thải ra quá nhiều đang {thành vấn đề}. [Vậy thì] muốn giảm rác {phải làm sao}?','Vấn đề → hỏi cách giải quyết.'],
+  ['주말에 {비가 온다고 한다}. [그러면] 등산 대신 영화를 {보러 가자}.','Nghe nói cuối tuần {trời mưa}. [Vậy thì] thay vì leo núi, {đi xem phim đi}.','Tình huống → đề nghị “nếu vậy thì”.']]}
+];
+var CMP2=[
+{g:1,t:'Có dự đoán: 오히려 hay 그러나?',base:['사람들은 새로 생긴 식당이 {비쌀 것이라고 생각했다}.','Mọi người {nghĩ} quán mới mở {sẽ đắt}.'],
+ r:[['오히려','다른 식당보다 값이 {더 쌌다}.','Giá {còn rẻ hơn} quán khác.','Dự đoán “đắt” bị đảo hẳn thành “rẻ hơn” → 오히려.'],
+  ['그러나','값은 {생각만큼 비싸지 않았다}.','Giá {không đắt như mình nghĩ}.','Chỉ “không đắt như nghĩ”, chưa ngược hẳn → 그러나.']]},
+{g:1,t:'Một đối tượng hay hai: 반면 hay 하지만?',base:['{이 식당은} 음식이 맛있다.','{Quán này} đồ ăn ngon.'],
+ r:[['반면','{옆 식당은} 음식이 맛이 없다.','{Quán bên cạnh} thì đồ ăn dở.','Đổi sang đối tượng khác → 반면 (trong khi đó).'],
+  ['하지만','{값이 너무 비싸다}.','{Giá đắt quá}.','Vẫn là quán này, nói mặt chưa tốt → 하지만 (nhưng).']]},
+{g:2,t:'Kể chuyện hay rút lời khuyên: 그래서 hay 따라서?',base:['{요즘 비가 자주 온다}.','{Dạo này hay mưa}.'],
+ r:[['그래서','어제 {경기도 취소되었다}.','Hôm qua {trận đấu cũng bị hủy}.','Kể việc đã xảy ra → 그래서.'],
+  ['따라서','외출할 때는 {우산을 꼭 챙겨야 한다}.','Khi ra ngoài {nhất định phải mang ô}.','Rút ra lời khuyên → 따라서. (Văn nói vẫn có thể dùng 그래서; bài đọc nghị luận thường dùng 따라서.)']]},
+{g:2,t:'Ví dụ đứng trước hay sau: 이처럼 hay 이를테면?',
+ r:[['이처럼','음악을 듣는 사람도 있고 산책하는 사람도 있다. [이처럼] {사람마다 쉬는 방법이 다르다}.','Có người nghe nhạc, có người đi dạo. [Như vậy] {mỗi người một cách nghỉ}.','Ví dụ ĐỨNG TRƯỚC, ý chung đứng sau → 이처럼.'],
+  ['이를테면','{사람마다 쉬는 방법이 다르다}. [이를테면] 음악을 듣거나 산책을 한다.','{Mỗi người một cách nghỉ}. [Chẳng hạn] nghe nhạc hoặc đi dạo.','Ý chung ĐỨNG TRƯỚC, ví dụ đứng sau → 이를테면 (chẳng hạn).']]},
+{g:2,t:'Bẫy: câu trước xấu, câu sau tốt — vẫn có thể là 따라서',base:['{최근 물가가 크게 올랐다}.','{Gần đây giá cả tăng mạnh}.'],
+ r:[['따라서','정부는 {물가를 낮추기 위한 대책을 마련해야 한다}.','Chính phủ {phải có biện pháp kéo giá xuống}.','Câu sau là việc phải làm VÌ câu trước → 따라서. Hai câu một xấu một tốt nhưng không phải trái ý.'],
+  ['그러나','사람들의 {소비는 줄지 않았다}.','Chi tiêu của mọi người {không giảm}.','Lẽ ra giá tăng thì chi tiêu giảm, nhưng không giảm → 그러나. (Nếu câu sau là “chi tiêu còn tăng hơn” thì là 오히려.)']]},
+{g:3,t:'Thêm ngang hàng hay chồng thêm: 또한 hay 게다가?',base:['이 노트북은 {가볍다}.','Laptop này {nhẹ}.'],
+ r:[['또한','{배터리도} 오래 간다.','Pin {cũng} bền.','Thêm một ưu điểm ngang hàng → 또한.'],
+  ['게다가','{값까지} 싸서 학생들에게 인기가 많다.','{Lại còn rẻ nữa} nên được sinh viên ưa chuộng.','Chồng thêm, có -까지 → 게다가. (또한 cũng nối được; có -까지 / 더 thì 게다가, 더구나 tự nhiên hơn.)']]},
+{g:3,t:'Cả hai đều là câu hỏi: 그러면 hay 과연?',base:['{요즘 잠을 잘 못 자는 사람이 많다}.','{Dạo này nhiều người ngủ không ngon}.'],
+ r:[['그러면','{어떻게 해야} 잠을 잘 잘 수 있을까?','{Làm thế nào} để ngủ ngon?','Hỏi cách giải quyết → 그러면.'],
+  ['과연','수면제가 {정말} 도움이 {될까?}','Thuốc ngủ {liệu có thật sự} giúp được {không}?','Nghi ngờ một điều → 과연 (đã học ở Buổi 1).']]},
+{g:3,t:'Chuyện mới hay trái ý: 그런데 hay 그러나?',base:['어제 친구와 공원에 갔다.','Hôm qua đi công viên với bạn.'],
+ r:[['그런데','거기서 {우연히} 선생님을 만났다.','Ở đó {tình cờ} gặp thầy giáo.','Không trái ý, chỉ là chuyện mới xảy ra → 그런데.'],
+  ['그러나','{공원 문이 닫혀 있었다}.','{Công viên đóng cửa}.','Trái với dự định (đi chơi mà không vào được) → 그러나. (그런데 cũng dùng được ở đây — 그런데 rộng hơn.)']]}
+];
+function rTx(s){return esc(s).replace(/\[([^\]]+)\]/g,'<span class="cn">$1</span>').replace(/\{([^}]+)\}/g,'<span class="cp">$1</span>');}
+function renderRel2(){
+  [1,2,3].forEach(function(g){
+    var el=$('rel'+g);if(el)el.innerHTML=REL2.filter(function(a){return a.g===g;}).map(function(a){
+      return '<div class="card adv"><div class="hd"><span class="ko">'+esc(a.w)+'</span> · <small>'+esc(a.m)+'</small></div><div class="bd">'+
+        '<p class="advd"><b>Nghĩa:</b> '+a.d+'</p><p class="advd"><b>Nhận ra bằng:</b></p><div class="ends">'+
+        a.sig.map(function(s){return '<span><b>'+esc(s[0])+':</b> <span class="ko">'+esc(s[1])+'</span></span>';}).join('')+'</div>'+
+        '<div class="pr"><div class="pt">Ví dụ</div>'+a.ex.map(function(e){return '<div class="ex"><span class="ko">'+rTx(e[0])+'</span><span class="vi">'+rTx(e[1])+'</span><span class="why">→ '+esc(e[2])+'</span></div>';}).join('')+'</div></div></div>';}).join('');
+    var cm=$('cmp'+g);if(cm)cm.innerHTML=CMP2.filter(function(c){return c.g===g;}).map(function(c){
+      return '<div class="cmp"><div class="ct">'+esc(c.t)+'</div>'+(c.base?'<div class="ex"><b>Câu trước:</b> <span class="ko">'+rTx(c.base[0])+'</span><span class="vi">'+rTx(c.base[1])+'</span></div>':'')+
+        '<div class="tw"><table class="t"><tr><th>'+(c.base?'Câu sau':'Đoạn')+'</th><th>Vì sao</th></tr>'+c.r.map(function(r){
+          return '<tr><td><span class="ko">'+(c.base?'<span class="cn">'+esc(r[0])+'</span> ':'')+rTx(r[1])+'</span><br><small>'+rTx(r[2])+'</small></td><td>'+esc(r[3])+'</td></tr>';}).join('')+'</table></div></div>';}).join('');
+  });
+}
+var NQ='Câu sau làm gì với câu trước?';
+var N1=['Đảo hẳn điều đã tưởng → 오히려','Đổi sang đối tượng khác → 반면','Trái ý câu trước → 그러나'];
+function n1(i){var o=N1.slice();var a=o.splice(i,1)[0];return [a].concat(o);}
+MCQ['2nN1']=[
+ ['모두 이번 시험이 어려울 것이라고 걱정했다. (    ) 시험은 지난번보다 훨씬 쉬웠다.',n1(0),'Có dự đoán (어려울 것이라고 걱정했다) bị đảo hẳn (훨씬 쉬웠다) → 오히려.',NQ],
+ ['언니는 단 음식을 좋아한다. (    ) 나는 매운 음식을 좋아한다.',n1(1),'Hai người (언니 ↔ 나), không có dự đoán bị đảo → 반면.',NQ],
+ ['이 옷은 색깔이 마음에 든다. (    ) 사이즈가 조금 작다.',n1(2),'Cùng một cái áo: điểm tốt → điểm chưa tốt; không dự đoán, không hai đối tượng → 그러나 / 하지만.',NQ],
+ ['쉬는 날 집에만 있으면 피로가 풀릴 줄 알았다. (    ) 집에만 있으니 몸이 더 무거워졌다.',n1(0),'“-ㄹ 줄 알았다” (tưởng là) + kết quả ngược hẳn, có 더 → 오히려.',NQ],
+ ['남쪽 지방은 겨울에도 따뜻하다. (    ) 북쪽 지방은 겨울에 눈이 많이 오고 춥다.',n1(1),'Hai vùng (남쪽 ↔ 북쪽) đặt cạnh nhau → 반면.',NQ],
+ ['그는 열심히 공부했다. (    ) 원하는 대학에 합격하지 못했다.',n1(2),'Cố gắng → kết quả không như ý, cùng một người, không “ngược hẳn còn hơn” → 그러나.',NQ]];
+MCQ['2nD1']=[
+ ['사람들은 휴대 전화가 생기면 가족 간의 대화가 늘 것이라고 기대했다. (    ) 대화가 더 줄어들었다.',['오히려','반면','따라서','또한'],'Có mong đợi (늘 것이라고 기대했다), kết quả ngược hẳn, có 더 → 오히려.'],
+ ['아버지는 아침 일찍 일어나는 것을 좋아한다. (    ) 어머니는 밤늦게까지 일하는 것을 좋아한다.',['반면','오히려','게다가','그러면'],'Hai người (아버지 ↔ 어머니), không có dự đoán bị đảo → 반면.'],
+ ['이 동네는 교통이 편리하다. (    ) 집값이 너무 비싸다.',['하지만','오히려','이처럼','또한'],'Cùng một khu: tốt → chưa tốt → 하지만. 또한 là thêm ý cùng chiều, không hợp vì câu sau là điểm xấu.'],
+ ['운동을 많이 하면 건강해질 것 같지만 너무 많이 하면 (    ) 몸에 무리가 갈 수 있다.',['오히려','반면','그래서','이처럼'],'“-ㄹ 것 같지만” = tưởng là…; câu sau ngược hẳn → 오히려 (đứng giữa câu).'],
+ ['도시 사람들은 바쁘게 산다. (    ) 시골 사람들은 비교적 여유롭게 산다.',['반면','오히려','따라서','그런데'],'Hai nhóm người (도시 ↔ 시골) → 반면.'],
+ ['많은 사람들이 이 영화를 좋아할 것이라고 예상했다. (    ) 관객 수는 기대에 미치지 못했다.',['그러나','오히려','반면','게다가'],'Có dự đoán nhưng câu sau chỉ là “không được như kỳ vọng”, chưa ngược hẳn → 그러나. Muốn 오히려 phải ngược hẳn (vd. “bị chê, khán giả ít hẳn đi”).']];
+var N2=['Rút ra kết luận, lời khuyên → 따라서','Kể kết quả đã xảy ra → 그래서','Gói ví dụ thành ý chung → 이처럼','Ý chung trước, ví dụ sau → 이를테면'];
+function n2(i){var o=N2.slice();var a=o.splice(i,1)[0];return [a].concat(o);}
+MCQ['2nN2']=[
+ ['물을 충분히 마시지 않으면 피부가 건조해지고 쉽게 피곤해진다. (    ) 하루에 물을 2리터 정도 마시는 것이 좋다.',n2(0),'Câu sau là lời khuyên (-는 것이 좋다) rút ra từ câu trước → 따라서.',NQ],
+ ['아침에 알람이 울리지 않았다. (    ) 회사에 지각했다.',n2(1),'Kể chuyện: nguyên nhân → kết quả đã xảy ra → 그래서.',NQ],
+ ['어떤 나라는 손으로 밥을 먹고, 어떤 나라는 젓가락이나 포크를 쓴다. (    ) 나라마다 식사 방법이 다르다.',n2(2),'Ví dụ đứng trước, câu sau gói lại (나라마다 … 다르다) → 이처럼.',NQ],
+ ['우리 주변에는 재활용할 수 있는 물건이 많다. (    ) 페트병이나 종이 상자, 유리병 등이 있다.',n2(3),'Ý chung đứng trước, câu sau là ví dụ → 이를테면.',NQ]];
+MCQ['2nD2']=[
+ ['이 약은 빈속에 먹으면 위가 아플 수 있다. (    ) 반드시 식사 후에 먹어야 한다.',['따라서','오히려','반면','이를테면'],'Lý do → việc phải làm (-아야 한다) → 따라서.'],
+ ['버스를 놓쳤다. (    ) 택시를 타고 학교에 갔다.',['그래서','이처럼','오히려','반면'],'Kể chuyện: nguyên nhân → kết quả đã xảy ra → 그래서.'],
+ ['꿀벌은 꽃가루를 옮기고, 지렁이는 흙을 건강하게 만든다. (    ) 작은 생물들도 자연에서 중요한 역할을 한다.',['이처럼','이를테면','오히려','그런데'],'Hai ví dụ đứng trước → gói lại “sinh vật nhỏ cũng quan trọng” → 이처럼.'],
+ ['스트레스를 푸는 방법은 다양하다. (    ) 운동을 하거나 노래를 부르거나 친구와 이야기를 나눈다.',['이를테면','이처럼','따라서','반면'],'Ý chung trước, ví dụ sau → 이를테면 (chẳng hạn).'],
+ ['최근 혼자 사는 노인이 크게 늘고 있다. (    ) 이들을 돌볼 수 있는 제도가 필요하다.',['따라서','그러나','오히려','이를테면'],'Câu trước là vấn đề (xấu), câu sau là việc cần làm (tốt) — không phải trái ý mà là hệ quả → 따라서.']];
+var N3=['Thêm ý cùng chiều → 또한 / 게다가','Chuyển sang chuyện mới → 그런데','Hỏi cách giải quyết → 그러면','Trái ý câu trước → 그러나'];
+function n3q(i){var o=N3.slice();var a=o.splice(i,1)[0];return [a].concat(o);}
+MCQ['2nN3']=[
+ ['이 노트북은 가볍다. (    ) 배터리도 오래 간다.',n3q(0),'Thêm một ưu điểm cùng chiều, có -도 → 또한.',NQ],
+ ['아침에 학교에 가려고 집을 나섰다. (    ) 길에서 오랜만에 옛 친구를 만났다.',n3q(1),'Không trái ý, chỉ là chuyện mới xảy ra → 그런데.',NQ],
+ ['요즘 청소년들이 책을 잘 읽지 않는다. (    ) 어떻게 하면 책을 좋아하게 만들 수 있을까?',n3q(2),'Vấn đề → câu hỏi “어떻게 …?” → 그러면.',NQ],
+ ['그 집은 넓고 깨끗하다. (    ) 역에서 너무 멀다.',n3q(3),'Cùng một căn nhà: tốt → chưa tốt → 그러나.',NQ]];
+MCQ['2nD3']=[
+ ['그 배우는 연기를 잘한다. (    ) 노래까지 잘해서 인기가 많다.',['게다가','그러나','그러면','이처럼'],'Chồng thêm ý tốt, có -까지 → 게다가.'],
+ ['걷기는 다리 근육을 튼튼하게 해 준다. (    ) 마음을 편안하게 하는 데에도 도움이 된다.',['또한','반면','그런데','오히려'],'Thêm một tác dụng ngang hàng, có -도 → 또한.'],
+ ['어제 오랜만에 백화점에 갔다. (    ) 마침 그날 큰 세일을 하고 있었다.',['그런데','따라서','반면','이처럼'],'Chuyện mới, bất ngờ (마침) → 그런데.'],
+ ['외국어를 배우고 싶지만 시간이 없는 사람이 많다. (    ) 바쁜 사람은 어떻게 외국어를 공부해야 할까?',['그러면','과연','오히려','또한'],'Câu hỏi “어떻게 …?” = hỏi cách làm → 그러면. 과연 là nghi ngờ “liệu … thật không?”.'],
+ ['비가 와서 길이 미끄러웠다. (    ) 날이 어두워서 운전하기가 더 힘들었다.',['더구나','반면','그러면','이처럼'],'Chuyện xấu chồng thêm, có 더 → 더구나.']];
+MCQ['2nM']=[
+ ['사람들은 나이가 들면 새로운 것을 배우기 어렵다고 생각한다. (    ) 나이가 들수록 배움에 대한 열정이 더 커지는 사람도 많다.',['오히려','반면','따라서','이를테면'],'Suy nghĩ chung (생각한다) bị đảo hẳn, có 더 → 오히려.'],
+ ['고양이는 혼자 있는 것을 좋아한다. (    ) 개는 사람과 함께 있는 것을 좋아한다.',['반면','오히려','또한','그래서'],'Hai con vật đặt cạnh nhau → 반면.'],
+ ['감기에 걸렸을 때는 몸이 약해진다. (    ) 충분히 쉬고 따뜻한 물을 자주 마셔야 한다.',['따라서','반면','그런데','이를테면'],'Lý do → lời khuyên (-아야 한다) → 따라서.'],
+ ['봄에는 꽃이 피고, 여름에는 바다에 가고, 가을에는 단풍을 본다. (    ) 한국은 계절마다 즐길 거리가 다르다.',['이처럼','이를테면','오히려','그러면'],'Ví dụ trước, ý chung sau (계절마다 … 다르다) → 이처럼.'],
+ ['이 카페는 커피가 맛있다. (    ) 창밖 경치도 아름다워서 손님이 많다.',['게다가','하지만','반면','그러면'],'Thêm ý tốt cùng chiều, có -도 → 게다가.'],
+ ['그 문제는 쉬워 보였다. (    ) 막상 풀어 보니 시간이 오래 걸렸다.',['하지만','반면','따라서','또한'],'Trông dễ ↔ làm lâu: trái ý, cùng một bài toán → 하지만.'],
+ ['어린이 비만이 늘고 있다. (    ) 아이들의 건강을 지키려면 무엇을 해야 할까?',['그러면','과연','이처럼','반면'],'Vấn đề → hỏi cách giải quyết (무엇을 해야 할까?) → 그러면.'],
+ ['친구에게 선물을 주려고 가게에 갔다. (    ) 가게 문이 닫혀 있었다.',['그런데','따라서','이처럼','게다가'],'Chuyện xảy ra tiếp theo, bất ngờ → 그런데.']];
+MV['2nN1']=['Ai cũng lo kỳ thi này sẽ khó. [Trái lại] đề còn dễ hơn lần trước nhiều.','Chị tôi thích đồ ngọt. [Trong khi đó] tôi thích đồ cay.','Tôi thích màu cái áo này. [Nhưng] cỡ hơi nhỏ.','Tưởng ngày nghỉ ở nhà thì hết mệt. [Trái lại] ở nhà suốt người còn nặng nề hơn.','Miền nam mùa đông vẫn ấm. [Trong khi đó] miền bắc mùa đông tuyết nhiều, lạnh.','Anh ấy học chăm chỉ. [Nhưng] không đỗ trường đại học mong muốn.'];
+MV['2nD1']=['Người ta mong có điện thoại thì gia đình nói chuyện nhiều hơn. [Trái lại] còn nói chuyện ít đi.','Bố thích dậy sớm. [Trong khi đó] mẹ thích làm việc đến khuya.','Khu này giao thông thuận tiện. [Nhưng] giá nhà đắt quá.','Tưởng tập nhiều thì khỏe, nhưng tập quá nhiều [trái lại] có thể làm cơ thể quá sức.','Người thành phố sống bận rộn. [Trong khi đó] người nông thôn sống tương đối thong thả.','Người ta dự đoán nhiều người sẽ thích phim này. [Nhưng] số khán giả không được như kỳ vọng.'];
+MV['2nN2']=['Không uống đủ nước thì da khô, dễ mệt. [Vì vậy] mỗi ngày nên uống khoảng 2 lít.','Sáng chuông báo thức không kêu. [Vì thế] tôi đi làm muộn.','Có nước ăn bằng tay, có nước dùng đũa hoặc nĩa. [Như vậy] mỗi nước một cách ăn.','Quanh ta có nhiều đồ tái chế được. [Chẳng hạn] chai nhựa, hộp giấy, chai thủy tinh…'];
+MV['2nD2']=['Thuốc này uống lúc đói có thể đau dạ dày. [Do đó] nhất định phải uống sau bữa ăn.','Tôi lỡ xe buýt. [Nên] đi taxi đến trường.','Ong chuyển phấn hoa, giun làm đất màu mỡ. [Như vậy] sinh vật nhỏ cũng có vai trò quan trọng trong tự nhiên.','Có nhiều cách giải tỏa căng thẳng. [Chẳng hạn] tập thể dục, hát, hoặc trò chuyện với bạn.','Gần đây người già sống một mình tăng mạnh. [Vì vậy] cần có chế độ chăm sóc họ.'];
+MV['2nN3']=['Laptop này nhẹ. [Ngoài ra] pin cũng bền.','Sáng ra khỏi nhà để đi học. [Thế rồi] trên đường gặp lại bạn cũ lâu ngày.','Dạo này thanh thiếu niên ít đọc sách. [Vậy thì] làm thế nào để các em thích đọc sách?','Căn nhà đó rộng và sạch. [Nhưng] xa ga quá.'];
+MV['2nD3']=['Diễn viên đó diễn giỏi. [Hơn nữa] hát cũng hay nên rất nổi tiếng.','Đi bộ giúp cơ chân khỏe. [Ngoài ra] cũng giúp tinh thần thoải mái.','Hôm qua lâu lắm mới đi trung tâm thương mại. [Thế rồi] đúng hôm đó đang giảm giá lớn.','Nhiều người muốn học ngoại ngữ nhưng không có thời gian. [Vậy thì] người bận nên học ngoại ngữ thế nào?','Mưa nên đường trơn. [Hơn nữa] trời tối nên lái xe càng khó.'];
+MV['2nM']=['Người ta nghĩ có tuổi thì khó học cái mới. [Trái lại] nhiều người càng lớn tuổi càng ham học hơn.','Mèo thích ở một mình. [Trong khi đó] chó thích ở cùng người.','Khi bị cảm, cơ thể yếu đi. [Vì vậy] phải nghỉ đủ và hay uống nước ấm.','Mùa xuân hoa nở, mùa hè đi biển, mùa thu ngắm lá đỏ. [Như vậy] Hàn Quốc mỗi mùa có thú vui riêng.','Quán cà phê này cà phê ngon. [Hơn nữa] cảnh ngoài cửa sổ cũng đẹp nên khách đông.','Bài đó trông dễ. [Nhưng] đến khi giải thật thì mất nhiều thời gian.','Trẻ em béo phì đang tăng. [Vậy thì] muốn bảo vệ sức khỏe trẻ phải làm gì?','Tôi đến cửa hàng để mua quà cho bạn. [Thế nhưng] cửa hàng đóng cửa.'];
 var MNAME={'1':'bài trộn cuối buổi','1a':'luyện nhanh nhóm 1 (-지만, -면)','1b':'luyện nhanh nhóm 2 (câu hỏi, đoán)','1c':'luyện nhanh nhóm 3 (thái độ, phủ định)','1d':'luyện nhanh cùng đuôi, khác phó từ','1e':'luyện nhanh câu chủ đề','1f':'luyện nhanh nội dung khớp',
  '1nD1':'nhóm 1 · luyện (-지만, -면, -니)',
  '1nD2':'nhóm 2 · luyện (?, -ㄹ지도, -ㄹ 리가)',
  '1nD3':'nhóm 3 · luyện (-아야, -는 게 낫다, phủ định)','1nE1':'nhóm 1 · phó từ → đuôi','1nE2':'nhóm 2 · phó từ → đuôi','1nE3':'nhóm 3 · phó từ → đuôi','1nM':'bài trộn cả 3 nhóm',
+ '2nN1':'nhóm 1 · gọi tên quan hệ','2nD1':'nhóm 1 · chọn từ nối (오히려, 반면, 그러나)','2nN2':'nhóm 2 · gọi tên quan hệ','2nD2':'nhóm 2 · chọn từ nối (따라서, 그래서, 이처럼)',
+ '2nN3':'nhóm 3 · gọi tên quan hệ','2nD3':'nhóm 3 · chọn từ nối (또한, 게다가, 그런데, 그러면)','2nM':'bài trộn cả 3 nhóm',
  '2':'bài trộn cuối buổi','2a':'luyện nhanh 오히려 · 반면 · 그러나','2b':'luyện nhanh kết luận, tóm','2c':'luyện nhanh thêm ý, chuyển ý','2d':'luyện nhanh gọi tên lỗi'};
 
 var CIR=['①','②','③','④'];
@@ -910,7 +1130,7 @@ function renderMcq(k){
       '<div class="why">'+(done?(p===0?'✅ ':'❌ ')+'💡 '+esc(it[2])+mvHTML(k,i):'')+'</div></div>';
     if(done){n++;if(p===0)ok++;}});
   $('mcq'+k).innerHTML=h+'<div class="score">Đúng '+ok+'/'+MCQ[k].length+(n<MCQ[k].length?' (còn '+(MCQ[k].length-n)+' câu)':'')+(n?' · <a href="#" data-redo="m'+k+'">Làm lại</a>':'')+'</div>';
-  renderSum(/^1n/.test(k)?'1n':parseInt(k,10));
+  renderSum(/^\dn/.test(k)?String(k).slice(0,2):parseInt(k,10));
 }
 function tally(list,m){var c={n:0,a:0,b:0};list.forEach(function(r){var p=m[r.id];if(both(p)){c.n++;if(p[0]===r.a)c.a++;if(p[1]===r.a2)c.b++;}});return c;}
 function renderReal(k){
@@ -1070,15 +1290,15 @@ document.addEventListener('click',function(e){
 
 /* ---- tổng kết + gửi cô ---- */
 function report(k){
-  if(k==='1n'){var L1=['Câu 19–20 · Buổi 1 bản mới (cặp tiếng Việt) · '+(st.name||'(chưa ghi tên)')];lines1n(L1,false);return L1.join('\n');}
+  if(/^\dn$/.test(k)){var L1=['Câu 19–20 · Buổi '+k.charAt(0)+' bản mới ('+(k==='1n'?'cặp tiếng Việt':'xét quan hệ qua ví dụ')+') · '+(st.name||'(chưa ghi tên)')];lines1n(L1,false,k);return L1.join('\n');}
   var ks=k==='all'?[1,2,3,'on']:[k==='on'?'on':+k],L=['Câu 19–20 phó từ nối & chủ đề · '+(k==='all'?'Cả 3 buổi + ôn':(k==='on'?'Ôn trộn đề':'Buổi '+k))+' · '+(st.name||'(chưa ghi tên)')];
   ks.forEach(function(kk){
     if(kk!=='on'){
-      Object.keys(MCQ).filter(function(q){return parseInt(q,10)===kk&&!/^1n/.test(q);}).sort(function(a,b){return (a.length-b.length)*-1||(a<b?-1:1);}).forEach(function(q){
+      Object.keys(MCQ).filter(function(q){return parseInt(q,10)===kk&&!/^\dn/.test(q);}).sort(function(a,b){return (a.length-b.length)*-1||(a<b?-1:1);}).forEach(function(q){
         var m=st['m'+q]||{},n=0,ok=0;for(var i in m){n++;if(m[i]===0)ok++;}
         if(!n&&q.length>1)return;
         L.push('Buổi '+kk+' – '+MNAME[q]+': '+ok+'/'+MCQ[q].length+(n<MCQ[q].length?' (làm '+n+')':''));});
-      if(kk===1)lines1n(L,true);
+      lines1n(L,true,kk+'n');
       var b=st['b'+kk]||{},list=R.filter(function(r){return r.b===kk;}),c=tally(list,b);
       L.push('Buổi '+kk+' – đề: câu 19 '+c.a+'/'+list.length+', câu 20 '+c.b+'/'+list.length+(c.n<list.length?' (làm '+c.n+' bài)':'')+(kk===3&&st.t3&&st.t3.s!=null?' · '+fmt(st.t3.s):''));
       list.forEach(function(r){var p=b[r.id];if(!both(p))return;
@@ -1098,15 +1318,15 @@ function report(k){
   }
   return L.join('\n');
 }
-function lines1n(L,pre){
-  Object.keys(MCQ).filter(function(q){return /^1n/.test(q);}).forEach(function(q){
+function lines1n(L,pre,pf){
+  Object.keys(MCQ).filter(function(q){return q.indexOf(pf)===0;}).forEach(function(q){
     var m=st['m'+q]||{},n=0,ok=0,bad=[];for(var i in m){n++;if(m[i]===0)ok++;else bad.push(+i+1);}
     if(!n)return;
-    L.push((pre?'Buổi 1 mới – ':'')+MNAME[q]+': '+ok+'/'+MCQ[q].length+(n<MCQ[q].length?' (làm '+n+')':'')+(bad.length?' · sai câu '+bad.join(', '):''));});
+    L.push((pre?'Buổi '+pf.charAt(0)+' mới – ':'')+MNAME[q]+': '+ok+'/'+MCQ[q].length+(n<MCQ[q].length?' (làm '+n+')':'')+(bad.length?' · sai câu '+bad.join(', '):''));});
 }
 function renderSum(k){
   var el=$('sum'+k);if(!el)return;el.dataset.k=k;
-  el.innerHTML='<h4>'+(k==='all'?'Kết quả cả 3 buổi + ôn':(k==='on'?'Kết quả ôn trộn đề':(k==='1n'?'Kết quả Buổi 1 bản mới':'Kết quả Buổi '+k)))+'</h4>'+
+  el.innerHTML='<h4>'+(k==='all'?'Kết quả cả 3 buổi + ôn':(k==='on'?'Kết quả ôn trộn đề':(/^\dn$/.test(k)?'Kết quả Buổi '+k.charAt(0)+' bản mới':'Kết quả Buổi '+k)))+'</h4>'+
     '<p class="note">Làm xong, ghi tên rồi bấm gửi cho cô qua Zalo (hoặc chép đoạn dưới gửi cô).</p>'+
     '<input class="nm" placeholder="Tên em" value="'+esc(st.name||'')+'"><div class="btns"><button class="b main" data-share="'+k+'">Gửi kết quả cho cô…</button></div><pre>'+esc(report(k))+'</pre>';
   if(k!=='all')renderSum('all');
@@ -1136,7 +1356,7 @@ document.addEventListener('click',function(e){
   if(e.target.id==='cpHide'){var tb=$('cpAll'),on=tb.classList.toggle('hideadv');e.target.textContent=on?'Hiện phó từ':'Che phó từ';tb.querySelectorAll('td.adv').forEach(function(td){td.classList.remove('show');});return;}
   var td=e.target.closest('#cpAll.hideadv td.adv');if(td)td.classList.add('show');
 });
-renderAdv();renderStats();renderDemos();
+renderAdv();renderRel2();renderStats();renderDemos();
 Object.keys(MCQ).forEach(function(k){renderMcq(k);});[1,2,3].forEach(function(k){renderReal(k);});renderDrill();renderAll();renderSum('all');
 window.addEventListener('hashchange',function(){if(!show())scrollTo(0,0);});show();
 
