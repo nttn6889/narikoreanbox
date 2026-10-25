@@ -743,6 +743,10 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   Câu `[đoạn, lựa chọn (đầu là đáp án), giải thích, câu hỏi?]` (có câu hỏi thì không điền ô); tên trong báo cáo ở `MNAME`.
   Mục 3d “Cùng một đuôi, nhiều phó từ” (bảng đuôi → các phó từ → cách phân biệt + `MCQ['1d']` 13 câu); cùng bảng + câu ở `dau-hieu/` thẻ A nhóm A11 (`PA.pa11`), sửa một bên thì chép sang bên kia.
   Nghĩa tiếng Việt từng câu luyện ở `MV[<bộ>][i]` (cùng thứ tự với `MCQ`, `[…]` = chỗ ô trống, tô vàng), hiện “Nghĩa:” sau khi chọn; thêm câu vào `MCQ` thì thêm nghĩa vào `MV`.
+- Thẻ **“Buổi 1 mới”** (`#b=1n`, section `s1n`; cô thấy phần kiến thức 3a–3c khó khi học sinh chưa nhớ nghĩa phó từ lẫn đuôi; thẻ Buổi 1 cũ giữ nguyên vì học sinh đang học dở):
+  học phó từ đi cặp qua **cặp từ tiếng Việt** (Tuy … nhưng = 비록 … -지만, Nếu … thì, Liệu … không?, Biết đâu … cũng nên, Thà … còn hơn…), hai đầu cặp tô cùng màu (`.cp`).
+  3 nhóm, mỗi nhóm 4 bước: ① điền cặp tiếng Việt `MCQ['1nA1…3']` · ② ôn đuôi đã học `1nB*` (phần tử 4 = câu hỏi) · ③ bảng ghép (★ = từng là đáp án) · ④ luyện câu Hàn `1nD*` (+ `MV`);
+  bảng cặp tổng “Che phó từ” (`#cpAll`), bài trộn `1nM`, rồi link sang Buổi 1 mục 4 (`#b=1&g=m14`; `g=` cuộn tới id trong thẻ) — mục 3d để dành sau. Báo cáo riêng `sum1n` (`lines1n`).
   Đáp án lấy từ `bank`, riêng `Etk091` dùng đáp án đúng ③ 비록 / ① (trong `bank` đang ghi sai ① / ③). `MCQ` câu tự soạn (lựa chọn đầu là đáp án). localStorage `nari-1920`.
 
 ## Học câu 23–24 tâm trạng trong tùy bút (`cau-23-24/`) và câu 42–43 tiểu thuyết (`cau-42-43/`)
