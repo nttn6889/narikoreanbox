@@ -27,9 +27,9 @@ main{max-width:820px;margin:0 auto;padding:16px 16px 48px}
 h1{font-size:26px;margin:4px 0 2px}
 .lead{margin:0 0 12px;color:#333;font-size:15px}
 nav{display:flex;margin:0 -16px 14px;padding:8px 16px;position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);z-index:3}
-nav .bar{display:flex;flex:1;border:2px solid var(--ink);border-radius:8px;overflow:hidden}
-nav a{flex:1;min-width:0;text-align:center;padding:6px 2px;color:var(--ink);text-decoration:none;font-weight:bold;font-size:15px;line-height:1.2}
-nav a+a{border-left:2px solid var(--ink)}
+nav .bar{display:grid;grid-template-columns:repeat(9,1fr);gap:2px;flex:1;border:2px solid var(--ink);border-radius:8px;overflow:hidden;background:var(--ink)}
+nav a{min-width:0;text-align:center;padding:6px 2px;color:var(--ink);background:var(--bg);text-decoration:none;font-weight:bold;font-size:15px;line-height:1.2}
+@media(max-width:700px){nav .bar{grid-template-columns:repeat(5,1fr)}nav a:last-child{grid-column:span 2}}
 nav a small{display:block;font-weight:normal;font-size:11.5px}
 nav a.on{background:var(--ink);color:#fff}
 @media(max-width:520px){nav a{font-size:13px}nav a small{font-size:10.5px}}
@@ -181,6 +181,9 @@ h4.sub{font-size:17px;margin:18px 0 6px;padding:3px 9px;border-left:5px solid va
 .cmp .ct{font-weight:bold;font-size:16px;margin:0 0 6px}
 .cmp table.t{margin:6px 0 2px}
 .cmp .ex b{color:inherit}
+.sps{display:grid;gap:6px;margin:4px 0 8px}
+.sp{font:15px/1.6 "Noto Sans KR","Malgun Gothic",sans-serif;text-align:left;padding:7px 10px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);cursor:pointer}
+.sp:hover{background:var(--sub)}
 #cpAll.hideadv td.adv{color:transparent;background:#ddd;cursor:pointer}
 #cpAll.hideadv td.adv.show{color:inherit;background:var(--okbg)}
 </style>
@@ -201,6 +204,7 @@ h4.sub{font-size:17px;margin:18px 0 6px;padding:3px 9px;border-left:5px solid va
   <a href="#b=1n" data-k="1n">Buổi 1 mới<small>Cặp tiếng Việt</small></a>
   <a href="#b=2" data-k="2">Buổi 2<small>Xét quan hệ</small></a>
   <a href="#b=2n" data-k="2n">Buổi 2 mới<small>Qua ví dụ</small></a>
+  <a href="#b=c20" data-k="c20">Câu 20<small>Chiến lược</small></a>
   <a href="#b=3" data-k="3">Buổi 3<small>Như thi</small></a>
   <a href="#b=on" data-k="on">Ôn<small>Trộn đề</small></a>
   <a href="#b=all" data-k="all">22 bài<small>Giải thích</small></a>
@@ -261,6 +265,7 @@ h4.sub{font-size:17px;margin:18px 0 6px;padding:3px 9px;border-left:5px solid va
 <div class="demo" data-id="Etk091"></div>
 
 <h3>5. Câu 20 dạng chủ đề: đọc thêm đúng 1 câu</h3>
+<p class="tip">Mục 5–6 là bản tóm tắt. Cách làm đầy đủ từng bước + luyện câu 20 của cả 22 bài ở thẻ <a href="#b=c20"><b>Câu 20</b></a>.</p>
 <p>Đề thật kỳ 83, 91 đều hỏi <span class="ko">윗글의 주제로 가장 알맞은 것</span>. Trong <b id="nj"></b> câu hỏi chủ đề, đáp án luôn nằm ở <b>câu có ô</b> hoặc <b>câu cuối</b> (<span id="zpos"></span>). Từ em vừa chọn ở câu 19 (<span class="ko">오히려, 따라서, 이처럼, 비록…지만</span>) thường <b>chỉ thẳng vào câu nói ý chính</b>.</p>
 <ul>
 <li>Bẫy <span class="trap z-H">Chi tiết hẹp</span>: đúng với bài nhưng chỉ là ví dụ / chi tiết dẫn vào (헬리콥터는 잠자리를 본떴다, 콜레라는…). Chủ đề phải <b>bao cả bài</b>.</li>
@@ -466,13 +471,130 @@ h4.sub{font-size:17px;margin:18px 0 6px;padding:3px 9px;border-left:5px solid va
 <h4 class="sub">④ Luyện: chọn từ nối</h4>
 <div class="prac"><div class="ph">✋ Chọn từ nối</div><div id="mcq2nD3"></div></div>
 
-<h3>5. Bài trộn cả 3 nhóm</h3>
+<h3 id="m2nk">5. Đọc hai câu mà không hiểu thì làm sao?</h3>
+<p>Không cần hiểu hết. Câu 19 chỉ hỏi <b>chiều</b> giữa hai câu, và chiều lộ ra ở <b>những chữ nhỏ em đã biết</b>: đuôi câu, tiểu từ, vài từ tốt / xấu. Từ khó (danh từ chuyên ngành) gần như không bao giờ quyết định đáp án. Làm theo thứ tự:</p>
+<h4 class="sub">Cách 1 · Che từ khó, đọc “khung”</h4>
+<p>Coi mỗi từ không hiểu là <b>▢▢</b>. Câu “<span class="ko">사람들은 ▢▢▢▢가 늘면 ▢▢이 떨어질 것이라고 예상했다. (    ) ▢▢▢▢를 한 직원들의 ▢▢이 더 높아졌다.</span>” vẫn đủ để chọn: <span class="cp">예상했다</span> (người ta dự đoán) + <span class="cp">떨어질 ↔ 더 높아졌다</span> (ngược hẳn, còn hơn) → <span class="cn">오히려</span>.</p>
+<div class="tw"><table class="t">
+<tr><th>Chữ em nhìn thấy</th><th>Ở đâu</th><th>Nghĩ tới</th></tr>
+<tr><td class="ko">생각하다 · 예상하다 · 기대하다 · -ㄹ 줄 알았다 · -다고 여기다 · -기 쉽다</td><td>câu trước</td><td>người ta tưởng → sắp bị lật: <span class="ko">오히려 · 그러나</span></td></tr>
+<tr><td class="ko">더 · 훨씬 · -까지</td><td>câu có ô, <b>ngược</b> câu trước</td><td><span class="ko">오히려</span></td></tr>
+<tr><td>Hai câu mở bằng <b>hai chủ ngữ khác nhau</b> + <span class="ko">은/는</span> (<span class="ko">A는 … B는 …</span>)</td><td>cả hai câu</td><td><span class="ko">반면</span></td></tr>
+<tr><td class="ko">-도 · -까지 · 더</td><td>câu có ô, <b>cùng chiều</b></td><td><span class="ko">또한 · 게다가 · 더구나</span></td></tr>
+<tr><td class="ko">-아야 한다 · -는 것이 좋다 · -ㄹ 필요가 있다 · 필요하다 · -다고 할 수 있다</td><td>cuối câu có ô</td><td><span class="ko">따라서</span></td></tr>
+<tr><td>Liệt kê <span class="ko">A는 …, B는 …</span> rồi <span class="ko">마다 · 모두 · 다양하다 · 다르다</span></td><td>câu trước → câu có ô</td><td><span class="ko">이처럼</span></td></tr>
+<tr><td class="ko">어떻게 · 무엇을 … -ㄹ까?</td><td>câu có ô</td><td><span class="ko">그러면</span> (nghi ngờ “liệu … thật không?” → <span class="ko">과연</span>)</td></tr>
+<tr><td class="ko">-았/었다 (kể chuyện) + 마침 · 갑자기</td><td>câu có ô</td><td>chuyện mới xảy ra: <span class="ko">그런데</span>; kết quả: <span class="ko">그래서</span></td></tr>
+</table></div>
+<h4 class="sub">Cách 2 · Chấm dấu + / − cho từng câu</h4>
+<p>Không hiểu câu nói gì nhưng thường vẫn biết câu <b>tốt (+)</b> hay <b>xấu (−)</b> nhờ vài từ quen:</p>
+<div class="pair">
+<div><b>+</b> <span class="ko">좋다 · 늘다 · 높아지다 · 도움 · 효과 · 성공 · 편리하다 · 쉽다 · 해결</span></div>
+<div><b>−</b> <span class="ko">나쁘다 · 줄다 · 떨어지다 · 문제 · 피해 · 실패 · 어렵다 · 위험 · 못 · 안 · 없다</span></div>
+</div>
+<ul>
+<li><b>Cùng dấu</b> (+ +, − −) → cùng chiều: <span class="ko">또한 · 게다가 · 따라서 · 그래서 · 이처럼</span>. Gạch nhóm ngược chiều.</li>
+<li><b>Khác dấu</b> (+ −, − +) → ngược chiều: <span class="ko">그러나 · 오히려 · 반면</span>. Gạch nhóm cùng chiều. Rồi dùng Cách 1 để chọn trong nhóm (có <span class="ko">예상했다</span>? hai chủ ngữ?).</li>
+<li><b>Ngoại lệ:</b> câu có ô là <b>việc phải làm</b> (<span class="ko">-아야 한다, 필요하다</span>) hoặc <b>câu hỏi cách làm</b> thì không xét dấu: vấn đề (−) → giải pháp (+) vẫn là <span class="ko">따라서 · 그러면</span>, không phải <span class="ko">그러나</span>.</li>
+</ul>
+<h4 class="sub">Cách 3 · Loại bằng điều kiện của từ nối</h4>
+<p>Mỗi từ nối cần một “điều kiện” nhìn thấy được. Thiếu điều kiện → gạch, không cần hiểu nghĩa câu:</p>
+<div class="tw"><table class="t">
+<tr><th>Từ nối</th><th>Cần có</th></tr>
+<tr><td class="ko">이처럼</td><td>ví dụ / liệt kê ở <b>trước</b></td></tr>
+<tr><td class="ko">이를테면 · 예를 들어</td><td>ví dụ ở <b>sau</b> (câu có ô có tên vật cụ thể, <span class="ko">-거나, 등</span>)</td></tr>
+<tr><td class="ko">반면</td><td><b>hai</b> đối tượng khác nhau</td></tr>
+<tr><td class="ko">그러면</td><td>câu hỏi / đề nghị ở câu có ô</td></tr>
+<tr><td class="ko">비록 · 만약 · 과연 · 어쩌면…</td><td>đuôi đi cặp cuối câu (Buổi 1)</td></tr>
+<tr><td class="ko">반면 · 게다가 · 따라서 · 그래서 · 이처럼</td><td>đứng <b>đầu câu</b> — ô nằm giữa câu thì gạch</td></tr>
+</table></div>
+<div class="tip"><b>Thứ tự khi bí:</b> Bước 1 tìm cặp → Cách 3 gạch từ thiếu điều kiện → Cách 2 chấm + / − → Cách 1 tìm chữ khung. Thường tới Cách 2 là còn 1 lựa chọn. Vẫn còn 2 thì đọc thêm <b>câu ngay sau câu có ô</b>: câu đó hay nói tiếp cùng chiều với câu có ô. Về lâu dài: học từ vựng theo chủ đề để ▢▢ ít dần.</div>
+<div class="prac"><div class="ph">✋ Luyện · Chọn từ nối khi bị che từ khó</div><p class="note">Từ khó đã bị che thành ▢▢. Chỉ nhìn khung + dấu + / −. Chọn xong em thấy câu đầy đủ và nghĩa.</p><div id="mcq2nK"></div></div>
+
+<h3>6. Bài trộn cả 3 nhóm</h3>
 <p class="note">Trước khi chọn, dịch thầm hai câu rồi nói: câu sau làm gì với câu trước?</p>
 <div id="mcq2nM"></div>
 
-<h3>6. Học tiếp</h3>
-<p>Học xong phần này, em làm tiếp ở thẻ <b>Buổi 2</b>: <a href="#b=2&amp;g=m25">mục 5–6 · Lựa chọn sai vì đâu</a> và <a href="#b=2&amp;g=m28">mục 8 · 10 bài đề</a>.</p>
+<h3>7. Học tiếp</h3>
+<p>Học xong phần này, em làm tiếp ở thẻ <b>Buổi 2</b>: <a href="#b=2&amp;g=m25">mục 5–6 · Lựa chọn sai vì đâu</a> và <a href="#b=2&amp;g=m28">mục 8 · 10 bài đề</a>. Câu 20 học riêng ở thẻ <a href="#b=c20">Câu 20</a>.</p>
 <div class="sum" id="sum2n"></div>
+</section>
+
+<!-- ================= CÂU 20 · CHIẾN LƯỢC RIÊNG ================= -->
+<section class="sec" id="sc20">
+<h2>Câu 20 · Chiến lược riêng</h2>
+<p class="goal"><b>Mục tiêu:</b> câu 20 <b>không cần hiểu cả bài</b>. Nhìn câu hỏi là biết dạng, mỗi dạng một cách làm cố định: dạng chủ đề thì tìm <b>một câu</b>, dạng nội dung khớp thì <b>gạch bẫy</b> trước rồi dò từ khóa.</p>
+
+<h3>1. Nhìn câu hỏi: dạng nào? (5 giây)</h3>
+<div class="tw"><table class="t">
+<tr><th>Câu hỏi</th><th>Dạng</th><th>Cách làm</th><th>Số bài</th></tr>
+<tr><td class="ko">윗글의 주제로 가장 알맞은 것</td><td><b>A · Chủ đề</b><br><small>cả 2 đề thật kỳ 83, 91</small></td><td>Tìm <b>câu chủ đề</b> trong bài → chọn lựa chọn nói lại câu đó</td><td class="n" id="c20nJ"></td></tr>
+<tr><td class="ko">이 글의 내용과 같은 것</td><td><b>B · Nội dung khớp</b><br><small>đề luyện hay ra</small></td><td>Gạch <b>bẫy</b> trước → dò từ khóa từng lựa chọn</td><td class="n" id="c20nD"></td></tr>
+</table></div>
+<div class="warnbox">Hai dạng làm <b>ngược nhau</b>: dạng A <b>không</b> dò từng chi tiết (lựa chọn đúng chi tiết vẫn có thể sai vì “hẹp”); dạng B <b>không</b> tìm ý chính (chỉ cần một lựa chọn đúng với một câu trong bài).</div>
+
+<h3>2. Dạng A · Chủ đề: 4 bước</h3>
+<ol class="steps">
+<li><b>Tìm câu chủ đề: chỉ nhìn 2 chỗ.</b> ① <b>Câu có ô</b> — nhất là khi ô là <span class="ko">그러나 · 오히려 · 하지만</span> (lật ý trước) hoặc <span class="ko">따라서 · 이처럼</span> (rút ra, gói lại). ② <b>Câu cuối</b> — nhất là câu có <span class="ko">이처럼 · 이렇게 · 따라서 · 결국</span> hoặc kết thúc <span class="ko">-아야 한다 · -는 것이 좋다 · -ㄹ 수 있다</span>. <span id="c20z"></span></li>
+<li><b>Rút gọn câu đó thành “cái gì + nói gì”</b> bằng tiếng Việt, 1 dòng. Vd. kỳ 91: <b>chim cánh cụt hoàng đế</b> + <b>cùng nhau sống sót</b> (qua mùa đông).</li>
+<li><b>So 4 lựa chọn với dòng đó.</b> Lựa chọn đúng có <b>đủ hai mảnh</b> và thường <b>nói lại bằng chữ khác</b> (<span class="ko">다 함께 살아남는다</span> → <span class="ko">서로 도우면서 … 생존해 왔다</span>). Lựa chọn <b>chép nguyên chữ</b> trong bài mà đổi một chỗ → nghi ngay.</li>
+<li><b>Phép thử “làm tiêu đề”:</b> đặt lựa chọn lên đầu bài như tên bài. Các câu khác trong bài có đều nói về nó không? Chỉ khớp 1 câu (ví dụ, số liệu, câu dẫn) → <b>chi tiết hẹp</b>, gạch.</li>
+</ol>
+<h4 class="sub">Câu nào là câu chủ đề, câu nào không?</h4>
+<div class="tw"><table class="t">
+<tr><th>Thường là câu chủ đề</th><th>Thường <u>không</u> phải câu chủ đề</th></tr>
+<tr><td>Câu sau <span class="ko">그러나 · 하지만 · 오히려</span>: lật điều người ta tưởng</td><td>Câu đầu nói <b>điều người ta tưởng</b> (<span class="ko">-다고 생각한다 · -다고 여긴다</span>) — sắp bị lật</td></tr>
+<tr><td>Câu có <span class="ko">이처럼 · 이렇게 · 따라서 · 결국</span></td><td>Câu mở bằng <span class="ko">실제로 · 예를 들어 · 한 연구에 따르면 · 조사 결과</span> — bằng chứng, ví dụ</td></tr>
+<tr><td>Câu kết bằng <span class="ko">-아야 한다 · -는 것이 좋다 · -ㄹ 필요가 있다 · -ㄹ 수 있다</span></td><td>Câu có <b>số liệu, tên riêng, năm</b> (30%, 에디슨, 1854년)</td></tr>
+<tr><td>Câu nói chung chung (<span class="ko">사람들, 우리, 동물들, 모든</span>)</td><td>Câu nói về <b>một</b> con vật / một người / một vụ việc cụ thể</td></tr>
+</table></div>
+<div class="tip"><b>Câu cuối không phải lúc nào cũng là chủ đề.</b> Câu cuối mở bằng <span class="ko">실제로</span> (đề thật kỳ 83) hay kể một ví dụ thì ý chính nằm <b>trước</b> đó — ở câu có ô. Hỏi: câu cuối đang <b>chứng minh</b> câu nào? Câu được chứng minh mới là chủ đề.</div>
+<h4 class="sub">Làm mẫu · đề thật</h4>
+<div class="cmp"><div class="ct">Kỳ 91 · chim cánh cụt hoàng đế</div>
+<p class="note">Câu 1–3: kể cách đàn chim đổi chỗ (chi tiết). Câu có ô: <span class="ko">비록 … 느리지만 쉬지 않고</span> (vẫn là chi tiết). <b>Câu cuối</b>: <span class="ko">그렇게 쉼 없이 둥글게 돌면서 펭귄들은 <b>다 함께 살아남는다</b></span> — có <span class="ko">그렇게</span> gói cả bài lại → câu chủ đề.</p>
+<table class="t"><tr><th>Lựa chọn</th><th>Phép thử</th></tr>
+<tr><td class="ko">① 황제펭귄은 서로 도우면서 추위에 맞서 생존해 왔다.</td><td>✅ Đủ “chim cánh cụt + cùng nhau sống sót”, nói lại bằng chữ khác (<span class="ko">살아남는다 → 생존해 왔다</span>).</td></tr>
+<tr><td class="ko">② … 날씨에 대한 정보를 알린다.</td><td>Bài không nói.</td></tr>
+<tr><td class="ko">③ … 움직임이 느려졌다.</td><td>Chép chữ <span class="ko">느리</span> nhưng đổi nghĩa (bài: chậm nhưng không ngừng).</td></tr>
+<tr><td class="ko">④ … 경쟁에서 이기는 법을 배운다.</td><td>Ngược bài: cùng nhau, không phải cạnh tranh.</td></tr></table></div>
+<div class="cmp"><div class="ct">Kỳ 83 · marketing vui nhộn</div>
+<p class="note">Câu 1–2: marketing vui nhộn thu hút khách (điều người ta tưởng là tốt). <b>Câu có ô</b>: <span class="ko">그러나 제품의 품질이 소비자의 기대에 미치지 못하는 경우 (오히려) 브랜드 이미지까지 나빠지기도 한다</span> — lật lại → câu chủ đề. Câu cuối mở bằng <span class="ko">실제로</span> = ví dụ chứng minh, bỏ qua.</p>
+<table class="t"><tr><th>Lựa chọn</th><th>Phép thử</th></tr>
+<tr><td class="ko">① 마케팅도 중요하지만 제품의 품질이 더 중요하다.</td><td>✅ “marketing + chất lượng quan trọng hơn” — nói lại ý câu có ô.</td></tr>
+<tr><td class="ko">③ 제품에 재미 요소를 포함하는 마케팅 전략이 필요하다.</td><td>Chép chữ <span class="ko">재미 요소</span> của câu đầu — đúng ý <b>bị lật</b>.</td></tr></table></div>
+<h4 class="sub">Lựa chọn sai của dạng A sai vì đâu</h4>
+<div id="c20xJ"></div>
+<div class="prac"><div class="ph">✋ Luyện bước 1 · Câu nào là câu chủ đề?</div><p class="note">Chưa cần đọc lựa chọn. Tìm câu có <span class="ko">그러나 · 오히려 · 이처럼 · 따라서</span>, câu cuối, rồi hỏi: câu nào được các câu kia chứng minh?</p><div id="mcq20a"></div></div>
+<div class="prac"><div class="ph">✋ Luyện cả 4 bước · Chọn chủ đề</div><p class="note">Tìm câu chủ đề → rút gọn “cái gì + nói gì” → so 4 lựa chọn → phép thử “làm tiêu đề”.</p><div id="mcq20b"></div></div>
+
+<h3>3. Dạng B · Nội dung khớp: 4 bước</h3>
+<ol class="steps">
+<li><b>Gạch “Quá mức” trước, chưa cần đọc bài (5 giây).</b> Lựa chọn có <span class="ko">반드시 · 항상 · 절대로 · 전혀 · 모든 · 모두 · 이미 · -만 · 한 번도</span> mà bài chỉ nói “có thể”, “nhiều”, “khả năng cao” → ✕.</li>
+<li><b>Đọc lựa chọn trước bài</b>, mỗi lựa chọn khoanh <b>1 từ khóa</b> dễ dò: danh từ lạ, số, tên, năm.</li>
+<li><b>Dò từ khóa trong bài → đọc đúng câu đó</b>, so phần <b>vị ngữ</b>: chiều (<span class="ko">늘다 ↔ 줄다</span>), ai làm gì (đổi vai), số (70% ≠ <span class="ko">절반</span>), thời gian (<span class="ko">이미</span> ≠ <span class="ko">-ㄹ 것이다</span>).</li>
+<li><b>Không tìm được từ khóa trong bài → “Bài không nói” → ✕</b>, dù nghe hợp lý. Không dùng hiểu biết ngoài bài. Còn 2 lựa chọn: lựa chọn <b>nói lại bằng chữ khác</b> thường đúng hơn lựa chọn chép nguyên chữ.</li>
+</ol>
+<h4 class="sub">Lựa chọn sai của dạng B sai vì đâu</h4>
+<div id="c20xD"></div>
+<div class="prac"><div class="ph">✋ Luyện · Gọi tên bẫy</div><p class="note">Không chọn đáp án mà nói xem lựa chọn sai <b>vì đâu</b>.</p><div id="mcq20c"></div></div>
+<div class="prac"><div class="ph">✋ Luyện cả 4 bước · Nội dung khớp</div><p class="note">Bấm <b>✕</b> gạch lựa chọn Quá mức trước, rồi mới dò bài.</p><div id="mcq20d"></div></div>
+
+<h3 id="c20r">4. Câu 20 của 22 bài đề</h3>
+<p class="note">Chỉ làm câu 20, ô câu 19 đã điền sẵn đáp án. Dạng A: bấm chọn <b>câu chủ đề</b> trước rồi 4 lựa chọn mới mở. Dạng B: bấm <b>✕</b> gạch bẫy trước rồi chọn. Bài làm ở đây không tính vào lịch Ôn.</p>
+<h4 class="sub">Dạng A · Chủ đề</h4>
+<div id="r20J"></div>
+<h4 class="sub">Dạng B · Nội dung khớp</h4>
+<div id="r20D"></div>
+
+<h3>5. Tóm tắt</h3>
+<div class="tw"><table class="t">
+<tr><th>A · <span class="ko">주제</span></th><th>B · <span class="ko">내용과 같은 것</span></th></tr>
+<tr><td>Tìm câu có ô / câu cuối (bỏ câu <span class="ko">실제로</span>, ví dụ)</td><td>Gạch Quá mức (<span class="ko">반드시, 항상, 이미…</span>)</td></tr>
+<tr><td>Rút gọn: cái gì + nói gì</td><td>Đọc lựa chọn trước, khoanh từ khóa</td></tr>
+<tr><td>Chọn lựa chọn nói lại đủ hai mảnh</td><td>Dò từ khóa, so vị ngữ: chiều, vai, số, thời gian</td></tr>
+<tr><td>Phép thử “làm tiêu đề”: gạch chi tiết hẹp</td><td>Không có trong bài → gạch</td></tr>
+</table></div>
+<div class="sum" id="sumc20"></div>
 </section>
 
 <!-- ================= BUỔI 3 ================= -->
@@ -507,7 +629,7 @@ h4.sub{font-size:17px;margin:18px 0 6px;padding:3px 9px;border-left:5px solid va
 <ol class="steps">
 <li><b>Tìm cặp:</b> phó từ đi cặp mà cuối câu không có đuôi → ✕. Ô giữa câu → đáp án là phó từ đi cặp.</li>
 <li><b>Xét quan hệ:</b> đọc câu trước + câu có ô, gọi tên quan hệ.</li>
-<li><b>Câu 20:</b> chủ đề → câu có ô / câu cuối; nội dung khớp → dò từ khóa, gạch từ tuyệt đối.</li>
+<li><b>Câu 20:</b> chủ đề → câu có ô / câu cuối (bỏ câu <span class="ko">실제로</span>, ví dụ), chọn lựa chọn nói lại đủ “cái gì + nói gì”; nội dung khớp → gạch Quá mức, đọc lựa chọn trước, dò từ khóa, không có trong bài thì gạch. Xem thẻ <a href="#b=c20">Câu 20</a>.</li>
 </ol>
 <h3>Phó từ đi cặp</h3>
 <table class="t" id="pairs2"></table>
@@ -1055,6 +1177,71 @@ var MNAME={'1':'bài trộn cuối buổi','1a':'luyện nhanh nhóm 1 (-지만,
  '2nN3':'nhóm 3 · gọi tên quan hệ','2nD3':'nhóm 3 · chọn từ nối (또한, 게다가, 그런데, 그러면)','2nM':'bài trộn cả 3 nhóm',
  '2':'bài trộn cuối buổi','2a':'luyện nhanh 오히려 · 반면 · 그러나','2b':'luyện nhanh kết luận, tóm','2c':'luyện nhanh thêm ý, chuyển ý','2d':'luyện nhanh gọi tên lỗi'};
 
+/* Buổi 2 mới · mục 5: chọn từ nối khi bị che từ khó (▢▢) */
+MCQ['2nK']=[
+ ['사람들은 ▢▢▢▢가 늘면 ▢▢ ▢▢이 떨어질 것이라고 예상했다. (    ) ▢▢▢▢를 한 직원들의 ▢▢ ▢▢이 더 높아졌다.',['오히려','반면','따라서','이처럼'],'Chữ khung: 예상했다 (người ta dự đoán) + 떨어질 ↔ 더 높아졌다 (−→+, ngược hẳn, có 더) → 오히려. Câu đầy đủ: 사람들은 재택근무가 늘면 업무 효율이 떨어질 것이라고 예상했다. 오히려 재택근무를 한 직원들의 업무 효율이 더 높아졌다.'],
+ ['▢▢ ▢▢은 ▢▢한 ▢▢을 가지고 있다. (    ) ▢▢ ▢▢은 ▢▢ 색이 ▢▢하다.',['반면','오히려','따라서','게다가'],'Hai câu mở bằng hai chủ ngữ khác nhau, cùng có 은 (A은 … B은 …), không có 예상/생각 → đặt cạnh nhau → 반면. Câu đầy đủ: 수컷 공작은 화려한 깃털을 가지고 있다. 반면 암컷 공작은 깃털 색이 수수하다.'],
+ ['▢▢▢▢ 운동하면 ▢▢ ▢▢이 ▢▢된다. 또 ▢▢▢▢도 줄일 수 있다. (    ) 하루 30분 정도 ▢▢▢ 운동하는 것이 좋다.',['따라서','반면','오히려','그런데'],'Cuối câu có ô là lời khuyên -는 것이 좋다, câu trước là lợi ích (+ +) → 따라서. Câu đầy đủ: 규칙적으로 운동하면 혈액 순환이 개선된다. 또 스트레스도 줄일 수 있다. 따라서 하루 30분 정도 꾸준히 운동하는 것이 좋다.'],
+ ['한국은 ▢을 ▢에 쓰고, 일본은 ▢로 ▢을 만든다. ▢▢▢은 ▢▢▢를 ▢▢에 이용한다. (    ) 나라마다 ▢을 이용하는 방법이 다양하다.',['이처럼','이를테면','오히려','반면'],'Trước là liệt kê (한국은…, 일본은…, ▢▢▢은…), câu có ô có 마다 + 다양하다 = gói lại → 이처럼. 이를테면 cần ví dụ ở SAU. Câu đầy đủ: 한국은 쌀을 떡에 쓰고, 일본은 쌀로 술을 만든다. 베트남은 쌀가루를 국수에 이용한다. 이처럼 나라마다 쌀을 이용하는 방법이 다양하다.'],
+ ['최근 ▢▢ ▢▢▢ ▢▢이 크게 늘고 있다. (    ) ▢▢ ▢▢▢ ▢▢을 줄이려면 어떻게 해야 할까?',['그러면','과연','게다가','이처럼'],'Câu có ô là câu hỏi 어떻게 해야 할까? (hỏi cách làm) sau một vấn đề → 그러면. 과연 là nghi ngờ “liệu … thật không?”. Câu đầy đủ: 최근 미세 플라스틱 오염이 크게 늘고 있다. 그러면 미세 플라스틱 오염을 줄이려면 어떻게 해야 할까?'],
+ ['▢▢는 ▢▢에 도움이 된다. (    ) ▢▢ ▢▢에도 좋은 영향을 준다.',['또한','반면','오히려','그러나'],'Dấu + (도움이 된다) rồi + (좋은 영향), câu có ô có -에도 → thêm ý cùng chiều → 또한. Câu đầy đủ: 녹차는 소화에 도움이 된다. 또한 피부 건강에도 좋은 영향을 준다.'],
+ ['▢▢▢ ▢▢은 빠르고 편리하다. (    ) ▢▢ ▢▢가 ▢▢ ▢▢ 문제가 생길 수 있다.',['그러나','따라서','게다가','이처럼'],'+ (빠르고 편리하다) → − (문제가 생길 수 있다): khác dấu, cùng một chủ đề, không có 예상/생각, không có hai đối tượng → 그러나. Câu đầy đủ: 온라인 쇼핑은 빠르고 편리하다. 그러나 개인 정보가 새어 나가는 문제가 생길 수 있다.'],
+ ['혼자 사는 ▢▢의 ▢▢▢가 늘고 있다. (    ) 이들을 위한 ▢▢ ▢▢가 필요하다.',['따라서','그러나','오히려','반면'],'Bẫy dấu: câu trước là vấn đề (−), câu sau là việc cần làm (필요하다). Câu có ô là việc phải làm → không xét dấu → 따라서, không phải 그러나. Câu đầy đủ: 혼자 사는 노인의 고독사가 늘고 있다. 따라서 이들을 위한 돌봄 제도가 필요하다.']];
+MV['2nK']=['Người ta dự đoán làm việc tại nhà tăng thì hiệu suất sẽ giảm. [Trái lại] hiệu suất của nhân viên làm việc tại nhà còn cao hơn.',
+ 'Công trống có bộ lông sặc sỡ. [Trong khi đó] công mái có lông màu giản dị.',
+ 'Tập thể dục đều đặn thì tuần hoàn máu được cải thiện. Lại còn giảm được căng thẳng. [Vì vậy] mỗi ngày nên tập đều khoảng 30 phút.',
+ 'Hàn Quốc dùng gạo làm bánh tteok, Nhật Bản dùng gạo nấu rượu. Việt Nam dùng bột gạo làm bún, phở. [Như vậy] mỗi nước có cách dùng gạo khác nhau.',
+ 'Gần đây ô nhiễm vi nhựa tăng mạnh. [Vậy thì] muốn giảm ô nhiễm vi nhựa phải làm thế nào?',
+ 'Trà xanh tốt cho tiêu hóa. [Ngoài ra] còn có ảnh hưởng tốt đến làn da.',
+ 'Mua sắm trực tuyến nhanh và tiện. [Nhưng] có thể xảy ra chuyện lộ thông tin cá nhân.',
+ 'Người già sống một mình qua đời cô độc ngày càng nhiều. [Vì vậy] cần có chế độ chăm sóc cho họ.'];
+/* thẻ Câu 20 */
+var QZ='Câu nào là câu chủ đề?';
+MCQ['20a']=[
+ ['많은 사람들은 아침을 거르면 살이 빠진다고 생각한다. 이런 사람들은 아침 대신 커피만 마시는 경우가 많다. 그러나 아침을 거르면 점심에 더 많이 먹게 되어 오히려 살이 찌기 쉽다. 실제로 한 연구에서 아침을 먹지 않은 사람들은 점심 식사량이 30% 늘었다.',['그러나 아침을 거르면 점심에 더 많이 먹게 되어 오히려 살이 찌기 쉽다.','많은 사람들은 아침을 거르면 살이 빠진다고 생각한다.','이런 사람들은 아침 대신 커피만 마시는 경우가 많다.','실제로 한 연구에서 아침을 먹지 않은 사람들은 점심 식사량이 30% 늘었다.'],'Câu đầu là điều người ta tưởng (-다고 생각한다) → bị lật. Câu cuối mở bằng 실제로 + số liệu 30% = bằng chứng. Câu được chứng minh là câu có 그러나 … 오히려 → câu chủ đề.',QZ],
+ ['개미는 냄새로 다른 개미에게 길을 알려 준다. 꿀벌은 춤을 추어 꽃이 있는 곳을 알린다. 돌고래는 소리를 내어 서로 대화한다. 이처럼 동물들도 저마다의 방법으로 의사소통을 한다.',['이처럼 동물들도 저마다의 방법으로 의사소통을 한다.','개미는 냄새로 다른 개미에게 길을 알려 준다.','꿀벌은 춤을 추어 꽃이 있는 곳을 알린다.','돌고래는 소리를 내어 서로 대화한다.'],'Ba câu đầu: mỗi câu một con vật (ví dụ). Câu cuối có 이처럼 + 동물들 (nói chung) gói lại → câu chủ đề.',QZ],
+ ['잠이 부족하면 집중력이 떨어진다. 또한 몸의 면역력이 약해져 감기에 걸리기 쉽다. 한 조사에 따르면 한국 직장인의 평균 수면 시간은 6시간 정도이다. 따라서 건강을 지키려면 하루 7시간 이상 자야 한다.',['따라서 건강을 지키려면 하루 7시간 이상 자야 한다.','잠이 부족하면 집중력이 떨어진다.','또한 몸의 면역력이 약해져 감기에 걸리기 쉽다.','한 조사에 따르면 한국 직장인의 평균 수면 시간은 6시간 정도이다.'],'Câu cuối có 따라서 + -아야 한다 (lời khuyên rút ra từ cả bài) → câu chủ đề. Câu 한 조사에 따르면 = số liệu, câu 1–2 = lý do.',QZ],
+ ['사람들은 보통 실패를 부끄러운 일이라고 여긴다. 하지만 실패는 성공으로 가는 데 꼭 필요한 과정이다. 에디슨은 전구를 만들기 위해 수천 번 실패했다. 그는 실패할 때마다 안 되는 방법을 하나씩 배웠다고 말했다.',['하지만 실패는 성공으로 가는 데 꼭 필요한 과정이다.','사람들은 보통 실패를 부끄러운 일이라고 여긴다.','에디슨은 전구를 만들기 위해 수천 번 실패했다.','그는 실패할 때마다 안 되는 방법을 하나씩 배웠다고 말했다.'],'Câu cuối ở đây KHÔNG phải chủ đề: nó kể về một người (에디슨) = ví dụ. Hai câu về 에디슨 chứng minh câu có 하지만 → câu chủ đề. Câu đầu là điều người ta tưởng (-다고 여긴다), bị lật.',QZ]];
+MV['20a']=['Nhiều người nghĩ bỏ bữa sáng thì sẽ giảm cân. Những người này thường chỉ uống cà phê thay bữa sáng. [Nhưng bỏ bữa sáng thì bữa trưa ăn nhiều hơn nên trái lại dễ tăng cân.] Thực tế, một nghiên cứu cho thấy người không ăn sáng ăn trưa nhiều hơn 30%.',
+ 'Kiến báo đường cho kiến khác bằng mùi. Ong múa để chỉ chỗ có hoa. Cá heo phát ra âm thanh để trò chuyện. [Như vậy động vật cũng giao tiếp theo cách riêng của mình.]',
+ 'Thiếu ngủ thì khả năng tập trung giảm. Ngoài ra sức đề kháng yếu đi, dễ bị cảm. Theo một khảo sát, thời gian ngủ trung bình của người đi làm Hàn Quốc khoảng 6 tiếng. [Vì vậy muốn giữ sức khỏe phải ngủ trên 7 tiếng mỗi ngày.]',
+ 'Người ta thường coi thất bại là điều đáng xấu hổ. [Nhưng thất bại là quá trình nhất định phải có trên đường tới thành công.] Edison thất bại hàng nghìn lần để làm ra bóng đèn. Ông nói mỗi lần thất bại ông học được thêm một cách không làm được.'];
+var QJ='윗글의 주제로 가장 알맞은 것은?';
+MCQ['20b']=[
+ ['사람들은 비싼 운동화를 신으면 더 빨리 달릴 수 있다고 생각한다. 그러나 달리기 실력은 신발보다 꾸준한 연습에 달려 있다. 실제로 많은 마라톤 선수들이 평범한 운동화를 신고 대회에서 우승했다.',['달리기를 잘하려면 좋은 신발보다 꾸준한 연습이 중요하다.','마라톤 선수들은 평범한 운동화를 좋아한다.','비싼 운동화를 신으면 더 빨리 달릴 수 있다.','운동화는 가격에 따라 디자인이 다르다.'],'Câu chủ đề = câu có 그러나: chạy giỏi nhờ luyện tập đều, không nhờ giày → ① (nói lại bằng chữ khác). ② Chi tiết hẹp (câu 실제로 = ví dụ). ③ Ngược bài: đúng điều người ta tưởng, đã bị lật. ④ Bài không nói.',QJ],
+ ['남극의 얼음이 녹으면서 바닷물의 높이가 조금씩 올라가고 있다. 태평양의 작은 섬나라들은 이미 땅의 일부가 바다에 잠겼다. 해안 도시들도 홍수 피해가 해마다 늘고 있다. 이처럼 기후 변화는 이제 먼 미래가 아닌 우리 눈앞의 문제가 되었다.',['기후 변화의 피해는 이미 지금 나타나고 있다.','태평양의 섬나라들은 땅의 일부가 바다에 잠겼다.','기후 변화는 먼 미래에 나타날 문제이다.','남극의 얼음을 지키려면 여행을 줄여야 한다.'],'Câu cuối có 이처럼 gói 3 ví dụ: biến đổi khí hậu đã là chuyện trước mắt → ① (눈앞의 문제 → 이미 지금 나타나고 있다). ② Chi tiết hẹp (một ví dụ). ③ Chép chữ “먼 미래” nhưng ngược nghĩa. ④ Bài không nói.',QJ],
+ ['아이들을 칭찬하면 자신감이 생긴다. 그런데 “똑똑하다”처럼 능력을 칭찬받은 아이는 어려운 문제를 피하는 경향이 있다. 반면 “열심히 했다”처럼 노력을 칭찬받은 아이는 어려운 문제에도 도전한다. 따라서 칭찬을 할 때는 결과보다 과정을 칭찬하는 것이 좋다.',['칭찬은 결과보다 노력한 과정에 하는 것이 효과적이다.','능력을 칭찬받은 아이는 어려운 문제를 피한다.','아이들에게는 칭찬을 하지 않는 것이 좋다.','똑똑한 아이는 노력하지 않아도 성공한다.'],'Câu cuối có 따라서 + -는 것이 좋다 → câu chủ đề: khen quá trình hơn kết quả → ①. ② Chi tiết hẹp (chỉ một nửa so sánh). ③ Ngược bài (bài khuyên khen đúng cách, không phải đừng khen). ④ Bài không nói.',QJ],
+ ['사람들은 보통 실패를 부끄러운 일이라고 여긴다. 하지만 실패는 성공으로 가는 데 꼭 필요한 과정이다. 에디슨은 전구를 만들기 위해 수천 번 실패했다. 그는 실패할 때마다 안 되는 방법을 하나씩 배웠다고 말했다.',['실패는 성공에 이르기 위해 거쳐야 하는 과정이다.','에디슨은 전구를 만들기 위해 수천 번 실패했다.','실패는 부끄러운 일이므로 피하는 것이 좋다.','성공한 사람은 실패를 한 번도 하지 않았다.'],'Câu chủ đề là câu có 하지만 (câu cuối chỉ là ví dụ về 에디슨) → ①, nói lại 꼭 필요한 과정 → 거쳐야 하는 과정. ② Chi tiết hẹp. ③ Ngược bài: ý người ta tưởng, bị lật. ④ Quá mức (한 번도) + ngược bài.',QJ]];
+MV['20b']=['Người ta nghĩ đi giày chạy đắt tiền thì chạy nhanh hơn. [Nhưng] khả năng chạy phụ thuộc vào luyện tập đều đặn hơn là đôi giày. Thực tế nhiều vận động viên marathon đi giày bình thường mà vẫn vô địch.',
+ 'Băng Nam Cực tan khiến mực nước biển dâng dần. Các đảo quốc nhỏ ở Thái Bình Dương đã bị nước biển nhấn chìm một phần đất. Các thành phố ven biển thiệt hại do lũ cũng tăng mỗi năm. [Như vậy] biến đổi khí hậu giờ không còn là chuyện tương lai xa mà là vấn đề trước mắt.',
+ 'Khen trẻ thì trẻ tự tin. Nhưng trẻ được khen năng lực (“thông minh”) có xu hướng né bài khó. Trong khi đó trẻ được khen nỗ lực (“đã cố gắng”) dám thử cả bài khó. [Vì vậy] khi khen nên khen quá trình hơn là kết quả.',
+ 'Người ta thường coi thất bại là đáng xấu hổ. [Nhưng] thất bại là quá trình nhất định phải có trên đường tới thành công. Edison thất bại hàng nghìn lần để làm ra bóng đèn. Ông nói mỗi lần thất bại lại học được một cách không làm được.'];
+var X5=['Quá mức','Ngược bài','Chép chữ đổi chi tiết','Bài không nói'];
+function x5(i){var o=X5.slice();var a=o.splice(i,1)[0];return [a].concat(o);}
+MCQ['20c']=[
+ ['이 도서관은 평일에는 밤 10시까지, 주말에는 오후 6시까지 문을 연다. 책은 한 사람이 5권까지 빌릴 수 있다.',x5(2),'Bài có đủ chữ 주말, 10시 nhưng ghép sai: 10시 là ngày thường, cuối tuần chỉ tới 6시 → Chép chữ đổi chi tiết.','Lựa chọn ‘주말에는 밤 10시까지 문을 연다’ sai vì đâu?'],
+ ['연구에 따르면 매일 30분씩 걷는 사람은 심장병에 걸릴 가능성이 낮다.',x5(0),'Bài: “khả năng thấp” (가능성이 낮다); lựa chọn: “tuyệt đối không” (절대로) → Quá mức.','Lựa chọn ‘매일 걷는 사람은 절대로 심장병에 걸리지 않는다’ sai vì đâu?'],
+ ['최근 혼자 밥을 먹는 사람이 늘면서 1인용 메뉴를 파는 식당이 많아졌다.',x5(1),'Bài: 많아졌다 (nhiều lên); lựa chọn: 줄고 있다 (giảm) → Ngược bài.','Lựa chọn ‘1인용 메뉴를 파는 식당이 줄고 있다’ sai vì đâu?'],
+ ['김치는 발효 식품으로 장 건강에 도움이 된다. 또한 비타민이 많아 감기 예방에도 좋다.',x5(3),'Bài không có chữ nào về người nước ngoài. Có thể đúng ngoài đời nhưng bài không nói → gạch.','Lựa chọn ‘김치는 외국인에게 인기가 많다’ sai vì đâu?'],
+ ['이 회사는 직원들이 일주일에 이틀은 집에서 일할 수 있게 했다. 그 결과 직원들의 만족도가 높아졌다.',x5(2),'Bài: hai ngày làm ở nhà (còn ba ngày ở công ty); lựa chọn: chỉ đến công ty hai ngày → giữ chữ 이틀 nhưng đổi chỗ → Chép chữ đổi chi tiết.','Lựa chọn ‘직원들은 일주일에 이틀만 회사에 나온다’ sai vì đâu?'],
+ ['전문가들은 앞으로 10년 안에 자율 주행 자동차가 널리 사용될 것이라고 예측했다.',x5(0),'Bài: chuyên gia dự đoán “sẽ” (-ㄹ 것이라고 예측했다); lựa chọn: “đã” (이미) → nói quá thời điểm. Bẫy 이미 xếp vào Quá mức (có khi gọi là đổi thời điểm).','Lựa chọn ‘자율 주행 자동차는 이미 널리 사용되고 있다’ sai vì đâu?']];
+MV['20c']=['Thư viện này ngày thường mở đến 10 giờ tối, cuối tuần đến 6 giờ chiều. Mỗi người mượn tối đa 5 cuốn.',
+ 'Theo nghiên cứu, người đi bộ mỗi ngày 30 phút có khả năng mắc bệnh tim thấp.',
+ 'Gần đây người ăn một mình tăng nên quán bán suất ăn một người nhiều lên.',
+ 'Kim chi là thực phẩm lên men, tốt cho đường ruột. Ngoài ra nhiều vitamin nên cũng tốt để phòng cảm.',
+ 'Công ty này cho nhân viên làm việc ở nhà hai ngày mỗi tuần. Kết quả là mức hài lòng của nhân viên tăng lên.',
+ 'Các chuyên gia dự đoán trong 10 năm tới xe tự lái sẽ được dùng rộng rãi.'];
+var QD='이 글의 내용과 같은 것은?';
+MCQ['20d']=[
+ ['한국의 편의점은 대부분 24시간 문을 연다. 편의점에서는 음식뿐 아니라 택배를 보내거나 공과금을 낼 수도 있다. 최근에는 혼자 사는 사람이 늘면서 도시락 판매가 크게 늘었다.',['편의점에서는 물건을 사는 것 말고 다른 일도 할 수 있다.','한국의 편의점은 밤에는 문을 닫는다.','편의점에서는 도시락이 항상 가장 많이 팔린다.','혼자 사는 사람이 줄면서 도시락 판매가 늘었다.'],'① nói lại câu 2 (택배, 공과금 = việc khác ngoài mua đồ). ② Ngược bài (24시간). ③ Quá mức (항상, 가장 — bài chỉ nói “tăng mạnh”). ④ Chép chữ đổi chiều (bài: 늘면서, lựa chọn: 줄면서).',QD],
+ ['고래는 물고기처럼 바다에 살지만 새끼를 낳아 젖을 먹인다. 또 물속에서 숨을 쉴 수 없어서 가끔 물 위로 올라와 숨을 쉰다.',['고래는 숨을 쉬기 위해 물 밖으로 나온다.','고래는 물고기처럼 알을 낳는다.','고래는 물고기보다 오래 산다.','고래는 절대로 물 위로 올라오지 않는다.'],'① nói lại câu 2 (물 위로 올라와 숨을 쉰다). ② Ngược bài + chép chữ 물고기처럼. ③ Bài không nói tuổi thọ. ④ Quá mức + ngược bài.',QD],
+ ['한 조사에서 대학생 100명에게 아침 식사를 하는지 물었다. 그 결과 60명이 아침을 먹지 않는다고 답했다. 그 이유로 가장 많이 꼽은 것은 시간 부족이었다.',['아침을 먹지 않는 학생이 먹는 학생보다 많았다.','대학생의 절반이 아침을 먹지 않는다고 답했다.','대학생들은 입맛이 없어서 아침을 먹지 않는다.','조사에 참여한 모든 대학생이 아침을 먹지 않는다.'],'① suy ra từ số: 60 không ăn > 40 có ăn (nói lại bằng chữ khác). ② Chép chữ đổi số: 60%, không phải một nửa (절반). ③ Bài nói lý do là thiếu thời gian, không nói chán ăn → Bài không nói. ④ Quá mức (모든).',QD]];
+MV['20d']=['Cửa hàng tiện lợi ở Hàn phần lớn mở 24 giờ. Ở đó không chỉ mua đồ ăn mà còn gửi chuyển phát, đóng tiền điện nước được. Gần đây người sống một mình tăng nên cơm hộp bán chạy hơn hẳn.',
+ 'Cá voi sống ở biển như cá nhưng đẻ con và nuôi con bằng sữa. Cá voi cũng không thở được dưới nước nên thỉnh thoảng ngoi lên mặt nước để thở.',
+ 'Một khảo sát hỏi 100 sinh viên có ăn sáng không. Kết quả 60 người trả lời không ăn sáng. Lý do được chọn nhiều nhất là thiếu thời gian.'];
+Object.assign(MNAME,{'2nK':'đọc không hiểu · che từ khó, chọn từ nối',
+ '20a':'chủ đề · tìm câu chủ đề','20b':'chủ đề · chọn chủ đề (4 bước)','20c':'nội dung khớp · gọi tên bẫy','20d':'nội dung khớp · chọn (4 bước)'});
+
 var CIR=['①','②','③','④'];
 var LIM=90;
 var KEY='nari-1920', st={};
@@ -1130,7 +1317,7 @@ function renderMcq(k){
       '<div class="why">'+(done?(p===0?'✅ ':'❌ ')+'💡 '+esc(it[2])+mvHTML(k,i):'')+'</div></div>';
     if(done){n++;if(p===0)ok++;}});
   $('mcq'+k).innerHTML=h+'<div class="score">Đúng '+ok+'/'+MCQ[k].length+(n<MCQ[k].length?' (còn '+(MCQ[k].length-n)+' câu)':'')+(n?' · <a href="#" data-redo="m'+k+'">Làm lại</a>':'')+'</div>';
-  renderSum(/^\dn/.test(k)?String(k).slice(0,2):parseInt(k,10));
+  renderSum(/^20/.test(k)?'c20':/^\dn/.test(k)?String(k).slice(0,2):parseInt(k,10));
 }
 function tally(list,m){var c={n:0,a:0,b:0};list.forEach(function(r){var p=m[r.id];if(both(p)){c.n++;if(p[0]===r.a)c.a++;if(p[1]===r.a2)c.b++;}});return c;}
 function renderReal(k){
@@ -1262,10 +1449,13 @@ function renderStats(){
 }
 
 document.addEventListener('click',function(e){
+  var spb=e.target.closest('[data-sp]');
+  if(spb){var a=spb.dataset.sp.split('.'),y0=window.scrollY;st.zs=st.zs||{};if(st.zs[a[0]]==null){st.zs[a[0]]=+a[1];save();renderC20();window.scrollTo(0,y0);}return;}
   var x=e.target.closest('.xo');
   if(x){var k=x.dataset.x;SX[k]=!SX[k];x.parentNode.classList.toggle('st',!!SX[k]);return;}
   var b=e.target.closest('.opt');
   if(b){var q=b.closest('.mcq'),key=q.dataset.key,o=+b.dataset.o,i=key.indexOf('.'),kind=key.slice(0,i),id=key.slice(i+1),y=window.scrollY;
+    if(kind==='z'){st.z=st.z||{};if(st.z[id]!=null)return;st.z[id]=o;var rz=BY[id];if(o!==rz.a2){var cz=rz.x2[o];st.t2=st.t2||{};if(cz)st.t2[cz.charAt(0)]=(st.t2[cz.charAt(0)]||0)+1;}save();renderC20();window.scrollTo(0,y);return;}
     if(kind.charAt(0)==='m'){var m=st[kind]||(st[kind]={});if(m[id]!=null)return;m[id]=o;save();renderMcq(kind.slice(1));window.scrollTo(0,y);return;}
     var w=+b.dataset.q-1,store;
     if(kind==='d'){if(!st.cur)return;store=st.cur.p;}else store=st[kind]||(st[kind]={});
@@ -1278,7 +1468,8 @@ document.addEventListener('click',function(e){
     if(kind==='b3'){if(!st.t3)st.t3={t0:Date.now()};var all=R.filter(function(r){return r.b===3;});if(st.t3.s==null&&all.every(function(r){return both(store[r.id]);}))st.t3.s=Math.round((Date.now()-st.t3.t0)/1000);}
     save();renderReal(+kind.slice(1));window.scrollTo(0,y);return;}
   var r=e.target.closest('[data-redo]');
-  if(r){e.preventDefault();var k=r.dataset.redo;st[k]={};if(k==='b3')st.t3=null;save();if(k.charAt(0)==='m')renderMcq(k.slice(1));else renderReal(+k.slice(1));return;}
+  if(r){e.preventDefault();var k=r.dataset.redo;
+    if(k==='zJ'||k==='zD'){R.forEach(function(q){if(q.t===k.charAt(1)){if(st.z)delete st.z[q.id];if(st.zs)delete st.zs[q.id];}});save();renderC20();return;}st[k]={};if(k==='b3')st.t3=null;save();if(k.charAt(0)==='m')renderMcq(k.slice(1));else renderReal(+k.slice(1));return;}
   var d=e.target.closest('button');if(!d)return;
   if(d.dataset['new']){newRound();scrollTo(0,$('son').offsetTop);}
   else if(d.dataset.end){st.cur=null;save();renderDrill();}
@@ -1288,13 +1479,59 @@ document.addEventListener('click',function(e){
   else if(d.dataset.peek){$('q-'+d.dataset.peek).classList.add('show');}
 });
 
+/* ---- thẻ Câu 20: chỉ làm câu 20 của 22 bài (ô câu 19 điền sẵn) ---- */
+function sents(p){return (p.match(/[^.?!]+(?:[.?!]+|$)/g)||[]).map(function(x){return x.trim();}).filter(function(x){return x;});}
+function topicIdx(r){var f=r.p.replace('(    )',r.o[r.a]);return sents(f).map(function(s,i){return r.c2.some(function(c){return s.indexOf(c)>=0;})?i:-1;}).filter(function(i){return i>=0;});}
+function c20Item(no,r){
+  st.z=st.z||{};st.zs=st.zs||{};
+  var pk=st.z[r.id],sp=st.zs[r.id],J=r.t==='J',done=pk!=null,key='z.'+r.id;
+  var h='<div class="mcq'+(done?' done done2':'')+(done&&pk!==r.a2?' wrong':'')+'" data-key="'+key+'"><div class="q"><span class="n">'+no+'.</span>'+srcTag(r).replace('câu 19–20','câu 20')+'</div>';
+  if(J&&sp==null){
+    h+='<div class="q1">Bước 1 · Bấm vào câu chủ đề</div><div class="sps">'+sents(r.p.replace('(    )',r.o[r.a])).map(function(s,i){return '<button class="sp" data-sp="'+r.id+'.'+i+'">'+esc(s)+'</button>';}).join('')+'</div>'+
+      '<div class="q2"><span class="n">20.</span>'+esc(r.s)+'</div><p class="lock">Chọn câu chủ đề trước, 4 lựa chọn sẽ mở.</p></div>';
+    return h;
+  }
+  h+=psg(r.p,null,done||J?r.c2:null,r.o[r.a]);
+  if(J){var ti=topicIdx(r),okS=ti.indexOf(sp)>=0;
+    h+='<p class="note">'+(okS?'✅ Câu chủ đề em chọn đúng (tô xanh).':'❌ Em chọn câu '+(sp+1)+'. Câu chủ đề là câu '+ti.map(function(i){return i+1;}).join(' + ')+' (tô xanh) — '+ZP[r.z]+'.')+'</p>';}
+  h+='<div class="q2"><span class="n">20.</span>'+esc(r.s)+'</div>'+optsHTML(r.o2,r.a2,pk,key,3,true)+'<div class="why2">'+(done?why20(r,pk):'')+'</div></div>';
+  return h;
+}
+function renderC20(){
+  st.z=st.z||{};st.zs=st.zs||{};
+  ['J','D'].forEach(function(t){
+    var list=R.filter(function(r){return r.t===t;}),n=0,ok=0,sok=0,h='';
+    list.forEach(function(r,i){h+=c20Item(i+1,r);var p=st.z[r.id];if(p!=null){n++;if(p===r.a2)ok++;}if(t==='J'&&st.zs[r.id]!=null&&topicIdx(r).indexOf(st.zs[r.id])>=0)sok++;});
+    $('r20'+t).innerHTML=h+'<div class="score">'+(t==='J'?'Tìm đúng câu chủ đề '+sok+'/'+list.length+' · ':'')+'Câu 20 đúng '+ok+'/'+list.length+(n<list.length?' (còn '+(list.length-n)+' bài)':'')+(n||(t==='J'&&Object.keys(st.zs).length)?' · <a href="#" data-redo="z'+t+'">Làm lại</a>':'')+'</div>';
+  });
+  renderSum('c20');
+}
+function renderC20Stats(){
+  var c={J:0,D:0},zp={o:0,e:0,oe:0},x={J:{},D:{}};
+  R.forEach(function(r){c[r.t]++;if(r.t==='J')zp[r.z]++;r.x2.forEach(function(v){if(v){var k=v.charAt(0);x[r.t][k]=(x[r.t][k]||0)+1;}});});
+  $('c20nJ').textContent=c.J;$('c20nD').textContent=c.D;
+  $('c20z').textContent='Trong '+c.J+' bài hỏi chủ đề: câu có ô '+zp.o+', câu cuối '+zp.e+', cả hai '+zp.oe+' — chưa bài nào nằm chỗ khác.';
+  ['J','D'].forEach(function(t){var tot=0,ks=Object.keys(x[t]).sort(function(a,b){return x[t][b]-x[t][a];});ks.forEach(function(k){tot+=x[t][k];});
+    $('c20x'+t).innerHTML='<table class="t"><tr><th>Lỗi</th><th>Lựa chọn sai làm gì</th><th>Số lần</th></tr>'+ks.map(function(k){return '<tr><td>'+t20(k)+'</td><td>'+X20[k][1]+'</td><td class="n">'+x[t][k]+'</td></tr>';}).join('')+'</table><p class="note">Tổng '+tot+' lựa chọn sai trong '+c[t]+' bài dạng '+(t==='J'?'A':'B')+'.</p>';});
+}
+function linesC20(L,pre){
+  var T=[];lines1n(T,false,'20');T.forEach(function(t){L.push((pre?'Câu 20 – ':'')+t);});
+  ['J','D'].forEach(function(t){var list=R.filter(function(r){return r.t===t;}),n=0,ok=0,sn=0,sok=0,bad=[];
+    list.forEach(function(r){var p=(st.z||{})[r.id],s=(st.zs||{})[r.id];if(s!=null){sn++;if(topicIdx(r).indexOf(s)>=0)sok++;}
+      if(p==null)return;n++;if(p===r.a2)ok++;else{var x=r.x2[p];bad.push(r.src+' (chọn '+CIR[p]+', lỗi '+(x?X20[x.charAt(0)][0]:'?')+' → đúng '+CIR[r.a2]+')');}});
+    if(!n&&!sn)return;
+    L.push((pre?'Câu 20 – ':'')+'đề '+(t==='J'?'dạng chủ đề: tìm câu chủ đề '+sok+'/'+sn+', ':'dạng nội dung khớp: ')+'chọn đúng '+ok+'/'+list.length+(n<list.length?' (làm '+n+')':''));
+    bad.forEach(function(b){L.push('  ✗ '+b);});});
+}
+
 /* ---- tổng kết + gửi cô ---- */
 function report(k){
+  if(k==='c20'){var Lz=['Câu 19–20 · Thẻ Câu 20 (chiến lược riêng) · '+(st.name||'(chưa ghi tên)')];linesC20(Lz,false);return Lz.join('\n');}
   if(/^\dn$/.test(k)){var L1=['Câu 19–20 · Buổi '+k.charAt(0)+' bản mới ('+(k==='1n'?'cặp tiếng Việt':'xét quan hệ qua ví dụ')+') · '+(st.name||'(chưa ghi tên)')];lines1n(L1,false,k);return L1.join('\n');}
   var ks=k==='all'?[1,2,3,'on']:[k==='on'?'on':+k],L=['Câu 19–20 phó từ nối & chủ đề · '+(k==='all'?'Cả 3 buổi + ôn':(k==='on'?'Ôn trộn đề':'Buổi '+k))+' · '+(st.name||'(chưa ghi tên)')];
   ks.forEach(function(kk){
     if(kk!=='on'){
-      Object.keys(MCQ).filter(function(q){return parseInt(q,10)===kk&&!/^\dn/.test(q);}).sort(function(a,b){return (a.length-b.length)*-1||(a<b?-1:1);}).forEach(function(q){
+      Object.keys(MCQ).filter(function(q){return parseInt(q,10)===kk&&!/^\dn/.test(q)&&!/^20/.test(q);}).sort(function(a,b){return (a.length-b.length)*-1||(a<b?-1:1);}).forEach(function(q){
         var m=st['m'+q]||{},n=0,ok=0;for(var i in m){n++;if(m[i]===0)ok++;}
         if(!n&&q.length>1)return;
         L.push('Buổi '+kk+' – '+MNAME[q]+': '+ok+'/'+MCQ[q].length+(n<MCQ[q].length?' (làm '+n+')':''));});
@@ -1310,6 +1547,7 @@ function report(k){
       L.push('  Đã thuộc '+cc.ok+' · đang nhớ '+(cc.seen-cc.ok)+' · chưa làm '+cc.fresh+' (tổng '+R.length+')');
     }
   });
+  if(k==='all')linesC20(L,true);
   if(k==='all'||k==='on'){
     function top(o,T){var ks2=Object.keys(o||{}).sort(function(a,b){return o[b]-o[a];});return ks2.map(function(c){return T[c][0]+' '+o[c];}).join(', ');}
     if(st.t1&&Object.keys(st.t1).length)L.push('Câu 19 em hay sai vì: '+top(st.t1,X19));
@@ -1326,7 +1564,7 @@ function lines1n(L,pre,pf){
 }
 function renderSum(k){
   var el=$('sum'+k);if(!el)return;el.dataset.k=k;
-  el.innerHTML='<h4>'+(k==='all'?'Kết quả cả 3 buổi + ôn':(k==='on'?'Kết quả ôn trộn đề':(/^\dn$/.test(k)?'Kết quả Buổi '+k.charAt(0)+' bản mới':'Kết quả Buổi '+k)))+'</h4>'+
+  el.innerHTML='<h4>'+(k==='all'?'Kết quả cả 3 buổi + ôn':(k==='on'?'Kết quả ôn trộn đề':k==='c20'?'Kết quả thẻ Câu 20':(/^\dn$/.test(k)?'Kết quả Buổi '+k.charAt(0)+' bản mới':'Kết quả Buổi '+k)))+'</h4>'+
     '<p class="note">Làm xong, ghi tên rồi bấm gửi cho cô qua Zalo (hoặc chép đoạn dưới gửi cô).</p>'+
     '<input class="nm" placeholder="Tên em" value="'+esc(st.name||'')+'"><div class="btns"><button class="b main" data-share="'+k+'">Gửi kết quả cho cô…</button></div><pre>'+esc(report(k))+'</pre>';
   if(k!=='all')renderSum('all');
@@ -1356,8 +1594,8 @@ document.addEventListener('click',function(e){
   if(e.target.id==='cpHide'){var tb=$('cpAll'),on=tb.classList.toggle('hideadv');e.target.textContent=on?'Hiện phó từ':'Che phó từ';tb.querySelectorAll('td.adv').forEach(function(td){td.classList.remove('show');});return;}
   var td=e.target.closest('#cpAll.hideadv td.adv');if(td)td.classList.add('show');
 });
-renderAdv();renderRel2();renderStats();renderDemos();
-Object.keys(MCQ).forEach(function(k){renderMcq(k);});[1,2,3].forEach(function(k){renderReal(k);});renderDrill();renderAll();renderSum('all');
+renderAdv();renderRel2();renderStats();renderC20Stats();renderDemos();
+Object.keys(MCQ).forEach(function(k){renderMcq(k);});[1,2,3].forEach(function(k){renderReal(k);});renderC20();renderDrill();renderAll();renderSum('all');
 window.addEventListener('hashchange',function(){if(!show())scrollTo(0,0);});show();
 
 </script>
