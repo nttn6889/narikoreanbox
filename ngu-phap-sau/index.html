@@ -74,6 +74,8 @@ ul.nt li{margin:3px 0}
 .err .w{font-size:14.5px;color:#333;margin-top:3px}
 .vs{border-left:4px solid var(--blue);background:var(--bluebg);padding:8px 12px;margin:0 0 10px;border-radius:0 8px 8px 0}
 .vs>b{color:var(--blue)}
+.lu{border:1px solid var(--soft);border-left:4px solid var(--warn);border-radius:10px;padding:8px 12px;margin:0 0 10px}
+.lu .h{font-size:16px;margin:0 0 3px}.lu .noi{font-size:14.5px;margin:0 0 4px}.lu .tp{margin:6px 0 0}
 .tp{border:1px solid #e3c98a;background:var(--warnbg);border-radius:10px;padding:8px 12px;margin:0 0 8px}
 .tp .s{font:bold 13px Arial,sans-serif;color:var(--warn)}
 .tp .ko{display:block;margin:3px 0;font-size:15.5px}
@@ -364,7 +366,7 @@ function renderLesson(b,n){
 function tbl(rows){return '<div class="scroll"><table class="t">'+rows.map(function(r){return '<tr>'+r.map(function(c){return '<td>'+md(c)+'</td>'}).join('')+'</tr>'}).join('')+'</table></div>'}
 function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
 // [id mục, tên, trường dữ liệu] — số thứ tự mục theo vị trí trong mảng
-var SECS=[['s1','Nghĩa lõi & cấu tạo','goc'],['s2','Kết hợp – chia','chia'],['sd','Chuyển từ câu gốc','doi'],['s3','Bản đồ tình huống','tinh'],['s4','Ràng buộc','rb'],['s5','Lỗi hay mắc','sai'],['s6','Phân biệt','pb'],['s7','Trong TOPIK','topik'],['s8','Cô hỏi','hoi'],['s9','Luyện ngay','luyen'],['sg','Luyện chuyển câu','go'],['s10','Câu của em','em']];
+var SECS=[['s1','Nghĩa lõi & cấu tạo','goc'],['s2','Kết hợp – chia','chia'],['sd','Chuyển từ câu gốc','doi'],['s3','Bản đồ tình huống','tinh'],['s4','Ràng buộc','rb'],['s5','Lỗi hay mắc','sai'],['s6','Phân biệt','pb'],['s7','Trong TOPIK','topik'],['su','Lên TOPIK','len'],['s8','Cô hỏi','hoi'],['s9','Luyện ngay','luyen'],['sg','Luyện chuyển câu','go'],['s10','Câu của em','em']];
 function H(i,extra,name){return '<h3 id="'+SECS[i][0]+'"><span class="n">'+(i+1)+'</span>'+(name||SECS[i][1])+(extra||'')+'</h3>'}
 function Hk(k,extra,name){for(var i=0;i<SECS.length;i++)if(SECS[i][0]==k)return H(i,extra,name)}
 // loại câu gốc → nhãn màu
@@ -423,6 +425,11 @@ function drawPoint(x,crumb,list,idx){
   if(on.s5)s+=Hk('s5')+p.sai.map(function(e){return '<div class="err"><div class="x ko">'+md(e.x)+'</div><div class="o ko">'+md(e.o)+'</div><div class="w">'+md(e.why)+'</div></div>'}).join('');
   if(on.s6)s+=Hk('s6')+p.pb.map(function(v){return '<div class="vs"><b>So với '+md(v.vs)+'</b><div>'+md(v.d)+'</div>'+(v.ex||[]).map(function(e){return '<div class="ex"><span class="ko">'+md(e[0])+sayBtn(e[0])+'</span><span class="vi">'+esc(e[1])+'</span></div>'}).join('')+'</div>'}).join('');
   if(on.s7)s+=Hk('s7')+(p.topik||[]).map(function(t){return '<div class="tp"><div class="s">📝 '+esc(t.src)+'</div><span class="ko">'+md(t.ko)+'</span><div class="w">'+t.note+'</div></div>'}).join('');
+  // len: [{p mẫu trung cấp, m nghĩa, noi nối từ mẫu nền, ex:[ko, vi], de:{src, ko, a đáp án / ý, note}}]
+  if(on.su)s+=Hk('su',' <span class="soon">'+p.len.length+' mẫu</span>')+'<p class="muted" style="margin:0 0 8px">Mẫu trung cấp xây trên mẫu này, hay gặp ở câu 1–4 (đọc) của TOPIK II.</p>'+p.len.map(function(t){
+    return '<div class="lu"><div class="h"><b class="ko">'+md(t.p)+'</b> · '+md(t.m)+'</div><div class="noi">🔗 '+md(t.noi)+'</div>'+
+      (t.ex?'<div class="ex"><span class="ko">'+md(t.ex[0])+sayBtn(t.ex[0])+'</span><span class="vi">'+esc(t.ex[1])+'</span></div>':'')+
+      (t.de?'<div class="tp"><div class="s">📝 '+esc(t.de.src)+'</div><span class="ko">'+md(t.de.ko)+'</span><div class="w">'+md(t.de.a)+(t.de.note?' — '+md(t.de.note):'')+'</div></div>':'')+'</div>'}).join('');
   if(on.s8)s+=Hk('s8')+p.hoi.map(function(q){return '<details class="ask"><summary>'+md(q.q)+'</summary><div>'+md(q.a)+'</div></details>'}).join('');
   if(on.s9)s+=Hk('s9')+'<div class="score" id="sc"></div>'+p.luyen.map(function(q,i){
     var o=shuffle(q.o.map(function(t,j){return {t:t,ok:j===0}}));

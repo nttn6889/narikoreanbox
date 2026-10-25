@@ -397,6 +397,20 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   `t:'y'` gõ (`a` đáp án nhận, `e` {sai hay gặp: ghi chú}, `h` gợi ý), `t:'d'` dịch Việt → Hàn (`a` câu mẫu, khác thì em tự so); `g` = mẫu 1–4, 0 = tổng hợp. Chỉ dùng từ / ngữ pháp
   đã học tới bài đó. Thêm bài: soạn data, thêm vào `LS` của trang và `BT` của `seoul/index.html` (trang đầu tự chia nhóm theo cuốn). localStorage `nari-sbt`. Thêm câu dùng id mới.
 
+## Từ vựng Seoul học sâu (`seoul/tu-sau/`) — lớp 2A cần học nhanh nền rồi vào ôn TOPIK
+- Cô chốt (24/10/2026): mỗi bài chỉ cần **từ vựng dạy sâu có mở rộng, nối sang TOPIK** + ngữ pháp sâu nối sang ngữ pháp TOPIK (`ngu-phap-sau/`);
+  không làm học liệu theo từng trang sách như `seoul/2a-1/` nữa. Đã làm **2A Bài 2, 3** (trang lớp `lop/2a/` có link).
+- Trang học sinh, link `seoul/tu-sau/#b=2A&c=2&s=hoc|nghia|dien|kh|de|dich`: ① Học (khung “Chủ đề của bài trong TOPIK”, thẻ từ: câu ví dụ, cụm hay đi cùng, tip,
+  khung “Lên TOPIK” = từ trung cấp cùng nhà kèm ★ số đề + câu trong đề, 📝 ghi chú TOPIK) · ② Nghĩa · ③ Điền câu · ④ Kết hợp · Mở rộng (`x`) ·
+  ⑤ Câu trong đề (chữ tô vàng nghĩa là gì; từ của bài + từ mở rộng gặp ≥ 7 đề, `UPK`) · ⑥ Dịch câu; “Gửi kết quả cho cô”. localStorage `nari-tusau`.
+  Trang `seoul/` hiện dòng “Học sâu” dưới bài có trong biến `TS`.
+- Nguồn soạn tay `tools/seoul_tu/<cuốn>-<bài>.json` (`w[].ko` đúng như `tools/seoul/<cuốn>.tsv`; `q` từ gốc để đếm (`[]` = không đếm: đơn vị thời gian, từ ngoại lai ghép), `r`, `tip`, `up:[[từ, loại, nghĩa, HV]]`, `note`, `exv`;
+  `top` từ chủ đề, `x` câu luyện, lựa chọn đầu là đáp án) → `python3 tools/seoul_tu.py` (cần kiwipiepy; lấy nghĩa/HV/câu ví dụ/id từ tsv, đếm đề như `tu-30/`)
+  → `seoul/tu-sau/data/<cuốn>-<bài>.json` + `ls.json`. Ghi chú TOPIK trong `note` chỉ ghi điều đã kiểm tra trong `thi-thu/de/`.
+  Soát câu đề máy chọn cho từ `up`: từ đồng âm (입장 vào cửa / lập trường, 이내 trong vòng / ngay sau đó, 정상) dễ ra câu sai nghĩa → bỏ khỏi `up`, ghi vào `note`.
+- Ngữ pháp: `ngu-phap-sau/` thêm mục **“Lên TOPIK”** (trường `len:[{p, m, noi, ex:[ko, vi], de:{src, ko, a, note}}]` = mẫu trung cấp xây trên mẫu nền,
+  kèm câu 1–4 đề thật / đề luyện đã đối chiếu `thi-thu/de/`). Đã có ở 2A Bài 2 (15 mẫu), Bài 3 (16 mẫu).
+
 ## Kho ngữ pháp Nari (`ngu-phap-sau/`) — học liệu dạy sâu ngữ pháp của cô
 - Trang `noindex`, cô dùng soạn bài + trình chiếu (nút góc trên: “Bản của cô” / “Bản chiếu cho học sinh” ẩn khung “Ghi chú cho cô”, localStorage `nari-nps`).
   Không đặt link từ trang học sinh (giống `seoul/3a-1/`). Link `#b=3A&c=2&g=3` (cùng kiểu `seoul/ngu-phap/`), `#v=cn` mục lục theo chức năng.
