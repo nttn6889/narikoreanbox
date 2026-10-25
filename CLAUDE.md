@@ -11,12 +11,15 @@ trang thi thử học sinh + chỉ dữ liệu 3 bài (Ehot1, N001 + file nghe) 
 Giáo án / bản trình chiếu của cô (`seoul/2a-1/`, `seoul/3a-1/`…) gắn `<meta name="robots" content="noindex">` để Google không đưa lên tìm kiếm.
 Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối không đưa dữ liệu học sinh vào repo.
 
-## Trang chủ học sinh (`index.html` ở gốc = https://hoc.naritopik.com/)
-- Một link duy nhất gửi học sinh. Khung “Bài cô giao” (nút sang app `thi-thu/`, hiện 4 bài gần nhất từ localStorage `nari-app-saved`, chào theo `nari-app-me`),
-  “Em vừa mở” (`nari-home-recent`), ô tìm (gõ số câu → dạng chứa câu đó), 2 cách xem: **Theo dạng câu** (Đọc / Nghe / Viết / Nền tảng; mỗi dạng một thẻ với nút
-  📖 Từ vựng · 🧩 Ngữ pháp · 🎯 Chiến thuật · ✍ Luyện tập) và **Theo loại học liệu**. Lựa chọn nhớ ở `nari-home`.
-- Dữ liệu trong trang: `D` = dạng câu, `L` = học liệu `[dạng, loại v|g|s|p, tên, link, mô tả, tên ngắn trên nút]`. **Làm trang học sinh mới thì thêm dòng vào `L`.**
-  Không đưa giáo án / bản trình chiếu của cô (trang `noindex`, `viet-51/`, `viet-52/`, `viet-53/`, `cau-25-27/`, `seoul/so-dem|tuong-dong|tu-de-hoi/`, `seoul/2a-1|3a-1/`, `ngu-phap-sau/`).
+## Trang chủ học sinh (`index.html` ở gốc = https://hoc.naritopik.com/) + trang lớp (`lop/3a|2a|1a/`)
+- Một link gửi học sinh, chia theo lớp (cô chốt 25/10): đầu trang = logo to + menu lớp **TOPIK II · Seoul 3A · Seoul 2A · Seoul 1A · Khóa học ›** (tạm trỏ `hoc-cung-co/`,
+  sau đổi sang naritopik.com) + nút “Về cô” tím (`ve-co/`). CSS chung `trang.css` (giao diện theo `tu-vung/`, màu tím logo). Chưa đưa “Bài cô giao” (app) vào — cô tính sau.
+- Trang gốc = **TOPIK II theo dạng câu**: Đọc / Nghe / Viết → thanh dạng câu (`DANG`) → 3 thẻ: **Từ vựng** (vẽ thẳng từ `thi-thu/vocab.json`, phần `Câu …`/`Nghe …` có số câu trùng dạng),
+  **Học liệu** (`HL['<phần>:<câu đầu>'] = [[loại, tên, link, mô tả]]` — làm trang học sinh mới thì thêm vào đây), **Câu đề thi** (Đọc: câu trong `thi-thu/de/<đề>.json`,
+  đáp án lấy từ `dau-hieu/data/<dạng>.json` (bấm chọn → đúng/sai, chưa hiện giải thích); Nghe: đề trong `NGHE` có file nghe, không có đáp án; Viết: `thi-thu/viet/index.json`
+  (do `sync_viet.py` ghi; `--index` ghi lại) → đề thật, nút xem đáp án / bài mẫu). Link `#k=doc|nghe|viet&c=<câu đầu>&t=tu|hl|de`.
+- Trang lớp `lop/<lớp>/` hiện chỉ là danh sách học liệu học sinh có sẵn (Seoul từ vựng / ngữ pháp / bài tập…), làm tiếp sau trang TOPIK.
+- Không đưa giáo án / bản trình chiếu của cô (trang `noindex`, `viet-51/`, `viet-52/`, `viet-53/`, `cau-25-27/`, `seoul/so-dem|tuong-dong|tu-de-hoi/`, `seoul/2a-1|3a-1/`, `ngu-phap-sau/`).
 
 ## Phòng thi thử (`thi-thu/`)
 - Trang **quản lý** của cô vẫn nằm trên claude.ai: https://claude.ai/artifact/7EWoCB9sEomX2FHY8d1QY8

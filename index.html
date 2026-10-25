@@ -3,293 +3,240 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Học liệu Nari TOPIK</title>
-<meta name="description" content="Trang học của học sinh cô Ngân: từ vựng, ngữ pháp, chiến thuật và luyện tập TOPIK II theo từng dạng câu.">
-<meta property="og:title" content="Học liệu Nari TOPIK">
-<meta property="og:description" content="Một link cho mọi học liệu: từ vựng, ngữ pháp, chiến thuật, luyện tập TOPIK II theo từng dạng câu.">
+<title>Học TOPIK II · Nari TOPIK</title>
+<meta name="description" content="Trang học của học sinh cô Ngân: từ vựng, học liệu và câu đề thi TOPIK II theo từng dạng câu.">
+<meta property="og:title" content="Học TOPIK II – Nari TOPIK">
+<meta property="og:description" content="Từ vựng, học liệu và câu đề thi TOPIK II theo từng dạng câu. Zalo cô Ngân: 0399.214.554">
 <meta property="og:image" content="https://hoc.naritopik.com/logo/nari-topik-logo-nen-trang.jpg">
 <meta property="og:url" content="https://hoc.naritopik.com/">
 <meta property="og:type" content="website">
 <link rel="icon" href="thi-thu/icon/icon-192.png">
-<link rel="apple-touch-icon" href="thi-thu/icon/icon-192.png">
-<style>
-:root{--ink:#1f1b2e;--muted:#6b6780;--line:#e4e0ee;--bg:#f7f5fb;--card:#fff;--pur:#53468F;--pur2:#EFEAF8;--gold:#C99A2E;--red:#E0313F;
-  --kv:#2f7a4f;--kvb:#e6f3eb;--kg:#2b5fa8;--kgb:#e6eefa;--ks:#a0471b;--ksb:#fbeee5;--kp:#7a3a9a;--kpb:#f3e8f8}
-*{box-sizing:border-box}
-[hidden]{display:none!important}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans KR","Malgun Gothic",sans-serif}
-a{color:inherit}
-main{max-width:920px;margin:0 auto;padding:16px 16px 56px}
-header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:4px 0 14px}
-header img{height:52px;width:auto;display:block}
-header .zl{font-size:14px;color:var(--muted);text-decoration:none}
-header .zl b{color:var(--pur)}
-.hi{font-size:15px;color:var(--muted);margin:0 0 12px}
-.box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:0 0 16px}
-.app{background:linear-gradient(135deg,var(--pur),#6c5fb0);color:#fff;border:0}
-.app h2{margin:0 0 4px;font-size:19px}
-.app p{margin:0 0 12px;opacity:.9;font-size:15px}
-.app .btns{display:flex;gap:8px;flex-wrap:wrap}
-.btn{display:inline-block;padding:9px 14px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:0;cursor:pointer}
-.app .btn{background:#fff;color:var(--pur)}
-.app .btn.o{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.6)}
-.saved{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:6px}
-.saved a{display:flex;justify-content:space-between;gap:10px;background:rgba(255,255,255,.14);padding:8px 12px;border-radius:9px;text-decoration:none;font-size:15px}
-.saved small{opacity:.8;white-space:nowrap}
-h2.t{font-size:18px;margin:22px 0 10px}
-.tools{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:0 0 12px}
-.seg{display:inline-flex;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:3px;flex-wrap:wrap}
-.seg button{border:0;background:none;padding:7px 12px;border-radius:8px;font:inherit;font-size:15px;cursor:pointer;color:var(--muted)}
-.seg button.on{background:var(--pur);color:#fff}
-#q{flex:1 1 220px;min-width:0;padding:9px 12px;border:1px solid var(--line);border-radius:10px;font:inherit;background:var(--card);color:var(--ink)}
-.legend{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 12px;font-size:13px}
-.ch{display:inline-flex;align-items:center;gap:4px;padding:5px 10px;border-radius:999px;font-size:14px;text-decoration:none;font-weight:600;line-height:1.3}
-.ch.v{background:var(--kvb);color:var(--kv)}.ch.g{background:var(--kgb);color:var(--kg)}
-.ch.s{background:var(--ksb);color:var(--ks)}.ch.p{background:var(--kpb);color:var(--kp)}
-a.ch:hover{filter:brightness(.95)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:10px}
-.cd{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
-.cd h3{margin:0 0 2px;font-size:16px}
-.cd h3 span{color:var(--pur)}
-.cd .ko{font-size:13px;color:var(--muted);margin:0 0 8px}
-.cd .chs{display:flex;gap:6px;flex-wrap:wrap}
-.list{display:grid;gap:8px}
-.it{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:11px 14px;text-decoration:none}
-.it:hover{border-color:var(--pur)}
-.it .ic{flex:none;width:34px;height:34px;border-radius:9px;display:grid;place-items:center;font-size:17px}
-.it.v .ic{background:var(--kvb)}.it.g .ic{background:var(--kgb)}.it.s .ic{background:var(--ksb)}.it.p .ic{background:var(--kpb)}
-.it b{display:block;font-size:15.5px}
-.it small{display:block;color:var(--muted);font-size:14px}
-.it .tag{display:inline-block;font-size:12px;color:var(--pur);background:var(--pur2);border-radius:6px;padding:0 6px;margin:2px 4px 0 0}
-.empty{color:var(--muted);font-size:15px;padding:8px 2px}
-footer{margin-top:30px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);font-size:14px;display:flex;gap:14px;flex-wrap:wrap;justify-content:space-between}
-footer a{color:var(--pur)}
-@media (prefers-color-scheme:dark){
-  :root{--ink:#ece9f5;--muted:#a7a2bb;--line:#35304a;--bg:#16131f;--card:#211d2e;--pur2:#2e2845;
-    --kv:#8fd4a8;--kvb:#1f3528;--kg:#9cbcf0;--kgb:#1d2a40;--ks:#f0b08d;--ksb:#3a2419;--kp:#d6a6ef;--kpb:#33223f}
-  header .logo-wrap{background:#EFEAF8;border-radius:10px;padding:4px 8px}
-  .seg button.on{background:#7c6fc4}
-}
-</style>
+<link rel="stylesheet" href="trang.css">
 </head>
 <body>
 <main>
-<header>
-  <span class="logo-wrap"><img src="logo/nari-topik-ngang.svg" alt="Nari TOPIK – Hiểu từng câu, vững từng cấp"></span>
-  <a class="zl" href="https://zalo.me/0399214554">Hỏi cô qua Zalo: <b>0399 214 554</b></a>
+<header class="brand">
+  <div class="lg"><img class="logo" src="logo/nari-topik-ngang.svg" width="225" height="76" alt="Nari TOPIK – Hiểu từng câu, Vững từng cấp"><span class="zl">Cô Ngân · Zalo: <a href="https://zalo.me/0399214554">0399.214.554</a></span></div>
+  <nav class="lop">
+    <a class="on" href="./">TOPIK II</a><a href="lop/3a/">Seoul 3A</a><a href="lop/2a/">Seoul 2A</a><a href="lop/1a/">Seoul 1A</a><a class="kh" href="hoc-cung-co/">Khóa học ›</a></nav>
+  <a class="co" href="ve-co/"><i>N</i>Về cô</a>
 </header>
-<p class="hi" id="hi">Trang học của học sinh cô Ngân. Lưu trang này lại — mọi học liệu đều ở đây.</p>
 
-<section class="box app">
-  <h2>Bài cô giao</h2>
-  <p>Bài hôm nay, đề thi thử, bài từ vựng, luyện nghe, luyện viết cô gửi đều nằm trong app luyện tập.</p>
-  <div class="btns">
-    <a class="btn" href="thi-thu/">Mở app luyện tập ›</a>
-    <a class="btn o" href="thi-thu/#">Dán link bài cô gửi</a>
-  </div>
-  <ul class="saved" id="saved"></ul>
-</section>
-
-<section id="recentBox" hidden>
-  <h2 class="t">Em vừa mở</h2>
-  <div class="list" id="recent"></div>
-</section>
-
-<h2 class="t">Học liệu</h2>
-<div class="tools">
-  <div class="seg" id="view">
-    <button data-v="dang" class="on">Theo dạng câu</button>
-    <button data-v="loai">Theo loại học liệu</button>
-  </div>
-  <input id="q" type="search" placeholder="Tìm: câu 16, tiêu đề báo, 54, ngữ pháp…" autocomplete="off">
-</div>
-<div class="seg" id="part" style="margin:0 0 10px"></div>
-<div class="legend" id="legend"></div>
+<h1>Học TOPIK II theo dạng câu</h1>
+<p class="intro">Chọn Đọc · Nghe · Viết rồi chọn dạng câu. Mỗi dạng có <b>Từ vựng</b> (học trước), <b>Học liệu</b> (chiến thuật, bài luyện của cô) và <b>Câu đề thi</b> (câu thật trong các đề, bấm chọn để xem đúng sai).</p>
+<div class="parts" id="parts"></div>
+<nav class="dang" id="nav"></nav>
 <div id="out"></div>
-
-<footer>
-  <span>Nari TOPIK · Hiểu từng câu – Vững từng cấp</span>
-  <span><a href="ve-co/">Về cô</a> · Zalo <a href="https://zalo.me/0399214554">0399 214 554</a></span>
-</footer>
+<footer><a href="tu-vung/">Tổng hợp từ vựng</a> · <a href="tu-vung/#k=uu">⭐ Từ cốt lõi</a> · <a href="thi-thu/">Phòng thi thử</a> · <a href="ve-co/">Về cô</a></footer>
 </main>
 <script>
-/* Loại học liệu */
-var K = {v:['Từ vựng','📖'], g:['Ngữ pháp','🧩'], s:['Chiến thuật','🎯'], p:['Luyện tập','✍']};
-/* Phần thi + dạng câu: [id, phần, tên, tên Hàn] */
-var PARTS = {doc:'Đọc', nghe:'Nghe', viet:'Viết', nen:'Nền tảng · Giáo trình'};
-var D = [
-  ['r12','doc','Câu 1–2','Chọn ngữ pháp điền vào chỗ trống','문법'],
-  ['r34','doc','Câu 3–4','Ngữ pháp tương đồng','유사 문법'],
-  ['r5','doc','Câu 5','Quảng cáo sản phẩm','제품 광고'],
-  ['r68','doc','Câu 6–8','Quảng cáo, khẩu hiệu','광고'],
-  ['r910','doc','Câu 9–10','Thông báo, biểu đồ','안내문 · 그래프'],
-  ['r1112','doc','Câu 11–12','Nội dung bài báo','기사'],
-  ['r1315','doc','Câu 13–15','Sắp xếp câu','순서 배열'],
-  ['r1618','doc','Câu 16–18','Điền vào chỗ trống','빈칸'],
-  ['r1920','doc','Câu 19–20','Phó từ nối + chủ đề','접속 부사'],
-  ['r2122','doc','Câu 21–22','Quán ngữ','관용 표현'],
-  ['r2324','doc','Câu 23–24','Tâm trạng trong tùy bút','감정 표현'],
-  ['r2527','doc','Câu 25–27','Tiêu đề báo','신문 기사 제목'],
-  ['r4243','doc','Câu 42–43','Tâm trạng nhân vật tiểu thuyết','소설'],
-  ['r4445','doc','Câu 44–45','Từ vựng vấn đề xã hội','사회 이슈'],
-  ['rall','doc','Cả đề Đọc','Từ hay ra nhất + làm đề','전체'],
-  ['n412','nghe','Nghe 4–12','Hội thoại theo địa điểm','장소별 대화'],
-  ['n15','nghe','Nghe 15','Bản tin','뉴스'],
-  ['n3132','nghe','Nghe 31–32','Tranh luận tán thành / phản đối','찬반'],
-  ['nall','nghe','Cả đề Nghe','Đề nghe, bài luyện nghe','전체'],
-  ['w51','viet','Câu 51','Điền câu vào văn bản thực dụng','실용문'],
-  ['w52','viet','Câu 52','Điền câu vào đoạn văn','설명문'],
-  ['w53','viet','Câu 53','Viết đoạn văn theo biểu đồ','그래프'],
-  ['w54','viet','Câu 54','Nghị luận 600–700 chữ','논술'],
-  ['s30','nen','TOPIK 30 ngày','Từ vựng trung cấp theo ngày','30일'],
-  ['seoul','nen','Giáo trình Seoul','Từ vựng, ngữ pháp, bài tập 1A–3B','서울대'],
-  ['soca','nen','Phát âm','Quy tắc phát âm','발음']
-];
-/* Học liệu: [dạng, loại, tên, link, mô tả, tên ngắn trên nút (khi một dạng có nhiều học liệu cùng loại)] — chỉ trang dành cho học sinh (giáo án / bản trình chiếu của cô không đưa vào đây) */
-var L = [
-  ['r12','g','Bảng ngữ pháp câu 1–2','tu-vung/#c=1-2','67 mẫu xếp theo chức năng, có câu ví dụ'],
-  ['r12','s','Học câu 1–2 theo cặp dễ nhầm','ngu-phap-12/','4 buổi: đuôi nối, đuôi câu, tiểu từ, trộn đề'],
-  ['r12','p','Tự luyện ngữ pháp câu 1–4 · 20 ngày','ngu-phap-luyen/#d=1','Mỗi ngày một nhóm, ôn ngắt quãng'],
-  ['r34','g','Bảng ngữ pháp tương đồng câu 3–4','tu-vung/#c=3-4','43 nhóm đồng nghĩa, 111 mẫu'],
-  ['r34','s','Học câu 3–4 theo tần suất đề thật','ngu-phap-34/','Cặp hay ra, quy trình 3 bước, bẫy'],
-  ['r34','p','Tự luyện ngữ pháp câu 1–4 · 20 ngày','ngu-phap-luyen/#d=1','Mỗi ngày một nhóm, ôn ngắt quãng'],
-  ['r5','v','Từ vựng câu 5','tu-vung/#c=5','Cụm từ theo từng đồ vật'],
-  ['r5','s','Học câu 5 · Quảng cáo sản phẩm','cau-5/','Tín hiệu, chuỗi suy luận, bẫy chữ'],
-  ['r5','p','Luyện câu 5 như thi','cau-5/#b=3','16 câu, 30 giây/câu'],
-  ['r68','v','Từ vựng câu 6–8','tu-vung/#c=6-8','Quảng cáo cửa hàng, công ích, chi tiết'],
-  ['r910','v','Từ vựng câu 9–10','tu-vung/#c=9-10','Thông báo, poster, biểu đồ'],
-  ['r1112','v','Từ vựng câu 11–12','tu-vung/#c=11-12','Chủ đề bài báo'],
-  ['r1315','s','Học câu 13–15 · Sắp xếp câu','cau-13-15/','Dấu bám, chọn câu đầu, so một vị trí'],
-  ['r1315','p','Tự luyện 66 câu sắp xếp','cau-13-15/luyen/','2 bước, có gợi ý'],
-  ['r1618','s','Học câu 16–18 · Điền chỗ trống','cau-16-18/','Đọc qua ô, 5 tín hiệu, 4 bẫy'],
-  ['r1618','p','Luyện câu 16–18 như thi','cau-16-18/#b=3','1 phút/câu'],
-  ['r1920','v','Phó từ nối câu 19–20','tu-vung/#c=19-20','접속 부사 và phó từ đi cặp'],
-  ['r1920','s','Học câu 19–20','cau-19-20/','Tìm cặp → xét quan hệ → chủ đề'],
-  ['r1920','p','Luyện câu 19–20 như thi','cau-19-20/#b=3','1 phút 30/bài'],
-  ['r2122','v','Quán ngữ câu 21–22','tu-vung/#c=21-22','관용 표현 hay ra'],
-  ['r2324','v','Từ cảm xúc câu 23–24','tu-vung/#c=23-24','감정 표현'],
-  ['r2324','s','Học câu 23–24 · Tâm trạng','cau-23-24/','Tìm nguyên nhân, chia + / −, sắc thái'],
-  ['r2324','p','Luyện câu 23–24 như thi','cau-23-24/#b=3','2 phút/bài'],
-  ['r2527','v','Từ vựng tiêu đề báo','tu-vung/#c=25-27','신문 기사 제목'],
-  ['r2527','p','63 tiêu đề báo theo chủ đề','tu-vung/tieu-de/','Tách khúc, nghĩa từ, che đáp án'],
-  ['r4243','v','Từ cảm xúc trong tiểu thuyết','tu-vung/#c=42-43','Tượng thanh, tượng hình, cảm xúc'],
-  ['r4243','s','Học câu 42–43 · Tiểu thuyết','cau-42-43/','Đúng người, đúng lúc, nguyên nhân'],
-  ['r4243','p','Luyện câu 42–43 như thi','cau-42-43/#b=3','2 phút 30/bài'],
-  ['r4445','v','Từ vựng vấn đề xã hội','tu-vung/#c=44-45','사회 이슈 어휘'],
-  ['rall','v','⭐ Từ cốt lõi TOPIK II','tu-vung/#k=uu','Từ gặp trong nhiều đề đọc nhất, chia 4 tầng','⭐ Từ cốt lõi'],
-  ['rall','v','Tổng hợp từ vựng theo câu','tu-vung/','Mọi câu Đọc · Nghe · Viết','Từ vựng theo câu'],
-  ['rall','p','Phòng thi thử','thi-thu/','Đề cô giao, chấm điểm, mã nộp bài'],
-  ['n412','v','Từ vựng nghe theo địa điểm','tu-vung/#c=n4','장소별 대화'],
-  ['n15','v','Từ vựng bản tin','tu-vung/#c=n15','뉴스'],
-  ['n3132','v','Biểu hiện tán thành / phản đối','tu-vung/#c=n31','찬반 표현'],
-  ['nall','v','Toàn bộ từ vựng Nghe','tu-vung/#k=nghe',''],
-  ['nall','p','Bài luyện nghe cô giao','thi-thu/','Nằm trong app luyện tập'],
-  ['w51','v','Từ vựng câu 51','tu-vung/#c=51','실용문','Từ vựng'],
-  ['w51','s','Dấu hiệu nhận biết câu 51','dau-hieu-51-52/#b=51','Thấy chữ gì quanh ô → viết mẫu gì'],
-  ['w51','v','Cặp danh từ → động từ','dau-hieu-51-52/#b=tu','Đoán động từ cho ô trống','Cặp danh – động từ'],
-  ['w51','p','Dịch đề câu 51','dich-51-52/#b=51','36 đề, tự chấm','Dịch đề'],
-  ['w51','p','Luyện nhanh dấu hiệu 51–52','dau-hieu-51-52/#b=luyen','38 câu trắc nghiệm','Luyện dấu hiệu'],
-  ['w52','s','Dấu hiệu nhận biết câu 52','dau-hieu-51-52/#b=52','Từ nối → đuôi, Chép hay Lật'],
-  ['w52','v','Cặp danh từ → động từ','dau-hieu-51-52/#b=tu','Đoán động từ cho ô trống'],
-  ['w52','p','Dịch đề câu 52','dich-51-52/#b=52','16 đề, tự chấm','Dịch đề'],
-  ['w52','p','Luyện nhanh dấu hiệu 51–52','dau-hieu-51-52/#b=luyen','38 câu trắc nghiệm','Luyện dấu hiệu'],
-  ['w53','v','Từ vựng viết biểu đồ','tu-vung/#c=53','그래프 쓰기'],
-  ['w54','v','Tục ngữ câu 54','tu-vung/#c=54','속담'],
-  ['w54','s','Học câu 54','viet-54/','Dàn ý 3 đoạn, văn viết, khung đoạn'],
-  ['w54','p','Viết cả bài câu 54','viet-54/#b=viet','Bấm giờ 30 phút, gửi bài cho cô','Viết cả bài'],
-  ['s30','v','Từ vựng TOPIK trung cấp 30 ngày','tu-30/','Học thẻ từ, điền câu, dễ nhầm, ôn'],
-  ['seoul','v','Từ vựng giáo trình Seoul','seoul/','1A–3B theo bài + từ cốt lõi'],
-  ['seoul','g','Ngữ pháp giáo trình Seoul','seoul/ngu-phap/','Mục lục theo cuốn, ví dụ có loa','Ngữ pháp Seoul'],
-  ['seoul','p','Bài tập Seoul theo bài','seoul/bai-tap/','Từ vựng + ngữ pháp, chấm ngay','Bài tập Seoul'],
-  ['seoul','g','Tiểu từ dễ nhầm','seoul/tieu-tu/','5 nhóm tiểu từ hay nhầm + luyện tập','Tiểu từ dễ nhầm'],
-  ['seoul','p','Luyện tiểu từ','seoul/tieu-tu/#b=lt','Chọn, gõ, tìm câu sai, kiểm tra cuối','Luyện tiểu từ'],
-  ['soca','s','Nối âm 연음','so-cap/noi-am/','']
-];
-
-function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
-function lsGet(k){ try{ return JSON.parse(localStorage.getItem(k)); }catch(e){ return null; } }
-function lsSet(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
-function norm(s){ return String(s).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/đ/g,'d').replace(/[–—]/g,'-'); }
-var DM = {}; D.forEach(function(d){ DM[d[0]] = d; });
-
-var S = lsGet('nari-home') || {};
-S.v = S.v === 'loai' ? 'loai' : 'dang';
-S.p = PARTS[S.p] ? S.p : 'doc';
-
-/* Bài cô giao em đã mở (cùng bộ nhớ với app thi-thu/) */
 (function(){
-  var me = lsGet('nari-app-me');
-  if(me && me.n) document.getElementById('hi').textContent = 'Chào ' + me.n + '! Mọi học liệu của em đều ở đây.';
-  var KIND = {l:'Lộ trình từ vựng', v:'Bài từ vựng', d:'Đề thi thử', n:'Bài luyện nghe', w:'Bài luyện viết', s:'Bảng sửa bài viết', r:'Đánh giá của cô'};
-  var list = (lsGet('nari-app-saved') || []).slice().sort(function(a, b){ return (b.at || 0) - (a.at || 0); }).slice(0, 4);
-  document.getElementById('saved').innerHTML = list.map(function(x){
-    return '<li><a href="thi-thu/' + esc(x.h) + '"><span>' + esc(x.t || KIND[x.k] || 'Bài của em') + '</span><small>' + esc(KIND[x.k] || '') + '</small></a></li>';
-  }).join('');
-})();
+  /* Dạng câu: [câu đầu, câu cuối, tên] */
+  var PARTS = [['doc', 'Đọc', 'Câu 1–50'], ['nghe', 'Nghe', 'Câu 1–50'], ['viet', 'Viết', 'Câu 51–54']];
+  var DANG = {
+    doc: [[1,2,'Ngữ pháp điền chỗ trống'],[3,4,'Ngữ pháp tương đồng'],[5,5,'Quảng cáo sản phẩm'],[6,8,'Quảng cáo, khẩu hiệu'],[9,10,'Thông báo, biểu đồ'],
+      [11,12,'Nội dung bài báo'],[13,15,'Sắp xếp câu'],[16,18,'Điền vào chỗ trống'],[19,20,'Phó từ nối + chủ đề'],[21,22,'Quán ngữ + nội dung'],
+      [23,24,'Tâm trạng trong tùy bút'],[25,27,'Tiêu đề báo'],[28,31,'Điền chỗ trống đoạn dài'],[32,34,'Nội dung khớp'],[35,38,'Chủ đề đoạn văn'],
+      [39,41,'Chèn câu'],[42,43,'Tiểu thuyết'],[44,45,'Đoạn văn xã hội'],[46,47,'Thái độ người viết'],[48,50,'Mục đích, thái độ']],
+    nghe: [[1,3,'Chọn tranh, biểu đồ'],[4,8,'Câu nói tiếp theo'],[9,12,'Hành động tiếp theo'],[13,16,'Nội dung khớp'],[17,20,'Ý chính người nói'],
+      [21,30,'Hội thoại, phỏng vấn'],[31,40,'Tranh luận, bài giảng'],[41,50,'Bài giảng, tài liệu']],
+    viet: [[51,51,'Điền câu văn bản thực dụng'],[52,52,'Điền câu đoạn văn'],[53,53,'Viết đoạn văn theo biểu đồ'],[54,54,'Nghị luận 600–700 chữ']]
+  };
+  /* Học liệu theo dạng: '<phần>:<câu đầu>' → [[loại, tên, link, mô tả]] — chỉ trang dành cho học sinh (không đưa giáo án / bản trình chiếu của cô) */
+  var HL = {
+    'doc:1': [['Chiến thuật','Học câu 1–2 theo cặp dễ nhầm','ngu-phap-12/','4 buổi: đuôi nối, đuôi câu, tiểu từ, trộn đề'],['Luyện tập','Tự luyện ngữ pháp câu 1–4 · 20 ngày','ngu-phap-luyen/#d=1','Mỗi ngày một nhóm, ôn ngắt quãng']],
+    'doc:3': [['Chiến thuật','Học câu 3–4 theo tần suất đề thật','ngu-phap-34/','Cặp hay ra, quy trình 3 bước, bẫy'],['Luyện tập','Tự luyện ngữ pháp câu 1–4 · 20 ngày','ngu-phap-luyen/#d=1','Mỗi ngày một nhóm, ôn ngắt quãng']],
+    'doc:5': [['Chiến thuật','Học câu 5 · Quảng cáo sản phẩm','cau-5/','Cụm từ theo đồ vật, tín hiệu, bẫy chữ'],['Luyện tập','Luyện câu 5 như thi','cau-5/#b=3','16 câu, 30 giây/câu']],
+    'doc:13': [['Chiến thuật','Học câu 13–15 · Sắp xếp câu','cau-13-15/','Dấu bám, chọn câu đầu, so một vị trí'],['Luyện tập','Tự luyện 66 câu sắp xếp','cau-13-15/luyen/','Làm 2 bước, có gợi ý']],
+    'doc:16': [['Chiến thuật','Học câu 16–18 · Điền chỗ trống','cau-16-18/','Đọc qua ô, 5 tín hiệu, 4 bẫy'],['Luyện tập','Luyện câu 16–18 như thi','cau-16-18/#b=3','1 phút/câu']],
+    'doc:19': [['Chiến thuật','Học câu 19–20','cau-19-20/','Tìm cặp → xét quan hệ → chủ đề'],['Luyện tập','Luyện câu 19–20 như thi','cau-19-20/#b=3','1 phút 30/bài']],
+    'doc:23': [['Chiến thuật','Học câu 23–24 · Tâm trạng','cau-23-24/','Tìm nguyên nhân, chia + / −, sắc thái'],['Luyện tập','Luyện câu 23–24 như thi','cau-23-24/#b=3','2 phút/bài']],
+    'doc:25': [['Luyện tập','63 tiêu đề báo theo chủ đề','tu-vung/tieu-de/','Tách khúc, nghĩa từ, che đáp án']],
+    'doc:42': [['Chiến thuật','Học câu 42–43 · Tiểu thuyết','cau-42-43/','Đúng người, đúng lúc, nguyên nhân'],['Luyện tập','Luyện câu 42–43 như thi','cau-42-43/#b=3','2 phút 30/bài']],
+    'viet:51': [['Chiến thuật','Dấu hiệu nhận biết câu 51','dau-hieu-51-52/#b=51','Thấy chữ gì quanh ô → viết mẫu gì'],['Từ vựng','Cặp danh từ → động từ','dau-hieu-51-52/#b=tu','Đoán động từ cho ô trống'],
+      ['Luyện tập','Dịch đề câu 51','dich-51-52/#b=51','36 đề, tự chấm'],['Luyện tập','Luyện nhanh dấu hiệu 51–52','dau-hieu-51-52/#b=luyen','38 câu trắc nghiệm']],
+    'viet:52': [['Chiến thuật','Dấu hiệu nhận biết câu 52','dau-hieu-51-52/#b=52','Từ nối → đuôi, Chép hay Lật'],['Từ vựng','Cặp danh từ → động từ','dau-hieu-51-52/#b=tu','Đoán động từ cho ô trống'],
+      ['Luyện tập','Dịch đề câu 52','dich-51-52/#b=52','16 đề, tự chấm'],['Luyện tập','Luyện nhanh dấu hiệu 51–52','dau-hieu-51-52/#b=luyen','38 câu trắc nghiệm']],
+    'viet:54': [['Chiến thuật','Học câu 54','viet-54/','Dàn ý 3 đoạn, văn viết, khung đoạn'],['Luyện tập','Viết cả bài câu 54','viet-54/#b=viet','Bấm giờ 30 phút, gửi bài cho cô']]
+  };
+  /* Đề nghe có file nghe (mới trước) */
+  var NGHE = ['Etk096n', 'Etk091n', 'Etk083n'];
+  var TAB = [['tu', 'Từ vựng'], ['hl', 'Học liệu'], ['de', 'Câu đề thi']];
 
-function itemHTML(x, withDang){
-  var d = DM[x[0]], k = K[x[1]];
-  return '<a class="it ' + x[1] + '" href="' + esc(x[3]) + '" data-u="' + esc(x[3]) + '"><span class="ic">' + k[1] + '</span><span><b>' + esc(x[2]) + '</b>' +
-    (x[4] ? '<small>' + esc(x[4]) + '</small>' : '') +
-    (withDang ? '<span class="tag">' + esc(d[2]) + '</span><span class="tag">' + esc(K[x[1]][0]) + '</span>' : '') + '</span></a>';
-}
-function render(){
-  document.querySelectorAll('#view button').forEach(function(b){ b.classList.toggle('on', b.dataset.v === S.v); });
-  var q = norm(document.getElementById('q').value.trim());
-  var part = document.getElementById('part'), out = document.getElementById('out'), lg = document.getElementById('legend');
-  if(q){ /* tìm trong mọi phần */
-    part.hidden = true; lg.hidden = true;
-    var n = q.replace(/^cau\s*/, '');
-    var seenQ = {};
-    var hit = L.filter(function(x){
-      var d = DM[x[0]];
-      if(/^\d+$/.test(n)){ var m = d[2].match(/(\d+)(?:-|–)?(\d+)?/); if(m){ var a = +m[1], b = +(m[2] || m[1]); return +n >= a && +n <= b; } return false; }
-      return norm([d[2], d[3], d[4], x[2], x[4], K[x[1]][0], PARTS[d[1]]].join(' ')).indexOf(q) >= 0;
-    });
-    hit = hit.filter(function(x){ if(seenQ[x[3]]) return false; seenQ[x[3]] = 1; return true; });
-    out.innerHTML = hit.length ? '<div class="list">' + hit.map(function(x){ return itemHTML(x, true); }).join('') + '</div>' : '<p class="empty">Chưa có học liệu khớp. Em hỏi cô qua Zalo nhé.</p>';
-    return;
+  var partsEl = document.getElementById('parts'), nav = document.getElementById('nav'), out = document.getElementById('out');
+  var S = {k: 'doc', c: 1, t: ''}, vocab = null, cache = {};
+  function esc(s){ return String(s == null ? '' : s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  function ul(s){ return esc(s).replace(/__(.+?)__/g, '<u>$1</u>'); }
+  function get(u){ if(!cache[u]) cache[u] = fetch(u).then(function(r){ if(!r.ok) throw r.status; return r.json(); }); return cache[u]; }
+  function cauTxt(d){ return d[0] === d[1] ? 'Câu ' + d[0] : 'Câu ' + d[0] + '–' + d[1]; }
+  function cur(){ var L = DANG[S.k]; for(var i = 0; i < L.length; i++) if(L[i][0] === S.c) return L[i]; return L[0]; }
+
+  /* ---- Từ vựng: phần trong kho từ có số câu trùng dạng ---- */
+  function secRange(sec){
+    var m = /^(Câu|Nghe) (\d+)(?:–(\d+))?/.exec(sec);
+    if(!m) return null;
+    return {k: m[1] === 'Nghe' ? 'nghe' : (+m[2] >= 51 ? 'viet' : 'doc'), a: +m[2], b: +(m[3] || m[2])};
   }
-  part.hidden = false; lg.hidden = S.v !== 'dang';
-  if(S.v === 'dang'){
-    part.innerHTML = Object.keys(PARTS).map(function(p){ return '<button data-p="' + p + '"' + (p === S.p ? ' class="on"' : '') + '>' + PARTS[p] + '</button>'; }).join('');
-    lg.innerHTML = Object.keys(K).map(function(k){ return '<span class="ch ' + k + '">' + K[k][1] + ' ' + K[k][0] + '</span>'; }).join('');
-    out.innerHTML = '<div class="grid">' + D.filter(function(d){ return d[1] === S.p; }).map(function(d){
-      var its = L.filter(function(x){ return x[0] === d[0]; }).sort(function(a, b){ return 'vgsp'.indexOf(a[1]) - 'vgsp'.indexOf(b[1]); });
-      if(!its.length) return '';
-      var cnt = {}; its.forEach(function(x){ cnt[x[1]] = (cnt[x[1]] || 0) + 1; });
-      return '<div class="cd"><h3><span>' + esc(d[2]) + '</span> · ' + esc(d[3]) + '</h3><p class="ko">' + esc(d[4]) + '</p><div class="chs">' +
-        its.map(function(x){ return '<a class="ch ' + x[1] + '" href="' + esc(x[3]) + '" data-u="' + esc(x[3]) + '" title="' + esc(x[2] + (x[4] ? ' — ' + x[4] : '')) + '">' + K[x[1]][1] + ' ' + esc(cnt[x[1]] > 1 ? (x[5] || x[2]) : K[x[1]][0]) + '</a>'; }).join('') +
-        '</div></div>';
+  function vocabFor(d){
+    var secs = {}, order = [];
+    (vocab.g || []).slice().sort(function(x, y){ return (x.so - y.so) || (x.o - y.o); }).forEach(function(g){
+      var r = secRange(g.sec);
+      if(!r || r.k !== S.k || r.b < d[0] || r.a > d[1]) return;
+      if(!secs[g.sec]){ secs[g.sec] = {r: r, g: []}; order.push(g.sec); }
+      secs[g.sec].g.push(g);
+    });
+    return order.map(function(s){ return {sec: s, r: secs[s].r, g: secs[s].g}; });
+  }
+  function tuHTML(d){
+    var list = vocabFor(d);
+    if(!list.length) return '<p class="empty">Dạng này chưa có bảng từ riêng. Em học <a href="tu-vung/#k=uu">⭐ Từ cốt lõi</a> trước nhé.</p>';
+    var link = S.k === 'nghe' ? 'tu-vung/#c=n' + list[0].r.a : 'tu-vung/#c=' + d[0] + (d[1] > d[0] ? '-' + d[1] : '');
+    var h = '<div class="tools"><button type="button" id="tg">Ẩn nghĩa</button><a href="' + link + '">Mở trên trang Từ vựng ›</a></div><div id="tbs">';
+    list.forEach(function(s){
+      h += '<h3 class="kr">' + esc(s.sec) + '</h3>';
+      s.g.forEach(function(g){
+        h += '<div class="blk"><h4>' + esc(g.ko) + ' <small>' + esc(g.vi) + '</small></h4><div class="tb"><div class="h">Từ</div><div class="h">Nghĩa</div>';
+        g.w.forEach(function(w){ h += '<div class="ko">' + esc(w[1]) + '</div><div class="vi">' + esc(w[2]) + '</div>' + (w[3] ? '<div class="ex">' + ul(w[3]) + '</div>' : ''); });
+        h += '</div></div>';
+      });
+    });
+    return h + '</div>';
+  }
+
+  /* ---- Học liệu ---- */
+  function hlHTML(){
+    var L = HL[S.k + ':' + S.c] || [];
+    if(!L.length) return '<p class="empty">Cô đang soạn học liệu cho dạng này. Trong lúc chờ, em làm thẻ <b>Câu đề thi</b> nhé.</p>';
+    return '<div class="hl">' + L.map(function(x){ return '<a href="' + esc(x[2]) + '"><span class="tag">' + esc(x[0]) + '</span><span><b>' + esc(x[1]) + '</b><small>' + esc(x[3]) + '</small></span></a>'; }).join('') + '</div>';
+  }
+
+  /* ---- Câu đề thi ---- */
+  var ANSF = ['1-2','3-4','5-8','9-10','11-12','13-15','16-18','19-20','21-22','23-24','25-27','28-31','32-34','35-38','39-41','42-43','44-45','46-47','48-50'];
+  function ansFiles(d){ return ANSF.filter(function(f){ var p = f.split('-'); return +p[1] >= d[0] && +p[0] <= d[1]; }); }
+  function examOrder(a, b){
+    var ra = /^Etk(\d+)/.exec(a), rb = /^Etk(\d+)/.exec(b);
+    if(ra && rb) return +rb[1] - +ra[1];
+    if(ra) return -1; if(rb) return 1;
+    return a < b ? -1 : 1;
+  }
+  var deState = null;
+  function deStart(d){
+    var tok = deState = {d: d, list: [], ans: {}, i: 0};
+    out.querySelector('#de').innerHTML = '<p class="empty">Đang tải câu đề…</p>';
+    if(S.k === 'viet'){
+      get('thi-thu/viet/index.json').then(function(idx){
+        if(tok !== deState) return;
+        tok.list = idx.filter(function(x){ return String(x.type) === String(d[0]) && x.round; }).sort(function(a, b){ return b.round - a.round; }).map(function(x){ return x.id; });
+        deMore(tok, true);
+      }).catch(deFail);
+      return;
+    }
+    if(S.k === 'nghe'){ tok.list = NGHE.slice(); deMore(tok, true); return; }
+    Promise.all(ansFiles(d).map(function(f){ return get('dau-hieu/data/' + f + '.json'); })).then(function(rs){
+      if(tok !== deState) return;
+      var ex = {};
+      rs.forEach(function(r){ r.forEach(function(x){ if(x.n >= d[0] && x.n <= d[1]){ tok.ans[x.e + '-' + x.n] = x.a; ex[x.e] = 1; } }); });
+      tok.list = Object.keys(ex).sort(examOrder);
+      deMore(tok, true);
+    }).catch(deFail);
+  }
+  function deFail(){ out.querySelector('#de').innerHTML = '<p class="empty">Chưa tải được câu đề. Em kiểm tra mạng rồi bấm lại thẻ nhé.</p>'; }
+  function deMore(tok, first){
+    var box = out.querySelector('#de'), n = S.k === 'viet' ? 6 : 4, ids = tok.list.slice(tok.i, tok.i + n);
+    tok.i += ids.length;
+    var base = S.k === 'viet' ? 'thi-thu/viet/' : 'thi-thu/de/';
+    Promise.all(ids.map(function(id){ return get(base + id + '.json').catch(function(){ return null; }); })).then(function(docs){
+      if(tok !== deState) return;
+      var h = docs.map(function(doc){ return doc ? (S.k === 'viet' ? vietHTML(doc) : examHTML(doc, tok)) : ''; }).join('');
+      if(first) box.innerHTML = '<p class="intro">' + tok.list.length + ' đề có dạng này' + (S.k === 'nghe' ? ' (chỉ câu đã có file nghe; đáp án đề nghe cô chữa trên lớp)' : S.k === 'doc' ? ' · đề thật xếp trước. Bấm vào đáp án để xem đúng sai.' : ' · đề thật mới trước.') + '</p>';
+      var old = box.querySelector('.more'); if(old) old.remove();
+      box.insertAdjacentHTML('beforeend', h);
+      if(tok.i < tok.list.length) box.insertAdjacentHTML('beforeend', '<button class="more" type="button">Xem thêm đề (' + (tok.list.length - tok.i) + ')</button>');
+    });
+  }
+  function img(src){ return src ? '<img loading="lazy" src="thi-thu/' + esc(src) + '" alt="">' : ''; }
+  function examHTML(doc, tok){
+    var d = tok.d, qs = doc.q || [], h = '', lastPs = -1, lastAudio = '', lastGr = '', any = false;
+    for(var i = 0; i < qs.length; i++){
+      var q = qs[i];
+      if(q.group) lastGr = q.group;
+      if(q.n < d[0] || q.n > d[1]) continue;
+      if(S.k === 'nghe' && !q.audio) continue;
+      if(!any){ h += '<div class="gr kr">' + esc(lastGr) + '</div>'; any = true; }
+      /* đoạn văn: của câu này, hoặc câu trước có đoạn văn (câu dùng chung) */
+      var pi = i;
+      if(!q.passage && !q.image && q.share) for(pi = i - 1; pi >= 0 && !qs[pi].passage && !qs[pi].image; pi--);
+      if(pi >= 0 && pi !== lastPs && (qs[pi].passage || qs[pi].image)){
+        h += img(qs[pi].image) + (qs[pi].passage ? '<div class="ps kr">' + ul(qs[pi].passage) + '</div>' : '');
+        lastPs = pi;
+      }
+      if(q.audio && q.audio !== lastAudio){ h += '<audio controls preload="none" src="thi-thu/' + esc(q.audio) + '"></audio>'; lastAudio = q.audio; }
+      var a = tok.ans[doc.id + '-' + q.n];
+      h += '<div class="q" data-a="' + (a == null ? '' : a) + '"><div class="st kr"><b>' + q.n + '.</b>' + ul(q.stem || '') + '</div><div class="op">' +
+        (q.opts || []).map(function(o, j){ return '<button type="button" data-j="' + j + '">' + '①②③④'[j] + ' ' + ul(o) + '</button>'; }).join('') + '</div><div class="fb"></div></div>';
+    }
+    return any ? '<div class="de"><div class="t">' + esc(doc.t) + '</div><div class="bd">' + h + '</div></div>' : '';
+  }
+  function vietHTML(w){
+    var src = w.img ? 'thi-thu/viet/' + String(w.img).split('/').pop() : '';
+    var k = w.keys || {}, key = '';
+    if(+w.type <= 52) key = '㉠ ' + (k.a || []).join(' / ') + (k.b && k.b.length ? '\n㉡ ' + k.b.join(' / ') : '');
+    else key = (k.a || [])[0] || '';
+    return '<div class="de"><div class="t">' + esc(w.src || w.id) + '</div><div class="bd">' + (src ? '<img loading="lazy" src="' + esc(src) + '" alt="">' : '') +
+      '<div class="ps kr">' + esc(w.passage || '') + '</div>' + (key ? '<details class="key"><summary>' + (+w.type <= 52 ? 'Xem đáp án' : 'Xem bài mẫu') + '</summary><div class="kr">' + esc(key) + '</div></details>' : '') + '</div></div>';
+  }
+
+  /* ---- Vẽ trang ---- */
+  function render(){
+    var d = cur(); S.c = d[0];
+    partsEl.innerHTML = PARTS.map(function(p){ return '<button type="button" data-k="' + p[0] + '"' + (p[0] === S.k ? ' class="on"' : '') + '>' + p[1] + '<small>' + p[2] + '</small></button>'; }).join('');
+    nav.innerHTML = DANG[S.k].map(function(x){ return '<a href="#k=' + S.k + '&c=' + x[0] + '"' + (x[0] === S.c ? ' class="on"' : '') + '>' + cauTxt(x) + '</a>'; }).join('');
+    var hasTu = vocab && vocabFor(d).length, hasHl = (HL[S.k + ':' + S.c] || []).length;
+    if(!S.t) S.t = hasTu ? 'tu' : hasHl ? 'hl' : 'de';
+    var h = '<h2>' + cauTxt(d) + ' <small>· ' + esc(d[2]) + '</small></h2><div class="tabs">' + TAB.map(function(t){
+      var n = t[0] === 'hl' ? hasHl : 0;
+      return '<button type="button" data-t="' + t[0] + '"' + (t[0] === S.t ? ' class="on"' : '') + '>' + t[1] + (n ? ' <small>(' + n + ')</small>' : '') + '</button>';
     }).join('') + '</div>';
-  } else {
-    part.innerHTML = Object.keys(K).map(function(k){ return '<button data-p="' + k + '"' + (k === S.k ? ' class="on"' : '') + '>' + K[k][1] + ' ' + K[k][0] + '</button>'; }).join('');
-    var seen = {};
-    var its = L.filter(function(x){ if(x[1] !== S.k || seen[x[3]]) return false; seen[x[3]] = 1; return true; });
-    var groups = Object.keys(PARTS).map(function(p){
-      var g = its.filter(function(x){ return DM[x[0]][1] === p; });
-      return g.length ? '<h3 style="font-size:15px;color:var(--muted);margin:14px 0 8px">' + PARTS[p] + '</h3><div class="list">' + g.map(function(x){ return itemHTML(x, false); }).join('') + '</div>' : '';
-    });
-    out.innerHTML = groups.join('');
+    if(S.t === 'tu') h += vocab ? tuHTML(d) : '<p class="empty">Đang tải từ vựng…</p>';
+    else if(S.t === 'hl') h += hlHTML();
+    else h += '<div id="de"></div>';
+    out.innerHTML = h;
+    if(S.t === 'de') deStart(d);
   }
-}
-if(!K[S.k]) S.k = 'v';
-document.getElementById('view').onclick = function(e){ var b = e.target.closest('button'); if(!b) return; S.v = b.dataset.v; lsSet('nari-home', S); render(); };
-document.getElementById('part').onclick = function(e){ var b = e.target.closest('button'); if(!b) return; if(S.v === 'dang') S.p = b.dataset.p; else S.k = b.dataset.p; lsSet('nari-home', S); render(); };
-document.getElementById('q').oninput = render;
-
-/* Em vừa mở: nhớ 4 học liệu gần nhất trên máy này */
-function renderRecent(){
-  var r = (lsGet('nari-home-recent') || []).map(function(u){ return L.filter(function(x){ return x[3] === u; })[0]; }).filter(Boolean).slice(0, 4);
-  document.getElementById('recentBox').hidden = !r.length;
-  document.getElementById('recent').innerHTML = r.map(function(x){ return itemHTML(x, true); }).join('');
-}
-document.addEventListener('click', function(e){
-  var a = e.target.closest('a[data-u]'); if(!a) return;
-  var r = (lsGet('nari-home-recent') || []).filter(function(u){ return u !== a.dataset.u; });
-  r.unshift(a.dataset.u); lsSet('nari-home-recent', r.slice(0, 8));
-});
-render(); renderRecent();
+  function go(k, c, t){
+    S.k = k; S.c = c; S.t = t || '';
+    var hs = '#k=' + k + '&c=' + c + (t ? '&t=' + t : '');
+    if(location.hash !== hs) history.replaceState(null, '', hs);
+    render();
+  }
+  function fromHash(){
+    var m = {}; location.hash.replace(/^#/, '').split('&').forEach(function(p){ var kv = p.split('='); if(kv[0]) m[kv[0]] = decodeURIComponent(kv[1] || ''); });
+    S.k = DANG[m.k] ? m.k : 'doc';
+    S.c = +m.c || DANG[S.k][0][0];
+    var c = DANG[S.k].filter(function(x){ return S.c >= x[0] && S.c <= x[1]; })[0]; S.c = c ? c[0] : DANG[S.k][0][0];
+    S.t = /^(tu|hl|de)$/.test(m.t) ? m.t : '';
+    render();
+  }
+  partsEl.addEventListener('click', function(e){ var b = e.target.closest('button'); if(b) go(b.dataset.k, DANG[b.dataset.k][0][0]); });
+  nav.addEventListener('click', function(e){ var a = e.target.closest('a'); if(!a) return; e.preventDefault(); go(S.k, +/c=(\d+)/.exec(a.getAttribute('href'))[1]); window.scrollTo(0, Math.min(window.scrollY, nav.offsetTop)); });
+  out.addEventListener('click', function(e){
+    var t = e.target.closest('.tabs button'); if(t){ go(S.k, S.c, t.dataset.t); return; }
+    if(e.target.id === 'tg'){ var on = document.getElementById('tbs').classList.toggle('hide'); e.target.textContent = on ? 'Hiện nghĩa' : 'Ẩn nghĩa'; return; }
+    if(e.target.classList.contains('vi') && e.target.closest('.hide')){ e.target.classList.toggle('show'); return; }
+    if(e.target.classList.contains('more')){ deMore(deState, false); return; }
+    var b = e.target.closest('.op button'); if(!b) return;
+    var q = b.closest('.q'), a = q.dataset.a, bs = q.querySelectorAll('.op button');
+    if(a === ''){ [].forEach.call(bs, function(x){ x.classList.toggle('pick', x === b); }); return; }
+    if(q.classList.contains('done')) return;
+    q.classList.add('done');
+    var ok = +b.dataset.j === +a;
+    b.classList.add(ok ? 'ok' : 'bad'); bs[+a].classList.add('ok');
+    q.querySelector('.fb').textContent = ok ? 'Đúng rồi!' : 'Chưa đúng — đáp án là ' + '①②③④'[+a] + '.';
+  });
+  window.addEventListener('hashchange', fromHash);
+  out.innerHTML = '<p class="empty">Đang tải…</p>';
+  get('thi-thu/vocab.json').then(function(v){ vocab = v; }).catch(function(){ vocab = {g: []}; }).then(fromHash);
+})();
 </script>
 </body>
 </html>
