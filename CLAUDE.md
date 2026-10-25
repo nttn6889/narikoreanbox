@@ -640,6 +640,10 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   Ngày 1–11 có phần **“2. Dịch câu · luyện chỗ hay nhầm”** (trước phần Luyện; chiều **Hàn → Việt**; cô muốn bám đúng “Chỗ hay nhầm” của ngày):
   biến `TR[ngày] = [[câu Hàn có __ngữ pháp__, bản dịch có [phần ứng với mẫu], mẫu, nghĩa mẫu]]` (7–10 câu/ngày, Claude soạn; mỗi mẫu nêu trong `tip` một câu,
   cặp dễ nhầm đứng cạnh nhau) → học sinh gõ nghĩa tiếng Việt → “Xem bản dịch” → tự chấm Đúng ý / Chưa đúng (`D.tr['t<ngày>_<i>'] = {t, c, m}`). Sửa `tip` thì sửa `TR` theo.
+  **Phần Dịch câu đang ẩn** (cô bảo để dùng lúc khác: `TR_ON = true` là hiện lại, dữ liệu `TR` giữ nguyên). Thay bằng **“2. Trắc nghiệm nhớ mẫu”** (`mqList`/`mqHTML`, tự sinh từ bảng mẫu
+  `V01_*`/`V03_*` của ngày, theo từng nhóm, cố định theo ngày): `m` mẫu → nghĩa (kèm câu ví dụ), `r` nghĩa → mẫu, `s` tương đồng (câu ví dụ của nhóm câu 3–4, đáp án = mẫu cùng câu ví dụ,
+  nhiễu lấy ở ngày khác). Nhiễu không lấy mẫu cùng gốc đồng nghĩa (`mqSyn`, bắc cầu qua các nhóm V03), nghĩa trùng chữ ≥ 50% hoặc cùng họ nghĩa `MQFAM` (đoán / dù / vì / nếu / để).
+  Bài lưu `D.mq[id câu]`, báo cáo ghi “Trắc nghiệm nhớ mẫu” + câu sai.
 
 ## Học câu 5 quảng cáo sản phẩm (`cau-5/`)
 - Cùng khung với `cau-16-18/`. Ý cô: học từ vựng gắn với cách ví von của quảng cáo, luyện **hai chiều** (đồ vật → chọn tất cả cụm của nó; quảng cáo → đồ vật).
