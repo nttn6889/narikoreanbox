@@ -508,7 +508,7 @@ function drawPoint(x,crumb,list,idx){
   if(on.s1||g)s+=Hk('s1')+(p.yn?ynHTML(p):on.s1?'<div class="goc">'+p.goc+'</div>':'');
   if(g)s+=bookBox(g,b,n);
   if(on.s2)s+=Hk('s2')+tbl(p.chia)+(p.chiaNote&&p.chiaNote.length?'<ul class="nt">'+p.chiaNote.map(function(x){return '<li>'+md(x)+'</li>'}).join('')+'</ul>':'')+
-    (p.bqt||[]).map(bqHTML).join('')+lxBlock(p.chiaLt,p.id+'_ch','✍ Luyện chia','Gõ dạng đã chia (không cần gõ dấu cách) → “Kiểm tra”. Bí thì bấm 💡 Gợi ý.');
+    (p.bqt||[]).map(function(q,i){return bqHTML(q,p.id+'_bq'+i)}).join('')+lxBlock(p.chiaLt,p.id+'_ch',p.bqt&&p.bqt.length?'✍ Luyện chia trộn (quy tắc + bất quy tắc)':'✍ Luyện chia','Gõ dạng đã chia (không cần gõ dấu cách) → “Kiểm tra”. Bí thì bấm 💡 Gợi ý.');
   if(on.sd)s+=Hk('sd',' <span class="soon">'+p.doi.length+' câu gốc</span>')+doiHTML(p);
   if(on.s3)s+=Hk('s3',' <span class="soon">'+p.tinh.length+' tình huống</span>')+'<div class="sits">'+p.tinh.map(function(t,i){
     return '<div class="sit"><div class="h"><b>'+(i+1)+'. '+esc(t.t)+'</b><span class="lv">'+esc(t.lv)+'</span></div><div class="c">'+esc(t.c)+'</div><div class="ex"><span class="ko">'+md(t.ko)+sayBtn(t.ko)+'</span><span class="vi">'+esc(t.vi)+'</span></div><div class="why">'+md(t.why)+'</div>'+lxBlock(t.lt,p.id+'_t'+i,'✍ Luyện tình huống này')+'</div>'}).join('')+'</div>';
@@ -559,9 +559,9 @@ function ynHTML(p){var y=p.yn,s='<div class="yn">';
   if(y.vi)s+='<h4>🇻🇳 Nghĩa tiếng Việt tương đương</h4>'+(y.viN?'<p class="muted" style="margin:0 0 4px;font-size:14.5px">'+md(y.viN)+'</p>':'')+'<div class="scroll"><table class="t vi"><tr><td>Tiếng Việt</td><td>Dùng khi</td><td>Ví dụ</td></tr>'+y.vi.map(function(r){return '<tr><td>'+md(r[0])+'</td><td>'+md(r[1])+'</td><td><span class="ko">'+md(r[2])+'</span>'+(r[3]?'<br><span class="muted">'+md(r[3])+'</span>':'')+'</td></tr>'}).join('')+'</table></div>';
   if(p.goc)s+='<div class="goc" style="margin-top:10px"><b class="gh">Vì sao có nghĩa này?</b> '+p.goc+'</div>';
   return s+'</div>'}
-// bqt: {t tên, r quy tắc, b:[bước chia một từ], ex:[[gốc, đã chia, nghĩa]], ng ngoại lệ / mẹo}
-function bqHTML(q){return '<div class="bq"><b>'+md(q.t)+'</b><div class="r">'+md(q.r)+'</div>'+(q.b?'<ol class="chain">'+q.b.map(function(x){return '<li>'+md(x)+'</li>'}).join('')+'</ol>':'')+
-  (q.ex?'<div class="scroll"><table class="t"><tr><td>Gốc</td><td>Chia</td><td>Nghĩa</td></tr>'+q.ex.map(function(e){return '<tr><td class="ko">'+md(e[0])+'</td><td class="ko">'+md(e[1])+'</td><td>'+md(e[2]||'')+'</td></tr>'}).join('')+'</table></div>':'')+(q.ng?'<div class="ng">'+md(q.ng)+'</div>':'')+'</div>'}
+// bqt: {t tên, r quy tắc, b:[bước chia một từ], ex:[[gốc, đã chia, nghĩa]], ng ngoại lệ / mẹo, lt bài luyện của nhóm}
+function bqHTML(q,key){return '<div class="bq"><b>'+md(q.t)+'</b><div class="r">'+md(q.r)+'</div>'+(q.b?'<ol class="chain">'+q.b.map(function(x){return '<li>'+md(x)+'</li>'}).join('')+'</ol>':'')+
+  (q.ex?'<div class="scroll"><table class="t"><tr><td>Gốc</td><td>Chia</td><td>Nghĩa</td></tr>'+q.ex.map(function(e){return '<tr><td class="ko">'+md(e[0])+'</td><td class="ko">'+md(e[1])+'</td><td>'+md(e[2]||'')+'</td></tr>'}).join('')+'</table></div>':'')+(q.ng?'<div class="ng">'+md(q.ng)+'</div>':'')+lxBlock(q.lt,key,'✍ Luyện nhóm này','Có câu bẫy: từ trông giống nhưng theo quy tắc, hoặc đuôi bắt đầu bằng phụ âm.')+'</div>'}
 // Lỗi hay mắc: câu (chưa đánh dấu) → ① chỗ sai (tô đỏ phần **…**) + loại lỗi → ② vì sao → ③ câu đúng; e.h = câu cô hỏi gợi ý
 var ESTEP=['🔍 Chỉ chỗ sai','❓ Lỗi gì?','✓ Câu đúng','Xong'];
 function saiHTML(p){
