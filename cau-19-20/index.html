@@ -75,6 +75,8 @@ table.t td.n{text-align:right;white-space:nowrap}
 .opt.no{background:#fbecee;border-color:var(--acc);color:var(--acc);text-decoration:line-through}
 .mcq .why{display:none;margin:6px 0 0;font-size:14.5px;color:#333}
 .mcq .why p{margin:3px 0}
+.mcq .why .mv{color:var(--muted)}
+.mcq .why .mv b{color:#333;background:#fff3b0}
 .mcq.done .why{display:block}
 .mcq.done.wrong{border-color:var(--acc)}
 .score{font:bold 15px Arial,sans-serif;color:var(--blue);margin:4px 0 12px}
@@ -497,6 +499,65 @@ MCQ['2d']=[
  ['헬리콥터는 잠자리를 보고 만들었다. 비행기의 날개는 새의 날개를 닮았다. 이처럼 사람들은 자연에서 아이디어를 얻어 많은 물건을 만든다.',['Chi tiết hẹp','Ngược bài','Quá mức','Bài không nói'],'Câu đó đúng với bài nhưng chỉ là một ví dụ; chủ đề phải bao cả bài (câu 이처럼) → Chi tiết hẹp.','Câu 20 hỏi chủ đề. Lựa chọn ‘헬리콥터는 잠자리를 보고 만들었다’ sai vì đâu?'],
  ['이 병은 어린아이들이 걸릴 가능성이 높다. 따라서 아이가 있는 집에서는 손을 자주 씻어야 한다.',['Quá mức','Chép chữ','Ngược bài','Chi tiết hẹp'],'Bài: “khả năng cao” → lựa chọn: “chỉ trẻ em” = nói quá lên → Quá mức.','Câu 20 hỏi nội dung khớp. Lựa chọn ‘이 병은 어린아이들만 걸린다’ sai vì đâu?']
 ];
+/* nghĩa tiếng Việt của câu luyện (cùng thứ tự với MCQ; [ ] = chỗ ô trống / phần ứng với đáp án) — hiện sau khi chọn */
+var MV={
+1:['Mưa nhiều nên đường tắc lắm. [Tuy] đến hơi muộn nhưng tôi vẫn kịp dự cuộc họp.',
+ 'Cách này [liệu] có hiệu quả [thật không]? Nhiều chuyên gia vẫn chưa chắc chắn.',
+ '[Nếu] ngày mai mưa to thì sự kiện sẽ dời sang tuần sau.',
+ 'Bây giờ có xuất phát thì [đằng nào cũng] muộn rồi, nên cứ chuẩn bị từ từ thôi.',
+ 'Tôi đã muốn đi du lịch một mình, nhưng [đến lúc] định đi [thật] thì lại lo lắng nhiều hơn.',
+ 'Lịch họp vẫn chưa được chốt. Cuộc họp hôm nay [biết đâu] sẽ bị dời sang ngày mai.',
+ 'Phải mặc bộ đồ khó chịu thế này ra ngoài thì [thà] không mặc còn hơn.',
+ 'Anh ấy mỗi ngày tập thể dục một tiếng. [Dù vậy] cân nặng không hề giảm chút nào.',
+ 'Tuy chỉ là một cửa hàng nhỏ nhưng chủ quán tận tâm với từng vị khách. Vì thế khách lại tìm đến cửa hàng đó. Rốt cuộc cửa hàng nhỏ ấy trở thành cửa hàng nổi tiếng nhất khu phố.',
+ 'Nhìn điện thoại lâu thì mắt dễ mỏi. Vì vậy các chuyên gia khuyên khoảng một tiếng một lần hãy nhìn ra xa.'],
+2:['Người ta dự đoán rằng có đường mới thì giao thông sẽ thuận tiện hơn. [Trái lại], từ khi có đường, xe dồn đến nhiều hơn nên đường còn tắc hơn.',
+ 'Anh trai thuộc kiểu nói nhiều và năng động. [Trong khi đó] em lại trầm lặng và thích ở một mình.',
+ 'Ở Hàn Quốc, người ta tặng giấy vệ sinh hoặc bột giặt khi đến nhà mới. Giấy vệ sinh mang ý mọi việc được suôn sẻ, còn bột giặt mang ý tài sản sinh sôi như bọt xà phòng. [Như vậy], quà tân gia chứa đựng mong muốn người nhận được thuận lợi.',
+ 'Dạo này nhiều người ngủ không ngon. [Vậy thì] làm thế nào để ngủ ngon? Trước hết, không nên xem điện thoại trước khi ngủ.',
+ 'Quán này đồ ăn ngon mà giá lại rẻ. [Hơn nữa] chủ quán còn thân thiện nên khách không lúc nào ngớt.',
+ 'Khi tập thể dục, cơ thể tiết ra chất làm tâm trạng tốt lên. Chất này giúp giảm căng thẳng. [Vì vậy] có thể nói khi căng thẳng nhiều thì tập thể dục nhẹ nhàng sẽ có ích.',
+ 'Điện thoại thông minh tiện lợi vì có thể tìm thông tin mọi lúc mọi nơi. [Nhưng] nếu dùng quá lâu thì mắt sẽ kém đi và khó ngủ.',
+ 'Bộ phim đó trước khi công chiếu không được mấy ai quan tâm. Nhưng sau khi công chiếu, nhờ tiếng lành đồn xa, khán giả ngày càng tăng. [Rốt cuộc] nó trở thành bộ phim có nhiều khán giả nhất năm đó.'],
+'1a':['Quán ăn đó [tuy] giá đắt nhưng đồ ăn thật sự rất ngon.',
+ '[Nếu] bây giờ nước trên Trái Đất biến mất hết thì sẽ ra sao?',
+ 'Trước khi thi tôi đã tự tin, vậy mà [đến lúc] nhận đề thi [thật] thì đầu óc trống rỗng.',
+ '[Giả sử] có được 100 triệu won, bạn muốn làm gì?',
+ 'Anh ấy [tuy] còn nhỏ tuổi nhưng suy nghĩ rất sâu sắc.'],
+'1b':['Trí tuệ nhân tạo [liệu] có thể thay thế hết công việc của con người [thật không]?',
+ 'Thấy anh ấy không liên lạc gì, [biết đâu] anh ấy đang ốm nặng.',
+ 'Một người chăm chỉ như thế [lẽ nào] lại quên lời hẹn.',
+ 'Hôm nay có buổi thuyết trình quan trọng, [sao lại đúng] hôm nay bị cảm cơ chứ.',
+ '[Không biết] gần đây có hiệu thuốc không ạ?'],
+'1c':['[Đằng nào cũng] phải đi cùng nhau, nên mình xuất phát bây giờ đi.',
+ 'Phải đợi lâu thế này thì [thà] sang quán khác còn hơn.',
+ 'Khoảng cách gần nên [không nhất thiết] phải đi taxi.',
+ 'Thói quen xấu một khi đã hình thành thì [khó mà] sửa được.',
+ 'Từ góc độ người tiêu dùng thì [không nhất thiết] phải mua sản phẩm đắt tiền.'],
+'1e':['Dơi mắt kém nhưng vẫn bay lượn tốt ở chỗ tối. Dơi phát ra âm thanh và nghe âm thanh đó dội lại khi va vào vật thể. Như vậy, dơi nhận biết xung quanh bằng âm thanh thay cho mắt.',
+ 'Nhiều người cho rằng mắc lỗi là đáng xấu hổ. Nhưng lỗi sai trái lại trở thành cơ hội để học hỏi. Vì qua lỗi sai ta biết được mình còn thiếu gì.',
+ 'Gần đây số người ăn cơm một mình đang tăng. Các quán ăn làm chỗ ngồi cho một người, còn ở cửa hàng tiện lợi cơm hộp một người bán rất chạy. Vì vậy sau này sản phẩm và dịch vụ dành cho người sống một mình sẽ càng đa dạng hơn.'],
+'1f':['Công viên này mở cửa từ 9 giờ sáng đến 6 giờ chiều. Thứ Hai là ngày nghỉ. Trong công viên không được đi xe đạp nhưng có thể đi dạo.',
+ 'Theo nghiên cứu, học sinh ăn sáng có khả năng cao là điểm số sẽ tăng. Vì bữa sáng cung cấp năng lượng cho não.',
+ '70% người Hàn Quốc uống từ một cốc cà phê trở lên mỗi ngày. Đặc biệt người ở độ tuổi 20 uống cà phê nhiều nhất.'],
+'2a':['Người ta nghĩ rằng tăng giá thì khách sẽ giảm. [Trái lại], sau khi tăng giá khách còn đông hơn.',
+ 'Ở thành phố có nhiều tiện ích. [Trong khi đó] nông thôn không khí trong lành và yên tĩnh.',
+ 'Bài tập này ai cũng có thể dễ dàng làm theo. [Nhưng] người yếu đầu gối thì phải cẩn thận.',
+ 'Người ta dễ nghĩ rằng học một mình sẽ tập trung hơn. [Trái lại], nhiều người khi học cùng bạn lại tập trung được lâu hơn.',
+ 'Anh trai cao và chơi thể thao giỏi. [Trong khi đó] em trai tuy thấp nhưng vẽ đẹp.'],
+'2b':['Hoa gặp ánh sáng thì nở, trời tối thì khép lại. Hoa hướng dương đổi hướng theo mặt trời. [Như vậy], thực vật chuyển động theo ánh sáng.',
+ 'Đọc sách thì vốn từ tốt lên. Ngoài ra còn rèn được khả năng hiểu suy nghĩ của người khác. [Vì vậy] có thể nói nên tập thói quen đọc sách từ nhỏ.',
+ 'Tối qua tôi chơi game đến khuya. [Vì thế] sáng nay ngủ dậy muộn nên đi học trễ.',
+ 'Thói quen tốt cho sức khỏe không khó. [Chẳng hạn] như uống một cốc nước vào buổi sáng hoặc đi bộ nhẹ trước khi ngủ.'],
+'2c':['Khách sạn này nhìn ra biển nên cảnh rất đẹp. [Hơn nữa] còn cho ăn sáng miễn phí.',
+ 'Tôi đi xem phim ở rạp cùng bạn. [Thế rồi] trước rạp tôi gặp cô giáo hồi tiểu học.',
+ 'Rác thải mỗi năm một tăng. [Vậy thì] muốn giảm rác phải làm thế nào?',
+ 'Quảng cáo nói rằng sản phẩm này cứu môi trường. [Liệu] sản phẩm này có thật sự giúp ích cho môi trường [không]?'],
+'2d':['Anh ấy luyện tập mỗi ngày cho cuộc thi. [Nhưng] ở cuộc thi anh ấy không đạt giải nhất.',
+ 'Người ta nghĩ giá tăng thì sẽ mua ít đi. [Trái lại], giá vừa tăng thì người ta mua nhiều hơn.',
+ '[Tuy] việc đó sẽ không dễ nhưng tôi sẽ cố gắng hết sức.',
+ 'Trực thăng được làm ra nhờ quan sát chuồn chuồn. Cánh máy bay giống cánh chim. Như vậy, con người lấy ý tưởng từ thiên nhiên để làm ra nhiều đồ vật.',
+ 'Bệnh này trẻ nhỏ có khả năng mắc cao. Vì vậy nhà có trẻ nhỏ nên rửa tay thường xuyên.']};
 var MNAME={'1':'bài trộn cuối buổi','1a':'luyện nhanh nhóm 1 (-지만, -면)','1b':'luyện nhanh nhóm 2 (câu hỏi, đoán)','1c':'luyện nhanh nhóm 3 (thái độ, phủ định)','1e':'luyện nhanh câu chủ đề','1f':'luyện nhanh nội dung khớp',
  '2':'bài trộn cuối buổi','2a':'luyện nhanh 오히려 · 반면 · 그러나','2b':'luyện nhanh kết luận, tóm','2c':'luyện nhanh thêm ý, chuyển ý','2d':'luyện nhanh gọi tên lỗi'};
 
@@ -566,12 +627,13 @@ function pairItem(no,r,p,key){
 }
 function scoreLine(c1,c2,n,all,redo,extra){return '<div class="score">Câu 19 đúng '+c1+'/'+n+' · câu 20 đúng '+c2+'/'+n+(n<all?' (còn '+(all-n)+' bài)':'')+(extra||'')+(n?' · <a href="#" data-redo="'+redo+'">Làm lại</a>':'')+'</div>';}
 
+function mvHTML(k,i){var v=MV[k]&&MV[k][i];return v?'<p class="mv">Nghĩa: '+esc(v).replace(/\[([^\]]+)\]/g,'<b>$1</b>')+'</p>':'';}
 function renderMcq(k){
   var m=st['m'+k]||(st['m'+k]={}),h='',n=0,ok=0;
   MCQ[k].forEach(function(it,i){var p=m[i],key='m'+k+'.'+i,done=p!=null;
     h+='<div class="mcq'+(done?' done':'')+(done&&p!==0?' wrong':'')+'" data-key="'+key+'"><div class="q"><span class="n">'+(i+1)+'.</span></div>'+
       psg(it[0],null,null,done&&!it[3]?it[1][0]:null)+(it[3]?'<div class="q1">'+esc(it[3])+'</div>':'')+optsHTML(it[1],0,p,key,0,false,i*31+parseInt(k,10)*7+String(k).length*13+3)+
-      '<div class="why">'+(done?(p===0?'✅ ':'❌ ')+'💡 '+esc(it[2]):'')+'</div></div>';
+      '<div class="why">'+(done?(p===0?'✅ ':'❌ ')+'💡 '+esc(it[2])+mvHTML(k,i):'')+'</div></div>';
     if(done){n++;if(p===0)ok++;}});
   $('mcq'+k).innerHTML=h+'<div class="score">Đúng '+ok+'/'+MCQ[k].length+(n<MCQ[k].length?' (còn '+(MCQ[k].length-n)+' câu)':'')+(n?' · <a href="#" data-redo="m'+k+'">Làm lại</a>':'')+'</div>';
   renderSum(parseInt(k,10));

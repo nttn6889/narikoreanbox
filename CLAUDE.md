@@ -741,6 +741,7 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - Lý thuyết đến đâu luyện đến đó: Buổi 1 bảng phó từ chia 3 nhóm (`PAIRS[i][4]` = 1 đuôi nối / 2 câu hỏi – đoán / 3 thái độ – phủ định), sau mỗi nhóm và sau phần câu 20
   có ô “✋ Luyện nhanh” `MCQ['1a'|'1b'|'1c'|'1e'|'1f']`; Buổi 2 sau từng quan hệ `MCQ['2a'|'2b'|'2c']` + gọi tên lỗi `MCQ['2d']`; `MCQ[1]`, `MCQ[2]` = “Bài trộn cuối buổi”.
   Câu `[đoạn, lựa chọn (đầu là đáp án), giải thích, câu hỏi?]` (có câu hỏi thì không điền ô); tên trong báo cáo ở `MNAME`.
+  Nghĩa tiếng Việt từng câu luyện ở `MV[<bộ>][i]` (cùng thứ tự với `MCQ`, `[…]` = chỗ ô trống, tô vàng), hiện “Nghĩa:” sau khi chọn; thêm câu vào `MCQ` thì thêm nghĩa vào `MV`.
   Đáp án lấy từ `bank`, riêng `Etk091` dùng đáp án đúng ③ 비록 / ① (trong `bank` đang ghi sai ① / ③). `MCQ` câu tự soạn (lựa chọn đầu là đáp án). localStorage `nari-1920`.
 
 ## Học câu 23–24 tâm trạng trong tùy bút (`cau-23-24/`) và câu 42–43 tiểu thuyết (`cau-42-43/`)
