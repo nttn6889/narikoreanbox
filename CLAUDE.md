@@ -745,7 +745,9 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   Nghĩa tiếng Việt từng câu luyện ở `MV[<bộ>][i]` (cùng thứ tự với `MCQ`, `[…]` = chỗ ô trống, tô vàng), hiện “Nghĩa:” sau khi chọn; thêm câu vào `MCQ` thì thêm nghĩa vào `MV`.
 - Thẻ **“Buổi 1 mới”** (`#b=1n`, section `s1n`; cô thấy phần kiến thức 3a–3c khó khi học sinh chưa nhớ nghĩa phó từ lẫn đuôi; thẻ Buổi 1 cũ giữ nguyên vì học sinh đang học dở):
   học phó từ đi cặp qua **cặp từ tiếng Việt** (Tuy … nhưng = 비록 … -지만, Nếu … thì, Liệu … không?, Biết đâu … cũng nên, Thà … còn hơn…), hai đầu cặp tô cùng màu (`.cp`).
-  3 nhóm, mỗi nhóm 4 bước: ① điền cặp tiếng Việt `MCQ['1nA1…3']` · ② ôn đuôi đã học `1nB*` (phần tử 4 = câu hỏi) · ③ bảng ghép (★ = từng là đáp án) · ④ luyện câu Hàn `1nD*` (+ `MV`);
+  3 nhóm, mỗi nhóm 5 bước: ① điền cặp tiếng Việt `MCQ['1nA1…3']` · ② ôn đuôi đã học `1nB*` (phần tử 4 = câu hỏi) · ③ thẻ từng phó từ (cô yêu cầu làm kỹ: biến `ADV` =
+  {g nhóm, w, s ★ từng là đáp án, m, d nghĩa, p:[[đuôi, nghĩa đuôi, cặp Hàn, cặp Việt, giải thích, [[ví dụ Hàn, dịch]×2]]]}, `{…}` = hai đầu cặp tô `.cp`; `renderAdv` vẽ vào `#adv1…3`;
+  14 phó từ, 34 cặp) · ④ thấy đuôi → chọn phó từ `1nD*` (+ `MV`, mỗi cặp có câu) · ⑤ thấy phó từ → chọn đuôi `1nE*`;
   bảng cặp tổng “Che phó từ” (`#cpAll`), bài trộn `1nM`, rồi link sang Buổi 1 mục 4 (`#b=1&g=m14`; `g=` cuộn tới id trong thẻ) — mục 3d để dành sau. Báo cáo riêng `sum1n` (`lines1n`).
   Đáp án lấy từ `bank`, riêng `Etk091` dùng đáp án đúng ③ 비록 / ① (trong `bank` đang ghi sai ① / ③). `MCQ` câu tự soạn (lựa chọn đầu là đáp án). localStorage `nari-1920`.
 
