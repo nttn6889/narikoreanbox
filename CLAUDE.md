@@ -571,6 +571,9 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   C Dấu bám `B` (+ chuỗi từ khóa `W`) · D Ý chính `Y` (vị trí `y`: l câu cuối, d sau 그러나…, f câu đầu, m giữa, g tổng hợp) + thái độ / mục đích ·
   E bẫy của lựa chọn sai `x`: N ngược một chữ, T bài không nói, C chép chữ ghép sai, S đổi đối tượng, G đổi thời điểm / số liệu, A quá mức, H chi tiết hẹp, R ý bị lật / nhượng bộ, P lệch.
   Bảng đối chiếu nhãn cũ (16–18, 19–20, 52, 13–15, 25–27, 23–24) ↔ mã chung nằm trong thẻ B và E.
+- Thẻ A (cô góp ý 25/10: “lý thuyết đến đâu thực hành đến đó”, cuối buổi mới trộn): mỗi nhóm A1–A10 = bảng → câu thật (`.exs`) → “✋ Luyện nhanh” (`PA.pa1…pa10`,
+  câu `[câu, lựa chọn (đầu là đáp án), giải thích, câu hỏi?]`, `st.h['paN_i']`); đầu thẻ thanh lộ trình `#hoNav` (điểm từng nhóm), cuối thẻ “Bài trộn cuối buổi” `HQM`
+  (16 câu khác câu luyện nhanh, phần tử 5 = nhóm → báo “Cần ôn lại” nhóm sai). Các thẻ B–E chưa làm theo khuôn này.
 - Thẻ: Tổng quan (bản đồ dạng × họ, số liệu, bảng nhiệt, thứ tự dạy) · A · B · C · D · E · Dạng câu (`#b=dang&t=1-2`, 19 thẻ: 1-2, 3-4, 5-8, 9-10, 11-12 … 48-50; mỗi thẻ có
   “Số liệu dạng này” tính từ `index.json` + câu đề thi thật) · Luyện chéo (`#b=luyen&t=…&k=HD&id=Etk091-39`, lọc dạng / đề / mã) · Bảng tra. localStorage `nari-dhcd`.
 - Dữ liệu `tools/dau_hieu/<dạng>.json` (1.126 câu, đủ 22 đề đọc cho mọi dạng; câu 1–4 thêm 9 kỳ thật Etk035…Etk102 trong `thi-thu/de/`)
@@ -681,6 +684,9 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   câu có ô hoặc câu cuối (7/7). Buổi 1 (6 bài), Buổi 2 (10), Buổi 3 như thi (6, 1:30/bài), Ôn (6 bài/lượt), thẻ “22 bài”, Bảng tra. Link `cau-19-20/#b=1|2|3|on|all|tra`, `#b=all&q=<id đề>`.
 - Biến `R` (id = id đề): `p`, `o`, `a`, `k` (quan hệ C O B G K T H), `c` (chỗ quyết định câu 19, tô vàng), `w`, `x[i]` (lỗi P thiếu cặp / N sai chiều / S sai sắc thái / M không hợp),
   `t` (J chủ đề / D nội dung khớp), `s`, `o2`, `a2`, `c2` (tô xanh), `w2`, `x2[i]` (H chi tiết hẹp / C chép chữ / N ngược / T không nói / A quá mức), `z` (vị trí đáp án chủ đề), `p1`, `mid`.
+- Lý thuyết đến đâu luyện đến đó: Buổi 1 bảng phó từ chia 3 nhóm (`PAIRS[i][4]` = 1 đuôi nối / 2 câu hỏi – đoán / 3 thái độ – phủ định), sau mỗi nhóm và sau phần câu 20
+  có ô “✋ Luyện nhanh” `MCQ['1a'|'1b'|'1c'|'1e'|'1f']`; Buổi 2 sau từng quan hệ `MCQ['2a'|'2b'|'2c']` + gọi tên lỗi `MCQ['2d']`; `MCQ[1]`, `MCQ[2]` = “Bài trộn cuối buổi”.
+  Câu `[đoạn, lựa chọn (đầu là đáp án), giải thích, câu hỏi?]` (có câu hỏi thì không điền ô); tên trong báo cáo ở `MNAME`.
   Đáp án lấy từ `bank`, riêng `Etk091` dùng đáp án đúng ③ 비록 / ① (trong `bank` đang ghi sai ① / ③). `MCQ` câu tự soạn (lựa chọn đầu là đáp án). localStorage `nari-1920`.
 
 ## Học câu 23–24 tâm trạng trong tùy bút (`cau-23-24/`) và câu 42–43 tiểu thuyết (`cau-42-43/`)
