@@ -754,6 +754,12 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   mỗi nhóm: ① thẻ từ nối `REL2` {g, w, m, d, sig:[[ở đâu, dấu hiệu]], ex:[[ko, vi, vì sao]]} · ② bảng đặt cạnh nhau `CMP2` {g, t, base?, r:[[từ nối, câu sau, dịch, vì sao]]}
   (`[chữ]` = từ nối đóng khung `.cn`, `{chữ}` = dấu hiệu `.cp`; `renderRel2`) · ③ gọi tên quan hệ `MCQ['2nN*']` (phần tử 4 = câu hỏi, lựa chọn = tên quan hệ) · ④ chọn từ nối `2nD*`; bài trộn `2nM`,
   link sang Buổi 2 mục 5–6, 8 (`#b=2&g=m25|m28`). Báo cáo `sum2n` (`lines1n(L, pre, '2n')` dùng chung cho mọi thẻ `<buổi>n`).
+  Buổi 2 mới mục 5 (`#b=2n&g=m2nk`) “Đọc hai câu mà không hiểu thì làm sao?”: Cách 1 che từ khó đọc khung (bảng chữ → từ nối), Cách 2 dấu + / −, Cách 3 điều kiện của từ nối,
+  luyện `2nK` (câu che từ khó bằng ▢▢, giải thích kèm câu đầy đủ).
+- Thẻ **“Câu 20”** (`#b=c20`, section `sc20`; cô thấy câu 20 chưa có chiến lược rõ): dạng A chủ đề (4 bước: câu có ô / câu cuối → “cái gì + nói gì” → lựa chọn nói lại đủ 2 mảnh →
+  phép thử “làm tiêu đề”; bảng câu nào là / không là câu chủ đề; làm mẫu kỳ 91, 83) · dạng B nội dung khớp (gạch Quá mức → đọc lựa chọn trước → dò từ khóa, so vị ngữ → không có thì gạch);
+  luyện `20a` tìm câu chủ đề (lựa chọn = câu trong bài), `20b` chọn chủ đề, `20c` gọi tên bẫy, `20d` chọn nội dung khớp; rồi câu 20 của 22 bài (ô 19 điền sẵn; dạng A bấm câu chủ đề trước,
+  đúng = câu chứa `c2`), lưu `st.z`/`st.zs`, không vào lịch Ôn. Báo cáo `linesC20`.
   Đáp án lấy từ `bank`, riêng `Etk091` dùng đáp án đúng ③ 비록 / ① (trong `bank` đang ghi sai ① / ③). `MCQ` câu tự soạn (lựa chọn đầu là đáp án). localStorage `nari-1920`.
 
 ## Học câu 23–24 tâm trạng trong tùy bút (`cau-23-24/`) và câu 42–43 tiểu thuyết (`cau-42-43/`)
