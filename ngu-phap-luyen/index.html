@@ -112,6 +112,9 @@ button.b.main{background:var(--acc);border-color:var(--acc);color:#fff;font-weig
 .opt.out{opacity:.45;text-decoration:line-through}
 .fb .mn{margin:4px 0 0;color:#333}
 .trin{width:100%;font:16px/1.45 "Times New Roman",Times,serif;padding:6px 8px;border:1px solid var(--line);border-radius:6px;margin:2px 0 4px;resize:vertical}
+.mqg{margin:10px 0 4px;padding:8px 10px 2px;border:1px dashed var(--blue);border-radius:8px;background:var(--bluebg)}
+.mqg .mqh{font:bold 15px Arial,sans-serif;color:var(--blue);margin:0 0 8px}
+.mqg .it{background:var(--bg)}
 .model{margin:6px 0 0;padding:5px 10px;background:var(--bluebg);border-left:4px solid var(--blue);font-size:15.5px}
 .model u{text-decoration:none;background:var(--hl);border-radius:3px;padding:0 2px}
 button.b.on{background:var(--blue);border-color:var(--blue);color:#fff}
@@ -391,8 +394,8 @@ function mqList(d){
       if(!t&&ws.length){t=ws[0];pr=g.w.filter(function(x){return mqNorm(x[1])!==mqNorm(t[1]);})[0];}
       if(t&&pr){var ds=mqDis(t,{day:[],rest:P.rest},sd+3,function(w){return mqNorm(w[1]);}).filter(function(w){return !g.w.some(function(x){return mqNorm(x[1])===mqNorm(w[1]);});});
         if(ds.length===3)L.push({t:'s',g:g,w:t,o:[pr[1]].concat(ds.map(function(w){return w[1];})),ex:t[3]});}
-      take=ws.filter(function(w){return !asked[mqNorm(w[1])];}).slice(0,1);
-    }else take=ws.filter(function(w){return !asked[mqNorm(w[1])];}).slice(0,3);
+      take=ws.filter(function(w){return !asked[mqNorm(w[1])];}).slice(0,2);
+    }else take=ws.filter(function(w){return !asked[mqNorm(w[1])];}).slice(0,4);
     take.forEach(function(w){
       asked[mqNorm(w[1])]=1;var rev=(n++)%3===2;
       var ds=mqDis(w,P,sd+n,rev?function(x){return mqNorm(x[1]);}:function(x){return String(x[2]);});
@@ -404,12 +407,14 @@ function mqList(d){
   L.forEach(function(q,i){q.id='m'+d+'_'+i+'_'+q.w[0];var ord=seeded([0,1,2,3],d*13+i*5);q.o=ord.map(function(k){return q.o[k];});q.a=ord.indexOf(0);});
   return MQC[d]=L;
 }
-function mqHTML(d,D){
+function mqGroupBox(d,gid){var D=st.d[d]||{},L=mqList(d).filter(function(q){return q.g.id===gid;});if(!L.length)return '';
+  var c=0;L.forEach(function(q){if((D.mq||{})[q.id]===q.a)c++;});
+  return '<div class="mqg" id="mqg-'+gid+'"><div class="mqh">✍ Luyện nhanh nhóm này <span class="note">· '+L.length+' câu · đúng '+c+'</span></div>'+mqHTML(d,D,gid)+'</div>';}
+function mqHTML(d,D,gid){
   if(!VG)return '<p class="note">Đang tải bảng ngữ pháp…</p>';
-  var L=mqList(d),a=D.mq||{},last='';if(!L.length)return '';
+  var L=mqList(d).filter(function(q){return !gid||q.g.id===gid;}),a=D.mq||{};if(!L.length)return '';
   return L.map(function(q,i){
     var ch=a[q.id],show=ch!=null,ko=q.t!=='m',h='';
-    if(q.g.id!==last){last=q.g.id;h+='<p class="note" style="margin:10px 0 4px"><b class="ko">'+esc(q.g.ko)+'</b> · '+esc(q.g.vi)+'</p>';}
     h+='<div class="it'+(show?(ch===q.a?' good':' wrong'):'')+'"><div class="q"><b>'+(i+1)+'.</b>'+
       {m:'Mẫu này nghĩa là gì?',r:'Nghĩa này là mẫu nào?',s:'Phần gạch chân thay bằng mẫu nào thì nghĩa gần nhất?'}[q.t]+'</div>';
     if(q.t==='m')h+='<div class="s"><span class="ko" style="font-weight:bold">'+esc(q.w[1])+'</span> &nbsp;<span class="ko" style="font-size:15px;color:var(--muted)">'+exHTML(q.ex)+'</span></div>';
@@ -435,14 +440,13 @@ function renderDay(){
   clearInterval(tick);
   h+='<h2>Ngày '+d+'/'+DAYN+' · '+esc(I.t)+'</h2>';
   if(I.kind==='learn'){
-    h+='<div class="how"><b>Hôm nay em làm '+(D.rv.length?4:3)+' phần (khoảng 20–25 phút):</b><ol><li><b>Đọc kiến thức</b> bên dưới (chỗ dễ nhầm + bảng mẫu có nghĩa từng câu).</li>'+(TR_ON?'<li><b>Dịch '+trPick(d).length+' câu</b> tiếng Hàn sang tiếng Việt: mỗi câu luyện một mẫu trong “Chỗ hay nhầm”.</li>':'<li><b>Trắc nghiệm nhớ mẫu</b>: mẫu này nghĩa là gì, mẫu nào gần nghĩa — chọn xong là biết đúng sai.</li>')+'<li><b>Luyện</b> '+D.ids.length+' câu: chọn xong là biết đúng sai. Bí thì bấm <b>💡 Gợi ý</b>.</li>'+
+    h+='<div class="how"><b>Hôm nay em làm '+(D.rv.length?(TR_ON?4:3):(TR_ON?3:2))+' phần (khoảng 20–25 phút):</b><ol><li><b>Đọc kiến thức</b> bên dưới (chỗ dễ nhầm + bảng mẫu có nghĩa từng câu)'+(TR_ON?'':'; học xong nhóm nào làm ngay <b>✍ Luyện nhanh</b> ngay dưới bảng nhóm đó (mẫu này nghĩa là gì, mẫu nào gần nghĩa) cho nhớ')+'.</li>'+(TR_ON?'<li><b>Dịch '+trPick(d).length+' câu</b> tiếng Hàn sang tiếng Việt: mỗi câu luyện một mẫu trong “Chỗ hay nhầm”.</li>':'')+'<li><b>Luyện tổng hợp</b> '+D.ids.length+' câu đề: chọn xong là biết đúng sai. Bí thì bấm <b>💡 Gợi ý</b>.</li>'+
       (D.rv.length?'<li><b>Ôn câu cũ</b>: '+D.rv.length+' câu những ngày trước em làm sai hoặc đến lúc hỏi lại.</li>':'')+'</ol>Cuối bài bấm <b>“Gửi kết quả cho cô”</b>.</div>';
     h+='<h3>1. Kiến thức hôm nay</h3><div class="tip"><b>Chỗ hay nhầm</b><ul>'+PLAN[d].tip.map(function(t){return '<li>'+t+'</li>';}).join('')+'</ul></div>';
-    trHide(d,D);h+=GLEG+'<div id="dayg">'+groupsHTML(PLAN[d].g,true)+'</div>';TRHIDE={};
+    trHide(d,D);h+=GLEG+'<div id="dayg">'+groupsHTML(PLAN[d].g,true,TR_ON?0:d)+'</div>';TRHIDE={};
     if(TR_ON)h+='<h3>2. Dịch câu · luyện chỗ hay nhầm</h3><p class="note">Mỗi câu dùng một mẫu trong phần “Chỗ hay nhầm” ở trên, các mẫu dễ nhầm đứng cạnh nhau. Đọc câu tiếng Hàn, gõ nghĩa tiếng Việt, chú ý phần gạch chân: dịch đúng nghĩa của mẫu đó. Gõ xong bấm “Xem bản dịch”; em dịch khác chữ mà vẫn đúng ý thì chọn “Đúng ý”.</p><div id="trbox">'+trHTML(d,D)+'</div>';
-    else h+='<h3>2. Trắc nghiệm nhớ mẫu</h3><p class="note">Câu hỏi lấy từ bảng mẫu ở trên, theo từng nhóm: phần gạch chân nghĩa là gì, nghĩa này là mẫu nào, mẫu nào gần nghĩa (thay được cho nhau như câu 3–4). Chọn xong là biết đúng sai; quên thì kéo lên xem lại bảng.</p><div id="mqbox">'+mqHTML(d,D)+'</div>';
-    h+='<h3>3. Luyện</h3>'+listHTML(D.ids,D.a,'live',1,D.h);
-    if(D.rv.length)h+='<h3>4. Ôn câu cũ</h3><p class="note">Câu những ngày trước: sai (hoặc đúng mà phải xem gợi ý) thì mai hỏi lại, đúng thì 3, 7, 14 ngày sau mới hỏi lại.</p>'+listHTML(D.rv,D.a,'live',D.ids.length+1,D.h);
+    h+='<h3>'+(TR_ON?3:2)+'. Luyện tổng hợp · câu đề</h3>'+listHTML(D.ids,D.a,'live',1,D.h);
+    if(D.rv.length)h+='<h3>'+(TR_ON?4:3)+'. Ôn câu cũ</h3><p class="note">Câu những ngày trước: sai (hoặc đúng mà phải xem gợi ý) thì mai hỏi lại, đúng thì 3, 7, 14 ngày sau mới hỏi lại.</p>'+listHTML(D.rv,D.a,'live',D.ids.length+1,D.h);
   }else if(I.kind==='test'){
     var lim=D.ids.length*30;
     h+='<div class="how"><b>Bài kiểm tra '+D.ids.length+' câu, làm như thi thật:</b><ul><li>Không xem bảng ngữ pháp. Làm trong <b>'+fmt(lim)+'</b> (30 giây/câu).</li><li>Làm xong bấm <b>“Nộp bài”</b> mới biết đúng sai và xem giải thích.</li></ul></div>';
@@ -464,7 +468,7 @@ function renderDay(){
   h+='<div class="sum" id="sumday"></div>';
   h+='<div class="dnav">'+(d>1?'<a href="#d='+(d-1)+'">‹ Ngày '+(d-1)+'</a>':'<span></span>')+(d<maxDay()?'<a href="#d='+(d+1)+'">Ngày '+(d+1)+' ›</a>':'<span></span>')+'</div>';
   $('sday').innerHTML=h;renderSum();
-  if(I.kind==='learn'&&!VG)loadV(function(){var g=$('dayg');if(g&&cur===d){trHide(d,D);g.innerHTML=groupsHTML(PLAN[d].g,true);TRHIDE={};if(TR_ON)$('trbox').innerHTML=trHTML(d,D);else $('mqbox').innerHTML=mqHTML(d,D);renderSum();}});
+  if(I.kind==='learn'&&!VG)loadV(function(){var g=$('dayg');if(g&&cur===d){trHide(d,D);g.innerHTML=groupsHTML(PLAN[d].g,true,TR_ON?0:d);TRHIDE={};if(TR_ON)$('trbox').innerHTML=trHTML(d,D);renderSum();}});
   if(I.kind==='test'&&D.t0&&!D.sub){var lim2=D.ids.length*30,f=function(){var el=$('timer');if(!el){clearInterval(tick);return;}var s=(Date.now()-D.t0)/1000;
     el.textContent='⏱ '+fmt(s)+' / '+fmt(lim2)+(s>lim2?' · hết giờ, em nộp bài nhé':'');el.classList.toggle('over',s>lim2);};f();tick=setInterval(f,1000);}
   $('navday').innerHTML='Hôm nay<small>Ngày '+d+'</small>';
@@ -484,15 +488,15 @@ var G2D={};PLAN.forEach(function(p,d){if(p)p.g.forEach(function(g){G2D[g]=d;});}
 function exHTML(s){return esc(s||'').replace(/__(.+?)__/g,'<u>$1</u>');}
 var GLAB={T:'⇄ Thay thế được cho nhau',C:'≈ Thay được, có điều kiện',L:'☰ Liệt kê – không thay cho nhau'};
 var GLEG='<p class="note">Mỗi nhóm có nhãn: <span class="tg T">'+GLAB.T+'</span> <span class="tg C">'+GLAB.C+'</span> <span class="tg L">'+GLAB.L+'</span> — nhóm “liệt kê” chỉ là các mẫu cùng chủ đề, mỗi mẫu một nghĩa, <b>không</b> thay cho nhau được.</p>';
-function groupHTML(g,open){
+function groupHTML(g,open,d){
   var n=GN[g.id]||['L',''];
   var rows=g.w.map(function(w){return '<tr><td class="ko">'+esc(w[1])+'</td><td>'+esc(w[2])+'</td><td class="ex"><span class="ko">'+exHTML(w[3])+'</span>'+(EXV[w[0]]?'<span class="exv">'+(TRHIDE[w[0]]?'<i>(nghĩa câu này: em tự dịch ở phần 2)</i>':viHTML(EXV[w[0]]))+'</span>':'')+'</td></tr>';}).join('');
   return '<details class="grp"'+(open?' open':'')+'><summary><span class="ko">'+esc(g.ko)+'</span> · '+esc(g.vi)+'<span class="tg '+n[0]+'">'+GLAB[n[0]]+'</span>'+(G2D[g.id]&&!open?'<span class="tg b">Ngày '+G2D[g.id]+'</span>':'')+
-    ' <span class="note">('+g.w.length+' mẫu)</span></summary>'+(n[1]?'<div class="gn '+n[0]+'"><b>'+GLAB[n[0]]+':</b> '+esc(n[1])+'</div>':'')+'<table class="g"><tr><th>Mẫu</th><th>Nghĩa</th><th>Ví dụ</th></tr>'+rows+'</table></details>';
+    ' <span class="note">('+g.w.length+' mẫu)</span></summary>'+(n[1]?'<div class="gn '+n[0]+'"><b>'+GLAB[n[0]]+':</b> '+esc(n[1])+'</div>':'')+'<table class="g"><tr><th>Mẫu</th><th>Nghĩa</th><th>Ví dụ</th></tr>'+rows+'</table>'+(d?mqGroupBox(d,g.id):'')+'</details>';
 }
-function groupsHTML(ids,open){
+function groupsHTML(ids,open,d){
   if(!VG)return '<p class="note">Đang tải bảng ngữ pháp…</p>';
-  var h=ids.map(function(id){return VG[id]?groupHTML(VG[id],open):'';}).join('');
+  var h=ids.map(function(id){return VG[id]?groupHTML(VG[id],open,d):'';}).join('');
   return h||'<p class="note">Chưa tải được bảng ngữ pháp, em mở thẻ “Kiến thức” sau nhé.</p>';
 }
 var KT='12';
@@ -550,7 +554,7 @@ function report(){
   if(D.rv&&D.rv.length){var c2=cnt(D.rv,D.a);L.push('Ôn câu cũ: '+c2.ok+'/'+D.rv.length+' đúng'+(c2.n<D.rv.length?' (làm '+c2.n+')':''));}
   var nh=Object.keys(D.h||{}).filter(function(id){return D.h[id]>0;}).length;if(nh)L.push('Có xem gợi ý: '+nh+' câu');
   if(I.kind==='learn'&&TR_ON){var tc=trCount(d,D);if(tc.all)L.push('Dịch câu: làm '+tc.n+'/'+tc.all+' · đúng ý '+tc.ok);}
-  if(I.kind==='learn'&&!TR_ON&&VG){var mc=mqCount(d,D);if(mc.all){L.push('Trắc nghiệm nhớ mẫu: làm '+mc.n+'/'+mc.all+' · đúng '+mc.ok);mc.wr.forEach(function(x){L.push('  ✗ '+x);});}}
+  if(I.kind==='learn'&&!TR_ON&&VG){var mc=mqCount(d,D);if(mc.all){L.push('Luyện nhanh từng nhóm: làm '+mc.n+'/'+mc.all+' · đúng '+mc.ok);mc.wr.forEach(function(x){L.push('  ✗ '+x);});}}
   if(I.kind!=='test'||D.sub)D.ids.concat(D.rv||[]).forEach(function(id){var r=BY[id],x=D.a[id];if(x!=null&&x!==r.a)L.push('  ✗ '+r.src+(r.n?' câu '+r.n:'')+' · '+r.s.replace(/__/g,'').slice(0,40)+' → chọn '+CIR[x]+' '+r.o[x]+', đúng '+CIR[r.a]+' '+r.o[r.a]);});
   var k={ok:0,on:0};Object.keys(st.q).forEach(function(id){if(st.q[id].ok)k.ok++;else k.on++;});
   var done=0;for(var i=1;i<=DAYN;i++)if(/^✓/.test(status(i)))done++;
@@ -571,7 +575,7 @@ function share(){
 /* ---- sự kiện ---- */
 document.addEventListener('click',function(e){
   var mq=e.target.closest('[data-mq]');
-  if(mq){if(!mq.disabled&&st.d[cur]){var DM=st.d[cur];DM.mq=DM.mq||{};if(DM.mq[mq.dataset.mq]==null){DM.mq[mq.dataset.mq]=+mq.dataset.i;save();$('mqbox').innerHTML=mqHTML(cur,DM);renderSum();}}return;}
+  if(mq){if(!mq.disabled&&st.d[cur]){var DM=st.d[cur];DM.mq=DM.mq||{};if(DM.mq[mq.dataset.mq]==null){DM.mq[mq.dataset.mq]=+mq.dataset.i;save();var mg=mq.closest('.mqg');if(mg)mg.outerHTML=mqGroupBox(cur,mg.id.slice(4));renderSum();}}return;}
   var o=e.target.closest('.opt');
   if(o&&!o.disabled){
     var D=st.d[cur],id=o.dataset.id,i=+o.dataset.i,r=BY[id],test=dayInfo(cur).kind==='test';
@@ -587,7 +591,7 @@ document.addEventListener('click',function(e){
   var b=e.target.closest('button');if(!b)return;
   var D3=st.d[cur];
   if(b.dataset.hint&&D3){var hid=b.dataset.hint;D3.h=D3.h||{};D3.h[hid]=(D3.h[hid]||0)+1;save();$('it-'+hid).outerHTML=item(noOf(D3,hid),BY[hid],null,'live',D3.h[hid]);renderSum();return;}
-  if(b.dataset.trc&&D3){var tid=b.dataset.trc,ta=document.querySelector('textarea[data-tr="'+tid+'"]');D3.tr=D3.tr||{};var t=D3.tr[tid]||(D3.tr[tid]={});t.t=ta?ta.value:'';t.c=1;save();$('trbox').innerHTML=trHTML(cur,D3);trHide(cur,D3);$('dayg').innerHTML=groupsHTML(PLAN[cur].g,true);TRHIDE={};renderSum();return;}
+  if(b.dataset.trc&&D3){var tid=b.dataset.trc,ta=document.querySelector('textarea[data-tr="'+tid+'"]');D3.tr=D3.tr||{};var t=D3.tr[tid]||(D3.tr[tid]={});t.t=ta?ta.value:'';t.c=1;save();$('trbox').innerHTML=trHTML(cur,D3);trHide(cur,D3);$('dayg').innerHTML=groupsHTML(PLAN[cur].g,true,TR_ON?0:cur);TRHIDE={};renderSum();return;}
   if(b.dataset.trm&&D3){var t2=D3.tr[b.dataset.trm];if(t2){t2.m=+b.dataset.v;save();$('trbox').innerHTML=trHTML(cur,D3);renderSum();}return;}
   if(b.id==='tstart'){st.d[cur].t0=Date.now();save();renderDay();}
   else if(b.id==='tsub'){
