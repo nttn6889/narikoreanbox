@@ -134,6 +134,12 @@ details{margin:6px 0}
 summary{cursor:pointer;font-weight:bold}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 @media(max-width:640px){.two{grid-template-columns:1fr}}
+.prac{margin:10px 0 22px;padding:8px 10px 4px;border:2px dashed var(--acc);border-radius:10px;background:#fffdf7}
+.prac .ph{font:bold 15px Arial,sans-serif;color:var(--acc);margin:0 0 6px}
+.quiz .score{font:bold 14px Arial,sans-serif;margin:4px 0 8px}.quiz .score a{font-weight:normal;color:var(--blue)}
+.qq .qline{font-size:14.5px;font-weight:bold;margin:0 0 6px}
+.route{margin:10px 0 6px;padding:8px 11px;border:1px solid var(--soft);border-radius:8px;background:var(--bluebg);font-size:15px}
+.route .tnav{margin:8px 0 2px}.route .tnav button small{font-weight:normal;color:var(--muted)}.route .tnav button.full small{color:var(--ok)}
 .pill{display:inline-block;border:1px solid var(--soft);border-radius:12px;padding:1px 9px;margin:2px 3px 2px 0;font-size:14.5px;background:#fff}
 @media print{nav,.flt,.qtools,.pager,.tnav{display:none}.sec{display:block!important}.why{display:block!important}}
 </style>
@@ -235,7 +241,10 @@ summary{cursor:pointer;font-weight:bold}
 <li><b>Câu 23–24, 42–43</b>: câu gạch chân hay có cặp cảm xúc (도대체 … -ㄴ지 = nghi ngờ, 하마터면 … -ㄹ 뻔했다, 차마 … 못 = không nỡ).</li>
 </ul>
 
-<h3>A1 · Nhượng bộ: “dù … vẫn …”</h3>
+<div class="route"><b>Cách học thẻ này trên lớp:</b> mỗi nhóm = <b>bảng lý thuyết</b> → <b>câu thật trong đề</b> (minh họa) → <b>✋ Luyện nhanh</b> 4–7 câu, chấm ngay. Xong 10 nhóm làm <b>Bài trộn cuối buổi</b>. Bấm nhóm để nhảy tới; số bên cạnh = câu đúng / số câu.
+<div class="tnav" id="hoNav"></div></div>
+
+<h3 id="hA1">A1 · Nhượng bộ: “dù … vẫn …”</h3>
 <div class="tw"><table class="t">
 <tr><th>Phó từ</th><th>Vế sau phải có</th><th>Nghĩa · sắc thái</th><th>Không đi với</th></tr>
 <tr><td class="ko"><b>비록</b></td><td class="ko">-지만 · -더라도 · -(으)ㄹ지라도 · -아/어도 · -는데도</td><td>“tuy, dù” — thừa nhận một sự thật (có thật hoặc giả định)</td><td class="ko">-면 · -니까 · -아서</td></tr>
@@ -246,7 +255,9 @@ summary{cursor:pointer;font-weight:bold}
 <div class="exs" data-q="비록|아무리" data-e="는데도|더라도|ㄹ지라도|지만|아도|어도|해도|라도" data-n="4"></div>
 <div class="co"><b>Dạy:</b> 비록 = “sự thật đã thừa nhận” nên đi được với -지만; 설령 = “chưa chắc xảy ra” nên chỉ đi với -더라도 / -ㄴ다 해도. Câu 19 kỳ 91: <span class="ko">(&nbsp;&nbsp;&nbsp;&nbsp;) 그 움직임은 아주 느리<b>지만</b></span> → chỉ 비록 khớp, 혹시 / 만약 cần -면, 또는 nối danh từ.</div>
 
-<h3>A2 · Điều kiện – giả định</h3>
+<div class="prac"><div class="ph">✋ Luyện nhanh A1 · Nhượng bộ</div><div class="quiz" id="pa1"></div></div>
+
+<h3 id="hA2">A2 · Điều kiện – giả định</h3>
 <div class="tw"><table class="t">
 <tr><th>Phó từ</th><th>Vế sau</th><th>Nghĩa</th><th>Ghi chú</th></tr>
 <tr><td class="ko"><b>만약 · 만일 · 만약에</b></td><td class="ko">-(으)면 · -ㄴ다면 · -(으)ㄹ 경우(에는) · -거든</td><td>“nếu”</td><td>đuôi ở câu sau thường -ㄹ 것이다 / -ㄹ지도 모른다 / -아야 한다</td></tr>
@@ -256,7 +267,9 @@ summary{cursor:pointer;font-weight:bold}
 </table></div>
 <div class="exs" data-q="만약|만일|혹시" data-e="다면|경우에는|경우|려면|으면|면" data-n="4"></div>
 
-<h3>A3 · Lý do</h3>
+<div class="prac"><div class="ph">✋ Luyện nhanh A2 · Điều kiện – giả định</div><div class="quiz" id="pa2"></div></div>
+
+<h3 id="hA3">A3 · Lý do</h3>
 <div class="tw"><table class="t">
 <tr><th>Phó từ</th><th>Vế sau</th><th>Ghi chú</th></tr>
 <tr><td class="ko"><b>왜냐하면</b></td><td class="ko">-기 때문이다 · -아서이다 · -(으)ㄴ/는 까닭이다</td><td>Câu 왜냐하면 luôn là câu <b>bám</b> (giải thích câu ngay trước) → không bao giờ là câu đầu ở 13–15; ở 39–41 nó đứng ngay sau câu nó giải thích.</td></tr>
@@ -265,14 +278,18 @@ summary{cursor:pointer;font-weight:bold}
 <div class="exs" data-q="왜냐하면" data-e="때문이다|때문" data-n="4"></div>
 <div class="co"><b>Bẫy trong đề luyện:</b> HOT 2 câu 41 viết <span class="ko">“왜냐하면 백색 식품은 … 다른 영양소는 거의 없다.”</span> — thiếu vế 때문이다. Câu viết sai như vậy không có trong đề thật; dùng để cho học sinh tự sửa.</div>
 
-<h3>A4 · So sánh: “như thể”</h3>
+<div class="prac"><div class="ph">✋ Luyện nhanh A3 · Lý do</div><div class="quiz" id="pa3"></div></div>
+
+<h3 id="hA4">A4 · So sánh: “như thể”</h3>
 <div class="tw"><table class="t">
 <tr><th>Phó từ</th><th>Vế sau</th><th>Ghi chú</th></tr>
 <tr><td class="ko"><b>마치</b></td><td class="ko">-처럼 · -같이 · -ㄴ 것 같다 · -ㄴ 듯(이) / 듯하다 · -ㄴ 양</td><td>Ô có 마치 ở trước (EBS 1 câu 30: <span class="ko">마치 인쇄 매체를 디지털 기기에 (&nbsp;&nbsp;&nbsp;&nbsp;) 제품</span>) → vế ô phải là “-ㄴ 것 같은”; khi cả 4 lựa chọn đều có “것 같은” thì hô ứng không giúp loại, phải xét quan hệ (B).</td></tr>
 </table></div>
 <div class="exs" data-q="마치" data-e="것처럼|처럼|것 같|같은|듯한|듯|양" data-n="3"></div>
 
-<h3>A5 · Phủ định bắt buộc</h3>
+<div class="prac"><div class="ph">✋ Luyện nhanh A4 · So sánh “như thể”</div><div class="quiz" id="pa4"></div></div>
+
+<h3 id="hA5">A5 · Phủ định bắt buộc</h3>
 <div class="tw"><table class="t">
 <tr><th>Phó từ</th><th>Vế sau</th><th>Nghĩa · mức độ</th></tr>
 <tr><td class="ko"><b>결코 · 절대(로)</b></td><td class="ko">-지 않다 · 없다 · 안 되다 · -(으)면 안 되다</td><td>“tuyệt đối không” — giọng nhấn mạnh, hay ở câu ý chính 35–38</td></tr>
@@ -285,7 +302,9 @@ summary{cursor:pointer;font-weight:bold}
 </table></div>
 <div class="exs" data-q="결코|전혀|별로|그다지|좀처럼|미처" data-e="지 않|지 못|없|못|모르|몰랐|아니" data-n="5"></div>
 
-<h3>A6 · Phỏng đoán – nghi vấn</h3>
+<div class="prac"><div class="ph">✋ Luyện nhanh A5 · Phủ định bắt buộc</div><div class="quiz" id="pa5"></div></div>
+
+<h3 id="hA6">A6 · Phỏng đoán – nghi vấn</h3>
 <div class="tw"><table class="t">
 <tr><th>Phó từ</th><th>Vế sau</th><th>Ghi chú</th></tr>
 <tr><td class="ko"><b>아마(도)</b></td><td class="ko">-(으)ㄹ 것이다 · -겠- · -(으)ㄹ걸요 · -(으)ㄹ 거예요</td><td>đoán khá chắc</td></tr>
@@ -295,7 +314,9 @@ summary{cursor:pointer;font-weight:bold}
 </table></div>
 <div class="exs" data-q="아마|도대체" data-e="을 거예요|ㄹ 거예요|건지|을까|ㄹ까|는지" data-n="3"></div>
 
-<h3>A7 · Nhấn mạnh – giới hạn – số lượng</h3>
+<div class="prac"><div class="ph">✋ Luyện nhanh A6 · Phỏng đoán – nghi vấn</div><div class="quiz" id="pa6"></div></div>
+
+<h3 id="hA7">A7 · Nhấn mạnh – giới hạn – số lượng</h3>
 <div class="tw"><table class="t">
 <tr><th>Phó từ</th><th>Vế sau</th><th>Ghi chú</th></tr>
 <tr><td class="ko"><b>반드시 · 꼭</b></td><td class="ko">-아야 하다 · -ㄴ다 (luôn luôn) · <b>-는 것은 아니다</b> (không hẳn)</td><td>“반드시 … 것은 아니다” = phủ định một phần: lựa chọn biến nó thành “không bao giờ” là bẫy A</td></tr>
@@ -307,7 +328,9 @@ summary{cursor:pointer;font-weight:bold}
 </table></div>
 <div class="exs" data-q="반드시|비로소|오직|오로지|비단|겨우|고작|무려" data-e="야 한다|야 하는|만이 아니|만으로|에만|에 불과|뿐인데|뿐|이나|나 |될 것이다" data-n="6"></div>
 
-<h3>A8 · Thái độ – lựa chọn</h3>
+<div class="prac"><div class="ph">✋ Luyện nhanh A7 · Nhấn mạnh – giới hạn</div><div class="quiz" id="pa7"></div></div>
+
+<h3 id="hA8">A8 · Thái độ – lựa chọn</h3>
 <div class="tw"><table class="t">
 <tr><th>Phó từ</th><th>Vế sau</th><th>Nghĩa</th></tr>
 <tr><td class="ko"><b>차라리</b></td><td class="ko">-는 게 낫다 · -겠다 · -(으)ㄹ 바에는</td><td>“thà … còn hơn”</td></tr>
@@ -320,7 +343,9 @@ summary{cursor:pointer;font-weight:bold}
 </table></div>
 <div class="exs" data-q="막상|굳이|자칫|일단" data-e="해 보면|보면|필요가 없|기 쉽다|려면|면" data-n="4"></div>
 
-<h3>A9 · Khung hai vế trong một câu</h3>
+<div class="prac"><div class="ph">✋ Luyện nhanh A8 · Thái độ – lựa chọn</div><div class="quiz" id="pa8"></div></div>
+
+<h3 id="hA9">A9 · Khung hai vế trong một câu</h3>
 <p>Không phải phó từ nhưng hoạt động y như hô ứng: thấy vế này là biết vế kia mang ý gì. Đây là loại <b>quyết định ô trống nhiều nhất</b> ở 28–31, 44, 49.</p>
 <div class="tw"><table class="t">
 <tr><th>Khung</th><th>Vế ô</th><th>Ví dụ trong đề</th></tr>
@@ -335,15 +360,18 @@ summary{cursor:pointer;font-weight:bold}
 <tr><td class="ko">다행히 … · 불행히도 …</td><td>kết quả tốt / xấu</td><td class="ko">다행히 … (인근에 있던 사람들 모두 무사했으나) <span class="src">New TOPIK 3 · 30</span></td></tr>
 </table></div>
 
-<h3>A10 · “물론 … 그러나 …” — hô ứng ở cấp đoạn văn</h3>
+<div class="prac"><div class="ph">✋ Luyện nhanh A9 · Khung hai vế</div><div class="quiz" id="pa9"></div></div>
+
+<h3 id="hA10">A10 · “물론 … 그러나 …” — hô ứng ở cấp đoạn văn</h3>
 <p>Câu <span class="kw">물론</span> = tác giả <b>tạm thừa nhận</b> một ý; câu sau mở bằng <span class="kw">그러나 / 하지만</span> (hoặc khung <span class="ko">-긴 하지만</span>) mới là ý của tác giả. Thấy 물론 là biết: (1) ý chính ở câu sau; (2) lựa chọn nào lấy nội dung câu 물론 làm chủ đề là bẫy <span class="trap R">R</span>.</p>
 <div class="exs" data-q="물론" data-n="6"></div>
 
-<h3>Luyện nhanh: thấy đuôi → chọn phó từ</h3>
-<p class="note">Câu tự soạn (lựa chọn đầu là đáp án, trang tự đảo). Bấm một lựa chọn để xem giải thích.</p>
-<div class="quiz" id="hq1"></div>
-<h3>Luyện nhanh: thấy phó từ → chọn đuôi</h3>
-<div class="quiz" id="hq2"></div>
+<div class="prac"><div class="ph">✋ Luyện nhanh A10 · 물론 … 그러나</div><div class="quiz" id="pa10"></div></div>
+
+<h3 id="hMix">Bài trộn cuối buổi</h3>
+<p class="note">Trộn cả 10 nhóm, hai chiều (thấy đuôi → chọn phó từ, thấy phó từ → chọn đuôi) + khung hai vế. Câu tự soạn, khác câu ở phần luyện nhanh. Làm xong xem dòng điểm theo từng nhóm để biết nhóm nào cần ôn.</p>
+<div class="quiz" id="hqm"></div>
+<div id="hqmRep"></div>
 <h3>Câu thật có dấu hiệu hô ứng</h3>
 <div class="exlist" data-k="H"></div>
 </section>
@@ -766,50 +794,128 @@ function fillExs(root){
   });});
 }
 
-/* ---------- luyện nhanh hô ứng ---------- */
-var HQ1=[
+/* ---------- luyện nhanh hô ứng: sau từng nhóm A1–A10 + bài trộn ----------
+   mỗi câu [câu, lựa chọn (đầu là đáp án, trang tự đảo), giải thích, câu hỏi (tùy chọn)] */
+var PA={
+pa1:[
 ['(    ) 바빠도 아침은 꼭 먹어야 한다.',['아무리','만약','과연','별로'],'-아도 ← 아무리 (dù … đến đâu). 만약 cần -면, 과연 cần câu hỏi, 별로 cần phủ định.'],
+['비록 키는 작(    ) 농구를 잘한다.',['지만','으면','아서','으니까'],'비록 → -지만 (thừa nhận một sự thật).'],
+['아무리 비싸(    ) 꼭 사고 싶다.',['도','면','니까','서'],'아무리 → -아/어도.'],
+['(    ) 그런 일이 생긴다 해도 너무 걱정하지 마세요.',['설령','만약','과연','왜냐하면'],'-ㄴ다 해도 + chuyện chưa chắc xảy ra ← 설령 (giả sử). 만약 cần -면.'],
+['',['설령 내일 비가 오더라도 경기는 열린다.','설령 내일 비가 오지만 경기는 열린다.','설령 내일 비가 오면 경기는 열린다.','설령 내일 비가 와서 경기는 열린다.'],'설령 = giả định chưa xảy ra → chỉ đi với -더라도 / -ㄴ다 해도. -지만 dành cho sự thật (비록).','Câu nào đúng?'],
+['약을 먹고 푹 잤다. (    ) 감기가 낫지 않았다.',['그래도','그래서','왜냐하면','게다가'],'Câu sau là kết quả trái mong đợi → 그래도 (dẫu vậy). 그래서 thì câu sau phải là kết quả thuận.']
+],
+pa2:[
 ['(    ) 내일까지 신청하지 않으면 참가할 수 없다.',['만약','비록','아무리','결코'],'-으면 ← 만약. 비록 / 아무리 cần -지만 / -아도.'],
+['만약 비가 오(    ) 소풍은 연기된다.',['면','더라도','지만','아서'],'만약 → -면. -더라도 đi với 비록 / 아무리 / 설령.'],
+['(    ) 제 우산 못 보셨어요?',['혹시','만약','비록','아무리'],'Câu hỏi lịch sự “liệu có … không” ← 혹시. 만약 không đứng trong câu hỏi khi không có -면.'],
+['(    ) 시작하면 끝까지 해야 한다.',['일단','비록','과연','설마'],'-면 + “một khi đã” ← 일단.'],
+['(    ) 그 착한 사람이 거짓말을 했을 리가 없다.',['설마','만약','비록','일단'],'-ㄹ 리가 없다 ← 설마 (lẽ nào).']
+],
+pa3:[
 ['이 지역에는 눈이 거의 오지 않는다. (    ) 겨울에도 기온이 영하로 내려가지 않기 때문이다.',['왜냐하면','그래서','만약','비록'],'-기 때문이다 ← 왜냐하면. 그래서 thì câu sau là kết quả, không phải lý do.'],
+['그날은 가게 문을 닫았다. 왜냐하면 그날은 휴일이었(    ).',['기 때문이다','지만','으면','고 싶다'],'왜냐하면 → -기 때문이다.'],
+['그는 오늘 수업 시간에 계속 졸았다.',['왜냐하면 어제 잠을 못 잤기 때문이다.','왜냐하면 어제 잠을 못 잤다.','왜냐하면 어제 잠을 못 잤지만.','왜냐하면 어제 잠을 못 자려고 한다.'],'Câu 왜냐하면 phải kết bằng -기 때문이다. ② thiếu vế (lỗi giống HOT 2 câu 41).','Câu tiếp theo nào viết đúng?'],
+['',['왜냐하면 물이 부족하기 때문이다.','요즘 물을 아껴 쓰자는 캠페인이 늘고 있다.','최근 한 회사가 새로운 정수기를 만들었다.','많은 사람들이 아침마다 물을 마신다.'],'Câu 왜냐하면 … 때문이다 là câu bám (giải thích câu ngay trước) → không bao giờ đứng đầu đoạn (câu 13–15).','Câu 13–15: câu nào KHÔNG thể đứng đầu đoạn văn?']
+],
+pa4:[
 ['그 소식을 듣고 (    ) 꿈을 꾸는 것 같았다.',['마치','비록','차라리','결코'],'-는 것 같다 ← 마치.'],
+['오늘은 마치 봄이 온 (    ) 따뜻하다.',['것처럼','때문에','덕분에','대신에'],'마치 → -ㄴ 것처럼 / 듯이.'],
+['아이는 (    ) 어른처럼 말을 했다.',['마치','아마','과연','별로'],'-처럼 ← 마치.'],
+['그는 마치 아무 일도 없었다는 (    ) 웃었다.',['듯이','바람에','탓에','김에'],'마치 → -는 듯이. 바람에 / 탓에 là lý do, 김에 là “nhân tiện”.']
+],
+pa5:[
 ['그는 약속 시간에 (    ) 늦는 법이 없다.',['결코','반드시','아마','과연'],'없다 (phủ định) ← 결코. 반드시 đi với khẳng định -아야 하다.'],
-['이 문제는 (    ) 혼자서 해결할 수 없다.',['도저히','반드시','별로','비록'],'-ㄹ 수 없다 ← 도저히 (không thể nào). 별로 đi với -지 않다 / 없다 chỉ mức độ, không đi với “không thể”.'],
-['시험이 생각보다 (    ) 어렵지 않았다.',['별로','아주','반드시','마치'],'-지 않다 + mức độ ← 별로 (không mấy). 아주 + phủ định nghe gượng.'],
-['이렇게 서두르면 (    ) 사고가 날 수 있다.',['자칫','비록','차마','마침내'],'-ㄹ 수 있다 (hậu quả xấu) ← 자칫.'],
+['이 문제는 (    ) 혼자서 해결할 수 없다.',['도저히','반드시','별로','비록'],'-ㄹ 수 없다 ← 도저히 (không thể nào). 별로 chỉ mức độ, không đi với “không thể”.'],
+['시험이 생각보다 (    ) 어렵지 않았다.',['별로','아주','반드시','마치'],'-지 않다 + mức độ ← 별로 (không mấy).'],
 ['친구가 준 선물이라 (    ) 버릴 수가 없었다.',['차마','마침','오히려','아마'],'-ㄹ 수가 없었다 + tình cảm ← 차마 (không nỡ).'],
-['(    ) 해 보니 생각보다 쉬웠다.',['막상','비록','과연','결코'],'-아 보니 ← 막상 (đến khi thật sự làm).'],
+['너무 바빠서 (    ) 인사도 못 드리고 왔다.',['미처','반드시','비록','마침내'],'못 + chưa kịp ← 미처.'],
+['이 일은 결코 쉽(    ).',['지 않다','다','을 것이다','어야 한다'],'결코 → phủ định.'],
+['Bài viết: “이 약은 부작용이 별로 없다.”',['이 약은 부작용이 전혀 없다.','이 약은 부작용이 많지 않다.','이 약은 부작용이 적은 편이다.','이 약의 부작용은 심하지 않다.'],'별로 없다 = “không nhiều” ≠ 전혀 없다 = “hoàn toàn không” → đổi mức độ là bẫy A (Quá mức).','Lựa chọn nào SAI vì đổi mức độ (bẫy A)?']
+],
+pa6:[
 ['그렇게 공부하고도 떨어지다니, (    ) 시험이 그렇게 어려웠던 걸까?',['과연','비록','차라리','별로'],'-ㄹ까? ← 과연 (liệu có).'],
-['줄을 서서 한 시간을 기다릴 바에는 (    ) 집에서 쉬는 게 낫다.',['차라리','아마','마치','결코'],'-는 게 낫다 · -ㄹ 바에는 ← 차라리.'],
-['이 약은 하루에 (    ) 세 번 먹어야 한다.',['반드시','별로','전혀','비록'],'-아야 한다 ← 반드시.'],
 ['내일은 (    ) 비가 올 것이다.',['아마','비록','결코','왜냐하면'],'-ㄹ 것이다 (đoán) ← 아마.'],
-['모든 사람이 서로 배려할 때 (    ) 좋은 사회가 될 수 있다.',['비로소','오히려','아예','마치'],'-ㄹ 때 … ← 비로소 (mới).'],
+['그가 연락이 없네요. 어쩌면 이미 떠났을(    ).',['지도 모른다','리가 없다','수밖에 없다','뿐이다'],'어쩌면 → -ㄹ지도 모르다. -ㄹ 리가 없다 ngược nghĩa (chắc chắn không).'],
+['과연 그 계획이 성공할 수 있을(    )?',['까','거라고','텐데','뿐이다'],'과연 (nghi vấn) → -ㄹ까?'],
+['열쇠를 (    ) 어디에 두었는지 기억이 나지 않는다.',['도대체','아마','비록','반드시'],'-는지 + từ hỏi 어디 + bực bội ← 도대체.']
+],
+pa7:[
+['이 약은 하루에 (    ) 세 번 먹어야 한다.',['반드시','별로','전혀','비록'],'-아야 한다 ← 반드시.'],
+['모든 사람이 서로 배려할 때 (    ) 좋은 사회가 될 수 있다.',['비로소','오히려','아예','마치'],'-ㄹ 때 … mới ← 비로소.'],
 ['이것은 (    ) 우리 회사만의 문제가 아니다.',['비단','오직','겨우','마침'],'-만의 문제가 아니다 ← 비단 (không chỉ). 오직 đi với khẳng định -만.'],
 ['그 공연을 보려고 (    ) 세 시간이나 기다렸다.',['무려','겨우','고작','단지'],'-이나 (nhiều) ← 무려. 겨우 / 고작 / 단지 đi với -밖에 / -뿐 (ít).'],
 ['생일 선물이 (    ) 사탕 한 개뿐이었다.',['고작','무려','비단','마침내'],'-뿐 (ít, thất vọng) ← 고작.'],
 ['돈이 많다고 (    ) 행복한 것은 아니다.',['반드시','별로','아마','차마'],'-는 것은 아니다 ← 반드시 (không hẳn). Phủ định một phần.'],
-['길이 미끄러워서 (    ) 넘어질 뻔했다.',['하마터면','비로소','마침내','오히려'],'-ㄹ 뻔했다 ← 하마터면.'],
-['너무 바빠서 (    ) 인사도 못 드리고 왔다.',['미처','반드시','비록','마침내'],'못 + chưa kịp ← 미처.']
-];
-var HQ2=[
-['비록 키는 작(    ) 농구를 잘한다.',['지만','으면','아서','으니까'],'비록 → -지만.'],
-['만약 비가 오(    ) 소풍은 연기된다.',['면','더라도','지만','아서'],'만약 → -면. -더라도 đi với 비록 / 아무리 / 설령.'],
-['아무리 비싸(    ) 꼭 사고 싶다.',['도','면','니까','서'],'아무리 → -아/어도.'],
-['그날은 가게 문을 닫았다. 왜냐하면 그날은 휴일이었(    ).',['기 때문이다','지만','으면','고 싶다'],'왜냐하면 → -기 때문이다.'],
-['오늘은 마치 봄이 온 (    ) 따뜻하다.',['것처럼','때문에','덕분에','대신에'],'마치 → -ㄴ 것처럼 / 듯이.'],
-['이 일은 결코 쉽(    ).',['지 않다','다','을 것이다','어야 한다'],'결코 → phủ định.'],
-['그가 연락이 없네요. 어쩌면 이미 떠났을(    ).',['지도 모른다','리가 없다','수밖에 없다','뿐이다'],'어쩌면 → -ㄹ지도 모르다. -ㄹ 리가 없다 ngược nghĩa (chắc chắn không).'],
-['과연 그 계획이 성공할 수 있을(    )?',['까','거라고','텐데','뿐이다'],'과연 (nghi vấn) → -ㄹ까?'],
-['그렇게 고생할 바에는 차라리 혼자 가는 게 (    ).',['낫겠다','어렵다','당연하다','틀림없다'],'차라리 → -는 게 낫다.'],
 ['좋은 사회는 모두가 노력할 때 비로소 만들어질 수 있(    ).',['다','지 않다','을까','을 뿐이다'],'비로소 → khẳng định (mới … được); không đi với phủ định.']
+],
+pa8:[
+['이렇게 서두르면 (    ) 사고가 날 수 있다.',['자칫','비록','차마','마침내'],'-ㄹ 수 있다 (hậu quả xấu) ← 자칫.'],
+['(    ) 해 보니 생각보다 쉬웠다.',['막상','비록','과연','결코'],'-아 보니 ← 막상 (đến khi thật sự làm).'],
+['줄을 서서 한 시간을 기다릴 바에는 (    ) 집에서 쉬는 게 낫다.',['차라리','아마','마치','결코'],'-는 게 낫다 · -ㄹ 바에는 ← 차라리.'],
+['길이 미끄러워서 (    ) 넘어질 뻔했다.',['하마터면','비로소','마침내','오히려'],'-ㄹ 뻔했다 ← 하마터면.'],
+['(    ) 해야 할 일이라면 빨리 끝내는 게 좋다.',['어차피','비록','과연','결코'],'“đằng nào cũng phải làm” ← 어차피.'],
+['그 정도 일은 (    ) 부모님께 말씀드릴 필요가 없다.',['굳이','반드시','마치','아마'],'-ㄹ 필요가 없다 ← 굳이.'],
+['약을 먹으면 나을 줄 알았는데 (    ) 더 아파졌다.',['오히려','게다가','따라서','마치'],'Dự đoán (나을 줄 알았는데) bị đảo ngược → 오히려 (trái lại). 오히려 không có đuôi cố định — nhận ra nhờ quan hệ (họ B).']
+],
+pa9:[
+['성공은 운이 아니라 (    ) 결과이다.',['꾸준한 노력의','갑작스러운 행운의','우연한 기회의','타고난 운의'],'A가 아니라 B → B ngược A: 운 (may mắn) ↔ 노력 (nỗ lực). ②③④ đều cùng phía với 운.'],
+['그는 화가 났다기보다는 (    ).',['조금 서운했던 것 같다','몹시 화가 난 것 같다','크게 분노했다','화를 참지 못했다'],'-기보다는 B → B khác A: không hẳn là giận mà là buồn tủi. ②③④ lặp lại ý “giận”.'],
+['이 책은 읽으면 읽을수록 (    ).',['더 재미있어진다','한 번만 읽으면 된다','처음 읽을 때만 재미있다','내용이 전혀 바뀌지 않는다'],'-(으)ㄹ수록 → B tăng / đổi theo A.'],
+['운동은 건강에 좋을 뿐만 아니라 (    ).',['스트레스를 줄이는 데에도 도움이 된다','건강을 해칠 수도 있다','시간이 많이 걸려서 불편하다','사람들이 별로 하지 않는다'],'뿐만 아니라 B도 → B cùng chiều (cũng tốt).'],
+['그는 열심히 준비했음에도 불구하고 (    ).',['시험에 떨어지고 말았다','시험에 쉽게 합격했다','좋은 점수를 받았다','준비한 만큼 결과가 좋았다'],'-음에도 불구하고 → B trái với điều A khiến ta chờ đợi.'],
+['예전에는 편지로 소식을 전했는데 이제는 (    ).',['휴대 전화로 바로 연락한다','여전히 편지를 쓴다','편지를 더 자주 쓴다','우체국에 자주 간다'],'예전에는 A -는데 이제는 B → A ngược B.']
+],
+pa10:[
+['물론 인터넷은 정보를 빨리 찾을 수 있게 해 준다. 그러나 인터넷의 정보가 모두 정확한 것은 아니므로 꼼꼼히 확인해야 한다.',['인터넷 정보는 확인하고 사용해야 한다.','인터넷은 정보를 빨리 찾게 해 준다.','인터넷을 사용하지 말아야 한다.','인터넷의 정보는 모두 정확하다.'],'Câu 물론 = tạm thừa nhận; ý tác giả ở câu 그러나 → ①. ② lấy câu 물론 làm ý chính (bẫy R), ③ quá mức (A), ④ ngược (N).','필자의 생각으로 가장 알맞은 것은?'],
+['물론 아이에게 칭찬은 필요하다. (    ) 지나친 칭찬은 오히려 아이를 약하게 만들 수 있다.',['하지만','그래서','게다가','예를 들어'],'물론 A → 하지만 / 그러나 B.'],
+['이 식당은 음식이 맛있긴 하지만 (    ).',['값이 너무 비싸다','정말 맛있어서 자주 간다','분위기도 아주 좋다','직원들도 친절하다'],'-긴 하지만 = tạm thừa nhận → vế sau đổi chiều (điểm trừ).'],
+['',['câu sau, mở bằng 그러나 / 하지만','chính câu có 물론','câu đầu tiên của bài','ví dụ ở giữa bài'],'물론 = tác giả tạm nhận một ý để rồi lật lại → ý chính ở câu 그러나 / 하지만 ngay sau.','Thấy câu bắt đầu bằng 물론, ý chính của tác giả thường nằm ở đâu?']
+]};
+/* bài trộn cuối buổi: phần tử 5 = nhóm (để báo nhóm cần ôn) */
+var HQM=[
+['(    ) 돈이 없어도 마음만은 부자다.',['비록','만약','혹시','아마'],'-어도 (sự thật đã thừa nhận) ← 비록. 만약 / 혹시 cần -면, 아마 cần -ㄹ 것이다.','',1],
+['혹시 내일 시간이 있으(    ) 같이 영화 볼래요?',['면','지만','더라도','아서'],'혹시 → -(으)면 (nếu, lỡ như).','',2],
+['나는 매일 걸어서 출근한다. 왜냐하면 걷는 것이 건강에 좋(    ).',['기 때문이다','지만','으면','을까'],'왜냐하면 → -기 때문이다.','',3],
+['그는 (    ) 한국 사람처럼 한국말을 잘한다.',['마치','결코','아마','비단'],'-처럼 ← 마치.','',4],
+['그 사람의 이름이 (    ) 생각나지 않는다.',['좀처럼','반드시','마치','무려'],'phủ định -지 않는다 ← 좀처럼 (mãi không).','',5],
+['어쩌면 그가 벌써 집에 도착했을(    ).',['지도 모른다','리가 없다','뿐이다','까 봐'],'어쩌면 → -ㄹ지도 모르다.','',6],
+['이번 일은 (    ) 내 잘못만은 아니다.',['비단','오직','겨우','무려'],'-만은 아니다 ← 비단 (không chỉ).','',7],
+['이 문제는 어려워 보이지만 (    ) 해 보면 쉽다.',['막상','비록','설마','결코'],'-아 보면 (đến khi làm thật) ← 막상.','',8],
+['하마터면 지갑을 잃어버릴 (    ).',['뻔했다','수밖에 없었다','리가 없었다','뿐이었다'],'하마터면 → -ㄹ 뻔했다.','',8],
+['시간이 부족해서 숙제를 (    ) 끝내지 못했다.',['미처','반드시','과연','마치'],'못 + chưa kịp ← 미처.','',5],
+['설령 실패한다(    ) 다시 도전할 것이다.',['고 해도','면','니까','아서'],'설령 → -ㄴ다고 해도 / -더라도.','',1],
+['과연 그 소문이 사실일(    )?',['까','지도 모른다','뿐이다','리가 없다'],'과연 (nghi vấn) → -ㄹ까?','',6],
+['행복은 많이 가지는 것이 아니라 (    ) 것이다.',['가진 것에 만족하는','더 많이 가지는','남보다 많이 버는','비싼 물건을 사는'],'A가 아니라 B → B ngược A (가지다 nhiều ↔ hài lòng với cái đã có).','',9],
+['물론 경험이 많은 사람이 일을 더 잘할 수 있다. 하지만 새로운 시각을 가진 젊은 사람의 아이디어도 회사에 꼭 필요하다.',['젊은 사람의 새로운 아이디어도 필요하다.','경험이 많은 사람이 일을 잘한다.','젊은 사람은 경험이 부족하다.','회사는 경험만 보고 사람을 뽑는다.'],'물론 … 하지만 → ý chính ở câu 하지만 (①). ② lấy câu 물론 (bẫy R), ③④ bài không nói.','필자의 생각으로 가장 알맞은 것은?',10],
+['아무리 노력해(    ) 안 되는 일도 있다.',['도','서','면','니까'],'아무리 → -아/어도.','',1],
+['이 일은 (    ) 혼자 할 수 있는 일이 아니다.',['결코','반드시','아마','과연'],'phủ định -는 일이 아니다 ← 결코.','',5]
 ];
 function shuf(a,seed){var r=a.map(function(x,i){return [x,i];});var s=seed;r.sort(function(p,q){s=(s*9301+49297)%233280;return ((p[1]*7+s)%5)-((q[1]*7+s)%5);});return r;}
-function quiz(id,Q){var box=$('#'+id);if(!box||box.dataset.done)return;box.dataset.done=1;
-  box.innerHTML=Q.map(function(q,qi){var o=shuf(q[1],qi*31+7),key=id+'_'+qi,ch=st.h[key];
-    return '<div class="qq'+(ch!=null?' done':'')+'" data-k="'+key+'"><div class="stem"><span class="n">'+(qi+1)+'</span><span class="ko">'+esc(sp(q[0]))+'</span></div><div class="opts">'+
+function qScore(id,Q){var n=0,ok=0;Q.forEach(function(q,qi){var c=st.h[id+'_'+qi];if(c!=null){n++;if(c===0)ok++;}});return [ok,n];}
+function quiz(id,Q,force){var box=$('#'+id);if(!box||(box.dataset.done&&!force))return;box.dataset.done=1;
+  box.innerHTML=Q.map(function(q,qi){var o=shuf(q[1],qi*31+id.length*11+7),key=id+'_'+qi,ch=st.h[key];
+    return '<div class="qq'+(ch!=null?' done':'')+'" data-k="'+key+'"><div class="stem"><span class="n">'+(qi+1)+'</span>'+(q[0]?'<span class="ko">'+esc(sp(q[0]))+'</span>':'')+'</div>'+(q[3]?'<div class="qline">'+esc(q[3])+'</div>':'')+'<div class="opts">'+
       o.map(function(p){var cls='opt';if(ch!=null){if(p[1]===0)cls+=' ok';else if(p[1]===ch)cls+=' no';}return '<button class="'+cls+'" data-i="'+p[1]+'"><span class="ko">'+esc(p[0])+'</span></button>';}).join('')+
-      '</div><div class="why">'+esc(q[2])+'</div></div>';}).join('');
+      '</div><div class="why">'+esc(q[2])+'</div></div>';}).join('')+'<div class="score"></div>';
+  function upd(){var sc=qScore(id,Q);$('.score',box).innerHTML='Đúng '+sc[0]+'/'+Q.length+(sc[1]<Q.length?' (còn '+(Q.length-sc[1])+' câu)':'')+(sc[1]?' · <a href="#" data-redo="1">Làm lại</a>':'');
+    var a=$('[data-redo]',box);if(a)a.onclick=function(e){e.preventDefault();Q.forEach(function(q,qi){delete st.h[id+'_'+qi];});save();quiz(id,Q,1);};
+    hoNav();if(id==='hqm')mixRep();}
   $$('.qq',box).forEach(function(qd){$$('.opt',qd).forEach(function(b){b.onclick=function(){if(qd.classList.contains('done'))return;var i=+b.dataset.i;st.h[qd.dataset.k]=i;save();qd.classList.add('done');
-    $$('.opt',qd).forEach(function(x){var j=+x.dataset.i;if(j===0)x.classList.add('ok');else if(j===i)x.classList.add('no');});};});});}
+    $$('.opt',qd).forEach(function(x){var j=+x.dataset.i;if(j===0)x.classList.add('ok');else if(j===i)x.classList.add('no');});upd();};});});
+  upd();}
+var HO_NM=['','Nhượng bộ','Điều kiện','Lý do','Như thể','Phủ định','Phỏng đoán','Nhấn mạnh','Thái độ','Khung hai vế','물론 … 그러나'];
+function hoNav(){var nv=$('#hoNav');if(!nv)return;
+  var h='';for(var n=1;n<=10;n++){var Q=PA['pa'+n],sc=qScore('pa'+n,Q);h+='<button data-go="hA'+n+'" class="'+(sc[1]===Q.length?'full':'')+'">A'+n+' '+esc(HO_NM[n])+' <small>'+sc[0]+'/'+Q.length+'</small></button>';}
+  var sm=qScore('hqm',HQM);h+='<button data-go="hMix" class="new'+(sm[1]===HQM.length?' full':'')+'">Bài trộn <small>'+sm[0]+'/'+HQM.length+'</small></button>';
+  nv.innerHTML=h;$$('button',nv).forEach(function(b){b.onclick=function(){var t=document.getElementById(b.dataset.go);if(t)t.scrollIntoView({behavior:'smooth'});};});}
+function mixRep(){var el=$('#hqmRep');if(!el)return;var g={},n=0;
+  HQM.forEach(function(q,qi){var c=st.h['hqm_'+qi];if(c==null)return;n++;var k=q[4];g[k]=g[k]||[0,0];g[k][1]++;if(c===0)g[k][0]++;});
+  if(!n){el.innerHTML='';return;}
+  var weak=Object.keys(g).filter(function(k){return g[k][0]<g[k][1];});
+  el.innerHTML='<div class="co"><b>Theo nhóm:</b> '+Object.keys(g).sort(function(a,b){return a-b;}).map(function(k){return 'A'+k+' '+esc(HO_NM[k])+' '+g[k][0]+'/'+g[k][1];}).join(' · ')+
+    (weak.length?'<br>Cần ôn lại: '+weak.map(function(k){return '<a href="#" data-go="hA'+k+'">A'+k+' '+esc(HO_NM[k])+'</a>';}).join(', '):'<br>Đúng hết các nhóm đã làm.')+'</div>';
+  $$('[data-go]',el).forEach(function(a){a.onclick=function(e){e.preventDefault();document.getElementById(a.dataset.go).scrollIntoView({behavior:'smooth'});};});}
 
 /* ---------- dạng câu ---------- */
 var TYPES=[
@@ -1079,7 +1185,7 @@ function route(){
   $$('nav a').forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#b='+b);});
   var sec=document.getElementById('s'+b);
   if(b==='tong'&&!inited.tong){inited.tong=1;mapTbl();legends();stats();}
-  if(b==='ho'){quiz('hq1',HQ1);quiz('hq2',HQ2);}
+  if(b==='ho'){Object.keys(PA).forEach(function(k){quiz(k,PA[k]);});quiz('hqm',HQM);hoNav();mixRep();}
   if(b==='dang'){if(!inited.dang){inited.dang=1;$('#tnav').innerHTML=TYPES.map(function(t){return '<button data-t="'+t.id+'" class="'+(t.neu?'new':'')+'">'+esc(t.name)+'</button>';}).join('');
       $$('#tnav button').forEach(function(x){x.onclick=function(){location.hash='#b=dang&t='+x.dataset.t;};});}
     if(h.t!==curT||!$('#tcard').innerHTML)showType(h.t||TYPES[0].id);}
