@@ -472,6 +472,10 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   Cuối mỗi thẻ nhóm (cô muốn bớt lý thuyết, luyện ngay sau từng nhóm): khối “📖 Ví dụ minh họa” (`.vd`, mỗi câu có nhãn mẫu `.tag`) + “✍ Luyện nhóm N”
   (`<div class="prac" id="pN">`, JS vẽ từ biến `P[N]` = `[loại, câu, đáp án, giải thích]`: `c` chọn (lựa chọn đầu là đáp án; “Câu nào sai?” thì lựa chọn đầu là câu sai),
   `y` gõ, `d` dịch Việt → Hàn (câu mẫu đầu + cách khác; trùng thì máy chấm, khác thì học sinh tự chấm), xen lẫn ~10 câu/nhóm; `st.p`, báo cáo gộp vào “Gửi kết quả cho cô”).
+- `seoul/tieu-tu/` **Tiểu từ dễ nhầm** — bản gửi học sinh, tách từ thẻ Tiểu từ (nhóm 1–5) của `seoul/tuong-dong/` (trang đó giữ nguyên làm giáo án của cô):
+  thẻ Bài học (`#b=tt`, `&g=g1…g5` nhảy tới nhóm; HTML nhóm 1–5 + `P[1…5]` + `M.q1` chép nguyên, sửa ở `tuong-dong/` thì chép lại) · thẻ Luyện tập (`#b=lt`, bài mới:
+  `M.l1` chọn tiểu từ 13, `T.l2` gõ tiểu từ 13, `M.l3` tìm câu sai 9 (lựa chọn đầu là câu sai), `T.l4` đoạn văn của Mai 10 chỗ trống, `M.ck` kiểm tra cuối 13; giải thích ghi số nhóm),
+  “Gửi kết quả cho cô” gộp cả bài luyện sau từng nhóm. localStorage `nari-tieutu`.
 - `seoul/tu-de-hoi/` Từ để hỏi (học sinh lớp 3A hay nhầm): thẻ 10 từ hỏi (`#b=cb`, bản đồ + 5 nhóm), Vị trí & tiểu từ (`vt`: thay đúng chỗ, từ hỏi chủ ngữ luôn 이/가,
   bảng tiểu từ, rút gọn khẩu ngữ), Dễ nhầm (`nh`: 무슨/어느/어떤, 몇/얼마/얼마나/며칠, 어떻게/어때요/어떤, “sao” = 왜/어떻게/무슨 일로/웬일, 언제/몇 시…),
   Lịch sự (`ls`: “어떻게 되세요”, 4 kiểu đuôi hỏi, câu hỏi đề viết 54), Mở rộng (`md`: nghĩa bất định + ngữ điệu, 누구나/아무나/아무도, -는지/-냐고, câu tu từ), Luyện (`lt`).
