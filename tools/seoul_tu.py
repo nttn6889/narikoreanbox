@@ -6,7 +6,7 @@ Cách dùng:  pip install kiwipiepy
 
 Nguồn (soạn tay): tools/seoul_tu/<cuốn>-<bài>.json
   {b, c, lead, top:[[từ, loại, nghĩa, Hán Việt?]] (từ chủ đề của bài trong TOPIK), topNote,
-   w:[{ko (đúng như tools/seoul/<cuốn>.tsv), q:[từ gốc để đếm trong đề] (mặc định ko), p 명/동/형/부, exv (dịch câu ví dụ),
+   w:[{ko (đúng như tools/seoul/<cuốn>.tsv), q:[từ gốc để đếm trong đề] (mặc định ko; [] = không đếm, vd. 일 lẫn với “việc”), p 명/동/형/부, exv (dịch câu ví dụ),
        r:[[từ liên quan, nghĩa]], tip:{t, c:[[cụm, nghĩa]] | x}, up:[[từ trung cấp, loại, nghĩa, Hán Việt?]], note}],
    x:[{g: k kết hợp | h mở rộng, w (số từ), s (câu có “( )”), o (lựa chọn đầu là đáp án), v (dịch), why}]}
   Nghĩa, Hán Việt, câu ví dụ, id từ lấy từ tools/seoul/<cuốn>.tsv (id giống seoul_kho.py: s2a02_<nhóm>_<thứ tự>).
@@ -40,7 +40,7 @@ def main():
     targets = {}
     for s in srcs:
         for w in s["w"]:
-            for q in w.get("q") or [w["ko"]]:
+            for q in w.get("q", [w["ko"]]):
                 targets[q] = "부" if w["p"] == "부" else ("명" if q != w["ko"] else w["p"])
             for u in w.get("up", []):
                 targets[u[0]] = u[1]
@@ -73,7 +73,7 @@ def main():
             seen.add(w["ko"])
             t = bw[w["ko"]]
             w.update(n=n, id=t["id"], grp=t["grp"], vi=w.get("vi") or t["vi"], hv=w.get("hv", t["hv"]), ex=w.get("ex") or t["ex"])
-            w.update({k: v for k, v in info(w.get("q") or [w["ko"]]).items() if v is not None})
+            w.update({k: v for k, v in info(w.get("q", [w["ko"]])).items() if v is not None})
             w["up"] = [u + [None] * (4 - len(u)) + [len(hits[u[0]]["e"]) if u[0] in hits else 0,
                                                     pick(hits[u[0]]["x"])[:1] if u[0] in hits else []] for u in w.get("up", [])]
         miss = [k for k in bw if k not in seen]
