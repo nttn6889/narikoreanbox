@@ -17,22 +17,23 @@
 <main>
 <header class="brand">
   <div class="lg"><img class="logo" src="logo/nari-topik-ngang.svg" width="225" height="76" alt="Nari TOPIK – Hiểu từng câu, Vững từng cấp"><span class="zl">Cô Ngân · Zalo: <a href="https://zalo.me/0399214554">0399.214.554</a></span></div>
-  <nav class="lop">
-    <a class="on" href="./">TOPIK II</a><a href="lop/3a/">Seoul 3A</a><a href="lop/2a/">Seoul 2A</a><a href="lop/1a/">Seoul 1A</a><a class="kh" href="hoc-cung-co/">Khóa học ›</a></nav>
+  <nav class="lop" id="lopnav"><a class="on" href="./">TOPIK II</a><a class="kh" href="hoc-cung-co/">Khóa học ›</a></nav>
   <a class="co" href="ve-co/"><i>N</i>Về cô</a>
 </header>
 
-<h1>Học TOPIK II theo dạng câu</h1>
-<p class="intro">Chọn Đọc · Nghe · Viết rồi chọn dạng câu. Mỗi dạng có <b>Từ vựng</b> (học trước), <b>Học liệu</b> (chiến thuật, bài luyện của cô) và <b>Câu đề thi</b> (câu thật trong các đề, bấm chọn để xem đúng sai).</p>
+<h1>Học TOPIK II</h1>
+<p class="intro">Chọn Đọc · Nghe · Viết rồi chọn dạng câu: mỗi dạng có <b>Từ vựng</b> (học trước), <b>Học liệu</b> (chiến thuật, bài luyện của cô) và <b>Câu đề thi</b>. Thẻ <b>Từ vựng</b> có Từ cốt lõi và từ theo chủ đề, <b>Ngữ pháp</b> có bảng ngữ pháp câu 1–4, <b>Đề thi</b> để làm cả đề rồi chấm điểm.</p>
 <div class="parts" id="parts"></div>
 <nav class="dang" id="nav"></nav>
 <div id="out"></div>
-<footer><a href="tu-vung/">Tổng hợp từ vựng</a> · <a href="tu-vung/#k=uu">⭐ Từ cốt lõi</a> · <a href="thi-thu/">Phòng thi thử</a> · <a href="ve-co/">Về cô</a></footer>
+<footer><a href="thi-thu/">Phòng thi thử (bài cô giao)</a> · <a href="ve-co/">Về cô</a></footer>
 </main>
+<script src="lop/lop.js" data-root=""></script>
 <script>
 (function(){
+  /* Menu trên: Đọc · Nghe · Viết (theo dạng câu) · Từ vựng · Ngữ pháp · Đề thi */
+  var PARTS = [['doc', 'Đọc', 'Câu 1–50'], ['nghe', 'Nghe', 'Câu 1–50'], ['viet', 'Viết', 'Câu 51–54'], ['tu', 'Từ vựng', 'Cốt lõi · Chủ đề'], ['np', 'Ngữ pháp', 'Câu 1–4'], ['de', 'Đề thi', 'Làm cả đề']];
   /* Dạng câu: [câu đầu, câu cuối, tên] */
-  var PARTS = [['doc', 'Đọc', 'Câu 1–50'], ['nghe', 'Nghe', 'Câu 1–50'], ['viet', 'Viết', 'Câu 51–54']];
   var DANG = {
     doc: [[1,2,'Ngữ pháp điền chỗ trống'],[3,4,'Ngữ pháp tương đồng'],[5,5,'Quảng cáo sản phẩm'],[6,8,'Quảng cáo, khẩu hiệu'],[9,10,'Thông báo, biểu đồ'],
       [11,12,'Nội dung bài báo'],[13,15,'Sắp xếp câu'],[16,18,'Điền vào chỗ trống'],[19,20,'Phó từ nối + chủ đề'],[21,22,'Quán ngữ + nội dung'],
@@ -41,6 +42,12 @@
     nghe: [[1,3,'Chọn tranh, biểu đồ'],[4,8,'Câu nói tiếp theo'],[9,12,'Hành động tiếp theo'],[13,16,'Nội dung khớp'],[17,20,'Ý chính người nói'],
       [21,30,'Hội thoại, phỏng vấn'],[31,40,'Tranh luận, bài giảng'],[41,50,'Bài giảng, tài liệu']],
     viet: [[51,51,'Điền câu văn bản thực dụng'],[52,52,'Điền câu đoạn văn'],[53,53,'Viết đoạn văn theo biểu đồ'],[54,54,'Nghị luận 600–700 chữ']]
+  };
+  /* Thanh thứ hai của Từ vựng / Ngữ pháp / Đề thi */
+  var SUB = {
+    tu: [['uu', '⭐ Từ cốt lõi'], ['cd', 'Từ theo chủ đề']],
+    np: [['12', 'Câu 1–2 · Ngữ pháp điền'], ['34', 'Câu 3–4 · Ngữ pháp tương đồng']],
+    de: [['doc', 'Đề đọc'], ['nghe', 'Đề nghe'], ['viet', 'Đề viết']]
   };
   /* Học liệu theo dạng: '<phần>:<câu đầu>' → [[loại, tên, link, mô tả]] — chỉ trang dành cho học sinh (không đưa giáo án / bản trình chiếu của cô) */
   var HL = {
@@ -61,58 +68,93 @@
   };
   /* Đề nghe có file nghe (mới trước) */
   var NGHE = ['Etk096n', 'Etk091n', 'Etk083n'];
+  var NGHE_NOTE = {Etk096n: 'đủ 50 câu có file nghe', Etk091n: 'câu 1–30 có file nghe', Etk083n: 'câu 1–30 có file nghe'};
+  /* Đề đọc đủ 50 câu, có đáp án trong dau-hieu/data (đề thật trước) */
+  var DOC_DE = [['Etk091', 'TOPIK II 제91회', 'Đề thật'], ['Etk083', 'TOPIK II 제83회', 'Đề thật'],
+    ['Ehot1', 'HOT TOPIK · Đề 1', 'Bìa đỏ'], ['Ehot2', 'HOT TOPIK · Đề 2', 'Bìa đỏ'], ['Ehot3', 'HOT TOPIK · Đề 3', 'Bìa đỏ'], ['Ehot4', 'HOT TOPIK · Đề 4', 'Bìa đỏ'], ['Ehot5', 'HOT TOPIK · Đề 5', 'Bìa đỏ'],
+    ['Eebs1', 'EBS 실전모의고사 · Đề 1', ''], ['Eebs2', 'EBS 실전모의고사 · Đề 2', ''],
+    ['Entk1', 'New TOPIK II · Đề 1', 'Giáo trình'], ['Entk2', 'New TOPIK II · Đề 2', 'Giáo trình'], ['Entk3', 'New TOPIK II · Đề 3', 'Giáo trình'],
+    ['Et3001', 'TOPIK 300⁺ · Đề 1', ''], ['Et3002', 'TOPIK 300⁺ · Đề 2', ''], ['Et3003', 'TOPIK 300⁺ · Đề 3', ''], ['Et3004', 'TOPIK 300⁺ · Đề 4', ''], ['Et3005', 'TOPIK 300⁺ · Đề 5', ''],
+    ['Eys1', 'Yonsei TOPIK II · Đề 1', ''], ['Eys2', 'Yonsei TOPIK II · Đề 2', ''], ['Eys3', 'Yonsei TOPIK II · Đề 3', ''], ['Eys4', 'Yonsei TOPIK II · Đề 4', ''], ['Eys5', 'Yonsei TOPIK II · Đề 5', '']];
   var TAB = [['tu', 'Từ vựng'], ['hl', 'Học liệu'], ['de', 'Câu đề thi']];
+  var LS = 'nari-home-de';  /* bài làm thẻ Đề thi: {đề: {p: {câu: lựa chọn}, sub: 1}} */
 
   var partsEl = document.getElementById('parts'), nav = document.getElementById('nav'), out = document.getElementById('out');
-  var S = {k: 'doc', c: 1, t: ''}, vocab = null, cache = {};
+  var S = {k: 'doc', c: 1, t: '', s: '', i: 0, e: ''}, vocab = null, cache = {}, X = {};
   function esc(s){ return String(s == null ? '' : s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
   function ul(s){ return esc(s).replace(/__(.+?)__/g, '<u>$1</u>'); }
   function get(u){ if(!cache[u]) cache[u] = fetch(u).then(function(r){ if(!r.ok) throw r.status; return r.json(); }); return cache[u]; }
+  /* tải thêm dữ liệu phụ (X[name]); xong thì vẽ lại nếu vẫn đang ở trang đó */
+  function need(name, url){
+    if(name in X) return X[name];
+    X[name] = undefined;
+    var at = S.k + S.s;
+    get(url).then(function(v){ X[name] = v; }, function(){ X[name] = false; }).then(function(){ if(S.k + S.s === at) render(); });
+    return undefined;
+  }
+  function lsGet(){ try{ return JSON.parse(localStorage.getItem(LS)) || {}; }catch(e){ return {}; } }
+  function lsSet(m){ try{ localStorage.setItem(LS, JSON.stringify(m)); }catch(e){} }
   function cauTxt(d){ return d[0] === d[1] ? 'Câu ' + d[0] : 'Câu ' + d[0] + '–' + d[1]; }
   function cur(){ var L = DANG[S.k]; for(var i = 0; i < L.length; i++) if(L[i][0] === S.c) return L[i]; return L[0]; }
+  function star(n){ return n ? '<span class="st' + (n < 3 ? ' lo' : '') + '" title="Gặp trong ' + n + ' đề">' + (n >= 3 ? '★' : '') + n + ' đề</span>' : ''; }
 
-  /* ---- Từ vựng: phần trong kho từ có số câu trùng dạng ---- */
+  /* ---- Bảng từ: nhóm {ko, vi, w:[[id, ko, vi, ví dụ]]} ---- */
+  function blkHTML(g, id, title, sub){
+    var h = '<div class="blk"' + (id ? ' id="' + id + '"' : '') + '><h4>' + esc(title == null ? g.ko : title) + ' <small>' + esc(sub == null ? g.vi : sub) + '</small></h4><div class="tb"><div class="h">Từ</div><div class="h">Nghĩa</div>';
+    g.w.forEach(function(w){ h += '<div class="ko">' + (w.html || esc(w[1])) + '</div><div class="vi">' + esc(w[2]) + '</div>' + (w[3] ? '<div class="ex">' + ul(w[3]) + '</div>' : ''); });
+    return h + '</div></div>';
+  }
+  function jumpChips(list){ return '<div class="chips">' + list.map(function(x){ return '<a href="javascript:void 0" data-jump="' + x[0] + '">' + esc(x[1]) + '</a>'; }).join('') + '</div>'; }
+  var TOOLS = '<div class="tools"><button type="button" id="tg">Ẩn nghĩa</button><span>Ẩn nghĩa để tự kiểm tra, chạm vào ô để xem lại.</span></div>';
+
+  /* ---- Từ vựng của dạng câu: phần trong kho từ có số câu trùng dạng ---- */
   function secRange(sec){
     var m = /^(Câu|Nghe) (\d+)(?:–(\d+))?/.exec(sec);
     if(!m) return null;
     return {k: m[1] === 'Nghe' ? 'nghe' : (+m[2] >= 51 ? 'viet' : 'doc'), a: +m[2], b: +(m[3] || m[2])};
   }
-  function vocabFor(d){
+  function vocabFor(k, d){
     var secs = {}, order = [];
     (vocab.g || []).slice().sort(function(x, y){ return (x.so - y.so) || (x.o - y.o); }).forEach(function(g){
       var r = secRange(g.sec);
-      if(!r || r.k !== S.k || r.b < d[0] || r.a > d[1]) return;
+      if(!r || r.k !== k || r.b < d[0] || r.a > d[1]) return;
       if(!secs[g.sec]){ secs[g.sec] = {r: r, g: []}; order.push(g.sec); }
       secs[g.sec].g.push(g);
     });
     return order.map(function(s){ return {sec: s, r: secs[s].r, g: secs[s].g}; });
   }
-  function tuHTML(d){
-    var list = vocabFor(d);
-    if(!list.length) return '<p class="empty">Dạng này chưa có bảng từ riêng. Em học <a href="tu-vung/#k=uu">⭐ Từ cốt lõi</a> trước nhé.</p>';
-    var link = S.k === 'nghe' ? 'tu-vung/#c=n' + list[0].r.a : 'tu-vung/#c=' + d[0] + (d[1] > d[0] ? '-' + d[1] : '');
-    var h = '<div class="tools"><button type="button" id="tg">Ẩn nghĩa</button><a href="' + link + '">Mở trên trang Từ vựng ›</a></div><div id="tbs">';
+  function tuHTML(k, d, jump){
+    var list = vocabFor(k, d);
+    if(!list.length) return '<p class="empty">Dạng này chưa có bảng từ riêng. Em học <a href="#k=tu&s=uu">⭐ Từ cốt lõi</a> trước nhé.</p>';
+    var h = TOOLS, j = 0, chips = [];
+    if(jump) list.forEach(function(s){ s.g.forEach(function(g){ chips.push(['g' + (j++), g.vi || g.ko]); }); });
+    h += jump ? jumpChips(chips) : '';
+    h += '<div id="tbs">'; j = 0;
     list.forEach(function(s){
       h += '<h3 class="kr">' + esc(s.sec) + '</h3>';
-      s.g.forEach(function(g){
-        h += '<div class="blk"><h4>' + esc(g.ko) + ' <small>' + esc(g.vi) + '</small></h4><div class="tb"><div class="h">Từ</div><div class="h">Nghĩa</div>';
-        g.w.forEach(function(w){ h += '<div class="ko">' + esc(w[1]) + '</div><div class="vi">' + esc(w[2]) + '</div>' + (w[3] ? '<div class="ex">' + ul(w[3]) + '</div>' : ''); });
-        h += '</div></div>';
-      });
+      s.g.forEach(function(g){ h += blkHTML(g, jump ? 'g' + (j++) : ''); });
     });
     return h + '</div>';
   }
 
   /* ---- Học liệu ---- */
-  function hlHTML(){
-    var L = HL[S.k + ':' + S.c] || [];
+  function hlHTML(key){
+    var L = HL[key] || [];
     if(!L.length) return '<p class="empty">Cô đang soạn học liệu cho dạng này. Trong lúc chờ, em làm thẻ <b>Câu đề thi</b> nhé.</p>';
     return '<div class="hl">' + L.map(function(x){ return '<a href="' + esc(x[2]) + '"><span class="tag">' + esc(x[0]) + '</span><span><b>' + esc(x[1]) + '</b><small>' + esc(x[3]) + '</small></span></a>'; }).join('') + '</div>';
   }
 
-  /* ---- Câu đề thi ---- */
+  /* ---- Câu đề thi (theo dạng) ---- */
   var ANSF = ['1-2','3-4','5-8','9-10','11-12','13-15','16-18','19-20','21-22','23-24','25-27','28-31','32-34','35-38','39-41','42-43','44-45','46-47','48-50'];
   function ansFiles(d){ return ANSF.filter(function(f){ var p = f.split('-'); return +p[1] >= d[0] && +p[0] <= d[1]; }); }
+  /* đáp án đọc: {"<đề>-<câu>": chỉ số} */
+  function loadAns(d){
+    return Promise.all(ansFiles(d).map(function(f){ return get('dau-hieu/data/' + f + '.json'); })).then(function(rs){
+      var ans = {};
+      rs.forEach(function(r){ r.forEach(function(x){ if(x.n >= d[0] && x.n <= d[1]) ans[x.e + '-' + x.n] = x.a; }); });
+      return ans;
+    });
+  }
   function examOrder(a, b){
     var ra = /^Etk(\d+)/.exec(a), rb = /^Etk(\d+)/.exec(b);
     if(ra && rb) return +rb[1] - +ra[1];
@@ -132,22 +174,23 @@
       return;
     }
     if(S.k === 'nghe'){ tok.list = NGHE.slice(); deMore(tok, true); return; }
-    Promise.all(ansFiles(d).map(function(f){ return get('dau-hieu/data/' + f + '.json'); })).then(function(rs){
+    loadAns(d).then(function(ans){
       if(tok !== deState) return;
       var ex = {};
-      rs.forEach(function(r){ r.forEach(function(x){ if(x.n >= d[0] && x.n <= d[1]){ tok.ans[x.e + '-' + x.n] = x.a; ex[x.e] = 1; } }); });
+      tok.ans = ans;
+      Object.keys(ans).forEach(function(k){ ex[k.replace(/-\d+$/, '')] = 1; });
       tok.list = Object.keys(ex).sort(examOrder);
       deMore(tok, true);
     }).catch(deFail);
   }
-  function deFail(){ out.querySelector('#de').innerHTML = '<p class="empty">Chưa tải được câu đề. Em kiểm tra mạng rồi bấm lại thẻ nhé.</p>'; }
+  function deFail(){ var b = out.querySelector('#de'); if(b) b.innerHTML = '<p class="empty">Chưa tải được câu đề. Em kiểm tra mạng rồi bấm lại thẻ nhé.</p>'; }
   function deMore(tok, first){
     var box = out.querySelector('#de'), n = S.k === 'viet' ? 6 : 4, ids = tok.list.slice(tok.i, tok.i + n);
     tok.i += ids.length;
     var base = S.k === 'viet' ? 'thi-thu/viet/' : 'thi-thu/de/';
     Promise.all(ids.map(function(id){ return get(base + id + '.json').catch(function(){ return null; }); })).then(function(docs){
       if(tok !== deState) return;
-      var h = docs.map(function(doc){ return doc ? (S.k === 'viet' ? vietHTML(doc) : examHTML(doc, tok)) : ''; }).join('');
+      var h = docs.map(function(doc){ return doc ? (S.k === 'viet' ? vietHTML(doc) : examHTML(doc, tok.d, {ans: tok.ans, nghe: S.k === 'nghe'})) : ''; }).join('');
       if(first) box.innerHTML = '<p class="intro">' + tok.list.length + ' đề có dạng này' + (S.k === 'nghe' ? ' (chỉ câu đã có file nghe; đáp án đề nghe cô chữa trên lớp)' : S.k === 'doc' ? ' · đề thật xếp trước. Bấm vào đáp án để xem đúng sai.' : ' · đề thật mới trước.') + '</p>';
       var old = box.querySelector('.more'); if(old) old.remove();
       box.insertAdjacentHTML('beforeend', h);
@@ -155,14 +198,16 @@
     });
   }
   function img(src){ return src ? '<img loading="lazy" src="thi-thu/' + esc(src) + '" alt="">' : ''; }
-  function examHTML(doc, tok){
-    var d = tok.d, qs = doc.q || [], h = '', lastPs = -1, lastAudio = '', lastGr = '', any = false;
+  /* o = {ans, nghe, test: {p: lựa chọn đã chọn, sub}} — test: làm cả đề, nộp xong mới chấm */
+  function examHTML(doc, d, o){
+    var qs = doc.q || [], h = '', lastPs = -1, lastAudio = '', lastGr = '', shownGr = null, any = false, T = o.test;
     for(var i = 0; i < qs.length; i++){
       var q = qs[i];
       if(q.group) lastGr = q.group;
       if(q.n < d[0] || q.n > d[1]) continue;
-      if(S.k === 'nghe' && !q.audio) continue;
-      if(!any){ h += '<div class="gr kr">' + esc(lastGr) + '</div>'; any = true; }
+      if(o.nghe && !q.audio) continue;
+      any = true;
+      if(lastGr !== shownGr){ h += '<div class="gr kr">' + esc(lastGr) + '</div>'; shownGr = lastGr; }
       /* đoạn văn: của câu này, hoặc câu trước có đoạn văn (câu dùng chung) */
       var pi = i;
       if(!q.passage && !q.image && q.share) for(pi = i - 1; pi >= 0 && !qs[pi].passage && !qs[pi].image; pi--);
@@ -171,61 +216,219 @@
         lastPs = pi;
       }
       if(q.audio && q.audio !== lastAudio){ h += '<audio controls preload="none" src="thi-thu/' + esc(q.audio) + '"></audio>'; lastAudio = q.audio; }
-      var a = tok.ans[doc.id + '-' + q.n];
-      h += '<div class="q" data-a="' + (a == null ? '' : a) + '"><div class="st kr"><b>' + q.n + '.</b>' + ul(q.stem || '') + '</div><div class="op">' +
-        (q.opts || []).map(function(o, j){ return '<button type="button" data-j="' + j + '">' + '①②③④'[j] + ' ' + ul(o) + '</button>'; }).join('') + '</div><div class="fb"></div></div>';
+      var a = o.ans ? o.ans[doc.id + '-' + q.n] : null, pk = T ? T.p[q.n] : null, fb = '';
+      if(T && T.sub && a != null) fb = pk == null ? 'Em chưa chọn — đáp án ' + '①②③④'[a] + '.' : pk === a ? 'Đúng.' : 'Chưa đúng — đáp án ' + '①②③④'[a] + '.';
+      h += '<div class="q' + (T && T.sub ? ' done' : '') + '" data-n="' + q.n + '" data-a="' + (a == null ? '' : a) + '"><div class="st kr"><b>' + q.n + '.</b>' + ul(q.stem || '') + '</div><div class="op">' +
+        (q.opts || []).map(function(op, j){
+          var c = '';
+          if(T){ if(T.sub && a != null){ if(j === a) c = 'ok'; else if(j === pk) c = 'bad'; } else if(j === pk) c = 'pick'; }
+          return '<button type="button" data-j="' + j + '"' + (c ? ' class="' + c + '"' : '') + '>' + '①②③④'[j] + ' ' + ul(op) + '</button>';
+        }).join('') + '</div><div class="fb">' + fb + '</div></div>';
     }
     return any ? '<div class="de"><div class="t">' + esc(doc.t) + '</div><div class="bd">' + h + '</div></div>' : '';
   }
-  function vietHTML(w){
+  function vietHTML(w, label){
     var src = w.img ? 'thi-thu/viet/' + String(w.img).split('/').pop() : '';
     var k = w.keys || {}, key = '';
     if(+w.type <= 52) key = '㉠ ' + (k.a || []).join(' / ') + (k.b && k.b.length ? '\n㉡ ' + k.b.join(' / ') : '');
     else key = (k.a || [])[0] || '';
-    return '<div class="de"><div class="t">' + esc(w.src || w.id) + '</div><div class="bd">' + (src ? '<img loading="lazy" src="' + esc(src) + '" alt="">' : '') +
+    return '<div class="de"><div class="t">' + esc(label || w.src || w.id) + '</div><div class="bd">' + (src ? '<img loading="lazy" src="' + esc(src) + '" alt="">' : '') +
       '<div class="ps kr">' + esc(w.passage || '') + '</div>' + (key ? '<details class="key"><summary>' + (+w.type <= 52 ? 'Xem đáp án' : 'Xem bài mẫu') + '</summary><div class="kr">' + esc(key) + '</div></details>' : '') + '</div></div>';
   }
 
-  /* ---- Vẽ trang ---- */
-  function render(){
+  /* ---- Đọc / Nghe / Viết theo dạng câu ---- */
+  function renderDang(){
     var d = cur(); S.c = d[0];
-    partsEl.innerHTML = PARTS.map(function(p){ return '<button type="button" data-k="' + p[0] + '"' + (p[0] === S.k ? ' class="on"' : '') + '>' + p[1] + '<small>' + p[2] + '</small></button>'; }).join('');
-    nav.innerHTML = DANG[S.k].map(function(x){ return '<a href="#k=' + S.k + '&c=' + x[0] + '"' + (x[0] === S.c ? ' class="on"' : '') + '>' + cauTxt(x) + '</a>'; }).join('');
-    var hasTu = vocab && vocabFor(d).length, hasHl = (HL[S.k + ':' + S.c] || []).length;
+    nav.innerHTML = DANG[S.k].map(function(x){ return '<a href="#k=' + S.k + '&c=' + x[0] + '" data-c="' + x[0] + '"' + (x[0] === S.c ? ' class="on"' : '') + '>' + cauTxt(x) + '</a>'; }).join('');
+    var hasTu = vocab && vocabFor(S.k, d).length, hasHl = (HL[S.k + ':' + S.c] || []).length;
     if(!S.t) S.t = hasTu ? 'tu' : hasHl ? 'hl' : 'de';
     var h = '<h2>' + cauTxt(d) + ' <small>· ' + esc(d[2]) + '</small></h2><div class="tabs">' + TAB.map(function(t){
       var n = t[0] === 'hl' ? hasHl : 0;
       return '<button type="button" data-t="' + t[0] + '"' + (t[0] === S.t ? ' class="on"' : '') + '>' + t[1] + (n ? ' <small>(' + n + ')</small>' : '') + '</button>';
     }).join('') + '</div>';
-    if(S.t === 'tu') h += vocab ? tuHTML(d) : '<p class="empty">Đang tải từ vựng…</p>';
-    else if(S.t === 'hl') h += hlHTML();
+    if(S.t === 'tu') h += vocab ? tuHTML(S.k, d) : '<p class="empty">Đang tải từ vựng…</p>';
+    else if(S.t === 'hl') h += hlHTML(S.k + ':' + S.c);
     else h += '<div id="de"></div>';
     out.innerHTML = h;
     if(S.t === 'de') deStart(d);
   }
-  function go(k, c, t){
-    S.k = k; S.c = c; S.t = t || '';
-    var hs = '#k=' + k + '&c=' + c + (t ? '&t=' + t : '');
+
+  /* ---- Từ vựng: Từ cốt lõi (phần “Cốt lõi · Tầng …” của kho từ) · Từ theo chủ đề (tu-vung/chu-de.json) ---- */
+  function renderTu(){
+    var h = '';
+    if(S.s === 'uu'){
+      var tiers = [], by = {};
+      (vocab.g || []).filter(function(g){ return /^Cốt lõi /.test(g.sec); }).sort(function(a, b){ return (a.so - b.so) || (a.o - b.o); })
+        .forEach(function(g){ if(!by[g.sec]){ by[g.sec] = []; tiers.push(g.sec); } by[g.sec].push(g); });
+      if(!tiers.length){ out.innerHTML = '<p class="empty">Chưa tải được từ cốt lõi. Em kiểm tra mạng rồi tải lại trang nhé.</p>'; return; }
+      var ti = Math.min(S.i, tiers.length - 1), sec = tiers[ti], p = sec.split(' · '), gs = by[sec];
+      h += '<h2>Từ cốt lõi <small>· từ lặp lại trong nhiều đề thi</small></h2>' +
+        '<p class="intro">Tính trên 20 đề đọc, chủ đề nào cũng gặp — học Tầng 1 trước. Đây cũng là từ trong bài kiểm tra từ vựng hằng ngày cô giao. Câu ví dụ lấy từ đề thật.</p>' +
+        '<div class="tabs">' + tiers.map(function(t, i){ return '<button type="button" data-i="' + i + '"' + (i === ti ? ' class="on"' : '') + '>' + esc(t.split(' · ')[1] || t) + '</button>'; }).join('') + '</div>' +
+        '<h3>' + esc(p[1] || sec) + ' <small>· ' + esc(p.slice(2).join(' · ')) + ' · ' + gs.reduce(function(a, g){ return a + g.w.length; }, 0) + ' từ</small></h3>' + TOOLS +
+        jumpChips(gs.map(function(g, gi){ return ['c' + gi, 'Nhóm ' + (gi + 1)]; })) + '<div id="tbs">' +
+        gs.map(function(g, gi){ return blkHTML(g, 'c' + gi, 'Nhóm ' + (gi + 1), g.w.length + ' từ'); }).join('') + '</div>';
+    } else {
+      var CD = need('cd', 'tu-vung/chu-de.json'), DE = need('de', 'tu-vung/de.json');
+      if(CD === undefined || DE === undefined){ out.innerHTML = '<p class="empty">Đang tải từ theo chủ đề…</p>'; return; }
+      if(!CD){ out.innerHTML = '<p class="empty">Chưa tải được từ theo chủ đề. Em kiểm tra mạng rồi tải lại trang nhé.</p>'; return; }
+      var muc = {}, kw = {};
+      CD.muc.forEach(function(m){ muc[m.no] = m; });
+      if(DE) DE.cd.forEach(function(c){ kw[c.k] = c.w; });
+      var ci = Math.min(S.i, CD.topics.length - 1), t = CD.topics[ci], blocks = [], k = kw[t.k];
+      if(k && k.length) blocks.push({ko: '★ Từ khóa gặp trong đề', vi: 'Dòng nhỏ: số đoạn văn có từ',
+        w: k.map(function(x){ var w = [0, x[0], x[1]]; w.html = esc(x[0]) + '<span class="mt">' + x[2] + ' đoạn văn</span>'; return w; })});
+      t.m.forEach(function(no){
+        var m = muc[no], w = [];
+        if(!m) return;
+        m.g.forEach(function(g){ g[1].forEach(function(x){ var r = [0, x[0], x[1]]; r.html = esc(x[0]) + star(DE && DE.cdk[x[0]]); w.push(r); }); });
+        blocks.push({ko: m.ko, vi: m.vi, w: w});
+      });
+      h += '<h2>Từ theo chủ đề <small>· 11 chủ đề hay gặp trong bài đọc</small></h2>' +
+        '<div class="chips">' + CD.topics.map(function(x, i){ return '<button type="button" data-i="' + i + '"' + (i === ci ? ' class="on"' : '') + '>' + esc(x.t.split(' – ')[0].split(' & ')[0]) + '</button>'; }).join('') + '</div>' +
+        '<h3>' + esc(t.t) + '</h3>' + (t.n ? '<p class="intro">' + esc(t.n) + '</p>' : '') + TOOLS +
+        jumpChips(blocks.map(function(b, bi){ return ['b' + bi, b.ko]; })) + '<div id="tbs">' +
+        blocks.map(function(b, bi){ return blkHTML(b, 'b' + bi, b.ko, b.vi + ' · ' + b.w.length + ' từ'); }).join('') + '</div>';
+    }
+    out.innerHTML = h;
+  }
+
+  /* ---- Ngữ pháp câu 1–4: học liệu + bảng mẫu (phần “Câu 1–2 · 문법”, “Câu 3–4 · 유사 문법” của kho từ) ---- */
+  function renderNp(){
+    var d = S.s === '34' ? [3, 4] : [1, 2];
+    out.innerHTML = '<h2>' + cauTxt(d) + ' <small>· ' + (d[0] === 1 ? 'Ngữ pháp điền chỗ trống' : 'Ngữ pháp tương đồng') + '</small></h2>' +
+      '<h3>Học liệu</h3>' + hlHTML('doc:' + d[0]) +
+      '<p class="tools"><a href="#k=doc&c=' + d[0] + '&t=de">Làm câu ' + d[0] + '–' + d[1] + ' trong các đề thi ›</a></p>' +
+      '<h3>Bảng ngữ pháp theo nhóm</h3>' + tuHTML('doc', d, true);
+  }
+
+  /* ---- Đề thi: làm cả đề ---- */
+  function renderDe(){
+    var M = lsGet(), h = '';
+    if(!S.e){
+      if(S.s === 'doc'){
+        h = '<h2>Đề đọc <small>· 50 câu · 70 phút</small></h2><p class="intro">Em chọn đáp án cho cả đề rồi bấm <b>Nộp bài</b> ở cuối để chấm điểm. Bài làm lưu trên máy, mở lại vẫn còn.</p><div class="dl">' +
+          DOC_DE.map(function(x){
+            var m = M[x[0]], sc = m && m.sub ? '<span class="sc">Đã làm: ' + m.ok + '/' + m.n + ' câu đúng</span>' : m ? 'Đang làm dở' : x[2];
+            return '<a href="#k=de&s=doc&e=' + x[0] + '"><b class="kr">' + esc(x[1]) + '</b><small>' + sc + '</small></a>';
+          }).join('') + '</div>';
+      } else if(S.s === 'nghe'){
+        h = '<h2>Đề nghe <small>· chỉ đề đã có file nghe</small></h2><p class="intro">Đáp án đề nghe cô chữa trên lớp.</p><div class="dl">' +
+          NGHE.map(function(id){ return '<a href="#k=de&s=nghe&e=' + id + '"><b class="kr">TOPIK II 제' + +id.replace(/\D/g, '') + '회 (Nghe)</b><small>' + NGHE_NOTE[id] + '</small></a>'; }).join('') + '</div>';
+      } else {
+        var idx = need('vi', 'thi-thu/viet/index.json');
+        if(idx === undefined){ out.innerHTML = '<p class="empty">Đang tải đề viết…</p>'; return; }
+        var R = {};
+        (idx || []).forEach(function(x){ if(x.round){ (R[x.round] = R[x.round] || []).push(+x.type); } });
+        var rs = Object.keys(R).sort(function(a, b){ return b - a; }), full = rs.filter(function(r){ return R[r].length >= 4; }), part = rs.filter(function(r){ return R[r].length < 4; });
+        var card = function(r){ return '<a href="#k=de&s=viet&e=' + r + '"><b class="kr">TOPIK II 제' + r + '회</b><small>Câu ' + R[r].sort().join(', ') + (r === '108' ? ' · đề thí sinh nhớ lại' : '') + '</small></a>'; };
+        h = '<h2>Đề viết</h2><h3>Đủ 4 câu 51–54</h3><div class="dl">' + full.map(card).join('') + '</div><h3>Các kỳ khác</h3><div class="dl">' + part.map(card).join('') + '</div>';
+      }
+      out.innerHTML = h;
+      return;
+    }
+    var back = '<a class="back" href="#k=de&s=' + S.s + '">‹ Danh sách đề</a>';
+    if(S.s === 'viet'){
+      var ix = need('vi', 'thi-thu/viet/index.json');
+      if(ix === undefined){ out.innerHTML = '<p class="empty">Đang tải đề viết…</p>'; return; }
+      var items = (ix || []).filter(function(x){ return String(x.round) === S.e; }).sort(function(a, b){ return a.type - b.type; });
+      out.innerHTML = back + '<h2>TOPIK II 제' + esc(S.e) + '회 <small>· Viết</small></h2><div id="dv"><p class="empty">Đang tải…</p></div>';
+      var at = location.hash;
+      Promise.all(items.map(function(x){ return get('thi-thu/viet/' + x.id + '.json').catch(function(){ return null; }); })).then(function(ws){
+        if(location.hash !== at) return;
+        document.getElementById('dv').innerHTML = ws.map(function(w){ return w ? vietHTML(w, 'Câu ' + w.type) : ''; }).join('') || '<p class="empty">Chưa có đề.</p>';
+      });
+      return;
+    }
+    var nghe = S.s === 'nghe', id = S.e, at2 = location.hash, info = DOC_DE.filter(function(x){ return x[0] === id; })[0];
+    out.innerHTML = back + '<p class="empty">Đang tải đề…</p>';
+    Promise.all([get('thi-thu/de/' + id + '.json'), nghe ? Promise.resolve(null) : loadAns([1, 50])]).then(function(r){
+      if(location.hash !== at2) return;
+      var doc = r[0], ans = r[1], T = M[id] || {p: {}}, total = 0;
+      if(ans) (doc.q || []).forEach(function(q){ if(ans[id + '-' + q.n] != null) total++; });
+      var h2 = back + '<h2 class="kr">' + esc(info ? info[1] : doc.t) + ' <small>· ' + (nghe ? 'Nghe' : 'Đọc · 50 câu · 70 phút') + '</small></h2>';
+      if(T.sub) h2 += '<div class="score">Em làm đúng <b>' + T.ok + '/' + T.n + '</b> câu' + (T.n >= 48 ? ' · khoảng <b>' + T.ok * 2 + '</b> điểm Đọc' : '') +
+        '. Câu sai tô đỏ, đáp án đúng tô xanh.</div>';
+      else if(!nghe) h2 += '<p class="intro">Chọn đáp án cho từng câu (đổi được), xong bấm <b>Nộp bài</b> ở cuối trang.' + (total < (doc.q || []).length ? ' Câu không có đoạn văn công bố thì không chấm.' : '') + '</p>';
+      else h2 += '<p class="intro">Chỉ hiện câu đã có file nghe. Đáp án đề nghe cô chữa trên lớp.</p>';
+      h2 += '<div class="test" data-id="' + id + '" data-total="' + total + '">' + examHTML(doc, [1, 50], {ans: ans, nghe: nghe, test: nghe ? null : T}) + '</div>';
+      if(!nghe) h2 += '<div class="bar"><span id="cnt"></span>' + (T.sub ? '<button type="button" class="submit ghost" id="redo">Làm lại đề này</button>' : '<button type="button" class="submit" id="nop">Nộp bài</button>') + '</div>';
+      out.innerHTML = h2;
+      count();
+    }, function(){ if(location.hash === at2) out.innerHTML = back + '<p class="empty">Chưa tải được đề. Em kiểm tra mạng rồi tải lại trang nhé.</p>'; });
+  }
+  function count(){
+    var c = document.getElementById('cnt'), t = out.querySelector('.test'); if(!c || !t) return;
+    var m = lsGet()[t.dataset.id] || {p: {}};
+    c.textContent = m.sub ? '' : 'Đã chọn ' + Object.keys(m.p).length + '/' + out.querySelectorAll('.test .q').length + ' câu';
+  }
+  function nop(){
+    var t = out.querySelector('.test'), id = t.dataset.id, M = lsGet(), m = M[id] || {p: {}}, qs = out.querySelectorAll('.test .q'), left = 0, ok = 0, n = 0;
+    [].forEach.call(qs, function(q){
+      if(m.p[q.dataset.n] == null) left++;
+      if(q.dataset.a === '') return;
+      n++; if(m.p[q.dataset.n] === +q.dataset.a) ok++;
+    });
+    if(left && !confirm('Em còn ' + left + ' câu chưa chọn. Vẫn nộp bài?')) return;
+    m.sub = 1; m.ok = ok; m.n = n; M[id] = m; lsSet(M);
+    render(); window.scrollTo(0, 0);
+  }
+
+  /* ---- Vẽ trang ---- */
+  function render(){
+    partsEl.innerHTML = PARTS.map(function(p){ return '<button type="button" data-k="' + p[0] + '"' + (p[0] === S.k ? ' class="on"' : '') + '>' + p[1] + '<small>' + p[2] + '</small></button>'; }).join('');
+    if(DANG[S.k]) return renderDang();
+    if(!SUB[S.k].some(function(x){ return x[0] === S.s; })) S.s = SUB[S.k][0][0];
+    nav.innerHTML = SUB[S.k].map(function(x){ return '<a href="#k=' + S.k + '&s=' + x[0] + '" data-s="' + x[0] + '"' + (x[0] === S.s ? ' class="on"' : '') + '>' + x[1] + '</a>'; }).join('');
+    if(!vocab){ out.innerHTML = '<p class="empty">Đang tải…</p>'; return; }
+    (S.k === 'tu' ? renderTu : S.k === 'np' ? renderNp : renderDe)();
+  }
+  function hashOf(){
+    if(DANG[S.k]) return '#k=' + S.k + '&c=' + S.c + (S.t ? '&t=' + S.t : '');
+    return '#k=' + S.k + '&s=' + S.s + (S.k === 'tu' && S.i ? '&i=' + S.i : '') + (S.k === 'de' && S.e ? '&e=' + S.e : '');
+  }
+  function go(o){
+    for(var x in o) S[x] = o[x];
+    var hs = hashOf();
     if(location.hash !== hs) history.replaceState(null, '', hs);
     render();
   }
   function fromHash(){
     var m = {}; location.hash.replace(/^#/, '').split('&').forEach(function(p){ var kv = p.split('='); if(kv[0]) m[kv[0]] = decodeURIComponent(kv[1] || ''); });
-    S.k = DANG[m.k] ? m.k : 'doc';
-    S.c = +m.c || DANG[S.k][0][0];
-    var c = DANG[S.k].filter(function(x){ return S.c >= x[0] && S.c <= x[1]; })[0]; S.c = c ? c[0] : DANG[S.k][0][0];
-    S.t = /^(tu|hl|de)$/.test(m.t) ? m.t : '';
+    S.k = DANG[m.k] || SUB[m.k] ? m.k : 'doc';
+    S.s = m.s || ''; S.i = +m.i || 0; S.e = m.e || ''; S.t = /^(tu|hl|de)$/.test(m.t) ? m.t : '';
+    if(DANG[S.k]){
+      S.c = +m.c || DANG[S.k][0][0];
+      var c = DANG[S.k].filter(function(x){ return S.c >= x[0] && S.c <= x[1]; })[0]; S.c = c ? c[0] : DANG[S.k][0][0];
+    }
     render();
   }
-  partsEl.addEventListener('click', function(e){ var b = e.target.closest('button'); if(b) go(b.dataset.k, DANG[b.dataset.k][0][0]); });
-  nav.addEventListener('click', function(e){ var a = e.target.closest('a'); if(!a) return; e.preventDefault(); go(S.k, +/c=(\d+)/.exec(a.getAttribute('href'))[1]); window.scrollTo(0, Math.min(window.scrollY, nav.offsetTop)); });
+  partsEl.addEventListener('click', function(e){ var b = e.target.closest('button'); if(!b) return; var k = b.dataset.k; go(DANG[k] ? {k: k, c: DANG[k][0][0], t: ''} : {k: k, s: '', i: 0, e: ''}); });
+  nav.addEventListener('click', function(e){
+    var a = e.target.closest('a'); if(!a) return; e.preventDefault();
+    go(a.dataset.s ? {s: a.dataset.s, i: 0, e: ''} : {c: +a.dataset.c, t: ''});
+    window.scrollTo(0, Math.min(window.scrollY, nav.offsetTop));
+  });
   out.addEventListener('click', function(e){
-    var t = e.target.closest('.tabs button'); if(t){ go(S.k, S.c, t.dataset.t); return; }
+    var t = e.target.closest('.tabs button[data-t]'); if(t){ go({t: t.dataset.t}); return; }
+    var ib = e.target.closest('button[data-i]'); if(ib){ go({i: +ib.dataset.i}); return; }
+    var j = e.target.getAttribute && e.target.getAttribute('data-jump');
+    if(j){ e.preventDefault(); var bl = document.getElementById(j); if(bl) window.scrollTo({top: bl.getBoundingClientRect().top + window.pageYOffset - nav.offsetHeight - 8, behavior: 'smooth'}); return; }
     if(e.target.id === 'tg'){ var on = document.getElementById('tbs').classList.toggle('hide'); e.target.textContent = on ? 'Hiện nghĩa' : 'Ẩn nghĩa'; return; }
     if(e.target.classList.contains('vi') && e.target.closest('.hide')){ e.target.classList.toggle('show'); return; }
     if(e.target.classList.contains('more')){ deMore(deState, false); return; }
+    if(e.target.id === 'nop'){ nop(); return; }
+    if(e.target.id === 'redo'){ if(!confirm('Xóa bài đã làm để làm lại đề này?')) return; var M0 = lsGet(); delete M0[out.querySelector('.test').dataset.id]; lsSet(M0); render(); window.scrollTo(0, 0); return; }
     var b = e.target.closest('.op button'); if(!b) return;
-    var q = b.closest('.q'), a = q.dataset.a, bs = q.querySelectorAll('.op button');
+    var q = b.closest('.q'), a = q.dataset.a, bs = q.querySelectorAll('.op button'), test = q.closest('.test');
+    if(test && out.querySelector('#nop')){
+      /* làm cả đề: chỉ ghi lựa chọn, nộp mới chấm */
+      var M = lsGet(), id = test.dataset.id, m = M[id] = M[id] || {p: {}};
+      m.p[q.dataset.n] = +b.dataset.j; lsSet(M);
+      [].forEach.call(bs, function(x){ x.classList.toggle('pick', x === b); });
+      count(); return;
+    }
+    if(test && !out.querySelector('#nop') && out.querySelector('#redo')) return;
     if(a === ''){ [].forEach.call(bs, function(x){ x.classList.toggle('pick', x === b); }); return; }
     if(q.classList.contains('done')) return;
     q.classList.add('done');

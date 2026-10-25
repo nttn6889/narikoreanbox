@@ -98,9 +98,14 @@ h4{font-size:14px;margin:12px 0 4px;color:var(--muted)}
 <div class="tools"><button id="tg" type="button">Ẩn nghĩa</button></div>
 <div id="msg">Đang tải từ vựng…</div>
 <div id="out"></div>
-<footer><a href="../">Trang chủ</a> · <a href="../thi-thu/">Phòng thi thử</a></footer>
+<footer><a href="../">Trang học</a> · <a href="../#k=tu">⭐ Từ cốt lõi, từ theo chủ đề</a> · <a href="../thi-thu/">Phòng thi thử</a></footer>
 </main>
 <script>
+// Từ cốt lõi và từ theo chủ đề đã chuyển về trang học (../#k=tu) — link cũ #k=uu / #k=cd tự chuyển sang đó
+(function(){
+  function moved(){ var k = /[#&]k=(uu|cd)\b/i.exec(location.hash); if (k) location.replace('../#k=tu&s=' + k[1].toLowerCase()); }
+  moved(); window.addEventListener('hashchange', moved);
+})();
 (function(){
   var out = document.getElementById('out'), nav = document.getElementById('nav'), partsEl = document.getElementById('parts'), msg = document.getElementById('msg');
   function esc(s){ return String(s == null ? '' : s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
@@ -122,8 +127,7 @@ h4{font-size:14px;margin:12px 0 4px;color:var(--muted)}
   }
   // Ba thẻ Đọc / Nghe / Viết (luôn hiện). #k=nghe, #k=viet mở thẻ tương ứng.
   // #c= lọc câu trong thẻ có câu khớp; thẻ khác vẫn hiện đủ, kèm nút “Xem tất cả” để bỏ lọc.
-  var PARTS = [{k: 'doc', t: 'Đọc', s: 'Câu 1–50'}, {k: 'nghe', t: 'Nghe', s: 'Câu 1–50'}, {k: 'viet', t: 'Viết', s: 'Câu 51–54'},
-               {k: 'uu', t: '⭐ Cốt lõi', s: 'Từ đề nào cũng có'}, {k: 'cd', t: 'Chủ đề', s: '11 chủ đề'}];
+  var PARTS = [{k: 'doc', t: 'Đọc', s: 'Câu 1–50'}, {k: 'nghe', t: 'Nghe', s: 'Câu 1–50'}, {k: 'viet', t: 'Viết', s: 'Câu 51–54'}];
   // tu-vung/de.json (tools/thong_ke_de.py): thống kê từ trong các đề thi thử; tu-vung/chu-de.json: từ vựng theo chủ đề
   // CORE: phần “Cốt lõi · Tầng …” của kho từ (tools/cot_loi_kho.py) — từ lặp lại trong 20 đề đọc, cũng là từ của lộ trình hằng ngày
   var DE = null, CD = null, CORE = [];
