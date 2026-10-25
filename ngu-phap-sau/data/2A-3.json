@@ -1,235 +1,4353 @@
 {
-"b":"2A","n":3,
-"tong":{
- "t":"Bài 3: kể một trải nghiệm – đã từng, bao lâu, bối cảnh",
- "p":"Tên bài “콘서트에 가 봤어요?” chứa mẫu chính <b>-아/어 보다</b> (thử / đã từng). Bài 3 giúp học sinh <b>kể một trải nghiệm</b> có đầu có đuôi: đã từng làm gì (-아/어 봤어요), kéo dài bao lâu (N 동안), nêu bối cảnh rồi nói tiếp (-는데), và hoàn thành bộ ba định ngữ với <b>-(으)ㄹ N</b>. Viên gạch nền: <b>đuôi -아/어</b> (cho -아/어 보다) và <b>đuôi định ngữ theo loại từ</b> -(으)ㄴ / -는 / 인 (cho -는데). -는데 ở bài này là nghĩa 1 (bối cảnh); nghĩa “nhưng” và -(으)ㄹ 텐데 (3A Bài 3) học sau.",
- "tb":[["Mẫu","Câu hỏi chìa khóa"],
-  ["V-아/어 보다","Thử (hiện tại / mệnh lệnh) hay đã từng (quá khứ)? Việc có chủ ý không? (không → -(으)ㄴ 적이 있다)"],
-  ["N 동안","Danh từ là khoảng thời gian hay mốc thời gian? (mốc → 에)"],
-  ["-(으)ㄴ데 / -는데 / 인데","Tính từ, động từ hay danh từ? Vế sau là nhờ / rủ / hỏi / giải thích?"],
-  ["V-(으)ㄹ N","Việc chưa xảy ra / để dùng vào việc gì? (đã xong → -(으)ㄴ, đang → -는)"]]
-},
-"p":[
-{
- "no":1,"id":"g_2A_03_1","cn":"Thử – kinh nghiệm",
- "core":"Hai nghĩa: (1) thử làm một việc để biết nó thế nào — “thử… xem”; (2) ở quá khứ -아/어 봤어요 = đã từng trải qua — “đã từng…”.",
- "goc":"V-아/어 + <b>보다</b> (xem, nhìn): làm rồi “xem” kết quả ra sao → <b>thử</b>. Giống hệt tiếng Việt “ăn thử <b>xem</b>”, “mặc thử <b>xem</b>”. Đã thử rồi (봤다) → <b>đã có kinh nghiệm</b>. Vì thế nghĩa phụ thuộc vào đuôi câu: 먹어 보세요 (ăn thử đi), 먹어 보고 싶어요 (muốn thử), 먹어 봤어요 (đã từng ăn).",
- "chia":[["Gốc","Ví dụ","→ -아/어 봐요 · 봤어요"],
-  ["ㅏ, ㅗ","가다 · 오다","**가 봐요** · **와 봤어요**"],
-  ["Nguyên âm khác","먹다 · 입다","먹**어 봐요** · 입**어 봤어요**"],
-  ["하다","하다 · 운동하다","**해 봐요** · 운동**해 봤어요**"],
-  ["ㄷ bất quy tắc","듣다","들**어 봤어요**"],
-  ["ㅂ bất quy tắc","굽다 (nướng)","구**워 봤어요**"],
-  ["르 bất quy tắc","부르다","불**러 봤어요**"],
-  ["으 rơi","쓰다","**써 봐요**"]],
- "chiaNote":[
-  "Lời mời, lời khuyên: -아/어 보세요 (hãy thử…) — rất hay dùng khi giới thiệu, bán hàng: 한번 드셔 **보세요**, 입어 **보세요**.",
-  "Xin phép thử: -아/어 봐도 돼요? (입어 봐도 돼요? = mặc thử được không?).",
-  "Chưa từng: **안** 가 봤어요 / **못** 가 봤어요 / 한 번도 안 가 봤어요 — 안, 못 đứng trước cả cụm."],
- "tinh":[
-  {"t":"Hỏi kinh nghiệm (tên bài)","c":"Nói chuyện với bạn về âm nhạc.","lv":"lịch sự","ko":"콘서트에 가 **봤어요**? – 아니요, 아직 못 가 **봤어요**.","vi":"Bạn đã từng đi xem hòa nhạc chưa? – Chưa, mình chưa đi bao giờ.","why":"Quá khứ 봤어요 = đã từng. 아직 못 = chưa có dịp (muốn mà chưa được)."},
-  {"t":"Mời thử món ăn","c":"Giới thiệu món Việt cho bạn Hàn.","lv":"lịch sự – kính ngữ","ko":"이 쌀국수 한번 드셔 **보세요**. 정말 맛있어요.","vi":"Anh / chị ăn thử phở này một lần xem. Ngon lắm.","why":"먹다 → 드시다 (kính ngữ) + -어 보세요. 한번 + -아/어 보다 là cụm cố định."},
-  {"t":"Xin thử đồ ở cửa hàng","c":"Mua quần áo, giày.","lv":"lịch sự","ko":"이 옷 입**어 봐도** 돼요?","vi":"Tôi mặc thử cái áo này được không?","why":"-아/어 봐도 돼요? = xin phép thử."},
-  {"t":"Kể kinh nghiệm du lịch","c":"Bạn hỏi đã đi những đâu ở Hàn.","lv":"lịch sự","ko":"제주도에는 두 번 가 **봤어요**.","vi":"Đảo Jeju thì tôi đã đi hai lần rồi.","why":"Kể số lần đã từng → -아/어 봤어요."},
-  {"t":"Khuyên giải quyết vấn đề","c":"Bạn không hiểu bài tập.","lv":"lịch sự","ko":"선생님께 한번 물**어 보세요**.","vi":"Bạn thử hỏi cô xem.","why":"묻다 bất quy tắc ㄷ → 물어 보다 (hỏi thử). Lời khuyên mềm, không ra lệnh."},
-  {"t":"Ước muốn thử việc mới","c":"Kể kế hoạch năm nay.","lv":"lịch sự","ko":"올해는 번지 점프를 해 **보고 싶어요**.","vi":"Năm nay tôi muốn thử nhảy bungee.","why":"-아/어 보고 싶다 = muốn thử — nghĩa “thử” chứ không phải “đã từng”."}],
- "rb":[
-  ["Loại từ","Chỉ động từ."],
-  ["Thì & nghĩa","Hiện tại / mệnh lệnh / -고 싶다 → “thử”; quá khứ 봤어요 → “đã từng”."],
-  ["Loại việc","Việc có chủ ý (đi, ăn, mặc, học…). Việc không ai muốn (ốm, tai nạn) → -(으)ㄴ 적이 있다."],
-  ["Kính ngữ","Gắn vào 보다: 가 보세요, 드셔 보세요."],
-  ["Với 보다 (xem)","보다 + -아/어 보다 = 봐 보다 vẫn gặp trong văn nói, nhưng hỏi kinh nghiệm thường nói gọn: 그 영화 봤어요? / 본 적이 있어요?"]],
- "sai":[
-  {"x":"김치를 먹**아** 봤어요.","o":"김치를 먹**어** 봤어요.","why":"먹 có nguyên âm ㅓ → -어."},
-  {"x":"이 노래 듣**어** 봤어요?","o":"이 노래 들**어** 봤어요?","why":"듣다 bất quy tắc ㄷ: trước nguyên âm → ㄹ."},
-  {"x":"저는 한국에 가 **안 봤어요**.","o":"저는 한국에 **안** 가 봤어요.","why":"안 / 못 đứng trước cả cụm V-아/어 보다."},
-  {"x":"작년에 교통사고가 나 **봤어요**.","o":"작년에 교통사고가 **난 적이 있어요**.","why":"Tai nạn không phải việc “thử” → -(으)ㄴ 적이 있다."},
-  {"x":"한국 음식을 만들어 **보세요**? (muốn hỏi “bạn đã từng nấu chưa”)","o":"한국 음식을 만들어 **봤어요**?","why":"보세요 là lời khuyên; hỏi kinh nghiệm phải dùng quá khứ 봤어요."}],
- "pb":[
-  {"vs":"-(으)ㄴ 적이 있다 (đã từng)","d":"Cả hai = đã từng. -아/어 봤다: kinh nghiệm có chủ ý, “đã thử”. -(으)ㄴ 적이 있다: mọi kinh nghiệm, kể cả việc không mong muốn. Hay kết hợp: 가 본 적이 있어요.","ex":[["한국 음식을 만들어 **봤어요**.","Tôi đã thử nấu món Hàn."],["다리를 **다친 적이 있어요**.","Tôi từng bị đau chân (chấn thương)."],["제주도에 가 **본 적이 있어요**.","Tôi đã từng đi Jeju."]]},
-  {"vs":"-고 싶다 ↔ -아/어 보고 싶다","d":"-고 싶다: muốn làm. -아/어 보고 싶다: muốn thử (lần đầu, để biết cảm giác).","ex":[["한복을 입**고 싶어요**.","Tôi muốn mặc hanbok."],["한복을 한번 입**어 보고 싶어요**.","Tôi muốn mặc thử hanbok một lần."]]}],
- "topik":[
-  {"src":"Đọc · kỳ 91 câu 1","ko":"나는 오래전에 설악산을 (등산한 적이 있다).","note":"Đáp án. Đề dùng -(으)ㄴ 적이 있다; nói hằng ngày cũng có thể nói 설악산에 가 봤다 — hai mẫu gần nghĩa, cô cho học sinh đổi qua lại."},
-  {"src":"Đọc · kỳ 83 câu 14","ko":"하지만 나는 오랫동안 생각해 온 사업을 시작해 **보려고 한다**.","note":"-아/어 보려고 하다 = định thử làm — câu nói về dự định của nhân vật; có 하지만 ở đầu nên không phải câu mở đoạn khi sắp xếp câu."},
-  {"src":"Đọc · kỳ 83 câu 23","ko":"나는 이번 주말에 일기장에 적혀 있는 곳에 한번 찾아가 **보려고 한다**.","note":"한번 + -아/어 보다 = thử một lần. Câu kết của đoạn tùy bút thường là dự định / quyết tâm của “나”."}],
- "len":[{"p": "-아/어 보니(까)", "m": "thử… thì thấy / (đến) nơi thì thấy", "noi": "-아/어 보다 + **-니까** (phát hiện): làm việc đó xong mới biết điều ở vế sau. Vế sau là điều **phát hiện ra**, thường ở quá khứ.", "ex": ["한국 음식을 먹어 **보니까** 생각보다 맵지 않았어요.", "Ăn thử món Hàn mới thấy không cay như tôi nghĩ."], "de": {"src": "Đọc · kỳ 37 câu 2", "ko": "퇴근 후에 집에 와 **보니까** 동생이 여행에서 (    ).", "a": "Đáp án: 돌아와 있었다", "note": "kỳ 91 câu 23 cũng có: “하루는 출근해 **보니** 금잔화가 쓰러져 있었다.”"}}, {"p": "-아/어 봐야", "m": "có… cũng (vô ích)", "noi": "-아/어 보다 + **-아야**: “thử làm thì cũng…” → vế sau là kết quả vô ích. Thay được bằng -ㄴ/는다고 해도, -아/어도.", "ex": ["지금 가 **봐야** 공연은 벌써 끝났을 거예요.", "Giờ có đi thì buổi diễn cũng hết rồi."], "de": {"src": "Đọc · kỳ 60 câu 4", "ko": "이 컴퓨터는 낡아서 **수리해 봐야** 오래 쓰기 어렵다.", "a": "Đáp án: 수리한다고 해도"}}, {"p": "-(으)ㄴ 바 있다 = -(으)ㄴ 적이 있다", "m": "đã từng (văn viết, báo chí)", "noi": "Câu hỏi “-아/어 본 적이 있어요?” của bài lên văn viết thành **-(으)ㄴ 바 있다** (바 = điều, việc).", "ex": ["그 가수는 해외에서 공연한 **바 있다**.", "Ca sĩ đó từng biểu diễn ở nước ngoài."], "de": {"src": "Đọc · Đề luyện TOPIK 300⁺ 5 câu 4", "ko": "이 제품은 실용성과 디자인 면에서 우수하다고 **소개된 바 있다**.", "a": "Đáp án: 소개된 적이 있다"}}, {"p": "-아/어 볼 만하다", "m": "đáng để thử", "noi": "-아/어 보다 + **-(으)ㄹ 만하다** (đáng): rủ, khuyên ai làm thử.", "ex": ["그 뮤지컬은 한 번쯤 **볼 만해요**.", "Vở nhạc kịch đó đáng xem một lần."], "de": {"src": "Đọc · Đề luyện Yonsei 4 câu 4", "ko": "그런 새로운 경험도 한 번쯤은 **해 볼 만하다**.", "a": "Đáp án: 해 볼 가치가 있다"}}],
- "hoi":[
-  {"q":"“Cô ăn thử món này xem ạ” — nói với cô (người lớn) thế nào?","a":"선생님, 이거 한번 <b>드셔 보세요</b>. (먹다 → 드시다, + -어 보세요)."},
-  {"q":"“Tôi từng nằm viện” — 입원해 봤어요 có ổn không?","a":"Không tự nhiên: nằm viện không phải việc “thử”. Dùng 입원<b>한 적이 있어요</b>."},
-  {"q":"Bạn hỏi 콘서트에 가 봤어요? — trả lời “chưa bao giờ” thế nào?","a":"아니요, 한 번도 <b>안</b> 가 봤어요. / 아직 <b>못</b> 가 봤어요 (muốn đi mà chưa có dịp)."}],
- "luyen":[
-  {"q":"가: 이 노래 (    )?  나: 네, 들어 봤어요. 정말 좋아요.","o":["들어 봤어요","듣어 봤어요","들어 보세요","들어 보고 싶어요"],"w":"Câu trả lời 들어 봤어요 → câu hỏi kinh nghiệm, quá khứ; 듣다 → 들어."},
-  {"q":"이 옷 예쁘네요. 한번 (    ).","o":["입어 보세요","입아 보세요","입어 봤어요","입어 보지 않아요"],"w":"Lời mời thử → -아/어 보세요; 입 có ㅣ → -어."},
-  {"q":"저는 한복을 한 번도 (    ).","o":["안 입어 봤어요","입어 안 봤어요","입어 보세요","입어 보고 싶어요"],"w":"한 번도 + 안 … -아/어 봤어요; 안 đứng trước cả cụm."},
-  {"q":"Câu nào KHÔNG tự nhiên?","o":["작년에 다리를 다쳐 봤어요.","작년에 다리를 다친 적이 있어요.","작년에 제주도에 가 봤어요.","작년에 처음 스키를 타 봤어요."],"w":"Bị thương không phải việc “thử” → -(으)ㄴ 적이 있다."}],
- "em":[
-  "Viết 3 việc em đã từng làm và 2 việc em chưa từng làm (…아/어 봤어요 / 안 … 아/어 봤어요).",
-  "Giới thiệu một món Việt cho bạn Hàn: …을/를 한번 먹어 보세요. …아/어요."],
- "co":"Trò “Tìm người đã từng…” (bingo kinh nghiệm): ô 제주도, 번지 점프, 김치 만들기, 콘서트, 한복… học sinh hỏi nhau -아/어 봤어요?, ai trả lời 네 thì ghi tên. Chốt nghĩa “thử” bằng tình huống cửa hàng (입어 봐도 돼요?, 신어 봐도 돼요?). Nối với -(으)ㄴ 적이 있다 vì đề TOPIK câu 1–2 dùng mẫu đó."
-},
-{
- "no":2,"id":"g_2A_03_2","cn":"Thời gian – khoảng",
- "core":"Đặt sau danh từ chỉ khoảng thời gian để nói việc kéo dài suốt khoảng đó: “trong (suốt)…”.",
- "goc":"<b>동안</b> là danh từ: “khoảng (thời gian)”. N (khoảng thời gian / sự kiện có độ dài) + 동안 (+ 에). Đi được với: <b>số + đơn vị</b> (3년, 두 시간, 일주일) và <b>sự kiện kéo dài</b> (방학, 휴가, 여행). Sau này gặp V-는 동안 (trong lúc làm…).",
- "chia":[["Loại danh từ","Ví dụ"],
-  ["Khoảng thời gian có số","두 시간 **동안** · 일주일 **동안** · 3년 **동안**"],
-  ["Ngày thuần Hàn","하루 **동안** · 이틀 **동안** · 사흘 **동안**"],
-  ["Sự kiện có độ dài","방학 **동안** · 휴가 **동안** · 여행 **동안**"],
-  ["Từ hỏi","얼마 **동안** (bao lâu)"],
-  ["Mở rộng: động từ","기다리**는 동안** (trong lúc chờ) — trung cấp"]],
- "chiaNote":[
-  "Không phụ thuộc 받침, viết cách: 방학 동안.",
-  "Thêm 에 cũng được: 방학 동안**에** — nhấn “trong khoảng đó, vào lúc nào đó”.",
-  "Đếm ngày thuần Hàn (sách khuyên dùng trước 동안): 하루, 이틀, 사흘, 나흘, 닷새, 엿새, 이레, 여드레, 아흐레, 열흘. Hằng ngày dùng nhiều nhất 하루, 이틀, 사흘."],
- "tinh":[
-  {"t":"Kể kỳ nghỉ","c":"Bạn hỏi kỳ nghỉ em làm gì.","lv":"lịch sự","ko":"여름 방학 **동안** 고향에 있었어요.","vi":"Suốt kỳ nghỉ hè tôi ở quê.","why":"방학 là sự kiện kéo dài → 동안."},
-  {"t":"Thời gian học","c":"Tự giới thiệu trình độ.","lv":"lịch sự","ko":"한국어를 1년 **동안** 배웠어요.","vi":"Tôi đã học tiếng Hàn trong 1 năm.","why":"Số + đơn vị + 동안."},
-  {"t":"Hỏi bao lâu","c":"Hỏi bạn sắp đi du lịch.","lv":"lịch sự","ko":"한국에 얼마 **동안** 있을 거예요? – 일주일 **동안** 있을 거예요.","vi":"Bạn sẽ ở Hàn bao lâu? – Tôi sẽ ở một tuần.","why":"얼마 동안 = bao lâu."},
-  {"t":"Kể bị ốm","c":"Giải thích với cô vì sao nghỉ học.","lv":"lịch sự","ko":"감기 때문에 사흘 **동안** 학교에 못 갔어요.","vi":"Vì cảm nên tôi không đi học được ba ngày.","why":"사흘 (3 ngày) tự nhiên hơn 3일."},
-  {"t":"Kể chuyến đi dài","c":"Kể về chuyến bay sang Hàn.","lv":"lịch sự","ko":"비행기를 다섯 시간 **동안** 탔어요.","vi":"Tôi ngồi máy bay suốt năm tiếng.","why":"Việc kéo dài liên tục trong khoảng thời gian."}],
- "rb":[
-  ["Danh từ đi trước","Phải là khoảng thời gian / sự kiện kéo dài. Mốc thời gian (월요일, 3시, 어제) → dùng 에."],
-  ["Động từ đi sau","Việc kéo dài hoặc lặp lại trong khoảng (공부했어요, 살았어요, 기다렸어요). Việc một lần (오다, 도착하다) không hợp."],
-  ["Bỏ 동안","Nhiều khi bỏ được mà nghĩa không đổi: 열 시간 (동안) 잤어요."],
-  ["Tiểu từ","Chỉ 동안 hoặc 동안에 — không 동안에서."]],
- "sai":[
-  {"x":"월요일 **동안** 공부했어요.","o":"월요일**에** 공부했어요.","why":"월요일 là mốc thời gian → 에. (Muốn nói “suốt cả ngày thứ Hai” → 월요일 내내.)"},
-  {"x":"2일 **동안** 여행했어요.","o":"**이틀** 동안 여행했어요.","why":"Không sai ngữ pháp, nhưng nói 이틀 tự nhiên hơn nhiều."},
-  {"x":"한국어를 1년 **동안에서** 배웠어요.","o":"한국어를 1년 **동안** 배웠어요.","why":"동안 không đi với 에서."},
-  {"x":"저는 한국에 3년 **동안** 왔어요.","o":"저는 한국에 **온 지 3년** 됐어요.","why":"“Đến” là việc một lần, không kéo dài. “Đã đến được 3 năm” → -(으)ㄴ 지 + thời gian + 되다."}],
- "pb":[
-  {"vs":"N 만에 / N 후에","d":"동안: suốt khoảng đó. 만에: sau (khoảng thời gian) mới lại. 후에: sau đó.","ex":[["3년 **동안** 한국에 살았어요.","Tôi sống ở Hàn suốt 3 năm."],["3년 **만에** 고향에 갔어요.","Sau 3 năm tôi mới về quê."]]},
-  {"vs":"V-(으)ㄴ 지 + thời gian + 되다","d":"동안: việc kéo dài trong khoảng. -(으)ㄴ 지: đã bao lâu kể từ khi một việc xảy ra.","ex":[["이 동네로 이사를 온 지 일 년이 됐다.","Chuyển đến khu này đã được một năm. (đề kỳ 102 câu 1)"]]},
-  {"vs":"V-는 동안 (mở rộng)","d":"Động từ + 는 동안 = trong lúc làm…","ex":[["친구를 기다리**는 동안** 책을 읽었어요.","Trong lúc chờ bạn, tôi đọc sách."]]}],
- "topik":[
-  {"src":"Đọc · kỳ 91 câu 4","ko":"지난 3년 **동안** 영화를 한 편 봤으니 거의 안 (본 셈이다).","note":"N 동안 + số lần rất ít (3년 동안 한 편) → “tính ra coi như không xem”. Đọc 동안 để biết khoảng thời gian rồi so với số lượng."},
-  {"src":"Đọc · kỳ 83 câu 14","ko":"내일은 내가 10년 **동안** 다니던 회사를 그만두는 날이다.","note":"10년 동안 + 다니던 (đã làm suốt): khoảng thời gian dài làm nền cho quyết định của nhân vật."},
-  {"src":"Đọc · kỳ 91 câu 13","ko":"사람이 붐비는 장소에서 짧은 기간 **동안** 운영하는 매장이 유행이다.","note":"짧은 기간 동안 = trong thời gian ngắn — cụm hay gặp trong văn báo."}],
- "len":[{"p": "V-는 동안", "m": "trong lúc, trong khi (làm gì)", "noi": "N 동안 đi với danh từ; với động từ thì thêm **-는**: 방학 동안 → 여행하는 동안.", "ex": ["제가 요리하는 **동안** 동생은 청소를 했어요.", "Trong lúc tôi nấu ăn, em tôi dọn dẹp."]}, {"p": "V-(으)ㄴ 지 N이/가 되다 · 지나다", "m": "(làm gì) được … rồi", "noi": "Cũng nói về khoảng thời gian, nhưng **tính từ lúc** việc xảy ra (khác 동안 = suốt thời gian đó). Câu ví dụ từ “년” của bài: 한국에 산 지 2년이 됐어요.", "ex": ["한국어를 배운 **지** 6개월이 **됐어요**.", "Tôi học tiếng Hàn được 6 tháng rồi."], "de": {"src": "Đọc · kỳ 102 câu 1", "ko": "이 동네로 이사를 (    ) 일 년이 됐다.", "a": "Đáp án: 온 지", "note": "thấy “+ khoảng thời gian + 되다” sau ô → -(으)ㄴ 지."}}, {"p": "N 만에", "m": "sau (khoảng) … (mới lại)", "noi": "Cũng đi sau khoảng thời gian như 동안, nhưng nghĩa là “cách … mới lại / sau … thì”.", "ex": ["10년 **만에** 고향 친구를 만났어요.", "Mười năm mới gặp lại bạn quê."]}, {"p": "동안 trong đề đọc", "m": "N 동안 · 기간 동안", "noi": "Đề đọc hay dùng **기간** (kỳ, thời gian) thay cho số cụ thể: 짧은 기간 동안 = trong thời gian ngắn.", "de": {"src": "Đọc · kỳ 91 câu 13", "ko": "사람이 붐비는 장소에서 짧은 **기간 동안** 운영하는 매장이 유행이다.", "a": "Câu sắp xếp (13–15): câu có 동안 nói “cửa hàng tạm” là gì."}}],
- "hoi":[
-  {"q":"“Em đã học tiếng Hàn được 6 tháng” — 6개월 동안 배웠어요 có đúng không?","a":"Đúng nếu ý là “đã học trong 6 tháng” (có thể giờ đã dừng). Muốn nhấn “tính đến nay đã được 6 tháng” → 한국어를 배운 <b>지</b> 6개월 됐어요."},
-  {"q":"“2 ngày”, “3 ngày” nói tự nhiên thế nào?","a":"<b>이틀</b>, <b>사흘</b> (동안)."}],
- "luyen":[
-  {"q":"저는 방학 (    ) 아르바이트를 했어요.","o":["동안","에서","동안에서","만에"],"w":"방학 là sự kiện kéo dài → 동안."},
-  {"q":"감기 때문에 (    ) 동안 학교에 못 갔어요.","o":["사흘","3시","월요일","어제"],"w":"동안 cần khoảng thời gian, không đi với mốc (3시, 월요일, 어제)."},
-  {"q":"가: 한국에 얼마 (    ) 있을 거예요?  나: 일주일 있을 거예요.","o":["동안","만에","후에","에서"],"w":"얼마 동안 = bao lâu."},
-  {"q":"Chọn câu SAI.","o":["토요일 동안 친구를 만났어요.","주말 동안 친구를 만났어요.","일주일 동안 여행했어요.","두 시간 동안 기다렸어요."],"w":"토요일 là mốc → 토요일에. 주말 (cuối tuần, 2 ngày) là khoảng → 동안 được."}],
- "em":[
-  "Kể kỳ nghỉ vừa rồi: … 동안 무엇을 했어요? (3 câu)",
-  "Em đã học tiếng Hàn bao lâu? Viết 2 cách: … 동안 배웠어요 / 배운 지 … 됐어요."],
- "co":"Ôn nhanh bảng 하루 – 열흘 (đọc to, nhớ 3 cái đầu là đủ dùng). Bẫy phổ biến: dùng 동안 với mốc thời gian (월요일 동안) và với việc một lần (한국에 3년 동안 왔어요). Hỏi từng em “한국어를 얼마 동안 배웠어요?”."
-},
-{
- "no":3,"id":"g_2A_03_3","cn":"Bối cảnh – dẫn dắt",
- "core":"Nêu trước bối cảnh, tình huống làm nền cho vế sau (nhờ, rủ, hỏi, giải thích thêm): “…, (nên / vậy)…” — nhiều khi tiếng Việt không cần từ nối.",
- "goc":"<b>-는데 / -(으)ㄴ데</b> = đuôi định ngữ (-는 / -(으)ㄴ) + <b>데</b> (chỗ, tình huống). Nghĩa đen “trong tình huống mà…” → nêu nền cho câu sau. Vì gốc là định ngữ nên <b>chia y như định ngữ</b>: động từ -는, tính từ -(으)ㄴ, danh từ 인. Đây là nghĩa 1 (bối cảnh); nghĩa 2 “nhưng” (đối lập) học sau.",
- "chia":[["","받침 ×","받침 ○","Quá khứ"],
-  ["Tính từ","크다 → **큰데**","작다 → 작**은데**","컸**는데**"],
-  ["Động từ","가다 → 가**는데**","먹다 → 먹**는데**","갔**는데** · 먹었**는데**"],
-  ["Danh từ","친구 → 친구**인데**","학생 → 학생**인데**","친구였**는데** · 학생이었**는데**"],
-  ["있다 / 없다","재미있**는데**","맛없**는데**",""],
-  ["Gốc ㄹ / ㅂ","만들다 → 만드**는데** · 멀다 → **먼데**","덥다 → 더**운데**",""]],
- "chiaNote":[
-  "있다 / 없다 (cả 맛있다, 재미없다…) đi với **-는데**, dù là tính từ.",
-  "Quá khứ của mọi loại từ: -았/었는데 (바빴는데, 먹었는데, 학생이었는데).",
-  "Gốc ㄹ rơi: 살다 → 사는데, 멀다 → 먼데, 길다 → 긴데; ㅂ bất quy tắc tính từ: 춥다 → 추운데, 덥다 → 더운데."],
- "tinh":[
-  {"t":"Nhờ vả","c":"Quên mang bút trong giờ kiểm tra.","lv":"lịch sự","ko":"펜이 없**는데** 하나 빌려 줄 수 있어요?","vi":"Mình không có bút, cho mình mượn một cái được không?","why":"Nêu hoàn cảnh trước, lời nhờ sau — nghe lịch sự, có lý do."},
-  {"t":"Rủ rê (tên bài)","c":"Có vé xem hòa nhạc.","lv":"thân mật – lịch sự","ko":"콘서트 표가 두 장 있**는데** 같이 갈래요?","vi":"Mình có hai vé xem hòa nhạc, đi cùng không?","why":"Vế sau là lời rủ → -아/어서 không dùng được, -는데 thì được."},
-  {"t":"Hỏi","c":"Thấy trời mưa khi bạn chuẩn bị về.","lv":"lịch sự","ko":"지금 비가 오**는데** 우산 있어요?","vi":"Đang mưa đấy, bạn có ô không?","why":"Bối cảnh (đang mưa) → câu hỏi. Hai vế khác chủ ngữ vẫn được."},
-  {"t":"Giới thiệu rồi giải thích thêm","c":"Giới thiệu món Việt cho bạn Hàn.","lv":"lịch sự","ko":"이건 반미**인데** 베트남 사람들이 아침에 자주 먹어요.","vi":"Đây là bánh mì, người Việt hay ăn vào buổi sáng.","why":"Danh từ → 인데. Câu đầu giới thiệu, câu sau thông tin thêm."},
-  {"t":"Kể chuyện + cảm nhận","c":"Kể bộ phim đã xem.","lv":"lịch sự","ko":"어제 그 영화를 봤**는데** 정말 재미있었어요.","vi":"Hôm qua mình xem phim đó, hay lắm.","why":"Quá khứ → 봤는데. Tiếng Việt chỉ cần dấu phẩy."},
-  {"t":"Mở lời trước khi nhờ","c":"Muốn nhờ thầy cô / đồng nghiệp.","lv":"lịch sự","ko":"부탁이 하나 있**는데** 잠깐 시간 있으세요?","vi":"Em có việc muốn nhờ, thầy / cô có rảnh một chút không ạ?","why":"Câu mở lời rất hay dùng — báo trước để người nghe chuẩn bị."}],
- "rb":[
-  ["Loại từ","Cả ba loại, mỗi loại một dạng (-는데 / -(으)ㄴ데 / 인데). Chọn sai dạng là lỗi số 1."],
-  ["Vế sau","Thường là nhờ, rủ, mệnh lệnh, hỏi hoặc giải thích thêm. Khác -아/어서: vế sau của -아/어서 không dùng rủ / mệnh lệnh."],
-  ["Chủ ngữ","Hai vế khác chủ ngữ được (비가 오는데 우산 있어요?)."],
-  ["Thì","Quá khứ gắn trước -는데 (갔는데); vế sau tự do."],
-  ["Nghĩa khác","-는데 còn nghĩa đối lập “nhưng” (nghĩa 2, học sau) — khi đọc phải xem vế sau mới biết."]],
- "sai":[
-  {"x":"날씨가 춥**는데** 문 좀 닫아 주세요.","o":"날씨가 추**운데** 문 좀 닫아 주세요.","why":"Tính từ → -(으)ㄴ데; 춥다 bất quy tắc ㅂ → 추운데."},
-  {"x":"배가 고파**서** 같이 밥 먹읍시다.","o":"배가 고**픈데** 같이 밥 먹읍시다.","why":"Vế sau là lời rủ → không dùng -아/어서; dùng -는데."},
-  {"x":"여기는 우리 학교**는데** 학생이 많아요.","o":"여기는 우리 학교**인데** 학생이 많아요.","why":"Danh từ → 인데."},
-  {"x":"이 식당이 맛있**은데** 같이 가요.","o":"이 식당이 맛있**는데** 같이 가요.","why":"있다 / 없다 luôn đi với -는데."},
-  {"x":"집이 멀**는데** 택시를 탈까요?","o":"집이 **먼데** 택시를 탈까요?","why":"멀다 là tính từ gốc ㄹ → ㄹ rơi + ㄴ데 = 먼데."}],
- "pb":[
-  {"vs":"-아/어서 (lý do)","d":"-아/어서: lý do → kết quả, vế sau không dùng rủ / mệnh lệnh. -는데: nêu nền, vế sau thoải mái (nhờ, rủ, hỏi).","ex":[["비가 와**서** 집에 있었어요.","Trời mưa nên tôi ở nhà."],["비가 오**는데** 우산 가져가세요.","Trời đang mưa, mang ô theo nhé."]]},
-  {"vs":"-는데 nghĩa 2 (đối lập, học sau)","d":"“nhưng”, nhẹ hơn -지만.","ex":[["형은 키가 **큰데** 동생은 작아요.","Anh thì cao, còn em thì thấp."]]},
-  {"vs":"-(으)ㄹ 텐데 (3A Bài 3)","d":"-는데: việc đang thấy, đã biết. -(으)ㄹ 텐데: việc mình đoán.","ex":[["비가 오**는데** 우산 있어요?","Trời đang mưa, có ô không?"],["오후에 비가 **올 텐데** 우산 있어요?","Chiều chắc sẽ mưa, có ô không?"]]}],
- "topik":[
-  {"src":"Đọc · kỳ 35 câu 1","ko":"친구와 내가 운동장에서 축구를 (하는데) 선생님이 나를 부르셨다.","note":"Đáp án. Vế trước là bối cảnh đang diễn ra, vế sau một việc khác xảy ra (khác chủ ngữ). Bẫy: 하면서 (cần cùng chủ ngữ), 하거나 / 하든지 (lựa chọn)."},
-  {"src":"Đọc · kỳ 83 câu 28","ko":"보통 마트가 해외에 진출할 때는 현지인의 취향에 맞추려고 하**는데** 이 편의점 업체는 이와 반대되는 방법을…","note":"-는데 nêu cái “thông thường” làm nền, vế sau là điểm khác biệt → ý chính nằm sau -는데."},
-  {"src":"Đọc · kỳ 83 câu 31","ko":"이런 현상이 생긴 원인은 다양한**데** 양육 과정에서 부모의 인정을 받지 못했거나…","note":"Tính từ 다양하다 → 다양한데: nêu nền “nguyên nhân thì nhiều” → vế sau kể nguyên nhân cụ thể."}],
- "len":[{"p": "-(으)ㄴ/는데도", "m": "dù … vẫn", "noi": "-는데 + **도**: bối cảnh có rồi mà kết quả vẫn ngược. Câu 3–4 thay bằng -고도, -아/어도.", "ex": ["열심히 공부했**는데도** 시험에 떨어졌어요.", "Dù học chăm vẫn trượt."], "de": {"src": "Đọc · Đề luyện EBS 1 câu 3", "ko": "그렇게 크게 **싸우고도** 같이 다니는 걸 보니 화해했나 봐요.", "a": "Đáp án: 싸웠는데도"}}, {"p": "-는 데 (viết cách)", "m": "vào việc …, để …", "noi": "**데** đứng riêng là danh từ (chỗ, việc): -는 **데** 쓰다 / 필요하다 / 성공하다. Viết cách và nghĩa khác hẳn -는데 (bối cảnh) của bài.", "ex": ["이 돈은 여행 가는 **데** 쓸 거예요.", "Số tiền này tôi sẽ dùng vào việc đi du lịch."], "de": {"src": "Đọc · kỳ 91 câu 33", "ko": "선비가 시골에서 살아가는 **데** 필요한 지식을 탐색한 것으로…", "a": "살아가는 데 필요한 = cần cho việc sống (ở quê)", "note": "kỳ 91 câu 18: 정보를 기억하는 데 뇌를 썼다; câu 35: 채취하는 데 성공하다."}}, {"p": "-(으)ㄴ/는데 = nhưng", "m": "đối lập (nghĩa 2 của -는데)", "noi": "Cùng hình thức với bối cảnh, nhưng hai vế **trái nhau**. Đề đọc dùng rất nhiều — phải đọc vế sau mới biết là “bối cảnh” hay “nhưng”.", "ex": ["형은 키가 큰**데** 동생은 작아요.", "Anh thì cao, còn em thì thấp."], "de": {"src": "Đọc · kỳ 83 câu 28", "ko": "보통 마트가 해외에 진출할 때는 현지인의 취향에 맞추려고 하**는데** 이 편의점 업체는 이와 반대되는 방법을 써서 성공한 것이다.", "a": "-는데 ở đây = “nhưng”: thường thì…, nhưng công ty này ngược lại."}}, {"p": "-(으)ㄹ 텐데", "m": "chắc là … (nên / vậy mà)", "noi": "-(으)ㄹ + **터** + 이다 + -ㄴ데: bối cảnh là một **phỏng đoán**. Học kỹ ở 3A Bài 3.", "ex": ["주말에는 공연장이 복잡할 **텐데** 평일에 가요.", "Cuối tuần chắc nhà hát đông, đi ngày thường đi."], "de": {"src": "Đọc · Đề luyện Yonsei 2 câu 2", "ko": "내일은 비가 (    ) 등산은 다음에 갑시다.", "a": "Đáp án: 올 텐데"}}],
- "hoi":[
-  {"q":"“Mình có vé hòa nhạc, đi cùng không?” — vì sao không dùng 있어서?","a":"Vế sau là lời rủ (갈래요? / 같이 가요) → -아/어서 không hợp. Dùng 표가 있<b>는데</b> 같이 갈래요?"},
-  {"q":"맛있다 là tính từ, sao lại là 맛있는데?","a":"있다 / 없다 luôn đi với <b>-는</b> (맛있는 음식, 맛있는데)."},
-  {"q":"“Hôm qua mình xem phim, phim hay lắm” — tiếng Việt không có từ nối. Tiếng Hàn nối thế nào?","a":"어제 영화를 봤<b>는데</b> 아주 재미있었어요. -는데 = giới thiệu rồi nói thêm."}],
- "luyen":[
-  {"q":"날씨가 (    ) 창문 좀 닫아 주세요.","o":["추운데","춥는데","추우는데","춥은데"],"w":"Tính từ → -(으)ㄴ데; ㅂ bất quy tắc → 추운데."},
-  {"q":"여기는 제 고향(    ) 경치가 아름다워요.","o":["인데","는데","은데","이는데"],"w":"Danh từ → 인데."},
-  {"q":"콘서트 표가 (    ) 같이 갈래요?","o":["있는데","있은데","있어서","있인데"],"w":"있다 → -는데; vế sau là lời rủ nên không dùng -아/어서."},
-  {"q":"어제 그 식당에 (    ) 정말 맛있었어요.","o":["갔는데","가는데","간데","갔은데"],"w":"Việc đã xảy ra → -았/었는데."},
-  {"q":"집이 (    ) 택시를 탈까요?","o":["먼데","멀는데","멀은데","머는데"],"w":"멀다: tính từ gốc ㄹ → 먼데."}],
- "em":[
-  "Viết 3 câu nhờ / rủ có bối cảnh: …는데 … 주세요 / 같이 …(으)ㄹ래요?",
-  "Giới thiệu một món ăn / địa điểm Việt Nam: 이건 / 여기는 …인데 …아/어요."],
- "co":"Ba dạng theo loại từ — kiểm tra bằng thẻ từ (가다, 춥다, 학생, 맛있다, 멀다, 갔다) trước khi vào nghĩa. Nghĩa: cho học sinh viết câu tiếng Việt “Trời mưa, bạn có ô không?” rồi chỉ ra tiếng Việt không có từ nối → -는데 lấp chỗ đó. Báo trước -는데 “nhưng” sẽ học sau để học sinh không bối rối khi đọc."
-},
-{
- "no":4,"id":"g_2A_03_4","cn":"Định ngữ – tương lai",
- "core":"Đặt hành động chưa xảy ra, dự định hoặc mục đích sử dụng trước danh từ: “(việc) sẽ làm”, “(chỗ) để ngồi”, “(thời gian) để đi”.",
- "goc":"Gốc động từ + <b>-(으)ㄹ</b> (đuôi định ngữ cho việc chưa xảy ra / chưa xác định) + danh từ. Hoàn thành bộ ba của động từ: 먹<b>은</b> (đã), 먹<b>는</b> (đang / thường), 먹<b>을</b> (sẽ / để). Nhiều mẫu đã học thật ra là -(으)ㄹ + danh từ: -(으)ㄹ <b>수</b> 있다, -(으)ㄹ <b>줄</b> 알다, -(으)ㄹ <b>거</b>예요 (= 것이에요).",
- "chia":[["Gốc","Ví dụ","→"],
-  ["Không 받침","만나다 · 가다","만**날** · **갈**"],
-  ["Có 받침","읽다 · 앉다","읽**을** · 앉**을**"],
-  ["Gốc ㄹ","만들다 · 살다","만들 · 살 (không thêm 을)"],
-  ["ㄷ bất quy tắc","듣다","들**을**"],
-  ["ㅂ bất quy tắc","돕다","도**울**"],
-  ["하다","하다 · 공부하다","**할** · 공부**할**"]],
- "chiaNote":[
-  "Gốc ㄹ: 만들다 → **만들** (만들 사람), 살다 → **살** (살 집 = nhà để ở). Nhưng 사다 → **살** cũng là “sẽ mua” — 살 집 có hai nghĩa, dựa vào ngữ cảnh.",
-  "Phát âm: sau -(으)ㄹ, phụ âm đầu từ sau đọc căng: 갈 시간 [갈 씨간], 앉을 자리 [안즐 짜리], 먹을 것 [머글 껃].",
-  "Danh từ hay đi kèm: 시간, 자리, 것 / 거, 일, 계획, 사람, 곳, 돈."],
- "tinh":[
-  {"t":"Từ chối vì không có thời gian","c":"Bạn mời đi họp mặt.","lv":"lịch sự","ko":"미안해요. 내일은 바빠서 **갈** 시간이 없어요.","vi":"Xin lỗi. Mai bận nên không có thời gian đi.","why":"Việc chưa xảy ra (đi) → -(으)ㄹ + 시간."},
-  {"t":"Không còn chỗ","c":"Quán cà phê đông khách.","lv":"lịch sự","ko":"사람이 많아서 앉**을** 자리가 없어요.","vi":"Đông người quá nên không có chỗ ngồi.","why":"자리 để ngồi → 앉을 자리."},
-  {"t":"Hỏi có đồ ăn không","c":"Về nhà đói bụng.","lv":"thân mật","ko":"배고픈데 먹**을** 거 있어요?","vi":"Đói quá, có gì ăn không?","why":"먹을 것 = đồ để ăn. Kết hợp với -는데 (mẫu 3)."},
-  {"t":"Kế hoạch, việc cần làm","c":"Bạn rủ đi chơi cuối tuần.","lv":"lịch sự","ko":"이번 주말에는 **할** 일이 많아요.","vi":"Cuối tuần này tôi có nhiều việc phải làm.","why":"할 일 = việc sẽ làm / phải làm."},
-  {"t":"Tìm người cùng làm","c":"Đăng tin tìm bạn đồng hành.","lv":"lịch sự","ko":"같이 여행 **갈** 사람을 찾고 있어요.","vi":"Tôi đang tìm người đi du lịch cùng.","why":"Việc chưa xảy ra → 갈 사람."},
-  {"t":"Chuẩn bị cho ngày mai","c":"Tối trước buổi phỏng vấn.","lv":"lịch sự","ko":"내일 입**을** 옷을 아직 못 골랐어요.","vi":"Tôi chưa chọn được quần áo để mặc ngày mai.","why":"입을 옷 = áo sẽ mặc / để mặc."}],
- "rb":[
-  ["Loại từ","Động từ (bài này). Tính từ dạng -(으)ㄹ chủ yếu gặp trong mẫu phỏng đoán (클 거예요) — không học ở đây."],
-  ["Thời gian","Không phụ thuộc thì của câu: 어제 내일 입을 옷을 샀어요 (hôm qua mua áo để mai mặc)."],
-  ["Chọn đuôi định ngữ","Đã xong → -(으)ㄴ; đang / thường → -는; chưa xảy ra / để dùng → -(으)ㄹ."],
-  ["Mẫu cố định","수, 줄, 거(것) sau động từ trong các mẫu đã học luôn đi với -(으)ㄹ."]],
- "sai":[
-  {"x":"오늘은 바빠서 친구를 **만난** 시간이 없어요.","o":"오늘은 바빠서 친구를 **만날** 시간이 없어요.","why":"Việc chưa xảy ra → -(으)ㄹ."},
-  {"x":"사람이 많아서 앉**는** 자리가 없어요.","o":"사람이 많아서 앉**을** 자리가 없어요.","why":"Chỗ để ngồi (chưa ngồi) → 앉을."},
-  {"x":"내일 케이크를 만들**을** 거예요.","o":"내일 케이크를 만들 거예요.","why":"Gốc ㄹ không thêm 을."},
-  {"x":"시간이 없어서 숙제를 하**는** 수 없어요.","o":"시간이 없어서 숙제를 **할** 수 없어요.","why":"수 trong -(으)ㄹ 수 없다 luôn đi với -(으)ㄹ."},
-  {"x":"저를 돕**을** 사람이 있어요?","o":"저를 도**울** 사람이 있어요?","why":"돕다 bất quy tắc ㅂ → 도울."}],
- "pb":[
-  {"vs":"Bộ ba -(으)ㄴ / -는 / -(으)ㄹ","d":"Cùng một động từ, đổi đuôi = đổi thời gian của hành động.","ex":[["어제 **본** 영화","phim đã xem hôm qua"],["지금 보**는** 영화","phim đang xem"],["내일 **볼** 영화","phim sẽ xem ngày mai"]]},
-  {"vs":"V-(으)ㄹ 거예요","d":"-(으)ㄹ 거예요 = -(으)ㄹ + 것 + 이에요 → “việc sẽ làm là…” = sẽ. Cùng đuôi định ngữ -(으)ㄹ.","ex":[["주말에 영화를 **볼 거예요**.","Cuối tuần tôi sẽ xem phim."]]}],
- "topik":[
-  {"src":"Đọc · kỳ 91 câu 23","ko":"죽**을** 것 같은 모습을 눈앞에서 보고 싶지 않았다.","note":"죽을 것 같다 (có vẻ sẽ chết) = -(으)ㄹ + danh từ 것 + 같다; cả cụm lại làm định ngữ cho 모습. Đề đọc có nhiều lớp định ngữ chồng nhau — tìm danh từ chính (모습) trước."},
-  {"src":"Đọc · kỳ 37 câu 1","ko":"아침에 일찍 (일어나야) 일곱 시 비행기를 **탈** 수 있다.","note":"-(으)ㄹ 수 있다 = -(으)ㄹ + 수 (khả năng). Bẫy 일어나려고: vế sau là “mới làm được” → vế trước là điều kiện -아/어야."}],
- "len":[{"p": "-(으)ㄹ 것 같다", "m": "chắc là, hình như (sẽ)", "noi": "-(으)ㄹ + **것** + 같다: đoán việc chưa xảy ra. Câu 3–4 hay thay bằng -(으)ㄹ 모양이다, -나 보다, -(으)려나 보다.", "ex": ["오늘 콘서트에 사람이 많을 **것 같아요**.", "Hôm nay chắc concert đông người."], "de": {"src": "Đọc · kỳ 35 câu 3", "ko": "먹구름이 몰려오는 걸 보니 비가 **올 모양이다**.", "a": "Đáp án: 올 것만 같다 · 올 리가 없다 là lựa chọn nhiễu (nghĩa ngược)"}}, {"p": "-(으)ㄹ 뻔하다", "m": "suýt nữa thì", "noi": "-(으)ㄹ + **뻔** + 하다, luôn ở quá khứ: -(으)ㄹ 뻔했다. Vế trước thường là lý do (-아서, -느라고).", "ex": ["길이 막혀서 공연에 늦을 **뻔했어요**.", "Tắc đường suýt nữa thì muộn buổi diễn."], "de": {"src": "Đọc · Đề luyện TOPIK 300⁺ 5 câu 1", "ko": "길이 막혀서 비행기를 (    ).", "a": "Đáp án: 놓칠 뻔했다"}}, {"p": "-(으)ㄹ 때마다", "m": "mỗi khi", "noi": "-(으)ㄹ **때** (danh từ) + 마다. Câu 3–4 thay bằng -기만 하면 (hễ … là).", "ex": ["그 노래를 들을 **때마다** 고향 생각이 나요.", "Mỗi khi nghe bài hát đó tôi lại nhớ quê."], "de": {"src": "Đọc · kỳ 60 câu 3", "ko": "동생은 차를 **타기만 하면** 멀미를 한다.", "a": "Đáp án: 탈 때마다"}}, {"p": "-(으)ㄹ 리가 없다 · -(으)ㄹ 게 뻔하다", "m": "không thể nào … · chắc chắn là …", "noi": "Hai đầu của thang “chắc chắn”: -(으)ㄹ + **리** (lý) + 가 없다 = không thể; -(으)ㄹ + **게** (것이) + 뻔하다 = rõ ràng là.", "ex": ["그 사람이 거짓말을 할 **리가 없어요**.", "Người đó không thể nào nói dối."], "de": {"src": "Đọc · Đề luyện Yonsei 2 câu 4", "ko": "영수는 아직도 집에서 **자고 있을 게 뻔하다**.", "a": "Đáp án: 자고 있을 것이 분명하다 · 자고 있을 리가 없다 là lựa chọn nhiễu"}}],
- "hoi":[
-  {"q":"“Em không có thời gian ăn sáng” viết thế nào?","a":"아침을 먹<b>을</b> 시간이 없어요."},
-  {"q":"Vì sao 갈 시간 đọc là [갈 씨간]?","a":"Sau đuôi định ngữ -(으)ㄹ, phụ âm ㄱ ㄷ ㅂ ㅅ ㅈ ở đầu từ sau đọc căng."},
-  {"q":"“어제 내일 입을 옷을 샀어요” — có cả 어제 và 내일, câu có sai không?","a":"Không sai: 어제 thuộc việc mua (샀어요), 내일 thuộc việc mặc (입을)."}],
- "luyen":[
-  {"q":"사람이 많아서 (    ) 자리가 없어요.","o":["앉을","앉는","앉은","앉을을"],"w":"Chỗ để ngồi → -(으)ㄹ."},
-  {"q":"내일 친구 생일 파티에서 (    ) 케이크를 지금 만들고 있어요.","o":["먹을","먹은","먹는","먹었을"],"w":"Bánh sẽ ăn ở bữa tiệc ngày mai → 먹을."},
-  {"q":"Chọn đúng bộ ba: phim đã xem / phim đang xem / phim sẽ xem.","o":["본 영화 / 보는 영화 / 볼 영화","보는 영화 / 본 영화 / 볼 영화","볼 영화 / 보는 영화 / 본 영화","본 영화 / 볼 영화 / 보는 영화"],"w":"-(으)ㄴ đã · -는 đang · -(으)ㄹ sẽ."},
-  {"q":"가: 내일 모임에 올 수 있어요?  나: 미안해요. 내일은 아르바이트가 있어서 (    ) 시간이 없어요.","o":["갈","간","가는","갔을"],"w":"Việc chưa xảy ra → 갈 시간."},
-  {"q":"같이 숙제를 (    ) 사람 있어요?","o":["도와줄","도와준","돕을","도와주는다"],"w":"Người sẽ giúp → -(으)ㄹ: 도와주다 → 도와줄."}],
- "em":[
-  "Viết 3 câu “không có… để…”: …(으)ㄹ 시간 / 돈 / 사람이 없어요.",
-  "Kế hoạch tuần này của em: 이번 주에 할 일이 … (liệt kê bằng -(으)ㄹ N)."],
- "co":"Đặt ba cột -(으)ㄴ / -는 / -(으)ㄹ lên bảng ngay từ đầu (nối với Bài 2 mẫu 3). Trò “Không có…”: cô đưa tình huống (bận, hết tiền, quán đông), học sinh nói câu -(으)ㄹ N이/가 없어요. Nhắc đọc căng [갈 씨간] — học sinh Việt hay đọc mềm. Chỉ cho học sinh thấy 수, 줄, 거 trong các mẫu cũ cũng là -(으)ㄹ + danh từ."
-}
-]
+ "b": "2A",
+ "n": 3,
+ "tong": {
+  "t": "Bài 3: kể một trải nghiệm – đã từng, bao lâu, bối cảnh",
+  "p": "Tên bài “콘서트에 가 봤어요?” chứa mẫu chính <b>-아/어 보다</b> (thử / đã từng). Bài 3 giúp học sinh <b>kể một trải nghiệm</b> có đầu có đuôi: đã từng làm gì (-아/어 봤어요), kéo dài bao lâu (N 동안), nêu bối cảnh rồi nói tiếp (-는데), và hoàn thành bộ ba định ngữ với <b>-(으)ㄹ N</b>. Viên gạch nền: <b>đuôi -아/어</b> (cho -아/어 보다) và <b>đuôi định ngữ theo loại từ</b> -(으)ㄴ / -는 / 인 (cho -는데). -는데 ở bài này là nghĩa 1 (bối cảnh); nghĩa “nhưng” và -(으)ㄹ 텐데 (3A Bài 3) học sau.",
+  "tb": [
+   [
+    "Mẫu",
+    "Câu hỏi chìa khóa"
+   ],
+   [
+    "V-아/어 보다",
+    "Thử (hiện tại / mệnh lệnh) hay đã từng (quá khứ)? Việc có chủ ý không? (không → -(으)ㄴ 적이 있다)"
+   ],
+   [
+    "N 동안",
+    "Danh từ là khoảng thời gian hay mốc thời gian? (mốc → 에)"
+   ],
+   [
+    "-(으)ㄴ데 / -는데 / 인데",
+    "Tính từ, động từ hay danh từ? Vế sau là nhờ / rủ / hỏi / giải thích?"
+   ],
+   [
+    "V-(으)ㄹ N",
+    "Việc chưa xảy ra / để dùng vào việc gì? (đã xong → -(으)ㄴ, đang → -는)"
+   ]
+  ]
+ },
+ "p": [
+  {
+   "no": 1,
+   "id": "g_2A_03_1",
+   "cn": "Thử – kinh nghiệm",
+   "core": "Hai nghĩa: (1) thử làm một việc để biết nó thế nào — “thử… xem”; (2) ở quá khứ -아/어 봤어요 = đã từng trải qua — “đã từng…”.",
+   "goc": "V-아/어 + <b>보다</b> (xem, nhìn): làm rồi “xem” kết quả ra sao → <b>thử</b>. Giống hệt tiếng Việt “ăn thử <b>xem</b>”, “mặc thử <b>xem</b>”. Đã thử rồi (봤다) → <b>đã có kinh nghiệm</b>. Vì thế nghĩa phụ thuộc vào đuôi câu: 먹어 보세요 (ăn thử đi), 먹어 보고 싶어요 (muốn thử), 먹어 봤어요 (đã từng ăn).",
+   "chia": [
+    [
+     "Nhóm",
+     "Quy tắc",
+     "Ví dụ chia",
+     "Câu ví dụ"
+    ],
+    [
+     "Nguyên âm cuối ㅏ, ㅗ",
+     "+ 아 (ㅏ + 아 gộp làm một, ㅗ + 아 → ㅘ)",
+     "가다 → **가 봐요** · 타다 → **타 봤어요** · 오다 → **와 봤어요** · 살다 → 살**아 봤어요**",
+     "부산에 가 **봤어요**? — Bạn đã đi Busan chưa?"
+    ],
+    [
+     "Nguyên âm khác (ㅓ ㅜ ㅡ ㅣ…)",
+     "+ 어 (ㅣ + 어 → ㅕ, ㅜ + 어 → ㅝ)",
+     "먹다 → 먹**어 봐요** · 입다 → 입**어 봤어요** · 마시다 → 마**셔 봤어요** · 배우다 → 배**워 봤어요**",
+     "막걸리를 마셔 **봤어요**. — Tôi đã uống thử rượu makgeolli."
+    ],
+    [
+     "하다",
+     "하 → 해",
+     "하다 → **해 봐요** · 운동하다 → 운동**해 봤어요** · 요리하다 → 요리**해 봤어요**",
+     "한국 요리를 해 **봤어요**. — Tôi đã nấu thử món Hàn."
+    ],
+    [
+     "Bất quy tắc ㄷ",
+     "ㄷ → ㄹ rồi + 어",
+     "듣다 → 들**어 봤어요** · 걷다 → 걸**어 봤어요** · 묻다 → 물**어 보세요**",
+     "이 노래 들어 **봤어요**? — Bạn nghe bài này chưa?"
+    ],
+    [
+     "Bất quy tắc ㅂ",
+     "ㅂ → 우, 우 + 어 = 워 (돕다 → 도와)",
+     "굽다 → 구**워 봤어요** · 눕다 → 누**워 보세요** · 돕다 → 도**와 봤어요**",
+     "고기를 직접 구워 **봤어요**. — Tôi đã tự nướng thịt."
+    ],
+    [
+     "Bất quy tắc 르",
+     "ㅡ rơi, thêm ㄹ: 르 → ㄹ라 / ㄹ러",
+     "부르다 → 불**러 봤어요** · 고르다 → 골**라 보세요** · 자르다 → 잘**라 봤어요**",
+     "한국 노래를 불러 **봤어요**. — Tôi đã hát thử bài hát Hàn."
+    ],
+    [
+     "Gốc ㅡ (으 rơi)",
+     "bỏ ㅡ, nhìn nguyên âm âm trước",
+     "쓰다 → **써 봐요** · 끄다 → **꺼 보세요** · 담그다 → 담**가 봤어요**",
+     "한국어로 일기를 써 **봤어요**. — Tôi đã thử viết nhật ký bằng tiếng Hàn."
+    ]
+   ],
+   "chiaNote": [
+    "Lời mời, lời khuyên: -아/어 보세요 (hãy thử…) — rất hay dùng khi giới thiệu, bán hàng: 한번 드셔 **보세요**, 입어 **보세요**.",
+    "Xin phép thử: -아/어 봐도 돼요? (입어 봐도 돼요? = mặc thử được không?).",
+    "Chưa từng: **안** 가 봤어요 / **못** 가 봤어요 / 한 번도 안 가 봤어요 — 안, 못 đứng trước cả cụm."
+   ],
+   "tinh": [
+    {
+     "t": "Hỏi kinh nghiệm (tên bài)",
+     "c": "Nói chuyện với bạn về âm nhạc.",
+     "lv": "lịch sự",
+     "ko": "콘서트에 가 **봤어요**? – 아니요, 아직 못 가 **봤어요**.",
+     "vi": "Bạn đã từng đi xem hòa nhạc chưa? – Chưa, mình chưa đi bao giờ.",
+     "why": "Quá khứ 봤어요 = đã từng. 아직 못 = chưa có dịp (muốn mà chưa được).",
+     "lt": [
+      {
+       "t": "kv",
+       "ko": "번지 점프를 해 봤어요? – 아니요, 한 번도 안 해 봤어요.",
+       "a": "Bạn đã nhảy bungee bao giờ chưa? – Chưa, tôi chưa thử lần nào.",
+       "w": "한 번도 안 … 봤어요 = chưa … lần nào."
+      },
+      {
+       "t": "vk",
+       "vi": "Bạn đã ăn tteokbokki bao giờ chưa?",
+       "a": [
+        "떡볶이를 먹어 봤어요?",
+        "떡볶이 먹어 봤어요?"
+       ],
+       "h": "Hỏi kinh nghiệm → quá khứ -아/어 봤어요?"
+      }
+     ]
+    },
+    {
+     "t": "Mời thử món ăn",
+     "c": "Giới thiệu món Việt cho bạn Hàn.",
+     "lv": "lịch sự – kính ngữ",
+     "ko": "이 쌀국수 한번 드셔 **보세요**. 정말 맛있어요.",
+     "vi": "Anh / chị ăn thử phở này một lần xem. Ngon lắm.",
+     "why": "먹다 → 드시다 (kính ngữ) + -어 보세요. 한번 + -아/어 보다 là cụm cố định.",
+     "lt": [
+      {
+       "t": "c",
+       "q": "Bạn Hàn đến nhà, em mời ăn thử nem rán (짜조). Câu nào tự nhiên, lịch sự?",
+       "o": [
+        "이 짜조 한번 드셔 보세요.",
+        "이 짜조 한번 드셔 봤어요.",
+        "이 짜조 한번 먹어 봐요?",
+        "이 짜조를 먹고 싶어요."
+       ],
+       "w": "Mời thử → -아/어 보세요; với khách dùng kính ngữ 드시다."
+      },
+      {
+       "t": "vk",
+       "vi": "Anh uống thử cái này xem.",
+       "a": [
+        "이거 한번 마셔 보세요",
+        "이거 마셔 보세요",
+        "이거 한번 드셔 보세요",
+        "이거 드셔 보세요"
+       ],
+       "h": "마시다 → 마셔 + 보세요."
+      }
+     ]
+    },
+    {
+     "t": "Xin thử đồ ở cửa hàng",
+     "c": "Mua quần áo, giày.",
+     "lv": "lịch sự",
+     "ko": "이 옷 입**어 봐도** 돼요?",
+     "vi": "Tôi mặc thử cái áo này được không?",
+     "why": "-아/어 봐도 돼요? = xin phép thử.",
+     "lt": [
+      {
+       "t": "vk",
+       "vi": "Tôi đi thử đôi giày này được không?",
+       "a": [
+        "이 신발 신어 봐도 돼요?",
+        "이 신발을 신어 봐도 돼요?",
+        "이 구두 신어 봐도 돼요?",
+        "이 구두를 신어 봐도 돼요?"
+       ],
+       "h": "신다 (đi giày) + -어 봐도 돼요?"
+      },
+      {
+       "t": "kv",
+       "ko": "이 모자 한번 써 봐도 돼요?",
+       "a": "Tôi đội thử cái mũ này một chút được không?",
+       "w": "쓰다 (đội mũ) → 써 봐도 돼요."
+      }
+     ]
+    },
+    {
+     "t": "Kể kinh nghiệm du lịch",
+     "c": "Bạn hỏi đã đi những đâu ở Hàn.",
+     "lv": "lịch sự",
+     "ko": "제주도에는 두 번 가 **봤어요**.",
+     "vi": "Đảo Jeju thì tôi đã đi hai lần rồi.",
+     "why": "Kể số lần đã từng → -아/어 봤어요.",
+     "lt": [
+      {
+       "t": "kv",
+       "ko": "서울에는 세 번 가 봤어요. 그런데 부산에는 아직 못 가 봤어요.",
+       "a": "Seoul thì tôi đã đi ba lần. Nhưng Busan thì vẫn chưa có dịp đi.",
+       "w": "아직 못 가 봤어요 = vẫn chưa có dịp đi."
+      },
+      {
+       "t": "vk",
+       "vi": "Tôi đã đi Đà Nẵng hai lần.",
+       "a": [
+        "다낭에 두 번 가 봤어요",
+        "다낭에는 두 번 가 봤어요"
+       ],
+       "h": "Số lần: 두 번."
+      }
+     ]
+    },
+    {
+     "t": "Khuyên giải quyết vấn đề",
+     "c": "Bạn không hiểu bài tập.",
+     "lv": "lịch sự",
+     "ko": "선생님께 한번 물**어 보세요**.",
+     "vi": "Bạn thử hỏi cô xem.",
+     "why": "묻다 bất quy tắc ㄷ → 물어 보다 (hỏi thử). Lời khuyên mềm, không ra lệnh.",
+     "lt": [
+      {
+       "t": "vk",
+       "vi": "Bạn thử hỏi Minsu xem.",
+       "a": [
+        "민수 씨한테 물어 보세요",
+        "민수 씨에게 물어 보세요",
+        "민수 씨한테 한번 물어 보세요",
+        "민수 씨에게 한번 물어 보세요"
+       ],
+       "h": "묻다 → 물어 (ㄷ bất quy tắc)."
+      },
+      {
+       "t": "c",
+       "q": "Bạn kêu máy tính bị đơ. Em khuyên: “Thử bật lại xem.”",
+       "o": [
+        "한번 다시 켜 보세요.",
+        "한번 다시 켜 봤어요.",
+        "한번 다시 키어 보세요.",
+        "한번 다시 켜 보고 싶어요."
+       ],
+       "w": "Khuyên thử → -아/어 보세요; 켜다 + 어 → 켜."
+      }
+     ]
+    },
+    {
+     "t": "Ước muốn thử việc mới",
+     "c": "Kể kế hoạch năm nay.",
+     "lv": "lịch sự",
+     "ko": "올해는 번지 점프를 해 **보고 싶어요**.",
+     "vi": "Năm nay tôi muốn thử nhảy bungee.",
+     "why": "-아/어 보고 싶다 = muốn thử — nghĩa “thử” chứ không phải “đã từng”.",
+     "lt": [
+      {
+       "t": "kv",
+       "ko": "한국에 가면 한복을 입어 보고 싶어요.",
+       "a": "Nếu sang Hàn, tôi muốn mặc thử hanbok.",
+       "w": "-아/어 보고 싶다 = muốn thử."
+      },
+      {
+       "t": "vk",
+       "vi": "Năm nay tôi muốn thử học bơi.",
+       "a": [
+        "올해는 수영을 배워 보고 싶어요",
+        "올해 수영을 배워 보고 싶어요"
+       ],
+       "h": "배우다 → 배워 + 보고 싶어요."
+      }
+     ]
+    }
+   ],
+   "rb": [
+    {
+     "k": "Chỉ đi với động từ",
+     "d": "Thử được thì phải là **việc làm** (đi, ăn, mặc, học…). Tính từ không “thử” được: ~~날씨가 추워 봤어요~~.",
+     "ex": [
+      [
+       "이 옷을 입어 **보세요**.",
+       "Bạn mặc thử áo này xem."
+      ]
+     ],
+     "lt": [
+      {
+       "t": "c",
+       "q": "Câu nào ĐÚNG?",
+       "o": [
+        "한국 노래를 불러 봤어요.",
+        "날씨가 추워 봤어요.",
+        "저는 키가 커 봤어요.",
+        "방이 깨끗해 봐요."
+       ],
+       "w": "춥다, 크다, 깨끗하다 là tính từ → không dùng -아/어 보다."
+      }
+     ]
+    },
+    {
+     "k": "Đuôi câu quyết định nghĩa",
+     "d": "Hiện tại / mời / -고 싶다 / -(으)ㄹ게요 → **thử**. Quá khứ 봤어요 → **đã từng / đã thử**.",
+     "ex": [
+      [
+       "매운 음식을 먹어 **볼게요**.",
+       "Tôi sẽ ăn thử đồ cay."
+      ],
+      [
+       "매운 음식을 먹어 **봤어요**.",
+       "Tôi đã từng ăn đồ cay."
+      ]
+     ],
+     "lt": [
+      {
+       "t": "c",
+       "q": "“Để tôi làm thử” → ?",
+       "o": [
+        "제가 해 볼게요.",
+        "제가 해 봤어요.",
+        "제가 해 보세요.",
+        "제가 하고 봤어요."
+       ],
+       "w": "Tôi sẽ thử → -아/어 볼게요."
+      },
+      {
+       "t": "kv",
+       "ko": "그 식당에 가 봤어요? 저는 아직 안 가 봤어요.",
+       "a": "Bạn đã đến quán đó chưa? Tôi thì chưa đến.",
+       "w": ""
+      }
+     ]
+    },
+    {
+     "k": "Việc có chủ ý",
+     "d": "Chỉ dùng cho việc mình **chủ động** làm. Việc không ai muốn (ốm, tai nạn, mất đồ) → **-(으)ㄴ 적이 있다** (xem phần Phân biệt).",
+     "ex": [
+      [
+       "지갑을 잃어버린 **적이 있어요**.",
+       "Tôi từng bị mất ví."
+      ]
+     ],
+     "lt": [
+      {
+       "t": "c",
+       "q": "“Tôi từng bị cảm nặng” — chọn câu tự nhiên.",
+       "o": [
+        "감기에 심하게 걸린 적이 있어요.",
+        "감기에 심하게 걸려 봤어요.",
+        "감기에 심하게 걸려 보세요.",
+        "감기에 심하게 걸려 보고 싶어요."
+       ],
+       "w": "Bị cảm không phải việc “thử” → -(으)ㄴ 적이 있다."
+      }
+     ]
+    },
+    {
+     "k": "Phủ định: 안 / 못 đứng trước cả cụm",
+     "d": "**안 가 봤어요**, không nói ~~가 안 봤어요~~. **안** = không làm / chưa làm; **못** = muốn mà chưa có dịp. Với N하다: 낚시를 **안 해** 봤어요.",
+     "ex": [
+      [
+       "아직 **못** 가 봤어요.",
+       "Tôi vẫn chưa có dịp đi."
+      ]
+     ],
+     "lt": [
+      {
+       "t": "y",
+       "q": "Thêm 안 cho đúng chỗ (chưa từng câu cá): 저는 낚시를 해 봤어요.",
+       "a": [
+        "저는 낚시를 안 해 봤어요"
+       ],
+       "h": "N하다: 안 đứng trước 하다.",
+       "w": "낚시를 안 해 봤어요."
+      }
+     ]
+    },
+    {
+     "k": "Kính ngữ gắn vào 보다",
+     "d": "Nói với người trên: 보다 → **보시다**: 가 **보세요**, 드셔 **보세요** (먹다 → 드시다 rồi + 어 보세요).",
+     "ex": [
+      [
+       "할머니, 이것 좀 드셔 **보세요**.",
+       "Bà ơi, bà ăn thử cái này đi ạ."
+      ]
+     ],
+     "lt": [
+      {
+       "t": "y",
+       "f": "선생님, 이거 한번 (    ). (mời cô ăn thử)",
+       "a": [
+        "드셔 보세요",
+        "드셔보세요"
+       ],
+       "h": "먹다 → kính ngữ 드시다.",
+       "w": "드시 + 어 → 드셔 + 보세요."
+      }
+     ]
+    },
+    {
+     "k": "Với chính 보다 (xem)",
+     "d": "봐 보다 vẫn gặp trong văn nói, nhưng hỏi kinh nghiệm thường nói gọn: 그 영화 **봤어요**? / 본 적이 있어요?",
+     "ex": [],
+     "lt": []
+    }
+   ],
+   "sai": [
+    {
+     "x": "김치를 먹**아** 봤어요.",
+     "o": "김치를 먹**어** 봤어요.",
+     "why": "먹 có nguyên âm ㅓ → -어. Chỉ ㅏ, ㅗ mới đi với -아.",
+     "k": "Chia đuôi -아/어",
+     "h": "Nguyên âm của 먹 là gì? Đi với 아 hay 어?"
+    },
+    {
+     "x": "이 노래 듣**어** 봤어요?",
+     "o": "이 노래 들**어** 봤어요?",
+     "why": "듣다 bất quy tắc ㄷ: gặp nguyên âm → ㄹ.",
+     "k": "Bất quy tắc ㄷ",
+     "h": "듣다 thuộc nhóm nào? Gặp -어 thì ㄷ thành gì?"
+    },
+    {
+     "x": "한국 노래를 **부르어** 봤어요.",
+     "o": "한국 노래를 **불러** 봤어요.",
+     "why": "부르다 bất quy tắc 르: ㅡ rơi, thêm ㄹ → 불러.",
+     "k": "Bất quy tắc 르",
+     "h": "Từ tận cùng bằng 르 gặp -어 thì thế nào?"
+    },
+    {
+     "x": "저는 한국에 가 **안 봤어요**.",
+     "o": "저는 한국에 **안** 가 봤어요.",
+     "why": "안 / 못 đứng trước cả cụm V-아/어 보다.",
+     "k": "Vị trí 안 / 못",
+     "h": "안 phải đứng trước động từ nào — 가다 hay 보다?"
+    },
+    {
+     "x": "작년에 교통사고가 나 **봤어요**.",
+     "o": "작년에 교통사고가 **난 적이 있어요**.",
+     "why": "Tai nạn không phải việc mình “thử” → -(으)ㄴ 적이 있다.",
+     "k": "Chọn sai mẫu",
+     "h": "Tai nạn có phải việc mình chủ động muốn thử không?"
+    },
+    {
+     "x": "한국 음식을 만들어 **보세요**? (muốn hỏi “bạn đã từng nấu chưa”)",
+     "o": "한국 음식을 만들어 **봤어요**?",
+     "why": "보세요 là lời mời / khuyên; hỏi kinh nghiệm phải dùng quá khứ 봤어요.",
+     "k": "Sai đuôi → sai nghĩa",
+     "h": "Hỏi kinh nghiệm (đã từng) thì phải dùng thì gì?"
+    }
+   ],
+   "pb": [
+    {
+     "vs": "-(으)ㄴ 적이 있다 (đã từng)",
+     "d": "Cả hai đều dịch là “đã từng”. Khác nhau ở chỗ: **-아/어 봤다** nhấn mình **chủ động thử** để biết (đi, ăn, làm). **-(으)ㄴ 적이 있다** chỉ nói **đã có lần xảy ra** — việc gì cũng được, kể cả việc xui. Hai mẫu ghép được thành **-아/어 본 적이 있다** (đã từng thử) — rất hay gặp. “Chưa từng” → -(으)ㄴ 적이 **없다**.",
+     "ex": [
+      [
+       "한국 음식을 만들어 **봤어요**.",
+       "Tôi đã thử nấu món Hàn."
+      ],
+      [
+       "다리를 **다친 적이 있어요**.",
+       "Tôi từng bị đau chân (chấn thương)."
+      ],
+      [
+       "제주도에 가 **본 적이 있어요**.",
+       "Tôi đã từng đi Jeju."
+      ]
+     ],
+     "bang": [
+      [
+       "",
+       "-아/어 봤어요",
+       "-(으)ㄴ 적이 있어요"
+      ],
+      [
+       "Ý",
+       "đã thử / đã từng (chủ động)",
+       "đã có lần (bất kỳ việc gì)"
+      ],
+      [
+       "Việc xui, không chủ ý",
+       "✗ 다쳐 봤어요",
+       "✓ 다친 적이 있어요"
+      ],
+      [
+       "Nghĩa “thử” (hiện tại)",
+       "✓ 먹어 보세요",
+       "✗ không có"
+      ],
+      [
+       "Chưa từng",
+       "안 / 못 … 봤어요",
+       "… 적이 없어요"
+      ]
+     ],
+     "lt": [
+      {
+       "t": "c",
+       "q": "“Tôi từng bị lạc đường ở Seoul.”",
+       "o": [
+        "서울에서 길을 잃은 적이 있어요.",
+        "서울에서 길을 잃어 봤어요.",
+        "서울에서 길을 잃어 보세요.",
+        "서울에서 길을 잃고 싶어요."
+       ],
+       "w": "Lạc đường là việc không mong muốn → -(으)ㄴ 적이 있다."
+      },
+      {
+       "t": "c",
+       "q": "Câu nào dùng được CẢ HAI mẫu?",
+       "o": [
+        "한복을 입어 봤어요 / 입은 적이 있어요.",
+        "교통사고가 나 봤어요 / 난 적이 있어요.",
+        "감기에 걸려 봤어요 / 걸린 적이 있어요.",
+        "지갑을 잃어버려 봤어요 / 잃어버린 적이 있어요."
+       ],
+       "w": "Mặc hanbok là việc chủ động → dùng được cả hai."
+      },
+      {
+       "t": "vk",
+       "vi": "Tôi đã từng đi Jeju.",
+       "a": [
+        "제주도에 가 본 적이 있어요",
+        "제주도에 가 봤어요",
+        "제주도에 간 적이 있어요"
+       ],
+       "h": "Có thể ghép: 가 본 적이 있어요."
+      }
+     ]
+    },
+    {
+     "vs": "-고 싶다 ↔ -아/어 보고 싶다",
+     "d": "**-고 싶다**: muốn làm việc đó (có thể đã làm nhiều lần). **-아/어 보고 싶다**: muốn **thử** — thường là lần đầu, muốn biết cảm giác. Món ngày nào cũng ăn → 먹고 싶어요; món chưa ăn bao giờ → 먹어 보고 싶어요.",
+     "ex": [
+      [
+       "한복을 입**고 싶어요**.",
+       "Tôi muốn mặc hanbok."
+      ],
+      [
+       "한복을 한번 입**어 보고 싶어요**.",
+       "Tôi muốn mặc thử hanbok một lần."
+      ]
+     ],
+     "bang": [
+      [
+       "",
+       "-고 싶어요",
+       "-아/어 보고 싶어요"
+      ],
+      [
+       "Ý",
+       "muốn làm",
+       "muốn thử (lần đầu)"
+      ],
+      [
+       "Ví dụ",
+       "배고파요. 밥 먹고 싶어요.",
+       "한국에 가면 삼계탕을 먹어 보고 싶어요."
+      ]
+     ],
+     "lt": [
+      {
+       "t": "c",
+       "q": "Ngày nào cũng uống cà phê, sáng nay chưa uống: 커피를 (    ).",
+       "o": [
+        "마시고 싶어요",
+        "마셔 보고 싶어요"
+       ],
+       "w": "Việc quen thuộc → -고 싶다."
+      },
+      {
+       "t": "c",
+       "q": "Chưa trượt tuyết bao giờ, muốn biết cảm giác: 스키를 (    ).",
+       "o": [
+        "타 보고 싶어요",
+        "타고 싶어요"
+       ],
+       "w": "Lần đầu, muốn thử → -아/어 보고 싶다."
+      }
+     ]
+    },
+    {
+     "vs": "-(으)세요 ↔ -아/어 보세요",
+     "d": "**-(으)세요**: bảo người nghe làm (yêu cầu, chỉ dẫn). **-아/어 보세요**: **gợi ý thử** — mềm hơn, người nghe tự quyết. Nhân viên bán hàng, người giới thiệu món ăn hay dùng -아/어 보세요.",
+     "bang": [
+      [
+       "",
+       "-(으)세요",
+       "-아/어 보세요"
+      ],
+      [
+       "Ý",
+       "hãy làm (yêu cầu)",
+       "làm thử xem (gợi ý)"
+      ],
+      [
+       "Ví dụ",
+       "여기 앉으세요. — Mời ngồi đây.",
+       "이 의자에 한번 앉아 보세요. — Ngồi thử ghế này xem."
+      ]
+     ],
+     "ex": [
+      [
+       "이 옷 한번 입어 **보세요**.",
+       "Anh / chị mặc thử áo này xem."
+      ],
+      [
+       "추우니까 코트를 입**으세요**.",
+       "Trời lạnh, mặc áo khoác vào."
+      ]
+     ],
+     "lt": [
+      {
+       "t": "c",
+       "q": "Nhân viên gợi ý khách mặc thử áo: 이 옷 한번 (    ).",
+       "o": [
+        "입어 보세요",
+        "입으세요"
+       ],
+       "w": "Gợi ý thử → -아/어 보세요."
+      },
+      {
+       "t": "c",
+       "q": "Mẹ bảo con (trời lạnh): 밖에 추워요. 코트를 (    ).",
+       "o": [
+        "입으세요",
+        "입어 보세요"
+       ],
+       "w": "Yêu cầu làm, không phải thử → -(으)세요."
+      }
+     ]
+    }
+   ],
+   "topik": [
+    {
+     "src": "Đọc · kỳ 91 câu 1",
+     "ko": "나는 오래전에 설악산을 (등산한 적이 있다).",
+     "note": "Đáp án. Đề dùng -(으)ㄴ 적이 있다; nói hằng ngày cũng có thể nói 설악산에 가 봤다 — hai mẫu gần nghĩa, cô cho học sinh đổi qua lại."
+    },
+    {
+     "src": "Đọc · kỳ 83 câu 14",
+     "ko": "하지만 나는 오랫동안 생각해 온 사업을 시작해 **보려고 한다**.",
+     "note": "-아/어 보려고 하다 = định thử làm — câu nói về dự định của nhân vật; có 하지만 ở đầu nên không phải câu mở đoạn khi sắp xếp câu."
+    },
+    {
+     "src": "Đọc · kỳ 83 câu 23",
+     "ko": "나는 이번 주말에 일기장에 적혀 있는 곳에 한번 찾아가 **보려고 한다**.",
+     "note": "한번 + -아/어 보다 = thử một lần. Câu kết của đoạn tùy bút thường là dự định / quyết tâm của “나”."
+    }
+   ],
+   "len": [
+    {
+     "p": "-아/어 보니(까)",
+     "m": "thử… thì thấy / (đến) nơi thì thấy",
+     "noi": "-아/어 보다 + **-니까** (phát hiện): làm việc đó xong mới biết điều ở vế sau. Vế sau là điều **phát hiện ra**, thường ở quá khứ.",
+     "ex": [
+      "한국 음식을 먹어 **보니까** 생각보다 맵지 않았어요.",
+      "Ăn thử món Hàn mới thấy không cay như tôi nghĩ."
+     ],
+     "de": {
+      "src": "Đọc · kỳ 37 câu 2",
+      "ko": "퇴근 후에 집에 와 **보니까** 동생이 여행에서 (    ).",
+      "a": "Đáp án: 돌아와 있었다",
+      "note": "kỳ 91 câu 23 cũng có: “하루는 출근해 **보니** 금잔화가 쓰러져 있었다.”"
+     }
+    },
+    {
+     "p": "-아/어 봐야",
+     "m": "có… cũng (vô ích)",
+     "noi": "-아/어 보다 + **-아야**: “thử làm thì cũng…” → vế sau là kết quả vô ích. Thay được bằng -ㄴ/는다고 해도, -아/어도.",
+     "ex": [
+      "지금 가 **봐야** 공연은 벌써 끝났을 거예요.",
+      "Giờ có đi thì buổi diễn cũng hết rồi."
+     ],
+     "de": {
+      "src": "Đọc · kỳ 60 câu 4",
+      "ko": "이 컴퓨터는 낡아서 **수리해 봐야** 오래 쓰기 어렵다.",
+      "a": "Đáp án: 수리한다고 해도"
+     }
+    },
+    {
+     "p": "-(으)ㄴ 바 있다 = -(으)ㄴ 적이 있다",
+     "m": "đã từng (văn viết, báo chí)",
+     "noi": "Câu hỏi “-아/어 본 적이 있어요?” của bài lên văn viết thành **-(으)ㄴ 바 있다** (바 = điều, việc).",
+     "ex": [
+      "그 가수는 해외에서 공연한 **바 있다**.",
+      "Ca sĩ đó từng biểu diễn ở nước ngoài."
+     ],
+     "de": {
+      "src": "Đọc · Đề luyện TOPIK 300⁺ 5 câu 4",
+      "ko": "이 제품은 실용성과 디자인 면에서 우수하다고 **소개된 바 있다**.",
+      "a": "Đáp án: 소개된 적이 있다"
+     }
+    },
+    {
+     "p": "-아/어 볼 만하다",
+     "m": "đáng để thử",
+     "noi": "-아/어 보다 + **-(으)ㄹ 만하다** (đáng): rủ, khuyên ai làm thử.",
+     "ex": [
+      "그 뮤지컬은 한 번쯤 **볼 만해요**.",
+      "Vở nhạc kịch đó đáng xem một lần."
+     ],
+     "de": {
+      "src": "Đọc · Đề luyện Yonsei 4 câu 4",
+      "ko": "그런 새로운 경험도 한 번쯤은 **해 볼 만하다**.",
+      "a": "Đáp án: 해 볼 가치가 있다"
+     }
+    }
+   ],
+   "hoi": [
+    {
+     "q": "“Cô ăn thử món này xem ạ” — nói với cô (người lớn) thế nào?",
+     "a": "선생님, 이거 한번 <b>드셔 보세요</b>. (먹다 → 드시다, + -어 보세요)."
+    },
+    {
+     "q": "“Tôi từng nằm viện” — 입원해 봤어요 có ổn không?",
+     "a": "Không tự nhiên: nằm viện không phải việc “thử”. Dùng 입원<b>한 적이 있어요</b>."
+    },
+    {
+     "q": "Bạn hỏi 콘서트에 가 봤어요? — trả lời “chưa bao giờ” thế nào?",
+     "a": "아니요, 한 번도 <b>안</b> 가 봤어요. / 아직 <b>못</b> 가 봤어요 (muốn đi mà chưa có dịp)."
+    }
+   ],
+   "luyen": [
+    {
+     "q": "가: 이 노래 (    )?  나: 네, 들어 봤어요. 정말 좋아요.",
+     "o": [
+      "들어 봤어요",
+      "듣어 봤어요",
+      "들어 보세요",
+      "들어 보고 싶어요"
+     ],
+     "w": "Câu trả lời 들어 봤어요 → câu hỏi kinh nghiệm, quá khứ; 듣다 → 들어."
+    },
+    {
+     "q": "이 옷 예쁘네요. 한번 (    ).",
+     "o": [
+      "입어 보세요",
+      "입아 보세요",
+      "입어 봤어요",
+      "입어 보지 않아요"
+     ],
+     "w": "Lời mời thử → -아/어 보세요; 입 có ㅣ → -어."
+    },
+    {
+     "q": "저는 한복을 한 번도 (    ).",
+     "o": [
+      "안 입어 봤어요",
+      "입어 안 봤어요",
+      "입어 보세요",
+      "입어 보고 싶어요"
+     ],
+     "w": "한 번도 + 안 … -아/어 봤어요; 안 đứng trước cả cụm."
+    },
+    {
+     "q": "Câu nào KHÔNG tự nhiên?",
+     "o": [
+      "작년에 다리를 다쳐 봤어요.",
+      "작년에 다리를 다친 적이 있어요.",
+      "작년에 제주도에 가 봤어요.",
+      "작년에 처음 스키를 타 봤어요."
+     ],
+     "w": "Bị thương không phải việc “thử” → -(으)ㄴ 적이 있다."
+    }
+   ],
+   "em": [
+    {
+     "q": "Viết 3 việc em đã từng làm và 2 việc em chưa từng làm (…아/어 봤어요 / 안 … 아/어 봤어요).",
+     "tip": "nghĩ về món ăn, nơi đã đi, môn thể thao, phim / nhạc Hàn, việc làm thêm.",
+     "gy": [
+      [
+       "저는 한국 노래를 불러 봤어요.",
+       "Em đã hát thử bài hát Hàn."
+      ],
+      [
+       "떡볶이를 직접 만들어 봤어요.",
+       "Em đã tự làm tteokbokki."
+      ],
+      [
+       "다낭에서 바다 수영을 해 봤어요.",
+       "Em đã bơi biển ở Đà Nẵng."
+      ],
+      [
+       "호수에서 오리배를 타 봤어요.",
+       "Em đã đi thử thuyền vịt trên hồ."
+      ],
+      [
+       "번지 점프는 한 번도 안 해 봤어요.",
+       "Nhảy bungee thì em chưa thử lần nào."
+      ],
+      [
+       "한국에는 아직 못 가 봤어요.",
+       "Hàn Quốc thì em vẫn chưa có dịp đi."
+      ]
+     ]
+    },
+    {
+     "q": "Giới thiệu một món Việt / một nơi ở Việt Nam cho bạn Hàn: …을/를 한번 …아/어 보세요. …아/어요.",
+     "tip": "món em thích nhất, đặc sản quê em, chỗ đẹp em từng đi.",
+     "gy": [
+      [
+       "분짜를 한번 먹어 보세요. 정말 맛있어요.",
+       "Bạn ăn thử bún chả xem. Ngon lắm."
+      ],
+      [
+       "반쎄오를 한번 드셔 보세요. 아주 바삭해요.",
+       "Anh / chị ăn thử bánh xèo xem. Giòn lắm."
+      ],
+      [
+       "베트남 커피를 한번 마셔 보세요. 아주 진해요.",
+       "Bạn uống thử cà phê Việt Nam xem. Đậm lắm."
+      ],
+      [
+       "호이안에 한번 가 보세요. 밤에 정말 예뻐요.",
+       "Bạn đi Hội An một lần xem. Buổi tối đẹp lắm."
+      ]
+     ]
+    }
+   ],
+   "co": "Trò “Tìm người đã từng…” (bingo kinh nghiệm): ô 제주도, 번지 점프, 김치 만들기, 콘서트, 한복… học sinh hỏi nhau -아/어 봤어요?, ai trả lời 네 thì ghi tên. Chốt nghĩa “thử” bằng tình huống cửa hàng (입어 봐도 돼요?, 신어 봐도 돼요?). Nối với -(으)ㄴ 적이 있다 vì đề TOPIK câu 1–2 dùng mẫu đó.",
+   "yn": {
+    "ct": [
+     [
+      "V-",
+      "gốc động từ",
+      "먹-"
+     ],
+     [
+      "-아/어",
+      "đuôi nối",
+      "-어"
+     ],
+     [
+      "보다",
+      "xem, nhìn",
+      "보다"
+     ]
+    ],
+    "kq": [
+     "먹어 보다",
+     "ăn (rồi) xem → **ăn thử**"
+    ],
+    "m": [
+     {
+      "t": "Thử làm (để biết thế nào)",
+      "k": "Đuôi hiện tại / mời / muốn / định: -아/어 보세요, 볼게요, 볼까요?, 보고 싶어요",
+      "ko": "이 옷 한번 입어 **보세요**.",
+      "vi": "Bạn mặc thử cái áo này xem."
+     },
+     {
+      "t": "Đã từng (kinh nghiệm)",
+      "k": "Đuôi quá khứ: -아/어 봤어요, 봤어요?, 안 / 못 … 봤어요",
+      "ko": "제주도에 가 **봤어요**?",
+      "vi": "Bạn đã đi Jeju bao giờ chưa?"
+     }
+    ],
+    "tbT": "Đuôi nào → nghĩa nào (nghĩa nằm ở đuôi của 보다)",
+    "tb": [
+     [
+      "Đuôi",
+      "Nghĩa",
+      "Ví dụ"
+     ],
+     [
+      "-아/어 보세요",
+      "Hãy thử (mời, khuyên)",
+      "한번 드셔 **보세요**. — Anh / chị ăn thử xem."
+     ],
+     [
+      "-아/어 볼게요",
+      "Tôi sẽ thử",
+      "제가 해 **볼게요**. — Để tôi làm thử."
+     ],
+     [
+      "-아/어 볼까요?",
+      "Mình thử … nhé?",
+      "같이 만들어 **볼까요**? — Mình làm thử cùng nhé?"
+     ],
+     [
+      "-아/어 보고 싶어요",
+      "Muốn thử",
+      "스키를 타 **보고 싶어요**. — Tôi muốn thử trượt tuyết."
+     ],
+     [
+      "-아/어 봐도 돼요?",
+      "Thử được không?",
+      "입어 **봐도 돼요**? — Mặc thử được không?"
+     ],
+     [
+      "-아/어 봤어요",
+      "Đã thử / đã từng",
+      "한복을 입어 **봤어요**. — Tôi đã mặc thử hanbok."
+     ]
+    ],
+    "viN": "Một mẫu tiếng Hàn, tiếng Việt có nhiều cách nói — dịch theo đuôi câu và hoàn cảnh.",
+    "vi": [
+     [
+      "thử … / … thử",
+      "mời, khuyên, muốn thử",
+      "이거 먹어 **보세요**.",
+      "Ăn thử cái này đi."
+     ],
+     [
+      "… xem",
+      "làm để biết kết quả",
+      "선생님께 물어 **보세요**.",
+      "Bạn hỏi cô xem."
+     ],
+     [
+      "thử … một lần",
+      "đi với 한번",
+      "한번 타 **보고 싶어요**.",
+      "Tôi muốn đi thử một lần."
+     ],
+     [
+      "đã từng … / đã … bao giờ chưa?",
+      "hỏi, kể kinh nghiệm (quá khứ)",
+      "콘서트에 가 **봤어요**?",
+      "Bạn đã đi xem hòa nhạc bao giờ chưa?"
+     ],
+     [
+      "đã có dịp … / đã được …",
+      "kể kinh nghiệm vui",
+      "한국 음식을 먹어 **봤어요**.",
+      "Tôi đã được ăn món Hàn."
+     ],
+     [
+      "chưa … bao giờ / chưa từng …",
+      "안 … 봤어요, 한 번도 안 …",
+      "한 번도 안 가 **봤어요**.",
+      "Tôi chưa đi lần nào."
+     ],
+     [
+      "chưa có dịp …",
+      "못 … 봤어요 (muốn mà chưa được)",
+      "아직 못 가 **봤어요**.",
+      "Tôi vẫn chưa có dịp đi."
+     ]
+    ]
+   },
+   "bqt": [
+    {
+     "t": "① Bất quy tắc ㄷ — 듣다, 걷다, 묻다 (hỏi)",
+     "r": "Một số động từ gốc tận cùng bằng **ㄷ**: gặp đuôi bắt đầu bằng **nguyên âm** (-아/어, -(으)…) thì ㄷ đổi thành **ㄹ**. Gặp đuôi bắt đầu bằng phụ âm (-고, -지, -는) thì giữ ㄷ.",
+     "b": [
+      "듣다 → gốc **듣-**",
+      "Đuôi -어 bắt đầu bằng nguyên âm → ㄷ đổi thành ㄹ: **들-**",
+      "들 + 어 = **들어**",
+      "들어 + 봤어요 = **들어 봤어요** (so sánh: 듣**고** 싶어요 — gặp phụ âm nên giữ ㄷ)"
+     ],
+     "ex": [
+      [
+       "듣다",
+       "들어 봤어요",
+       "nghe"
+      ],
+      [
+       "걷다",
+       "걸어 봤어요",
+       "đi bộ"
+      ],
+      [
+       "묻다",
+       "물어 보세요",
+       "hỏi"
+      ]
+     ],
+     "ng": "Không đổi (theo quy tắc): 받다 → 받아 봤어요, 닫다 → 닫아 보세요, 믿다 → 믿어 봐요. Mẹo: thuộc 3 từ hay gặp 듣다, 걷다, 묻다 — còn lại gần như theo quy tắc."
+    },
+    {
+     "t": "② Bất quy tắc ㅂ — 굽다, 눕다, 돕다",
+     "r": "Phần lớn từ gốc tận cùng bằng **ㅂ**: gặp nguyên âm thì ㅂ biến thành **우** (우 + 어 = **워**). Riêng **돕다** (giúp) và 곱다 thành **오** (오 + 아 = **와**).",
+     "b": [
+      "굽다 (nướng) → gốc **굽-**",
+      "Gặp -어 → ㅂ thành 우: **구우-**",
+      "구우 + 어 = 구워",
+      "구워 + 봤어요 = **구워 봤어요**"
+     ],
+     "ex": [
+      [
+       "굽다",
+       "구워 봤어요",
+       "nướng"
+      ],
+      [
+       "눕다",
+       "누워 보세요",
+       "nằm"
+      ],
+      [
+       "돕다",
+       "도와 봤어요",
+       "giúp"
+      ]
+     ],
+     "ng": "Không đổi: 입다 → 입어 보세요, 잡다 → 잡아 보세요, 씹다 → 씹어 보세요. -아/어 보다 chỉ đi với động từ, nên các tính từ ㅂ (덥다, 춥다…) sẽ gặp ở mẫu 3 (-는데)."
+    },
+    {
+     "t": "③ Bất quy tắc 르 — 부르다, 고르다, 자르다",
+     "r": "Gốc tận cùng bằng **르**: gặp -아/어 thì **ㅡ rơi** và thêm một **ㄹ** dồn lên âm trước. Âm trước có ㅏ / ㅗ → **-ㄹ라**, còn lại → **-ㄹ러**.",
+     "b": [
+      "부르다 (hát, gọi) → gốc **부르-**",
+      "Bỏ ㅡ của 르, thêm ㄹ vào âm trước: 부 → **불**",
+      "Âm trước 부 có ㅜ (không phải ㅏ, ㅗ) → **러**: 불러",
+      "불러 + 봤어요 = **불러 봤어요**"
+     ],
+     "ex": [
+      [
+       "부르다",
+       "불러 봤어요",
+       "hát"
+      ],
+      [
+       "고르다",
+       "골라 보세요",
+       "chọn"
+      ],
+      [
+       "자르다",
+       "잘라 봤어요",
+       "cắt"
+      ]
+     ],
+     "ng": "Gặp phụ âm thì giữ nguyên: 부르고, 부르는, 부를. Lỗi hay gặp: 부르어, 불어 (불어 = thổi)."
+    },
+    {
+     "t": "④ Gốc ㅡ (으 rơi) — 쓰다, 끄다, 담그다",
+     "r": "Gốc tận cùng bằng nguyên âm **ㅡ**: gặp -아/어 thì ㅡ rơi. Chọn 아 / 어 theo **nguyên âm của âm đứng trước**; gốc chỉ có một âm (쓰, 끄, 크) → **어**. Đây là quy tắc, mọi từ đều theo.",
+     "b": [
+      "쓰다 (viết) → gốc **쓰-**",
+      "Bỏ ㅡ: còn **ㅆ**",
+      "Không có âm trước → + 어: **써**",
+      "써 + 봤어요 = **써 봤어요**"
+     ],
+     "ex": [
+      [
+       "쓰다",
+       "써 봤어요",
+       "viết"
+      ],
+      [
+       "끄다",
+       "꺼 보세요",
+       "tắt"
+      ],
+      [
+       "담그다",
+       "담가 봤어요",
+       "muối (kimchi) — âm trước 담 có ㅏ → 가"
+      ]
+     ],
+     "ng": "Khác 르: 부르다 không phải ㅡ rơi bình thường (부러 ✗) mà là 르 bất quy tắc (불러 ✓)."
+    }
+   ],
+   "chiaLt": [
+    {
+     "t": "y",
+     "q": "가다 + -아/어 봤어요",
+     "a": [
+      "가 봤어요"
+     ],
+     "h": "가 có ㅏ → + 아, ㅏ + 아 gộp làm một.",
+     "w": "가 + 아 → 가."
+    },
+    {
+     "t": "y",
+     "q": "마시다 + -아/어 보세요",
+     "a": [
+      "마셔 보세요"
+     ],
+     "h": "ㅣ + 어 → ㅕ.",
+     "w": "마시 + 어 → 마셔."
+    },
+    {
+     "t": "y",
+     "q": "요리하다 + -아/어 봤어요",
+     "a": [
+      "요리해 봤어요"
+     ],
+     "h": "하 → 해.",
+     "w": ""
+    },
+    {
+     "t": "y",
+     "q": "걷다 + -아/어 봤어요",
+     "a": [
+      "걸어 봤어요"
+     ],
+     "h": "ㄷ bất quy tắc: gặp nguyên âm → ㄹ.",
+     "w": "걷 → 걸 + 어."
+    },
+    {
+     "t": "y",
+     "q": "받다 + -아/어 봤어요",
+     "a": [
+      "받아 봤어요"
+     ],
+     "h": "받다 có phải bất quy tắc ㄷ không?",
+     "w": "받다 theo quy tắc (không đổi ㄷ)."
+    },
+    {
+     "t": "y",
+     "q": "굽다 + -아/어 보고 싶어요",
+     "a": [
+      "구워 보고 싶어요"
+     ],
+     "h": "ㅂ → 우, 우 + 어 = 워.",
+     "w": ""
+    },
+    {
+     "t": "y",
+     "q": "입다 + -아/어 봐도 돼요?",
+     "a": [
+      "입어 봐도 돼요"
+     ],
+     "h": "입다 có đổi ㅂ không?",
+     "w": "입다 theo quy tắc: 입어."
+    },
+    {
+     "t": "y",
+     "q": "고르다 + -아/어 보세요",
+     "a": [
+      "골라 보세요"
+     ],
+     "h": "르 bất quy tắc; âm trước 고 có ㅗ → ㄹ라.",
+     "w": ""
+    },
+    {
+     "t": "y",
+     "q": "쓰다 + -아/어 봤어요",
+     "a": [
+      "써 봤어요"
+     ],
+     "h": "ㅡ rơi, gốc một âm → 어.",
+     "w": ""
+    },
+    {
+     "t": "y",
+     "q": "배우다 + -아/어 보고 싶어요",
+     "a": [
+      "배워 보고 싶어요"
+     ],
+     "h": "ㅜ + 어 → ㅝ.",
+     "w": ""
+    }
+   ],
+   "saiLy": "Lỗi của **-아/어 보다** rơi vào 3 nhóm: ① **chia đuôi** (아 hay 어, bất quy tắc ㄷ / ㅂ / 르) · ② **vị trí 안 / 못** · ③ **sai nghĩa** (việc không chủ ý, dùng đuôi mời khi muốn hỏi kinh nghiệm). Gặp câu sai, hỏi lần lượt 3 câu đó.",
+   "saiLt": [
+    {
+     "t": "s",
+     "x": "작년에 처음 쌀국수를 먹아 봤어요.",
+     "a": [
+      "작년에 처음 쌀국수를 먹어 봤어요"
+     ],
+     "h": "먹 → 아 hay 어?",
+     "w": ""
+    },
+    {
+     "t": "s",
+     "x": "저는 스키를 타 안 봤어요.",
+     "a": [
+      "저는 스키를 안 타 봤어요"
+     ],
+     "h": "안 đặt trước 타다.",
+     "w": ""
+    },
+    {
+     "t": "s",
+     "x": "이 길을 걷어 봤어요?",
+     "a": [
+      "이 길을 걸어 봤어요?"
+     ],
+     "h": "걷다 — bất quy tắc ㄷ.",
+     "w": ""
+    },
+    {
+     "t": "s",
+     "x": "저는 지갑을 잃어버려 봤어요.",
+     "a": [
+      "저는 지갑을 잃어버린 적이 있어요"
+     ],
+     "h": "Mất ví có phải việc “thử” không?",
+     "w": "Việc không mong muốn → -(으)ㄴ 적이 있다."
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "id": "g_2A_03_2",
+   "cn": "Thời gian – khoảng",
+   "core": "Đặt sau danh từ chỉ khoảng thời gian để nói việc kéo dài suốt khoảng đó: “trong (suốt)…”.",
+   "goc": "<b>동안</b> là danh từ: “khoảng (thời gian)”. N (khoảng thời gian / sự kiện có độ dài) + 동안 (+ 에). Đi được với: <b>số + đơn vị</b> (3년, 두 시간, 일주일) và <b>sự kiện kéo dài</b> (방학, 휴가, 여행). Sau này gặp V-는 동안 (trong lúc làm…).",
+   "chia": [
+    [
+     "Loại danh từ",
+     "Ví dụ",
+     "Câu ví dụ"
+    ],
+    [
+     "Số + đơn vị thời gian",
+     "두 시간 **동안** · 10분 **동안** · 일주일 **동안** · 한 달 **동안** · 3년 **동안**",
+     "두 시간 **동안** 기다렸어요. — Tôi đã chờ hai tiếng."
+    ],
+    [
+     "Ngày thuần Hàn",
+     "하루 **동안** · 이틀 **동안** · 사흘 **동안** · 열흘 **동안**",
+     "이틀 **동안** 잠을 못 잤어요. — Hai ngày liền tôi không ngủ được."
+    ],
+    [
+     "Sự kiện có độ dài",
+     "방학 **동안** · 휴가 **동안** · 여행 **동안** · 수업 **동안**",
+     "수업 **동안** 휴대폰을 끄세요. — Trong giờ học hãy tắt điện thoại."
+    ],
+    [
+     "Từ hỏi",
+     "얼마 **동안** (bao lâu)",
+     "얼마 **동안** 한국에 있을 거예요? — Bạn sẽ ở Hàn bao lâu?"
+    ],
+    [
+     "Mở rộng: động từ",
+     "기다리**는 동안** (trong lúc chờ) — trung cấp",
+     "친구를 기다리**는 동안** 책을 읽었어요. — Trong lúc chờ bạn tôi đọc sách."
+    ]
+   ],
+   "chiaNote": [
+    "Không phụ thuộc 받침, viết cách: 방학 동안.",
+    "Thêm 에 cũng được: 방학 동안**에** — nhấn “trong khoảng đó, vào lúc nào đó”.",
+    "Đếm ngày thuần Hàn (sách khuyên dùng trước 동안): 하루, 이틀, 사흘, 나흘, 닷새, 엿새, 이레, 여드레, 아흐레, 열흘. Hằng ngày dùng nhiều nhất 하루, 이틀, 사흘."
+   ],
+   "tinh": [
+    {
+     "t": "Kể kỳ nghỉ",
+     "c": "Bạn hỏi kỳ nghỉ em làm gì.",
+     "lv": "lịch sự",
+     "ko": "여름 방학 **동안** 고향에 있었어요.",
+     "vi": "Suốt kỳ nghỉ hè tôi ở quê.",
+     "why": "방학 là sự kiện kéo dài → 동안.",
+     "lt": [
+      {
+       "t": "kv",
+       "ko": "겨울 방학 동안 아르바이트를 했어요.",
+       "a": "Suốt kỳ nghỉ đông tôi đi làm thêm.",
+       "w": ""
+      },
+      {
+       "t": "vk",
+       "vi": "Trong kỳ nghỉ hè tôi đã học bơi.",
+       "a": [
+        "여름 방학 동안 수영을 배웠어요",
+        "여름 방학 동안에 수영을 배웠어요"
+       ],
+       "h": "여름 방학 + 동안"
+      }
+     ]
+    },
+    {
+     "t": "Thời gian học",
+     "c": "Tự giới thiệu trình độ.",
+     "lv": "lịch sự",
+     "ko": "한국어를 1년 **동안** 배웠어요.",
+     "vi": "Tôi đã học tiếng Hàn trong 1 năm.",
+     "why": "Số + đơn vị + 동안.",
+     "lt": [
+      {
+       "t": "vk",
+       "vi": "Tôi đã sống ở Hà Nội 5 năm.",
+       "a": [
+        "하노이에서 5년 동안 살았어요",
+        "하노이에서 오 년 동안 살았어요",
+        "저는 하노이에서 5년 동안 살았어요"
+       ],
+       "h": "살다 → 살았어요; nơi sống dùng 에서."
+      },
+      {
+       "t": "c",
+       "q": "“Tôi học tiếng Hàn được 6 tháng rồi (và vẫn đang học)” — câu nào sát ý nhất?",
+       "o": [
+        "한국어를 배운 지 6개월 됐어요.",
+        "한국어를 6개월에 배웠어요.",
+        "한국어를 6개월 동안에서 배웠어요.",
+        "한국어를 6개월 후에 배웠어요."
+       ],
+       "w": "“Được … rồi (tính đến nay)” → -(으)ㄴ 지 … 됐어요 (xem phần Phân biệt)."
+      }
+     ]
+    },
+    {
+     "t": "Hỏi bao lâu",
+     "c": "Hỏi bạn sắp đi du lịch.",
+     "lv": "lịch sự",
+     "ko": "한국에 얼마 **동안** 있을 거예요? – 일주일 **동안** 있을 거예요.",
+     "vi": "Bạn sẽ ở Hàn bao lâu? – Tôi sẽ ở một tuần.",
+     "why": "얼마 동안 = bao lâu.",
+     "lt": [
+      {
+       "t": "kv",
+       "ko": "여행을 얼마 동안 해요? – 열흘 동안 해요.",
+       "a": "Bạn đi du lịch bao lâu? – Mười ngày.",
+       "w": "열흘 = 10 ngày."
+      },
+      {
+       "t": "vk",
+       "vi": "Bạn đã chờ bao lâu?",
+       "a": [
+        "얼마 동안 기다렸어요?",
+        "얼마나 기다렸어요?"
+       ],
+       "h": "얼마 동안 + 기다렸어요?",
+       "w": "얼마나 (bao nhiêu, bao lâu) cũng hay dùng."
+      }
+     ]
+    },
+    {
+     "t": "Kể bị ốm",
+     "c": "Giải thích với cô vì sao nghỉ học.",
+     "lv": "lịch sự",
+     "ko": "감기 때문에 사흘 **동안** 학교에 못 갔어요.",
+     "vi": "Vì cảm nên tôi không đi học được ba ngày.",
+     "why": "사흘 (3 ngày) tự nhiên hơn 3일.",
+     "lt": [
+      {
+       "t": "vk",
+       "vi": "Tôi bị ốm nên nằm ở nhà hai ngày.",
+       "a": [
+        "아파서 이틀 동안 집에 있었어요",
+        "아파서 이틀 동안 집에서 쉬었어요",
+        "아파서 이틀 동안 집에 누워 있었어요"
+       ],
+       "h": "2 ngày → 이틀."
+      },
+      {
+       "t": "kv",
+       "ko": "사흘 동안 비가 와서 밖에 못 나갔어요.",
+       "a": "Mưa ba ngày liền nên tôi không ra ngoài được.",
+       "w": "사흘 동안 → “ba ngày liền”."
+      }
+     ]
+    },
+    {
+     "t": "Kể chuyến đi dài",
+     "c": "Kể về chuyến bay sang Hàn.",
+     "lv": "lịch sự",
+     "ko": "비행기를 다섯 시간 **동안** 탔어요.",
+     "vi": "Tôi ngồi máy bay suốt năm tiếng.",
+     "why": "Việc kéo dài liên tục trong khoảng thời gian.",
+     "lt": [
+      {
+       "t": "kv",
+       "ko": "버스를 네 시간 동안 탔어요. 너무 피곤했어요.",
+       "a": "Tôi ngồi xe buýt suốt bốn tiếng. Mệt quá.",
+       "w": ""
+      },
+      {
+       "t": "c",
+       "q": "“Tôi đã ngủ 10 tiếng.”",
+       "o": [
+        "열 시간 동안 잤어요.",
+        "열 시 동안 잤어요.",
+        "십 시간 동안 잤어요.",
+        "열 시간 동안에서 잤어요."
+       ],
+       "w": "10 tiếng = 열 시간 (thuần Hàn); 열 시 = 10 giờ."
+      }
+     ]
+    }
+   ],
+   "rb": [
+    {
+     "k": "Danh từ đi trước: KHOẢNG, không phải MỐC",
+     "d": "Khoảng = có độ dài (두 시간, 일주일, 방학). Mốc = một điểm trên lịch / đồng hồ (월요일, 3시, 어제, 작년) → dùng **에**.",
+     "ex": [
+      [
+       "주말 **동안** 쉬었어요.",
+       "Suốt cuối tuần tôi nghỉ."
+      ],
+      [
+       "토요일**에** 쉬었어요.",
+       "Thứ Bảy tôi nghỉ."
+      ]
+     ],
+     "lt": [
+      {
+       "t": "c",
+       "q": "저는 (    ) 동안 제주도를 여행했어요.",
+       "o": [
+        "5일",
+        "5일에",
+        "5월 5일",
+        "금요일"
+       ],
+       "w": "Chỉ “5 ngày” là khoảng; ngày tháng, thứ là mốc."
+      },
+      {
+       "t": "y",
+       "f": "월요일(    ) 시험이 있어요.",
+       "a": [
+        "에"
+       ],
+       "h": "월요일 là mốc.",
+       "w": "Mốc thời gian → 에."
+      }
+     ]
+    },
+    {
+     "k": "Động từ đi sau: việc KÉO DÀI hoặc LẶP LẠI",
+     "d": "공부했어요, 살았어요, 기다렸어요, 일했어요… Việc xảy ra trong một khoảnh khắc (도착하다, 오다, 시작하다) không đi với “suốt”.",
+     "ex": [
+      [
+       "두 시간 **동안** 걸었어요.",
+       "Tôi đi bộ suốt hai tiếng."
+      ]
+     ],
+     "lt": [
+      {
+       "t": "c",
+       "q": "Câu nào KHÔNG tự nhiên?",
+       "o": [
+        "두 시간 동안 도착했어요.",
+        "두 시간 동안 기다렸어요.",
+        "두 시간 동안 이야기했어요.",
+        "두 시간 동안 걸었어요."
+       ],
+       "w": "Đến (도착하다) là việc một khoảnh khắc. Muốn nói “mất hai tiếng mới đến” → 두 시간 걸렸어요."
+      }
+     ]
+    },
+    {
+     "k": "동안 / 동안에 / bỏ 동안",
+     "d": "**동안에** nhấn “vào trong khoảng đó” — hay dùng khi có việc xảy ra trong khoảng: 방학 동안에 여행을 두 번 갔어요. Nhiều khi bỏ 동안 mà nghĩa không đổi: 열 시간 (동안) 잤어요. Không có ~~동안에서~~.",
+     "ex": [
+      [
+       "방학 **동안에** 여행을 두 번 갔어요.",
+       "Trong kỳ nghỉ tôi đi du lịch hai lần."
+      ]
+     ],
+     "lt": [
+      {
+       "t": "c",
+       "q": "Chọn câu SAI.",
+       "o": [
+        "1년 동안에서 배웠어요.",
+        "1년 동안 배웠어요.",
+        "1년 동안에 두 번 이사했어요.",
+        "1년 배웠어요."
+       ],
+       "w": "동안 không đi với 에서."
+      }
+     ]
+    }
+   ],
+   "sai": [
+    {
+     "x": "월요일 **동안** 공부했어요.",
+     "o": "월요일**에** 공부했어요.",
+     "why": "월요일 là mốc → 에. (Muốn nói “suốt cả ngày thứ Hai” → 월요일 내내.)",
+     "k": "Mốc ≠ khoảng",
+     "h": "월요일 là một mốc hay một khoảng thời gian?"
+    },
+    {
+     "x": "저는 **3시 동안** 친구를 기다렸어요.",
+     "o": "저는 **세 시간 동안** 친구를 기다렸어요.",
+     "why": "3시 = 3 giờ (mốc trên đồng hồ); 3 tiếng = 세 시간 (khoảng).",
+     "k": "Nhầm 시 / 시간",
+     "h": "3시 và 세 시간 khác nhau thế nào?"
+    },
+    {
+     "x": "**2일** 동안 여행했어요.",
+     "o": "**이틀** 동안 여행했어요.",
+     "why": "Không sai ngữ pháp, nhưng 이틀 tự nhiên hơn nhiều.",
+     "k": "Cách nói tự nhiên",
+     "h": "“2 ngày” người Hàn hay nói bằng từ thuần Hàn nào?"
+    },
+    {
+     "x": "한국어를 1년 **동안에서** 배웠어요.",
+     "o": "한국어를 1년 **동안** 배웠어요.",
+     "why": "동안 không đi với 에서.",
+     "k": "Tiểu từ",
+     "h": "동안 đi được với tiểu từ nào?"
+    },
+    {
+     "x": "저는 한국에 **3년 동안 왔어요**.",
+     "o": "저는 한국에 **온 지 3년** 됐어요.",
+     "why": "“Đến” là việc một lần, không kéo dài. “Đến được 3 năm rồi” → -(으)ㄴ 지 + thời gian + 되다.",
+     "k": "Việc một lần",
+     "h": "“Đến” có kéo dài suốt 3 năm được không?"
+    }
+   ],
+   "pb": [
+    {
+     "vs": "N 만에 / N 후에",
+     "d": "**동안**: suốt khoảng đó (việc kéo dài). **만에**: sau một khoảng (thường lâu) **mới lại** xảy ra. **후에**: sau đó (thứ tự trước – sau). Ba từ cùng đứng sau khoảng thời gian nên rất dễ lẫn.",
+     "ex": [
+      [
+       "3년 **동안** 한국에 살았어요.",
+       "Tôi sống ở Hàn suốt 3 năm."
+      ],
+      [
+       "3년 **만에** 고향에 갔어요.",
+       "Sau 3 năm tôi mới về quê."
+      ]
+     ],
+     "bang": [
+      [
+       "",
+       "동안",
+       "만에",
+       "후에"
+      ],
+      [
+       "Ý",
+       "suốt khoảng đó",
+       "sau khoảng đó mới (lại)…",
+       "sau đó, … nữa"
+      ],
+      [
+       "Ví dụ",
+       "3년 동안 살았어요.",
+       "3년 만에 만났어요.",
+       "3년 후에 결혼할 거예요."
+      ],
+      [
+       "Tiếng Việt",
+       "sống suốt 3 năm",
+       "3 năm rồi mới gặp lại",
+       "3 năm nữa sẽ cưới"
+      ]
+     ],
+     "lt": [
+      {
+       "t": "c",
+       "q": "5 năm rồi mới gặp lại bạn: 친구를 5년 (    ) 만났어요.",
+       "o": [
+        "만에",
+        "동안",
+        "후에"
+       ],
+       "w": "Lâu rồi mới lại → 만에."
+      },
+      {
+       "t": "c",
+       "q": "Ở Hàn suốt một năm: 한국에서 1년 (    ) 살았어요.",
+       "o": [
+        "동안",
+        "만에",
+        "후에"
+       ],
+       "w": "Kéo dài → 동안."
+      },
+      {
+       "t": "c",
+       "q": "Một tiếng nữa tôi đến: 한 시간 (    ) 갈게요.",
+       "o": [
+        "후에",
+        "동안",
+        "만에"
+       ],
+       "w": "Sau một tiếng → 후에."
+      }
+     ]
+    },
+    {
+     "vs": "V-(으)ㄴ 지 + thời gian + 되다",
+     "d": "Hỏi khác nhau: **N 동안 V-았/었어요** trả lời “làm trong bao lâu?” (có thể đã dừng). **V-(으)ㄴ 지 N 됐어요** trả lời “từ khi bắt đầu đến nay được bao lâu?”. Câu tiếng Việt “được … rồi” thường là -(으)ㄴ 지.",
+     "ex": [
+      [
+       "이 동네로 이사를 온 지 일 년이 됐다.",
+       "Chuyển đến khu này đã được một năm. (đề kỳ 102 câu 1)"
+      ]
+     ],
+     "bang": [
+      [
+       "",
+       "N 동안 V-았/었어요",
+       "V-(으)ㄴ 지 N 됐어요"
+      ],
+      [
+       "Câu hỏi",
+       "Làm trong bao lâu?",
+       "Từ khi … đến nay bao lâu?"
+      ],
+      [
+       "Ví dụ",
+       "한국어를 1년 동안 배웠어요.",
+       "한국어를 배운 지 1년 됐어요."
+      ],
+      [
+       "Ý",
+       "học suốt 1 năm (có thể đã dừng)",
+       "bắt đầu học cách đây 1 năm"
+      ]
+     ],
+     "lt": [
+      {
+       "t": "c",
+       "q": "Em sang Hàn được 2 tháng rồi: 한국에 (    ) 두 달 됐어요.",
+       "o": [
+        "온 지",
+        "온 동안",
+        "와서",
+        "올 때"
+       ],
+       "w": "“Được … rồi” → -(으)ㄴ 지 … 됐어요."
+      }
+     ]
+    },
+    {
+     "vs": "V-는 동안 (mở rộng)",
+     "d": "Gắn sau **động từ** thì dùng **-는 동안** = trong lúc đang làm việc đó (học kỹ ở trung cấp).",
+     "ex": [
+      [
+       "친구를 기다리**는 동안** 책을 읽었어요.",
+       "Trong lúc chờ bạn, tôi đọc sách."
+      ]
+     ],
+     "lt": [
+      {
+       "t": "kv",
+       "ko": "친구를 기다리는 동안 커피를 마셨어요.",
+       "a": "Trong lúc chờ bạn, tôi uống cà phê.",
+       "w": ""
+      }
+     ]
+    }
+   ],
+   "topik": [
+    {
+     "src": "Đọc · kỳ 91 câu 4",
+     "ko": "지난 3년 **동안** 영화를 한 편 봤으니 거의 안 (본 셈이다).",
+     "note": "N 동안 + số lần rất ít (3년 동안 한 편) → “tính ra coi như không xem”. Đọc 동안 để biết khoảng thời gian rồi so với số lượng."
+    },
+    {
+     "src": "Đọc · kỳ 83 câu 14",
+     "ko": "내일은 내가 10년 **동안** 다니던 회사를 그만두는 날이다.",
+     "note": "10년 동안 + 다니던 (đã làm suốt): khoảng thời gian dài làm nền cho quyết định của nhân vật."
+    },
+    {
+     "src": "Đọc · kỳ 91 câu 13",
+     "ko": "사람이 붐비는 장소에서 짧은 기간 **동안** 운영하는 매장이 유행이다.",
+     "note": "짧은 기간 동안 = trong thời gian ngắn — cụm hay gặp trong văn báo."
+    }
+   ],
+   "len": [
+    {
+     "p": "V-는 동안",
+     "m": "trong lúc, trong khi (làm gì)",
+     "noi": "N 동안 đi với danh từ; với động từ thì thêm **-는**: 방학 동안 → 여행하는 동안.",
+     "ex": [
+      "제가 요리하는 **동안** 동생은 청소를 했어요.",
+      "Trong lúc tôi nấu ăn, em tôi dọn dẹp."
+     ]
+    },
+    {
+     "p": "V-(으)ㄴ 지 N이/가 되다 · 지나다",
+     "m": "(làm gì) được … rồi",
+     "noi": "Cũng nói về khoảng thời gian, nhưng **tính từ lúc** việc xảy ra (khác 동안 = suốt thời gian đó). Câu ví dụ từ “년” của bài: 한국에 산 지 2년이 됐어요.",
+     "ex": [
+      "한국어를 배운 **지** 6개월이 **됐어요**.",
+      "Tôi học tiếng Hàn được 6 tháng rồi."
+     ],
+     "de": {
+      "src": "Đọc · kỳ 102 câu 1",
+      "ko": "이 동네로 이사를 (    ) 일 년이 됐다.",
+      "a": "Đáp án: 온 지",
+      "note": "thấy “+ khoảng thời gian + 되다” sau ô → -(으)ㄴ 지."
+     }
+    },
+    {
+     "p": "N 만에",
+     "m": "sau (khoảng) … (mới lại)",
+     "noi": "Cũng đi sau khoảng thời gian như 동안, nhưng nghĩa là “cách … mới lại / sau … thì”.",
+     "ex": [
+      "10년 **만에** 고향 친구를 만났어요.",
+      "Mười năm mới gặp lại bạn quê."
+     ]
+    },
+    {
+     "p": "동안 trong đề đọc",
+     "m": "N 동안 · 기간 동안",
+     "noi": "Đề đọc hay dùng **기간** (kỳ, thời gian) thay cho số cụ thể: 짧은 기간 동안 = trong thời gian ngắn.",
+     "de": {
+      "src": "Đọc · kỳ 91 câu 13",
+      "ko": "사람이 붐비는 장소에서 짧은 **기간 동안** 운영하는 매장이 유행이다.",
+      "a": "Câu sắp xếp (13–15): câu có 동안 nói “cửa hàng tạm” là gì."
+     }
+    }
+   ],
+   "hoi": [
+    {
+     "q": "“Em đã học tiếng Hàn được 6 tháng” — 6개월 동안 배웠어요 có đúng không?",
+     "a": "Đúng nếu ý là “đã học trong 6 tháng” (có thể giờ đã dừng). Muốn nhấn “tính đến nay đã được 6 tháng” → 한국어를 배운 <b>지</b> 6개월 됐어요."
+    },
+    {
+     "q": "“2 ngày”, “3 ngày” nói tự nhiên thế nào?",
+     "a": "<b>이틀</b>, <b>사흘</b> (동안)."
+    }
+   ],
+   "luyen": [
+    {
+     "q": "저는 방학 (    ) 아르바이트를 했어요.",
+     "o": [
+      "동안",
+      "에서",
+      "동안에서",
+      "만에"
+     ],
+     "w": "방학 là sự kiện kéo dài → 동안."
+    },
+    {
+     "q": "감기 때문에 (    ) 동안 학교에 못 갔어요.",
+     "o": [
+      "사흘",
+      "3시",
+      "월요일",
+      "어제"
+     ],
+     "w": "동안 cần khoảng thời gian, không đi với mốc (3시, 월요일, 어제)."
+    },
+    {
+     "q": "가: 한국에 얼마 (    ) 있을 거예요?  나: 일주일 있을 거예요.",
+     "o": [
+      "동안",
+      "만에",
+      "후에",
+      "에서"
+     ],
+     "w": "얼마 동안 = bao lâu."
+    },
+    {
+     "q": "Chọn câu SAI.",
+     "o": [
+      "토요일 동안 친구를 만났어요.",
+      "주말 동안 친구를 만났어요.",
+      "일주일 동안 여행했어요.",
+      "두 시간 동안 기다렸어요."
+     ],
+     "w": "토요일 là mốc → 토요일에. 주말 (cuối tuần, 2 ngày) là khoảng → 동안 được."
+    }
+   ],
+   "em": [
+    {
+     "q": "Kể kỳ nghỉ vừa rồi: … 동안 무엇을 했어요? (3 câu)",
+     "tip": "đi đâu, ở với ai, học gì, làm thêm gì; thêm số lần (두 번, 매일).",
+     "gy": [
+      [
+       "여름 방학 동안 고향에 있었어요.",
+       "Suốt kỳ nghỉ hè em ở quê."
+      ],
+      [
+       "방학 동안 매일 한국어를 공부했어요.",
+       "Trong kỳ nghỉ ngày nào em cũng học tiếng Hàn."
+      ],
+      [
+       "일주일 동안 할머니 댁에서 지냈어요.",
+       "Em ở nhà bà một tuần."
+      ],
+      [
+       "두 달 동안 카페에서 아르바이트를 했어요.",
+       "Em làm thêm ở quán cà phê hai tháng."
+      ],
+      [
+       "사흘 동안 친구들하고 하롱베이를 여행했어요.",
+       "Em đi du lịch Hạ Long với bạn ba ngày."
+      ]
+     ]
+    },
+    {
+     "q": "Em đã học tiếng Hàn bao lâu? Viết 2 cách: … 동안 배웠어요 / 배운 지 … 됐어요.",
+     "gy": [
+      [
+       "한국어를 6개월 동안 배웠어요.",
+       "Em đã học tiếng Hàn 6 tháng."
+      ],
+      [
+       "한국어를 배운 지 6개월 됐어요.",
+       "Em học tiếng Hàn được 6 tháng rồi."
+      ],
+      [
+       "고등학교 때 1년 동안 배웠어요.",
+       "Hồi cấp ba em học 1 năm."
+      ]
+     ]
+    }
+   ],
+   "co": "Ôn nhanh bảng 하루 – 열흘 (đọc to, nhớ 3 cái đầu là đủ dùng). Bẫy phổ biến: dùng 동안 với mốc thời gian (월요일 동안) và với việc một lần (한국에 3년 동안 왔어요). Hỏi từng em “한국어를 얼마 동안 배웠어요?”.",
+   "yn": {
+    "ct": [
+     [
+      "N",
+      "khoảng thời gian / sự kiện kéo dài",
+      "3년 · 방학"
+     ],
+     [
+      "동안",
+      "danh từ: khoảng (thời gian)",
+      "동안"
+     ]
+    ],
+    "kq": [
+     "3년 동안",
+     "**suốt 3 năm**, trong 3 năm"
+    ],
+    "m": [
+     {
+      "t": "Kéo dài suốt khoảng thời gian",
+      "k": "Việc diễn ra liên tục từ đầu đến cuối khoảng đó",
+      "ko": "방학 **동안** 고향에 있었어요.",
+      "vi": "Suốt kỳ nghỉ tôi ở quê."
+     },
+     {
+      "t": "Trong khoảng đó (có việc xảy ra / lặp lại)",
+      "k": "N 동안(에) + số lần, việc lặp lại",
+      "ko": "일주일 **동안** 세 번 운동했어요.",
+      "vi": "Trong một tuần tôi tập thể dục ba lần."
+     }
+    ],
+    "tbT": "Hỏi – đáp “bao lâu”",
+    "tb": [
+     [
+      "Hỏi",
+      "Đáp"
+     ],
+     [
+      "얼마 **동안** 한국어를 배웠어요? — Bạn học tiếng Hàn bao lâu?",
+      "1년 **동안** 배웠어요. — Tôi học 1 năm."
+     ],
+     [
+      "얼마 **동안** 기다렸어요? — Bạn chờ bao lâu?",
+      "30분 **동안** 기다렸어요. — Tôi chờ 30 phút."
+     ],
+     [
+      "한국에 얼마 **동안** 있을 거예요? — Bạn sẽ ở Hàn bao lâu?",
+      "열흘 **동안** 있을 거예요. — Tôi sẽ ở mười ngày."
+     ]
+    ],
+    "vi": [
+     [
+      "trong …",
+      "nói độ dài, trung tính",
+      "1년 **동안** 배웠어요.",
+      "Tôi đã học trong 1 năm."
+     ],
+     [
+      "suốt …",
+      "nhấn kéo dài từ đầu đến cuối",
+      "방학 **동안** 집에 있었어요.",
+      "Suốt kỳ nghỉ tôi ở nhà."
+     ],
+     [
+      "trong vòng …",
+      "có việc xảy ra / số lần trong khoảng",
+      "일주일 **동안** 세 번 만났어요.",
+      "Trong vòng một tuần gặp ba lần."
+     ],
+     [
+      "… liền",
+      "kéo dài nhiều ngày liên tiếp",
+      "사흘 **동안** 비가 왔어요.",
+      "Mưa ba ngày liền."
+     ],
+     [
+      "trong thời gian …",
+      "đi với sự kiện (방학, 휴가, 출장)",
+      "출장 **동안** 연락이 안 됐어요.",
+      "Trong thời gian đi công tác không liên lạc được."
+     ],
+     [
+      "bao lâu?",
+      "얼마 동안",
+      "얼마 **동안** 살았어요?",
+      "Bạn đã sống bao lâu?"
+     ],
+     [
+      "(không dịch)",
+      "nhiều khi tiếng Việt chỉ cần số + đơn vị",
+      "두 시간 **동안** 잤어요.",
+      "Tôi ngủ hai tiếng."
+     ]
+    ]
+   },
+   "bqt": [
+    {
+     "t": "Đọc số trước 동안: số thuần Hàn hay Hán Hàn?",
+     "r": "동안 không biến đổi gì (viết cách, không phụ thuộc 받침). Chỗ học sinh hay sai là **đọc số + đơn vị**: mỗi đơn vị đi với một bộ số.",
+     "ex": [
+      [
+       "시간 (tiếng)",
+       "**한** 시간, **두** 시간, **세** 시간 — thuần Hàn",
+       "3시간 = [세 시간]"
+      ],
+      [
+       "분 (phút)",
+       "**십** 분, **삼십** 분 — Hán Hàn",
+       "30분 = [삼십 분]"
+      ],
+      [
+       "일 / 주일 (ngày, tuần)",
+       "**삼** 일, **일**주일, **이** 주일 — Hán Hàn",
+       "1주일 = [일주일]"
+      ],
+      [
+       "달 / 개월 (tháng)",
+       "**한** 달, **두** 달 (thuần Hàn) = **일** 개월, **이** 개월 (Hán Hàn)",
+       "2달 = 2개월"
+      ],
+      [
+       "년 (năm)",
+       "**일** 년, **삼** 년 — Hán Hàn",
+       "3년 = [삼 년]"
+      ]
+     ],
+     "ng": "Bẫy: **3시** (3 giờ, mốc trên đồng hồ) ≠ **세 시간** (3 tiếng, khoảng). Chỉ khoảng mới đi với 동안."
+    },
+    {
+     "t": "Đếm ngày thuần Hàn (sách khuyên dùng trước 동안)",
+     "r": "Khi nói “mấy ngày”, người Hàn hay dùng từ thuần Hàn thay cho 2일, 3일. Dùng nhiều nhất: **하루, 이틀, 사흘**.",
+     "ex": [
+      [
+       "1 ngày",
+       "하루",
+       ""
+      ],
+      [
+       "2 ngày",
+       "이틀",
+       ""
+      ],
+      [
+       "3 ngày",
+       "사흘",
+       ""
+      ],
+      [
+       "4 ngày",
+       "나흘",
+       ""
+      ],
+      [
+       "5 ngày",
+       "닷새",
+       ""
+      ],
+      [
+       "10 ngày",
+       "열흘",
+       ""
+      ]
+     ],
+     "ng": "Học sinh nhớ 3 từ đầu là đủ dùng. 2일 동안 vẫn đúng, nhưng 이틀 동안 tự nhiên hơn nhiều."
+    }
+   ],
+   "chiaLt": [
+    {
+     "t": "y",
+     "q": "2 ngày (từ thuần Hàn) + 동안",
+     "a": [
+      "이틀 동안"
+     ],
+     "h": "하루 – 이틀 – 사흘",
+     "w": ""
+    },
+    {
+     "t": "y",
+     "q": "3 ngày (từ thuần Hàn) + 동안",
+     "a": [
+      "사흘 동안"
+     ],
+     "h": "하루 – 이틀 – 사흘",
+     "w": ""
+    },
+    {
+     "t": "y",
+     "q": "1 ngày (từ thuần Hàn) + 동안",
+     "a": [
+      "하루 동안"
+     ],
+     "h": "",
+     "w": ""
+    },
+    {
+     "t": "y",
+     "q": "2 tiếng (viết chữ) + 동안",
+     "a": [
+      "두 시간 동안"
+     ],
+     "h": "시간 đi với số thuần Hàn: 한, 두, 세…",
+     "w": "두 시간 — không phải 이 시간."
+    },
+    {
+     "t": "y",
+     "q": "1 tháng (từ thuần Hàn) + 동안",
+     "a": [
+      "한 달 동안"
+     ],
+     "h": "달 đi với số thuần Hàn.",
+     "w": "= 1개월 동안 [일 개월]."
+    },
+    {
+     "t": "y",
+     "q": "bao lâu? (từ hỏi + 동안)",
+     "a": [
+      "얼마 동안"
+     ],
+     "h": "",
+     "w": ""
+    },
+    {
+     "t": "c",
+     "q": "Đọc đúng: 비행기를 5시간 동안 탔어요.",
+     "o": [
+      "다섯 시간",
+      "오 시간",
+      "다섯 시",
+      "오 시"
+     ],
+     "w": "시간 (tiếng) → số thuần Hàn: 다섯 시간."
+    },
+    {
+     "t": "c",
+     "q": "Chỗ nào dùng được 동안?",
+     "o": [
+      "주말 (cuối tuần)",
+      "일요일 (chủ nhật)",
+      "오후 3시 (3 giờ chiều)",
+      "어제 (hôm qua)"
+     ],
+     "w": "주말 = 2 ngày → là khoảng. Các từ còn lại là mốc → 에."
+    }
+   ],
+   "saiLy": "Gần như mọi lỗi của **동안** đến từ một câu hỏi: danh từ trước nó là **khoảng** (kéo dài được) hay **mốc** (một điểm trên lịch, đồng hồ)? Thêm hai bẫy nhỏ: đọc nhầm **시 / 시간**, và động từ sau là việc **một lần** (오다, 도착하다).",
+   "saiLt": [
+    {
+     "t": "s",
+     "x": "토요일 동안 도서관에서 공부했어요.",
+     "a": [
+      "토요일에 도서관에서 공부했어요"
+     ],
+     "h": "토요일 là mốc.",
+     "w": ""
+    },
+    {
+     "t": "s",
+     "x": "2시 동안 운동했어요.",
+     "a": [
+      "두 시간 동안 운동했어요",
+      "2시간 동안 운동했어요"
+     ],
+     "h": "2 giờ hay 2 tiếng?",
+     "w": ""
+    },
+    {
+     "t": "s",
+     "x": "방학 동안에서 여행했어요.",
+     "a": [
+      "방학 동안 여행했어요",
+      "방학 동안에 여행했어요"
+     ],
+     "h": "Tiểu từ sau 동안.",
+     "w": ""
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "id": "g_2A_03_3",
+   "cn": "Bối cảnh – dẫn dắt",
+   "core": "Nêu trước bối cảnh, tình huống làm nền cho vế sau (nhờ, rủ, hỏi, giải thích thêm): “…, (nên / vậy)…” — nhiều khi tiếng Việt không cần từ nối.",
+   "goc": "<b>-는데 / -(으)ㄴ데</b> = đuôi định ngữ (-는 / -(으)ㄴ) + <b>데</b> (chỗ, tình huống). Nghĩa đen “trong tình huống mà…” → nêu nền cho câu sau. Vì gốc là định ngữ nên <b>chia y như định ngữ</b>: động từ -는, tính từ -(으)ㄴ, danh từ 인. Đây là nghĩa 1 (bối cảnh); nghĩa 2 “nhưng” (đối lập) học sau.",
+   "chia": [
+    [
+     "Loại từ",
+     "Đuôi",
+     "Ví dụ chia",
+     "Câu ví dụ"
+    ],
+    [
+     "Động từ",
+     "-는데 (mọi gốc)",
+     "가다 → 가**는데** · 먹다 → 먹**는데** · 공부하다 → 공부하**는데**",
+     "지금 공부하**는데** 조용히 해 주세요. — Tôi đang học, giữ im lặng giúp tôi."
+    ],
+    [
+     "Tính từ không 받침",
+     "-ㄴ데",
+     "크다 → **큰데** · 바쁘다 → 바**쁜데** · 비싸다 → 비**싼데**",
+     "이 가방이 비**싼데** 다른 거 없어요? — Túi này đắt, có cái khác không?"
+    ],
+    [
+     "Tính từ có 받침",
+     "-은데",
+     "작다 → 작**은데** · 좋다 → 좋**은데** · 많다 → 많**은데**",
+     "날씨가 좋**은데** 산책할래요? — Trời đẹp, đi dạo không?"
+    ],
+    [
+     "있다 / 없다 (cả 맛있다, 재미없다…)",
+     "-는데 (như động từ)",
+     "있다 → 있**는데** · 맛있다 → 맛있**는데** · 없다 → 없**는데**",
+     "시간이 없**는데** 내일 만날까요? — Mình không có thời gian, mai gặp nhé?"
+    ],
+    [
+     "Danh từ",
+     "인데 (không 받침 vẫn là 인데)",
+     "친구 → 친구**인데** · 학생 → 학생**인데**",
+     "여기는 제 고향**인데** 바다가 아름다워요. — Đây là quê tôi, biển đẹp lắm."
+    ],
+    [
+     "Quá khứ (mọi loại từ)",
+     "-았/었는데 · N였는데 / 이었는데",
+     "갔**는데** · 바빴**는데** · 친구였**는데** · 학생이었**는데**",
+     "어제 그 식당에 갔**는데** 문을 닫았어요. — Hôm qua tôi đến quán đó thì quán đóng cửa."
+    ]
+   ],
+   "chiaNote": [
+    "Bước 0 luôn là **xác định loại từ**. Mẹo kiểm tra: thêm -는다 (가다 → 간다 ✓ → động từ; 춥다 → 춥는다 ✗ → tính từ), hoặc thử “đang …”: “đang lạnh” không nói được → tính từ."
+   ],
+   "tinh": [
+    {
+     "t": "Nhờ vả",
+     "c": "Quên mang bút trong giờ kiểm tra.",
+     "lv": "lịch sự",
+     "ko": "펜이 없**는데** 하나 빌려 줄 수 있어요?",
+     "vi": "Mình không có bút, cho mình mượn một cái được không?",
+     "why": "Nêu hoàn cảnh trước, lời nhờ sau — nghe lịch sự, có lý do.",
+     "lt": [
+      {
+       "t": "vk",
+       "vi": "Tôi không có điện thoại, cho tôi mượn một chút được không?",
+       "a": [
+        "핸드폰이 없는데 잠깐 빌려 줄 수 있어요?",
+        "휴대폰이 없는데 잠깐 빌려 줄 수 있어요?",
+        "핸드폰이 없는데 좀 빌려 줄 수 있어요?",
+        "핸드폰이 없는데 좀 빌려 주세요"
+       ],
+       "h": "없다 → 없는데; nhờ → -아/어 줄 수 있어요?"
+      },
+      {
+       "t": "kv",
+       "ko": "제가 한국어를 잘 못하는데 천천히 말해 주세요.",
+       "a": "Tôi nói tiếng Hàn chưa giỏi, xin hãy nói chậm giúp tôi.",
+       "w": ""
+      }
+     ]
+    },
+    {
+     "t": "Rủ rê (tên bài)",
+     "c": "Có vé xem hòa nhạc.",
+     "lv": "thân mật – lịch sự",
+     "ko": "콘서트 표가 두 장 있**는데** 같이 갈래요?",
+     "vi": "Mình có hai vé xem hòa nhạc, đi cùng không?",
+     "why": "Vế sau là lời rủ → -아/어서 không dùng được, -는데 thì được.",
+     "lt": [
+      {
+       "t": "c",
+       "q": "Em có 2 vé xem phim, rủ bạn. Chọn câu đúng.",
+       "o": [
+        "영화표가 두 장 있는데 같이 볼래요?",
+        "영화표가 두 장 있어서 같이 볼래요?",
+        "영화표가 두 장 있은데 같이 볼래요?",
+        "영화표가 두 장 있는데 같이 봤어요?"
+       ],
+       "w": "Vế sau là lời rủ → -는데, không -아/어서; 있다 → 있는데."
+      },
+      {
+       "t": "vk",
+       "vi": "Hôm nay trời đẹp, đi dạo không?",
+       "a": [
+        "오늘 날씨가 좋은데 산책할래요?",
+        "오늘 날씨가 좋은데 산책할까요?",
+        "날씨가 좋은데 산책할래요?",
+        "오늘 날씨가 좋은데 같이 산책할래요?"
+       ],
+       "h": "좋다 → 좋은데; rủ → -(으)ㄹ래요?"
+      }
+     ]
+    },
+    {
+     "t": "Hỏi",
+     "c": "Thấy trời mưa khi bạn chuẩn bị về.",
+     "lv": "lịch sự",
+     "ko": "지금 비가 오**는데** 우산 있어요?",
+     "vi": "Đang mưa đấy, bạn có ô không?",
+     "why": "Bối cảnh (đang mưa) → câu hỏi. Hai vế khác chủ ngữ vẫn được.",
+     "lt": [
+      {
+       "t": "kv",
+       "ko": "지금 배가 고픈데 근처에 식당 있어요?",
+       "a": "Giờ tôi đói, gần đây có quán ăn không?",
+       "w": "고프다 → 고픈데."
+      },
+      {
+       "t": "vk",
+       "vi": "Trời lạnh, bạn có áo khoác không?",
+       "a": [
+        "날씨가 추운데 코트 있어요?",
+        "추운데 코트 있어요?",
+        "날씨가 추운데 외투 있어요?",
+        "추운데 외투 있어요?"
+       ],
+       "h": "춥다 → 추운데."
+      }
+     ]
+    },
+    {
+     "t": "Giới thiệu rồi giải thích thêm",
+     "c": "Giới thiệu món Việt cho bạn Hàn.",
+     "lv": "lịch sự",
+     "ko": "이건 반미**인데** 베트남 사람들이 아침에 자주 먹어요.",
+     "vi": "Đây là bánh mì, người Việt hay ăn vào buổi sáng.",
+     "why": "Danh từ → 인데. Câu đầu giới thiệu, câu sau thông tin thêm.",
+     "lt": [
+      {
+       "t": "vk",
+       "vi": "Đây là bạn tôi, bạn ấy là người Hàn.",
+       "a": [
+        "이 사람은 제 친구인데 한국 사람이에요",
+        "이쪽은 제 친구인데 한국 사람이에요",
+        "여기는 제 친구인데 한국 사람이에요"
+       ],
+       "h": "친구 → 친구인데."
+      },
+      {
+       "t": "kv",
+       "ko": "제 고향은 하이퐁인데 바다가 가까워요.",
+       "a": "Quê tôi là Hải Phòng, gần biển.",
+       "w": ""
+      }
+     ]
+    },
+    {
+     "t": "Kể chuyện + cảm nhận",
+     "c": "Kể bộ phim đã xem.",
+     "lv": "lịch sự",
+     "ko": "어제 그 영화를 봤**는데** 정말 재미있었어요.",
+     "vi": "Hôm qua mình xem phim đó, hay lắm.",
+     "why": "Quá khứ → 봤는데. Tiếng Việt chỉ cần dấu phẩy.",
+     "lt": [
+      {
+       "t": "vk",
+       "vi": "Hôm qua tôi đi Busan, vui lắm.",
+       "a": [
+        "어제 부산에 갔는데 정말 재미있었어요",
+        "어제 부산에 갔는데 아주 재미있었어요",
+        "어제 부산에 갔는데 너무 재미있었어요",
+        "어제 부산에 갔는데 정말 좋았어요"
+       ],
+       "h": "Đã xảy ra → 갔는데."
+      },
+      {
+       "t": "c",
+       "q": "어제 그 책을 (    ) 정말 재미있었어요.",
+       "o": [
+        "읽었는데",
+        "읽는데",
+        "읽은데",
+        "읽어서는데"
+       ],
+       "w": "Việc đã xảy ra → -았/었는데."
+      }
+     ]
+    },
+    {
+     "t": "Mở lời trước khi nhờ",
+     "c": "Muốn nhờ thầy cô / đồng nghiệp.",
+     "lv": "lịch sự",
+     "ko": "부탁이 하나 있**는데** 잠깐 시간 있으세요?",
+     "vi": "Em có việc muốn nhờ, thầy / cô có rảnh một chút không ạ?",
+     "why": "Câu mở lời rất hay dùng — báo trước để người nghe chuẩn bị.",
+     "lt": [
+      {
+       "t": "kv",
+       "ko": "질문이 하나 있는데 지금 괜찮으세요?",
+       "a": "Em có một câu hỏi, bây giờ thầy / cô có tiện không ạ?",
+       "w": ""
+      },
+      {
+       "t": "vk",
+       "vi": "Em có việc muốn nhờ, cô có thời gian không ạ?",
+       "a": [
+        "부탁이 있는데 시간 있으세요?",
+        "부탁이 하나 있는데 시간 있으세요?",
+        "선생님, 부탁이 있는데 시간 있으세요?",
+        "부탁이 하나 있는데 시간 괜찮으세요?"
+       ],
+       "h": "부탁이 있다 → 있는데."
+      }
+     ]
+    }
+   ],
+   "rb": [
+    {
+     "k": "Mỗi loại từ một dạng",
+     "d": "Động từ **-는데**, tính từ **-(으)ㄴ데**, danh từ **인데**, 있다 / 없다 **-는데**. Chọn sai dạng là lỗi số 1.",
+     "ex": [],
+     "lt": [
+      {
+       "t": "c",
+       "q": "Chọn dạng đúng cho cả ba: 크다 / 오다 / 가수",
+       "o": [
+        "큰데 / 오는데 / 가수인데",
+        "크는데 / 온데 / 가수는데",
+        "큰데 / 온데 / 가수인데",
+        "크는데 / 오는데 / 가수데"
+       ],
+       "w": "Tính từ -ㄴ데, động từ -는데, danh từ 인데."
+      }
+     ]
+    },
+    {
+     "k": "Vế sau được nhờ / rủ / bảo (khác -아/어서)",
+     "d": "Vế sau của -는데 thoải mái: nhờ, rủ, bảo, hỏi. Vế sau của **-아/어서** (lý do) **không** dùng rủ, mệnh lệnh.",
+     "ex": [
+      [
+       "배가 고**픈데** 같이 밥 먹을래요?",
+       "Đói rồi, đi ăn cùng không?"
+      ]
+     ],
+     "lt": [
+      {
+       "t": "c",
+       "q": "배가 (    ) 같이 밥 먹을래요?",
+       "o": [
+        "고픈데",
+        "고파서",
+        "고프는데",
+        "고팠어서"
+       ],
+       "w": "Vế sau là lời rủ → -는데; 고프다 là tính từ → 고픈데."
+      }
+     ]
+    },
+    {
+     "k": "Hai vế khác chủ ngữ vẫn được",
+     "d": "비가 오는데 (trời) / 우산 있어요? (bạn) — hai vế không cần cùng chủ ngữ.",
+     "ex": [
+      [
+       "동생이 자**는데** 조용히 하세요.",
+       "Em tôi đang ngủ, giữ im lặng nhé."
+      ]
+     ],
+     "lt": [
+      {
+       "t": "kv",
+       "ko": "아기가 자는데 음악 좀 꺼 주세요.",
+       "a": "Em bé đang ngủ, tắt nhạc giúp tôi.",
+       "w": "Vế trước chủ ngữ 아기, vế sau là người nghe."
+      }
+     ]
+    },
+    {
+     "k": "Thì: quá khứ gắn TRƯỚC -는데",
+     "d": "Việc đã xảy ra → **-았/었는데** cho mọi loại từ (갔는데, 바빴는데, 학생이었는데). Vế sau chia thì tự do.",
+     "ex": [
+      [
+       "어제 친구 집에 갔**는데** 친구가 없었어요.",
+       "Hôm qua tôi đến nhà bạn thì bạn không có nhà."
+      ]
+     ],
+     "lt": [
+      {
+       "t": "y",
+       "f": "어제 친구 집에 (    ) 친구가 없었어요. (가다)",
+       "a": [
+        "갔는데"
+       ],
+       "h": "Đã xảy ra → -았/었는데.",
+       "w": ""
+      }
+     ]
+    },
+    {
+     "k": "Còn nghĩa “nhưng” (học sau)",
+     "d": "-는데 còn nghĩa đối lập, nhẹ hơn -지만. Khi đọc, phải xem vế sau mới biết là nghĩa nào.",
+     "ex": [],
+     "lt": [
+      {
+       "t": "c",
+       "q": "Câu nào -는데 mang nghĩa “nhưng / còn”?",
+       "o": [
+        "저는 커피를 좋아하는데 동생은 차를 좋아해요.",
+        "커피를 샀는데 같이 마실래요?",
+        "비가 오는데 우산 있어요?",
+        "이건 한국 커피인데 정말 진해요."
+       ],
+       "w": "Hai vế đối lập (tôi ↔ em) → nghĩa 2."
+      }
+     ]
+    }
+   ],
+   "sai": [
+    {
+     "x": "날씨가 **춥는데** 문 좀 닫아 주세요.",
+     "o": "날씨가 **추운데** 문 좀 닫아 주세요.",
+     "why": "춥다 là tính từ → -(으)ㄴ데; ㅂ gặp 으 → 우: 추운데.",
+     "k": "Sai dạng theo loại từ + bất quy tắc ㅂ",
+     "h": "춥다 là động từ hay tính từ? ㅂ gặp 으 thì thành gì?"
+    },
+    {
+     "x": "배가 **고파서** 같이 밥 먹읍시다.",
+     "o": "배가 **고픈데** 같이 밥 먹읍시다.",
+     "why": "Vế sau là lời rủ → không dùng -아/어서; dùng -는데.",
+     "k": "Chọn sai mẫu",
+     "h": "Vế sau là gì — kể hay rủ? -아/어서 có đi với lời rủ không?"
+    },
+    {
+     "x": "여기는 우리 **학교는데** 학생이 많아요.",
+     "o": "여기는 우리 **학교인데** 학생이 많아요.",
+     "why": "Danh từ → 인데 (không 받침 vẫn là 인데).",
+     "k": "Danh từ",
+     "h": "학교 là loại từ gì?"
+    },
+    {
+     "x": "이 식당이 **맛있은데** 같이 가요.",
+     "o": "이 식당이 **맛있는데** 같이 가요.",
+     "why": "있다 / 없다 luôn đi với -는데.",
+     "k": "있다 / 없다",
+     "h": "맛있다 tận cùng bằng 있다 — đi với đuôi nào?"
+    },
+    {
+     "x": "집이 **멀는데** 택시를 탈까요?",
+     "o": "집이 **먼데** 택시를 탈까요?",
+     "why": "멀다 là tính từ gốc ㄹ → ㄹ rơi + ㄴ데 = 먼데.",
+     "k": "Gốc ㄹ",
+     "h": "멀다 là động từ hay tính từ? ㄹ gặp ㄴ thì sao?"
+    },
+    {
+     "x": "어제 시장에 **가는데** 사람이 정말 많았어요.",
+     "o": "어제 시장에 **갔는데** 사람이 정말 많았어요.",
+     "why": "Việc đã xảy ra (어제) → -았/었는데.",
+     "k": "Thì",
+     "h": "Có 어제 — việc đã xảy ra hay đang xảy ra?"
+    }
+   ],
+   "pb": [
+    {
+     "vs": "-아/어서 (lý do)",
+     "d": "**-아/어서**: lý do → kết quả (vì … nên …), vế sau **không** rủ, không mệnh lệnh, vế trước **không** chia quá khứ. **-는데**: nêu nền / hoàn cảnh, vế sau thoải mái. Mẹo: vế sau là -(으)세요, -(으)ㄹ까요?, -(으)ㄹ래요?, -(으)ㅂ시다 → nghĩ ngay tới -는데. Còn xin lỗi, cảm ơn vì lý do (늦어서 죄송합니다) → -아/어서.",
+     "ex": [
+      [
+       "비가 와**서** 집에 있었어요.",
+       "Trời mưa nên tôi ở nhà."
+      ],
+      [
+       "비가 오**는데** 우산 가져가세요.",
+       "Trời đang mưa, mang ô theo nhé."
+      ]
+     ],
+     "bang": [
+      [
+       "",
+       "-아/어서",
+       "-는데"
+      ],
+      [
+       "Quan hệ",
+       "lý do → kết quả",
+       "nền → câu tiếp"
+      ],
+      [
+       "Vế sau: rủ, mệnh lệnh",
+       "✗",
+       "✓"
+      ],
+      [
+       "Vế trước quá khứ",
+       "✗ (갔어서)",
+       "✓ (갔는데)"
+      ],
+      [
+       "Ví dụ",
+       "비가 와서 집에 있었어요.",
+       "비가 오는데 우산 가져가세요."
+      ]
+     ],
+     "lt": [
+      {
+       "t": "c",
+       "q": "시간이 (    ) 커피 한잔할까요?",
+       "o": [
+        "있는데",
+        "있어서"
+       ],
+       "w": "Rủ → -는데."
+      },
+      {
+       "t": "c",
+       "q": "늦게 (    ) 죄송합니다.",
+       "o": [
+        "와서",
+        "왔는데"
+       ],
+       "w": "Xin lỗi vì lý do → -아/어서."
+      },
+      {
+       "t": "c",
+       "q": "길이 (    ) 지하철을 탑시다.",
+       "o": [
+        "막히는데",
+        "막혀서"
+       ],
+       "w": "Vế sau -(으)ㅂ시다 (rủ) → -는데."
+      }
+     ]
+    },
+    {
+     "vs": "-는데 nghĩa 2 (đối lập, học sau)",
+     "d": "Nghĩa 2 “nhưng, còn … thì” — nhẹ hơn -지만, hay dùng khi so sánh hai người / hai việc. Bài này chỉ cần **nhận ra** khi đọc.",
+     "ex": [
+      [
+       "형은 키가 **큰데** 동생은 작아요.",
+       "Anh thì cao, còn em thì thấp."
+      ]
+     ],
+     "lt": [
+      {
+       "t": "c",
+       "q": "Trong câu “저는 키가 작은데 동생은 커요”, -는데 nghĩa gì?",
+       "o": [
+        "nhưng / còn (đối lập)",
+        "bối cảnh → nhờ",
+        "lý do (vì … nên)"
+       ],
+       "w": "Hai người được so sánh, hai vế trái nhau."
+      }
+     ]
+    },
+    {
+     "vs": "-(으)ㄹ 텐데 (3A Bài 3)",
+     "d": "**-는데**: việc đang thấy, đã biết chắc. **-(으)ㄹ 텐데**: việc mình **đoán** sẽ xảy ra. Cùng vế sau (우산 있어요?) nhưng nguồn thông tin khác nhau.",
+     "ex": [
+      [
+       "비가 오**는데** 우산 있어요?",
+       "Trời đang mưa, có ô không?"
+      ],
+      [
+       "오후에 비가 **올 텐데** 우산 있어요?",
+       "Chiều chắc sẽ mưa, có ô không?"
+      ]
+     ],
+     "lt": [
+      {
+       "t": "c",
+       "q": "Nhìn ra cửa sổ thấy đang mưa: 비가 (    ) 우산 가져가세요.",
+       "o": [
+        "오는데",
+        "올 텐데"
+       ],
+       "w": "Đang thấy → -는데."
+      },
+      {
+       "t": "c",
+       "q": "Xem dự báo, chiều sẽ mưa: 오후에 비가 (    ) 우산 가져가세요.",
+       "o": [
+        "올 텐데",
+        "오는데"
+       ],
+       "w": "Đoán việc chưa xảy ra → -(으)ㄹ 텐데."
+      }
+     ]
+    }
+   ],
+   "topik": [
+    {
+     "src": "Đọc · kỳ 35 câu 1",
+     "ko": "친구와 내가 운동장에서 축구를 (하는데) 선생님이 나를 부르셨다.",
+     "note": "Đáp án. Vế trước là bối cảnh đang diễn ra, vế sau một việc khác xảy ra (khác chủ ngữ). Bẫy: 하면서 (cần cùng chủ ngữ), 하거나 / 하든지 (lựa chọn)."
+    },
+    {
+     "src": "Đọc · kỳ 83 câu 28",
+     "ko": "보통 마트가 해외에 진출할 때는 현지인의 취향에 맞추려고 하**는데** 이 편의점 업체는 이와 반대되는 방법을…",
+     "note": "-는데 nêu cái “thông thường” làm nền, vế sau là điểm khác biệt → ý chính nằm sau -는데."
+    },
+    {
+     "src": "Đọc · kỳ 83 câu 31",
+     "ko": "이런 현상이 생긴 원인은 다양한**데** 양육 과정에서 부모의 인정을 받지 못했거나…",
+     "note": "Tính từ 다양하다 → 다양한데: nêu nền “nguyên nhân thì nhiều” → vế sau kể nguyên nhân cụ thể."
+    }
+   ],
+   "len": [
+    {
+     "p": "-(으)ㄴ/는데도",
+     "m": "dù … vẫn",
+     "noi": "-는데 + **도**: bối cảnh có rồi mà kết quả vẫn ngược. Câu 3–4 thay bằng -고도, -아/어도.",
+     "ex": [
+      "열심히 공부했**는데도** 시험에 떨어졌어요.",
+      "Dù học chăm vẫn trượt."
+     ],
+     "de": {
+      "src": "Đọc · Đề luyện EBS 1 câu 3",
+      "ko": "그렇게 크게 **싸우고도** 같이 다니는 걸 보니 화해했나 봐요.",
+      "a": "Đáp án: 싸웠는데도"
+     }
+    },
+    {
+     "p": "-는 데 (viết cách)",
+     "m": "vào việc …, để …",
+     "noi": "**데** đứng riêng là danh từ (chỗ, việc): -는 **데** 쓰다 / 필요하다 / 성공하다. Viết cách và nghĩa khác hẳn -는데 (bối cảnh) của bài.",
+     "ex": [
+      "이 돈은 여행 가는 **데** 쓸 거예요.",
+      "Số tiền này tôi sẽ dùng vào việc đi du lịch."
+     ],
+     "de": {
+      "src": "Đọc · kỳ 91 câu 33",
+      "ko": "선비가 시골에서 살아가는 **데** 필요한 지식을 탐색한 것으로…",
+      "a": "살아가는 데 필요한 = cần cho việc sống (ở quê)",
+      "note": "kỳ 91 câu 18: 정보를 기억하는 데 뇌를 썼다; câu 35: 채취하는 데 성공하다."
+     }
+    },
+    {
+     "p": "-(으)ㄴ/는데 = nhưng",
+     "m": "đối lập (nghĩa 2 của -는데)",
+     "noi": "Cùng hình thức với bối cảnh, nhưng hai vế **trái nhau**. Đề đọc dùng rất nhiều — phải đọc vế sau mới biết là “bối cảnh” hay “nhưng”.",
+     "ex": [
+      "형은 키가 큰**데** 동생은 작아요.",
+      "Anh thì cao, còn em thì thấp."
+     ],
+     "de": {
+      "src": "Đọc · kỳ 83 câu 28",
+      "ko": "보통 마트가 해외에 진출할 때는 현지인의 취향에 맞추려고 하**는데** 이 편의점 업체는 이와 반대되는 방법을 써서 성공한 것이다.",
+      "a": "-는데 ở đây = “nhưng”: thường thì…, nhưng công ty này ngược lại."
+     }
+    },
+    {
+     "p": "-(으)ㄹ 텐데",
+     "m": "chắc là … (nên / vậy mà)",
+     "noi": "-(으)ㄹ + **터** + 이다 + -ㄴ데: bối cảnh là một **phỏng đoán**. Học kỹ ở 3A Bài 3.",
+     "ex": [
+      "주말에는 공연장이 복잡할 **텐데** 평일에 가요.",
+      "Cuối tuần chắc nhà hát đông, đi ngày thường đi."
+     ],
+     "de": {
+      "src": "Đọc · Đề luyện Yonsei 2 câu 2",
+      "ko": "내일은 비가 (    ) 등산은 다음에 갑시다.",
+      "a": "Đáp án: 올 텐데"
+     }
+    }
+   ],
+   "hoi": [
+    {
+     "q": "“Mình có vé hòa nhạc, đi cùng không?” — vì sao không dùng 있어서?",
+     "a": "Vế sau là lời rủ (갈래요? / 같이 가요) → -아/어서 không hợp. Dùng 표가 있<b>는데</b> 같이 갈래요?"
+    },
+    {
+     "q": "맛있다 là tính từ, sao lại là 맛있는데?",
+     "a": "있다 / 없다 luôn đi với <b>-는</b> (맛있는 음식, 맛있는데)."
+    },
+    {
+     "q": "“Hôm qua mình xem phim, phim hay lắm” — tiếng Việt không có từ nối. Tiếng Hàn nối thế nào?",
+     "a": "어제 영화를 봤<b>는데</b> 아주 재미있었어요. -는데 = giới thiệu rồi nói thêm."
+    }
+   ],
+   "luyen": [
+    {
+     "q": "날씨가 (    ) 창문 좀 닫아 주세요.",
+     "o": [
+      "추운데",
+      "춥는데",
+      "추우는데",
+      "춥은데"
+     ],
+     "w": "Tính từ → -(으)ㄴ데; ㅂ bất quy tắc → 추운데."
+    },
+    {
+     "q": "여기는 제 고향(    ) 경치가 아름다워요.",
+     "o": [
+      "인데",
+      "는데",
+      "은데",
+      "이는데"
+     ],
+     "w": "Danh từ → 인데."
+    },
+    {
+     "q": "콘서트 표가 (    ) 같이 갈래요?",
+     "o": [
+      "있는데",
+      "있은데",
+      "있어서",
+      "있인데"
+     ],
+     "w": "있다 → -는데; vế sau là lời rủ nên không dùng -아/어서."
+    },
+    {
+     "q": "어제 그 식당에 (    ) 정말 맛있었어요.",
+     "o": [
+      "갔는데",
+      "가는데",
+      "간데",
+      "갔은데"
+     ],
+     "w": "Việc đã xảy ra → -았/었는데."
+    },
+    {
+     "q": "집이 (    ) 택시를 탈까요?",
+     "o": [
+      "먼데",
+      "멀는데",
+      "멀은데",
+      "머는데"
+     ],
+     "w": "멀다: tính từ gốc ㄹ → 먼데."
+    }
+   ],
+   "em": [
+    {
+     "q": "Viết 3 câu nhờ / rủ có bối cảnh: …는데 … 주세요 / 같이 …(으)ㄹ래요?",
+     "tip": "nghĩ tới lớp học (quên sách, không hiểu bài), thời tiết, đồ ăn, vé / phiếu giảm giá.",
+     "gy": [
+      [
+       "책을 안 가져왔는데 같이 봐도 돼요?",
+       "Mình quên mang sách, xem chung được không?"
+      ],
+      [
+       "이 문법을 잘 모르는데 좀 가르쳐 주세요.",
+       "Mình chưa hiểu ngữ pháp này, giảng giúp mình với."
+      ],
+      [
+       "날씨가 더운데 아이스크림 먹을래요?",
+       "Trời nóng, ăn kem không?"
+      ],
+      [
+       "할인 쿠폰이 있는데 같이 쇼핑할래요?",
+       "Mình có phiếu giảm giá, đi mua sắm cùng không?"
+      ],
+      [
+       "내일 시험이 있는데 같이 공부할까요?",
+       "Mai có bài kiểm tra, học cùng nhé?"
+      ]
+     ]
+    },
+    {
+     "q": "Giới thiệu một món ăn / địa điểm Việt Nam: 이건 / 여기는 …인데 …아/어요.",
+     "gy": [
+      [
+       "이건 분짜인데 하노이 사람들이 점심에 많이 먹어요.",
+       "Đây là bún chả, người Hà Nội hay ăn buổi trưa."
+      ],
+      [
+       "여기는 호안끼엠 호수인데 주말에 사람이 정말 많아요.",
+       "Đây là hồ Hoàn Kiếm, cuối tuần rất đông người."
+      ],
+      [
+       "이건 연유 커피인데 아주 달고 진해요.",
+       "Đây là cà phê sữa, rất ngọt và đậm."
+      ],
+      [
+       "제 고향은 응에안인데 바다가 아름다워요.",
+       "Quê em là Nghệ An, biển đẹp lắm."
+      ]
+     ]
+    }
+   ],
+   "co": "Ba dạng theo loại từ — kiểm tra bằng thẻ từ (가다, 춥다, 학생, 맛있다, 멀다, 갔다) trước khi vào nghĩa. Nghĩa: cho học sinh viết câu tiếng Việt “Trời mưa, bạn có ô không?” rồi chỉ ra tiếng Việt không có từ nối → -는데 lấp chỗ đó. Báo trước -는데 “nhưng” sẽ học sau để học sinh không bối rối khi đọc.",
+   "yn": {
+    "ct": [
+     [
+      "V / A / N",
+      "động từ · tính từ · danh từ",
+      "오- · 춥- · 학생"
+     ],
+     [
+      "-는 / -(으)ㄴ / 인",
+      "đuôi định ngữ",
+      "오는 · 추운 · 학생인"
+     ],
+     [
+      "데",
+      "tình huống, chỗ",
+      "데"
+     ]
+    ],
+    "kq": [
+     "비가 오는데 …",
+     "trời đang mưa (trong tình huống đó) → …"
+    ],
+    "m": [
+     {
+      "t": "Nêu bối cảnh → nhờ / rủ / hỏi / khuyên",
+      "k": "Vế sau: -아/어 주세요, -(으)세요, -(으)ㄹ래요?, -(으)ㄹ까요?, câu hỏi",
+      "ko": "비가 오**는데** 우산 있어요?",
+      "vi": "Trời đang mưa, bạn có ô không?"
+     },
+     {
+      "t": "Giới thiệu / kể trước, nói thêm sau",
+      "k": "Vế sau: thông tin thêm, cảm nhận, kết quả",
+      "ko": "어제 영화를 봤**는데** 정말 재미있었어요.",
+      "vi": "Hôm qua mình xem phim, hay lắm."
+     },
+     {
+      "t": "(Học sau) Đối lập “nhưng, còn”",
+      "k": "Hai vế trái nhau — bài này chưa học",
+      "ko": "형은 키가 **큰데** 동생은 작아요.",
+      "vi": "Anh thì cao, còn em thì thấp.",
+      "later": true
+     }
+    ],
+    "tbT": "Vế sau thường gặp (nghĩa 1)",
+    "tb": [
+     [
+      "Vế sau",
+      "Ví dụ"
+     ],
+     [
+      "Nhờ: -아/어 주세요, -아/어 줄 수 있어요?",
+      "펜이 없**는데** 하나 빌려 주세요."
+     ],
+     [
+      "Rủ: -(으)ㄹ래요?, -(으)ㄹ까요?, -(으)ㅂ시다",
+      "날씨가 좋**은데** 산책할래요?"
+     ],
+     [
+      "Khuyên, bảo: -(으)세요",
+      "추**운데** 코트 입으세요."
+     ],
+     [
+      "Hỏi",
+      "지금 비가 오**는데** 우산 있어요?"
+     ],
+     [
+      "Nói thêm, cảm nhận",
+      "이건 반미**인데** 정말 맛있어요."
+     ]
+    ],
+    "viN": "Tiếng Việt thường **không có từ nối** ở chỗ này — chỉ ngắt câu bằng dấu phẩy. Vì vậy học sinh Việt hay quên dùng -는데, nói hai câu rời.",
+    "vi": [
+     [
+      "(dấu phẩy, không từ nối)",
+      "cách dịch phổ biến nhất",
+      "비가 오**는데** 우산 있어요?",
+      "Trời mưa, bạn có ô không?"
+     ],
+     [
+      "…, nên …",
+      "nêu lý do nhẹ trước lời nhờ",
+      "펜이 없**는데** 빌려 줄 수 있어요?",
+      "Mình không có bút nên cho mình mượn được không?"
+     ],
+     [
+      "… đây, … / … này, …",
+      "có sẵn cái gì rồi rủ",
+      "표가 두 장 있**는데** 같이 갈래요?",
+      "Mình có hai vé đây, đi cùng không?"
+     ],
+     [
+      "… là …, (nó) …",
+      "giới thiệu rồi nói thêm",
+      "이건 반미**인데** 아침에 많이 먹어요.",
+      "Đây là bánh mì, (người ta) hay ăn vào buổi sáng."
+     ],
+     [
+      "… thì …",
+      "kể việc đã làm rồi nhận xét",
+      "먹어 봤**는데** 맛있었어요.",
+      "Ăn thử rồi thì thấy ngon."
+     ],
+     [
+      "…, vậy …",
+      "mở lời trước khi nhờ",
+      "부탁이 있**는데** 시간 있으세요?",
+      "Em có việc muốn nhờ, vậy thầy có rảnh không ạ?"
+     ],
+     [
+      "nhưng / còn … thì (học sau)",
+      "nghĩa 2: đối lập",
+      "형은 **큰데** 동생은 작아요.",
+      "Anh cao, còn em thấp."
+     ]
+    ]
+   },
+   "bqt": [
+    {
+     "t": "① Gốc ㄹ — ㄹ rơi (살다, 만들다, 멀다, 길다)",
+     "r": "Gốc tận cùng bằng **ㄹ** gặp đuôi bắt đầu bằng **ㄴ, ㅂ, ㅅ** thì ㄹ rơi. -는데 và -ㄴ데 đều bắt đầu bằng ㄴ → **ㄹ rơi**. Tính từ gốc ㄹ không thêm 으.",
+     "b": [
+      "멀다 (xa) → tính từ → dùng -(으)ㄴ데",
+      "Gốc 멀- có 받침 ㄹ: không thêm 으, dùng -ㄴ데",
+      "ㄹ gặp ㄴ → ㄹ rơi: 머 + ㄴ데",
+      "= **먼데** (động từ 살다: 살 + 는데 → ㄹ rơi → **사는데**)"
+     ],
+     "ex": [
+      [
+       "살다 (động từ)",
+       "사는데",
+       "sống"
+      ],
+      [
+       "만들다 (động từ)",
+       "만드는데",
+       "làm"
+      ],
+      [
+       "알다 (động từ)",
+       "아는데",
+       "biết"
+      ],
+      [
+       "멀다 (tính từ)",
+       "먼데",
+       "xa"
+      ],
+      [
+       "길다 (tính từ)",
+       "긴데",
+       "dài"
+      ],
+      [
+       "달다 (tính từ)",
+       "단데",
+       "ngọt"
+      ]
+     ],
+     "ng": "Lỗi hay gặp: 멀는데, 멀은데, 살는데. Nhớ: ㄹ + ㄴ → ㄹ biến mất."
+    },
+    {
+     "t": "② Bất quy tắc ㅂ — chỉ đổi khi gặp 으 (tính từ)",
+     "r": "Tính từ gốc **ㅂ** đi với -은데 (bắt đầu bằng 으 = nguyên âm) → ㅂ thành **우**: 춥 + 은데 → 추우 + ㄴ데 → **추운데**. Động từ gốc ㅂ đi với **-는데** (phụ âm) → **giữ nguyên**: 돕는데, 굽는데.",
+     "b": [
+      "춥다 (lạnh) → tính từ → -(으)ㄴ데",
+      "Có 받침 ㅂ → -은데: 춥 + 은데",
+      "ㅂ gặp 으 → ㅂ thành 우: 추우 + ㄴ데",
+      "= **추운데**"
+     ],
+     "ex": [
+      [
+       "덥다",
+       "더운데",
+       "nóng"
+      ],
+      [
+       "어렵다",
+       "어려운데",
+       "khó"
+      ],
+      [
+       "맵다",
+       "매운데",
+       "cay"
+      ],
+      [
+       "가깝다",
+       "가까운데",
+       "gần"
+      ],
+      [
+       "돕다 (động từ)",
+       "돕는데 (không đổi)",
+       "giúp"
+      ],
+      [
+       "좁다 (tính từ, theo quy tắc)",
+       "좁은데",
+       "hẹp"
+      ]
+     ],
+     "ng": "Quá khứ thì đổi theo -아/어: 추웠는데, 더웠는데, 도왔는데."
+    },
+    {
+     "t": "③ Bất quy tắc ㄷ — với -는데 thì KHÔNG đổi",
+     "r": "ㄷ chỉ đổi thành ㄹ khi gặp **nguyên âm**. -는데 bắt đầu bằng phụ âm ㄴ → **giữ ㄷ**: 듣는데, 걷는데. Chỉ quá khứ mới đổi (vì -었 là nguyên âm): **들었는데**, **걸었는데**.",
+     "ex": [
+      [
+       "듣다",
+       "듣는데 · 들었는데",
+       "nghe"
+      ],
+      [
+       "걷다",
+       "걷는데 · 걸었는데",
+       "đi bộ"
+      ],
+      [
+       "묻다",
+       "묻는데 · 물었는데",
+       "hỏi"
+      ]
+     ],
+     "ng": "Học sinh hay “sửa quá tay” thành 들는데 — sai."
+    },
+    {
+     "t": "④ Gặp sớm: ㅎ rơi — 그렇다, 어떻다, màu sắc",
+     "r": "Tính từ gốc **ㅎ** (그렇다, 어떻다, 이렇다, 빨갛다…) gặp -(으)ㄴ thì ㅎ rơi và không thêm 으: 그렇 + ㄴ데 → **그런데**.",
+     "b": [
+      "그렇다 (như thế) → tính từ → -(으)ㄴ데",
+      "ㅎ rơi: 그러 + ㄴ데",
+      "= **그런데** — chính là từ nối “nhưng mà / mà này” học sinh đã biết!"
+     ],
+     "ex": [
+      [
+       "그렇다",
+       "그런데",
+       "như thế"
+      ],
+      [
+       "어떻다",
+       "어떤데",
+       "thế nào"
+      ],
+      [
+       "빨갛다",
+       "빨간데",
+       "đỏ"
+      ]
+     ],
+     "ng": "Từ nối 그런데 = 그렇다 + -(으)ㄴ데: “tình hình là như thế, (và) …”."
+    }
+   ],
+   "chiaLt": [
+    {
+     "t": "y",
+     "q": "공부하다 + -는데",
+     "a": [
+      "공부하는데"
+     ],
+     "h": "Động từ → -는데.",
+     "w": ""
+    },
+    {
+     "t": "y",
+     "q": "좋다 + -(으)ㄴ데",
+     "a": [
+      "좋은데"
+     ],
+     "h": "Tính từ có 받침 → -은데.",
+     "w": ""
+    },
+    {
+     "t": "y",
+     "q": "바쁘다 → ? (đuôi -는데 / -(으)ㄴ데)",
+     "a": [
+      "바쁜데"
+     ],
+     "h": "Tính từ không 받침 → -ㄴ데.",
+     "w": ""
+    },
+    {
+     "t": "y",
+     "q": "맛있다 → ?",
+     "a": [
+      "맛있는데"
+     ],
+     "h": "있다 / 없다 → -는데.",
+     "w": ""
+    },
+    {
+     "t": "y",
+     "q": "의사 (danh từ) → ?",
+     "a": [
+      "의사인데"
+     ],
+     "h": "Danh từ → 인데.",
+     "w": ""
+    },
+    {
+     "t": "y",
+     "q": "살다 (động từ) → ?",
+     "a": [
+      "사는데"
+     ],
+     "h": "ㄹ gặp ㄴ → rơi.",
+     "w": ""
+    },
+    {
+     "t": "y",
+     "q": "길다 (tính từ) → ?",
+     "a": [
+      "긴데"
+     ],
+     "h": "Tính từ gốc ㄹ: ㄹ rơi + ㄴ데.",
+     "w": ""
+    },
+    {
+     "t": "y",
+     "q": "덥다 → ?",
+     "a": [
+      "더운데"
+     ],
+     "h": "Tính từ ㅂ: ㅂ → 우 + ㄴ데.",
+     "w": ""
+    },
+    {
+     "t": "y",
+     "q": "듣다 (hiện tại) → ?",
+     "a": [
+      "듣는데"
+     ],
+     "h": "-는데 bắt đầu bằng phụ âm → ㄷ có đổi không?",
+     "w": "Giữ ㄷ: 듣는데."
+    },
+    {
+     "t": "y",
+     "q": "먹다 (quá khứ) → ?",
+     "a": [
+      "먹었는데"
+     ],
+     "h": "-았/었는데.",
+     "w": ""
+    },
+    {
+     "t": "y",
+     "q": "학생 (quá khứ) → ?",
+     "a": [
+      "학생이었는데"
+     ],
+     "h": "Danh từ có 받침 + 이었는데.",
+     "w": ""
+    },
+    {
+     "t": "y",
+     "q": "어떻다 → ?",
+     "a": [
+      "어떤데"
+     ],
+     "h": "ㅎ rơi (giống 그렇다 → 그런데).",
+     "w": ""
+    }
+   ],
+   "saiLy": "Trước khi sửa, hỏi 3 câu theo thứ tự: ① **Loại từ gì?** (động từ / tính từ / danh từ / 있다·없다) ② **Gốc có bất quy tắc không?** (ㄹ, ㅂ) ③ **Đã xảy ra chưa?** (quá khứ -았/었는데). Thêm một lỗi về nghĩa: dùng -아/어서 khi vế sau là lời rủ / nhờ.",
+   "saiLt": [
+    {
+     "t": "s",
+     "x": "날씨가 덥는데 에어컨 좀 켜 주세요.",
+     "a": [
+      "날씨가 더운데 에어컨 좀 켜 주세요"
+     ],
+     "h": "덥다 — tính từ ㅂ.",
+     "w": ""
+    },
+    {
+     "t": "s",
+     "x": "저는 베트남 사람는데 하노이에 살아요.",
+     "a": [
+      "저는 베트남 사람인데 하노이에 살아요"
+     ],
+     "h": "Danh từ → ?",
+     "w": ""
+    },
+    {
+     "t": "s",
+     "x": "시간이 없어서 내일 만날까요?",
+     "a": [
+      "시간이 없는데 내일 만날까요"
+     ],
+     "h": "Vế sau là lời rủ.",
+     "w": ""
+    },
+    {
+     "t": "s",
+     "x": "그 가방이 예쁘는데 얼마예요?",
+     "a": [
+      "그 가방이 예쁜데 얼마예요"
+     ],
+     "h": "예쁘다 là tính từ.",
+     "w": ""
+    }
+   ]
+  },
+  {
+   "no": 4,
+   "id": "g_2A_03_4",
+   "cn": "Định ngữ – tương lai",
+   "core": "Đặt hành động chưa xảy ra, dự định hoặc mục đích sử dụng trước danh từ: “(việc) sẽ làm”, “(chỗ) để ngồi”, “(thời gian) để đi”.",
+   "goc": "Gốc động từ + <b>-(으)ㄹ</b> (đuôi định ngữ cho việc chưa xảy ra / chưa xác định) + danh từ. Hoàn thành bộ ba của động từ: 먹<b>은</b> (đã), 먹<b>는</b> (đang / thường), 먹<b>을</b> (sẽ / để). Nhiều mẫu đã học thật ra là -(으)ㄹ + danh từ: -(으)ㄹ <b>수</b> 있다, -(으)ㄹ <b>줄</b> 알다, -(으)ㄹ <b>거</b>예요 (= 것이에요).",
+   "chia": [
+    [
+     "Gốc",
+     "Quy tắc",
+     "Ví dụ chia",
+     "Câu ví dụ"
+    ],
+    [
+     "Không 받침",
+     "+ ㄹ",
+     "만나다 → 만**날** · 가다 → **갈** · 마시다 → 마**실**",
+     "마**실** 거 있어요? — Có gì uống không?"
+    ],
+    [
+     "Có 받침",
+     "+ 을",
+     "읽다 → 읽**을** · 앉다 → 앉**을** · 먹다 → 먹**을**",
+     "방학 때 읽**을** 책을 샀어요. — Tôi mua sách để đọc trong kỳ nghỉ."
+    ],
+    [
+     "Gốc ㄹ",
+     "giữ nguyên (không thêm 을)",
+     "만들다 → **만들** · 살다 → **살** · 놀다 → **놀**",
+     "주말에 같이 **놀** 친구가 없어요. — Cuối tuần không có bạn chơi cùng."
+    ],
+    [
+     "하다",
+     "하 → 할",
+     "하다 → **할** · 공부하다 → 공부**할**",
+     "오늘 **할** 일이 많아요. — Hôm nay nhiều việc phải làm."
+    ],
+    [
+     "Bất quy tắc ㄷ",
+     "ㄷ → ㄹ + 을",
+     "듣다 → 들**을** · 걷다 → 걸**을** · 묻다 → 물**을**",
+     "선생님께 물**을** 게 있어요. — Em có điều muốn hỏi cô."
+    ],
+    [
+     "Bất quy tắc ㅂ",
+     "ㅂ → 우 + ㄹ = 울",
+     "돕다 → 도**울** · 굽다 → 구**울** · 눕다 → 누**울**",
+     "이사를 도**울** 사람이 필요해요. — Cần người giúp chuyển nhà."
+    ],
+    [
+     "르 (không đổi)",
+     "không 받침 → + ㄹ",
+     "부르다 → 부**를** · 고르다 → 고**를**",
+     "노래방에서 부**를** 노래를 골랐어요. — Tôi chọn bài sẽ hát ở karaoke."
+    ]
+   ],
+   "chiaNote": [
+    "Phát âm: sau -(으)ㄹ, phụ âm đầu ㄱ ㄷ ㅂ ㅅ ㅈ của từ sau đọc **căng**: 갈 시간 [갈 씨간], 앉을 자리 [안즐 짜리], 먹을 것 [머글 껃].",
+    "Danh từ hay đi kèm: 시간, 자리, 것 / 거, 일, 계획, 사람, 곳, 돈, 옷, 선물."
+   ],
+   "tinh": [
+    {
+     "t": "Từ chối vì không có thời gian",
+     "c": "Bạn mời đi họp mặt.",
+     "lv": "lịch sự",
+     "ko": "미안해요. 내일은 바빠서 **갈** 시간이 없어요.",
+     "vi": "Xin lỗi. Mai bận nên không có thời gian đi.",
+     "why": "Việc chưa xảy ra (đi) → -(으)ㄹ + 시간.",
+     "lt": [
+      {
+       "t": "vk",
+       "vi": "Xin lỗi, dạo này tôi không có thời gian gặp bạn.",
+       "a": [
+        "미안해요 요즘 친구를 만날 시간이 없어요",
+        "미안해요 요즘 만날 시간이 없어요",
+        "미안해요 요즘은 만날 시간이 없어요"
+       ],
+       "h": "만나다 → 만날 + 시간."
+      },
+      {
+       "t": "kv",
+       "ko": "오늘은 숙제가 많아서 놀 시간이 없어요.",
+       "a": "Hôm nay nhiều bài tập nên không có thời gian chơi.",
+       "w": "놀다 → 놀 (gốc ㄹ)."
+      }
+     ]
+    },
+    {
+     "t": "Không còn chỗ",
+     "c": "Quán cà phê đông khách.",
+     "lv": "lịch sự",
+     "ko": "사람이 많아서 앉**을** 자리가 없어요.",
+     "vi": "Đông người quá nên không có chỗ ngồi.",
+     "why": "자리 để ngồi → 앉을 자리.",
+     "lt": [
+      {
+       "t": "c",
+       "q": "Xe buýt đông quá, không có cả chỗ đứng: 버스에 사람이 많아서 (    ) 자리도 없어요.",
+       "o": [
+        "설",
+        "서는",
+        "선",
+        "설을"
+       ],
+       "w": "서다 (đứng) → 설 자리."
+      },
+      {
+       "t": "vk",
+       "vi": "Không có chỗ đỗ xe.",
+       "a": [
+        "주차할 곳이 없어요",
+        "주차할 자리가 없어요",
+        "차를 세울 곳이 없어요",
+        "차를 세울 자리가 없어요"
+       ],
+       "h": "주차하다 → 주차할 + 곳 / 자리."
+      }
+     ]
+    },
+    {
+     "t": "Hỏi có đồ ăn không",
+     "c": "Về nhà đói bụng.",
+     "lv": "thân mật",
+     "ko": "배고픈데 먹**을** 거 있어요?",
+     "vi": "Đói quá, có gì ăn không?",
+     "why": "먹을 것 = đồ để ăn. Kết hợp với -는데 (mẫu 3).",
+     "lt": [
+      {
+       "t": "vk",
+       "vi": "Có gì uống không?",
+       "a": [
+        "마실 거 있어요?",
+        "마실 것 있어요?",
+        "뭐 마실 거 있어요?"
+       ],
+       "h": "마시다 → 마실 + 거."
+      },
+      {
+       "t": "kv",
+       "ko": "냉장고에 먹을 게 하나도 없어요.",
+       "a": "Trong tủ lạnh chẳng có gì để ăn.",
+       "w": "먹을 게 = 먹을 것이."
+      }
+     ]
+    },
+    {
+     "t": "Kế hoạch, việc cần làm",
+     "c": "Bạn rủ đi chơi cuối tuần.",
+     "lv": "lịch sự",
+     "ko": "이번 주말에는 **할** 일이 많아요.",
+     "vi": "Cuối tuần này tôi có nhiều việc phải làm.",
+     "why": "할 일 = việc sẽ làm / phải làm.",
+     "lt": [
+      {
+       "t": "kv",
+       "ko": "이번 주에는 할 일이 많아서 정말 바빠요.",
+       "a": "Tuần này nhiều việc phải làm nên tôi rất bận.",
+       "w": ""
+      },
+      {
+       "t": "vk",
+       "vi": "Hôm nay tôi có nhiều bài tập phải làm.",
+       "a": [
+        "오늘 할 숙제가 많아요",
+        "오늘은 할 숙제가 많아요"
+       ],
+       "h": "할 + 숙제."
+      }
+     ]
+    },
+    {
+     "t": "Tìm người cùng làm",
+     "c": "Đăng tin tìm bạn đồng hành.",
+     "lv": "lịch sự",
+     "ko": "같이 여행 **갈** 사람을 찾고 있어요.",
+     "vi": "Tôi đang tìm người đi du lịch cùng.",
+     "why": "Việc chưa xảy ra → 갈 사람.",
+     "lt": [
+      {
+       "t": "vk",
+       "vi": "Tôi đang tìm người học tiếng Hàn cùng.",
+       "a": [
+        "같이 한국어를 공부할 사람을 찾고 있어요",
+        "한국어를 같이 공부할 사람을 찾고 있어요",
+        "같이 한국어를 배울 사람을 찾고 있어요"
+       ],
+       "h": "공부하다 → 공부할 + 사람."
+      },
+      {
+       "t": "c",
+       "q": "Tìm người ở chung phòng: 같이 (    ) 사람을 찾아요.",
+       "o": [
+        "살",
+        "사는",
+        "산",
+        "살을"
+       ],
+       "w": "Chưa ở cùng → -(으)ㄹ; 살다 gốc ㄹ → 살."
+      }
+     ]
+    },
+    {
+     "t": "Chuẩn bị cho ngày mai",
+     "c": "Tối trước buổi phỏng vấn.",
+     "lv": "lịch sự",
+     "ko": "내일 입**을** 옷을 아직 못 골랐어요.",
+     "vi": "Tôi chưa chọn được quần áo để mặc ngày mai.",
+     "why": "입을 옷 = áo sẽ mặc / để mặc.",
+     "lt": [
+      {
+       "t": "kv",
+       "ko": "여행 갈 때 가져갈 가방을 샀어요.",
+       "a": "Tôi đã mua túi để mang theo khi đi du lịch.",
+       "w": "가져가다 → 가져갈 가방."
+      },
+      {
+       "t": "vk",
+       "vi": "Tôi vẫn chưa mua quà để tặng mẹ.",
+       "a": [
+        "엄마한테 줄 선물을 아직 못 샀어요",
+        "어머니께 드릴 선물을 아직 못 샀어요",
+        "엄마에게 줄 선물을 아직 안 샀어요",
+        "엄마한테 줄 선물을 아직 안 샀어요"
+       ],
+       "h": "주다 → 줄 선물 (kính ngữ: 드릴)."
+      }
+     ]
+    }
+   ],
+   "rb": [
+    {
+     "k": "Bài này: động từ",
+     "d": "-(으)ㄹ + N ở bài này dùng với **động từ**. Tính từ dạng -(으)ㄹ chủ yếu gặp trong mẫu phỏng đoán (클 거예요) — học sau.",
+     "ex": [],
+     "lt": []
+    },
+    {
+     "k": "Không phụ thuộc thì của câu",
+     "d": "Đuôi định ngữ tính theo **việc trong định ngữ**, không theo cả câu: 어제 내일 입**을** 옷을 샀어요 — hôm qua mua (đã) áo để mai mặc (chưa).",
+     "ex": [
+      [
+       "어제 내일 입**을** 옷을 샀어요.",
+       "Hôm qua tôi mua áo để mặc ngày mai."
+      ]
+     ],
+     "lt": [
+      {
+       "t": "c",
+       "q": "Hôm qua tôi mua sách để đọc trong kỳ nghỉ: 어제 방학 때 (    ) 책을 샀어요.",
+       "o": [
+        "읽을",
+        "읽은",
+        "읽는"
+       ],
+       "w": "Việc đọc chưa xảy ra → 읽을, dù câu ở quá khứ (샀어요)."
+      }
+     ]
+    },
+    {
+     "k": "Chọn đuôi định ngữ theo thời gian của việc",
+     "d": "Đã xong → **-(으)ㄴ**; đang / thường → **-는**; chưa xảy ra / để dùng → **-(으)ㄹ**.",
+     "ex": [],
+     "lt": [
+      {
+       "t": "c",
+       "q": "(Bài đang nghe) 지금 (    ) 노래 제목이 뭐예요?",
+       "o": [
+        "듣는",
+        "들을",
+        "들은"
+       ],
+       "w": "Đang → -는."
+      },
+      {
+       "t": "c",
+       "q": "(Bài nghe hôm qua) 어제 (    ) 노래 제목이 뭐예요?",
+       "o": [
+        "들은",
+        "듣는",
+        "들을"
+       ],
+       "w": "Đã → -(으)ㄴ; ㄷ → ㄹ."
+      },
+      {
+       "t": "c",
+       "q": "(Bài sẽ hát) 발표 때 (    ) 노래를 골랐어요.",
+       "o": [
+        "부를",
+        "부른",
+        "부르는"
+       ],
+       "w": "Sẽ → -(으)ㄹ."
+      }
+     ]
+    },
+    {
+     "k": "Mẫu cố định luôn dùng -(으)ㄹ",
+     "d": "수, 줄, 거(것) trong -(으)ㄹ 수 있다, -(으)ㄹ 줄 알다, -(으)ㄹ 거예요 luôn đi với **-(으)ㄹ** — vì chúng chính là -(으)ㄹ + danh từ.",
+     "ex": [
+      [
+       "수영**할 수** 있어요.",
+       "Tôi bơi được."
+      ],
+      [
+       "김치를 만**들 줄** 알아요.",
+       "Tôi biết làm kimchi."
+      ]
+     ],
+     "lt": [
+      {
+       "t": "y",
+       "f": "시간이 없어서 숙제를 (    ) 수 없어요. (하다)",
+       "a": [
+        "할"
+       ],
+       "h": "Trước 수 luôn là -(으)ㄹ.",
+       "w": ""
+      }
+     ]
+    }
+   ],
+   "sai": [
+    {
+     "x": "오늘은 바빠서 친구를 **만난** 시간이 없어요.",
+     "o": "오늘은 바빠서 친구를 **만날** 시간이 없어요.",
+     "why": "Việc gặp chưa xảy ra → -(으)ㄹ.",
+     "k": "Chọn sai đuôi định ngữ",
+     "h": "Gặp bạn — đã gặp hay chưa gặp?"
+    },
+    {
+     "x": "사람이 많아서 **앉는** 자리가 없어요.",
+     "o": "사람이 많아서 **앉을** 자리가 없어요.",
+     "why": "Chỗ để ngồi (chưa ngồi) → 앉을.",
+     "k": "Chọn sai đuôi định ngữ",
+     "h": "Chỗ đó mình đang ngồi hay sẽ ngồi?"
+    },
+    {
+     "x": "내일 케이크를 **만들을** 거예요.",
+     "o": "내일 케이크를 **만들** 거예요.",
+     "why": "Gốc ㄹ không thêm 을.",
+     "k": "Gốc ㄹ",
+     "h": "만들다 có 받침 gì? Gốc ㄹ có thêm 을 không?"
+    },
+    {
+     "x": "시간이 없어서 숙제를 **하는** 수 없어요.",
+     "o": "시간이 없어서 숙제를 **할** 수 없어요.",
+     "why": "수 trong -(으)ㄹ 수 없다 luôn đi với -(으)ㄹ.",
+     "k": "Mẫu cố định",
+     "h": "Trước 수 (khả năng) luôn dùng đuôi nào?"
+    },
+    {
+     "x": "저를 **돕을** 사람이 있어요?",
+     "o": "저를 **도울** 사람이 있어요?",
+     "why": "돕다 bất quy tắc ㅂ → 도울.",
+     "k": "Bất quy tắc ㅂ",
+     "h": "돕다 thuộc nhóm bất quy tắc nào?"
+    },
+    {
+     "x": "내일 **부를을** 노래를 연습해요.",
+     "o": "내일 **부를** 노래를 연습해요.",
+     "why": "부르 không có 받침 → chỉ thêm ㄹ: 부를. 르 bất quy tắc chỉ xảy ra trước -아/어.",
+     "k": "Thừa 을",
+     "h": "부르- có 받침 không?"
+    }
+   ],
+   "pb": [
+    {
+     "vs": "Bộ ba -(으)ㄴ / -는 / -(으)ㄹ",
+     "d": "Cùng một động từ, đổi đuôi = đổi **thời gian** của hành động trong định ngữ. Hỏi: việc đó **đã xong**, **đang / thường**, hay **chưa xảy ra**?",
+     "ex": [
+      [
+       "어제 **본** 영화",
+       "phim đã xem hôm qua"
+      ],
+      [
+       "지금 보**는** 영화",
+       "phim đang xem"
+      ],
+      [
+       "내일 **볼** 영화",
+       "phim sẽ xem ngày mai"
+      ]
+     ],
+     "bang": [
+      [
+       "",
+       "-(으)ㄴ",
+       "-는",
+       "-(으)ㄹ"
+      ],
+      [
+       "Thời gian",
+       "đã xong",
+       "đang / thường xuyên",
+       "chưa xảy ra / để dùng"
+      ],
+      [
+       "Ví dụ",
+       "어제 본 영화",
+       "지금 보는 영화",
+       "내일 볼 영화"
+      ],
+      [
+       "Tiếng Việt",
+       "phim đã xem hôm qua",
+       "phim đang xem",
+       "phim sẽ xem ngày mai"
+      ]
+     ],
+     "lt": [
+      {
+       "t": "c",
+       "q": "(Đang đọc) 지금 (    ) 책",
+       "o": [
+        "읽는",
+        "읽은",
+        "읽을"
+       ],
+       "w": ""
+      },
+      {
+       "t": "c",
+       "q": "(Đọc xong tuần trước) 지난주에 (    ) 책",
+       "o": [
+        "읽은",
+        "읽는",
+        "읽을"
+       ],
+       "w": ""
+      },
+      {
+       "t": "c",
+       "q": "(Sẽ đọc trong kỳ nghỉ) 방학에 (    ) 책",
+       "o": [
+        "읽을",
+        "읽은",
+        "읽는"
+       ],
+       "w": ""
+      }
+     ]
+    },
+    {
+     "vs": "V-(으)ㄹ 거예요",
+     "d": "**-(으)ㄹ 거예요** = -(으)ㄹ + 것 + 이에요 → “việc sẽ làm là …” = **sẽ**. Học sinh đã quen -(으)ㄹ 거예요 nên dùng nó để nhớ: -(으)ㄹ = chưa xảy ra.",
+     "ex": [
+      [
+       "주말에 영화를 **볼 거예요**.",
+       "Cuối tuần tôi sẽ xem phim."
+      ]
+     ],
+     "lt": [
+      {
+       "t": "c",
+       "q": "Cuối tuần bạn sẽ làm gì? 주말에 뭐 (    )?",
+       "o": [
+        "할 거예요",
+        "하는 거예요",
+        "한 거예요"
+       ],
+       "w": "Sẽ → -(으)ㄹ 거예요."
+      }
+     ]
+    }
+   ],
+   "topik": [
+    {
+     "src": "Đọc · kỳ 91 câu 23",
+     "ko": "죽**을** 것 같은 모습을 눈앞에서 보고 싶지 않았다.",
+     "note": "죽을 것 같다 (có vẻ sẽ chết) = -(으)ㄹ + danh từ 것 + 같다; cả cụm lại làm định ngữ cho 모습. Đề đọc có nhiều lớp định ngữ chồng nhau — tìm danh từ chính (모습) trước."
+    },
+    {
+     "src": "Đọc · kỳ 37 câu 1",
+     "ko": "아침에 일찍 (일어나야) 일곱 시 비행기를 **탈** 수 있다.",
+     "note": "-(으)ㄹ 수 있다 = -(으)ㄹ + 수 (khả năng). Bẫy 일어나려고: vế sau là “mới làm được” → vế trước là điều kiện -아/어야."
+    }
+   ],
+   "len": [
+    {
+     "p": "-(으)ㄹ 것 같다",
+     "m": "chắc là, hình như (sẽ)",
+     "noi": "-(으)ㄹ + **것** + 같다: đoán việc chưa xảy ra. Câu 3–4 hay thay bằng -(으)ㄹ 모양이다, -나 보다, -(으)려나 보다.",
+     "ex": [
+      "오늘 콘서트에 사람이 많을 **것 같아요**.",
+      "Hôm nay chắc concert đông người."
+     ],
+     "de": {
+      "src": "Đọc · kỳ 35 câu 3",
+      "ko": "먹구름이 몰려오는 걸 보니 비가 **올 모양이다**.",
+      "a": "Đáp án: 올 것만 같다 · 올 리가 없다 là lựa chọn nhiễu (nghĩa ngược)"
+     }
+    },
+    {
+     "p": "-(으)ㄹ 뻔하다",
+     "m": "suýt nữa thì",
+     "noi": "-(으)ㄹ + **뻔** + 하다, luôn ở quá khứ: -(으)ㄹ 뻔했다. Vế trước thường là lý do (-아서, -느라고).",
+     "ex": [
+      "길이 막혀서 공연에 늦을 **뻔했어요**.",
+      "Tắc đường suýt nữa thì muộn buổi diễn."
+     ],
+     "de": {
+      "src": "Đọc · Đề luyện TOPIK 300⁺ 5 câu 1",
+      "ko": "길이 막혀서 비행기를 (    ).",
+      "a": "Đáp án: 놓칠 뻔했다"
+     }
+    },
+    {
+     "p": "-(으)ㄹ 때마다",
+     "m": "mỗi khi",
+     "noi": "-(으)ㄹ **때** (danh từ) + 마다. Câu 3–4 thay bằng -기만 하면 (hễ … là).",
+     "ex": [
+      "그 노래를 들을 **때마다** 고향 생각이 나요.",
+      "Mỗi khi nghe bài hát đó tôi lại nhớ quê."
+     ],
+     "de": {
+      "src": "Đọc · kỳ 60 câu 3",
+      "ko": "동생은 차를 **타기만 하면** 멀미를 한다.",
+      "a": "Đáp án: 탈 때마다"
+     }
+    },
+    {
+     "p": "-(으)ㄹ 리가 없다 · -(으)ㄹ 게 뻔하다",
+     "m": "không thể nào … · chắc chắn là …",
+     "noi": "Hai đầu của thang “chắc chắn”: -(으)ㄹ + **리** (lý) + 가 없다 = không thể; -(으)ㄹ + **게** (것이) + 뻔하다 = rõ ràng là.",
+     "ex": [
+      "그 사람이 거짓말을 할 **리가 없어요**.",
+      "Người đó không thể nào nói dối."
+     ],
+     "de": {
+      "src": "Đọc · Đề luyện Yonsei 2 câu 4",
+      "ko": "영수는 아직도 집에서 **자고 있을 게 뻔하다**.",
+      "a": "Đáp án: 자고 있을 것이 분명하다 · 자고 있을 리가 없다 là lựa chọn nhiễu"
+     }
+    }
+   ],
+   "hoi": [
+    {
+     "q": "“Em không có thời gian ăn sáng” viết thế nào?",
+     "a": "아침을 먹<b>을</b> 시간이 없어요."
+    },
+    {
+     "q": "Vì sao 갈 시간 đọc là [갈 씨간]?",
+     "a": "Sau đuôi định ngữ -(으)ㄹ, phụ âm ㄱ ㄷ ㅂ ㅅ ㅈ ở đầu từ sau đọc căng."
+    },
+    {
+     "q": "“어제 내일 입을 옷을 샀어요” — có cả 어제 và 내일, câu có sai không?",
+     "a": "Không sai: 어제 thuộc việc mua (샀어요), 내일 thuộc việc mặc (입을)."
+    }
+   ],
+   "luyen": [
+    {
+     "q": "사람이 많아서 (    ) 자리가 없어요.",
+     "o": [
+      "앉을",
+      "앉는",
+      "앉은",
+      "앉을을"
+     ],
+     "w": "Chỗ để ngồi → -(으)ㄹ."
+    },
+    {
+     "q": "내일 친구 생일 파티에서 (    ) 케이크를 지금 만들고 있어요.",
+     "o": [
+      "먹을",
+      "먹은",
+      "먹는",
+      "먹었을"
+     ],
+     "w": "Bánh sẽ ăn ở bữa tiệc ngày mai → 먹을."
+    },
+    {
+     "q": "Chọn đúng bộ ba: phim đã xem / phim đang xem / phim sẽ xem.",
+     "o": [
+      "본 영화 / 보는 영화 / 볼 영화",
+      "보는 영화 / 본 영화 / 볼 영화",
+      "볼 영화 / 보는 영화 / 본 영화",
+      "본 영화 / 볼 영화 / 보는 영화"
+     ],
+     "w": "-(으)ㄴ đã · -는 đang · -(으)ㄹ sẽ."
+    },
+    {
+     "q": "가: 내일 모임에 올 수 있어요?  나: 미안해요. 내일은 아르바이트가 있어서 (    ) 시간이 없어요.",
+     "o": [
+      "갈",
+      "간",
+      "가는",
+      "갔을"
+     ],
+     "w": "Việc chưa xảy ra → 갈 시간."
+    },
+    {
+     "q": "같이 숙제를 (    ) 사람 있어요?",
+     "o": [
+      "도와줄",
+      "도와준",
+      "돕을",
+      "도와주는다"
+     ],
+     "w": "Người sẽ giúp → -(으)ㄹ: 도와주다 → 도와줄."
+    }
+   ],
+   "em": [
+    {
+     "q": "Viết 3 câu “không có … để …”: …(으)ㄹ 시간 / 돈 / 사람 / 자리가 없어요.",
+     "tip": "nghĩ tới lúc bận, lúc hết tiền, quán đông, muốn đi chơi mà không có bạn.",
+     "gy": [
+      [
+       "요즘 바빠서 운동할 시간이 없어요.",
+       "Dạo này bận nên không có thời gian tập thể dục."
+      ],
+      [
+       "돈이 없어서 새 휴대폰을 살 수 없어요.",
+       "Không có tiền nên không mua được điện thoại mới."
+      ],
+      [
+       "주말에 같이 놀 친구가 없어요.",
+       "Cuối tuần không có bạn chơi cùng."
+      ],
+      [
+       "카페에 사람이 많아서 앉을 자리가 없어요.",
+       "Quán cà phê đông nên không có chỗ ngồi."
+      ],
+      [
+       "아침에 늦게 일어나서 밥 먹을 시간이 없었어요.",
+       "Sáng dậy muộn nên không có thời gian ăn sáng."
+      ]
+     ]
+    },
+    {
+     "q": "Kế hoạch tuần này của em: 이번 주에 할 일이 … (liệt kê bằng -(으)ㄹ N).",
+     "gy": [
+      [
+       "이번 주에 할 일이 많아요. 금요일에 볼 시험이 있어요.",
+       "Tuần này nhiều việc lắm. Thứ Sáu có bài thi phải làm."
+      ],
+      [
+       "주말에 엄마한테 줄 선물을 살 거예요.",
+       "Cuối tuần em sẽ mua quà tặng mẹ."
+      ],
+      [
+       "토요일에 친구하고 볼 영화를 골랐어요.",
+       "Em đã chọn phim sẽ xem với bạn hôm thứ Bảy."
+      ]
+     ]
+    }
+   ],
+   "co": "Đặt ba cột -(으)ㄴ / -는 / -(으)ㄹ lên bảng ngay từ đầu (nối với Bài 2 mẫu 3). Trò “Không có…”: cô đưa tình huống (bận, hết tiền, quán đông), học sinh nói câu -(으)ㄹ N이/가 없어요. Nhắc đọc căng [갈 씨간] — học sinh Việt hay đọc mềm. Chỉ cho học sinh thấy 수, 줄, 거 trong các mẫu cũ cũng là -(으)ㄹ + danh từ.",
+   "yn": {
+    "ct": [
+     [
+      "V-",
+      "gốc động từ",
+      "먹- · 가-"
+     ],
+     [
+      "-(으)ㄹ",
+      "định ngữ: việc chưa xảy ra",
+      "-을 · -ㄹ"
+     ],
+     [
+      "N",
+      "danh từ",
+      "것 · 시간"
+     ]
+    ],
+    "kq": [
+     "먹을 것 · 갈 시간",
+     "đồ **để** ăn · thời gian **để** đi"
+    ],
+    "m": [
+     {
+      "t": "Việc sẽ làm, dự định",
+      "k": "Hành động xảy ra sau thời điểm nói",
+      "ko": "내일 **볼** 영화를 골랐어요.",
+      "vi": "Tôi đã chọn phim sẽ xem ngày mai."
+     },
+     {
+      "t": "Để dùng vào việc …",
+      "k": "Danh từ dùng để làm việc đó: chỗ, thời gian, đồ, tiền",
+      "ko": "앉**을** 자리가 없어요.",
+      "vi": "Không có chỗ (để) ngồi."
+     },
+     {
+      "t": "Việc cần / phải làm",
+      "k": "Hay đi với 일, 숙제, 것",
+      "ko": "오늘 **할** 일이 많아요.",
+      "vi": "Hôm nay có nhiều việc phải làm."
+     },
+     {
+      "t": "Gốc của nhiều mẫu đã học",
+      "k": "-(으)ㄹ + danh từ phụ thuộc 수, 줄, 거(것)",
+      "ko": "**할 수** 있어요 · **할 줄** 알아요 · **할 거**예요",
+      "vi": "làm được · biết làm · sẽ làm"
+     }
+    ],
+    "tbT": "Bộ ba định ngữ của động từ — đổi đuôi là đổi thời gian",
+    "tb": [
+     [
+      "",
+      "Đã (-(으)ㄴ)",
+      "Đang / thường (-는)",
+      "Sẽ / để (-(으)ㄹ)"
+     ],
+     [
+      "먹다",
+      "먹**은** 음식",
+      "먹**는** 음식",
+      "먹**을** 음식"
+     ],
+     [
+      "가다",
+      "**간** 곳",
+      "가**는** 곳",
+      "**갈** 곳"
+     ],
+     [
+      "만들다",
+      "만**든** 케이크",
+      "만드**는** 케이크",
+      "만**들** 케이크"
+     ],
+     [
+      "듣다",
+      "들**은** 노래",
+      "듣**는** 노래",
+      "들**을** 노래"
+     ]
+    ],
+    "viN": "Tiếng Việt đặt phần bổ nghĩa **sau** danh từ, tiếng Hàn đặt **trước**: 앉을 **자리** → **chỗ** ngồi. Khi dịch, đọc danh từ trước.",
+    "vi": [
+     [
+      "(N) để …",
+      "danh từ dùng vào việc",
+      "앉**을** 자리",
+      "chỗ (để) ngồi"
+     ],
+     [
+      "(N) … sẽ …",
+      "dự định",
+      "내일 만**날** 사람",
+      "người mai sẽ gặp"
+     ],
+     [
+      "(N) phải / cần …",
+      "việc cần làm",
+      "**할** 일이 많아요.",
+      "có nhiều việc phải làm"
+     ],
+     [
+      "đồ ăn, thức uống, đồ mặc",
+      "먹을 것, 마실 것, 입을 옷",
+      "먹**을** 거 있어요?",
+      "Có gì ăn không?"
+     ],
+     [
+      "(N) … cùng",
+      "tìm người làm cùng",
+      "같이 **갈** 사람",
+      "người đi cùng"
+     ],
+     [
+      "giờ … / lúc …",
+      "thời gian để làm",
+      "**잘** 시간이에요.",
+      "Đến giờ đi ngủ rồi."
+     ],
+     [
+      "(N) mà … (sẽ) …",
+      "câu dài, trang trọng",
+      "발표**할** 내용",
+      "nội dung mà (mình) sẽ trình bày"
+     ]
+    ]
+   },
+   "bqt": [
+    {
+     "t": "① Gốc ㄹ — không thêm 을",
+     "r": "Gốc đã có **ㄹ** thì giữ nguyên, **không thêm 을**: 만들 + ㄹ → **만들**. Bẫy: 사다 (mua) → **살** trùng với 살다 (sống) → **살** — 살 집 có thể là “nhà để ở” hoặc “nhà sẽ mua”, dựa vào ngữ cảnh.",
+     "b": [
+      "만들다 → gốc **만들-**",
+      "Gốc tận cùng ㄹ → không thêm 을",
+      "= **만들** + N: 만들 음식 (món sẽ nấu)"
+     ],
+     "ex": [
+      [
+       "만들다",
+       "만들 음식",
+       "món sẽ nấu"
+      ],
+      [
+       "살다",
+       "살 집",
+       "nhà để ở"
+      ],
+      [
+       "놀다",
+       "놀 시간",
+       "thời gian chơi"
+      ],
+      [
+       "사다 (không ㄹ)",
+       "살 물건",
+       "đồ sẽ mua"
+      ]
+     ],
+     "ng": "Lỗi hay gặp: 만들을, 살을. Mẹo: ㄹ + ㄹ chỉ viết một ㄹ."
+    },
+    {
+     "t": "② Bất quy tắc ㄷ — 듣다, 걷다, 묻다",
+     "r": "-을 bắt đầu bằng nguyên âm → ㄷ đổi thành **ㄹ**: 듣 + 을 → **들을**.",
+     "b": [
+      "듣다 → gốc **듣-**, có 받침 → -을",
+      "-을 bắt đầu bằng nguyên âm → ㄷ thành ㄹ: 들 + 을",
+      "= **들을** 노래 (bài sẽ nghe)"
+     ],
+     "ex": [
+      [
+       "듣다",
+       "들을 노래",
+       "bài sẽ nghe"
+      ],
+      [
+       "걷다",
+       "걸을 길",
+       "con đường sẽ đi bộ"
+      ],
+      [
+       "묻다",
+       "물을 것",
+       "điều muốn hỏi"
+      ],
+      [
+       "받다 (theo quy tắc)",
+       "받을 선물",
+       "quà sẽ nhận"
+      ]
+     ],
+     "ng": "Giống hệt -아/어 보다 ở mẫu 1: ㄷ gặp nguyên âm → ㄹ."
+    },
+    {
+     "t": "③ Bất quy tắc ㅂ — 돕다, 굽다, 눕다",
+     "r": "-을 bắt đầu bằng 으 → ㅂ thành **우**, rồi 우 + ㄹ = **울**: 돕 + 을 → 도우 + ㄹ → **도울**.",
+     "b": [
+      "돕다 → gốc **돕-**, có 받침 → -을",
+      "ㅂ gặp 으 → ㅂ thành 우: 도우 + ㄹ",
+      "= **도울** 사람 (người sẽ giúp)"
+     ],
+     "ex": [
+      [
+       "돕다",
+       "도울 사람",
+       "người sẽ giúp"
+      ],
+      [
+       "굽다",
+       "구울 고기",
+       "thịt để nướng"
+      ],
+      [
+       "눕다",
+       "누울 자리",
+       "chỗ để nằm"
+      ],
+      [
+       "입다 (theo quy tắc)",
+       "입을 옷",
+       "áo để mặc"
+      ]
+     ],
+     "ng": "Riêng -아/어 thì 돕다 → 도와; với -(으)ㄹ thì mọi từ ㅂ đều thành 울: 도울."
+    },
+    {
+     "t": "④ 르 — với -(으)ㄹ thì KHÔNG đổi",
+     "r": "르 bất quy tắc chỉ xảy ra trước -아/어. Gốc 부르- không có 받침 → chỉ thêm ㄹ: **부를**.",
+     "ex": [
+      [
+       "부르다",
+       "부를 노래",
+       "bài sẽ hát"
+      ],
+      [
+       "고르다",
+       "고를 선물",
+       "quà sẽ chọn"
+      ]
+     ],
+     "ng": "Lỗi “sửa quá tay”: 불를, 부를을 — sai."
+    }
+   ],
+   "chiaLt": [
+    {
+     "t": "y",
+     "q": "만나다 → ___ 사람 (người sẽ gặp)",
+     "a": [
+      "만날"
+     ],
+     "h": "Không 받침 → + ㄹ.",
+     "w": ""
+    },
+    {
+     "t": "y",
+     "q": "읽다 → ___ 책 (sách để đọc)",
+     "a": [
+      "읽을"
+     ],
+     "h": "Có 받침 → + 을.",
+     "w": ""
+    },
+    {
+     "t": "y",
+     "q": "살다 → ___ 집 (nhà để ở)",
+     "a": [
+      "살"
+     ],
+     "h": "Gốc ㄹ → không thêm 을.",
+     "w": ""
+    },
+    {
+     "t": "y",
+     "q": "만들다 → ___ 음식 (món sẽ nấu)",
+     "a": [
+      "만들"
+     ],
+     "h": "Gốc ㄹ.",
+     "w": ""
+    },
+    {
+     "t": "y",
+     "q": "하다 → ___ 일 (việc phải làm)",
+     "a": [
+      "할"
+     ],
+     "h": "",
+     "w": ""
+    },
+    {
+     "t": "y",
+     "q": "마시다 → ___ 것 (đồ uống)",
+     "a": [
+      "마실"
+     ],
+     "h": "",
+     "w": ""
+    },
+    {
+     "t": "y",
+     "q": "듣다 → ___ 노래 (bài sẽ nghe)",
+     "a": [
+      "들을"
+     ],
+     "h": "ㄷ gặp nguyên âm → ㄹ.",
+     "w": ""
+    },
+    {
+     "t": "y",
+     "q": "돕다 → ___ 사람 (người sẽ giúp)",
+     "a": [
+      "도울"
+     ],
+     "h": "ㅂ → 우 + ㄹ.",
+     "w": ""
+    },
+    {
+     "t": "y",
+     "q": "입다 → ___ 옷 (áo để mặc)",
+     "a": [
+      "입을"
+     ],
+     "h": "입다 có phải bất quy tắc ㅂ không?",
+     "w": "입다 theo quy tắc: 입을."
+    },
+    {
+     "t": "y",
+     "q": "부르다 → ___ 노래 (bài sẽ hát)",
+     "a": [
+      "부를"
+     ],
+     "h": "르 chỉ đổi trước -아/어.",
+     "w": ""
+    },
+    {
+     "t": "y",
+     "q": "굽다 → ___ 고기 (thịt để nướng)",
+     "a": [
+      "구울"
+     ],
+     "h": "ㅂ bất quy tắc.",
+     "w": ""
+    },
+    {
+     "t": "c",
+     "q": "Đọc đúng: 갈 시간",
+     "o": [
+      "[갈 씨간]",
+      "[갈 시간]",
+      "[가 씨간]",
+      "[갈 지간]"
+     ],
+     "w": "Sau -(으)ㄹ phụ âm đầu ㅅ đọc căng → ㅆ."
+    }
+   ],
+   "saiLy": "Hai nhóm lỗi: ① **chọn sai đuôi** (-(으)ㄴ / -는 / -(으)ㄹ) — hỏi “việc đó đã xảy ra, đang xảy ra hay chưa?” · ② **chia sai** (gốc ㄹ thêm 을, quên bất quy tắc ㄷ / ㅂ, hoặc sửa quá tay với 르).",
+   "saiLt": [
+    {
+     "t": "s",
+     "x": "오늘 저녁에 먹은 음식을 사러 마트에 가요.",
+     "a": [
+      "오늘 저녁에 먹을 음식을 사러 마트에 가요"
+     ],
+     "h": "Bữa tối nay — đã ăn chưa?",
+     "w": ""
+    },
+    {
+     "t": "s",
+     "x": "내일 듣을 수업이 많아요.",
+     "a": [
+      "내일 들을 수업이 많아요"
+     ],
+     "h": "듣다 — ㄷ bất quy tắc.",
+     "w": ""
+    },
+    {
+     "t": "s",
+     "x": "여기는 제가 살을 집이에요.",
+     "a": [
+      "여기는 제가 살 집이에요"
+     ],
+     "h": "Gốc ㄹ.",
+     "w": ""
+    },
+    {
+     "t": "s",
+     "x": "친구를 돕을 수 있어요.",
+     "a": [
+      "친구를 도울 수 있어요"
+     ],
+     "h": "ㅂ bất quy tắc.",
+     "w": ""
+    }
+   ]
+  }
+ ],
+ "tron": [
+  {
+   "g": 1,
+   "t": "c",
+   "q": "가: 콘서트에 (    )?  나: 아니요, 아직 못 가 봤어요.",
+   "o": [
+    "가 봤어요",
+    "가 보세요",
+    "갈 거예요",
+    "가는데요"
+   ],
+   "w": "Câu trả lời kể kinh nghiệm → hỏi -아/어 봤어요?"
+  },
+  {
+   "g": 2,
+   "t": "c",
+   "q": "여름 방학 (    ) 뭐 했어요?",
+   "o": [
+    "동안",
+    "만에",
+    "에서",
+    "후에서"
+   ],
+   "w": "방학 là khoảng → 동안."
+  },
+  {
+   "g": 3,
+   "t": "c",
+   "q": "날씨가 (    ) 같이 산책할래요?",
+   "o": [
+    "좋은데",
+    "좋는데",
+    "좋아서",
+    "좋을"
+   ],
+   "w": "Tính từ có 받침 → -은데; rủ → không dùng -아/어서."
+  },
+  {
+   "g": 4,
+   "t": "c",
+   "q": "배고파요. 뭐 (    ) 거 있어요?",
+   "o": [
+    "먹을",
+    "먹은",
+    "먹는",
+    "먹어 볼"
+   ],
+   "w": "Đồ để ăn → 먹을 거."
+  },
+  {
+   "g": 1,
+   "t": "y",
+   "f": "이 노래 (    ) 봤어요? (듣다)",
+   "a": [
+    "들어"
+   ],
+   "h": "ㄷ gặp nguyên âm → ㄹ.",
+   "w": ""
+  },
+  {
+   "g": 2,
+   "t": "y",
+   "f": "(    ) 동안 비가 왔어요. (3 ngày, từ thuần Hàn)",
+   "a": [
+    "사흘"
+   ],
+   "h": "하루 – 이틀 – …",
+   "w": ""
+  },
+  {
+   "g": 3,
+   "t": "y",
+   "f": "날씨가 (    ) 창문 좀 닫아 주세요. (춥다)",
+   "a": [
+    "추운데"
+   ],
+   "h": "Tính từ ㅂ + -(으)ㄴ데.",
+   "w": ""
+  },
+  {
+   "g": 4,
+   "t": "y",
+   "f": "내일 같이 (    ) 사람이 누구예요? (가다)",
+   "a": [
+    "갈"
+   ],
+   "h": "Chưa xảy ra → -(으)ㄹ.",
+   "w": ""
+  },
+  {
+   "g": 3,
+   "t": "vk",
+   "vi": "Mình có hai vé, đi xem cùng không?",
+   "a": [
+    "표가 두 장 있는데 같이 볼래요?",
+    "표가 두 장 있는데 같이 갈래요?",
+    "표가 두 장 있는데 같이 볼까요?",
+    "표가 두 장 있는데 같이 갈까요?"
+   ],
+   "h": "있다 → 있는데 + lời rủ.",
+   "w": ""
+  },
+  {
+   "g": 1,
+   "t": "vk",
+   "vi": "Bạn đã ăn thử món này chưa?",
+   "a": [
+    "이 음식 먹어 봤어요?",
+    "이 음식을 먹어 봤어요?",
+    "이거 먹어 봤어요?"
+   ],
+   "h": "Hỏi kinh nghiệm → 봤어요?",
+   "w": ""
+  },
+  {
+   "g": 2,
+   "t": "c",
+   "q": "Câu nào SAI?",
+   "o": [
+    "토요일 동안 친구를 만났어요.",
+    "주말 동안 친구를 만났어요.",
+    "두 시간 동안 기다렸어요.",
+    "일주일 동안 여행했어요."
+   ],
+   "w": "토요일 là mốc → 토요일에."
+  },
+  {
+   "g": 4,
+   "t": "s",
+   "x": "월요일 동안 할을 일이 많아요.",
+   "a": [
+    "월요일에 할 일이 많아요"
+   ],
+   "h": "Hai lỗi: mốc thời gian, và 하다 → ?",
+   "w": "월요일 là mốc → 에; 하다 → 할 (không thêm 을)."
+  },
+  {
+   "g": 3,
+   "t": "s",
+   "x": "어제 그 영화를 보는데 정말 재미있었어요.",
+   "a": [
+    "어제 그 영화를 봤는데 정말 재미있었어요"
+   ],
+   "h": "어제 → đã xảy ra.",
+   "w": ""
+  },
+  {
+   "g": 1,
+   "t": "c",
+   "q": "Câu nào KHÔNG tự nhiên?",
+   "o": [
+    "작년에 교통사고가 나 봤어요.",
+    "한복을 입어 봤어요.",
+    "부탁이 있는데 시간 있으세요?",
+    "앉을 자리가 없어요."
+   ],
+   "w": "Tai nạn không phải việc “thử” → 난 적이 있어요."
+  },
+  {
+   "g": 4,
+   "t": "kv",
+   "ko": "한국에 가면 꼭 가 볼 곳이 있어요?",
+   "a": "Nếu sang Hàn, có chỗ nào bạn nhất định sẽ đi thử không?",
+   "w": "가 볼 곳 = mẫu 1 (-아/어 보다) + mẫu 4 (-(으)ㄹ N): chỗ sẽ đi thử."
+  },
+  {
+   "g": 3,
+   "t": "kv",
+   "ko": "일주일 동안 할 일이 많은데 좀 도와줄 수 있어요?",
+   "a": "Cả tuần này tôi có nhiều việc phải làm, bạn giúp tôi một chút được không?",
+   "w": "Một câu có cả 동안 (mẫu 2), 할 일 (mẫu 4), 많은데 (mẫu 3)."
+  }
+ ]
 }

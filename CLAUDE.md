@@ -418,6 +418,15 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   core, goc (cấu tạo / nghĩa gốc), chia (bảng), chiaNote, tinh:[{t, c bối cảnh, lv mức lịch sự, ko, vi, why}] (bản đồ tình huống), rb (ràng buộc), sai:[{x, o, why}],
   pb:[{vs, d, ex}] (phân biệt), topik:[{src, ko, note}], hoi:[{q, a}] (Cô hỏi), luyen:[{q, o (lựa chọn đầu là đáp án), w}], em (Câu của em), co (ghi chú cô)}]`. `**chữ**` = tô đỏ.
   Tên mẫu, số trang + khung “📖 Sách viết gì” lấy từ `seoul/ngu-phap/np.json` theo (cuốn, bài, no).
+- **Khung mới (cô góp ý 25/10, làm thử ở 2A Bài 3; bài cũ vẫn chạy theo khung cũ, làm lại dần):** “học tới đâu luyện tới đó”. Trường thêm của mẫu:
+  `yn` = mục **Ý nghĩa và cấu trúc** (tên cũ “Nghĩa lõi & cấu tạo”): `ct:[[mảnh, tên, ví dụ]]` + `kq` (công thức dạng ô), `m:[{t, k khi nào, ko, vi, later}]` các nghĩa, `tbT`/`tb` bảng phụ,
+  `vi:[[nghĩa tiếng Việt tương đương, dùng khi, ví dụ Hàn, dịch]]` (liệt kê hết), `goc` hiện thành “Vì sao có nghĩa này?”; `chia` thêm cột câu ví dụ,
+  `bqt:[{t, r quy tắc, b:[bước chia một từ], ex:[[gốc, chia, nghĩa]], ng ngoại lệ}]` (bất quy tắc giải thích rõ), `chiaLt` luyện chia; `tinh[i].lt` luyện từng tình huống
+  (1 câu Hàn → Việt + 1 câu Việt → Hàn hoặc chọn); `rb` dạng thẻ `[{k, d, ex, lt}]` (dạng bảng cũ vẫn nhận); `sai[i].h` (câu cô hỏi gợi ý), `.k` (loại lỗi) → lỗi **mở từng bước**
+  (câu chưa đánh dấu → 🔍 chỗ sai tô đỏ + loại lỗi → ❓ vì sao → ✓ câu đúng; “Mở hết” chỉ ở bản của cô), `saiLy` lý thuyết trước, `saiLt` em tự sửa câu; `pb[i].bang` bảng so sánh + `pb[i].lt`;
+  `em[i]` = chuỗi hoặc `{q, tip, gy:[[ko, vi]]}` (nút “Xem câu gợi ý” sau khi viết). Bài: `tron` = luyện trộn cả bài (trang bài, `#b=2A&c=3&t=tron`; câu có `g` = số mẫu).
+  Bài luyện nhỏ dùng chung (`lxBlock`): `{t:'c', q, o (đầu là đáp án), w}` · `{t:'y', q|f "(    )", a:[…], h gợi ý, w}` · `{t:'s', x câu sai, a}` · `{t:'vk', vi, a}` (máy so, khác thì em tự chấm)
+  · `{t:'kv', ko, a bản dịch}` (tự chấm); bài lưu `ST.lx`, nút “↺ Làm lại” từng khối. `~~chữ~~` = gạch ngang.
 - Đã soạn: Seoul 1A Bài 1–3 + 2A Bài 1–3 + 3A Bài 1–3 (36 mẫu) + 3 chuyên đề. Câu đề TOPIK dẫn trong `topik` chỉ ghi câu đã kiểm tra trong `thi-thu/de/`.
 - **Chuyên đề** (buổi gom các mẫu cùng chức năng nằm rải nhiều bài + ôn nền 1A–2B; cô chốt hướng học trước 3A theo nhóm): `data/cd-<id>.json` (thêm id vào biến `CDS`)
   = {t, ko, sub, tong, parts:[tên nửa buổi], p:[bước], co}; bước `{ref:'3A-1', no, part, m: phút, why}` dùng lại mẫu có sẵn, hoặc mẫu viết riêng cùng khung (`id` dạng `cd_…`, `t` tên,
