@@ -1,0 +1,86 @@
+{
+"e": "Etk091", "n": [35],
+"t": "Thám hiểm tiểu hành tinh",
+"cd": "Khoa học – vũ trụ",
+"y": "Tiểu hành tinh được dự đoán có khoáng vật giá trị khổng lồ; vài nước đã lấy được mẫu, nhưng phần lớn các nước vẫn chỉ đang bàn bạc → cần tích cực đầu tư, phát triển công nghệ thám hiểm tiểu hành tinh để bảo đảm tài nguyên tương lai.",
+"doc": [
+  {"t": "Đọc câu hỏi", "d": "Chủ đề → đọc **câu cuối** trước, tìm đuôi “cần phải” (-ㄹ 필요가 있다, -아야 한다).", "s": []},
+  {"t": "Câu cuối · ý chính", "d": "**… 나설 필요가 있다** = cần bắt tay vào đầu tư, phát triển công nghệ thám hiểm → ④.", "s": [4]},
+  {"t": "Câu 4 · lý do", "d": "**하지만** phần lớn các nước còn ở giai đoạn thảo luận → vì vậy mới “cần”.", "s": [3]},
+  {"t": "Câu 1–3 · bối cảnh", "d": "Giá trị khoáng vật → nhiều nước quan tâm → vài nước đã lấy mẫu.", "s": [0, 1, 2]}
+],
+"l": [
+  ["예상된다", "GT", "được dự đoán (chưa chắc chắn)"],
+  ["그래서", "NN", "vì có giá trị → các nước quan tâm"],
+  ["실제로", "VD", "dẫn chứng thực tế"],
+  ["하지만", "DL", "chuyển: phần lớn còn chậm"],
+  ["나설 필요가 있다", "KL", "đuôi “cần phải” → câu chủ đề"]
+],
+"s": [
+  {"c": [["태양계에 존재하는", "DN", "tồn tại trong hệ Mặt Trời", 2], ["수많은 소행성에는", "TR", "ở vô số tiểu hành tinh", 1], ["천문학적인 가치를 지닌", "DN", "có giá trị khổng lồ", 5], ["광물이", "CN", "khoáng vật", 4], ["있는 것으로 예상된다.", "VN", "được dự đoán là có", 3]],
+   "g": "광물이 있는 것으로 예상된다", "gv": "Được dự đoán là có khoáng vật",
+   "r": "Mở · Bối cảnh", "y": "Tiểu hành tinh có thể chứa khoáng vật quý.",
+   "vi": "Ở vô số tiểu hành tinh tồn tại trong hệ Mặt Trời, người ta dự đoán có những khoáng vật mang giá trị khổng lồ.",
+   "tip": "**천문학적** nghĩa đen “thuộc thiên văn học”, nghĩa bóng = con số **khổng lồ**. **-는 것으로 예상되다** = được dự đoán là …"},
+  {"c": [["그래서", "TR", "vì vậy", 1], ["많은 나라들이", "CN", "nhiều nước", 2], ["이에", "TR", "đến điều này", 4], ["관심을 가지고 있다.", "VN", "đang quan tâm", 3]],
+   "g": "나라들이 관심을 가지고 있다", "gv": "Các nước đang quan tâm",
+   "r": "Hệ quả", "y": "Nhiều nước quan tâm.",
+   "vi": "Vì vậy nhiều nước đang quan tâm đến điều này.",
+   "tip": "**이에** = đến điều này (chỉ lại câu trước)."},
+  {"c": [["실제로", "TR", "trên thực tế", 1], ["최근", "TR", "gần đây", 2], ["몇몇 국가에서는", "CN", "một vài quốc gia", 3], ["소행성에 있는", "DN", "trên tiểu hành tinh", 6], ["광물 시료를 채취하는 데", "TR", "lấy mẫu khoáng vật", 5], ["성공하기도 했다.", "VN", "đã thành công", 4]],
+   "g": "국가에서는 성공하기도 했다", "gv": "Có nước đã thành công",
+   "r": "Dẫn chứng", "y": "Vài nước đã lấy được mẫu khoáng vật.",
+   "vi": "Trên thực tế, gần đây một vài quốc gia đã thành công trong việc lấy mẫu khoáng vật trên tiểu hành tinh.",
+   "tip": "**-는 데 성공하다** = thành công trong việc …"},
+  {"c": [["하지만", "TR", "nhưng", 1], ["대부분의 나라들에서는", "TR", "ở phần lớn các nước", 2], ["소행성 탐사가", "CN", "việc thám hiểm tiểu hành tinh", 3], ["아직", "TR", "vẫn", 4], ["논의 단계에", "TR", "ở giai đoạn thảo luận", 6], ["머무르고 있다.", "VN", "đang dừng lại", 5]],
+   "g": "탐사가 논의 단계에 머무르고 있다", "gv": "Thám hiểm dừng ở giai đoạn thảo luận",
+   "r": "Vấn đề", "y": "Phần lớn các nước vẫn chỉ đang bàn bạc.",
+   "vi": "Nhưng ở phần lớn các nước, việc thám hiểm tiểu hành tinh vẫn đang dừng ở giai đoạn thảo luận.",
+   "tip": "Câu **하지만** + vấn đề → câu sau thường là giải pháp = ý chính."},
+  {"c": [["미래 자원을 확보하기 위해서", "TR", "để bảo đảm tài nguyên tương lai", 5], ["적극적으로", "TR", "một cách tích cực", 4], ["소행성 탐사에 대한", "DN", "cho thám hiểm tiểu hành tinh", 3], ["투자와 기술 개발에", "TR", "đầu tư và phát triển công nghệ", 2], ["나설 필요가 있다.", "VN", "cần bắt tay vào", 1]],
+   "g": "투자와 기술 개발에 나설 필요가 있다", "gv": "Cần bắt tay vào đầu tư và phát triển công nghệ",
+   "r": "Kết · Chủ đề", "y": "Cần tích cực đầu tư, phát triển công nghệ thám hiểm.",
+   "vi": "Cần tích cực bắt tay vào đầu tư và phát triển công nghệ thám hiểm tiểu hành tinh để bảo đảm tài nguyên cho tương lai.",
+   "tip": "**N에 나서다** = đứng ra, bắt tay vào N. **-(으)ㄹ 필요가 있다** = cần … → dấu hiệu câu chủ đề."}
+],
+"w": [
+  ["태양계", "hệ Mặt Trời", "thái dương hệ 太陽系", "태양계에"],
+  ["존재하다", "tồn tại", "tồn tại 存在", "존재하는"],
+  ["소행성", "tiểu hành tinh", "tiểu hành tinh 小行星", "소행성에는|소행성에|소행성 탐사"],
+  ["천문학적", "khổng lồ (con số); thuộc thiên văn học", "thiên văn học đích 天文學的", "천문학적인"],
+  ["지니다", "mang, có", "", "지닌"],
+  ["광물", "khoáng vật", "khoáng vật 鑛物", "광물이|광물 시료를"],
+  ["예상되다", "được dự đoán", "dự tưởng 豫想", "예상된다"],
+  ["실제로", "trên thực tế", "thực tế 實際", "실제로"],
+  ["몇몇", "một vài", "", "몇몇"],
+  ["시료", "mẫu (thử nghiệm)", "thí liệu 試料", "시료를"],
+  ["채취하다", "lấy (mẫu), khai thác", "thải thủ 採取", "채취하는"],
+  ["탐사", "thám hiểm, khảo sát", "thám tra 探査", "탐사가|탐사에"],
+  ["논의", "thảo luận", "luận nghị 論議", "논의 단계에"],
+  ["단계", "giai đoạn", "giai đoạn 段階", "단계에"],
+  ["머무르다", "dừng lại, lưu lại", "", "머무르고"],
+  ["확보하다", "bảo đảm, giành được", "xác bảo 確保", "확보하기"],
+  ["적극적", "tích cực", "tích cực đích 積極的", "적극적으로"],
+  ["나서다", "đứng ra, bắt tay vào", "", "나설"]
+],
+"wo": [
+  ["희박하다", "mong manh, ít ỏi", "hy bạc 稀薄", "", "lựa chọn ②"],
+  ["협력", "hợp tác", "hiệp lực 協力", "", "lựa chọn ③"],
+  ["노력을 기울이다", "dồn sức nỗ lực", "", "", "lựa chọn ④ · đáp án"]
+],
+"g": [
+  {"p": "-는 것으로 예상되다", "m": "được dự đoán là …", "f": "있는 것으로 예상된다", "d": "", "ex": []},
+  {"p": "-는 데 성공하다", "m": "thành công trong việc …", "f": "채취하는 데 성공하기도", "d": "", "ex": []},
+  {"p": "-기도 하다", "m": "cũng / còn …", "f": "성공하기도 했다", "d": "", "ex": []},
+  {"p": "-기 위해서", "m": "để …", "f": "확보하기 위해서", "d": "", "ex": []},
+  {"p": "-(으)ㄹ 필요가 있다", "m": "cần phải …", "f": "나설 필요가 있다", "d": "Đuôi khẳng định quan điểm → câu chủ đề.", "ex": []}
+],
+"qa": {
+  "35": {"a": 3, "w": "Câu cuối **-ㄹ 필요가 있다**: cần đầu tư, phát triển công nghệ thám hiểm để bảo đảm tài nguyên tương lai → ④ (투자와 기술 개발 → 노력).", "x": ["Chi tiết hẹp, bài không nói “chưa phát hiện”.", "Ngược: có nước đã lấy được mẫu.", "Bài không nói hợp tác quốc tế.", null]}
+},
+"hoi": [
+  {"q": "Vì sao các nước quan tâm đến tiểu hành tinh?", "a": "Vì có thể có khoáng vật giá trị khổng lồ."},
+  {"q": "Phần lớn các nước đang ở giai đoạn nào?", "a": "Giai đoạn thảo luận (논의 단계)."},
+  {"q": "Tác giả đề xuất gì?", "a": "Tích cực đầu tư và phát triển công nghệ thám hiểm tiểu hành tinh."}
+]
+}

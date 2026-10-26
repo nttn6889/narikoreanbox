@@ -1,0 +1,82 @@
+{
+"e": "Etk091", "n": [40],
+"t": "Địa Trung Hải từng là sa mạc",
+"cd": "Khoa học – địa lý",
+"y": "Địa Trung Hải là biển bao quanh bởi châu Âu, châu Á, châu Phi, nay khí hậu ôn hòa, đáng sống. Nhưng xưa kia nó từng là sa mạc — bằng chứng là lớp trầm tích muối khắp Địa Trung Hải (muối còn lại khi nước biển bốc hơi). Sau đó một trận lụt lớn khiến nó lại thành biển như ngày nay.",
+"doc": [
+  {"t": "Đọc <보기> trước", "d": "<보기> **그 증거로** … 소금 퇴적층 → câu trước phải là **nhận định cần bằng chứng**; câu sau có thể nói tiếp về lớp muối.", "s": []},
+  {"t": "Tìm nhận định", "d": "Câu 3 **지중해는 오래전 사막이었던 적이 있었다** — điều bất ngờ cần chứng minh.", "s": [2]},
+  {"t": "Câu sau ㉢", "d": "**이** 소금 퇴적층 → từ này phải được nhắc ngay trước → <보기> ở ㉢.", "s": [3]}
+],
+"l": [
+  ["그런데", "DL", "chuyển: biển hiện nay ↔ sa mạc xưa"],
+  ["이 소금 퇴적층은", "CH", "chỉ lại lớp muối → <보기> ngay trước"],
+  ["보여 준다", "GT", "giải thích lớp muối chứng minh điều gì"],
+  ["이후", "TG", "diễn biến sau đó"],
+  ["발생하면서", "TG", "-면서: lụt xảy ra kéo theo thành biển"]
+],
+"s": [
+  {"c": [["유럽과 아시아, 아프리카 대륙으로 둘러싸인", "DN", "được bao quanh bởi các lục địa châu Âu, châu Á, châu Phi", 2], ["바다를", "TN", "vùng biển", 1], ["지중해라고 한다.", "VN", "gọi là Địa Trung Hải", 3], ["( ㉠ )", "NOI", "( ㉠ )", 4]],
+   "g": "바다를 지중해라고 한다", "gv": "Gọi vùng biển … là Địa Trung Hải",
+   "r": "Mở · Định nghĩa", "y": "Địa Trung Hải là biển giữa ba châu lục.",
+   "vi": "Vùng biển được bao quanh bởi các lục địa châu Âu, châu Á và châu Phi được gọi là Địa Trung Hải. ( ㉠ )",
+   "tip": "**A를 B라고 하다** = gọi A là B."},
+  {"c": [["오늘날", "TR", "ngày nay", 1], ["지중해 연안은", "CN", "vùng ven Địa Trung Hải", 2], ["기후가 온화해서", "VP", "khí hậu ôn hòa nên", 3], ["살기 좋은 곳으로", "TR", "là nơi đáng sống", 5], ["손꼽힌다.", "VN", "được xếp vào hàng", 4], ["( ㉡ )", "NOI", "( ㉡ )", 6]],
+   "g": "연안은 살기 좋은 곳으로 손꼽힌다", "gv": "Ven biển được coi là nơi đáng sống",
+   "r": "Hiện nay", "y": "Nay khí hậu ôn hòa, đáng sống.",
+   "vi": "Ngày nay vùng ven Địa Trung Hải có khí hậu ôn hòa nên được xếp vào hàng những nơi đáng sống. ( ㉡ )",
+   "tip": "**N(으)로 손꼽히다** = được kể vào hàng N (nổi bật)."},
+  {"c": [["그런데", "TR", "thế nhưng", 1], ["지중해는", "CN", "Địa Trung Hải", 2], ["오래전", "TR", "từ lâu", 4], ["사막이었던 적이 있었다.", "VN", "đã từng là sa mạc", 3], ["( ㉢ )", "NOI", "( ㉢ )", 5]],
+   "g": "지중해는 사막이었던 적이 있었다", "gv": "Địa Trung Hải từng là sa mạc",
+   "r": "Nhận định bất ngờ (cần bằng chứng)", "y": "Xưa kia Địa Trung Hải từng là sa mạc.",
+   "vi": "Thế nhưng Địa Trung Hải đã từng là sa mạc từ rất lâu. ( ㉢ )",
+   "tip": "Nhận định bất ngờ → câu tiếp theo thường đưa **bằng chứng** (그 증거로)."},
+  {"c": [["이 소금 퇴적층은", "CN", "lớp trầm tích muối này", 1], ["바닷물이 증발되고 남은", "DN", "còn lại sau khi nước biển bốc hơi", 3], ["소금이 쌓여 만들어진 것으로", "VP", "được tạo nên do muối … tích tụ", 2], ["지중해가 이전에는 사막이었음을", "TN", "rằng Địa Trung Hải trước đây là sa mạc", 5], ["보여 준다.", "VN", "cho thấy", 4], ["( ㉣ )", "NOI", "( ㉣ )", 6]],
+   "g": "퇴적층은 … 사막이었음을 보여 준다", "gv": "Lớp muối cho thấy … là sa mạc",
+   "r": "Giải thích bằng chứng", "y": "Lớp muối do nước bốc hơi → chứng tỏ từng là sa mạc.",
+   "vi": "Lớp trầm tích muối này được tạo nên do muối còn lại sau khi nước biển bốc hơi tích tụ, cho thấy Địa Trung Hải trước đây là sa mạc. ( ㉣ )",
+   "tip": "**-았/었음을 보여 주다** = cho thấy rằng đã …"},
+  {"c": [["사막이었던", "DN", "vốn là sa mạc", 2], ["지중해에", "TR", "ở Địa Trung Hải", 1], ["이후", "TR", "sau đó", 3], ["큰 홍수가 발생하면서", "VP", "trận lụt lớn xảy ra, kéo theo", 4], ["다시", "TR", "lại", 5], ["오늘날과 같은 바다가", "CN", "biển như ngày nay", 7], ["되었다.", "VN", "trở thành", 6]],
+   "g": "홍수가 발생하면서 바다가 되었다", "gv": "Lụt xảy ra, thành biển",
+   "r": "Kết", "y": "Lụt lớn khiến nó lại thành biển.",
+   "vi": "Ở Địa Trung Hải vốn là sa mạc, sau đó một trận lụt lớn xảy ra khiến nó lại trở thành biển như ngày nay.",
+   "tip": "**-았/었던** = vốn đã là (trạng thái trong quá khứ)."}
+],
+"w": [
+  ["대륙", "lục địa", "đại lục 大陸", "대륙으로"],
+  ["둘러싸이다", "được bao quanh", "", "둘러싸인"],
+  ["지중해", "Địa Trung Hải", "địa trung hải 地中海", "지중해라고|지중해 연안은|지중해는|지중해가|지중해에"],
+  ["오늘날", "ngày nay", "", "오늘날"],
+  ["연안", "vùng ven biển", "duyên ngạn 沿岸", "연안은"],
+  ["기후", "khí hậu", "khí hậu 氣候", "기후가"],
+  ["온화하다", "ôn hòa", "ôn hòa 溫和", "온화해서"],
+  ["손꼽히다", "được kể vào hàng (nổi bật)", "", "손꼽힌다"],
+  ["사막", "sa mạc", "sa mạc 沙漠", "사막이었던|사막이었음을"],
+  ["소금", "muối", "", "소금 퇴적층은|소금이"],
+  ["퇴적층", "lớp trầm tích", "đôi tích tằng 堆積層", "퇴적층은"],
+  ["증발되다", "bốc hơi", "chưng phát 蒸發", "증발되고"],
+  ["쌓이다", "chất đống, tích tụ", "", "쌓여"],
+  ["홍수", "lũ lụt", "hồng thủy 洪水", "홍수가"],
+  ["발생하다", "xảy ra, phát sinh", "phát sinh 發生", "발생하면서"]
+],
+"wo": [
+  ["증거", "bằng chứng", "chứng cứ 證據", "", "<보기> 그 증거로"],
+  ["전역", "toàn vùng", "toàn vực 全域", "", "<보기>"],
+  ["N을/를 들 수 있다", "có thể đưa ra (ví dụ) N", "", "", "<보기>"]
+],
+"g": [
+  {"p": "A를 B라고 하다", "m": "gọi A là B", "f": "지중해라고 한다", "d": "", "ex": []},
+  {"p": "N(으)로 손꼽히다", "m": "được kể vào hàng N", "f": "곳으로 손꼽힌다", "d": "", "ex": []},
+  {"p": "-았/었던 적이 있다", "m": "đã từng …", "f": "사막이었던 적이 있었다", "d": "", "ex": []},
+  {"p": "-(으)ㅁ을 보여 주다", "m": "cho thấy rằng …", "f": "사막이었음을", "d": "Danh từ hóa -(으)ㅁ + 을.", "ex": []},
+  {"p": "-(으)면서", "m": "cùng với / kéo theo", "f": "발생하면서", "d": "", "ex": []}
+],
+"qa": {
+  "40": {"a": 2, "w": "<보기> **그 증거로** cần nhận định “từng là sa mạc” đứng trước; câu sau ㉢ **이 소금 퇴적층** cần <보기> giới thiệu lớp muối → ㉢.", "x": ["Chưa có nhận định cần bằng chứng.", "Câu trước nói khí hậu ôn hòa — không cần bằng chứng về lớp muối.", null, "Câu trước ㉣ đã nói “이 소금 퇴적층” — lớp muối phải được giới thiệu trước đó."]}
+},
+"hoi": [
+  {"q": "Địa Trung Hải nằm giữa những châu lục nào?", "a": "Châu Âu, châu Á, châu Phi."},
+  {"q": "Bằng chứng nó từng là sa mạc?", "a": "Lớp trầm tích muối khắp Địa Trung Hải."},
+  {"q": "Vì sao nó lại thành biển?", "a": "Một trận lụt lớn xảy ra."}
+]
+}

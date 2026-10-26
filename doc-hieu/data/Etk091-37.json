@@ -1,0 +1,88 @@
+{
+"e": "Etk091", "n": [37],
+"t": "Hạn ngạch đánh bắt cá ngừ",
+"cd": "Môi trường – kinh tế",
+"y": "Chế độ hạn ngạch cá ngừ quy định sản lượng đánh bắt cho từng nước để chống đánh bắt bừa bãi. Hàn Quốc được phân rất ít vì trước đây ven biển Hàn hầu như không có cá ngừ. Nay nước biển ấm lên, cá ngừ vào ven biển Hàn tăng vọt nhưng vì hạn ngạch ngư dân phải vứt bỏ phần lớn. Công nhận sự cần thiết của hạn ngạch, nhưng cần điều chỉnh linh hoạt theo biến động số lượng cá ở từng nước.",
+"doc": [
+  {"t": "Đọc câu hỏi", "d": "Chủ đề → đọc câu cuối, tìm vế sau **-지만** và đuôi **필요하다**.", "s": []},
+  {"t": "Câu cuối · ý chính", "d": "**필요성은 인정하지만 … 융통성 있는 조정이 필요하다** → phần sau -지만 là ý chính: điều chỉnh linh hoạt theo từng nước → ①.", "s": [3]},
+  {"t": "Câu 2–3 · lý do", "d": "Hàn được phân ít (trước kia ít cá) ↔ nay cá vào nhiều nhưng phải vứt bỏ → hạn ngạch không còn hợp thực tế.", "s": [1, 2]},
+  {"t": "Câu 1 · định nghĩa", "d": "Hạn ngạch đã có (để chống đánh bắt bừa bãi) → ② “phải đưa vào” sai.", "s": [0]}
+],
+"l": [
+  ["막기 위해", "NN", "mục đích của chế độ"],
+  ["배정돼 있는데", "GT", "-는데: nêu thực trạng rồi giải thích"],
+  ["않았기 때문이다", "NN", "lý do được phân ít"],
+  ["상승함에 따라", "TG", "-(으)ㅁ에 따라: theo cùng với"],
+  ["늘어나고 있지만", "DL", "-지만: cá tăng nhưng phải bỏ"],
+  ["인정하지만", "DL", "nhượng bộ → ý chính ở vế sau"]
+],
+"s": [
+  {"c": [["참치 쿼터제는", "CN", "chế độ hạn ngạch cá ngừ", 1], ["참치의 무분별한 포획을 막기 위해", "TR", "để ngăn việc đánh bắt cá ngừ bừa bãi", 5], ["어획량을", "TN", "sản lượng đánh bắt", 4], ["국가별로", "TR", "cho từng quốc gia", 6], ["정해 놓은", "DN", "quy định sẵn", 3], ["제도이다.", "VN", "là chế độ", 2]],
+   "g": "참치 쿼터제는 제도이다", "gv": "Hạn ngạch cá ngừ là một chế độ",
+   "r": "Mở · Định nghĩa", "y": "Hạn ngạch = quy định sản lượng từng nước để chống đánh bắt bừa bãi.",
+   "vi": "Chế độ hạn ngạch cá ngừ là chế độ quy định sẵn sản lượng đánh bắt cho từng quốc gia nhằm ngăn việc đánh bắt cá ngừ bừa bãi.",
+   "tip": "Câu định nghĩa **N은 … 제도이다**: phần định ngữ dài → dịch sau “là chế độ”."},
+  {"c": [["한국은", "CN", "Hàn Quốc", 1], ["참치 어획량이", "CN", "sản lượng cá ngừ", 2], ["매우 적게", "TR", "rất ít", 4], ["배정돼 있는데", "VP", "được phân bổ", 3], ["이는", "CN", "điều này", 5], ["한국 연안에서는", "TR", "ở vùng ven biển Hàn Quốc", 7], ["참치가 거의 잡히지 않았기", "VP", "hầu như không bắt được cá ngừ", 8], ["때문이다.", "VN", "là vì", 6]],
+   "g": "한국은 어획량이 적게 배정돼 있는데 이는 … 때문이다", "gv": "Hàn được phân ít, đó là vì …",
+   "r": "Thực trạng của Hàn", "y": "Hàn được phân ít vì trước kia ven biển ít cá ngừ.",
+   "vi": "Hàn Quốc được phân bổ sản lượng cá ngừ rất ít, điều này là vì ở vùng ven biển Hàn Quốc hầu như không bắt được cá ngừ.",
+   "tip": "**이는 … 때문이다** = điều này là vì … (giải thích ngay trong câu)."},
+  {"c": [["최근", "TR", "gần đây", 1], ["수온이 상승함에 따라", "TR", "theo đà nhiệt độ nước biển tăng", 2], ["한국 연안에 유입되는", "DN", "đi vào vùng ven biển Hàn", 4], ["참치가", "CN", "cá ngừ", 3], ["급격히 늘어나고 있지만", "VP", "đang tăng vọt nhưng", 5], ["쿼터제 때문에", "TR", "vì hạn ngạch", 6], ["그물에 걸린", "DN", "mắc lưới", 9], ["참치를", "TN", "cá ngừ", 8], ["대부분", "TR", "phần lớn", 10], ["바다에 버리고 있다.", "VN", "đang phải vứt bỏ xuống biển", 7]],
+   "g": "참치가 늘어나고 있지만 참치를 버리고 있다", "gv": "Cá ngừ tăng nhưng phải vứt bỏ",
+   "r": "Vấn đề", "y": "Nay cá vào nhiều nhưng phải vứt bỏ vì hạn ngạch.",
+   "vi": "Gần đây theo đà nhiệt độ nước biển tăng, cá ngừ đi vào vùng ven biển Hàn tăng vọt, nhưng vì hạn ngạch nên phần lớn cá ngừ mắc lưới đang phải vứt bỏ xuống biển.",
+   "tip": "**-(으)ㅁ에 따라** = theo cùng với (thay đổi kéo theo)."},
+  {"c": [["쿼터제의 필요성은", "TN", "sự cần thiết của hạn ngạch", 2], ["인정하지만", "VP", "công nhận, nhưng", 1], ["국가별 개체 수 증감을 반영한", "DN", "phản ánh tăng giảm số lượng cá thể ở từng nước", 5], ["융통성 있는 조정이", "CN", "sự điều chỉnh linh hoạt", 4], ["필요하다.", "VN", "cần có", 3]],
+   "g": "필요성은 인정하지만 조정이 필요하다", "gv": "Công nhận cần thiết, nhưng cần điều chỉnh",
+   "r": "Kết · Chủ đề", "y": "Cần điều chỉnh hạn ngạch linh hoạt theo từng nước.",
+   "vi": "Công nhận sự cần thiết của hạn ngạch, nhưng cần có sự điều chỉnh linh hoạt phản ánh tăng giảm số lượng cá thể ở từng nước.",
+   "tip": "**A는 인정하지만 B** = nhượng bộ A, khẳng định B → **B** là ý chính."}
+],
+"w": [
+  ["참치", "cá ngừ", "", "참치"],
+  ["쿼터제", "chế độ hạn ngạch (quota)", "chế 制", "쿼터제는|쿼터제 때문에|쿼터제의"],
+  ["무분별하다", "bừa bãi, thiếu cân nhắc", "vô phân biệt 無分別", "무분별한"],
+  ["포획", "đánh bắt, săn bắt", "bộ hoạch 捕獲", "포획을"],
+  ["어획량", "sản lượng đánh bắt", "ngư hoạch lượng 漁獲量", "어획량을|어획량이"],
+  ["국가별", "theo từng quốc gia", "quốc gia biệt 國家別", "국가별로|국가별 개체"],
+  ["제도", "chế độ", "chế độ 制度", "제도이다"],
+  ["배정되다", "được phân bổ", "phối định 配定", "배정돼"],
+  ["연안", "vùng ven biển", "duyên ngạn 沿岸", "연안에서는|연안에"],
+  ["잡히다", "bị bắt", "", "잡히지"],
+  ["수온", "nhiệt độ nước", "thủy ôn 水溫", "수온이"],
+  ["상승하다", "tăng lên", "thượng thăng 上昇", "상승함에"],
+  ["유입되다", "chảy vào, đi vào", "lưu nhập 流入", "유입되는"],
+  ["급격히", "đột ngột, mạnh", "cấp kích 急激", "급격히"],
+  ["그물", "lưới", "", "그물에"],
+  ["필요성", "sự cần thiết", "tất yếu tính 必要性", "필요성은"],
+  ["인정하다", "công nhận", "nhận định 認定", "인정하지만"],
+  ["개체 수", "số lượng cá thể", "cá thể 個體", "개체 수"],
+  ["증감", "tăng giảm", "tăng giảm 增減", "증감을"],
+  ["반영하다", "phản ánh", "phản ánh 反映", "반영한"],
+  ["융통성", "tính linh hoạt", "dung thông tính 融通性", "융통성"],
+  ["조정", "điều chỉnh", "điều chỉnh 調整", "조정이"]
+],
+"wo": [
+  ["수정하다", "sửa đổi", "tu chính 修正", "", "lựa chọn ①"],
+  ["방지하다", "phòng ngừa", "phòng chỉ 防止", "", "lựa chọn ②"],
+  ["도입하다", "đưa vào áp dụng", "đạo nhập 導入", "", "lựa chọn ②"],
+  ["대책을 마련하다", "chuẩn bị biện pháp", "đối sách 對策", "", "lựa chọn ③"],
+  ["실질적", "thực chất", "thực chất đích 實質的", "", "lựa chọn ④"]
+],
+"g": [
+  {"p": "-아/어 놓다", "m": "làm sẵn", "f": "정해 놓은", "d": "", "ex": []},
+  {"p": "이는 … 때문이다", "m": "điều này là vì …", "f": "않았기 때문이다", "d": "", "ex": []},
+  {"p": "-(으)ㅁ에 따라", "m": "theo (sự thay đổi)", "f": "상승함에 따라", "d": "", "ex": [["나이가 듦에 따라 체력이 약해진다.", "Theo tuổi tác, thể lực yếu đi."]]},
+  {"p": "N 때문에", "m": "vì N", "f": "쿼터제 때문에", "d": "", "ex": []},
+  {"p": "A은/는 인정하지만 B", "m": "công nhận A nhưng B", "f": "인정하지만", "d": "Nhượng bộ → ý chính là B.", "ex": []}
+],
+"qa": {
+  "37": {"a": 0, "w": "Vế sau **-지만**: cần điều chỉnh linh hoạt theo tăng giảm cá ở từng nước → ① sửa hạn ngạch cho hợp thực tế từng nước.", "x": [null, "Hạn ngạch đã có rồi; tác giả công nhận nó, không phải đề xuất đưa vào.", "Bài không nói bảo vệ cá ngừ khỏi nước ấm.", "Bài không nói nghiên cứu tăng lượng cá."]}
+},
+"hoi": [
+  {"q": "Hạn ngạch cá ngừ nhằm mục đích gì?", "a": "Ngăn đánh bắt bừa bãi."},
+  {"q": "Vì sao Hàn được phân ít?", "a": "Vì trước kia ven biển Hàn hầu như không có cá ngừ."},
+  {"q": "Vấn đề hiện nay là gì?", "a": "Cá ngừ vào nhiều nhưng vì hạn ngạch nên phải vứt bỏ."}
+]
+}

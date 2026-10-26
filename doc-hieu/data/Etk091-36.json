@@ -1,0 +1,89 @@
+{
+"e": "Etk091", "n": [36],
+"t": "Nghịch lý của tiết kiệm",
+"cd": "Kinh tế",
+"y": "Khi kinh tế suy thoái, người ta tăng tiết kiệm thay vì tiêu dùng. Nhưng tiết kiệm không phải lúc nào cũng tốt: tiêu dùng giảm → doanh thu giảm → sản xuất, việc làm giảm → thu nhập giảm → người ta càng bớt tiêu → kinh tế lại suy thoái (vòng luẩn quẩn). Với cá nhân, tiết kiệm hợp lý; với cả nền kinh tế lại gây tình trạng bất hợp lý.",
+"doc": [
+  {"t": "Đọc câu hỏi", "d": "Chủ đề → tìm câu có **그런데 / 하지만** + nhận định, và câu kết **-는 것이다**.", "s": []},
+  {"t": "Câu 2 · ý chính", "d": "**그런데 저축이 언제나 긍정적인 것만은 아니다** = tiết kiệm không phải lúc nào cũng tốt.", "s": [1]},
+  {"t": "Câu cuối · kết", "d": "Cá nhân hợp lý **-지만** cả nền kinh tế bất hợp lý → ④ (tiết kiệm có thể ảnh hưởng xấu tới kinh tế quốc gia).", "s": [4]},
+  {"t": "Câu 3–4 · chuỗi giải thích", "d": "Tiêu dùng giảm → doanh thu → sản xuất, việc làm → thu nhập → tiêu dùng giảm thêm (vòng luẩn quẩn).", "s": [2, 3]}
+],
+"l": [
+  ["빠지면", "TG", "điều kiện: khi suy thoái"],
+  ["그런데", "DL", "chuyển: tiết kiệm có mặt trái → ý chính"],
+  ["줄면", "TG", "bắt đầu chuỗi nhân quả"],
+  ["결국", "KL", "cuối cùng (kết quả chuỗi)"],
+  ["그러면", "TG", "tiếp tục chuỗi → vòng luẩn quẩn"],
+  ["초래하게 되는 것이다", "KL", "câu kết tổng hợp"]
+],
+"s": [
+  {"c": [["경기 침체에 빠지면", "VP", "khi rơi vào suy thoái kinh tế", 1], ["사람들은", "CN", "người ta", 2], ["소비보다는", "TR", "hơn là tiêu dùng", 5], ["저축을", "TN", "tiết kiệm", 4], ["늘리려고 한다.", "VN", "muốn tăng", 3]],
+   "g": "사람들은 저축을 늘리려고 한다", "gv": "Người ta muốn tăng tiết kiệm",
+   "r": "Mở · Hiện tượng", "y": "Suy thoái thì người ta tăng tiết kiệm.",
+   "vi": "Khi rơi vào suy thoái kinh tế, người ta muốn tăng tiết kiệm hơn là tiêu dùng.",
+   "tip": "**A보다는 B** = B hơn là A."},
+  {"c": [["그런데", "TR", "thế nhưng", 1], ["저축이", "CN", "tiết kiệm", 2], ["언제나", "TR", "lúc nào cũng", 3], ["긍정적인 것만은 아니다.", "VN", "không hẳn là tích cực", 4]],
+   "g": "저축이 긍정적인 것만은 아니다", "gv": "Tiết kiệm không hẳn là tích cực",
+   "r": "Ý chính", "y": "Tiết kiệm không phải lúc nào cũng tốt.",
+   "vi": "Thế nhưng tiết kiệm không phải lúc nào cũng là điều tích cực.",
+   "tip": "**언제나 … -ㄴ 것만은 아니다** = không phải lúc nào cũng … → câu báo hiệu chủ đề."},
+  {"c": [["소비가 줄면", "VP", "tiêu dùng giảm thì", 1], ["기업의 매출이 감소해서", "VP", "doanh thu của doanh nghiệp giảm nên", 2], ["생산과 고용이", "CN", "sản xuất và việc làm", 3], ["줄 수밖에 없고", "VP", "buộc phải giảm,", 4], ["결국", "TR", "rốt cuộc", 5], ["근로자들의 소득도", "CN", "thu nhập của người lao động", 6], ["줄어들게 된다.", "VN", "cũng giảm theo", 7]],
+   "g": "소비가 줄면 … 소득도 줄어들게 된다", "gv": "Tiêu dùng giảm thì … thu nhập cũng giảm",
+   "r": "Giải thích (1) · chuỗi nhân quả", "y": "Tiêu dùng giảm → doanh thu, việc làm, thu nhập đều giảm.",
+   "vi": "Tiêu dùng giảm thì doanh thu doanh nghiệp giảm, nên sản xuất và việc làm buộc phải giảm, rốt cuộc thu nhập của người lao động cũng giảm theo.",
+   "tip": "Câu chuỗi: **-면 → -아서 → -(으)ㄹ 수밖에 없고 → 결국** — dịch giữ nguyên thứ tự."},
+  {"c": [["그러면", "TR", "khi đó", 1], ["미래가 불확실해진", "DN", "thấy tương lai bấp bênh", 3], ["사람들이", "CN", "người ta", 2], ["더욱 소비를 줄여", "VP", "càng giảm tiêu dùng", 4], ["전체 경기가 다시 침체에 빠지는", "DN", "cả nền kinh tế lại rơi vào suy thoái", 7], ["악순환이", "CN", "vòng luẩn quẩn", 6], ["되풀이된다.", "VN", "lặp đi lặp lại", 5]],
+   "g": "악순환이 되풀이된다", "gv": "Vòng luẩn quẩn lặp lại",
+   "r": "Giải thích (2) · vòng luẩn quẩn", "y": "Người ta càng bớt tiêu → kinh tế lại suy thoái.",
+   "vi": "Khi đó những người thấy tương lai bấp bênh lại càng giảm tiêu dùng, khiến vòng luẩn quẩn — cả nền kinh tế lại rơi vào suy thoái — cứ lặp đi lặp lại.",
+   "tip": "**악순환** (ác tuần hoàn) = vòng luẩn quẩn."},
+  {"c": [["개인 차원에서는", "TR", "ở góc độ cá nhân", 1], ["저축이", "CN", "tiết kiệm", 2], ["합리적인 행동이지만", "VP", "là hành động hợp lý, nhưng", 3], ["경제 전체적으로는", "TR", "xét toàn bộ nền kinh tế", 4], ["비합리적인 상황을", "TN", "tình trạng bất hợp lý", 6], ["초래하게 되는 것이다.", "VN", "(tức là) lại gây ra", 5]],
+   "g": "저축이 합리적이지만 … 상황을 초래하게 되는 것이다", "gv": "Tiết kiệm hợp lý nhưng gây ra tình trạng bất hợp lý",
+   "r": "Kết · Tổng hợp", "y": "Cá nhân hợp lý, toàn nền kinh tế bất hợp lý.",
+   "vi": "Tức là ở góc độ cá nhân, tiết kiệm là hành động hợp lý, nhưng xét toàn bộ nền kinh tế thì lại gây ra tình trạng bất hợp lý.",
+   "tip": "**A 차원에서는 … B적으로는** = so sánh hai góc độ; ý chính nằm sau **-지만**."}
+],
+"w": [
+  ["경기", "tình hình kinh tế", "cảnh khí 景氣", "경기 침체에|전체 경기가"],
+  ["침체", "suy thoái, trì trệ", "trầm trệ 沈滯", "침체에"],
+  ["빠지다", "rơi vào", "", "빠지면|빠지는"],
+  ["소비", "tiêu dùng", "tiêu phí 消費", "소비보다는|소비가|소비를"],
+  ["저축", "tiết kiệm", "trữ súc 貯蓄", "저축을|저축이"],
+  ["긍정적", "tích cực", "khẳng định đích 肯定的", "긍정적인"],
+  ["매출", "doanh thu", "mại xuất 賣出", "매출이"],
+  ["감소하다", "giảm", "giảm thiểu 減少", "감소해서"],
+  ["생산", "sản xuất", "sinh sản 生産", "생산과"],
+  ["고용", "việc làm, tuyển dụng", "cố dụng 雇用", "고용이"],
+  ["근로자", "người lao động", "cần lao giả 勤勞者", "근로자들의"],
+  ["소득", "thu nhập", "sở đắc 所得", "소득도"],
+  ["불확실하다", "không chắc chắn, bấp bênh", "bất xác thực 不確實", "불확실해진"],
+  ["악순환", "vòng luẩn quẩn", "ác tuần hoàn 惡循環", "악순환이"],
+  ["되풀이되다", "lặp lại", "", "되풀이된다"],
+  ["차원", "góc độ, chiều", "thứ nguyên 次元", "차원에서는"],
+  ["합리적", "hợp lý", "hợp lý đích 合理的", "합리적인"],
+  ["비합리적", "bất hợp lý", "phi hợp lý đích 非合理的", "비합리적인"],
+  ["초래하다", "gây ra, dẫn đến", "chiêu lai 招來", "초래하게"]
+],
+"wo": [
+  ["불경기", "kinh tế khó khăn", "bất cảnh khí 不景氣", "", "lựa chọn ①"],
+  ["조절하다", "điều chỉnh", "điều tiết 調節", "", "lựa chọn ③"],
+  ["부정적", "tiêu cực", "phủ định đích 否定的", "", "lựa chọn ④"]
+],
+"g": [
+  {"p": "A보다는 B", "m": "B hơn là A", "f": "소비보다는", "d": "", "ex": []},
+  {"p": "-(으)려고 하다", "m": "định, muốn …", "f": "늘리려고 한다", "d": "", "ex": []},
+  {"p": "-는 것만은 아니다", "m": "không hẳn là …", "f": "것만은 아니다", "d": "Phủ định một phần → báo ý chính.", "ex": []},
+  {"p": "-(으)ㄹ 수밖에 없다", "m": "buộc phải, đành", "f": "줄 수밖에 없고", "d": "", "ex": []},
+  {"p": "-게 되다", "m": "rốt cuộc thành …", "f": "줄어들게 된다|초래하게 되는", "d": "", "ex": []},
+  {"p": "-는 것이다", "m": "tức là", "f": "되는 것이다", "d": "Kết luận, tổng hợp.", "ex": []}
+],
+"qa": {
+  "36": {"a": 3, "w": "Tiết kiệm **không phải lúc nào cũng tích cực**: với toàn nền kinh tế thì gây tình trạng bất hợp lý → ④.", "x": ["Ngược: suy thoái thì người ta **tăng** tiết kiệm.", "Bài không đề xuất tăng đầu tư.", "Bài không nói điều chỉnh sản xuất, việc làm.", null]}
+},
+"hoi": [
+  {"q": "Khi suy thoái, người ta làm gì?", "a": "Giảm tiêu dùng, tăng tiết kiệm."},
+  {"q": "Vì sao thu nhập người lao động giảm?", "a": "Tiêu dùng giảm → doanh thu giảm → sản xuất, việc làm giảm."},
+  {"q": "Tiết kiệm hợp lý với ai, bất hợp lý với ai?", "a": "Hợp lý với cá nhân; bất hợp lý với toàn nền kinh tế."}
+]
+}

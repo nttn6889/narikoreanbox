@@ -1,0 +1,76 @@
+{
+"e": "Etk091", "n": [39],
+"t": "Video hỗ trợ trọng tài (VAR)",
+"cd": "Thể thao – công nghệ",
+"y": "Ghi bàn, phạm lỗi do trọng tài phân xử, nhưng dù chọn vị trí tốt đến đâu vẫn có góc chết bị cơ thể cầu thủ che khuất, nơi trọng tài khó phán đoán chính xác. Công nghệ đọc video dùng camera siêu tốc làm căn cứ phân xử → kiểm tra khách quan chỗ khó, tăng độ tin cậy của phán quyết.",
+"doc": [
+  {"t": "Đọc <보기> trước", "d": "<보기>: **그런데** trọng tài dù chọn vị trí tốt vẫn có **사각지대** (góc chết) bị cơ thể cầu thủ che. → Câu trước phải là ý “bình thường”, câu sau phải nói về góc chết.", "s": []},
+  {"t": "Câu sau ㉠", "d": "**이렇게 눈에 보이지 않는 곳** = chỉ lại “góc chết” → <보기> đứng ngay trước câu này → ㉠.", "s": [0, 1]},
+  {"t": "Kiểm tra", "d": "Câu 1 (trọng tài phân xử) + 그런데 (nhưng có góc chết) + 이렇게 (chỗ không thấy) → mạch liền.", "s": [0]}
+],
+"l": [
+  ["이렇게 눈에 보이지 않는 곳", "CH", "chỉ lại một ý chưa có trong đoạn → ô ngay trước"],
+  ["이런 스포츠 경기", "CH", "chỉ lại tình huống khó phân xử"],
+  ["이처럼", "KL", "tổng kết vai trò của VAR"]
+],
+"s": [
+  {"c": [["스포츠 경기를 진행할 때", "TR", "khi tiến hành trận đấu thể thao", 1], ["득점이나 반칙 등의", "DN", "về ghi điểm hay phạm lỗi", 3], ["판정은", "CN", "việc phán quyết", 2], ["심판에 의해서", "TR", "bởi trọng tài", 5], ["이루어진다.", "VN", "được thực hiện", 4], ["( ㉠ )", "NOI", "( ㉠ )", 6]],
+   "g": "판정은 심판에 의해서 이루어진다", "gv": "Phán quyết được trọng tài thực hiện",
+   "r": "Mở · Bình thường", "y": "Trọng tài phân xử ghi điểm, phạm lỗi.",
+   "vi": "Khi tiến hành trận đấu thể thao, việc phán quyết ghi điểm hay phạm lỗi được thực hiện bởi trọng tài. ( ㉠ )",
+   "tip": "**N에 의해(서)** = bởi N (bị động)."},
+  {"c": [["이렇게", "TR", "như thế này", 6], ["눈에 보이지 않는 곳에서 벌어진", "DN", "xảy ra ở chỗ không nhìn thấy", 5], ["상황에 대해서는", "TR", "đối với tình huống", 4], ["심판도", "CN", "ngay cả trọng tài", 1], ["정확한 판단을 하기", "TN", "phán đoán chính xác", 3], ["어렵다.", "VN", "cũng khó", 2], ["( ㉡ )", "NOI", "( ㉡ )", 7]],
+   "g": "심판도 판단을 하기 어렵다", "gv": "Trọng tài cũng khó phán đoán",
+   "r": "Vấn đề", "y": "Chỗ không thấy thì trọng tài cũng khó phán đoán.",
+   "vi": "Ngay cả trọng tài cũng khó phán đoán chính xác đối với tình huống xảy ra ở chỗ không nhìn thấy như thế này. ( ㉡ )",
+   "tip": "**이렇게 + N** ở đầu câu = phải có câu trước nói về N → dấu hiệu chèn câu."},
+  {"c": [["비디오 판독은", "CN", "công nghệ đọc video (VAR)", 1], ["이런 스포츠 경기에서", "TR", "trong những trận đấu như thế", 5], ["초고속 카메라를", "TN", "camera siêu tốc", 4], ["판정의 근거로", "TR", "làm căn cứ phán quyết", 6], ["사용하는", "DN", "sử dụng", 3], ["기술이다.", "VN", "là công nghệ", 2], ["( ㉢ )", "NOI", "( ㉢ )", 7]],
+   "g": "비디오 판독은 기술이다", "gv": "VAR là công nghệ",
+   "r": "Giải pháp · định nghĩa", "y": "VAR dùng camera siêu tốc làm căn cứ phân xử.",
+   "vi": "Đọc video là công nghệ sử dụng camera siêu tốc làm căn cứ phán quyết trong những trận đấu như thế. ( ㉢ )",
+   "tip": "Câu định nghĩa **N은 … 기술이다**."},
+  {"c": [["이처럼", "TR", "như vậy", 1], ["비디오 판독을 활용하면", "VP", "nếu tận dụng VAR", 2], ["심판이 판단하기 어려운", "DN", "trọng tài khó phán đoán", 4], ["부분을", "TN", "những phần", 3], ["객관적으로 확인할 수 있어", "VP", "có thể kiểm tra khách quan nên", 5], ["판정에 대한 신뢰도를", "TN", "độ tin cậy của phán quyết", 7], ["높일 수 있다.", "VN", "có thể nâng cao", 6], ["( ㉣ )", "NOI", "( ㉣ )", 8]],
+   "g": "확인할 수 있어 신뢰도를 높일 수 있다", "gv": "Kiểm tra được nên nâng cao độ tin cậy",
+   "r": "Kết · Hiệu quả", "y": "VAR giúp kiểm tra khách quan, tăng độ tin cậy.",
+   "vi": "Như vậy, nếu tận dụng VAR thì có thể kiểm tra khách quan những phần trọng tài khó phán đoán, nhờ đó nâng cao độ tin cậy của phán quyết. ( ㉣ )",
+   "tip": "**이처럼** = tổng kết → câu cuối."}
+],
+"w": [
+  ["진행하다", "tiến hành", "tiến hành 進行", "진행할"],
+  ["득점", "ghi điểm", "đắc điểm 得點", "득점이나"],
+  ["반칙", "phạm lỗi", "phản tắc 反則", "반칙"],
+  ["판정", "phán quyết, phân xử", "phán định 判定", "판정은|판정의|판정에"],
+  ["심판", "trọng tài", "thẩm phán 審判", "심판에|심판도|심판이"],
+  ["벌어지다", "xảy ra", "", "벌어진"],
+  ["상황", "tình huống", "trạng huống 狀況", "상황에"],
+  ["정확하다", "chính xác", "chính xác 正確", "정확한"],
+  ["판단", "phán đoán", "phán đoán 判斷", "판단을|판단하기"],
+  ["판독", "đọc, phân tích (hình ảnh)", "phán độc 判讀", "판독은|판독을"],
+  ["초고속", "siêu tốc", "siêu cao tốc 超高速", "초고속"],
+  ["근거", "căn cứ", "căn cứ 根據", "근거로"],
+  ["활용하다", "tận dụng", "hoạt dụng 活用", "활용하면"],
+  ["객관적", "khách quan", "khách quan đích 客觀的", "객관적으로"],
+  ["신뢰도", "độ tin cậy", "tín lại độ 信賴度", "신뢰도를"]
+],
+"wo": [
+  ["위치 선정", "chọn vị trí", "vị trí tuyển định 位置選定", "", "<보기>"],
+  ["필연적으로", "tất yếu", "tất nhiên đích 必然的", "", "<보기>"],
+  ["가리다", "che khuất", "", "", "<보기> 가려서"],
+  ["사각지대", "góc chết, điểm mù", "tử giác địa đới 死角地帶", "", "<보기>"]
+],
+"g": [
+  {"p": "N에 의해(서)", "m": "bởi N", "f": "심판에 의해서", "d": "", "ex": []},
+  {"p": "N에 대해서는", "m": "đối với N thì", "f": "상황에 대해서는", "d": "", "ex": []},
+  {"p": "-기 어렵다", "m": "khó …", "f": "판단을 하기 어렵다|판단하기 어려운", "d": "", "ex": []},
+  {"p": "N(으)로 사용하다", "m": "dùng làm N", "f": "근거로", "d": "", "ex": []},
+  {"p": "아무리 -아/어도", "m": "dù … đến đâu", "f": "", "d": "Ở <보기>: 아무리 위치 선정을 잘해도.", "ex": []}
+],
+"qa": {
+  "39": {"a": 0, "w": "<보기> nói **góc chết**; câu sau ㉠ **이렇게 눈에 보이지 않는 곳** chỉ lại góc chết → <보기> đứng ở ㉠.", "x": [null, "Câu trước ㉡ đã nói “chỗ không nhìn thấy” rồi — <보기> phải đứng trước câu đó.", "Đã sang giải pháp (VAR), không quay lại vấn đề.", "Sau câu kết 이처럼 không thêm vấn đề mới."]}
+},
+"hoi": [
+  {"q": "Vì sao trọng tài khó phán đoán?", "a": "Có góc chết bị cơ thể cầu thủ che khuất."},
+  {"q": "VAR dùng gì làm căn cứ?", "a": "Camera siêu tốc."},
+  {"q": "Lợi ích của VAR?", "a": "Kiểm tra khách quan, tăng độ tin cậy của phán quyết."}
+]
+}

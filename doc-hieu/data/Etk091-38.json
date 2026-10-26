@@ -1,0 +1,77 @@
+{
+"e": "Etk091", "n": [38],
+"t": "Đổi mới công nghệ và thói quen khách hàng",
+"cd": "Kinh tế – công nghệ",
+"y": "Doanh nghiệp đổi mới công nghệ để mang lại tiện lợi cho khách, nhưng dù đột phá đến đâu, nếu đòi khách thay đổi hành vi lạ lẫm, lớn thì dễ bị quay lưng (xe điện thời đầu). Ngược lại, như bảng điện tử, bút điện tử: không phải đổi mới lớn nhưng cách dùng quen thuộc, đơn giản nên được đón nhận.",
+"doc": [
+  {"t": "Đọc câu hỏi", "d": "Chủ đề → tìm câu nhận định (thường sau **하지만**), rồi xem ví dụ để kiểm tra.", "s": []},
+  {"t": "Câu 2 · luận điểm", "d": "**하지만 아무리 … 혁신이라도 … 낯설고 커다란 행동 변화를 요구한다면 외면당하기 쉽다** = lạ lẫm thì bị bỏ rơi.", "s": [1]},
+  {"t": "Câu 3–4 · hai ví dụ ngược nhau", "d": "**예를 들어** xe điện (lạ → thất bại) ↔ **반대로** bảng điện tử (quen, đơn giản → được đón nhận). Gom lại → đổi mới thành công khi khách **dễ tiếp nhận** → ④.", "s": [2, 3]}
+],
+"l": [
+  ["하지만", "DL", "chuyển sang luận điểm"],
+  ["아무리 획기적인 혁신이라도", "DL", "아무리 … -라도: dù … đến đâu"],
+  ["예를 들어", "VD", "ví dụ thất bại"],
+  ["반대로", "DL", "ví dụ ngược lại: thành công"]
+],
+"s": [
+  {"c": [["기업들은", "CN", "các doanh nghiệp", 1], ["기술 혁신을 통해", "TR", "thông qua đổi mới công nghệ", 5], ["고객에게", "TR", "cho khách hàng", 4], ["편의와 혜택을", "TN", "tiện lợi và lợi ích", 3], ["제공하려고 한다.", "VN", "muốn mang lại", 2]],
+   "g": "기업들은 편의와 혜택을 제공하려고 한다", "gv": "Doanh nghiệp muốn mang lại tiện lợi, lợi ích",
+   "r": "Mở · Bối cảnh", "y": "Doanh nghiệp đổi mới để mang lại tiện lợi.",
+   "vi": "Các doanh nghiệp muốn mang lại sự tiện lợi và lợi ích cho khách hàng thông qua đổi mới công nghệ.",
+   "tip": "**N을/를 통해** = thông qua N."},
+  {"c": [["하지만", "TR", "nhưng", 1], ["아무리 획기적인 혁신이라도", "TR", "dù là đổi mới đột phá đến đâu", 2], ["고객에게", "TR", "khách hàng", 4], ["낯설고 커다란", "DN", "lạ lẫm và lớn", 6], ["행동 변화를", "TN", "sự thay đổi hành vi", 5], ["요구한다면", "VP", "nếu đòi hỏi", 3], ["외면당하기 쉽다.", "VN", "thì dễ bị quay lưng", 7]],
+   "g": "… 요구한다면 외면당하기 쉽다", "gv": "Nếu đòi hỏi … thì dễ bị quay lưng",
+   "r": "Luận điểm", "y": "Đòi khách thay đổi lạ lẫm thì dễ bị bỏ rơi.",
+   "vi": "Nhưng dù là đổi mới đột phá đến đâu, nếu đòi hỏi khách hàng thay đổi hành vi lạ lẫm và lớn thì dễ bị quay lưng.",
+   "tip": "**아무리 N(이)라도** = dù N đến đâu. **-기 쉽다** = dễ … **외면당하다** = bị ngoảnh mặt, bị làm ngơ."},
+  {"c": [["예를 들어", "TR", "ví dụ", 1], ["초창기", "DN", "thời kỳ đầu", 3], ["전기 자동차는", "CN", "xe ô tô điện", 2], ["전기로 오래 충전을 해야 하는 것이", "CN", "việc phải sạc điện lâu", 4], ["낯설고 불편해서", "VP", "lạ lẫm và bất tiện nên", 5], ["큰 관심을", "TN", "sự quan tâm lớn", 7], ["끌지 못했다.", "VN", "không thu hút được", 6]],
+   "g": "전기 자동차는 관심을 끌지 못했다", "gv": "Xe điện không thu hút được sự quan tâm",
+   "r": "Ví dụ 1 · thất bại", "y": "Xe điện thời đầu: phải sạc lâu, lạ → không được quan tâm.",
+   "vi": "Ví dụ, xe ô tô điện thời kỳ đầu, việc phải sạc điện lâu khiến người ta thấy lạ lẫm và bất tiện nên không thu hút được nhiều sự quan tâm.",
+   "tip": "**관심을 끌다** = thu hút sự quan tâm."},
+  {"c": [["반대로", "TR", "ngược lại", 1], ["전자 칠판과 전자 펜처럼", "TR", "như bảng điện tử và bút điện tử", 3], ["대단한 혁신은 아니지만", "VP", "không phải đổi mới gì lớn nhưng", 4], ["사용하는 방법이", "CN", "cách sử dụng", 5], ["고객에게", "TR", "với khách hàng", 7], ["익숙하고 간단해서", "VP", "quen thuộc và đơn giản nên", 6], ["환영받는", "DN", "được đón nhận", 9], ["경우도", "CN", "trường hợp", 8], ["있다.", "VN", "cũng có", 2]],
+   "g": "환영받는 경우도 있다", "gv": "Cũng có trường hợp được đón nhận",
+   "r": "Ví dụ 2 · thành công", "y": "Bảng, bút điện tử: quen, đơn giản → được đón nhận.",
+   "vi": "Ngược lại, cũng có trường hợp như bảng điện tử và bút điện tử: không phải đổi mới gì lớn nhưng cách dùng quen thuộc, đơn giản với khách hàng nên được đón nhận.",
+   "tip": "Hai ví dụ trái chiều → chủ đề là **điều kiện chung** của cả hai (quen thuộc, dễ dùng)."}
+],
+"w": [
+  ["기술 혁신", "đổi mới công nghệ", "kỹ thuật cách tân 技術革新", "기술 혁신을"],
+  ["편의", "tiện lợi", "tiện nghi 便宜", "편의와"],
+  ["혜택", "lợi ích, ưu đãi", "huệ trạch 惠澤", "혜택을"],
+  ["제공하다", "cung cấp, mang lại", "đề cung 提供", "제공하려고"],
+  ["획기적", "đột phá, mang tính bước ngoặt", "hoạch kỳ đích 劃期的", "획기적인"],
+  ["낯설다", "lạ lẫm", "", "낯설고"],
+  ["요구하다", "đòi hỏi, yêu cầu", "yêu cầu 要求", "요구한다면"],
+  ["외면당하다", "bị ngoảnh mặt, bị quay lưng", "ngoại diện 外面", "외면당하기"],
+  ["초창기", "thời kỳ đầu", "sơ sáng kỳ 草創期", "초창기"],
+  ["충전", "sạc (pin), nạp điện", "sung điện 充電", "충전을"],
+  ["관심을 끌다", "thu hút sự quan tâm", "quan tâm 關心", "관심을 끌지"],
+  ["칠판", "bảng (lớp học)", "", "칠판과"],
+  ["익숙하다", "quen thuộc", "", "익숙하고"],
+  ["간단하다", "đơn giản", "giản đơn 簡單", "간단해서"],
+  ["환영받다", "được hoan nghênh", "hoan nghênh 歡迎", "환영받는"]
+],
+"wo": [
+  ["무리하다", "quá đáng, quá sức", "vô lý 無理", "", "lựa chọn ①"],
+  ["받아들이다", "tiếp nhận, chấp nhận", "", "", "lựa chọn ④ · đáp án"],
+  ["가능성", "khả năng", "khả năng tính 可能性", "", "lựa chọn ④"]
+],
+"g": [
+  {"p": "N을/를 통해", "m": "thông qua N", "f": "혁신을 통해", "d": "", "ex": []},
+  {"p": "아무리 N(이)라도", "m": "dù N đến đâu", "f": "아무리 획기적인 혁신이라도", "d": "", "ex": [["아무리 바빠도 밥은 먹어야 한다.", "Dù bận đến đâu cũng phải ăn cơm."]]},
+  {"p": "-ㄴ다면", "m": "nếu (giả định)", "f": "요구한다면", "d": "", "ex": []},
+  {"p": "-기 쉽다", "m": "dễ …", "f": "외면당하기 쉽다", "d": "", "ex": []},
+  {"p": "-지 못하다", "m": "không … được", "f": "끌지 못했다", "d": "", "ex": []},
+  {"p": "N처럼", "m": "như N", "f": "펜처럼", "d": "", "ex": []}
+],
+"qa": {
+  "38": {"a": 3, "w": "Lạ lẫm → bị quay lưng; quen, đơn giản → được đón nhận ⇒ đổi mới thành công khi khách **dễ tiếp nhận** → ④.", "x": ["Bài không nói yêu cầu quá đáng của khách.", "Bài không nói giải thích cách dùng.", "Lệch: bài nói đổi mới **đòi thay đổi lạ** thì bị bỏ rơi, không phải đổi mới thất bại.", null]}
+},
+"hoi": [
+  {"q": "Đổi mới nào dễ bị quay lưng?", "a": "Đổi mới đòi khách thay đổi hành vi lạ lẫm, lớn."},
+  {"q": "Vì sao xe điện thời đầu không được quan tâm?", "a": "Phải sạc lâu — lạ lẫm, bất tiện."},
+  {"q": "Vì sao bảng, bút điện tử được đón nhận?", "a": "Cách dùng quen thuộc, đơn giản."}
+]
+}

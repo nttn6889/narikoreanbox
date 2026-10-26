@@ -1,0 +1,80 @@
+{
+"e": "Etk091", "n": [41],
+"t": "Sách 『Hãy trả lời, Joseon』",
+"cd": "Văn hóa – lịch sử",
+"y": "Nhà sử học Kim Kyung-min xuất bản 『Hãy trả lời, Joseon』 về sự giao tiếp giữa vua và bề tôi; phần được chú ý nhất là các tấu chương bề tôi liều mình chỉ ra lỗi của vua — tác giả ví chúng như tiếng thước tre đánh thức nhà vua. Cuốn sách là cây thước tre đánh thức người hiện đại hay nhìn sắc mặt, làm ngơ lỗi của cấp trên.",
+"doc": [
+  {"t": "Đọc <보기> trước", "d": "<보기> **이런 상소문들을** … 죽비 소리로 비유 → câu trước phải nói về **상소문** (tấu chương).", "s": []},
+  {"t": "Tìm 상소문", "d": "Câu 3 nói về 상소문 → <보기> đứng sau câu 3 → ㉢.", "s": [2]},
+  {"t": "Câu sau ㉢", "d": "Câu 4 lấy lại hình ảnh **죽비** để nói với người hiện đại → nối mạch với <보기>.", "s": [3]}
+],
+"l": [
+  ["이 책은", "CH", "chỉ lại cuốn sách ở câu 1"],
+  ["그 소통의 내용", "CH", "chỉ lại sự giao tiếp vua – bề tôi"],
+  ["특히", "TH", "nhấn mạnh phần nổi bật"],
+  ["죽비인 것이다", "KL", "-ㄴ 것이다: kết luận, ẩn dụ"]
+],
+"s": [
+  {"c": [["최근", "TR", "gần đây", 1], ["역사학자 김경민 씨가", "CN", "nhà sử học Kim Kyung-min", 2], ["『응답하라, 조선』을", "TN", "cuốn 『Hãy trả lời, Joseon』", 4], ["펴냈다.", "VN", "đã xuất bản", 3], ["( ㉠ )", "NOI", "( ㉠ )", 5]],
+   "g": "김경민 씨가 『응답하라, 조선』을 펴냈다", "gv": "Kim Kyung-min xuất bản sách",
+   "r": "Mở · Giới thiệu sách", "y": "Nhà sử học xuất bản sách mới.",
+   "vi": "Gần đây nhà sử học Kim Kyung-min đã xuất bản cuốn 『Hãy trả lời, Joseon』. ( ㉠ )",
+   "tip": "**펴내다** = xuất bản, phát hành."},
+  {"c": [["이 책은", "CN", "cuốn sách này", 1], ["왕과 신하의 소통을", "TN", "sự giao tiếp giữa vua và bề tôi", 3], ["다루고 있어", "VP", "đề cập đến nên", 2], ["사람들의 관심을", "TN", "sự quan tâm của mọi người", 5], ["끈다.", "VN", "thu hút", 4], ["( ㉡ )", "NOI", "( ㉡ )", 6]],
+   "g": "이 책은 다루고 있어 관심을 끈다", "gv": "Sách đề cập … nên thu hút quan tâm",
+   "r": "Nội dung chung", "y": "Sách về giao tiếp vua – bề tôi.",
+   "vi": "Cuốn sách này đề cập đến sự giao tiếp giữa vua và bề tôi nên thu hút sự quan tâm của mọi người. ( ㉡ )",
+   "tip": "**N을/를 다루다** = đề cập, bàn về N."},
+  {"c": [["그 소통의 내용 중에서", "TR", "trong nội dung giao tiếp đó", 1], ["특히", "TR", "đặc biệt", 2], ["왕의 노여움을 무릅쓰고", "VP", "bất chấp cơn giận của vua", 5], ["신하가 왕의 잘못을 지적한", "DN", "bề tôi chỉ ra lỗi của vua", 6], ["상소문을 다룬", "DN", "đề cập đến các tấu chương", 4], ["부분이", "CN", "phần", 3], ["주목받고 있다.", "VN", "đang được chú ý", 7], ["( ㉢ )", "NOI", "( ㉢ )", 8]],
+   "g": "부분이 주목받고 있다", "gv": "Phần … đang được chú ý",
+   "r": "Phần nổi bật · 상소문", "y": "Phần về tấu chương chỉ lỗi vua được chú ý.",
+   "vi": "Trong nội dung giao tiếp đó, đặc biệt phần đề cập các tấu chương mà bề tôi bất chấp cơn giận của vua để chỉ ra lỗi của vua đang được chú ý. ( ㉢ )",
+   "tip": "Định ngữ lồng 2 lớp (… 지적한 상소문을 다룬 부분) → dịch từ danh từ cuối: “phần đề cập tấu chương mà …”."},
+  {"c": [["『응답하라, 조선』은", "CN", "『Hãy trả lời, Joseon』", 1], ["눈치를 살피며", "VP", "nhìn sắc mặt", 5], ["윗사람의 잘못을 모르는 체 넘기곤 하는", "DN", "hay giả vờ không biết mà bỏ qua lỗi của cấp trên", 6], ["현대인들을", "TN", "người hiện đại", 4], ["깨우는", "DN", "đánh thức", 3], ["죽비인 것이다.", "VN", "chính là cây thước tre", 2], ["( ㉣ )", "NOI", "( ㉣ )", 7]],
+   "g": "『응답하라, 조선』은 죽비인 것이다", "gv": "Cuốn sách là cây thước tre",
+   "r": "Kết · Ẩn dụ", "y": "Sách đánh thức người hiện đại hay làm ngơ lỗi cấp trên.",
+   "vi": "『Hãy trả lời, Joseon』 chính là cây thước tre đánh thức những người hiện đại hay nhìn sắc mặt, giả vờ không biết mà bỏ qua lỗi của cấp trên. ( ㉣ )",
+   "tip": "**죽비** = thước tre nhà chùa gõ để đánh thức người ngồi thiền → ẩn dụ “lời cảnh tỉnh”."}
+],
+"w": [
+  ["역사학자", "nhà sử học", "lịch sử học giả 歷史學者", "역사학자"],
+  ["펴내다", "xuất bản", "", "펴냈다"],
+  ["신하", "bề tôi, quan lại", "thần hạ 臣下", "신하의|신하가"],
+  ["소통", "giao tiếp, thông hiểu", "sơ thông 疏通", "소통을|소통의"],
+  ["다루다", "đề cập, xử lý", "", "다루고|다룬"],
+  ["관심을 끌다", "thu hút sự quan tâm", "quan tâm 關心", "관심을 끈다"],
+  ["노여움", "cơn giận", "", "노여움을"],
+  ["무릅쓰다", "bất chấp, liều", "", "무릅쓰고"],
+  ["잘못", "lỗi, sai lầm", "", "잘못을"],
+  ["지적하다", "chỉ ra", "chỉ trích 指摘", "지적한"],
+  ["상소문", "tấu chương (dâng vua)", "thượng sớ văn 上疏文", "상소문을"],
+  ["주목받다", "được chú ý", "chú mục 注目", "주목받고"],
+  ["눈치를 살피다", "nhìn sắc mặt, dè chừng", "", "눈치를 살피며"],
+  ["윗사람", "người trên, cấp trên", "", "윗사람의"],
+  ["모르는 체하다", "giả vờ không biết", "", "모르는 체"],
+  ["넘기다", "bỏ qua, cho qua", "", "넘기곤"],
+  ["깨우다", "đánh thức", "", "깨우는"],
+  ["죽비", "thước tre (gõ đánh thức khi thiền)", "trúc bề 竹篦", "죽비인"]
+],
+"wo": [
+  ["저자", "tác giả", "trứ giả 著者", "", "<보기>"],
+  ["깨우침", "sự thức tỉnh", "", "", "<보기>"],
+  ["비유하다", "ví von", "tỉ dụ 比喩", "", "<보기>"]
+],
+"g": [
+  {"p": "-고 있어(서)", "m": "vì đang …", "f": "다루고 있어", "d": "", "ex": []},
+  {"p": "N 중에서 특히", "m": "trong N, đặc biệt", "f": "중에서", "d": "", "ex": []},
+  {"p": "-(으)며", "m": "vừa … vừa", "f": "살피며", "d": "", "ex": []},
+  {"p": "-는 체하다", "m": "giả vờ …", "f": "모르는 체", "d": "= -는 척하다.", "ex": []},
+  {"p": "-곤 하다", "m": "thường hay", "f": "넘기곤 하는", "d": "", "ex": []},
+  {"p": "N인 것이다", "m": "chính là N", "f": "죽비인 것이다", "d": "Kết luận, khẳng định.", "ex": []}
+],
+"qa": {
+  "41": {"a": 2, "w": "<보기> **이런 상소문들** cần câu nói về 상소문 ngay trước (câu 3) → ㉢; câu 4 tiếp hình ảnh 죽비.", "x": ["Chưa nhắc đến 상소문.", "Chưa nhắc đến 상소문 (câu 2 chỉ nói giao tiếp chung).", null, "Sau câu kết; câu 4 đã dùng 죽비 cho người hiện đại — <보기> phải đứng trước để giới thiệu ẩn dụ."]}
+},
+"hoi": [
+  {"q": "Sách viết về điều gì?", "a": "Sự giao tiếp giữa vua và bề tôi."},
+  {"q": "Phần nào được chú ý nhất?", "a": "Các tấu chương bề tôi liều chỉ ra lỗi của vua."},
+  {"q": "죽비 tượng trưng cho gì?", "a": "Lời cảnh tỉnh, đánh thức."}
+]
+}
