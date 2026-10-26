@@ -136,6 +136,9 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   Tháng đầu vào giữa tháng = số buổi có lịch từ `from` đến hết tháng × đơn giá (hạn = buổi đầu tiên); từ tháng sau đóng đầu tháng (hạn ngày `due`).
   `hocphi/<id học viên>_<YYYY-MM>` = {n, rate, base, how (chốt khi “Đánh dấu đã gửi”/ghi đóng tiền), adj, adjNote, paid, paidAt, note, sent};
   `hocphi/_cfg` = {due, bank, note, sign}. Thẻ Học sinh → Học phí (bảng theo tháng) + hồ sơ → Học phí; “Thông báo” tạo tin nhắn Zalo.
+- **Tin nhắn lịch tuần** (Học sinh → Lịch tuần → nút “💬 Tin nhắn lịch tuần cho học sinh”, `lhWeekMsg`/`lhWeekMsgText`): mỗi em một tin theo lịch của tuần đang xem
+  (`lhPlan`, bỏ buổi trước `start`; lịch khác tuần trước thì thêm dòng “Lưu ý”), ô sửa được + “Sao chép”, ô “Lời nhắn thêm cho tất cả”, ký tên = `hpCfg().sign`.
+  Tên gọi = chữ cuối của “Tên khác” đầu tiên (nếu có) hoặc của tên.
 - `nangluc.py` móc thêm 2 chỗ ngoài khối NLA: listener `hocphi`, và `editStudent` giữ `fee` khi cô sửa thông tin.
 
 ## Tư vấn (tab "Tư vấn" trong trang quản lý, chỉ cô xem)
