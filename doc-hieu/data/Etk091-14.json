@@ -1,0 +1,68 @@
+{
+"e": "Etk091", "n": [14],
+"t": "Báo tin đỗ việc cho bạn",
+"cd": "Đời sống – tình bạn",
+"y": "Tôi đỗ vào công ty, gọi điện báo cho bạn thân; bạn mừng như chuyện của mình. Nhưng cúp máy rồi tôi lại thấy áy náy vì đã không nghĩ cho người bạn vẫn chưa xin được việc.",
+"doc": [
+  {"t": "Nhìn 4 đáp án", "d": "Câu đầu là (나) hoặc (다) → so 2 câu.", "s": []},
+  {"t": "So (나) và (다)", "d": "(나) **친구는 나의 합격 소식** — chưa biết người bạn nào, tin đỗ gì → cần câu trước. (다) **얼마 전 나는 …** mở đầu câu chuyện → **câu đầu = (다)**.", "s": [1, 2]},
+  {"t": "Dấu bám", "d": "(가) **그런데** = chuyển hướng (vui → áy náy) → sau phản ứng của bạn (나). (라) **-기 때문이었다** giải thích lý do của (가) → đứng cuối.", "s": [0, 3]}
+],
+"l": [
+  ["그런데", "DL", "chuyển hướng cảm xúc: vui → áy náy"],
+  ["얼마 전", "TG", "mốc thời gian mở đầu câu chuyện"],
+  ["생각 때문이었다", "NN", "lý do của cảm giác áy náy ở (가)"]
+],
+"s": [
+  {"c": [["(가) 그런데", "TR", "thế nhưng", 1], ["전화를 끊고", "VP", "cúp máy xong", 2], ["뒤늦게", "TR", "muộn màng", 4], ["미안한 마음이", "CN", "cảm giác áy náy", 5], ["들었다.", "VN", "(tôi) lại thấy", 3]],
+   "g": "미안한 마음이 들었다", "gv": "Thấy áy náy",
+   "r": "Chuyển hướng cảm xúc", "y": "Cúp máy rồi tôi mới thấy áy náy.",
+   "vi": "Thế nhưng cúp máy rồi, tôi lại muộn màng thấy áy náy.",
+   "tip": "**N(이/가) 들다** với 마음, 생각, 느낌 = “thấy, nảy ra”. 미안한 마음이 들다 = thấy có lỗi."},
+  {"c": [["(나) 친구는", "CN", "bạn tôi", 1], ["나의 합격 소식을 듣고", "VP", "nghe tin tôi đỗ", 2], ["자신의 일처럼", "TR", "như chuyện của chính mình", 4], ["기뻐했다.", "VN", "đã vui mừng", 3]],
+   "g": "친구는 기뻐했다", "gv": "Bạn đã vui mừng",
+   "r": "Phản ứng của bạn", "y": "Bạn mừng như chuyện của mình.",
+   "vi": "Bạn tôi nghe tin tôi đỗ thì vui mừng như chuyện của chính mình.",
+   "tip": "**N처럼** = như N. **기뻐하다** (vui – nhìn từ ngoài, ngôi 3) ↔ 기쁘다 (tôi vui)."},
+  {"c": [["(다) 얼마 전", "TR", "cách đây không lâu", 1], ["나는", "CN", "tôi", 2], ["회사 합격 소식을 듣고", "VP", "nghe tin đỗ vào công ty", 3], ["친한 친구에게", "TR", "cho một người bạn thân", 5], ["전화했다.", "VN", "đã gọi điện", 4]],
+   "g": "나는 친구에게 전화했다", "gv": "Tôi gọi điện cho bạn",
+   "r": "Câu đầu · Bối cảnh", "y": "Tôi đỗ việc và gọi báo cho bạn thân.",
+   "vi": "Cách đây không lâu, tôi nhận được tin đỗ vào công ty và đã gọi điện cho một người bạn thân.",
+   "tip": "Câu mở đầu câu chuyện thường có **mốc thời gian** (얼마 전, 어느 날) + nhân vật **나는**."},
+  {"c": [["(라) 아직 취업 못 한", "DN", "vẫn chưa xin được việc", 5], ["친구를", "TN", "người bạn", 4], ["내가", "CN", "tôi", 2], ["배려하지 못했다는", "DN", "đã không biết nghĩ cho", 3], ["생각 때문이었다.", "VN", "(đó) là vì ý nghĩ", 1]],
+   "g": "생각 때문이었다", "gv": "Là vì ý nghĩ …",
+   "r": "Lý do · kết", "y": "Vì nghĩ mình đã không quan tâm đến người bạn chưa có việc.",
+   "vi": "Đó là vì tôi nghĩ mình đã không biết nghĩ cho người bạn vẫn chưa xin được việc.",
+   "tip": "**-기 때문이다 / N 때문이다** ở cuối câu = câu lý do → không đứng đầu, đi ngay sau câu nó giải thích."}
+],
+"w": [
+  ["전화를 끊다", "cúp máy", "", "전화를 끊고"],
+  ["뒤늦다", "muộn màng", "", "뒤늦게"],
+  ["미안하다", "áy náy, xin lỗi", "vị an 未安", "미안한"],
+  ["마음이 들다", "cảm thấy (trong lòng)", "", "마음이 들었다"],
+  ["합격", "đỗ, trúng tuyển", "hợp cách 合格", "합격"],
+  ["소식", "tin tức", "tiêu tức 消息", "소식을"],
+  ["자신", "bản thân, chính mình", "tự thân 自身", "자신의"],
+  ["기뻐하다", "vui mừng", "", "기뻐했다"],
+  ["얼마 전", "cách đây không lâu", "", "얼마 전"],
+  ["친하다", "thân", "thân 親", "친한"],
+  ["취업", "có việc làm, xin được việc", "tựu nghiệp 就業", "취업"],
+  ["배려하다", "quan tâm, nghĩ cho (người khác)", "phối lự 配慮", "배려하지"]
+],
+"wo": [],
+"g": [
+  {"p": "-고", "m": "rồi, xong (nối tiếp)", "f": "끊고|듣고", "d": "Hành động nối tiếp nhau.", "ex": []},
+  {"p": "N처럼", "m": "như N", "f": "일처럼", "d": "So sánh giống.", "ex": []},
+  {"p": "못 V / -지 못하다", "m": "không thể, không (được)", "f": "못 한|배려하지 못했다는", "d": "Không làm được do hoàn cảnh/năng lực.", "ex": []},
+  {"p": "-다는 생각", "m": "ý nghĩ rằng …", "f": "못했다는 생각", "d": "Định ngữ trích dẫn + danh từ (생각, 소식, 말).", "ex": []},
+  {"p": "N 때문이다", "m": "là vì N", "f": "생각 때문이었다", "d": "Câu lý do cho câu trước.", "ex": []}
+],
+"qa": {
+  "14": {"a": 2, "w": "(다) mở đầu (얼마 전 나는) → (나) bạn mừng → (가) **그런데** áy náy → (라) lý do **때문이었다**.", "x": ["(나) “친구는 나의 합격 소식” cần câu trước giới thiệu.", "(나) không đứng đầu; (라) lý do phải sau (가).", null, "(라) là lý do của (가) → phải đứng sau (가)."]}
+},
+"hoi": [
+  {"q": "Bạn phản ứng thế nào khi nghe tin?", "a": "Mừng như chuyện của chính mình (자신의 일처럼 기뻐했다)."},
+  {"q": "Vì sao “tôi” thấy áy náy?", "a": "Vì đã không nghĩ cho người bạn vẫn chưa xin được việc."},
+  {"q": "Chữ nào báo đổi chiều cảm xúc?", "a": "**그런데** ở (가)."}
+]
+}

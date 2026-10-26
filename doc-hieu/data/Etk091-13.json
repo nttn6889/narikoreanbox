@@ -1,0 +1,70 @@
+{
+"e": "Etk091", "n": [13],
+"t": "Cửa hàng tạm thời (pop-up store)",
+"cd": "Kinh tế – tiêu dùng",
+"y": "Đang thịnh hành loại cửa hàng mở trong thời gian ngắn ở nơi đông người (cửa hàng tạm, từ 1 ngày đến 1 tháng); doanh nghiệp dùng nó để bán / quảng bá sản phẩm và tổ chức sự kiện vui để hình ảnh công ty gần gũi hơn.",
+"doc": [
+  {"t": "Nhìn 4 đáp án", "d": "Câu đầu chỉ có (가) hoặc (나) → chỉ cần so 2 câu này.", "s": []},
+  {"t": "So (가) và (나)", "d": "(가) “… 임시 매장이다” không có chủ ngữ — cái gì là cửa hàng tạm? → cần câu trước. (나) giới thiệu hiện tượng, đứng một mình được → **câu đầu = (나)**.", "s": [0, 1]},
+  {"t": "Dấu bám", "d": "(다) **이** 임시 매장 → sau (가) (câu nói ra từ 임시 매장). (라) **또** = thêm mục đích thứ hai → sau (다).", "s": [2, 3]}
+],
+"l": [
+  ["임시 매장이다", "GT", "(가) định nghĩa — giải thích câu nói về cửa hàng ngắn hạn"],
+  ["이 임시 매장을", "CH", "từ chỉ lại → đứng sau câu có 임시 매장"],
+  ["또", "TH", "thêm ý → đứng sau câu nêu mục đích thứ nhất"]
+],
+"s": [
+  {"c": [["(가) 짧게는 하루, 길게는 한 달 정도", "TR", "ngắn thì một ngày, dài thì khoảng một tháng", 3], ["반짝 운영하는", "DN", "mở chớp nhoáng", 2], ["임시 매장이다.", "VN", "(đó) là cửa hàng tạm thời", 1]],
+   "g": "임시 매장이다", "gv": "(Đó) là cửa hàng tạm thời",
+   "r": "Định nghĩa", "y": "Là cửa hàng tạm, mở 1 ngày đến 1 tháng.",
+   "vi": "(Đó) là cửa hàng tạm thời, mở chớp nhoáng — ngắn thì một ngày, dài thì khoảng một tháng.",
+   "tip": "Câu “… 이다” không có chủ ngữ = câu định nghĩa cho thứ đã nói trước → **không đứng đầu**. **짧게는 A, 길게는 B** = “ngắn thì A, dài thì B”."},
+  {"c": [["(나) 사람이 붐비는 장소에서", "TR", "ở nơi đông người", 3], ["짧은 기간 동안", "TR", "trong thời gian ngắn", 4], ["운영하는", "DN", "hoạt động", 2], ["매장이", "CN", "cửa hàng", 1], ["유행이다.", "VN", "đang thịnh hành", 5]],
+   "g": "매장이 유행이다", "gv": "Cửa hàng … đang thịnh hành",
+   "r": "Câu đầu · Hiện tượng", "y": "Cửa hàng mở ngắn hạn ở nơi đông người đang thịnh hành.",
+   "vi": "Loại cửa hàng hoạt động trong thời gian ngắn ở những nơi đông người đang thịnh hành.",
+   "tip": "Câu đầu kiểu “hiện tượng / xu hướng” (… 유행이다, … 늘고 있다) — thường đứng đầu đoạn."},
+  {"c": [["(다) 기업은", "CN", "doanh nghiệp", 1], ["이 임시 매장을 이용해", "TR", "tận dụng cửa hàng tạm này", 2], ["주로", "TR", "chủ yếu", 3], ["특정 제품을 팔거나", "VP", "bán sản phẩm nhất định hoặc", 4], ["홍보를 한다.", "VN", "quảng bá", 5]],
+   "g": "기업은 제품을 팔거나 홍보를 한다", "gv": "Doanh nghiệp bán sản phẩm hoặc quảng bá",
+   "r": "Mục đích (1)", "y": "Doanh nghiệp dùng nó để bán hoặc quảng bá sản phẩm.",
+   "vi": "Doanh nghiệp tận dụng cửa hàng tạm này chủ yếu để bán sản phẩm nhất định hoặc quảng bá.",
+   "tip": "**이** + danh từ đã nhắc = dấu bám → tìm câu trước có danh từ đó (임시 매장 ở (가))."},
+  {"c": [["(라) 또", "TR", "ngoài ra", 1], ["기업 이미지를", "TN", "hình ảnh doanh nghiệp", 5], ["친숙하게 만들기 위해", "VP", "để làm cho … trở nên gần gũi", 4], ["재미있는 행사를", "TN", "sự kiện thú vị", 3], ["열기도 한다.", "VN", "(họ) còn tổ chức", 2]],
+   "g": "행사를 열기도 한다", "gv": "Còn tổ chức sự kiện",
+   "r": "Mục đích (2) · thêm", "y": "Còn tổ chức sự kiện vui để hình ảnh công ty gần gũi.",
+   "vi": "Ngoài ra, họ còn tổ chức sự kiện thú vị để làm cho hình ảnh doanh nghiệp trở nên gần gũi.",
+   "tip": "**또** + **-기도 하다** = “ngoài ra còn …” → luôn là ý thêm sau một ý trước."}
+],
+"w": [
+  ["반짝", "chớp nhoáng, thoáng chốc", "", "반짝"],
+  ["운영하다", "vận hành, mở (cửa hàng)", "vận doanh 運營", "운영하는"],
+  ["임시", "tạm thời", "lâm thời 臨時", "임시"],
+  ["매장", "cửa hàng, quầy bán", "mại trường 賣場", "매장이|매장을"],
+  ["붐비다", "đông đúc", "", "붐비는"],
+  ["장소", "địa điểm", "trường sở 場所", "장소에서"],
+  ["기간", "thời gian, kỳ hạn", "kỳ gian 期間", "기간"],
+  ["유행", "thịnh hành, mốt", "lưu hành 流行", "유행이다"],
+  ["기업", "doanh nghiệp", "xí nghiệp 企業", "기업은|기업 이미지"],
+  ["주로", "chủ yếu", "chủ 主", "주로"],
+  ["특정", "nhất định, đặc định", "đặc định 特定", "특정"],
+  ["제품", "sản phẩm", "chế phẩm 製品", "제품을"],
+  ["홍보", "quảng bá", "hoằng báo 弘報", "홍보를"],
+  ["친숙하다", "thân quen, gần gũi", "thân thục 親熟", "친숙하게"],
+  ["행사를 열다", "tổ chức sự kiện", "hành sự 行事", "행사를 열기도"]
+],
+"wo": [],
+"g": [
+  {"p": "짧게는 A, 길게는 B", "m": "ngắn thì A, dài thì B", "f": "짧게는|길게는", "d": "Nêu khoảng dao động.", "ex": []},
+  {"p": "-거나", "m": "hoặc", "f": "팔거나", "d": "Lựa chọn giữa hai hành động.", "ex": []},
+  {"p": "-기 위해", "m": "để …", "f": "만들기 위해", "d": "Mục đích.", "ex": []},
+  {"p": "-기도 하다", "m": "cũng / còn …", "f": "열기도 한다", "d": "Thêm một việc khác bên cạnh việc đã nói.", "ex": []}
+],
+"qa": {
+  "13": {"a": 1, "w": "(나) giới thiệu hiện tượng → (가) định nghĩa 임시 매장 → (다) **이** 임시 매장 dùng để bán / quảng bá → (라) **또** thêm mục đích.", "x": ["(가) không có chủ ngữ, không đứng đầu.", null, "(가) không đứng đầu; (라) 또 không đi ngay sau định nghĩa.", "(라) 또 không đứng ngay sau câu đầu; (가) định nghĩa phải đi sát (나)."]}
+},
+"hoi": [
+  {"q": "임시 매장 hoạt động bao lâu?", "a": "Ngắn thì 1 ngày, dài thì khoảng 1 tháng."},
+  {"q": "Doanh nghiệp dùng cửa hàng tạm để làm gì? (2 mục đích)", "a": "Bán / quảng bá sản phẩm; tổ chức sự kiện để hình ảnh công ty gần gũi."},
+  {"q": "Vì sao (가) không thể là câu đầu?", "a": "Câu “… 임시 매장이다” thiếu chủ ngữ — phải có câu trước nói về loại cửa hàng."}
+]
+}

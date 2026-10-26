@@ -1,0 +1,81 @@
+{
+"e": "Etk091", "n": [11],
+"t": "Trung tâm sửa xe đạp lưu động",
+"cd": "Xã hội – đời sống",
+"y": "Thành phố Inju năm nay tiếp tục mở “trung tâm sửa xe đạp lưu động” trong tháng 10: ngày thường đến tận nơi, cuối tuần ở công viên Inju; sửa miễn phí, thay linh kiện giá rẻ, nhằm giúp người dân quen đi xe đạp.",
+"doc": [
+  {"t": "Đọc 4 lựa chọn trước", "d": "Gạch từ khóa: **일 년 내내** (cả năm) · **올해 처음** (lần đầu năm nay) · **주말 – 인주공원** · **무료로 부품을 교체**. Mỗi lựa chọn ứng với một câu trong bài.", "s": []},
+  {"t": "Câu 1 · thời gian", "d": "**작년에 이어 올해도** (tiếp nối năm ngoái) → loại ②; **10월 한 달간** → loại ①.", "s": [0]},
+  {"t": "Câu 2 · nơi chốn", "d": "**주말에는 인주공원에서** → khớp ③.", "s": [1]},
+  {"t": "Câu 3 · miễn phí hay không", "d": "Sửa **무료**, nhưng thay linh kiện **저렴한 가격** (giá rẻ) → ④ sai.", "s": [2]}
+],
+"l": [
+  ["작년에 이어", "TG", "tiếp nối năm ngoái → không phải lần đầu"],
+  ["평일에는", "DL", "ngày thường ↔ cuối tuần: hai cách hoạt động"],
+  ["주말에는", "DL", "đối với ngày thường"],
+  ["경우에는", "DL", "trường hợp riêng: thay linh kiện thì tính tiền (rẻ)"],
+  ["위해", "NN", "mục đích của chương trình"]
+],
+"s": [
+  {"c": [["인주시가", "CN", "thành phố Inju", 1], ["작년에 이어 올해도", "TR", "năm nay cũng (tiếp nối năm ngoái)", 2], ["10월 한 달간", "TR", "trong suốt tháng 10", 5], ["'찾아가는 자전거 수리 센터'를", "TN", "“trung tâm sửa xe đạp lưu động”", 4], ["운영한다.", "VN", "vận hành", 3]],
+   "g": "인주시가 수리 센터를 운영한다", "gv": "Thành phố Inju vận hành trung tâm sửa xe",
+   "r": "Mở · Sự kiện (ai, khi nào, cái gì)", "y": "Năm nay Inju lại mở trung tâm sửa xe đạp lưu động trong tháng 10.",
+   "vi": "Tiếp nối năm ngoái, năm nay thành phố Inju cũng vận hành “trung tâm sửa xe đạp lưu động” trong suốt tháng 10.",
+   "tip": "Câu đầu tin ngắn luôn trả lời: **ai – khi nào – làm gì**. **찾아가는** = “tìm đến tận nơi” → dịch gọn “lưu động”."},
+  {"c": [["평일에는", "TR", "ngày thường thì", 1], ["여러 지역을", "TN", "nhiều khu vực", 3], ["직접 방문해", "VP", "trực tiếp đến", 2], ["고쳐 주고", "VP", "sửa giúp,", 4], ["주말에는", "TR", "cuối tuần thì", 5], ["인주공원에서", "TR", "ở công viên Inju", 7], ["수리 서비스를", "TN", "dịch vụ sửa chữa", 8], ["제공한다.", "VN", "cung cấp", 6]],
+   "g": "평일에는 고쳐 주고 주말에는 서비스를 제공한다", "gv": "Ngày thường sửa tận nơi, cuối tuần cung cấp dịch vụ",
+   "r": "Cách hoạt động", "y": "Ngày thường đi đến các khu vực, cuối tuần ở công viên.",
+   "vi": "Ngày thường thì trực tiếp đến nhiều khu vực để sửa giúp, còn cuối tuần thì cung cấp dịch vụ sửa chữa ở công viên Inju.",
+   "tip": "Hai vế đối xứng **-에는 … -고 -에는 …** → dịch “… thì …, còn … thì …”."},
+  {"c": [["전문 수리 기사가", "CN", "thợ sửa chuyên nghiệp", 1], ["자전거를", "TN", "xe đạp", 4], ["무료로", "TR", "miễn phí", 3], ["고쳐 주고", "VP", "sửa giúp", 2], ["부품 교체가 필요한 경우에는", "TR", "trường hợp cần thay linh kiện thì", 5], ["저렴한 가격으로", "TR", "với giá rẻ", 7], ["바꿔 준다.", "VN", "thay giúp", 6]],
+   "g": "기사가 고쳐 주고 바꿔 준다", "gv": "Thợ sửa giúp và thay giúp",
+   "r": "Chi tiết · giá", "y": "Sửa miễn phí, thay linh kiện giá rẻ.",
+   "vi": "Thợ sửa chuyên nghiệp sửa xe đạp miễn phí, còn trường hợp cần thay linh kiện thì thay với giá rẻ.",
+   "tip": "**-는 경우에는** = “trường hợp … thì” — thường là ngoại lệ của vế trước. Đề hay gài bẫy ở chỗ này (miễn phí ≠ giá rẻ)."},
+  {"c": [["시는", "CN", "thành phố", 1], ["시민들의 자전거 타기 생활화를 위해", "TR", "để việc đi xe đạp trở thành thói quen sinh hoạt của người dân", 5], ["이 수리 센터를", "TN", "trung tâm sửa chữa này", 4], ["운영하는 것이라고", "VP", "vận hành", 3], ["밝혔다.", "VN", "cho biết", 2]],
+   "g": "시는 … 운영하는 것이라고 밝혔다", "gv": "Thành phố cho biết là vận hành …",
+   "r": "Kết · Mục đích (lời cơ quan)", "y": "Mục đích: để người dân quen đi xe đạp.",
+   "vi": "Thành phố cho biết vận hành trung tâm sửa chữa này là để việc đi xe đạp trở thành thói quen trong sinh hoạt của người dân.",
+   "tip": "**-라고 밝혔다** = “cho biết rằng” (câu trích dẫn lời cơ quan, cuối tin). Dịch “… cho biết” lên trước, nội dung sau."}
+],
+"w": [
+  ["작년에 이어", "tiếp nối năm ngoái", "tác niên 昨年", "작년에 이어"],
+  ["한 달간", "trong một tháng", "gian 間", "한 달간"],
+  ["찾아가다", "tìm đến, đến tận nơi", "", "찾아가는"],
+  ["수리", "sửa chữa", "tu lý 修理", "수리"],
+  ["운영하다", "vận hành, điều hành", "vận doanh 運營", "운영한다|운영하는"],
+  ["평일", "ngày thường", "bình nhật 平日", "평일에는"],
+  ["지역", "khu vực", "địa vực 地域", "지역을"],
+  ["직접", "trực tiếp", "trực tiếp 直接", "직접"],
+  ["방문하다", "đến thăm, đến", "phỏng vấn 訪問", "방문해"],
+  ["제공하다", "cung cấp", "đề cung 提供", "제공한다"],
+  ["전문", "chuyên nghiệp, chuyên môn", "chuyên môn 專門", "전문"],
+  ["기사", "thợ, kỹ thuật viên", "kỹ sư 技士", "기사가"],
+  ["무료", "miễn phí", "vô liệu 無料", "무료로"],
+  ["부품", "linh kiện, phụ tùng", "bộ phẩm 部品", "부품"],
+  ["교체", "thay thế", "giao thế 交替", "교체가"],
+  ["저렴하다", "rẻ", "đê liêm 低廉", "저렴한"],
+  ["생활화", "biến thành thói quen sinh hoạt", "sinh hoạt hóa 生活化", "생활화를"],
+  ["밝히다", "cho biết, công bố", "", "밝혔다"]
+],
+"wo": [
+  ["일 년 내내", "suốt cả năm", "", "", "lựa chọn ①"],
+  ["처음으로", "lần đầu tiên", "", "", "lựa chọn ②"]
+],
+"g": [
+  {"p": "N에 이어", "m": "tiếp nối N, sau N", "f": "작년에 이어", "d": "Việc này đã có trước đó và tiếp tục.", "ex": [["1위에 이어 2위도 한국 선수가 차지했다.", "Tiếp sau hạng 1, hạng 2 cũng là vận động viên Hàn Quốc."]]},
+  {"p": "-아/어 주다", "m": "làm giúp", "f": "고쳐 주고|바꿔 준다", "d": "Làm việc gì cho người khác.", "ex": []},
+  {"p": "-는 경우에는", "m": "trường hợp … thì", "f": "필요한 경우에는", "d": "Nêu điều kiện riêng / ngoại lệ.", "ex": []},
+  {"p": "N을/를 위해", "m": "vì N, để N", "f": "생활화를 위해", "d": "Mục đích.", "ex": []},
+  {"p": "-는 것이라고 밝히다", "m": "cho biết rằng (là) …", "f": "운영하는 것이라고 밝혔다", "d": "Trích dẫn gián tiếp lời cơ quan; hay ở câu cuối tin báo.", "ex": []}
+],
+"qa": {
+  "11": {"a": 2, "w": "Câu 2: **주말에는 인주공원에서** 수리 서비스를 제공한다 → ③.", "x": ["Chỉ trong **10월 한 달간**, không phải cả năm.", "**작년에 이어** = năm ngoái đã có, không phải lần đầu.", null, "Thay linh kiện **giá rẻ**, không miễn phí (miễn phí là tiền sửa)."]}
+},
+"hoi": [
+  {"q": "Chương trình chạy trong bao lâu?", "a": "Một tháng — tháng 10 (10월 한 달간)."},
+  {"q": "Ngày thường và cuối tuần khác nhau thế nào?", "a": "Ngày thường thợ đến tận các khu vực; cuối tuần sửa ở công viên Inju."},
+  {"q": "Cái gì miễn phí, cái gì mất tiền?", "a": "Tiền sửa miễn phí; thay linh kiện thì trả giá rẻ."},
+  {"q": "Thành phố làm việc này để làm gì?", "a": "Để người dân quen đi xe đạp trong sinh hoạt (자전거 타기 생활화)."}
+]
+}

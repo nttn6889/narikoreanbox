@@ -1,0 +1,39 @@
+{
+"e": "Etk091", "n": [1],
+"t": "Đã từng leo núi Seorak",
+"cd": "Đời sống",
+"y": "Câu nói về một trải nghiệm trong quá khứ: lâu rồi tôi đã từng leo núi Seorak.",
+"doc": [
+  {"t": "Đọc 4 lựa chọn trước", "d": "Cùng động từ 등산하다, chỉ khác đuôi: muốn (-고 싶다) · được phép (-아도 되다) · đoán (-(으)ㄹ 것 같다) · kinh nghiệm (-(으)ㄴ 적이 있다).", "s": []},
+  {"t": "Tìm dấu hiệu trong câu", "d": "**오래전에** (lâu rồi) = thời điểm trong quá khứ → chỉ đuôi kinh nghiệm hợp nghĩa.", "s": [0]}
+],
+"l": [
+  ["오래전에", "TG", "mốc quá khứ → đuôi kinh nghiệm -(으)ㄴ 적이 있다"]
+],
+"s": [
+  {"c": [["나는", "CN", "tôi", 1], ["오래전에", "TR", "lâu rồi", 4], ["설악산을", "TN", "núi Seorak", 3], ["(    ).", "VN", "đã từng leo", 2]],
+   "g": "나는 설악산을 등산한 적이 있다", "gv": "Tôi đã từng leo núi Seorak",
+   "r": "Câu có ô", "y": "Kể một kinh nghiệm trong quá khứ.",
+   "vi": "Tôi đã từng leo núi Seorak từ lâu rồi.",
+   "tip": "Trạng từ thời gian quá khứ (**오래전에, 예전에, 어렸을 때**) + câu kể chuyện đã qua → nghĩ ngay tới **-(으)ㄴ 적이 있다**."}
+],
+"w": [
+  ["오래전", "lâu rồi, từ lâu", "", "오래전에"],
+  ["설악산", "núi Seorak", "tuyết nhạc sơn 雪嶽山", "설악산"]
+],
+"wo": [
+  ["등산하다", "leo núi", "đăng sơn 登山", "", "cả 4 lựa chọn"]
+],
+"g": [
+  {"p": "-(으)ㄴ 적이 있다", "m": "đã từng …", "f": "", "d": "Kinh nghiệm trong quá khứ. Thường đi với 오래전에, 한 번, 예전에.", "ex": [["제주도에 가 본 적이 있어요.", "Tôi đã từng đến đảo Jeju."]]},
+  {"p": "-고 싶다", "m": "muốn …", "f": "", "d": "Mong muốn hiện tại/tương lai → không hợp với 오래전에.", "ex": []},
+  {"p": "-(으)ㄹ 것 같다", "m": "có lẽ sẽ …", "f": "", "d": "Phỏng đoán; 등산할 것 같다 = có lẽ sẽ leo → không hợp với mốc quá khứ.", "ex": []}
+],
+"qa": {
+  "1": {"a": 3, "w": "**오래전에** (lâu rồi) → kể kinh nghiệm: **등산한 적이 있다** = đã từng leo núi.", "x": ["Muốn leo: mong muốn hiện tại, không hợp với 오래전에.", "Được phép leo: không hợp nghĩa câu kể.", "Có lẽ sẽ leo: phỏng đoán tương lai, mâu thuẫn với 오래전에.", null]}
+},
+"hoi": [
+  {"q": "Chữ nào trong câu cho biết chuyện đã xảy ra?", "a": "**오래전에** = lâu rồi."},
+  {"q": "Nếu bỏ 오래전에, đổi thành 내일 thì chọn lựa chọn nào?", "a": "등산할 것 같다 / 등산하고 싶다 — câu về tương lai."}
+]
+}

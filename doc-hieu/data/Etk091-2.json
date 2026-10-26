@@ -1,0 +1,40 @@
+{
+"e": "Etk091", "n": [2],
+"t": "Chuyển nhà xong mới mua đồ",
+"cd": "Đời sống",
+"y": "Hai việc nối tiếp: chuyển sang nhà mới xong rồi mới mua đồ đạc mới.",
+"doc": [
+  {"t": "Đọc 4 lựa chọn trước", "d": "Cùng 이사하다: -(으)ㄴ 지 (từ khi) · -거든 (nếu) · -(으)려면 (nếu muốn) · -고 나서 (xong rồi).", "s": []},
+  {"t": "Nhìn vế sau", "d": "Vế sau **샀다** là quá khứ, câu kể → loại -거든, -(으)려면 (điều kiện không đi với vế sau quá khứ). -(으)ㄴ 지 phải đi với khoảng thời gian (… 지 1년이 됐다).", "s": [0]}
+],
+"l": [
+  ["새로 샀다", "TG", "vế sau là việc xảy ra sau → quan hệ trình tự"]
+],
+"s": [
+  {"c": [["새집으로", "TR", "sang nhà mới", 2], ["(    )", "VP", "chuyển … xong rồi", 1], ["가구를", "TN", "đồ đạc", 5], ["새로", "TR", "mới", 4], ["샀다.", "VN", "(tôi) đã mua", 3]],
+   "g": "이사하고 나서 가구를 샀다", "gv": "Chuyển nhà xong rồi mua đồ đạc",
+   "r": "Câu có ô", "y": "Chuyển nhà xong mới mua đồ đạc mới.",
+   "vi": "Chuyển sang nhà mới xong, tôi đã mua đồ đạc mới.",
+   "tip": "Câu không có chủ ngữ → tiếng Việt thêm “tôi”. Hai hành động nối tiếp trong quá khứ → **-고 나서** (làm xong A rồi B)."}
+],
+"w": [
+  ["새집", "nhà mới", "", "새집으로"],
+  ["가구", "đồ đạc (giường, tủ, bàn…)", "gia cụ 家具", "가구를"],
+  ["새로", "mới", "", "새로"]
+],
+"wo": [
+  ["이사하다", "chuyển nhà", "di tỉ 移徙", "", "cả 4 lựa chọn"]
+],
+"g": [
+  {"p": "-고 나서", "m": "làm xong … rồi", "f": "", "d": "Việc trước kết thúc rồi mới tới việc sau. Vế sau thì nào cũng được.", "ex": [["밥을 먹고 나서 이를 닦아요.", "Ăn cơm xong rồi đánh răng."]]},
+  {"p": "-(으)ㄴ 지", "m": "từ khi … (đã bao lâu)", "f": "", "d": "Luôn đi với khoảng thời gian: 이사한 지 1년이 됐다.", "ex": []},
+  {"p": "-거든 / -(으)려면", "m": "nếu … / nếu muốn …", "f": "", "d": "Điều kiện; vế sau thường là mệnh lệnh, lời khuyên, không phải câu kể quá khứ.", "ex": []}
+],
+"qa": {
+  "2": {"a": 3, "w": "Chuyển nhà xong rồi mua đồ mới → **이사하고 나서**.", "x": ["-(으)ㄴ 지 cần khoảng thời gian (이사한 지 1년이 됐다).", "-거든 = nếu, không đi với vế sau quá khứ 샀다.", "-(으)려면 = nếu muốn, vế sau phải là việc cần làm.", null]}
+},
+"hoi": [
+  {"q": "Việc nào xảy ra trước?", "a": "Chuyển nhà (이사하다), sau đó mới mua đồ (가구를 샀다)."},
+  {"q": "Vì sao không chọn 이사하려면?", "a": "-려면 = nếu muốn…, vế sau phải là điều cần làm (…해야 한다), không phải việc đã làm 샀다."}
+]
+}

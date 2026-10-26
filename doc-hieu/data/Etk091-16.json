@@ -1,0 +1,79 @@
+{
+"e": "Etk091", "n": [16],
+"t": "Đà điểu vùi đầu xuống cát",
+"cd": "Khoa học – động vật",
+"y": "Người ta ví người né tránh nguy hiểm với đà điểu vì nó vùi đầu xuống cát khi kẻ thù đến gần. Thật ra đà điểu làm vậy để nghe tiếng chân vang dưới đất, nắm được kẻ thù có đến hay không — vì thính giác của nó phát triển hơn thị giác.",
+"doc": [
+  {"t": "Đọc câu có ô", "d": "**그런데 사실** + (    ) **위해** → ô là **mục đích thật** của việc vùi đầu, ngược với cách người ta hiểu.", "s": [2]},
+  {"t": "Đọc qua ô · câu sau", "d": "**-려는 것이다** giải thích: nghe tiếng chân để biết kẻ thù có đến không → ô = **biết chuyển động của kẻ thù**.", "s": [3]},
+  {"t": "Câu 1–2 · quan niệm bị lật", "d": "Người ta tưởng đà điểu giả vờ không biết nguy hiểm.", "s": [0, 1]}
+],
+"l": [
+  ["다가와도", "DL", "-아도: dù kẻ thù đến gần vẫn vùi đầu"],
+  ["그래서", "NN", "vì hành động đó → người ta ví von"],
+  ["그런데 사실", "DL", "lật lại quan niệm → ô là sự thật"],
+  ["이런 행동", "CH", "chỉ lại việc vùi đầu xuống cát"],
+  ["파악하려는 것이다", "GT", "giải thích mục đích → chìa khóa của ô"]
+],
+"s": [
+  {"c": [["타조는", "CN", "đà điểu", 1], ["멀리서 적이 다가와도", "VP", "dù kẻ thù từ xa tiến lại gần", 5], ["머리를", "TN", "đầu", 3], ["모래에", "TR", "xuống cát", 4], ["파묻고 있다.", "VN", "vẫn vùi", 2]],
+   "g": "타조는 머리를 파묻고 있다", "gv": "Đà điểu vùi đầu",
+   "r": "Mở · Hiện tượng", "y": "Kẻ thù đến gần, đà điểu vẫn vùi đầu xuống cát.",
+   "vi": "Đà điểu vẫn vùi đầu xuống cát dù kẻ thù từ xa đang tiến lại gần.",
+   "tip": "**-아/어도** = dù … vẫn. Tiếng Việt có thể đặt vế “dù …” sau."},
+  {"c": [["그래서", "TR", "vì vậy", 1], ["위험이나 위기를 모르는 척 피하는", "DN", "giả vờ không biết nguy hiểm hay khủng hoảng mà né tránh", 4], ["사람을", "TN", "người", 3], ["타조에", "TR", "với đà điểu", 5], ["비유하곤 한다.", "VN", "người ta thường ví", 2]],
+   "g": "사람을 타조에 비유하곤 한다", "gv": "Người ta thường ví người … với đà điểu",
+   "r": "Quan niệm phổ biến", "y": "Người né tránh nguy hiểm bị ví với đà điểu.",
+   "vi": "Vì vậy người ta thường ví những người giả vờ không biết nguy hiểm hay khủng hoảng mà né tránh với đà điểu.",
+   "tip": "**A를 B에 비유하다** = ví A với B. **-곤 하다** = thường hay."},
+  {"c": [["그런데", "TR", "thế nhưng", 1], ["사실", "TR", "thật ra", 2], ["타조는", "CN", "đà điểu", 3], ["(    ) 위해", "TR", "để (    )", 6], ["이런 행동을", "TN", "hành động này", 5], ["한다.", "VN", "làm", 4]],
+   "g": "타조는 (    ) 위해 이런 행동을 한다", "gv": "Đà điểu làm thế để (    )",
+   "r": "Câu có ô · Lật lại", "y": "Thật ra đà điểu làm vậy vì mục đích khác.",
+   "vi": "Thế nhưng thật ra đà điểu làm hành động này để (    ).",
+   "tip": "**그런데 사실** = báo hiệu “sự thật ngược với điều vừa nói” → nội dung ô nằm ở câu giải thích phía sau."},
+  {"c": [["시각보다 청각이 발달한", "DN", "có thính giác phát triển hơn thị giác", 2], ["타조는", "CN", "đà điểu", 1], ["땅에서 울리는", "DN", "vang dưới mặt đất", 4], ["발소리를 듣고", "VP", "nghe tiếng bước chân", 3], ["적이 오는지를", "TN", "kẻ thù có đến hay không", 6], ["파악하려는 것이다.", "VN", "(tức là) muốn nắm bắt", 5]],
+   "g": "타조는 … 파악하려는 것이다", "gv": "Đà điểu muốn nắm bắt …",
+   "r": "Giải thích · chìa khóa của ô", "y": "Nghe tiếng chân dưới đất để biết kẻ thù có đến không.",
+   "vi": "Tức là đà điểu, loài có thính giác phát triển hơn thị giác, nghe tiếng bước chân vang dưới mặt đất để nắm được kẻ thù có đang đến hay không.",
+   "tip": "**-(으)려는 것이다** = “(làm vậy) là để …” → giải thích mục đích. **-는지** = có … hay không."}
+],
+"w": [
+  ["타조", "đà điểu", "đà điểu 駝鳥", "타조는|타조에"],
+  ["적", "kẻ thù, địch", "địch 敵", "적이"],
+  ["다가오다", "tiến lại gần", "", "다가와도"],
+  ["모래", "cát", "", "모래에"],
+  ["파묻다", "vùi, chôn", "", "파묻고"],
+  ["위험", "nguy hiểm", "nguy hiểm 危險", "위험이나"],
+  ["위기", "khủng hoảng, nguy cơ", "nguy cơ 危機", "위기를"],
+  ["피하다", "tránh, né", "tị 避", "피하는"],
+  ["비유하다", "ví von, so sánh", "tỉ dụ 比喩", "비유하곤"],
+  ["행동", "hành động", "hành động 行動", "행동을"],
+  ["시각", "thị giác", "thị giác 視覺", "시각보다"],
+  ["청각", "thính giác", "thính giác 聽覺", "청각이"],
+  ["발달하다", "phát triển", "phát đạt 發達", "발달한"],
+  ["울리다", "vang", "", "울리는"],
+  ["발소리", "tiếng bước chân", "", "발소리를"],
+  ["파악하다", "nắm bắt, nắm rõ", "bả ác 把握", "파악하려는"]
+],
+"wo": [
+  ["움직임", "sự chuyển động", "", "", "lựa chọn ①"],
+  ["먹이", "thức ăn (của động vật)", "", "", "lựa chọn ②"],
+  ["공격하다", "tấn công", "công kích 攻擊", "", "lựa chọn ④"]
+],
+"g": [
+  {"p": "-아/어도", "m": "dù … vẫn", "f": "다가와도", "d": "Nhượng bộ.", "ex": []},
+  {"p": "-는 척하다", "m": "giả vờ …", "f": "모르는 척", "d": "", "ex": [["자는 척했다.", "Giả vờ ngủ."]]},
+  {"p": "-곤 하다", "m": "thường hay …", "f": "비유하곤 한다", "d": "Việc lặp lại thường xuyên.", "ex": []},
+  {"p": "N보다", "m": "hơn N", "f": "시각보다", "d": "So sánh.", "ex": []},
+  {"p": "-는지", "m": "… hay không", "f": "오는지를", "d": "Mệnh đề nghi vấn làm tân ngữ (알다, 파악하다, 모르다).", "ex": []},
+  {"p": "-(으)려는 것이다", "m": "(là) để …", "f": "파악하려는 것이다", "d": "Giải thích mục đích của hành động đã nói.", "ex": []}
+],
+"qa": {
+  "16": {"a": 0, "w": "Câu sau ô: nghe tiếng chân để biết **kẻ thù có đến không** → ô = **적의 움직임을 알기** (biết chuyển động của kẻ thù).", "x": [null, "Bài không nói chuyện kiếm mồi.", "Bài không nói rửa đầu — chỉ lấy chữ 머리.", "Bài không nói tấn công đà điểu khác."]}
+},
+"hoi": [
+  {"q": "Người ta ví ai với đà điểu?", "a": "Người giả vờ không biết nguy hiểm mà né tránh."},
+  {"q": "Thật ra đà điểu vùi đầu để làm gì?", "a": "Nghe tiếng chân dưới đất để biết kẻ thù có đến không."},
+  {"q": "Giác quan nào của đà điểu phát triển hơn?", "a": "Thính giác (청각) phát triển hơn thị giác."}
+]
+}

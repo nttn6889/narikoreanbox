@@ -1,0 +1,72 @@
+{
+"e": "Etk091", "n": [15],
+"t": "Thức ăn chuyển màu nâu khi nướng",
+"cd": "Khoa học – ẩm thực",
+"y": "Đường và đạm trong thực phẩm gặp nhiệt thì đổi màu (như bánh mì, thịt nướng chuyển nâu); khi chuyển nâu, vị đậm và phong phú hơn; nhưng nếu quá nhiệt, cháy đen thì mất vị ấy.",
+"doc": [
+  {"t": "Nhìn 4 đáp án", "d": "Câu đầu là (가) hoặc (다) → so 2 câu.", "s": []},
+  {"t": "So (가) và (다)", "d": "(가) “**그** 예이다” = ví dụ của cái đã nói → không đứng đầu. (다) nêu nguyên lý chung → **câu đầu = (다)**.", "s": [0, 2]},
+  {"t": "Thứ tự còn lại", "d": "Ví dụ (가) → (나) chuyển nâu thì vị đậm hơn → (라) **만약** quá nhiệt … **그런** 맛 (= vị đậm ở (나)) → cuối.", "s": [1, 3]}
+],
+"l": [
+  ["그 예이다", "VD", "ví dụ cho nguyên lý trước → đứng sau (다)"],
+  ["바뀌면서", "TG", "-면서: cùng lúc đổi màu, vị cũng thay đổi"],
+  ["만나면", "TG", "điều kiện: gặp nhiệt thì …"],
+  ["만약", "DL", "giả định ngược: nếu quá nhiệt"],
+  ["그런 맛", "CH", "chỉ lại “vị đậm, phong phú” ở (나)"]
+],
+"s": [
+  {"c": [["(가) 빵이나 고기를 구울 때", "TR", "khi nướng bánh mì hay thịt", 2], ["갈색으로 바뀌는", "DN", "chuyển sang màu nâu", 4], ["것이", "CN", "việc", 3], ["그 예이다.", "VN", "là ví dụ của điều đó", 1]],
+   "g": "것이 그 예이다", "gv": "Việc … là ví dụ của điều đó",
+   "r": "Ví dụ", "y": "Bánh mì, thịt nướng chuyển nâu là ví dụ.",
+   "vi": "Việc bánh mì hay thịt chuyển sang màu nâu khi nướng chính là ví dụ của điều đó.",
+   "tip": "**그 예이다 / 예를 들어** = câu ví dụ → luôn đứng sau câu nêu nguyên lý."},
+  {"c": [["(나) 갈색으로 바뀌면서", "VP", "cùng với việc chuyển nâu", 1], ["빵이나 고기의", "DN", "của bánh mì hay thịt", 3], ["맛도", "CN", "vị", 2], ["더 깊어지고", "VP", "đậm hơn", 4], ["풍부해진다.", "VN", "và phong phú hơn", 5]],
+   "g": "맛도 깊어지고 풍부해진다", "gv": "Vị cũng đậm và phong phú hơn",
+   "r": "Kết quả", "y": "Chuyển nâu thì vị đậm, phong phú hơn.",
+   "vi": "Cùng với việc chuyển sang màu nâu, vị của bánh mì hay thịt cũng trở nên đậm đà và phong phú hơn.",
+   "tip": "**-아/어지다** với tính từ = “trở nên …”: 깊어지다, 풍부해지다."},
+  {"c": [["(다) 식품에 들어 있는", "DN", "có trong thực phẩm", 3], ["당과 단백질이", "CN", "đường và chất đạm", 1], ["열을 만나면", "VP", "gặp nhiệt thì", 2], ["색깔이", "CN", "màu sắc", 4], ["바뀌게 된다.", "VN", "sẽ thay đổi", 5]],
+   "g": "당과 단백질이 열을 만나면 색깔이 바뀌게 된다", "gv": "Đường và đạm gặp nhiệt thì màu thay đổi",
+   "r": "Câu đầu · Nguyên lý", "y": "Đường và đạm gặp nhiệt thì đổi màu.",
+   "vi": "Đường và chất đạm có trong thực phẩm khi gặp nhiệt sẽ thay đổi màu sắc.",
+   "tip": "Câu nguyên lý chung (A하면 B하게 된다), không có từ chỉ → hợp làm câu đầu."},
+  {"c": [["(라) 만약", "TR", "nếu", 1], ["열이", "CN", "nhiệt", 2], ["너무 가해져서", "VP", "bị đưa vào quá nhiều nên", 3], ["검게 타게 되면", "VP", "cháy đen thì", 4], ["그런 맛을", "TN", "vị như thế", 6], ["낼 수가 없다.", "VN", "không thể tạo ra", 5]],
+   "g": "만약 … 되면 그런 맛을 낼 수가 없다", "gv": "Nếu … thì không thể tạo ra vị ấy",
+   "r": "Điều kiện ngược · kết", "y": "Quá nhiệt cháy đen thì mất vị ngon.",
+   "vi": "Nếu nhiệt quá cao khiến thức ăn cháy đen thì không thể tạo ra vị như thế.",
+   "tip": "**그런** + danh từ = chỉ lại điều vừa nói → tìm câu có “vị” (나)."}
+],
+"w": [
+  ["굽다", "nướng", "", "구울"],
+  ["갈색", "màu nâu", "hạt sắc 褐色", "갈색으로"],
+  ["예", "ví dụ", "lệ 例", "예이다"],
+  ["깊다", "sâu, đậm (vị)", "", "깊어지고"],
+  ["풍부하다", "phong phú", "phong phú 豐富", "풍부해진다"],
+  ["식품", "thực phẩm", "thực phẩm 食品", "식품에"],
+  ["당", "đường", "đường 糖", "당과"],
+  ["단백질", "chất đạm, protein", "đản bạch chất 蛋白質", "단백질이"],
+  ["열", "nhiệt", "nhiệt 熱", "열을|열이"],
+  ["색깔", "màu sắc", "sắc 色", "색깔이"],
+  ["가해지다", "được thêm vào, bị tác động", "gia 加", "가해져서"],
+  ["타다", "cháy", "", "타게"],
+  ["맛을 내다", "tạo vị", "", "맛을 낼"]
+],
+"wo": [],
+"g": [
+  {"p": "-(으)ㄹ 때", "m": "khi …", "f": "구울 때", "d": "굽다 bất quy tắc ㅂ → 구울.", "ex": []},
+  {"p": "-(으)면서", "m": "cùng với việc …", "f": "바뀌면서", "d": "Hai thay đổi đi kèm.", "ex": []},
+  {"p": "A-아/어지다", "m": "trở nên …", "f": "깊어지고|풍부해진다", "d": "Biến đổi trạng thái.", "ex": []},
+  {"p": "-게 되다", "m": "trở nên, rốt cuộc …", "f": "바뀌게 된다|타게 되면", "d": "Kết quả tự nhiên.", "ex": []},
+  {"p": "만약 -(으)면", "m": "nếu …", "f": "되면", "d": "Giả định.", "ex": []},
+  {"p": "-(으)ㄹ 수가 없다", "m": "không thể …", "f": "낼 수가 없다", "d": "", "ex": []}
+],
+"qa": {
+  "15": {"a": 1, "w": "(다) nguyên lý → (가) ví dụ **그 예** → (나) chuyển nâu thì vị đậm → (라) **만약** quá nhiệt mất **그런 맛**.", "x": ["(가) “그 예” không đứng đầu.", null, "(가) không đứng đầu.", "(라) “그런 맛” cần (나) nói về vị đứng trước."]}
+},
+"hoi": [
+  {"q": "Điều gì làm thực phẩm đổi màu?", "a": "Đường và đạm gặp nhiệt."},
+  {"q": "“그런 맛” là vị gì?", "a": "Vị đậm đà, phong phú khi chuyển nâu ở (나)."},
+  {"q": "Khi nào không còn vị ngon?", "a": "Khi quá nhiệt, cháy đen."}
+]
+}

@@ -1,0 +1,80 @@
+{
+"e": "Etk091", "n": [18],
+"t": "Thiết bị số và bộ não",
+"cd": "Khoa học – công nghệ",
+"y": "Phụ thuộc thiết bị số nhiều hơn nên ta ít phải tự nhớ, vì vậy dễ nghĩ rằng ta dùng não ít đi. Nhưng thật ra chỉ cách dùng não thay đổi chứ lượng dùng không giảm: trước dùng để ghi nhớ thông tin, nay dùng để xử lý lượng thông tin nhiều hơn hẳn.",
+"doc": [
+  {"t": "Đọc câu có ô", "d": "**… (    ) 생각할 수 있다** → ô là một **suy nghĩ** của người ta (có thể nghĩ rằng …).", "s": [1]},
+  {"t": "Đọc qua ô · câu bác bỏ", "d": "**그런데** + “**사용량이 줄어든 것이 아니다**” — bác bỏ suy nghĩ đó → suy nghĩ = “dùng não ít đi”.", "s": [2]},
+  {"t": "Câu 1 · lý do của suy nghĩ", "d": "Ít phải tự nhớ → dễ tưởng não làm việc ít đi.", "s": [0]},
+  {"t": "Câu cuối · giải thích", "d": "Quá khứ: nhớ thông tin → nay: xử lý thông tin nhiều hơn.", "s": [3]}
+],
+"l": [
+  ["높아지면서", "TG", "-면서: phụ thuộc tăng kéo theo việc phải nhớ giảm"],
+  ["그래서", "NN", "vì ít phải nhớ → dễ có suy nghĩ ở ô"],
+  ["그런데", "DL", "bác bỏ suy nghĩ ở ô"],
+  ["달라졌을 뿐", "GT", "-(으)ㄹ 뿐: chỉ … thôi, không phải …"],
+  ["썼다면", "DL", "-았/었다면: so sánh quá khứ ↔ hiện tại"],
+  ["사용하고 있는 것이다", "GT", "-는 것이다: giải thích câu 3"]
+],
+"s": [
+  {"c": [["디지털 기기에 대한", "DN", "vào thiết bị số", 3], ["의존도가", "CN", "mức độ phụ thuộc", 2], ["높아지면서", "VP", "khi … tăng lên", 1], ["사람들이", "CN", "con người", 4], ["무언가 직접 기억해야 할", "DN", "phải tự mình ghi nhớ điều gì đó", 6], ["일은", "CN", "việc", 5], ["줄었다.", "VN", "đã giảm", 7]],
+   "g": "일은 줄었다", "gv": "Việc … đã giảm",
+   "r": "Mở · Hiện tượng", "y": "Phụ thuộc thiết bị số nên ít phải tự nhớ.",
+   "vi": "Khi mức độ phụ thuộc vào thiết bị số tăng lên, những việc con người phải tự mình ghi nhớ đã giảm đi.",
+   "tip": "**-면서** ở đây = “cùng với / khi … thì”: một thay đổi kéo theo thay đổi khác."},
+  {"c": [["그래서", "TR", "vì vậy", 1], ["이전보다", "TR", "so với trước", 4], ["(    )", "TN", "(rằng) (    )", 3], ["생각할 수 있다.", "VN", "có thể nghĩ", 2]],
+   "g": "(    ) 생각할 수 있다", "gv": "Có thể nghĩ (rằng) …",
+   "r": "Câu có ô · Suy nghĩ phổ biến", "y": "Dễ nghĩ rằng … so với trước.",
+   "vi": "Vì vậy người ta có thể nghĩ rằng (mình dùng não ít hơn) so với trước.",
+   "tip": "Ô kết thúc bằng **-다고** + 생각하다 → ô là nội dung suy nghĩ. Câu sau **그런데** sẽ bác bỏ nó."},
+  {"c": [["그런데", "TR", "thế nhưng", 1], ["뇌를 사용하는", "DN", "sử dụng não", 3], ["방식이", "CN", "cách", 2], ["이전과", "TR", "so với trước", 5], ["달라졌을 뿐", "VP", "chỉ thay đổi", 4], ["사용량이", "CN", "lượng sử dụng", 6], ["줄어든 것이 아니다.", "VN", "chứ không phải giảm đi", 7]],
+   "g": "방식이 달라졌을 뿐 사용량이 줄어든 것이 아니다", "gv": "Chỉ cách thay đổi, chứ lượng không giảm",
+   "r": "Bác bỏ · Ý chính", "y": "Chỉ cách dùng não đổi, lượng dùng không giảm.",
+   "vi": "Thế nhưng chỉ có cách sử dụng não thay đổi so với trước, chứ lượng sử dụng không hề giảm đi.",
+   "tip": "**A-(으)ㄹ 뿐 B-(으)ㄴ 것이 아니다** = chỉ A thôi, chứ không phải B. Phần B chính là điều bị bác bỏ → nội dung ô."},
+  {"c": [["과거에는", "TR", "nếu như trước đây", 1], ["단순히", "TR", "đơn thuần", 3], ["정보를 기억하는 데", "TR", "vào việc ghi nhớ thông tin", 4], ["뇌를 썼다면", "VP", "ta dùng não", 2], ["이제는", "TR", "thì bây giờ", 5], ["과거보다 압도적으로 많아진", "DN", "đã nhiều hơn trước một cách áp đảo", 8], ["정보를 처리하는 데", "TR", "vào việc xử lý lượng thông tin", 7], ["사용하고 있는 것이다.", "VN", "(ta) đang dùng (não)", 6]],
+   "g": "과거에는 … 썼다면 이제는 … 사용하고 있는 것이다", "gv": "Trước đây dùng để …, bây giờ dùng để …",
+   "r": "Giải thích · Kết", "y": "Trước: nhớ thông tin; nay: xử lý thông tin nhiều hơn hẳn.",
+   "vi": "Nếu như trước đây ta dùng não đơn thuần để ghi nhớ thông tin, thì bây giờ ta đang dùng nó để xử lý lượng thông tin đã nhiều hơn trước một cách áp đảo.",
+   "tip": "**A-았/었다면 B** = “nếu như (trước kia) A thì (nay) B” — so sánh hai thời kỳ. **-는 데 쓰다/사용하다** = dùng vào việc …"}
+],
+"w": [
+  ["디지털 기기", "thiết bị số", "cơ khí 機器", "디지털 기기에"],
+  ["의존도", "mức độ phụ thuộc", "y tồn độ 依存度", "의존도가"],
+  ["높아지다", "tăng lên, cao lên", "", "높아지면서"],
+  ["직접", "trực tiếp, tự mình", "trực tiếp 直接", "직접"],
+  ["기억하다", "ghi nhớ", "ký ức 記憶", "기억해야|기억하는"],
+  ["줄다", "giảm", "", "줄었다"],
+  ["이전", "trước đây", "dĩ tiền 以前", "이전보다|이전과"],
+  ["뇌", "não", "não 腦", "뇌를"],
+  ["방식", "phương thức, cách", "phương thức 方式", "방식이"],
+  ["달라지다", "thay đổi, khác đi", "", "달라졌을"],
+  ["사용량", "lượng sử dụng", "sử dụng lượng 使用量", "사용량이"],
+  ["줄어들다", "giảm đi", "", "줄어든"],
+  ["단순히", "đơn thuần", "đơn thuần 單純", "단순히"],
+  ["압도적", "áp đảo", "áp đảo đích 壓倒的", "압도적으로"],
+  ["처리하다", "xử lý", "xử lý 處理", "처리하는"]
+],
+"wo": [
+  ["덜", "ít hơn, kém", "", "", "lựa chọn ①"],
+  ["기억력", "trí nhớ", "ký ức lực 記憶力", "", "lựa chọn ②"],
+  ["저장하다", "lưu trữ", "trữ tàng 貯藏", "", "lựa chọn ③"]
+],
+"g": [
+  {"p": "N에 대한", "m": "về / đối với N", "f": "기기에 대한", "d": "", "ex": []},
+  {"p": "-(으)ㄹ 수 있다", "m": "có thể", "f": "생각할 수 있다", "d": "", "ex": []},
+  {"p": "-(으)ㄹ 뿐 (-지 않다)", "m": "chỉ … thôi, chứ không …", "f": "달라졌을 뿐", "d": "Giới hạn: chỉ có điều này, phủ định điều kia.", "ex": [["얼굴만 알 뿐 이름은 모른다.", "Chỉ biết mặt thôi chứ không biết tên."]]},
+  {"p": "-(으)ㄴ 것이 아니다", "m": "không phải là …", "f": "줄어든 것이 아니다", "d": "Bác bỏ một cách hiểu.", "ex": []},
+  {"p": "-았/었다면", "m": "nếu như (trước kia) …", "f": "썼다면", "d": "Đặt hai thời kỳ cạnh nhau để so sánh.", "ex": []},
+  {"p": "-는 데 쓰다", "m": "dùng vào việc …", "f": "기억하는 데|처리하는 데", "d": "", "ex": []}
+],
+"qa": {
+  "18": {"a": 0, "w": "Câu sau bác bỏ: **사용량이 줄어든 것이 아니다** → điều người ta nghĩ = **뇌를 덜 사용한다고** (dùng não ít đi).", "x": [null, "Ít phải nhớ không làm trí nhớ tốt lên; bài không nói.", "Ngược: phải tự nhớ **ít đi**.", "Đúng là dùng thiết bị nhiều, nhưng không phải điều bị câu sau bác bỏ."]}
+},
+"hoi": [
+  {"q": "Vì sao người ta dễ nghĩ não được dùng ít đi?", "a": "Vì phụ thuộc thiết bị số nên ít phải tự nhớ."},
+  {"q": "Tác giả nói điều gì thay đổi, điều gì không?", "a": "Cách dùng não thay đổi; lượng dùng không giảm."},
+  {"q": "Ngày nay não được dùng vào việc gì?", "a": "Xử lý lượng thông tin nhiều hơn hẳn trước."}
+]
+}

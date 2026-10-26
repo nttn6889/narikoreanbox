@@ -1,0 +1,44 @@
+{
+"e": "Etk091", "n": [3],
+"t": "Làm tình nguyện để giúp hàng xóm",
+"cd": "Xã hội",
+"y": "Mỗi năm tham gia hoạt động tình nguyện với mục đích giúp đỡ hàng xóm khó khăn.",
+"doc": [
+  {"t": "Gọi tên phần gạch chân", "d": "**돕고자** = -고자 → **mục đích** (để …).", "s": [0]},
+  {"t": "Gọi tên 4 lựa chọn", "d": "-기 위해서 (mục đích) · -는 대신에 (thay vì) · -기 무섭게 (vừa … là ngay) · -는 바람에 (vì – kết quả xấu) → chỉ ① cùng nghĩa.", "s": []}
+],
+"l": [
+  ["돕고자", "GT", "-고자: mục đích của việc làm tình nguyện"]
+],
+"s": [
+  {"c": [["어려운 이웃을", "TN", "những người hàng xóm khó khăn", 5], ["돕고자", "VP", "để giúp đỡ", 4], ["매년", "TR", "hằng năm", 2], ["봉사 활동에", "TR", "hoạt động tình nguyện", 3], ["참여하고 있다.", "VN", "(tôi) đang tham gia", 1]],
+   "g": "봉사 활동에 참여하고 있다", "gv": "(Tôi) đang tham gia hoạt động tình nguyện",
+   "r": "Câu có gạch chân", "y": "Tham gia tình nguyện để giúp người khó khăn.",
+   "vi": "Hằng năm tôi tham gia hoạt động tình nguyện để giúp đỡ những người hàng xóm có hoàn cảnh khó khăn.",
+   "tip": "Vế mục đích (-고자) đứng trước trong tiếng Hàn nhưng tiếng Việt thường để **sau**: “làm A **để** B”."}
+],
+"w": [
+  ["어렵다", "khó khăn (hoàn cảnh)", "", "어려운"],
+  ["이웃", "hàng xóm", "", "이웃을"],
+  ["돕다", "giúp đỡ", "", "돕고자"],
+  ["매년", "hằng năm", "mỗi niên 每年", "매년"],
+  ["봉사 활동", "hoạt động tình nguyện", "phụng sự hoạt động 奉仕活動", "봉사 활동"],
+  ["참여하다", "tham gia", "tham dự 參與", "참여하고"]
+],
+"wo": [
+  ["-기 무섭게", "vừa … là ngay lập tức", "", "", "lựa chọn ③"],
+  ["-는 바람에", "vì … (kết quả không mong muốn)", "", "", "lựa chọn ④"]
+],
+"g": [
+  {"p": "-고자", "m": "để …, nhằm …", "f": "돕고자", "d": "Mục đích, văn viết / trang trọng. Đồng nghĩa -기 위해(서), -(으)려고.", "ex": [["건강을 지키고자 운동을 시작했다.", "Tôi bắt đầu tập thể dục để giữ sức khỏe."]]},
+  {"p": "-기 위해서", "m": "để …", "f": "", "d": "Mục đích; dùng được với động từ. = -고자.", "ex": []},
+  {"p": "-고 있다", "m": "đang …; (thói quen) vẫn …", "f": "참여하고 있다", "d": "Ở đây kèm 매년 → việc làm đều đặn.", "ex": []}
+],
+"qa": {
+  "3": {"a": 0, "w": "-고자 = **-기 위해서** (mục đích). Đề thật đã hỏi cặp này nhiều lần.", "x": [null, "-는 대신에 = thay vì / bù lại.", "-기 무섭게 = vừa … là ngay.", "-는 바람에 = vì (kết quả xấu)."]}
+},
+"hoi": [
+  {"q": "Tham gia tình nguyện nhằm mục đích gì?", "a": "Để giúp hàng xóm khó khăn (어려운 이웃을 돕고자)."},
+  {"q": "Nêu 2 đuôi khác cùng nghĩa với -고자.", "a": "-기 위해(서), -(으)려고."}
+]
+}

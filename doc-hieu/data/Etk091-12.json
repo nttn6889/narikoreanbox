@@ -1,0 +1,79 @@
+{
+"e": "Etk091", "n": [12],
+"t": "Người khách hỏi thăm trước khi hỏi pizza",
+"cd": "Đời sống – câu chuyện cảm động",
+"y": "Anh Kim (chủ tiệm pizza) đi giao hàng thì xe máy trượt trên đường mưa; người không sao nhưng pizza hỏng. Khi anh gọi báo giao trễ, khách nói “cứ từ từ, anh có sao không?” — câu chuyện gây xúc động nhẹ nhàng.",
+"doc": [
+  {"t": "Đọc 4 lựa chọn trước", "d": "Từ khóa: **취소** (hủy) · **피자가 망가졌다** · **김 씨가 다쳤다** · **연락하다 사고** (thứ tự việc).", "s": []},
+  {"t": "Câu 2–3 · sự việc", "d": "Đang đi giao thì xe trượt (câu 2); **다행히 … 없었지만** người không bị thương nhưng **피자가 망가져서** → ② đúng, ③ sai.", "s": [1, 2]},
+  {"t": "Câu 4 · thứ tự + lời khách", "d": "Sau tai nạn anh mới gọi khách (→ ④ đảo thứ tự); khách bảo cứ từ từ (→ ① sai).", "s": [3]}
+],
+"l": [
+  ["사연이", "GT", "câu 1 giới thiệu “câu chuyện”, các câu sau kể chi tiết"],
+  ["배달하러 가다가", "TG", "-다가: đang đi thì xảy ra việc khác"],
+  ["다행히", "TD", "may mà → kết quả tốt (không ai bị thương)"],
+  ["없었지만", "DL", "-지만: nhưng vẫn có vấn đề (pizza hỏng)"],
+  ["연락하자", "TG", "-자: vừa gọi thì khách phản ứng"],
+  ["전했다고 한다", "GT", "-다고 한다: kể lại (nghe nói)"]
+],
+"s": [
+  {"c": [["피자 가게를 운영하는", "DN", "điều hành tiệm pizza", 3], ["김민수 씨의", "DN", "của anh Kim Min-su", 2], ["사연이", "CN", "câu chuyện", 1], ["잔잔한 감동을", "TN", "sự xúc động nhẹ nhàng", 5], ["주고 있다.", "VN", "đang mang lại", 4]],
+   "g": "사연이 감동을 주고 있다", "gv": "Câu chuyện đang gây xúc động",
+   "r": "Mở · Giới thiệu câu chuyện", "y": "Chuyện của chủ tiệm pizza gây xúc động.",
+   "vi": "Câu chuyện của anh Kim Min-su, chủ một tiệm pizza, đang mang lại sự xúc động nhẹ nhàng.",
+   "tip": "Định ngữ dài (피자 가게를 운영하는) → tiếng Việt đặt sau tên: “anh Kim, (người) điều hành tiệm pizza” → gọn: “chủ tiệm pizza”."},
+  {"c": [["최근", "TR", "gần đây", 1], ["김 씨는", "CN", "anh Kim", 2], ["피자를 배달하러 가다가", "VP", "đang đi giao pizza thì", 3], ["오토바이가 빗길에 미끄러지는", "DN", "xe máy trượt trên đường mưa", 6], ["사고를", "TN", "tai nạn", 5], ["당했다.", "VN", "gặp phải", 4]],
+   "g": "김 씨는 사고를 당했다", "gv": "Anh Kim gặp tai nạn",
+   "r": "Sự việc (1)", "y": "Đang đi giao pizza thì xe trượt trên đường mưa.",
+   "vi": "Gần đây, anh Kim đang đi giao pizza thì gặp tai nạn: xe máy bị trượt trên đường mưa.",
+   "tip": "**-다가** = đang làm A thì B xảy ra. **N을 당하다** = gặp phải (chuyện xấu): 사고를 당하다, 사기를 당하다."},
+  {"c": [["다행히", "TR", "may mà", 1], ["사람이 다치는", "DN", "người bị thương", 4], ["피해는", "CN", "thiệt hại", 3], ["없었지만", "VP", "không có nhưng", 2], ["피자가", "CN", "pizza", 5], ["망가져서", "VP", "bị hỏng nên", 6], ["배달에", "TR", "việc giao hàng", 8], ["문제가 생겼다.", "VN", "gặp vấn đề", 7]],
+   "g": "피해는 없었지만 문제가 생겼다", "gv": "Không có thiệt hại nhưng nảy sinh vấn đề",
+   "r": "Sự việc (2) · kết quả", "y": "Người không sao nhưng pizza hỏng, giao hàng có vấn đề.",
+   "vi": "May mà không ai bị thương, nhưng pizza bị hỏng nên việc giao hàng gặp trục trặc.",
+   "tip": "**사람이 다치는 피해는 없었다** → dịch gọn “không ai bị thương”. Câu có 3 vế: -지만 (nhưng) … -아서 (nên) …"},
+  {"c": [["배달이 늦어지는 것에 대해", "TR", "về việc giao hàng bị trễ", 3], ["김 씨가", "CN", "anh Kim", 1], ["고객에게", "TR", "khách hàng", 2], ["연락하자", "VP", "vừa liên lạc thì", 4], ["고객은", "CN", "khách hàng", 5], ["\"천천히 오셔도 돼요. 몸은 괜찮나요?\"라며", "TR", "nói “Anh cứ đến từ từ cũng được. Anh có sao không?”", 8], ["따뜻한 말부터", "TN", "lời ấm áp trước tiên", 7], ["전했다고 한다.", "VN", "đã gửi (nghe kể)", 6]],
+   "g": "고객은 따뜻한 말부터 전했다고 한다", "gv": "Khách gửi lời ấm áp trước tiên",
+   "r": "Kết · Điểm cảm động", "y": "Khách bảo cứ từ từ và hỏi thăm sức khỏe trước.",
+   "vi": "Khi anh Kim liên lạc với khách về việc giao trễ, khách đã nói những lời ấm áp trước tiên: “Anh cứ đến từ từ cũng được. Anh có sao không?”",
+   "tip": "**-자** = vừa làm A thì B. **N부터** = trước hết là N (chưa hỏi pizza đã hỏi thăm người). **-라며** = vừa nói “…” vừa."}
+],
+"w": [
+  ["운영하다", "điều hành, kinh doanh", "vận doanh 運營", "운영하는"],
+  ["사연", "câu chuyện, hoàn cảnh", "sự duyên 事緣", "사연이"],
+  ["잔잔하다", "nhẹ nhàng, êm đềm", "", "잔잔한"],
+  ["감동", "cảm động, xúc động", "cảm động 感動", "감동을"],
+  ["배달하다", "giao hàng", "phối đạt 配達", "배달하러|배달에|배달이"],
+  ["빗길", "đường mưa (đường trơn vì mưa)", "", "빗길에"],
+  ["미끄러지다", "trượt", "", "미끄러지는"],
+  ["사고를 당하다", "gặp tai nạn", "sự cố 事故", "사고를 당했다"],
+  ["다행히", "may mắn là, may mà", "đa hạnh 多幸", "다행히"],
+  ["다치다", "bị thương", "", "다치는"],
+  ["피해", "thiệt hại", "bị hại 被害", "피해는"],
+  ["망가지다", "bị hỏng", "", "망가져서"],
+  ["늦어지다", "bị trễ", "", "늦어지는"],
+  ["고객", "khách hàng", "cố khách 顧客", "고객에게|고객은"],
+  ["연락하다", "liên lạc", "liên lạc 連絡", "연락하자"],
+  ["전하다", "truyền, gửi (lời)", "truyền 傳", "전했다고"]
+],
+"wo": [
+  ["취소하다", "hủy", "thủ tiêu 取消", "", "lựa chọn ①"],
+  ["시키다", "gọi (món), đặt", "", "", "lựa chọn ④"]
+],
+"g": [
+  {"p": "-(으)러 가다", "m": "đi để …", "f": "배달하러 가다가", "d": "Mục đích của việc di chuyển.", "ex": []},
+  {"p": "-다가", "m": "đang … thì", "f": "가다가", "d": "Hành động đang diễn ra thì bị chuyển sang việc khác (thường là sự cố).", "ex": [["길을 걷다가 넘어졌다.", "Đang đi bộ thì bị ngã."]]},
+  {"p": "-지만", "m": "nhưng", "f": "없었지만", "d": "Đối lập hai vế.", "ex": []},
+  {"p": "-자", "m": "vừa … thì", "f": "연락하자", "d": "Vế trước là nguyên nhân/thời điểm, vế sau là phản ứng ngay sau đó.", "ex": [["문을 열자 고양이가 뛰어나왔다.", "Vừa mở cửa thì con mèo chạy ra."]]},
+  {"p": "-(이)라며", "m": "vừa nói “…” vừa / nói rằng", "f": "라며", "d": "Trích dẫn + hành động.", "ex": []},
+  {"p": "-다고 한다", "m": "nghe nói, được biết", "f": "전했다고 한다", "d": "Kể lại thông tin nghe được (văn tin báo).", "ex": []}
+],
+"qa": {
+  "12": {"a": 1, "w": "Câu 3: **피자가 망가져서** — tai nạn làm pizza đang giao bị hỏng → ②.", "x": ["Khách nói “천천히 오셔도 돼요”, không hủy đơn.", null, "Ngược: **다치는 피해는 없었지만** = không ai bị thương.", "Đảo thứ tự: tai nạn xảy ra lúc đang đi giao, sau đó anh mới gọi khách."]}
+},
+"hoi": [
+  {"q": "Tai nạn xảy ra khi nào, vì sao?", "a": "Khi đang đi giao pizza; xe máy trượt trên đường mưa."},
+  {"q": "Anh Kim có bị thương không?", "a": "Không — 다행히 사람이 다치는 피해는 없었다."},
+  {"q": "Điều gì làm câu chuyện cảm động?", "a": "Khách chưa hỏi pizza mà hỏi thăm sức khỏe trước (따뜻한 말부터)."}
+]
+}

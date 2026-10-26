@@ -1,0 +1,77 @@
+{
+"e": "Etk091", "n": [17],
+"t": "Nước xả vải và khăn tắm",
+"cd": "Đời sống – khoa học",
+"y": "Nước xả vải phủ một lớp màng lên sợi vải để vải mềm và lưu hương nên nhiều người dùng; nhưng với chất liệu cần thấm nhanh như khăn tắm thì không hẳn tốt, vì lớp màng ấy ngược lại làm giảm khả năng thấm hút của sợi vải.",
+"doc": [
+  {"t": "Đọc câu có ô", "d": "Câu cuối **… 때문이다** = lý do; **오히려** = ngược với mong đợi → lớp màng gây hại.", "s": [3]},
+  {"t": "Câu trước ô", "d": "**그런데**: khăn phải **thấm nước nhanh** → nước xả không hẳn tốt → hại ở đúng chỗ “thấm” → **giảm khả năng thấm**.", "s": [2]},
+  {"t": "Câu 1–2", "d": "Lợi ích: mềm, thơm → loại các lựa chọn ngược (mất mùi, thô ráp).", "s": [0, 1]}
+],
+"l": [
+  ["그래서", "NN", "vì có lợi → nhiều người dùng"],
+  ["그런데", "DL", "chuyển sang mặt hạn chế"],
+  ["좋은 것만은 아니다", "TD", "không hẳn là tốt → câu sau phải nêu điểm hại"],
+  ["오히려", "DL", "ngược lại với mong đợi"],
+  ["때문이다", "NN", "câu có ô là lý do của câu 3"]
+],
+"s": [
+  {"c": [["섬유 유연제는", "CN", "nước xả vải", 1], ["섬유에", "TR", "lên sợi vải", 4], ["막을", "TN", "một lớp màng", 3], ["씌워", "VP", "phủ", 2], ["옷감을", "TN", "vải", 6], ["부드럽게 하고", "VP", "làm mềm", 5], ["향기도", "TN", "hương thơm", 8], ["남긴다.", "VN", "và để lại", 7]],
+   "g": "유연제는 옷감을 부드럽게 하고 향기도 남긴다", "gv": "Nước xả làm vải mềm và lưu hương",
+   "r": "Mở · Tác dụng", "y": "Nước xả phủ màng, làm vải mềm, lưu hương.",
+   "vi": "Nước xả vải phủ một lớp màng lên sợi vải, làm vải mềm và còn lưu lại hương thơm.",
+   "tip": "**-아/어 (씌워)** = cách thức: phủ màng **để / bằng cách đó** làm mềm."},
+  {"c": [["그래서", "TR", "vì vậy", 1], ["세탁할 때", "TR", "khi giặt", 4], ["유연제를 넣는", "DN", "cho nước xả vào", 3], ["사람들이", "CN", "người", 2], ["많다.", "VN", "nhiều", 5]],
+   "g": "사람들이 많다", "gv": "Nhiều người",
+   "r": "Hệ quả", "y": "Nhiều người dùng nước xả khi giặt.",
+   "vi": "Vì vậy có nhiều người cho nước xả vào khi giặt.",
+   "tip": "**-는 사람들이 많다** → dịch “nhiều người …”."},
+  {"c": [["그런데", "TR", "thế nhưng", 1], ["수건처럼", "TR", "như khăn tắm", 4], ["물기를 빠르게 흡수해야 하는", "DN", "phải thấm nước nhanh", 3], ["소재에는", "TR", "với chất liệu", 2], ["유연제를 넣는 것이", "CN", "việc cho nước xả", 5], ["좋은 것만은 아니다.", "VN", "không hẳn là tốt", 6]],
+   "g": "유연제를 넣는 것이 좋은 것만은 아니다", "gv": "Cho nước xả không hẳn là tốt",
+   "r": "Chuyển · Hạn chế", "y": "Với khăn tắm, nước xả không hẳn tốt.",
+   "vi": "Thế nhưng với chất liệu phải thấm nước nhanh như khăn tắm thì việc cho nước xả không hẳn là tốt.",
+   "tip": "**-는 것만은 아니다** = không hẳn chỉ là … (phủ định một phần). Câu sau sẽ nêu mặt xấu."},
+  {"c": [["유연제가 만든", "DN", "do nước xả tạo ra", 2], ["막이", "CN", "lớp màng", 1], ["오히려", "TR", "ngược lại", 3], ["섬유의", "DN", "của sợi vải", 5], ["(    ) 때문이다.", "VN", "vì (    )", 4]],
+   "g": "막이 (    ) 때문이다", "gv": "Vì lớp màng (    )",
+   "r": "Câu có ô · Lý do", "y": "Lớp màng ngược lại gây hại cho sợi vải.",
+   "vi": "Vì lớp màng do nước xả tạo ra ngược lại (làm giảm khả năng thấm hút) của sợi vải.",
+   "tip": "**오히려** = điều tưởng có lợi lại gây hại. Ô phải nối với “thấm nước nhanh” ở câu trước."}
+],
+"w": [
+  ["섬유", "sợi vải", "tiêm duy 纖維", "섬유"],
+  ["유연제", "nước xả vải (chất làm mềm)", "nhu nhuyễn tễ 柔軟劑", "유연제"],
+  ["막", "lớp màng", "mạc 膜", "막을|막이"],
+  ["씌우다", "phủ, trùm", "", "씌워"],
+  ["옷감", "vải (để may)", "", "옷감을"],
+  ["향기", "hương thơm", "hương khí 香氣", "향기도"],
+  ["남기다", "để lại", "", "남긴다"],
+  ["세탁하다", "giặt", "tẩy trạc 洗濯", "세탁할"],
+  ["수건", "khăn tắm, khăn mặt", "thủ cân 手巾", "수건처럼"],
+  ["물기", "hơi nước, nước đọng", "", "물기를"],
+  ["흡수하다", "hấp thụ, thấm", "hấp thu 吸收", "흡수해야"],
+  ["소재", "chất liệu", "tố tài 素材", "소재에는"],
+  ["오히려", "ngược lại", "", "오히려"]
+],
+"wo": [
+  ["흡수력", "khả năng thấm hút", "hấp thu lực 吸收力", "", "lựa chọn ③"],
+  ["떨어뜨리다", "làm giảm, làm rơi", "", "", "lựa chọn ③"],
+  ["변형시키다", "làm biến dạng", "biến hình 變形", "", "lựa chọn ②"],
+  ["촉감", "cảm giác khi chạm", "xúc cảm 觸感", "", "lựa chọn ④"],
+  ["거칠다", "thô ráp", "", "", "lựa chọn ④"]
+],
+"g": [
+  {"p": "-게 하다", "m": "làm cho …", "f": "부드럽게 하고", "d": "Gây ra trạng thái.", "ex": []},
+  {"p": "N처럼", "m": "như N", "f": "수건처럼", "d": "Nêu ví dụ.", "ex": []},
+  {"p": "-아/어야 하다", "m": "phải …", "f": "흡수해야 하는", "d": "", "ex": []},
+  {"p": "-는 것만은 아니다", "m": "không hẳn (chỉ) là …", "f": "좋은 것만은 아니다", "d": "Phủ định một phần.", "ex": []},
+  {"p": "N/-기 때문이다", "m": "là vì …", "f": "때문이다", "d": "Câu giải thích lý do.", "ex": []}
+],
+"qa": {
+  "17": {"a": 2, "w": "Khăn cần **thấm nhanh**; lớp màng **오히려** cản trở → **흡수력을 떨어뜨리기** (làm giảm khả năng thấm).", "x": ["Ngược: nước xả **để lại** mùi thơm.", "Bài không nói màu sắc.", null, "Ngược: nước xả làm vải **mềm**."]}
+},
+"hoi": [
+  {"q": "Nước xả có 2 tác dụng gì?", "a": "Làm vải mềm và lưu hương."},
+  {"q": "Vì sao khăn tắm không nên dùng nước xả?", "a": "Khăn phải thấm nước nhanh; lớp màng làm giảm khả năng thấm."},
+  {"q": "오히려 cho biết điều gì?", "a": "Điều tưởng có lợi (lớp màng) lại gây hại."}
+]
+}

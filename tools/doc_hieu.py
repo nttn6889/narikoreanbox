@@ -35,6 +35,8 @@ def check(k, d):
         if plain(' '.join(ss)) != p:
             bad.append('các câu ghép lại khác đoạn văn:\n  ' + plain(' '.join(ss)) + '\n  ' + p)
         for i, s in enumerate(d['s']):
+            if any(not c[0].strip() for c in s['c']):
+                bad.append('câu %d: có cụm rỗng' % (i + 1))
             if any(c[1] not in ROLES for c in s['c']):
                 bad.append('câu %d: vai trò lạ %s' % (i + 1, [c[1] for c in s['c'] if c[1] not in ROLES]))
             od = sorted(c[3] for c in s['c'])

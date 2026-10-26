@@ -1,0 +1,45 @@
+{
+"e": "Etk091", "n": [4],
+"t": "3 năm xem 1 phim = coi như không xem",
+"cd": "Đời sống",
+"y": "Ba năm chỉ xem một bộ phim nên tính ra coi như gần như không xem phim.",
+"doc": [
+  {"t": "Gọi tên phần gạch chân", "d": "**본 셈이다** = -(으)ㄴ 셈이다 → **tính ra / coi như**.", "s": [0]},
+  {"t": "Dấu hiệu trong câu", "d": "Số liệu (3년 … 한 편) + **-으니** (vì) + **거의** → kết luận “coi như”. Lựa chọn ④ -(으)ㄴ 거나 마찬가지이다 = cũng như là.", "s": [0]}
+],
+"l": [
+  ["봤으니", "NN", "-으니: lý do → vế sau là kết luận tính ra"],
+  ["거의", "KL", "gần như → đi với -(으)ㄴ 셈이다"]
+],
+"s": [
+  {"c": [["지난 3년 동안", "TR", "trong 3 năm qua", 1], ["영화를", "TN", "phim", 4], ["한 편", "TR", "một bộ", 3], ["봤으니", "VP", "(tôi) chỉ xem … nên", 2], ["거의 안", "TR", "gần như không", 6], ["본 셈이다.", "VN", "coi như … xem", 5]],
+   "g": "영화를 한 편 봤으니 안 본 셈이다", "gv": "Xem 1 phim nên coi như không xem",
+   "r": "Câu có gạch chân", "y": "Tính ra coi như không xem phim.",
+   "vi": "Trong 3 năm qua tôi chỉ xem có một bộ phim, nên coi như gần như không xem.",
+   "tip": "**-(으)ㄴ 셈이다** = “tính ra, coi như”: thực tế không hẳn vậy nhưng kết quả gần như thế. Dịch “coi như …”."}
+],
+"w": [
+  ["지난", "vừa qua", "", "지난"],
+  ["동안", "trong khoảng", "", "동안"],
+  ["편", "bộ (đơn vị đếm phim)", "thiên 篇", "한 편"],
+  ["거의", "gần như", "", "거의"]
+],
+"wo": [
+  ["-(으)ㄴ 척하다", "giả vờ …", "", "", "lựa chọn ①"],
+  ["-기 나름이다", "tùy vào …", "", "", "lựa chọn ②"],
+  ["-(으)ㄹ 수밖에 없다", "đành phải, không thể không", "", "", "lựa chọn ③"],
+  ["-(으)ㄴ 거나 마찬가지이다", "cũng như là, chẳng khác gì", "", "", "lựa chọn ④ · đáp án"]
+],
+"g": [
+  {"p": "-(으)ㄴ/는 셈이다", "m": "coi như, tính ra là", "f": "본 셈이다", "d": "Kết luận gần đúng sau khi tính toán. Đồng nghĩa -(으)ㄴ 거나 마찬가지이다, -(으)ㄴ 것과 같다.", "ex": [["거의 다 끝난 셈이다.", "Coi như gần xong hết rồi."]]},
+  {"p": "-(으)니", "m": "vì … nên", "f": "봤으니", "d": "Lý do, ở đây dẫn tới kết luận.", "ex": []},
+  {"p": "N 동안", "m": "trong (khoảng thời gian)", "f": "3년 동안", "d": "", "ex": []}
+],
+"qa": {
+  "4": {"a": 3, "w": "-(으)ㄴ 셈이다 (coi như) = **-(으)ㄴ 거나 마찬가지이다** (cũng như là).", "x": ["본 척했다 = giả vờ đã xem.", "보기 나름이다 = tùy cách nhìn.", "볼 수밖에 없었다 = buộc phải xem — ngược nghĩa.", null]}
+},
+"hoi": [
+  {"q": "Người nói có thật sự “không xem” không?", "a": "Không hẳn — có xem 1 phim, nhưng tính ra coi như không xem."},
+  {"q": "Chữ nào báo hiệu “tính ra, kết luận”?", "a": "**-으니** (lý do) + **거의** (gần như)."}
+]
+}
