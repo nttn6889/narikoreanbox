@@ -38,7 +38,7 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - Trang lớp `lop/<lớp>/` cùng khung với trang TOPIK (cô chốt 26/10, 4 lớp giống nhau): `lop/khung.js` vẽ thanh **Từ vựng · Ngữ pháp · Nghe · Đọc · Viết**
   → thanh chọn bài theo cuốn của lớp (`data-books`, vd. `2A,2B`; tên bài từ `seoul/bai.json`) → nội dung bài. Từ vựng = thẻ “Bảng từ” (vẽ từ `thi-thu/vocab.json`,
   phần `Seoul <cuốn> · Bài N`) + “Học liệu”; Ngữ pháp = “Mẫu ngữ pháp” (`seoul/ngu-phap/np.json`, link sang giải thích) + “Học liệu”; Nghe/Đọc/Viết = Học liệu (chưa có thì báo cô đang soạn).
-  Học liệu tự sinh: `seoul/#b&c`, `seoul/tu-sau/` (bài trong `TS`), `seoul/bai-tap/` (bài trong `BT` — thêm bài thì sửa cả `TS`/`BT` trong `khung.js`), `seoul/ngu-phap/`;
+  Học liệu tự sinh: `seoul/#b&c`, `seoul/bai-tap/` (bài trong `BT` — thêm bài thì sửa `BT` trong `khung.js`; `TS` để trống: `seoul/tu-sau/` là giáo án của cô), `seoul/ngu-phap/`;
   thêm tay vào `HL['<lớp>']['<phần>:<cuốn>-<bài>']` hoặc `'<phần>:chung'` (hiện nút “★ Dùng chung”). Link `lop/2a/#k=tu|np|nghe|doc|viet&b=2A-3&t=bang|mau|hl`.
 - Không đưa giáo án / bản trình chiếu của cô (trang `noindex`, `viet-51/`, `viet-52/`, `viet-53/`, `cau-25-27/`, `seoul/so-dem|tuong-dong|tu-de-hoi/`, `seoul/2a-1|3a-1/`, `ngu-phap-sau/`).
 
@@ -355,7 +355,7 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   → ArtifactData batch `set` collection `vocab` → đồng bộ kho từ `--vocab-only` (bỏ `VCD*`; khi `update` `site/kho` giữ dấu các phần cũ không có trong dump).
 - Kho từ: phần `TOPIK 30 ngày · Day NN` (secOrder 200 + NN), nhóm Phần 1 = từ 1–17, Phần 2 = 18–33 (học sinh chia 2 ngày được), id `t30NN_MM` cố định.
   Trang `tu-vung/` bỏ các phần này. Giao hằng ngày: Lộ trình từ vựng chọn các phần `TOPIK 30 ngày`, 33 từ/ngày (hoặc 17 nếu chia 2 ngày), dạng nên có “Điền từ vào câu” (`cau`, dùng câu sách).
-- Trang `tu-30/` (gửi học sinh, `#d=1&b=<bước>&p=all|1|2`): ① Học (thẻ từ, 🔊, 관련어, Tip, ★ số đề + câu trong đề, “Em thuộc”, “Che nghĩa”) · ② Nghĩa · ③ Điền câu sách ·
+- Trang `tu-30/` (giáo án của cô, `noindex`, link ở Mục lục giáo án; `#d=1&b=<bước>&p=all|1|2`): ① Học (thẻ từ, 🔊, 관련어, Tip, ★ số đề + câu trong đề, “Em thuộc”, “Che nghĩa”) · ② Nghĩa · ③ Điền câu sách ·
   ④ Họ từ · Kết hợp · ⑤ Dễ nhầm (khung sách + bài) · ⑥ Câu trong đề · ⑦ Dịch Việt → Hàn (câu sách ngắn, so LCS, tự chấm) · ⑧ Ôn (bài 복습 của sách); “Gửi kết quả cho cô”.
   localStorage `nari-t30`. Thêm Day: soạn `tools/t30/dNN.json`, chạy script (tự thêm vào `days.json`), ghi `vocab`, đồng bộ kho từ.
 
@@ -408,13 +408,13 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 
 ## Từ vựng Seoul học sâu (`seoul/tu-sau/`) — lớp 2A cần học nhanh nền rồi vào ôn TOPIK
 - Cô chốt (24/10/2026): mỗi bài chỉ cần **từ vựng dạy sâu có mở rộng, nối sang TOPIK** + ngữ pháp sâu nối sang ngữ pháp TOPIK (`ngu-phap-sau/`);
-  không làm học liệu theo từng trang sách như `seoul/2a-1/` nữa. Đã làm **2A Bài 2, 3** và **3A Bài 1–3** (trang lớp `lop/2a/`, `lop/3a/` có link).
-- Trang học sinh, **8 bước như `tu-30/`** (cô chốt 26/10), link `seoul/tu-sau/#b=2A&c=2&s=hoc|nghia|dien|kh|nham|de|dich|on`: ① Học (khung “Chủ đề của bài trong TOPIK”, thẻ từ: câu ví dụ, cụm hay đi cùng, tip,
+  không làm học liệu theo từng trang sách như `seoul/2a-1/` nữa. Đã làm **2A Bài 2, 3** và **3A Bài 1–3**. Cô chốt 26/10: `seoul/tu-sau/` và `tu-30/` là giáo án của cô (`noindex`), link chỉ nằm ở Mục lục giáo án, không đặt link từ trang học sinh.
+- Trang `noindex`, **8 bước như `tu-30/`** (cô chốt 26/10), link `seoul/tu-sau/#b=2A&c=2&s=hoc|nghia|dien|kh|nham|de|dich|on`: ① Học (khung “Chủ đề của bài trong TOPIK”, thẻ từ: câu ví dụ, cụm hay đi cùng, tip,
   khung “Lên TOPIK” = từ trung cấp cùng nhà kèm ★ số đề + câu trong đề, 📝 ghi chú TOPIK) · ② Nghĩa · ③ Điền câu · ④ Kết hợp · Mở rộng (`x` g k|h) ·
   ⑤ Dễ nhầm (khung `cf` + câu `x` g c; sách Seoul không có khung này nên Claude soạn: gần nghĩa, đồng âm, nhiều nghĩa, chủ động – bị động, số thuần Hàn / Hán…) ·
   ⑥ Câu trong đề (chữ tô vàng nghĩa là gì; từ của bài + từ mở rộng gặp ≥ 7 đề, `UPK`; cụm từ đếm theo `q` thì hỏi nghĩa `qv` của chữ được tô) · ⑦ Dịch câu ·
   ⑧ Ôn (tự sinh: gõ 8 từ của bài Việt → Hàn + 5 từ của mỗi bài trước cùng cuốn, tối đa 2 bài — `ON_CUR`/`ON_PREV`/`ON_NPREV`); “Gửi kết quả cho cô”. localStorage `nari-tusau`.
-  Trang `seoul/` hiện dòng “Học sâu” dưới bài có trong biến `TS`.
+  Biến `TS` trong `seoul/index.html` và `lop/khung.js` để trống (không hiện dòng “Học sâu”); làm bài mới thì thêm vào Mục lục giáo án.
 - Nguồn soạn tay `tools/seoul_tu/<cuốn>-<bài>.json` (`w[].ko` đúng như `tools/seoul/<cuốn>.tsv`; `q` từ gốc để đếm (`[]` = không đếm: đơn vị thời gian, từ ngoại lai ghép), `r`, `tip`, `up:[[từ, loại, nghĩa, HV]]`, `note`, `exv`;
   `top` từ chủ đề, `x` câu luyện (g k kết hợp / h mở rộng / c dễ nhầm; có `q` thì `s` là câu có `__chữ__` + câu hỏi nghĩa), lựa chọn đầu là đáp án,
   `cf:[{t, k loại, d, it:[[từ, nghĩa, dùng khi]], ex:[[câu có __chữ__, dịch]]}]` khung dễ nhầm, `qv` nghĩa của chữ `q` khi khác nghĩa cả cụm) → `python3 tools/seoul_tu.py` (cần kiwipiepy; lấy nghĩa/HV/câu ví dụ/id từ tsv, đếm đề như `tu-30/`)

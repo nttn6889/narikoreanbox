@@ -13,7 +13,7 @@
   /* số bài từng cuốn khi chưa có tên bài trong seoul/bai.json */
   var NBAI = {'1A': [1, 8], '1B': [9, 16], '2A': [1, 9], '2B': [10, 18], '3A': [1, 9], '3B': [10, 18], '4A': [1, 9], '4B': [10, 18]};
   /* Bài có trang tu-sau/ và bai-tap/ (giống TS, BT của seoul/index.html) */
-  var TS = {'2A-2': 1, '2A-3': 1, '3A-1': 1, '3A-2': 1, '3A-3': 1};
+  var TS = {};  // tu-sau/ là giáo án của cô (link ở Mục lục giáo án), không hiện ở trang lớp
   var BT = {'1A-1': 1, '1A-2': 1, '1A-3': 1, '2A-1': 1, '2A-2': 1, '2A-3': 1};
   var HL = {
     '1a': {'nghe:chung': [['Phát âm', 'Nối âm 연음', 'so-cap/noi-am/', 'Quy tắc nối âm, luyện đọc']]},
@@ -58,7 +58,7 @@
       var q = '#b=' + x.b + '&c=' + x.n;
       if(k === 'tu'){
         if(vocabOf(x).length) L.push(['Bảng từ', 'Từ vựng Seoul ' + x.b + ' · Bài ' + x.n, 'seoul/' + q, 'Bảng từ, Hán Việt, câu ví dụ, in ra được']);
-        if(TS[x.id]) L.push(['Học sâu', 'Từ vựng học sâu · nối sang TOPIK', 'seoul/tu-sau/' + q, 'Cụm hay đi cùng, từ dễ nhầm, từ trung cấp, câu trong đề thật']);
+        if(TS[x.id]) L.push(['Học sâu', 'Từ vựng học sâu · nối sang TOPIK', 'seoul/tu-sau/' + q, 'Cụm hay đi cùng, từ trung cấp, câu trong đề thật']);
         if(BT[x.id]) L.push(['Bài tập', 'Bài tập từ vựng Bài ' + x.n, 'seoul/bai-tap/' + q + '&t=v', 'Nghe, chọn nghĩa, điền câu — chấm ngay']);
       }
       if(k === 'np'){

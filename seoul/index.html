@@ -144,7 +144,7 @@ footer a{color:var(--muted)}
   // Bài có phần học sâu từ vựng: seoul/sau/<khóa>.html (bảng + dữ liệu bài luyện từ vựng).
   var SAU = {'3A-1': 1}, SAUC = {};
   // Bài có trang bài tập (bai-tap/, dữ liệu bai-tap/data/<cuốn>-<bài>.json).
-  var TS = {'2A-2': 1, '2A-3': 1, '3A-1': 1, '3A-2': 1, '3A-3': 1};  // có trang tu-sau/ (từ vựng học sâu nối sang TOPIK)
+  var TS = {};  // trang tu-sau/ (từ vựng học sâu) cô dùng làm giáo án, link ở Mục lục giáo án — không đặt link từ trang học sinh
   var BT = {'1A-1': 1, '1A-2': 1, '1A-3': 1, '2A-1': 1, '2A-2': 1, '2A-3': 1};
   var DATA = null, DE = null, BAI = {}, NP = null, cur = 0, curPart = null;
   // Ngữ pháp từng bài (ngu-phap/np.json, tools/seoul_np.py) → dòng "Ngữ pháp bài này" trỏ sang trang ngu-phap/.
@@ -189,7 +189,7 @@ footer a{color:var(--muted)}
       by[sec].forEach(function(g){ n += g.w.length; });
       nv += '<a href="javascript:void 0" data-to="' + si + '">Bài ' + i.n + '</a>';
       h += '<section class="sec"><h2><span class="n">Bài ' + i.n + '</span>' + esc(i.ko) + '</h2><p class="lvi">' + esc(BAI[part + '-' + i.n] || '') + ' · ' + n + ' từ</p>' + npLine(part, i.n);
-      if (TS[part + '-' + i.n]) h += '<p class="npl"><b>Học sâu:</b> <a href="tu-sau/#b=' + part + '&c=' + i.n + '">Từ vựng bài này + nối sang TOPIK ›</a> <span style="color:#666">(cụm hay đi cùng, từ dễ nhầm, từ trung cấp, câu trong đề thật)</span></p>';
+      if (TS[part + '-' + i.n]) h += '<p class="npl"><b>Học sâu:</b> <a href="tu-sau/#b=' + part + '&c=' + i.n + '">Từ vựng bài này + nối sang TOPIK ›</a> <span style="color:#666">(cụm hay đi cùng, từ trung cấp, câu trong đề thật)</span></p>';
       if (BT[part + '-' + i.n]) h += '<p class="npl"><b>Bài tập:</b> <a href="bai-tap/#b=' + part + '&c=' + i.n + '&t=v">Từ vựng</a> · <a href="bai-tap/#b=' + part + '&c=' + i.n + '&t=g">Ngữ pháp</a> <span style="color:#666">(chấm ngay, gửi kết quả cho cô)</span></p>';
       by[sec].forEach(function(g){ h += '<h3>' + esc(g.ko) + (g.vi && g.vi !== g.ko ? ' <small>(' + esc(g.vi) + ')</small>' : '') + '</h3>' + table(g.w); });
       if (SAU[part + '-' + i.n]) h += '<div class="sau" data-sau="' + part + '-' + i.n + '"><p class="sh">Học sâu từ vựng bài này<small>Cách đọc, Hán Việt, đi với tiểu từ nào, phân biệt từ gần nghĩa</small></p><p class="note">Đang tải…</p></div>';
