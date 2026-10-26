@@ -1,0 +1,48 @@
+{
+"e": "Etk091", "n": [27],
+"t": "Thị trường bất động sản “vươn vai”",
+"cd": "Kinh tế",
+"y": "Lãi suất cho vay đang giảm, thị trường bất động sản bắt đầu khởi sắc.",
+"doc": [
+  {"t": "Tách hai nửa ở dấu phẩy", "d": "Nửa 1: **대출 금리 하락세** (lãi suất vay đang giảm). Nửa 2: **부동산 시장 기지개** (thị trường vươn vai).", "s": [0]},
+  {"t": "Quan hệ hai nửa", "d": "Dấu phẩy ở đây = **nhân quả**: lãi giảm → thị trường sống lại.", "s": [0]},
+  {"t": "Ẩn dụ", "d": "**기지개(를 켜다)** = vươn vai sau khi ngủ dậy → bắt đầu hoạt động lại, khởi sắc.", "s": []}
+],
+"l": [
+  ["하락세,", "NN", "nửa 1 = nguyên nhân"],
+  ["기지개", "KL", "ẩn dụ: bắt đầu sống lại"]
+],
+"s": [
+  {"c": [["대출 금리", "CN", "lãi suất cho vay", 1], ["하락세,", "VP", "đang giảm,", 2], ["부동산 시장", "CN", "thị trường bất động sản", 3], ["기지개", "VN", "vươn vai (khởi sắc)", 4]],
+   "g": "금리 하락세, 시장 기지개", "gv": "Lãi suất giảm, thị trường vươn vai",
+   "r": "Tiêu đề", "y": "Lãi suất giảm nên thị trường nhà đất bắt đầu sống lại.",
+   "vi": "Lãi suất cho vay đang giảm, thị trường bất động sản bắt đầu “vươn vai” khởi sắc.",
+   "tip": "**-세** (하락세, 상승세) = xu hướng / đà đang … **기지개를 켜다** = vươn vai → (bóng) bắt đầu hoạt động lại."}
+],
+"w": [
+  ["대출", "cho vay, khoản vay", "thải xuất 貸出", "대출"],
+  ["금리", "lãi suất", "kim lợi 金利", "금리"],
+  ["하락세", "đà giảm", "hạ lạc thế 下落勢", "하락세"],
+  ["부동산", "bất động sản", "bất động sản 不動産", "부동산"],
+  ["시장", "thị trường", "thị trường 市場", "시장"],
+  ["기지개(를 켜다)", "vươn vai; (bóng) khởi sắc, sống lại", "", "기지개"]
+],
+"wo": [
+  ["살아나다", "sống lại, hồi phục", "", "", "lựa chọn ① · đáp án"],
+  ["규제", "hạn chế, quy chế", "quy chế 規制", "", "lựa chọn ②"],
+  ["거래", "giao dịch", "khứ lai 去來", "", "lựa chọn ③"],
+  ["활성화하다", "làm sôi động, kích hoạt", "hoạt tính hóa 活性化", "", "lựa chọn ④"],
+  ["대책", "biện pháp đối phó", "đối sách 對策", "", "lựa chọn ④"]
+],
+"g": [
+  {"p": "N-세", "m": "đà / xu hướng …", "f": "하락세", "d": "하락세 (đà giảm), 상승세 (đà tăng), 회복세 (đà hồi phục).", "ex": []},
+  {"p": "Tiêu đề A, B", "m": "A nên B / A, B cùng lúc", "f": "하락세,", "d": "Dấu phẩy nối hai sự việc; thường là nhân quả.", "ex": []}
+],
+"qa": {
+  "27": {"a": 0, "w": "Lãi giảm → thị trường **기지개** (vươn vai = bắt đầu sống lại) → ①.", "x": [null, "Đảo nhân quả, thêm 규제 không có trong tiêu đề.", "Giao dịch giảm — ngược với 기지개.", "Đang bàn biện pháp — tiêu đề nói thị trường đã khởi sắc."]}
+},
+"hoi": [
+  {"q": "기지개 nghĩa đen là gì?", "a": "Vươn vai (khi ngủ dậy)."},
+  {"q": "Nguyên nhân thị trường khởi sắc?", "a": "Lãi suất cho vay giảm."}
+]
+}

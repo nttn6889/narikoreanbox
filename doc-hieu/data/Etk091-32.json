@@ -1,0 +1,90 @@
+{
+"e": "Etk091", "n": [32],
+"t": "Giống ớt “Salicho” cho người tiểu đường",
+"cd": "Khoa học – nông nghiệp",
+"y": "Giống ớt Salicho được phát triển cho người bệnh tiểu đường: không có quả, ăn lá; chứa chất hạ đường huyết nhiều gấp hơn 10 lần ớt thường, dùng phòng và chữa bệnh người lớn tuổi; giàu canxi, vitamin; kháng sâu bệnh, thời gian sinh trưởng ngắn nên được chú ý là cây trồng thu nhập cao.",
+"doc": [
+  {"t": "Đọc 4 lựa chọn trước", "d": "Từ khóa: **해충에 취약** · **열매는 크고** · **생육 기간이 길어** · **잎 – 혈당을 떨어뜨리는 성분**.", "s": []},
+  {"t": "Câu 2 · lá hay quả", "d": "**열매가 없고 잎을 먹는** → ② sai (không có quả).", "s": [1]},
+  {"t": "Câu 3 · thành phần", "d": "**혈당을 낮추는 성분** (chất hạ đường huyết) — lá là phần ăn → ④ (낮추다 = 떨어뜨리다).", "s": [2]},
+  {"t": "Câu 5 · ưu điểm", "d": "**병해충에도 강하고 생육 기간도 짧아서** → ① ③ ngược.", "s": [4]}
+],
+"l": [
+  ["재배하지만", "DL", "-지만: ớt thường lấy quả ↔ Salicho ăn lá"],
+  ["함유돼 있어", "NN", "-어(서): vì chứa nhiều → dùng phòng, chữa bệnh"],
+  ["또한", "TH", "thêm ưu điểm: dinh dưỡng"],
+  ["짧아서", "NN", "-아서: lý do được chú ý"]
+],
+"s": [
+  {"c": [["당뇨 환자들을 위해", "TR", "dành cho bệnh nhân tiểu đường", 4], ["고추 품종인", "DN", "một giống ớt", 2], ["'살리초'가", "CN", "“Salicho”", 1], ["개발되었다.", "VN", "đã được phát triển", 3]],
+   "g": "'살리초'가 개발되었다", "gv": "Salicho đã được phát triển",
+   "r": "Mở · Sự kiện", "y": "Giống ớt Salicho được tạo ra cho người tiểu đường.",
+   "vi": "Giống ớt “Salicho” đã được phát triển dành cho bệnh nhân tiểu đường.",
+   "tip": "**N인 N** = N là N (đồng vị ngữ): 고추 품종인 살리초 = Salicho, một giống ớt."},
+  {"c": [["고추는", "CN", "ớt", 1], ["보통", "TR", "thường", 2], ["열매를 얻기 위해", "TR", "để lấy quả", 4], ["재배하지만", "VP", "được trồng, nhưng", 3], ["살리초는", "CN", "Salicho", 5], ["열매가 없고", "VP", "không có quả", 6], ["잎을 먹는", "DN", "ăn lá", 8], ["품종이다.", "VN", "là giống", 7]],
+   "g": "고추는 재배하지만 살리초는 품종이다", "gv": "Ớt được trồng …, nhưng Salicho là giống …",
+   "r": "Đặc điểm (1)", "y": "Salicho không có quả, ăn lá.",
+   "vi": "Ớt thường được trồng để lấy quả, nhưng Salicho là giống không có quả mà ăn lá.",
+   "tip": "**A는 … -지만 B는 …** = so sánh hai đối tượng."},
+  {"c": [["일반 고추에 비해", "TR", "so với ớt thông thường", 4], ["혈당을 낮추는", "DN", "hạ đường huyết", 2], ["성분이", "CN", "thành phần", 1], ["10배 이상 많이", "TR", "nhiều gấp hơn 10 lần", 5], ["함유돼 있어", "VP", "được chứa", 3], ["당뇨병, 비만증 등", "DN", "như tiểu đường, béo phì", 7], ["성인병의 예방과 치료에", "TR", "vào phòng ngừa và điều trị bệnh người lớn", 6], ["이용될 수 있다.", "VN", "nên có thể được dùng", 8]],
+   "g": "성분이 함유돼 있어 이용될 수 있다", "gv": "Chứa thành phần … nên có thể được dùng",
+   "r": "Đặc điểm (2) · tác dụng", "y": "Chất hạ đường huyết gấp 10 lần, dùng phòng chữa bệnh.",
+   "vi": "Thành phần hạ đường huyết được chứa nhiều gấp hơn 10 lần so với ớt thông thường, nên có thể dùng vào phòng ngừa và điều trị các bệnh người lớn tuổi như tiểu đường, béo phì.",
+   "tip": "**N에 비해** = so với N. **함유되다** = được chứa."},
+  {"c": [["또한", "TR", "ngoài ra", 1], ["살리초에는", "TR", "trong Salicho", 2], ["칼슘, 비타민 등", "DN", "như canxi, vitamin", 4], ["각종 영양 성분이", "CN", "các loại chất dinh dưỡng", 3], ["풍부하다.", "VN", "dồi dào", 5]],
+   "g": "영양 성분이 풍부하다", "gv": "Chất dinh dưỡng dồi dào",
+   "r": "Đặc điểm (3) · thêm", "y": "Giàu canxi, vitamin.",
+   "vi": "Ngoài ra, trong Salicho có nhiều loại chất dinh dưỡng như canxi, vitamin.",
+   "tip": "**또한** = thêm ý cùng chiều."},
+  {"c": [["병해충에도 강하고", "VP", "kháng cả sâu bệnh", 2], ["생육 기간도 짧아서", "VP", "thời gian sinh trưởng ngắn nên", 3], ["농가의", "DN", "của nhà nông", 5], ["고소득 작물로", "TR", "là cây trồng thu nhập cao", 4], ["주목받고 있다.", "VN", "(nó) đang được chú ý", 1]],
+   "g": "강하고 짧아서 주목받고 있다", "gv": "Vì … nên được chú ý",
+   "r": "Kết · Triển vọng", "y": "Kháng sâu bệnh, lớn nhanh → cây thu nhập cao.",
+   "vi": "Nó đang được chú ý như một loại cây trồng thu nhập cao của nhà nông vì kháng sâu bệnh tốt và thời gian sinh trưởng ngắn.",
+   "tip": "Câu dài lý do (-고 … -아서) → tiếng Việt đưa kết quả lên trước: “được chú ý vì …”."}
+],
+"w": [
+  ["당뇨", "tiểu đường", "đường niệu 糖尿", "당뇨 환자들을|당뇨병"],
+  ["환자", "bệnh nhân", "hoạn giả 患者", "환자들을"],
+  ["고추", "ớt", "", "고추"],
+  ["품종", "giống (cây, vật nuôi)", "phẩm chủng 品種", "품종인|품종이다"],
+  ["개발되다", "được phát triển", "khai phát 開發", "개발되었다"],
+  ["열매", "quả", "", "열매를|열매가"],
+  ["재배하다", "trồng trọt", "tài bồi 栽培", "재배하지만"],
+  ["잎", "lá", "", "잎을"],
+  ["혈당", "đường huyết", "huyết đường 血糖", "혈당을"],
+  ["낮추다", "hạ thấp", "", "낮추는"],
+  ["성분", "thành phần", "thành phần 成分", "성분이"],
+  ["함유되다", "được chứa", "hàm hữu 含有", "함유돼"],
+  ["비만증", "chứng béo phì", "phì mãn chứng 肥滿症", "비만증"],
+  ["성인병", "bệnh người lớn (bệnh mạn tính)", "thành nhân bệnh 成人病", "성인병의"],
+  ["예방", "phòng ngừa", "dự phòng 豫防", "예방과"],
+  ["치료", "điều trị", "trị liệu 治療", "치료에"],
+  ["영양", "dinh dưỡng", "dinh dưỡng 營養", "영양 성분이"],
+  ["병해충", "sâu bệnh", "bệnh hại trùng 病害蟲", "병해충에도"],
+  ["생육 기간", "thời gian sinh trưởng", "sinh dục kỳ gian 生育期間", "생육 기간도"],
+  ["농가", "nhà nông, hộ nông dân", "nông gia 農家", "농가의"],
+  ["고소득", "thu nhập cao", "cao sở đắc 高所得", "고소득"],
+  ["작물", "cây trồng", "tác vật 作物", "작물로"],
+  ["주목받다", "được chú ý", "chú mục 注目", "주목받고"]
+],
+"wo": [
+  ["해충", "côn trùng có hại", "hại trùng 害蟲", "", "lựa chọn ①"],
+  ["취약하다", "yếu, dễ bị tổn thương", "thúy nhược 脆弱", "", "lựa chọn ①"],
+  ["떨어뜨리다", "làm giảm", "", "", "lựa chọn ④ · đáp án (= 낮추다)"]
+],
+"g": [
+  {"p": "N인 N", "m": "N, (là) N", "f": "품종인", "d": "Đồng vị ngữ.", "ex": []},
+  {"p": "N에 비해", "m": "so với N", "f": "고추에 비해", "d": "", "ex": []},
+  {"p": "-아/어 있다 (함유돼 있다)", "m": "(đang) được …", "f": "함유돼 있어", "d": "", "ex": []},
+  {"p": "-(으)ㄹ 수 있다", "m": "có thể", "f": "이용될 수 있다", "d": "", "ex": []},
+  {"p": "N(으)로 주목받다", "m": "được chú ý như là N", "f": "작물로 주목받고", "d": "", "ex": []}
+],
+"qa": {
+  "32": {"a": 3, "w": "Salicho ăn **lá**, chứa **혈당을 낮추는 성분** → ④ (낮추다 = 떨어뜨리다).", "x": ["Ngược: **병해충에도 강하고**.", "Ngược: **열매가 없고**.", "Ngược: **생육 기간도 짧아서** 주목받고 있다.", null]}
+},
+"hoi": [
+  {"q": "Salicho ăn phần nào?", "a": "Ăn lá (không có quả)."},
+  {"q": "Chất hạ đường huyết nhiều gấp bao nhiêu lần ớt thường?", "a": "Hơn 10 lần."},
+  {"q": "Vì sao Salicho được nhà nông chú ý?", "a": "Kháng sâu bệnh, thời gian sinh trưởng ngắn → thu nhập cao."}
+]
+}

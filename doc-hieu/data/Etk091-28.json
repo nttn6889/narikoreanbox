@@ -1,0 +1,75 @@
+{
+"e": "Etk091", "n": [28],
+"t": "Kính râm cũng có hạn sử dụng",
+"cd": "Đời sống – sức khỏe",
+"y": "Tròng kính râm có lớp màng chống tia cực tím; tiếp xúc nhiệt lâu thì khả năng chống UV giảm dần, không bảo vệ được mắt → dùng khoảng 5 năm thì nên thay tròng.",
+"doc": [
+  {"t": "Đọc câu có ô", "d": "Câu cuối: **… 어려우므로 5년 정도 쓰고 나면 (    ) 것이 좋다** → ô = việc nên làm, là kết luận từ lý do “khó bảo vệ mắt”.", "s": [3]},
+  {"t": "Câu 2 · chủ đề", "d": "**그런데 … 사용 기한이 있다** (có hạn dùng) → hết hạn thì phải **thay**.", "s": [1]},
+  {"t": "Câu 3 · cơ chế", "d": "Màng chống UV gặp nhiệt lâu → chức năng giảm dần.", "s": [2]}
+],
+"l": [
+  ["그런데", "DL", "chuyển: kính râm tưởng dùng mãi, thật ra có hạn"],
+  ["입혀져 있는데", "GT", "-는데: nêu bối cảnh rồi giải thích"],
+  ["노출되면", "TG", "điều kiện: gặp nhiệt lâu thì …"],
+  ["어려우므로", "NN", "-므로: lý do → ô là kết luận"]
+],
+"s": [
+  {"c": [["선글라스는", "CN", "kính râm", 1], ["보통", "TR", "thường", 2], ["햇빛이 강할 때", "TR", "khi nắng gắt", 4], ["눈 건강을 위해", "TR", "vì sức khỏe của mắt", 5], ["쓴다.", "VN", "được đeo", 3]],
+   "g": "선글라스는 쓴다", "gv": "Kính râm được đeo",
+   "r": "Mở · Hiểu biết chung", "y": "Kính râm đeo khi nắng gắt để bảo vệ mắt.",
+   "vi": "Kính râm thường được đeo khi nắng gắt để bảo vệ sức khỏe đôi mắt.",
+   "tip": "**쓰다** với kính, mũ = đeo, đội."},
+  {"c": [["그런데", "TR", "thế nhưng", 1], ["선글라스의", "DN", "của kính râm", 3], ["렌즈는", "CN", "tròng", 2], ["사용 기한이", "CN", "hạn sử dụng", 5], ["있다.", "VN", "có", 4]],
+   "g": "렌즈는 사용 기한이 있다", "gv": "Tròng có hạn sử dụng",
+   "r": "Chủ đề", "y": "Tròng kính có hạn sử dụng.",
+   "vi": "Thế nhưng tròng kính râm có hạn sử dụng.",
+   "tip": "Câu **그런데** + thông tin bất ngờ = chủ đề của đoạn. Phần còn lại giải thích vì sao."},
+  {"c": [["선글라스의 렌즈에는", "TR", "trên tròng kính râm", 1], ["자외선 차단을 위한", "DN", "để chặn tia cực tím", 4], ["엷은 막이", "CN", "một lớp màng mỏng", 3], ["입혀져 있는데", "VP", "được phủ", 2], ["열에", "TR", "với nhiệt", 6], ["계속 노출되면", "VP", "liên tục tiếp xúc thì", 5], ["자외선 차단 기능이", "CN", "chức năng chặn tia cực tím", 7], ["점점", "TR", "dần dần", 9], ["떨어지게 된다.", "VN", "sẽ giảm", 8]],
+   "g": "막이 입혀져 있는데 … 기능이 떨어지게 된다", "gv": "Có lớp màng, … chức năng sẽ giảm",
+   "r": "Giải thích · cơ chế", "y": "Màng chống UV gặp nhiệt lâu thì yếu dần.",
+   "vi": "Trên tròng kính râm được phủ một lớp màng mỏng để chặn tia cực tím, nếu liên tục tiếp xúc với nhiệt thì chức năng chặn tia cực tím sẽ giảm dần.",
+   "tip": "**-는데** chia câu thành 2 phần: bối cảnh (có lớp màng) → điều xảy ra. Dịch tách 2 câu cũng được."},
+  {"c": [["자외선 차단 기능이 약해진", "DN", "có chức năng chống tia cực tím đã yếu đi", 2], ["선글라스로는", "TR", "với kính râm", 1], ["눈을 보호하기", "CN", "bảo vệ mắt", 3], ["어려우므로", "VP", "khó nên", 4], ["5년 정도 쓰고 나면", "VP", "dùng khoảng 5 năm thì", 5], ["(    ) 것이", "CN", "việc (    )", 7], ["좋다.", "VN", "nên", 6]],
+   "g": "(    ) 것이 좋다", "gv": "Nên (    )",
+   "r": "Câu có ô · Kết luận", "y": "Dùng 5 năm thì nên (thay tròng).",
+   "vi": "Với kính râm đã yếu chức năng chống tia cực tím thì khó bảo vệ mắt, nên dùng khoảng 5 năm thì nên (thay tròng).",
+   "tip": "**-(으)므로** = vì (văn viết). **-는 것이 좋다** = nên … → ô là lời khuyên khớp với lý do."}
+],
+"w": [
+  ["선글라스", "kính râm", "", "선글라스는|선글라스의|선글라스로는"],
+  ["렌즈", "tròng kính", "", "렌즈는|렌즈에는"],
+  ["사용 기한", "hạn sử dụng", "sử dụng kỳ hạn 使用期限", "사용 기한이"],
+  ["자외선", "tia cực tím (UV)", "tử ngoại tuyến 紫外線", "자외선"],
+  ["차단", "ngăn chặn", "già đoạn 遮斷", "차단을|차단 기능이"],
+  ["엷다", "mỏng, nhạt", "", "엷은"],
+  ["입히다", "phủ, tráng (lên)", "", "입혀져"],
+  ["열", "nhiệt", "nhiệt 熱", "열에"],
+  ["노출되다", "bị phơi ra, tiếp xúc", "lộ xuất 露出", "노출되면"],
+  ["기능", "chức năng", "cơ năng 機能", "기능이"],
+  ["떨어지다", "giảm, rơi", "", "떨어지게"],
+  ["약해지다", "yếu đi", "nhược 弱", "약해진"],
+  ["보호하다", "bảo vệ", "bảo hộ 保護", "보호하기"]
+],
+"wo": [
+  ["꼼꼼히", "kỹ lưỡng, tỉ mỉ", "", "", "lựa chọn ②"],
+  ["닦다", "lau, chùi", "", "", "lựa chọn ②"],
+  ["벗겨 내다", "bóc ra, lột ra", "", "", "lựa chọn ④"]
+],
+"g": [
+  {"p": "-(으)ㄹ 때", "m": "khi …", "f": "강할 때", "d": "", "ex": []},
+  {"p": "-아/어져 있다", "m": "được … (trạng thái)", "f": "입혀져 있는데", "d": "Bị động + trạng thái còn lại.", "ex": []},
+  {"p": "-는데", "m": "(bối cảnh) …, và / nhưng", "f": "있는데", "d": "Nêu nền rồi nói tiếp.", "ex": []},
+  {"p": "-게 되다", "m": "trở nên, rốt cuộc", "f": "떨어지게 된다", "d": "", "ex": []},
+  {"p": "-(으)므로", "m": "vì … (văn viết)", "f": "어려우므로", "d": "Lý do trang trọng, thường trong văn bản, luật.", "ex": [["비가 오므로 경기를 연기한다.", "Vì trời mưa nên hoãn trận đấu."]]},
+  {"p": "-고 나면", "m": "sau khi … xong thì", "f": "쓰고 나면", "d": "", "ex": []},
+  {"p": "-는 것이 좋다", "m": "nên …", "f": "것이 좋다", "d": "Lời khuyên.", "ex": []}
+],
+"qa": {
+  "28": {"a": 0, "w": "Tròng có hạn dùng, chức năng chống UV yếu → khó bảo vệ mắt **-므로** → nên **렌즈를 바꿔 주는** (thay tròng).", "x": [null, "Lau kỹ không khôi phục chức năng chống UV; bài không nói.", "Làm tối màu không liên quan chống UV.", "Bóc màng còn làm mất hẳn chức năng chống UV."]}
+},
+"hoi": [
+  {"q": "Vì sao tròng kính râm có hạn dùng?", "a": "Lớp màng chống UV gặp nhiệt lâu thì chức năng giảm dần."},
+  {"q": "Nên làm gì sau 5 năm?", "a": "Thay tròng kính."}
+]
+}

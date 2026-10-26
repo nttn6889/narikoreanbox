@@ -1,0 +1,83 @@
+{
+"e": "Etk091", "n": [34],
+"t": "Koala và lá bạch đàn",
+"cd": "Khoa học – động vật",
+"y": "Koala ăn lá bạch đàn có độc mạnh mà động vật thường không ăn được; koala có enzyme giải độc nên không phải tranh giành. Riêng koala con chưa có enzyme nên ăn phân của mẹ thay lá — ăn dần, trong cơ thể con cũng sinh ra enzyme giải độc.",
+"doc": [
+  {"t": "Đọc 4 lựa chọn trước", "d": "Từ khóa: **경쟁한다** · **어미 – 효소를 가지고** · **태어난 직후부터** · **배설물을 먹지 않는다**.", "s": []},
+  {"t": "Câu 3 · koala trưởng thành", "d": "**효소가 있어서 다른 동물들과 경쟁할 필요 없이** → ① sai; koala (trưởng thành, tức mẹ) có enzyme → ② đúng.", "s": [2]},
+  {"t": "Câu 4–5 · koala con", "d": "**다만** con không có enzyme → ăn **배설물** thay lá → ③ ④ sai.", "s": [3, 4]}
+],
+"l": [
+  ["독성이 강해서", "NN", "vì độc mạnh → động vật thường không ăn được"],
+  ["하지만", "DL", "koala thì khác"],
+  ["있어서", "NN", "vì có enzyme → ăn thoải mái"],
+  ["다만", "DL", "ngoại lệ: koala con"],
+  ["이를", "CH", "chỉ lại phân của mẹ"],
+  ["먹다 보면", "TG", "-다 보면: cứ ăn dần thì …"]
+],
+"s": [
+  {"c": [["코알라는", "CN", "koala", 1], ["유칼립투스라는", "DN", "gọi là bạch đàn", 4], ["나뭇잎을", "TN", "lá cây", 3], ["먹고 산다.", "VN", "sống bằng cách ăn", 2]],
+   "g": "코알라는 나뭇잎을 먹고 산다", "gv": "Koala ăn lá cây mà sống",
+   "r": "Mở", "y": "Koala sống nhờ ăn lá bạch đàn.",
+   "vi": "Koala sống bằng cách ăn lá cây bạch đàn.",
+   "tip": "**N(이)라는 N** = N gọi là … **-고 살다** = sống bằng cách …"},
+  {"c": [["이 나뭇잎은", "CN", "loại lá này", 1], ["독성이 강해서", "VP", "độc tính mạnh nên", 2], ["일반적인 동물들은", "CN", "các động vật thông thường", 3], ["먹을 수 없다.", "VN", "không ăn được", 4]],
+   "g": "독성이 강해서 동물들은 먹을 수 없다", "gv": "Độc mạnh nên động vật không ăn được",
+   "r": "Đặc điểm của lá", "y": "Lá độc, động vật thường không ăn được.",
+   "vi": "Loại lá này có độc tính mạnh nên các động vật thông thường không ăn được.",
+   "tip": "**이** + danh từ = dấu bám chỉ lại câu trước."},
+  {"c": [["하지만", "TR", "nhưng", 1], ["코알라는", "CN", "koala", 2], ["유칼립투스의 독을 해독하는", "DN", "giải độc của bạch đàn", 5], ["효소가", "CN", "enzyme", 4], ["있어서", "VP", "có … nên", 3], ["다른 동물들과 경쟁할 필요 없이", "TR", "không cần tranh giành với động vật khác", 8], ["유칼립투스 잎을", "TN", "lá bạch đàn", 7], ["충분히 먹을 수 있다.", "VN", "có thể ăn no đủ", 6]],
+   "g": "코알라는 효소가 있어서 잎을 먹을 수 있다", "gv": "Koala có enzyme nên ăn được lá",
+   "r": "Koala trưởng thành", "y": "Koala có enzyme giải độc, ăn thoải mái không phải tranh giành.",
+   "vi": "Nhưng koala có enzyme giải độc của bạch đàn nên có thể ăn đủ lá bạch đàn mà không cần tranh giành với các động vật khác.",
+   "tip": "**-(으)ㄹ 필요 없이** = không cần phải …"},
+  {"c": [["다만", "TR", "có điều", 1], ["새끼 코알라는", "CN", "koala con", 2], ["독성을 분해하는", "DN", "phân hủy độc tính", 5], ["효소가", "CN", "enzyme", 4], ["없어서", "VP", "không có … nên", 3], ["유칼립투스 잎 대신", "TR", "thay cho lá bạch đàn", 8], ["어미의 배설물을", "TN", "phân của mẹ", 7], ["먹는다.", "VN", "ăn", 6]],
+   "g": "새끼 코알라는 효소가 없어서 배설물을 먹는다", "gv": "Koala con không có enzyme nên ăn phân",
+   "r": "Ngoại lệ · koala con", "y": "Koala con chưa có enzyme, ăn phân mẹ thay lá.",
+   "vi": "Có điều koala con không có enzyme phân hủy độc tính nên ăn phân của mẹ thay cho lá bạch đàn.",
+   "tip": "**다만** = có điều, chỉ riêng → ngoại lệ của điều vừa nói. Suy ra: mẹ (koala trưởng thành) **có** enzyme."},
+  {"c": [["이를 먹다 보면", "VP", "cứ ăn thứ này thì", 1], ["새끼 코알라의 몸속에도", "TR", "trong cơ thể koala con cũng", 2], ["유칼립투스의 독을 해독하는", "DN", "giải độc bạch đàn", 5], ["효소가", "CN", "enzyme", 4], ["생기게 된다.", "VN", "sẽ sinh ra", 3]],
+   "g": "효소가 생기게 된다", "gv": "Enzyme sẽ sinh ra",
+   "r": "Kết", "y": "Ăn dần thì con cũng có enzyme.",
+   "vi": "Cứ ăn thứ này dần dần thì trong cơ thể koala con cũng sẽ sinh ra enzyme giải độc bạch đàn.",
+   "tip": "**-다 보면** = cứ làm mãi thì (kết quả)."}
+],
+"w": [
+  ["코알라", "gấu túi koala", "", "코알라는|코알라의"],
+  ["유칼립투스", "cây bạch đàn (khuynh diệp)", "", "유칼립투스"],
+  ["나뭇잎", "lá cây", "", "나뭇잎을|나뭇잎은"],
+  ["독성", "độc tính", "độc tính 毒性", "독성이|독성을"],
+  ["일반적", "thông thường", "nhất ban đích 一般的", "일반적인"],
+  ["해독하다", "giải độc", "giải độc 解毒", "해독하는"],
+  ["효소", "enzyme, men", "diếu tố 酵素", "효소가"],
+  ["경쟁하다", "cạnh tranh", "cạnh tranh 競爭", "경쟁할"],
+  ["충분히", "đầy đủ", "sung phân 充分", "충분히"],
+  ["다만", "có điều, chỉ có", "đãn 但", "다만"],
+  ["새끼", "con non", "", "새끼"],
+  ["분해하다", "phân hủy", "phân giải 分解", "분해하는"],
+  ["어미", "con mẹ (động vật)", "", "어미의"],
+  ["배설물", "chất thải, phân", "bài tiết vật 排泄物", "배설물을"],
+  ["몸속", "trong cơ thể", "", "몸속에도"],
+  ["생기다", "sinh ra, xuất hiện", "", "생기게"]
+],
+"wo": [
+  ["차지하다", "chiếm", "", "", "lựa chọn ①"],
+  ["직후", "ngay sau", "trực hậu 直後", "", "lựa chọn ③"]
+],
+"g": [
+  {"p": "N(이)라는 N", "m": "N gọi là …", "f": "유칼립투스라는", "d": "", "ex": []},
+  {"p": "-아/어서", "m": "vì … nên", "f": "강해서|있어서|없어서", "d": "", "ex": []},
+  {"p": "-(으)ㄹ 필요 없이", "m": "không cần …", "f": "경쟁할 필요 없이", "d": "", "ex": []},
+  {"p": "N 대신", "m": "thay cho N", "f": "잎 대신", "d": "", "ex": []},
+  {"p": "-다 보면", "m": "cứ … thì (dần dần)", "f": "먹다 보면", "d": "Làm lặp đi lặp lại → kết quả.", "ex": [["자꾸 듣다 보면 익숙해진다.", "Cứ nghe mãi thì sẽ quen."]]}
+],
+"qa": {
+  "34": {"a": 1, "w": "Koala (trưởng thành) có enzyme giải độc; 다만 koala **con** không có → mẹ có enzyme → ②.", "x": ["Ngược: các động vật khác không ăn được nên koala **không cần** tranh giành.", null, "Koala con ăn **phân mẹ thay lá**, không ăn lá ngay.", "Ngược: koala con **ăn** phân mẹ."]}
+},
+"hoi": [
+  {"q": "Vì sao động vật khác không ăn lá bạch đàn?", "a": "Vì lá có độc tính mạnh."},
+  {"q": "Koala con ăn gì, vì sao?", "a": "Phân của mẹ, vì chưa có enzyme giải độc."},
+  {"q": "Sau khi ăn phân mẹ, điều gì xảy ra?", "a": "Trong cơ thể con sinh ra enzyme giải độc."}
+]
+}

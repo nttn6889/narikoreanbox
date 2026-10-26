@@ -1,0 +1,79 @@
+{
+"e": "Etk091", "n": [31],
+"t": "Vì sao áo bác sĩ màu trắng",
+"cd": "Lịch sử – y học",
+"y": "Áo blouse bác sĩ không phải trắng ngay từ đầu: thời Trung cổ tu sĩ thường kiêm bác sĩ nên mặc áo đen khi khám bệnh. Nhưng áo đen không thấy vết bẩn nhiễm khuẩn; khi nhận thức về nguy cơ nhiễm khuẩn tăng, áo đổi sang màu trắng để vết bẩn dễ thấy.",
+"doc": [
+  {"t": "Đọc câu có ô", "d": "Ô đứng trước “màu áo đổi sang trắng” → ô = **mục đích** của việc đổi màu (-도록, -게).", "s": [4]},
+  {"t": "Câu ngay trước ô", "d": "**그런데** áo đen **얼룩이 잘 보이지 않았다** (không thấy vết bẩn) → đổi sang trắng để **vết bẩn dễ thấy**.", "s": [3]},
+  {"t": "Câu 1–3", "d": "Bối cảnh: áo bác sĩ thời Trung cổ màu đen.", "s": [0, 1, 2]}
+],
+"l": [
+  ["그런데 의사 가운이", "DL", "lật lại quan niệm: áo không phải trắng từ đầu"],
+  ["많아", "NN", "-아: vì tu sĩ kiêm bác sĩ nên mặc áo đen"],
+  ["그런데 검은색 옷은", "DL", "vấn đề của áo đen → chìa khóa của ô"],
+  ["이후", "TG", "sau đó → thay đổi"],
+  ["높아지면서", "TG", "-면서: nhận thức tăng kéo theo đổi màu"]
+],
+"s": [
+  {"c": [["의사의 모습을 생각하면", "VP", "nghĩ đến hình ảnh bác sĩ", 2], ["우리는", "CN", "chúng ta", 1], ["보통", "TR", "thường", 3], ["흰색 가운을", "TN", "chiếc áo blouse trắng", 5], ["떠올리게 된다.", "VN", "nghĩ ngay đến", 4]],
+   "g": "우리는 흰색 가운을 떠올리게 된다", "gv": "Ta nghĩ đến áo blouse trắng",
+   "r": "Mở · Quan niệm", "y": "Nghĩ đến bác sĩ là nghĩ đến áo trắng.",
+   "vi": "Khi nghĩ đến hình ảnh bác sĩ, chúng ta thường nghĩ ngay đến chiếc áo blouse trắng.",
+   "tip": "Câu mở bằng hiểu biết chung → câu sau thường **그런데** lật lại."},
+  {"c": [["그런데", "TR", "thế nhưng", 1], ["의사 가운이", "CN", "áo blouse bác sĩ", 2], ["처음부터", "TR", "ngay từ đầu", 4], ["흰색이었던 것은 아니다.", "VN", "không phải là màu trắng", 3]],
+   "g": "가운이 흰색이었던 것은 아니다", "gv": "Áo không phải là trắng",
+   "r": "Chủ đề · Lật lại", "y": "Áo bác sĩ không phải trắng từ đầu.",
+   "vi": "Thế nhưng áo blouse bác sĩ không phải màu trắng ngay từ đầu.",
+   "tip": "**-았/었던 것은 아니다** = vốn dĩ không phải là …"},
+  {"c": [["중세 시대에는", "TR", "thời Trung cổ", 1], ["성직자가 의사를 겸하는 경우가", "CN", "trường hợp tu sĩ kiêm bác sĩ", 2], ["많아", "VP", "nhiều nên", 3], ["성직자용 검은색 가운을 입고", "VP", "mặc áo choàng đen dành cho tu sĩ", 4], ["진료를 했다.", "VN", "để khám chữa bệnh", 5]],
+   "g": "경우가 많아 가운을 입고 진료를 했다", "gv": "Vì … nhiều nên mặc áo đen khám bệnh",
+   "r": "Bối cảnh · áo đen", "y": "Thời Trung cổ tu sĩ kiêm bác sĩ, mặc áo đen.",
+   "vi": "Thời Trung cổ, tu sĩ thường kiêm luôn bác sĩ nên họ mặc áo choàng đen của tu sĩ để khám chữa bệnh.",
+   "tip": "**-아/어(서)** = vì … nên. **N을 겸하다** = kiêm N."},
+  {"c": [["그런데", "TR", "nhưng", 1], ["검은색 옷은", "CN", "áo màu đen", 2], ["세균으로 오염된", "DN", "bị nhiễm vi khuẩn", 4], ["얼룩이", "CN", "vết bẩn", 3], ["잘 보이지 않았다.", "VN", "khó nhìn thấy", 5]],
+   "g": "얼룩이 잘 보이지 않았다", "gv": "Vết bẩn khó thấy",
+   "r": "Vấn đề", "y": "Áo đen không thấy vết bẩn nhiễm khuẩn.",
+   "vi": "Nhưng trên áo màu đen, vết bẩn bị nhiễm vi khuẩn khó nhìn thấy.",
+   "tip": "Câu nêu **vấn đề** ngay trước ô → ô là cách giải quyết vấn đề này."},
+  {"c": [["이후", "TR", "sau đó", 1], ["세균 감염의 위험성에 대한", "DN", "về nguy cơ nhiễm khuẩn", 3], ["인식이", "CN", "nhận thức", 2], ["높아지면서", "VP", "tăng lên, kéo theo", 4], ["(    )", "TR", "để (    )", 7], ["가운의 색이", "CN", "màu áo blouse", 5], ["흰색으로 바뀌었다.", "VN", "đã đổi sang trắng", 6]],
+   "g": "가운의 색이 흰색으로 바뀌었다", "gv": "Màu áo đổi sang trắng",
+   "r": "Câu có ô · Kết", "y": "Đổi sang trắng để (vết bẩn dễ thấy).",
+   "vi": "Sau đó, khi nhận thức về nguy cơ nhiễm khuẩn tăng lên, màu áo blouse đã đổi sang trắng để (vết bẩn dễ nhìn thấy).",
+   "tip": "Ô kết thúc bằng **-도록 / -게** = để … → ô là mục đích."}
+],
+"w": [
+  ["떠올리다", "nghĩ đến, gợi nhớ", "", "떠올리게"],
+  ["가운", "áo choàng, áo blouse", "", "가운을|가운이|가운의"],
+  ["중세", "Trung cổ", "trung thế 中世", "중세"],
+  ["성직자", "tu sĩ, giáo sĩ", "thánh chức giả 聖職者", "성직자가|성직자용"],
+  ["겸하다", "kiêm", "kiêm 兼", "겸하는"],
+  ["진료", "khám chữa bệnh", "chẩn liệu 診療", "진료를"],
+  ["세균", "vi khuẩn", "tế khuẩn 細菌", "세균으로|세균 감염"],
+  ["오염되다", "bị ô nhiễm, bị bẩn", "ô nhiễm 汚染", "오염된"],
+  ["얼룩", "vết bẩn, vết loang", "", "얼룩이"],
+  ["감염", "nhiễm (bệnh)", "cảm nhiễm 感染", "감염의"],
+  ["위험성", "tính nguy hiểm, nguy cơ", "nguy hiểm tính 危險性", "위험성에"],
+  ["인식", "nhận thức", "nhận thức 認識", "인식이"]
+],
+"wo": [
+  ["염색하다", "nhuộm", "nhiễm sắc 染色", "", "lựa chọn ①"],
+  ["구분", "phân biệt", "khu phân 區分", "", "lựa chọn ②"],
+  ["눈에 띄다", "dễ thấy", "", "", "lựa chọn ③ · đáp án"]
+],
+"g": [
+  {"p": "-게 되다", "m": "(tự nhiên) trở nên", "f": "떠올리게 된다", "d": "", "ex": []},
+  {"p": "-았/었던 것은 아니다", "m": "vốn không phải là …", "f": "흰색이었던 것은 아니다", "d": "", "ex": []},
+  {"p": "N을/를 겸하다", "m": "kiêm N", "f": "겸하는", "d": "", "ex": []},
+  {"p": "-(으)면서", "m": "cùng với việc …", "f": "높아지면서", "d": "", "ex": []},
+  {"p": "-도록", "m": "để …", "f": "", "d": "Mục đích (ở các lựa chọn): 눈에 띄도록 = để dễ thấy.", "ex": []}
+],
+"qa": {
+  "31": {"a": 2, "w": "Vấn đề của áo đen: **얼룩이 잘 보이지 않았다** → đổi sang trắng **오염이 쉽게 눈에 띄도록**.", "x": ["Bài không nói chuyện nhuộm.", "Bài không nói phân biệt với bệnh nhân.", null, "Hình ảnh tươi sáng — bài không nói; lý do là vết bẩn."]}
+},
+"hoi": [
+  {"q": "Thời Trung cổ bác sĩ mặc áo màu gì, vì sao?", "a": "Màu đen, vì tu sĩ kiêm bác sĩ mặc áo của tu sĩ."},
+  {"q": "Áo đen có vấn đề gì?", "a": "Khó thấy vết bẩn nhiễm khuẩn."},
+  {"q": "Khi nào áo đổi sang trắng?", "a": "Khi nhận thức về nguy cơ nhiễm khuẩn tăng."}
+]
+}

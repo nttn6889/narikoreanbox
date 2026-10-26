@@ -1,0 +1,82 @@
+{
+"e": "Etk091", "n": [29],
+"t": "Bố cục ảnh: đường chéo và tam giác",
+"cd": "Văn hóa – nghệ thuật",
+"y": "Bố cục quan trọng trong nhiếp ảnh: muốn cảm giác động thì dùng bố cục đường chéo (ảnh đường, thác nước); còn ảnh gia đình truyền thống dùng bố cục tam giác để tạo cảm giác ổn định — người lớn tuổi ở giữa, các thành viên bên cạnh, phía sau → thoải mái, cân bằng.",
+"doc": [
+  {"t": "Đọc câu có ô", "d": "**한편** (mặt khác) → ô đối lập với bố cục trước. Ô là **mục đích** (… 위해서) của bố cục tam giác.", "s": [2]},
+  {"t": "Câu trước ô", "d": "Đường chéo = **동적** (động), sinh động → tam giác = ngược lại: tĩnh, ổn định.", "s": [1]},
+  {"t": "Đọc qua ô · câu sau", "d": "**편안하고 균형 잡힌 분위기** → xác nhận: ổn định.", "s": [3]}
+],
+"l": [
+  ["쓰는데", "GT", "-는데: nêu cách dùng rồi giải thích thêm"],
+  ["한편", "DL", "chuyển sang đối tượng đối lập"],
+  ["이 구도", "CH", "chỉ lại bố cục tam giác"],
+  ["편안하고 균형 잡힌", "KL", "bằng chứng cho nội dung ô"]
+],
+"s": [
+  {"c": [["사진에서", "TR", "trong nhiếp ảnh", 5], ["구도는", "CN", "bố cục", 1], ["전체적인 분위기를 살리는", "DN", "làm nổi bật không khí tổng thể", 4], ["중요한", "DN", "quan trọng", 3], ["요소이다.", "VN", "là yếu tố", 2]],
+   "g": "구도는 요소이다", "gv": "Bố cục là yếu tố",
+   "r": "Mở · Chủ đề", "y": "Bố cục là yếu tố quan trọng của ảnh.",
+   "vi": "Bố cục là yếu tố quan trọng làm nổi bật không khí tổng thể trong nhiếp ảnh.",
+   "tip": "Hai định ngữ chồng nhau (살리는 + 중요한) → tiếng Việt: “yếu tố quan trọng làm …”."},
+  {"c": [["보통", "TR", "thông thường", 1], ["동적인 느낌을 주고 싶을 때는", "TR", "khi muốn tạo cảm giác động", 2], ["대각선 구도를", "TN", "bố cục đường chéo", 4], ["쓰는데", "VP", "người ta dùng", 3], ["도로나 폭포 등의", "DN", "như đường sá, thác nước", 6], ["풍경 사진 등에 쓰여", "VP", "được dùng trong ảnh phong cảnh", 5], ["생동감을", "TN", "sự sinh động", 8], ["표현한다.", "VN", "để thể hiện", 7]],
+   "g": "대각선 구도를 쓰는데 … 생동감을 표현한다", "gv": "Dùng bố cục đường chéo … thể hiện sự sinh động",
+   "r": "Đối tượng 1 · đường chéo", "y": "Đường chéo tạo cảm giác động, sinh động.",
+   "vi": "Thông thường khi muốn tạo cảm giác động, người ta dùng bố cục đường chéo; nó được dùng trong ảnh phong cảnh như đường sá, thác nước để thể hiện sự sinh động.",
+   "tip": "Câu dài có **-는데** → tách làm 2 câu tiếng Việt."},
+  {"c": [["한편", "TR", "mặt khác", 1], ["전통적인", "DN", "truyền thống", 3], ["가족사진은", "CN", "ảnh gia đình", 2], ["(    ) 위해서", "TR", "để (    )", 6], ["삼각형 구도를", "TN", "bố cục tam giác", 5], ["가장 많이 활용한다.", "VN", "dùng nhiều nhất", 4]],
+   "g": "가족사진은 삼각형 구도를 활용한다", "gv": "Ảnh gia đình dùng bố cục tam giác",
+   "r": "Câu có ô · Đối tượng 2", "y": "Ảnh gia đình dùng tam giác để (tạo cảm giác ổn định).",
+   "vi": "Mặt khác, ảnh gia đình truyền thống dùng bố cục tam giác nhiều nhất để (tạo cảm giác ổn định).",
+   "tip": "**한편** = chuyển sang đối tượng khác, thường **đối lập**. Ô ngược với “động” ở câu trước."},
+  {"c": [["이 구도는", "CN", "bố cục này", 1], ["연장자를 중심으로", "TR", "lấy người lớn tuổi làm trung tâm", 2], ["가족 구성원이", "CN", "các thành viên gia đình", 3], ["옆이나 뒤에", "TR", "ở bên cạnh hoặc phía sau", 5], ["배치되어", "VP", "được bố trí", 4], ["전체적으로", "TR", "về tổng thể", 6], ["편안하고 균형 잡힌", "DN", "thoải mái và cân bằng", 9], ["분위기를", "TN", "không khí", 8], ["만들어 낸다.", "VN", "tạo nên", 7]],
+   "g": "이 구도는 분위기를 만들어 낸다", "gv": "Bố cục này tạo nên không khí …",
+   "r": "Giải thích · bằng chứng", "y": "Người lớn ở giữa, thành viên xung quanh → thoải mái, cân bằng.",
+   "vi": "Bố cục này lấy người lớn tuổi làm trung tâm, các thành viên gia đình được bố trí bên cạnh hoặc phía sau, nhờ vậy tạo nên không khí tổng thể thoải mái và cân bằng.",
+   "tip": "**N을/를 중심으로** = lấy N làm trung tâm."}
+],
+"w": [
+  ["구도", "bố cục", "cấu đồ 構圖", "구도는|구도를"],
+  ["전체적", "tổng thể", "toàn thể đích 全體的", "전체적인|전체적으로"],
+  ["분위기", "không khí, bầu không khí", "phân vi khí 雰圍氣", "분위기를"],
+  ["살리다", "làm sống động, làm nổi bật", "", "살리는"],
+  ["요소", "yếu tố", "yếu tố 要素", "요소이다"],
+  ["동적", "động, mang tính chuyển động", "động đích 動的", "동적인"],
+  ["대각선", "đường chéo", "đối giác tuyến 對角線", "대각선"],
+  ["폭포", "thác nước", "bộc bố 瀑布", "폭포"],
+  ["풍경", "phong cảnh", "phong cảnh 風景", "풍경"],
+  ["생동감", "sự sinh động", "sinh động cảm 生動感", "생동감을"],
+  ["표현하다", "thể hiện", "biểu hiện 表現", "표현한다"],
+  ["한편", "mặt khác", "nhất phiến 一便", "한편"],
+  ["전통적", "truyền thống", "truyền thống đích 傳統的", "전통적인"],
+  ["삼각형", "hình tam giác", "tam giác hình 三角形", "삼각형"],
+  ["활용하다", "tận dụng, sử dụng", "hoạt dụng 活用", "활용한다"],
+  ["연장자", "người lớn tuổi hơn", "niên trưởng giả 年長者", "연장자를"],
+  ["구성원", "thành viên", "cấu thành viên 構成員", "구성원이"],
+  ["배치되다", "được bố trí", "phối trí 配置", "배치되어"],
+  ["편안하다", "thoải mái", "tiện an 便安", "편안하고"],
+  ["균형 잡히다", "cân bằng", "quân hành 均衡", "균형 잡힌"]
+],
+"wo": [
+  ["안정적", "ổn định", "an định đích 安定的", "", "lựa chọn ② · đáp án"],
+  ["중앙", "trung tâm, chính giữa", "trung ương 中央", "", "lựa chọn ③"],
+  ["긴장되다", "căng thẳng", "khẩn trương 緊張", "", "lựa chọn ④"],
+  ["연출하다", "dàn dựng, tạo ra", "diễn xuất 演出", "", "lựa chọn ④"]
+],
+"g": [
+  {"p": "-고 싶을 때", "m": "khi muốn …", "f": "주고 싶을 때는", "d": "", "ex": []},
+  {"p": "N 등", "m": "N v.v., như N", "f": "폭포 등의|사진 등에", "d": "Liệt kê ví dụ.", "ex": []},
+  {"p": "-아/어 (쓰여)", "m": "… và / để", "f": "쓰여", "d": "쓰이다 (bị động) + -어.", "ex": []},
+  {"p": "N을/를 중심으로", "m": "lấy N làm trung tâm", "f": "연장자를 중심으로", "d": "", "ex": []},
+  {"p": "-아/어 내다", "m": "(làm) cho bằng được, tạo ra", "f": "만들어 낸다", "d": "Hoàn thành ra kết quả.", "ex": []}
+],
+"qa": {
+  "29": {"a": 1, "w": "**한편** đối lập với đường chéo (động); câu sau: **편안하고 균형 잡힌** → **안정적인 느낌을 주기**.", "x": ["Chép chữ 동적 của bố cục đường chéo — đối tượng kia.", null, "Bố cục đặt **người lớn tuổi** ở giữa, không phải phong cảnh.", "Ngược: bố cục tạo không khí thoải mái."]}
+},
+"hoi": [
+  {"q": "Bố cục đường chéo dùng khi nào?", "a": "Khi muốn cảm giác động — ảnh đường, thác nước."},
+  {"q": "Trong ảnh gia đình, ai đứng giữa?", "a": "Người lớn tuổi (연장자)."},
+  {"q": "한편 báo hiệu điều gì?", "a": "Chuyển sang đối tượng đối lập → ô ngược với “động”."}
+]
+}

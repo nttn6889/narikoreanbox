@@ -1,0 +1,91 @@
+{
+"e": "Etk091", "n": [33],
+"t": "Bộ bách khoa 『Imwon gyeongjeji』",
+"cd": "Lịch sử – văn hóa",
+"y": "『Imwon gyeongjeji』 là bộ bách khoa do Seo Yu-gu thời Joseon viết, tập hợp kiến thức cần cho nhà nho sống ở nông thôn (16 lĩnh vực). Ông tự quan sát đời sống, tham khảo nhiều sách và kèm lời bình của mình; ghi rõ các sách trích dẫn nên có giá trị thư mục học lớn. 52 quyển, kiến thức đồ sộ đến mức khó tin một người hoàn thành.",
+"doc": [
+  {"t": "Đọc 4 lựa chọn trước", "d": "Từ khóa: **전문가가 모여** · **참고한 문헌을 기록** · **자신의 의견은 배제** · **서지학적 가치는 크지 않다**.", "s": []},
+  {"t": "Câu 3–4 · cách viết", "d": "**자신의 논평을 첨부** → ③ ngược. **인용한 책들을 밝혀 놓아** = ghi rõ sách trích dẫn → ② đúng; **서지학적 가치도 크다** → ④ ngược.", "s": [2, 3]},
+  {"t": "Câu 5", "d": "**개인이 완성했다고 보기 어려울 만큼** = một cá nhân làm mà khó tin → ① (nhiều chuyên gia) sai.", "s": [4]}
+],
+"l": [
+  ["탐색한 것으로", "GT", "giải thích nội dung sách"],
+  ["참고했으며", "TH", "-으며: liệt kê các việc tác giả làm"],
+  ["이 과정에서", "CH", "chỉ lại quá trình viết ở câu 3"],
+  ["밝혀 놓아", "NN", "-아: vì ghi rõ nguồn → giá trị thư mục"],
+  ["보기 어려울 만큼", "TD", "nhấn mạnh độ đồ sộ"]
+],
+"s": [
+  {"c": [["『임원경제지』는", "CN", "『Imwon gyeongjeji』", 1], ["조선 시대 서유구가 쓴", "DN", "do Seo Yu-gu thời Joseon viết", 3], ["백과사전이다.", "VN", "là bộ bách khoa", 2]],
+   "g": "『임원경제지』는 백과사전이다", "gv": "『Imwon gyeongjeji』 là bộ bách khoa",
+   "r": "Mở · Giới thiệu", "y": "Bộ bách khoa do Seo Yu-gu thời Joseon viết.",
+   "vi": "『Imwon gyeongjeji』 là bộ bách khoa toàn thư do Seo Yu-gu thời Joseon viết.",
+   "tip": "Câu giới thiệu: **N은 … N이다**."},
+  {"c": [["선비가 시골에서 살아가는 데 필요한", "DN", "cần thiết cho nhà nho sống ở nông thôn", 2], ["지식을", "TN", "kiến thức", 1], ["탐색한 것으로", "VP", "là sách tìm hiểu …", 3], ["농업, 건축, 의학 등", "DN", "như nông nghiệp, kiến trúc, y học", 5], ["16개 분야를", "TN", "16 lĩnh vực", 4], ["정리했다.", "VN", "đã hệ thống lại", 6]],
+   "g": "… 것으로 16개 분야를 정리했다", "gv": "… hệ thống 16 lĩnh vực",
+   "r": "Nội dung", "y": "Kiến thức cho nhà nho ở nông thôn, 16 lĩnh vực.",
+   "vi": "Sách tìm hiểu những kiến thức cần thiết cho nhà nho sống ở nông thôn, hệ thống lại 16 lĩnh vực như nông nghiệp, kiến trúc, y học.",
+   "tip": "Câu không có chủ ngữ → chủ ngữ vẫn là cuốn sách ở câu 1. **-ㄴ 것으로** = (là sách) …, và …"},
+  {"c": [["서유구는", "CN", "Seo Yu-gu", 1], ["이 책을 쓸 때", "TR", "khi viết cuốn sách này", 2], ["조선의 생활상을 직접 관찰하고", "VP", "trực tiếp quan sát đời sống Joseon,", 3], ["여러 서적들을 참고했으며", "VP", "tham khảo nhiều sách,", 4], ["거기에", "TR", "vào đó", 7], ["자신의 논평을", "TN", "lời bình của mình", 6], ["첨부했다.", "VN", "và đính kèm", 5]],
+   "g": "서유구는 관찰하고 참고했으며 첨부했다", "gv": "Seo Yu-gu quan sát, tham khảo và đính kèm",
+   "r": "Cách viết", "y": "Quan sát trực tiếp, tham khảo sách, thêm lời bình.",
+   "vi": "Khi viết cuốn sách này, Seo Yu-gu trực tiếp quan sát đời sống Joseon, tham khảo nhiều sách, rồi đính kèm thêm lời bình của chính mình.",
+   "tip": "Ba động từ nối bằng **-고 … -(으)며 …** → liệt kê 3 việc."},
+  {"c": [["이 과정에서", "TR", "trong quá trình này", 1], ["인용한 책들을", "TN", "những sách đã trích dẫn", 3], ["밝혀 놓아", "VP", "ghi rõ nên", 2], ["서지학적 가치도", "CN", "giá trị thư mục học", 4], ["크다.", "VN", "cũng lớn", 5]],
+   "g": "책들을 밝혀 놓아 가치도 크다", "gv": "Ghi rõ sách nên giá trị lớn",
+   "r": "Giá trị", "y": "Ghi rõ sách trích dẫn → giá trị thư mục học.",
+   "vi": "Trong quá trình này, ông ghi rõ những sách đã trích dẫn nên giá trị về thư mục học cũng lớn.",
+   "tip": "**밝히다** = làm rõ, ghi rõ. **-아/어 놓다** = để lại sẵn."},
+  {"c": [["총 52권의 책을", "TN", "tổng cộng 52 quyển", 2], ["편찬했는데", "VP", "(ông) biên soạn", 1], ["개인이 완성했다고 보기 어려울 만큼", "TR", "đến mức khó tin một cá nhân hoàn thành", 6], ["방대하고 전문적인", "DN", "đồ sộ và chuyên sâu", 5], ["지식이", "CN", "kiến thức", 4], ["담겨 있다.", "VN", "chứa đựng", 3]],
+   "g": "편찬했는데 지식이 담겨 있다", "gv": "Biên soạn … chứa kiến thức …",
+   "r": "Kết · Quy mô", "y": "52 quyển, kiến thức đồ sộ đến khó tin một người làm.",
+   "vi": "Ông biên soạn tổng cộng 52 quyển, chứa đựng kiến thức đồ sộ và chuyên sâu đến mức khó tin là một cá nhân hoàn thành.",
+   "tip": "**-(으)ㄹ 만큼** = đến mức … (nhấn mạnh mức độ)."}
+],
+"w": [
+  ["조선 시대", "thời Joseon", "triều tiên thời đại 朝鮮時代", "조선 시대"],
+  ["백과사전", "bách khoa toàn thư", "bách khoa từ điển 百科事典", "백과사전이다"],
+  ["선비", "nhà nho, kẻ sĩ", "", "선비가"],
+  ["시골", "nông thôn", "", "시골에서"],
+  ["탐색하다", "tìm hiểu, khám phá", "thám sách 探索", "탐색한"],
+  ["농업", "nông nghiệp", "nông nghiệp 農業", "농업"],
+  ["건축", "kiến trúc", "kiến trúc 建築", "건축"],
+  ["의학", "y học", "y học 醫學", "의학"],
+  ["분야", "lĩnh vực", "phân dã 分野", "분야를"],
+  ["정리하다", "sắp xếp, hệ thống", "chỉnh lý 整理", "정리했다"],
+  ["생활상", "đời sống, sinh hoạt", "sinh hoạt tướng 生活相", "생활상을"],
+  ["관찰하다", "quan sát", "quan sát 觀察", "관찰하고"],
+  ["서적", "sách vở", "thư tịch 書籍", "서적들을"],
+  ["참고하다", "tham khảo", "tham khảo 參考", "참고했으며"],
+  ["논평", "lời bình", "luận bình 論評", "논평을"],
+  ["첨부하다", "đính kèm", "thiêm phụ 添附", "첨부했다"],
+  ["인용하다", "trích dẫn", "dẫn dụng 引用", "인용한"],
+  ["서지학", "thư mục học", "thư chí học 書誌學", "서지학적"],
+  ["가치", "giá trị", "giá trị 價値", "가치도"],
+  ["편찬하다", "biên soạn", "biên soạn 編纂", "편찬했는데"],
+  ["방대하다", "đồ sộ", "bàng đại 厖大", "방대하고"],
+  ["담기다", "được chứa đựng", "", "담겨"]
+],
+"wo": [
+  ["문헌", "tài liệu, văn hiến", "văn hiến 文獻", "", "lựa chọn ②"],
+  ["집필하다", "chấp bút, viết", "chấp bút 執筆", "", "lựa chọn ②"],
+  ["배제하다", "loại trừ, gạt bỏ", "bài trừ 排除", "", "lựa chọn ③"],
+  ["객관적", "khách quan", "khách quan đích 客觀的", "", "lựa chọn ③"],
+  ["한정되다", "bị giới hạn", "hạn định 限定", "", "lựa chọn ④"]
+],
+"g": [
+  {"p": "-는 데 필요하다", "m": "cần cho việc …", "f": "살아가는 데 필요한", "d": "", "ex": []},
+  {"p": "-(으)며", "m": "và, đồng thời", "f": "참고했으며", "d": "Liệt kê (văn viết).", "ex": []},
+  {"p": "-아/어 놓다", "m": "làm sẵn, để lại", "f": "밝혀 놓아", "d": "", "ex": []},
+  {"p": "-다고 보다", "m": "cho rằng, coi là", "f": "완성했다고 보기", "d": "", "ex": []},
+  {"p": "-(으)ㄹ 만큼", "m": "đến mức …", "f": "어려울 만큼", "d": "", "ex": [["눈물이 날 만큼 웃었다.", "Cười đến mức chảy nước mắt."]]}
+],
+"qa": {
+  "33": {"a": 1, "w": "**인용한 책들을 밝혀 놓아** = ghi lại các sách đã tham khảo → ②.", "x": ["Một cá nhân (서유구) viết; câu cuối nói khó tin **một người** làm được.", null, "Ngược: **자신의 논평을 첨부했다**.", "Ngược: 16 lĩnh vực, **서지학적 가치도 크다**."]}
+},
+"hoi": [
+  {"q": "Sách viết cho ai?", "a": "Cho nhà nho sống ở nông thôn."},
+  {"q": "Seo Yu-gu viết bằng cách nào?", "a": "Quan sát đời sống, tham khảo nhiều sách, thêm lời bình của mình."},
+  {"q": "Vì sao sách có giá trị thư mục học?", "a": "Vì ghi rõ các sách đã trích dẫn."}
+]
+}

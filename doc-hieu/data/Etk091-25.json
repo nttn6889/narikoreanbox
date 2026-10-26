@@ -1,0 +1,45 @@
+{
+"e": "Etk091", "n": [25],
+"t": "Khán giả đông như mây",
+"cd": "Văn hóa – giải trí",
+"y": "Ca sĩ Jinyoung mở concert sau 3 năm, khán giả kéo đến rất đông.",
+"doc": [
+  {"t": "Tách hai nửa ở dấu phẩy", "d": "Nửa 1: ai (가수 진영). Nửa 2: chuyện gì (3년 만의 콘서트에 구름 관중).", "s": [0]},
+  {"t": "Giải nghĩa chữ khó", "d": "**구름 관중** = khán giả đông như mây (ẩn dụ). **3년 만의** = sau 3 năm mới có.", "s": [0]},
+  {"t": "Chữ cuối → thời điểm", "d": "Tiêu đề kết thúc bằng danh từ (관중) = sự việc **đã xảy ra** → loại lựa chọn “hứa, quảng bá”.", "s": []}
+],
+"l": [
+  ["3년 만의", "TG", "sau 3 năm mới (có lại)"],
+  ["구름 관중", "KL", "ẩn dụ: rất đông khán giả → điểm chính của tiêu đề"]
+],
+"s": [
+  {"c": [["가수 진영,", "CN", "ca sĩ Jinyoung", 1], ["3년 만의", "DN", "sau 3 năm", 3], ["콘서트에", "TR", "concert", 2], ["구름 관중", "VN", "khán giả đông như mây", 4]],
+   "g": "콘서트에 구름 관중", "gv": "Concert khán giả đông nghịt",
+   "r": "Tiêu đề", "y": "Concert sau 3 năm, khán giả kéo đến rất đông.",
+   "vi": "Ca sĩ Jinyoung: concert sau 3 năm vắng bóng, khán giả kéo đến đông như mây.",
+   "tip": "Tiêu đề báo bỏ động từ: **N에 구름 관중** = (khán giả) kéo đến N đông như mây. Dịch thêm động từ “kéo đến”."}
+],
+"w": [
+  ["가수", "ca sĩ", "ca thủ 歌手", "가수"],
+  ["N 만에 / N 만의", "sau N (mới lại)", "", "3년 만의"],
+  ["콘서트", "buổi hòa nhạc, concert", "", "콘서트에"],
+  ["구름 관중", "khán giả đông như mây", "quan chúng 觀衆", "구름 관중"]
+],
+"wo": [
+  ["몰리다", "dồn đến, đổ xô", "", "", "lựa chọn ① · đáp án"],
+  ["호응", "sự hưởng ứng", "hô ứng 呼應", "", "lựa chọn ③"],
+  ["홍보하다", "quảng bá", "hoằng báo 弘報", "", "lựa chọn ④"],
+  ["N 내에", "trong vòng N", "nội 內", "", "lựa chọn ②"]
+],
+"g": [
+  {"p": "N 만에 / N 만의 N", "m": "sau N (khoảng thời gian) mới …", "f": "3년 만의", "d": "Khoảng cách thời gian từ lần trước. 만의 + danh từ.", "ex": [["10년 만에 고향에 갔다.", "Sau 10 năm mới về quê."]]},
+  {"p": "Tiêu đề: N에 N", "m": "(xảy ra) ở N …", "f": "콘서트에", "d": "Tiêu đề báo lược động từ; tự thêm động từ hợp nghĩa (몰리다).", "ex": []}
+],
+"qa": {
+  "25": {"a": 0, "w": "**구름 관중** = rất đông khán giả; **3년 만의** = sau 3 năm → ① mở concert sau 3 năm, đông người kéo đến.", "x": [null, "3년 내에 = trong 3 năm tới + hứa — tiêu đề nói chuyện đã diễn ra.", "호응이 적었다 — ngược với 구름 관중.", "Quảng bá để kéo khách — tiêu đề nói khán giả đã đến."]}
+},
+"hoi": [
+  {"q": "구름 관중 nghĩa đen và nghĩa bóng?", "a": "Nghĩa đen: khán giả mây; nghĩa bóng: khán giả đông như mây."},
+  {"q": "3년 만의 콘서트 là gì?", "a": "Concert đầu tiên sau 3 năm."}
+]
+}

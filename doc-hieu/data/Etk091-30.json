@@ -1,0 +1,77 @@
+{
+"e": "Etk091", "n": [30],
+"t": "Tài nguyên dồi dào chưa đủ để phát triển",
+"cd": "Kinh tế",
+"y": "Tài nguyên phong phú là điều kiện cần chứ không đủ cho tăng trưởng kinh tế: có nước giàu tài nguyên vẫn không phát triển được vì chỉ dựa vào tài nguyên, không đầu tư vào sản xuất, dịch vụ; ngược lại có nước nghèo tài nguyên vẫn nâng năng lực sản xuất nhờ công nghệ, giáo dục.",
+"doc": [
+  {"t": "Câu 1 · chìa khóa", "d": "**필요조건이지 충분조건은 아니다** = cần nhưng chưa đủ → có tài nguyên **mà vẫn** không tăng trưởng.", "s": [0]},
+  {"t": "Câu có ô", "d": "**갖추고 있음에도** = dù có … → ô là kết quả **ngược** với “có nhiều tài nguyên” → không phát triển kinh tế.", "s": [1]},
+  {"t": "Đọc qua ô", "d": "Câu 3 (**-는 것이다**) giải thích vì sao; câu 4 **반면에** nêu trường hợp ngược lại.", "s": [2, 3]}
+],
+"l": [
+  ["필요조건이지 충분조건은 아니다", "KL", "ý chính: cần nhưng không đủ"],
+  ["갖추고 있음에도", "DL", "-음에도: dù … vẫn → ô trái với “giàu tài nguyên”"],
+  ["않게 되는 것이다", "GT", "giải thích vì sao không phát triển"],
+  ["반면에", "DL", "trường hợp ngược: ít tài nguyên mà vẫn mạnh"]
+],
+"s": [
+  {"c": [["풍부한", "DN", "phong phú", 2], ["자원은", "CN", "tài nguyên", 1], ["경제 성장의", "DN", "của tăng trưởng kinh tế", 4], ["필요조건이지", "VP", "là điều kiện cần", 3], ["충분조건은 아니다.", "VN", "chứ không phải điều kiện đủ", 5]],
+   "g": "자원은 필요조건이지 충분조건은 아니다", "gv": "Tài nguyên là điều kiện cần chứ không phải đủ",
+   "r": "Mở · Ý chính", "y": "Tài nguyên là điều kiện cần, chưa đủ.",
+   "vi": "Tài nguyên phong phú là điều kiện cần của tăng trưởng kinh tế chứ không phải điều kiện đủ.",
+   "tip": "**A이지 B는 아니다** = là A chứ không phải B."},
+  {"c": [["풍부한 천연자원을", "TN", "tài nguyên thiên nhiên phong phú", 2], ["갖추고 있음에도", "VP", "dù có", 1], ["(    )", "DN", "(    )", 4], ["경우도", "CN", "trường hợp", 3], ["있다.", "VN", "cũng có", 5]],
+   "g": "(    ) 경우도 있다", "gv": "Cũng có trường hợp (    )",
+   "r": "Câu có ô", "y": "Có nước giàu tài nguyên mà vẫn (không phát triển).",
+   "vi": "Cũng có trường hợp dù có tài nguyên thiên nhiên phong phú mà vẫn (không đạt được phát triển kinh tế).",
+   "tip": "**-(으)ㅁ에도 (불구하고)** = dù … vẫn → vế sau trái với kỳ vọng."},
+  {"c": [["풍부한 자원에만", "TR", "chỉ vào tài nguyên dồi dào", 2], ["의존해", "VP", "dựa", 1], ["경제 성장의 중심 산업인", "DN", "là ngành trọng tâm của tăng trưởng kinh tế", 5], ["제조업이나 서비스업 등에", "TR", "vào sản xuất, dịch vụ…", 4], ["투자를 하지 않게 되는 것이다.", "VN", "(tức là) không đầu tư", 3]],
+   "g": "투자를 하지 않게 되는 것이다", "gv": "Tức là không đầu tư",
+   "r": "Giải thích", "y": "Chỉ dựa vào tài nguyên, không đầu tư vào sản xuất, dịch vụ.",
+   "vi": "Tức là họ chỉ dựa vào tài nguyên dồi dào mà không đầu tư vào các ngành trọng tâm của tăng trưởng kinh tế như sản xuất hay dịch vụ.",
+   "tip": "**-게 되는 것이다** = (rốt cuộc) thành ra là … — câu giải thích nguyên nhân cho câu có ô."},
+  {"c": [["반면에", "TR", "ngược lại", 1], ["천연자원이 빈약해도", "VP", "dù nghèo tài nguyên thiên nhiên", 4], ["새로운 기술 개발이나 교육을 통해", "TR", "thông qua phát triển công nghệ mới hay giáo dục", 6], ["생산 능력을 높이는", "DN", "nâng cao năng lực sản xuất", 5], ["나라도", "CN", "nước", 3], ["있다.", "VN", "cũng có", 2]],
+   "g": "나라도 있다", "gv": "Cũng có nước …",
+   "r": "Đối lập · Kết", "y": "Có nước ít tài nguyên vẫn mạnh nhờ công nghệ, giáo dục.",
+   "vi": "Ngược lại, cũng có nước dù nghèo tài nguyên thiên nhiên vẫn nâng cao năng lực sản xuất thông qua phát triển công nghệ mới hay giáo dục.",
+   "tip": "**반면에** = ngược lại (hai đối tượng trái nhau)."}
+],
+"w": [
+  ["풍부하다", "phong phú, dồi dào", "phong phú 豐富", "풍부한"],
+  ["자원", "tài nguyên", "tư nguyên 資源", "자원은|자원에만"],
+  ["경제 성장", "tăng trưởng kinh tế", "kinh tế thành trưởng 經濟成長", "경제 성장의"],
+  ["필요조건", "điều kiện cần", "tất yếu điều kiện 必要條件", "필요조건이지"],
+  ["충분조건", "điều kiện đủ", "sung phân điều kiện 充分條件", "충분조건은"],
+  ["천연자원", "tài nguyên thiên nhiên", "thiên nhiên tư nguyên 天然資源", "천연자원을|천연자원이"],
+  ["갖추다", "có đủ, trang bị", "", "갖추고"],
+  ["의존하다", "phụ thuộc, dựa vào", "y tồn 依存", "의존해"],
+  ["산업", "ngành công nghiệp", "sản nghiệp 産業", "산업인"],
+  ["제조업", "ngành sản xuất chế tạo", "chế tạo nghiệp 製造業", "제조업이나"],
+  ["서비스업", "ngành dịch vụ", "", "서비스업"],
+  ["투자", "đầu tư", "đầu tư 投資", "투자를"],
+  ["빈약하다", "nghèo nàn, thiếu thốn", "bần nhược 貧弱", "빈약해도"],
+  ["개발", "phát triển, khai thác", "khai phát 開發", "개발이나"],
+  ["생산 능력", "năng lực sản xuất", "sinh sản năng lực 生産能力", "생산 능력을"]
+],
+"wo": [
+  ["경제 발전", "phát triển kinh tế", "kinh tế phát triển 經濟發展", "", "lựa chọn ③ · đáp án"],
+  ["이루다", "đạt được", "", "", "lựa chọn ③"],
+  ["무리하게", "quá sức, quá mức", "vô lý 無理", "", "lựa chọn ④"]
+],
+"g": [
+  {"p": "A이지 B는 아니다", "m": "là A chứ không phải B", "f": "필요조건이지", "d": "", "ex": []},
+  {"p": "-(으)ㅁ에도 (불구하고)", "m": "dù … vẫn", "f": "있음에도", "d": "Nhượng bộ, văn viết.", "ex": [["비가 옴에도 경기는 계속되었다.", "Dù trời mưa, trận đấu vẫn tiếp tục."]]},
+  {"p": "N에만 의존하다", "m": "chỉ dựa vào N", "f": "자원에만", "d": "", "ex": []},
+  {"p": "-게 되는 것이다", "m": "thành ra là …", "f": "않게 되는 것이다", "d": "Giải thích kết quả.", "ex": []},
+  {"p": "-아/어도", "m": "dù …", "f": "빈약해도", "d": "", "ex": []},
+  {"p": "N을/를 통해", "m": "thông qua N", "f": "교육을 통해", "d": "", "ex": []}
+],
+"qa": {
+  "30": {"a": 2, "w": "Tài nguyên cần nhưng chưa đủ → có tài nguyên **mà vẫn** (-음에도) **경제 발전을 이루지 못하는** trường hợp.", "x": ["Chép chữ 제조업 nhưng ngược: họ **không** đầu tư vào sản xuất.", "Ngược: họ **có** nhiều tài nguyên.", null, "Ngược: họ không đầu tư; đầu tư công nghệ là nước nghèo tài nguyên."]}
+},
+"hoi": [
+  {"q": "Tài nguyên là điều kiện gì của tăng trưởng?", "a": "Điều kiện cần, chưa phải điều kiện đủ."},
+  {"q": "Vì sao nước giàu tài nguyên có thể không phát triển?", "a": "Chỉ dựa vào tài nguyên, không đầu tư vào sản xuất, dịch vụ."},
+  {"q": "Nước nghèo tài nguyên phát triển bằng cách nào?", "a": "Phát triển công nghệ mới, giáo dục để nâng năng lực sản xuất."}
+]
+}

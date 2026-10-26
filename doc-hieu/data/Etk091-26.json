@@ -1,0 +1,45 @@
+{
+"e": "Etk091", "n": [26],
+"t": "Quét sạch huy chương vàng",
+"cd": "Thể thao",
+"y": "Tay vợt chủ lực của bóng bàn Hàn Quốc, Kim Su-mi, năm nay giành hết huy chương vàng ở các giải quốc tế.",
+"doc": [
+  {"t": "Tách hai nửa ở dấu phẩy", "d": "Nửa 1: ai (한국 탁구의 간판 김수미 = gương mặt tiêu biểu). Nửa 2: kết quả (금메달 싹쓸이).", "s": [0]},
+  {"t": "Chữ cuối → thời điểm", "d": "**싹쓸이** = quét sạch, giành hết → kết quả **đã có** → loại “khả năng tăng / đang nhắm / đang tập”.", "s": []}
+],
+"l": [
+  ["간판", "KL", "nghĩa bóng: gương mặt tiêu biểu, chủ lực"],
+  ["싹쓸이", "KL", "giành hết → đã hoàn thành"]
+],
+"s": [
+  {"c": [["한국 탁구의 간판", "DN", "gương mặt chủ lực của bóng bàn Hàn Quốc", 2], ["김수미,", "CN", "Kim Su-mi", 1], ["올해", "TR", "năm nay", 4], ["국제 대회", "TR", "các giải quốc tế", 5], ["금메달 싹쓸이", "VN", "quét sạch huy chương vàng", 3]],
+   "g": "김수미, 금메달 싹쓸이", "gv": "Kim Su-mi giành hết HCV",
+   "r": "Tiêu đề", "y": "Năm nay giành hết HCV các giải quốc tế.",
+   "vi": "Kim Su-mi, gương mặt chủ lực của bóng bàn Hàn Quốc, quét sạch huy chương vàng các giải quốc tế năm nay.",
+   "tip": "**간판** nghĩa gốc “biển hiệu” → nghĩa bóng “gương mặt đại diện”. **싹쓸이** (quét sạch) = giành hết."}
+],
+"w": [
+  ["탁구", "bóng bàn", "trác cầu 卓球", "탁구의"],
+  ["간판", "biển hiệu; (bóng) gương mặt chủ lực", "khán bản 看板", "간판"],
+  ["국제 대회", "giải đấu quốc tế", "quốc tế đại hội 國際大會", "국제 대회"],
+  ["금메달", "huy chương vàng", "kim 金", "금메달"],
+  ["싹쓸이", "quét sạch, giành hết", "", "싹쓸이"]
+],
+"wo": [
+  ["가능성", "khả năng", "khả năng tính 可能性", "", "lựa chọn ①"],
+  ["내세우다", "đưa ra (làm đại diện)", "", "", "lựa chọn ②"],
+  ["노리다", "nhắm tới", "", "", "lựa chọn ②"],
+  ["따다", "giành (huy chương), hái", "", "", "lựa chọn ③④"],
+  ["훈련", "huấn luyện, tập luyện", "huấn luyện 訓練", "", "lựa chọn ④"]
+],
+"g": [
+  {"p": "Tiêu đề kết thúc bằng danh từ", "m": "việc đã xảy ra", "f": "싹쓸이", "d": "Danh từ hành động (싹쓸이, 기지개, 우승) ở cuối tiêu đề thường = đã làm xong. “Sẽ / đang” thì tiêu đề có 예정, 추진, 노린다…", "ex": []}
+],
+"qa": {
+  "26": {"a": 2, "w": "**싹쓸이** = giành hết → ③ đã giành tất cả HCV.", "x": ["Khả năng cao lên = chưa giành.", "노리고 있다 = đang nhắm tới, chưa giành.", null, "Đang tập luyện = chưa có kết quả."]}
+},
+"hoi": [
+  {"q": "간판 ở đây nghĩa là gì?", "a": "Gương mặt tiêu biểu, chủ lực (không phải biển hiệu)."},
+  {"q": "Kim Su-mi đã giành HCV chưa?", "a": "Rồi — giành hết (싹쓸이)."}
+]
+}
