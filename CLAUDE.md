@@ -807,6 +807,12 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   đúng = câu chứa `c2`), lưu `st.z`/`st.zs`, không vào lịch Ôn. Báo cáo `linesC20`.
   Đáp án lấy từ `bank`, riêng `Etk091` dùng đáp án đúng ③ 비록 / ① (trong `bank` đang ghi sai ① / ③). `MCQ` câu tự soạn (lựa chọn đầu là đáp án). localStorage `nari-1920`.
 
+- **Bản theo khuôn bài dạng câu `cau-19-20/moi/`** (cô yêu cầu 26/10, cùng khuôn `cau-11-12/`; trang cũ giữ nguyên cho học sinh đang học dở): Bắt đầu (làm thử 5 bài `PRE` = 10 câu) ·
+  Buổi 1 đọc đoạn (vai trò câu M N V L X K H, khuôn “người ta tưởng → bị lật”, ô ở đâu, đọc chậm) · Buổi 2 phó từ đi cặp (`ADV` + `1nD*`/`1nE*`/`1nM`/`1d`) · Buổi 3 từ nối (`REL2`, `CMP2` + `2nN*`/`2nD*`/`2nM`/`2nK`) ·
+  Buổi 4 câu 20 (dạng A chủ đề / B nội dung, `20a–d` + gọi tên bẫy câu thật) · Buổi 5 quy trình 5 bước, làm mẫu kỳ 91, làm từng bước · Luyện (4 bài/lượt, ôn ngắt quãng) · 22 bài · Kết quả.
+  Dữ liệu `python3 tools/cau_19_20.py` → `cau-19-20/moi/data.json`: đọc thẳng biến `R`, `ADV`, `REL2`, `CMP2`, `PAIRS`, `REL`, `MCQ`, `MV` của `cau-19-20/index.html` (bằng node) + `tools/dau_hieu/19-20.json`,
+  `doc-dap-an/`, `dong-trai/`, `thi-thu/de/tu/` + dịch từng câu `tools/cau_19_20/bai.txt`, nghĩa lựa chọn câu 20 chủ đề `vi20.txt` (Claude soạn). Sửa trang cũ thì chạy lại script. localStorage `nari-1920m`.
+
 ## Học câu 23–24 tâm trạng trong tùy bút (`cau-23-24/`) và câu 42–43 tiểu thuyết (`cau-42-43/`)
 - Hai trang riêng, cùng khung với `cau-19-20/` (một bài = đoạn văn + 2 câu; câu sau mở khi làm câu trước; ✕ gạch lựa chọn; Buổi 1–3, Ôn ngắt quãng 5 bài/lượt,
   thẻ tất cả bài, Bảng tra; 23–24: 2 phút/bài, localStorage `nari-2324`; 42–43: 2:30/bài, `nari-4243`). Link `#b=1|2|3|on|all|tra`, `#b=all&q=<id đề>`.

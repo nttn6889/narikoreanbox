@@ -1,0 +1,148 @@
+# Dịch từng câu đoạn văn câu 19–20 (Claude soạn). Khối "## <đề>", mỗi câu của đoạn một dòng "<vai trò> | <dịch>"; chỗ ô trống dịch là […].
+# Vai trò: M mở bài (nêu hiện tượng) · N giải thích, chi tiết · V ví dụ, bằng chứng · L lý do · X điều người ta tưởng / ý sắp bị lật · K ý chính, kết luận · H câu hỏi
+
+## Etk083
+M | Chiến lược marketing quảng bá bằng yếu tố thú vị, vui nhộn đang được chú ý.
+N | Kiểu marketing này kích thích sự tò mò của người tiêu dùng, dẫn tới việc mua hàng.
+K | Nhưng khi chất lượng sản phẩm không đạt kỳ vọng của người tiêu dùng thì […] đến cả hình ảnh thương hiệu cũng xấu đi.
+V | Thực tế, một công ty hamburger từng làm “burger túi”, “burger ép” để thu hút người tiêu dùng, nhưng chất lượng không như kỳ vọng nên cả các sản phẩm khác của công ty cũng giảm doanh số.
+
+## Etk091
+M | Mùa đông khắc nghiệt ở Nam Cực, chim cánh cụt hoàng đế đứng sát nhau nhiều lớp, chịu rét bằng thân nhiệt của nhau.
+N | Cả đàn xoay vòng, những con ở vòng ngoài và vòng trong liên tục đổi chỗ cho nhau.
+N | Tức là con đã được sưởi ấm ở trong thì đi ra ngoài, con đang run rét ở ngoài thì đi vào trong.
+N | […] chuyển động đó rất chậm nhưng diễn ra không ngừng, nên không có con nào phải đứng chịu gió lạnh mãi.
+K | Cứ xoay tròn không nghỉ như vậy, đàn chim cánh cụt cùng nhau sống sót.
+
+## Eebs1
+M | Sự kiện tri ân của trung tâm thương mại, siêu thị lớn được tổ chức theo cách: tùy số tiền mua hàng mà tặng phiếu mua hàng, đồ dùng sinh hoạt, hoặc cho tham gia bốc thăm giải thưởng như du lịch nước ngoài.
+X | Về phía người tiêu dùng, mua những thứ […] phải mua mà vừa có lợi về kinh tế vừa có cơ hội trúng giải không ngờ, nên có thể nói sự kiện tri ân cũng không tệ.
+N | Nhưng cũng nhiều trường hợp vì muốn nhận phiếu mua hàng hay đồ dùng mà mua cả thứ không cần, rồi về nhà lại hối hận.
+K | Vì vậy cần có thói quen tiêu dùng khôn ngoan để không sa vào lời dụ dỗ mua sắm bốc đồng của doanh nghiệp.
+
+## Eebs2
+M | Khi chế độ làm việc 5 ngày một tuần trở nên phổ biến, văn hóa giải trí của người Hàn đang thay đổi.
+X | Thời gian đầu mới làm 5 ngày, vì không biết cách dùng thời gian rảnh nên […] đến cuối tuần thì nhiều người chỉ ở nhà ngủ hoặc xem TV, nghỉ ngơi đơn thuần.
+K | Nhưng dần dần, giải trí đang chuyển từ kiểu nghỉ ngơi sang kiểu hoạt động và tận hưởng.
+K | Ngoài ra, việc chuyển từ giải trí cá nhân sang giải trí theo gia đình, theo nhóm cũng là một thay đổi quan trọng.
+N | Nói cách khác, ngày càng nhiều người dành thời gian rảnh ra ngoài trời trải nghiệm cùng gia đình hoặc sinh hoạt sở thích cùng câu lạc bộ.
+
+## Ehot1
+M | Khắp các chung cư trên cả nước liên tiếp xảy ra chuyện đồ vật rơi xuống làm người bị thương, tử vong và ô tô bị hư hỏng.
+N | Vấn đề là phần lớn người làm việc này là trẻ nhỏ.
+N | Vì thế người dân đang đòi tăng hình phạt với loại tội phạm này và xử phạt cả trẻ dưới 14 tuổi.
+K | […] điều quan trọng hơn hết là lập ra phương án bồi thường thiết thực cho người bị hại.
+
+## Ehot2
+M | Hiện nay chúng ta đang sống giữa vô số hệ thống trí tuệ nhân tạo.
+N | Các chuyên gia nói rằng nhiệm vụ nào trí tuệ nhân tạo hiểu được cách làm thì nó sẽ vượt con người.
+N | Vì thế, nghe nói trong tương lai nhiều loại việc làm cũng sẽ giảm đi.
+N | Người ta dự đoán cả giáo dục nặng về số và ngôn ngữ cũng có thể bị trí tuệ nhân tạo thay thế.
+H | […] năng lực không thể bị thay thế là gì?
+K | Có lẽ là năng lực thể hiện sáng tạo trong lĩnh vực nghệ thuật như âm nhạc, mỹ thuật, và năng lực đặt câu hỏi về điều mình thắc mắc chứ không phải trả lời câu hỏi.
+
+## Ehot3
+M | Có những công ty tái chế thu gom đồ tái chế trong khu chung cư.
+N | Gần đây các công ty này tuyên bố không thu gom túi nilon, xốp, thậm chí cả nhựa như đồ tái chế nữa, gây ra hỗn loạn.
+L | Nguyên nhân lớn nhất là Trung Quốc ngừng nhập 24 loại chất thải rắn với danh nghĩa “bảo vệ môi trường và vệ sinh”.
+L | Thêm vào đó giá chất thải cũng giảm, nên ngay cả công ty tái chế trong nước cũng ngại thu gom.
+X | Không thể bất mãn với thái độ của Trung Quốc rằng đây là biện pháp bất đắc dĩ vì môi trường.
+K | […] chính phủ, chính quyền địa phương, khu chung cư, công ty tái chế — những bên không có đối sách gì, chỉ nhìn vào cơ cấu thị trường cố định và đùn đẩy trách nhiệm cho nhau — đều phải tự xem lại mình.
+
+## Ehot4
+M | Một trong những truyền thống đám cưới là cô dâu tung “bó hoa” về phía mọi người.
+L | Từ xưa người ta tin cô dâu là người mang lại may mắn cho người khác.
+N | […] người ta xô về phía cô dâu để lấy được quần áo cô dâu đã mặc hay bó hoa.
+N | Vì vậy nhiều chuyện nguy hiểm xảy ra với cô dâu, nên đổi thành chỉ tung bó hoa cô dâu cầm.
+K | Như vậy, truyền thống tung hoa trong đám cưới mang ý nghĩa cô dâu chia sẻ may mắn cho người khác.
+
+## Ehot5
+M | Một nghiên cứu đã làm rõ rằng tính tò mò có liên quan đến năng lực làm việc.
+N | Nghe nói người không có tính tò mò sợ điều mới và nhiều khả năng tỏ thái độ thụ động khi tham gia công việc.
+N | […] người tò mò nhiều thì giỏi giải quyết mâu thuẫn với đồng nghiệp và được xã hội ủng hộ nhiều hơn.
+N | Ngoài ra, nhóm có tính tò mò mạnh thì thích thử thách mới và khá sáng tạo.
+K | Như vậy, có tính tò mò có nhiều lợi ích, nhưng mức độ tò mò mỗi người mỗi khác.
+
+## Entk1
+M | Trợ cấp thất nghiệp là chế độ trả tiền cho người mất việc trong thời gian họ tìm việc lại, giúp ổn định cuộc sống.
+X | Nhà nước dùng trợ cấp thất nghiệp hỗ trợ người mất việc có cơ hội đi làm lại.
+K | […] trợ cấp thất nghiệp rất khó nhận, thủ tục phức tạp nên bất tiện, lại có người không đáng nhận cũng nhận, vấn đề rất nghiêm trọng.
+V | Gần đây đã phát hiện hàng loạt người nhận trái phép trợ cấp thất nghiệp còn nhiều hơn lúc đi làm.
+N | Chính phủ nói sẽ hạ mức trợ cấp, nhưng đó không thể là cách giải quyết tận gốc.
+
+## Entk2
+M | “Digital quarter” là từ chỉ những người trẻ dùng thiết bị số như điện thoại thông minh để xử lý công việc nhanh.
+N | Nghĩa là nhờ thiết bị số, họ làm xong việc trong thời gian ngắn hơn nhiều so với thời gian thế hệ trước suy nghĩ và hành động.
+X | Dân digital quarter biết làm hai, ba việc một lúc và tìm ngay được thông tin cần.
+K | […] họ cũng có nguy cơ nghiện thiết bị số: không rời điện thoại được dù chỉ một lát, trí nhớ giảm sút… là những tác dụng phụ họ gặp phải.
+
+## Entk3
+N | Răng người là một loại xương; thường trẻ sinh ra khoảng 6 tháng thì mọc răng.
+N | Răng mọc lúc đầu gọi là răng sữa; đến một độ tuổi nhất định răng sữa rụng hết và mọc răng mới.
+X | Sau đó không mọc răng mới nữa nên gọi là răng vĩnh viễn; vì răng mọc đầu tiên đều được thay bằng răng vĩnh viễn nên nhiều người lơ là việc chăm sóc răng sữa.
+K | […] răng sữa có vai trò giữ chỗ để răng vĩnh viễn mọc đúng, nên không được để sâu vì không đánh răng kỹ.
+
+## Et3001
+M | Từ lâu con người đã phát hiện và bắt chước những đặc điểm kỳ diệu của sinh vật.
+V | Ví dụ bắt chước sinh vật có trực thăng bắt chước chuồn chuồn, băng dính gai bắt chước quả ké, đồ bơi toàn thân bắt chước vảy cá mập…
+N | […] lĩnh vực nghiên cứu bắt chước đặc điểm của nhiều sinh vật để phát triển kỹ thuật, thiết bị mới gọi là mô phỏng sinh học.
+K | Mô phỏng sinh học đang được ứng dụng trong nhiều lĩnh vực như ô tô, máy bay, robot, y tế, và được kỳ vọng sẽ giúp vượt qua giới hạn của khoa học, kỹ thuật hiện có.
+
+## Et3002
+N | Trong các loại kịch, hài kịch nói đơn giản là thể loại mang lại tiếng cười, thể hiện vui vẻ những sự việc, vấn đề con người gặp phải và chứa mong ước của họ.
+N | Ngược lại, bi kịch gồm nội dung buồn, chủ đề nặng nề, nhưng là kịch mang lại hy vọng rằng qua đau khổ nhân loại có thể tiến bộ hơn.
+K | Hài kịch và bi kịch […] tính chất khác nhau nhưng có chung mục đích: đề cập nhiều vấn đề của xã hội và truyền hy vọng cho khán giả.
+
+## Et3003
+N | Từ “placebo” bắt nguồn từ tiếng Latinh nghĩa là “làm cho vừa lòng”.
+N | Theo hiệu ứng placebo, dù uống thuốc giả không có tác dụng, nếu bệnh nhân tin mình sẽ khỏi thì bệnh thật sự đỡ.
+N | Bệnh mà hiệu ứng placebo phát huy rõ nhất là trầm cảm — bệnh của tâm trí.
+L | Trầm cảm bắt nguồn từ việc mang suy nghĩ tiêu cực về bản thân cả về lý trí lẫn cảm xúc.
+K | […] khi ta nhìn hoàn cảnh khó khăn bằng tâm thế tích cực, thì như nghĩa của chữ placebo, hoàn cảnh của ta sẽ dần tốt lên và kết quả hài lòng có thể xuất hiện.
+K | Hôm nay hãy thử tặng bản thân sức mạnh của sự tích cực xem sao.
+
+## Et3004
+M | Trong khảo sát các nhà khoa học và y học, “sự phát triển của hệ thống cấp thoát nước” được chọn là thành tựu vĩ đại nhất của nhân loại.
+V | Ngày xưa nhiều người chết vì bệnh như dịch tả lây qua nước bẩn, nhưng từ thế kỷ 20 khi có cống thoát nước và nước máy sạch thì số người chết giảm mạnh.
+V | Nhờ đó tuổi thọ trung bình của con người tăng được hơn 30 năm.
+K | […] có thể nói việc cung cấp nước sạch có liên quan mật thiết đến sức khỏe con người.
+
+## Et3005
+X | Ngày xưa một bài báo ở Mỹ viết rằng ô tô đe dọa loài người.
+X | Bài báo mô tả phát minh mới là ô tô như cỗ máy chết chóc, dự đoán ô tô sẽ sớm diệt vong loài người.
+L | Hồi đó người ta nghĩ về ô tô như vậy vì chưa có đèn tín hiệu giao thông.
+H | Năm tháng trôi qua, giờ loài người có diệt vong không?
+N | […] ô tô đã trở thành công cụ không thể thiếu với chúng ta.
+N | Để dùng ô tô an toàn, người ta làm đường xe chạy, đèn tín hiệu và cả chế độ bằng lái.
+K | Bất cứ thứ gì, nếu làm ra luật và chế độ cần thiết thì đều có thể dùng an toàn.
+
+## Eys1
+X | Người ta từng dự đoán vì máy tính, điện thoại phát triển nên số người đọc sách giấy sẽ dần giảm.
+N | Nhưng thời gian trôi qua, lượng sách giấy bán ra vẫn không giảm.
+K | […] lượng bán sách điện tử — vốn lúc đầu có nhiều độc giả — đang dần giảm.
+L | Có vẻ là vì sách điện tử có ưu điểm dễ mang theo nhưng lại có nhược điểm chết người như mỏi mắt, có hại cho sức khỏe.
+
+## Eys2
+X | Phần lớn mọi người nghĩ thịt nướng than ngon hơn nướng bằng bếp ga.
+N | Nhưng không nhiều người biết khi nướng thịt bằng than, mỡ thịt cháy sinh ra chất gây ung thư “benzopyrene”.
+H | […] nấu thịt thế nào thì tốt?
+K | Khi nướng thịt, nên dùng nhiệt hay nướng bằng chảo thay vì nướng trực tiếp trên lửa; nếu định nướng than thì nên dùng thịt ít mỡ và nấu sao cho không cháy.
+
+## Eys3
+M | Một nhà khoa học đã làm thí nghiệm về việc cá nhân làm theo số đông.
+N | […] thực ra trong mỗi nhóm chỉ có một người là đối tượng thí nghiệm, 7 người còn lại cùng phòng là nhân viên nghiên cứu đã thống nhất trước.
+N | Ông cho 7 nhân viên nói đáp án sai, sau đó mới cho đối tượng thí nghiệm nói đáp án.
+K | Kết quả là 70% đối tượng dù biết rõ đáp án nhưng vì các nhân viên khăng khăng đáp án sai nên chính họ cũng nói đáp án sai.
+
+## Eys4
+M | Chuối trồng ở nông trại dễ bị bệnh dịch.
+L | Vì được trồng bằng cách nhân bản: cắt thân, lá, cành rồi trồng lại.
+L | Chuối nhân bản có độ đa dạng gen thấp hơn chuối dại.
+K | Rốt cuộc khi dịch bệnh lan ra, tất cả các cây chuối có gen giống nhau đều mắc bệnh như nhau.
+L | […] nông trại trồng chuối rất dày nên càng dễ bị dịch bệnh hơn.
+
+## Eys5
+M | Ký ức hằng ngày của con người dần biến mất cùng với ký ức cũ.
+V | Theo kết quả nghiên cứu, ký ức không được nhớ lại trong ngày thì ngày đầu chỉ còn 54%, sau một tuần giảm còn 21%.
+K | […] với con người phải không ngừng học và thích nghi với cái mới, quên có lẽ là chức năng của não tự nhiên như nhớ.
+K | Phải quên những ký ức đau khổ mới có thể bước tiếp, nên quên là món quà, là phước lành trời ban.
