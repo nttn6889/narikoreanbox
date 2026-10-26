@@ -643,6 +643,15 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   câu 6–10, 21–22 soạn mới (đáp án theo bank). `python3 tools/dau_hieu.py [<dump>]` kiểm tra chữ tô, so đáp án với bank (dump `bank/<id>/q`), ghi `dau-hieu/data/*.json` + `index.json`. Đoạn văn trang đọc thẳng `thi-thu/de/`.
 - Khi soát (23/10/2026) phát hiện bank `Etk091` sai đáp án 14 câu (19–34 trừ 27, 33; đúng: 19③ 20① 21③ 22④ 23① 24④ 25① 26③ 28① 29② 30③ 31③ 32④ 34②) và `Entk3` câu 2 (bank ①, đúng ④ 적응하느라고) — đã báo cô, chưa sửa bank.
 
+## Đọc chọn lọc (`doc-chon-loc/`) — giáo án của cô (`noindex`, không đặt link từ trang học sinh)
+- Câu hỏi của cô (26/10): học sinh không hiểu từ / không đủ giờ đọc hết đoạn thì làm bài thế nào. Cô xem giáo án, nhận xét xong mới soạn trang học sinh.
+- Số liệu: `python3 tools/doc_chon_loc.py` (đọc `tools/dau_hieu/*.json` + đoạn văn `thi-thu/de/`) → `doc-chon-loc/data.json`: theo dạng (`<tệp>:<loại câu t>`) độ dài đoạn,
+  % chữ của đoạn nằm trong câu chứa manh mối (`c`), vị trí manh mối / ý chính, bẫy, thí nghiệm “máy không đọc” (so chữ bằng cặp âm tiết: lựa chọn ít / nhiều chữ của bài nhất,
+  giống câu cuối nhất, luật đoán tốt nhất); chữ tín hiệu trong lựa chọn; vị trí đáp án. Chạy lại khi sửa `tools/dau_hieu/`. Số trong chữ tĩnh của trang (Tổng quan mục 1, thẻ dạng `so`/`bay`) viết tay — chạy lại thì đối chiếu.
+- Thẻ: Tổng quan · ① Nền (đọc câu hỏi → dạng, đọc khung khi không hiểu từ, so lựa chọn) · ② Ô trống · ③ Ý chính · ④ Nội dung · ⑤ Ngắn & cảm xúc · ⑥ Thời gian (khung 70 phút, luật đoán)
+  · Máy chiếu (`#b=mau&id=Etk091-35&s=0…5&fr=1`: che đoạn → chỉ câu manh mối → tô dấu hiệu → loại bẫy → đáp án → cả đoạn; “Chế độ khung” làm mờ chữ, chỉ giữ từ nối / đuôi câu / chữ tín hiệu)
+  · Bảng tra. Thẻ từng dạng ở biến `TY` (đọc chỗ nào, không hiểu từ thì, bẫy, lỗi, cô hỏi, thời gian), vẽ vào `<div class="tys" data-ty="…">`. localStorage `nari-dcl`.
+
 ## Chuyên đề Đồng nghĩa – trái nghĩa (`dong-trai/`) — bản nghiên cứu của cô (`noindex`, không đặt link từ trang học sinh)
 - Câu hỏi của cô: có dấu hiệu đồng nghĩa / trái nghĩa giúp chọn đúng, loại sai không. Nghiên cứu 241 câu “nội dung khớp” (t = n trong `tools/dau_hieu`: câu 9–12, 20, 22, 24, 32–34, 43, 47, 50)
   của 22 đề đọc: đáp án đúng nói lại bằng chữ khác (90%; chỉ 25 câu chép gần nguyên), lựa chọn sai giữ chữ của bài đổi một chỗ (349 lựa chọn, 84% số câu có).
