@@ -35,7 +35,11 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   `lop/1a` Xây nền Sơ cấp 1 (Seoul 1A–1B) · Chuẩn phát âm – Hiểu ngữ pháp – Vững giao tiếp; `lop/2a` Hoàn thiện Sơ cấp 2 (Seoul 2A–2B) · Rõ cấu trúc – Mượt nối câu – Vững diễn đạt;
   `lop/3a` Bứt phá Trung cấp 1 (Seoul 3A–3B) · Sâu ngữ pháp – Rộng vốn từ – Vững đọc viết; `lop/4a` Làm chủ Trung cấp 2 (Seoul 4A–4B) · Chuẩn văn viết – Giàu thành ngữ – Vững lập luận
   (trang 4A đã tạo, có mã lớp, chưa có học liệu — repo chưa nhập từ vựng / ngữ pháp Seoul 4). 5A, 6A (Cao cấp) tính sau, cùng khuôn.
-- Trang lớp `lop/<lớp>/` hiện chỉ là danh sách học liệu học sinh có sẵn (Seoul từ vựng / ngữ pháp / bài tập…), làm tiếp sau trang TOPIK.
+- Trang lớp `lop/<lớp>/` cùng khung với trang TOPIK (cô chốt 26/10, 4 lớp giống nhau): `lop/khung.js` vẽ thanh **Từ vựng · Ngữ pháp · Nghe · Đọc · Viết**
+  → thanh chọn bài theo cuốn của lớp (`data-books`, vd. `2A,2B`; tên bài từ `seoul/bai.json`) → nội dung bài. Từ vựng = thẻ “Bảng từ” (vẽ từ `thi-thu/vocab.json`,
+  phần `Seoul <cuốn> · Bài N`) + “Học liệu”; Ngữ pháp = “Mẫu ngữ pháp” (`seoul/ngu-phap/np.json`, link sang giải thích) + “Học liệu”; Nghe/Đọc/Viết = Học liệu (chưa có thì báo cô đang soạn).
+  Học liệu tự sinh: `seoul/#b&c`, `seoul/tu-sau/` (bài trong `TS`), `seoul/bai-tap/` (bài trong `BT` — thêm bài thì sửa cả `TS`/`BT` trong `khung.js`), `seoul/ngu-phap/`;
+  thêm tay vào `HL['<lớp>']['<phần>:<cuốn>-<bài>']` hoặc `'<phần>:chung'` (hiện nút “★ Dùng chung”). Link `lop/2a/#k=tu|np|nghe|doc|viet&b=2A-3&t=bang|mau|hl`.
 - Không đưa giáo án / bản trình chiếu của cô (trang `noindex`, `viet-51/`, `viet-52/`, `viet-53/`, `cau-25-27/`, `seoul/so-dem|tuong-dong|tu-de-hoi/`, `seoul/2a-1|3a-1/`, `ngu-phap-sau/`).
 
 ## Phòng thi thử (`thi-thu/`)

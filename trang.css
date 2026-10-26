@@ -145,3 +145,10 @@ footer a{color:var(--pur)}
 .submit.ghost{background:#fff;color:var(--pur);border:2px solid var(--pur);font-weight:normal;font-size:15px;padding:7px 18px}
 .bar{position:sticky;bottom:0;background:var(--bg);border-top:1px solid var(--line);padding:8px 0;margin:0 0 8px;display:flex;gap:10px;align-items:center;justify-content:space-between;font-size:15px}
 .bar .submit{margin:0}
+
+/* Trang lớp Seoul (lop/khung.js): 5 phần, thanh chọn bài theo cuốn */
+.parts.p5{grid-template-columns:repeat(5,1fr)}
+@media (max-width:639px){.parts.p5 button{font-size:15px;padding:7px 2px}.parts.p5 small{font-size:11.5px}}
+nav.dang .bk{align-self:center;font:bold 13px Arial,sans-serif;color:var(--gold);margin:0 -2px 0 4px}
+nav.dang .bk:first-child{margin-left:0}
+@media (max-width:639px){nav.dang:has(.bk) a{padding:3px 9px;font-size:14px}}
