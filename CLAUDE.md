@@ -653,6 +653,20 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - Dữ liệu soạn tay `tools/dong_trai/*.txt`, mỗi dòng: `<đề> <câu> | <cách đáp án nói lại> | bài=>đáp án ; … | <i>:<kiểu> bài=>lựa chọn i ; …` (chữ phải có đúng trong đề / `tx`)
   → `python3 tools/dong_trai.py` (kiểm tra, thống kê, đếm chữ tín hiệu `SIG`) → `dong-trai/data.json`. Số trong phần chữ tĩnh của trang (90%, 25/241…) viết tay — chạy lại script thì đối chiếu.
 
+## Đọc đáp án (`doc-dap-an/`) — trang gửi học sinh: đọc 4 lựa chọn, tìm chỗ đáp án trong bài
+- Cô hỏi 26/10: luyện học sinh quen đọc 4 lựa chọn, biết đáp án nằm ở đâu trong bài, đọc lựa chọn cho nhanh; thống kê lựa chọn theo dạng / cấu trúc.
+  Dùng 241 câu “nội dung khớp” (câu 9–12, 20, 22, 24, 32–34, 43, 47, 50 của 22 đề đọc) = 964 lựa chọn.
+- Thẻ: Cách làm (3 bước: đọc lựa chọn + gạch chữ khóa → dò theo thứ tự ①→④ → so vị ngữ; số liệu; bảng khuôn câu; làm mẫu kỳ 91 câu 32) ·
+  ① Đọc lựa chọn (lượt 5 câu, mỗi lựa chọn chọn nghĩa Việt trong 4 nghĩa của chính câu đó, bấm giờ) · ② Tìm chỗ trong bài (từng lựa chọn: chạm câu chứa căn cứ /
+  “Bài không nhắc” → Khớp / Không khớp → tô cặp chữ bài ⇒ lựa chọn) · ③ Cùng ý hay khác ý (10 cặp chữ, khác ý thì chọn kiểu đổi) · Kho lựa chọn (lọc dạng / đề / khuôn,
+  “Che nghĩa”) · Thống kê. Link `#b=cach|doc|tim|so|kho|tk`, `&g=9|10|11|20|24|32|43|47` (dạng), `#b=tim&id=Etk091-32`. Chữ gạch chấm = từ của câu trong `thi-thu/de/tu/`.
+  localStorage `nari-dda`, “Gửi kết quả cho cô” chia sẻ đoạn chữ. Link ở trang chủ (`HL` doc:9, 11, 19, 21, 23, 32, 42, 46, 48).
+- Dữ liệu `python3 tools/doc_dap_an.py` → `doc-dap-an/data.json`: cặp chữ + cách nói lại / kiểu đổi lấy từ `dong-trai/data.json` (sửa `tools/dong_trai/` thì chạy `dong_trai.py` trước),
+  mã bẫy + chữ ảnh câu 9–10 từ `tools/dau_hieu/`, nghĩa Việt 4 lựa chọn `tools/doc_dap_an/vi-*.txt` (Claude soạn; `<đề> <câu> | ① | ② | ③ | ④`),
+  khuôn câu = regex `KH` trong script (F phủ định, M bắt buộc, N khả năng, B so sánh / tăng giảm, L phạm vi / thời điểm, D -고 있다, Q quá khứ, K câu kể).
+  Lựa chọn sai chưa có cặp chữ (374/723) thì `nb` = câu gần nhất máy dò (trùng âm tiết), chỉ gợi ý, không chấm vị trí.
+  Chưa chia theo chủ đề đoạn văn (chủ đề `topics` chỉ nằm trong db trang quản lý, không đưa vào repo).
+
 ## Dấu hiệu nhận biết câu 51–52 (`dau-hieu-51-52/`) — trang gửi học sinh
 - `viet-51/`, `viet-52/` là bản trình chiếu của cô; trang này chỉ gom **dấu hiệu nhận biết** (thấy chữ gì quanh ô → viết mẫu gì) cho học sinh tự học.
   Thẻ Câu 51 (chữ sau ô · ô cuối câu 6 nhóm · ô giữa câu · tiêu đề/kính ngữ/thì · bảng tóm tắt 72 ô), Câu 52 (chữ sau ô · từ nối → đuôi 7 nhóm · ô giữa câu ·

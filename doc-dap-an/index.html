@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Đọc đáp án · Nari TOPIK</title>
+<meta name="description" content="Luyện đọc nhanh 4 lựa chọn câu nội dung TOPIK II đọc và tìm chỗ đáp án trong đoạn văn: 241 câu, 964 lựa chọn của 22 đề đọc, chia theo dạng câu và khuôn câu.">
+<link rel="icon" href="../thi-thu/icon/icon-192.png">
+<script src="../lam-moi.js?v=2" data-key="nari-dda"></script>
+<style>
+:root{--ink:#111;--line:#555;--soft:#d8dde6;--sub:#f2f2f2;--muted:#666;--bg:#fff;--acc:#53468F;--ok:#1d7a3a;--okbg:#e6f4ea;--bad:#b0283c;--badbg:#fbe9ec;--warn:#9a6200;--warnbg:#fff6df;--blue:#1f3c88;--bluebg:#eef2fb;--hl:#ffe9a8}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Times New Roman",Times,"Noto Serif KR","Malgun Gothic",serif}
+main{max-width:920px;margin:0 auto;padding:16px 16px 60px}
+.ko,.op,.psg,.frag,select,button{font-family:"Noto Sans KR","Malgun Gothic","Apple SD Gothic Neo",sans-serif}
+.brand{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--soft)}
+.brand .logo{display:block;height:50px;width:auto;margin:0 0 2px -4px}
+.brand span{font-size:14px;color:var(--muted)}
+h1{font-size:27px;margin:4px 0 2px;line-height:1.25}
+.lead{margin:0 0 12px;color:#333;font-size:15.5px}
+nav{display:flex;margin:0 -16px 14px;padding:8px 16px;position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);z-index:5}
+nav .bar{display:flex;flex:1;border:2px solid var(--ink);border-radius:8px;overflow-x:auto;scrollbar-width:thin}
+nav a{flex:1 0 auto;min-width:64px;text-align:center;padding:5px 6px;color:var(--ink);text-decoration:none;font-weight:bold;font-size:14.5px;line-height:1.2;white-space:nowrap}
+nav a+a{border-left:2px solid var(--ink)}
+nav a small{display:block;font-weight:normal;font-size:11px}
+nav a.on{background:var(--ink);color:#fff}
+.sec{display:none}.sec.on{display:block}
+h2{font-size:24px;margin:6px 0 6px;line-height:1.3}
+h3{font-size:19.5px;margin:24px 0 8px;padding-bottom:3px;border-bottom:2px solid var(--ink)}
+p{margin:6px 0}
+.goal{margin:0 0 14px;padding:9px 12px;background:var(--bluebg);border-left:4px solid var(--blue);font-size:15.5px}
+.co{margin:10px 0;padding:9px 12px;background:var(--warnbg);border-left:4px solid var(--warn);font-size:15px}
+.note{font-size:14px;color:var(--muted);margin:4px 0}
+table.t{border-collapse:collapse;width:100%;font-size:15px;margin:6px 0 12px}
+table.t th,table.t td{border:1px solid var(--line);padding:5px 7px;text-align:left;vertical-align:top}
+table.t th{background:var(--sub)}
+table.t td.n{text-align:right;white-space:nowrap}
+.tw{overflow-x:auto;margin:0 0 12px}.tw table.t{margin:0}
+@media(max-width:560px){table.t{font-size:14px}table.t th,table.t td{padding:4px 5px}}
+.steps{counter-reset:s;list-style:none;padding:0;margin:8px 0 14px}
+.steps>li{counter-increment:s;position:relative;padding:6px 8px 6px 42px;margin:0 0 6px;border:1px solid var(--soft);border-radius:8px}
+.steps>li::before{content:counter(s);position:absolute;left:8px;top:6px;width:26px;height:26px;border-radius:50%;background:var(--acc);color:#fff;display:grid;place-items:center;font:bold 14px Arial,sans-serif}
+.big{font-size:22px;font-weight:bold;color:var(--acc)}
+.nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px;margin:8px 0 12px}
+.nums>div{border:1px solid var(--soft);border-radius:8px;padding:8px 10px;font-size:14.5px}
+.flt{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;margin:0 0 12px;padding:8px 10px;background:var(--sub);border-radius:8px;font-size:15px}
+.flt select{font-size:15px;padding:3px 4px;max-width:100%}
+button.b{font-size:15px;padding:6px 12px;border:2px solid var(--ink);border-radius:8px;background:#fff;color:var(--ink);cursor:pointer;font-weight:bold}
+button.b.pr{background:var(--ink);color:#fff}
+button.b:disabled{opacity:.45;cursor:default}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}
+.qh{font:bold 14px Arial,sans-serif;color:var(--muted);margin:0 0 6px}
+.qh .tag{color:#fff;background:var(--acc);border-radius:10px;padding:1px 8px;margin-right:4px}
+/* lựa chọn */
+.opc{border:1px solid var(--line);border-radius:8px;margin:0 0 10px;padding:8px 10px;background:#fff}
+.opc.cur{border-width:2px;border-color:var(--acc);box-shadow:0 0 0 3px #ece8f6}
+.op{font-size:17px;line-height:1.65}
+.op .no{display:inline-block;min-width:24px;font-weight:bold;color:var(--acc)}
+.chs{display:grid;gap:6px;margin:8px 0 2px}
+.chs button{text-align:left;font-family:inherit;font-size:15.5px;line-height:1.4;padding:7px 10px;border:1px solid var(--line);border-radius:7px;background:#fff;color:var(--ink);cursor:pointer}
+.chs button.ok{background:var(--okbg);border-color:var(--ok);font-weight:bold}
+.chs button.no{background:var(--badbg);border-color:var(--bad);text-decoration:line-through}
+.chs button:disabled{cursor:default}
+.fb{margin:6px 0 0;padding:6px 9px;border-radius:6px;font-size:15px;line-height:1.5}
+.fb.ok{background:var(--okbg)}.fb.no{background:var(--badbg)}.fb.in{background:var(--sub)}
+.kh{display:inline-block;font:12.5px Arial,sans-serif;border:1px solid var(--acc);color:var(--acc);border-radius:10px;padding:0 7px;margin:2px 4px 0 0;white-space:nowrap}
+.kh.on{background:var(--acc);color:#fff}
+.kw{background:var(--hl);border-radius:3px;padding:0 2px;font-weight:bold}
+.gw{border-bottom:1.5px dotted var(--acc);cursor:pointer}
+#tip{position:absolute;z-index:30;max-width:280px;background:#222;color:#fff;font:14px/1.4 Arial,sans-serif;padding:6px 9px;border-radius:6px;display:none;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+/* đoạn văn */
+.psg{border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:0 0 12px;font-size:16.5px;line-height:1.85;background:#fcfcfd}
+.psg .sn{cursor:pointer;border-radius:4px;padding:1px 2px}
+.psg .sn sup{font:bold 11px Arial,sans-serif;color:var(--acc);margin-right:2px}
+.psg.pick .sn:hover{background:#ece8f6}
+.psg .sn.sel{outline:2px solid var(--acc);background:#ece8f6}
+.psg .sn.ans{background:var(--okbg)}
+.psg .sn.bad{background:var(--badbg)}
+.psg .sn.near{background:var(--sub);outline:1px dashed var(--line)}
+mark.a{background:#b9e6c4;padding:0 1px}mark.x{background:#f6c6cf;padding:0 1px}
+.frag{font-size:15.5px}
+.pr{display:grid;grid-template-columns:auto 1fr;gap:3px 8px;margin:6px 0;padding:6px 9px;border-radius:6px;border:1px solid var(--soft);background:#fafafa;font-size:15.5px}
+.pr b.l{font:bold 12.5px Arial,sans-serif;color:var(--muted);padding-top:3px;white-space:nowrap}
+.bar2{height:8px;background:var(--soft);border-radius:4px;overflow:hidden;margin:3px 0}
+.bar2>i{display:block;height:100%;background:var(--acc)}
+.kho td.ko{font-size:15.5px}
+.kho tr.hide td.vi span{visibility:hidden}
+.kho tr.hide td.vi{background:repeating-linear-gradient(45deg,#f4f4f4,#f4f4f4 6px,#fff 6px,#fff 12px);cursor:pointer}
+.pager{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin:8px 0}
+.done{font-size:18px;font-weight:bold;margin:10px 0}
+</style>
+</head>
+<body>
+<main>
+<header class="brand">
+  <div><a href="https://hoc.naritopik.com/"><img class="logo" src="../logo/nari-topik-ngang.svg" alt="Nari TOPIK"></a>
+  <span>Đọc TOPIK II · câu nội dung</span></div>
+</header>
+<h1>Đọc đáp án: đọc 4 lựa chọn, tìm chỗ trong bài</h1>
+<p class="lead">Ở câu hỏi <b>“chọn câu đúng với nội dung”</b>, em mất nhiều thời gian nhất ở chỗ đọc 4 lựa chọn rồi dò lại bài. Trang này luyện riêng việc đó, dùng <b>964 lựa chọn của 241 câu</b> trong 22 đề đọc (kỳ 83, 91 và 20 đề luyện): câu 9–12, 20, 22, 24, 32–34, 43, 47, 50.</p>
+
+<nav><div class="bar">
+<a href="#b=cach">Cách làm<small>3 bước · số liệu</small></a>
+<a href="#b=doc">① Đọc lựa chọn<small>hiểu nhanh</small></a>
+<a href="#b=tim">② Tìm chỗ trong bài<small>dò + so</small></a>
+<a href="#b=so">③ Cùng ý?<small>so cặp chữ</small></a>
+<a href="#b=kho">Kho lựa chọn<small>theo dạng · khuôn</small></a>
+<a href="#b=tk">Thống kê<small>bảng số</small></a>
+</div></nav>
+
+<!-- ======================= CÁCH LÀM ======================= -->
+<section class="sec" id="scach">
+<h2>Cách làm câu nội dung: đọc lựa chọn trước</h2>
+<p class="goal">Ý chính: <b>đáp án gần như luôn nằm gọn trong một câu của bài</b>, và các lựa chọn sai thường <b>giữ nguyên chữ của bài nhưng đổi một chỗ</b>. Vì vậy em không cần hiểu hết cả bài. Em đọc kỹ 4 lựa chọn, tìm đúng câu trong bài mà lựa chọn đó nhắc tới, rồi so từng chữ.</p>
+<div class="nums" id="cachNums"></div>
+
+<h3>3 bước</h3>
+<ol class="steps">
+<li><b>Đọc 4 lựa chọn trước, gạch chữ khóa.</b> Mỗi lựa chọn tách thành <b>Ai / cái gì</b> + <b>làm gì</b> + <b>mức độ, thời gian</b>. Chữ khóa là chữ khó nói lại bằng từ khác: tên riêng, con số, năm, nơi chốn, chủ ngữ (살리초, 2012년, 인주시, 코알라). Khoanh luôn <b>khuôn câu</b> ở cuối: có 안 / 없다 không, có 만 / 모두 / 항상 không, có -야 하다 không. Luyện ở thẻ <a href="#b=doc">① Đọc lựa chọn</a>.</li>
+<li><b>Dò chữ khóa trong bài theo thứ tự ① → ④.</b> Lựa chọn sai thường xếp theo thứ tự bài (① ở đầu bài, ④ ở cuối). Thấy chữ khóa ở câu nào thì <b>chỉ đọc kỹ câu đó</b>. Không thấy chữ khóa ở đâu cả thì có thể là bẫy “bài không nói”. Luyện ở thẻ <a href="#b=tim">② Tìm chỗ trong bài</a>.</li>
+<li><b>So vị ngữ.</b> Đáp án đúng nói lại bằng từ khác (đồng nghĩa, Hán ↔ thuần Hàn, suy ra một bước). Lựa chọn sai giữ chữ của bài, đổi một chỗ: <b>đổi sang nghĩa ngược</b>, <b>thêm / bỏ phủ định</b>, <b>đảo so sánh</b>, <b>đổi phạm vi</b>, <b>đổi thời điểm / con số</b>. Luyện ở thẻ <a href="#b=so">③ Cùng ý hay khác ý</a>.</li>
+</ol>
+
+<h3>Khuôn câu của lựa chọn: khuôn nào hay là bẫy?</h3>
+<p>Mỗi lựa chọn được xếp vào một khuôn theo chữ ở vị ngữ. Cột cuối cho biết bao nhiêu phần trăm lựa chọn có khuôn đó là đáp án đúng; tính trung bình thì cứ 4 lựa chọn mới có 1 đáp án (25%). Khuôn có tỉ lệ dưới 25% thì em đọc thật kỹ, vì bẫy hay nằm ở đó.</p>
+<div class="tw"><table class="t" id="khTab"></table></div>
+<p class="note">Chạm vào tên khuôn để xem tất cả lựa chọn của khuôn đó ở thẻ Kho lựa chọn.</p>
+
+<h3>Làm mẫu: kỳ 91 câu 32</h3>
+<div id="demo"></div>
+</section>
+
+<!-- ======================= ① ĐỌC LỰA CHỌN ======================= -->
+<section class="sec" id="sdoc">
+<h2>① Đọc lựa chọn: hiểu nhanh từng câu</h2>
+<p class="goal">Mỗi lượt có 5 câu đề. Em đọc từng lựa chọn tiếng Hàn rồi chọn nghĩa tiếng Việt đúng. 4 nghĩa để chọn chính là nghĩa của 4 lựa chọn cùng câu, nên trông rất giống nhau: em phải đọc đúng <b>chủ ngữ</b>, <b>vị ngữ</b> và <b>khuôn câu</b> mới chọn đúng. Chữ có gạch chấm thì chạm vào để xem nghĩa.</p>
+<div class="flt" data-f="doc"></div>
+<div id="docBox"></div>
+</section>
+
+<!-- ======================= ② TÌM CHỖ ======================= -->
+<section class="sec" id="stim">
+<h2>② Tìm chỗ trong bài</h2>
+<p class="goal">Em làm lần lượt từng lựa chọn ① → ④. Bước 1: chạm vào câu trong bài mà lựa chọn đó nhắc tới (hoặc bấm “Bài không nhắc”). Bước 2: chọn lựa chọn đó <b>Khớp</b> hay <b>Không khớp</b> với bài. Sau mỗi lựa chọn, trang tô cặp chữ <mark class="a">bài viết</mark> ⇒ <mark class="a">lựa chọn viết lại</mark> (xanh là cùng ý, <mark class="x">hồng</mark> là chỗ bị đổi).</p>
+<div class="flt" data-f="tim"></div>
+<div id="timBox"></div>
+</section>
+
+<!-- ======================= ③ CÙNG Ý ======================= -->
+<section class="sec" id="sso">
+<h2>③ Cùng ý hay khác ý?</h2>
+<p class="goal">Mỗi lượt 10 cặp chữ lấy từ đề thật. Dòng trên là chữ trong bài, dòng dưới là chữ trong một lựa chọn. Em chọn <b>Cùng ý</b> (bài nói lại bằng từ khác) hay <b>Khác ý</b>. Nếu khác ý, em chọn tiếp <b>chỗ bị đổi là gì</b>.</p>
+<div class="flt" data-f="so"></div>
+<div id="soBox"></div>
+</section>
+
+<!-- ======================= KHO ======================= -->
+<section class="sec" id="skho">
+<h2>Kho lựa chọn</h2>
+<p class="goal">Tất cả lựa chọn trong đề, chia theo <b>dạng câu</b> và <b>khuôn câu</b>, kèm nghĩa tiếng Việt. Em tự đọc: bật “Che nghĩa”, đọc câu tiếng Hàn, nói nghĩa ra miệng, rồi chạm ô nghĩa để kiểm tra. ✓ là đáp án đúng của câu đó.</p>
+<div class="flt" data-f="kho"></div>
+<div id="khoBox"></div>
+</section>
+
+<!-- ======================= THỐNG KÊ ======================= -->
+<section class="sec" id="stk">
+<h2>Thống kê đáp án trong đề</h2>
+<p class="note">Số liệu tính từ 241 câu, 964 lựa chọn. Vị trí câu chứa đáp án và thứ tự lựa chọn sai chỉ tính những lựa chọn đã đối chiếu với bài theo cặp chữ.</p>
+<div id="tkBox"></div>
+</section>
+
+<div class="row" style="margin-top:24px"><button class="b" id="send">Gửi kết quả cho cô…</button><span class="note">Gửi số câu em đã làm ở thẻ ①, ②, ③ qua Zalo.</span></div>
+<div id="tip"></div>
+</main>
+<script>
+(function(){
+'use strict';
+var KEY='nari-dda';
+var st={};try{st=JSON.parse(localStorage.getItem(KEY)||'{}')||{};}catch(e){st={};}
+st.d=st.d||{};st.t=st.t||{};st.s=st.s||{};st.f=st.f||{};
+function save(){try{localStorage.setItem(KEY,JSON.stringify(st));}catch(e){}}
+function $(s,r){return (r||document).querySelector(s);}
+function $$(s,r){return [].slice.call((r||document).querySelectorAll(s));}
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+var NO=['①','②','③','④'];
+
+var DE={Etk091:'Kỳ 91',Etk083:'Kỳ 83',Ehot1:'HOT 1',Ehot2:'HOT 2',Ehot3:'HOT 3',Ehot4:'HOT 4',Ehot5:'HOT 5',Eebs1:'EBS 1',Eebs2:'EBS 2',
+ Entk1:'New TOPIK 1',Entk2:'New TOPIK 2',Entk3:'New TOPIK 3',Et3001:'TOPIK 300⁺ 1',Et3002:'TOPIK 300⁺ 2',Et3003:'TOPIK 300⁺ 3',Et3004:'TOPIK 300⁺ 4',Et3005:'TOPIK 300⁺ 5',
+ Eys1:'Yonsei 1',Eys2:'Yonsei 2',Eys3:'Yonsei 3',Eys4:'Yonsei 4',Eys5:'Yonsei 5'};
+var DEO=Object.keys(DE);
+/* dạng câu: [mã, tên, các câu] */
+var G=[['9','Câu 9 · Thông báo',[9]],['10','Câu 10 · Biểu đồ',[10]],['11','Câu 11–12 · Tin tức',[11,12]],['20','Câu 20, 22 · Đoạn văn ngắn',[20,22]],
+ ['24','Câu 24 · Tùy bút',[24]],['32','Câu 32–34 · Kiến thức',[32,33,34]],['43','Câu 43 · Tiểu thuyết',[43]],['47','Câu 47, 50 · Nghị luận',[47,50]]];
+var OKN={D:['Đổi từ đồng nghĩa','thay một từ bằng từ cùng nghĩa, giữ khung câu'],H:['Hán ↔ thuần Hàn','bài dùng từ Hán gọn, đáp án giải nghĩa bằng cụm thuần Hàn (hoặc ngược lại)'],
+ U:['Suy ra một bước','bài không nói thẳng nhưng suy ra chắc chắn từ một câu'],K:['Gói chung','nhiều chi tiết của bài gói thành một từ chung'],
+ P:['Nói ngược + phủ định','bài nói một chiều, đáp án nói chiều ngược kèm phủ định'],S:['Tính từ số liệu','đáp án là kết quả phép tính trên số của bài'],C:['Chép gần nguyên chữ','đáp án giữ gần nguyên câu của bài']};
+var XN={T:['Đổi sang nghĩa ngược','đổi một từ sang từ trái nghĩa'],F:['Thêm / bỏ phủ định','thêm hoặc bỏ 안 · 못 · 없다 · 관계없다'],B:['Đảo so sánh – thứ tự','đảo A보다 B, tăng ↔ giảm, nguyên nhân ↔ kết quả'],
+ L:['Đổi phạm vi','thêm / bỏ 만, 모두, 누구나, 항상…'],G:['Đổi thời điểm / con số','đổi năm, giờ, số lượng, đã ↔ sẽ'],S:['Đổi đối tượng','giữ chữ nhưng đổi người / vật được nói tới'],
+ R:['Ý bị bài bác','lấy ý bài nêu ra để phản bác'],O:['Đổi thứ khác','đổi sang một thứ khác hẳn']};
+var BN={N:'ngược nghĩa một chữ',T:'bài không nói',C:'chép chữ của bài nhưng ghép sai',S:'đổi đối tượng',G:'đổi thời điểm / con số',A:'nói quá mức',H:'chỉ là chi tiết hẹp',R:'ý bị bài lật lại',P:'lệch ý bài'};
+
+var D=null,IT=[],BYID={},KH=[],KHN={};
+function idOf(it){return it.e+'-'+it.n;}
+function grpOf(n){for(var i=0;i<G.length;i++)if(G[i][2].indexOf(n)>=0)return G[i][0];return '';}
+function hash(s){var h=7;for(var i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))>>>0;return h;}
+function shuf(a,seed){a=a.slice();var x=seed||1;for(var i=a.length-1;i>0;i--){x=(x*1103515245+12345)>>>0;var j=x%(i+1),t=a[i];a[i]=a[j];a[j]=t;}return a;}
+function pct(a,b){return b?Math.round(a*100/b):0;}
+
+/* ---------- chữ có nghĩa (gạch chấm) ---------- */
+function gloss(text,g){
+  var marks=[];
+  (g||[]).forEach(function(w){var f=w[0],k=text.indexOf(f);if(k<0)return;
+    for(var i=0;i<marks.length;i++)if(k<marks[i][1]&&k+f.length>marks[i][0])return;
+    marks.push([k,k+f.length,w[1]+' · '+w[2]]);});
+  marks.sort(function(a,b){return a[0]-b[0];});
+  var out='',p=0;marks.forEach(function(m){out+=esc(text.slice(p,m[0]))+'<span class="gw" data-m="'+esc(m[2])+'">'+esc(text.slice(m[0],m[1]))+'</span>';p=m[1];});
+  return out+esc(text.slice(p));
+}
+/* tô các đoạn (frags) trong text bằng lớp cls; giữ gạch chấm cho phần còn lại */
+function paint(text,frags,g){
+  var rs=[];frags.forEach(function(f){if(!f[0])return;var k=text.indexOf(f[0]);if(k>=0)rs.push([k,k+f[0].length,f[1]]);});
+  rs.sort(function(a,b){return a[0]-b[0];});
+  var out='',p=0;rs.forEach(function(r){if(r[0]<p)return;out+=gloss(text.slice(p,r[0]),g)+'<mark class="'+r[2]+'">'+esc(text.slice(r[0],r[1]))+'</mark>';p=r[1];});
+  return out+gloss(text.slice(p),g);
+}
+function allGloss(it){var a=[];it.g.forEach(function(x){a=a.concat(x);});return a;}
+var tip=$('#tip');
+document.addEventListener('click',function(e){
+  var w=e.target.closest('.gw');
+  if(!w){tip.style.display='none';return;}
+  e.stopPropagation();
+  tip.textContent=w.dataset.m;tip.style.display='block';
+  var r=w.getBoundingClientRect();
+  tip.style.left=Math.max(8,Math.min(r.left+window.scrollX,window.scrollX+document.documentElement.clientWidth-290))+'px';
+  tip.style.top=(r.bottom+window.scrollY+4)+'px';
+},true);
+
+/* ---------- khuôn câu ---------- */
+function khMatches(o){var s=' '+o,out=[];KH.forEach(function(k){if(!k[2])return;var re=new RegExp(k[2],'g'),m;while((m=re.exec(s))){out.push([k[0],m[0].trim()]);if(!m[0])re.lastIndex++;}});return out;}
+function khChips(it,j,on){
+  var ms=khMatches(it.o[j]),seen={};
+  return it.k[j].map(function(k){var w=ms.filter(function(m){return m[0]===k;}).map(function(m){return m[1];}).filter(function(x){if(seen[x])return false;seen[x]=1;return true;});
+    return '<span class="kh'+(on?' on':'')+'">'+esc(KHN[k])+(w.length?': '+esc(w.join(', ')):'')+'</span>';}).join('');
+}
+
+/* ---------- bộ lọc ---------- */
+function fltHTML(f){
+  var v=st.f[f]||{};
+  var h='<label>Dạng câu <select data-k="g"><option value="">Tất cả</option>'+G.map(function(g){return '<option value="'+g[0]+'"'+(v.g===g[0]?' selected':'')+'>'+esc(g[1])+'</option>';}).join('')+'</select></label>'+
+    '<label>Đề <select data-k="e"><option value="">Tất cả</option>'+DEO.map(function(e){return '<option value="'+e+'"'+(v.e===e?' selected':'')+'>'+esc(DE[e])+'</option>';}).join('')+'</select></label>';
+  if(f==='kho')h+='<label>Khuôn <select data-k="k"><option value="">Tất cả</option>'+KH.map(function(k){return '<option value="'+k[0]+'"'+(v.k===k[0]?' selected':'')+'>'+esc(k[1])+'</option>';}).join('')+'</select></label>'+
+    '<label>Hiện <select data-k="a"><option value="">Cả 4 lựa chọn</option><option value="y"'+(v.a==='y'?' selected':'')+'>Chỉ đáp án đúng</option><option value="n"'+(v.a==='n'?' selected':'')+'>Chỉ lựa chọn sai</option></select></label>'+
+    '<label><input type="checkbox" data-k="h"'+(v.h?' checked':'')+'> Che nghĩa</label>';
+  return h;
+}
+function fltWire(){
+  $$('.flt').forEach(function(box){var f=box.dataset.f;box.innerHTML=fltHTML(f);
+    box.addEventListener('change',function(e){var k=e.target.dataset.k;if(!k)return;st.f[f]=st.f[f]||{};st.f[f][k]=e.target.type==='checkbox'?e.target.checked:e.target.value;
+      if(f==='doc')st.dr=null;if(f==='so')st.sr=null;if(f==='kho')st.kp=0;if(f==='tim')st.ti=null;save();render(f);});});
+}
+function pool(f){var v=st.f[f]||{};return IT.filter(function(it){return (!v.g||grpOf(it.n)===v.g)&&(!v.e||it.e===v.e);});}
+
+/* ================= CÁCH LÀM ================= */
+function renderCach(){
+  var n=IT.length,one=0,pos={f:0,m:0,l:0},oy=0,on=0,c=0;
+  IT.forEach(function(it){var a=it.at[it.a],L=it.s.length;if(a>=0){pos[a===0?'f':(a===L-1?'l':'m')]++;}
+    var ss={};it.p[it.a].forEach(function(p){for(var i=0;i<L;i++)if(it.s[i].indexOf(p[1])>=0){ss[i]=1;break;}});if(Object.keys(ss).length<=1)one++;
+    var w=it.at.filter(function(x,j){return x>=0&&j!==it.a;});if(w.length>=2){if(w.join()===w.slice().sort(function(a,b){return a-b;}).join())oy++;else on++;}
+    if(it.ok==='C')c++;});
+  $('#cachNums').innerHTML=
+    '<div><span class="big">'+pct(one,n)+'%</span><br>số câu có đáp án nằm gọn trong <b>một câu</b> của bài ('+one+'/'+n+')</div>'+
+    '<div><span class="big">'+pct(pos.m,n)+'%</span><br>đáp án ở <b>giữa bài</b>, không phải câu đầu ('+pos.f+') hay câu cuối ('+pos.l+')</div>'+
+    '<div><span class="big">'+pct(oy,oy+on)+'%</span><br>số câu có lựa chọn sai <b>xếp theo thứ tự bài</b> ('+oy+'/'+(oy+on)+')</div>'+
+    '<div><span class="big">'+pct(n-c,n)+'%</span><br>đáp án đúng <b>nói lại bằng chữ khác</b>; chỉ '+c+' câu chép gần nguyên</div>';
+  var cnt={};KH.forEach(function(k){cnt[k[0]]=[0,0];});
+  IT.forEach(function(it){it.k.forEach(function(ks,j){cnt[ks[0]][0]++;if(j===it.a)cnt[ks[0]][1]++;});});
+  $('#khTab').innerHTML='<tr><th>Khuôn (chữ ở vị ngữ)</th><th>Ví dụ</th><th>Số lựa chọn</th><th>Là đáp án</th></tr>'+KH.map(function(k){
+    var c=cnt[k[0]],ex='';for(var i=0;i<IT.length&&!ex;i++){var it=IT[i];for(var j=0;j<4;j++)if(it.k[j][0]===k[0]&&j===it.a){ex=it.o[j];break;}}
+    var p=pct(c[1],c[0]);
+    return '<tr><td><a href="#b=kho" data-kh="'+k[0]+'">'+esc(k[1])+'</a></td><td class="ko">'+esc(ex)+'</td><td class="n">'+c[0]+'</td><td class="n" style="'+(p<25?'color:var(--bad);font-weight:bold':'')+'">'+c[1]+' · '+p+'%</td></tr>';}).join('');
+  $$('#khTab a[data-kh]').forEach(function(a){a.addEventListener('click',function(){st.f.kho={k:a.dataset.kh};st.kp=0;save();fltWire();});});
+  var it=BYID['Etk091-32'];
+  if(it){
+    var fr=[];it.p.forEach(function(ps,j){ps.forEach(function(p){fr.push([p[1],j===it.a?'a':'x']);});});
+    var h='<div class="psg">'+it.s.map(function(s,i){return '<span class="sn"><sup>'+(i+1)+'</sup>'+paint(s,fr,allGloss(it))+'</span> ';}).join('')+'</div>';
+    h+='<ol class="steps">';
+    h+='<li><b>Bước 1 · gạch chữ khóa:</b> ① 해충 · 취약 ② 열매 · 크다 ③ 생육 기간 · 길다 ④ 잎 · 혈당 · 떨어뜨리다. Khuôn: ③ có <span class="kh">phủ định: 지 못</span> + <span class="kh">-고 있다</span>, ① ② ④ là câu kể.</li>';
+    h+='<li><b>Bước 2 · dò theo thứ tự:</b> ① 해충 → câu 5 (병해충에도 강하고) · ② 열매 → câu 2 (열매가 없고) · ③ 생육 기간 → câu 5 · ④ 잎 → câu 2, 혈당 → câu 3. Không cần đọc kỹ câu 1 và câu 4.</li>';
+    h+='<li><b>Bước 3 · so vị ngữ:</b>'+it.p.map(function(ps,j){return ps.map(function(p){return '<div class="pr"><b class="l">'+NO[j]+' Bài</b><span class="frag"><mark class="'+(j===it.a?'a':'x')+'">'+esc(p[1])+'</mark></span><b class="l">Lựa chọn</b><span class="frag"><mark class="'+(j===it.a?'a':'x')+'">'+esc(p[2])+'</mark> — '+(j===it.a?'<b style="color:var(--ok)">cùng ý</b> ('+esc(OKN[it.ok][0])+')':'<b style="color:var(--bad)">'+esc(XN[p[0]][0])+'</b>')+'</span></div>';}).join('');}).join('')+
+      '<p>→ Đáp án <b>④</b>: bài viết 낮추다, 함유돼 있다, đáp án nói lại bằng 떨어뜨리다, 들어 있다.</p></li></ol>';
+    $('#demo').innerHTML=h;
+  }
+}
+
+/* ================= ① ĐỌC LỰA CHỌN ================= */
+function newDocRound(){
+  var P=pool('doc');if(!P.length){st.dr={ids:[],i:0};return;}
+  var undone=P.filter(function(it){return !st.d[idOf(it)];}),src=undone.length>=5?undone:P;
+  st.dr={ids:shuf(src.map(idOf),Date.now()%100000+7).slice(0,5),i:0,r:{},t0:0,tm:{}};save();
+}
+function renderDoc(){
+  var box=$('#docBox');
+  if(!st.dr||!st.dr.ids)newDocRound();
+  var R=st.dr;R.r=R.r||{};R.tm=R.tm||{};
+  if(!R.ids.length){box.innerHTML='<p>Không có câu nào trong bộ lọc này.</p>';return;}
+  if(R.i>=R.ids.length){
+    var ok=0,tot=0,sec=0;R.ids.forEach(function(id){var r=R.r[id]||{};for(var j=0;j<4;j++)if(r[j]!=null){tot++;if(r[j]===j)ok++;}sec+=R.tm[id]||0;});
+    box.innerHTML='<p class="done">Xong lượt: đúng '+ok+'/'+tot+' lựa chọn · trung bình '+Math.round(sec/R.ids.length)+' giây / câu (4 lựa chọn).</p>'+
+      '<p class="note">Thi thật em có khoảng 1 phút cho một câu nội dung, trong đó đọc 4 lựa chọn nên dưới 30 giây.</p><div class="row"><button class="b pr" id="dNew">Lượt mới ›</button></div>';
+    $('#dNew').onclick=function(){newDocRound();renderDoc();};return;
+  }
+  var id=R.ids[R.i],it=BYID[id],r=R.r[id]=R.r[id]||{};
+  if(!R.t0)R.t0=Date.now();
+  var seed=hash(id),cur=-1;for(var j=0;j<4;j++)if(r[j]==null){cur=j;break;}
+  var h='<div class="qh"><span class="tag">'+(R.i+1)+'/'+R.ids.length+'</span>'+esc(DE[it.e])+' · câu '+it.n+'</div>';
+  for(var j=0;j<4;j++){
+    var done=r[j]!=null,ord=shuf([0,1,2,3],seed+j*17);
+    h+='<div class="opc'+(j===cur?' cur':'')+'"><div class="op"><span class="no">'+NO[j]+'</span>'+gloss(it.o[j],it.g[j])+'</div>';
+    if(done||j===cur){
+      h+='<div class="chs">'+ord.map(function(m){var c='';if(done){if(m===j)c='ok';else if(m===r[j])c='no';}
+        return '<button data-j="'+j+'" data-m="'+m+'"'+(c?' class="'+c+'"':'')+(done?' disabled':'')+'>'+esc(it.v[m])+'</button>';}).join('')+'</div>';
+      if(done)h+='<div class="fb '+(r[j]===j?'ok':'no')+'">'+(r[j]===j?'✓ Đúng.':'✗ Chưa đúng.')+' Khuôn: '+khChips(it,j,1)+(j===it.a?' <b>· đây là đáp án của câu</b>':'')+'</div>';
+    }
+    h+='</div>';
+  }
+  if(cur<0){
+    if(!R.tm[id]){R.tm[id]=Math.round((Date.now()-R.t0)/1000);st.d[id]=1;save();}
+    h+='<p class="note">Thời gian câu này: '+R.tm[id]+' giây. Đáp án đúng của câu là '+NO[it.a]+'. Muốn biết vì sao thì làm câu này ở thẻ ② Tìm chỗ trong bài.</p>'+
+      '<div class="row"><button class="b pr" id="dNext">'+(R.i+1<R.ids.length?'Câu tiếp ›':'Xem kết quả ›')+'</button> <a href="#b=tim&id='+id+'">Làm câu này ở thẻ ②</a></div>';
+  }
+  box.innerHTML=h;
+  $$('.chs button:not(:disabled)',box).forEach(function(b){b.onclick=function(){r[+b.dataset.j]=+b.dataset.m;save();renderDoc();};});
+  var nx=$('#dNext');if(nx)nx.onclick=function(){R.i++;R.t0=0;save();renderDoc();window.scrollTo(0,$('#sdoc').offsetTop-60);};
+}
+
+/* ================= ② TÌM CHỖ ================= */
+function accSet(it,j){var a={};it.p[j].forEach(function(p){for(var i=0;i<it.s.length;i++)if(it.s[i].indexOf(p[1])>=0){a[i]=1;break;}});return a;}
+function renderTim(){
+  var box=$('#timBox'),P=pool('tim');
+  if(!P.length){box.innerHTML='<p>Không có câu nào trong bộ lọc này.</p>';return;}
+  var id=st.ti;if(!id||!BYID[id]||P.indexOf(BYID[id])<0){id=(P.filter(function(it){return !st.t[idOf(it)]||st.t[idOf(it)].j<4;})[0]||P[0]);id=idOf(id);st.ti=id;}
+  var it=BYID[id],T=st.t[id]=st.t[id]||{j:0,r:[]},j=T.j,k=P.indexOf(it);
+  var h='<div class="row"><button class="b" id="tPrev"'+(k<=0?' disabled':'')+'>‹</button><select id="tSel">'+P.map(function(x){var i=idOf(x),t=st.t[i];
+    return '<option value="'+i+'"'+(i===id?' selected':'')+'>'+esc(DE[x.e])+' · câu '+x.n+(t&&t.j>=4?' ✓':'')+'</option>';}).join('')+'</select><button class="b" id="tNext"'+(k>=P.length-1?' disabled':'')+'>›</button>'+
+    '<span class="note">'+(k+1)+'/'+P.length+'</span></div>';
+  /* tô */
+  var fr=[],cls={};
+  T.r.forEach(function(x,jj){it.p[jj].forEach(function(p){fr.push([p[1],jj===it.a?'a':'x']);});
+    var a=accSet(it,jj);Object.keys(a).forEach(function(i){cls[i]=jj===it.a?'ans':(cls[i]||'bad');});});
+  var step=j<4?(T.c==null?1:2):0;
+  h+='<div class="psg'+(step===1?' pick':'')+'">'+it.s.map(function(s,i){var c=cls[i]||'';if(step===2&&T.c===i)c+=' sel';
+    if(j<4&&T.c!=null)c+='';return '<span class="sn '+c+'" data-i="'+i+'"><sup>'+(i+1)+'</sup>'+paint(s,fr,allGloss(it))+'</span> ';}).join('')+'</div>';
+  for(var q=0;q<4;q++){
+    var x=T.r[q],ofr=x?it.p[q].map(function(p){return [p[2],q===it.a?'a':'x'];}):[];
+    h+='<div class="opc'+(q===j?' cur':'')+'"><div class="op"><span class="no">'+NO[q]+'</span>'+paint(it.o[q],ofr,it.g[q])+'</div>';
+    if(q===j&&step===1)h+='<div class="fb in"><b>Bước 1.</b> Lựa chọn '+NO[q]+' nói về câu nào trong bài? Chạm vào câu đó.<div class="row" style="margin:6px 0 0"><button class="b" id="tNone">Bài không nhắc</button></div></div>';
+    if(q===j&&step===2)h+='<div class="fb in"><b>Bước 2.</b> '+(T.c===-1?'Em chọn: bài không nhắc.':'Em chọn câu '+(T.c+1)+'.')+' So kỹ với bài: lựa chọn '+NO[q]+' khớp hay không khớp?<div class="row" style="margin:6px 0 0"><button class="b" data-y="1">Khớp với bài</button><button class="b" data-y="0">Không khớp</button></div></div>';
+    if(x)h+=timFb(it,q,x);
+    h+='</div>';
+  }
+  if(j>=4){
+    var lo=0,lt=0,yo=0;T.r.forEach(function(x){if(x.l!=null){lt++;if(x.l)lo++;}if(x.y)yo++;});
+    h+='<p class="done">Đáp án: '+NO[it.a]+' · tìm đúng chỗ '+lo+'/'+lt+' · chọn khớp / không khớp đúng '+yo+'/4</p><div class="row"><button class="b" id="tRe">↺ Làm lại câu này</button>'+(k<P.length-1?'<button class="b pr" id="tGo">Câu tiếp ›</button>':'')+'</div>';
+  }
+  box.innerHTML=h;
+  function goId(nid){st.ti=nid;save();renderTim();}
+  $('#tSel').onchange=function(){goId(this.value);};
+  $('#tPrev').onclick=function(){if(k>0)goId(idOf(P[k-1]));};
+  $('#tNext').onclick=function(){if(k<P.length-1)goId(idOf(P[k+1]));};
+  if(step===1){$$('.psg .sn',box).forEach(function(s){s.onclick=function(e){if(e.target.closest('.gw'))return;T.c=+s.dataset.i;save();renderTim();};});$('#tNone').onclick=function(){T.c=-1;save();renderTim();};}
+  if(step===2)$$('button[data-y]',box).forEach(function(b){b.onclick=function(){
+    var acc=accSet(it,j),kn=Object.keys(acc).length,l=null;
+    if(kn)l=!!acc[T.c];else if(it.b[j]==='T')l=T.c===-1||T.c===it.nb[j];
+    var y=(+b.dataset.y===1)===(j===it.a);
+    T.r[j]={c:T.c,l:l,y:y,u:+b.dataset.y};T.c=null;T.j++;save();renderTim();};});
+  var re=$('#tRe');if(re)re.onclick=function(){st.t[id]={j:0,r:[]};save();renderTim();};
+  var go=$('#tGo');if(go)go.onclick=function(){goId(idOf(P[k+1]));window.scrollTo(0,$('#stim').offsetTop-60);};
+}
+function timFb(it,q,x){
+  var acc=accSet(it,q),kn=Object.keys(acc).map(function(i){return +i+1;}),h='<div class="fb '+(x.y?'ok':'no')+'">';
+  h+=(x.y?'✓ ':'✗ ')+(q===it.a?'Lựa chọn này <b>khớp</b> với bài, đây là đáp án.':'Lựa chọn này <b>không khớp</b> với bài.');
+  if(x.u===1&&q!==it.a)h+=' Em chọn “khớp”.';if(x.u===0&&q===it.a)h+=' Em chọn “không khớp”.';
+  if(kn.length)h+='<br>Chỗ trong bài: câu '+kn.join(', ')+(x.l===true?' — em tìm đúng.':(x.l===false?' — em chọn '+(x.c<0?'“bài không nhắc”':'câu '+(x.c+1))+'.':''));
+  else if(it.b[q]==='T')h+='<br>Bài <b>không nói</b> ý này'+(it.nb[q]>=0?' (chữ giống nhất ở câu '+(it.nb[q]+1)+')':'')+(x.l?' — em làm đúng.':'.');
+  else if(it.nb[q]>=0)h+='<br>Câu gần nhất (máy dò, có thể chưa chuẩn): câu '+(it.nb[q]+1)+'.';
+  it.p[q].forEach(function(p){h+='<div class="pr"><b class="l">Bài</b><span class="frag"><mark class="'+(q===it.a?'a':'x')+'">'+esc(p[1])+'</mark></span><b class="l">Lựa chọn</b><span class="frag"><mark class="'+(q===it.a?'a':'x')+'">'+esc(p[2])+'</mark> — '+
+    (q===it.a?'<b>'+esc(OKN[it.ok][0])+'</b>: '+esc(OKN[it.ok][1]):'<b>'+esc((XN[p[0]]||['Đổi'])[0])+'</b>: '+esc((XN[p[0]]||['',''])[1]))+'</span></div>';});
+  if(q!==it.a&&it.b[q]&&BN[it.b[q]]&&!it.p[q].length)h+='Bẫy: '+esc(BN[it.b[q]])+'. ';
+  h+='<br><i>Nghĩa:</i> '+esc(it.v[q])+'</div>';
+  return h;
+}
+
+/* ================= ③ CÙNG Ý ================= */
+var SOK=['T','F','B','L','G','S','O'];
+function soPool(){var a=[];pool('so').forEach(function(it){it.p.forEach(function(ps,j){ps.forEach(function(p,pi){a.push([idOf(it),j,pi]);});});});return a;}
+function newSoRound(){var a=soPool();st.sr={q:shuf(a,Date.now()%100000+3).slice(0,10),i:0,r:[]};save();}
+function renderSo(){
+  var box=$('#soBox');if(!st.sr||!st.sr.q)newSoRound();
+  var R=st.sr;if(!R.q.length){box.innerHTML='<p>Không có cặp nào trong bộ lọc này.</p>';return;}
+  if(R.i>=R.q.length){
+    var ok=R.r.filter(function(x){return x&&x.ok;}).length,wk={};
+    R.r.forEach(function(x,i){if(x&&!x.ok){var q=R.q[i],it=BYID[q[0]],p=it.p[q[1]][q[2]];var k=q[1]===it.a?'cùng ý mà em chọn khác ý':(XN[p[0]]||['khác'])[0];wk[k]=(wk[k]||0)+1;}});
+    box.innerHTML='<p class="done">Xong lượt: đúng '+ok+'/'+R.q.length+'.</p>'+(Object.keys(wk).length?'<p>Chỗ em hay nhầm: '+Object.keys(wk).map(function(k){return esc(k)+' ('+wk[k]+')';}).join(', ')+'.</p>':'')+
+      '<div class="row"><button class="b pr" id="sNew">Lượt mới ›</button></div>';
+    $('#sNew').onclick=function(){newSoRound();renderSo();};return;
+  }
+  var q=R.q[R.i],it=BYID[q[0]],p=it.p[q[1]][q[2]],same=q[1]===it.a,x=R.r[R.i]||{};
+  var h='<div class="qh"><span class="tag">'+(R.i+1)+'/'+R.q.length+'</span>'+esc(DE[it.e])+' · câu '+it.n+' · lựa chọn '+NO[q[1]]+'</div>';
+  h+='<div class="pr" style="font-size:17px"><b class="l">Bài</b><span class="frag">'+gloss(p[1],allGloss(it))+'</span><b class="l">Lựa chọn</b><span class="frag">'+gloss(p[2],it.g[q[1]])+'</span></div>';
+  if(x.a==null)h+='<div class="row"><button class="b" data-a="1">Cùng ý</button><button class="b" data-a="0">Khác ý</button></div>';
+  else if(x.a===0&&!same&&x.k==null)h+='<p>Đúng, khác ý. Chỗ bị đổi là gì?</p><div class="chs">'+SOK.map(function(k){return '<button data-k="'+k+'"><b>'+esc(XN[k][0])+'</b> · '+esc(XN[k][1])+'</button>';}).join('')+'</div>';
+  else{
+    var sent='';for(var i=0;i<it.s.length;i++)if(it.s[i].indexOf(p[1])>=0){sent=it.s[i];break;}
+    h+='<div class="fb '+(x.ok?'ok':'no')+'">'+(x.ok?'✓ Đúng. ':'✗ Chưa đúng. ')+(same?'<b>Cùng ý</b>: '+esc(OKN[it.ok][0])+' ('+esc(OKN[it.ok][1])+').':'<b>Khác ý</b>: '+esc(XN[p[0]][0])+' ('+esc(XN[p[0]][1])+')'+(x.k&&x.k!==p[0]?'. Em chọn: '+esc(XN[x.k][0])+'.':'.'))+
+      (sent?'<br><i>Câu trong bài:</i> <span class="ko">'+paint(sent,[[p[1],same?'a':'x']],allGloss(it))+'</span>':'')+
+      '<br><i>Lựa chọn '+NO[q[1]]+':</i> <span class="ko">'+paint(it.o[q[1]],[[p[2],same?'a':'x']],it.g[q[1]])+'</span><br><i>Nghĩa:</i> '+esc(it.v[q[1]])+'</div><div class="row"><button class="b pr" id="sNext">Tiếp ›</button></div>';
+  }
+  box.innerHTML=h;
+  $$('button[data-a]',box).forEach(function(b){b.onclick=function(){var a=+b.dataset.a;x.a=a;R.r[R.i]=x;if(a===1||same){x.ok=(a===1)===same;}save();renderSo();};});
+  $$('button[data-k]',box).forEach(function(b){b.onclick=function(){x.k=b.dataset.k;x.ok=x.k===p[0];save();renderSo();};});
+  var nx=$('#sNext');if(nx)nx.onclick=function(){R.i++;save();renderSo();};
+}
+
+/* ================= KHO ================= */
+function renderKho(){
+  var v=st.f.kho||{},rows=[];
+  pool('kho').forEach(function(it){for(var j=0;j<4;j++){if(v.k&&it.k[j].indexOf(v.k)<0)continue;if(v.a==='y'&&j!==it.a)continue;if(v.a==='n'&&j===it.a)continue;rows.push([it,j]);}});
+  var per=40,pg=Math.min(st.kp||0,Math.max(0,Math.ceil(rows.length/per)-1)),sl=rows.slice(pg*per,pg*per+per);
+  var pager='<div class="pager"><span class="note">'+rows.length+' lựa chọn</span>'+(rows.length>per?'<button class="b" data-p="'+(pg-1)+'"'+(pg<=0?' disabled':'')+'>‹</button> trang '+(pg+1)+'/'+Math.ceil(rows.length/per)+' <button class="b" data-p="'+(pg+1)+'"'+((pg+1)*per>=rows.length?' disabled':'')+'>›</button>':'')+'</div>';
+  var h=pager+'<div class="tw"><table class="t kho"><tr><th>Lựa chọn</th><th>Nghĩa</th></tr>'+sl.map(function(r){var it=r[0],j=r[1];
+    return '<tr'+(v.h?' class="hide"':'')+'><td class="ko">'+(j===it.a?'<b style="color:var(--ok)">✓</b> ':'')+gloss(it.o[j],it.g[j])+'<br>'+khChips(it,j)+' <span class="note">'+esc(DE[it.e])+' · câu '+it.n+NO[j]+'</span></td><td class="vi"><span>'+esc(it.v[j])+'</span></td></tr>';}).join('')+'</table></div>'+pager;
+  $('#khoBox').innerHTML=h;
+  $$('#khoBox button[data-p]').forEach(function(b){b.onclick=function(){st.kp=+b.dataset.p;save();renderKho();window.scrollTo(0,$('#skho').offsetTop-60);};});
+  $$('#khoBox tr.hide td.vi').forEach(function(td){td.onclick=function(){td.parentNode.classList.remove('hide');};});
+}
+
+/* ================= THỐNG KÊ ================= */
+function renderTk(){
+  var h='<h3>Theo dạng câu</h3><div class="tw"><table class="t"><tr><th>Dạng câu</th><th>Số câu</th><th>Câu chứa đáp án<br><small>đầu · giữa · cuối</small></th><th>Lựa chọn sai theo thứ tự bài</th><th>Đáp án nói lại bằng cách nào</th><th>Bẫy đổi chữ hay gặp</th></tr>';
+  G.forEach(function(g){var L=IT.filter(function(it){return g[2].indexOf(it.n)>=0;});if(!L.length)return;
+    var pos=[0,0,0],oy=0,ot=0,ok={},x={};
+    L.forEach(function(it){var a=it.at[it.a],n=it.s.length;if(a>=0)pos[a===0?0:(a===n-1?2:1)]++;
+      var w=it.at.filter(function(v,j){return v>=0&&j!==it.a;});if(w.length>=2){ot++;if(w.join()===w.slice().sort(function(a,b){return a-b;}).join())oy++;}
+      ok[it.ok]=(ok[it.ok]||0)+1;it.p.forEach(function(ps,j){if(j!==it.a&&ps.length)x[ps[0][0]]=(x[ps[0][0]]||0)+1;});});
+    function top(o,N){return Object.keys(o).sort(function(a,b){return o[b]-o[a];}).slice(0,3).map(function(k){return esc((N[k]||[k])[0])+' '+o[k];}).join(' · ');}
+    h+='<tr><td><a href="#b=kho" data-g="'+g[0]+'">'+esc(g[1])+'</a></td><td class="n">'+L.length+'</td><td>'+pos.join(' · ')+'</td><td>'+(ot?oy+'/'+ot+' ('+pct(oy,ot)+'%)':'—')+'</td><td>'+top(ok,OKN)+'</td><td>'+top(x,XN)+'</td></tr>';});
+  h+='</table></div>';
+  var cnt={},tot=0;KH.forEach(function(k){cnt[k[0]]={};});
+  IT.forEach(function(it){it.k.forEach(function(ks,j){var g=grpOf(it.n);cnt[ks[0]][g]=(cnt[ks[0]][g]||0)+1;});});
+  h+='<h3>Khuôn câu theo dạng câu</h3><p class="note">Số lựa chọn có khuôn đó (khuôn chính) ở mỗi dạng.</p><div class="tw"><table class="t"><tr><th>Khuôn</th>'+G.map(function(g){return '<th>'+esc(g[1].split(' · ')[0])+'</th>';}).join('')+'</tr>'+
+    KH.map(function(k){return '<tr><td>'+esc(k[1])+'</td>'+G.map(function(g){return '<td class="n">'+(cnt[k[0]][g[0]]||'')+'</td>';}).join('')+'</tr>';}).join('')+'</table></div>';
+  var xs={},oks={};IT.forEach(function(it){oks[it.ok]=(oks[it.ok]||0)+1;it.p.forEach(function(ps,j){if(j!==it.a)ps.forEach(function(p){xs[p[0]]=(xs[p[0]]||0)+1;});});});
+  h+='<h3>Đáp án đúng nói lại bằng cách nào</h3><div class="tw"><table class="t"><tr><th>Cách</th><th>Giải thích</th><th>Số câu</th></tr>'+Object.keys(oks).sort(function(a,b){return oks[b]-oks[a];}).map(function(k){return '<tr><td>'+esc(OKN[k][0])+'</td><td>'+esc(OKN[k][1])+'</td><td class="n">'+oks[k]+'</td></tr>';}).join('')+'</table></div>';
+  h+='<h3>Lựa chọn sai đổi chữ thế nào</h3><div class="tw"><table class="t"><tr><th>Kiểu đổi</th><th>Giải thích</th><th>Số chỗ</th></tr>'+Object.keys(xs).sort(function(a,b){return xs[b]-xs[a];}).map(function(k){return '<tr><td>'+esc(XN[k][0])+'</td><td>'+esc(XN[k][1])+'</td><td class="n">'+xs[k]+'</td></tr>';}).join('')+'</table></div>';
+  $('#tkBox').innerHTML=h;
+  $$('#tkBox a[data-g]').forEach(function(a){a.addEventListener('click',function(){st.f.kho={g:a.dataset.g};st.kp=0;save();fltWire();});});
+}
+
+/* ================= gửi kết quả ================= */
+$('#send').onclick=function(){
+  var nd=Object.keys(st.d).length,tl=0,tt=0,ty=0,tn=0;
+  Object.keys(st.t).forEach(function(id){var T=st.t[id];if(T.j>=4){tn++;T.r.forEach(function(x){if(x.l!=null){tt++;if(x.l)tl++;}if(x.y)ty++;});}});
+  var t='Đọc đáp án (câu nội dung TOPIK II đọc)\n① Đọc lựa chọn: đã làm '+nd+' câu'+
+    (st.dr&&st.dr.r?' · lượt gần nhất đúng '+(function(){var o=0,a=0;Object.keys(st.dr.r).forEach(function(id){var r=st.dr.r[id];for(var j=0;j<4;j++)if(r[j]!=null){a++;if(r[j]===j)o++;}});return o+'/'+a;})()+' lựa chọn':'')+
+    '\n② Tìm chỗ trong bài: xong '+tn+' câu · tìm đúng chỗ '+tl+'/'+tt+' · khớp / không khớp đúng '+ty+'/'+(tn*4)+
+    (st.sr&&st.sr.r?'\n③ Cùng ý hay khác ý: lượt gần nhất đúng '+st.sr.r.filter(function(x){return x&&x.ok;}).length+'/'+st.sr.r.filter(Boolean).length:'');
+  if(navigator.share){navigator.share({text:t}).catch(function(){});}
+  else if(navigator.clipboard){navigator.clipboard.writeText(t).then(function(){alert('Đã chép. Em dán vào Zalo gửi cô nhé.');});}
+  else prompt('Chép đoạn này gửi cô:',t);
+};
+
+/* ================= điều hướng ================= */
+var TABS=['cach','doc','tim','so','kho','tk'];
+function render(b){if(!D)return;({cach:renderCach,doc:renderDoc,tim:renderTim,so:renderSo,kho:renderKho,tk:renderTk})[b]();}
+function show(){
+  var m={};location.hash.replace(/^#/,'').split('&').forEach(function(p){var kv=p.split('=');if(kv[0])m[kv[0]]=decodeURIComponent(kv[1]||'');});
+  var b=TABS.indexOf(m.b)>=0?m.b:'cach';
+  if(m.g&&G.some(function(g){return g[0]===m.g;})){st.f[b]=st.f[b]||{};if(st.f[b].g!==m.g){st.f[b].g=m.g;if(b==='doc')st.dr=null;if(b==='so')st.sr=null;st.kp=0;}fltWire();}
+  if(b==='tim'&&m.id&&BYID[m.id]){st.ti=m.id;var f=st.f.tim||{};if((f.g&&grpOf(BYID[m.id].n)!==f.g)||(f.e&&BYID[m.id].e!==f.e)){st.f.tim={};fltWire();}}
+  save();
+  $$('.sec').forEach(function(s){s.classList.toggle('on',s.id==='s'+b);});
+  $$('nav a').forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#b='+b);});
+  render(b);
+}
+window.addEventListener('hashchange',show);
+fetch('data.json?v=1').then(function(r){return r.json();}).then(function(d){
+  D=d;IT=d.it;KH=d.kh;KH.forEach(function(k){KHN[k[0]]=k[1];});
+  IT.sort(function(a,b){return (DEO.indexOf(a.e)-DEO.indexOf(b.e))||(a.n-b.n);});
+  IT.forEach(function(it){BYID[idOf(it)]=it;});
+  fltWire();show();
+}).catch(function(){$('#scach').classList.add('on');$('#scach').insertAdjacentHTML('afterbegin','<p class="co">Không tải được dữ liệu. Em kiểm tra mạng rồi tải lại trang.</p>');});
+})();
+</script>
+</body>
+</html>
