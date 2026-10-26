@@ -1,0 +1,271 @@
+# Dịch từng câu tin câu 11–12 (Claude soạn). Khối: "## <đề> <câu> <kiểu tin A|B|C|D>", rồi mỗi câu của bài một dòng "<vai trò> | <dịch>".
+# Kiểu tin: A sự kiện – chương trình – chính sách · B câu chuyện người thật · C xu hướng mới · D kiến thức – ý kiến.
+# Vai trò (ghép được nhiều chữ): C chuyện gì (ý chính) · T thời gian / nơi chốn · D đối tượng / điều kiện · G giá / số liệu · N nội dung chi tiết · L lý do · K kết quả / phản ứng · S sắp tới / dự kiến · Y ý kiến / lời khuyên · X ý trái (vế bị lật)
+
+## Etk091 11 A
+CT | Thành phố Inju năm nay lại tiếp tục (giống năm ngoái) vận hành “Trung tâm sửa xe đạp lưu động” trong suốt tháng 10.
+TN | Ngày thường thì đến tận nhiều khu vực để sửa, cuối tuần thì cung cấp dịch vụ sửa chữa ở công viên Inju.
+GN | Thợ sửa chuyên nghiệp sửa xe miễn phí, trường hợp cần thay linh kiện thì thay với giá rẻ.
+L | Thành phố cho biết vận hành trung tâm này là để việc đi xe đạp trở thành thói quen hằng ngày của người dân.
+
+## Etk091 12 B
+C | Câu chuyện của anh Kim Min-su, chủ tiệm pizza, đang mang lại sự cảm động nhẹ nhàng.
+TN | Gần đây, trên đường đi giao pizza, anh Kim bị tai nạn: xe máy trượt trên đường mưa.
+K | May là không ai bị thương, nhưng pizza bị hỏng nên việc giao hàng gặp trục trặc.
+K | Khi anh Kim liên lạc với khách về việc giao trễ thì khách nói: “Anh cứ từ từ đến cũng được.
+K | Anh có sao không?” — nghe nói khách gửi lời hỏi han ấm áp trước tiên.
+
+## Etk083 11 A
+CK | Tác giả sách tranh Lee Su-ji đang được chú ý vì là người Hàn đầu tiên nhận giải Andersen, được gọi là “giải Nobel của sách thiếu nhi”.
+TD | Giải này được lập năm 1956, xét trên toàn bộ tác phẩm mà tác giả đã công bố.
+K | Tác giả được đánh giá là thể hiện rất hay bằng tranh thế giới mà trẻ em mơ ước và tưởng tượng.
+
+## Etk083 12 A
+CTG | Lúc 6 giờ 22 phút sáng ngày 17, ở thành phố Inju xảy ra động đất cường độ 3,2.
+G | Trận động đất hôm đó là trận lớn nhất trong các trận xảy ra ở Inju năm nay.
+K | Phòng tình huống 119 nhận được nhiều cuộc báo của người dân cảm thấy động đất.
+K | Tuy nhiên, theo điều tra thì trận động đất lần này không gây thiệt hại lớn.
+S | Cục Khí tượng dự đoán trong tuần này sẽ còn xảy ra thêm vài trận động đất khoảng 2,0 độ.
+
+## Eebs1 11 D
+C | Người nước ngoài chưa quen văn hóa và tiếng Hàn đôi khi chỉ tin lời văn phòng bất động sản rồi ký hợp đồng nhà.
+Y | Nhưng khi tìm nhà thì nhất định phải tự đến tận nơi xem rồi mới ký hợp đồng.
+YK | Đặc biệt, nếu không kiểm tra kỹ điện nước dùng có vấn đề gì không, tường hay sàn có hư hỏng gì không mà đã ký thì có thể bị thiệt hại lớn.
+
+## Eebs1 12 D
+C | Người ít bộc lộ cảm xúc dễ bị hiểu lầm.
+L | Vì không bộc lộ cảm xúc có thể bị coi là từ chối hay phủ nhận đối phương.
+X | Tất nhiên, lúc nào cũng bộc lộ cảm xúc quá thật thà cũng có thể cản trở việc giữ gìn quan hệ.
+YK | Nhưng nếu không bộc lộ cảm xúc đúng mức thì có thể xảy ra những tình huống mình không muốn, trở nên khó xử hoặc bị thiệt, nên tốt hơn là bộc lộ cảm xúc vừa phải.
+
+## Eebs2 11 D
+C | Hôn nhân quốc tế mỗi năm một tăng, nhưng người khác ngôn ngữ, văn hóa sống hòa hợp với nhau không phải chuyện dễ.
+LK | Đặc biệt, những hiểu lầm do ngôn ngữ không thông, cứ tích tụ dần thì gây tổn thương lớn cho nhau, và nhiều trường hợp cuối cùng dẫn đến ly hôn.
+Y | Vì vậy khi kết hôn quốc tế, dù sống ở đâu thì trước hết cũng nên cố gắng học và hiểu ngôn ngữ của đối phương.
+
+## Eebs2 12 D
+C | Truyền thống là thứ được gìn giữ suốt bao năm tháng trong xã hội và văn hóa đó.
+X | Một số người nói rằng không nên cứ là truyền thống thì chấp nhận vô điều kiện, mà nên thay đổi cho hợp thực tế.
+X | Tất nhiên, truyền thống nào không còn ảnh hưởng đến đời sống con người nữa thì khó mà ép giữ nguyên như cũ.
+Y | Nhưng nếu vì thế mà cứ thay đổi truyền thống mãi thì cuối cùng sẽ đánh mất bộ mặt thật của xã hội, văn hóa đó.
+
+## Ehot1 11 A
+CT | Hội chợ du lịch năm 2018 sẽ diễn ra trong một tuần, bắt đầu từ ngày mai.
+GD | Hội chợ lần này là dịp bán các tour du lịch được ưa chuộng với giá rẻ nhất, nên rất được những khách muốn đi du lịch nước ngoài tiết kiệm yêu thích.
+N | Ngoài ra, dù không mua tour cũng có thể cảm nhận niềm vui như đang đi du lịch nước ngoài.
+GN | Có thể xem miễn phí các buổi biểu diễn của nhiều nước như Thái Lan, Nhật Bản và nếm thử món ăn tiêu biểu của nhiều nước.
+
+## Ehot1 12 D
+C | Gần đây số người hút thuốc lá điện tử đã tăng lên.
+L | Lượng tiêu thụ thuốc lá điện tử tăng là vì ngày càng nhiều người nghĩ rằng chất độc hại có trong thuốc lá thường thì thuốc lá điện tử không có.
+Y | Nhưng theo chuyên gia, thuốc lá điện tử cũng giống thuốc lá thường, có chứa chất độc hại cho cơ thể và còn làm ô nhiễm không khí xung quanh.
+Y | Ngoài ra, nó hoàn toàn không giúp giảm lượng hút hay cai thuốc.
+
+## Ehot2 11 A
+CG | Ở Seoul sắp có “khu chợ điện thoại tập trung” thứ tư.
+L | Nó được lập ra vì dự đoán thị trường di động sẽ sôi động theo dịch vụ viễn thông mới sẽ bắt đầu vào năm 2019.
+S | Ở chợ tập trung, ngoài dịch vụ di động không dây như điện thoại thông minh, đồng hồ thông minh, còn dự định bán cả dịch vụ viễn thông có dây, Internet vạn vật.
+S | Họ cũng đang bàn phương án lấy thế mạnh là bán nhiều thiết bị điện tử giá đặc biệt rẻ mà tính năng tốt.
+
+## Ehot2 12 D
+CN | Từ điển tiếng Anh Oxford — nơi mỗi tháng gom và phân tích những từ hay dùng trong tiếng Anh hiện đại — gần đây đã chọn từ “selfie”.
+N | Selfie là từ chỉ ảnh tự chụp, cùng nghĩa với từ “selca” dùng ở Hàn Quốc.
+TG | Selfie xuất hiện lần đầu năm 2002, từ năm 2012 khi điện thoại thông minh phổ biến thì trở thành từ dùng rộng rãi.
+N | Gần đây, nhờ các ứng dụng có chức năng tự chỉnh ảnh mạnh hơn, không chỉ chụp ảnh mà còn có thể chụp hoặc tạo nhiều hình ảnh, video khác nhau.
+
+## Ehot3 11 C
+C | Hình ảnh và vai trò ngôi nhà mà con người mong muốn không ngừng thay đổi.
+T | Nhà ngày xưa chủ yếu đề cao vai trò thực dụng về ăn – mặc – ở: ngủ, ăn cơm, để đồ.
+C | Nhưng gần đây, ngày càng nhiều người muốn thỏa mãn nhiều nhu cầu về cảm xúc ở nhà, như hàn gắn quan hệ gia đình, nghỉ ngơi và chữa lành.
+K | Sự thay đổi này kéo theo thay đổi về nội thất, như cách sắp xếp đồ đạc hay phối màu bên trong nhà.
+
+## Ehot3 12 D
+C | Khi ăn, nhai từ 30 lần trở lên thì tốt cho sức khỏe.
+NK | Khi ta nhai thức ăn, kích thích giúp cảm nhận vị và truyền lên não, nên càng nhai nhiều thì chức năng não càng phát triển, đầu óc càng tốt lên.
+N | Hơn nữa, hoóc-môn “parotin” cũng được tiết ra nhiều nên còn tốt cho việc chống lão hóa.
+LY | Não cần khoảng 30 phút để nhận kích thích, nên giờ ăn nên thong thả, ăn chậm.
+
+## Ehot4 11 D
+C | Táo ăn buổi sáng tốt cho sức khỏe hơn ăn buổi tối.
+N | Ăn buổi sáng thì chất trong táo giúp ruột hoạt động, phòng táo bón.
+N | Ngoài ra táo nhiều vitamin nên không chỉ làm da đẹp hơn mà còn giúp hết mệt mỏi và giúp giảm cân.
+N | Đặc biệt, ăn táo đều đặn sẽ hỗ trợ chất thần kinh hoạt động trong não, có thể phòng được chứng mất trí.
+
+## Ehot4 12 D
+C | Động vật cũng có cảm xúc.
+N | Chúng cảm nhận nhiều cảm xúc như vui, buồn, sợ hãi và thể hiện bằng cử chỉ.
+N | Khi vui, mèo và cá heo phát ra tiếng, còn chó thì vẫy đuôi.
+N | Voi thì vừa vẫy đôi tai to vừa kêu lớn.
+N | Và khi mất gia đình hay bạn bè, chúng cũng rơi nước mắt vì buồn bã, đau khổ, và buồn rầu rất lâu.
+
+## Ehot5 11 D
+C | Có câu “Bánh trông đẹp thì ăn cũng ngon”.
+Y | Có thể thấy yếu tố bên ngoài của món ăn cũng quan trọng đến mức đó.
+N | Thông tin thị giác ảnh hưởng đến vị món ăn không chỉ là màu của chính món ăn, mà còn gồm màu hay hình dáng của bát đĩa đựng, dụng cụ ăn và cả ánh đèn nơi ăn.
+K | Theo thí nghiệm, cùng một món nhưng đựng trong đĩa nào thì cảm nhận vị cũng khác nhau.
+
+## Ehot5 12 D
+C | Khó khăn lớn nhất sau khi sinh con là “nuôi con”.
+L | Vì trong thời đại vợ chồng cùng đi làm là chuyện đương nhiên, không có ai trông con giúp.
+ND | Để giải quyết vấn đề này, gần đây thành phố Seoul đang vận hành trung tâm trông trẻ tận dụng cơ sở công cộng, dành cho học sinh tiểu học cần được trông sau giờ học.
+ND | Ngoài ra, trẻ 0–5 tuổi không đi nhà trẻ có thể chơi an toàn ở phòng chơi mở.
+
+## Entk1 11 A
+CT | Ngày 10 vừa rồi, chính phủ thông báo sẽ cấm hoàn toàn việc đứng trên xe buýt chạy qua đường cao tốc.
+K | Theo đó, phần lớn xe buýt liên tỉnh đã cấm đứng, một số xe buýt thì đổi tuyến.
+K | Nhưng khi thực hiện thử thì nhiều người thấy bất tiện vì giờ đi làm, tan làm không lên được xe.
+K | Theo phỏng vấn người dân, 8 giờ sáng đến bến nhưng người chờ quá đông nên 30 phút trôi qua vẫn không lên được xe.
+Y | Nhiều người cho rằng ít nhất trong giờ đi làm, tan làm phải cho phép đứng.
+
+## Entk1 12 D
+C | Những đứa trẻ bị cha mẹ bạo hành thể chất, tinh thần, khi đến nhà trẻ hay mẫu giáo chỉ kể với cô giáo những điều tốt về cha mẹ.
+L | Vì chúng nghĩ làm như vậy mới tránh được bạo hành và được cha mẹ yêu thương.
+C | Nhưng những đứa trẻ không bị bạo hành, được yêu thương đầy đủ thì kể thoải mái cả ưu lẫn nhược điểm của cha mẹ với người khác.
+L | Vì niềm tin vào cha mẹ đã được hình thành vững chắc.
+
+## Entk2 11 D
+C | Người Hàn hay khen “Anh/chị nói tiếng Hàn giỏi quá” dù người nước ngoài chỉ nói tiếng Hàn một chút.
+N | Ngay cả câu rất đơn giản như “Xin chào”, “Cảm ơn” họ cũng thán phục trình độ tiếng Hàn của người đó.
+C | Nhưng một số người nước ngoài thấy khá ngượng với lời khen này.
+L | Vì họ nghĩ chỉ chào hỏi đơn giản mà đã khen giỏi tiếng Hàn thì lời khen không thật lòng.
+
+## Entk2 12 D
+C | Độ tuổi đẹp nhất để kết hôn được gọi là “tuổi kết hôn”.
+XG | Phần lớn nam nữ kết hôn trong khoảng 28–32 tuổi, nên gọi độ tuổi này là tuổi kết hôn có vẻ hợp lý.
+Y | Nhưng xác định tuổi đẹp nhất để kết hôn là việc khó.
+L | Muốn vừa làm việc mình thích vừa trau dồi năng lực thì kết hôn muộn là chuyện đương nhiên, nên mỗi người kết hôn ở một độ tuổi khác nhau.
+Y | Cứ khăng khăng theo tuổi kết hôn, bắt mọi người kết hôn cùng một thời điểm là không hợp lý trong xã hội hiện đại.
+
+## Entk3 11 A
+C | Đã có nơi ngắm được sao dù đèn sáng làm bầu trời đêm khó nhìn thấy.
+T | Đó chính là “Biển sao” đang diễn ra ở công viên Lịch sử – Văn hóa Dongdaemun.
+K | Những chòm sao đẹp trong phòng triển lãm 50 pyeong nhờ tiếng lành đồn xa mà khách đến không ngớt.
+S | Cuối cùng thành phố Seoul quyết định kéo dài triển lãm “Biển sao” đến tháng 12.
+TG | Mỗi ngày từ 6 giờ đến 10 giờ tối, với vé vào cửa 3.000 won, có thể ngắm những chòm sao đẹp.
+
+## Entk3 12 C
+C | Gần đây sách tranh tự tô màu để hoàn thành đang được ưa chuộng.
+G | Theo khảo sát, mảng sở thích của hiệu sách trực tuyến hiện nay có 7 trong 10 cuốn bán chạy nhất là loại sách tranh này.
+DL | Đặc biệt, không phải trẻ nhỏ mà phụ nữ đi làm 20–30 tuổi rất thích, lý do là giúp tăng tập trung, giải tỏa căng thẳng, và tính giải trí của trò tô màu.
+K | Ngoài ra, nhiều người khoe tác phẩm của mình trên mạng xã hội nên nhiều người khác cũng thấy hứng thú với sách tranh này.
+
+## Et3001 11 D
+G | Thìa nhựa dùng một lần phải mất hơn 1.000 năm mới phân hủy.
+C | Có loại thìa thân thiện môi trường được làm ra để khắc phục nhược điểm đó.
+N | Thìa thân thiện môi trường dùng xong có thể ăn được.
+L | Thìa này làm từ hỗn hợp cao lương, gạo, bột mì nên ăn sau khi dùng cũng hoàn toàn không hại cho cơ thể.
+N | Dù không ăn mà vứt đi thì trong lòng đất nó cũng phân hủy hết trong thời gian tương đối ngắn.
+
+## Et3001 12 B
+C | Chuyện một người dân cứu một cụ bà ngoài 80 tuổi bị ngã quỵ giữa trời rét đang được bàn tán.
+TN | Trong con hẻm phủ tuyết, cụ bà đang kéo xe đẩy nhặt giấy vụn thì đột ngột ngất và ngã xuống.
+K | Đúng lúc đó, một viên chức nhà nước từng là y tá đang trên đường đi làm chạy đến hô hấp nhân tạo, nhờ vậy cụ bà giữ được tính mạng.
+TL | Viên chức này hôm đó đi làm sớm hơn mọi khi để dọn tuyết vì tuyết rơi bất ngờ.
+K | Cụ bà gửi lời cảm ơn đến người đã cứu mình.
+
+## Et3002 11 C
+C | Con tem bưu điện Pháp làm để tôn vinh bánh mì baguette — món ăn tiêu biểu của Pháp — đang được mọi người ưa chuộng.
+N | Trên tem vẽ ổ bánh baguette buộc dải ruy băng ba màu xanh, trắng, đỏ tượng trưng cho quốc kỳ Pháp.
+N | Lấy tay xoa vào chỗ này thì có mùi bánh mì vừa nướng.
+K | Những người đã ngửi tem nói rằng cảm giác như đang ở trong tiệm bánh.
+
+## Et3002 12 C
+C | Cuối tuần qua có những người tụ tập lại để không làm gì cả.
+C | Đó chính là những người tham gia “Cuộc thi ngẩn người”.
+NT | “Cuộc thi ngẩn người” là cuộc thi giữ nguyên tư thế, không nói hay làm gì trong một khoảng thời gian nhất định, bắt đầu từ năm 2014.
+LK | Vì cuộc thi là dịp cho thân và tâm được nghỉ ngơi một lát, nên người đi làm và học sinh bị căng thẳng ở công ty, trường học tham gia ngày càng đông.
+
+## Et3003 11 C
+C | Gần đây doanh nghiệp tuyển ít nhân viên mới nên tuổi có việc làm của người 20 tuổi bị muộn đi.
+G | Kết quả khảo sát: tuổi nhân viên mới trung bình nam 33,5, nữ 31,6.
+K | Việc thanh niên đi làm muộn như vậy làm muộn tuổi kết hôn và sinh con.
+G | Tuổi kết hôn lần đầu trung bình của phụ nữ tăng khoảng 6,5 tuổi trong 30 năm qua; cùng thời gian đó tuổi sinh con đầu của phụ nữ cũng vọt từ khoảng 26,2 lên 33.
+
+## Et3003 12 A
+CS | Thành phố Inju dự kiến sẽ mở rộng chương trình hỗ trợ thanh niên tìm việc từ nửa cuối năm nay.
+LN | Để giảm gánh nặng kinh tế và giúp thanh niên tìm việc, thành phố đang xem xét nhiều chính sách như cho mượn miễn phí vest đi phỏng vấn, người cố vấn việc làm.
+N | Trong đó có cả chương trình hỗ trợ lệ phí thi ngoại ngữ.
+S | Chương trình này sau này có thể xem trên trang chủ.
+
+## Et3004 11 A
+C | Phòng hòa nhạc cổ điển Inju đang nâng cao sự hài lòng của khán giả bằng dịch vụ khác biệt.
+C | Dịch vụ được khán giả hưởng ứng nhiều nhất là dịch vụ giữ đồ uống.
+DN | Vì bên trong phòng diễn không được mang đồ uống vào, khán giả có thể nhờ nhân viên giữ đồ uống mình mang theo.
+NT | Đồ uống nóng để trong tủ ấm, đồ uống lạnh để trong tủ lạnh, khán giả có thể dùng nốt đồ uống ở khu nghỉ vào giờ giải lao giữa buổi diễn.
+
+## Et3004 12 A
+CS | Thành phố Inju dự kiến tăng cường hỗ trợ gia đình người khuyết tật.
+GD | “Tiền hỗ trợ sinh con cho gia đình người khuyết tật” tăng từ 1 triệu lên 1,2 triệu won, và gia đình có trẻ khuyết tật dưới 18 tuổi được hỗ trợ “trợ cấp nuôi con” 200 nghìn won mỗi tháng.
+DS | Ngoài ra, thành phố cũng đang chuẩn bị dịch vụ cử “người giúp nuôi con” miễn phí đến gia đình người khuyết tật có con dưới 9 tuổi.
+TS | Nội dung thay đổi dự kiến áp dụng từ ngày 1 tháng 1 năm sau.
+
+## Et3005 11 A
+CG | Thành phố Inju năm nay lần đầu tiên tổ chức khám sức khỏe miễn phí cho người dân.
+DG | Mọi người dân sống trong khu vực đều được khám sức khỏe cơ bản và tư vấn miễn phí.
+TN | Theo đó, trong suốt tháng 5, mỗi thứ bảy có thể đăng ký ở sảnh tầng 1 tòa thị chính Inju rồi khám ngay.
+S | Sau khi khám nếu có bất thường, thành phố sẽ hướng dẫn đến bệnh viện thành phố Inju để khám thêm.
+D | Thành phố cho biết mong cả những người già yếu bình thường ít đi bệnh viện cũng đến nhiều.
+
+## Et3005 12 B
+C | Câu chuyện của anh Kim Min-su, chủ quán canh cơm, đang làm mọi người cảm động.
+TN | Gần đây, khi đạp xe đi ngân hàng về, anh Kim lỡ làm rơi khoảng 1,2 triệu won tiền mặt trong túi xuống đường.
+N | Anh Kim không biết đã rơi tiền nên cứ thế về nhà, và một nữ sinh cấp ba đi ngang qua đã thấy tiền.
+N | Nữ sinh nhặt tiền mang đến đồn cảnh sát trình báo.
+K | Nhận điện thoại của đồn cảnh sát, anh Kim nói rất vui vì tìm lại được tiền, và cảm ơn bằng cách hứa mời nữ sinh ăn canh cơm miễn phí suốt đời, lúc nào cũng có thể đến ăn.
+
+## Eys1 11 A
+CT | Bộ Văn hóa – Thể thao – Du lịch sẽ tổ chức cuộc thi hát cho người nước ngoài vào dịp Tết năm sau.
+D | Điều kiện tham gia: người nước ngoài từ 20 tuổi trở lên sống ở Hàn Quốc; người Hàn có vợ/chồng là người nước ngoài cũng được tham gia cùng vợ/chồng.
+TN | Cuối năm nay qua vòng sơ tuyển sẽ chọn 20 đội hát hay, và vòng chung kết tổ chức đúng ngày Tết.
+G | Đội nhất, nhì, ba nhận tiền thưởng và quà; đội nhận giải đặc biệt được phiếu du lịch đảo Jeju 5 ngày 4 đêm.
+
+## Eys1 12 C
+C | Theo kết quả, số gia đình tranh thủ cuối tuần hay kỳ nghỉ để trải nghiệm nông thôn tăng lên mỗi năm.
+L | Cha mẹ và con cùng trải nghiệm việc nhà nông không chỉ làm quan hệ gia đình tốt hơn mà còn có tác dụng giáo dục, giúp trẻ biết quý đồ ăn, nên rất được ưa chuộng.
+N | Các làng quê chuẩn bị nhiều hoạt động như bắt cá, nấu rau hữu cơ, hái quả, mang lại niềm vui cho người mệt mỏi vì cuộc sống thành phố.
+
+## Eys2 11 C
+C | Gần đây “house concert” (hòa nhạc tại gia) đang được ưa chuộng.
+NT | House concert là buổi hòa nhạc nghe nhạc cổ điển thoải mái ở nhà hay hội trường nhỏ, không phải nhà hát.
+GK | Vé vào khoảng 10–20 nghìn won, rẻ, và người biểu diễn với khán giả có thể cùng giao lưu, trò chuyện về âm nhạc, nên trở thành buổi diễn mà cả hai bên đều hài lòng.
+
+## Eys2 12 C
+CL | Số hộ một người tăng lên, nên xuất hiện văn hóa mới “social dining”: những người có cùng mối quan tâm tụ họp ăn uống cùng nhau.
+L | Có vẻ nó phản ánh mong muốn của người hiện đại: không chỉ ăn cho no bữa mà muốn chia sẻ tình cảm qua món ngon.
+N | Hình thức tự do: đóng hội phí rồi ăn, hoặc mỗi người mang món ăn đến cùng dọn mâm ăn chung.
+
+## Eys3 11 A
+CT | Năm nay, Đài Daehan lại tiếp tục (như năm ngoái) tổ chức cuộc thi nấu ăn hoành tráng.
+DN | 10 đầu bếp món Hàn đại diện các vùng trên cả nước phải dùng nguyên liệu, cách nấu đặc trưng của vùng mình để làm món hợp chủ đề trong thời gian quy định.
+NG | Mỗi tập loại 1 người bị điểm thấp nhất, kéo dài tổng cộng 10 tập; người thắng chung cuộc được thưởng 100 triệu won.
+T | Chương trình phát sóng lúc 8 giờ 30 tối thứ ba hằng tuần.
+
+## Eys3 12 C
+C | “Đám cưới nhỏ” giản dị, cá tính thay cho đám cưới hoành tráng đang tăng lên.
+N | Đám cưới quy mô nhỏ — giảm chi phí hội trường, chụp ảnh, váy cưới… và chỉ mời gia đình, người quen thân — nay không còn là cảnh lạ nữa.
+K | Văn hóa cưới cũ làm để phô cho người khác xem đã thay đổi.
+K | Theo nghĩa đó, đám cưới của một diễn viên nổi tiếng gần đây được bàn tán đang trở thành tấm gương tạo nên văn hóa “đám cưới nhỏ”.
+
+## Eys4 11 A
+CTG | Bãi biển Yeonsu vào thứ bảy, chủ nhật từ 2 đến 4 giờ chiều có tiết mục mới để xem miễn phí.
+N | Đó là màn diễn của các nghệ sĩ hóa trang như tượng, khi người xem tỏ ra chú ý thì đột nhiên cử động làm mọi người giật mình.
+KD | Màn diễn này mang lại niềm vui không chỉ cho người dân địa phương mà cả khách du lịch nước ngoài.
+S | Quận Yeonsu cho biết sau khi diễn suốt tháng 5 sẽ tùy phản ứng của mọi người mà quyết định có kéo dài thêm thời gian diễn hay không.
+
+## Eys4 12 C
+CL | Gần đây hoạt động ngoài trời nhiều lên nên đồ ăn dã chiến (khẩu phần quân đội) đang được ưa chuộng.
+N | Vốn dĩ đồ ăn dã chiến là món được làm ra để quân nhân ăn tiện lợi.
+N | Đồ ăn dã chiến bán ngoài thị trường có cách ăn giống loại của quân đội nhưng thành phần, cấu tạo thì khác.
+LS | Nhờ chương trình truyền hình cho thấy người nổi tiếng trải nghiệm quân ngũ mà đồ ăn dã chiến nổi lên; với nhiều loại mới ra mắt, dự đoán nó sẽ còn được người thích hoạt động ngoài trời ưa chuộng hơn nữa.
+
+## Eys5 11 A
+CT | Công viên Chorok tổ chức sự kiện trải nghiệm đặc biệt: ngủ một đêm ở vườn thú, từ ngày 21 đến ngày 20 tháng sau.
+DG | Sự kiện tổ chức tổng cộng 5 lần, gia đình có con học mẫu giáo hoặc tiểu học được tham gia.
+NG | Sự kiện có nhiều chương trình như nghe người chăm thú kể chuyện vườn thú, đi tham quan vườn thú ban đêm; phí tham gia 30 nghìn won, không phân biệt người lớn hay trẻ em.
+N | Đăng ký tham gia qua trang chủ.
+
+## Eys5 12 D
+C | Tên bão lấy luân phiên những cái tên làm bằng ngôn ngữ riêng của các nước chịu ảnh hưởng của bão, và dùng lặp lại.
+NG | Mỗi nước trong 14 nước nộp trước 10 cái tên, rồi đặt cho bão theo thứ tự bão xuất hiện.
+L | Với mong muốn sức bão yếu đi dù chỉ một chút, phần lớn là tên con vật, cây cỏ nhỏ bé, hiền lành, thân thuộc.
+K | Nếu bão gây thiệt hại nặng nề thì tên đó bị thay bằng tên khác.

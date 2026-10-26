@@ -744,6 +744,15 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   `k` tín hiệu, `x[i]` bẫy lựa chọn sai (G cùng nhóm / C chữ bẫy / K không liên quan). `P` = 30 đồ vật {vi, n: đồ vật dễ nhầm, c:[[ko, vi, 1 = ví von]]} — mỗi cụm chỉ đồ vật đó dùng được,
   `c[1]` là cụm phân biệt (bài ngược dùng `c[1]` + câu ví von đầu); `G` nhóm; `OV` cặp quá gần không lấy cụm của nhau làm nhiễu; `PX` nghĩa đồ vật chỉ làm lựa chọn nhiễu. localStorage `nari-5`.
 
+## Học câu 11–12 tin ngắn (`cau-11-12/`) — bài dạng câu gom cả 5 chuyên đề Đọc (cô yêu cầu 26/10, làm thử dạng đầu tiên)
+- Ý cô: dạy lần đầu theo dạng câu; mỗi dạng lấy **hết** dấu hiệu / cách giải của 5 chuyên đề (`dau-hieu/`, `doc-chon-loc/`, `dong-trai/`, `doc-dap-an/`, `doc-hieu/`) nhưng chỉ phần của dạng đó,
+  cho học sinh yếu nền (thiếu từ, dịch kém). Khung: Bắt đầu (đề mẫu, số liệu, **làm thử 5 câu** `PRE`) · Buổi 1 đọc tin (4 kiểu tin A sự kiện / B câu chuyện / C xu hướng / D kiến thức nhận từ câu đầu,
+  vốn từ tin tức 8 nhóm `VG` + ✋ mỗi nhóm, vai trò câu, 그러나/물론 → ý chính, đọc chậm có dịch) · Buổi 2 đáp án nói lại 6 cách (`OK`) + cùng ý / khác ý + đọc nghĩa lựa chọn + chữ tín hiệu ·
+  Buổi 3 7 bẫy (`BAY`: N C T G S A R) + bẫy theo kiểu tin + gọi tên bẫy · Buổi 4 quy trình 4 bước, làm mẫu kỳ 91 câu 11, làm từng bước (chọn câu căn cứ → Khớp / Không khớp) ·
+  Luyện như thi (6 câu/lượt, ôn ngắt quãng, bỏ 5 câu `PRE`) · 44 bài · Kết quả (làm lại 5 câu, so trước – sau, tự đánh giá, “Gửi kết quả cho cô”). Hộp “Dành cho cô” ở thẻ Bắt đầu = bảng lấy gì từ chuyên đề nào.
+- Dữ liệu `python3 tools/cau_11_12.py` → `cau-11-12/data.json` (gộp `doc-dap-an/data.json`, `dong-trai/data.json`, `tools/dau_hieu/11-12.json`, `thi-thu/de/tu/`) + dịch từng câu, vai trò câu (C T D G N L K S Y X),
+  kiểu tin ở `tools/cau_11_12/bai.txt` (Claude soạn). Số trong chữ tĩnh viết theo lần chạy 26/10. localStorage `nari-1112`. Trang `noindex`, chưa đặt link từ trang học sinh (chờ cô duyệt khuôn rồi làm các dạng khác cùng khuôn).
+
 ## Học câu 13–15 sắp xếp câu (`cau-13-15/`)
 - Chiến thuật rút từ 66 câu của 22 đề đọc: 65/66 câu 4 đáp án chỉ có 2 câu đầu → chọn câu đầu (loại câu có **dấu bám**: từ nối, từ chỉ, câu lý do `때문이다`/`-ㄴ 것이다`;
   cả hai sạch thì phép thử “đứng một mình” + 4 kiểu câu đầu G/H/Q/T) → còn 2 đáp án, so đúng **một vị trí** (vị trí 2: 46, vị trí 3: 19). Câu đầu đúng không bao giờ có dấu bám (66/66).
