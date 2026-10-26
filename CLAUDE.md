@@ -158,7 +158,7 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   (`<script src="../lam-moi.js" data-key="<KEY>">` trong `<head>`): nút “↺ Làm mới” cuối thanh chọn buổi (đầu trang) xóa bài đã làm trên máy đó; link có `?moi`
   (vd. `viet-51/?moi#b=1`) tự xóa khi mở — cô dùng khi giảng. Trang học liệu mới cũng gắn script này.
 - **Mỗi lần làm trang học liệu mới** (site hoặc claude.ai): tự thêm link vào trang “Mục lục học liệu Nari” (https://claude.ai/artifact/6bTfJWsvsCeMrmggceXPjQ,
-  mảng `L` theo lớp → nhóm; Artifact `read` → sửa → `publish` với `url`, đổi ngày “cập nhật”), trang cũ đã gộp thì ghi chú “Bản cũ, đã gộp vào …”, trang đã xóa thì bỏ dòng.
+  mảng `L` theo lớp → phần → nhóm; lớp 1A–3A chia phần như trang lớp `lop/<lớp>/`: Từ vựng · Ngữ pháp · Nghe · Đọc · Viết, trong phần chia nhóm “Chung” + từng bài, giáo án cả bài để ở Từ vựng; Artifact `read` → sửa → `publish` với `url`, đổi ngày “cập nhật”), trang cũ đã gộp thì ghi chú “Bản cũ, đã gộp vào …”, trang đã xóa thì bỏ dòng.
 
 ## Logo Nari TOPIK (`logo/`) — bản cô đã chốt
 - Tên **Nari TOPIK**, khẩu hiệu **Hiểu từng câu – Vững từng cấp**. Biểu tượng: tháp Namsan (chóp đỏ, chân là ngòi bút) cắm vào quyển sách mở
