@@ -159,7 +159,7 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   (vd. `viet-51/?moi#b=1`) tự xóa khi mở — cô dùng khi giảng. Trang học liệu mới cũng gắn script này.
 - **Mỗi lần làm trang học liệu mới** (site hoặc claude.ai): tự thêm link vào trang “Mục lục học liệu Nari” (https://claude.ai/artifact/6bTfJWsvsCeMrmggceXPjQ,
   Artifact `read` → sửa → `publish` với `url`, đổi ngày “cập nhật”), trang cũ đã gộp thì ghi loại “Bản cũ” + ghi chú “đã gộp vào …”, trang đã xóa thì bỏ dòng.
-  Trang mục lục (cô chốt 26/10) cùng khung trang chủ: logo + menu lớp (TOPIK II · 4A · 3A · 2A · 1A · Khác) → tiêu đề + khẩu hiệu lớp → thanh phần
+  Trang mục lục (cô chốt 26/10) cùng khung trang chủ nhưng đơn giản, đen trắng, không logo / khẩu hiệu: tên trang + menu lớp (TOPIK II · 4A · 3A · 2A · 1A · Khác) → “Lớp …” → thanh phần
   (TOPIK II: Lộ trình · Đọc · Nghe · Viết · Từ vựng · Ngữ pháp; lớp Seoul: Theo bài · Ngữ pháp · …) → thanh dạng câu / bài → thẻ trang.
   Mảng `L` = [{id, n, h, hs, sl, in, p:[[mã, tên, dòng nhỏ, [[tên nhóm, [[loại, tên, link, ghi chú]], cuốn?]]]]}]; link `/…` = trang site, còn lại mã artifact.
   **Chỉ ghi giáo án / bản trình chiếu / tài liệu / công cụ của cô** — trang học sinh không đưa vào (học sinh dùng hoc.naritopik.com).
