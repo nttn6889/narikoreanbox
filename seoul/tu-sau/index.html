@@ -403,7 +403,7 @@ document.addEventListener('input',function(e){
 document.addEventListener('keydown',function(e){if(e.key==='Enter'&&e.target.dataset.ty){var b=document.querySelector('[data-chk="'+e.target.dataset.ty+'"]');if(b)b.click();}});
 
 /* tải bài + các bài trước cùng cuốn (cho ⑧ Ôn) */
-function get(k){return D[k]?Promise.resolve(D[k]):fetch('data/'+k+'.json').then(function(r){return r.json();}).then(function(x){D[k]=x;return x;});}
+function get(k){return D[k]?Promise.resolve(D[k]):fetch('data/'+k+'.json',{cache:'no-cache'}).then(function(r){return r.json();}).then(function(x){D[k]=x;return x;});}
 function load(k){
   var l=k.split('-'),need=LS.filter(function(x){return x[0]===l[0]&&x[1]<+l[1];}).slice(-ON_NPREV).map(function(x){return lk(x[0],x[1]);});
   Promise.all([get(k)].concat(need.map(function(p){return get(p).catch(function(){return null;});}))).then(function(r){cur=r[0];render();})
@@ -411,12 +411,14 @@ function load(k){
 }
 function route(){
   var h=location.hash,b=h.match(/b=(\w+)/),c=h.match(/c=(\d+)/),k=b&&c?lk(b[1],+c[1]):(st.ui.l||lk(LS[0][0],LS[0][1]));
-  if(!LS.some(function(l){return lk(l[0],l[1])===k;}))k=lk(LS[0][0],LS[0][1]);
+  if(!LS.some(function(l){return lk(l[0],l[1])===k;})){  // bài có trong link mà danh sách chưa có: báo, không tự mở bài khác
+    if(b&&c){$('days').innerHTML='';$('steps').innerHTML='';$('sum').innerHTML='';$('body').innerHTML='<p class="note">Chưa tải được bài '+esc(b[1])+' · Bài '+c[1]+'. Em tải lại trang (kéo xuống để làm mới) nhé.</p>';return;}
+    k=lk(LS[0][0],LS[0][1]);}
   var s=h.match(/s=(\w+)/);if(s&&title(s[1]))st.ui.s=s[1];
   st.ui.l=k;save();load(k);
 }
 document.body.classList.toggle('hide',!!st.ui.hide);
-fetch('data/ls.json').then(function(r){return r.json();}).then(function(x){LS=x;route();window.addEventListener('hashchange',route);});
+fetch('data/ls.json',{cache:'no-cache'}).then(function(r){return r.json();}).then(function(x){LS=x;route();window.addEventListener('hashchange',route);});
 </script>
 </body>
 </html>
