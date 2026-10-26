@@ -852,7 +852,9 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   w:[[từ gốc, nghĩa trong bài, Hán Việt, chữ trong bài (| ngăn), ghi chú]], wo (từ trong câu hỏi/lựa chọn, cùng dạng), g:[{p mẫu, m nghĩa, f chữ trong bài, d, ex:[[ko, vi]]}],
   qa:{câu:{a (0-based), w, x:[vì sao sai]}}, hoi:[{q, a}]}; `**chữ**` = in đậm. Đáp án đối chiếu `bank` (trong `thi-thu/de/` không có đáp án).
   Rồi `python3 tools/doc_hieu.py` (kiểm tra cụm ghép lại đúng từng câu và đúng đoạn văn, chữ cần tô có trong đoạn; ghi `doc-hieu/index.json`). Chạy lại cả sau khi đồng bộ đề.
-- Đã phân tích: kỳ 91 câu 19–20, 21–22.
+- Đã phân tích (26/10): **mọi đoạn có chữ của đề thật** — kỳ 91 và 83 (câu 1–4, 11–41, 44–50; câu 5–10 là ảnh, 42–43 đề không công bố đoạn văn),
+  câu 1–4 kỳ 35, 37, 41, 47, 52, 60, 64, 96, 102 (105 đoạn). Đề luyện (EBS, HOT, New TOPIK, TOPIK 300⁺, Yonsei, ~800 đoạn) chưa làm.
+  `tools/doc_hieu.py` còn báo lỗi cụm rỗng; thứ tự dịch trong một câu phải đủ 1…n.
 
 ## Facebook (`fb/`)
 - `fb/ca-nhan/`: bài cho trang cá nhân "Tiếng Hàn Ngân Nguyễn" (cô có ảnh đại diện thật, giọng văn kể chuyện, lồng từ Hàn). `bia.html` ảnh bìa 1640×924
