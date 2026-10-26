@@ -408,13 +408,16 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 
 ## Từ vựng Seoul học sâu (`seoul/tu-sau/`) — lớp 2A cần học nhanh nền rồi vào ôn TOPIK
 - Cô chốt (24/10/2026): mỗi bài chỉ cần **từ vựng dạy sâu có mở rộng, nối sang TOPIK** + ngữ pháp sâu nối sang ngữ pháp TOPIK (`ngu-phap-sau/`);
-  không làm học liệu theo từng trang sách như `seoul/2a-1/` nữa. Đã làm **2A Bài 2, 3**. Cô chốt 26/10: `seoul/tu-sau/` và `tu-30/` là giáo án của cô (`noindex`), link chỉ nằm ở Mục lục giáo án, không đặt link từ trang học sinh.
-- Trang `noindex`, link `seoul/tu-sau/#b=2A&c=2&s=hoc|nghia|dien|kh|de|dich`: ① Học (khung “Chủ đề của bài trong TOPIK”, thẻ từ: câu ví dụ, cụm hay đi cùng, tip,
-  khung “Lên TOPIK” = từ trung cấp cùng nhà kèm ★ số đề + câu trong đề, 📝 ghi chú TOPIK) · ② Nghĩa · ③ Điền câu · ④ Kết hợp · Mở rộng (`x`) ·
-  ⑤ Câu trong đề (chữ tô vàng nghĩa là gì; từ của bài + từ mở rộng gặp ≥ 7 đề, `UPK`) · ⑥ Dịch câu; “Gửi kết quả cho cô”. localStorage `nari-tusau`.
+  không làm học liệu theo từng trang sách như `seoul/2a-1/` nữa. Đã làm **2A Bài 2, 3** và **3A Bài 1–3**. Cô chốt 26/10: `seoul/tu-sau/` và `tu-30/` là giáo án của cô (`noindex`), link chỉ nằm ở Mục lục giáo án, không đặt link từ trang học sinh.
+- Trang `noindex`, **8 bước như `tu-30/`** (cô chốt 26/10), link `seoul/tu-sau/#b=2A&c=2&s=hoc|nghia|dien|kh|nham|de|dich|on`: ① Học (khung “Chủ đề của bài trong TOPIK”, thẻ từ: câu ví dụ, cụm hay đi cùng, tip,
+  khung “Lên TOPIK” = từ trung cấp cùng nhà kèm ★ số đề + câu trong đề, 📝 ghi chú TOPIK) · ② Nghĩa · ③ Điền câu · ④ Kết hợp · Mở rộng (`x` g k|h) ·
+  ⑤ Dễ nhầm (khung `cf` + câu `x` g c; sách Seoul không có khung này nên Claude soạn: gần nghĩa, đồng âm, nhiều nghĩa, chủ động – bị động, số thuần Hàn / Hán…) ·
+  ⑥ Câu trong đề (chữ tô vàng nghĩa là gì; từ của bài + từ mở rộng gặp ≥ 7 đề, `UPK`; cụm từ đếm theo `q` thì hỏi nghĩa `qv` của chữ được tô) · ⑦ Dịch câu ·
+  ⑧ Ôn (tự sinh: gõ 8 từ của bài Việt → Hàn + 5 từ của mỗi bài trước cùng cuốn, tối đa 2 bài — `ON_CUR`/`ON_PREV`/`ON_NPREV`); “Gửi kết quả cho cô”. localStorage `nari-tusau`.
   Biến `TS` trong `seoul/index.html` và `lop/khung.js` để trống (không hiện dòng “Học sâu”); làm bài mới thì thêm vào Mục lục giáo án.
 - Nguồn soạn tay `tools/seoul_tu/<cuốn>-<bài>.json` (`w[].ko` đúng như `tools/seoul/<cuốn>.tsv`; `q` từ gốc để đếm (`[]` = không đếm: đơn vị thời gian, từ ngoại lai ghép), `r`, `tip`, `up:[[từ, loại, nghĩa, HV]]`, `note`, `exv`;
-  `top` từ chủ đề, `x` câu luyện, lựa chọn đầu là đáp án) → `python3 tools/seoul_tu.py` (cần kiwipiepy; lấy nghĩa/HV/câu ví dụ/id từ tsv, đếm đề như `tu-30/`)
+  `top` từ chủ đề, `x` câu luyện (g k kết hợp / h mở rộng / c dễ nhầm; có `q` thì `s` là câu có `__chữ__` + câu hỏi nghĩa), lựa chọn đầu là đáp án,
+  `cf:[{t, k loại, d, it:[[từ, nghĩa, dùng khi]], ex:[[câu có __chữ__, dịch]]}]` khung dễ nhầm, `qv` nghĩa của chữ `q` khi khác nghĩa cả cụm) → `python3 tools/seoul_tu.py` (cần kiwipiepy; lấy nghĩa/HV/câu ví dụ/id từ tsv, đếm đề như `tu-30/`)
   → `seoul/tu-sau/data/<cuốn>-<bài>.json` + `ls.json`. Ghi chú TOPIK trong `note` chỉ ghi điều đã kiểm tra trong `thi-thu/de/`.
   Soát câu đề máy chọn cho từ `up`: từ đồng âm (입장 vào cửa / lập trường, 이내 trong vòng / ngay sau đó, 정상) dễ ra câu sai nghĩa → bỏ khỏi `up`, ghi vào `note`.
 - Ngữ pháp: `ngu-phap-sau/` thêm mục **“Lên TOPIK”** (trường `len:[{p, m, noi, ex:[ko, vi], de:{src, ko, a, note}}]` = mẫu trung cấp xây trên mẫu nền,
@@ -642,6 +645,15 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   Câu 1–5, 13–20, 23–27, 42–43 chép một lần từ `R` của các trang cũ (ngu-phap-12/34, cau-5, cau-13-15…; nhãn cũ đổi sang mã chung, ghi chú cũ ở `xw`) — sửa trang cũ thì trang này không tự đổi;
   câu 6–10, 21–22 soạn mới (đáp án theo bank). `python3 tools/dau_hieu.py [<dump>]` kiểm tra chữ tô, so đáp án với bank (dump `bank/<id>/q`), ghi `dau-hieu/data/*.json` + `index.json`. Đoạn văn trang đọc thẳng `thi-thu/de/`.
 - Khi soát (23/10/2026) phát hiện bank `Etk091` sai đáp án 14 câu (19–34 trừ 27, 33; đúng: 19③ 20① 21③ 22④ 23① 24④ 25① 26③ 28① 29② 30③ 31③ 32④ 34②) và `Entk3` câu 2 (bank ①, đúng ④ 적응하느라고) — đã báo cô, chưa sửa bank.
+
+## Đọc chọn lọc (`doc-chon-loc/`) — giáo án của cô (`noindex`, không đặt link từ trang học sinh)
+- Câu hỏi của cô (26/10): học sinh không hiểu từ / không đủ giờ đọc hết đoạn thì làm bài thế nào. Cô xem giáo án, nhận xét xong mới soạn trang học sinh.
+- Số liệu: `python3 tools/doc_chon_loc.py` (đọc `tools/dau_hieu/*.json` + đoạn văn `thi-thu/de/`) → `doc-chon-loc/data.json`: theo dạng (`<tệp>:<loại câu t>`) độ dài đoạn,
+  % chữ của đoạn nằm trong câu chứa manh mối (`c`), vị trí manh mối / ý chính, bẫy, thí nghiệm “máy không đọc” (so chữ bằng cặp âm tiết: lựa chọn ít / nhiều chữ của bài nhất,
+  giống câu cuối nhất, luật đoán tốt nhất); chữ tín hiệu trong lựa chọn; vị trí đáp án. Chạy lại khi sửa `tools/dau_hieu/`. Số trong chữ tĩnh của trang (Tổng quan mục 1, thẻ dạng `so`/`bay`) viết tay — chạy lại thì đối chiếu.
+- Thẻ: Tổng quan · ① Nền (đọc câu hỏi → dạng, đọc khung khi không hiểu từ, so lựa chọn) · ② Ô trống · ③ Ý chính · ④ Nội dung · ⑤ Ngắn & cảm xúc · ⑥ Thời gian (khung 70 phút, luật đoán)
+  · Máy chiếu (`#b=mau&id=Etk091-35&s=0…5&fr=1`: che đoạn → chỉ câu manh mối → tô dấu hiệu → loại bẫy → đáp án → cả đoạn; “Chế độ khung” làm mờ chữ, chỉ giữ từ nối / đuôi câu / chữ tín hiệu)
+  · Bảng tra. Thẻ từng dạng ở biến `TY` (đọc chỗ nào, không hiểu từ thì, bẫy, lỗi, cô hỏi, thời gian), vẽ vào `<div class="tys" data-ty="…">`. localStorage `nari-dcl`.
 
 ## Chuyên đề Đồng nghĩa – trái nghĩa (`dong-trai/`) — bản nghiên cứu của cô (`noindex`, không đặt link từ trang học sinh)
 - Câu hỏi của cô: có dấu hiệu đồng nghĩa / trái nghĩa giúp chọn đúng, loại sai không. Nghiên cứu 241 câu “nội dung khớp” (t = n trong `tools/dau_hieu`: câu 9–12, 20, 22, 24, 32–34, 43, 47, 50)
