@@ -1,0 +1,81 @@
+{
+"e": "Etk083", "n": [19, 20],
+"t": "Marketing vui nhưng chất lượng kém",
+"cd": "Kinh tế – tiêu dùng",
+"y": "Chiến lược marketing dựa vào yếu tố thú vị đang được chú ý: kích thích tò mò, dẫn tới mua hàng. Nhưng nếu chất lượng không đạt kỳ vọng thì ngược lại còn làm xấu cả hình ảnh thương hiệu — như hãng hamburger làm “burger túi”, “burger ép” thu hút chú ý nhưng chất lượng kém khiến cả sản phẩm khác cũng giảm doanh số.",
+"doc": [
+  {"t": "Đọc câu hỏi trước", "d": "Câu 19: 4 phó từ (과연, 비록, 차라리, 오히려) → xem đuôi câu có ô và quan hệ với câu trước. Câu 20: chủ đề → câu có ô (sau **그러나**).", "s": []},
+  {"t": "Câu có ô (câu 19)", "d": "Marketing mong bán được (câu 2) — **그러나** chất lượng kém thì **còn** làm xấu thương hiệu = kết quả **ngược** mong đợi → **오히려**. Không có -지만 (비록), không có câu hỏi (과연), không có “thà … còn hơn” (차라리).", "s": [1, 2]},
+  {"t": "Ý chính (câu 20)", "d": "Câu 3 + ví dụ câu 4: marketing vui mà chất lượng kém thì hại → **chất lượng quan trọng hơn** (①).", "s": [2, 3]}
+],
+"l": [
+  ["이런 마케팅", "CH", "chỉ lại marketing yếu tố vui"],
+  ["그러나", "DL", "chuyển sang mặt trái → ý chính"],
+  ["브랜드 이미지까지", "TH", "-까지: đến cả → mức độ hại tăng"],
+  ["실제로", "VD", "ví dụ thực tế"],
+  ["끌었지만", "DL", "thu hút nhưng …"],
+  ["미치자", "TG", "-자: vừa … thì"]
+],
+"s": [
+  {"c": [["흥미와 재미 요소를 내세워", "VP", "đưa yếu tố hứng thú, vui nhộn lên hàng đầu", 3], ["홍보하는", "DN", "để quảng bá", 2], ["마케팅 전략이", "CN", "chiến lược marketing", 1], ["주목받고 있다.", "VN", "đang được chú ý", 4]],
+   "g": "마케팅 전략이 주목받고 있다", "gv": "Chiến lược marketing đang được chú ý",
+   "r": "Mở · Hiện tượng", "y": "Marketing dùng yếu tố vui đang được chú ý.",
+   "vi": "Chiến lược marketing quảng bá bằng cách đưa yếu tố hứng thú, vui nhộn lên hàng đầu đang được chú ý.",
+   "tip": "**N을/를 내세우다** = đưa N ra làm điểm chính."},
+  {"c": [["이런 마케팅은", "CN", "kiểu marketing này", 1], ["소비자의 호기심을 자극해", "VP", "kích thích tò mò của người tiêu dùng", 2], ["구매로", "TR", "tới việc mua hàng", 4], ["이어지게 한다.", "VN", "dẫn", 3]],
+   "g": "마케팅은 구매로 이어지게 한다", "gv": "Marketing dẫn tới mua hàng",
+   "r": "Mặt tốt", "y": "Kích thích tò mò → mua hàng.",
+   "vi": "Kiểu marketing này kích thích sự tò mò của người tiêu dùng, dẫn tới việc mua hàng.",
+   "tip": "**N(으)로 이어지다** = dẫn tới N."},
+  {"c": [["그러나", "TR", "nhưng", 1], ["제품의 품질이", "CN", "chất lượng sản phẩm", 3], ["소비자의 기대에 미치지 못하는", "DN", "không đạt kỳ vọng của người tiêu dùng", 4], ["경우", "TR", "trường hợp", 2], ["(    )", "TR", "(ngược lại)", 5], ["브랜드 이미지까지", "CN", "đến cả hình ảnh thương hiệu", 6], ["나빠지기도 한다.", "VN", "cũng bị xấu đi", 7]],
+   "g": "브랜드 이미지까지 나빠지기도 한다", "gv": "Đến cả hình ảnh thương hiệu cũng xấu đi",
+   "r": "Câu có ô · Ý chính", "y": "Chất lượng kém thì ngược lại còn hại thương hiệu.",
+   "vi": "Nhưng trường hợp chất lượng sản phẩm không đạt kỳ vọng của người tiêu dùng thì (ngược lại) đến cả hình ảnh thương hiệu cũng bị xấu đi.",
+   "tip": "Mong đợi “bán được” mà kết quả “xấu cả thương hiệu” = **ngược mong đợi** → 오히려."},
+  {"c": [["실제로", "TR", "thực tế", 1], ["한 햄버거 회사에서", "TR", "ở một hãng hamburger", 2], ["'주머니 버거', '눌러 먹는 버거'를 만들어", "VP", "làm “burger túi”, “burger ép”", 3], ["소비자의 관심을 끌었지만", "VP", "thu hút sự quan tâm của khách nhưng", 4], ["품질이 기대에 못 미치자", "VP", "khi chất lượng không đạt kỳ vọng", 5], ["회사의 다른 제품까지 판매가 감소한", "DN", "doanh số đến cả sản phẩm khác của hãng giảm", 8], ["경우가", "CN", "trường hợp", 7], ["있었다.", "VN", "đã có", 6]],
+   "g": "… 감소한 경우가 있었다", "gv": "Đã có trường hợp … giảm",
+   "r": "Ví dụ", "y": "Hãng burger: chất lượng kém → sản phẩm khác cũng ế.",
+   "vi": "Thực tế, một hãng hamburger đã làm “burger túi”, “burger ép” thu hút sự quan tâm của khách, nhưng khi chất lượng không đạt kỳ vọng thì đã có chuyện doanh số đến cả sản phẩm khác của hãng cũng giảm.",
+   "tip": "Câu ví dụ dài: dịch theo thứ tự sự việc, đặt “đã có chuyện” ở giữa."}
+],
+"w": [
+  ["흥미", "hứng thú", "hứng vị 興味", "흥미와"],
+  ["요소", "yếu tố", "yếu tố 要素", "요소를"],
+  ["내세우다", "đưa ra làm điểm chính", "", "내세워"],
+  ["홍보하다", "quảng bá", "hoằng báo 弘報", "홍보하는"],
+  ["전략", "chiến lược", "chiến lược 戰略", "전략이"],
+  ["주목받다", "được chú ý", "chú mục 注目", "주목받고"],
+  ["호기심", "sự tò mò", "hiếu kỳ tâm 好奇心", "호기심을"],
+  ["자극하다", "kích thích", "thích kích 刺戟", "자극해"],
+  ["구매", "mua hàng", "cấu mãi 購買", "구매로"],
+  ["이어지다", "dẫn tới, nối tiếp", "", "이어지게"],
+  ["품질", "chất lượng", "phẩm chất 品質", "품질이"],
+  ["기대에 미치다", "đạt kỳ vọng", "kỳ đãi 期待", "기대에 미치지|기대에 못 미치자"],
+  ["관심을 끌다", "thu hút sự quan tâm", "quan tâm 關心", "관심을 끌었지만"],
+  ["판매", "bán hàng, doanh số", "phán mại 販賣", "판매가"],
+  ["감소하다", "giảm", "giảm thiểu 減少", "감소한"]
+],
+"wo": [
+  ["과연", "quả nhiên; liệu (câu hỏi)", "quả nhiên 果然", "", "câu 19 ①"],
+  ["비록", "tuy (đi với -지만)", "", "", "câu 19 ②"],
+  ["차라리", "thà (đi với -는 게 낫다)", "", "", "câu 19 ③"],
+  ["오히려", "ngược lại, trái lại", "", "", "câu 19 ④ · đáp án"],
+  ["익숙하다", "quen thuộc", "", "", "câu 20 ④"]
+],
+"g": [
+  {"p": "-게 하다", "m": "làm cho …", "f": "이어지게 한다", "d": "", "ex": []},
+  {"p": "-지 못하다", "m": "không … được", "f": "미치지 못하는", "d": "", "ex": []},
+  {"p": "N까지", "m": "đến cả N", "f": "이미지까지|제품까지", "d": "", "ex": []},
+  {"p": "-기도 하다", "m": "cũng có khi …", "f": "나빠지기도 한다", "d": "", "ex": []},
+  {"p": "-자", "m": "vừa … thì / khi … thì", "f": "미치자", "d": "", "ex": []}
+],
+"qa": {
+  "19": {"a": 3, "w": "Mong bán được mà **ngược lại** còn hại thương hiệu → **오히려**.", "x": ["과연 cần câu hỏi (?) hoặc “quả nhiên như đoán”.", "비록 cần -지만 / -아도.", "차라리 cần “thà … còn hơn” (-는 게 낫다).", null]},
+  "20": {"a": 0, "w": "Marketing vui mà chất lượng kém thì hại → **chất lượng sản phẩm quan trọng hơn** marketing.", "x": [null, "Bài không nói xác nhận nhu cầu khách.", "Chép “재미 요소” nhưng bài cảnh báo, không khuyên.", "Bài không so sánh sản phẩm lạ – quen."]}
+},
+"hoi": [
+  {"q": "Marketing vui có lợi gì?", "a": "Kích thích tò mò, dẫn tới mua hàng."},
+  {"q": "Khi nào nó gây hại?", "a": "Khi chất lượng không đạt kỳ vọng."},
+  {"q": "Hãng hamburger gặp chuyện gì?", "a": "Chất lượng kém khiến cả sản phẩm khác cũng giảm doanh số."}
+]
+}

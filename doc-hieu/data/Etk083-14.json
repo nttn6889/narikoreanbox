@@ -1,0 +1,64 @@
+{
+"e": "Etk083", "n": [14],
+"t": "Ngày cuối ở công ty",
+"cd": "Đời sống – công việc",
+"y": "Mai là ngày tôi nghỉ công ty đã làm 10 năm. Bạn bè khuyên đến phút cuối hãy suy nghĩ lại, nhưng tôi định bắt đầu công việc kinh doanh đã ấp ủ lâu; dù không dễ, tôi muốn thử một lần.",
+"doc": [
+  {"t": "Nhìn 4 đáp án", "d": "Câu đầu là (나) hoặc (다).", "s": []},
+  {"t": "So (나) và (다)", "d": "(나) “**퇴사를** 다시 고민” — chưa biết ai nghỉ việc → cần câu trước. (다) **내일은 … 그만두는 날이다** mở đầu → **câu đầu = (다)**.", "s": [1, 2]},
+  {"t": "Dấu bám", "d": "(라) **하지만** đối lập với lời bạn bè (나) → (가) **그** 사업 chỉ lại 사업 ở (라) → cuối.", "s": [3, 0]}
+],
+"l": [
+  ["그 사업이", "CH", "chỉ lại 사업 ở (라)"],
+  ["하지만", "DL", "đối lập với lời can của bạn"],
+  ["쉽지는 않겠지만", "DL", "nhượng bộ: không dễ nhưng vẫn muốn thử"]
+],
+"s": [
+  {"c": [["(가) 그 사업이", "CN", "việc kinh doanh đó", 1], ["쉽지는 않겠지만", "VP", "chắc không dễ, nhưng", 2], ["한번", "TR", "một lần", 4], ["시도해 보고 싶다.", "VN", "(tôi) muốn thử", 3]],
+   "g": "사업이 쉽지는 않겠지만 시도해 보고 싶다", "gv": "Không dễ nhưng muốn thử",
+   "r": "Kết · Quyết tâm", "y": "Dù không dễ, muốn thử một lần.",
+   "vi": "Việc kinh doanh đó chắc không dễ, nhưng tôi muốn thử một lần.",
+   "tip": "**그 + N** = dấu bám → N phải được nhắc trước."},
+  {"c": [["(나) 친구들은", "CN", "bạn bè", 1], ["마지막까지", "TR", "đến phút cuối", 3], ["퇴사를", "TN", "việc nghỉ việc", 5], ["다시 고민해 보라고", "VP", "hãy suy nghĩ lại", 4], ["했다.", "VN", "đã bảo", 2]],
+   "g": "친구들은 … 고민해 보라고 했다", "gv": "Bạn bè bảo hãy suy nghĩ lại",
+   "r": "Phản ứng của bạn bè", "y": "Bạn khuyên nghĩ lại việc nghỉ.",
+   "vi": "Bạn bè bảo tôi đến phút cuối hãy suy nghĩ lại việc nghỉ việc.",
+   "tip": "**-(으)라고 하다** = bảo (ai) hãy … (câu mệnh lệnh gián tiếp)."},
+  {"c": [["(다) 내일은", "CN", "ngày mai", 1], ["내가 10년 동안 다니던", "DN", "mà tôi đã làm 10 năm", 5], ["회사를", "TN", "công ty", 4], ["그만두는", "DN", "nghỉ", 3], ["날이다.", "VN", "là ngày", 2]],
+   "g": "내일은 … 날이다", "gv": "Ngày mai là ngày …",
+   "r": "Câu đầu · Bối cảnh", "y": "Mai tôi nghỉ công ty đã làm 10 năm.",
+   "vi": "Ngày mai là ngày tôi nghỉ công ty mà tôi đã làm suốt 10 năm.",
+   "tip": "**-던** = đã (từng, kéo dài) … trong quá khứ."},
+  {"c": [["(라) 하지만", "TR", "nhưng", 1], ["나는", "CN", "tôi", 2], ["오랫동안 생각해 온", "DN", "đã suy nghĩ từ lâu", 5], ["사업을", "TN", "việc kinh doanh", 4], ["시작해 보려고 한다.", "VN", "định thử bắt đầu", 3]],
+   "g": "나는 사업을 시작해 보려고 한다", "gv": "Tôi định thử bắt đầu kinh doanh",
+   "r": "Quyết định", "y": "Tôi định bắt đầu kinh doanh đã ấp ủ.",
+   "vi": "Nhưng tôi định thử bắt đầu việc kinh doanh mà tôi đã suy nghĩ từ lâu.",
+   "tip": "**-아/어 오다** = (làm) suốt từ trước tới nay."}
+],
+"w": [
+  ["사업", "kinh doanh, dự án", "sự nghiệp 事業", "사업이|사업을"],
+  ["시도하다", "thử", "thí đồ 試圖", "시도해"],
+  ["퇴사", "nghỉ việc (ở công ty)", "thoái xã 退社", "퇴사를"],
+  ["고민하다", "suy nghĩ, băn khoăn", "khổ muộn 苦悶", "고민해"],
+  ["다니다", "đi làm, đi học (thường xuyên)", "", "다니던"],
+  ["그만두다", "nghỉ, thôi", "", "그만두는"],
+  ["오랫동안", "trong thời gian dài", "", "오랫동안"]
+],
+"wo": [],
+"g": [
+  {"p": "-겠지만", "m": "chắc là … nhưng", "f": "않겠지만", "d": "", "ex": []},
+  {"p": "-아/어 보고 싶다", "m": "muốn thử …", "f": "시도해 보고 싶다", "d": "", "ex": []},
+  {"p": "-(으)라고 하다", "m": "bảo hãy …", "f": "보라고 했다", "d": "", "ex": []},
+  {"p": "-던", "m": "đã (từng) …", "f": "다니던", "d": "", "ex": []},
+  {"p": "-아/어 오다", "m": "(làm) suốt đến nay", "f": "생각해 온", "d": "", "ex": []},
+  {"p": "-(으)려고 하다", "m": "định …", "f": "시작해 보려고 한다", "d": "", "ex": []}
+],
+"qa": {
+  "14": {"a": 3, "w": "(다) mai nghỉ việc → (나) bạn can → (라) **하지만** tôi muốn kinh doanh → (가) **그** 사업.", "x": ["(나) không đứng đầu.", "(나) không đứng đầu.", "(라) 하지만 phải đối lập lời bạn (나) → (나) đứng trước (라).", null]}
+},
+"hoi": [
+  {"q": "“Tôi” đã làm công ty bao lâu?", "a": "10 năm."},
+  {"q": "Bạn bè khuyên gì?", "a": "Suy nghĩ lại việc nghỉ việc."},
+  {"q": "“Tôi” định làm gì?", "a": "Bắt đầu việc kinh doanh đã ấp ủ lâu."}
+]
+}

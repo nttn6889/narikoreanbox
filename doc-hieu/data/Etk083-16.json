@@ -1,0 +1,68 @@
+{
+"e": "Etk083", "n": [16],
+"t": "Loa dạng màng phim",
+"cd": "Khoa học – công nghệ",
+"y": "Loa dạng màng phim mỏng hơn giấy, trong suốt nên dán được lên nhiều đồ vật: màn hình máy tính, khung ảnh, cả tường, trần nhà; chất liệu mềm nên gắn lên quần áo, rèm cũng dùng thoải mái.",
+"doc": [
+  {"t": "Đọc câu có ô", "d": "Mỏng, trong suốt **nên** (    ) dùng được → ô = cách dùng nhờ đặc điểm đó.", "s": [0]},
+  {"t": "Đọc qua ô · ví dụ", "d": "Màn hình, khung ảnh, **tường, trần**, quần áo, rèm → tên chung: **dán lên nhiều đồ vật khác nhau**.", "s": [1, 2]}
+],
+"l": [
+  ["얇고 투명해서", "NN", "đặc điểm → cho phép cách dùng ở ô"],
+  ["이 스피커를", "CH", "chỉ lại loa màng phim"],
+  ["뿐만 아니라", "VD", "liệt kê ví dụ → tên chung cho ô"],
+  ["또", "TH", "thêm ví dụ (quần áo, rèm)"]
+],
+"s": [
+  {"c": [["필름형 스피커는", "CN", "loa dạng màng phim", 1], ["종이보다 얇고 투명해서", "VP", "mỏng hơn giấy và trong suốt nên", 2], ["(    )", "TR", "(    )", 4], ["사용할 수 있다.", "VN", "có thể sử dụng", 3]],
+   "g": "스피커는 (    ) 사용할 수 있다", "gv": "Loa có thể dùng (    )",
+   "r": "Câu có ô · Đặc điểm", "y": "Mỏng, trong suốt → dán được lên nhiều đồ vật.",
+   "vi": "Loa dạng màng phim mỏng hơn giấy và trong suốt nên có thể (dán lên nhiều đồ vật khác nhau) để sử dụng.",
+   "tip": "Ô đứng trước 사용할 수 있다 → ô là **cách dùng**; câu sau liệt kê ví dụ."},
+  {"c": [["이 스피커를 활용하면", "VP", "nếu tận dụng loa này", 1], ["컴퓨터 화면이나 액자뿐만 아니라", "TR", "không chỉ màn hình máy tính hay khung ảnh", 2], ["벽이나 천장에서도", "TR", "mà cả trên tường hay trần nhà", 3], ["소리가 나오게 할 수 있다.", "VN", "có thể làm âm thanh phát ra", 4]],
+   "g": "소리가 나오게 할 수 있다", "gv": "Có thể làm âm thanh phát ra",
+   "r": "Ví dụ (1)", "y": "Âm thanh phát ra từ màn hình, khung ảnh, tường, trần.",
+   "vi": "Nếu tận dụng loa này, có thể làm âm thanh phát ra không chỉ từ màn hình máy tính hay khung ảnh mà cả từ tường hay trần nhà.",
+   "tip": "**A뿐만 아니라 B도** = không chỉ A mà cả B."},
+  {"c": [["또", "TR", "ngoài ra", 1], ["소재가 부드러워서", "VP", "chất liệu mềm nên", 2], ["옷이나 커튼에 달아도", "VP", "dù gắn lên quần áo hay rèm", 3], ["불편함 없이", "TR", "mà không bất tiện", 5], ["사용이 가능하다.", "VN", "vẫn có thể sử dụng", 4]],
+   "g": "사용이 가능하다", "gv": "Có thể sử dụng",
+   "r": "Ví dụ (2)", "y": "Mềm, gắn lên quần áo, rèm vẫn dùng tốt.",
+   "vi": "Ngoài ra, chất liệu mềm nên dù gắn lên quần áo hay rèm vẫn có thể sử dụng mà không bất tiện.",
+   "tip": "**-아/어도** = dù … vẫn."}
+],
+"w": [
+  ["필름형", "dạng màng phim", "hình 型", "필름형"],
+  ["스피커", "loa", "", "스피커는|스피커를"],
+  ["얇다", "mỏng", "", "얇고"],
+  ["투명하다", "trong suốt", "thấu minh 透明", "투명해서"],
+  ["활용하다", "tận dụng", "hoạt dụng 活用", "활용하면"],
+  ["화면", "màn hình", "họa diện 畫面", "화면이나"],
+  ["액자", "khung ảnh", "ngạch tử 額子", "액자뿐만"],
+  ["천장", "trần nhà", "thiên tỉnh 天障", "천장에서도"],
+  ["소재", "chất liệu", "tố tài 素材", "소재가"],
+  ["부드럽다", "mềm", "", "부드러워서"],
+  ["달다", "gắn, treo", "", "달아도"],
+  ["불편함", "sự bất tiện", "bất tiện 不便", "불편함"]
+],
+"wo": [
+  ["단독", "đơn độc, riêng lẻ", "đơn độc 單獨", "", "lựa chọn ②"],
+  ["분리하다", "tách rời", "phân ly 分離", "", "lựa chọn ②"],
+  ["붙이다", "dán", "", "", "lựa chọn ③ · đáp án"],
+  ["영역", "lĩnh vực, phạm vi", "lĩnh vực 領域", "", "lựa chọn ④"],
+  ["제한하다", "giới hạn", "chế hạn 制限", "", "lựa chọn ④"]
+],
+"g": [
+  {"p": "N보다", "m": "hơn N", "f": "종이보다", "d": "", "ex": []},
+  {"p": "A뿐만 아니라 B도", "m": "không chỉ A mà cả B", "f": "액자뿐만 아니라", "d": "", "ex": []},
+  {"p": "-게 하다", "m": "làm cho …", "f": "나오게 할 수 있다", "d": "", "ex": []},
+  {"p": "-아/어도", "m": "dù …", "f": "달아도", "d": "", "ex": []},
+  {"p": "N 없이", "m": "không có N", "f": "불편함 없이", "d": "", "ex": []}
+],
+"qa": {
+  "16": {"a": 2, "w": "Ví dụ sau ô: màn hình, khung ảnh, tường, trần, quần áo, rèm → **다양한 물건에 붙여** (dán lên nhiều đồ vật).", "x": ["Bài không nói âm lượng.", "Ngược: loa gắn vào đồ vật, không tách riêng.", null, "Ngược: dùng được ở nhiều nơi, không giới hạn."]}
+},
+"hoi": [
+  {"q": "Loa màng phim có đặc điểm gì?", "a": "Mỏng hơn giấy, trong suốt, chất liệu mềm."},
+  {"q": "Có thể gắn loa ở đâu?", "a": "Màn hình, khung ảnh, tường, trần, quần áo, rèm."}
+]
+}

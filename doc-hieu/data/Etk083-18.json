@@ -1,0 +1,68 @@
+{
+"e": "Etk083", "n": [18],
+"t": "Chim định cư Nhật Bản xuất hiện ở Hàn",
+"cd": "Khoa học – động vật",
+"y": "Hai con chim định cư chỉ sống ở Nhật được phát hiện trên một đảo nhỏ của Hàn. Chim định cư không đổi chỗ, hầu như không bay xa, nên chuyên gia đoán chúng bị bão cuốn sang Hàn và nói việc quan sát được chim của Nhật trên đảo này là trường hợp rất hiếm.",
+"doc": [
+  {"t": "Đọc câu có ô", "d": "**이 섬에서 (    ) 것이 매우 보기 드문 사례** → ô = sự việc hiếm gặp ở đảo này.", "s": [2]},
+  {"t": "Câu 1 · chìa khóa", "d": "Chim **chỉ sống ở Nhật** được **phát hiện** ở đảo Hàn → điều hiếm = **chim của Nhật được quan sát**.", "s": [0]},
+  {"t": "Câu 2 · lý do hiếm", "d": "Chim định cư hầu như không bay xa.", "s": [1]}
+],
+"l": [
+  ["살기 때문에", "NN", "lý do chim không bay xa"],
+  ["따라서", "KL", "vì vậy → chuyên gia suy đoán"],
+  ["추측된다며", "GT", "trích lời chuyên gia"]
+],
+"s": [
+  {"c": [["얼마 전", "TR", "cách đây không lâu", 1], ["일본에서만 사는", "DN", "chỉ sống ở Nhật Bản", 4], ["텃새 두 마리가", "CN", "hai con chim định cư", 2], ["한국의 작은 섬에서", "TR", "trên một hòn đảo nhỏ của Hàn Quốc", 5], ["발견됐다.", "VN", "đã được phát hiện", 3]],
+   "g": "텃새 두 마리가 발견됐다", "gv": "Hai con chim định cư được phát hiện",
+   "r": "Mở · Sự kiện", "y": "Chim chỉ sống ở Nhật xuất hiện ở đảo Hàn.",
+   "vi": "Cách đây không lâu, hai con chim định cư chỉ sống ở Nhật Bản đã được phát hiện trên một hòn đảo nhỏ của Hàn Quốc.",
+   "tip": "**N에서만** = chỉ ở N. Chữ **만** là chìa khóa: chim của Nhật."},
+  {"c": [["텃새는", "CN", "chim định cư", 1], ["자리를 옮기지 않고", "VP", "không đổi chỗ", 2], ["한 지역에서만 살기 때문에", "VP", "chỉ sống ở một vùng nên", 3], ["장거리 이동을", "TN", "di chuyển đường dài", 5], ["거의 하지 않는다.", "VN", "hầu như không", 4]],
+   "g": "텃새는 이동을 거의 하지 않는다", "gv": "Chim định cư hầu như không di chuyển",
+   "r": "Giải thích", "y": "Chim định cư hầu như không bay xa.",
+   "vi": "Chim định cư không đổi chỗ, chỉ sống ở một vùng nên hầu như không di chuyển đường dài.",
+   "tip": "**텃새** (chim định cư) ↔ **철새** (chim di cư)."},
+  {"c": [["따라서", "TR", "vì vậy", 1], ["전문가는", "CN", "chuyên gia", 2], ["이번에 발견된 텃새가 태풍에 휩쓸려 한국에 온 것으로 추측된다며", "VP", "cho rằng chim lần này có lẽ bị bão cuốn sang Hàn, và", 3], ["이 섬에서", "TR", "ở đảo này", 7], ["(    )", "DN", "(    )", 6], ["것이", "CN", "việc", 5], ["매우 보기 드문 사례라고", "VP", "là trường hợp rất hiếm thấy", 8], ["언급했다.", "VN", "đã nói", 4]],
+   "g": "전문가는 … 것이 사례라고 언급했다", "gv": "Chuyên gia nói việc … là trường hợp hiếm",
+   "r": "Câu có ô · Nhận định chuyên gia", "y": "Bão cuốn sang; quan sát được chim Nhật ở đây là hiếm.",
+   "vi": "Vì vậy chuyên gia cho rằng chim lần này có lẽ bị bão cuốn sang Hàn, và nói việc (quan sát được chim của Nhật) ở đảo này là trường hợp rất hiếm thấy.",
+   "tip": "**-다며** = vừa nói rằng … vừa. **보기 드물다** = hiếm thấy."}
+],
+"w": [
+  ["텃새", "chim định cư (không di cư)", "", "텃새 두 마리가|텃새는|텃새가"],
+  ["마리", "con (đếm động vật)", "", "마리가"],
+  ["섬", "đảo", "", "섬에서"],
+  ["발견되다", "được phát hiện", "phát kiến 發見", "발견됐다|발견된"],
+  ["옮기다", "dời, chuyển", "", "옮기지"],
+  ["지역", "vùng, khu vực", "địa vực 地域", "지역에서만"],
+  ["장거리", "đường dài", "trường cự ly 長距離", "장거리"],
+  ["이동", "di chuyển", "di động 移動", "이동을"],
+  ["태풍", "bão", "thái phong 颱風", "태풍에"],
+  ["휩쓸리다", "bị cuốn đi", "", "휩쓸려"],
+  ["추측되다", "được suy đoán", "suy trắc 推測", "추측된다며"],
+  ["드물다", "hiếm", "", "드문"],
+  ["사례", "trường hợp, ví dụ", "sự lệ 事例", "사례라고"],
+  ["언급하다", "đề cập, nói", "ngôn cập 言及", "언급했다"]
+],
+"wo": [
+  ["관찰되다", "được quan sát", "quan sát 觀察", "", "lựa chọn ③ · đáp án"],
+  ["사라지다", "biến mất", "", "", "lựa chọn ②"],
+  ["부상당하다", "bị thương", "phụ thương 負傷", "", "lựa chọn ④"]
+],
+"g": [
+  {"p": "N에서만", "m": "chỉ ở N", "f": "일본에서만|지역에서만", "d": "", "ex": []},
+  {"p": "-기 때문에", "m": "vì …", "f": "살기 때문에", "d": "", "ex": []},
+  {"p": "-(으)ㄴ 것으로 추측되다", "m": "được đoán là đã …", "f": "온 것으로 추측된다며", "d": "", "ex": []},
+  {"p": "-다며", "m": "nói rằng … và", "f": "추측된다며", "d": "-다고 하며.", "ex": []},
+  {"p": "-다고 언급하다", "m": "nói/đề cập rằng", "f": "사례라고 언급했다", "d": "", "ex": []}
+],
+"qa": {
+  "18": {"a": 2, "w": "Chim **chỉ sống ở Nhật** xuất hiện ở đảo Hàn → điều hiếm: **일본의 텃새가 관찰된** 것.", "x": ["Bài không nói chim ở đảo giảm.", "Bài không nói chim Hàn biến mất.", null, "Bài nói bị bão cuốn, không nói bị thương, được bảo vệ."]}
+},
+"hoi": [
+  {"q": "Chim định cư khác chim di cư thế nào?", "a": "Không đổi chỗ, chỉ sống một vùng, hầu như không bay xa."},
+  {"q": "Vì sao chim Nhật đến Hàn?", "a": "Có lẽ bị bão cuốn sang."}
+]
+}

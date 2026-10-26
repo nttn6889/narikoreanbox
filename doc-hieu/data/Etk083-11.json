@@ -1,0 +1,63 @@
+{
+"e": "Etk083", "n": [11],
+"t": "Giải Andersen cho tác giả sách tranh",
+"cd": "Văn hóa – nghệ thuật",
+"y": "Tác giả sách tranh Lee Su-ji là người Hàn đầu tiên nhận giải Andersen (“Nobel sách thiếu nhi”). Giải lập năm 1956, xét mọi tác phẩm của tác giả; bà được khen là thể hiện tốt thế giới trẻ em mơ ước, tưởng tượng.",
+"doc": [
+  {"t": "Đọc 4 lựa chọn trước", "d": "Từ khóa: **작년에 만들어졌다** · **한국인 중 처음** · **직접 경험한 이야기** · **한 편을 골라 제출**.", "s": []},
+  {"t": "Câu 1", "d": "**한국인 최초로** = người Hàn đầu tiên → ② (최초 = 처음).", "s": [0]},
+  {"t": "Câu 2–3", "d": "Lập **1956** (① sai); xét **모든 작품** (④ ngược); vẽ thế giới trẻ **tưởng tượng** (③ không nói).", "s": [1, 2]}
+],
+"l": [
+  ["이 상은", "CH", "chỉ lại giải Andersen"],
+  ["이 작가는", "CH", "chỉ lại Lee Su-ji"]
+],
+"s": [
+  {"c": [["그림책 작가 이수지 씨가", "CN", "tác giả sách tranh Lee Su-ji", 1], ["한국인 최초로", "TR", "là người Hàn đầu tiên", 2], ["어린이책 노벨상이라는", "DN", "được gọi là giải Nobel của sách thiếu nhi", 5], ["안데르센 상을", "TN", "giải Andersen", 4], ["받아", "VP", "nhận", 3], ["주목받고 있다.", "VN", "và đang được chú ý", 6]],
+   "g": "이수지 씨가 상을 받아 주목받고 있다", "gv": "Lee Su-ji nhận giải nên được chú ý",
+   "r": "Mở · Sự kiện", "y": "Người Hàn đầu tiên nhận giải Andersen.",
+   "vi": "Tác giả sách tranh Lee Su-ji là người Hàn Quốc đầu tiên nhận giải Andersen — được gọi là giải Nobel của sách thiếu nhi — và đang được chú ý.",
+   "tip": "**N(이)라는 N** = N được gọi là … **최초로** = đầu tiên."},
+  {"c": [["이 상은", "CN", "giải này", 1], ["1956년에 만들어진 상으로", "VP", "là giải lập năm 1956,", 2], ["작가가 발표한 모든 작품을", "TN", "toàn bộ tác phẩm tác giả đã công bố", 5], ["대상으로", "TR", "làm đối tượng", 4], ["심사한다.", "VN", "xét", 3]],
+   "g": "이 상은 … 상으로 … 심사한다", "gv": "Giải này là giải …, xét …",
+   "r": "Thông tin về giải", "y": "Giải từ 1956, xét mọi tác phẩm.",
+   "vi": "Giải này được lập năm 1956, xét toàn bộ các tác phẩm mà tác giả đã công bố.",
+   "tip": "**N(으)로** sau câu định nghĩa = “là N, và …” (nối thêm thông tin)."},
+  {"c": [["이 작가는", "CN", "tác giả này", 1], ["어린이들이 꿈꾸고 상상하는", "DN", "trẻ em mơ ước và tưởng tượng", 5], ["세계를", "TN", "thế giới", 4], ["그림으로 잘 표현해 낸다는", "DN", "thể hiện tốt bằng tranh", 3], ["평을 받았다.", "VN", "được nhận xét là", 2]],
+   "g": "이 작가는 … 평을 받았다", "gv": "Tác giả được nhận xét …",
+   "r": "Đánh giá", "y": "Thể hiện tốt thế giới tưởng tượng của trẻ.",
+   "vi": "Tác giả này được nhận xét là thể hiện tốt bằng tranh thế giới mà trẻ em mơ ước và tưởng tượng.",
+   "tip": "**-다는 평을 받다** = được đánh giá là …"}
+],
+"w": [
+  ["그림책", "sách tranh", "", "그림책"],
+  ["작가", "tác giả", "tác gia 作家", "작가 이수지|작가가|이 작가는"],
+  ["최초", "đầu tiên", "tối sơ 最初", "최초로"],
+  ["주목받다", "được chú ý", "chú mục 注目", "주목받고"],
+  ["발표하다", "công bố", "phát biểu 發表", "발표한"],
+  ["작품", "tác phẩm", "tác phẩm 作品", "작품을"],
+  ["대상", "đối tượng", "đối tượng 對象", "대상으로"],
+  ["심사하다", "thẩm định, xét", "thẩm tra 審査", "심사한다"],
+  ["꿈꾸다", "mơ ước", "", "꿈꾸고"],
+  ["상상하다", "tưởng tượng", "tưởng tượng 想像", "상상하는"],
+  ["표현하다", "thể hiện", "biểu hiện 表現", "표현해"],
+  ["평", "lời đánh giá, nhận xét", "bình 評", "평을"]
+],
+"wo": [
+  ["제출하다", "nộp", "đề xuất 提出", "", "lựa chọn ④"]
+],
+"g": [
+  {"p": "N(이)라는 N", "m": "N gọi là …", "f": "노벨상이라는", "d": "", "ex": []},
+  {"p": "N(으)로 (최초로)", "m": "(là) …", "f": "최초로", "d": "", "ex": []},
+  {"p": "N을/를 대상으로", "m": "lấy N làm đối tượng", "f": "대상으로", "d": "", "ex": []},
+  {"p": "-아/어 내다", "m": "(làm) được, ra", "f": "표현해 낸다는", "d": "", "ex": []},
+  {"p": "-다는 평을 받다", "m": "được đánh giá là …", "f": "낸다는 평을 받았다", "d": "", "ex": []}
+],
+"qa": {
+  "11": {"a": 1, "w": "**한국인 최초로** = người Hàn đầu tiên → ②.", "x": ["Giải lập năm **1956**.", null, "Bài nói thế giới trẻ em **tưởng tượng**, không nói kinh nghiệm bản thân.", "Ngược: xét **모든 작품** (mọi tác phẩm)."]}
+},
+"hoi": [
+  {"q": "Giải Andersen được gọi là gì?", "a": "Giải Nobel của sách thiếu nhi."},
+  {"q": "Giải xét những tác phẩm nào?", "a": "Toàn bộ tác phẩm tác giả đã công bố."}
+]
+}

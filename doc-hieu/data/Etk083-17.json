@@ -1,0 +1,74 @@
+{
+"e": "Etk083", "n": [17],
+"t": "Thiết kế hộ chiếu",
+"cd": "Văn hóa",
+"y": "Hộ chiếu vừa là giấy tờ tùy thân quốc tế vừa thể hiện bản sắc, văn hóa của một nước, nên nhiều nước quyết định thiết kế hộ chiếu rất thận trọng: màu bìa theo màu biểu tượng quốc gia, thêm hoa văn biểu tượng, có loại chiếu đèn thì hiện di sản văn hóa rực rỡ.",
+"doc": [
+  {"t": "Đọc câu có ô", "d": "**그래서** + các nước quyết định **여권의 (    )** → ô là khía cạnh của hộ chiếu liên quan tới “thể hiện bản sắc”.", "s": [1]},
+  {"t": "Câu trước ô", "d": "Hộ chiếu **드러내기도 한다** bản sắc, văn hóa → lý do của 그래서.", "s": [0]},
+  {"t": "Đọc qua ô · ví dụ", "d": "Màu bìa, hoa văn, hình văn hóa hiện dưới đèn → tất cả là **thiết kế** → quyết định thiết kế **thận trọng**.", "s": [2, 3]}
+],
+"l": [
+  ["뿐만 아니라", "TH", "không chỉ giấy tờ mà còn thể hiện bản sắc"],
+  ["그래서", "NN", "vì thể hiện bản sắc → ô"],
+  ["넣기도 한다", "VD", "ví dụ về thiết kế"],
+  ["또한", "TH", "thêm ví dụ"]
+],
+"s": [
+  {"c": [["여권은", "CN", "hộ chiếu", 1], ["국제 신분증으로", "TR", "như giấy tờ tùy thân quốc tế", 3], ["통할 뿐만 아니라", "VP", "không chỉ được dùng", 2], ["한 국가의 정체성과 문화를", "TN", "bản sắc và văn hóa của một quốc gia", 5], ["드러내기도 한다.", "VN", "mà còn thể hiện", 4]],
+   "g": "여권은 통할 뿐만 아니라 드러내기도 한다", "gv": "Hộ chiếu không chỉ … mà còn thể hiện …",
+   "r": "Mở · Hai vai trò", "y": "Hộ chiếu vừa là giấy tờ, vừa thể hiện bản sắc.",
+   "vi": "Hộ chiếu không chỉ được dùng như giấy tờ tùy thân quốc tế mà còn thể hiện bản sắc và văn hóa của một quốc gia.",
+   "tip": "**N(으)로 통하다** = được công nhận / dùng như N."},
+  {"c": [["그래서", "TR", "vì vậy", 1], ["많은 국가들은", "CN", "nhiều quốc gia", 2], ["여권의", "DN", "của hộ chiếu", 5], ["(    )", "TN", "(    )", 4], ["결정한다.", "VN", "quyết định", 3]],
+   "g": "국가들은 여권의 (    ) 결정한다", "gv": "Các nước quyết định (    ) của hộ chiếu",
+   "r": "Câu có ô", "y": "Các nước quyết định (thiết kế) hộ chiếu (thận trọng).",
+   "vi": "Vì vậy nhiều quốc gia quyết định (thiết kế) của hộ chiếu (một cách thận trọng).",
+   "tip": "Ô gồm **danh từ + trạng từ** (… 을/를 …하게) → kiểm tra cả hai phần với ví dụ sau."},
+  {"c": [["여권 표지의 색깔을", "TN", "màu bìa hộ chiếu", 2], ["국가의 상징색으로", "TR", "bằng màu biểu tượng của quốc gia", 3], ["표현하거나", "VP", "thể hiện, hoặc", 1], ["국가를 상징하는", "DN", "tượng trưng cho quốc gia", 6], ["문양을", "TN", "hoa văn", 5], ["넣기도 한다.", "VN", "đưa vào", 4]],
+   "g": "색깔을 표현하거나 문양을 넣기도 한다", "gv": "Thể hiện màu hoặc đưa hoa văn vào",
+   "r": "Ví dụ (1)", "y": "Màu bìa = màu quốc gia, thêm hoa văn biểu tượng.",
+   "vi": "Họ thể hiện màu bìa hộ chiếu bằng màu biểu tượng của quốc gia, hoặc đưa vào hoa văn tượng trưng cho quốc gia.",
+   "tip": "**-거나 -기도 하다** = hoặc …, cũng có khi …"},
+  {"c": [["또한", "TR", "ngoài ra", 1], ["여권에 불빛이 비치면", "VP", "khi ánh đèn chiếu vào hộ chiếu", 4], ["주요 문화재가 화려하게 보이도록", "VP", "để di sản văn hóa tiêu biểu hiện lên rực rỡ", 5], ["한 것도", "CN", "loại làm", 3], ["있다.", "VN", "cũng có", 2]],
+   "g": "… 한 것도 있다", "gv": "Cũng có loại làm …",
+   "r": "Ví dụ (2)", "y": "Có loại chiếu đèn thì hiện di sản văn hóa.",
+   "vi": "Ngoài ra, cũng có loại làm cho khi ánh đèn chiếu vào hộ chiếu thì di sản văn hóa tiêu biểu hiện lên rực rỡ.",
+   "tip": "**-도록 하다** = làm cho (để) …"}
+],
+"w": [
+  ["여권", "hộ chiếu", "lữ khoán 旅券", "여권은|여권의|여권 표지의|여권에"],
+  ["신분증", "giấy tờ tùy thân", "thân phận chứng 身分證", "신분증으로"],
+  ["통하다", "được chấp nhận, thông dụng", "thông 通", "통할"],
+  ["정체성", "bản sắc", "chính thể tính 正體性", "정체성과"],
+  ["드러내다", "thể hiện, bộc lộ", "", "드러내기도"],
+  ["결정하다", "quyết định", "quyết định 決定", "결정한다"],
+  ["표지", "bìa", "biểu chỉ 表紙", "표지의"],
+  ["상징색", "màu biểu tượng", "tượng trưng sắc 象徵色", "상징색으로"],
+  ["상징하다", "tượng trưng", "tượng trưng 象徵", "상징하는"],
+  ["문양", "hoa văn", "văn dạng 文樣", "문양을"],
+  ["불빛", "ánh đèn", "", "불빛이"],
+  ["비치다", "chiếu vào", "", "비치면"],
+  ["문화재", "di sản văn hóa", "văn hóa tài 文化財", "문화재가"],
+  ["화려하다", "rực rỡ, lộng lẫy", "hoa lệ 華麗", "화려하게"]
+],
+"wo": [
+  ["두께", "độ dày", "", "", "lựa chọn ①"],
+  ["자율적", "tự chủ, tự do", "tự luật đích 自律的", "", "lựa chọn ①"],
+  ["신중하다", "thận trọng", "thận trọng 愼重", "", "lựa chọn ② · đáp án"],
+  ["발급", "cấp (giấy tờ)", "phát cấp 發給", "", "lựa chọn ④"]
+],
+"g": [
+  {"p": "-(으)ㄹ 뿐만 아니라", "m": "không chỉ … mà còn", "f": "통할 뿐만 아니라", "d": "", "ex": []},
+  {"p": "-기도 하다", "m": "cũng / còn …", "f": "드러내기도 한다|넣기도 한다", "d": "", "ex": []},
+  {"p": "-거나", "m": "hoặc", "f": "표현하거나", "d": "", "ex": []},
+  {"p": "-도록 하다", "m": "làm cho …", "f": "보이도록 한", "d": "", "ex": []}
+],
+"qa": {
+  "17": {"a": 1, "w": "Ví dụ sau ô (màu bìa, hoa văn, hình di sản) đều là **thiết kế**; vì thể hiện bản sắc nên làm **thận trọng** → **디자인을 신중하게**.", "x": ["Bài không nói độ dày.", null, "Lấy ý 국제 신분증 nhưng ví dụ sau ô không nói phạm vi dùng.", "Bài không nói cách cấp."]}
+},
+"hoi": [
+  {"q": "Hộ chiếu có hai vai trò gì?", "a": "Giấy tờ tùy thân quốc tế; thể hiện bản sắc, văn hóa quốc gia."},
+  {"q": "Nêu ví dụ về thiết kế hộ chiếu.", "a": "Màu bìa theo màu quốc gia, hoa văn biểu tượng, hình di sản hiện dưới đèn."}
+]
+}

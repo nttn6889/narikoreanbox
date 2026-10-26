@@ -1,0 +1,72 @@
+{
+"e": "Etk083", "n": [12],
+"t": "Động đất 3,2 độ ở Inju",
+"cd": "Xã hội – thời sự",
+"y": "6 giờ 22 sáng ngày 17, Inju có động đất 3,2 độ — lớn nhất năm nay ở đây. Nhiều người dân cảm nhận và báo cho tổng đài 119; không có thiệt hại lớn. Cục khí tượng dự báo trong tuần sẽ còn vài trận khoảng 2,0 độ.",
+"doc": [
+  {"t": "Đọc 4 lựa chọn trước", "d": "Từ khóa: **늦은 밤** · **시민 – 신고** · **큰 피해 – 많다** · **더 이상 … 않을 것**.", "s": []},
+  {"t": "Câu 1 · thời gian", "d": "**오전 6시 22분** → ① sai.", "s": [0]},
+  {"t": "Câu 3 · người báo", "d": "**지진을 느낀 시민들의 신고가 … 접수됐다** → ② đúng.", "s": [2]},
+  {"t": "Câu 4–5", "d": "**큰 피해는 없는 것으로** → ③ sai; **더 발생할 것으로** → ④ sai.", "s": [3, 4]}
+],
+"l": [
+  ["이날 지진은", "CH", "chỉ lại trận động đất"],
+  ["그러나", "DL", "nhiều người báo nhưng không thiệt hại lớn"],
+  ["보고 있다", "GT", "dự báo của cơ quan"]
+],
+"s": [
+  {"c": [["17일 오전 6시 22분", "TR", "6 giờ 22 phút sáng ngày 17", 1], ["인주시에서", "TR", "ở thành phố Inju", 2], ["규모 3.2의", "DN", "cường độ 3,2", 4], ["지진이", "CN", "trận động đất", 3], ["발생했다.", "VN", "đã xảy ra", 5]],
+   "g": "지진이 발생했다", "gv": "Động đất xảy ra",
+   "r": "Mở · Sự kiện", "y": "Sáng 17, động đất 3,2 độ ở Inju.",
+   "vi": "6 giờ 22 phút sáng ngày 17, ở thành phố Inju đã xảy ra trận động đất cường độ 3,2.",
+   "tip": "Tin ngắn: câu đầu = khi nào, ở đâu, chuyện gì. **오전** = buổi sáng."},
+  {"c": [["이날", "DN", "hôm đó", 2], ["지진은", "CN", "trận động đất", 1], ["올해 인주시에서 발생한", "DN", "xảy ra ở Inju năm nay", 5], ["지진 중", "TR", "trong số các trận động đất", 4], ["가장 큰 규모다.", "VN", "có cường độ lớn nhất", 3]],
+   "g": "지진은 가장 큰 규모다", "gv": "Động đất có cường độ lớn nhất",
+   "r": "Thông tin thêm", "y": "Lớn nhất năm nay ở Inju.",
+   "vi": "Trận động đất hôm đó có cường độ lớn nhất trong các trận xảy ra ở Inju năm nay.",
+   "tip": "**N 중 가장 …** = … nhất trong số N."},
+  {"c": [["119 상황실에는", "TR", "ở phòng tình huống 119", 4], ["지진을 느낀", "DN", "đã cảm nhận động đất", 3], ["시민들의 신고가", "CN", "tin báo của người dân", 2], ["여러 건", "TR", "nhiều cuộc", 1], ["접수됐다.", "VN", "đã được tiếp nhận", 5]],
+   "g": "신고가 접수됐다", "gv": "Tin báo được tiếp nhận",
+   "r": "Phản ứng của người dân", "y": "Nhiều người cảm nhận và gọi báo 119.",
+   "vi": "Nhiều cuộc báo tin của người dân cảm nhận được động đất đã được phòng tình huống 119 tiếp nhận.",
+   "tip": "Bị động **접수되다** → tiếng Việt có thể đổi chủ động: “phòng 119 nhận được nhiều cuộc gọi báo”."},
+  {"c": [["그러나", "TR", "tuy nhiên", 1], ["이번 지진으로 입은", "DN", "do trận động đất lần này gây ra", 4], ["큰 피해는", "CN", "thiệt hại lớn", 3], ["없는 것으로 조사됐다.", "VN", "được điều tra là không có", 2]],
+   "g": "피해는 없는 것으로 조사됐다", "gv": "Điều tra cho thấy không có thiệt hại",
+   "r": "Kết quả", "y": "Không có thiệt hại lớn.",
+   "vi": "Tuy nhiên, điều tra cho thấy không có thiệt hại lớn do trận động đất lần này.",
+   "tip": "**-는 것으로 조사되다** = qua điều tra cho thấy là …"},
+  {"c": [["기상청은", "CN", "Cục khí tượng", 1], ["이번 주 내로", "TR", "trong tuần này", 3], ["규모 2.0 정도의", "DN", "cường độ khoảng 2,0", 5], ["지진이", "CN", "động đất", 4], ["몇 번 더", "TR", "thêm vài lần", 6], ["발생할 것으로 보고 있다.", "VN", "nhận định sẽ xảy ra", 2]],
+   "g": "기상청은 … 발생할 것으로 보고 있다", "gv": "Cục khí tượng nhận định sẽ xảy ra",
+   "r": "Dự báo", "y": "Trong tuần còn vài trận nhỏ.",
+   "vi": "Cục khí tượng nhận định trong tuần này sẽ xảy ra thêm vài trận động đất cường độ khoảng 2,0.",
+   "tip": "**-(으)ㄹ 것으로 보다** = nhận định là sẽ …"}
+],
+"w": [
+  ["오전", "buổi sáng", "ngọ tiền 午前", "오전"],
+  ["규모", "quy mô, cường độ", "quy mô 規模", "규모 3.2의|큰 규모다|규모 2.0"],
+  ["지진", "động đất", "địa chấn 地震", "지진이|지진은|지진 중|지진을|지진으로"],
+  ["발생하다", "xảy ra", "phát sinh 發生", "발생했다|발생한|발생할"],
+  ["상황실", "phòng tình huống (trực)", "trạng huống thất 狀況室", "상황실에는"],
+  ["느끼다", "cảm nhận", "", "느낀"],
+  ["신고", "khai báo, báo tin", "thân cáo 申告", "신고가"],
+  ["접수되다", "được tiếp nhận", "tiếp thu 接受", "접수됐다"],
+  ["피해를 입다", "chịu thiệt hại", "bị hại 被害", "입은|큰 피해는"],
+  ["조사되다", "được điều tra", "điều tra 調査", "조사됐다"],
+  ["기상청", "Cục khí tượng", "khí tượng sảnh 氣象廳", "기상청은"],
+  ["내로", "trong vòng", "nội 內", "내로"]
+],
+"wo": [],
+"g": [
+  {"p": "N 중 가장", "m": "… nhất trong N", "f": "지진 중 가장", "d": "", "ex": []},
+  {"p": "-는 것으로 조사되다", "m": "điều tra cho thấy …", "f": "없는 것으로 조사됐다", "d": "", "ex": []},
+  {"p": "-(으)ㄹ 것으로 보다", "m": "nhận định là sẽ …", "f": "발생할 것으로 보고", "d": "", "ex": []}
+],
+"qa": {
+  "12": {"a": 1, "w": "**지진을 느낀 시민들의 신고가 여러 건 접수됐다** → ②.", "x": ["Sai giờ: **오전 6시** (sáng sớm).", null, "Ngược: **큰 피해는 없는 것으로** 조사됐다.", "Ngược: còn **몇 번 더 발생할** 것으로."]}
+},
+"hoi": [
+  {"q": "Động đất xảy ra lúc mấy giờ?", "a": "6 giờ 22 sáng."},
+  {"q": "Có thiệt hại lớn không?", "a": "Không."},
+  {"q": "Cục khí tượng dự báo gì?", "a": "Trong tuần sẽ có thêm vài trận khoảng 2,0 độ."}
+]
+}

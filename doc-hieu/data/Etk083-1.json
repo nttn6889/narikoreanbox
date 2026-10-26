@@ -1,0 +1,38 @@
+{
+"e": "Etk083", "n": [1],
+"t": "Đọc nhiều sách thì tích được kiến thức",
+"cd": "Giáo dục",
+"y": "Điều kiện → kết quả: đọc nhiều sách thì có thể tích lũy kiến thức.",
+"doc": [
+  {"t": "Đọc 4 lựa chọn", "d": "Cùng 읽다: -(으)면 (nếu) · -든지 (hoặc… hoặc) · -지만 (nhưng) · -거나 (hoặc).", "s": []},
+  {"t": "Xét quan hệ hai vế", "d": "Đọc nhiều sách → **có thể** tích kiến thức (-(으)ㄹ 수 있다) = điều kiện → kết quả → **-(으)면**.", "s": [0]}
+],
+"l": [
+  ["쌓을 수 있다", "KL", "kết quả có thể đạt → vế trước là điều kiện"]
+],
+"s": [
+  {"c": [["책을", "TN", "sách", 3], ["많이", "TR", "nhiều", 2], ["(    )", "VP", "nếu đọc", 1], ["지식을", "TN", "kiến thức", 5], ["쌓을 수 있다.", "VN", "có thể tích lũy", 4]],
+   "g": "책을 읽으면 지식을 쌓을 수 있다", "gv": "Đọc sách thì có thể tích lũy kiến thức",
+   "r": "Câu có ô", "y": "Đọc nhiều sách thì tích lũy được kiến thức.",
+   "vi": "Nếu đọc nhiều sách thì có thể tích lũy kiến thức.",
+   "tip": "Vế sau là **khả năng / kết quả** (-(으)ㄹ 수 있다) → vế trước thường là điều kiện **-(으)면**."}
+],
+"w": [
+  ["지식", "kiến thức", "tri thức 知識", "지식을"],
+  ["쌓다", "tích lũy, chồng chất", "", "쌓을"]
+],
+"wo": [
+  ["-든지", "hoặc … hoặc, dù … hay", "", "", "lựa chọn ②"],
+  ["-거나", "hoặc", "", "", "lựa chọn ④"]
+],
+"g": [
+  {"p": "-(으)면", "m": "nếu … thì", "f": "", "d": "Điều kiện → kết quả.", "ex": [["열심히 공부하면 합격할 수 있다.", "Học chăm thì có thể đỗ."]]},
+  {"p": "-(으)ㄹ 수 있다", "m": "có thể", "f": "쌓을 수 있다", "d": "", "ex": []}
+],
+"qa": {
+  "1": {"a": 0, "w": "Điều kiện → kết quả: **읽으면** (nếu đọc) … 쌓을 수 있다.", "x": [null, "-든지 = hoặc / dù … — cần hai lựa chọn.", "-지만 = nhưng — hai vế không đối lập.", "-거나 = hoặc — câu không liệt kê lựa chọn."]}
+},
+"hoi": [
+  {"q": "Muốn tích lũy kiến thức thì làm gì?", "a": "Đọc nhiều sách."}
+]
+}

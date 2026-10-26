@@ -1,0 +1,63 @@
+{
+"e": "Etk083", "n": [15],
+"t": "Đồng hồ cát",
+"cd": "Khoa học – đời sống",
+"y": "Đồng hồ cát dùng cát để đo một khoảng thời gian nhất định. Điều chỉnh lượng cát thì làm được đồng hồ nhiều đơn vị thời gian; ngoài ra còn điều chỉnh qua kích thước lỗ — lỗ càng nhỏ, đơn vị thời gian càng lớn.",
+"doc": [
+  {"t": "Nhìn 4 đáp án", "d": "Câu đầu là (가) hoặc (라).", "s": []},
+  {"t": "So (가) và (라)", "d": "(가) định nghĩa đồng hồ cát → đứng một mình được → **câu đầu = (가)**. (라) nói chi tiết cách làm, cần biết đồng hồ cát là gì trước.", "s": [0, 3]},
+  {"t": "Dấu bám", "d": "(나) **또한 … 구멍 크기를 통해서도** = cách thứ hai → cách thứ nhất (라) lượng cát trước. (다) chi tiết về **구멍 크기** → sau (나).", "s": [1, 2]}
+],
+"l": [
+  ["또한", "TH", "thêm cách thứ hai → sau cách thứ nhất"],
+  ["통해서도", "TH", "-도: cũng (ngoài cách đã nói)"],
+  ["작을수록", "GT", "càng … càng: chi tiết của 구멍 크기"]
+],
+"s": [
+  {"c": [["(가) 모래시계는", "CN", "đồng hồ cát", 1], ["모래를 이용해", "TR", "dùng cát", 4], ["일정 단위의 시간을 재는", "DN", "đo thời gian theo đơn vị nhất định", 3], ["기구이다.", "VN", "là dụng cụ", 2]],
+   "g": "모래시계는 기구이다", "gv": "Đồng hồ cát là dụng cụ",
+   "r": "Câu đầu · Định nghĩa", "y": "Đồng hồ cát đo thời gian bằng cát.",
+   "vi": "Đồng hồ cát là dụng cụ đo thời gian theo một đơn vị nhất định bằng cách dùng cát.",
+   "tip": "Câu định nghĩa có chủ ngữ đầy đủ (N은 … 이다) → hợp làm câu đầu."},
+  {"c": [["(나) 또한", "TR", "ngoài ra", 1], ["모래시계의 구멍 크기를 통해서도", "TR", "thông qua cả kích thước lỗ của đồng hồ cát", 3], ["시간 단위를", "TN", "đơn vị thời gian", 4], ["조절한다.", "VN", "(người ta) còn điều chỉnh", 2]],
+   "g": "시간 단위를 조절한다", "gv": "Điều chỉnh đơn vị thời gian",
+   "r": "Cách thứ hai", "y": "Còn điều chỉnh qua kích thước lỗ.",
+   "vi": "Ngoài ra, người ta còn điều chỉnh đơn vị thời gian thông qua kích thước lỗ của đồng hồ cát.",
+   "tip": "**또한 … -도** = ngoài ra còn … → phải có cách thứ nhất đứng trước."},
+  {"c": [["(다) 구멍 크기가", "CN", "kích thước lỗ", 1], ["작을수록", "VP", "càng nhỏ thì", 2], ["큰 시간 단위의", "DN", "có đơn vị thời gian lớn", 5], ["모래시계를", "TN", "đồng hồ cát", 4], ["만들 수 있다.", "VN", "có thể làm", 3]],
+   "g": "구멍 크기가 작을수록 모래시계를 만들 수 있다", "gv": "Lỗ càng nhỏ, làm được đồng hồ …",
+   "r": "Chi tiết cách thứ hai", "y": "Lỗ càng nhỏ, đơn vị thời gian càng lớn.",
+   "vi": "Kích thước lỗ càng nhỏ thì càng làm được đồng hồ cát có đơn vị thời gian lớn.",
+   "tip": "**-(으)ㄹ수록** = càng … càng."},
+  {"c": [["(라) 모래의 양을 조절하면", "VP", "nếu điều chỉnh lượng cát", 1], ["다양한 시간 단위의", "DN", "với nhiều đơn vị thời gian", 4], ["모래시계를", "TN", "đồng hồ cát", 3], ["만들 수 있다.", "VN", "có thể làm", 2]],
+   "g": "모래의 양을 조절하면 모래시계를 만들 수 있다", "gv": "Điều chỉnh lượng cát thì làm được đồng hồ …",
+   "r": "Cách thứ nhất", "y": "Chỉnh lượng cát → nhiều đơn vị thời gian.",
+   "vi": "Nếu điều chỉnh lượng cát thì có thể làm được đồng hồ cát với nhiều đơn vị thời gian khác nhau.",
+   "tip": "Câu nêu cách thứ nhất → đứng trước câu “또한 … -도”."}
+],
+"w": [
+  ["모래시계", "đồng hồ cát", "thời kế 時計", "모래시계는|모래시계의|모래시계를"],
+  ["이용하다", "sử dụng", "lợi dụng 利用", "이용해"],
+  ["일정", "nhất định", "nhất định 一定", "일정"],
+  ["단위", "đơn vị", "đơn vị 單位", "단위의|단위를"],
+  ["재다", "đo", "", "재는"],
+  ["기구", "dụng cụ", "khí cụ 器具", "기구이다"],
+  ["구멍", "lỗ", "", "구멍 크기를|구멍 크기가"],
+  ["조절하다", "điều chỉnh", "điều tiết 調節", "조절한다|조절하면"],
+  ["양", "lượng", "lượng 量", "양을"]
+],
+"wo": [],
+"g": [
+  {"p": "N을/를 이용해", "m": "dùng N", "f": "모래를 이용해", "d": "", "ex": []},
+  {"p": "N을/를 통해서도", "m": "cũng thông qua N", "f": "통해서도", "d": "", "ex": []},
+  {"p": "-(으)ㄹ수록", "m": "càng … càng", "f": "작을수록", "d": "", "ex": [["많이 읽을수록 잘 쓴다.", "Càng đọc nhiều càng viết hay."]]},
+  {"p": "-(으)면 -(으)ㄹ 수 있다", "m": "nếu … thì có thể", "f": "조절하면", "d": "", "ex": []}
+],
+"qa": {
+  "15": {"a": 1, "w": "(가) định nghĩa → (라) cách 1: lượng cát → (나) **또한** cách 2: lỗ → (다) chi tiết lỗ.", "x": ["(다) nói “구멍” trước khi (나) giới thiệu cách dùng lỗ.", null, "(라) không đứng đầu; (가) định nghĩa không đứng cuối.", "(라) không đứng đầu."]}
+},
+"hoi": [
+  {"q": "Có mấy cách điều chỉnh đơn vị thời gian?", "a": "Hai: lượng cát và kích thước lỗ."},
+  {"q": "Lỗ nhỏ thì đơn vị thời gian thế nào?", "a": "Lớn hơn."}
+]
+}

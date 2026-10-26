@@ -1,0 +1,37 @@
+{
+"e": "Etk083", "n": [4],
+"t": "Không khí ngôi nhà tùy cách trang trí",
+"cd": "Đời sống",
+"y": "Không khí của ngôi nhà tùy thuộc vào cách trang trí.",
+"doc": [
+  {"t": "Gọi tên phần gạch chân", "d": "**꾸미기 나름이다** = -기 나름이다 → **tùy vào**.", "s": [0]},
+  {"t": "Gọi tên 4 lựa chọn", "d": "-(으)ㄹ 만하다 (đáng) · -기가 쉽다 (dễ) · -(으)ㄹ 수도 있다 (cũng có thể) · **-기에 달려 있다 (phụ thuộc vào)**. Bẫy hình thức: 꾸미기가 쉽다 cũng có -기.", "s": []}
+],
+"l": [
+  ["꾸미기 나름이다", "GT", "tùy vào cách trang trí"]
+],
+"s": [
+  {"c": [["집의", "DN", "của ngôi nhà", 2], ["분위기는", "CN", "không khí", 1], ["꾸미기 나름이다.", "VN", "tùy vào cách trang trí", 3]],
+   "g": "분위기는 꾸미기 나름이다", "gv": "Không khí tùy vào cách trang trí",
+   "r": "Câu có gạch chân", "y": "Trang trí thế nào thì không khí như thế.",
+   "vi": "Không khí của ngôi nhà tùy vào cách trang trí.",
+   "tip": "**V-기 나름이다** = tùy vào việc V thế nào = **V-기에 달려 있다**."}
+],
+"w": [
+  ["분위기", "không khí", "phân vi khí 雰圍氣", "분위기는"],
+  ["꾸미다", "trang trí", "", "꾸미기"]
+],
+"wo": [
+  ["-(으)ㄹ 만하다", "đáng …", "", "", "lựa chọn ①"],
+  ["N에 달려 있다", "phụ thuộc vào N", "", "", "lựa chọn ④ · đáp án"]
+],
+"g": [
+  {"p": "-기 나름이다", "m": "tùy vào …", "f": "꾸미기 나름이다", "d": "= -기에 달려 있다.", "ex": [["성공은 노력하기 나름이다.", "Thành công tùy vào nỗ lực."]]}
+],
+"qa": {
+  "4": {"a": 3, "w": "-기 나름이다 = **-기에 달려 있다** (phụ thuộc vào).", "x": ["-(으)ㄹ 만하다 = đáng làm.", "Bẫy hình thức: cũng có -기 nhưng nghĩa “dễ trang trí”.", "-(으)ㄹ 수도 있다 = cũng có thể.", null]}
+},
+"hoi": [
+  {"q": "Không khí ngôi nhà phụ thuộc vào gì?", "a": "Cách trang trí."}
+]
+}

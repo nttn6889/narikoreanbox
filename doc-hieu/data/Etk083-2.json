@@ -1,0 +1,39 @@
+{
+"e": "Etk083", "n": [2],
+"t": "Hoa nở, chắc xuân đến rồi",
+"cd": "Đời sống – thiên nhiên",
+"y": "Thấy hoa bắt đầu nở nên đoán mùa xuân đã đến.",
+"doc": [
+  {"t": "Tìm dấu hiệu", "d": "**-는 걸 보니** = thấy … nên (căn cứ) → vế sau là **phỏng đoán**.", "s": [0]},
+  {"t": "Gọi tên 4 lựa chọn", "d": "-곤 하다 (thường hay) · **-(으)ㄴ 모양이다 (hình như, chắc là)** · -는 편이다 (thuộc loại) · -(으)ㄴ 적이 있다 (đã từng).", "s": []}
+],
+"l": [
+  ["보니", "NN", "-는 걸 보니: căn cứ → đoán"]
+],
+"s": [
+  {"c": [["꽃이 피기 시작하는 걸", "TN", "hoa bắt đầu nở", 2], ["보니", "VP", "thấy … nên", 1], ["봄이", "CN", "mùa xuân", 3], ["(    ).", "VN", "chắc đã đến", 4]],
+   "g": "봄이 온 모양이다", "gv": "Chắc mùa xuân đã đến",
+   "r": "Câu có ô", "y": "Hoa nở → chắc xuân đến rồi.",
+   "vi": "Thấy hoa bắt đầu nở, chắc mùa xuân đã đến rồi.",
+   "tip": "**-는 걸 보니 / -는 것을 보니** luôn đi với đuôi đoán: -(으)ㄴ/는 모양이다, -나 보다, -(으)ㄴ/는 것 같다."}
+],
+"w": [
+  ["피다", "nở", "", "피기"],
+  ["-기 시작하다", "bắt đầu …", "khai thủy 開始", "시작하는"],
+  ["봄", "mùa xuân", "", "봄이"]
+],
+"wo": [
+  ["-곤 하다", "thường hay", "", "", "lựa chọn ①"],
+  ["-는 편이다", "thuộc loại, khá là", "", "", "lựa chọn ③"]
+],
+"g": [
+  {"p": "-는 걸 보니", "m": "thấy … nên (đoán)", "f": "걸 보니", "d": "걸 = 것을. Căn cứ quan sát → đoán.", "ex": [["불이 꺼진 걸 보니 아무도 없나 보다.", "Thấy đèn tắt, chắc không có ai."]]},
+  {"p": "-(으)ㄴ/는 모양이다", "m": "hình như, chắc là", "f": "", "d": "Đoán dựa trên điều thấy. 온 모양이다 = chắc đã đến.", "ex": []}
+],
+"qa": {
+  "2": {"a": 1, "w": "**-는 걸 보니** → đoán: **온 모양이다** (chắc đã đến).", "x": ["-곤 하다 = thường hay, không phải đoán.", null, "-는 편이다 = thuộc loại … — không hợp.", "-(으)ㄴ 적이 있다 = kinh nghiệm — không hợp với -걸 보니."]}
+},
+"hoi": [
+  {"q": "Căn cứ nào khiến người nói đoán xuân đến?", "a": "Hoa bắt đầu nở."}
+]
+}

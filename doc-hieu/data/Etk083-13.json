@@ -1,0 +1,65 @@
+{
+"e": "Etk083", "n": [13],
+"t": "Đánh răng theo thứ tự",
+"cd": "Sức khỏe",
+"y": "Người ta thường không để ý thứ tự khi đánh răng, nhưng nên đánh theo thứ tự: chuyên gia khuyên đi từ góc trong ra phía trước, vì răng trong dễ hỏng nên phải đánh kỹ hơn.",
+"doc": [
+  {"t": "Nhìn 4 đáp án", "d": "Câu đầu là (나) hoặc (다).", "s": []},
+  {"t": "So (나) và (다)", "d": "(다) “안쪽 구석에서부터 앞쪽 방향” — hướng của cái gì? cần biết đang nói thứ tự đánh răng → không đứng đầu. (나) thói quen chung → **câu đầu = (나)**.", "s": [1, 2]},
+  {"t": "Dấu bám", "d": "(가) **그러나** lật thói quen ở (나) → (다) chuyên gia nói thứ tự cụ thể → (라) **-기 때문이다** lý do của (다).", "s": [0, 3]}
+],
+"l": [
+  ["그러나", "DL", "lật thói quen ở (나)"],
+  ["하기 때문이다", "NN", "lý do → đứng sau câu nó giải thích"]
+],
+"s": [
+  {"c": [["(가) 그러나", "TR", "nhưng", 1], ["이를 닦을 때는", "TR", "khi đánh răng", 2], ["순서에 맞춰 닦는 것이", "CN", "việc đánh theo đúng thứ tự", 3], ["좋다.", "VN", "thì tốt", 4]],
+   "g": "닦는 것이 좋다", "gv": "Đánh … thì tốt",
+   "r": "Ý chính · lật lại", "y": "Nên đánh răng theo thứ tự.",
+   "vi": "Nhưng khi đánh răng thì nên đánh theo đúng thứ tự.",
+   "tip": "**그러나** đứng đầu → cần câu trước để lật."},
+  {"c": [["(나) 사람들은", "CN", "người ta", 1], ["보통", "TR", "thường", 2], ["이를 닦을 때", "TR", "khi đánh răng", 5], ["순서에", "TR", "đến thứ tự", 4], ["별로 신경 쓰지 않는다.", "VN", "không mấy để ý", 3]],
+   "g": "사람들은 신경 쓰지 않는다", "gv": "Người ta không để ý",
+   "r": "Câu đầu · Thói quen chung", "y": "Người ta ít để ý thứ tự đánh răng.",
+   "vi": "Người ta thường không mấy để ý đến thứ tự khi đánh răng.",
+   "tip": "**별로 + phủ định** = không mấy. Câu thói quen chung (사람들은 보통 …) hay đứng đầu."},
+  {"c": [["(다) 전문가들은", "CN", "các chuyên gia", 1], ["안쪽 구석에서부터 앞쪽 방향이", "CN", "hướng từ góc trong ra phía trước", 3], ["좋다고", "VP", "là tốt", 4], ["조언한다.", "VN", "khuyên", 2]],
+   "g": "전문가들은 … 좋다고 조언한다", "gv": "Chuyên gia khuyên rằng … tốt",
+   "r": "Thứ tự cụ thể", "y": "Đánh từ góc trong ra trước.",
+   "vi": "Các chuyên gia khuyên rằng nên đánh theo hướng từ góc trong ra phía trước.",
+   "tip": "**-다고 조언하다** = khuyên rằng …"},
+  {"c": [["(라) 안쪽 이가", "CN", "răng phía trong", 1], ["상하기 쉬워서", "VP", "dễ bị hỏng nên", 2], ["더 꼼꼼하게", "TR", "kỹ hơn", 4], ["닦아야 하기 때문이다.", "VN", "phải đánh", 3]],
+   "g": "… 닦아야 하기 때문이다", "gv": "Là vì phải đánh …",
+   "r": "Lý do", "y": "Răng trong dễ hỏng nên phải đánh kỹ.",
+   "vi": "Đó là vì răng phía trong dễ bị hỏng nên phải đánh kỹ hơn.",
+   "tip": "**-기 때문이다** ở cuối = câu lý do → luôn sau câu nó giải thích."}
+],
+"w": [
+  ["이를 닦다", "đánh răng", "", "이를 닦을"],
+  ["순서", "thứ tự", "thuận tự 順序", "순서에"],
+  ["맞추다", "khớp, theo đúng", "", "맞춰"],
+  ["신경 쓰다", "để ý, bận tâm", "thần kinh 神經", "신경 쓰지"],
+  ["전문가", "chuyên gia", "chuyên môn gia 專門家", "전문가들은"],
+  ["안쪽", "phía trong", "", "안쪽 구석에서부터|안쪽 이가"],
+  ["구석", "góc", "", "구석에서부터"],
+  ["방향", "hướng", "phương hướng 方向", "방향이"],
+  ["조언하다", "khuyên", "trợ ngôn 助言", "조언한다"],
+  ["상하다", "hỏng, bị tổn hại", "thương 傷", "상하기"],
+  ["꼼꼼하다", "kỹ lưỡng", "", "꼼꼼하게"]
+],
+"wo": [],
+"g": [
+  {"p": "N에 맞춰", "m": "theo đúng N", "f": "순서에 맞춰", "d": "", "ex": []},
+  {"p": "별로 -지 않다", "m": "không mấy …", "f": "별로 신경 쓰지 않는다", "d": "", "ex": []},
+  {"p": "N에서부터", "m": "bắt đầu từ N", "f": "구석에서부터", "d": "", "ex": []},
+  {"p": "-기 쉽다", "m": "dễ …", "f": "상하기 쉬워서", "d": "", "ex": []},
+  {"p": "-기 때문이다", "m": "là vì …", "f": "하기 때문이다", "d": "", "ex": []}
+],
+"qa": {
+  "13": {"a": 0, "w": "(나) thói quen → (가) **그러나** nên theo thứ tự → (다) thứ tự chuyên gia khuyên → (라) **때문이다** lý do.", "x": [null, "(라) lý do của (다), không đứng ngay sau (나).", "(다) không đứng đầu.", "(다) không đứng đầu; (가) 그러나 không đứng cuối."]}
+},
+"hoi": [
+  {"q": "Chuyên gia khuyên đánh răng theo hướng nào?", "a": "Từ góc trong ra phía trước."},
+  {"q": "Vì sao phải đánh kỹ răng trong?", "a": "Vì răng trong dễ bị hỏng."}
+]
+}

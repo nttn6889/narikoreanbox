@@ -1,0 +1,84 @@
+{
+"e": "Etk083", "n": [21, 22],
+"t": "Chăm sóc sức khỏe tinh thần lính cứu hỏa",
+"cd": "Xã hội – sức khỏe",
+"y": "Lính cứu hỏa thường chứng kiến cảnh khủng khiếp ở hiện trường thảm họa nên sức khỏe tinh thần gặp nguy. Vấn đề nghiêm trọng hơn, thành phố Inju tích cực đứng ra giải quyết: sớm điều tra sức khỏe tinh thần, cử chuyên gia tư vấn cho người gặp vấn đề, và bảo đảm ngân sách phát triển chương trình ổn định tâm lý, hỗ trợ chi phí khám.",
+"doc": [
+  {"t": "Đọc câu hỏi trước", "d": "Câu 21: quán ngữ vào ô (등, 눈, 발, 손). Câu 22: gạch từ khóa: 해소되었다 · 모두 마쳤다 · 운영할 계획 · 찾아가야 한다.", "s": []},
+  {"t": "Câu có ô + câu sau (câu 21)", "d": "Thành phố **để giải quyết** (    ) → câu sau liệt kê nhiều việc làm ngay → **tích cực đứng ra** = 발 벗고 나서다.", "s": [1, 2, 3]},
+  {"t": "Câu 3–4 (câu 22)", "d": "**빠른 시일 내에 … 실시하고** (sẽ điều tra → ② sai) · **상담사를 보내** (cử đến → ④ sai) · **프로그램 개발 … 예산을 확보** → sẽ vận hành (③).", "s": [2, 3]},
+  {"t": "Câu 2", "d": "**최근 … 심각해지자** → ① “đã giải quyết nhiều” sai.", "s": [1]}
+],
+"l": [
+  ["접하기 때문에", "NN", "lý do sức khỏe tinh thần gặp nguy"],
+  ["이러한 문제", "CH", "chỉ lại vấn đề sức khỏe tinh thần"],
+  ["심각해지자", "TG", "-자: vấn đề nghiêm trọng thì thành phố hành động"],
+  ["하기로 했다", "GT", "các việc thành phố quyết định làm"],
+  ["이와 더불어", "TH", "thêm biện pháp"]
+],
+"s": [
+  {"c": [["소방관은", "CN", "lính cứu hỏa", 1], ["재난 현장에서", "TR", "ở hiện trường thảm họa", 3], ["끔찍한 상황을", "TN", "những cảnh khủng khiếp", 4], ["자주 접하기 때문에", "VP", "thường xuyên tiếp xúc nên", 2], ["정신 건강에", "TR", "đến sức khỏe tinh thần", 6], ["위험이 따른다.", "VN", "kéo theo nguy hiểm", 5]],
+   "g": "소방관은 … 위험이 따른다", "gv": "Lính cứu hỏa gặp nguy hiểm",
+   "r": "Mở · Vấn đề", "y": "Lính cứu hỏa dễ bị tổn thương tinh thần.",
+   "vi": "Lính cứu hỏa thường xuyên chứng kiến những cảnh khủng khiếp ở hiện trường thảm họa nên sức khỏe tinh thần gặp nguy hiểm.",
+   "tip": "**N에 위험이 따르다** = đi kèm nguy hiểm cho N."},
+  {"c": [["최근", "TR", "gần đây", 1], ["이러한 문제가", "CN", "vấn đề này", 2], ["심각해지자", "VP", "trở nên nghiêm trọng thì", 3], ["인주시가", "CN", "thành phố Inju", 4], ["해결을 위해", "TR", "để giải quyết", 6], ["(    ).", "VN", "(tích cực đứng ra)", 5]],
+   "g": "인주시가 해결을 위해 (    )", "gv": "Thành phố Inju (    ) để giải quyết",
+   "r": "Câu có ô", "y": "Thành phố tích cực đứng ra giải quyết.",
+   "vi": "Gần đây vấn đề này trở nên nghiêm trọng, thành phố Inju đã (tích cực đứng ra) để giải quyết.",
+   "tip": "**발 벗고 나서다** (cởi giày bước ra) = xắn tay áo, tích cực đứng ra làm."},
+  {"c": [["인주시는", "CN", "thành phố Inju", 1], ["빠른 시일 내에", "TR", "trong thời gian sớm nhất", 3], ["정신 건강에 대해", "TR", "về sức khỏe tinh thần", 5], ["조사를 실시하고", "VP", "tiến hành điều tra", 4], ["문제를 겪는 소방관이 있으면", "VP", "nếu có lính cứu hỏa gặp vấn đề", 6], ["전문 상담사를 보내", "VP", "cử chuyên viên tư vấn đến", 7], ["상담을 진행하기로 했다.", "VN", "để tiến hành tư vấn — đã quyết định", 2]],
+   "g": "인주시는 조사를 실시하고 … 상담을 진행하기로 했다", "gv": "Inju quyết định điều tra và tư vấn",
+   "r": "Biện pháp (1)", "y": "Sớm điều tra, cử chuyên gia tư vấn.",
+   "vi": "Thành phố Inju đã quyết định sẽ tiến hành điều tra sức khỏe tinh thần trong thời gian sớm nhất, và nếu có lính cứu hỏa gặp vấn đề thì cử chuyên viên tư vấn đến tư vấn.",
+   "tip": "**-기로 하다** = quyết định sẽ … (chưa làm) → bẫy câu 22 ② “đã điều tra xong”."},
+  {"c": [["이와 더불어", "TR", "cùng với đó", 1], ["심리 안정 프로그램 개발과", "TN", "phát triển chương trình ổn định tâm lý và", 5], ["진료비 지원을 위한", "DN", "hỗ trợ chi phí khám", 6], ["예산을", "TN", "ngân sách", 4], ["확보했다고", "VP", "đã bảo đảm", 3], ["발표했다.", "VN", "(thành phố) công bố", 2]],
+   "g": "예산을 확보했다고 발표했다", "gv": "Công bố đã bảo đảm ngân sách",
+   "r": "Biện pháp (2)", "y": "Có ngân sách cho chương trình tâm lý, chi phí khám.",
+   "vi": "Cùng với đó, thành phố công bố đã bảo đảm ngân sách cho việc phát triển chương trình ổn định tâm lý và hỗ trợ chi phí khám chữa.",
+   "tip": "**이와 더불어** = cùng với điều này (thêm ý)."}
+],
+"w": [
+  ["소방관", "lính cứu hỏa", "tiêu phòng quan 消防官", "소방관은|소방관이"],
+  ["재난", "thảm họa", "tai nạn 災難", "재난"],
+  ["현장", "hiện trường", "hiện trường 現場", "현장에서"],
+  ["끔찍하다", "khủng khiếp", "", "끔찍한"],
+  ["접하다", "tiếp xúc, gặp", "tiếp 接", "접하기"],
+  ["정신 건강", "sức khỏe tinh thần", "tinh thần kiện khang 精神健康", "정신 건강에"],
+  ["따르다", "đi kèm, theo", "", "따른다"],
+  ["심각하다", "nghiêm trọng", "thâm khắc 深刻", "심각해지자"],
+  ["해결", "giải quyết", "giải quyết 解決", "해결을"],
+  ["시일", "thời gian, ngày giờ", "thời nhật 時日", "시일"],
+  ["실시하다", "thực thi, tiến hành", "thực thi 實施", "실시하고"],
+  ["겪다", "trải qua, gặp", "", "겪는"],
+  ["상담사", "chuyên viên tư vấn", "tương đàm sư 相談士", "상담사를"],
+  ["진행하다", "tiến hành", "tiến hành 進行", "진행하기로"],
+  ["더불어", "cùng với", "", "더불어"],
+  ["심리 안정", "ổn định tâm lý", "tâm lý an định 心理安定", "심리 안정"],
+  ["진료비", "chi phí khám chữa", "chẩn liệu phí 診療費", "진료비"],
+  ["예산", "ngân sách", "dự toán 豫算", "예산을"],
+  ["확보하다", "bảo đảm, giành được", "xác bảo 確保", "확보했다고"]
+],
+"wo": [
+  ["등(을) 떠밀다", "đẩy lưng, ép (ai làm)", "", "", "câu 21 ①"],
+  ["눈(을) 맞추다", "nhìn vào mắt nhau", "", "", "câu 21 ②"],
+  ["발(을) 벗고 나서다", "tích cực đứng ra, xắn tay áo", "", "", "câu 21 ③ · đáp án"],
+  ["손에 땀을 쥐다", "hồi hộp toát mồ hôi tay", "", "", "câu 21 ④"],
+  ["해소되다", "được giải tỏa", "giải tiêu 解消", "", "câu 22 ①"]
+],
+"g": [
+  {"p": "-기 때문에", "m": "vì …", "f": "접하기 때문에", "d": "", "ex": []},
+  {"p": "-자", "m": "khi … thì", "f": "심각해지자", "d": "", "ex": []},
+  {"p": "-기로 하다", "m": "quyết định sẽ …", "f": "진행하기로 했다", "d": "", "ex": [["다음 달에 이사하기로 했다.", "Đã quyết định tháng sau chuyển nhà."]]},
+  {"p": "N와/과 더불어", "m": "cùng với N", "f": "이와 더불어", "d": "", "ex": []},
+  {"p": "-았/었다고 발표하다", "m": "công bố rằng đã …", "f": "확보했다고 발표했다", "d": "", "ex": []}
+],
+"qa": {
+  "21": {"a": 2, "w": "Sau ô: điều tra, cử chuyên gia, bảo đảm ngân sách → **tích cực đứng ra** = **발 벗고 나섰다**.", "x": ["등 떠밀다 = ép người khác làm; thành phố tự làm.", "눈을 맞추다 = nhìn vào mắt — không hợp.", null, "손에 땀을 쥐다 = hồi hộp — không hợp."]},
+  "22": {"a": 2, "w": "Bảo đảm ngân sách **phát triển chương trình ổn định tâm lý** → sẽ vận hành chương trình (③).", "x": ["Ngược: vấn đề **최근 심각해지자**.", "Sai thời điểm: **sẽ** điều tra (빠른 시일 내에 실시).", null, "Ngược: thành phố **cử** chuyên viên đến (보내)."]}
+},
+"hoi": [
+  {"q": "Vì sao lính cứu hỏa gặp nguy về tinh thần?", "a": "Thường chứng kiến cảnh khủng khiếp ở hiện trường thảm họa."},
+  {"q": "Thành phố Inju làm những gì?", "a": "Điều tra sức khỏe tinh thần, cử chuyên gia tư vấn, ngân sách cho chương trình tâm lý và chi phí khám."}
+]
+}

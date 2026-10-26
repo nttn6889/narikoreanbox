@@ -1,0 +1,43 @@
+{
+"e": "Etk083", "n": [3],
+"t": "Yên đến mức nghe tiếng thở",
+"cd": "Giáo dục",
+"y": "Bài thi vừa bắt đầu, lớp học yên lặng đến mức nghe được cả tiếng thở.",
+"doc": [
+  {"t": "Gọi tên phần gạch chân", "d": "**들릴 만큼** = -(으)ㄹ 만큼 → **mức độ** (đến mức).", "s": [0]},
+  {"t": "Gọi tên 4 lựa chọn", "d": "-다가 (đang … thì) · -더라도 (dù) · **-(으)ㄹ 정도로 (đến mức)** · -(으)ㄹ 때까지 (cho đến khi).", "s": []}
+],
+"l": [
+  ["시작되자", "TG", "-자: vừa … thì"],
+  ["들릴 만큼", "GT", "mức độ của sự yên lặng"]
+],
+"s": [
+  {"c": [["시험이 시작되자", "VP", "bài thi vừa bắt đầu thì", 1], ["교실은", "CN", "lớp học", 2], ["숨소리가 들릴 만큼", "TR", "đến mức nghe được tiếng thở", 4], ["조용해졌다.", "VN", "trở nên yên lặng", 3]],
+   "g": "교실은 조용해졌다", "gv": "Lớp học trở nên yên lặng",
+   "r": "Câu có gạch chân", "y": "Lớp yên đến mức nghe tiếng thở.",
+   "vi": "Bài thi vừa bắt đầu thì lớp học trở nên yên lặng đến mức nghe được cả tiếng thở.",
+   "tip": "**-(으)ㄹ 만큼 = -(으)ㄹ 정도로** = đến mức … (nói quá để nhấn mạnh)."}
+],
+"w": [
+  ["시작되다", "được bắt đầu", "khai thủy 開始", "시작되자"],
+  ["교실", "lớp học", "giáo thất 敎室", "교실은"],
+  ["숨소리", "tiếng thở", "", "숨소리가"],
+  ["들리다", "được nghe thấy", "", "들릴"],
+  ["조용하다", "yên lặng", "", "조용해졌다"]
+],
+"wo": [
+  ["-더라도", "dù …", "", "", "lựa chọn ②"],
+  ["-(으)ㄹ 때까지", "cho đến khi", "", "", "lựa chọn ④"]
+],
+"g": [
+  {"p": "-자", "m": "vừa … thì", "f": "시작되자", "d": "", "ex": []},
+  {"p": "-(으)ㄹ 만큼", "m": "đến mức …", "f": "들릴 만큼", "d": "= -(으)ㄹ 정도로.", "ex": [["배가 아플 만큼 웃었다.", "Cười đến mức đau bụng."]]},
+  {"p": "A-아/어지다", "m": "trở nên …", "f": "조용해졌다", "d": "", "ex": []}
+],
+"qa": {
+  "3": {"a": 2, "w": "-(으)ㄹ 만큼 = **-(으)ㄹ 정도로** (đến mức).", "x": ["-다가 = đang … thì.", "-더라도 = dù.", null, "-(으)ㄹ 때까지 = cho đến khi."]}
+},
+"hoi": [
+  {"q": "Lớp học yên đến mức nào?", "a": "Nghe được cả tiếng thở."}
+]
+}
