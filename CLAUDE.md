@@ -8,7 +8,8 @@ GitHub tự chuyển sang tên miền mới. Link tuyệt đối trong trang vi�
 Cách định làm: kho GitHub mới `nttn6889/naritopik` (Pages, CNAME `naritopik.com`; cô thêm 4 bản ghi A + CNAME `www` → `nttn6889.github.io`), bản ghi
 trang thi thử học sinh + chỉ dữ liệu 3 bài (Ehot1, N001 + file nghe) ở `naritopik.com/lam-thu/`; trang cũ trên hoc.naritopik.com chuyển hướng sang. Khi đó sửa luôn link
 “Liên kết” trong `fb/ca-nhan/caption.md`. Hỏi lại cô trước khi tạo kho.
-Giáo án / bản trình chiếu của cô (`seoul/2a-1/`, `seoul/3a-1/`…) gắn `<meta name="robots" content="noindex">` để Google không đưa lên tìm kiếm.
+**Cả site hoc.naritopik.com chặn tìm kiếm** (cô chốt 26/10: chỉ học sinh có link mới xem): mọi trang `.html` gắn `<meta name="robots" content="noindex">` ngay sau `<meta charset>` —
+làm trang mới cũng gắn (`thi-thu/index.html` lấy từ `APP_HEAD` của `sync_thi_thu.py`, `seoul/sau/*.html` từ `seoul_sau.js`). Không thêm `robots.txt` chặn `Disallow` (Google sẽ không đọc được thẻ noindex).
 Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối không đưa dữ liệu học sinh vào repo.
 
 ## Trang chủ học sinh (`index.html` ở gốc = https://hoc.naritopik.com/) + trang lớp (`lop/4a|3a|2a|1a/`)

@@ -20,6 +20,7 @@ ABOUT_URL = "../ve-co/"
 
 # Cài thành app trên điện thoại (PWA): manifest + biểu tượng + service worker (thi-thu/sw.js).
 APP_HEAD = """<link rel="manifest" href="manifest.webmanifest">
+<meta name="robots" content="noindex">
 <meta name="theme-color" content="#1b2a5c">
 <link rel="icon" type="image/png" href="icon/favicon-64.png">
 <link rel="apple-touch-icon" href="icon/apple-touch-icon.png">

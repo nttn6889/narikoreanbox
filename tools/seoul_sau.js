@@ -17,6 +17,6 @@ const fs = require('fs'), path = require('path');
       '\n<h3>7. Luyện từ vựng</h3>\n<script type="application/json" class="sau-q">' + JSON.stringify(q).replace(/</g, '\\u003c') + '</' + 'script>';
   });
   await b.close();
-  fs.writeFileSync(out, '<!-- Sinh tự động từ seoul/' + slug + '/ bằng tools/seoul_sau.js — không sửa tay -->\n' + html + '\n');
+  fs.writeFileSync(out, '<!-- Sinh tự động từ seoul/' + slug + '/ bằng tools/seoul_sau.js — không sửa tay -->\n<meta name="robots" content="noindex">\n' + html + '\n');
   console.log('Đã ghi', path.relative(root, out), html.length, 'ký tự');
 })();
