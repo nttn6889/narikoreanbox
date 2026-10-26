@@ -1,0 +1,71 @@
+{
+"e": "Etk083", "n": [39],
+"t": "Sách về những cây cầu cũ",
+"cd": "Văn hóa – lịch sử",
+"y": "『Lại dạo trên những cây cầu cũ』 của Lee Young-cheon nhìn lại cuộc sống người Hàn qua đề tài cây cầu. Sách gồm hai phần: trước hết là cầu cổ và câu chuyện gắn với chúng (cầu đá bước, cầu cho vua → phong tục, lịch sử), tiếp theo là cầu cận hiện đại và những thay đổi do công nghệ mang lại. Sách giúp suy nghĩ về con đường đã qua và sẽ đi.",
+"doc": [
+  {"t": "Đọc <보기> trước", "d": "<보기>: sách gồm **hai phần**, **먼저** (trước hết) cầu cũ và chuyện gắn với chúng → câu trước phải giới thiệu sách; câu sau nói tiếp phần 1.", "s": []},
+  {"t": "Câu sau ㉠", "d": "**여기에서는** … cầu đá bước, cầu cho vua = phần cầu cũ → chỉ lại <보기>. Câu 3 **이어서** (tiếp theo) = phần 2 → cặp **먼저 … 이어서**.", "s": [1, 2]},
+  {"t": "Kết luận", "d": "<보기> đứng sau câu giới thiệu sách (câu 1), trước 여기에서는 → ㉠.", "s": [0]}
+],
+"l": [
+  ["여기에서는", "CH", "chỉ lại “phần cầu cũ” — cần <보기> đứng trước"],
+  ["이어서", "TG", "tiếp theo = phần 2 (cặp với 먼저 trong <보기>)"],
+  ["이 책은", "CH", "kết luận về cuốn sách"]
+],
+"s": [
+  {"c": [["이영천의", "DN", "của Lee Young-cheon", 2], ["『다시, 오래된 다리를 거닐다』는", "CN", "cuốn 『Lại dạo trên những cây cầu cũ』", 1], ["다리를 소재로", "TR", "lấy cây cầu làm đề tài", 4], ["한국인의 삶을 돌아본", "DN", "nhìn lại cuộc sống người Hàn", 5], ["책이다.", "VN", "là cuốn sách", 3], ["( ㉠ )", "NOI", "( ㉠ )", 6]],
+   "g": "『…』는 책이다", "gv": "Cuốn … là sách …",
+   "r": "Mở · Giới thiệu sách", "y": "Sách nhìn lại đời sống người Hàn qua cây cầu.",
+   "vi": "『Lại dạo trên những cây cầu cũ』 của Lee Young-cheon là cuốn sách lấy cây cầu làm đề tài để nhìn lại cuộc sống của người Hàn. ( ㉠ )",
+   "tip": "**N을/를 소재로** = lấy N làm đề tài."},
+  {"c": [["여기에서는", "TR", "ở phần này", 1], ["수백 년 전에 놓인 징검다리, 왕을 위한 다리 등을 통해", "TR", "qua cầu đá bước bắc từ mấy trăm năm trước, cầu dành cho vua…", 3], ["우리 고유의 풍속과 역사를", "TN", "phong tục và lịch sử riêng của chúng ta", 4], ["만난다.", "VN", "(ta) gặp", 2], ["( ㉡ )", "NOI", "( ㉡ )", 5]],
+   "g": "… 풍속과 역사를 만난다", "gv": "Gặp phong tục và lịch sử",
+   "r": "Phần 1 · cầu cũ", "y": "Qua cầu cổ, gặp phong tục và lịch sử.",
+   "vi": "Ở phần này, ta gặp phong tục và lịch sử riêng của dân tộc qua cầu đá bước bắc từ mấy trăm năm trước, cầu dành cho vua… ( ㉡ )",
+   "tip": "**여기에서는** = ở đây (chỉ lại một phần vừa nhắc) → dấu bám."},
+  {"c": [["이어서", "TR", "tiếp theo", 1], ["근현대식 다리와 함께", "TR", "cùng với cầu kiểu cận hiện đại", 2], ["기술의 발전이 다리와 우리 사회에 가져온", "DN", "mà sự phát triển công nghệ mang lại cho cầu và xã hội", 5], ["변화를", "TN", "những thay đổi", 4], ["살펴본다.", "VN", "xem xét", 3], ["( ㉢ )", "NOI", "( ㉢ )", 6]],
+   "g": "변화를 살펴본다", "gv": "Xem xét những thay đổi",
+   "r": "Phần 2 · cầu hiện đại", "y": "Cầu hiện đại và thay đổi do công nghệ.",
+   "vi": "Tiếp theo, cùng với cầu kiểu cận hiện đại, sách xem xét những thay đổi mà sự phát triển công nghệ mang lại cho cầu và xã hội. ( ㉢ )",
+   "tip": "**먼저 … 이어서 …** = trước hết … tiếp theo … (liệt kê phần)."},
+  {"c": [["이 책은", "CN", "cuốn sách này", 1], ["과거와 현재의 다리를 거닐며", "VP", "dạo qua những cây cầu xưa và nay", 3], ["우리가 지나온 길과 가야 할 길을", "TN", "con đường ta đã đi qua và phải đi", 4], ["생각해 보게 한다.", "VN", "khiến (ta) suy nghĩ", 2], ["( ㉣ )", "NOI", "( ㉣ )", 5]],
+   "g": "이 책은 … 생각해 보게 한다", "gv": "Sách khiến ta suy nghĩ",
+   "r": "Kết", "y": "Sách giúp nghĩ về quá khứ và tương lai.",
+   "vi": "Cuốn sách này khiến ta vừa dạo qua những cây cầu xưa và nay vừa suy nghĩ về con đường đã đi qua và con đường phải đi. ( ㉣ )",
+   "tip": "**-게 하다** = khiến (ai) …"}
+],
+"w": [
+  ["다리", "cây cầu", "", "다리를|다리,|다리 등을|다리와"],
+  ["소재", "đề tài, chất liệu", "tố tài 素材", "소재로"],
+  ["돌아보다", "nhìn lại", "", "돌아본"],
+  ["수백 년", "mấy trăm năm", "số bách niên 數百年", "수백 년"],
+  ["놓이다", "được bắc, được đặt", "", "놓인"],
+  ["징검다리", "cầu đá bước (đá kê qua suối)", "", "징검다리,"],
+  ["고유", "riêng có", "cố hữu 固有", "고유의"],
+  ["풍속", "phong tục", "phong tục 風俗", "풍속과"],
+  ["근현대식", "kiểu cận hiện đại", "cận hiện đại thức 近現代式", "근현대식"],
+  ["발전", "phát triển", "phát triển 發展", "발전이"],
+  ["살펴보다", "xem xét", "", "살펴본다"],
+  ["거닐다", "dạo bước", "", "거닐며"]
+],
+"wo": [
+  ["구성되다", "được cấu thành", "cấu thành 構成", "", "<보기>"],
+  ["얽히다", "gắn với, vướng", "", "", "<보기> 얽힌"],
+  ["다루다", "đề cập", "", "", "<보기>"]
+],
+"g": [
+  {"p": "N을/를 소재로", "m": "lấy N làm đề tài", "f": "소재로", "d": "", "ex": []},
+  {"p": "N을/를 통해", "m": "thông qua N", "f": "등을 통해", "d": "", "ex": []},
+  {"p": "먼저 … 이어서 …", "m": "trước hết … tiếp theo …", "f": "이어서", "d": "먼저 ở <보기>.", "ex": []},
+  {"p": "-(으)며", "m": "vừa … vừa", "f": "거닐며", "d": "", "ex": []},
+  {"p": "-게 하다", "m": "khiến …", "f": "생각해 보게 한다", "d": "", "ex": []}
+],
+"qa": {
+  "39": {"a": 0, "w": "<보기> **먼저** cầu cũ → câu sau ㉠ **여기에서는** chỉ lại phần cầu cũ → **이어서** phần 2. <보기> ở ㉠.", "x": [null, "Câu trước ㉡ đã nói cầu cũ; <보기> phải giới thiệu trước.", "Đã sang phần 2 (이어서).", "Sau câu kết."]}
+},
+"hoi": [
+  {"q": "Sách gồm mấy phần?", "a": "Hai: cầu cũ và chuyện gắn với chúng; cầu cận hiện đại và thay đổi do công nghệ."},
+  {"q": "Chữ nào cho biết phần 2?", "a": "**이어서** (tiếp theo)."}
+]
+}

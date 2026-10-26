@@ -1,0 +1,68 @@
+{
+"e": "Etk083", "n": [36],
+"t": "Chữ nổi trên sản phẩm",
+"cd": "Xã hội – phúc lợi",
+"y": "Vị trí, cách in chữ nổi khác nhau theo nhà sản xuất, sản phẩm khiến người khiếm thị bất tiện, rối: vì chưa có quy định thống nhất (hiện chỉ dược phẩm có quy định) → cơ quan liên quan phải lập quy định in chữ nổi cho nhiều sản phẩm hơn.",
+"doc": [
+  {"t": "Đọc câu hỏi", "d": "Chủ đề → câu cuối có **-아야 한다**.", "s": []},
+  {"t": "Câu cuối · chủ đề", "d": "**더 많은 제품을 대상으로 … 규정을 정해야 한다** → ④ (nhiều sản phẩm).", "s": [3]},
+  {"t": "Câu 1–3 · vấn đề → nguyên nhân → hiện trạng", "d": "Không thống nhất → chưa có quy định → chỉ dược phẩm có. ① chỉ nói dược phẩm (hẹp).", "s": [0, 1, 2]}
+],
+"l": [
+  ["달라", "NN", "-아: khác nhau nên bất tiện"],
+  ["없기 때문이다", "NN", "nguyên nhân"],
+  ["에 한해서만", "GT", "chỉ giới hạn ở dược phẩm"],
+  ["정해야 한다", "KL", "đề xuất → chủ đề"]
+],
+"s": [
+  {"c": [["점자 표기의 위치, 방식 등이", "CN", "vị trí, cách in chữ nổi…", 1], ["제조사나 제품별로", "TR", "theo nhà sản xuất hay sản phẩm", 3], ["달라", "VP", "khác nhau nên", 2], ["시각 장애인들이", "CN", "người khiếm thị", 4], ["불편과 혼란을", "TN", "sự bất tiện và bối rối", 6], ["겪고 있다.", "VN", "đang gặp", 5]],
+   "g": "… 달라 시각 장애인들이 불편과 혼란을 겪고 있다", "gv": "Khác nhau nên người khiếm thị gặp bất tiện",
+   "r": "Mở · Vấn đề", "y": "Chữ nổi không thống nhất → người khiếm thị bất tiện.",
+   "vi": "Vị trí, cách in chữ nổi khác nhau theo nhà sản xuất hay sản phẩm nên người khiếm thị đang gặp bất tiện và bối rối.",
+   "tip": "**N별로** = theo từng N."},
+  {"c": [["시각 장애인을 위한", "DN", "dành cho người khiếm thị", 2], ["점자 정보가", "CN", "thông tin chữ nổi", 1], ["여러 제품에", "TR", "trên nhiều sản phẩm", 4], ["표기되고는 있지만", "VP", "có được in, nhưng", 3], ["아직 통일된 규정이", "CN", "quy định thống nhất", 6], ["없기 때문이다.", "VN", "là vì chưa có", 5]],
+   "g": "… 규정이 없기 때문이다", "gv": "Là vì chưa có quy định",
+   "r": "Nguyên nhân", "y": "Chưa có quy định thống nhất.",
+   "vi": "Đó là vì thông tin chữ nổi cho người khiếm thị có được in trên nhiều sản phẩm, nhưng chưa có quy định thống nhất.",
+   "tip": "**-고는 있지만** = có … đấy, nhưng (nhượng bộ)."},
+  {"c": [["현재는", "TR", "hiện nay", 1], ["의약품에 한해서만", "TR", "chỉ riêng với dược phẩm", 2], ["표기 규정이", "CN", "quy định in", 3], ["정해져 있다.", "VN", "được đặt ra", 4]],
+   "g": "표기 규정이 정해져 있다", "gv": "Quy định đã được đặt ra",
+   "r": "Hiện trạng", "y": "Hiện chỉ dược phẩm có quy định.",
+   "vi": "Hiện nay chỉ riêng dược phẩm là có quy định về cách in.",
+   "tip": "**N에 한해서(만)** = chỉ giới hạn ở N."},
+  {"c": [["관계 기관은", "CN", "cơ quan liên quan", 1], ["더 많은 제품을 대상으로", "TR", "với nhiều sản phẩm hơn", 3], ["점자 표기에 대한", "DN", "về việc in chữ nổi", 5], ["규정을", "TN", "quy định", 4], ["정해야 한다.", "VN", "phải đặt ra", 2]],
+   "g": "기관은 규정을 정해야 한다", "gv": "Cơ quan phải đặt ra quy định",
+   "r": "Kết · Chủ đề", "y": "Phải lập quy định cho nhiều sản phẩm hơn.",
+   "vi": "Cơ quan liên quan phải đặt ra quy định về việc in chữ nổi với nhiều sản phẩm hơn.",
+   "tip": "**-아/어야 한다** ở câu cuối = câu chủ đề."}
+],
+"w": [
+  ["점자", "chữ nổi (chữ Braille)", "điểm tự 點字", "점자"],
+  ["표기", "ghi, in (chữ)", "biểu ký 表記", "표기의|표기되고는|표기 규정이|표기에"],
+  ["제조사", "nhà sản xuất", "chế tạo xã 製造社", "제조사나"],
+  ["시각 장애인", "người khiếm thị", "thị giác chướng ngại nhân 視覺障礙人", "시각 장애인들이|시각 장애인을"],
+  ["혼란", "hỗn loạn, bối rối", "hỗn loạn 混亂", "혼란을"],
+  ["통일되다", "được thống nhất", "thống nhất 統一", "통일된"],
+  ["규정", "quy định", "quy định 規定", "규정이|규정을"],
+  ["의약품", "dược phẩm", "y dược phẩm 醫藥品", "의약품에"],
+  ["관계 기관", "cơ quan liên quan", "quan hệ cơ quan 關係機關", "관계 기관은"]
+],
+"wo": [
+  ["검토하다", "xem xét", "kiểm thảo 檢討", "", "lựa chọn ①"],
+  ["인식", "nhận thức", "nhận thức 認識", "", "lựa chọn ②"],
+  ["적용하다", "áp dụng", "thích dụng 適用", "", "lựa chọn ④"]
+],
+"g": [
+  {"p": "N별로", "m": "theo từng N", "f": "제품별로", "d": "", "ex": []},
+  {"p": "-고는 있지만", "m": "có … nhưng", "f": "표기되고는 있지만", "d": "", "ex": []},
+  {"p": "N에 한해서만", "m": "chỉ riêng N", "f": "의약품에 한해서만", "d": "", "ex": []},
+  {"p": "-아/어야 하다", "m": "phải …", "f": "정해야 한다", "d": "", "ex": []}
+],
+"qa": {
+  "36": {"a": 3, "w": "Câu cuối: lập quy định cho **nhiều sản phẩm hơn** → ④.", "x": ["Hẹp: dược phẩm đã có quy định; bài muốn mở rộng.", "Bài không nói nâng nhận thức.", "Bài không nói chữ nổi in sai.", null]}
+},
+"hoi": [
+  {"q": "Vì sao người khiếm thị bối rối?", "a": "Vị trí, cách in chữ nổi khác nhau theo nhà sản xuất."},
+  {"q": "Hiện nay loại sản phẩm nào có quy định?", "a": "Chỉ dược phẩm."}
+]
+}

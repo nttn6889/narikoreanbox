@@ -1,0 +1,45 @@
+{
+"e": "Etk083", "n": [27],
+"t": "Lừa đảo giao dịch online tăng vọt",
+"cd": "Xã hội – kinh tế",
+"y": "Lừa đảo giao dịch trực tuyến tăng vọt nhưng biện pháp của chính phủ còn chưa đầy đủ.",
+"doc": [
+  {"t": "Tách 2 nửa", "d": "Nửa 1: **급증** (tăng vọt). Nửa 2: **정부 대책 마련은 미흡** (chuẩn bị biện pháp **còn thiếu**).", "s": [0]},
+  {"t": "Quan hệ hai nửa", "d": "Tiểu từ **은** + **미흡** → đối lập: tăng mạnh **nhưng** biện pháp chưa đủ → ①.", "s": [0]}
+],
+"l": [
+  ["급증,", "DL", "nửa 1 đối lập với nửa 2"],
+  ["마련은 미흡", "KL", "은 + 미흡: chưa đủ → “nhưng”"]
+],
+"s": [
+  {"c": [["온라인 거래 사기", "CN", "lừa đảo giao dịch trực tuyến", 1], ["급증,", "VP", "tăng vọt,", 2], ["정부 대책 마련은", "CN", "việc chính phủ chuẩn bị biện pháp", 3], ["미흡", "VN", "còn chưa đầy đủ", 4]],
+   "g": "사기 급증, 대책 마련은 미흡", "gv": "Lừa đảo tăng vọt, biện pháp còn thiếu",
+   "r": "Tiêu đề", "y": "Lừa đảo tăng mạnh nhưng chính phủ chưa đủ biện pháp.",
+   "vi": "Lừa đảo giao dịch trực tuyến tăng vọt, nhưng việc chính phủ chuẩn bị biện pháp còn chưa đầy đủ.",
+   "tip": "Tiêu đề hai nửa có **은/는** ở nửa sau → thường đối lập (A인데 B는 …)."}
+],
+"w": [
+  ["거래", "giao dịch", "khứ lai 去來", "거래"],
+  ["사기", "lừa đảo", "trá khi 詐欺", "사기"],
+  ["급증", "tăng vọt", "cấp tăng 急增", "급증,"],
+  ["정부", "chính phủ", "chính phủ 政府", "정부"],
+  ["대책", "biện pháp đối phó", "đối sách 對策", "대책"],
+  ["마련", "chuẩn bị, lập ra", "", "마련은"],
+  ["미흡", "chưa đầy đủ, chưa thỏa đáng", "vị hiệp 未洽", "미흡"]
+],
+"wo": [
+  ["수립하다", "thiết lập", "thụ lập 樹立", "", "lựa chọn ②"],
+  ["효과", "hiệu quả", "hiệu quả 效果", "", "lựa chọn ③"],
+  ["피해자", "người bị hại", "bị hại giả 被害者", "", "lựa chọn ④"]
+],
+"g": [
+  {"p": "Tiêu đề A, B은/는 …", "m": "A, nhưng B thì …", "f": "마련은", "d": "Tiểu từ 은/는 ở nửa sau → đối lập.", "ex": []}
+],
+"qa": {
+  "27": {"a": 0, "w": "**급증** ↔ **미흡**: tăng nhưng biện pháp chưa đủ → ①.", "x": [null, "Ngược: 미흡 = còn thiếu, không phải “đang lập kế hoạch”.", "Chưa có biện pháp đầy đủ để nói hiệu quả.", "Ngược: tiêu đề nói còn thiếu, không nói đã công bố."]}
+},
+"hoi": [
+  {"q": "미흡 nghĩa là gì?", "a": "Chưa đầy đủ, chưa thỏa đáng."},
+  {"q": "Quan hệ giữa hai nửa tiêu đề?", "a": "Đối lập: tăng vọt nhưng biện pháp còn thiếu."}
+]
+}

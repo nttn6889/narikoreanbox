@@ -1,0 +1,45 @@
+{
+"e": "Etk083", "n": [25],
+"t": "Phim nổi, nguyên tác bán chạy",
+"cd": "Văn hóa – giải trí",
+"y": "Nhờ phim truyền hình “Sự thật” nổi tiếng, tiểu thuyết nguyên tác đứng hạng 1 sách bán chạy.",
+"doc": [
+  {"t": "Tách hai nửa ở dấu phẩy", "d": "Nửa 1: **인기 효과** (hiệu ứng nổi tiếng của phim) = nguyên nhân. Nửa 2: **원작 베스트셀러 1위** = kết quả.", "s": [0]},
+  {"t": "Kiểm tra đối tượng", "d": "Hạng 1 là **nguyên tác** (sách), không phải tác giả hay mọi tác phẩm.", "s": []}
+],
+"l": [
+  ["인기 효과,", "NN", "nửa 1 = nguyên nhân"],
+  ["원작 베스트셀러 1위", "KL", "kết quả"]
+],
+"s": [
+  {"c": [["드라마 '진실'", "DN", "của phim “Sự thật”", 2], ["인기 효과,", "TR", "nhờ hiệu ứng nổi tiếng", 1], ["원작", "CN", "nguyên tác", 3], ["베스트셀러 1위", "VN", "hạng 1 sách bán chạy", 4]],
+   "g": "인기 효과, 원작 1위", "gv": "Hiệu ứng nổi tiếng, nguyên tác hạng 1",
+   "r": "Tiêu đề", "y": "Phim nổi → sách gốc bán chạy nhất.",
+   "vi": "Nhờ hiệu ứng nổi tiếng của phim “Sự thật”, nguyên tác đứng hạng 1 sách bán chạy.",
+   "tip": "**N 효과** = hiệu ứng của N → nguyên nhân. **원작** = tác phẩm gốc (để chuyển thể)."}
+],
+"w": [
+  ["드라마", "phim truyền hình", "", "드라마"],
+  ["인기", "sự nổi tiếng, được yêu thích", "nhân khí 人氣", "인기"],
+  ["효과", "hiệu quả, hiệu ứng", "hiệu quả 效果", "효과,"],
+  ["원작", "nguyên tác", "nguyên tác 原作", "원작"],
+  ["베스트셀러", "sách bán chạy", "", "베스트셀러"]
+],
+"wo": [
+  ["판매량", "lượng bán", "phán mại lượng 販賣量", "", "lựa chọn ①"],
+  ["차지하다", "chiếm", "", "", "lựa chọn ①"],
+  ["시청률", "tỉ suất người xem", "thị thính suất 視聽率", "", "lựa chọn ②④"],
+  ["판매율", "tỉ lệ bán", "phán mại suất 販賣率", "", "lựa chọn ③"]
+],
+"g": [
+  {"p": "N 효과, …", "m": "nhờ hiệu ứng N, …", "f": "효과,", "d": "Tiêu đề nhân quả: nửa trước là nguyên nhân.", "ex": []},
+  {"p": "-(으)면서", "m": "cùng với việc … (nhân quả)", "f": "", "d": "Ở lựa chọn ①: 인기를 얻으면서.", "ex": []}
+],
+"qa": {
+  "25": {"a": 0, "w": "Phim nổi tiếng → nguyên tác **판매량 1위** → ①.", "x": [null, "Đổi đối tượng: tiêu đề nói nguyên tác, không nói tác giả; và 1위 là sách, không phải tỉ suất xem.", "Quá mức: chỉ nguyên tác, không phải **mọi** tác phẩm.", "Đảo nhân quả: phim làm sách bán chạy, không phải ngược lại."]}
+},
+"hoi": [
+  {"q": "Cái gì đứng hạng 1?", "a": "Nguyên tác (sách gốc) của phim."},
+  {"q": "Nhờ đâu?", "a": "Phim “Sự thật” nổi tiếng."}
+]
+}

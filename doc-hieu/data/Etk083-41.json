@@ -1,0 +1,75 @@
+{
+"e": "Etk083", "n": [41],
+"t": "Tranh Đông Khuyết Đồ",
+"cd": "Lịch sử – văn hóa",
+"y": "Đông Khuyết Đồ là tranh thời Joseon vẽ toàn bộ cung Changdeok và Changgyeong: tranh lớn (cao 2 m, dài hơn 5 m), vẽ y nguyên cả núi, ao, cây; tái hiện hoàn hảo bố trí và khoảng cách giữa các tòa nhà. Tranh chính xác như thật nên có thể bị kẻ ngoài dùng để đột nhập cung — vì vậy mọi thông tin về tranh, kể cả người vẽ và năm vẽ, được cho là bí mật hoàng gia.",
+"doc": [
+  {"t": "Đọc <보기> trước", "d": "<보기> **이처럼 정밀하면서도 실제와 같은** → câu trước phải nói tranh chính xác, như thật. Nội dung: tranh có thể bị dùng để **đột nhập** cung.", "s": []},
+  {"t": "Câu trước ㉢", "d": "Câu 3 **완벽하게 재현했다** (tái hiện hoàn hảo) → khớp **이처럼 정밀**.", "s": [2]},
+  {"t": "Câu sau ㉢", "d": "**이러한 이유로** … 왕실 기밀 → cần lý do đứng trước: “có thể bị dùng để đột nhập” chính là lý do → ㉢.", "s": [3]}
+],
+"l": [
+  ["물론", "TH", "건축물은 물론 = không chỉ công trình mà cả …"],
+  ["까지", "TH", "đến cả cây cối"],
+  ["완벽하게 재현했다", "GT", "độ chính xác → <보기> 이처럼 정밀"],
+  ["이러한 이유로", "CH", "chỉ lại lý do → <보기> đứng ngay trước"]
+],
+"s": [
+  {"c": [["동궐도는", "CN", "Đông Khuyết Đồ", 1], ["창덕궁과 창경궁 전체를 그린", "DN", "vẽ toàn bộ cung Changdeok và Changgyeong", 4], ["조선 시대의", "DN", "thời Joseon", 3], ["그림이다.", "VN", "là bức tranh", 2], ["( ㉠ )", "NOI", "( ㉠ )", 5]],
+   "g": "동궐도는 그림이다", "gv": "Đông Khuyết Đồ là bức tranh",
+   "r": "Mở · Giới thiệu", "y": "Tranh thời Joseon vẽ hai cung điện.",
+   "vi": "Đông Khuyết Đồ là bức tranh thời Joseon vẽ toàn bộ cung Changdeok và cung Changgyeong. ( ㉠ )",
+   "tip": "Câu định nghĩa mở đầu."},
+  {"c": [["세로 2m, 가로 5m가 넘는", "DN", "cao 2 m, dài hơn 5 m", 2], ["대작으로", "VP", "là tác phẩm lớn,", 1], ["건축물은 물론", "TR", "không chỉ công trình kiến trúc", 3], ["주변의 산과 궁궐 안 연못, 나무까지", "TN", "mà cả núi xung quanh, ao trong cung, cây cối", 5], ["그대로 그려 넣었다.", "VN", "vẽ y nguyên vào", 4], ["( ㉡ )", "NOI", "( ㉡ )", 6]],
+   "g": "… 그대로 그려 넣었다", "gv": "Vẽ y nguyên vào",
+   "r": "Chi tiết (1)", "y": "Tranh lớn, vẽ y nguyên cả núi, ao, cây.",
+   "vi": "Là tác phẩm lớn cao 2 m, dài hơn 5 m, tranh vẽ y nguyên không chỉ công trình mà cả núi xung quanh, ao trong cung, cây cối. ( ㉡ )",
+   "tip": "**A은/는 물론 B까지** = không chỉ A mà cả B."},
+  {"c": [["건물 배치와 건물 사이의 거리도", "TN", "cả bố trí tòa nhà và khoảng cách giữa các tòa nhà", 2], ["완벽하게", "TR", "hoàn hảo", 3], ["재현했다.", "VN", "đã tái hiện", 1], ["( ㉢ )", "NOI", "( ㉢ )", 4]],
+   "g": "거리도 재현했다", "gv": "Tái hiện cả khoảng cách",
+   "r": "Chi tiết (2) · độ chính xác", "y": "Tái hiện hoàn hảo bố trí, khoảng cách.",
+   "vi": "Tranh còn tái hiện hoàn hảo cả bố trí tòa nhà và khoảng cách giữa các tòa nhà. ( ㉢ )",
+   "tip": "Câu nêu độ chính xác → câu sau có thể là **이처럼** (tóm lại) như <보기>."},
+  {"c": [["이러한 이유로", "TR", "vì lý do này", 1], ["제작자와 제작 연도를 포함하여", "TR", "kể cả người vẽ và năm vẽ", 3], ["그림에 관련된", "DN", "liên quan đến tranh", 4], ["정보 일체가", "CN", "toàn bộ thông tin", 2], ["왕실 기밀이었을 것으로", "VP", "là bí mật hoàng gia", 6], ["추정된다.", "VN", "được cho là", 5], ["( ㉣ )", "NOI", "( ㉣ )", 7]],
+   "g": "정보 일체가 기밀이었을 것으로 추정된다", "gv": "Toàn bộ thông tin được cho là bí mật",
+   "r": "Kết", "y": "Mọi thông tin về tranh là bí mật hoàng gia.",
+   "vi": "Vì lý do này, toàn bộ thông tin liên quan đến tranh, kể cả người vẽ và năm vẽ, được cho là đã là bí mật của hoàng gia. ( ㉣ )",
+   "tip": "**이러한 이유로** = dấu bám: lý do phải nằm ngay câu trước."}
+],
+"w": [
+  ["동궐도", "Đông Khuyết Đồ (tranh cung điện phía đông)", "đông khuyết đồ 東闕圖", "동궐도는"],
+  ["창덕궁", "cung Changdeok", "xương đức cung 昌德宮", "창덕궁과"],
+  ["세로 / 가로", "chiều dọc / chiều ngang", "", "세로 2m,|가로 5m가"],
+  ["대작", "tác phẩm lớn", "đại tác 大作", "대작으로"],
+  ["건축물", "công trình kiến trúc", "kiến trúc vật 建築物", "건축물은"],
+  ["궁궐", "cung điện", "cung khuyết 宮闕", "궁궐"],
+  ["연못", "ao", "", "연못,"],
+  ["그대로", "y nguyên", "", "그대로"],
+  ["배치", "bố trí", "phối trí 配置", "배치와"],
+  ["완벽하다", "hoàn hảo", "hoàn bích 完璧", "완벽하게"],
+  ["재현하다", "tái hiện", "tái hiện 再現", "재현했다"],
+  ["제작자", "người làm, tác giả", "chế tác giả 製作者", "제작자와"],
+  ["일체", "toàn bộ", "nhất thiết 一切", "일체가"],
+  ["왕실", "hoàng gia", "vương thất 王室", "왕실"],
+  ["기밀", "bí mật", "cơ mật 機密", "기밀이었을"],
+  ["추정되다", "được suy đoán", "suy định 推定", "추정된다"]
+],
+"wo": [
+  ["정밀하다", "tinh xác, chi tiết", "tinh mật 精密", "", "<보기>"],
+  ["침입하다", "đột nhập", "xâm nhập 侵入", "", "<보기>"],
+  ["외부인", "người ngoài", "ngoại bộ nhân 外部人", "", "<보기>"]
+],
+"g": [
+  {"p": "A은/는 물론 B까지", "m": "không chỉ A mà cả B", "f": "건축물은 물론|나무까지", "d": "", "ex": []},
+  {"p": "-아/어 넣다", "m": "(làm) vào", "f": "그려 넣었다", "d": "", "ex": []},
+  {"p": "N을/를 포함하여", "m": "kể cả N", "f": "포함하여", "d": "", "ex": []},
+  {"p": "-았/었을 것으로 추정되다", "m": "được cho là đã …", "f": "기밀이었을 것으로 추정된다", "d": "", "ex": []}
+],
+"qa": {
+  "41": {"a": 2, "w": "<보기> **이처럼 정밀** cần câu “tái hiện hoàn hảo” đứng trước; câu sau ㉢ **이러한 이유로** cần lý do (đột nhập) đứng trước → ㉢.", "x": ["Chưa nói độ chính xác.", "Mới nói tranh lớn, vẽ y nguyên; câu 3 còn tiếp chi tiết — <보기> 이처럼 tóm lại sau khi đủ chi tiết.", null, "Sau câu kết; “이러한 이유로” cần lý do đứng trước."]}
+},
+"hoi": [
+  {"q": "Tranh vẽ những gì?", "a": "Toàn bộ hai cung điện, cả núi, ao, cây, bố trí và khoảng cách giữa các tòa nhà."},
+  {"q": "Vì sao thông tin về tranh là bí mật?", "a": "Tranh chính xác như thật, có thể bị dùng để đột nhập cung."}
+]
+}

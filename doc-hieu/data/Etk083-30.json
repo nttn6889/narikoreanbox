@@ -1,0 +1,62 @@
+{
+"e": "Etk083", "n": [30],
+"t": "Vì sao bóng rổ màu cam",
+"cd": "Thể thao",
+"y": "Một số giải bóng rổ chuyên nghiệp bắt buộc dùng bóng màu cam. Một trong các lý do là để giảm mỏi mắt: bóng rổ phải đập xuống sàn nhiều, nếu màu bóng khác màu sàn quá thì cả cầu thủ lẫn khán giả đều thấy nặng nề.",
+"doc": [
+  {"t": "Đọc câu có ô", "d": "**그중 하나는 (    ) 데 있다** = một trong các lý do nằm ở việc (    ).", "s": [1]},
+  {"t": "Đọc qua ô · câu lý do", "d": "Câu 3 (**-기 때문이다**): bóng đập sàn nhiều, nếu màu khác sàn **nhiều** thì cầu thủ, khán giả **thấy nặng nề (mỏi)** → bóng cam (gần màu sàn gỗ) để **giảm mỏi mắt**.", "s": [2]}
+],
+"l": [
+  ["이유가 있지만", "DL", "-지만: có nhiều lý do, nhưng nói một"],
+  ["그중 하나는", "GT", "một trong các lý do → ô"],
+  ["특성상", "NN", "do đặc tính"],
+  ["느낄 수 있기 때문이다", "NN", "lý do → chìa khóa của ô"]
+],
+"s": [
+  {"c": [["일부 프로 농구 리그에서는", "TR", "ở một số giải bóng rổ chuyên nghiệp", 1], ["반드시", "TR", "bắt buộc", 2], ["주황색 공을", "TN", "bóng màu cam", 4], ["쓰게 하고 있다.", "VN", "cho dùng", 3]],
+   "g": "주황색 공을 쓰게 하고 있다", "gv": "Bắt dùng bóng màu cam",
+   "r": "Mở · Sự thật", "y": "Một số giải bắt buộc dùng bóng cam.",
+   "vi": "Ở một số giải bóng rổ chuyên nghiệp, người ta bắt buộc dùng bóng màu cam.",
+   "tip": "**-게 하다** = bắt / cho (ai) làm."},
+  {"c": [["여러 이유가 있지만", "VP", "có nhiều lý do, nhưng", 1], ["그중 하나는", "CN", "một trong số đó", 2], ["(    ) 데", "TR", "ở việc (    )", 4], ["있다.", "VN", "nằm", 3]],
+   "g": "그중 하나는 (    ) 데 있다", "gv": "Một trong số đó nằm ở việc (    )",
+   "r": "Câu có ô", "y": "Một lý do là (giảm mỏi mắt).",
+   "vi": "Có nhiều lý do, nhưng một trong số đó nằm ở việc (muốn giảm mỏi mắt).",
+   "tip": "**N은/는 -는 데 있다** = N nằm ở việc … (nêu lý do, mục đích)."},
+  {"c": [["바닥에 공을 많이 튀겨야 하는", "DN", "phải đập bóng xuống sàn nhiều", 3], ["농구의 특성상", "TR", "do đặc tính của bóng rổ", 2], ["공이 바닥의 색과 많이 다르면", "VP", "nếu bóng khác màu sàn nhiều", 4], ["선수나 관중 모두", "CN", "cả cầu thủ lẫn khán giả", 5], ["부담을 느낄 수 있기 때문이다.", "VN", "có thể thấy nặng nề — là vì", 1]],
+   "g": "… 부담을 느낄 수 있기 때문이다", "gv": "Vì có thể thấy nặng nề",
+   "r": "Lý do · chìa khóa", "y": "Khác màu sàn nhiều → mỏi, nặng nề.",
+   "vi": "Đó là vì do đặc tính của bóng rổ phải đập bóng xuống sàn nhiều, nếu bóng khác màu sàn quá nhiều thì cả cầu thủ lẫn khán giả đều có thể thấy nặng nề.",
+   "tip": "**N상** = về mặt N, do N (특성상 = do đặc tính). **부담을 느끼다** = thấy gánh nặng → ở đây là mắt mỏi."}
+],
+"w": [
+  ["프로", "chuyên nghiệp", "", "프로"],
+  ["농구", "bóng rổ", "lung cầu 籠球", "농구 리그에서는|농구의"],
+  ["리그", "giải đấu (league)", "", "리그에서는"],
+  ["주황색", "màu cam", "chu hoàng sắc 朱黃色", "주황색"],
+  ["이유", "lý do", "lý do 理由", "이유가"],
+  ["바닥", "sàn", "", "바닥에|바닥의"],
+  ["튀기다", "đập (cho nảy)", "", "튀겨야"],
+  ["특성상", "do đặc tính", "đặc tính thượng 特性上", "특성상"],
+  ["관중", "khán giả", "quan chúng 觀衆", "관중"],
+  ["부담", "gánh nặng", "phụ đảm 負擔", "부담을"]
+],
+"wo": [
+  ["피로감", "cảm giác mệt mỏi", "bì lao cảm 疲勞感", "", "lựa chọn ③ · đáp án"],
+  ["구별하다", "phân biệt", "khu biệt 區別", "", "lựa chọn ④"]
+],
+"g": [
+  {"p": "-게 하다", "m": "bắt / cho làm", "f": "쓰게 하고 있다", "d": "", "ex": []},
+  {"p": "-는 데 있다", "m": "nằm ở việc …", "f": "데 있다", "d": "", "ex": []},
+  {"p": "N상", "m": "do / về mặt N", "f": "특성상", "d": "", "ex": [["업무상 출장이 많다.", "Do công việc nên hay đi công tác."]]},
+  {"p": "-기 때문이다", "m": "là vì …", "f": "있기 때문이다", "d": "", "ex": []}
+],
+"qa": {
+  "30": {"a": 2, "w": "Khác màu sàn nhiều thì cầu thủ, khán giả đều **thấy nặng nề** → bóng cam để **눈의 피로감을 줄이려는**.", "x": ["Bài không nói ghi bàn.", "Ngược logic bài: bài không nói muốn bóng nổi bật; khác màu quá lại gây mệt.", null, "Bài không nói phân biệt với áo cầu thủ."]}
+},
+"hoi": [
+  {"q": "Bóng rổ có đặc tính gì?", "a": "Phải đập bóng xuống sàn nhiều."},
+  {"q": "Nếu bóng khác màu sàn quá nhiều thì sao?", "a": "Cầu thủ và khán giả thấy nặng nề, mỏi mắt."}
+]
+}

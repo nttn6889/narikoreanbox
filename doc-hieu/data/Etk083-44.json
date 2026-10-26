@@ -1,0 +1,99 @@
+{
+"e": "Etk083", "n": [44, 45],
+"t": "“Thời đại của những phát kiến vĩ đại”",
+"cd": "Lịch sử",
+"y": "Thế kỷ 15–16 được gọi là “thời đại của những phát kiến vĩ đại” vì nhiều nhà thám hiểm châu Âu như Columbus ra đi tìm vùng đất chưa biết để kiếm vàng, hương liệu. Nhưng ý nghĩa thật của các phát kiến không phải là phát hiện lục địa mà là phát hiện biển: nhận thức rằng mọi đại dương nối liền nhau, và các tuyến hàng hải mở ra dựa trên nhận thức đó. Đường biển mở ra, thế giới thành một, tạo cơ hội trao đổi kinh tế, công nghệ, văn hóa và cả hệ sinh thái.",
+"doc": [
+  {"t": "Đọc câu hỏi trước", "d": "44: ô trong câu lý do (**때문이다**). 45: chủ đề → câu **그러나 … 진정한 의미는**.", "s": []},
+  {"t": "Câu có ô (câu 44)", "d": "Ô = lý do gọi là “thời đại phát kiến”. Câu sau **그러나 … 대륙의 발견이 아니라** cho biết cách hiểu thông thường = **phát hiện lục địa** → các nhà thám hiểm **ra đi tìm vùng đất chưa biết** (③).", "s": [1, 2]},
+  {"t": "Câu 3–4 (câu 45)", "d": "Ý nghĩa thật = **phát hiện biển**: các đại dương nối nhau, mở tuyến hàng hải → ④. ① ② nói “lục địa” = điều bị phủ định.", "s": [2, 3]},
+  {"t": "Câu 5–6", "d": "Ví dụ tuyến đường biển và hệ quả (trao đổi) — chi tiết, không phải chủ đề (③ câu 45 là bẫy chi tiết).", "s": [4, 5]}
+],
+"l": [
+  ["얻고자", "NN", "-고자: mục đích (vàng, hương liệu)"],
+  ["때문이다", "NN", "lý do của tên gọi"],
+  ["그러나", "DL", "lật cách hiểu thông thường → chủ đề"],
+  ["아니라", "DL", "không phải A mà là B"],
+  ["실제로", "VD", "ví dụ đường biển"],
+  ["열리자", "TG", "-자: đường biển mở thì …"],
+  ["이로 인해", "NN", "hệ quả"]
+],
+"s": [
+  {"c": [["서양 역사에서는", "TR", "trong lịch sử phương Tây", 1], ["15·16세기를", "TN", "thế kỷ 15–16", 3], ["'위대한 발견의 시대'라고", "TR", "là “thời đại của những phát kiến vĩ đại”", 4], ["부른다.", "VN", "người ta gọi", 2]],
+   "g": "15·16세기를 '…'라고 부른다", "gv": "Gọi thế kỷ 15–16 là …",
+   "r": "Mở · Tên gọi", "y": "Thế kỷ 15–16 = thời đại phát kiến vĩ đại.",
+   "vi": "Trong lịch sử phương Tây, người ta gọi thế kỷ 15–16 là “thời đại của những phát kiến vĩ đại”.",
+   "tip": "**A를 B라고 부르다** = gọi A là B."},
+  {"c": [["콜럼버스처럼", "TR", "như Columbus", 2], ["유럽의 많은 탐험가들이", "CN", "nhiều nhà thám hiểm châu Âu", 1], ["금이나 향신료 등을 얻고자", "TR", "để có được vàng hay hương liệu", 4], ["(    ) 때문이다.", "VN", "là vì (    )", 3]],
+   "g": "탐험가들이 (    ) 때문이다", "gv": "Vì các nhà thám hiểm (    )",
+   "r": "Câu có ô (câu 44) · Lý do tên gọi", "y": "Vì các nhà thám hiểm (ra đi tìm đất mới).",
+   "vi": "Đó là vì nhiều nhà thám hiểm châu Âu như Columbus đã (ra đi tìm vùng đất chưa biết) để có được vàng hay hương liệu.",
+   "tip": "Ô là lý do của tên gọi “phát kiến” → phải có hành động **tìm, phát hiện**."},
+  {"c": [["그러나", "TR", "nhưng", 1], ["이 시대에 이루어진", "DN", "diễn ra trong thời đại này", 4], ["발견의", "DN", "của các phát kiến", 3], ["진정한 의미는", "CN", "ý nghĩa thật sự", 2], ["대륙의 발견이 아니라", "VP", "không phải là phát hiện lục địa mà", 5], ["바다의 발견이었다.", "VN", "là phát hiện biển", 6]],
+   "g": "의미는 대륙의 발견이 아니라 바다의 발견이었다", "gv": "Ý nghĩa không phải lục địa mà là biển",
+   "r": "Lật lại · Chủ đề", "y": "Ý nghĩa thật là phát hiện biển, không phải lục địa.",
+   "vi": "Nhưng ý nghĩa thật sự của các phát kiến trong thời đại này không phải là phát hiện lục địa mà là phát hiện biển.",
+   "tip": "**A이/가 아니라 B** = không phải A mà là B → B là ý chính."},
+  {"c": [["탐험을 통해", "TR", "thông qua thám hiểm", 2], ["지구상의 모든 바다가 하나로 이어져 있다는 인식이 생겼다는 것,", "CN", "việc hình thành nhận thức rằng mọi đại dương trên Trái Đất nối liền làm một,", 3], ["또", "TR", "và", 4], ["이러한 인식을 바탕으로 다양한 해상 항로를 발견한 것이", "CN", "việc phát hiện nhiều tuyến hàng hải dựa trên nhận thức đó", 5], ["이 시대의 진정한 소산이라는 것이다.", "VN", "(tức là) là thành quả thật sự của thời đại", 1]],
+   "g": "… 것이 진정한 소산이라는 것이다", "gv": "Tức là … là thành quả thật",
+   "r": "Giải thích chủ đề", "y": "Biết các đại dương nối nhau, mở tuyến hàng hải.",
+   "vi": "Tức là thành quả thật sự của thời đại này là: thông qua thám hiểm, hình thành nhận thức rằng mọi đại dương trên Trái Đất nối liền làm một, và dựa trên nhận thức đó đã phát hiện nhiều tuyến hàng hải.",
+   "tip": "Câu dài có hai chủ ngữ “-ㄴ 것, 또 -ㄴ 것이” → dịch “thành quả là: (1)…, và (2)…”."},
+  {"c": [["실제로", "TR", "thực tế", 1], ["탐험가들은", "CN", "các nhà thám hiểm", 2], ["아프리카를 돌아 인도양, 더 나아가 극동까지 가는", "DN", "vòng qua châu Phi tới Ấn Độ Dương, xa hơn là Viễn Đông", 4], ["바닷길을 열었고", "VP", "mở đường biển,", 3], ["콜럼버스도", "CN", "Columbus cũng", 5], ["대서양을 왕복할 수 있는", "DN", "có thể đi về qua Đại Tây Dương", 8], ["경로를", "TN", "lộ trình", 7], ["만들었다.", "VN", "tạo ra", 6]],
+   "g": "탐험가들은 바닷길을 열었고 콜럼버스도 경로를 만들었다", "gv": "Mở đường biển, tạo lộ trình",
+   "r": "Ví dụ", "y": "Đường biển tới Viễn Đông; Columbus qua lại Đại Tây Dương.",
+   "vi": "Thực tế, các nhà thám hiểm đã mở đường biển vòng qua châu Phi tới Ấn Độ Dương, xa hơn nữa là Viễn Đông; Columbus cũng tạo ra lộ trình đi về qua Đại Tây Dương.",
+   "tip": "**더 나아가** = xa hơn nữa, hơn thế nữa."},
+  {"c": [["바닷길이 열리자", "VP", "đường biển vừa mở thì", 1], ["전 세계가 하나의 지구가 되었고", "VP", "cả thế giới thành một Trái Đất,", 2], ["이로 인해", "TR", "do đó", 3], ["경제, 기술, 문화뿐만 아니라 생태계의 교환까지 이루어지는", "DN", "trao đổi không chỉ kinh tế, công nghệ, văn hóa mà cả hệ sinh thái diễn ra", 6], ["계기가", "CN", "cơ hội", 5], ["마련되었다.", "VN", "được tạo ra", 4]],
+   "g": "전 세계가 … 되었고 계기가 마련되었다", "gv": "Thế giới thành một, cơ hội được tạo ra",
+   "r": "Kết · Hệ quả", "y": "Thế giới thành một, trao đổi mọi mặt.",
+   "vi": "Đường biển mở ra, cả thế giới trở thành một Trái Đất, và do đó đã tạo ra cơ hội để trao đổi không chỉ kinh tế, công nghệ, văn hóa mà cả hệ sinh thái.",
+   "tip": "**이로 인해** = do điều này."}
+],
+"w": [
+  ["서양", "phương Tây", "tây dương 西洋", "서양"],
+  ["세기", "thế kỷ", "thế kỷ 世紀", "15·16세기를"],
+  ["위대하다", "vĩ đại", "vĩ đại 偉大", "위대한"],
+  ["발견", "phát hiện, phát kiến", "phát kiến 發見", "발견의|발견이|발견한"],
+  ["탐험가", "nhà thám hiểm", "thám hiểm gia 探險家", "탐험가들이|탐험가들은"],
+  ["향신료", "hương liệu, gia vị", "hương tân liệu 香辛料", "향신료"],
+  ["진정하다", "thật sự", "chân chính 眞正", "진정한"],
+  ["대륙", "lục địa", "đại lục 大陸", "대륙의"],
+  ["지구상", "trên Trái Đất", "địa cầu thượng 地球上", "지구상의"],
+  ["이어지다", "nối liền", "", "이어져"],
+  ["인식", "nhận thức", "nhận thức 認識", "인식이|인식을"],
+  ["바탕", "nền tảng", "", "바탕으로"],
+  ["해상 항로", "tuyến hàng hải", "hải thượng hàng lộ 海上航路", "해상 항로를"],
+  ["소산", "sản phẩm, thành quả", "sở sản 所産", "소산이라는"],
+  ["극동", "Viễn Đông", "cực đông 極東", "극동까지"],
+  ["바닷길", "đường biển", "", "바닷길을|바닷길이"],
+  ["왕복하다", "đi về", "vãng phục 往復", "왕복할"],
+  ["경로", "lộ trình", "kinh lộ 經路", "경로를"],
+  ["생태계", "hệ sinh thái", "sinh thái hệ 生態系", "생태계의"],
+  ["교환", "trao đổi", "giao hoán 交換", "교환까지"],
+  ["계기", "cơ hội, bước ngoặt", "khế cơ 契機", "계기가"]
+],
+"wo": [
+  ["매매하다", "mua bán", "mãi mại 賣買", "", "câu 44 ①"],
+  ["미지", "chưa biết", "vị tri 未知", "", "câu 44 ③ · đáp án"],
+  ["개척하다", "khai phá", "khai thác 開拓", "", "câu 45 ①"],
+  ["의의", "ý nghĩa", "ý nghĩa 意義", "", "câu 45 ④"]
+],
+"g": [
+  {"p": "A를 B라고 부르다", "m": "gọi A là B", "f": "'위대한 발견의 시대'라고 부른다", "d": "", "ex": []},
+  {"p": "-고자", "m": "để …", "f": "얻고자", "d": "", "ex": []},
+  {"p": "A이/가 아니라 B", "m": "không phải A mà là B", "f": "발견이 아니라", "d": "", "ex": []},
+  {"p": "N을/를 바탕으로", "m": "dựa trên N", "f": "인식을 바탕으로", "d": "", "ex": []},
+  {"p": "-자", "m": "vừa … thì", "f": "열리자", "d": "", "ex": []},
+  {"p": "A뿐만 아니라 B까지", "m": "không chỉ A mà cả B", "f": "문화뿐만 아니라", "d": "", "ex": []}
+],
+"qa": {
+  "44": {"a": 2, "w": "Lý do tên gọi “phát kiến”; câu sau cho biết cách hiểu thông thường là **phát hiện lục địa** → **미지의 땅을 찾아 떠났기**.", "x": ["Bài nói đi kiếm vàng, hương liệu nhưng không nói mua bán đồ đắt.", "Bài không nói sưu tầm bản đồ.", null, "Bài không nói ghi chép thám hiểm."]},
+  "45": {"a": 3, "w": "Ý nghĩa thật: mở **tuyến hàng hải**, nối thế giới → ④.", "x": ["Nói “lục địa mới” — điều bị phủ định.", "Nói “lục địa” — điều bị phủ định.", "Chỉ là hệ quả (chi tiết), không phải ý chính; lại gán cho “phát hiện lục địa”.", null]}
+},
+"hoi": [
+  {"q": "Vì sao gọi là “thời đại phát kiến”?", "a": "Các nhà thám hiểm ra đi tìm vùng đất mới (kiếm vàng, hương liệu)."},
+  {"q": "Ý nghĩa thật của các phát kiến là gì?", "a": "Phát hiện biển: các đại dương nối nhau, mở tuyến hàng hải."},
+  {"q": "Đường biển mở ra dẫn tới điều gì?", "a": "Thế giới thành một, trao đổi kinh tế, công nghệ, văn hóa, cả hệ sinh thái."}
+]
+}

@@ -1,0 +1,72 @@
+{
+"e": "Etk083", "n": [35],
+"t": "Sách nhập môn nghệ thuật",
+"cd": "Văn hóa – nghệ thuật",
+"y": "Nhiều sách nhập môn nghệ thuật cho đại chúng tập trung vào chuyện gây hứng thú (bối cảnh lịch sử, giai thoại tác giả). Kiến thức đó có ích, nhưng bản chất nghệ thuật nằm ở chính tác phẩm → mong có thêm sách tập trung vào tác phẩm, giải thích đầy đủ yếu tố cấu thành, cách biểu hiện.",
+"doc": [
+  {"t": "Đọc câu hỏi", "d": "Chủ đề → tìm **그러나** và câu cuối (**-기를 희망한다** = mong muốn của người viết).", "s": []},
+  {"t": "Câu 3 · lật lại", "d": "**그러나 예술의 본질은 작품 그 자체에 있다** — bản chất ở tác phẩm.", "s": [2]},
+  {"t": "Câu cuối · chủ đề", "d": "Mong sách **tập trung vào tác phẩm** tăng lên → ②. ① là điều bị lật (chuyện ngoài tác phẩm).", "s": [3]}
+],
+"l": [
+  ["경우를 많이 볼 수 있다", "GT", "hiện trạng sắp bị phê bình"],
+  ["이런 지식", "CH", "chỉ lại bối cảnh, giai thoại"],
+  ["그러나", "DL", "lật lại → ý chính"],
+  ["늘어나기를 희망한다", "TD", "mong muốn → chủ đề"]
+],
+"s": [
+  {"c": [["대중을 대상으로 한", "DN", "dành cho đại chúng", 2], ["예술 입문서가", "CN", "sách nhập môn nghệ thuật", 1], ["작품의 역사적 배경, 작가에 대한 일화 등", "DN", "như bối cảnh lịch sử của tác phẩm, giai thoại về tác giả", 6], ["독자의 흥미를 끄는", "DN", "thu hút hứng thú người đọc", 5], ["이야기에 집중하는", "DN", "tập trung vào câu chuyện", 4], ["경우를 많이 볼 수 있다.", "VN", "(ta) thấy nhiều trường hợp", 3]],
+   "g": "입문서가 … 집중하는 경우를 많이 볼 수 있다", "gv": "Thấy nhiều sách tập trung vào …",
+   "r": "Mở · Hiện trạng", "y": "Sách nhập môn chuộng chuyện bên lề.",
+   "vi": "Ta thấy nhiều trường hợp sách nhập môn nghệ thuật dành cho đại chúng tập trung vào những câu chuyện thu hút người đọc như bối cảnh lịch sử của tác phẩm, giai thoại về tác giả.",
+   "tip": "**-는 경우를 많이 볼 수 있다** = thường thấy … → hiện trạng (thường bị phê bình sau đó)."},
+  {"c": [["작품에 관한", "DN", "về tác phẩm", 2], ["이런 지식은", "CN", "những kiến thức như thế", 1], ["작품 이해에", "TR", "cho việc hiểu tác phẩm", 4], ["도움이 된다.", "VN", "có ích", 3]],
+   "g": "지식은 도움이 된다", "gv": "Kiến thức có ích",
+   "r": "Nhượng bộ", "y": "Kiến thức đó có ích.",
+   "vi": "Những kiến thức như thế về tác phẩm có ích cho việc hiểu tác phẩm.",
+   "tip": "Câu nhượng bộ (công nhận) → câu sau **그러나** mới là ý chính."},
+  {"c": [["그러나", "TR", "nhưng", 1], ["예술의 본질은", "CN", "bản chất của nghệ thuật", 2], ["작품 그 자체에", "TR", "ở chính tác phẩm", 4], ["있다.", "VN", "nằm", 3]],
+   "g": "본질은 작품 그 자체에 있다", "gv": "Bản chất nằm ở chính tác phẩm",
+   "r": "Lật lại · Ý chính", "y": "Bản chất nằm ở chính tác phẩm.",
+   "vi": "Nhưng bản chất của nghệ thuật nằm ở chính tác phẩm.",
+   "tip": "**그 자체** = chính bản thân nó."},
+  {"c": [["작품 외적인 사실들보다", "TR", "hơn là những sự thật bên ngoài tác phẩm", 6], ["작품에 초점을 두고", "VP", "tập trung vào tác phẩm", 4], ["작품의 구성 요소, 표현 방식 등을", "TN", "yếu tố cấu thành, cách biểu hiện của tác phẩm", 7], ["충분히 설명하는", "DN", "giải thích đầy đủ", 5], ["입문서가", "CN", "sách nhập môn", 3], ["늘어나기를", "VP", "tăng lên", 2], ["희망한다.", "VN", "(tôi) mong", 1]],
+   "g": "입문서가 늘어나기를 희망한다", "gv": "Mong sách nhập môn tăng lên",
+   "r": "Kết · Chủ đề", "y": "Mong có thêm sách tập trung vào tác phẩm.",
+   "vi": "Tôi mong sách nhập môn tập trung vào tác phẩm, giải thích đầy đủ yếu tố cấu thành, cách biểu hiện của tác phẩm hơn là những sự thật bên ngoài tác phẩm sẽ tăng lên.",
+   "tip": "**-기를 희망하다/바라다** = mong rằng … → quan điểm người viết."}
+],
+"w": [
+  ["대중", "đại chúng", "đại chúng 大衆", "대중을"],
+  ["입문서", "sách nhập môn", "nhập môn thư 入門書", "입문서가"],
+  ["역사적", "mang tính lịch sử", "lịch sử đích 歷史的", "역사적"],
+  ["배경", "bối cảnh", "bối cảnh 背景", "배경,"],
+  ["일화", "giai thoại", "dật thoại 逸話", "일화"],
+  ["흥미를 끌다", "gây hứng thú", "hứng vị 興味", "흥미를 끄는"],
+  ["집중하다", "tập trung", "tập trung 集中", "집중하는"],
+  ["본질", "bản chất", "bản chất 本質", "본질은"],
+  ["자체", "tự thân, bản thân", "tự thể 自體", "자체에"],
+  ["외적", "bên ngoài", "ngoại đích 外的", "외적인"],
+  ["초점을 두다", "tập trung vào", "tiêu điểm 焦點", "초점을 두고"],
+  ["구성 요소", "yếu tố cấu thành", "cấu thành yếu tố 構成要素", "구성 요소,"],
+  ["표현 방식", "cách biểu hiện", "biểu hiện phương thức 表現方式", "표현 방식"],
+  ["희망하다", "mong muốn", "hy vọng 希望", "희망한다"]
+],
+"wo": [
+  ["충실히", "đầy đủ, trung thực", "sung thực 充實", "", "lựa chọn ②"],
+  ["궁금하다", "tò mò, muốn biết", "", "", "lựa chọn ③"]
+],
+"g": [
+  {"p": "N을/를 대상으로 한", "m": "dành cho N", "f": "대상으로 한", "d": "", "ex": []},
+  {"p": "N에 관한", "m": "về N", "f": "작품에 관한", "d": "", "ex": []},
+  {"p": "N보다", "m": "hơn N", "f": "사실들보다", "d": "", "ex": []},
+  {"p": "-기를 희망하다", "m": "mong rằng …", "f": "늘어나기를 희망한다", "d": "", "ex": []}
+],
+"qa": {
+  "35": {"a": 1, "w": "Câu cuối: mong **sách tập trung vào chính tác phẩm** tăng lên → ②.", "x": ["Ngược: đó là điều bị phê bình (chuyện ngoài tác phẩm).", null, "Bài không nói tìm hiểu đại chúng muốn biết gì.", "Bài không nói làm nghệ thuật bớt khó."]}
+},
+"hoi": [
+  {"q": "Sách nhập môn hiện nay thường tập trung vào gì?", "a": "Bối cảnh lịch sử, giai thoại tác giả."},
+  {"q": "Theo tác giả, bản chất nghệ thuật nằm ở đâu?", "a": "Ở chính tác phẩm."}
+]
+}

@@ -1,0 +1,69 @@
+{
+"e": "Etk083", "n": [29],
+"t": "Vận chuyển đá xây kim tự tháp",
+"cd": "Lịch sử – khoa học",
+"y": "Xây kim tự tháp Ai Cập phải kéo đá khổng lồ trên cát, nên kỹ thuật tưới lượng nước vừa đủ rất quan trọng: độ ẩm giữ đều thì đường cát cứng, vận chuyển dễ. Tranh tường cổ vẽ người tưới nước trên đường kéo đá.",
+"doc": [
+  {"t": "Đọc câu có ô", "d": "Kéo đá trên cát → để làm vậy kỹ thuật (    ) quan trọng.", "s": [0]},
+  {"t": "Đọc qua ô · lý do", "d": "Câu 2 (**-기 때문이다**): **수분이 일정하게 유지되면** đường cát cứng → nước.", "s": [1]},
+  {"t": "Bằng chứng", "d": "Câu 3 (**실제로**): tranh tường có người **물을 뿌리고** → ô = **tưới lượng nước vừa đủ**.", "s": [2]}
+],
+"l": [
+  ["운반해야 했는데", "GT", "-는데: nêu bối cảnh"],
+  ["이를 위해서는", "CH", "chỉ lại việc vận chuyển đá"],
+  ["수월했기 때문이다", "NN", "lý do → chìa khóa của ô"],
+  ["실제로", "VD", "bằng chứng"]
+],
+"s": [
+  {"c": [["고대 이집트 피라미드를 건축할 때", "TR", "khi xây kim tự tháp Ai Cập cổ đại", 1], ["거대한 바위를", "TN", "những tảng đá khổng lồ", 3], ["모래 위에서", "TR", "trên cát", 4], ["운반해야 했는데", "VP", "phải vận chuyển", 2], ["이를 위해서는", "TR", "để làm điều đó", 5], ["(    ) 기술이", "CN", "kỹ thuật (    )", 6], ["중요했다.", "VN", "rất quan trọng", 7]],
+   "g": "기술이 중요했다", "gv": "Kỹ thuật … quan trọng",
+   "r": "Câu có ô", "y": "Kéo đá trên cát cần kỹ thuật (tưới nước vừa đủ).",
+   "vi": "Khi xây kim tự tháp Ai Cập cổ đại phải vận chuyển những tảng đá khổng lồ trên cát, và để làm điều đó thì kỹ thuật (tưới lượng nước vừa đủ) rất quan trọng.",
+   "tip": "**이를 위해서는** = để làm việc này → ô là phương tiện cho việc vừa nêu."},
+  {"c": [["모래에", "TR", "trong cát", 2], ["수분이", "CN", "độ ẩm", 1], ["일정하게 유지되면", "VP", "được giữ đều thì", 3], ["모랫길이", "CN", "đường cát", 4], ["단단해져서", "VP", "trở nên cứng nên", 5], ["운반이 수월했기 때문이다.", "VN", "vận chuyển dễ dàng — là vì", 6]],
+   "g": "… 운반이 수월했기 때문이다", "gv": "Là vì vận chuyển dễ",
+   "r": "Lý do", "y": "Cát ẩm đều → đường cứng → dễ kéo.",
+   "vi": "Đó là vì nếu độ ẩm trong cát được giữ đều thì đường cát trở nên cứng nên việc vận chuyển dễ dàng.",
+   "tip": "Chuỗi **-면 → -아서 → -기 때문이다**."},
+  {"c": [["실제로", "TR", "thực tế", 1], ["고대 벽화에는", "TR", "trong tranh tường cổ", 2], ["바위를 운반하는 길 위에", "TR", "trên con đường kéo đá", 6], ["사람들이 물을 뿌리고 있는", "DN", "người ta đang tưới nước", 5], ["장면이", "CN", "cảnh", 4], ["묘사되어 있다.", "VN", "có vẽ", 3]],
+   "g": "장면이 묘사되어 있다", "gv": "Có vẽ cảnh …",
+   "r": "Bằng chứng", "y": "Tranh tường vẽ người tưới nước trên đường kéo đá.",
+   "vi": "Thực tế, trong tranh tường cổ có vẽ cảnh người ta đang tưới nước trên con đường kéo đá.",
+   "tip": "**실제로** = câu bằng chứng → xác nhận đáp án."}
+],
+"w": [
+  ["고대", "cổ đại", "cổ đại 古代", "고대"],
+  ["피라미드", "kim tự tháp", "", "피라미드를"],
+  ["건축하다", "xây dựng", "kiến trúc 建築", "건축할"],
+  ["거대하다", "khổng lồ", "cự đại 巨大", "거대한"],
+  ["바위", "tảng đá", "", "바위를"],
+  ["운반하다", "vận chuyển", "vận ban 運搬", "운반해야|운반하는|운반이"],
+  ["수분", "độ ẩm, hơi nước", "thủy phần 水分", "수분이"],
+  ["일정하다", "đều, nhất định", "nhất định 一定", "일정하게"],
+  ["유지되다", "được duy trì", "duy trì 維持", "유지되면"],
+  ["단단하다", "cứng, chắc", "", "단단해져서"],
+  ["수월하다", "dễ dàng", "", "수월했기"],
+  ["벽화", "tranh tường", "bích họa 壁畫", "벽화에는"],
+  ["뿌리다", "tưới, rắc", "", "뿌리고"],
+  ["장면", "cảnh", "trường diện 場面", "장면이"],
+  ["묘사되다", "được miêu tả", "miêu tả 描寫", "묘사되어"]
+],
+"wo": [
+  ["적정량", "lượng vừa phải", "thích chính lượng 適正量", "", "lựa chọn ① · đáp án"],
+  ["무게", "trọng lượng", "", "", "lựa chọn ③"],
+  ["배치하다", "bố trí", "phối trí 配置", "", "lựa chọn ④"]
+],
+"g": [
+  {"p": "-아/어야 했는데", "m": "đã phải …, và", "f": "운반해야 했는데", "d": "", "ex": []},
+  {"p": "-기 위해서는", "m": "để … thì", "f": "이를 위해서는", "d": "", "ex": []},
+  {"p": "-기 때문이다", "m": "là vì …", "f": "수월했기 때문이다", "d": "", "ex": []},
+  {"p": "-아/어 있다", "m": "(trạng thái) đang …", "f": "묘사되어 있다", "d": "", "ex": []}
+],
+"qa": {
+  "29": {"a": 0, "w": "Câu lý do (độ ẩm đều) + bằng chứng (tranh vẽ người tưới nước) → **적정량의 물을 뿌리는** 기술.", "x": [null, "Ngược: cát ẩm thì **cứng**, không phải mềm.", "Bài không nói tính trọng lượng.", "Bài không nói bố trí người."]}
+},
+"hoi": [
+  {"q": "Vì sao cần tưới nước lên cát?", "a": "Độ ẩm đều thì đường cát cứng, kéo đá dễ."},
+  {"q": "Bằng chứng là gì?", "a": "Tranh tường cổ vẽ người tưới nước trên đường kéo đá."}
+]
+}

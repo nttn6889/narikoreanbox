@@ -1,0 +1,69 @@
+{
+"e": "Etk083", "n": [34],
+"t": "Từ chỉ thị trong lời nói của trẻ",
+"cd": "Ngôn ngữ – tâm lý",
+"y": "Sau “mẹ”, trẻ nhanh học các từ chỉ thị như “cái này”. Từ chỉ thị chỉ hiểu được khi người nói và người nghe cùng chia sẻ tình huống; trẻ dùng chúng để tự nhiên thu hút sự chú ý của cha mẹ. Nhiều nghiên cứu cho thấy phần lớn trẻ dùng từ chỉ thị vào khoảng 12–18 tháng tuổi.",
+"doc": [
+  {"t": "Đọc 4 lựa chọn trước", "d": "Từ khóa: **혼잣말** · **엄마보다 먼저** · **언어권마다 다르게** · **상황을 공유해야 의미 전달**.", "s": []},
+  {"t": "Câu 2", "d": "**상황을 타인과 공유해야 그 의미를 이해** → ④ (diễn đạt lại).", "s": [1]},
+  {"t": "Câu 1, 3, 4", "d": "**'엄마' 다음으로** → ② ngược; trẻ dùng để **thu hút cha mẹ** → ① sai; **대부분 … 12~18개월** nhiều nghiên cứu → ③ sai.", "s": [0, 2, 3]}
+],
+"l": [
+  ["다음으로", "TG", "thứ tự học: sau ‘엄마’"],
+  ["공유해야", "GT", "-아야: điều kiện để hiểu"],
+  ["이러한 지시어", "CH", "chỉ lại từ chỉ thị"],
+  ["밝혀진 바 있다", "GT", "đã được làm rõ"]
+],
+"s": [
+  {"c": [["아이가 '엄마' 다음으로 빨리 배우는", "DN", "trẻ học nhanh sau từ “mẹ”", 2], ["말 중에는", "TR", "trong số những từ", 1], ["'이것'과 같이", "TR", "như “cái này”", 5], ["여러 물건을 가리키는", "DN", "chỉ nhiều đồ vật", 6], ["지시어가", "CN", "từ chỉ thị", 4], ["있다.", "VN", "có", 3]],
+   "g": "말 중에는 지시어가 있다", "gv": "Trong số các từ có từ chỉ thị",
+   "r": "Mở · Giới thiệu", "y": "Sau “mẹ”, trẻ học từ chỉ thị.",
+   "vi": "Trong số những từ trẻ học nhanh sau từ “mẹ”, có các từ chỉ thị như “cái này” dùng để chỉ nhiều đồ vật.",
+   "tip": "**N 다음으로** = sau N (thứ tự)."},
+  {"c": [["지시어는", "CN", "từ chỉ thị", 1], ["대화하는 상황을 타인과 공유해야", "VP", "phải chia sẻ tình huống hội thoại với người khác", 4], ["그 의미를 이해할 수 있다는", "DN", "thì mới hiểu được nghĩa", 5], ["특성이", "CN", "đặc tính", 3], ["있다.", "VN", "có", 2]],
+   "g": "지시어는 … 특성이 있다", "gv": "Từ chỉ thị có đặc tính …",
+   "r": "Đặc tính", "y": "Phải chia sẻ tình huống mới hiểu nghĩa.",
+   "vi": "Từ chỉ thị có đặc tính là phải chia sẻ tình huống hội thoại với người khác thì mới hiểu được nghĩa.",
+   "tip": "**-아/어야** = phải … thì mới."},
+  {"c": [["아기들은", "CN", "trẻ", 1], ["이러한 지시어를 사용해", "VP", "dùng từ chỉ thị như vậy", 2], ["자연스럽게", "TR", "một cách tự nhiên", 3], ["부모의 관심을", "TN", "sự chú ý của cha mẹ", 5], ["끄는 것이다.", "VN", "(tức là) thu hút", 4]],
+   "g": "아기들은 관심을 끄는 것이다", "gv": "Trẻ thu hút sự chú ý",
+   "r": "Chức năng", "y": "Trẻ dùng để thu hút cha mẹ.",
+   "vi": "Tức là trẻ dùng từ chỉ thị như vậy để tự nhiên thu hút sự chú ý của cha mẹ.",
+   "tip": "**-는 것이다** = tức là (giải thích)."},
+  {"c": [["대부분의 아기들이", "CN", "phần lớn trẻ", 3], ["생후 12~18개월 무렵에", "TR", "vào khoảng 12–18 tháng tuổi", 4], ["이런 지시어를 사용한다는 것은", "CN", "việc dùng từ chỉ thị như thế", 2], ["이미 여러 언어 연구에서", "TR", "trong nhiều nghiên cứu ngôn ngữ", 5], ["밝혀진 바 있다.", "VN", "đã được làm rõ", 1]],
+   "g": "… 것은 밝혀진 바 있다", "gv": "Việc … đã được làm rõ",
+   "r": "Kết · Bằng chứng", "y": "Nhiều nghiên cứu: trẻ 12–18 tháng dùng từ chỉ thị.",
+   "vi": "Nhiều nghiên cứu ngôn ngữ đã làm rõ rằng phần lớn trẻ dùng các từ chỉ thị như thế vào khoảng 12–18 tháng tuổi.",
+   "tip": "**-(으)ㄴ 바 있다** = đã từng … (văn viết trang trọng)."}
+],
+"w": [
+  ["가리키다", "chỉ (vào)", "", "가리키는"],
+  ["지시어", "từ chỉ thị", "chỉ thị ngữ 指示語", "지시어가|지시어는|지시어를"],
+  ["대화하다", "hội thoại", "đối thoại 對話", "대화하는"],
+  ["타인", "người khác", "tha nhân 他人", "타인과"],
+  ["공유하다", "chia sẻ", "cộng hữu 共有", "공유해야"],
+  ["특성", "đặc tính", "đặc tính 特性", "특성이"],
+  ["관심을 끌다", "thu hút sự chú ý", "quan tâm 關心", "관심을 끄는"],
+  ["생후", "sau khi sinh", "sinh hậu 生後", "생후"],
+  ["무렵", "khoảng (thời điểm)", "", "무렵에"],
+  ["밝혀지다", "được làm rõ", "", "밝혀진"]
+],
+"wo": [
+  ["혼잣말", "nói một mình", "", "", "lựa chọn ①"],
+  ["습득하다", "tiếp thu, học được", "tập đắc 習得", "", "lựa chọn ②③"],
+  ["언어권", "khu vực ngôn ngữ", "ngôn ngữ quyển 言語圈", "", "lựa chọn ③"]
+],
+"g": [
+  {"p": "N 다음으로", "m": "sau N", "f": "다음으로", "d": "", "ex": []},
+  {"p": "N과/와 같이", "m": "như N", "f": "'이것'과 같이", "d": "", "ex": []},
+  {"p": "-아/어야", "m": "phải … thì mới", "f": "공유해야", "d": "", "ex": []},
+  {"p": "-(으)ㄴ 바 있다", "m": "đã từng …", "f": "밝혀진 바 있다", "d": "Văn viết.", "ex": []}
+],
+"qa": {
+  "34": {"a": 3, "w": "**상황을 타인과 공유해야 그 의미를 이해할 수 있다** → ④.", "x": ["Bài nói trẻ dùng để thu hút cha mẹ, không nói nói một mình.", "Ngược: học **sau** từ “mẹ”.", "Nhiều nghiên cứu cho cùng một thời kỳ (12–18 tháng).", null]}
+},
+"hoi": [
+  {"q": "Muốn hiểu nghĩa từ chỉ thị cần gì?", "a": "Cùng chia sẻ tình huống hội thoại."},
+  {"q": "Trẻ dùng từ chỉ thị để làm gì?", "a": "Thu hút sự chú ý của cha mẹ."}
+]
+}

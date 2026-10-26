@@ -1,0 +1,82 @@
+{
+"e": "Etk083", "n": [38],
+"t": "Tầng lớp trung dung",
+"cd": "Xã hội – chính trị",
+"y": "Tầng lớp trung dung bị xem là tiêu cực vì bị cho là không có niềm tin rõ, đổi ý theo vấn đề. Nhưng cũng có đánh giá tích cực: họ suy nghĩ linh hoạt, khách quan hơn; ý kiến của họ có thể làm dịu phân cực chính trị, làm nền cho đồng thuận xã hội hợp lý.",
+"doc": [
+  {"t": "Đọc câu hỏi", "d": "Chủ đề → tìm **그러나** và câu cuối **-다는 것이다**.", "s": []},
+  {"t": "Câu 2 · lật lại", "d": "**그러나 … 긍정적 평가도 있다** → bài đi theo hướng tích cực.", "s": [1]},
+  {"t": "Câu cuối · chủ đề", "d": "Làm dịu phân cực, giúp đồng thuận hợp lý → giúp xã hội phát triển cân bằng (②). ④ là định kiến bị lật.", "s": [3]}
+],
+"l": [
+  ["인식 때문에", "NN", "lý do bị xem tiêu cực"],
+  ["그러나", "DL", "lật sang đánh giá tích cực → ý chính"],
+  ["보이지만", "DL", "trông có vẻ … nhưng"],
+  ["될 수 있다는 것이다", "KL", "kết luận"]
+],
+"s": [
+  {"c": [["뚜렷한 신념 없이 사안에 따라 의견을 바꾼다는", "DN", "không có niềm tin rõ ràng, đổi ý theo từng vấn đề", 4], ["인식 때문에", "TR", "vì nhận thức", 3], ["중도층은", "CN", "tầng lớp trung dung", 1], ["부정적 존재로", "TR", "là tồn tại tiêu cực", 5], ["여겨진다.", "VN", "bị coi", 2]],
+   "g": "중도층은 부정적 존재로 여겨진다", "gv": "Trung dung bị coi là tiêu cực",
+   "r": "Mở · Định kiến", "y": "Trung dung bị xem tiêu cực vì hay đổi ý.",
+   "vi": "Tầng lớp trung dung bị coi là tiêu cực vì nhận thức rằng họ không có niềm tin rõ ràng, đổi ý theo từng vấn đề.",
+   "tip": "**N(으)로 여겨지다** = bị coi là N."},
+  {"c": [["그러나", "TR", "nhưng", 1], ["이들에 대한", "DN", "về họ", 3], ["긍정적 평가도", "CN", "đánh giá tích cực", 2], ["있다.", "VN", "cũng có", 4]],
+   "g": "긍정적 평가도 있다", "gv": "Cũng có đánh giá tích cực",
+   "r": "Lật lại", "y": "Cũng có đánh giá tích cực.",
+   "vi": "Nhưng cũng có đánh giá tích cực về họ.",
+   "tip": "Câu ngắn sau **그러나** = hướng của cả bài."},
+  {"c": [["주관 없이 흔들리는 것처럼 보이지만", "VP", "trông như dao động vì không có chủ kiến, nhưng", 1], ["쟁점에 대해", "TR", "về các vấn đề tranh cãi", 3], ["좀 더 유연하고 객관적으로", "TR", "linh hoạt và khách quan hơn", 4], ["사고한다고 보는", "DN", "cho rằng (họ) suy nghĩ", 2], ["관점이다.", "VN", "là quan điểm", 5]],
+   "g": "… 사고한다고 보는 관점이다", "gv": "Là quan điểm cho rằng họ suy nghĩ …",
+   "r": "Giải thích", "y": "Họ suy nghĩ linh hoạt, khách quan hơn.",
+   "vi": "Đó là quan điểm cho rằng họ trông như dao động vì không có chủ kiến, nhưng thật ra suy nghĩ về các vấn đề tranh cãi linh hoạt và khách quan hơn.",
+   "tip": "**-는 것처럼 보이지만** = trông như … nhưng."},
+  {"c": [["중도층의 의견이", "CN", "ý kiến của tầng lớp trung dung", 1], ["정치적 양극화를 완화하고", "VP", "làm dịu phân cực chính trị", 4], ["합리적으로 사회적 합의가 도출되도록 이끄는", "DN", "dẫn dắt để đồng thuận xã hội được hình thành hợp lý", 5], ["토대가", "TN", "nền tảng", 3], ["될 수 있다는 것이다.", "VN", "có thể trở thành", 2]],
+   "g": "의견이 토대가 될 수 있다는 것이다", "gv": "Ý kiến có thể trở thành nền tảng",
+   "r": "Kết · Chủ đề", "y": "Giảm phân cực, giúp đồng thuận hợp lý.",
+   "vi": "Tức là ý kiến của tầng lớp trung dung có thể trở thành nền tảng làm dịu phân cực chính trị và dẫn dắt để đồng thuận xã hội được hình thành một cách hợp lý.",
+   "tip": "**-다는 것이다** = tức là … (tóm lại quan điểm)."}
+],
+"w": [
+  ["뚜렷하다", "rõ ràng", "", "뚜렷한"],
+  ["신념", "niềm tin, tín niệm", "tín niệm 信念", "신념"],
+  ["사안", "vấn đề, vụ việc", "sự án 事案", "사안에"],
+  ["인식", "nhận thức", "nhận thức 認識", "인식"],
+  ["중도층", "tầng lớp trung dung (ôn hòa)", "trung đạo tằng 中道層", "중도층은|중도층의"],
+  ["부정적", "tiêu cực", "phủ định đích 否定的", "부정적"],
+  ["여겨지다", "bị coi là", "", "여겨진다"],
+  ["긍정적", "tích cực", "khẳng định đích 肯定的", "긍정적"],
+  ["평가", "đánh giá", "bình giá 評價", "평가도"],
+  ["주관", "chủ kiến", "chủ quan 主觀", "주관"],
+  ["흔들리다", "dao động", "", "흔들리는"],
+  ["쟁점", "vấn đề tranh cãi", "tranh điểm 爭點", "쟁점에"],
+  ["유연하다", "linh hoạt", "nhu nhuyễn 柔軟", "유연하고"],
+  ["객관적", "khách quan", "khách quan đích 客觀的", "객관적으로"],
+  ["사고하다", "suy nghĩ, tư duy", "tư khảo 思考", "사고한다고"],
+  ["관점", "quan điểm", "quan điểm 觀點", "관점이다"],
+  ["양극화", "phân cực", "lưỡng cực hóa 兩極化", "양극화를"],
+  ["완화하다", "làm dịu", "hoãn hòa 緩和", "완화하고"],
+  ["합의", "đồng thuận", "hợp ý 合意", "합의가"],
+  ["도출되다", "được rút ra", "đạo xuất 導出", "도출되도록"],
+  ["토대", "nền tảng", "thổ đài 土臺", "토대가"]
+],
+"wo": [
+  ["비판적", "phê phán", "phê phán đích 批判的", "", "lựa chọn ①"],
+  ["균형", "cân bằng", "quân hành 均衡", "", "lựa chọn ②"],
+  ["표출하다", "biểu lộ", "biểu xuất 表出", "", "lựa chọn ③"],
+  ["저해하다", "cản trở", "trở hại 沮害", "", "lựa chọn ④"]
+],
+"g": [
+  {"p": "N에 따라", "m": "theo N", "f": "사안에 따라", "d": "", "ex": []},
+  {"p": "N(으)로 여겨지다", "m": "bị coi là N", "f": "존재로 여겨진다", "d": "", "ex": []},
+  {"p": "-는 것처럼 보이지만", "m": "trông như … nhưng", "f": "흔들리는 것처럼 보이지만", "d": "", "ex": []},
+  {"p": "-도록 이끌다", "m": "dẫn dắt để …", "f": "도출되도록 이끄는", "d": "", "ex": []},
+  {"p": "-다는 것이다", "m": "tức là …", "f": "있다는 것이다", "d": "", "ex": []}
+],
+"qa": {
+  "38": {"a": 1, "w": "Câu cuối: làm dịu phân cực, giúp đồng thuận → **giúp xã hội phát triển cân bằng** (②).", "x": ["Bài nói họ suy nghĩ khách quan, không nói phê phán.", null, "Bài không khuyên bày tỏ niềm tin chính trị mạnh.", "Đó là định kiến bị lật ở câu 1."]}
+},
+"hoi": [
+  {"q": "Vì sao trung dung bị xem tiêu cực?", "a": "Bị cho là không có niềm tin, đổi ý theo vấn đề."},
+  {"q": "Đánh giá tích cực về họ là gì?", "a": "Suy nghĩ linh hoạt, khách quan; giúp giảm phân cực, tạo đồng thuận."}
+]
+}

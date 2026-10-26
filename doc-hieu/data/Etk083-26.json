@@ -1,0 +1,46 @@
+{
+"e": "Etk083", "n": [26],
+"t": "Mưa lớn bất ngờ, xe bò như rùa",
+"cd": "Xã hội – thời sự",
+"y": "Mưa lớn bất ngờ khiến xe cộ chạy chậm như bò, đường đi làm buổi sáng bị tắc.",
+"doc": [
+  {"t": "Tách 2 nửa", "d": "Nửa 1: **기습 폭우에 차량 '엉금엉금'** (mưa lớn bất ngờ → xe bò chậm). Nửa 2: **출근길 정체** (tắc đường đi làm).", "s": [0]},
+  {"t": "Giải nghĩa chữ khó", "d": "**기습** = tập kích, bất ngờ; **엉금엉금** = bò chậm chạp → xe chạy rất chậm. Không có chữ “tai nạn, thiệt hại”.", "s": []}
+],
+"l": [
+  ["기습 폭우에", "NN", "nguyên nhân: mưa lớn bất ngờ"],
+  ["'엉금엉금',", "GT", "từ tượng hình: bò chậm"],
+  ["출근길 정체", "KL", "kết quả"]
+],
+"s": [
+  {"c": [["기습 폭우에", "TR", "vì mưa lớn bất ngờ", 1], ["차량", "CN", "xe cộ", 2], ["'엉금엉금',", "VP", "bò chậm như rùa,", 3], ["출근길", "CN", "đường đi làm", 4], ["정체", "VN", "tắc nghẽn", 5]],
+   "g": "차량 엉금엉금, 출근길 정체", "gv": "Xe bò chậm, đường đi làm tắc",
+   "r": "Tiêu đề", "y": "Mưa lớn bất ngờ → xe chậm → tắc đường đi làm.",
+   "vi": "Mưa lớn bất ngờ khiến xe cộ bò chậm như rùa, đường đi làm bị tắc nghẽn.",
+   "tip": "**N에** trong tiêu đề = vì N. Từ tượng hình trong ‘ ’ diễn tả trạng thái."}
+],
+"w": [
+  ["기습", "tập kích; bất ngờ", "kỳ tập 奇襲", "기습"],
+  ["폭우", "mưa lớn, mưa xối xả", "bạo vũ 暴雨", "폭우에"],
+  ["차량", "xe cộ", "xa lượng 車輛", "차량"],
+  ["엉금엉금", "(bò) chậm chạp", "", "엉금엉금"],
+  ["출근길", "đường đi làm", "xuất cần 出勤", "출근길"],
+  ["정체", "tắc nghẽn, ùn tắc", "đình trệ 停滯", "정체"]
+],
+"wo": [
+  ["쏟아지다", "đổ xuống, trút", "", "", "lựa chọn ③"],
+  ["운행하다", "chạy (xe)", "vận hành 運行", "", "lựa chọn ③"],
+  ["잇따르다", "liên tiếp xảy ra", "", "", "lựa chọn ②"],
+  ["혼잡하다", "đông đúc, hỗn loạn", "hỗn tạp 混雜", "", "lựa chọn ④"]
+],
+"g": [
+  {"p": "N에 (tiêu đề)", "m": "vì N", "f": "폭우에", "d": "Nguyên nhân trong tiêu đề.", "ex": []}
+],
+"qa": {
+  "26": {"a": 2, "w": "Mưa lớn **đột ngột** (기습) → xe **chạy chậm** (엉금엉금) → **tắc đường đi làm** → ③.", "x": ["Thêm “xe bị thiệt hại” — tiêu đề không có.", "Thêm “tai nạn liên tiếp” — tiêu đề không có.", null, "Đổi đối tượng: giao thông công cộng; và 기습 = đột ngột, không phải mưa kéo dài."]}
+},
+"hoi": [
+  {"q": "기습 폭우 là mưa như thế nào?", "a": "Mưa lớn bất ngờ."},
+  {"q": "엉금엉금 tả cái gì?", "a": "Xe chạy chậm như bò."}
+]
+}

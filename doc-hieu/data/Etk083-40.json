@@ -1,0 +1,74 @@
+{
+"e": "Etk083", "n": [40],
+"t": "Hệ thần kinh ruột",
+"cd": "Khoa học – y học",
+"y": "Não điều khiển cơ thể qua hệ thần kinh, nhưng ruột có thể tự hoạt động không cần lệnh của não, vì ruột có hệ thần kinh riêng phục vụ ăn uống, tiêu hóa. Hệ thần kinh ruột chủ yếu điều chỉnh cơ ruột, dịch tiêu hóa để thúc đẩy tiêu hóa; nhưng không chỉ liên quan tới ruột — nó trao đổi với não, nên vấn đề ở ruột có thể ảnh hưởng tâm lý.",
+"doc": [
+  {"t": "Đọc <보기> trước", "d": "<보기>: hệ thần kinh ruột **chủ yếu** (주로) làm việc **trong ruột** (cơ, dịch tiêu hóa). → Câu trước phải giới thiệu hệ thần kinh ruột.", "s": []},
+  {"t": "Tìm chỗ", "d": "Câu 2 vừa nói **장에 별도의 신경계** (ruột có hệ thần kinh riêng) → <보기> giải thích chức năng của nó ngay sau → ㉡.", "s": [1]},
+  {"t": "Câu sau ㉡", "d": "**한편 … 오로지 장에만 관여하는 것은 아니다** (không chỉ liên quan ruột) → cần câu “chủ yếu làm việc trong ruột” đứng trước. Cặp **주로 ↔ 오로지 …만 …은 아니다**.", "s": [2]}
+],
+"l": [
+  ["관장하는데", "DL", "-는데: não điều khiển, nhưng ruột thì …"],
+  ["두었기 때문이다", "NN", "lý do ruột tự hoạt động"],
+  ["한편", "DL", "chuyển sang chức năng ngoài ruột"],
+  ["오로지 장에만", "GT", "không chỉ ruột → trước đó phải nói chức năng trong ruột"]
+],
+"s": [
+  {"c": [["뇌는", "CN", "não", 1], ["신경계를 통해", "TR", "thông qua hệ thần kinh", 3], ["몸 전체의 움직임을", "TN", "chuyển động của toàn cơ thể", 4], ["관장하는데", "VP", "điều khiển, nhưng", 2], ["장의 경우에는", "TR", "trường hợp của ruột thì", 5], ["뇌의 명령 없이", "TR", "không cần lệnh của não", 8], ["자율적으로", "TR", "một cách tự chủ", 7], ["작동하기도 한다.", "VN", "cũng có khi hoạt động", 6], ["( ㉠ )", "NOI", "( ㉠ )", 9]],
+   "g": "뇌는 관장하는데 장은 작동하기도 한다", "gv": "Não điều khiển, nhưng ruột cũng tự hoạt động",
+   "r": "Mở · Đặc điểm", "y": "Ruột có thể tự hoạt động không cần não.",
+   "vi": "Não điều khiển chuyển động của toàn cơ thể thông qua hệ thần kinh, nhưng riêng ruột thì cũng có khi hoạt động tự chủ mà không cần lệnh của não. ( ㉠ )",
+   "tip": "**N의 경우에는** = riêng trường hợp N thì."},
+  {"c": [["생존에 필수적인", "DN", "thiết yếu cho sinh tồn", 3], ["식사와 소화를 위해", "TR", "để ăn uống và tiêu hóa", 2], ["장에", "TR", "ở ruột", 4], ["별도의 신경계를", "TN", "hệ thần kinh riêng", 5], ["두었기 때문이다.", "VN", "là vì đã đặt", 1], ["( ㉡ )", "NOI", "( ㉡ )", 6]],
+   "g": "… 신경계를 두었기 때문이다", "gv": "Là vì đặt hệ thần kinh riêng",
+   "r": "Lý do · giới thiệu hệ thần kinh ruột", "y": "Ruột có hệ thần kinh riêng cho tiêu hóa.",
+   "vi": "Đó là vì để phục vụ ăn uống và tiêu hóa thiết yếu cho sinh tồn, ruột có một hệ thần kinh riêng. ( ㉡ )",
+   "tip": "Câu giới thiệu khái niệm mới (장 신경계) → câu sau thường giải thích chức năng."},
+  {"c": [["한편", "TR", "mặt khác", 1], ["장 신경계가", "CN", "hệ thần kinh ruột", 2], ["오로지 장에만", "TR", "chỉ với ruột", 4], ["관여하는 것은 아니다.", "VN", "không phải là chỉ liên quan", 3], ["( ㉢ )", "NOI", "( ㉢ )", 5]],
+   "g": "장 신경계가 관여하는 것은 아니다", "gv": "Hệ thần kinh ruột không chỉ liên quan …",
+   "r": "Chuyển ý", "y": "Không chỉ liên quan tới ruột.",
+   "vi": "Mặt khác, hệ thần kinh ruột không phải chỉ liên quan tới ruột. ( ㉢ )",
+   "tip": "**오로지 …만 -는 것은 아니다** = không chỉ … → trước đó phải nói phần “chỉ” (trong ruột)."},
+  {"c": [["과학자들은", "CN", "các nhà khoa học", 1], ["장 신경계와 뇌가 서로 소통하고 있어서", "VP", "hệ thần kinh ruột và não trao đổi với nhau nên", 3], ["장의 문제가", "CN", "vấn đề ở ruột", 4], ["심리적 변화에", "TR", "đến thay đổi tâm lý", 6], ["영향을 줄 수 있다고", "VP", "có thể ảnh hưởng", 5], ["말한다.", "VN", "nói rằng", 2], ["( ㉣ )", "NOI", "( ㉣ )", 7]],
+   "g": "과학자들은 … 영향을 줄 수 있다고 말한다", "gv": "Nhà khoa học nói … có thể ảnh hưởng",
+   "r": "Kết", "y": "Ruột – não trao đổi → ruột ảnh hưởng tâm lý.",
+   "vi": "Các nhà khoa học nói rằng hệ thần kinh ruột và não trao đổi với nhau nên vấn đề ở ruột có thể ảnh hưởng đến thay đổi tâm lý. ( ㉣ )",
+   "tip": "**-다고 말하다** = nói rằng."}
+],
+"w": [
+  ["뇌", "não", "não 腦", "뇌는|뇌의|뇌가"],
+  ["신경계", "hệ thần kinh", "thần kinh hệ 神經系", "신경계를|신경계가|신경계와"],
+  ["관장하다", "quản lý, điều khiển", "quản chưởng 管掌", "관장하는데"],
+  ["장", "ruột", "trường 腸", "장의|장에|장에만|장 신경계"],
+  ["명령", "mệnh lệnh", "mệnh lệnh 命令", "명령"],
+  ["자율적", "tự chủ", "tự luật đích 自律的", "자율적으로"],
+  ["작동하다", "hoạt động, vận hành", "tác động 作動", "작동하기도"],
+  ["필수적", "thiết yếu", "tất tu đích 必須的", "필수적인"],
+  ["소화", "tiêu hóa", "tiêu hóa 消化", "소화를"],
+  ["별도", "riêng", "biệt đồ 別途", "별도의"],
+  ["오로지", "chỉ, duy nhất", "", "오로지"],
+  ["관여하다", "liên quan, can dự", "quan dự 關與", "관여하는"],
+  ["소통하다", "trao đổi, giao tiếp", "sơ thông 疏通", "소통하고"],
+  ["심리적", "tâm lý", "tâm lý đích 心理的", "심리적"]
+],
+"wo": [
+  ["근육", "cơ bắp", "cân nhục 筋肉", "", "<보기>"],
+  ["소화액", "dịch tiêu hóa", "tiêu hóa dịch 消化液", "", "<보기>"],
+  ["촉진하다", "thúc đẩy", "xúc tiến 促進", "", "<보기>"]
+],
+"g": [
+  {"p": "-는데", "m": "…, nhưng / còn", "f": "관장하는데", "d": "", "ex": []},
+  {"p": "N 없이", "m": "không có N", "f": "명령 없이", "d": "", "ex": []},
+  {"p": "-기도 하다", "m": "cũng có khi", "f": "작동하기도 한다", "d": "", "ex": []},
+  {"p": "오로지 N만 -는 것은 아니다", "m": "không chỉ N", "f": "오로지 장에만", "d": "", "ex": []},
+  {"p": "-다고 말하다", "m": "nói rằng", "f": "있다고 말한다", "d": "", "ex": []}
+],
+"qa": {
+  "40": {"a": 1, "w": "<보기> giải thích chức năng **chủ yếu trong ruột** của hệ thần kinh vừa giới thiệu ở câu 2; câu sau ㉡ **한편 … 오로지 장에만 … 아니다** chuyển sang chức năng khác → ㉡.", "x": ["Hệ thần kinh ruột chưa được giới thiệu.", null, "Sau câu “không chỉ ruột”, quay lại chức năng trong ruột là ngược mạch.", "Sau câu kết."]}
+},
+"hoi": [
+  {"q": "Vì sao ruột tự hoạt động được?", "a": "Có hệ thần kinh riêng phục vụ ăn uống, tiêu hóa."},
+  {"q": "Vấn đề ở ruột ảnh hưởng gì?", "a": "Có thể ảnh hưởng thay đổi tâm lý."}
+]
+}

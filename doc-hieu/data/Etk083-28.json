@@ -1,0 +1,66 @@
+{
+"e": "Etk083", "n": [28],
+"t": "Cửa hàng tiện lợi Hàn ra nước ngoài",
+"cd": "Kinh tế",
+"y": "Các chuỗi cửa hàng tiện lợi Hàn Quốc ra nước ngoài đang rất được ưa chuộng vì tái hiện nguyên vẹn cửa hàng Hàn từ nội thất đến hàng bán — ngược với cách siêu thị thường làm là chiều theo khẩu vị người địa phương.",
+"doc": [
+  {"t": "Đọc câu có ô", "d": "Câu 2 **-기 때문이다** = lý do thành công: dùng chiến lược (    ) từ nội thất đến hàng bán.", "s": [1]},
+  {"t": "Đọc qua ô · câu sau", "d": "Mart thường **chiều khẩu vị người địa phương**, còn công ty này dùng cách **ngược lại** → giữ nguyên kiểu Hàn → **재현** (tái hiện nguyên).", "s": [2]}
+],
+"l": [
+  ["진출하면서", "TG", "-면서: ra nước ngoài và được ưa chuộng"],
+  ["썼기 때문이다", "NN", "lý do thành công → câu có ô"],
+  ["반대되는 방법", "DL", "ngược với chiều theo địa phương → chìa khóa"],
+  ["성공한 것이다", "GT", "giải thích lại"]
+],
+"s": [
+  {"c": [["최근", "TR", "gần đây", 1], ["한국의 편의점 업체가", "CN", "các chuỗi cửa hàng tiện lợi Hàn Quốc", 2], ["해외로 진출하면서", "VP", "vươn ra nước ngoài và", 3], ["현지에서", "TR", "ở nước sở tại", 5], ["큰 인기를 끌고 있다.", "VN", "đang rất được ưa chuộng", 4]],
+   "g": "업체가 인기를 끌고 있다", "gv": "Công ty đang được ưa chuộng",
+   "r": "Mở · Hiện tượng", "y": "Cửa hàng tiện lợi Hàn được ưa chuộng ở nước ngoài.",
+   "vi": "Gần đây các chuỗi cửa hàng tiện lợi Hàn Quốc vươn ra nước ngoài và đang rất được ưa chuộng ở nước sở tại.",
+   "tip": "**인기를 끌다** = được ưa chuộng."},
+  {"c": [["인테리어에서 판매 상품까지", "TR", "từ nội thất đến hàng hóa bày bán", 3], ["(    )", "DN", "(    )", 2], ["전략을 썼기 때문이다.", "VN", "là vì đã dùng chiến lược", 1]],
+   "g": "(    ) 전략을 썼기 때문이다", "gv": "Vì dùng chiến lược (    )",
+   "r": "Câu có ô · Lý do", "y": "Vì dùng chiến lược (tái hiện nguyên cửa hàng Hàn).",
+   "vi": "Đó là vì họ đã dùng chiến lược (tái hiện nguyên vẹn cửa hàng tiện lợi Hàn Quốc) từ nội thất đến hàng hóa bày bán.",
+   "tip": "**A에서 B까지** = từ A đến B (bao trùm mọi thứ)."},
+  {"c": [["보통", "TR", "thông thường", 1], ["마트가 해외에 진출할 때는", "TR", "khi siêu thị ra nước ngoài", 2], ["현지인의 취향에", "TR", "theo khẩu vị người địa phương", 4], ["맞추려고 하는데", "VP", "người ta cố chiều", 3], ["이 편의점 업체는", "CN", "công ty tiện lợi này", 5], ["이와 반대되는 방법을 써서", "VP", "dùng cách ngược lại", 6], ["성공한 것이다.", "VN", "nên đã thành công", 7]],
+   "g": "마트가 맞추려고 하는데 이 업체는 … 성공한 것이다", "gv": "Mart thường chiều …, công ty này dùng cách ngược lại mà thành công",
+   "r": "Giải thích · đối lập", "y": "Mart chiều địa phương; công ty này làm ngược lại.",
+   "vi": "Thông thường khi siêu thị ra nước ngoài, người ta cố chiều theo khẩu vị người địa phương, còn công ty tiện lợi này dùng cách ngược lại mà thành công.",
+   "tip": "**이와 반대되는** = ngược với điều này → nội dung ô là **ngược** với “chiều theo địa phương”."}
+],
+"w": [
+  ["편의점", "cửa hàng tiện lợi", "tiện nghi điếm 便宜店", "편의점"],
+  ["업체", "công ty, doanh nghiệp", "nghiệp thể 業體", "업체가|업체는"],
+  ["해외", "nước ngoài", "hải ngoại 海外", "해외로|해외에"],
+  ["진출하다", "tiến ra, vươn ra", "tiến xuất 進出", "진출하면서|진출할"],
+  ["현지", "nước sở tại, tại chỗ", "hiện địa 現地", "현지에서"],
+  ["인기를 끌다", "được ưa chuộng", "nhân khí 人氣", "인기를 끌고"],
+  ["인테리어", "nội thất", "", "인테리어에서"],
+  ["상품", "hàng hóa", "thương phẩm 商品", "상품까지"],
+  ["전략", "chiến lược", "chiến lược 戰略", "전략을"],
+  ["현지인", "người địa phương", "hiện địa nhân 現地人", "현지인의"],
+  ["취향", "khẩu vị, sở thích", "thú hướng 趣向", "취향에"],
+  ["반대되다", "ngược lại", "phản đối 反對", "반대되는"]
+],
+"wo": [
+  ["빠뜨리다", "bỏ sót", "", "", "lựa chọn ①"],
+  ["기호", "sở thích", "thị hiếu 嗜好", "", "lựa chọn ②"],
+  ["감추다", "che giấu", "", "", "lựa chọn ③"],
+  ["재현하다", "tái hiện", "tái hiện 再現", "", "lựa chọn ④ · đáp án"]
+],
+"g": [
+  {"p": "A에서 B까지", "m": "từ A đến B", "f": "인테리어에서 판매 상품까지", "d": "", "ex": []},
+  {"p": "-기 때문이다", "m": "là vì …", "f": "썼기 때문이다", "d": "", "ex": []},
+  {"p": "N에 맞추다", "m": "theo, chiều theo N", "f": "취향에 맞추려고", "d": "", "ex": []},
+  {"p": "-는데 (đối lập)", "m": "…, còn …", "f": "하는데", "d": "", "ex": []}
+],
+"qa": {
+  "28": {"a": 3, "w": "Ngược với “chiều khẩu vị địa phương” → **한국 편의점을 그대로 재현하는** (tái hiện nguyên vẹn cửa hàng Hàn).", "x": ["Bài không nói quảng bá.", "Đổi đối tượng: bài nói khẩu vị **người địa phương**, không phải người bán.", "Ngược: họ giữ nguyên đặc trưng, không che giấu.", null]}
+},
+"hoi": [
+  {"q": "Siêu thị thường làm gì khi ra nước ngoài?", "a": "Chiều theo khẩu vị người địa phương."},
+  {"q": "Công ty tiện lợi Hàn làm khác thế nào?", "a": "Ngược lại — giữ nguyên kiểu cửa hàng Hàn."}
+]
+}

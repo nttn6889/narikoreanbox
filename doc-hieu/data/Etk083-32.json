@@ -1,0 +1,73 @@
+{
+"e": "Etk083", "n": [32],
+"t": "Kèn oboe – âm chuẩn của dàn nhạc",
+"cd": "Văn hóa – âm nhạc",
+"y": "Trước khi biểu diễn, dàn nhạc chỉnh âm các nhạc cụ cho khớp nhau; khi đó oboe ngồi chính giữa phát ra âm chuẩn, vì oboe dùng hai lưỡi gà gỗ chồng lên nhau nên âm chính xác, rõ; lại giữ âm ổn định, lâu nên nhạc cụ khác dễ chỉnh theo.",
+"doc": [
+  {"t": "Đọc 4 lựa chọn trước", "d": "Từ khóa: **리드 하나로** · **첫 음과 함께 연주 시작** · **소리가 작아서 앞쪽** · **기준 역할**.", "s": []},
+  {"t": "Câu 1–2", "d": "Chỉnh âm trước khi diễn; oboe **한가운데** (chính giữa) phát **기준 음** → ④ đúng, ③ sai.", "s": [0, 1]},
+  {"t": "Câu 3–4", "d": "**두 장 겹쳐** (hai lưỡi gà) → ① sai. Chỉnh âm là **trước khi** diễn → ② sai.", "s": [2, 3]}
+],
+"l": [
+  ["그때", "CH", "lúc chỉnh âm"],
+  ["달리", "DL", "khác với nhạc cụ hơi khác"],
+  ["또렷하기 때문이다", "NN", "lý do oboe làm âm chuẩn"],
+  ["또", "TH", "thêm lý do"]
+],
+"s": [
+  {"c": [["오케스트라는", "CN", "dàn nhạc", 1], ["연주하기 전에", "TR", "trước khi biểu diễn", 2], ["악기들의 음을 서로 맞춰 보는", "DN", "chỉnh âm các nhạc cụ khớp với nhau", 4], ["과정을 거친다.", "VN", "trải qua quá trình", 3]],
+   "g": "오케스트라는 과정을 거친다", "gv": "Dàn nhạc trải qua quá trình",
+   "r": "Mở · Bối cảnh", "y": "Trước khi diễn, dàn nhạc chỉnh âm.",
+   "vi": "Trước khi biểu diễn, dàn nhạc trải qua quá trình chỉnh âm các nhạc cụ cho khớp với nhau.",
+   "tip": "**과정을 거치다** = trải qua quá trình."},
+  {"c": [["그때", "TR", "lúc đó", 1], ["오케스트라의 한가운데에 자리 잡은", "DN", "ngồi ở chính giữa dàn nhạc", 3], ["오보에가", "CN", "kèn oboe", 2], ["기준 음을", "TN", "âm chuẩn", 5], ["낸다.", "VN", "phát ra", 4]],
+   "g": "오보에가 기준 음을 낸다", "gv": "Oboe phát âm chuẩn",
+   "r": "Ý chính", "y": "Oboe ở giữa phát âm chuẩn.",
+   "vi": "Lúc đó, kèn oboe ngồi ở chính giữa dàn nhạc phát ra âm chuẩn.",
+   "tip": "**자리 잡다** = chiếm chỗ, ngồi ở."},
+  {"c": [["오보에는", "CN", "oboe", 1], ["다른 관악기와 달리", "TR", "khác với các nhạc cụ hơi khác", 2], ["나무 떨림판인 '리드'를", "TN", "“lưỡi gà” là tấm rung bằng gỗ", 5], ["두 장 겹쳐", "TR", "chồng hai tấm", 4], ["사용해서", "VP", "sử dụng nên", 3], ["소리가 더 정확하고 또렷하기 때문이다.", "VN", "âm thanh chính xác và rõ hơn — là vì", 6]],
+   "g": "오보에는 … 사용해서 소리가 또렷하기 때문이다", "gv": "Vì oboe dùng … nên âm rõ",
+   "r": "Lý do (1)", "y": "Hai lưỡi gà → âm chính xác, rõ.",
+   "vi": "Đó là vì oboe, khác với các nhạc cụ hơi khác, dùng chồng hai “lưỡi gà” bằng gỗ nên âm thanh chính xác và rõ hơn.",
+   "tip": "**N와/과 달리** = khác với N."},
+  {"c": [["또", "TR", "ngoài ra", 1], ["음을 안정적으로 길게 유지할 수 있어서", "VP", "có thể giữ âm ổn định và lâu nên", 2], ["다른 악기들이", "CN", "các nhạc cụ khác", 4], ["음을 쉽게 맞출 수 있도록", "VP", "có thể dễ dàng chỉnh âm", 5], ["해 준다.", "VN", "giúp", 3]],
+   "g": "… 맞출 수 있도록 해 준다", "gv": "Giúp … chỉnh âm dễ",
+   "r": "Lý do (2)", "y": "Giữ âm ổn định → nhạc cụ khác dễ chỉnh.",
+   "vi": "Ngoài ra, oboe có thể giữ âm ổn định và lâu nên giúp các nhạc cụ khác dễ dàng chỉnh âm.",
+   "tip": "**-도록 해 주다** = giúp cho (ai) …"}
+],
+"w": [
+  ["오케스트라", "dàn nhạc giao hưởng", "", "오케스트라는|오케스트라의"],
+  ["연주하다", "biểu diễn (nhạc)", "diễn tấu 演奏", "연주하기"],
+  ["악기", "nhạc cụ", "nhạc khí 樂器", "악기들의|악기들이"],
+  ["음", "âm", "âm 音", "음을"],
+  ["맞추다", "chỉnh cho khớp", "", "맞춰|맞출"],
+  ["과정", "quá trình", "quá trình 過程", "과정을"],
+  ["한가운데", "chính giữa", "", "한가운데에"],
+  ["기준", "tiêu chuẩn", "cơ chuẩn 基準", "기준 음을"],
+  ["관악기", "nhạc cụ hơi", "quản nhạc khí 管樂器", "관악기와"],
+  ["떨림판", "tấm rung", "", "떨림판인"],
+  ["겹치다", "chồng lên", "", "겹쳐"],
+  ["정확하다", "chính xác", "chính xác 正確", "정확하고"],
+  ["또렷하다", "rõ ràng", "", "또렷하기"],
+  ["안정적", "ổn định", "an định đích 安定的", "안정적으로"],
+  ["유지하다", "duy trì", "duy trì 維持", "유지할"]
+],
+"wo": [
+  ["위치하다", "nằm ở, ở vị trí", "vị trí 位置", "", "lựa chọn ③"],
+  ["역할", "vai trò", "dịch cát 役割", "", "lựa chọn ④"]
+],
+"g": [
+  {"p": "-기 전에", "m": "trước khi …", "f": "연주하기 전에", "d": "", "ex": []},
+  {"p": "N와/과 달리", "m": "khác với N", "f": "관악기와 달리", "d": "", "ex": []},
+  {"p": "-기 때문이다", "m": "là vì …", "f": "또렷하기 때문이다", "d": "", "ex": []},
+  {"p": "-도록 해 주다", "m": "giúp cho …", "f": "맞출 수 있도록 해 준다", "d": "", "ex": []}
+],
+"qa": {
+  "32": {"a": 3, "w": "Oboe phát **기준 음** khi chỉnh âm → vai trò chuẩn (④).", "x": ["Ngược: dùng **hai** lưỡi gà chồng nhau.", "Chỉnh âm diễn ra **trước khi** biểu diễn; bài không nói oboe mở màn.", "Ngược: ngồi **chính giữa**; bài không nói âm nhỏ.", null]}
+},
+"hoi": [
+  {"q": "Oboe ngồi ở đâu trong dàn nhạc?", "a": "Chính giữa."},
+  {"q": "Hai lý do oboe làm âm chuẩn?", "a": "Hai lưỡi gà nên âm rõ, chính xác; giữ âm ổn định và lâu."}
+]
+}

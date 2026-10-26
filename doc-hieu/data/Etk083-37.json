@@ -1,0 +1,80 @@
+{
+"e": "Etk083", "n": [37],
+"t": "Tự thuần hóa và Homo sapiens",
+"cd": "Khoa học – lịch sử",
+"y": "“Tự thuần hóa” là hiện tượng động vật tự kìm tính hung hăng, tăng tính thân thiện khi tiến hóa. Có giả thuyết Homo sapiens lấy đó làm chiến lược sinh tồn: người Neanderthal to khỏe, não lớn hơn nhưng không sống sót; còn Homo sapiens sống sót nhờ tính thân thiện — bao dung, bảo vệ nhau, tạo nhóm lớn để đối phó tấn công và biến đổi môi trường.",
+"doc": [
+  {"t": "Đọc câu hỏi", "d": "Chủ đề → tìm câu đối chiếu (**반면**) và câu kết **-ㄴ 것이다**.", "s": []},
+  {"t": "Câu 3–4 · đối chiếu", "d": "Neanderthal **to khỏe, não lớn nhưng không sống sót** ↔ **반면** Homo sapiens **sống sót nhờ tính thân thiện**.", "s": [2, 3]},
+  {"t": "Câu cuối · giải thích", "d": "Thân thiện → nhóm lớn → đối phó tấn công, môi trường → ④.", "s": [4]}
+],
+"l": [
+  ["말한다", "GT", "định nghĩa thuật ngữ"],
+  ["이것을", "CH", "chỉ lại “tự thuần hóa”"],
+  ["컸지만", "DL", "-지만: to khỏe nhưng vẫn chết"],
+  ["반면", "DL", "đối chiếu hai loài"],
+  ["대응한 것이다", "GT", "giải thích cách sống sót"]
+],
+"s": [
+  {"c": [["'자기 길들이기'는", "CN", "“tự thuần hóa”", 1], ["동물이 스스로 공격성을 억제하고 친화력을 높이는 방향으로 진화하는", "DN", "động vật tự kìm tính hung hăng, tiến hóa theo hướng tăng tính thân thiện", 4], ["현상을", "TN", "hiện tượng", 3], ["말한다.", "VN", "là chỉ", 2]],
+   "g": "'자기 길들이기'는 현상을 말한다", "gv": "“Tự thuần hóa” chỉ hiện tượng …",
+   "r": "Mở · Định nghĩa", "y": "Tự kìm hung hăng, tăng thân thiện khi tiến hóa.",
+   "vi": "“Tự thuần hóa” là chỉ hiện tượng động vật tự kìm nén tính hung hăng và tiến hóa theo hướng tăng tính thân thiện.",
+   "tip": "**N은/는 … 현상을 말한다** = N là hiện tượng … (định nghĩa)."},
+  {"c": [["호모 사피엔스도", "CN", "Homo sapiens cũng", 3], ["이것을", "TN", "điều này", 4], ["생존 전략으로 삼았다는", "DN", "lấy làm chiến lược sinh tồn", 5], ["가설이", "CN", "giả thuyết", 2], ["있다.", "VN", "có", 1]],
+   "g": "가설이 있다", "gv": "Có giả thuyết",
+   "r": "Giả thuyết", "y": "Homo sapiens dùng nó làm chiến lược sinh tồn.",
+   "vi": "Có giả thuyết rằng Homo sapiens cũng lấy điều này làm chiến lược sinh tồn.",
+   "tip": "**N을/를 N(으)로 삼다** = lấy … làm …"},
+  {"c": [["네안데르탈인은", "CN", "người Neanderthal", 1], ["호모 사피엔스보다", "TR", "so với Homo sapiens", 3], ["체격도 좋고 뇌의 용량도 컸지만", "VP", "thể hình tốt và dung tích não lớn hơn, nhưng", 2], ["살아남지 못했다.", "VN", "không sống sót được", 4]],
+   "g": "네안데르탈인은 … 살아남지 못했다", "gv": "Neanderthal không sống sót",
+   "r": "Đối tượng 1", "y": "Neanderthal to khỏe nhưng không sống sót.",
+   "vi": "Người Neanderthal có thể hình tốt và dung tích não lớn hơn Homo sapiens, nhưng không sống sót được.",
+   "tip": "**-지만** = nhưng → thể lực không quyết định sinh tồn."},
+  {"c": [["반면", "TR", "ngược lại", 1], ["호모 사피엔스는", "CN", "Homo sapiens", 2], ["서로를 포용하고 보호하는", "DN", "bao dung và bảo vệ nhau", 5], ["친화력을", "TN", "tính thân thiện", 4], ["무기로", "TR", "làm vũ khí", 3], ["살아남았다.", "VN", "đã sống sót", 6]],
+   "g": "호모 사피엔스는 친화력을 무기로 살아남았다", "gv": "Homo sapiens sống sót nhờ tính thân thiện",
+   "r": "Đối tượng 2 · Ý chính", "y": "Homo sapiens sống sót nhờ thân thiện.",
+   "vi": "Ngược lại, Homo sapiens đã sống sót nhờ lấy tính thân thiện — bao dung và bảo vệ nhau — làm vũ khí.",
+   "tip": "**N을/를 무기로** = lấy N làm vũ khí."},
+  {"c": [["높은 친화력으로", "TR", "bằng tính thân thiện cao", 1], ["더 큰 집단을 형성함으로써", "VP", "thông qua việc tạo nhóm lớn hơn", 2], ["외부의 공격과 환경 변화에", "TR", "với tấn công bên ngoài và biến đổi môi trường", 4], ["대응한 것이다.", "VN", "(tức là) đã đối phó", 3]],
+   "g": "… 대응한 것이다", "gv": "Tức là đã đối phó",
+   "r": "Giải thích · Kết", "y": "Nhóm lớn → đối phó tấn công, môi trường.",
+   "vi": "Tức là nhờ tính thân thiện cao, họ tạo nhóm lớn hơn để đối phó với tấn công bên ngoài và biến đổi môi trường.",
+   "tip": "**-(으)ㅁ으로써** = bằng cách, thông qua việc …"}
+],
+"w": [
+  ["길들이다", "thuần hóa", "", "길들이기'는"],
+  ["공격성", "tính hung hăng", "công kích tính 攻擊性", "공격성을"],
+  ["억제하다", "kìm nén", "ức chế 抑制", "억제하고"],
+  ["친화력", "tính thân thiện, sức hòa đồng", "thân hòa lực 親和力", "친화력을|친화력으로"],
+  ["진화하다", "tiến hóa", "tiến hóa 進化", "진화하는"],
+  ["생존 전략", "chiến lược sinh tồn", "sinh tồn chiến lược 生存戰略", "생존 전략으로"],
+  ["가설", "giả thuyết", "giả thuyết 假說", "가설이"],
+  ["체격", "thể hình", "thể cách 體格", "체격도"],
+  ["용량", "dung tích", "dung lượng 容量", "용량도"],
+  ["살아남다", "sống sót", "", "살아남지|살아남았다"],
+  ["포용하다", "bao dung", "bao dung 包容", "포용하고"],
+  ["무기", "vũ khí", "vũ khí 武器", "무기로"],
+  ["집단", "tập thể, nhóm", "tập đoàn 集團", "집단을"],
+  ["형성하다", "hình thành", "hình thành 形成", "형성함으로써"],
+  ["대응하다", "đối phó", "đối ứng 對應", "대응한"]
+],
+"wo": [
+  ["고유하다", "riêng có", "cố hữu 固有", "", "lựa chọn ①"],
+  ["뛰어나다", "xuất sắc", "", "", "lựa chọn ③"],
+  ["덕분에", "nhờ", "đức phận 德分", "", "lựa chọn ④"]
+],
+"g": [
+  {"p": "N을/를 N(으)로 삼다", "m": "lấy … làm …", "f": "전략으로 삼았다는", "d": "", "ex": []},
+  {"p": "-지만", "m": "nhưng", "f": "컸지만", "d": "", "ex": []},
+  {"p": "반면", "m": "ngược lại", "f": "반면", "d": "Đối chiếu hai đối tượng.", "ex": []},
+  {"p": "-(으)ㅁ으로써", "m": "bằng cách …", "f": "형성함으로써", "d": "", "ex": [["운동함으로써 건강을 지킨다.", "Giữ sức khỏe bằng cách tập thể dục."]]}
+],
+"qa": {
+  "37": {"a": 3, "w": "Homo sapiens **친화력을 무기로 살아남았다** → sống sót nhờ tính thân thiện (④).", "x": ["Bài định nghĩa ở **động vật**, không nói riêng con người.", "Đổi đối tượng: đó là chiến lược của **Homo sapiens**.", "Ngược: Neanderthal mới to khỏe hơn.", null]}
+},
+"hoi": [
+  {"q": "“Tự thuần hóa” là gì?", "a": "Động vật tự kìm hung hăng, tiến hóa theo hướng thân thiện hơn."},
+  {"q": "Vì sao Homo sapiens sống sót?", "a": "Nhờ tính thân thiện, tạo nhóm lớn để đối phó."}
+]
+}

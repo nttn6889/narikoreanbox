@@ -1,0 +1,69 @@
+{
+"e": "Etk083", "n": [31],
+"t": "Hội chứng kẻ mạo danh",
+"cd": "Tâm lý – xã hội",
+"y": "“Hội chứng mặt nạ” (kẻ mạo danh) là hiện tượng được xã hội công nhận nhưng khổ sở vì nghĩ đó không phải do thực lực của mình: dù có thành tích vẫn nghi ngờ năng lực, lo một ngày mặt nạ bị lột. Nguyên nhân: thiếu sự công nhận của cha mẹ khi lớn lên, hoặc lớn lên trong môi trường đề cao khiêm tốn.",
+"doc": [
+  {"t": "Câu 1 · định nghĩa", "d": "**진짜 실력 때문이 아니라는 생각** = nghĩ thành công không phải do thực lực → đã có sẵn ý của ô.", "s": [0]},
+  {"t": "Câu có ô", "d": "**성과를 내고 있음에도** (dù có thành tích) + ô → vẫn **nghi ngờ năng lực bản thân**, lo mặt nạ bị lột.", "s": [1]},
+  {"t": "Câu 3 · nguyên nhân", "d": "Không cần cho ô; nói nguyên nhân hình thành.", "s": [2]}
+],
+"l": [
+  ["받고 있지만", "DL", "được công nhận nhưng"],
+  ["있음에도", "DL", "-음에도: dù … vẫn → ô trái với “có thành tích”"],
+  ["불안해하는 것이다", "GT", "giải thích lại định nghĩa"],
+  ["원인은 다양한데", "NN", "nêu nguyên nhân"]
+],
+"s": [
+  {"c": [["'가면 증후군'이란", "CN", "“hội chứng mặt nạ” là", 1], ["사회적으로 인정을 받고 있지만", "VP", "được xã hội công nhận, nhưng", 3], ["그것이 자신의 진짜 실력 때문이 아니라는 생각으로", "TR", "vì ý nghĩ rằng điều đó không phải do thực lực thật của mình", 5], ["괴로워하는", "DN", "khổ sở", 4], ["현상이다.", "VN", "hiện tượng", 2]],
+   "g": "'가면 증후군'이란 … 현상이다", "gv": "Hội chứng mặt nạ là hiện tượng …",
+   "r": "Mở · Định nghĩa", "y": "Được công nhận nhưng nghĩ không phải do thực lực.",
+   "vi": "“Hội chứng mặt nạ” là hiện tượng được xã hội công nhận nhưng khổ sở vì nghĩ rằng điều đó không phải do thực lực thật của mình.",
+   "tip": "**N(이)란 … 이다** = N là … (câu định nghĩa)."},
+  {"c": [["성과를 내고 있음에도", "VP", "dù đang có thành tích", 1], ["(    )", "VP", "(    )", 2], ["언젠가 가면이 벗겨질지도 모른다는", "DN", "rằng một ngày nào đó mặt nạ có thể bị lột", 5], ["생각에", "TR", "vì ý nghĩ", 4], ["불안해하는 것이다.", "VN", "(tức là) bất an", 3]],
+   "g": "… 생각에 불안해하는 것이다", "gv": "Tức là bất an vì ý nghĩ …",
+   "r": "Câu có ô · Giải thích", "y": "Có thành tích vẫn (nghi ngờ năng lực), lo bị lộ.",
+   "vi": "Tức là dù đang có thành tích vẫn (nghi ngờ năng lực của mình), bất an vì nghĩ một ngày nào đó mặt nạ có thể bị lột.",
+   "tip": "**-(으)ㅁ에도** = dù … vẫn. **-(으)ㄹ지도 모르다** = có thể sẽ …"},
+  {"c": [["이런 현상이 생긴", "DN", "khiến hiện tượng này xuất hiện", 2], ["원인은", "CN", "nguyên nhân", 1], ["다양한데", "VP", "đa dạng,", 3], ["양육 과정에서 부모의 인정을 받지 못했거나", "VP", "do không được cha mẹ công nhận khi lớn lên, hoặc", 4], ["겸손을 강조하는 분위기 속에서", "TR", "trong bầu không khí đề cao khiêm tốn", 6], ["자랐기 때문이다.", "VN", "lớn lên — là vì", 5]],
+   "g": "원인은 다양한데 … 자랐기 때문이다", "gv": "Nguyên nhân đa dạng, là vì …",
+   "r": "Nguyên nhân", "y": "Thiếu công nhận của cha mẹ, hoặc đề cao khiêm tốn.",
+   "vi": "Nguyên nhân khiến hiện tượng này xuất hiện rất đa dạng, như không được cha mẹ công nhận trong quá trình nuôi dạy, hoặc lớn lên trong bầu không khí đề cao sự khiêm tốn.",
+   "tip": "**-거나** = hoặc. Câu nguyên nhân không ảnh hưởng ô."}
+],
+"w": [
+  ["가면", "mặt nạ", "giả diện 假面", "가면"],
+  ["증후군", "hội chứng", "chứng hậu quần 症候群", "증후군'이란"],
+  ["인정", "sự công nhận", "nhận định 認定", "인정을"],
+  ["실력", "thực lực", "thực lực 實力", "실력"],
+  ["괴로워하다", "khổ sở", "", "괴로워하는"],
+  ["현상", "hiện tượng", "hiện tượng 現象", "현상이다|현상이"],
+  ["성과", "thành quả, thành tích", "thành quả 成果", "성과를"],
+  ["벗겨지다", "bị lột ra", "", "벗겨질지도"],
+  ["불안하다", "bất an", "bất an 不安", "불안해하는"],
+  ["원인", "nguyên nhân", "nguyên nhân 原因", "원인은"],
+  ["양육", "nuôi dạy", "dưỡng dục 養育", "양육"],
+  ["겸손", "khiêm tốn", "khiêm tốn 謙遜", "겸손을"],
+  ["강조하다", "nhấn mạnh, đề cao", "cường điệu 强調", "강조하는"]
+],
+"wo": [
+  ["미루다", "trì hoãn", "", "", "lựa chọn ①"],
+  ["타인", "người khác", "tha nhân 他人", "", "lựa chọn ②"],
+  ["지위", "địa vị", "địa vị 地位", "", "lựa chọn ③"],
+  ["의심하다", "nghi ngờ", "nghi tâm 疑心", "", "lựa chọn ④ · đáp án"]
+],
+"g": [
+  {"p": "N(이)란", "m": "N là …", "f": "증후군'이란", "d": "Định nghĩa.", "ex": []},
+  {"p": "N 때문이 아니다", "m": "không phải vì N", "f": "때문이 아니라는", "d": "", "ex": []},
+  {"p": "-(으)ㅁ에도", "m": "dù … vẫn", "f": "있음에도", "d": "", "ex": []},
+  {"p": "-(으)ㄹ지도 모르다", "m": "có thể …", "f": "벗겨질지도 모른다는", "d": "", "ex": []},
+  {"p": "-거나", "m": "hoặc", "f": "못했거나", "d": "", "ex": []}
+],
+"qa": {
+  "31": {"a": 3, "w": "Có thành tích **mà vẫn** (-음에도) nghĩ không phải do thực lực → **자신의 능력을 의심하면서**.", "x": ["Bài không nói trì hoãn việc.", "Họ **được** công nhận mà vẫn bất an, không phải muốn người khác đánh giá.", "Ngược: họ đã có thành tích, được công nhận.", null]}
+},
+"hoi": [
+  {"q": "Người mắc hội chứng này nghĩ gì về thành công của mình?", "a": "Không phải do thực lực thật."},
+  {"q": "Nêu hai nguyên nhân.", "a": "Không được cha mẹ công nhận; lớn lên trong môi trường đề cao khiêm tốn."}
+]
+}
