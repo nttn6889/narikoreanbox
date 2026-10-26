@@ -1,0 +1,161 @@
+{
+ "e": "Etk096",
+ "n": [
+  3
+ ],
+ "t": "Đi nhầm xe buýt nên trễ học",
+ "cd": "Đời sống",
+ "y": "Vì đi nhầm xe buýt nên tôi bị trễ giờ học.",
+ "doc": [
+  {
+   "t": "Đọc 4 lựa chọn",
+   "d": "① 탄 탓에 (tại vì đã đi (xấu)) · ② 타는 김에 (nhân tiện đi) · ③ 탄 반면에 (trái lại) · ④ 타는 대신에 (thay vì đi)",
+   "s": []
+  },
+  {
+   "t": "Gọi tên phần gạch chân",
+   "d": "**타는 바람에** = -는 바람에 → **vì … (kết quả xấu)** = -(으)ㄴ 탓에.",
+   "s": [
+    0
+   ]
+  }
+ ],
+ "l": [
+  [
+   "타는 바람에",
+   "NN",
+   "nguyên nhân → kết quả xấu"
+  ]
+ ],
+ "s": [
+  {
+   "c": [
+    [
+     "버스를",
+     "TN",
+     "xe buýt",
+     2
+    ],
+    [
+     "잘못",
+     "TR",
+     "nhầm",
+     3
+    ],
+    [
+     "타는 바람에",
+     "VP",
+     "vì đi",
+     1
+    ],
+    [
+     "수업에",
+     "TR",
+     "giờ học",
+     5
+    ],
+    [
+     "늦었다.",
+     "VN",
+     "bị trễ",
+     4
+    ]
+   ],
+   "g": "버스를 타는 바람에 늦었다",
+   "gv": "Vì đi xe buýt nên trễ",
+   "r": "Câu có gạch chân",
+   "y": "Vì đi nhầm xe buýt nên tôi bị trễ giờ học.",
+   "vi": "Vì đi nhầm xe buýt nên tôi bị trễ giờ học.",
+   "tip": "**-는 바람에 ≈ -(으)ㄴ 탓에**: nguyên nhân dẫn tới kết quả không mong muốn."
+  }
+ ],
+ "w": [
+  [
+   "잘못",
+   "nhầm, sai",
+   "",
+   "잘못"
+  ],
+  [
+   "수업",
+   "giờ học",
+   "thụ nghiệp 授業",
+   "수업에"
+  ],
+  [
+   "늦다",
+   "trễ",
+   "",
+   "늦었다"
+  ]
+ ],
+ "wo": [
+  [
+   "탄 탓에",
+   "tại vì đã đi (xấu)",
+   "",
+   "",
+   "lựa chọn ① · đáp án"
+  ],
+  [
+   "타는 김에",
+   "nhân tiện đi",
+   "",
+   "",
+   "lựa chọn ②"
+  ],
+  [
+   "탄 반면에",
+   "trái lại",
+   "",
+   "",
+   "lựa chọn ③"
+  ],
+  [
+   "타는 대신에",
+   "thay vì đi",
+   "",
+   "",
+   "lựa chọn ④"
+  ]
+ ],
+ "g": [
+  {
+   "p": "-는 바람에",
+   "m": "vì … (xấu)",
+   "f": "타는 바람에",
+   "d": "Vế sau thường quá khứ, kết quả xấu.",
+   "ex": [
+    [
+     "늦잠을 자는 바람에 지각했다.",
+     "Vì ngủ quên nên đi muộn."
+    ]
+   ]
+  },
+  {
+   "p": "-(으)ㄴ 탓에",
+   "m": "tại vì",
+   "f": "",
+   "d": "",
+   "ex": []
+  }
+ ],
+ "qa": {
+  "3": {
+   "a": 0,
+   "w": "Lần thứ 3 cùng dạng. Muộn học = kết quả xấu → 탓에. Loại: 김에 (nhân tiện), 반면에 (trái lại), 대신에 (thay vì).",
+   "x": [
+    null,
+    "타는 김에 = nhân tiện đi — -는 김에 = nhân tiện.",
+    "탄 반면에 = trái lại — -(으)ㄴ 반면에 = trái lại.",
+    "타는 대신에 = thay vì đi — -는 대신에 = thay vì."
+   ]
+  }
+ },
+ "hoi": [
+  {
+   "q": "Vì sao trễ học?",
+   "a": "Đi nhầm xe buýt."
+  }
+ ]
+}

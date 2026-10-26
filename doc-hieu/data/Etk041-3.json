@@ -1,0 +1,160 @@
+{
+ "e": "Etk041",
+ "n": [
+  3
+ ],
+ "t": "Đi nhẹ để bé không thức",
+ "cd": "Gia đình",
+ "y": "Em bé đang ngủ nên tôi nhẹ nhàng vào phòng để bé không thức giấc.",
+ "doc": [
+  {
+   "t": "Đọc 4 lựa chọn",
+   "d": "① 깨지 않는지 (liệu có không thức) · ② 깨지 않도록 (để không thức) · ③ 깨지 않더니 ((thấy) không thức rồi) · ④ 깨지 않느라 (vì mải không thức)",
+   "s": []
+  },
+  {
+   "t": "Gọi tên phần gạch chân",
+   "d": "**깨지 않게** = -게 → **để, sao cho** = -도록.",
+   "s": [
+    0
+   ]
+  }
+ ],
+ "l": [
+  [
+   "자고 있어서",
+   "NN",
+   "lý do"
+  ],
+  [
+   "깨지 않게",
+   "GT",
+   "mục đích: để không thức"
+  ]
+ ],
+ "s": [
+  {
+   "c": [
+    [
+     "아기가 자고 있어서",
+     "VP",
+     "em bé đang ngủ nên",
+     1
+    ],
+    [
+     "깨지 않게",
+     "TR",
+     "để bé không thức giấc",
+     4
+    ],
+    [
+     "조용히",
+     "TR",
+     "nhẹ nhàng",
+     3
+    ],
+    [
+     "방 안으로 들어갔다.",
+     "VN",
+     "(tôi) đi vào phòng",
+     2
+    ]
+   ],
+   "g": "깨지 않게 조용히 들어갔다",
+   "gv": "Vào nhẹ để không thức",
+   "r": "Câu có gạch chân",
+   "y": "Em bé đang ngủ nên tôi nhẹ nhàng vào phòng để bé không thức giấc.",
+   "vi": "Em bé đang ngủ nên tôi nhẹ nhàng đi vào phòng để bé không thức giấc.",
+   "tip": "**-게 = -도록** = để, sao cho (chủ ngữ hai vế có thể khác nhau)."
+  }
+ ],
+ "w": [
+  [
+   "아기",
+   "em bé",
+   "",
+   "아기가"
+  ],
+  [
+   "깨다",
+   "thức giấc",
+   "",
+   "깨지"
+  ],
+  [
+   "조용히",
+   "nhẹ nhàng, yên lặng",
+   "",
+   "조용히"
+  ]
+ ],
+ "wo": [
+  [
+   "깨지 않는지",
+   "liệu có không thức",
+   "",
+   "",
+   "lựa chọn ①"
+  ],
+  [
+   "깨지 않도록",
+   "để không thức",
+   "",
+   "",
+   "lựa chọn ② · đáp án"
+  ],
+  [
+   "깨지 않더니",
+   "(thấy) không thức rồi",
+   "",
+   "",
+   "lựa chọn ③"
+  ],
+  [
+   "깨지 않느라",
+   "vì mải không thức",
+   "",
+   "",
+   "lựa chọn ④"
+  ]
+ ],
+ "g": [
+  {
+   "p": "-게 / -도록",
+   "m": "để, sao cho",
+   "f": "깨지 않게",
+   "d": "",
+   "ex": [
+    [
+     "감기에 걸리지 않도록 조심하세요.",
+     "Cẩn thận để không bị cảm."
+    ]
+   ]
+  },
+  {
+   "p": "-아/어서",
+   "m": "vì … nên",
+   "f": "있어서",
+   "d": "",
+   "ex": []
+  }
+ ],
+ "qa": {
+  "3": {
+   "a": 1,
+   "w": "-게 = -도록 (để, sao cho). Hai chủ ngữ khác nhau (em bé không thức – tôi đi vào) vẫn dùng được. Loại: 는지 (liệu… không), 더니 (quan sát rồi…), 느라 (vì mải – lại cần cùng chủ ngữ).",
+   "x": [
+    "깨지 않는지 = liệu có không thức — -는지 = liệu … không.",
+    null,
+    "깨지 않더니 = (thấy) không thức rồi — -더니 = thấy rồi (quan sát).",
+    "깨지 않느라 = vì mải không thức — -느라 = vì mải (cần cùng chủ ngữ)."
+   ]
+  }
+ },
+ "hoi": [
+  {
+   "q": "Vì sao đi vào nhẹ nhàng?",
+   "a": "Để em bé không thức giấc."
+  }
+ ]
+}

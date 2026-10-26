@@ -1,0 +1,166 @@
+{
+ "e": "Etk096",
+ "n": [
+  2
+ ],
+ "t": "Chuẩn bị sẵn nguyên liệu",
+ "cd": "Đời sống",
+ "y": "Để mai làm kimbap, tôi đã chuẩn bị sẵn nguyên liệu.",
+ "doc": [
+  {
+   "t": "Đọc 4 lựa chọn",
+   "d": "① 준비해 놓았다 (đã chuẩn bị sẵn) · ② 준비하곤 했다 (thường hay chuẩn bị) · ③ 준비하면 된다 (chuẩn bị là được) · ④ 준비하는 법이다 (vốn dĩ phải chuẩn bị)",
+   "s": []
+  },
+  {
+   "t": "Tìm dấu hiệu",
+   "d": "**미리** (trước) + mục đích **-려고** → làm sẵn để dùng sau: **-아/어 놓다**.",
+   "s": [
+    0
+   ]
+  }
+ ],
+ "l": [
+  [
+   "만들려고",
+   "NN",
+   "mục đích"
+  ],
+  [
+   "미리",
+   "GT",
+   "trước → -아/어 놓다"
+  ]
+ ],
+ "s": [
+  {
+   "c": [
+    [
+     "내일",
+     "TR",
+     "ngày mai",
+     2
+    ],
+    [
+     "김밥을 만들려고",
+     "VP",
+     "để làm kimbap",
+     1
+    ],
+    [
+     "재료를",
+     "TN",
+     "nguyên liệu",
+     4
+    ],
+    [
+     "미리",
+     "TR",
+     "trước",
+     5
+    ],
+    [
+     "(    ).",
+     "VN",
+     "đã chuẩn bị sẵn",
+     3
+    ]
+   ],
+   "g": "재료를 준비해 놓았다",
+   "gv": "Đã chuẩn bị sẵn nguyên liệu",
+   "r": "Câu có ô",
+   "y": "Để mai làm kimbap, tôi đã chuẩn bị sẵn nguyên liệu.",
+   "vi": "Để mai làm kimbap, tôi đã chuẩn bị sẵn nguyên liệu từ trước.",
+   "tip": "**미리 + -아/어 놓다/두다** = làm sẵn từ trước."
+  }
+ ],
+ "w": [
+  [
+   "김밥",
+   "kimbap (cơm cuộn)",
+   "",
+   "김밥을"
+  ],
+  [
+   "재료",
+   "nguyên liệu",
+   "tài liệu 材料",
+   "재료를"
+  ],
+  [
+   "미리",
+   "trước",
+   "",
+   "미리"
+  ]
+ ],
+ "wo": [
+  [
+   "준비해 놓았다",
+   "đã chuẩn bị sẵn",
+   "",
+   "",
+   "lựa chọn ① · đáp án"
+  ],
+  [
+   "준비하곤 했다",
+   "thường hay chuẩn bị",
+   "",
+   "",
+   "lựa chọn ②"
+  ],
+  [
+   "준비하면 된다",
+   "chuẩn bị là được",
+   "",
+   "",
+   "lựa chọn ③"
+  ],
+  [
+   "준비하는 법이다",
+   "vốn dĩ phải chuẩn bị",
+   "",
+   "",
+   "lựa chọn ④"
+  ]
+ ],
+ "g": [
+  {
+   "p": "-아/어 놓다",
+   "m": "làm sẵn",
+   "f": "",
+   "d": "",
+   "ex": [
+    [
+     "문을 열어 놓으세요.",
+     "Hãy mở sẵn cửa."
+    ]
+   ]
+  },
+  {
+   "p": "-(으)려고",
+   "m": "để …",
+   "f": "만들려고",
+   "d": "",
+   "ex": []
+  }
+ ],
+ "qa": {
+  "2": {
+   "a": 0,
+   "w": "미리 (trước) + để mai làm kimbap → chuẩn bị sẵn: -아/어 놓다.",
+   "x": [
+    null,
+    "준비하곤 했다 = thường hay chuẩn bị — Thói quen — không hợp với “mai làm kimbap”.",
+    "준비하면 된다 = chuẩn bị là được — Lời khuyên — không phải câu kể.",
+    "준비하는 법이다 = vốn dĩ phải chuẩn bị — Chân lý chung — không hợp."
+   ]
+  }
+ },
+ "hoi": [
+  {
+   "q": "Vì sao chuẩn bị nguyên liệu trước?",
+   "a": "Để mai làm kimbap."
+  }
+ ]
+}

@@ -1,0 +1,166 @@
+{
+ "e": "Etk037",
+ "n": [
+  4
+ ],
+ "t": "Giả vờ không biết",
+ "cd": "Công việc",
+ "y": "Tôi biết lỗi của đàn em nhưng sợ em áy náy nên giả vờ không biết.",
+ "doc": [
+  {
+   "t": "Đọc 4 lựa chọn",
+   "d": "① 모르는 체했다 (giả vờ không biết) · ② 모르는 듯했다 (có vẻ không biết) · ③ 모르는 편이다 (thuộc loại không biết) · ④ 모르기 마련이다 (đương nhiên không biết)",
+   "s": []
+  },
+  {
+   "t": "Gọi tên phần gạch chân",
+   "d": "**모르는 척했다** = -는 척하다 → **giả vờ** = -는 체하다.",
+   "s": [
+    0
+   ]
+  }
+ ],
+ "l": [
+  [
+   "알고 있었지만",
+   "DL",
+   "biết nhưng …"
+  ],
+  [
+   "미안해할까 봐",
+   "NN",
+   "vì sợ …"
+  ]
+ ],
+ "s": [
+  {
+   "c": [
+    [
+     "후배가 한",
+     "DN",
+     "đàn em đã gây",
+     3
+    ],
+    [
+     "잘못을",
+     "TN",
+     "lỗi",
+     2
+    ],
+    [
+     "알고 있었지만",
+     "VP",
+     "(tôi) biết nhưng",
+     1
+    ],
+    [
+     "미안해할까 봐",
+     "VP",
+     "sợ em áy náy nên",
+     4
+    ],
+    [
+     "모르는 척했다.",
+     "VN",
+     "giả vờ không biết",
+     5
+    ]
+   ],
+   "g": "알고 있었지만 모르는 척했다",
+   "gv": "Biết nhưng giả vờ không biết",
+   "r": "Câu có gạch chân",
+   "y": "Tôi biết lỗi của đàn em nhưng sợ em áy náy nên giả vờ không biết.",
+   "vi": "Tôi biết lỗi đàn em gây ra nhưng sợ em áy náy nên đã giả vờ không biết.",
+   "tip": "**-는 척하다 = -는 체하다**. Bẫy: **-는 듯하다** = có vẻ như (đoán)."
+  }
+ ],
+ "w": [
+  [
+   "후배",
+   "đàn em, hậu bối",
+   "hậu bối 後輩",
+   "후배가"
+  ],
+  [
+   "잘못",
+   "lỗi",
+   "",
+   "잘못을"
+  ],
+  [
+   "미안해하다",
+   "áy náy",
+   "",
+   "미안해할까"
+  ]
+ ],
+ "wo": [
+  [
+   "모르는 체했다",
+   "giả vờ không biết",
+   "",
+   "",
+   "lựa chọn ① · đáp án"
+  ],
+  [
+   "모르는 듯했다",
+   "có vẻ không biết",
+   "",
+   "",
+   "lựa chọn ②"
+  ],
+  [
+   "모르는 편이다",
+   "thuộc loại không biết",
+   "",
+   "",
+   "lựa chọn ③"
+  ],
+  [
+   "모르기 마련이다",
+   "đương nhiên không biết",
+   "",
+   "",
+   "lựa chọn ④"
+  ]
+ ],
+ "g": [
+  {
+   "p": "-(으)ㄹ까 봐",
+   "m": "sợ rằng … nên",
+   "f": "미안해할까 봐",
+   "d": "",
+   "ex": [
+    [
+     "늦을까 봐 택시를 탔다.",
+     "Sợ muộn nên đi taxi."
+    ]
+   ]
+  },
+  {
+   "p": "-는 척하다",
+   "m": "giả vờ",
+   "f": "모르는 척했다",
+   "d": "",
+   "ex": []
+  }
+ ],
+ "qa": {
+  "4": {
+   "a": 0,
+   "w": "Biết nhưng sợ em áy náy nên làm như không biết = giả vờ: -는 척하다 = -는 체하다. Bẫy chính: 모르는 듯했다 = “có vẻ như không biết” (đoán), khác “giả vờ”. Loại thêm: 편이다, 마련이다.",
+   "x": [
+    null,
+    "모르는 듯했다 = có vẻ không biết — Bẫy chính: “có vẻ như” (đoán), không phải giả vờ.",
+    "모르는 편이다 = thuộc loại không biết — -는 편이다 = thuộc loại.",
+    "모르기 마련이다 = đương nhiên không biết — -기 마련이다 = đương nhiên."
+   ]
+  }
+ },
+ "hoi": [
+  {
+   "q": "Vì sao giả vờ không biết?",
+   "a": "Sợ đàn em áy náy."
+  }
+ ]
+}

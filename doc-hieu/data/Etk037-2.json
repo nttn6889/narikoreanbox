@@ -1,0 +1,161 @@
+{
+ "e": "Etk037",
+ "n": [
+  2
+ ],
+ "t": "Em đã đi du lịch về",
+ "cd": "Gia đình",
+ "y": "Tan làm về nhà thì thấy em đã đi du lịch về rồi.",
+ "doc": [
+  {
+   "t": "Đọc 4 lựa chọn",
+   "d": "① 돌아와 있었다 (đã về (trạng thái còn đó)) · ② 돌아오게 되었다 (rốt cuộc về) · ③ 돌아왔으면 했다 (giá mà về) · ④ 돌아오도록 했다 (bảo về)",
+   "s": []
+  },
+  {
+   "t": "Tìm dấu hiệu",
+   "d": "**와 보니까** (về thì thấy) → trạng thái đang còn: **-아/어 있다** (với 오다).",
+   "s": [
+    0
+   ]
+  }
+ ],
+ "l": [
+  [
+   "와 보니까",
+   "TG",
+   "-아 보니까: đến thì phát hiện"
+  ]
+ ],
+ "s": [
+  {
+   "c": [
+    [
+     "퇴근 후에",
+     "TR",
+     "sau khi tan làm",
+     1
+    ],
+    [
+     "집에 와 보니까",
+     "VP",
+     "về nhà thì thấy",
+     2
+    ],
+    [
+     "동생이",
+     "CN",
+     "em",
+     3
+    ],
+    [
+     "여행에서",
+     "TR",
+     "từ chuyến du lịch",
+     5
+    ],
+    [
+     "(    ).",
+     "VN",
+     "đã về rồi",
+     4
+    ]
+   ],
+   "g": "동생이 여행에서 돌아와 있었다",
+   "gv": "Em đã về từ chuyến du lịch",
+   "r": "Câu có ô",
+   "y": "Tan làm về nhà thì thấy em đã đi du lịch về rồi.",
+   "vi": "Sau khi tan làm về nhà thì thấy em đã đi du lịch về rồi.",
+   "tip": "**-아/어 보니(까)** = làm thì thấy. **오다/가다 + -아/어 있다** = đã đến/đi (trạng thái)."
+  }
+ ],
+ "w": [
+  [
+   "퇴근",
+   "tan làm",
+   "thoái cần 退勤",
+   "퇴근"
+  ],
+  [
+   "여행",
+   "du lịch",
+   "lữ hành 旅行",
+   "여행에서"
+  ],
+  [
+   "돌아오다",
+   "trở về",
+   "",
+   ""
+  ]
+ ],
+ "wo": [
+  [
+   "돌아와 있었다",
+   "đã về (trạng thái còn đó)",
+   "",
+   "",
+   "lựa chọn ① · đáp án"
+  ],
+  [
+   "돌아오게 되었다",
+   "rốt cuộc về",
+   "",
+   "",
+   "lựa chọn ②"
+  ],
+  [
+   "돌아왔으면 했다",
+   "giá mà về",
+   "",
+   "",
+   "lựa chọn ③"
+  ],
+  [
+   "돌아오도록 했다",
+   "bảo về",
+   "",
+   "",
+   "lựa chọn ④"
+  ]
+ ],
+ "g": [
+  {
+   "p": "-아/어 보니까",
+   "m": "làm … thì thấy",
+   "f": "와 보니까",
+   "d": "",
+   "ex": []
+  },
+  {
+   "p": "-아/어 있다",
+   "m": "(trạng thái) đang …",
+   "f": "",
+   "d": "",
+   "ex": [
+    [
+     "문이 열려 있다.",
+     "Cửa đang mở."
+    ]
+   ]
+  }
+ ],
+ "qa": {
+  "2": {
+   "a": 0,
+   "w": "Về nhà thì thấy em đã về rồi (trạng thái vẫn còn) → -아/어 있다 (với 오다, 가다, 앉다, 열리다…).",
+   "x": [
+    null,
+    "돌아오게 되었다 = rốt cuộc về — -게 되다 = rốt cuộc — không hợp với cảnh phát hiện.",
+    "돌아왔으면 했다 = giá mà về — Mong muốn — không hợp.",
+    "돌아오도록 했다 = bảo về — Sai khiến — không hợp."
+   ]
+  }
+ },
+ "hoi": [
+  {
+   "q": "Về nhà người nói thấy gì?",
+   "a": "Em đã đi du lịch về."
+  }
+ ]
+}

@@ -1,0 +1,166 @@
+{
+ "e": "Etk064",
+ "n": [
+  3
+ ],
+ "t": "Chính phủ muốn tăng việc làm",
+ "cd": "Xã hội – kinh tế",
+ "y": "Chính phủ lập chính sách mới để tăng việc làm.",
+ "doc": [
+  {
+   "t": "Đọc 4 lựa chọn",
+   "d": "① 늘리자마자 (ngay khi tăng) · ② 늘리더라도 (dù tăng) · ③ 늘리는 대신 (thay vì tăng) · ④ 늘리기 위해 (để tăng)",
+   "s": []
+  },
+  {
+   "t": "Gọi tên phần gạch chân",
+   "d": "**늘리고자** = -고자 → **mục đích** = -기 위해.",
+   "s": [
+    0
+   ]
+  }
+ ],
+ "l": [
+  [
+   "늘리고자",
+   "GT",
+   "mục đích"
+  ]
+ ],
+ "s": [
+  {
+   "c": [
+    [
+     "정부는",
+     "CN",
+     "chính phủ",
+     1
+    ],
+    [
+     "일자리를",
+     "TN",
+     "việc làm",
+     5
+    ],
+    [
+     "늘리고자",
+     "VP",
+     "để tăng",
+     4
+    ],
+    [
+     "새로운 정책을",
+     "TN",
+     "chính sách mới",
+     3
+    ],
+    [
+     "수립했다.",
+     "VN",
+     "đã lập",
+     2
+    ]
+   ],
+   "g": "정부는 정책을 수립했다",
+   "gv": "Chính phủ lập chính sách",
+   "r": "Câu có gạch chân",
+   "y": "Chính phủ lập chính sách mới để tăng việc làm.",
+   "vi": "Chính phủ đã lập chính sách mới để tăng việc làm.",
+   "tip": "**-고자** = để, nhằm (văn viết; chủ ngữ hay là tổ chức) = **-기 위해**."
+  }
+ ],
+ "w": [
+  [
+   "정부",
+   "chính phủ",
+   "chính phủ 政府",
+   "정부는"
+  ],
+  [
+   "일자리",
+   "việc làm, chỗ làm",
+   "",
+   "일자리를"
+  ],
+  [
+   "늘리다",
+   "tăng",
+   "",
+   "늘리고자"
+  ],
+  [
+   "정책",
+   "chính sách",
+   "chính sách 政策",
+   "정책을"
+  ],
+  [
+   "수립하다",
+   "thiết lập",
+   "thụ lập 樹立",
+   "수립했다"
+  ]
+ ],
+ "wo": [
+  [
+   "늘리자마자",
+   "ngay khi tăng",
+   "",
+   "",
+   "lựa chọn ①"
+  ],
+  [
+   "늘리더라도",
+   "dù tăng",
+   "",
+   "",
+   "lựa chọn ②"
+  ],
+  [
+   "늘리는 대신",
+   "thay vì tăng",
+   "",
+   "",
+   "lựa chọn ③"
+  ],
+  [
+   "늘리기 위해",
+   "để tăng",
+   "",
+   "",
+   "lựa chọn ④ · đáp án"
+  ]
+ ],
+ "g": [
+  {
+   "p": "-고자",
+   "m": "để …",
+   "f": "늘리고자",
+   "d": "",
+   "ex": [
+    [
+     "건강을 지키고자 운동한다.",
+     "Tập thể dục để giữ sức khỏe."
+    ]
+   ]
+  }
+ ],
+ "qa": {
+  "3": {
+   "a": 3,
+   "w": "Chủ ngữ 정부 + 정책을 수립했다: nỗ lực có chủ đích → -고자 = -기 위해. -고자 hay gặp trong văn viết, chủ ngữ là tổ chức. Loại: 자마자 (ngay khi), 더라도 (dù), 대신 (thay vì).",
+   "x": [
+    "늘리자마자 = ngay khi tăng — -자마자 = ngay khi.",
+    "늘리더라도 = dù tăng — -더라도 = dù.",
+    "늘리는 대신 = thay vì tăng — -는 대신 = thay vì.",
+    null
+   ]
+  }
+ },
+ "hoi": [
+  {
+   "q": "Chính sách mới nhằm mục đích gì?",
+   "a": "Tăng việc làm."
+  }
+ ]
+}

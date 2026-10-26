@@ -1,0 +1,149 @@
+{
+ "e": "Etk102",
+ "n": [
+  3
+ ],
+ "t": "Không đi ngay có thể trễ hẹn",
+ "cd": "Đời sống",
+ "y": "Nếu không xuất phát bây giờ thì có thể trễ giờ hẹn.",
+ "doc": [
+  {
+   "t": "Đọc 4 lựa chọn",
+   "d": "① 늦는 셈이다 (coi như trễ) · ② 늦어도 된다 (trễ cũng được) · ③ 늦을 리가 없다 (không thể trễ) · ④ 늦을 수도 있다 (cũng có thể trễ)",
+   "s": []
+  },
+  {
+   "t": "Gọi tên phần gạch chân",
+   "d": "**늦을지도 모른다** = -(으)ㄹ지도 모르다 → **không chừng, có thể** = -(으)ㄹ 수도 있다.",
+   "s": [
+    0
+   ]
+  }
+ ],
+ "l": [
+  [
+   "출발하지 않으면",
+   "TG",
+   "điều kiện → khả năng xấu"
+  ]
+ ],
+ "s": [
+  {
+   "c": [
+    [
+     "지금 출발하지 않으면",
+     "VP",
+     "nếu bây giờ không xuất phát",
+     1
+    ],
+    [
+     "약속 시간에",
+     "TR",
+     "giờ hẹn",
+     3
+    ],
+    [
+     "늦을지도 모른다.",
+     "VN",
+     "có thể sẽ trễ",
+     2
+    ]
+   ],
+   "g": "출발하지 않으면 늦을지도 모른다",
+   "gv": "Không xuất phát thì có thể trễ",
+   "r": "Câu có gạch chân",
+   "y": "Nếu không xuất phát bây giờ thì có thể trễ giờ hẹn.",
+   "vi": "Nếu bây giờ không xuất phát thì có thể sẽ trễ giờ hẹn.",
+   "tip": "**-(으)ㄹ지도 모르다** = không chừng … = **-(으)ㄹ 수도 있다**."
+  }
+ ],
+ "w": [
+  [
+   "출발하다",
+   "xuất phát",
+   "xuất phát 出發",
+   "출발하지"
+  ],
+  [
+   "약속 시간",
+   "giờ hẹn",
+   "ước thúc 約束",
+   "약속 시간에"
+  ],
+  [
+   "늦다",
+   "trễ, muộn",
+   "",
+   "늦을지도"
+  ]
+ ],
+ "wo": [
+  [
+   "늦는 셈이다",
+   "coi như trễ",
+   "",
+   "",
+   "lựa chọn ①"
+  ],
+  [
+   "늦어도 된다",
+   "trễ cũng được",
+   "",
+   "",
+   "lựa chọn ②"
+  ],
+  [
+   "늦을 리가 없다",
+   "không thể trễ",
+   "",
+   "",
+   "lựa chọn ③"
+  ],
+  [
+   "늦을 수도 있다",
+   "cũng có thể trễ",
+   "",
+   "",
+   "lựa chọn ④ · đáp án"
+  ]
+ ],
+ "g": [
+  {
+   "p": "-(으)ㄹ지도 모르다",
+   "m": "không chừng, có thể",
+   "f": "늦을지도 모른다",
+   "d": "Phỏng đoán không chắc.",
+   "ex": [
+    [
+     "비가 올지도 몰라요.",
+     "Không chừng trời mưa."
+    ]
+   ]
+  },
+  {
+   "p": "-지 않으면",
+   "m": "nếu không …",
+   "f": "출발하지 않으면",
+   "d": "",
+   "ex": []
+  }
+ ],
+ "qa": {
+  "3": {
+   "a": 3,
+   "w": "-(으)ㄹ지도 모르다 = -(으)ㄹ 수도 있다 (không chừng / có thể). Loại: 늦는 셈이다 (coi như muộn – chưa xảy ra thì không tính được), 늦어도 된다 (muộn cũng được), 늦을 리가 없다 (chắc chắn không – ngược nghĩa).",
+   "x": [
+    "늦는 셈이다 = coi như trễ — không hợp nghĩa câu.",
+    "늦어도 된다 = trễ cũng được — Cho phép — ngược ý lo lắng.",
+    "늦을 리가 없다 = không thể trễ — Ngược: chắc chắn không trễ.",
+    null
+   ]
+  }
+ },
+ "hoi": [
+  {
+   "q": "Người nói lo điều gì?",
+   "a": "Có thể bị trễ giờ hẹn."
+  }
+ ]
+}

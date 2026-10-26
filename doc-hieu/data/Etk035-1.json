@@ -1,0 +1,166 @@
+{
+ "e": "Etk035",
+ "n": [
+  1
+ ],
+ "t": "Đang đá bóng thì thầy gọi",
+ "cd": "Giáo dục",
+ "y": "Tôi với bạn đang đá bóng ở sân thì thầy gọi tôi.",
+ "doc": [
+  {
+   "t": "Đọc 4 lựa chọn",
+   "d": "① 하거나 (hoặc chơi) · ② 하는데 (đang chơi thì) · ③ 하면서 (vừa chơi vừa) · ④ 하든지 (dù chơi)",
+   "s": []
+  },
+  {
+   "t": "Xét quan hệ hai vế",
+   "d": "Vế trước là **bối cảnh** (đang đá bóng), vế sau là việc khác với chủ ngữ khác (선생님) → **-는데**. -면서 cần cùng chủ ngữ.",
+   "s": [
+    0
+   ]
+  }
+ ],
+ "l": [
+  [
+   "선생님이",
+   "DL",
+   "chủ ngữ vế sau khác vế trước"
+  ]
+ ],
+ "s": [
+  {
+   "c": [
+    [
+     "친구와 내가",
+     "CN",
+     "bạn và tôi",
+     1
+    ],
+    [
+     "운동장에서",
+     "TR",
+     "ở sân",
+     3
+    ],
+    [
+     "축구를",
+     "TN",
+     "bóng đá",
+     4
+    ],
+    [
+     "(    )",
+     "VP",
+     "đang đá thì",
+     2
+    ],
+    [
+     "선생님이",
+     "CN",
+     "thầy",
+     5
+    ],
+    [
+     "나를",
+     "TN",
+     "tôi",
+     7
+    ],
+    [
+     "부르셨다.",
+     "VN",
+     "gọi",
+     6
+    ]
+   ],
+   "g": "축구를 하는데 선생님이 나를 부르셨다",
+   "gv": "Đang đá bóng thì thầy gọi",
+   "r": "Câu có ô",
+   "y": "Tôi với bạn đang đá bóng ở sân thì thầy gọi tôi.",
+   "vi": "Tôi và bạn đang đá bóng ở sân thì thầy gọi tôi.",
+   "tip": "**-는데** = nêu bối cảnh rồi kể việc xảy ra. **-(으)면서** chỉ dùng khi cùng chủ ngữ."
+  }
+ ],
+ "w": [
+  [
+   "운동장",
+   "sân vận động, sân trường",
+   "vận động trường 運動場",
+   "운동장에서"
+  ],
+  [
+   "축구",
+   "bóng đá",
+   "xúc cầu 蹴球",
+   "축구를"
+  ],
+  [
+   "부르다",
+   "gọi",
+   "",
+   "부르셨다"
+  ]
+ ],
+ "wo": [
+  [
+   "하거나",
+   "hoặc chơi",
+   "",
+   "",
+   "lựa chọn ①"
+  ],
+  [
+   "하는데",
+   "đang chơi thì",
+   "",
+   "",
+   "lựa chọn ② · đáp án"
+  ],
+  [
+   "하면서",
+   "vừa chơi vừa",
+   "",
+   "",
+   "lựa chọn ③"
+  ],
+  [
+   "하든지",
+   "dù chơi",
+   "",
+   "",
+   "lựa chọn ④"
+  ]
+ ],
+ "g": [
+  {
+   "p": "-는데 (bối cảnh)",
+   "m": "đang … thì",
+   "f": "",
+   "d": "",
+   "ex": [
+    [
+     "밥을 먹는데 전화가 왔다.",
+     "Đang ăn thì có điện thoại."
+    ]
+   ]
+  }
+ ],
+ "qa": {
+  "1": {
+   "a": 1,
+   "w": "Vế trước là bối cảnh (đang đá bóng) thì việc khác xảy ra → -는데. -면서 cần cùng chủ ngữ (ở đây 나 ≠ 선생님); -거나/-든지 là lựa chọn.",
+   "x": [
+    "하거나 = hoặc chơi — Lựa chọn — không hợp.",
+    null,
+    "하면서 = vừa chơi vừa — -면서 cần cùng chủ ngữ (나 ≠ 선생님).",
+    "하든지 = dù chơi — Lựa chọn — không hợp."
+   ]
+  }
+ },
+ "hoi": [
+  {
+   "q": "Ai gọi “tôi”?",
+   "a": "Thầy giáo."
+  }
+ ]
+}

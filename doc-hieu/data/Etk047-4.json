@@ -1,0 +1,149 @@
+{
+ "e": "Etk047",
+ "n": [
+  4
+ ],
+ "t": "Thắng thua tùy luyện tập",
+ "cd": "Thể thao",
+ "y": "Thắng hay thua trong trận đấu là phụ thuộc vào luyện tập.",
+ "doc": [
+  {
+   "t": "Đọc 4 lựa chọn",
+   "d": "① 연습할 따름이다 (chỉ luyện thôi) · ② 연습할 모양이다 (có vẻ sẽ luyện) · ③ 연습하기 나름이다 (tùy vào luyện tập) · ④ 연습하기 십상이다 (dễ luyện (xấu))",
+   "s": []
+  },
+  {
+   "t": "Gọi tên phần gạch chân",
+   "d": "**연습하기에 달려 있다** = phụ thuộc vào luyện tập = **-기 나름이다**.",
+   "s": [
+    0
+   ]
+  }
+ ],
+ "l": [
+  [
+   "이기고 지는 것은",
+   "GT",
+   "kết quả → tùy vào …"
+  ]
+ ],
+ "s": [
+  {
+   "c": [
+    [
+     "경기에서",
+     "TR",
+     "trong trận đấu",
+     3
+    ],
+    [
+     "이기고 지는 것은",
+     "CN",
+     "việc thắng hay thua",
+     1
+    ],
+    [
+     "연습하기에 달려 있다.",
+     "VN",
+     "phụ thuộc vào luyện tập",
+     2
+    ]
+   ],
+   "g": "이기고 지는 것은 연습하기에 달려 있다",
+   "gv": "Thắng thua phụ thuộc luyện tập",
+   "r": "Câu có gạch chân",
+   "y": "Thắng hay thua trong trận đấu là phụ thuộc vào luyện tập.",
+   "vi": "Thắng hay thua trong trận đấu là phụ thuộc vào việc luyện tập.",
+   "tip": "**-기에 달려 있다 = -기 나름이다** = tùy vào."
+  }
+ ],
+ "w": [
+  [
+   "경기",
+   "trận đấu",
+   "cạnh kỹ 競技",
+   "경기에서"
+  ],
+  [
+   "이기다 / 지다",
+   "thắng / thua",
+   "",
+   "이기고|지는"
+  ],
+  [
+   "연습하다",
+   "luyện tập",
+   "luyện tập 練習",
+   "연습하기에"
+  ]
+ ],
+ "wo": [
+  [
+   "연습할 따름이다",
+   "chỉ luyện thôi",
+   "",
+   "",
+   "lựa chọn ①"
+  ],
+  [
+   "연습할 모양이다",
+   "có vẻ sẽ luyện",
+   "",
+   "",
+   "lựa chọn ②"
+  ],
+  [
+   "연습하기 나름이다",
+   "tùy vào luyện tập",
+   "",
+   "",
+   "lựa chọn ③ · đáp án"
+  ],
+  [
+   "연습하기 십상이다",
+   "dễ luyện (xấu)",
+   "",
+   "",
+   "lựa chọn ④"
+  ]
+ ],
+ "g": [
+  {
+   "p": "N에 달려 있다",
+   "m": "phụ thuộc vào N",
+   "f": "달려 있다",
+   "d": "",
+   "ex": [
+    [
+     "성공은 노력에 달려 있다.",
+     "Thành công phụ thuộc nỗ lực."
+    ]
+   ]
+  },
+  {
+   "p": "-기 나름이다",
+   "m": "tùy vào",
+   "f": "",
+   "d": "",
+   "ex": []
+  }
+ ],
+ "qa": {
+  "4": {
+   "a": 2,
+   "w": "“Thắng hay thua là…” = kết quả → tùy vào luyện tập: -기에 달려 있다 = -기 나름이다. Loại: 따름이다 (chỉ… thôi), 모양이다 (có vẻ), 십상이다 (dễ bị – chỉ chuyện xấu).",
+   "x": [
+    "연습할 따름이다 = chỉ luyện thôi — -(으)ㄹ 따름이다 = chỉ … thôi.",
+    "연습할 모양이다 = có vẻ sẽ luyện — -(으)ㄹ 모양이다 = có vẻ.",
+    null,
+    "연습하기 십상이다 = dễ luyện (xấu) — -기 십상이다 = dễ (chuyện xấu)."
+   ]
+  }
+ },
+ "hoi": [
+  {
+   "q": "Kết quả trận đấu phụ thuộc vào gì?",
+   "a": "Luyện tập."
+  }
+ ]
+}

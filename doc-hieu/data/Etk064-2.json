@@ -1,0 +1,148 @@
+{
+ "e": "Etk064",
+ "n": [
+  2
+ ],
+ "t": "Em ngày càng giống bố",
+ "cd": "Gia đình",
+ "y": "Em tôi ngày càng giống bố.",
+ "doc": [
+  {
+   "t": "Đọc 4 lựa chọn",
+   "d": "① 닮아 간다 (dần dần giống) · ② 닮기도 한다 (cũng có khi giống) · ③ 닮았나 보다 (chắc là giống) · ④ 닮은 적이 없다 (chưa từng giống)",
+   "s": []
+  },
+  {
+   "t": "Tìm dấu hiệu",
+   "d": "**점점** (dần dần) → thay đổi đang tiếp diễn: **-아/어 가다**.",
+   "s": [
+    0
+   ]
+  }
+ ],
+ "l": [
+  [
+   "점점",
+   "GT",
+   "dần dần → -아/어 가다"
+  ]
+ ],
+ "s": [
+  {
+   "c": [
+    [
+     "동생이",
+     "CN",
+     "em tôi",
+     1
+    ],
+    [
+     "점점",
+     "TR",
+     "ngày càng",
+     2
+    ],
+    [
+     "아버지를",
+     "TN",
+     "bố",
+     4
+    ],
+    [
+     "(    ).",
+     "VN",
+     "giống",
+     3
+    ]
+   ],
+   "g": "동생이 아버지를 닮아 간다",
+   "gv": "Em ngày càng giống bố",
+   "r": "Câu có ô",
+   "y": "Em tôi ngày càng giống bố.",
+   "vi": "Em tôi ngày càng giống bố.",
+   "tip": "**N을/를 닮다** = giống N (về ngoại hình, tính cách). **점점 + -아/어 가다**."
+  }
+ ],
+ "w": [
+  [
+   "동생",
+   "em",
+   "đồng sinh 同生",
+   "동생이"
+  ],
+  [
+   "점점",
+   "dần dần",
+   "점점 漸漸",
+   "점점"
+  ],
+  [
+   "닮다",
+   "giống",
+   "",
+   ""
+  ]
+ ],
+ "wo": [
+  [
+   "닮아 간다",
+   "dần dần giống",
+   "",
+   "",
+   "lựa chọn ① · đáp án"
+  ],
+  [
+   "닮기도 한다",
+   "cũng có khi giống",
+   "",
+   "",
+   "lựa chọn ②"
+  ],
+  [
+   "닮았나 보다",
+   "chắc là giống",
+   "",
+   "",
+   "lựa chọn ③"
+  ],
+  [
+   "닮은 적이 없다",
+   "chưa từng giống",
+   "",
+   "",
+   "lựa chọn ④"
+  ]
+ ],
+ "g": [
+  {
+   "p": "-아/어 가다",
+   "m": "dần dần …",
+   "f": "",
+   "d": "Thay đổi tiếp diễn.",
+   "ex": [
+    [
+     "점점 익숙해져 간다.",
+     "Dần dần quen."
+    ]
+   ]
+  }
+ ],
+ "qa": {
+  "2": {
+   "a": 0,
+   "w": "점점 (dần dần) → -아/어 가다 (thay đổi đang tiếp diễn).",
+   "x": [
+    null,
+    "닮기도 한다 = cũng có khi giống — Không hợp với 점점.",
+    "닮았나 보다 = chắc là giống — Đoán — không hợp với 점점.",
+    "닮은 적이 없다 = chưa từng giống — Ngược với 점점."
+   ]
+  }
+ },
+ "hoi": [
+  {
+   "q": "Em giống ai?",
+   "a": "Giống bố."
+  }
+ ]
+}

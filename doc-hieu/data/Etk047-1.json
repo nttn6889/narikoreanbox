@@ -1,0 +1,142 @@
+{
+ "e": "Etk047",
+ "n": [
+  1
+ ],
+ "t": "Mai đi công viên giải trí",
+ "cd": "Đời sống",
+ "y": "Mai tôi đã hẹn đi công viên giải trí cùng bạn.",
+ "doc": [
+  {
+   "t": "Đọc 4 lựa chọn",
+   "d": "① 가는 편이다 (thường hay đi) · ② 가는 중이다 (đang đi) · ③ 가기로 했다 (đã hẹn / quyết định đi) · ④ 간 적이 있다 (đã từng đi)",
+   "s": []
+  },
+  {
+   "t": "Tìm dấu hiệu",
+   "d": "**내일** + **친구와 함께** → kế hoạch, lời hẹn: **-기로 하다**.",
+   "s": [
+    0
+   ]
+  }
+ ],
+ "l": [
+  [
+   "내일",
+   "TG",
+   "tương lai → quyết định, hẹn"
+  ]
+ ],
+ "s": [
+  {
+   "c": [
+    [
+     "내일",
+     "TR",
+     "ngày mai",
+     2
+    ],
+    [
+     "친구와 함께",
+     "TR",
+     "cùng bạn",
+     3
+    ],
+    [
+     "놀이공원에",
+     "TR",
+     "công viên giải trí",
+     4
+    ],
+    [
+     "(    ).",
+     "VN",
+     "(tôi) đã hẹn đi",
+     1
+    ]
+   ],
+   "g": "내일 놀이공원에 가기로 했다",
+   "gv": "Mai đã hẹn đi công viên",
+   "r": "Câu có ô",
+   "y": "Mai tôi đã hẹn đi công viên giải trí cùng bạn.",
+   "vi": "Tôi đã hẹn mai đi công viên giải trí cùng bạn.",
+   "tip": "**-기로 하다** = quyết định / hẹn (sẽ làm). Hay đi với mốc tương lai."
+  }
+ ],
+ "w": [
+  [
+   "함께",
+   "cùng",
+   "",
+   "함께"
+  ],
+  [
+   "놀이공원",
+   "công viên giải trí",
+   "",
+   "놀이공원에"
+  ]
+ ],
+ "wo": [
+  [
+   "가는 편이다",
+   "thường hay đi",
+   "",
+   "",
+   "lựa chọn ①"
+  ],
+  [
+   "가는 중이다",
+   "đang đi",
+   "",
+   "",
+   "lựa chọn ②"
+  ],
+  [
+   "가기로 했다",
+   "đã hẹn / quyết định đi",
+   "",
+   "",
+   "lựa chọn ③ · đáp án"
+  ],
+  [
+   "간 적이 있다",
+   "đã từng đi",
+   "",
+   "",
+   "lựa chọn ④"
+  ]
+ ],
+ "g": [
+  {
+   "p": "-기로 하다",
+   "m": "quyết định, hẹn sẽ …",
+   "f": "",
+   "d": "",
+   "ex": [
+    [
+     "주말에 만나기로 했어요.",
+     "Đã hẹn gặp cuối tuần."
+    ]
+   ]
+  }
+ ],
+ "qa": {
+  "1": {
+   "a": 2,
+   "w": "내일 + 친구와 함께 → hẹn, quyết định: -기로 하다. -는 중이다, -ㄴ 적이 있다 không đi với 내일.",
+   "x": [
+    "가는 편이다 = thường hay đi — -는 편이다 = thuộc loại (thói quen).",
+    "가는 중이다 = đang đi — -는 중이다 = đang — không hợp với 내일.",
+    null,
+    "간 적이 있다 = đã từng đi — Kinh nghiệm — không hợp với 내일."
+   ]
+  }
+ },
+ "hoi": [
+  {
+   "q": "Mai người nói làm gì?",
+   "a": "Đi công viên giải trí cùng bạn."
+  }
+ ]
+}

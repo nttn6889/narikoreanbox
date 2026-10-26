@@ -1,0 +1,167 @@
+{
+ "e": "Etk060",
+ "n": [
+  1
+ ],
+ "t": "Mải xem điện thoại lỡ ga",
+ "cd": "Đời sống",
+ "y": "Đang xem điện thoại thì đi quá ga phải xuống.",
+ "doc": [
+  {
+   "t": "Đọc 4 lựa chọn",
+   "d": "① 보든지 (dù xem) · ② 보다가 (đang xem thì) · ③ 보려면 (nếu muốn xem) · ④ 보고서 (xem xong rồi)",
+   "s": []
+  },
+  {
+   "t": "Xét quan hệ hai vế",
+   "d": "Đang xem điện thoại thì việc khác (đi quá ga) chen vào, cùng chủ ngữ → **-다가**.",
+   "s": [
+    0
+   ]
+  }
+ ],
+ "l": [
+  [
+   "지나쳤다",
+   "TG",
+   "việc xen vào khi đang làm"
+  ]
+ ],
+ "s": [
+  {
+   "c": [
+    [
+     "휴대 전화를",
+     "TN",
+     "điện thoại",
+     2
+    ],
+    [
+     "(    )",
+     "VP",
+     "đang xem thì",
+     1
+    ],
+    [
+     "내려야 할",
+     "DN",
+     "phải xuống",
+     5
+    ],
+    [
+     "역을",
+     "TN",
+     "ga",
+     4
+    ],
+    [
+     "지나쳤다.",
+     "VN",
+     "đã đi quá",
+     3
+    ]
+   ],
+   "g": "휴대 전화를 보다가 역을 지나쳤다",
+   "gv": "Đang xem điện thoại thì đi quá ga",
+   "r": "Câu có ô",
+   "y": "Đang xem điện thoại thì đi quá ga phải xuống.",
+   "vi": "Đang xem điện thoại thì tôi đi quá ga phải xuống.",
+   "tip": "**-다가** = đang … thì (chuyển sang việc khác, thường bất ngờ)."
+  }
+ ],
+ "w": [
+  [
+   "휴대 전화",
+   "điện thoại di động",
+   "huề đới điện thoại 携帶電話",
+   "휴대 전화를"
+  ],
+  [
+   "내리다",
+   "xuống (xe)",
+   "",
+   "내려야"
+  ],
+  [
+   "역",
+   "ga",
+   "dịch 驛",
+   "역을"
+  ],
+  [
+   "지나치다",
+   "đi quá, vượt qua",
+   "",
+   "지나쳤다"
+  ]
+ ],
+ "wo": [
+  [
+   "보든지",
+   "dù xem",
+   "",
+   "",
+   "lựa chọn ①"
+  ],
+  [
+   "보다가",
+   "đang xem thì",
+   "",
+   "",
+   "lựa chọn ② · đáp án"
+  ],
+  [
+   "보려면",
+   "nếu muốn xem",
+   "",
+   "",
+   "lựa chọn ③"
+  ],
+  [
+   "보고서",
+   "xem xong rồi",
+   "",
+   "",
+   "lựa chọn ④"
+  ]
+ ],
+ "g": [
+  {
+   "p": "-다가",
+   "m": "đang … thì",
+   "f": "",
+   "d": "",
+   "ex": [
+    [
+     "길을 걷다가 친구를 만났다.",
+     "Đang đi thì gặp bạn."
+    ]
+   ]
+  },
+  {
+   "p": "-아/어야 하다",
+   "m": "phải …",
+   "f": "내려야 할",
+   "d": "",
+   "ex": []
+  }
+ ],
+ "qa": {
+  "1": {
+   "a": 1,
+   "w": "Đang xem điện thoại thì lỡ ga → -다가 (đang làm A thì B chen vào, cùng chủ ngữ). -려면 cần vế sau “phải”; -든지 là lựa chọn; -고서 = làm xong rồi.",
+   "x": [
+    "보든지 = dù xem — Lựa chọn — không hợp.",
+    null,
+    "보려면 = nếu muốn xem — Cần vế sau “phải…”.",
+    "보고서 = xem xong rồi — Xem xong rồi mới lỡ ga — không tự nhiên; lỗi xảy ra trong lúc xem."
+   ]
+  }
+ },
+ "hoi": [
+  {
+   "q": "Vì sao đi quá ga?",
+   "a": "Mải xem điện thoại."
+  }
+ ]
+}

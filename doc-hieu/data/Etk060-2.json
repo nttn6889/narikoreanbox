@@ -1,0 +1,149 @@
+{
+ "e": "Etk060",
+ "n": [
+  2
+ ],
+ "t": "Nhờ bạn mà biết văn hóa Hàn",
+ "cd": "Văn hóa",
+ "y": "Nhờ bạn người Hàn mà tôi biết nhiều về văn hóa Hàn.",
+ "doc": [
+  {
+   "t": "Đọc 4 lựa chọn",
+   "d": "① 알게 되었다 (đã (trở nên) biết) · ② 알도록 했다 (làm cho biết) · ③ 알아도 된다 (biết cũng được) · ④ 알아야 한다 (phải biết)",
+   "s": []
+  },
+  {
+   "t": "Tìm dấu hiệu",
+   "d": "**덕분에** (nhờ) → kết quả thay đổi: **-게 되다**.",
+   "s": [
+    0
+   ]
+  }
+ ],
+ "l": [
+  [
+   "덕분에",
+   "NN",
+   "nhờ … → kết quả -게 되다"
+  ]
+ ],
+ "s": [
+  {
+   "c": [
+    [
+     "한국 친구 덕분에",
+     "TR",
+     "nhờ bạn người Hàn",
+     1
+    ],
+    [
+     "한국 문화를",
+     "TN",
+     "văn hóa Hàn",
+     4
+    ],
+    [
+     "많이",
+     "TR",
+     "nhiều",
+     3
+    ],
+    [
+     "(    ).",
+     "VN",
+     "đã biết",
+     2
+    ]
+   ],
+   "g": "한국 문화를 알게 되었다",
+   "gv": "Đã biết văn hóa Hàn",
+   "r": "Câu có ô",
+   "y": "Nhờ bạn người Hàn mà tôi biết nhiều về văn hóa Hàn.",
+   "vi": "Nhờ bạn người Hàn mà tôi đã biết nhiều về văn hóa Hàn.",
+   "tip": "**N 덕분에 … -게 되다** = nhờ N mà (rốt cuộc) …"
+  }
+ ],
+ "w": [
+  [
+   "덕분",
+   "nhờ (ơn)",
+   "đức phận 德分",
+   "덕분에"
+  ],
+  [
+   "문화",
+   "văn hóa",
+   "văn hóa 文化",
+   "문화를"
+  ]
+ ],
+ "wo": [
+  [
+   "알게 되었다",
+   "đã (trở nên) biết",
+   "",
+   "",
+   "lựa chọn ① · đáp án"
+  ],
+  [
+   "알도록 했다",
+   "làm cho biết",
+   "",
+   "",
+   "lựa chọn ②"
+  ],
+  [
+   "알아도 된다",
+   "biết cũng được",
+   "",
+   "",
+   "lựa chọn ③"
+  ],
+  [
+   "알아야 한다",
+   "phải biết",
+   "",
+   "",
+   "lựa chọn ④"
+  ]
+ ],
+ "g": [
+  {
+   "p": "N 덕분에",
+   "m": "nhờ N",
+   "f": "덕분에",
+   "d": "",
+   "ex": []
+  },
+  {
+   "p": "-게 되다",
+   "m": "trở nên, rốt cuộc",
+   "f": "",
+   "d": "",
+   "ex": [
+    [
+     "한국에 살게 되었다.",
+     "Rốt cuộc sống ở Hàn."
+    ]
+   ]
+  }
+ ],
+ "qa": {
+  "2": {
+   "a": 0,
+   "w": "Nhờ bạn Hàn (덕분에) mà kết quả là biết nhiều → -게 되다.",
+   "x": [
+    null,
+    "알도록 했다 = làm cho biết — -도록 하다 = làm cho người khác …",
+    "알아도 된다 = biết cũng được — Cho phép — không hợp.",
+    "알아야 한다 = phải biết — Nghĩa vụ — không hợp với 덕분에."
+   ]
+  }
+ },
+ "hoi": [
+  {
+   "q": "Nhờ ai mà người nói biết văn hóa Hàn?",
+   "a": "Nhờ bạn người Hàn."
+  }
+ ]
+}

@@ -1,0 +1,156 @@
+{
+ "e": "Etk035",
+ "n": [
+  4
+ ],
+ "t": "Đi tiệm khác giá cũng vậy",
+ "cd": "Đời sống",
+ "y": "Có đi tiệm quần áo khác thì giá cũng sẽ giống ở đây.",
+ "doc": [
+  {
+   "t": "Đọc 4 lựa chọn",
+   "d": "① 간다고 해도 (dù có đi) · ② 간다고 치고 (cứ cho là đi) · ③ 갈지도 몰라서 (vì không chừng sẽ đi) · ④ 가기는 하지만 (có đi nhưng)",
+   "s": []
+  },
+  {
+   "t": "Gọi tên phần gạch chân",
+   "d": "**가 봐야** + vế sau “giá cũng như ở đây” → có đi cũng vô ích = **-ㄴ다고 해도**.",
+   "s": [
+    0
+   ]
+  }
+ ],
+ "l": [
+  [
+   "가 봐야",
+   "DL",
+   "có … cũng (vô ích)"
+  ]
+ ],
+ "s": [
+  {
+   "c": [
+    [
+     "다른 옷가게에",
+     "TR",
+     "tiệm quần áo khác",
+     2
+    ],
+    [
+     "가 봐야",
+     "VP",
+     "có đi",
+     1
+    ],
+    [
+     "값은",
+     "CN",
+     "giá",
+     3
+    ],
+    [
+     "여기와",
+     "TR",
+     "với ở đây",
+     5
+    ],
+    [
+     "비슷할 것이다.",
+     "VN",
+     "chắc cũng giống",
+     4
+    ]
+   ],
+   "g": "가 봐야 값은 비슷할 것이다",
+   "gv": "Có đi giá cũng giống",
+   "r": "Câu có gạch chân",
+   "y": "Có đi tiệm quần áo khác thì giá cũng sẽ giống ở đây.",
+   "vi": "Có đi tiệm quần áo khác thì giá chắc cũng giống ở đây.",
+   "tip": "**-아/어 봐야** (+ kết quả không đổi) = có … cũng vô ích = **-ㄴ/는다고 해도**."
+  }
+ ],
+ "w": [
+  [
+   "옷가게",
+   "tiệm quần áo",
+   "",
+   "옷가게에"
+  ],
+  [
+   "값",
+   "giá",
+   "",
+   "값은"
+  ],
+  [
+   "비슷하다",
+   "tương tự",
+   "",
+   "비슷할"
+  ]
+ ],
+ "wo": [
+  [
+   "간다고 해도",
+   "dù có đi",
+   "",
+   "",
+   "lựa chọn ① · đáp án"
+  ],
+  [
+   "간다고 치고",
+   "cứ cho là đi",
+   "",
+   "",
+   "lựa chọn ②"
+  ],
+  [
+   "갈지도 몰라서",
+   "vì không chừng sẽ đi",
+   "",
+   "",
+   "lựa chọn ③"
+  ],
+  [
+   "가기는 하지만",
+   "có đi nhưng",
+   "",
+   "",
+   "lựa chọn ④"
+  ]
+ ],
+ "g": [
+  {
+   "p": "-아/어 봐야",
+   "m": "có … cũng (vô ích)",
+   "f": "가 봐야",
+   "d": "",
+   "ex": []
+  },
+  {
+   "p": "-(으)ㄹ 것이다",
+   "m": "chắc sẽ",
+   "f": "비슷할 것이다",
+   "d": "",
+   "ex": []
+  }
+ ],
+ "qa": {
+  "4": {
+   "a": 0,
+   "w": "Vế sau “giá cũng như ở đây” → có đi cũng vô ích. -아/어 봐야 ở đây = -ㄴ/는다고 해도, không phải “phải thử”. Loại: 간다고 치고 (cứ cho là đi), 갈지도 몰라서 (vì không chừng sẽ đi), 가기는 하지만 (có đi nhưng).",
+   "x": [
+    null,
+    "간다고 치고 = cứ cho là đi — -ㄴ다고 치다 = cứ cho là (giả định).",
+    "갈지도 몰라서 = vì không chừng sẽ đi — -(으)ㄹ지도 몰라서 = vì không chừng.",
+    "가기는 하지만 = có đi nhưng — -기는 하지만 = có … nhưng."
+   ]
+  }
+ },
+ "hoi": [
+  {
+   "q": "Người nói khuyên gì?",
+   "a": "Không cần đi tiệm khác vì giá cũng vậy."
+  }
+ ]
+}

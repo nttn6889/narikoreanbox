@@ -1,0 +1,142 @@
+{
+ "e": "Etk096",
+ "n": [
+  1
+ ],
+ "t": "Uống thuốc xong thì hạ sốt",
+ "cd": "Sức khỏe",
+ "y": "Uống thuốc cảm xong thì hạ sốt.",
+ "doc": [
+  {
+   "t": "Đọc 4 lựa chọn",
+   "d": "① 먹느라고 (vì mải … (kết quả xấu)) · ② 먹더라도 (dù …) · ③ 먹을 텐데 (chắc là … nên) · ④ 먹고 나서 (… xong rồi)",
+   "s": []
+  },
+  {
+   "t": "Xét quan hệ hai vế",
+   "d": "Uống thuốc → hạ sốt: hai việc **nối tiếp**, vế sau quá khứ → **-고 나서**.",
+   "s": [
+    0
+   ]
+  }
+ ],
+ "l": [
+  [
+   "열이 내렸다",
+   "TG",
+   "việc xảy ra sau"
+  ]
+ ],
+ "s": [
+  {
+   "c": [
+    [
+     "감기약을",
+     "TN",
+     "thuốc cảm",
+     2
+    ],
+    [
+     "(    )",
+     "VP",
+     "uống xong",
+     1
+    ],
+    [
+     "열이",
+     "CN",
+     "cơn sốt",
+     3
+    ],
+    [
+     "내렸다.",
+     "VN",
+     "đã hạ",
+     4
+    ]
+   ],
+   "g": "감기약을 먹고 나서 열이 내렸다",
+   "gv": "Uống thuốc xong thì hạ sốt",
+   "r": "Câu có ô",
+   "y": "Uống thuốc cảm xong thì hạ sốt.",
+   "vi": "Uống thuốc cảm xong thì đã hạ sốt.",
+   "tip": "**-고 나서** = làm xong … rồi. -느라고 dùng khi vì mải làm A mà B (xấu) xảy ra."
+  }
+ ],
+ "w": [
+  [
+   "감기약",
+   "thuốc cảm",
+   "cảm khí dược 感氣藥",
+   "감기약을"
+  ],
+  [
+   "열이 내리다",
+   "hạ sốt",
+   "nhiệt 熱",
+   "열이|내렸다"
+  ]
+ ],
+ "wo": [
+  [
+   "먹느라고",
+   "vì mải … (kết quả xấu)",
+   "",
+   "",
+   "lựa chọn ①"
+  ],
+  [
+   "먹더라도",
+   "dù …",
+   "",
+   "",
+   "lựa chọn ②"
+  ],
+  [
+   "먹을 텐데",
+   "chắc là … nên",
+   "",
+   "",
+   "lựa chọn ③"
+  ],
+  [
+   "먹고 나서",
+   "… xong rồi",
+   "",
+   "",
+   "lựa chọn ④ · đáp án"
+  ]
+ ],
+ "g": [
+  {
+   "p": "-고 나서",
+   "m": "làm xong … rồi",
+   "f": "",
+   "d": "",
+   "ex": [
+    [
+     "숙제를 하고 나서 놀아요.",
+     "Làm bài xong rồi chơi."
+    ]
+   ]
+  }
+ ],
+ "qa": {
+  "1": {
+   "a": 3,
+   "w": "Uống thuốc xong thì hạ sốt → trình tự -고 나서. -느라고 (vì mải… nên kết quả xấu), -더라도 (dù), -ㄹ 텐데 (chắc là… nên) không hợp.",
+   "x": [
+    "먹느라고 = vì mải … (kết quả xấu) — Hạ sốt là kết quả tốt; -느라고 dùng cho kết quả xấu.",
+    "먹더라도 = dù … — Dù uống — không hợp.",
+    "먹을 텐데 = chắc là … nên — Phỏng đoán, không hợp vế sau quá khứ.",
+    null
+   ]
+  }
+ },
+ "hoi": [
+  {
+   "q": "Việc nào xảy ra trước?",
+   "a": "Uống thuốc cảm, sau đó hạ sốt."
+  }
+ ]
+}

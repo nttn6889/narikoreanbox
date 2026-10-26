@@ -1,0 +1,167 @@
+{
+ "e": "Etk041",
+ "n": [
+  1
+ ],
+ "t": "Trông lạnh lùng nhưng lòng ấm áp",
+ "cd": "Gia đình",
+ "y": "Anh tôi trông lạnh lùng nhưng lòng ấm áp.",
+ "doc": [
+  {
+   "t": "Đọc 4 lựa chọn",
+   "d": "① 보여도 (dù trông có vẻ) · ② 보여야 (phải trông thì mới) · ③ 보이다가 (đang trông thì) · ④ 보이든지 (dù trông thế nào)",
+   "s": []
+  },
+  {
+   "t": "Xét quan hệ hai vế",
+   "d": "**차가워** ↔ **따뜻하다**: hai vế đối lập → nhượng bộ **-아/어 보여도** (dù trông có vẻ).",
+   "s": [
+    0
+   ]
+  }
+ ],
+ "l": [
+  [
+   "마음은",
+   "DL",
+   "은: đối lập với vẻ ngoài"
+  ]
+ ],
+ "s": [
+  {
+   "c": [
+    [
+     "형은",
+     "CN",
+     "anh tôi",
+     1
+    ],
+    [
+     "차가워",
+     "TR",
+     "lạnh lùng",
+     3
+    ],
+    [
+     "(    )",
+     "VP",
+     "dù trông",
+     2
+    ],
+    [
+     "마음은",
+     "CN",
+     "nhưng lòng",
+     4
+    ],
+    [
+     "따뜻하다.",
+     "VN",
+     "ấm áp",
+     5
+    ]
+   ],
+   "g": "형은 차가워 보여도 마음은 따뜻하다",
+   "gv": "Anh trông lạnh nhưng lòng ấm",
+   "r": "Câu có ô",
+   "y": "Anh tôi trông lạnh lùng nhưng lòng ấm áp.",
+   "vi": "Anh tôi trông lạnh lùng nhưng lòng thì ấm áp.",
+   "tip": "**A-아/어 보이다** = trông có vẻ A. **-아/어도** = dù."
+  }
+ ],
+ "w": [
+  [
+   "형",
+   "anh trai (nam gọi)",
+   "huynh 兄",
+   "형은"
+  ],
+  [
+   "차갑다",
+   "lạnh lùng, lạnh",
+   "",
+   "차가워"
+  ],
+  [
+   "마음",
+   "lòng, tấm lòng",
+   "",
+   "마음은"
+  ],
+  [
+   "따뜻하다",
+   "ấm áp",
+   "",
+   "따뜻하다"
+  ]
+ ],
+ "wo": [
+  [
+   "보여도",
+   "dù trông có vẻ",
+   "",
+   "",
+   "lựa chọn ① · đáp án"
+  ],
+  [
+   "보여야",
+   "phải trông thì mới",
+   "",
+   "",
+   "lựa chọn ②"
+  ],
+  [
+   "보이다가",
+   "đang trông thì",
+   "",
+   "",
+   "lựa chọn ③"
+  ],
+  [
+   "보이든지",
+   "dù trông thế nào",
+   "",
+   "",
+   "lựa chọn ④"
+  ]
+ ],
+ "g": [
+  {
+   "p": "A-아/어 보이다",
+   "m": "trông có vẻ",
+   "f": "",
+   "d": "",
+   "ex": []
+  },
+  {
+   "p": "-아/어도",
+   "m": "dù …",
+   "f": "",
+   "d": "",
+   "ex": [
+    [
+     "비싸도 사고 싶다.",
+     "Dù đắt vẫn muốn mua."
+    ]
+   ]
+  }
+ ],
+ "qa": {
+  "1": {
+   "a": 0,
+   "w": "Trông lạnh lùng NHƯNG lòng ấm áp → -아/어 보여도 (dù trông có vẻ). -아야 (phải), -다가, -든지 sai.",
+   "x": [
+    null,
+    "보여야 = phải trông thì mới — -아야 = phải … mới.",
+    "보이다가 = đang trông thì — -다가 = đang … thì.",
+    "보이든지 = dù trông thế nào — -든지 = hoặc / dù gì."
+   ]
+  }
+ },
+ "hoi": [
+  {
+   "q": "Anh trông thế nào, thật ra thế nào?",
+   "a": "Trông lạnh lùng; thật ra lòng ấm áp."
+  }
+ ]
+}

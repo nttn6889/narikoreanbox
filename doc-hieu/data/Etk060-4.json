@@ -1,0 +1,166 @@
+{
+ "e": "Etk060",
+ "n": [
+  4
+ ],
+ "t": "Có sửa cũng khó dùng lâu",
+ "cd": "Đời sống",
+ "y": "Máy tính này cũ nên có sửa cũng khó dùng lâu.",
+ "doc": [
+  {
+   "t": "Đọc 4 lựa chọn",
+   "d": "① 수리해 보니까 (sửa thử thì thấy) · ② 수리하는 대로 (ngay khi sửa) · ③ 수리하는 바람에 (vì sửa (xấu)) · ④ 수리한다고 해도 (dù có sửa)",
+   "s": []
+  },
+  {
+   "t": "Gọi tên phần gạch chân",
+   "d": "**수리해 봐야** + vế sau tiêu cực (**어렵다**) → có làm cũng vô ích = **-ㄴ다고 해도**.",
+   "s": [
+    0
+   ]
+  }
+ ],
+ "l": [
+  [
+   "낡아서",
+   "NN",
+   "vì cũ"
+  ],
+  [
+   "수리해 봐야",
+   "DL",
+   "có sửa cũng (vô ích)"
+  ]
+ ],
+ "s": [
+  {
+   "c": [
+    [
+     "이 컴퓨터는",
+     "CN",
+     "máy tính này",
+     1
+    ],
+    [
+     "낡아서",
+     "VP",
+     "cũ nên",
+     2
+    ],
+    [
+     "수리해 봐야",
+     "VP",
+     "có sửa",
+     3
+    ],
+    [
+     "오래 쓰기",
+     "CN",
+     "dùng lâu",
+     5
+    ],
+    [
+     "어렵다.",
+     "VN",
+     "cũng khó",
+     4
+    ]
+   ],
+   "g": "수리해 봐야 오래 쓰기 어렵다",
+   "gv": "Có sửa cũng khó dùng lâu",
+   "r": "Câu có gạch chân",
+   "y": "Máy tính này cũ nên có sửa cũng khó dùng lâu.",
+   "vi": "Máy tính này cũ nên có sửa cũng khó dùng được lâu.",
+   "tip": "**-아/어 봐야 + kết quả xấu** = có … cũng vô ích = **-ㄴ/는다고 해도**."
+  }
+ ],
+ "w": [
+  [
+   "낡다",
+   "cũ",
+   "",
+   "낡아서"
+  ],
+  [
+   "수리하다",
+   "sửa chữa",
+   "tu lý 修理",
+   "수리해"
+  ],
+  [
+   "오래",
+   "lâu",
+   "",
+   "오래"
+  ]
+ ],
+ "wo": [
+  [
+   "수리해 보니까",
+   "sửa thử thì thấy",
+   "",
+   "",
+   "lựa chọn ①"
+  ],
+  [
+   "수리하는 대로",
+   "ngay khi sửa",
+   "",
+   "",
+   "lựa chọn ②"
+  ],
+  [
+   "수리하는 바람에",
+   "vì sửa (xấu)",
+   "",
+   "",
+   "lựa chọn ③"
+  ],
+  [
+   "수리한다고 해도",
+   "dù có sửa",
+   "",
+   "",
+   "lựa chọn ④ · đáp án"
+  ]
+ ],
+ "g": [
+  {
+   "p": "-아/어 봐야",
+   "m": "có … cũng (vô ích)",
+   "f": "수리해 봐야",
+   "d": "",
+   "ex": [
+    [
+     "지금 가 봐야 늦었다.",
+     "Giờ có đi cũng muộn rồi."
+    ]
+   ]
+  },
+  {
+   "p": "-기 어렵다",
+   "m": "khó …",
+   "f": "쓰기 어렵다",
+   "d": "",
+   "ex": []
+  }
+ ],
+ "qa": {
+  "4": {
+   "a": 3,
+   "w": "Máy cũ + 오래 쓰기 어렵다 → có sửa cũng vô ích: 봐야 = 다고 해도. Bẫy hình thức: 수리해 보니까 (sửa rồi mới thấy) — cũng có 보 nhưng nghĩa khác. Loại thêm: 대로, 바람에.",
+   "x": [
+    "수리해 보니까 = sửa thử thì thấy — Bẫy hình thức: cũng có 보 nhưng nghĩa “sửa rồi mới thấy”.",
+    "수리하는 대로 = ngay khi sửa — -는 대로 = ngay khi / theo như.",
+    "수리하는 바람에 = vì sửa (xấu) — -는 바람에 = vì (xấu).",
+    null
+   ]
+  }
+ },
+ "hoi": [
+  {
+   "q": "Vì sao sửa cũng vô ích?",
+   "a": "Máy đã cũ."
+  }
+ ]
+}

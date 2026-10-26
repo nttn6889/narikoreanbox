@@ -1,0 +1,148 @@
+{
+ "e": "Etk102",
+ "n": [
+  1
+ ],
+ "t": "Chuyển đến đây đã một năm",
+ "cd": "Đời sống",
+ "y": "Từ khi chuyển đến khu này đã được một năm.",
+ "doc": [
+  {
+   "t": "Đọc 4 lựa chọn",
+   "d": "① 온지 (từ khi … (đã bao lâu)) · ② 올 때 (khi …) · ③ 오거나 (hoặc …) · ④ 오다가 (đang … thì)",
+   "s": []
+  },
+  {
+   "t": "Nhìn sau ô",
+   "d": "Sau ô là **일 년이 됐다** (khoảng thời gian) → **-(으)ㄴ 지** + thời gian + 되다/지나다.",
+   "s": [
+    0
+   ]
+  }
+ ],
+ "l": [
+  [
+   "일 년이 됐다",
+   "TG",
+   "khoảng thời gian → -(으)ㄴ 지"
+  ]
+ ],
+ "s": [
+  {
+   "c": [
+    [
+     "이 동네로",
+     "TR",
+     "đến khu này",
+     3
+    ],
+    [
+     "이사를",
+     "TN",
+     "chuyển nhà",
+     2
+    ],
+    [
+     "(    )",
+     "VP",
+     "từ khi",
+     1
+    ],
+    [
+     "일 년이",
+     "CN",
+     "một năm",
+     4
+    ],
+    [
+     "됐다.",
+     "VN",
+     "đã được",
+     5
+    ]
+   ],
+   "g": "이사를 온 지 일 년이 됐다",
+   "gv": "Từ khi chuyển đến đã được một năm",
+   "r": "Câu có ô",
+   "y": "Từ khi chuyển đến khu này đã được một năm.",
+   "vi": "Từ khi chuyển đến khu này đã được một năm.",
+   "tip": "**V-(으)ㄴ 지 + thời gian + 되다/지나다/넘다** = từ khi … đã được (bao lâu)."
+  }
+ ],
+ "w": [
+  [
+   "동네",
+   "khu phố, xóm",
+   "",
+   "동네로"
+  ],
+  [
+   "이사를 오다",
+   "chuyển (nhà) đến",
+   "di tỉ 移徙",
+   "이사를"
+  ]
+ ],
+ "wo": [
+  [
+   "온지",
+   "từ khi … (đã bao lâu)",
+   "",
+   "",
+   "lựa chọn ① · đáp án"
+  ],
+  [
+   "올 때",
+   "khi …",
+   "",
+   "",
+   "lựa chọn ②"
+  ],
+  [
+   "오거나",
+   "hoặc …",
+   "",
+   "",
+   "lựa chọn ③"
+  ],
+  [
+   "오다가",
+   "đang … thì",
+   "",
+   "",
+   "lựa chọn ④"
+  ]
+ ],
+ "g": [
+  {
+   "p": "-(으)ㄴ 지 N이/가 되다",
+   "m": "từ khi … đã được N",
+   "f": "",
+   "d": "Luôn có khoảng thời gian phía sau.",
+   "ex": [
+    [
+     "한국에 온 지 3년이 됐어요.",
+     "Tôi đến Hàn được 3 năm rồi."
+    ]
+   ]
+  }
+ ],
+ "qa": {
+  "1": {
+   "a": 0,
+   "w": "Sau ô là “일 년이 됐다” (khoảng thời gian) → -(으)ㄴ 지 + thời gian + 되다/지나다.",
+   "x": [
+    null,
+    "올 때 = khi … — Cần vế sau là việc xảy ra lúc đó, không phải khoảng thời gian.",
+    "오거나 = hoặc … — Liệt kê lựa chọn — không hợp.",
+    "오다가 = đang … thì — Đang … thì — không hợp với 일 년이 됐다."
+   ]
+  }
+ },
+ "hoi": [
+  {
+   "q": "Người nói chuyển đến khu này bao lâu rồi?",
+   "a": "Một năm."
+  }
+ ]
+}

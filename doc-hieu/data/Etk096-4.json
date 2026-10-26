@@ -1,0 +1,155 @@
+{
+ "e": "Etk096",
+ "n": [
+  4
+ ],
+ "t": "Buộc phải hoãn hẹn",
+ "cd": "Công việc",
+ "y": "Cuộc họp kéo dài nên tôi đã buộc phải hoãn giờ hẹn.",
+ "doc": [
+  {
+   "t": "Đọc 4 lựa chọn",
+   "d": "① 미루기만 했다 (chỉ toàn hoãn) · ② 미룰 줄 몰랐다 (không ngờ là hoãn) · ③ 미루기가 어려웠다 (khó hoãn) · ④ 미룰 수밖에 없었다 (buộc phải hoãn)",
+   "s": []
+  },
+  {
+   "t": "Gọi tên phần gạch chân",
+   "d": "**미뤄야만 했다** = -아/어야만 했다 → **buộc phải** = -(으)ㄹ 수밖에 없었다.",
+   "s": [
+    0
+   ]
+  }
+ ],
+ "l": [
+  [
+   "길어져서",
+   "NN",
+   "vì họp kéo dài (ngoài ý mình)"
+  ]
+ ],
+ "s": [
+  {
+   "c": [
+    [
+     "회의가",
+     "CN",
+     "cuộc họp",
+     1
+    ],
+    [
+     "길어져서",
+     "VP",
+     "kéo dài nên",
+     2
+    ],
+    [
+     "약속 시간을",
+     "TN",
+     "giờ hẹn",
+     4
+    ],
+    [
+     "미뤄야만 했다.",
+     "VN",
+     "buộc phải hoãn",
+     3
+    ]
+   ],
+   "g": "약속 시간을 미뤄야만 했다",
+   "gv": "Buộc phải hoãn giờ hẹn",
+   "r": "Câu có gạch chân",
+   "y": "Cuộc họp kéo dài nên tôi đã buộc phải hoãn giờ hẹn.",
+   "vi": "Cuộc họp kéo dài nên tôi đã buộc phải hoãn giờ hẹn.",
+   "tip": "**-아/어야만 하다** = nhất định phải; nguyên nhân ngoài ý muốn → = **-(으)ㄹ 수밖에 없다**."
+  }
+ ],
+ "w": [
+  [
+   "회의",
+   "cuộc họp",
+   "hội nghị 會議",
+   "회의가"
+  ],
+  [
+   "길어지다",
+   "kéo dài",
+   "",
+   "길어져서"
+  ],
+  [
+   "미루다",
+   "hoãn, dời",
+   "",
+   "미뤄야만"
+  ]
+ ],
+ "wo": [
+  [
+   "미루기만 했다",
+   "chỉ toàn hoãn",
+   "",
+   "",
+   "lựa chọn ①"
+  ],
+  [
+   "미룰 줄 몰랐다",
+   "không ngờ là hoãn",
+   "",
+   "",
+   "lựa chọn ②"
+  ],
+  [
+   "미루기가 어려웠다",
+   "khó hoãn",
+   "",
+   "",
+   "lựa chọn ③"
+  ],
+  [
+   "미룰 수밖에 없었다",
+   "buộc phải hoãn",
+   "",
+   "",
+   "lựa chọn ④ · đáp án"
+  ]
+ ],
+ "g": [
+  {
+   "p": "-아/어야만 하다",
+   "m": "nhất định phải",
+   "f": "미뤄야만 했다",
+   "d": "만 nhấn mạnh.",
+   "ex": []
+  },
+  {
+   "p": "-(으)ㄹ 수밖에 없다",
+   "m": "buộc phải, đành",
+   "f": "",
+   "d": "",
+   "ex": [
+    [
+     "비가 와서 집에 있을 수밖에 없었다.",
+     "Mưa nên đành ở nhà."
+    ]
+   ]
+  }
+ ],
+ "qa": {
+  "4": {
+   "a": 3,
+   "w": "Vì họp kéo dài (ngoài ý mình) → buộc phải hoãn: -아/어야만 했다 = -(으)ㄹ 수밖에 없었다. Bẫy hình thức: 미루기만 했다 cũng có 만 nhưng = “chỉ toàn hoãn”. Loại: 미룰 줄 몰랐다 (không ngờ), 미루기가 어려웠다 (khó hoãn).",
+   "x": [
+    "미루기만 했다 = chỉ toàn hoãn — Bẫy hình thức: cũng có 만 nhưng nghĩa “chỉ toàn hoãn”.",
+    "미룰 줄 몰랐다 = không ngờ là hoãn — không hợp nghĩa câu.",
+    "미루기가 어려웠다 = khó hoãn — Ngược: đã hoãn rồi.",
+    null
+   ]
+  }
+ },
+ "hoi": [
+  {
+   "q": "Vì sao phải hoãn hẹn?",
+   "a": "Cuộc họp kéo dài."
+  }
+ ]
+}

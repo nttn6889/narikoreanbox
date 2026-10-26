@@ -1,0 +1,144 @@
+{
+ "e": "Etk035",
+ "n": [
+  3
+ ],
+ "t": "Mây đen kéo đến, chắc mưa",
+ "cd": "Thiên nhiên",
+ "y": "Thấy mây đen kéo đến, có lẽ trời sắp mưa.",
+ "doc": [
+  {
+   "t": "Đọc 4 lựa chọn",
+   "d": "① 오기도 한다 (cũng có khi mưa) · ② 올 것만 같다 (chắc là sẽ mưa) · ③ 올 리가 없다 (không thể mưa) · ④ 온 적이 없다 (chưa từng mưa)",
+   "s": []
+  },
+  {
+   "t": "Gọi tên phần gạch chân",
+   "d": "**걸 보니** + **올 모양이다** (đoán) = **-(으)ㄹ 것 같다** (만 chỉ nhấn mạnh).",
+   "s": [
+    0
+   ]
+  }
+ ],
+ "l": [
+  [
+   "걸 보니",
+   "NN",
+   "căn cứ → đoán"
+  ]
+ ],
+ "s": [
+  {
+   "c": [
+    [
+     "먹구름이 몰려오는 걸",
+     "TN",
+     "mây đen kéo đến",
+     2
+    ],
+    [
+     "보니",
+     "VP",
+     "thấy … nên",
+     1
+    ],
+    [
+     "비가",
+     "CN",
+     "trời",
+     3
+    ],
+    [
+     "올 모양이다.",
+     "VN",
+     "có lẽ sẽ mưa",
+     4
+    ]
+   ],
+   "g": "비가 올 모양이다",
+   "gv": "Có lẽ trời sẽ mưa",
+   "r": "Câu có gạch chân",
+   "y": "Thấy mây đen kéo đến, có lẽ trời sắp mưa.",
+   "vi": "Thấy mây đen kéo đến, có lẽ trời sắp mưa.",
+   "tip": "**-(으)ㄹ 모양이다 = -(으)ㄹ 것 같다** (đoán dựa trên điều thấy)."
+  }
+ ],
+ "w": [
+  [
+   "먹구름",
+   "mây đen",
+   "",
+   "먹구름이"
+  ],
+  [
+   "몰려오다",
+   "kéo đến, ùa đến",
+   "",
+   "몰려오는"
+  ]
+ ],
+ "wo": [
+  [
+   "오기도 한다",
+   "cũng có khi mưa",
+   "",
+   "",
+   "lựa chọn ①"
+  ],
+  [
+   "올 것만 같다",
+   "chắc là sẽ mưa",
+   "",
+   "",
+   "lựa chọn ② · đáp án"
+  ],
+  [
+   "올 리가 없다",
+   "không thể mưa",
+   "",
+   "",
+   "lựa chọn ③"
+  ],
+  [
+   "온 적이 없다",
+   "chưa từng mưa",
+   "",
+   "",
+   "lựa chọn ④"
+  ]
+ ],
+ "g": [
+  {
+   "p": "-는 걸 보니",
+   "m": "thấy … nên",
+   "f": "걸 보니",
+   "d": "",
+   "ex": []
+  },
+  {
+   "p": "-(으)ㄹ 모양이다",
+   "m": "có lẽ, có vẻ",
+   "f": "올 모양이다",
+   "d": "",
+   "ex": []
+  }
+ ],
+ "qa": {
+  "3": {
+   "a": 1,
+   "w": "걸 보니 (thấy mây đen) → đoán: -(으)ㄹ 모양이다 = -(으)ㄹ 것 같다; 만 chỉ nhấn mạnh, bỏ đi vẫn đúng. Loại: 오기도 한다 (cũng có khi mưa), 올 리가 없다 (chắc chắn không – ngược bằng chứng), 온 적이 없다 (chưa từng).",
+   "x": [
+    "오기도 한다 = cũng có khi mưa — -기도 하다 = cũng có khi.",
+    null,
+    "올 리가 없다 = không thể mưa — Ngược với bằng chứng mây đen.",
+    "온 적이 없다 = chưa từng mưa — -(으)ㄴ 적이 없다 = chưa từng."
+   ]
+  }
+ },
+ "hoi": [
+  {
+   "q": "Căn cứ để đoán trời mưa?",
+   "a": "Mây đen kéo đến."
+  }
+ ]
+}

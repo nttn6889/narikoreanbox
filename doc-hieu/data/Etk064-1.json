@@ -1,0 +1,160 @@
+{
+ "e": "Etk064",
+ "n": [
+  1
+ ],
+ "t": "Cuối tuần xem phim hoặc tập thể dục",
+ "cd": "Đời sống",
+ "y": "Cuối tuần tôi thường xem phim hoặc tập thể dục.",
+ "doc": [
+  {
+   "t": "Đọc 4 lựa chọn",
+   "d": "① 보지만 (xem nhưng) · ② 보거나 (xem hoặc) · ③ 보려고 (để xem) · ④ 보더니 ((thấy) xem rồi)",
+   "s": []
+  },
+  {
+   "t": "Tìm dấu hiệu",
+   "d": "**보통** (thường) + hai hoạt động cuối tuần → liệt kê lựa chọn: **-거나**.",
+   "s": [
+    0
+   ]
+  }
+ ],
+ "l": [
+  [
+   "보통",
+   "GT",
+   "thói quen → liệt kê hoạt động"
+  ]
+ ],
+ "s": [
+  {
+   "c": [
+    [
+     "나는",
+     "CN",
+     "tôi",
+     1
+    ],
+    [
+     "주말에는",
+     "TR",
+     "cuối tuần",
+     2
+    ],
+    [
+     "보통",
+     "TR",
+     "thường",
+     3
+    ],
+    [
+     "영화를",
+     "TN",
+     "phim",
+     5
+    ],
+    [
+     "(    )",
+     "VP",
+     "xem hoặc",
+     4
+    ],
+    [
+     "운동을 한다.",
+     "VN",
+     "tập thể dục",
+     6
+    ]
+   ],
+   "g": "나는 영화를 보거나 운동을 한다",
+   "gv": "Tôi xem phim hoặc tập thể dục",
+   "r": "Câu có ô",
+   "y": "Cuối tuần tôi thường xem phim hoặc tập thể dục.",
+   "vi": "Cuối tuần tôi thường xem phim hoặc tập thể dục.",
+   "tip": "**A-거나 B** = A hoặc B (thói quen, lựa chọn)."
+  }
+ ],
+ "w": [
+  [
+   "주말",
+   "cuối tuần",
+   "chu mạt 週末",
+   "주말에는"
+  ],
+  [
+   "보통",
+   "thường",
+   "phổ thông 普通",
+   "보통"
+  ],
+  [
+   "운동",
+   "thể dục",
+   "vận động 運動",
+   "운동을"
+  ]
+ ],
+ "wo": [
+  [
+   "보지만",
+   "xem nhưng",
+   "",
+   "",
+   "lựa chọn ①"
+  ],
+  [
+   "보거나",
+   "xem hoặc",
+   "",
+   "",
+   "lựa chọn ② · đáp án"
+  ],
+  [
+   "보려고",
+   "để xem",
+   "",
+   "",
+   "lựa chọn ③"
+  ],
+  [
+   "보더니",
+   "(thấy) xem rồi",
+   "",
+   "",
+   "lựa chọn ④"
+  ]
+ ],
+ "g": [
+  {
+   "p": "-거나",
+   "m": "hoặc",
+   "f": "",
+   "d": "",
+   "ex": [
+    [
+     "주말에 책을 읽거나 산책을 한다.",
+     "Cuối tuần đọc sách hoặc đi dạo."
+    ]
+   ]
+  }
+ ],
+ "qa": {
+  "1": {
+   "a": 1,
+   "w": "Cuối tuần thường xem phim HOẶC tập thể dục → -거나. 보통 cho biết là thói quen, không phải đối lập (-지만) hay mục đích (-려고).",
+   "x": [
+    "보지만 = xem nhưng — Không có đối lập.",
+    null,
+    "보려고 = để xem — Xem phim không phải mục đích của tập thể dục.",
+    "보더니 = (thấy) xem rồi — -더니 dùng khi quan sát người khác thay đổi."
+   ]
+  }
+ },
+ "hoi": [
+  {
+   "q": "Cuối tuần người nói làm gì?",
+   "a": "Xem phim hoặc tập thể dục."
+  }
+ ]
+}

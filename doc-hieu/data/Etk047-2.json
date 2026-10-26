@@ -1,0 +1,166 @@
+{
+ "e": "Etk047",
+ "n": [
+  2
+ ],
+ "t": "Càng lâu càng nhớ nhà",
+ "cd": "Gia đình",
+ "y": "Sống một mình nên thời gian càng trôi càng nhớ gia đình.",
+ "doc": [
+  {
+   "t": "Đọc 4 lựa chọn",
+   "d": "① 지나거나 (qua hoặc) · ② 지나도록 (đến tận khi qua) · ③ 지나거든 (nếu qua) · ④ 지날수록 (càng qua)",
+   "s": []
+  },
+  {
+   "t": "Tìm dấu hiệu",
+   "d": "Vế sau **그리워진다** (dần trở nên nhớ) = thay đổi theo mức độ → **càng … càng**: **-(으)ㄹ수록**.",
+   "s": [
+    0
+   ]
+  }
+ ],
+ "l": [
+  [
+   "살다 보니",
+   "NN",
+   "-다 보니: sống một thời gian thì nhận ra"
+  ],
+  [
+   "그리워진다",
+   "GT",
+   "thay đổi dần → -(으)ㄹ수록"
+  ]
+ ],
+ "s": [
+  {
+   "c": [
+    [
+     "혼자 살다 보니",
+     "VP",
+     "sống một mình nên",
+     1
+    ],
+    [
+     "시간이",
+     "CN",
+     "thời gian",
+     2
+    ],
+    [
+     "(    )",
+     "VP",
+     "càng trôi",
+     3
+    ],
+    [
+     "가족이",
+     "CN",
+     "gia đình",
+     5
+    ],
+    [
+     "그리워진다.",
+     "VN",
+     "càng thấy nhớ",
+     4
+    ]
+   ],
+   "g": "시간이 지날수록 가족이 그리워진다",
+   "gv": "Thời gian càng trôi càng nhớ gia đình",
+   "r": "Câu có ô",
+   "y": "Sống một mình nên thời gian càng trôi càng nhớ gia đình.",
+   "vi": "Sống một mình nên thời gian càng trôi tôi càng nhớ gia đình.",
+   "tip": "**-(으)ㄹ수록** + vế sau thay đổi (-아/어지다) = càng … càng."
+  }
+ ],
+ "w": [
+  [
+   "혼자",
+   "một mình",
+   "",
+   "혼자"
+  ],
+  [
+   "지나다",
+   "trôi qua",
+   "",
+   ""
+  ],
+  [
+   "그리워지다",
+   "trở nên nhớ",
+   "",
+   "그리워진다"
+  ]
+ ],
+ "wo": [
+  [
+   "지나거나",
+   "qua hoặc",
+   "",
+   "",
+   "lựa chọn ①"
+  ],
+  [
+   "지나도록",
+   "đến tận khi qua",
+   "",
+   "",
+   "lựa chọn ②"
+  ],
+  [
+   "지나거든",
+   "nếu qua",
+   "",
+   "",
+   "lựa chọn ③"
+  ],
+  [
+   "지날수록",
+   "càng qua",
+   "",
+   "",
+   "lựa chọn ④ · đáp án"
+  ]
+ ],
+ "g": [
+  {
+   "p": "-다 보니",
+   "m": "làm … một thời gian thì",
+   "f": "살다 보니",
+   "d": "",
+   "ex": []
+  },
+  {
+   "p": "-(으)ㄹ수록",
+   "m": "càng … càng",
+   "f": "",
+   "d": "",
+   "ex": [
+    [
+     "볼수록 예쁘다.",
+     "Càng nhìn càng đẹp."
+    ]
+   ]
+  }
+ ],
+ "qa": {
+  "2": {
+   "a": 3,
+   "w": "Thời gian CÀNG trôi CÀNG nhớ nhà → -(으)ㄹ수록. Dấu hiệu: vế sau thay đổi dần (-아지다).",
+   "x": [
+    "지나거나 = qua hoặc — Lựa chọn — không hợp.",
+    "지나도록 = đến tận khi qua — -도록 = đến tận khi / để.",
+    "지나거든 = nếu qua — -거든 = nếu — vế sau không phải mệnh lệnh.",
+    null
+   ]
+  }
+ },
+ "hoi": [
+  {
+   "q": "Vì sao nhớ gia đình?",
+   "a": "Vì sống một mình, thời gian càng lâu càng nhớ."
+  }
+ ]
+}

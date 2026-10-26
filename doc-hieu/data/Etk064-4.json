@@ -1,0 +1,157 @@
+{
+ "e": "Etk064",
+ "n": [
+  4
+ ],
+ "t": "Seoul coi như là quê",
+ "cd": "Đời sống",
+ "y": "Mới sinh ra chưa lâu đã lên Seoul nên Seoul coi như là quê.",
+ "doc": [
+  {
+   "t": "Đọc 4 lựa chọn",
+   "d": "① 고향일 뿐이다 (chỉ là quê thôi) · ② 고향이면 좋겠다 (giá mà là quê) · ③ 고향일 리가 없다 (không thể là quê) · ④ 고향이나 마찬가지이다 (cũng như là quê)",
+   "s": []
+  },
+  {
+   "t": "Gọi tên phần gạch chân",
+   "d": "**고향인 셈이다** = -(으)ㄴ 셈이다 → **coi như** = N(이)나 마찬가지이다.",
+   "s": [
+    0
+   ]
+  }
+ ],
+ "l": [
+  [
+   "왔으니",
+   "NN",
+   "-으니: căn cứ → tính ra"
+  ]
+ ],
+ "s": [
+  {
+   "c": [
+    [
+     "태어난 지 얼마 안 되어",
+     "TR",
+     "sinh ra chưa được bao lâu",
+     2
+    ],
+    [
+     "서울로 왔으니",
+     "VP",
+     "đã lên Seoul nên",
+     1
+    ],
+    [
+     "서울이",
+     "CN",
+     "Seoul",
+     3
+    ],
+    [
+     "고향인 셈이다.",
+     "VN",
+     "coi như là quê",
+     4
+    ]
+   ],
+   "g": "서울이 고향인 셈이다",
+   "gv": "Seoul coi như là quê",
+   "r": "Câu có gạch chân",
+   "y": "Mới sinh ra chưa lâu đã lên Seoul nên Seoul coi như là quê.",
+   "vi": "Sinh ra chưa được bao lâu đã lên Seoul nên Seoul coi như là quê.",
+   "tip": "**N인 셈이다** = coi như là N = **N(이)나 마찬가지이다**."
+  }
+ ],
+ "w": [
+  [
+   "태어나다",
+   "sinh ra",
+   "",
+   "태어난"
+  ],
+  [
+   "얼마 안 되다",
+   "chưa được bao lâu",
+   "",
+   "얼마 안 되어"
+  ],
+  [
+   "고향",
+   "quê hương",
+   "cố hương 故鄕",
+   "고향인"
+  ]
+ ],
+ "wo": [
+  [
+   "고향일 뿐이다",
+   "chỉ là quê thôi",
+   "",
+   "",
+   "lựa chọn ①"
+  ],
+  [
+   "고향이면 좋겠다",
+   "giá mà là quê",
+   "",
+   "",
+   "lựa chọn ②"
+  ],
+  [
+   "고향일 리가 없다",
+   "không thể là quê",
+   "",
+   "",
+   "lựa chọn ③"
+  ],
+  [
+   "고향이나 마찬가지이다",
+   "cũng như là quê",
+   "",
+   "",
+   "lựa chọn ④ · đáp án"
+  ]
+ ],
+ "g": [
+  {
+   "p": "-(으)ㄴ 지",
+   "m": "từ khi …",
+   "f": "태어난 지",
+   "d": "",
+   "ex": []
+  },
+  {
+   "p": "-(으)니",
+   "m": "vì … nên",
+   "f": "왔으니",
+   "d": "",
+   "ex": []
+  },
+  {
+   "p": "N인 셈이다",
+   "m": "coi như là N",
+   "f": "고향인 셈이다",
+   "d": "",
+   "ex": []
+  }
+ ],
+ "qa": {
+  "4": {
+   "a": 3,
+   "w": "…왔으니 (căn cứ để “tính ra”) → -(으)ㄴ 셈이다 = N(이)나 마찬가지이다. Loại: 고향일 뿐이다 (chỉ là quê thôi), 고향이면 좋겠다 (giá mà), 고향일 리가 없다 (không thể).",
+   "x": [
+    "고향일 뿐이다 = chỉ là quê thôi — -(으)ㄹ 뿐이다 = chỉ … thôi.",
+    "고향이면 좋겠다 = giá mà là quê — -(으)면 좋겠다 = giá mà.",
+    "고향일 리가 없다 = không thể là quê — -(으)ㄹ 리가 없다 = không thể.",
+    null
+   ]
+  }
+ },
+ "hoi": [
+  {
+   "q": "Người nói đến Seoul khi nào?",
+   "a": "Khi mới sinh ra chưa bao lâu."
+  }
+ ]
+}

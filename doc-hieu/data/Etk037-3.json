@@ -1,0 +1,149 @@
+{
+ "e": "Etk037",
+ "n": [
+  3
+ ],
+ "t": "Vội nên quên ví",
+ "cd": "Đời sống",
+ "y": "Vì vội vàng ra khỏi nhà nên tôi quên mang ví trên bàn.",
+ "doc": [
+  {
+   "t": "Đọc 4 lựa chọn",
+   "d": "① 나오는 김에 (nhân tiện ra) · ② 나오는 사이에 (trong lúc ra) · ③ 나오는 바람에 (vì ra (xấu)) · ④ 나오는 대신에 (thay vì ra)",
+   "s": []
+  },
+  {
+   "t": "Gọi tên phần gạch chân",
+   "d": "**나온 탓에** = -(으)ㄴ 탓에 → **vì (kết quả xấu)** = -는 바람에.",
+   "s": [
+    0
+   ]
+  }
+ ],
+ "l": [
+  [
+   "나온 탓에",
+   "NN",
+   "nguyên nhân → kết quả xấu"
+  ]
+ ],
+ "s": [
+  {
+   "c": [
+    [
+     "서둘러",
+     "TR",
+     "vội vàng",
+     2
+    ],
+    [
+     "나온 탓에",
+     "VP",
+     "vì ra khỏi nhà",
+     1
+    ],
+    [
+     "책상 위에 있는",
+     "DN",
+     "trên bàn",
+     5
+    ],
+    [
+     "지갑을",
+     "TN",
+     "cái ví",
+     4
+    ],
+    [
+     "안 가지고 나왔다.",
+     "VN",
+     "quên mang theo",
+     3
+    ]
+   ],
+   "g": "나온 탓에 지갑을 안 가지고 나왔다",
+   "gv": "Vì ra … nên không mang ví",
+   "r": "Câu có gạch chân",
+   "y": "Vì vội vàng ra khỏi nhà nên tôi quên mang ví trên bàn.",
+   "vi": "Vì vội vàng ra khỏi nhà nên tôi đã không mang theo cái ví trên bàn.",
+   "tip": "**-(으)ㄴ 탓에 = -는 바람에** (nguyên nhân, kết quả xấu)."
+  }
+ ],
+ "w": [
+  [
+   "서두르다",
+   "vội vàng",
+   "",
+   "서둘러"
+  ],
+  [
+   "책상",
+   "bàn học, bàn làm việc",
+   "sách sàng 冊床",
+   "책상"
+  ],
+  [
+   "지갑",
+   "ví",
+   "chỉ giáp 紙匣",
+   "지갑을"
+  ]
+ ],
+ "wo": [
+  [
+   "나오는 김에",
+   "nhân tiện ra",
+   "",
+   "",
+   "lựa chọn ①"
+  ],
+  [
+   "나오는 사이에",
+   "trong lúc ra",
+   "",
+   "",
+   "lựa chọn ②"
+  ],
+  [
+   "나오는 바람에",
+   "vì ra (xấu)",
+   "",
+   "",
+   "lựa chọn ③ · đáp án"
+  ],
+  [
+   "나오는 대신에",
+   "thay vì ra",
+   "",
+   "",
+   "lựa chọn ④"
+  ]
+ ],
+ "g": [
+  {
+   "p": "-(으)ㄴ 탓에",
+   "m": "tại vì",
+   "f": "나온 탓에",
+   "d": "",
+   "ex": []
+  }
+ ],
+ "qa": {
+  "3": {
+   "a": 2,
+   "w": "Vế sau là chuyện xấu đã xảy ra (quên ví) → nguyên nhân xấu: -(으)ㄴ 탓에 = -는 바람에. Loại: 김에 (nhân tiện), 사이에 (trong lúc), 대신에 (thay vì).",
+   "x": [
+    "나오는 김에 = nhân tiện ra — -는 김에 = nhân tiện.",
+    "나오는 사이에 = trong lúc ra — -는 사이에 = trong lúc.",
+    null,
+    "나오는 대신에 = thay vì ra — -는 대신에 = thay vì."
+   ]
+  }
+ },
+ "hoi": [
+  {
+   "q": "Vì sao quên ví?",
+   "a": "Vì vội ra khỏi nhà."
+  }
+ ]
+}

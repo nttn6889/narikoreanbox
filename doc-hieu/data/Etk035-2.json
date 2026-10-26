@@ -1,0 +1,154 @@
+{
+ "e": "Etk035",
+ "n": [
+  2
+ ],
+ "t": "Tốt nghiệp xong là đi làm ngay",
+ "cd": "Công việc",
+ "y": "Anh Min-su vừa tốt nghiệp đại học là xin được việc ở công ty ngay.",
+ "doc": [
+  {
+   "t": "Đọc 4 lựa chọn",
+   "d": "① 졸업해도 (dù tốt nghiệp) · ② 졸업한다면 (nếu tốt nghiệp) · ③ 졸업하더라도 (dù có tốt nghiệp) · ④ 졸업하자마자 (ngay khi tốt nghiệp)",
+   "s": []
+  },
+  {
+   "t": "Xét quan hệ hai vế",
+   "d": "Câu kể quá khứ: tốt nghiệp → đi làm **ngay** → **-자마자**.",
+   "s": [
+    0
+   ]
+  }
+ ],
+ "l": [
+  [
+   "취직했다",
+   "TG",
+   "việc xảy ra ngay sau"
+  ]
+ ],
+ "s": [
+  {
+   "c": [
+    [
+     "민수 씨는",
+     "CN",
+     "anh Min-su",
+     1
+    ],
+    [
+     "대학교를",
+     "TN",
+     "đại học",
+     3
+    ],
+    [
+     "(    )",
+     "VP",
+     "vừa tốt nghiệp là",
+     2
+    ],
+    [
+     "회사에",
+     "TR",
+     "vào công ty",
+     5
+    ],
+    [
+     "취직했다.",
+     "VN",
+     "xin được việc",
+     4
+    ]
+   ],
+   "g": "민수 씨는 졸업하자마자 취직했다",
+   "gv": "Min-su tốt nghiệp xong là đi làm ngay",
+   "r": "Câu có ô",
+   "y": "Anh Min-su vừa tốt nghiệp đại học là xin được việc ở công ty ngay.",
+   "vi": "Anh Min-su vừa tốt nghiệp đại học là xin được việc ở công ty ngay.",
+   "tip": "**-자마자** = vừa … là (ngay lập tức)."
+  }
+ ],
+ "w": [
+  [
+   "대학교",
+   "đại học",
+   "đại học hiệu 大學校",
+   "대학교를"
+  ],
+  [
+   "졸업하다",
+   "tốt nghiệp",
+   "tốt nghiệp 卒業",
+   ""
+  ],
+  [
+   "취직하다",
+   "xin được việc",
+   "tựu chức 就職",
+   "취직했다"
+  ]
+ ],
+ "wo": [
+  [
+   "졸업해도",
+   "dù tốt nghiệp",
+   "",
+   "",
+   "lựa chọn ①"
+  ],
+  [
+   "졸업한다면",
+   "nếu tốt nghiệp",
+   "",
+   "",
+   "lựa chọn ②"
+  ],
+  [
+   "졸업하더라도",
+   "dù có tốt nghiệp",
+   "",
+   "",
+   "lựa chọn ③"
+  ],
+  [
+   "졸업하자마자",
+   "ngay khi tốt nghiệp",
+   "",
+   "",
+   "lựa chọn ④ · đáp án"
+  ]
+ ],
+ "g": [
+  {
+   "p": "-자마자",
+   "m": "vừa … là",
+   "f": "",
+   "d": "",
+   "ex": [
+    [
+     "집에 도착하자마자 잤다.",
+     "Về đến nhà là ngủ ngay."
+    ]
+   ]
+  }
+ ],
+ "qa": {
+  "2": {
+   "a": 3,
+   "w": "Tốt nghiệp xong là đi làm ngay → -자마자. -아도/-더라도 (dù), -ㄴ다면 (nếu) không đi với câu kể chuyện quá khứ 취직했다.",
+   "x": [
+    "졸업해도 = dù tốt nghiệp — -아도 = dù — không hợp câu kể.",
+    "졸업한다면 = nếu tốt nghiệp — -ㄴ다면 = nếu — không hợp câu kể quá khứ.",
+    "졸업하더라도 = dù có tốt nghiệp — -더라도 = dù — không hợp.",
+    null
+   ]
+  }
+ },
+ "hoi": [
+  {
+   "q": "Min-su đi làm khi nào?",
+   "a": "Ngay sau khi tốt nghiệp."
+  }
+ ]
+}

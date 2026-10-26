@@ -1,0 +1,148 @@
+{
+ "e": "Etk037",
+ "n": [
+  1
+ ],
+ "t": "Phải dậy sớm mới kịp chuyến bay",
+ "cd": "Đời sống",
+ "y": "Phải dậy sớm thì mới kịp chuyến bay 7 giờ.",
+ "doc": [
+  {
+   "t": "Đọc 4 lựa chọn",
+   "d": "① 일어나야 (phải dậy thì mới) · ② 일어나려고 (để dậy) · ③ 일어나며 (dậy và) · ④ 일어나더니 ((thấy) dậy rồi)",
+   "s": []
+  },
+  {
+   "t": "Xét quan hệ hai vế",
+   "d": "Vế sau **탈 수 있다** (có thể) = kết quả cần điều kiện → **-아/어야** (phải … mới).",
+   "s": [
+    0
+   ]
+  }
+ ],
+ "l": [
+  [
+   "탈 수 있다",
+   "KL",
+   "kết quả → điều kiện bắt buộc -아야"
+  ]
+ ],
+ "s": [
+  {
+   "c": [
+    [
+     "아침에",
+     "TR",
+     "buổi sáng",
+     3
+    ],
+    [
+     "일찍",
+     "TR",
+     "sớm",
+     2
+    ],
+    [
+     "(    )",
+     "VP",
+     "phải dậy thì mới",
+     1
+    ],
+    [
+     "일곱 시 비행기를",
+     "TN",
+     "chuyến bay 7 giờ",
+     5
+    ],
+    [
+     "탈 수 있다.",
+     "VN",
+     "có thể đi",
+     4
+    ]
+   ],
+   "g": "일찍 일어나야 비행기를 탈 수 있다",
+   "gv": "Phải dậy sớm mới đi kịp máy bay",
+   "r": "Câu có ô",
+   "y": "Phải dậy sớm thì mới kịp chuyến bay 7 giờ.",
+   "vi": "Phải dậy sớm vào buổi sáng thì mới đi kịp chuyến bay 7 giờ.",
+   "tip": "**-아/어야 -(으)ㄹ 수 있다** = phải … mới có thể."
+  }
+ ],
+ "w": [
+  [
+   "일찍",
+   "sớm",
+   "",
+   "일찍"
+  ],
+  [
+   "비행기",
+   "máy bay",
+   "phi hành cơ 飛行機",
+   "비행기를"
+  ]
+ ],
+ "wo": [
+  [
+   "일어나야",
+   "phải dậy thì mới",
+   "",
+   "",
+   "lựa chọn ① · đáp án"
+  ],
+  [
+   "일어나려고",
+   "để dậy",
+   "",
+   "",
+   "lựa chọn ②"
+  ],
+  [
+   "일어나며",
+   "dậy và",
+   "",
+   "",
+   "lựa chọn ③"
+  ],
+  [
+   "일어나더니",
+   "(thấy) dậy rồi",
+   "",
+   "",
+   "lựa chọn ④"
+  ]
+ ],
+ "g": [
+  {
+   "p": "-아/어야",
+   "m": "phải … mới",
+   "f": "",
+   "d": "",
+   "ex": [
+    [
+     "연습해야 잘할 수 있다.",
+     "Phải luyện mới giỏi được."
+    ]
+   ]
+  }
+ ],
+ "qa": {
+  "1": {
+   "a": 0,
+   "w": "PHẢI dậy sớm MỚI kịp chuyến 7 giờ → -아/어야 … -(으)ㄹ 수 있다. -려고 (để), -며 (và), -더니 (quan sát) sai.",
+   "x": [
+    null,
+    "일어나려고 = để dậy — -려고 = để (mục đích).",
+    "일어나며 = dậy và — -며 = và.",
+    "일어나더니 = (thấy) dậy rồi — -더니 = quan sát."
+   ]
+  }
+ },
+ "hoi": [
+  {
+   "q": "Muốn kịp chuyến bay 7 giờ phải làm gì?",
+   "a": "Dậy sớm."
+  }
+ ]
+}

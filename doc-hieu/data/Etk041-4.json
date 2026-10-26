@@ -1,0 +1,155 @@
+{
+ "e": "Etk041",
+ "n": [
+  4
+ ],
+ "t": "Đọc báo Hàn để giỏi tiếng",
+ "cd": "Giáo dục",
+ "y": "Tôi thường xem báo, đài Hàn để nâng trình độ tiếng Hàn.",
+ "doc": [
+  {
+   "t": "Đọc 4 lựa chọn",
+   "d": "① 늘리기 위해서 (để tăng) · ② 늘리기 무섭게 (vừa tăng là ngay) · ③ 늘리는 대신에 (thay vì tăng) · ④ 늘리는 반면에 (trái lại tăng)",
+   "s": []
+  },
+  {
+   "t": "Gọi tên phần gạch chân",
+   "d": "**늘리고자** = -고자 → **mục đích** = -기 위해서.",
+   "s": [
+    0
+   ]
+  }
+ ],
+ "l": [
+  [
+   "늘리고자",
+   "GT",
+   "mục đích"
+  ]
+ ],
+ "s": [
+  {
+   "c": [
+    [
+     "한국어 실력을",
+     "TN",
+     "trình độ tiếng Hàn",
+     5
+    ],
+    [
+     "늘리고자",
+     "VP",
+     "để nâng",
+     4
+    ],
+    [
+     "한국 신문과 방송을",
+     "TN",
+     "báo và đài Hàn",
+     3
+    ],
+    [
+     "자주",
+     "TR",
+     "thường xuyên",
+     2
+    ],
+    [
+     "봤다.",
+     "VN",
+     "(tôi) đã xem",
+     1
+    ]
+   ],
+   "g": "늘리고자 신문과 방송을 봤다",
+   "gv": "Xem báo, đài để nâng trình độ",
+   "r": "Câu có gạch chân",
+   "y": "Tôi thường xem báo, đài Hàn để nâng trình độ tiếng Hàn.",
+   "vi": "Tôi đã thường xuyên xem báo và đài Hàn để nâng trình độ tiếng Hàn.",
+   "tip": "**-고자 = -기 위해서** (mục đích, văn viết)."
+  }
+ ],
+ "w": [
+  [
+   "실력",
+   "thực lực, trình độ",
+   "thực lực 實力",
+   "실력을"
+  ],
+  [
+   "늘리다",
+   "tăng, nâng",
+   "",
+   "늘리고자"
+  ],
+  [
+   "신문",
+   "báo",
+   "tân văn 新聞",
+   "신문과"
+  ],
+  [
+   "방송",
+   "phát sóng, đài",
+   "phóng tống 放送",
+   "방송을"
+  ]
+ ],
+ "wo": [
+  [
+   "늘리기 위해서",
+   "để tăng",
+   "",
+   "",
+   "lựa chọn ① · đáp án"
+  ],
+  [
+   "늘리기 무섭게",
+   "vừa tăng là ngay",
+   "",
+   "",
+   "lựa chọn ②"
+  ],
+  [
+   "늘리는 대신에",
+   "thay vì tăng",
+   "",
+   "",
+   "lựa chọn ③"
+  ],
+  [
+   "늘리는 반면에",
+   "trái lại tăng",
+   "",
+   "",
+   "lựa chọn ④"
+  ]
+ ],
+ "g": [
+  {
+   "p": "-고자",
+   "m": "để …",
+   "f": "늘리고자",
+   "d": "",
+   "ex": []
+  }
+ ],
+ "qa": {
+  "4": {
+   "a": 0,
+   "w": "Xem báo, đài thường xuyên là việc có chủ đích → “để”. -고자 = -기 위해서. Loại: 무섭게 (vừa… là ngay), 대신에 (thay vì), 반면에 (trái lại) — ba bẫy quen.",
+   "x": [
+    null,
+    "늘리기 무섭게 = vừa tăng là ngay — -기 무섭게 = vừa … là ngay.",
+    "늘리는 대신에 = thay vì tăng — -는 대신에 = thay vì.",
+    "늘리는 반면에 = trái lại tăng — -는 반면에 = trái lại."
+   ]
+  }
+ },
+ "hoi": [
+  {
+   "q": "Người nói làm gì để giỏi tiếng Hàn?",
+   "a": "Thường xuyên xem báo, đài Hàn."
+  }
+ ]
+}
