@@ -408,13 +408,16 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 
 ## Từ vựng Seoul học sâu (`seoul/tu-sau/`) — lớp 2A cần học nhanh nền rồi vào ôn TOPIK
 - Cô chốt (24/10/2026): mỗi bài chỉ cần **từ vựng dạy sâu có mở rộng, nối sang TOPIK** + ngữ pháp sâu nối sang ngữ pháp TOPIK (`ngu-phap-sau/`);
-  không làm học liệu theo từng trang sách như `seoul/2a-1/` nữa. Đã làm **2A Bài 2, 3**. Cô chốt 26/10: `seoul/tu-sau/` và `tu-30/` là giáo án của cô (`noindex`), link chỉ nằm ở Mục lục giáo án, không đặt link từ trang học sinh.
-- Trang `noindex`, link `seoul/tu-sau/#b=2A&c=2&s=hoc|nghia|dien|kh|de|dich`: ① Học (khung “Chủ đề của bài trong TOPIK”, thẻ từ: câu ví dụ, cụm hay đi cùng, tip,
-  khung “Lên TOPIK” = từ trung cấp cùng nhà kèm ★ số đề + câu trong đề, 📝 ghi chú TOPIK) · ② Nghĩa · ③ Điền câu · ④ Kết hợp · Mở rộng (`x`) ·
-  ⑤ Câu trong đề (chữ tô vàng nghĩa là gì; từ của bài + từ mở rộng gặp ≥ 7 đề, `UPK`) · ⑥ Dịch câu; “Gửi kết quả cho cô”. localStorage `nari-tusau`.
+  không làm học liệu theo từng trang sách như `seoul/2a-1/` nữa. Đã làm **2A Bài 2, 3** và **3A Bài 1–3**. Cô chốt 26/10: `seoul/tu-sau/` và `tu-30/` là giáo án của cô (`noindex`), link chỉ nằm ở Mục lục giáo án, không đặt link từ trang học sinh.
+- Trang `noindex`, **8 bước như `tu-30/`** (cô chốt 26/10), link `seoul/tu-sau/#b=2A&c=2&s=hoc|nghia|dien|kh|nham|de|dich|on`: ① Học (khung “Chủ đề của bài trong TOPIK”, thẻ từ: câu ví dụ, cụm hay đi cùng, tip,
+  khung “Lên TOPIK” = từ trung cấp cùng nhà kèm ★ số đề + câu trong đề, 📝 ghi chú TOPIK) · ② Nghĩa · ③ Điền câu · ④ Kết hợp · Mở rộng (`x` g k|h) ·
+  ⑤ Dễ nhầm (khung `cf` + câu `x` g c; sách Seoul không có khung này nên Claude soạn: gần nghĩa, đồng âm, nhiều nghĩa, chủ động – bị động, số thuần Hàn / Hán…) ·
+  ⑥ Câu trong đề (chữ tô vàng nghĩa là gì; từ của bài + từ mở rộng gặp ≥ 7 đề, `UPK`; cụm từ đếm theo `q` thì hỏi nghĩa `qv` của chữ được tô) · ⑦ Dịch câu ·
+  ⑧ Ôn (tự sinh: gõ 8 từ của bài Việt → Hàn + 5 từ của mỗi bài trước cùng cuốn, tối đa 2 bài — `ON_CUR`/`ON_PREV`/`ON_NPREV`); “Gửi kết quả cho cô”. localStorage `nari-tusau`.
   Biến `TS` trong `seoul/index.html` và `lop/khung.js` để trống (không hiện dòng “Học sâu”); làm bài mới thì thêm vào Mục lục giáo án.
 - Nguồn soạn tay `tools/seoul_tu/<cuốn>-<bài>.json` (`w[].ko` đúng như `tools/seoul/<cuốn>.tsv`; `q` từ gốc để đếm (`[]` = không đếm: đơn vị thời gian, từ ngoại lai ghép), `r`, `tip`, `up:[[từ, loại, nghĩa, HV]]`, `note`, `exv`;
-  `top` từ chủ đề, `x` câu luyện, lựa chọn đầu là đáp án) → `python3 tools/seoul_tu.py` (cần kiwipiepy; lấy nghĩa/HV/câu ví dụ/id từ tsv, đếm đề như `tu-30/`)
+  `top` từ chủ đề, `x` câu luyện (g k kết hợp / h mở rộng / c dễ nhầm; có `q` thì `s` là câu có `__chữ__` + câu hỏi nghĩa), lựa chọn đầu là đáp án,
+  `cf:[{t, k loại, d, it:[[từ, nghĩa, dùng khi]], ex:[[câu có __chữ__, dịch]]}]` khung dễ nhầm, `qv` nghĩa của chữ `q` khi khác nghĩa cả cụm) → `python3 tools/seoul_tu.py` (cần kiwipiepy; lấy nghĩa/HV/câu ví dụ/id từ tsv, đếm đề như `tu-30/`)
   → `seoul/tu-sau/data/<cuốn>-<bài>.json` + `ls.json`. Ghi chú TOPIK trong `note` chỉ ghi điều đã kiểm tra trong `thi-thu/de/`.
   Soát câu đề máy chọn cho từ `up`: từ đồng âm (입장 vào cửa / lập trường, 이내 trong vòng / ngay sau đó, 정상) dễ ra câu sai nghĩa → bỏ khỏi `up`, ghi vào `note`.
 - Ngữ pháp: `ngu-phap-sau/` thêm mục **“Lên TOPIK”** (trường `len:[{p, m, noi, ex:[ko, vi], de:{src, ko, a, note}}]` = mẫu trung cấp xây trên mẫu nền,
