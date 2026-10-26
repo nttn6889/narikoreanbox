@@ -649,7 +649,7 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   c:[[chữ, mã]] (phải có đúng trong đề, câu ảnh thì trong `tx`), tx (chữ chép từ ảnh, câu 5–10 dạng ảnh), w giải thích, x:{chỉ số lựa chọn sai: mã bẫy}, xw:{chỉ số: ghi chú bẫy của trang cũ}, chk:1 = đáp án sách đáng ngờ}]`.
   Câu 1–5, 13–20, 23–27, 42–43 chép một lần từ `R` của các trang cũ (ngu-phap-12/34, cau-5, cau-13-15…; nhãn cũ đổi sang mã chung, ghi chú cũ ở `xw`) — sửa trang cũ thì trang này không tự đổi;
   câu 6–10, 21–22 soạn mới (đáp án theo bank). `python3 tools/dau_hieu.py [<dump>]` kiểm tra chữ tô, so đáp án với bank (dump `bank/<id>/q`), ghi `dau-hieu/data/*.json` + `index.json`. Đoạn văn trang đọc thẳng `thi-thu/de/`.
-- Khi soát (23/10/2026) phát hiện bank `Etk091` sai đáp án 14 câu (19–34 trừ 27, 33; đúng: 19③ 20① 21③ 22④ 23① 24④ 25① 26③ 28① 29② 30③ 31③ 32④ 34②) và `Entk3` câu 2 (bank ①, đúng ④ 적응하느라고) — đã báo cô, chưa sửa bank.
+- Khi soát (23/10/2026) phát hiện bank `Etk091` sai đáp án 14 câu (19–34 trừ 27, 33; đúng: 19③ 20① 21③ 22④ 23① 24④ 25① 26③ 28① 29② 30③ 31③ 32④ 34②) và `Entk3` câu 2 (bank ①, đúng ④ 적응하느라고) — bank `Etk091` đã sửa 26/10 (học sinh hỏi câu 19–20); `Entk3` câu 2 giữ đáp án sách (có ghi chú tranh cãi trong `explain`).
 
 ## Đọc chọn lọc (`doc-chon-loc/`) — giáo án của cô (`noindex`, không đặt link từ trang học sinh)
 - Câu hỏi của cô (26/10): học sinh không hiểu từ / không đủ giờ đọc hết đoạn thì làm bài thế nào. Cô xem giáo án, nhận xét xong mới soạn trang học sinh.
@@ -809,7 +809,7 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   phép thử “làm tiêu đề”; bảng câu nào là / không là câu chủ đề; làm mẫu kỳ 91, 83) · dạng B nội dung khớp (gạch Quá mức → đọc lựa chọn trước → dò từ khóa, so vị ngữ → không có thì gạch);
   luyện `20a` tìm câu chủ đề (lựa chọn = câu trong bài), `20b` chọn chủ đề, `20c` gọi tên bẫy, `20d` chọn nội dung khớp; rồi câu 20 của 22 bài (ô 19 điền sẵn; dạng A bấm câu chủ đề trước,
   đúng = câu chứa `c2`), lưu `st.z`/`st.zs`, không vào lịch Ôn. Báo cáo `linesC20`.
-  Đáp án lấy từ `bank`, riêng `Etk091` dùng đáp án đúng ③ 비록 / ① (trong `bank` đang ghi sai ① / ③). `MCQ` câu tự soạn (lựa chọn đầu là đáp án). localStorage `nari-1920`.
+  Đáp án lấy từ `bank`, `Etk091` = ③ 비록 / ① (bank đã sửa 26/10). `MCQ` câu tự soạn (lựa chọn đầu là đáp án). localStorage `nari-1920`.
 
 - **Bản theo khuôn bài dạng câu `cau-19-20/moi/`** (cô yêu cầu 26/10, cùng khuôn `cau-11-12/`; trang cũ giữ nguyên cho học sinh đang học dở): Bắt đầu (làm thử 5 bài `PRE` = 10 câu) ·
   Buổi 1 đọc đoạn (vai trò câu M N V L X K H, khuôn “người ta tưởng → bị lật”, ô ở đâu, đọc chậm) · Buổi 2 phó từ đi cặp (`ADV` + `1nD*`/`1nE*`/`1nM`/`1d`) · Buổi 3 từ nối (`REL2`, `CMP2` + `2nN*`/`2nD*`/`2nM`/`2nK`) ·
@@ -824,7 +824,7 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   (9/22 bài phải đọc cả câu sau; gạch chân là cảnh thì cảm xúc ở câu sau) → chia + / − → chọn sắc thái (10 cặp dễ nhầm `CONF`). 42–43 thêm: khoanh tên nhân vật
   (7/19 bài hỏi người khác “tôi”; đề thật 83 hỏi ‘부모님’, 91 hỏi ‘미연’), đúng người – đúng lúc, gạch từ tả tính cách, câu 43 đáp án diễn đạt lại / suy ra.
 - Dữ liệu `R` trong trang (22 bài 23–24 từ 22 đề đọc; 19 bài 42–43 — bỏ `Eebs1` vì đề không có câu gạch chân, kỳ 83/91 không công bố đoạn văn, chỉ để câu hỏi + lựa chọn
-  ở Bảng tra): đoạn văn, câu hỏi, lựa chọn lấy từ `thi-thu/de/*.json`; đáp án `a`/`a2` (0-based) theo `bank`, **trừ `Etk091` câu 23–24** (bank ghi ④/①, đề thật là ① 의심스럽다 / ④).
+  ở Bảng tra): đoạn văn, câu hỏi, lựa chọn lấy từ `thi-thu/de/*.json`; đáp án `a`/`a2` (0-based) theo `bank`, `Etk091` câu 23–24 = ① 의심스럽다 / ④ (bank đã sửa 26/10).
   Chú giải Claude soạn: `u` dạng câu gạch chân (B cơ thể, Q quán ngữ, H hành động, L lời / suy nghĩ, C cảnh), `k` họ cảm xúc (`FAM`: S bất ngờ, F lo sợ, H xấu hổ – áy náy,
   B buồn – tiếc, A bực – oán, D nghi ngờ, P vui – yên tâm, T thái độ), `s` nguyên nhân ở t trước / s sau / h cả hai, `v` nghĩa câu gạch chân, `c` nguyên nhân (tô vàng, phải có
   đúng trong đoạn văn), `m` nghĩa 4 lựa chọn, `x[i]` bẫy (V ngược chiều, L khác loại, M gần nghĩa, G sai lúc, A sai người, K không phải cảm xúc, N ngược bài), `c2` chỗ chứa
