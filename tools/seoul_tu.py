@@ -7,8 +7,12 @@ Cách dùng:  pip install kiwipiepy
 Nguồn (soạn tay): tools/seoul_tu/<cuốn>-<bài>.json
   {b, c, lead, top:[[từ, loại, nghĩa, Hán Việt?]] (từ chủ đề của bài trong TOPIK), topNote,
    w:[{ko (đúng như tools/seoul/<cuốn>.tsv), q:[từ gốc để đếm trong đề] (mặc định ko; [] = không đếm, vd. 일 lẫn với “việc”), p 명/동/형/부, exv (dịch câu ví dụ),
+       qv (nghĩa của chữ q khi khác nghĩa cả cụm, vd. 장학금을 신청하다 → q 신청, qv “sự đăng ký” — ⑥ hỏi nghĩa này),
        r:[[từ liên quan, nghĩa]], tip:{t, c:[[cụm, nghĩa]] | x}, up:[[từ trung cấp, loại, nghĩa, Hán Việt?]], note}],
-   x:[{g: k kết hợp | h mở rộng, w (số từ), s (câu có “( )”), o (lựa chọn đầu là đáp án), v (dịch), why}]}
+   x:[{g: k kết hợp | h mở rộng | c dễ nhầm, w (số từ), s (câu có “( )”; có q thì s là câu có __chữ__ và q là câu hỏi),
+       o (lựa chọn đầu là đáp án), v (dịch), why}],
+   cf:[{t tên khung, k loại (Gần nghĩa, Đồng âm, Nhiều nghĩa, Chủ động – bị động…), d giải thích, it:[[từ, nghĩa, dùng khi]], ex:[[câu có __chữ__, dịch]]}]}
+  ⑤ Dễ nhầm = khung cf + câu x có g = c; ⑧ Ôn tự sinh trong trang (gõ từ của bài + từ các bài trước cùng cuốn).
   Nghĩa, Hán Việt, câu ví dụ, id từ lấy từ tools/seoul/<cuốn>.tsv (id giống seoul_kho.py: s2a02_<nhóm>_<thứ tự>).
 
 Ghi ra seoul/tu-sau/data/<cuốn>-<bài>.json (thêm k = số đề đọc có từ, de = ≤ 2 câu trong đề, cho từ, từ `up` và `top`)
@@ -41,7 +45,7 @@ def main():
     for s in srcs:
         for w in s["w"]:
             for q in w.get("q", [w["ko"]]):
-                targets[q] = "부" if w["p"] == "부" else ("명" if q != w["ko"] else w["p"])
+                targets[q] = "부" if w["p"] == "부" else (w["p"] if q == w["ko"] else ("동" if q.endswith("다") and w["p"] in "동형" else "명"))
             for u in w.get("up", []):
                 targets[u[0]] = u[1]
         for t in s.get("top", []):
@@ -82,14 +86,18 @@ def main():
         s["top"] = [t + [None] * (4 - len(t)) + [len(hits[t[0]]["e"]), pick(hits[t[0]]["x"])[:1]] for t in s.get("top", [])]
         s.update(ko=les["ko"], vi=les["vi"])
         for i, x in enumerate(s.get("x", [])):
-            if "( )" not in x["s"] or x["g"] not in "kh" or not 1 <= x["w"] <= len(s["w"]):
-                sys.exit("%s-%d x[%d]: cần “( )”, g k|h, w đúng" % (s["b"], s["c"], i))
+            if ("__" not in x["s"] if x.get("q") else "( )" not in x["s"]) or x["g"] not in ("k", "h", "c") or not 1 <= x["w"] <= len(s["w"]):
+                sys.exit("%s-%d x[%d]: cần “( )” (hoặc __chữ__ khi có q), g k|h|c, w đúng" % (s["b"], s["c"], i))
+        for i, c in enumerate(s.get("cf", [])):
+            if not c.get("t") or not (c.get("it") or c.get("ex")) or any("__" not in e[0] for e in c.get("ex", [])):
+                sys.exit("%s-%d cf[%d]: cần t, it hoặc ex (câu có __chữ__)" % (s["b"], s["c"], i))
         name = "%s-%d" % (s["b"], s["c"])
         with open(os.path.join(OUT, name + ".json"), "w", encoding="utf-8") as f:
             json.dump(s, f, ensure_ascii=False, separators=(",", ":"))
         ls.append([s["b"], s["c"], s["ko"], s["vi"], len(s["w"])])
-        print("%s: %d từ (%d có câu trong đề), %d từ mở rộng, %d câu luyện" % (
-            name, len(s["w"]), sum(1 for w in s["w"] if w["de"]), sum(len(w["up"]) for w in s["w"]), len(s.get("x", []))))
+        print("%s: %d từ (%d có câu trong đề), %d từ mở rộng, %d câu luyện (%d dễ nhầm), %d khung dễ nhầm" % (
+            name, len(s["w"]), sum(1 for w in s["w"] if w["de"]), sum(len(w["up"]) for w in s["w"]), len(s.get("x", [])),
+            sum(1 for x in s.get("x", []) if x["g"] == "c"), len(s.get("cf", []))))
     with open(os.path.join(OUT, "ls.json"), "w", encoding="utf-8") as f:
         json.dump(ls, f, ensure_ascii=False)
 
