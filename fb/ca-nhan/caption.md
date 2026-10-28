@@ -117,3 +117,56 @@ Tối nay cô đăng đáp án và cách tách tiêu đề ở comment.
 Bạn nào chọn ③ là bị bẫy chiều ngược: 거래가 줄어들다 (giao dịch giảm) thì trái nghĩa với 기지개.
 Mẹo: dấu phẩy giữa hai nửa tiêu đề thường là **nguyên nhân → kết quả**.
 Bài sau cô viết tiếp về nhóm "được yêu thích, đông người" (열풍, 구름 관중, 북새통…) nhé. 💙
+
+---
+
+# Loạt "Danh sách ôn TOPIK" — cho học sinh thấy comment đấu giá rồi bấm vào trang cô
+
+Mục đích: ai xem trang cá nhân đều thấy cô **tự thống kê đề thật** (con số cụ thể, nguồn rõ) — thứ trung tâm khác ít khi có.
+Mỗi bài = 1 ảnh danh sách để **lưu lại** + lời đăng ngắn + 1 câu hỏi để học sinh comment. Không đặt link trang học liệu.
+Khung `ds.css`, có dấu mờ `wm.js`. Chụp: `node tools/chup_anh.js fb/ca-nhan/ds-*.html`.
+Số liệu lấy từ repo (không bịa): #1 `tu-vung/de.json` + phần `Cốt lõi` của `thi-thu/vocab.json`; #2 `dong-trai/data.json` (`st.sig`).
+
+## 6. Danh sách #1 — 20 từ có mặt ở 20/20 đề đọc (ds-01-20-tu.png)
+
+Học TOPIK II, nhiều em mua sổ ghi 3.000–4.000 từ rồi… bỏ dở ở trang 30. 😅
+
+Cô làm ngược lại: cô tách từng chữ của **20 đề đọc TOPIK II**, bỏ từ sơ cấp, rồi đếm xem từ nào đề nào cũng có.
+Kết quả: đúng **20 từ không vắng mặt ở đề nào**. Riêng 위하다 gặp 396 lần.
+
+Hai điều cô rút ra:
+• 5 từ trong đó thật ra là **cụm ngữ pháp**: 을 위해, 에 대해, 에 따라, 을 통해, 로 인해. Học cả cụm thì đọc câu nhanh hơn hẳn.
+• 16/20 từ là từ Hán: 사회 – xã hội, 영향 – ảnh hưởng, 상황 – tình huống… Người Việt mình có lợi thế lớn ở đây.
+
+Em lưu ảnh lại, mỗi ngày đọc 5 từ. Em thấy từ nào em vẫn hay quên? Comment cho cô nhé 👇
+
+#DanhSachOnTOPIK #TuVungTOPIK #TOPIK2 #NariTOPIK
+
+## 7. Danh sách #2 — Chữ tín hiệu trong 4 lựa chọn (ds-02-chu-tin-hieu.png)
+
+Câu “chọn nội dung đúng với bài” (câu 9–12, 20, 22, 24, 32–34, 43, 47, 50) chiếm gần 1/3 đề đọc. Đọc không kịp bài thì làm sao?
+
+Cô soát lại **241 câu** dạng này trong 22 đề đọc, đếm từng lựa chọn có chữ “nói tuyệt đối”:
+❌ 전혀 / 절대 xuất hiện 7 lần — **chưa lần nào** là đáp án.
+❌ 항상 / 늘 / 매일: 1/11. 관계없다 / 필요 없다: 2/19.
+✅ Ngược lại, lựa chọn nói mềm (-기도 하다, -ㄹ 수도 있다, 경우에 따라): **11/12 lần là đáp án đúng.**
+
+Lý do: bài văn TOPIK hiếm khi nói chắc 100%. Lựa chọn sai thường giữ chữ của bài rồi “nói quá lên”.
+
+Nhưng cẩn thận: 모두, 만, 반드시, 가장 thì **không** phải tín hiệu (≈ 1/4, như đoán bừa). Mẹo này chỉ để loại nhanh khi phân vân, vẫn phải dò lại bài nhé.
+
+Em đã từng bị bẫy “nói quá” bao giờ chưa? 😄
+
+#DanhSachOnTOPIK #DocTOPIK #TOPIK2 #NariTOPIK
+
+## Các số tiếp theo (đã có số liệu trong repo — cô chọn, em làm ảnh)
+- **#3 Câu 13–15:** 66/66 câu đầu đúng **không có dấu bám**; danh sách dấu bám (그래서, 이, 그, 또한, 때문이다…) + 65/66 câu chỉ cần so 2 câu đầu. (`cau-13-15/`)
+- **#4 Câu 52:** bảng “thấy từ nối gì → viết đuôi gì” (9 nhóm tín hiệu, 28/32 ô dùng lại từ trong bài). (`viet-52/` Bảng tra)
+- **#5 Câu 3–4:** 6 nhóm ngữ pháp tương đồng = 16/21 câu đề thật kỳ 35–102. (`ngu-phap-34/`)
+- **#6 Câu 19–20:** 14 phó từ đi cặp kiểu tiếng Việt “Tuy… nhưng”, “Thà… còn hơn” — 7/22 bài ra đáp án chỉ nhờ cặp này. (`cau-19-20/`)
+- **#7 Câu 16–18:** 39/65 câu manh mối nằm **sau** ô trống → đọc qua ô. (`cau-16-18/`)
+- **#8 Câu 54:** 29 câu hỏi của 10 đề chia 6 kiểu; “giải pháp” có ở 9/10 đề. (`viet-54/` Khung đoạn)
+- **#9 Từ vựng tầng 2:** 30 từ gặp ở 15–19/20 đề (tiếp #1).
+
+Thứ tự đăng: xen kẽ 1 bài Danh sách · 1 bài “Một từ, một câu chuyện” / “Đọc tiêu đề báo” · thỉnh thoảng 1 ảnh lớp thật, cách nhau 1–2 ngày.
+Khi đi comment đấu giá thì có thể dẫn: “Cô có chia sẻ danh sách 20 từ đề nào cũng có trên trang cá nhân, em vào lưu về ôn nhé.”
