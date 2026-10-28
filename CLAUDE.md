@@ -775,6 +775,14 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   10 câu (đúng mà có xem gợi ý → ôn lại ngày mai). Mỗi bước có 💡 gợi ý 2 mức (mức 1 = `g1`/`g3`, mức 2 = tô `h` của câu đang so + cách làm) và phản hồi tách
   “Vì sao chọn” (`c1`/`c3`) / “Vì sao loại” (`x1`/`x3`) + nghĩa 2 câu đang so. Dữ liệu `R` cùng câu, đáp án, `h`, `v` với trang chính + 6 trường trên, `p` = thẻ.
   Báo cáo gửi cô: đúng cả 2 bước / không cần gợi ý / sai bước nào. localStorage `nari-1315l`.
+- **Bản theo khuôn bài dạng câu `cau-13-15/moi/`** (cô yêu cầu 28/10, cùng khuôn `cau-11-12/`, `cau-19-20/moi/`; hai trang cũ giữ nguyên): Bắt đầu (làm thử 5 câu `PRE`) ·
+  Từ vựng tự học (`#b=tu`: từ dấu bám 7 nhóm `DB`, 40 từ hay gặp, cặp chữ bám ⇒ chữ được bám, “là dấu bám không?” `NO`) · Buổi 1 đọc 4 câu (vai trò câu M X N V L T S D R B K, 6 khuôn đoạn `MK`
+  Q G H W T P, câu nào đứng cuối, đọc chậm có dịch / xếp đúng thứ tự) · Buổi 2 bước 1–2 dấu bám (6 loại C1–C6 của `dau-hieu/` thẻ C, câu đề chọn câu đầu khi câu kia có dấu bám) ·
+  Buổi 3 hai câu đều sạch (đứng một mình, 4 kiểu câu đầu, bẫy định nghĩa sau hiện tượng) · Buổi 4 so một vị trí (vị trí 2 / 3, 6 tín hiệu `K2`, chuỗi từ khóa: chữ bám trỏ về câu nào, câu nào đi ngay sau) ·
+  Buổi 5 quy trình 3 bước, làm mẫu kỳ 91 câu 15, làm từng bước có 💡 gợi ý (`g1`/`g3`) · Luyện như thi (6 câu/lượt, 1 phút/câu, ôn ngắt quãng) · 66 câu · Kết quả.
+  Dữ liệu `python3 tools/cau_13_15.py` → `cau-13-15/moi/data.json`: đọc thẳng `R`, `MCQ`, `F`, `K2` của `cau-13-15/index.html` + `g1 c1 x1 g3 c3 x3` của `cau-13-15/luyen/` (bằng node),
+  `tools/dau_hieu/13-15.json`, `thi-thu/de/tu/` + `tools/cau_13_15/bai.txt` (Claude soạn: khuôn đoạn, vai trò 4 câu theo thứ tự đúng, cặp “chữ bám>chữ được bám” — script kiểm tra cả hai có trong câu).
+  Sửa trang cũ thì chạy lại script. Số trong chữ tĩnh viết theo lần chạy 28/10. localStorage `nari-1315m`. Trang `noindex`, link ở Mục lục giáo án.
 
 ## Học câu 16–18 điền chỗ trống (`cau-16-18/`)
 - Cùng khung với `cau-25-27/`: Buổi 1 (thói quen **đọc qua ô** — 39/65 câu manh mối nằm sau ô; quy trình 3 bước; khung quanh ô → loại ý; tín hiệu ① Đảo chiều, ② Giải thích ở sau),
