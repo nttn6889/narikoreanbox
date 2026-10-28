@@ -876,7 +876,10 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   (khung `tu.css`, từ lấy từ phần `Cốt lõi` của `thi-thu/vocab.json` + số đề trong `tu-vung/de.json`), lời đăng ở `caption.md`.
   Dùng chung `quang-cao/topik2-len-3-4/base.css`.
   Loạt “Danh sách ôn TOPIK” `ds-NN-*.html` (khung `ds.css`, có `wm.js`): danh sách rút từ số liệu đề thật trong repo (#1 20 từ có ở 20/20 đề đọc, #2 chữ tín hiệu trong lựa chọn);
-  lời đăng + kế hoạch các số sau (#3…#9) ở `caption.md`. Số trên ảnh phải lấy từ dữ liệu repo, không bịa. Chụp PNG: `node tools/chup_anh.js fb/ca-nhan/*.html` (cỡ khác 1080×1350 ghi `<meta name=size content="WxH">`).
+  lời đăng + kế hoạch các số sau (#3…#9) ở `caption.md`. Số trên ảnh phải lấy từ dữ liệu repo, không bịa.
+  **Cô chốt 28/10: loạt Danh sách là bí quyết riêng, để dành tới khi trang đông người theo dõi** (đăng sớm thì page lớn lấy lại). Bây giờ đăng loạt
+  “Ôn TOPIK cùng cô Ngân” `kt-NN-*.html` (khung `kt.css` + `ds.css`): chủ đề các trang khác hay đăng (cấu trúc đề, quán ngữ…) nhưng đúng + đầy đủ + rõ hơn,
+  **không đưa số liệu thống kê riêng của cô** (số đề, tỉ lệ đáp án…). Chụp PNG: `node tools/chup_anh.js fb/ca-nhan/*.html` (cỡ khác 1080×1350 ghi `<meta name=size content="WxH">`).
 - `fb/de-viet-108/`: đề viết kỳ 108 (18.10.2026, đề thí sinh nhớ lại, câu chữ theo bản của Tiếng Hàn Thầy Tư) — 2 ảnh đề sạch `de-1`/`de-2` cho bài chính,
   ảnh đáp án đăng ở comment: bìa, 51, 52 (đáp án + cách viết khác), 53 đề (biểu đồ vẽ lại bằng SVG) + bài mẫu, 54 đề + dàn ý + bài mẫu; `de.css`, lời đăng `caption.md`.
 - Cô: cử nhân Quản trị kinh doanh Đại học Daegu, đang ở Quỳnh Lưu, dạy trực tiếp tại Quỳnh Lưu + online toàn quốc.

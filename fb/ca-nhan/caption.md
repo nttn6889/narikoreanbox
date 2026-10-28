@@ -120,7 +120,9 @@ Bài sau cô viết tiếp về nhóm "được yêu thích, đông người" (�
 
 ---
 
-# Loạt "Danh sách ôn TOPIK" — cho học sinh thấy comment đấu giá rồi bấm vào trang cô
+# ⏸ ĐỂ DÀNH — Loạt "Danh sách ôn TOPIK" (bí quyết riêng của cô)
+
+**Cô chốt 28/10: chưa đăng.** Đây là số liệu cô tự thống kê — đăng lúc trang còn ít người theo dõi thì page lớn dễ lấy lại. Chỉ đăng khi trang cá nhân đã đông người theo dõi / kết bạn.
 
 Mục đích: ai xem trang cá nhân đều thấy cô **tự thống kê đề thật** (con số cụ thể, nguồn rõ) — thứ trung tâm khác ít khi có.
 Mỗi bài = 1 ảnh danh sách để **lưu lại** + lời đăng ngắn + 1 câu hỏi để học sinh comment. Không đặt link trang học liệu.
@@ -170,3 +172,50 @@ Em đã từng bị bẫy “nói quá” bao giờ chưa? 😄
 
 Thứ tự đăng: xen kẽ 1 bài Danh sách · 1 bài “Một từ, một câu chuyện” / “Đọc tiêu đề báo” · thỉnh thoảng 1 ảnh lớp thật, cách nhau 1–2 ngày.
 Khi đi comment đấu giá thì có thể dẫn: “Cô có chia sẻ danh sách 20 từ đề nào cũng có trên trang cá nhân, em vào lưu về ôn nhé.”
+
+---
+
+# Loạt "Ôn TOPIK cùng cô Ngân" — đăng ngay bây giờ
+
+Chủ đề các trang khác hay đăng, nhưng làm **đúng, đầy đủ, rõ ràng hơn**. Không dùng số liệu thống kê riêng của cô (để dành cho loạt Danh sách).
+Ảnh `kt-*.png` (khung `kt.css` + `ds.css`, có dấu mờ). Chụp: `node tools/chup_anh.js fb/ca-nhan/kt-*.html`.
+
+## 8. Cấu trúc đề TOPIK II (ảnh: kt-01a-cau-truc-de → kt-01b-50-cau-doc)
+
+Nhiều em ôn TOPIK II mấy tháng mà vẫn chưa nắm rõ đề có những phần nào, câu nào hỏi gì. Cô tổng hợp lại trong 2 ảnh:
+
+📌 Ảnh 1: 3 phần thi, thời gian, điểm từng câu viết, điểm đạt từng cấp.
+📌 Ảnh 2: 50 câu đọc, câu nào hỏi gì.
+
+Ba điều nhiều bạn chưa biết:
+1️⃣ Câu sai **không bị trừ điểm** → đừng bỏ trống câu nào.
+2️⃣ **Không có điểm liệt từng phần**: cấp tính theo tổng 300 điểm. Nghe yếu vẫn bù bằng đọc và viết được.
+3️⃣ Câu 54 chiếm **50/100 điểm viết**. Bỏ câu 54 là gần như mất luôn cấp 4.
+
+Em lưu lại để ôn nhé. Em đang nhắm cấp mấy? Comment cho cô biết, cô gợi ý nên ưu tiên phần nào 👇
+
+#TOPIK2 #CauTrucDeTOPIK #LuyenthiTOPIK #NariTOPIK
+
+## 9. Quán ngữ theo bộ phận cơ thể (ảnh: kt-02a-quan-ngu-mat-tai-mieng → kt-02b-quan-ngu-tay-chan-dau)
+
+귀가 얇다 không phải “tai mỏng”, mà là… **cả tin**, ai nói gì cũng nghe. 😄
+
+Quán ngữ (관용 표현) là phần dịch từng chữ là sai ngay. Trong đề đọc TOPIK II, câu 21 hỏi thẳng quán ngữ, còn bài nghe và bài đọc khác cũng hay dùng.
+
+Cô chọn 30 quán ngữ thông dụng nhất với 눈 · 귀 · 입 · 손 · 발 · 머리. Có cặp trái nghĩa đi cùng để em nhớ một lần được hai:
+• 입이 무겁다 (kín miệng) ↔ 입이 가볍다 (hớt lẻo)
+• 손이 크다 (hào phóng) ↔ 손이 작다 (keo kiệt)
+
+Thử nhé: “Sắp thi rồi mới học” là quán ngữ nào trong ảnh 2? Comment đáp án cho cô 👇
+(Đáp án: 발등에 불이 떨어지다)
+
+#QuanNguTiengHan #관용표현 #TuVungTOPIK #NariTOPIK
+
+## Chủ đề phổ biến làm tiếp (cùng khung, không lộ số liệu riêng)
+- Quán ngữ với 가슴 · 속 · 마음 (cảm xúc); tục ngữ 속담 hay gặp (kho từ có phần `Câu 54 · 속담`, EBS).
+- Ngữ pháp tương đồng câu 3–4 (bảng cặp đồng nghĩa, như các trang khác nhưng có ví dụ + cặp dễ nhầm).
+- Từ nối (그러나, 따라서, 반면에…) chia theo chức năng.
+- Biểu hiện mô tả biểu đồ câu 53 (증가하다, 감소하다, 차지하다…).
+- Biểu hiện mở bài – thân bài – kết bài câu 54.
+- Đuôi văn viết -ㄴ/는다 và cách đổi văn nói → văn viết.
+- Lịch thi TOPIK 2027 (cần đối chiếu lịch chính thức trước khi đăng).
