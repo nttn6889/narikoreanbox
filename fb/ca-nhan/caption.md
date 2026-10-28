@@ -178,7 +178,7 @@ Khi đi comment đấu giá thì có thể dẫn: “Cô có chia sẻ danh sác
 # Loạt "Ôn TOPIK cùng cô Ngân" — đăng ngay bây giờ
 
 Chủ đề các trang khác hay đăng, nhưng làm **đúng, đầy đủ, rõ ràng hơn**. Không dùng số liệu thống kê riêng của cô (để dành cho loạt Danh sách).
-Ảnh `kt-*.png` (khung `kt.css` + `ds.css`, có dấu mờ). Chụp: `node tools/chup_anh.js fb/ca-nhan/kt-*.html`.
+Ảnh `kt-*.png` (khung `kt.css` + `ds.css`), `qn-*.png` (khung `qn.css`). Dấu bản quyền: chữ “Nari TOPIK · Zalo 0399 214 554” rất nhạt lặp chéo khắp ảnh (`wm.js` `data-style="tile"`) — cô thấy vòng tròn to ở giữa làm ảnh rối. Chụp: `node tools/chup_anh.js fb/ca-nhan/kt-*.html`.
 
 ## 8. Cấu trúc đề TOPIK II (ảnh: kt-01a-cau-truc-de → kt-01b-50-cau-doc)
 
@@ -196,23 +196,31 @@ Em lưu lại để ôn nhé. Em đang nhắm cấp mấy? Comment cho cô biế
 
 #TOPIK2 #CauTrucDeTOPIK #LuyenthiTOPIK #NariTOPIK
 
-## 9. Quán ngữ theo bộ phận cơ thể (ảnh: kt-02a-quan-ngu-mat-tai-mieng → kt-02b-quan-ngu-tay-chan-dau)
+## 9. Bộ sưu tập 96 quán ngữ theo bộ phận cơ thể — 14 ảnh (qn-01-bia → qn-14-on-tap)
 
-귀가 얇다 không phải “tai mỏng”, mà là… **cả tin**, ai nói gì cũng nghe. 😄
+Sinh bằng `python3 tools/fb_quan_ngu.py` (dữ liệu trong script), chụp `node tools/chup_anh.js fb/ca-nhan/qn-*.html`.
+Facebook cho đăng tối đa 80 ảnh/bài → đăng cả 14 ảnh trong **một bài** (ảnh bìa đầu tiên) để học sinh lưu một lần là đủ.
 
-Quán ngữ (관용 표현) là phần dịch từng chữ là sai ngay. Trong đề đọc TOPIK II, câu 21 hỏi thẳng quán ngữ, còn bài nghe và bài đọc khác cũng hay dùng.
+📚 TỔNG HỢP 96 QUÁN NGỮ TIẾNG HÀN THEO BỘ PHẬN CƠ THỂ (관용 표현)
 
-Cô chọn 30 quán ngữ thông dụng nhất với 눈 · 귀 · 입 · 손 · 발 · 머리. Có cặp trái nghĩa đi cùng để em nhớ một lần được hai:
-• 입이 무겁다 (kín miệng) ↔ 입이 가볍다 (hớt lẻo)
-• 손이 크다 (hào phóng) ↔ 손이 작다 (keo kiệt)
+귀가 얇다 không phải “tai mỏng” mà là **cả tin**. 손이 크다 không phải “tay to” mà là **rộng rãi, hào phóng**. 😄
+Quán ngữ là phần dịch từng chữ là sai ngay. Đề đọc TOPIK II có hẳn câu 21 hỏi quán ngữ, còn bài nghe và bài đọc khác cũng dùng rất nhiều.
 
-Thử nhé: “Sắp thi rồi mới học” là quán ngữ nào trong ảnh 2? Comment đáp án cho cô 👇
-(Đáp án: 발등에 불이 떨어지다)
+Cô tổng hợp 96 quán ngữ thông dụng, chia theo bộ phận cơ thể cho dễ nhớ:
+👀 눈 (mắt) · 👂 귀 (tai) · 👄 입 (miệng) · ✋ 손 (tay) · 🦶 발 (chân) · 🙂 머리 · 얼굴 · 코 · 💗 가슴 · 마음 · 😣 속 · 애 · 간 · 💪 어깨 · 허리 · 목
+Mỗi quán ngữ có nghĩa, câu ví dụ và bản dịch. Ảnh cuối là bài ôn tập 8 câu.
 
-#QuanNguTiengHan #관용표현 #TuVungTOPIK #NariTOPIK
+📌 Cách học: mỗi ngày 1 ảnh · che cột nghĩa, nhìn quán ngữ đoán nghĩa · tự đặt 1 câu về em.
+
+👉 Em lưu bài lại để ôn dần, làm bài ôn tập ở ảnh cuối rồi comment đáp án (dạng 1A, 2B…), cô chữa cho nhé!
+
+#QuanNguTiengHan #관용표현 #TuVungTOPIK #TOPIK2 #NariTOPIK
+
+**Comment đáp án** (đăng sau 1 ngày): 1C · 2G · 3E · 4A · 5H · 6D · 7B · 8F
+1 발등에 불이 떨어지다 · 2 입이 무겁다 · 3 귀가 얇다 · 4 손이 크다 · 5 눈코 뜰 사이도 없다 · 6 머리를 맞대다 · 7 애를 먹다 · 8 어깨가 무겁다
 
 ## Chủ đề phổ biến làm tiếp (cùng khung, không lộ số liệu riêng)
-- Quán ngữ với 가슴 · 속 · 마음 (cảm xúc); tục ngữ 속담 hay gặp (kho từ có phần `Câu 54 · 속담`, EBS).
+- Tục ngữ 속담 hay gặp (bộ sưu tập cùng khuôn `qn`) (kho từ có phần `Câu 54 · 속담`, EBS).
 - Ngữ pháp tương đồng câu 3–4 (bảng cặp đồng nghĩa, như các trang khác nhưng có ví dụ + cặp dễ nhầm).
 - Từ nối (그러나, 따라서, 반면에…) chia theo chức năng.
 - Biểu hiện mô tả biểu đồ câu 53 (증가하다, 감소하다, 차지하다…).

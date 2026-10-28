@@ -879,7 +879,10 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   lời đăng + kế hoạch các số sau (#3…#9) ở `caption.md`. Số trên ảnh phải lấy từ dữ liệu repo, không bịa.
   **Cô chốt 28/10: loạt Danh sách là bí quyết riêng, để dành tới khi trang đông người theo dõi** (đăng sớm thì page lớn lấy lại). Bây giờ đăng loạt
   “Ôn TOPIK cùng cô Ngân” `kt-NN-*.html` (khung `kt.css` + `ds.css`): chủ đề các trang khác hay đăng (cấu trúc đề, quán ngữ…) nhưng đúng + đầy đủ + rõ hơn,
-  **không đưa số liệu thống kê riêng của cô** (số đề, tỉ lệ đáp án…). Chụp PNG: `node tools/chup_anh.js fb/ca-nhan/*.html` (cỡ khác 1080×1350 ghi `<meta name=size content="WxH">`).
+  **không đưa số liệu thống kê riêng của cô** (số đề, tỉ lệ đáp án…).
+  Cô thích dạng **bộ sưu tập nhiều ảnh** (10–15 ảnh, bìa có mục lục + ảnh ôn tập cuối) để học sinh lưu về học lâu dài: `qn-NN-*.html` = 96 quán ngữ theo bộ phận cơ thể,
+  sinh bằng `python3 tools/fb_quan_ngu.py` (khung `qn.css`, nền sáng, ít khung, 8 mục/ảnh: quán ngữ | nghĩa | câu ví dụ + dịch).
+  **Dấu bản quyền ảnh FB**: cô thấy vòng tròn to giữa ảnh làm rối → dùng `wm.js` `data-style="tile"` (chữ “Nari TOPIK · Zalo” nhạt .045 lặp chéo khắp ảnh); ảnh `quang-cao/` vẫn kiểu cũ. Chụp PNG: `node tools/chup_anh.js fb/ca-nhan/*.html` (cỡ khác 1080×1350 ghi `<meta name=size content="WxH">`).
 - `fb/de-viet-108/`: đề viết kỳ 108 (18.10.2026, đề thí sinh nhớ lại, câu chữ theo bản của Tiếng Hàn Thầy Tư) — 2 ảnh đề sạch `de-1`/`de-2` cho bài chính,
   ảnh đáp án đăng ở comment: bìa, 51, 52 (đáp án + cách viết khác), 53 đề (biểu đồ vẽ lại bằng SVG) + bài mẫu, 54 đề + dàn ý + bài mẫu; `de.css`, lời đăng `caption.md`.
 - Cô: cử nhân Quản trị kinh doanh Đại học Daegu, đang ở Quỳnh Lưu, dạy trực tiếp tại Quỳnh Lưu + online toàn quốc.
