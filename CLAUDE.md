@@ -754,6 +754,10 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   vốn từ tin tức 8 nhóm `VG` + ✋ mỗi nhóm, vai trò câu, 그러나/물론 → ý chính, đọc chậm có dịch) · Buổi 2 đáp án nói lại 6 cách (`OK`) + cùng ý / khác ý + đọc nghĩa lựa chọn + chữ tín hiệu ·
   Buổi 3 7 bẫy (`BAY`: N C T G S A R) + bẫy theo kiểu tin + gọi tên bẫy · Buổi 4 quy trình 4 bước, làm mẫu kỳ 91 câu 11, làm từng bước (chọn câu căn cứ → Khớp / Không khớp) ·
   Luyện như thi (6 câu/lượt, ôn ngắt quãng, bỏ 5 câu `PRE`) · 44 bài · Kết quả (làm lại 5 câu, so trước – sau, tự đánh giá, “Gửi kết quả cho cô”). Hộp “Dành cho cô” ở thẻ Bắt đầu = bảng lấy gì từ chuyên đề nào.
+- Thẻ **Từ vựng · tự học** (`#b=tu`, section `stu`; cô góp ý 28/10: Buổi 2 câu dài, học sinh tự học khó tập trung → chỉ từ / cụm ngắn): 1 từ tin tức 8 nhóm (`VG`, chỉ từ + nghĩa, luyện `tv0…7`) ·
+  2 40 từ gặp nhiều nhất (`D.w`, luyện `tw`) · 3 cặp cùng ý bài ⇒ đáp án (D đồng nghĩa, H Hán ↔ thuần Hàn, K gói chung, P nói ngược + “không”, U suy ra; luyện `ts`) ·
+  4 cặp khác ý của lựa chọn sai (T ngược nghĩa, F thêm/bỏ “không”, G thời gian/số, L phạm vi; luyện `td` cùng ý hay khác ý). Cặp rút gọn tay từ cặp chữ của 44 câu, biến `TP`
+  `[cách, chữ bài, chữ lựa chọn, nghĩa, nghĩa, id câu | '' = cặp Hán ↔ thuần hay gặp trong đề đọc]`; nút “Che nghĩa” / “Che vế đáp án” (chạm ô xám để xem). Chờ cô duyệt rồi mới tách trang học sinh.
 - Dữ liệu `python3 tools/cau_11_12.py` → `cau-11-12/data.json` (gộp `doc-dap-an/data.json`, `dong-trai/data.json`, `tools/dau_hieu/11-12.json`, `thi-thu/de/tu/`) + dịch từng câu, vai trò câu (C T D G N L K S Y X),
   kiểu tin ở `tools/cau_11_12/bai.txt` (Claude soạn). Số trong chữ tĩnh viết theo lần chạy 26/10. localStorage `nari-1112`. Trang `noindex`, chưa đặt link từ trang học sinh (chờ cô duyệt khuôn rồi làm các dạng khác cùng khuôn).
 
