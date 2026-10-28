@@ -32,7 +32,7 @@ nav a{flex:1;min-width:0;text-align:center;padding:6px 2px;color:var(--ink);text
 nav a+a{border-left:2px solid var(--ink)}
 nav a small{display:block;font-weight:normal;font-size:11.5px}
 nav a.on{background:var(--ink);color:#fff}
-@media(max-width:620px){nav a{font-size:12.5px;flex-basis:25%}nav a small{font-size:10px}nav a:nth-child(5){border-left:0}nav a:nth-child(n+5){border-top:2px solid var(--ink)}}
+@media(max-width:620px){nav a{font-size:12.5px;flex-basis:20%}nav a small{font-size:10px}nav a:nth-child(6){border-left:0}nav a:nth-child(n+6){border-top:2px solid var(--ink)}}
 .sec{display:none}.sec.on{display:block}
 h2{font-size:23px;margin:6px 0 4px}
 h3{font-size:19px;margin:26px 0 8px;padding-bottom:3px;border-bottom:2px solid var(--ink);scroll-margin-top:70px}
@@ -143,6 +143,14 @@ details.co-note summary{cursor:pointer;font-weight:bold;color:var(--warn)}
 .chk label{display:block;padding:4px 0;font-size:15px}
 .bar2{height:10px;background:var(--sub);border-radius:5px;overflow:hidden;margin:2px 0 6px}
 .bar2 i{display:block;height:100%;background:var(--acc)}
+/* từ vựng tự học */
+table.tw td.vm,table.tw span.vm{color:#333}
+table.tw.tp td{width:50%}
+table.tw.tp span.vm{font-size:14px}
+.cheV .vm:not(.show){color:transparent!important;background:var(--sub);border-radius:4px;cursor:pointer}
+.cheR td.rt:not(.show)>*{visibility:hidden}
+.cheR td.rt:not(.show){background:var(--sub);cursor:pointer}
+.tuhint{font-size:14px;color:var(--muted);margin:0 0 6px}
 footer{margin-top:40px;font-size:13px;color:var(--muted);text-align:center}
 footer a{color:var(--muted)}
 @media print{nav,.btns,.timer,.sum,.prac,footer,.co,.flt{display:none}.sec{display:block!important}.card,.mcq,.qc{break-inside:avoid}}
@@ -161,6 +169,7 @@ footer a{color:var(--muted)}
 </header>
 <nav><div class="bar">
   <a href="#b=tong" data-k="tong">Bắt đầu<small>Làm thử</small></a>
+  <a href="#b=tu" data-k="tu">Từ vựng<small>Tự học</small></a>
   <a href="#b=1" data-k="1">Buổi 1<small>Đọc tin</small></a>
   <a href="#b=2" data-k="2">Buổi 2<small>Nói lại</small></a>
   <a href="#b=3" data-k="3">Buổi 3<small>7 bẫy</small></a>
@@ -209,6 +218,43 @@ footer a{color:var(--muted)}
 </table>
 <p class="note">Số trong trang tự tính từ <code>cau-11-12/data.json</code> (<code>python3 tools/cau_11_12.py</code>); phần chữ tĩnh viết theo lần chạy 26/10/2026.</p>
 </details>
+</section>
+
+<!-- ================= TỪ VỰNG TỰ HỌC ================= -->
+<section class="sec" id="stu">
+<h2>Từ vựng câu 11–12 · tự học</h2>
+<div class="goal">Thẻ này để em <b>tự học từ trước</b> (trước buổi học hoặc ôn lại ở nhà): chỉ có <b>từ và cụm ngắn</b> + nghĩa, không có câu dài. Học xong 4 phần dưới, khi vào bài em đọc tin nhanh hơn và nhận ra đáp án “nói lại bằng chữ khác”.</div>
+<ol class="steps">
+<li><b>Từ tin tức</b> (8 nhóm): các từ tin TOPIK hay dùng để báo tin.</li>
+<li><b>40 từ gặp nhiều nhất</b> trong 44 bài câu 11–12.</li>
+<li><b>Cặp cùng ý:</b> trong bài viết thế này ⇒ đáp án đúng viết thế kia (chữ khác, ý giống).</li>
+<li><b>Cặp khác ý:</b> lựa chọn sai đổi đúng một chữ để thành sai.</li>
+</ol>
+<p class="tuhint">Cách tự học: đọc bảng một lượt → bấm “Che …” → nhìn tiếng Hàn tự nói nghĩa, chạm ô xám để xem lại → làm phần ✋ luyện. Phần luyện có “Lượt mới” để làm nhiều lần.</p>
+
+<h3 id="tu-1">1. Từ tin tức (8 nhóm)</h3>
+<div class="btns" style="margin-bottom:8px"><button class="b" data-che="tuVG" data-cls="cheV">Che nghĩa</button></div>
+<div id="tuVG"></div>
+
+<h3 id="tu-2">2. Từ gặp nhiều nhất trong 44 bài</h3>
+<p class="note">Số bài = trong 44 bài câu 11–12, bao nhiêu bài có từ này.</p>
+<div class="btns" style="margin-bottom:8px"><button class="b" data-che="tuTop" data-cls="cheV">Che nghĩa</button></div>
+<div id="tuTop"></div>
+<div class="prac" id="tuTopQ"></div>
+
+<h3 id="tu-3">3. Cặp cùng ý: bài ⇒ đáp án</h3>
+<p>Đáp án đúng câu 11–12 <b>hầu như không chép nguyên</b> chữ của bài, mà đổi sang chữ khác cùng nghĩa. Học thuộc các cặp này: thấy bên trái trong bài thì nhận ra bên phải trong lựa chọn. Cặp có tên đề là lấy từ đề thật / đề luyện; cặp ghi “hay gặp” là cặp Hán ↔ thuần Hàn gặp nhiều trong đề đọc.</p>
+<div class="btns" style="margin-bottom:8px"><button class="b" data-che="tuSame" data-cls="cheR">Che vế đáp án</button><button class="b" data-che="tuSame" data-cls="cheV">Che nghĩa</button></div>
+<div id="tuSame"></div>
+<div class="prac" id="tuSameQ"></div>
+
+<h3 id="tu-4">4. Cặp khác ý: chỗ lựa chọn sai đổi chữ</h3>
+<p>Lựa chọn sai hay <b>giữ gần hết chữ của bài, chỉ đổi một chỗ</b>. Bốn kiểu đổi hay gặp nhất:</p>
+<div class="btns" style="margin-bottom:8px"><button class="b" data-che="tuDiff" data-cls="cheR">Che vế lựa chọn</button><button class="b" data-che="tuDiff" data-cls="cheV">Che nghĩa</button></div>
+<div id="tuDiff"></div>
+<div class="prac" id="tuDiffQ"></div>
+<div class="okbox">Học xong thẻ này, em sang <a href="#b=1">Buổi 1</a> (đọc tin) hoặc <a href="#b=thi">Luyện như thi</a>.</div>
+<div class="sum" data-k="tu"></div>
 </section>
 
 <!-- ================= BUỔI 1 ================= -->
@@ -444,6 +490,183 @@ document.addEventListener('click',function(e){
   if(r){var k=r.dataset.round.replace(/_r\d+$/,'');st.r[k]=(st.r[k]||0)+1;save();ROUNDS[k]();return;}
 });
 var ROUNDS={};
+
+/* ---------- Từ vựng tự học ---------- */
+// cặp chữ ngắn rút từ 44 câu: [cách, chữ trong bài, chữ lựa chọn nói, nghĩa trong bài, nghĩa lựa chọn, câu đề ('' = cặp hay gặp trong đề đọc)]
+var TP=[
+ ['D','제공하다','받을 수 있다','(nơi tổ chức) cung cấp','(người dân) được nhận','Etk091-11'],
+ ['D','저렴하다','싸다','rẻ, phải chăng','rẻ','Ehot1-11'],
+ ['D','인기가 많다','많이 찾다','được ưa chuộng','nhiều người tìm đến','Ehot1-11'],
+ ['D','꼼꼼히 확인하다','잘 확인하다','kiểm tra kỹ lưỡng','kiểm tra kỹ','Eebs1-11'],
+ ['D','곤란해지다','힘들어지다','trở nên khó xử','trở nên khó khăn','Eebs1-12'],
+ ['D','잃어버리고 말다','잃어버리게 되다','rốt cuộc đánh mất','sẽ bị mất','Eebs2-12'],
+ ['D','N와 마찬가지로','N에도 있다','giống như N','N cũng có','Ehot1-12'],
+ ['D','영향을 미치다','영향을 주다','gây ảnh hưởng','ảnh hưởng tới','Ehot5-11'],
+ ['D','슬픔','슬픈 감정','nỗi buồn','cảm xúc buồn','Ehot4-12'],
+ ['D','아이를 봐 주다','아이를 돌보다','trông trẻ giúp','chăm sóc trẻ','Ehot5-12'],
+ ['D','스스럼없이 말하다','자유롭게 이야기하다','nói không ngại ngần','nói chuyện thoải mái','Entk1-12'],
+ ['D','어떤 사람들','몇몇 사람들','có những người','một vài người','Entk2-11'],
+ ['D','어색하게 생각하다','이상하게 생각하다','thấy gượng gạo','thấy kỳ lạ','Entk2-11'],
+ ['D','사람마다 다르다','개인에 따라 다르다','mỗi người một khác','tùy từng cá nhân','Entk2-12'],
+ ['D','2, 30대','젊다','tuổi 20, 30','trẻ','Entk3-12'],
+ ['D','냄새가 나다','냄새를 맡다','có mùi (bay ra)','ngửi thấy mùi','Et3002-11'],
+ ['D','쉬다','아무것도 하지 않다','nghỉ ngơi','không làm gì cả','Et3002-12'],
+ ['D','지난 30년 동안 올랐다','과거에 비해 올라갔다','tăng trong 30 năm qua','tăng so với trước đây','Et3003-11'],
+ ['D','확대하다','강화하다','mở rộng','tăng cường','Et3003-12'],
+ ['D','-ㄹ 것으로 보인다','-ㄹ 예정이다','có vẻ sẽ, dự kiến','dự định sẽ','Et3003-12'],
+ ['D','외국인 배우자가 있다','외국인과 결혼하다','có vợ / chồng người nước ngoài','kết hôn với người nước ngoài','Eys1-11'],
+ ['D','먹을 것','음식','đồ ăn','thức ăn','Eys1-12'],
+ ['D','배우다','알게 되다','học được','biết được','Eys1-12'],
+ ['D','함께 어울려 이야기를 나누다','소통하다','cùng hòa vào trò chuyện','giao lưu, trò chuyện','Eys2-11'],
+ ['D','특색 있다','특징을 살리다','đặc sắc','phát huy đặc trưng','Eys3-11'],
+ ['D','기간을 늘리다','기간이 길어지다','kéo dài thời gian','thời gian dài ra','Eys4-11'],
+ ['D','더 큰 인기를 끌다','인기가 더 높아지다','càng được ưa chuộng','độ yêu thích cao hơn','Eys4-12'],
+ ['D','하룻밤을 보내다','1박 2일','qua một đêm','2 ngày 1 đêm','Eys5-11'],
+ ['D','프로그램','체험','chương trình','trải nghiệm','Eys5-11'],
+ ['D','다른 이름으로 교체되다','이름을 없애다','được thay bằng tên khác','bỏ tên (cũ) đi','Eys5-12'],
+ ['H','최초','처음','đầu tiên (Hán)','lần đầu (thuần Hàn)','Etk083-11'],
+ ['H','교체하다','바꾸다','thay thế','thay, đổi','Etk091-11'],
+ ['H','증가하다','늘다','gia tăng','tăng lên',''],
+ ['H','감소하다','줄다','giảm sút','giảm đi',''],
+ ['H','개최하다','열다','tổ chức (sự kiện)','mở, tổ chức',''],
+ ['H','실시하다','하다','tiến hành','làm',''],
+ ['H','구입하다','사다','mua (Hán)','mua',''],
+ ['H','판매하다','팔다','bán (Hán)','bán',''],
+ ['H','방문하다','찾다 · 가다','đến thăm','tìm đến, đi',''],
+ ['H','이용하다','쓰다','sử dụng','dùng',''],
+ ['H','거주하다','살다','cư trú','sống',''],
+ ['H','연장하다','늘리다','gia hạn','kéo dài',''],
+ ['H','참가하다','참여하다','tham gia (cuộc thi)','tham gia (hoạt động)',''],
+ ['H','불가','-ㄹ 수 없다','bất khả, không được','không thể','Et3004-11'],
+ ['K','언어가 안 통해서 생기는 오해','언어 문제','hiểu lầm vì bất đồng ngôn ngữ','vấn đề ngôn ngữ','Eebs2-11'],
+ ['K','유선 + 무선','유·무선 모두','có dây + không dây','cả có dây lẫn không dây','Ehot2-11'],
+ ['K','여러 가지','다양하다','nhiều loại','đa dạng','Ehot3-11'],
+ ['K','끊임없이 변하다','변하고 있다','không ngừng thay đổi','đang thay đổi','Ehot3-11'],
+ ['P','18세 미만','18세는 받을 수 없다','dưới 18 tuổi (được nhận)','18 tuổi thì không được nhận','Et3004-12'],
+ ['P','더 이상 낯설지 않다','익숙하다','không còn lạ nữa','đã quen','Eys3-12'],
+ ['P','가능하게 해야 한다','금지는 비합리적이다','phải cho phép','cấm là vô lý','Entk1-11'],
+ ['P','무료','돈을 내지 않다','miễn phí','không phải trả tiền',''],
+ ['P','20세 이상','20세 미만은 안 된다','từ 20 tuổi trở lên','dưới 20 tuổi thì không được',''],
+ ['U','오후 6시~10시 사이','아침에는 볼 수 없다','từ 6 đến 10 giờ tối','buổi sáng không xem được','Entk3-11'],
+ ['U','모든 시민','나이에 상관없이','mọi người dân','không kể tuổi tác','Et3005-11'],
+ ['U','조금만 말해도 칭찬하다','쉽게 칭찬하다','mới nói chút đã khen','dễ dàng khen','Entk2-11'],
+ ['U','장단점을 모두','단점도','cả ưu lẫn nhược điểm','cả nhược điểm','Entk1-12'],
+ ['U','최근 화제가 된','얼마 전에','gần đây được bàn tán','cách đây không lâu','Eys3-12'],
+ ['U','반응에 따라','좋아하면','tùy theo phản ứng','nếu (mọi người) thích','Eys4-11'],
+ ['U','돈을 찾게 되다','돈이 돌아가다','tìm lại được tiền','tiền về lại (với chủ)','Et3005-12'],
+ // khác ý = cách làm lựa chọn sai
+ ['T','작년에 이어','올해 처음','tiếp nối năm ngoái','năm nay lần đầu','Etk091-11'],
+ ['T','저렴하다','무료','rẻ (vẫn mất tiền)','miễn phí','Etk091-11'],
+ ['T','무료','돈을 내다','miễn phí','phải trả tiền','Eys4-11'],
+ ['T','입장료 3,000원','입장료가 없다','vé vào 3.000 won','không mất vé vào','Entk3-11'],
+ ['T','네 번째','처음','lần thứ tư','lần đầu','Ehot2-11'],
+ ['T','싸다','비싸다','rẻ','đắt','Ehot2-11'],
+ ['T','전시장 안','실외','trong phòng triển lãm','ngoài trời','Entk3-11'],
+ ['T','강화하다','축소되다','tăng cường','bị thu hẹp','Et3004-12'],
+ ['T','많이 분비되다','적게 나오다','tiết ra nhiều','ra ít','Ehot3-12'],
+ ['T','한파','폭염','rét đậm','nắng nóng gay gắt','Et3001-12'],
+ ['T','칭찬을 많이 하다','칭찬에 인색하다','hay khen','kiệm lời khen','Entk2-11'],
+ ['T','어색하게 생각하다','좋아하다','thấy gượng gạo','thích','Entk2-11'],
+ ['T','좋은 이야기만','안 좋은 점만','chỉ chuyện tốt','chỉ điểm không tốt','Entk1-12'],
+ ['T','같은 말','다른 의미','cùng nghĩa','nghĩa khác nhau','Ehot2-12'],
+ ['T','토요일과 일요일','평일','thứ bảy và chủ nhật','ngày thường','Eys4-11'],
+ ['T','다른 제품','차이가 거의 없다','sản phẩm khác (hẳn)','hầu như không khác','Eys4-12'],
+ ['F','피해는 없었다','다쳤다','không có thiệt hại','bị thương','Etk091-12'],
+ ['F','큰 피해는 없다','큰 피해를 입다','không thiệt hại lớn','chịu thiệt hại lớn','Etk083-12'],
+ ['F','더 발생할 것이다','더 이상 일어나지 않다','sẽ còn xảy ra nữa','không xảy ra nữa','Etk083-12'],
+ ['F','오염시키다','오염되지 않다','làm ô nhiễm','không bị ô nhiễm','Ehot1-12'],
+ ['F','판매하다','살 수 없다','bán','không mua được','Ehot1-11'],
+ ['F','예방할 수 있다','효과가 없다','phòng ngừa được','không có hiệu quả','Ehot4-11'],
+ ['F','표현한다','표현하지 못한다','biểu hiện','không biểu hiện được','Ehot4-12'],
+ ['F','중요하다','상관이 없다','quan trọng','không liên quan','Ehot5-11'],
+ ['F','분해가 된다','분해가 되지 않는다','phân hủy được','không phân hủy','Et3001-11'],
+ ['F','많이 방문하다','이용할 수 없다','đến nhiều','không sử dụng được','Et3005-11'],
+ ['F','강요하기 힘들다','꼭 지켜야 하다','khó mà ép buộc','nhất định phải giữ','Eebs2-12'],
+ ['G','10월 한 달간','일 년 내내','trong tháng 10','suốt cả năm','Etk091-11'],
+ ['G','1956년','작년','năm 1956','năm ngoái','Etk083-11'],
+ ['G','오전 6시','늦은 밤','6 giờ sáng','đêm khuya','Etk083-12'],
+ ['G','시작할 예정이다','이미 시작했다','dự kiến sẽ bắt đầu','đã bắt đầu rồi','Ehot2-11'],
+ ['G','매달','매년','mỗi tháng','mỗi năm','Ehot2-12'],
+ ['G','최근에는','예전부터','gần đây thì','từ xưa đến nay','Ehot3-11'],
+ ['G','12월까지 연장하다','원래 12월까지','gia hạn đến tháng 12','vốn dĩ đến tháng 12','Entk3-11'],
+ ['G','1,000년 이상','100년 정도','hơn 1.000 năm','khoảng 100 năm','Et3001-11'],
+ ['G','간호사 출신','현재 간호사','từng là y tá','hiện là y tá','Et3001-12'],
+ ['G','일정한 시간 동안','주말 내내','trong một khoảng thời gian nhất định','suốt cả cuối tuần','Et3002-12'],
+ ['G','올해 연말','내년','cuối năm nay','năm sau','Eys1-11'],
+ ['G','총 5회','매일','tổng cộng 5 lần','mỗi ngày','Eys5-11'],
+ ['L','모든 작품','한 편','mọi tác phẩm','một tác phẩm','Etk083-11'],
+ ['L','경우가 많다','누구나','nhiều trường hợp','ai cũng','Eebs2-11'],
+ ['L','밤보다 아침에','아무 때나','buổi sáng (tốt hơn buổi tối)','lúc nào cũng được','Ehot4-11'],
+ ['L','N뿐만 아니라','N으로 결정된다','không chỉ N','do N quyết định','Ehot5-11'],
+ ['L','폭력을 당한 아이들','모든 아이들','trẻ bị bạo lực','mọi trẻ em','Entk1-12'],
+ ['L','직장인과 학생들도','직장인과 학생만','cả nhân viên và học sinh','chỉ nhân viên và học sinh','Et3002-12'],
+ ['L','채용이 줄어들다','채용하지 않다','tuyển dụng giảm','không tuyển dụng','Et3003-11'],
+ ['L','20세 이상','나이에 관계없이','từ 20 tuổi trở lên','không kể tuổi tác','Eys1-11'],
+ ['L','자녀를 둔 가족','누구든지','gia đình có con','bất kỳ ai','Eys5-11'],
+ ['L','동물 이름이 많다','모두 동물 이름이다','nhiều tên là động vật','tất cả là tên động vật','Eys5-12']
+];
+var TPS={D:['Đồng nghĩa','đổi sang từ cùng nghĩa'],H:['Hán ↔ thuần Hàn','từ Hán (sách vở) ↔ từ thuần Hàn (thường ngày)'],K:['Gói chung','nhiều chi tiết → một chữ chung'],P:['Nói ngược + “không”','đổi chiều rồi thêm phủ định: vẫn cùng ý'],U:['Suy ra','điều chắc chắn rút ra từ bài'],
+ T:['Ngược nghĩa','đổi một chữ sang nghĩa ngược'],F:['Thêm / bỏ “không”','có ↔ không, được ↔ không được'],G:['Đổi thời gian / số','đổi năm, giờ, số lần, số lượng'],L:['Đổi phạm vi','một số ↔ tất cả / chỉ / ai cũng']};
+var TSAME='DHKPU',TDIFF='TFGL';
+function tpSrc(p){return p[5]?'<small class="note">'+qName(BY[p[5]])+'</small>':'<small class="note">hay gặp</small>';}
+function renderTu(){
+  // 1. vốn từ tin tức: chỉ từ + nghĩa
+  $('tuVG').innerHTML=VG.map(function(g,gi){
+    return '<div class="card"><div class="hd">'+(gi+1)+'. '+g[0]+' <small>'+g[1]+'</small></div><div class="bd"><table class="t tw"><tr><th>Từ</th><th>Nghĩa</th></tr>'+
+      g[2].map(function(w){return '<tr><td class="ko"><b>'+w[0]+'</b></td><td class="vm">'+w[1]+'</td></tr>';}).join('')+'</table><div class="prac" id="tv'+gi+'"></div></div></div>';
+  }).join('');
+  VG.forEach(function(g,gi){
+    var ws=g[2],pick=shuf(ws,'tv'+gi).slice(0,4);
+    quiz('tv'+gi,'tv'+gi,'Luyện ngay · nhóm '+(gi+1),pick.map(function(w){
+      var wr=shuf(ws.filter(function(v){return v!==w;}),'tvw'+w[0]).slice(0,3);
+      return {q:'<span class="ko"><b>'+w[0]+'</b></span> nghĩa là gì?',o:[w[1]].concat(wr.map(function(v){return v[1];}))};
+    }));
+  });
+  // 2. từ gặp nhiều
+  var top=D.w.slice(0,40);
+  $('tuTop').innerHTML='<table class="t tw"><tr><th>Từ</th><th>Nghĩa</th><th>Số bài</th></tr>'+top.map(function(w){
+    return '<tr><td class="ko"><b>'+esc(w[0])+'</b></td><td class="vm">'+esc(w[1])+'</td><td class="n">'+w[3]+'</td></tr>';}).join('')+'</table>';
+  ROUNDS.tw=function(){
+    var r=st.r.tw||0,pick=shuf(top,'tw'+r).slice(0,8);
+    quiz('tuTopQ','tw_r'+r,'Luyện · từ hay gặp nghĩa là gì?',pick.map(function(w){
+      var wr=shuf(top.filter(function(v){return v!==w;}),'tww'+w[0]+r).slice(0,3);
+      return {q:'<span class="ko"><b>'+esc(w[0])+'</b></span>',o:[esc(w[1])].concat(wr.map(function(v){return esc(v[1]);})),two:true};
+    }),{round:1});
+  };ROUNDS.tw();
+  // 3–4. cặp chữ
+  function tbl(keys,box){
+    $(box).innerHTML=keys.split('').map(function(k){
+      var ps=TP.filter(function(p){return p[0]===k;});
+      return '<div class="card"><div class="hd">'+TPS[k][0]+' <small>'+TPS[k][1]+' · '+ps.length+' cặp</small></div><div class="bd"><table class="t tw tp"><tr><th>Trong bài</th><th>'+(TSAME.indexOf(k)>=0?'⇒ Đáp án nói':'≠ Lựa chọn sai nói')+'</th></tr>'+
+        ps.map(function(p){return '<tr><td><span class="ko"><b>'+esc(p[1])+'</b></span><br><span class="vm">'+esc(p[3])+'</span></td><td class="rt"><span class="ko"><b>'+esc(p[2])+'</b></span><br><span class="vm">'+esc(p[4])+'</span> '+tpSrc(p)+'</td></tr>';}).join('')+'</table></div></div>';
+    }).join('');
+  }
+  tbl(TSAME,'tuSame');tbl(TDIFF,'tuDiff');
+  var same=TP.filter(function(p){return TSAME.indexOf(p[0])>=0;}),diff=TP.filter(function(p){return TDIFF.indexOf(p[0])>=0;});
+  ROUNDS.ts=function(){
+    var r=st.r.ts||0,pick=shuf(same,'ts'+r).slice(0,8);
+    quiz('tuSameQ','ts_r'+r,'Luyện · bài nói thế này, đáp án sẽ nói thế nào?',pick.map(function(p){
+      var bad=diff.filter(function(d){return d[1]===p[1];}).map(function(d){return d[2];});
+      var oth=shuf(same.filter(function(q){return q!==p&&q[2]!==p[2];}),'tso'+p[1]+r).map(function(q){return q[2];});
+      var wr=bad.concat(oth).slice(0,3);
+      return {q:'Trong bài: <span class="ko"><b>'+esc(p[1])+'</b></span> <small class="note">('+esc(p[3])+')</small>',o:[esc(p[2])].concat(wr.map(esc)),two:true,
+        w:'<p><span class="ko">'+esc(p[1])+'</span> ⇒ <span class="ko"><b>'+esc(p[2])+'</b></span> = '+esc(p[4])+' · '+TPS[p[0]][0]+'</p>'};
+    }),{round:1});
+  };ROUNDS.ts();
+  ROUNDS.td=function(){
+    var r=st.r.td||0,pick=shuf(shuf(same,'tda'+r).slice(0,5).concat(shuf(diff,'tdb'+r).slice(0,5)),'tdc'+r);
+    quiz('tuDiffQ','td_r'+r,'Luyện · cùng ý hay khác ý?',pick.map(function(p){
+      var s=TSAME.indexOf(p[0])>=0;
+      return {q:'<span class="ko"><b>'+esc(p[1])+'</b></span> &nbsp;→&nbsp; <span class="ko"><b>'+esc(p[2])+'</b></span>',o:['Cùng ý','Khác ý'],a:s?0:1,fixed:true,two:true,
+        w:'<p>'+esc(p[3])+' → '+esc(p[4])+' · <b>'+(s?'Cùng ý':'Khác ý')+'</b> ('+TPS[p[0]][0]+')</p>'};
+    }),{round:1});
+  };ROUNDS.td();
+}
+document.addEventListener('click',function(e){
+  var c=e.target.closest('[data-che]');
+  if(c){var box=$(c.dataset.che);box.classList.toggle(c.dataset.cls);c.classList.toggle('on');box.querySelectorAll('.show').forEach(function(x){x.classList.remove('show');});return;}
+  var v=e.target.closest('#stu .vm,#stu td.rt');if(v)v.classList.toggle('show');
+});
 
 /* ---------- Bắt đầu ---------- */
 function renderTong(){
@@ -762,6 +985,8 @@ function report(){
   var L=['Câu 11–12 (tin ngắn) — '+(st.name||'(chưa ghi tên)'),''];
   var a=testScore('pre'),b=testScore('post');
   L.push('Làm thử trước khi học: '+(a==null?'chưa làm':a+'/5')+' · Làm lại sau khi học: '+(b==null?'chưa làm':b+'/5'));
+  var tv=0,tvn=0;VG.forEach(function(_,i){var h=st.h['tv'+i];if(h){tv+=h.ok;tvn+=h.n;}});
+  L.push('Từ vựng tự học · từ tin tức '+(tvn?tv+'/'+tvn:'—')+' · từ hay gặp '+hs('tw')+' · cặp cùng ý '+hs('ts')+' · cùng / khác ý '+hs('td'));
   L.push('Buổi 1 · kiểu tin '+hs('p1a')+' · vai trò câu '+hs('p1c')+' · ý tác giả '+hs('p1d'));
   var v=0,vn=0;VG.forEach(function(_,i){var h=st.h['pv'+i];if(h){v+=h.ok;vn+=h.n;}});L.push('Buổi 1 · vốn từ tin tức '+(vn?v+'/'+vn:'—'));
   L.push('Buổi 2 · cùng ý / khác ý '+hs('p2a')+' · nghĩa lựa chọn '+hs('p2b'));
@@ -800,7 +1025,7 @@ function show(){
 }
 fetch('data.json').then(function(r){return r.json();}).then(function(d){
   D=d;IT=d.it;IT.forEach(function(x){BY[x.id]=x;});
-  renderTong();renderB1();renderB2();renderB3();renderB4();renderAll();renderChk();renderSums();
+  renderTong();renderTu();renderB1();renderB2();renderB3();renderB4();renderAll();renderChk();renderSums();
   $('rdSel').onchange=drawReader;$('stSel').onchange=drawStep;
   window.addEventListener('hashchange',function(){if(!show())scrollTo(0,0);});show();
 });
