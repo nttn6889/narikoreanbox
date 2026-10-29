@@ -169,6 +169,8 @@ mark.k{background:none;border-bottom:2px solid var(--blue);border-radius:0}
 .flow{display:flex;flex-wrap:wrap;gap:4px;align-items:center;font-size:14px;margin:4px 0}
 .flow span{border:1px solid var(--line);border-radius:6px;padding:1px 6px;background:#fff}
 .flow i{font-style:normal;color:var(--muted)}
+.kb{border-left:4px solid var(--soft);padding:2px 0 2px 12px;margin:18px 0 22px}
+.kb>h4{margin:4px 0 6px;font-size:17px}
 .yes{color:var(--ok);font-weight:bold}.no2{color:var(--acc);font-weight:bold}
 </style>
 <script src="../../lam-moi.js?v=2" data-key="nari-1315m"></script>
@@ -267,13 +269,17 @@ mark.k{background:none;border-bottom:2px solid var(--blue);border-radius:0}
 <h2>Buổi 1 · Đọc đoạn 4 câu</h2>
 <div class="goal">Trước khi học mẹo, em phải <b>đọc được 4 câu</b> và biết mỗi câu đang <b>làm việc gì</b> trong đoạn. Đoạn văn TOPIK đi theo vài khuôn quen: mở bài → giải thích → (đảo chiều) → kết luận. Biết khuôn là đoán được câu nào đứng đầu, câu nào đứng cuối.</div>
 <h3 id="b1-vai">1. Mỗi câu trong đoạn làm một việc</h3>
-<div id="roleTbl"></div>
-<h4>Ví dụ: kỳ 91 câu 13 (bấm từng câu để xem dịch)</h4>
+<p>Mỗi câu trong đoạn làm <b>một việc</b>: mở bài, giải thích, lật lại, kết luận… Có 11 việc, gom thành <b>5 nhóm</b>. Học từng nhóm: đọc → xem câu trong đề (chữ dấu hiệu tô vàng, bấm để xem dịch) → ✋ luyện ngay.</p>
+<div id="roleBlocks"></div>
+<h4>Cả đoạn: kỳ 91 câu 13 (bấm từng câu để xem dịch)</h4>
 <div id="vaiDemo"></div>
 <div class="prac" id="p1a"></div>
+<details><summary><b>Bảng tổng 11 việc</b> (đếm theo vị trí câu trong 66 đoạn)</summary><div id="roleTbl"></div></details>
 <h3 id="b1-khuon">2. Sáu khuôn đoạn hay gặp</h3>
-<div id="mkTbl"></div>
+<p>Ghép việc của 4 câu lại là ra <b>khuôn đoạn</b>. 66 câu đề chỉ dùng <b>6 khuôn</b>. Học từng khuôn: đọc khuôn → xem đoạn mẫu đã xếp đúng → ✋ tìm câu đầu của một đoạn cùng khuôn.</p>
+<div id="mkBlocks"></div>
 <div class="prac" id="p1b"></div>
+<details><summary><b>Bảng tổng 6 khuôn</b></summary><div id="mkTbl"></div></details>
 <h3 id="b1-cuoi">3. Câu nào đứng cuối?</h3>
 <p>Câu <b>kết luận / lời khuyên</b> (<span class="ko">그러므로 · 따라서 · 이처럼 · 이렇듯 · -아야 한다 · -는 것이 좋다</span>) và câu <b>lý do</b> (<span class="ko">-기 때문이다</span>) hay nằm cuối. Biết câu cuối là gạch được đáp án đặt nó ở giữa.</p>
 <div id="lastStat"></div>
@@ -319,19 +325,13 @@ mark.k{background:none;border-bottom:2px solid var(--blue);border-radius:0}
 <h2>Buổi 3 · Hai câu đều “sạch”: câu nào đứng đầu?</h2>
 <div class="goal">Hơn nửa số câu (<span id="nK"></span>/66), câu bị loại <b>không có dấu bám rõ</b>. Lúc đó dùng phép thử <b>“đứng một mình”</b> và nhớ <b>4 kiểu câu đầu</b>.</div>
 <h3 id="b3-1">1. Phép thử “đứng một mình”</h3>
-<div class="okbox">Đọc riêng câu đó. Nếu em phải hỏi lại <b>“cái gì? ai? chuyện gì? sao thế?”</b> thì câu đó đang dựa vào câu trước → <b>không đứng đầu</b>.</div>
-<table class="t">
-<tr><th>Câu đang dựa vào câu trước</th><th>Ví dụ trong đề</th></tr>
-<tr><td><b>Thiếu chủ ngữ</b></td><td class="ko">짧게는 하루, 길게는 한 달 정도 … 임시 매장이다. <small>(cái gì là cửa hàng tạm?) – <a href="#b=all&q=Etk091-13">Kỳ 91 c.13</a></small></td></tr>
-<tr><td><b>Nói về người / vật như đã biết</b></td><td class="ko">친구는 나의 합격 소식을 듣고 … <small>(tin đỗ gì?) – <a href="#b=all&q=Etk091-14">Kỳ 91 c.14</a></small><br>여인의 생각과는 다르게 … <small>– <a href="#b=all&q=Ehot4-14">HOT 4 c.14</a></small></td></tr>
-<tr><td><b>Chi tiết</b>: con số, chuyên gia nói, cách làm cụ thể, ví dụ</td><td class="ko">전문가들은 안쪽 구석에서부터 … 조언한다. <small>– <a href="#b=all&q=Etk083-13">Kỳ 83 c.13</a></small><br>보통 16시간을 굶고 … <small>– <a href="#b=all&q=Et3002-13">300⁺ 2 c.13</a></small></td></tr>
-<tr><td><b>Mắt xích giữa</b> chuỗi nhân quả / quy trình</td><td class="ko">알갱이 속 … 수분이 열에 의해 수증기로 변한다. <small>(nhiệt ở đâu ra?) – <a href="#b=all&q=Et3001-13">300⁺ 1 c.13</a></small></td></tr>
-<tr><td><b>Ý kiến, lời khuyên, kết thúc</b> (-야 한다, -는 것이 좋다, 현재는, 드디어) → hay ở cuối</td><td class="ko">향수는 … 적당히 뿌리는 것이 좋다. <small>– <a href="#b=all&q=Ehot1-15">HOT 1 c.15</a></small></td></tr>
-</table>
+<div class="okbox">Đọc riêng câu đó. Nếu em phải hỏi lại <b>“cái gì? ai? chuyện gì? sao thế?”</b> thì câu đó đang dựa vào câu trước → <b>không đứng đầu</b>. Có 4 kiểu câu “không đứng một mình” — học từng kiểu, mỗi kiểu có ví dụ trong đề và luyện ngay.</div>
+<div id="saBlocks"></div>
 <h3 id="b3-2">2. Bốn kiểu câu đầu</h3>
 <p>Câu đầu giới thiệu <b>chủ đề rộng</b>; câu bị loại thường là <b>chi tiết</b> của chính chủ đề đó (nên hai câu hay giống nhau về từ, dễ nhầm).</p>
-<div id="ftab"></div>
+<div id="ftBlocks"></div>
 <div class="prac" id="p3c"></div>
+<details><summary><b>Bảng tổng 4 kiểu câu đầu</b></summary><div id="ftab"></div></details>
 <h3 id="b3-3">3. Bẫy: định nghĩa đứng SAU hiện tượng</h3>
 <p>Câu định nghĩa (<span class="ko">-이란 … 을 말한다</span>) thường mở bài, nhưng bài kiểu tin tức có thể đi: <b>hiện tượng → gọi tên → định nghĩa</b>. Hai câu này cùng là ứng viên thì xem: tên được định nghĩa đã được <b>giới thiệu ở câu khác</b> chưa (<span class="ko">이는 … 간소화 상품</span>, <span class="ko">이렇게 … 펭귄 효과라고 한다</span>)? Có → câu hiện tượng đứng đầu.</p>
 <div id="defDemo"></div>
@@ -349,14 +349,16 @@ mark.k{background:none;border-bottom:2px solid var(--blue);border-radius:0}
 <div id="posStat"></div>
 <div class="prac" id="p4a"></div>
 <h3 id="b4-2">2. Sáu tín hiệu ở bước 3</h3>
-<div id="k2Tbl"></div>
+<p>Bước 3 nhìn câu cần so có <b>tín hiệu</b> gì, rồi hỏi: câu đứng ngay trước nó phải là câu thế nào? Học từng tín hiệu: luật → ví dụ trong đề (✓ câu đúng, ✕ câu sai) → ✋ luyện ngay.</p>
+<div id="k2Blocks"></div>
+<details><summary><b>Bảng tổng 6 tín hiệu</b></summary><div id="k2Tbl"></div></details>
 <h3 id="b4-3">3. Chuỗi từ khóa: chữ bám trỏ về đâu?</h3>
-<p>Khi không có từ nối, thứ tự lộ ra qua <b>cách từ khóa xuất hiện</b>: từ mới (<span class="ko">-(이)라는 · -(이)란 · -라고 한다</span>) → được dùng lại → được thay bằng từ chỉ hoặc chữ khác cùng nghĩa. Câu chứa chữ được trỏ về phải đứng <b>trước</b>.</p>
-<div id="lkDemo"></div>
+<p>Khi không có từ nối, thứ tự lộ ra qua <b>chữ bám</b>: câu sau nhắc lại một thứ đã nói ở câu trước. Câu chứa thứ được nhắc lại phải đứng <b>trước</b>. Có 3 kiểu, từ dễ đến khó; mỗi kiểu làm theo <b>3 bước</b>. <mark class="k">Gạch chân</mark> = chữ bám, <mark class="b">tô xanh</mark> = chữ nó trỏ về.</p>
+<div id="lkBlocks"></div>
 <div class="prac" id="p4b"></div>
 <h3 id="b4-4">4. Đọc không hiểu thì làm sao?</h3>
 <div class="okbox">Không hiểu hết từ vẫn so được: chỉ đọc <b>khung</b> của 2 câu cần so — <b>2–3 âm tiết đầu</b> (từ nối, từ chỉ), <b>đuôi câu</b> (<span class="ko">-기 때문이다 · -아야 한다 · -ㄴ 것이다</span>) và <b>danh từ lặp lại</b> với câu trước. Câu có danh từ của câu trước + từ chỉ (<span class="ko">이 / 그 / 이러한</span>) gần như chắc là câu đi ngay sau.</div>
-<h3 id="b4-de">5. Câu đề thật: câu nào đi ngay sau?</h3>
+<h3 id="b4-de">5. Bài trộn: câu nào đi ngay sau?</h3>
 <div class="prac" id="p4d"></div>
 </section>
 
@@ -573,31 +575,200 @@ document.addEventListener('click',function(e){
   var v=e.target.closest('#stu .vm,#stu td.rt');if(v)v.classList.toggle('show');
 });
 
+/* ---------- khối nhỏ: kiến thức → ví dụ → luyện ngay ---------- */
+// chữ hay gặp của từng vai trò câu: [chữ, nghĩa]
+var RS={M:[['요즘','dạo này'],['최근','gần đây'],['이제는','giờ đây'],['이란','… là (định nghĩa)'],['라고 한다','gọi là / nghe nói'],['얼마 전','cách đây không lâu'],['로 알려져','được biết là']],
+ X:[['사람들은 보통','người ta thường'],['흔히','thường'],['많은 사람들이','nhiều người'],['전통적으로','theo truyền thống'],['물론','tất nhiên'],['마련이다','… là lẽ thường']],
+ N:[['전문가들은','các chuyên gia'],['특히','đặc biệt'],['즉','tức là']],
+ V:[['예를 들어','ví dụ'],['가령','chẳng hạn'],['그 예','ví dụ của điều đó'],['좋은 예','ví dụ tốt']],
+ L:[['왜냐하면','bởi vì'],['그 이유는','lý do là'],['때문이다','là vì'],['때문이었다','là vì'],['것이다','là (do) …']],
+ T:[['또한','ngoài ra'],['또 ','còn'],['그리고','và'],['심지어','thậm chí']],
+ S:[['반면','ngược lại'],['이와는 반대로','ngược với điều này'],['하지만','nhưng (người / nơi khác)']],
+ D:[['그러나','nhưng'],['하지만','nhưng'],['그런데','thế nhưng'],['그렇다고','dù vậy cũng không'],['다만','chỉ có điều']],
+ R:[['그래서','vì vậy'],['이에','vì vậy, trước việc đó'],['이로 인해','do điều này'],['그러다 보니','cứ thế nên'],['그 결과','kết quả là'],['그만큼','đến mức ấy']],
+ B:[['먼저','trước tiên'],['이때','lúc này'],['그런 다음에','sau đó'],['그리고','rồi'],['마지막으로','cuối cùng'],['드디어','cuối cùng thì'],['그 뒤','sau đó']],
+ K:[['그러므로','vì thế'],['따라서','do đó'],['이처럼','như vậy'],['이렇듯','như thế'],['야 한다','phải'],['것이 좋다','nên'],['현재는','hiện nay'],['필요하다','cần'],['하자','hãy'],['보여준다','cho thấy']]};
+var RDEF={M:'Câu mở bài: giới thiệu chủ đề / hiện tượng / nhân vật, đọc riêng vẫn hiểu, không có chữ bám.',X:'Nêu điều người ta thường nghĩ — câu sau sẽ lật lại bằng 그러나 / 하지만.',
+ N:'Nói tiếp, giải thích rõ hơn điều ở câu trước (thường lặp lại hoặc trỏ về chữ của câu trước).',V:'Đưa ví dụ / bằng chứng cụ thể cho ý ngay trước nó.',L:'Trả lời “vì sao?” cho câu ngay trước nó.',
+ T:'Thêm một ý cùng loại với ý trước → ý thứ nhất phải có trước.',S:'Chuyển sang nói về người / nơi khác để so sánh với câu trước.',D:'Lật lại / nói mặt trái của câu trước.',
+ R:'Là kết quả, hệ quả của câu trước.',B:'Việc xảy ra tiếp theo trong câu chuyện / quy trình.',K:'Chốt ý chính, kết luận hoặc lời khuyên — thường ở cuối.'};
+function endDot(t){return /[.…?!]$/.test(t)?t:t+'.';}
+function sigs(s,L){return (L||[]).filter(function(p){return s.indexOf(p[0])>=0;});}
+function hlS(s,f){return markIn(esc(s),f.map(function(p){return p[0].trim();}));}
+// giải thích vai trò của một câu: tên vai trò + chữ dấu hiệu tìm thấy + chữ bám + dịch
+function roleWhy(x,c){var ro=roleOf(x,c),s=sOf(x,c),f=sigs(s,RS[ro]),lk=x.lk.filter(function(l){return l[0]===c;});
+  return '<p><span class="role">'+ro+'</span> <b>'+ROLE[ro]+'</b>. '+(f.length?endDot('Dấu hiệu: '+f.map(function(p){return '«<span class="ko">'+esc(p[0].trim())+'</span>» = '+p[1];}).join(', '))+' ':'')+RDEF[ro]+'</p>'+
+    (lk.length?'<p>Chữ bám: '+lk.map(function(l){return '«<span class="ko">'+esc(l[1])+'</span>» trỏ về «<span class="ko">'+esc(l[3])+'</span>» ở câu ('+l[2]+')';}).join('; ')+'.</p>':'')+
+    '<p class="ko">'+hlS(s,f)+'</p><p><i>'+esc(vOf(x,c))+'</i></p>';}
+function kb(t,body,pid){return '<div class="kb"><h4>'+t+'</h4>'+body+(pid?'<div class="prac" id="'+pid+'"></div>':'')+'</div>';}
+function exS(x,c,f){return '<div class="ex"><span class="ko">'+hlS(sOf(x,c),f||[])+'</span><span class="vi">'+esc(vOf(x,c))+' <small>— '+x.src+' c.'+x.n+'</small></span></div>';}
+
+/* Buổi 1 · vai trò câu theo 5 nhóm */
+var RG5=[['Nhóm 1 · Câu mở đầu','MX','N','Câu đứng <b>đầu đoạn</b>: giới thiệu chủ đề (M) hoặc nêu điều người ta hay nghĩ (X) để lát nữa lật lại.'],
+ ['Nhóm 2 · Câu giải thích','NVL','M','Câu <b>nói rõ hơn</b> câu trước: giải thích (N), ví dụ (V), lý do “vì sao” (L). Không bao giờ đứng đầu.'],
+ ['Nhóm 3 · Thêm ý · đổi hướng','TSD','N','Câu <b>bắt đầu bằng từ nối</b>: thêm ý cùng loại (T), chuyển sang người / nơi khác (S), lật lại (D).'],
+ ['Nhóm 4 · Kết quả · bước tiếp','RB','N','Câu <b>đi sau</b> một việc: là hệ quả của nó (R) hoặc là bước / việc xảy ra tiếp theo (B).'],
+ ['Nhóm 5 · Câu kết','K','L','Câu <b>chốt</b> cả đoạn: kết luận, lời khuyên, mốc cuối — thường đứng cuối.']];
+function rolePool(ros){var P=[];IT.forEach(function(x){LET.split('').forEach(function(c){if(ros.indexOf(roleOf(x,c))>=0)P.push([x,c]);});});return P;}
+function roleQ(p,opts,seed){var x=p[0],c=p[1],ro=roleOf(x,c);var o=[ro].concat(opts.filter(function(k){return k!==ro;}));
+  return {q:'<span class="ko">'+esc(sOf(x,c))+'</span> <small class="note">('+x.src+' c.'+x.n+', đứng thứ '+(ordOf(x).indexOf(c)+1)+')</small>',o:o.map(function(k){return ROLE[k];}),two:true,w:roleWhy(x,c)};}
+function renderRoleBlocks(){
+  $('roleBlocks').innerHTML=RG5.map(function(g,gi){
+    return kb(g[0],'<p>'+g[3]+'</p>'+g[1].split('').map(function(ro){
+      var P=rolePool(ro),best=P.filter(function(p){return sigs(sOf(p[0],p[1]),RS[ro]).length;}),ex=(best.length?best:P).filter(function(p){return p[0].real;})[0]||(best.length?best:P)[0];
+      return '<p style="margin:10px 0 2px"><span class="role">'+ro+'</span> <b>'+ROLE[ro]+'</b> — '+RDEF[ro]+'<br><small>Hay có chữ: <span class="ko">'+RS[ro].map(function(p){return esc(p[0].trim());}).join(' · ')+'</span></small></p>'+exS(ex[0],ex[1],sigs(sOf(ex[0],ex[1]),RS[ro]));
+    }).join(''),'rb'+gi);
+  }).join('');
+  RG5.forEach(function(g,gi){var opts=(g[1]+g[2]).split('');if(opts.length<3)opts.push(g[2]==='N'?'M':'N');
+    roundQuiz('rb'+gi,'rb'+gi,'Luyện ngay · '+g[0].split(' · ')[1].toLowerCase()+': câu này làm gì?',4,function(r){return shuf(rolePool(g[1]),'rb'+gi+r).map(function(p){return roleQ(p,opts);});});});
+}
+
+/* Buổi 1 · 6 khuôn đoạn, mỗi khuôn một khối */
+var MKD={G:['Câu đầu <b>giới thiệu / định nghĩa</b> một thứ (<span class="ko">A는 …이다 · A란 …을 말한다</span>). Các câu sau nói từng mặt của nó, nối bằng <span class="ko">이 / 그 + N · 또한 · 예를 들어</span>.','Et3004-14'],
+ H:['Câu đầu <b>báo một hiện tượng / tin</b> (<span class="ko">요즘 · 최근 · -고 있다 · 결과가 나왔다</span>). Sau đó là nguyên nhân (<span class="ko">-기 때문이다</span>) và hệ quả (<span class="ko">이로 인해 · 그래서</span>).','Et3004-13'],
+ W:['Câu đầu nêu <b>một vấn đề / một việc</b> trong đời sống. Giữa đoạn giải thích lý do, có thể lật bằng <span class="ko">그러나</span>. Câu cuối là <b>lời khuyên</b>: <span class="ko">-아야 한다 · -는 것이 좋다</span>.','Eys1-13'],
+ Q:['Câu đầu nói <b>điều người ta thường nghĩ</b> (<span class="ko">사람들은 보통 · 흔히 · 많은 사람들이</span>). Câu 2 <b>lật lại</b> bằng <span class="ko">그러나 / 하지만</span> — từ đây mới là ý tác giả. Cuối là kết luận / lời khuyên.','Etk083-13'],
+ T:['<b>Chuyện kể</b>: câu đầu có thời gian + nhân vật (<span class="ko">얼마 전 나는 · 한 여인이</span>). Các câu sau theo thứ tự việc xảy ra; nhân vật được nhắc lại bằng tên (<span class="ko">친구는 · 여인은</span>). Cuối là kết cục / cảm nghĩ.','Etk091-14'],
+ P:['<b>Quy trình</b>: câu đầu nêu việc cần làm, rồi các bước <span class="ko">먼저 → 그런 다음에 → 마지막으로</span>; hoặc chuỗi nhân quả mà chữ cuối câu trước lặp lại ở đầu câu sau.','Ehot3-14']};
+function renderMkBlocks(){
+  $('mkBlocks').innerHTML=MKO.split('').map(function(k,ki){var x=BY[MKD[k][1]];
+    return kb((ki+1)+'. '+MK[k][0]+' <small>('+(D.st.mk[k]||0)+' câu)</small>','<div class="flow">'+MK[k][1].split(' ').map(function(r){return '<span>'+r+'</span>';}).join('<i>→</i>')+'</div><p>'+MKD[k][0]+'</p>'+
+      '<p class="note">Ví dụ '+x.src+' c.'+x.n+' — xếp đúng thứ tự, bấm câu để xem dịch:</p>'+sentList(x,true,{lk:1}),'mk'+k);
+  }).join('');
+  MKO.split('').forEach(function(k){
+    var P=IT.filter(function(x){return x.mk===k&&x.id!==MKD[k][1];});
+    roundQuiz('mk'+k,'mk'+k,'Luyện ngay · đoạn “'+MK[k][0]+'”: câu nào đứng đầu?',2,function(r){return shuf(P,'mk'+k+r).map(function(x){var f=ordOf(x)[0];
+      return {q:sentList(x,false),o:LET.split('').map(function(c){return '('+c+')';}),a:LET.indexOf(f),fixed:true,two:true,
+        w:'<p>Khuôn <b>'+MK[k][0]+'</b>: câu đầu là ('+f+').</p>'+roleWhy(x,f)+'<p>Thứ tự đúng: '+fo(ordOf(x))+'</p>'};});});
+  });
+}
+
+/* Buổi 3 · phép thử đứng một mình: 4 kiểu, mỗi kiểu ví dụ + luyện */
+var SA=[['Thiếu chủ ngữ · nói về người / vật như đã biết','Câu không có chủ ngữ, hoặc nhắc một người / vật / chuyện như thể em đã biết rồi (<span class="ko">친구는 · 여인의 생각 · 나의 합격 소식</span>). Đọc riêng em sẽ hỏi <b>“ai? cái gì? chuyện gì?”</b>',
+  [['Etk091-13','Cái gì là cửa hàng tạm?'],['Etk091-14','Tin đỗ gì? Ai đỗ?'],['Ehot4-14','Người phụ nữ nào? Bà nghĩ gì?'],['Etk083-14','Nghỉ việc gì? Sao bạn bè lại khuyên?'],['Ehot5-13','Người đàn ông nào? Trả tiền gì?'],['Eys1-14','“Sản phẩm thu hút khách” là gì?']]],
+ ['Chi tiết: con số, chuyên gia nói, cách làm cụ thể','Câu có <b>con số</b>, <b>lời chuyên gia</b> (<span class="ko">전문가들은</span>), <b>một cách làm cụ thể</b> là chi tiết, phải đi sau chủ đề. Đọc riêng em sẽ hỏi <b>“chuyện này nói về cái gì?”</b>',
+  [['Etk083-13','Chuyên gia khuyên chuyện gì? Đánh răng thì sao?'],['Et3002-13','Nhịn 16 tiếng để làm gì?'],['Eys4-13','Ngủ trưa thì sao? Sao lại nói chuyện này?'],['Et3004-13','Sông băng nào? Ở đâu?'],['Ehot5-14','Sao lại nói chuyện trà?']]],
+ ['Mắt xích giữa chuỗi nhân quả / quy trình','Câu là <b>một bước ở giữa</b>: nó dùng kết quả của bước trước (<span class="ko">열에 의해 · 동생을 찾으러 · 길이 좁아지면</span>). Đọc riêng em sẽ hỏi <b>“sao thế? cái đó từ đâu ra?”</b>',
+  [['Et3001-13','Nhiệt ở đâu ra?'],['Et3001-14','Sao phải đi tìm em?'],['Eys1-13','Sao đường lại hẹp?'],['Entk1-15','Sao lại nói chuyện tiết kiệm nhiều?'],['Eys5-13','Sao lại nói chuyện nghệ thuật?']]],
+ ['Ý kiến, lời khuyên, kết thúc','Câu khuyên (<span class="ko">-아야 한다 · -는 것이 좋다 · -면 안 된다</span>), câu kết luận (<span class="ko">-보다는 … 더 필요하다</span>) hoặc mốc cuối (<span class="ko">현재는</span>) chốt lại cả bài → đứng <b>cuối</b>, không mở bài. Đọc riêng em sẽ hỏi <b>“vì sao lại khuyên thế?”</b>',
+  [['Ehot1-15','Vì sao phải xịt vừa phải?'],['Et3001-15','“Hiện nay” — trước đó thì sao?'],['Eys2-14','Vì sao cấm xem TV là không tốt?'],['Et3003-15','Thuật toán là gì? Sao lại nói chuyện đó?']]]];
+function pairHTML(x,mark){return '<ul class="sl">'+x.hd.map(function(c){return '<li data-sl="1"'+(mark&&mark[c]?' class="'+mark[c]+'"':'')+'><span class="ko"><span class="lt">('+c+')</span>'+esc(sOf(x,c))+'</span><span class="vi">'+esc(vOf(x,c))+'</span></li>';}).join('')+'</ul>';}
+function renderSaBlocks(){
+  $('saBlocks').innerHTML=SA.map(function(t,ti){var e=t[2][0],x=BY[e[0]],f=ordOf(x)[0];
+    return kb('Kiểu '+(ti+1)+' · '+t[0],'<p>'+t[1]+'</p><p class="note">Ví dụ '+x.src+' c.'+x.n+' — hai câu có thể đứng đầu:</p>'+pairHTML(x,(function(){var m={};m[f]='first';m[x.rj]='rej';return m;})())+
+      '<div class="okbox">Đọc riêng ('+x.rj+') → em phải hỏi: <b>“'+e[1]+'”</b> → câu này đang dựa vào câu trước → <b>không đứng đầu</b>.<br>'+esc(x.x1)+'<br>✓ '+esc(x.c1)+'</div>','sa'+ti);
+  }).join('');
+  SA.forEach(function(t,ti){
+    quiz('sa'+ti,'sa'+ti,'Luyện ngay · kiểu '+(ti+1)+': câu nào KHÔNG đứng một mình được?',t[2].slice(1).map(function(e){var x=BY[e[0]];
+      return {q:pairHTML(x)+'<small class="note">'+x.src+' c.'+x.n+' · bấm câu để xem dịch</small>',o:x.hd.map(function(c){return '('+c+') không đứng một mình';}),a:x.hd.indexOf(x.rj),fixed:true,two:true,
+        w:'<p><b>Kiểu '+(ti+1)+' · '+t[0]+'.</b> Đọc riêng ('+x.rj+') em phải hỏi: <b>“'+e[1]+'”</b> → không đứng đầu.</p><p>✕ '+esc(x.x1)+'</p><p>✓ '+esc(x.c1)+'</p>'};}));
+  });
+}
+
+/* Buổi 3 · 4 kiểu câu đầu, mỗi kiểu một khối */
+var FSIG={G:[['이란','… là (định nghĩa)'],['라고 한다','gọi là'],['라는 말이 있다','có câu nói …'],['로 알려져','được biết là'],['로 구성된다','gồm có'],['이다.','A là B']],
+ H:[['요즘','dạo này'],['최근','gần đây'],['이제는','giờ đây'],['고 있다','đang …'],['유행','xu hướng'],['결과가 나왔다','có kết quả (khảo sát)'],['발생했다','đã xảy ra'],['다음 달부터','từ tháng sau'],['따르면','theo …'],['많아지고','ngày càng nhiều']],
+ Q:[['사람들은','người ta'],['보통','thường'],['흔히','thường'],['많은 사람들이','nhiều người'],['전통적으로','theo truyền thống'],['마련이다','là lẽ thường'],['야 한다','phải'],['중요하다','quan trọng'],['좋다고 한다','nghe nói tốt'],['필수품','thứ thiết yếu']],
+ T:[['옛날','ngày xưa'],['얼마 전','cách đây không lâu'],['나는','tôi'],['내가','tôi'],['내일은','ngày mai'],['한 여인','một người phụ nữ'],['세 명의','ba người'],['던 중','đang … thì'],['하루를 시작','bắt đầu một ngày'],['가끔','đôi khi'],['시작되었다','đã bắt đầu'],['남자는','người đàn ông']]};
+var FDEF={G:'Giới thiệu / định nghĩa một thứ: “A là …”, “A gọi là …”.',H:'Báo một hiện tượng / tin mới: đang xảy ra, đang tăng, vừa có kết quả.',Q:'Nhận định chung / điều người ta thường nghĩ (hay bị lật bằng 그러나).',T:'Mở đầu chuyện kể hoặc quy trình: thời gian + nhân vật, hoặc bước 1.'};
+function fWhy(x){var c=ordOf(x)[0],f=sigs(sOf(x,c),FSIG[x.f]);
+  return '<p>Kiểu <b>'+D.F[x.f][0]+'</b>: '+FDEF[x.f]+(f.length?' '+endDot('Dấu hiệu: '+f.map(function(p){return '«<span class="ko">'+esc(p[0].trim())+'</span>» = '+p[1];}).join(', ')):'')+'</p><p class="ko">'+hlS(sOf(x,c),f)+'</p><p><i>'+esc(vOf(x,c))+'</i></p>';}
+function renderFtBlocks(){
+  $('ftBlocks').innerHTML='GHQT'.split('').map(function(k,ki){var L=IT.filter(function(x){return x.f===k;});
+    var ex=L.filter(function(x){return sigs(sOf(x,ordOf(x)[0]),FSIG[k]).length;}).slice(0,2);
+    return kb('Kiểu '+(ki+1)+' · '+D.F[k][0]+' <small>('+L.length+' câu)</small>','<p>'+FDEF[k]+' Hay có chữ: <span class="ko">'+FSIG[k].map(function(p){return esc(p[0]);}).join(' · ')+'</span></p>'+
+      ex.map(function(x){var c=ordOf(x)[0];return exS(x,c,sigs(sOf(x,c),FSIG[k]));}).join(''),'ft'+k);
+  }).join('');
+  'GHQT'.split('').forEach(function(k){
+    var P=IT.filter(function(x){return x.f===k&&x.hd.length===2;});
+    roundQuiz('ft'+k,'ft'+k,'Luyện ngay · câu nào là câu đầu kiểu “'+D.F[k][0]+'”?',3,function(r){return shuf(P,'ft'+k+r).map(function(x){var q=headQ(x);q.w=fWhy(x)+'<p>✕ '+esc(x.x1||'')+'</p>';return q;});});
+  });
+}
+
+/* Buổi 4 · 6 tín hiệu, mỗi tín hiệu một khối */
+var K2EX={C:'Etk091-15',L:'Etk091-14',N:'Etk083-13',K:'Ehot1-13',T:'Etk091-13',D:'Et3001-13'};
+var K2HOW={C:'Thấy <b>이 / 그 / 이런 / 이러한 + N</b> → hỏi “N nào?” → câu có N đó đứng <b>ngay trước</b>.',L:'Câu kết bằng <b>-기 때문이다 / -ㄴ 것이다</b> trả lời “vì sao?” → đặt <b>ngay sau</b> câu nó giải thích.',
+ N:'Câu mở bằng <b>그러나 / 하지만</b> nói ngược câu trước → câu trước phải nói điều <b>ngược chiều</b> với nó.',K:'Câu mở bằng <b>그래서 / 이에 / 그러므로</b> là kết quả → câu trước phải là <b>nguyên nhân</b>.',
+ T:'Câu mở bằng <b>또한 / 또 / 그리고</b> là ý thứ hai → ý thứ nhất <b>cùng loại</b> phải đứng trước.',D:'Không có từ nối: xếp theo <b>thứ tự xảy ra</b> (먼저 → 그런 다음에 → 마지막으로, năm trước → năm sau) hoặc <b>nối đuôi</b>: chữ cuối câu trước lặp ở đầu câu sau.'};
+function k2Q(x){var ord=ordOf(x),prev=ord[x.pos-1],ans=ord[x.pos];
+  return {q:'<div class="ex"><span class="ko">'+(x.pos>1?'… ':'')+'('+prev+') '+esc(sOf(x,prev))+'</span><span class="vi">'+esc(vOf(x,prev))+'</span></div><b>Câu nào đi ngay sau ('+prev+')?</b>',
+    o:x.pr.map(function(c){return '<span class="ko">('+c+') '+esc(sOf(x,c))+'</span>';}),a:x.pr.indexOf(ans),fixed:true,
+    w:'<p><b>Tín hiệu '+(D.K2[x.k]||[''])[0]+'</b>: '+K2HOW[x.k]+'</p><p class="ko">('+ans+') '+sHTML(x,ans,{h:1,lk:1})+'</p><p>✓ '+esc(x.c3||'')+'</p><p>✕ '+esc(x.x3||'')+'</p><p class="note">Thứ tự đúng '+fo(ord)+'</p>'};}
+function renderK2Blocks(){
+  $('k2Blocks').innerHTML='CLNKTD'.split('').map(function(k,ki){var t=D.K2[k],x=BY[K2EX[k]],ord=ordOf(x),prev=ord[x.pos-1],ans=ord[x.pos],bad=x.pr.filter(function(c){return c!==ans;})[0];
+    return kb('Tín hiệu '+(ki+1)+' · '+t[0]+' <small>('+(D.st.k[k]||0)+' câu)</small>','<p>Chữ: <span class="ko">'+t[1]+'</span></p><p>'+K2HOW[k]+'</p>'+
+      '<p class="note">Ví dụ '+x.src+' c.'+x.n+': còn '+restOf(x).map(fo).join(' và ')+' → câu nào đi ngay sau ('+prev+')?</p>'+
+      '<ul class="sl"><li data-sl="1"><span class="ko"><span class="lt">('+prev+')</span>'+esc(sOf(x,prev))+'</span><span class="vi">'+esc(vOf(x,prev))+'</span></li>'+
+      '<li data-sl="1" class="first"><span class="ko"><span class="lt">('+ans+') ✓</span>'+sHTML(x,ans,{h:1,lk:1})+'</span><span class="vi">'+esc(vOf(x,ans))+'</span></li>'+
+      '<li data-sl="1" class="rej"><span class="ko"><span class="lt">('+bad+') ✕</span>'+sHTML(x,bad,{h:1})+'</span><span class="vi">'+esc(vOf(x,bad))+'</span></li></ul>'+
+      '<div class="okbox">✓ '+esc(x.c3||'')+'<br>✕ '+esc(x.x3||'')+'</div>','k2'+k);
+  }).join('');
+  'CLNKTD'.split('').forEach(function(k){var P=IT.filter(function(x){return x.k===k&&x.pos>0&&x.id!==K2EX[k];});
+    roundQuiz('k2'+k,'k2'+k,'Luyện ngay · tín hiệu “'+D.K2[k][0]+'”: câu nào đi ngay sau?',3,function(r){return shuf(P,'k2'+k+r).map(k2Q);});});
+}
+
+/* Buổi 4 · chuỗi từ khóa: 3 kiểu chữ bám, mỗi kiểu 3 bước */
+var LKX=/^(이에|이렇게|이렇듯|그만큼|그런 다음에|그 결과|그런 이유로|이와는 반대로|이로 인해|그 이유는)/;
+var LK3=[['Etk083-14','퇴사를'],['Et3001-14','술래가 되었고'],['Entk2-13','사고 차량'],['Et3005-14','서로가 원하는 물품'],['Et3003-15','편리함에 빠져서'],['Entk1-14','일방적인 복종'],['Et3004-13','자연 경계']];
+function hg(s){return s.replace(/[^가-힣]/g,'');}
+function lkKind(x,l){
+  if(LK3.some(function(p){return p[0]===x.id&&p[1]===l[1];}))return 3;
+  if(LKX.test(l[1]))return 0;
+  if(/^(이|그)(\s|런|러한|는|를|것|곳|중|들|럴)/.test(l[1]))return 1;
+  var a=hg(l[1].split(' ')[0]).slice(0,2);if(a.length===2&&hg(l[3]).indexOf(a)>=0)return 2;
+  return 0;}
+var LKT={1:['Từ chỉ: 이 / 그 + danh từ','Câu sau gọi lại một thứ bằng <b>이 / 그</b> (“này / đó”): <span class="ko">이런 문화 · 이 사고 · 그곳 · 이들 · 그중에 · 이는</span>.',
+   ['Khoanh <b>이 / 그</b> ở đầu cụm.','Hỏi: “<b>… nào? cái gì?</b>”','Tìm câu có thứ đó → câu đó đứng <b>trước</b> (thường ngay trước).']],
+ 2:['Lặp lại từ khóa','Cùng một danh từ có ở hai câu. Câu <b>giới thiệu</b> nó trước (<span class="ko">한 N · N이라고 한다 · N이란 · N이/가/을</span>), câu <b>dùng lại</b> nó sau (thường <span class="ko">N은/는 · N도 · N에는</span>).',
+   ['Tìm danh từ có ở cả hai câu.','Hỏi: câu nào <b>giới thiệu</b> nó lần đầu, câu nào nói như đã biết?','Câu giới thiệu đứng <b>trước</b>, câu dùng lại đứng sau.']],
+ 3:['Nói lại bằng chữ khác','Câu sau nói về <b>cùng một chuyện</b> nhưng đổi sang chữ khác: <span class="ko">회사를 그만두다 → 퇴사 · 숨바꼭질 → 술래 · 승용차 두 대 → 사고 차량</span>. Khó thấy nhất — phải hiểu nghĩa hai chữ.',
+   ['Tìm danh từ được nói <b>như đã biết</b> mà chưa câu nào nhắc đúng chữ đó.','Hỏi: “chữ này <b>nói về chuyện nào</b> đã kể?” (dịch nghĩa ra tiếng Việt)','Câu kể chuyện đó bằng chữ khác đứng <b>trước</b>.']]};
+var LKEX={1:['Eebs1-13','이런 문화'],2:['Ehot4-14','여인은'],3:['Etk083-14','퇴사를']};
+function lkPool(k){var P=[];IT.forEach(function(x){x.lk.forEach(function(l){if(lkKind(x,l)===k)P.push([x,l]);});});return P;}
+function lkSteps(k,x,l){var a='«<span class="ko">'+esc(l[1])+'</span>»',b='«<span class="ko">'+esc(l[3])+'</span>»';
+  return '<ol class="steps"><li>'+(k===1?'Chữ bám: '+a+' (có 이 / 그).':k===2?'Danh từ lặp: '+a+' ở ('+l[0]+') và '+b+' ở ('+l[2]+').':'Chữ nói như đã biết: '+a+' ở ('+l[0]+').')+'</li>'+
+    '<li>'+(k===1?'Hỏi: '+a+' = … nào? → là '+b+'.':k===2?'('+l[2]+') giới thiệu / nói trước, ('+l[0]+') dùng lại như đã biết.':a+' nói về chuyện nào? → chính là '+b+' (cùng một chuyện, nói bằng chữ khác).')+'</li>'+
+    '<li>'+b+' ở câu ('+l[2]+') → ('+l[2]+') đứng <b>trước</b> ('+l[0]+').</li></ol>'+
+    '<p class="ko">('+l[2]+') '+markIn(esc(sOf(x,l[2])),[l[3]],'b')+'<br>('+l[0]+') '+markIn(esc(sOf(x,l[0])),[l[1]],'k')+'</p><p><i>'+esc(vOf(x,l[2]))+'</i> → <i>'+esc(vOf(x,l[0]))+'</i></p>';}
+function lkQ(k,p){var x=p[0],l=p[1],oth=LET.split('').filter(function(c){return c!==l[0];});
+  var hint=k===1?'Hỏi: «'+esc(l[1])+'» = … nào?':k===2?'Tìm câu khác cũng có chữ này — câu nào giới thiệu nó trước?':'Chữ này nói về chuyện nào? Tìm câu kể chuyện đó bằng chữ khác.';
+  return {q:'<span class="ko">('+l[0]+') '+markIn(esc(sOf(x,l[0])),[l[1]],'k')+'</span><br><small class="note">💡 '+hint+'</small>',o:oth.map(function(c){return '<span class="ko">('+c+') '+esc(sOf(x,c))+'</span>';}),a:oth.indexOf(l[2]),fixed:true,
+    w:'<p><b>Kiểu '+k+' · '+LKT[k][0]+'</b></p>'+lkSteps(k,x,l)};}
+function renderLkBlocks(){
+  $('lkBlocks').innerHTML=[1,2,3].map(function(k){var e=LKEX[k],x=BY[e[0]],l=x.lk.filter(function(l){return l[1]===e[1];})[0];
+    return kb('Kiểu '+k+' · '+LKT[k][0]+' <small>('+lkPool(k).length+' cặp)</small>','<p>'+LKT[k][1]+'</p><p><b>3 bước:</b></p><ol class="steps">'+LKT[k][2].map(function(s){return '<li>'+s+'</li>';}).join('')+'</ol>'+
+      '<p class="note">Làm mẫu '+x.src+' c.'+x.n+':</p>'+lkSteps(k,x,l),'lk'+k);
+  }).join('');
+  [1,2,3].forEach(function(k){var P=lkPool(k).filter(function(p){return !(p[0].id===LKEX[k][0]&&p[1][1]===LKEX[k][1]);});
+    roundQuiz('lk'+k,'lk'+k,'Luyện ngay · kiểu '+k+': chữ gạch chân trỏ về câu nào?',4,function(r){return shuf(P,'lk'+k+r).map(function(p){return lkQ(k,p);});});});
+}
+
 /* ---------- Buổi 1 ---------- */
 function renderB1(){
   var s=D.st;
   $('roleTbl').innerHTML='<table class="t"><tr><th>Ký hiệu</th><th>Câu này làm gì</th><th>Hay có chữ</th><th>Câu 1</th><th>Câu 2</th><th>Câu 3</th><th>Câu 4</th></tr>'+
    RORD.split('').map(function(k){return '<tr><td><span class="role">'+k+'</span></td><td>'+ROLE[k]+'</td><td class="ko">'+RCH[k]+'</td>'+[0,1,2,3].map(function(p){return '<td class="n">'+((s['ro'+p]||{})[k]||'')+'</td>';}).join('')+'</tr>';}).join('')+'</table>'+
    '<div class="okbox">Câu 1 gần như luôn là <b>M mở bài</b> ('+(s.ro0.M||0)+'/66) hoặc <b>X điều người ta tưởng</b> ('+(s.ro0.X||0)+'). Câu 4 hay là <b>K kết luận</b> ('+(s.ro3.K||0)+') hoặc <b>L lý do</b> ('+(s.ro3.L||0)+'). Câu lý do, đảo chiều, thêm ý <b>không bao giờ ở câu 1</b>.</div>';
+  renderRoleBlocks();renderMkBlocks();
   $('vaiDemo').innerHTML=sentList(BY['Etk091-13'],true,{lk:1});
   var pool=[];IT.forEach(function(x){LET.split('').forEach(function(c){pool.push([x,c]);});});
-  roundQuiz('p1a','p1a','Luyện ngay · câu này làm gì trong đoạn?',8,function(r){
+  roundQuiz('p1a','p1a','Bài trộn 5 nhóm · câu này làm gì trong đoạn?',8,function(r){
     return shuf(pool,'p1a'+r).map(function(p){var x=p[0],c=p[1],ro=roleOf(x,c);
       var wr=shuf(RORD.split('').filter(function(k){return k!==ro;}),'r'+x.id+c+r).slice(0,3);
-      return {q:'<span class="ko">'+esc(sOf(x,c))+'</span> <small class="note">('+x.src+' c.'+x.n+', đứng thứ '+(ordOf(x).indexOf(c)+1)+')</small>',o:[ROLE[ro]].concat(wr.map(function(k){return ROLE[k];})),two:true,w:'<p><i>'+esc(vOf(x,c))+'</i></p>'};});});
+      return {q:'<span class="ko">'+esc(sOf(x,c))+'</span> <small class="note">('+x.src+' c.'+x.n+', đứng thứ '+(ordOf(x).indexOf(c)+1)+')</small>',o:[ROLE[ro]].concat(wr.map(function(k){return ROLE[k];})),two:true,w:roleWhy(x,c)};});});
   $('mkTbl').innerHTML='<table class="t"><tr><th>Khuôn</th><th>Vai trò 4 câu</th><th>Hay đi thế này</th><th>Số câu</th></tr>'+MKO.split('').map(function(k){
     var ex=IT.filter(function(x){return x.mk===k;})[0];
     return '<tr><td><b>'+MK[k][0]+'</b><br><small><a href="#b=all&q='+ex.id+'">'+ex.src+' c.'+ex.n+'</a></small></td><td><div class="flow">'+MK[k][1].split(' ').map(function(r){return '<span>'+r+'</span>';}).join('<i>→</i>')+'</div></td><td class="ko">'+MK[k][2]+'</td><td class="n">'+(s.mk[k]||0)+'</td></tr>';}).join('')+'</table>';
-  roundQuiz('p1b','p1b','Luyện ngay · đoạn này theo khuôn nào?',5,function(r){
+  roundQuiz('p1b','p1b','Bài trộn 6 khuôn · đoạn này theo khuôn nào?',5,function(r){
     return shuf(IT,'p1b'+r).map(function(x){var wr=shuf(MKO.split('').filter(function(k){return k!==x.mk;}),'m'+x.id+r).slice(0,3);
       return {q:'<div class="psg">'+ordOf(x).split('').map(function(c){return esc(sOf(x,c));}).join(' ')+'</div>',o:[MK[x.mk][0]].concat(wr.map(function(k){return MK[k][0];})),two:true,
-        w:'<p>'+ordOf(x).split('').map(function(c){return '<span class="role">'+roleOf(x,c)+'</span> '+esc(vOf(x,c));}).join('<br>')+'</p>'};});});
+        w:'<p><b>'+MK[x.mk][0]+'</b>: '+MKD[x.mk][0]+'</p><p>'+ordOf(x).split('').map(function(c){return '<span class="role">'+roleOf(x,c)+'</span> '+esc(vOf(x,c));}).join('<br>')+'</p>'};});});
   var r3=s.ro3;
   $('lastStat').innerHTML='<p>Câu cuối của 66 đoạn: '+Object.keys(r3).sort(function(a,b){return r3[b]-r3[a];}).map(function(k){return '<span class="role">'+k+'</span> '+ROLE[k]+' <b>'+r3[k]+'</b>';}).join(' · ')+'</p>';
   roundQuiz('p1c','p1c','Luyện ngay · câu nào đứng cuối?',5,function(r){
     return shuf(IT,'p1c'+r).map(function(x){var last=ordOf(x)[3];
       return {q:sentList(x,false),o:LET.split('').map(function(c){return '('+c+')';}),a:LET.indexOf(last),fixed:true,two:true,
-        w:'<p>Câu cuối ('+last+'): <span class="role">'+roleOf(x,last)+'</span> '+ROLE[roleOf(x,last)]+' — <i>'+esc(vOf(x,last))+'</i><br>Thứ tự: '+fo(ordOf(x))+'</p>'};});});
+        w:'<p>Câu cuối là ('+last+').</p>'+roleWhy(x,last)+'<p>Thứ tự đúng: '+fo(ordOf(x))+'</p>'};});});
   $('rdSel').innerHTML=IT.map(function(x){return '<option value="'+x.id+'">'+x.src+' · c.'+x.n+'</option>';}).join('');$('rdSel').value=st.rd&&BY[st.rd]?st.rd:'Etk091-13';drawReader();
 }
 function drawReader(){var x=BY[$('rdSel').value];st.rd=x.id;save();
@@ -629,16 +800,17 @@ function renderB2(){
 /* ---------- Buổi 3 ---------- */
 function renderB3(){
   var s=D.st;$('nK').textContent=s.m.K||0;
+  renderSaBlocks();renderFtBlocks();
   $('ftab').innerHTML='<table class="t"><tr><th>Kiểu câu đầu</th><th>Hay có chữ</th><th>Ví dụ</th><th>Số câu</th></tr>'+'GHQT'.split('').map(function(k){var f=D.F[k];
     return '<tr><td><b>'+f[0]+'</b></td><td class="ko">'+f[1]+'</td><td class="ko">'+f[2]+'</td><td class="n">'+(s.f[k]||0)+'</td></tr>';}).join('')+'</table>';
-  roundQuiz('p3c','p3c','Luyện ngay · câu đầu này thuộc kiểu nào?',6,function(r){
+  roundQuiz('p3c','p3c','Bài trộn 4 kiểu · câu đầu này thuộc kiểu nào?',6,function(r){
     return shuf(IT,'p3c'+r).map(function(x){var c=ordOf(x)[0];
-      return {q:'<span class="ko">'+esc(sOf(x,c))+'</span>',o:'GHQT'.split('').map(function(k){return D.F[k][0];}),a:'GHQT'.indexOf(x.f),fixed:true,two:true,w:'<p><i>'+esc(vOf(x,c))+'</i></p>'};});});
+      return {q:'<span class="ko">'+esc(sOf(x,c))+'</span>',o:'GHQT'.split('').map(function(k){return D.F[k][0];}),a:'GHQT'.indexOf(x.f),fixed:true,two:true,w:fWhy(x)};});});
   $('defDemo').innerHTML=['Eys4-15','Ehot5-15'].map(function(id){var x=BY[id];
     return '<div class="card"><div class="hd">'+x.src+' · c.'+x.n+'</div><div class="bd">'+sentList(x,true,{h:1,lk:1})+'<p>'+esc(x.r)+'</p><p>'+esc(x.w)+'</p></div></div>';}).join('');
   oldQ('2','Luyện nhận diện · hai câu đều sạch (câu tự soạn)','p3m');
   var P=IT.filter(function(x){return x.hd.length===2&&x.m==='K';});
-  roundQuiz('p3b','p3b','Câu đề thật · hai câu đều sạch, câu nào đứng đầu? ('+P.length+' câu)',6,function(r){return shuf(P,'p3b'+r).map(function(x){var q=headQ(x);q.w=(x.g1?'<p>💡 '+esc(x.g1)+'</p>':'')+q.w;return q;});});
+  roundQuiz('p3b','p3b','Câu đề thật · hai câu đều sạch, câu nào đứng đầu? ('+P.length+' câu)',6,function(r){return shuf(P,'p3b'+r).map(function(x){var q=headQ(x);var t=SA.filter(function(t){return t[2].some(function(e){return e[0]===x.id;});})[0];q.w=(t?'<p><b>Phép thử đứng một mình · '+t[0]+'</b></p>':'')+(x.g1?'<p>💡 '+esc(x.g1)+'</p>':'')+q.w;return q;});});
 }
 
 /* ---------- Buổi 4 ---------- */
@@ -654,21 +826,14 @@ function renderB4(){
       if(x.pos!==1)o.push('Vị trí 2: ('+R2[0][1]+') đứng sau ('+R2[0][0]+')?');
       o.push('Phải xếp lại cả 4 câu');
       return {q:'Còn 2 đáp án: <span class="ord">'+fo(R2[0])+'</span> và <span class="ord">'+fo(R2[1])+'</span>',o:o.slice(0,4),w:'<p>Hai đáp án giống nhau tới vị trí '+x.pos+', khác nhau ở vị trí <b>'+(x.pos+1)+'</b>: chỉ cần biết ('+x.pr[0]+') hay ('+x.pr[1]+') đứng ngay sau ('+ordOf(x)[x.pos-1]+'). Không cần xét phần còn lại.</p>'};});});
+  renderK2Blocks();renderLkBlocks();
   $('k2Tbl').innerHTML='<table class="t"><tr><th>Tín hiệu</th><th>Chữ</th><th>Đặt câu ở đâu</th><th>Số câu</th></tr>'+'CLNKTD'.split('').map(function(k){var t=D.K2[k];
     return '<tr><td><b>'+t[0]+'</b></td><td class="ko">'+t[1]+'</td><td>'+t[2]+'</td><td class="n">'+(s.k[k]||0)+'</td></tr>';}).join('')+'</table>';
-  $('lkDemo').innerHTML=['Eebs1-13','Ehot2-15'].map(function(id){var x=BY[id];
-    return '<div class="card"><div class="hd">'+x.src+' · c.'+x.n+'</div><div class="bd">'+sentList(x,true,{lk:1})+'<p class="note">'+x.lk.map(function(l){return '<span class="ko">'+esc(l[1])+'</span> ('+l[0]+') ⇐ <span class="ko">'+esc(l[3])+'</span> ('+l[2]+')';}).join(' · ')+'</p></div></div>';}).join('')+
-    '<p class="note"><mark class="k">Gạch chân</mark> = chữ bám · <mark class="b">tô xanh</mark> = chữ nó trỏ về. Bấm câu để xem dịch.</p>';
-  var pool=[];IT.forEach(function(x){x.lk.forEach(function(l){pool.push([x,l]);});});
-  roundQuiz('p4b','p4b','Luyện ngay · chữ gạch chân trỏ về câu nào?',8,function(r){
-    return shuf(pool,'p4b'+r).map(function(p){var x=p[0],l=p[1],oth=LET.split('').filter(function(c){return c!==l[0];});
-      return {q:'<span class="ko">('+l[0]+') '+markIn(esc(sOf(x,l[0])),[l[1]],'k')+'</span>',o:oth.map(function(c){return '<span class="ko">('+c+') '+esc(sOf(x,c))+'</span>';}),a:oth.indexOf(l[2]),fixed:true,
-        w:'<p class="ko"><b>'+esc(l[1])+'</b> ⇐ ('+l[2]+') '+markIn(esc(sOf(x,l[2])),[l[3]],'b')+'</p><p><i>'+esc(vOf(x,l[2]))+'</i> → <i>'+esc(vOf(x,l[0]))+'</i></p>'};});});
-  roundQuiz('p4d','p4d','Câu đề thật · câu nào đi ngay sau?',6,function(r){
-    return shuf(P,'p4d'+r).map(function(x){var ord=ordOf(x),prev=ord[x.pos-1],ans=ord[x.pos];
-      return {q:'<div class="ex"><span class="ko">'+(x.pos>1?'… ':'')+'('+prev+') '+esc(sOf(x,prev))+'</span><span class="vi">'+esc(vOf(x,prev))+'</span></div><b>Câu nào đi ngay sau ('+prev+')?</b>',
-        o:x.pr.map(function(c){return '<span class="ko">('+c+') '+esc(sOf(x,c))+'</span>';}),a:x.pr.indexOf(ans),fixed:true,
-        w:'<p>✓ '+esc(x.c3||'')+'</p><p>✕ '+esc(x.x3||'')+'</p><p class="note">Tín hiệu: '+(D.K2[x.k]||[''])[0]+' · thứ tự '+fo(ord)+'</p>'};});});
+  var pool=[];IT.forEach(function(x){x.lk.forEach(function(l){if(lkKind(x,l))pool.push([x,l]);});});
+  roundQuiz('p4b','p4b','Bài trộn 3 kiểu · chữ gạch chân trỏ về câu nào?',8,function(r){
+    return shuf(pool,'p4b'+r).map(function(p){var k=lkKind(p[0],p[1]);var q=lkQ(k,p);q.q=q.q.replace(/<br><small class="note">💡.*<\/small>/,'');return q;});});
+  roundQuiz('p4d','p4d','Bài trộn 6 tín hiệu · câu nào đi ngay sau?',6,function(r){
+    return shuf(P,'p4d'+r).map(k2Q);});
 }
 
 /* ---------- Buổi 5 ---------- */
@@ -795,10 +960,10 @@ function report(){
   var a=testScore('pre'),b=testScore('post');
   L.push('Làm thử trước khi học: '+(a==null?'chưa làm':a+'/5')+' · Làm lại sau khi học: '+(b==null?'chưa làm':b+'/5'));
   L.push('Từ vựng · từ dấu bám '+hsum(DB.map(function(_,i){return 'tdb'+i;}))+' · từ hay gặp '+hs('tw')+' · là dấu bám không '+hs('tno'));
-  L.push('Buổi 1 · vai trò câu '+hs('p1a')+' · khuôn đoạn '+hs('p1b')+' · câu cuối '+hs('p1c'));
+  L.push('Buổi 1 · 5 nhóm vai trò '+hsum(RG5.map(function(_,i){return 'rb'+i;}))+' · trộn '+hs('p1a')+' · 6 khuôn '+hsum(MKO.split('').map(function(k){return 'mk'+k;}))+' · trộn '+hs('p1b')+' · câu cuối '+hs('p1c'));
   L.push('Buổi 2 · đứng đầu được không '+hs('p2a')+' · nhận diện '+hs('o1')+' · câu đầu (dấu bám) '+hs('p2b'));
-  L.push('Buổi 3 · kiểu câu đầu '+hs('p3c')+' · nhận diện '+hs('o2')+' · câu đầu (hai câu sạch) '+hs('p3b'));
-  L.push('Buổi 4 · so vị trí nào '+hs('p4a')+' · chữ bám trỏ về đâu '+hs('p4b')+' · câu đi ngay sau '+hs('p4d'));
+  L.push('Buổi 3 · đứng một mình '+hsum(SA.map(function(_,i){return 'sa'+i;}))+' · 4 kiểu câu đầu '+hsum('GHQT'.split('').map(function(k){return 'ft'+k;}))+' · trộn '+hs('p3c')+' · nhận diện '+hs('o2')+' · câu đầu (hai câu sạch) '+hs('p3b'));
+  L.push('Buổi 4 · so vị trí nào '+hs('p4a')+' · 6 tín hiệu '+hsum('CLNKTD'.split('').map(function(k){return 'k2'+k;}))+' · trộn '+hs('p4d')+' · chữ bám (từ chỉ '+hs('lk1')+', lặp từ '+hs('lk2')+', nói lại '+hs('lk3')+') · trộn '+hs('p4b'));
   var n=0,ok=0;IT.forEach(function(y){var s=st.step[y.id];if(s&&s.a!=null){n++;if(s.a===y.a)ok++;}});
   L.push('Buổi 5 · làm từng bước: '+ok+'/'+n+' câu · bước chọn câu đầu '+hs('s1')+' · bước so một vị trí '+hs('s3'));
   var qs=0,qok=0,qw=[];for(var id in st.q){qs++;if(st.q[id].ok)qok++;if(st.q[id].w)qw.push(BY[id]?BY[id].src+' c.'+BY[id].n:id);}

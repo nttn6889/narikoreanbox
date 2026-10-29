@@ -787,6 +787,11 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   Dữ liệu `python3 tools/cau_13_15.py` → `cau-13-15/moi/data.json`: đọc thẳng `R`, `MCQ`, `F`, `K2` của `cau-13-15/index.html` + `g1 c1 x1 g3 c3 x3` của `cau-13-15/luyen/` (bằng node),
   `tools/dau_hieu/13-15.json`, `thi-thu/de/tu/` + `tools/cau_13_15/bai.txt` (Claude soạn: khuôn đoạn, vai trò 4 câu theo thứ tự đúng, cặp “chữ bám>chữ được bám” — script kiểm tra cả hai có trong câu).
   Sửa trang cũ thì chạy lại script. Số trong chữ tĩnh viết theo lần chạy 28/10. localStorage `nari-1315m`. Trang `noindex`, link ở Mục lục giáo án.
+  **Cô góp ý 29/10: chia kiến thức thành khối nhỏ, mỗi khối = kiến thức → ví dụ trong đề → ✋ luyện ngay, giải thích phải gọi tên dấu hiệu vừa học** (khuôn chung `kb()`, CSS `.kb`;
+  làm trang dạng câu mới cũng theo khuôn này). Buổi 1: vai trò câu 5 nhóm `RG5` (chữ dấu hiệu `RS`, định nghĩa `RDEF`, giải thích `roleWhy` = vai trò + chữ dấu hiệu tô vàng + chữ bám + dịch),
+  6 khuôn đoạn `MKD` (mô tả + đoạn mẫu + luyện tìm câu đầu). Buổi 3: phép thử đứng một mình 4 kiểu `SA` ([tên, luật, [[id câu, câu em phải hỏi lại]]], ví dụ đầu + luyện phần còn lại),
+  4 kiểu câu đầu (`FSIG`/`FDEF`, `fWhy`). Buổi 4: 6 tín hiệu (`K2EX` ví dụ, `K2HOW` luật, `k2Q`), chuỗi từ khóa 3 kiểu `LKT` (1 từ chỉ 이/그 + N, 2 lặp từ khóa, 3 nói lại bằng chữ khác —
+  danh sách tay `LK3`; `lkKind` xếp cặp chữ bám, cặp là từ nối `LKX` bỏ ra), mỗi kiểu 3 bước + làm mẫu `LKEX` + luyện có 💡. Bảng tổng cũ thu vào `<details>`, bài trộn để cuối mục.
 
 ## Học câu 16–18 điền chỗ trống (`cau-16-18/`)
 - Cùng khung với `cau-25-27/`: Buổi 1 (thói quen **đọc qua ô** — 39/65 câu manh mối nằm sau ô; quy trình 3 bước; khung quanh ô → loại ý; tín hiệu ① Đảo chiều, ② Giải thích ở sau),
