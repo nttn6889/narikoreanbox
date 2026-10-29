@@ -219,6 +219,30 @@ Mỗi quán ngữ có nghĩa, câu ví dụ và bản dịch. Ảnh cuối là b
 **Comment đáp án** (đăng sau 1 ngày): 1C · 2G · 3E · 4A · 5H · 6D · 7B · 8F
 1 발등에 불이 떨어지다 · 2 입이 무겁다 · 3 귀가 얇다 · 4 손이 크다 · 5 눈코 뜰 사이도 없다 · 6 머리를 맞대다 · 7 애를 먹다 · 8 어깨가 무겁다
 
+## 10. Bộ sưu tập 80 từ vựng đọc tiêu đề báo TOPIK — 12 ảnh (tb-01-bia → tb-12-on-tap)
+
+Sinh bằng `python3 tools/fb_tieu_de.py` (dữ liệu trong script), chụp `node tools/chup_anh.js fb/ca-nhan/tb-*.html`.
+Đăng cả 12 ảnh trong **một bài** (ảnh bìa đầu tiên). Tiêu đề mẫu tự soạn theo kiểu báo, không lấy đề thật.
+
+📰 80 TỪ VỰNG ĐỌC TIÊU ĐỀ BÁO TOPIK (câu 25–27)
+
+Tiêu đề báo Hàn ngắn mà khó: bỏ hết tiểu từ, kết thúc bằng danh từ, lại hay ví von. 껑충 không phải “nhảy” mà là giá **tăng vọt**, 기지개 không phải “vươn vai” mà là **khởi sắc trở lại**, 찬물 là **gáo nước lạnh** dội vào niềm vui. 😄
+
+Cô gom 80 từ hay gặp, chia theo 10 nhóm nghĩa cho dễ nhớ:
+🔥 Được yêu thích · 👥 Đông – vắng · 📈 Tăng – kỷ lục · 📉 Giảm – chững lại · 💰 Giá cả – mua bán
+🚦 Tín hiệu tốt – xấu · ⛔ Hủy – kẹt – trì hoãn · 🤝 Bắt tay – thúc đẩy · ⏩ Liên tiếp – sắp tới · 💬 Ý kiến – phản ứng
+
+Mỗi từ có nghĩa, âm Hán Việt (người Việt mình nhớ từ Hán rất nhanh), một tiêu đề mẫu và bản dịch. Ảnh cuối là bài ôn tập 8 câu.
+
+📌 Cách học: mỗi ngày 1 ảnh · che cột nghĩa, đọc tiêu đề mẫu rồi tự dịch · gặp tiêu đề thật trên báo Hàn thì đối chiếu lại.
+
+👉 Em lưu bài lại để ôn dần, làm bài ôn tập ở ảnh cuối rồi comment đáp án (dạng 1A, 2B…), cô chữa cho nhé!
+
+#TieuDeBao #TuVungTOPIK #TOPIK2 #DocTOPIK #NariTOPIK
+
+**Comment đáp án** (đăng sau 1 ngày): 1D · 2B · 3H · 4F · 5A · 6G · 7C · 8E
+1 껑충 · 2 결항 · 3 썰렁하다 · 4 기지개를 켜다 · 5 손을 잡다 · 6 무산 · 7 코앞 · 8 엇갈리다
+
 ## Chủ đề phổ biến làm tiếp (cùng khung, không lộ số liệu riêng)
 - Tục ngữ 속담 hay gặp (bộ sưu tập cùng khuôn `qn`) (kho từ có phần `Câu 54 · 속담`, EBS).
 - Ngữ pháp tương đồng câu 3–4 (bảng cặp đồng nghĩa, như các trang khác nhưng có ví dụ + cặp dễ nhầm).

@@ -891,6 +891,7 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   **không đưa số liệu thống kê riêng của cô** (số đề, tỉ lệ đáp án…).
   Cô thích dạng **bộ sưu tập nhiều ảnh** (10–15 ảnh, bìa có mục lục + ảnh ôn tập cuối) để học sinh lưu về học lâu dài: `qn-NN-*.html` = 96 quán ngữ theo bộ phận cơ thể,
   sinh bằng `python3 tools/fb_quan_ngu.py` (khung `qn.css`, nền sáng, ít khung, 8 mục/ảnh: quán ngữ | nghĩa | câu ví dụ + dịch).
+  `tb-NN-*.html` = 80 từ vựng đọc tiêu đề báo (câu 25–27), 10 nhóm nghĩa × 8 từ (nghĩa + Hán Việt + tiêu đề mẫu tự soạn + dịch), sinh bằng `python3 tools/fb_tieu_de.py` (cùng khung `qn.css`).
   **Dấu bản quyền ảnh FB**: cô thấy vòng tròn to giữa ảnh làm rối → dùng `wm.js` `data-style="tile"` (chữ “Nari TOPIK · Zalo” nhạt .045 lặp chéo khắp ảnh); ảnh `quang-cao/` vẫn kiểu cũ. Chụp PNG: `node tools/chup_anh.js fb/ca-nhan/*.html` (cỡ khác 1080×1350 ghi `<meta name=size content="WxH">`).
 - `fb/de-viet-108/`: đề viết kỳ 108 (18.10.2026, đề thí sinh nhớ lại, câu chữ theo bản của Tiếng Hàn Thầy Tư) — 2 ảnh đề sạch `de-1`/`de-2` cho bài chính,
   ảnh đáp án đăng ở comment: bìa, 51, 52 (đáp án + cách viết khác), 53 đề (biểu đồ vẽ lại bằng SVG) + bài mẫu, 54 đề + dàn ý + bài mẫu; `de.css`, lời đăng `caption.md`.
