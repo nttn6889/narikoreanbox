@@ -832,6 +832,10 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   Buổi 4 câu 20 (dạng A chủ đề / B nội dung, `20a–d` + gọi tên bẫy câu thật) · Buổi 5 quy trình 5 bước, làm mẫu kỳ 91, làm từng bước · Luyện (4 bài/lượt, ôn ngắt quãng) · 22 bài · Kết quả.
   Dữ liệu `python3 tools/cau_19_20.py` → `cau-19-20/moi/data.json`: đọc thẳng biến `R`, `ADV`, `REL2`, `CMP2`, `PAIRS`, `REL`, `MCQ`, `MV` của `cau-19-20/index.html` (bằng node) + `tools/dau_hieu/19-20.json`,
   `doc-dap-an/`, `dong-trai/`, `thi-thu/de/tu/` + dịch từng câu `tools/cau_19_20/bai.txt`, nghĩa lựa chọn câu 20 chủ đề `vi20.txt` (Claude soạn). Sửa trang cũ thì chạy lại script. localStorage `nari-1920m`.
+- **Trang học sinh `cau-19-20/hoc/`** (cùng khuôn `cau-11-12/hoc/`, cô yêu cầu 29/10; một link, 6 bước `#b=1…6`, 3 ngày): ① phó từ & từ nối = 4 nhóm kho từ `V19_00…03` của `thi-thu/vocab.json` (luyện `tv0…3`)
+  + 30 từ hay gặp trong 22 bài (`x.tu`, bỏ từ đã có trong 4 nhóm; luyện `tw`) ② đọc 3 đoạn có dịch (`READ`, ô điền sẵn) + làm thử 5 bài `PRE` (10 câu) · Ngày 2: ③ bảng `PAIRS` (“Che đuôi”) + `MCQ['1nM']`, bảng `REL` + `MCQ['2nM']`
+  ④ làm từng bước 4 bài (2 chủ đề + 2 nội dung, `stepIds`) · Ngày 3: ⑤ như thi 2 lượt × 4 bài (lượt sau hỏi lại bài sai; `st.thd` ≥ 8 bài) ⑥ kiểm tra 5 bài `PRE` + 2 bài để dành `Et3001`, `Eys1` (14 câu).
+  Kỳ 91 không vào luyện (cô làm mẫu trên lớp). Dữ liệu `../moi/data.json` (không cần script riêng). localStorage `nari-1920h`. Đã thêm vào `HL['doc:19']`.
 
 ## Học câu 23–24 tâm trạng trong tùy bút (`cau-23-24/`) và câu 42–43 tiểu thuyết (`cau-42-43/`)
 - Hai trang riêng, cùng khung với `cau-19-20/` (một bài = đoạn văn + 2 câu; câu sau mở khi làm câu trước; ✕ gạch lựa chọn; Buổi 1–3, Ôn ngắt quãng 5 bài/lượt,
