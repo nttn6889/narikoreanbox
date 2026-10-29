@@ -761,7 +761,7 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - **Trang học sinh `cau-11-12/hoc/`** (cô chốt 28/10: mỗi dạng câu = phần tự học trước buổi + giáo án trên lớp + luyện sau buổi; **một link, làm theo thứ tự, 2–3 ngày**):
   6 bước `#b=1…6` — Ngày 1 trước buổi: ① từ tin tức (`VG`, luyện `tv0…7`) ② đọc 3 tin có dịch (`READ`) + làm thử 5 câu `PRE` (chưa dạy mẹo; “Gửi kết quả cho cô” để cô biết trước buổi) ·
   Ngày 2: ③ cặp cùng ý / khác ý (`TP`, `ts`/`td`) ④ làm từng bước 4 câu (`stepIds`, mỗi kiểu tin một câu) · Ngày 3: ⑤ như thi 2 lượt × 6 câu (lượt sau hỏi lại câu sai) ⑥ kiểm tra 7 câu = 5 câu `PRE` + đề thật `Etk083-12`, `Etk091-12` (để dành, không vào luyện) → so trước – sau, tự đánh giá, gửi cô.
-  Thanh bước có ✓, bước kế tiếp gạch đỏ; không khóa bước. Dữ liệu `../data.json`; `VG`, `TP`, `PRE`, hàm quiz chép từ giáo án (sửa giáo án thì chép lại). localStorage `nari-1112h`. Chưa thêm vào trang chủ học sinh (`HL`) — chờ cô duyệt; các dạng khác làm cùng khuôn `cau-<dạng>/hoc/`.
+  Thanh bước có ✓, bước kế tiếp gạch đỏ; không khóa bước. Dữ liệu `../data.json`; `VG`, `TP`, `PRE`, hàm quiz chép từ giáo án (sửa giáo án thì chép lại). localStorage `nari-1112h`. Đã thêm vào trang chủ học sinh `HL['doc:11']` (cô duyệt 29/10: link + `#b=5` luyện như thi); các dạng khác làm cùng khuôn `cau-<dạng>/hoc/`.
 - Dữ liệu `python3 tools/cau_11_12.py` → `cau-11-12/data.json` (gộp `doc-dap-an/data.json`, `dong-trai/data.json`, `tools/dau_hieu/11-12.json`, `thi-thu/de/tu/`) + dịch từng câu, vai trò câu (C T D G N L K S Y X),
   kiểu tin ở `tools/cau_11_12/bai.txt` (Claude soạn). Số trong chữ tĩnh viết theo lần chạy 26/10. localStorage `nari-1112`. Trang `noindex`, chưa đặt link từ trang học sinh (chờ cô duyệt khuôn rồi làm các dạng khác cùng khuôn).
 
