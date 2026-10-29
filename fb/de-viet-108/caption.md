@@ -5,7 +5,7 @@ Comment đáp án: `2-cau-51` → `3-cau-52` → `4-cau-53-de` → `5-cau-53-mau
 Câu chữ đề theo bản đã nhớ lại của Tiếng Hàn Thầy Tư (đủ hơn bản đầu).
 Sửa chữ trong `*.html` rồi chụp lại: `node tools/chup_anh.js fb/de-viet-108/*.html`.
 
-## Lời đăng (bài chính – 2 ảnh đề)
+## Lời đăng (bài chính – 2 ảnh đề: de-1 → de-2)
 
 📝 ĐỀ VIẾT TOPIK II KỲ 108 (18/10/2026)
 
@@ -31,3 +31,5 @@ Em nào muốn cô chữa bài viết của mình theo từng câu, so với bà
 2. (ảnh 3-cau-52) Câu 52: ㉠ 버리는 것이 · ㉡ 약이 있다면.
 3. (ảnh 4-cau-53-de + 5-cau-53-mau) Câu 53: bài mẫu 285 chữ, tô sẵn các mẫu câu nên học.
 4. (ảnh 6-cau-54-de + 7-cau-54-mau) Câu 54: dàn ý 3 đoạn + bài mẫu ~660 chữ, tô sẵn từ nối.
+
+(ảnh 1-bia: dùng làm ảnh đầu khi muốn đăng gộp đề + đáp án trong một bài.)

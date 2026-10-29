@@ -1,0 +1,64 @@
+<!doctype html><html lang=vi><head><meta charset=utf-8>
+<meta name="robots" content="noindex">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>Ảnh Facebook · Nari TOPIK</title>
+<link rel=icon href="../thi-thu/icon/icon-192.png">
+<style>
+:root{--p:#53468F;--y:#D4A843;--bg:#f6f4fb;--card:#fff;--tx:#222;--mu:#666;--ln:#e3dff0}
+@media (prefers-color-scheme:dark){:root{--bg:#17151f;--card:#221f2d;--tx:#eee;--mu:#aaa;--ln:#3a3550}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+header{background:var(--p);color:#fff;padding:14px 16px}header h1{margin:0;font-size:19px}header p{margin:4px 0 0;font-size:13px;opacity:.85}
+main{max-width:860px;margin:0 auto;padding:12px 16px 40px}
+nav{display:flex;gap:6px;flex-wrap:wrap;margin:4px 0 14px}
+nav button{border:1px solid var(--ln);background:var(--card);color:var(--tx);border-radius:16px;padding:5px 11px;font-size:13px;cursor:pointer}
+nav button.on{background:var(--p);color:#fff;border-color:var(--p)}
+.g{font-size:13px;color:var(--mu);margin:18px 0 6px;text-transform:uppercase;letter-spacing:.03em}
+.post{background:var(--card);border:1px solid var(--ln);border-radius:12px;padding:12px;margin-bottom:12px}
+.post h2{font-size:16px;margin:0 0 8px;cursor:pointer}.post h2 small{color:var(--mu);font-weight:400}
+.imgs{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:8px}
+.imgs a{display:block;position:relative}.imgs img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:6px;border:1px solid var(--ln);background:#eee}
+.imgs span{position:absolute;left:4px;top:4px;background:rgba(0,0,0,.6);color:#fff;font-size:11px;border-radius:8px;padding:0 6px}
+.bar{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 4px}
+.bar button{border:0;background:var(--p);color:#fff;border-radius:8px;padding:8px 12px;font-size:14px;cursor:pointer}
+.bar button.y{background:var(--y);color:#222}
+pre{white-space:pre-wrap;word-wrap:break-word;font:inherit;background:var(--bg);border-radius:8px;padding:10px;margin:8px 0 0;max-height:none}
+.lb{font-size:13px;font-weight:600;margin-top:10px;color:var(--p)}@media (prefers-color-scheme:dark){.lb{color:#b9adf0}}
+.hide{display:none}.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:#222;color:#fff;padding:8px 14px;border-radius:8px;font-size:14px;opacity:0;transition:.2s;pointer-events:none}.toast.on{opacity:1}
+.big{position:fixed;inset:0;background:rgba(0,0,0,.92);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:9;padding:10px}
+.big img{max-width:100%;max-height:82vh}.big div{margin-top:10px;display:flex;gap:8px}.big button,.big a{border:0;border-radius:8px;padding:8px 12px;font-size:14px;background:#fff;color:#222;text-decoration:none}
+</style></head><body>
+<header><h1>Ảnh Facebook · Nari TOPIK</h1><p>Mỗi bài: ảnh theo đúng thứ tự đăng + lời đăng. Chạm ảnh để xem to / lưu. Trang riêng của cô, không gửi học sinh.</p></header>
+<main><nav id=nav></nav><div id=list></div></main>
+<div class=toast id=toast></div>
+<script>
+var D=/*DATA*/[];
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function toast(t){var e=document.getElementById('toast');e.textContent=t;e.classList.add('on');setTimeout(function(){e.classList.remove('on')},1800)}
+function copy(t){(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){toast('Đã chép ✓')},function(){var a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();try{document.execCommand('copy');toast('Đã chép ✓')}catch(e){toast('Chưa chép được, cô bôi đen rồi chép tay')}a.remove()})}
+function nm(u){return u.split('/').pop()}
+function saveAll(i){var p=D[i];toast('Đang tải '+p.i.length+' ảnh…');
+ Promise.all(p.i.map(function(u){return fetch(u).then(function(r){return r.blob()}).then(function(b){return new File([b],nm(u),{type:'image/png'})})})).then(function(fs){
+  if(navigator.canShare&&navigator.canShare({files:fs})){navigator.share({files:fs}).catch(function(){})}
+  else{fs.forEach(function(f,k){setTimeout(function(){var a=document.createElement('a');a.href=URL.createObjectURL(f);a.download=String(k+1).padStart(2,'0')+'-'+f.name;document.body.appendChild(a);a.click();a.remove()},k*350)})}
+ },function(){toast('Không tải được ảnh')})}
+function big(i,k){var p=D[i],u=p.i[k],e=document.createElement('div');e.className='big';
+ e.innerHTML='<img src="'+esc(u)+'"><div>'+(k>0?'<button data-m=-1>‹ Trước</button>':'')+'<a href="'+esc(u)+'" download="'+esc(nm(u))+'">Tải ảnh</a><button data-x>Đóng</button>'+(k<p.i.length-1?'<button data-m=1>Sau ›</button>':'')+'</div><small style="color:#ccc;margin-top:6px">Ảnh '+(k+1)+'/'+p.i.length+' · Điện thoại: nhấn giữ ảnh → Lưu ảnh</small>';
+ e.onclick=function(ev){var t=ev.target;if(t.dataset.m){e.remove();big(i,k+ +t.dataset.m)}else if(t.hasAttribute('data-x')||t===e)e.remove()};document.body.appendChild(e)}
+var groups=[];D.forEach(function(p){if(groups.indexOf(p.g)<0)groups.push(p.g)});
+var cur=-1;try{cur=+(localStorage.getItem('nari-fb-g')||-1)}catch(e){}
+function render(){
+ document.getElementById('nav').innerHTML='<button data-g=-1 class="'+(cur<0?'on':'')+'">Tất cả</button>'+groups.map(function(g,k){return '<button data-g='+k+' class="'+(cur===k?'on':'')+'">'+esc(g.replace(/^Loạt\s*/,'').replace(/"/g,''))+'</button>'}).join('');
+ var h='',lastG=null;D.forEach(function(p,i){var gk=groups.indexOf(p.g);if(cur>=0&&gk!==cur)return;
+  if(p.g!==lastG){h+='<div class=g>'+esc(p.g)+'</div>';lastG=p.g}
+  h+='<div class=post id=p'+i+'><h2>'+esc(p.t)+' <small>· '+p.i.length+' ảnh</small></h2><div class=imgs>'+p.i.map(function(u,k){return '<a href="'+esc(u)+'" data-i='+i+' data-k='+k+'><img loading=lazy src="'+esc(u)+'" alt="'+esc(nm(u))+'"><span>'+(k+1)+'</span></a>'}).join('')+'</div>'
+  +'<div class=bar><button data-all='+i+'>⬇ Lưu cả '+p.i.length+' ảnh</button>'+(p.c?'<button class=y data-c='+i+'>📋 Chép lời đăng</button>':'')+(p.m?'<button class=y data-cm='+i+'>📋 Chép bình luận đáp án</button>':'')+'</div>'
+  +(p.c?'<div class=lb>Lời đăng</div><pre>'+esc(p.c)+'</pre>':'')+(p.m?'<div class=lb>Bình luận đáp án</div><pre>'+esc(p.m)+'</pre>':'')+'</div>'});
+ document.getElementById('list').innerHTML=h}
+document.addEventListener('click',function(ev){var t=ev.target.closest('[data-g],[data-all],[data-c],[data-cm],a[data-i]');if(!t)return;
+ if(t.dataset.g!=null){cur=+t.dataset.g;try{localStorage.setItem('nari-fb-g',cur)}catch(e){}render()}
+ else if(t.dataset.all!=null)saveAll(+t.dataset.all);
+ else if(t.dataset.c!=null)copy(D[+t.dataset.c].c);
+ else if(t.dataset.cm!=null)copy(D[+t.dataset.cm].m);
+ else if(t.dataset.i!=null){ev.preventDefault();big(+t.dataset.i,+t.dataset.k)}});
+render();
+</script></body></html>

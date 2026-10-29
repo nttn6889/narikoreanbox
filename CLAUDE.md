@@ -894,4 +894,8 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   **Dấu bản quyền ảnh FB**: cô thấy vòng tròn to giữa ảnh làm rối → dùng `wm.js` `data-style="tile"` (chữ “Nari TOPIK · Zalo” nhạt .045 lặp chéo khắp ảnh); ảnh `quang-cao/` vẫn kiểu cũ. Chụp PNG: `node tools/chup_anh.js fb/ca-nhan/*.html` (cỡ khác 1080×1350 ghi `<meta name=size content="WxH">`).
 - `fb/de-viet-108/`: đề viết kỳ 108 (18.10.2026, đề thí sinh nhớ lại, câu chữ theo bản của Tiếng Hàn Thầy Tư) — 2 ảnh đề sạch `de-1`/`de-2` cho bài chính,
   ảnh đáp án đăng ở comment: bìa, 51, 52 (đáp án + cách viết khác), 53 đề (biểu đồ vẽ lại bằng SVG) + bài mẫu, 54 đề + dàn ý + bài mẫu; `de.css`, lời đăng `caption.md`.
+- **Trang lấy ảnh + lời đăng** `fb/` (https://hoc.naritopik.com/fb/, `noindex`, chỉ cô dùng): mỗi mục `## ` của `fb/*/caption.md` = một bài (ảnh theo thứ tự đăng,
+  nút “Lưu cả N ảnh” — điện thoại mở bảng chia sẻ để lưu vào Ảnh, chép lời đăng / bình luận đáp án). Sinh bằng `python3 tools/fb_trang.py` (khung `fb/trang.tpl.html`):
+  ảnh = tên file `.png` nhắc trong tiêu đề / thân mục (cùng thư mục rồi `quang-cao/*/`; `a → b` cùng tiền tố lấy cả dãy), lời đăng tới dòng `**Comment đáp án**`.
+  **Làm ảnh / sửa caption.md xong thì chạy lại script.**
 - Cô: cử nhân Quản trị kinh doanh Đại học Daegu, đang ở Quỳnh Lưu, dạy trực tiếp tại Quỳnh Lưu + online toàn quốc.
