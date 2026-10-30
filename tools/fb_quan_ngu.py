@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Sinh bộ ảnh Facebook "Quán ngữ tiếng Hàn theo bộ phận cơ thể" → fb/ca-nhan/qn-NN-*.html (chụp: node tools/chup_anh.js fb/ca-nhan/qn-*.html).
-Mỗi ảnh 8 quán ngữ: quán ngữ | nghĩa | câu ví dụ ({…} = phần quán ngữ, in đậm) + dịch. Nghĩa đối chiếu nhóm V21_* của kho từ."""
+Khung khung.css (nền tím + viền vàng, thẻ trắng). Mỗi ảnh 8 quán ngữ: quán ngữ | nghĩa | câu ví dụ ({…} = phần quán ngữ, in đậm) + dịch. Nghĩa đối chiếu nhóm V21_* của kho từ."""
 import html, re, os
 OUT = os.path.join(os.path.dirname(__file__), '..', 'fb', 'ca-nhan')
 P = [
@@ -116,10 +116,13 @@ P = [
 N = len(P) + 2  # bìa + nội dung + ôn tập
 HEAD = '''<!doctype html><meta charset=utf-8>
 <meta name="robots" content="noindex">
-<link rel=stylesheet href="../../quang-cao/topik2-len-3-4/base.css"><link rel=stylesheet href=qn.css>
-<div class=top><img src="../../logo/nari-topik-ngang.svg"><div class="tag zalo"><small>Zalo cô Ngân</small>0399 214 554</div></div>
+<link rel=stylesheet href="../../quang-cao/topik2-len-3-4/base.css"><link rel=stylesheet href=khung.css>
+<div class=frame></div>
+<div class=card>
+<div class=hd><img src="../../logo/nari-topik-ngang.svg"><div class=zl>Zalo cô Ngân<b>0399 214 554</b></div></div>
 '''
-def foot(i): return f'''<div class=foot><span>Quán ngữ tiếng Hàn · <b>Nari TOPIK</b></span><span class=pg>{i}/{N}</span><span>Lưu lại để ôn nhé 🔖</span></div>
+def foot(i): return f'''<div class=ft><span>Quán ngữ tiếng Hàn · <b>Nari TOPIK</b></span><span class=pg>{i}/{N}</span><span>Lưu lại để ôn nhé 🔖</span></div>
+</div>
 <script src="../../quang-cao/wm.js" data-style="tile"></script>
 '''
 def ex(s): return re.sub(r'\{(.+?)\}', r'<b>\1</b>', html.escape(s))
@@ -135,13 +138,13 @@ h = HEAD + f'''<div class=eye>Ôn TOPIK cùng cô Ngân · Bộ sưu tập</div>
 ''' + foot(1)
 files.append(('qn-01-bia.html', h))
 for i, (slug, e, k, vi, ph, rows) in enumerate(P):
-    it = ''.join(f'''<div class=it><div class=a><span class=n>{j + 1:02d}</span><b>{html.escape(a)}</b></div><div class=m>{m}</div>
-<div class=x><span class=ko>{ex(x)}</span><span class=vi>{html.escape(v)}</span></div></div>
+    it = ''.join(f'''<div class=it><span class=n>{j + 1}</span><div><div class=a><b>{html.escape(a)}</b><span class=m>{m}</span></div>
+<div class=x><span class=ko>{ex(x)}</span><span class=vi>{html.escape(v)}</span></div></div></div>
 ''' for j, (a, m, x, v) in enumerate(rows))
     h = HEAD + f'''<div class=eye>Quán ngữ tiếng Hàn · {i + 2}/{N}</div>
-<h1 class=pt><span class=e>{e}</span>{k}<small>{vi}{" · " + ph if ph else ""}</small></h1>
-<div class=list>{it}</div>
-''' + foot(i + 2)
+<h1 class=k><span class=e>{e}</span><span>{k}<small>{vi}{" · " + ph if ph else ""}</small></span></h1>
+<div class=bar></div>
+{it}''' + foot(i + 2)
     files.append((f'qn-{i + 2:02d}-{slug}.html', h))
 # ôn tập
 Q = [('Mai thi rồi mà hôm nay mới bắt đầu học.', '발등에 불이 떨어지다'), ('Bạn ấy giữ bí mật rất tốt.', '입이 무겁다'),
@@ -154,7 +157,7 @@ box = ''.join(f'<div><b>{L[i]}</b>{Q[o][1]}</div>' for i, o in enumerate(order))
 qs = ''.join(f'<div class=r><span class=n>{j + 1}</span><span class=t>{s}</span><span class=blank></span></div>' for j, (s, _) in enumerate(Q))
 ans = ' · '.join(f'{j + 1}{L[order.index(j)]}' for j in range(len(Q)))
 h = HEAD + f'''<div class=eye>Quán ngữ tiếng Hàn · {N}/{N} · Ôn tập</div>
-<h1 class="pt q"><span class=e>✍️</span>Chọn quán ngữ<small>ghép mỗi tình huống với 1 quán ngữ</small></h1>
+<h1 class=k><span class=e>✍️</span><span>Chọn quán ngữ<small>ghép mỗi tình huống với 1 quán ngữ</small></span></h1>
 <div class=box>{box}</div>
 <div class=quiz>{qs}</div>
 <div class=how>Comment đáp án dạng <b>1A, 2B…</b> · cô chữa ở bình luận 💜</div>

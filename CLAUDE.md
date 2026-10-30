@@ -892,7 +892,8 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   “Ôn TOPIK cùng cô Ngân” `kt-NN-*.html` (khung `kt.css` + `ds.css`): chủ đề các trang khác hay đăng (cấu trúc đề, quán ngữ…) nhưng đúng + đầy đủ + rõ hơn,
   **không đưa số liệu thống kê riêng của cô** (số đề, tỉ lệ đáp án…).
   Cô thích dạng **bộ sưu tập nhiều ảnh** (10–15 ảnh, bìa có mục lục + ảnh ôn tập cuối) để học sinh lưu về học lâu dài: `qn-NN-*.html` = 96 quán ngữ theo bộ phận cơ thể,
-  sinh bằng `python3 tools/fb_quan_ngu.py` (khung `qn.css`, nền sáng, ít khung, 8 mục/ảnh: quán ngữ | nghĩa | câu ví dụ + dịch).
+  sinh bằng `python3 tools/fb_quan_ngu.py` (8 mục/ảnh: quán ngữ | nghĩa | câu ví dụ + dịch). **Khung ảnh cô duyệt 30/10: `khung.css`** (mẫu `mau-khung`): nền tím chuyển màu + viền vàng mảnh,
+  thẻ trắng bên trong, số thứ tự chấm tròn tím, từ đang học gạch nền vàng — bộ quán ngữ đã đổi sang khung này; bộ mới làm theo khung này (`qn.css` là khung cũ).
   `tb-NN-*.html` = 80 từ vựng đọc tiêu đề báo (câu 25–27), 10 nhóm nghĩa × 8 từ (nghĩa + Hán Việt + tiêu đề mẫu tự soạn + dịch), sinh bằng `python3 tools/fb_tieu_de.py` (cùng khung `qn.css`).
   **Dấu bản quyền ảnh FB**: cô thấy vòng tròn to giữa ảnh làm rối → dùng `wm.js` `data-style="tile"` (chữ “Nari TOPIK · Zalo” nhạt .045 lặp chéo khắp ảnh); ảnh `quang-cao/` vẫn kiểu cũ. Chụp PNG: `node tools/chup_anh.js fb/ca-nhan/*.html` (cỡ khác 1080×1350 ghi `<meta name=size content="WxH">`).
 - `fb/de-viet-108/`: đề viết kỳ 108 (18.10.2026, đề thí sinh nhớ lại, câu chữ theo bản của Tiếng Hàn Thầy Tư) — 2 ảnh đề sạch `de-1`/`de-2` cho bài chính,
