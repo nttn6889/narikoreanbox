@@ -187,6 +187,8 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 
 ## Về cô (`ve-co/`)
 - Bản sao trang https://claude.ai/artifact/2XJHcdRJMNbKnDoMXqVZWQ, sửa trực tiếp ở đây (link "Trang chủ" trỏ về trang chủ site).
+- Dạng landing page (30/10): hero + 4 số liệu, Lời cô, dòng thời gian (`TL`), lĩnh vực biên phiên dịch (`FIELDS`), “Mang vào lớp học”, hồ sơ chia thẻ
+  Công tác · Học vấn · Biên – phiên dịch · Làm thêm · Chứng chỉ (`WORK`/`EDU`/`DICH`/`THEM`/`CC` trong script, câu chuyện mở bằng “Đọc câu chuyện”), nút Zalo. Không ảnh chân dung.
 
 ## Học cùng cô (`hoc-cung-co/`) — trang giới thiệu gửi học sinh mới khi tư vấn
 - Sửa trực tiếp `hoc-cung-co/index.html`. Ảnh trong `img/` là ảnh chụp màn hình thật (Playwright, khung 390px, tên “Học viên”).
