@@ -465,6 +465,8 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   누구나 / 무슨 N(이)나 (ref 3A-2 mẫu 4) · 아무 N도 (3A-6; bảng 아무도 / 아무나 / 누구나, lỗi “ai cũng không” → 누구나 안); Nửa 2 chọn lựa = Bước 0 (이)나 “hoặc” + 4 nghĩa
   của (이)나 (2A-1) · N(이)나 chọn tạm, rủ nhẹ (3A-4) · N(이)라도 (3A-5, phân biệt với (이)나, 만 / 밖에 / 조차) · Tổng hợp (bảng chọn tiểu từ, 12 câu gồm câu 1–2
   Yonsei 3, HOT 2, HOT 5, kỳ 52). Câu dẫn trong đoạn văn lấy từ đề luyện trong `thi-thu/de/` (kỳ thật chỉ có kỳ 64 câu 1, kỳ 52 câu 2, kỳ 91 câu 38).
+  **Đã chuyển sang khung mới** (30/10, cả 6 bước + mẫu 4 của 3A-2): `yn`, `chiaV` (bước có 받침 이나/나), `chiaDs`, `bqt` = ghép với tiểu từ khác (nền 1, 아무 N도), `chiaLt`,
+  `tinh[].lt`, `rb` dạng thẻ có `lt`, `sai` có `h`/`k` + `saiLy`/`saiLt`, `pb[].bang`/`lt`, `em` có `gy`. Sửa thẳng `data/cd-tieu-tu.json`.
   `dinh-ngu` (Định ngữ, cô yêu cầu cho lớp 2A–3B, ~2 tiếng 20, 10 bước, 3 nửa — ngoài thứ tự 8 chuyên đề trên): Nửa 1 = Bước 0 định ngữ là gì + A-(으)ㄴ N, N인 N (src 1B-14) ·
   V-는 N (src 1B-15) · ref 2A-2 mẫu 3 (-(으)ㄴ) · ref 2A-3 mẫu 4 (-(으)ㄹ) · bảng đã/đang/sẽ × loại từ + 12 câu gõ; Nửa 2 = ghép hai câu / đọc câu dài · định ngữ + danh từ phụ thuộc
   (chỉ -(으)ㄹ: 수 줄 때 뻔; chỉ -(으)ㄴ: 적 후 지; chỉ -는: 중 동안 바람에; theo thì: 것 같다 편 척 대로 탓; câu 1–3 kỳ 37, 47, 60, 96, 102); Nửa 3 = -던 · -았/었던 (chưa có `src` vì
