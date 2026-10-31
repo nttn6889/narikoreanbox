@@ -168,7 +168,11 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   bấm T / — để ẩn, bấm T hiện lại viết tiếp, chữ lưu ở `st.n`), tẩy theo nét, 6 màu, 3 cỡ, ↶ ↷, 🗑. Bút cảm ứng thì bỏ chạm lòng bàn tay.
   Cô góp ý 31/10 (chuyển qua lại bảng ↔ chọn đáp án): bảng trắng mặc định là **cửa sổ nổi** (`cfg.win`; ⠿ kéo dời, góc dưới phải đổi cỡ, ⛶ / ⧉ cả màn hình ↔ cửa sổ) — trang bên cạnh vẫn bấm được;
   “Trên trang”: **chạm nhẹ (không kéo, < 0,4 giây) = bấm vào trang** (`passClick`), kéo = vẽ; phím **B** bật / tắt bảng.
-  Lưu localStorage `nari-bang` theo đường dẫn trang. Thuộc tính của thanh dùng `data-bt` (nhiều trang đã dùng `data-t` cho câu hỏi).
+  Lưu localStorage `nari-bang` theo đường dẫn trang.
+- **Tra từ + Sổ từ** (`tra-tu.js`, cô hỏi 31/10: học sinh không biết từ thì tra ngay, lưu lại gửi danh sách / bài tập sau buổi): `bang.js` tự nạp (trang khác gắn `<script src="../tra-tu.js"></script>`).
+  Nhấp đúp từ tiếng Hàn (hoặc bôi đen → “📖 Tra”) → khung nghĩa (từ gốc + nghĩa từ `tra-tu/tu.json`, sửa được, câu chứa từ trong trang làm câu ví dụ `__chữ__`, 🔊, Naver ↗) → “★ Lưu vào sổ từ”.
+  Nút “📖 Sổ từ” (cạnh ✏ Bảng): danh sách theo buổi (ngày), ô gõ từ để tra, “Chép danh sách” (Zalo), “Tạo bài tập” = link `thi-thu/#v=` (mã `ST<yymmdd>..`, chọn ≤ 3 dạng; học sinh tự thấy điểm,
+  mã nộp `NV1-` chỉ chấm được trong trang quản lý khi mã bài có trong `vassigns`). localStorage `nari-sotu` (máy cô). Từ điển: `python3 tools/tu_dien.py` (kho từ + `cot_loi`/`nghia_de`/`cum_de` + `thi-thu/de/tu/`) — chạy lại sau đồng bộ đề / kho từ. Thuộc tính của thanh dùng `data-bt` (nhiều trang đã dùng `data-t` cho câu hỏi).
 - **Mỗi lần làm trang học liệu mới** (site hoặc claude.ai): tự thêm link vào trang “Mục lục học liệu Nari” (https://claude.ai/artifact/6bTfJWsvsCeMrmggceXPjQ,
   mảng `L` theo lớp → nhóm; Artifact `read` → sửa → `publish` với `url`, đổi ngày “cập nhật”), trang cũ đã gộp thì ghi chú “Bản cũ, đã gộp vào …”, trang đã xóa thì bỏ dòng.
 

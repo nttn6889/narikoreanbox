@@ -6,9 +6,11 @@
    - Công cụ: bút, bút tô (vàng trong), T = khung chữ nền vàng cố định trên màn hình (kéo đầu khung để dời, kéo góc để đổi cỡ; T / — ẩn, bấm T hiện lại, chữ giữ nguyên), tẩy (chạm nét nào xóa nét đó), 6 màu, 3 cỡ, ↶ ↷, Xóa hết.
    - Bảng trắng mặc định là cửa sổ nổi (⠿ kéo dời, góc dưới phải đổi cỡ, ⧉ / ⛶ thu nhỏ / cả màn hình): trang bên cạnh vẫn bấm chọn đáp án được.
    - “Trên trang”: chạm nhẹ = bấm vào trang (chọn đáp án, bấm nút), kéo = vẽ.
+   - Tự nạp tra-tu.js (nhấp đúp từ tiếng Hàn → nghĩa, “📖 Sổ từ”).
    - Phím: B bật / tắt bảng · Esc đóng · Ctrl+Z / Ctrl+Y. Nét vẽ lưu trên máy (localStorage `nari-bang`, theo từng trang), mở lại vẫn còn. */
 (function(){
   if(window.__bang)return;window.__bang=1;
+  var ME=document.currentScript;
   var LS='nari-bang',PG=location.pathname;
   var COL=['#1d1a2c','#E0313F','#1f5fd1','#1b8a3a','#53468F','#e08a00'],HL=['#ffe14d','#7ee0ff','#9cf29c','#ffb3d9'];
   var SZ=[2.5,5,10];
@@ -292,4 +294,6 @@
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
   window.bangOpen=open;
+  /* Tra từ + Sổ từ (tra-tu.js) đi kèm bảng trắng */
+  if(ME&&!window.__tratu){var tt=document.createElement('script');tt.src=ME.src.replace(/bang\.js(\?.*)?$/,'tra-tu.js');document.body.appendChild(tt);}
 })();
