@@ -1,0 +1,45 @@
+/* Khung ảnh FB cô duyệt 30/10 (mẫu mau-khung): nền tím + viền vàng mảnh, thẻ trắng bên trong; dùng sau base.css */
+body{padding:0;background:linear-gradient(150deg,#5B4D9C,#43377A)}
+.frame{position:absolute;inset:26px;border:2px solid rgba(212,168,67,.75);border-radius:44px}
+.card{position:absolute;inset:44px;background:#fff;border:0;border-radius:32px;padding:34px 50px 0;overflow:hidden}
+.hd{display:flex;align-items:center;justify-content:space-between}
+.hd img{height:92px;margin-left:-14px}
+.zl{text-align:right;font-size:17px;color:#8A84A3;font-weight:600;line-height:1.2}
+.zl b{display:block;font-size:30px;color:var(--v);font-weight:800;letter-spacing:.3px}
+.eye{margin-top:24px;font-size:20px;font-weight:700;letter-spacing:2px;color:var(--g);text-transform:uppercase}
+h1.k{display:flex;align-items:center;gap:20px;font-size:60px;margin-top:6px;color:var(--ink);letter-spacing:-1px}
+h1.k .e{width:84px;height:84px;border-radius:50%;background:var(--gs);display:grid;place-items:center;font-size:44px;flex:none}
+h1.k small{display:block;font-size:24px;font-weight:600;color:#8A84A3;letter-spacing:0;margin-top:2px}
+.bar{height:5px;width:120px;background:var(--gl);border-radius:3px;margin:16px 0 4px}
+.it{display:flex;gap:20px;padding:14px 0 13px;border-bottom:1.5px dashed #E4DFF0}
+.it:last-of-type{border-bottom:0}
+.n{flex:none;width:40px;height:40px;border-radius:50%;background:var(--v);color:#fff;font-weight:800;font-size:20px;display:grid;place-items:center;margin-top:4px}
+.a{display:flex;align-items:baseline;flex-wrap:wrap;column-gap:18px}
+.a b{font-size:31px;font-weight:800;color:var(--ink)}
+.m{font-size:24px;font-weight:600;color:var(--v)}
+.m i{font-style:normal;font-weight:500;font-size:19px;color:#9A93BC}
+.x{margin-top:6px;font-size:20px;line-height:1.45}
+.x .ko{color:#3D3852;margin-right:12px}
+.x .ko b{font-weight:800;color:var(--ink);background:linear-gradient(transparent 58%,#F6E2A8 58%)}
+.x .vi{color:#8A84A3}
+.ft{position:absolute;left:50px;right:50px;bottom:26px;display:flex;justify-content:space-between;align-items:center;font-size:19px;color:#8A84A3}
+.ft b,.ft .pg{color:var(--v);font-weight:800}
+/* bìa */
+h1.cv{font-size:68px;line-height:1.12;margin-top:10px;letter-spacing:-1px;color:var(--ink)}
+h1.cv b{color:var(--r)} h1.cv span{color:var(--v)}
+.lead{font-size:24px;margin-top:12px;color:var(--dim)}
+.toc{display:grid;grid-template-columns:1fr 1fr;gap:10px 18px;margin-top:22px}
+.toc div{display:grid;grid-template-columns:50px 1fr 36px;grid-template-rows:auto auto;align-items:center;border:1.5px solid #E4DFF0;border-radius:16px;padding:7px 16px}
+.toc .e{grid-row:1/3;font-size:28px}
+.toc b{font-size:25px;color:var(--ink)} .toc small{font-size:17px;color:#8A84A3}
+.toc i{grid-row:1/3;grid-column:3;font-style:normal;font-weight:800;color:#fff;background:var(--v);border-radius:50%;width:34px;height:34px;display:grid;place-items:center;font-size:17px}
+.toc .q{background:var(--gs);border-color:var(--gs)}
+.how{margin-top:20px;font-size:21px;line-height:1.5;color:var(--dim);border-left:5px solid var(--gl);padding:4px 0 4px 18px}
+.how b{color:var(--ink)}
+/* ôn tập */
+.box{display:grid;grid-template-columns:1fr 1fr;gap:10px 18px;margin-top:18px;background:var(--gs);border-radius:20px;padding:18px 24px}
+.box div{font-size:24px;font-weight:700;color:var(--ink)} .box div b{display:inline-block;width:36px;color:var(--g)}
+.quiz{margin-top:14px}
+.quiz .r{display:grid;grid-template-columns:52px 1fr 90px;align-items:center;padding:12px 0;border-bottom:1.5px dashed #E4DFF0;font-size:24px}
+.quiz .r .n{margin-top:0}
+.quiz .blank{height:40px;border-bottom:3px solid #C9C2E2}

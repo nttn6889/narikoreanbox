@@ -111,7 +111,7 @@ h4{font-size:14px;margin:12px 0 4px;color:var(--muted)}
   var out = document.getElementById('out'), nav = document.getElementById('nav'), partsEl = document.getElementById('parts'), msg = document.getElementById('msg');
   function esc(s){ return String(s == null ? '' : s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
   // Trang học câu 1–2 / 3–4 trong 4 buổi
-  var PRACTICE = {1: {url: '../ngu-phap-12/', what: 'học theo cặp dễ nhầm, 61 câu đề có giải thích'}, 3: {url: '../ngu-phap-34/', what: 'học theo nhóm hay ra, 60 câu đề có giải thích'}};
+  var PRACTICE = {1: {url: '../ngu-phap-luyen/#d=1', what: 'tự luyện ngữ pháp câu 1–4 trong 20 ngày'}, 3: {url: '../ngu-phap-luyen/#d=1', what: 'tự luyện ngữ pháp câu 1–4 trong 20 ngày'}};  // ngu-phap-12/34 là giáo án của cô, không đặt link từ trang học sinh
   function ul(s){ return esc(s).replace(/__(.+?)__/g, '<u>$1</u>'); }
   // Phần đọc/viết "Câu 11–12 · …" → 11; phần nghe "Nghe 4–12 · …" → 104 (không lẫn với câu đọc)
   function secNum(sec){ var m = /(\d+)/.exec(sec || ''); return m ? +m[1] + (/^Nghe/.test(sec) ? 100 : 0) : 0; }
@@ -162,7 +162,8 @@ h4{font-size:14px;margin:12px 0 4px;color:var(--muted)}
     secs.forEach(function(sec, si){
       var id = 's' + si, parts = sec.split(' · ');
       parts[0] = parts[0].replace(/^Nghe/, 'Câu');  // trong thẻ Nghe chỉ cần ghi "Câu 4–12" 
-      nv += '<a href="javascript:void 0" data-to="' + si + '">' + esc(parts[0]) + '</a>';
+      var sub = /\s(\d+)$/.exec(parts[1] || '');  // phần chia nhóm (vd. “Câu 5 · 제품 광고 3 · …”) → nút “Câu 5 · 3”
+      nv += '<a href="javascript:void 0" data-to="' + si + '">' + esc(parts[0] + (sub ? ' · ' + sub[1] : '')) + '</a>';
       var lt = PRACTICE[secNum(sec)];
       lt = lt ? '<a class="lt" href="' + lt.url + '">✎ Luyện tập ' + esc(parts[0]) + ' <small>(' + esc(lt.what) + ')</small></a>' : '';
       var hay = DE && DE.hay && part === 'doc' && DE.hay[secNum(sec)];
@@ -172,7 +173,7 @@ h4{font-size:14px;margin:12px 0 4px;color:var(--muted)}
         h += '<h3>' + esc(g.ko) + (g.vi ? ' <small>(' + esc(g.vi) + ')</small>' : '') + '</h3>';
         if (g.w.some(function(w){ return w[3]; })) {
           // ngữ pháp (câu 1–4): mỗi dòng một mẫu, kèm câu ví dụ
-          h += '<div class="tb gr"><div class="h">Ngữ pháp</div><div class="h">Nghĩa tiếng Việt</div><div class="h wide">Ví dụ</div>';
+          h += '<div class="tb gr"><div class="h">' + (secNum(sec) <= 4 ? 'Ngữ pháp' : 'Từ vựng') + '</div><div class="h">Nghĩa tiếng Việt</div><div class="h wide">Ví dụ</div>';
           g.w.forEach(function(w){ h += '<div class="ko">' + esc(w[1]) + '</div><div class="vi">' + esc(w[2]) + '</div><div class="ex">' + ul(w[3] || '') + '</div>'; });
         } else {
           h += '<div class="tb">' +

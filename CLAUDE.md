@@ -42,6 +42,17 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   Học liệu tự sinh: `seoul/#b&c`, `seoul/bai-tap/` (bài trong `BT` — thêm bài thì sửa `BT` trong `khung.js`; `TS` để trống: `seoul/tu-sau/` là giáo án của cô), `seoul/ngu-phap/`;
   thêm tay vào `HL['<lớp>']['<phần>:<cuốn>-<bài>']` hoặc `'<phần>:chung'` (hiện nút “★ Dùng chung”). Link `lop/2a/#k=tu|np|nghe|doc|viet&b=2A-3&t=bang|mau|hl`.
 - Không đưa giáo án / bản trình chiếu của cô (trang `noindex`, `viet-51/`, `viet-52/`, `viet-53/`, `cau-25-27/`, `seoul/so-dem|tuong-dong|tu-de-hoi/`, `seoul/2a-1|3a-1/`, `ngu-phap-sau/`).
+  Cô chốt 31/10: `ngu-phap-12/`, `ngu-phap-34/`, `cau-13-15/`, `cau-16-18/`, `cau-19-20/`, `cau-23-24/`, `cau-42-43/` (kể cả `#b=3` luyện như thi) cũng là giáo án — đã gỡ khỏi `HL` và nút Luyện tập của `tu-vung/` (nay trỏ `ngu-phap-luyen/`), link ở Mục lục giáo án.
+
+## Khóa 110 (thi khoảng 11/4/2027, mục tiêu TOPIK 4) — khung buổi 90 phút cố định
+- Cô chốt 31/10: 3 buổi/tuần, Tết nghỉ khoảng 10 ngày, học sinh mới hết sơ cấp, kiểm tra đầu giờ **chiếu trên lớp, cô kiểm tra trực tiếp** (cả lớp giơ thẻ ①②③④).
+  Khung mỗi buổi: trước buổi tự học (30–40′) → ① kiểm tra đầu giờ 10′ (đạt 8/10) → ② chữa 5′ → ③ dạy dạng 30′ → ④ cô làm mẫu + làm từng bước 15′ → ⑤ như thi 15′
+  → ⑥ góc chủ đề / ôn dạng cũ 10′ → ⑦ phiếu ra lớp 3 câu chưa gặp + giao bài 5′; hết dạng có kiểm tra dạng (80%), hết giai đoạn có kiểm tra giai đoạn.
+  Câu đề của mỗi dạng chia cố định: làm thử · làm mẫu/từng bước · như thi · ra lớp · để dành cho kiểm tra (không cho học sinh gặp trước).
+- `khoa-110/` (trang học sinh): lộ trình theo **Tuần 1–23 × Buổi 1–3** (không ghi thứ/ngày — cô đổi lịch được), biến `W` = [giai đoạn, chủ đề, [buổi: loại, tên, `k:c` link trang chủ, ghi chú, kiểm tra đầu giờ]].
+  Chủ đề 2 tuần một chủ đề theo 10 chủ đề × 12 chủ điểm (trang https://claude.ai/artifact/ExdBDgYYhxrysxqHEDB27S, tab Theo chủ đề). `#t=<tuần>` tô + cuộn tới tuần đó. localStorage `nari-k110` (em tick “Đã học”).
+- `cau-5/lop/` (giáo án của cô, `noindex`): buổi câu 5 theo khung — chiếu câu đề (`R` chép từ `cau-5/`, nghĩa lựa chọn `VIO`), bấm giờ, chạm tên em sai, Kết quả buổi + “Chép kết quả”.
+  Bộ câu `SETS` (dau 5 làm thử · buoc 4 · thi 8 · ra 3) + `KEEP` 2 câu để dành. Tên học sinh chỉ ở localStorage `nari-lop5`. Buổi dạng khác làm cùng khuôn `cau-<dạng>/lop/`.
 
 ## Phòng thi thử (`thi-thu/`)
 - Trang **quản lý** của cô vẫn nằm trên claude.ai: https://claude.ai/artifact/7EWoCB9sEomX2FHY8d1QY8
@@ -162,6 +173,17 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   Nút “⛶ Chiếu” cuối thanh chọn buổi → ẩn đầu trang/menu, thanh điều khiển dưới: ◀ ▶ (phím ← →, hết thẻ tự sang thẻ sau), chọn thẻ, A− A+, “Một khối” (chỉ hiện khối đang giảng,
   tự phóng vừa màn hình) / “Cả trang” (khối khác mờ, chạm khối nào chọn khối đó), ⛶ toàn màn hình, ✕ (Esc). Khối tự chia theo khung trang (khối cao quá màn hình thì chia theo khối con;
   tiêu đề h2–h4, `.hd`, `.ph`, summary đi liền khối sau) → trang mới không cần soạn thêm. Link mở thẳng chỗ đang giảng: `#…&cf=<số khối>`. localStorage `nari-chieu` (cỡ chữ, chế độ).
+- **Bảng trắng** (`bang.js`, cô hỏi 31/10: giảng trong trang khỏi chuyển sang Google Docs): gắn cuối trang `<script src="../bang.js"></script>` (sau `dd.js`/`chieu.js`; đã gắn ở `cau-11-12/`, `cau-5/`).
+  Nút “✏ Bảng” cuối thanh chọn buổi (đang chiếu thì nằm trên thanh chiếu) → “⬜ Bảng” nền trắng (kẻ ô ▦, nhiều trang ‹ ›) hoặc “📄 Trên trang” (viết đè lên học liệu, nét đi theo trang khi cuộn,
+  mỗi `#hash` một lớp, ✋ tạm thôi vẽ để cuộn / bấm trong trang). Bút, bút tô, T = **khung chữ** (cô góp ý 31/10: chữ gõ không được dính vào trang; một khung nền vàng cố định trên màn hình, kéo đầu khung để dời, góc để đổi cỡ, A− A+;
+  bấm T / — để ẩn, bấm T hiện lại viết tiếp, chữ lưu ở `st.n`), tẩy theo nét, 6 màu, 3 cỡ, ↶ ↷, 🗑. Bút cảm ứng thì bỏ chạm lòng bàn tay.
+  Cô góp ý 31/10 (chuyển qua lại bảng ↔ chọn đáp án): bảng trắng mặc định là **cửa sổ nổi** (`cfg.win`; ⠿ kéo dời, góc dưới phải đổi cỡ, ⛶ / ⧉ cả màn hình ↔ cửa sổ) — trang bên cạnh vẫn bấm được;
+  “Trên trang”: **chạm nhẹ (không kéo, < 0,4 giây) = bấm vào trang** (`passClick`), kéo = vẽ; phím **B** bật / tắt bảng.
+  Lưu localStorage `nari-bang` theo đường dẫn trang.
+- **Tra từ + Sổ từ** (`tra-tu.js`, cô hỏi 31/10: học sinh không biết từ thì tra ngay, lưu lại gửi danh sách / bài tập sau buổi): `bang.js` tự nạp (trang khác gắn `<script src="../tra-tu.js"></script>`).
+  Nhấp đúp từ tiếng Hàn (hoặc bôi đen → “📖 Tra”) → khung nghĩa (từ gốc + nghĩa từ `tra-tu/tu.json`, sửa được, câu chứa từ trong trang làm câu ví dụ `__chữ__`, 🔊, Naver ↗) → “★ Lưu vào sổ từ”.
+  Nút “📖 Sổ từ” (cạnh ✏ Bảng): danh sách theo buổi (ngày), ô gõ từ để tra, “Chép danh sách” (Zalo), “Tạo bài tập” = link `thi-thu/#v=` (mã `ST<yymmdd>..`, chọn ≤ 3 dạng; học sinh tự thấy điểm,
+  mã nộp `NV1-` chỉ chấm được trong trang quản lý khi mã bài có trong `vassigns`). localStorage `nari-sotu` (máy cô). Từ điển: `python3 tools/tu_dien.py` (kho từ + `cot_loi`/`nghia_de`/`cum_de` + `thi-thu/de/tu/`) — chạy lại sau đồng bộ đề / kho từ. Thuộc tính của thanh dùng `data-bt` (nhiều trang đã dùng `data-t` cho câu hỏi).
 - **Mỗi lần làm trang học liệu mới** (site hoặc claude.ai): tự thêm link vào trang “Mục lục học liệu Nari” (https://claude.ai/artifact/6bTfJWsvsCeMrmggceXPjQ,
   mảng `L` theo lớp → nhóm; Artifact `read` → sửa → `publish` với `url`, đổi ngày “cập nhật”), trang cũ đã gộp thì ghi chú “Bản cũ, đã gộp vào …”, trang đã xóa thì bỏ dòng.
 
@@ -187,6 +209,8 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 
 ## Về cô (`ve-co/`)
 - Bản sao trang https://claude.ai/artifact/2XJHcdRJMNbKnDoMXqVZWQ, sửa trực tiếp ở đây (link "Trang chủ" trỏ về trang chủ site).
+- Dạng landing page (30/10): hero + 4 số liệu, Lời cô, dòng thời gian (`TL`), lĩnh vực biên phiên dịch (`FIELDS`), “Mang vào lớp học”, hồ sơ chia thẻ
+  Công tác · Học vấn · Biên – phiên dịch · Làm thêm · Chứng chỉ (`WORK`/`EDU`/`DICH`/`THEM`/`CC` trong script, câu chuyện mở bằng “Đọc câu chuyện”), nút Zalo. Không ảnh chân dung.
 
 ## Học cùng cô (`hoc-cung-co/`) — trang giới thiệu gửi học sinh mới khi tư vấn
 - Sửa trực tiếp `hoc-cung-co/index.html`. Ảnh trong `img/` là ảnh chụp màn hình thật (Playwright, khung 390px, tên “Học viên”).
@@ -465,6 +489,8 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   누구나 / 무슨 N(이)나 (ref 3A-2 mẫu 4) · 아무 N도 (3A-6; bảng 아무도 / 아무나 / 누구나, lỗi “ai cũng không” → 누구나 안); Nửa 2 chọn lựa = Bước 0 (이)나 “hoặc” + 4 nghĩa
   của (이)나 (2A-1) · N(이)나 chọn tạm, rủ nhẹ (3A-4) · N(이)라도 (3A-5, phân biệt với (이)나, 만 / 밖에 / 조차) · Tổng hợp (bảng chọn tiểu từ, 12 câu gồm câu 1–2
   Yonsei 3, HOT 2, HOT 5, kỳ 52). Câu dẫn trong đoạn văn lấy từ đề luyện trong `thi-thu/de/` (kỳ thật chỉ có kỳ 64 câu 1, kỳ 52 câu 2, kỳ 91 câu 38).
+  **Đã chuyển sang khung mới** (30/10, cả 6 bước + mẫu 4 của 3A-2): `yn`, `chiaV` (bước có 받침 이나/나), `chiaDs`, `bqt` = ghép với tiểu từ khác (nền 1, 아무 N도), `chiaLt`,
+  `tinh[].lt`, `rb` dạng thẻ có `lt`, `sai` có `h`/`k` + `saiLy`/`saiLt`, `pb[].bang`/`lt`, `em` có `gy`. Sửa thẳng `data/cd-tieu-tu.json`.
   `dinh-ngu` (Định ngữ, cô yêu cầu cho lớp 2A–3B, ~2 tiếng 20, 10 bước, 3 nửa — ngoài thứ tự 8 chuyên đề trên): Nửa 1 = Bước 0 định ngữ là gì + A-(으)ㄴ N, N인 N (src 1B-14) ·
   V-는 N (src 1B-15) · ref 2A-2 mẫu 3 (-(으)ㄴ) · ref 2A-3 mẫu 4 (-(으)ㄹ) · bảng đã/đang/sẽ × loại từ + 12 câu gõ; Nửa 2 = ghép hai câu / đọc câu dài · định ngữ + danh từ phụ thuộc
   (chỉ -(으)ㄹ: 수 줄 때 뻔; chỉ -(으)ㄴ: 적 후 지; chỉ -는: 중 동안 바람에; theo thì: 것 같다 편 척 대로 탓; câu 1–3 kỳ 37, 47, 60, 96, 102); Nửa 3 = -던 · -았/었던 (chưa có `src` vì
@@ -747,6 +773,21 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - Biến `R` = 22 câu 5 (16 câu đề là ảnh, chữ chép tay từ ảnh; đáp án `a` 0-based, đã đối chiếu `bank/<đề>/q/q05`): `l` dòng, `v` nghĩa, `c` chữ quyết định (phải có đúng trong `l`),
   `k` tín hiệu, `x[i]` bẫy lựa chọn sai (G cùng nhóm / C chữ bẫy / K không liên quan). `P` = 30 đồ vật {vi, n: đồ vật dễ nhầm, c:[[ko, vi, 1 = ví von]]} — mỗi cụm chỉ đồ vật đó dùng được,
   `c[1]` là cụm phân biệt (bài ngược dùng `c[1]` + câu ví von đầu); `G` nhóm; `OV` cặp quá gần không lấy cụm của nhau làm nhiễu; `PX` nghĩa đồ vật chỉ làm lựa chọn nhiễu. localStorage `nari-5`.
+- Buổi 2 mục 1 “Năm kiểu tín hiệu” (cô góp ý 31/10: chưa giải thích kỹ): mỗi kiểu một khối `.kb` = bảng nhận ra bằng gì → cách làm → 2 câu đề thật (`<div class="sx" data-id>`, vẽ từ `R`, tô `c`)
+  → bẫy hay gặp → ✋ luyện ngay 3 câu `MCQ.sK|sS|sD|sB|sV` (cô tự soạn; phần tử 5 = câu hỏi riêng; giải thích gọi tên tín hiệu). Bảng tóm tắt `SIG` giữ ở đầu mục + Bảng tra.
+- Thẻ **Từ ngữ câu 5–8** (`#b=tu`, section `stu`; cô góp ý 31/10: câu 5–8 nhiều từ láy, tượng thanh, từ quảng cáo chưa liệt kê): 3 luật đọc từ láy · `TL` từ láy theo cảm giác
+  ([ko, nghĩa, hay tả, ví dụ, dịch, ★ đề có từ đó]; “Che nghĩa”) + luyện `MCQ.tl` · câu cụt của quảng cáo / khẩu hiệu · `TB` từ ngữ quảng cáo – thông báo câu 5–6 / 6 / 7 / 8
+  ([ko, nghĩa, dẫn tới, ★]) + luyện `MCQ.tb`.
+- Bài trắc nghiệm từ vựng (31/10): 8 link `thi-thu/#v=` (kv+vk) trong biến `TQ` — `C5N1…6` theo 6 nhóm đồ vật `G` (tên đồ vật + cụm `P`), `C5L1/2` từ láy `TL`; nút ở cuối Buổi 1 mục 3 (`#tqN`) và thẻ Từ ngữ (`#tqL`). Đã ghi `vassigns/C5N1…C5L2` để chấm mã `NV1-`. Sửa `P`/`TL` thì tạo lại link + ghi lại `vassigns`.
+- **Trang học sinh `cau-5/luyen/`** (cô yêu cầu 31/10; gộp với kho từ cùng ngày): bảng từ **đọc thẳng `thi-thu/vocab.json`** — cùng nguồn với thẻ Từ vựng câu 5 ở trang chủ
+  (`#k=doc&c=5&t=tu`, mỗi nhóm có nút “Luyện nhóm này ›” = `tuLuyen` trong `index.html`). Kho từ câu 5 = 55 đồ vật (50 của sách 합격 레시피 + 5 của `P`: 다리미, 옷, 제습기, 연고, 휴대 전화),
+  mỗi đồ vật một nhóm `V05_00…54` (từ khóa sách + cụm/ví von của `P`, id `w5_<nhóm>_<i>`), chia 10 phần `Câu 5 · 제품 광고 N · <tên nhóm>` (secOrder 1, `order` chạy liên tục) + phần
+  `Câu 5–8 · 의성어·의태어 · …` (`V05T_01…08` = `TL`, câu ví dụ trong `ex`; hiện ở cả dạng 5 và 6–8). Sửa từ trong trang quản lý (Từ vựng) → đồng bộ kho từ là hai trang tự đổi.
+  Trang: thẻ `#t=n1…n10` (thẻ đồ vật, “Che nghĩa”), `l1|l2` từ láy, `tr` bài trộn; **✋ Luyện nhanh** tự sinh (chấm ngay, “Làm lại” đổi câu, `st.q[thẻ] = {sd, a}`): cụm → đồ vật (lựa chọn = đồ vật cùng nhóm),
+  đồ vật → chọn mọi cụm của nó, từ láy → nghĩa; chỉ hỏi cụm thuộc đúng một đồ vật, bỏ từ quá chung (`GEN`). `VV` (cụm ví von, tô xanh) và `TLX` (từ láy: hay tả, dịch ví dụ, ★) nhúng trong trang.
+  Bài trắc nghiệm: `python3 tools/cau_5_luyen.py <thư mục>` → `cau-5/luyen/tq.json` (mã `C5G<nhóm>[A|B]`, `C5T1/2`, ≤ 36 từ/bài, kv+vk) + `<thư mục>/vassigns/*.json` → ArtifactData batch `set` `vassigns`
+  (đã ghi 31/10). Sửa từ câu 5 trong kho thì chạy lại + ghi lại `vassigns`. Mã cũ `C5N1…6`, `C5L1/2` vẫn ở `vassigns` (giáo án `cau-5/` còn dùng `P`/`TL`/`TQ` riêng, không đổi). localStorage `nari-5luyen`.
+  Dữ liệu nhúng `var D` chép một lần từ `cau-5/index.html` (sửa `P`/`TL`/`TQ` ở trang chính thì chép lại). localStorage `nari-5luyen`. Đã thêm vào `HL['doc:5']` — câu 5 ở trang chủ học sinh chỉ còn link này (cô chốt 31/10: `cau-5/` và `cau-5/#b=3` là giáo án, chỉ để ở Mục lục giáo án). ★ chỉ ghi khi chữ có trong câu 5–8 của 22 đề (`tools/dau_hieu/5-8.json` `tx` hoặc `thi-thu/de/`).
 
 ## Học câu 11–12 tin ngắn (`cau-11-12/`) — bài dạng câu gom cả 5 chuyên đề Đọc (cô yêu cầu 26/10, làm thử dạng đầu tiên)
 - Ý cô: dạy lần đầu theo dạng câu; mỗi dạng lấy **hết** dấu hiệu / cách giải của 5 chuyên đề (`dau-hieu/`, `doc-chon-loc/`, `dong-trai/`, `doc-dap-an/`, `doc-hieu/`) nhưng chỉ phần của dạng đó,
@@ -754,6 +795,14 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   vốn từ tin tức 8 nhóm `VG` + ✋ mỗi nhóm, vai trò câu, 그러나/물론 → ý chính, đọc chậm có dịch) · Buổi 2 đáp án nói lại 6 cách (`OK`) + cùng ý / khác ý + đọc nghĩa lựa chọn + chữ tín hiệu ·
   Buổi 3 7 bẫy (`BAY`: N C T G S A R) + bẫy theo kiểu tin + gọi tên bẫy · Buổi 4 quy trình 4 bước, làm mẫu kỳ 91 câu 11, làm từng bước (chọn câu căn cứ → Khớp / Không khớp) ·
   Luyện như thi (6 câu/lượt, ôn ngắt quãng, bỏ 5 câu `PRE`) · 44 bài · Kết quả (làm lại 5 câu, so trước – sau, tự đánh giá, “Gửi kết quả cho cô”). Hộp “Dành cho cô” ở thẻ Bắt đầu = bảng lấy gì từ chuyên đề nào.
+- Thẻ **Từ vựng · tự học** (`#b=tu`, section `stu`; cô góp ý 28/10: Buổi 2 câu dài, học sinh tự học khó tập trung → chỉ từ / cụm ngắn): 1 từ tin tức 8 nhóm (`VG`, chỉ từ + nghĩa, luyện `tv0…7`) ·
+  2 40 từ gặp nhiều nhất (`D.w`, luyện `tw`) · 3 cặp cùng ý bài ⇒ đáp án (D đồng nghĩa, H Hán ↔ thuần Hàn, K gói chung, P nói ngược + “không”, U suy ra; luyện `ts`) ·
+  4 cặp khác ý của lựa chọn sai (T ngược nghĩa, F thêm/bỏ “không”, G thời gian/số, L phạm vi; luyện `td` cùng ý hay khác ý). Cặp rút gọn tay từ cặp chữ của 44 câu, biến `TP`
+  `[cách, chữ bài, chữ lựa chọn, nghĩa, nghĩa, id câu | '' = cặp Hán ↔ thuần hay gặp trong đề đọc]`; nút “Che nghĩa” / “Che vế đáp án” (chạm ô xám để xem). Chờ cô duyệt rồi mới tách trang học sinh.
+- **Trang học sinh `cau-11-12/hoc/`** (cô chốt 28/10: mỗi dạng câu = phần tự học trước buổi + giáo án trên lớp + luyện sau buổi; **một link, làm theo thứ tự, 2–3 ngày**):
+  6 bước `#b=1…6` — Ngày 1 trước buổi: ① từ tin tức (`VG`, luyện `tv0…7`) ② đọc 3 tin có dịch (`READ`) + làm thử 5 câu `PRE` (chưa dạy mẹo; “Gửi kết quả cho cô” để cô biết trước buổi) ·
+  Ngày 2: ③ cặp cùng ý / khác ý (`TP`, `ts`/`td`) ④ làm từng bước 4 câu (`stepIds`, mỗi kiểu tin một câu) · Ngày 3: ⑤ như thi 2 lượt × 6 câu (lượt sau hỏi lại câu sai) ⑥ kiểm tra 7 câu = 5 câu `PRE` + đề thật `Etk083-12`, `Etk091-12` (để dành, không vào luyện) → so trước – sau, tự đánh giá, gửi cô.
+  Thanh bước có ✓, bước kế tiếp gạch đỏ; không khóa bước. Dữ liệu `../data.json`; `VG`, `TP`, `PRE`, hàm quiz chép từ giáo án (sửa giáo án thì chép lại). localStorage `nari-1112h`. Đã thêm vào trang chủ học sinh `HL['doc:11']` (cô duyệt 29/10: link + `#b=5` luyện như thi); các dạng khác làm cùng khuôn `cau-<dạng>/hoc/`.
 - Dữ liệu `python3 tools/cau_11_12.py` → `cau-11-12/data.json` (gộp `doc-dap-an/data.json`, `dong-trai/data.json`, `tools/dau_hieu/11-12.json`, `thi-thu/de/tu/`) + dịch từng câu, vai trò câu (C T D G N L K S Y X),
   kiểu tin ở `tools/cau_11_12/bai.txt` (Claude soạn). Số trong chữ tĩnh viết theo lần chạy 26/10. localStorage `nari-1112`. Trang `noindex`, chưa đặt link từ trang học sinh (chờ cô duyệt khuôn rồi làm các dạng khác cùng khuôn).
 
@@ -771,6 +820,19 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   10 câu (đúng mà có xem gợi ý → ôn lại ngày mai). Mỗi bước có 💡 gợi ý 2 mức (mức 1 = `g1`/`g3`, mức 2 = tô `h` của câu đang so + cách làm) và phản hồi tách
   “Vì sao chọn” (`c1`/`c3`) / “Vì sao loại” (`x1`/`x3`) + nghĩa 2 câu đang so. Dữ liệu `R` cùng câu, đáp án, `h`, `v` với trang chính + 6 trường trên, `p` = thẻ.
   Báo cáo gửi cô: đúng cả 2 bước / không cần gợi ý / sai bước nào. localStorage `nari-1315l`.
+- **Bản theo khuôn bài dạng câu `cau-13-15/moi/`** (cô yêu cầu 28/10, cùng khuôn `cau-11-12/`, `cau-19-20/moi/`; hai trang cũ giữ nguyên): Bắt đầu (làm thử 5 câu `PRE`) ·
+  Từ vựng tự học (`#b=tu`: từ dấu bám 7 nhóm `DB`, 40 từ hay gặp, cặp chữ bám ⇒ chữ được bám, “là dấu bám không?” `NO`) · Buổi 1 đọc 4 câu (vai trò câu M X N V L T S D R B K, 6 khuôn đoạn `MK`
+  Q G H W T P, câu nào đứng cuối, đọc chậm có dịch / xếp đúng thứ tự) · Buổi 2 bước 1–2 dấu bám (6 loại C1–C6 của `dau-hieu/` thẻ C, câu đề chọn câu đầu khi câu kia có dấu bám) ·
+  Buổi 3 hai câu đều sạch (đứng một mình, 4 kiểu câu đầu, bẫy định nghĩa sau hiện tượng) · Buổi 4 so một vị trí (vị trí 2 / 3, 6 tín hiệu `K2`, chuỗi từ khóa: chữ bám trỏ về câu nào, câu nào đi ngay sau) ·
+  Buổi 5 quy trình 3 bước, làm mẫu kỳ 91 câu 15, làm từng bước có 💡 gợi ý (`g1`/`g3`) · Luyện như thi (6 câu/lượt, 1 phút/câu, ôn ngắt quãng) · 66 câu · Kết quả.
+  Dữ liệu `python3 tools/cau_13_15.py` → `cau-13-15/moi/data.json`: đọc thẳng `R`, `MCQ`, `F`, `K2` của `cau-13-15/index.html` + `g1 c1 x1 g3 c3 x3` của `cau-13-15/luyen/` (bằng node),
+  `tools/dau_hieu/13-15.json`, `thi-thu/de/tu/` + `tools/cau_13_15/bai.txt` (Claude soạn: khuôn đoạn, vai trò 4 câu theo thứ tự đúng, cặp “chữ bám>chữ được bám” — script kiểm tra cả hai có trong câu).
+  Sửa trang cũ thì chạy lại script. Số trong chữ tĩnh viết theo lần chạy 28/10. localStorage `nari-1315m`. Trang `noindex`, link ở Mục lục giáo án.
+  **Cô góp ý 29/10: chia kiến thức thành khối nhỏ, mỗi khối = kiến thức → ví dụ trong đề → ✋ luyện ngay, giải thích phải gọi tên dấu hiệu vừa học** (khuôn chung `kb()`, CSS `.kb`;
+  làm trang dạng câu mới cũng theo khuôn này). Buổi 1: vai trò câu 5 nhóm `RG5` (chữ dấu hiệu `RS`, định nghĩa `RDEF`, giải thích `roleWhy` = vai trò + chữ dấu hiệu tô vàng + chữ bám + dịch),
+  6 khuôn đoạn `MKD` (mô tả + đoạn mẫu + luyện tìm câu đầu). Buổi 3: phép thử đứng một mình 4 kiểu `SA` ([tên, luật, [[id câu, câu em phải hỏi lại]]], ví dụ đầu + luyện phần còn lại),
+  4 kiểu câu đầu (`FSIG`/`FDEF`, `fWhy`). Buổi 4: 6 tín hiệu (`K2EX` ví dụ, `K2HOW` luật, `k2Q`), chuỗi từ khóa 3 kiểu `LKT` (1 từ chỉ 이/그 + N, 2 lặp từ khóa, 3 nói lại bằng chữ khác —
+  danh sách tay `LK3`; `lkKind` xếp cặp chữ bám, cặp là từ nối `LKX` bỏ ra), mỗi kiểu 3 bước + làm mẫu `LKEX` + luyện có 💡. Bảng tổng cũ thu vào `<details>`, bài trộn để cuối mục.
 
 ## Học câu 16–18 điền chỗ trống (`cau-16-18/`)
 - Cùng khung với `cau-25-27/`: Buổi 1 (thói quen **đọc qua ô** — 39/65 câu manh mối nằm sau ô; quy trình 3 bước; khung quanh ô → loại ý; tín hiệu ① Đảo chiều, ② Giải thích ở sau),
@@ -816,6 +878,10 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   Buổi 4 câu 20 (dạng A chủ đề / B nội dung, `20a–d` + gọi tên bẫy câu thật) · Buổi 5 quy trình 5 bước, làm mẫu kỳ 91, làm từng bước · Luyện (4 bài/lượt, ôn ngắt quãng) · 22 bài · Kết quả.
   Dữ liệu `python3 tools/cau_19_20.py` → `cau-19-20/moi/data.json`: đọc thẳng biến `R`, `ADV`, `REL2`, `CMP2`, `PAIRS`, `REL`, `MCQ`, `MV` của `cau-19-20/index.html` (bằng node) + `tools/dau_hieu/19-20.json`,
   `doc-dap-an/`, `dong-trai/`, `thi-thu/de/tu/` + dịch từng câu `tools/cau_19_20/bai.txt`, nghĩa lựa chọn câu 20 chủ đề `vi20.txt` (Claude soạn). Sửa trang cũ thì chạy lại script. localStorage `nari-1920m`.
+- **Trang học sinh `cau-19-20/hoc/`** (cùng khuôn `cau-11-12/hoc/`, cô yêu cầu 29/10; một link, 6 bước `#b=1…6`, 3 ngày): ① phó từ & từ nối = 4 nhóm kho từ `V19_00…03` của `thi-thu/vocab.json` (luyện `tv0…3`)
+  + 30 từ hay gặp trong 22 bài (`x.tu`, bỏ từ đã có trong 4 nhóm; luyện `tw`) ② đọc 3 đoạn có dịch (`READ`, ô điền sẵn) + làm thử 5 bài `PRE` (10 câu) · Ngày 2: ③ bảng `PAIRS` (“Che đuôi”) + `MCQ['1nM']`, bảng `REL` + `MCQ['2nM']`
+  ④ làm từng bước 4 bài (2 chủ đề + 2 nội dung, `stepIds`) · Ngày 3: ⑤ như thi 2 lượt × 4 bài (lượt sau hỏi lại bài sai; `st.thd` ≥ 8 bài) ⑥ kiểm tra 5 bài `PRE` + 2 bài để dành `Et3001`, `Eys1` (14 câu).
+  Kỳ 91 không vào luyện (cô làm mẫu trên lớp). Dữ liệu `../moi/data.json` (không cần script riêng). localStorage `nari-1920h`. Đã thêm vào `HL['doc:19']`.
 
 ## Học câu 23–24 tâm trạng trong tùy bút (`cau-23-24/`) và câu 42–43 tiểu thuyết (`cau-42-43/`)
 - Hai trang riêng, cùng khung với `cau-19-20/` (một bài = đoạn văn + 2 câu; câu sau mở khi làm câu trước; ✕ gạch lựa chọn; Buổi 1–3, Ôn ngắt quãng 5 bài/lượt,
@@ -858,10 +924,24 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - `fb/ca-nhan/`: bài cho trang cá nhân "Tiếng Hàn Ngân Nguyễn" (cô có ảnh đại diện thật, giọng văn kể chuyện, lồng từ Hàn). `bia.html` ảnh bìa 1640×924
   (chữ để trên + hai bên, vì trên điện thoại ảnh đại diện che giữa phía dưới), `ghim-1` bài ghim, loạt “Một từ, một câu chuyện” `tu-NN-*.html`
   (khung `tu.css`, từ lấy từ phần `Cốt lõi` của `thi-thu/vocab.json` + số đề trong `tu-vung/de.json`), lời đăng ở `caption.md`.
-  Dùng chung `quang-cao/topik2-len-3-4/base.css`. Chụp PNG: `node tools/chup_anh.js fb/ca-nhan/*.html` (cỡ khác 1080×1350 ghi `<meta name=size content="WxH">`).
+  Dùng chung `quang-cao/topik2-len-3-4/base.css`.
+  Loạt “Danh sách ôn TOPIK” `ds-NN-*.html` (khung `ds.css`, có `wm.js`): danh sách rút từ số liệu đề thật trong repo (#1 20 từ có ở 20/20 đề đọc, #2 chữ tín hiệu trong lựa chọn);
+  lời đăng + kế hoạch các số sau (#3…#9) ở `caption.md`. Số trên ảnh phải lấy từ dữ liệu repo, không bịa.
+  **Cô chốt 28/10: loạt Danh sách là bí quyết riêng, để dành tới khi trang đông người theo dõi** (đăng sớm thì page lớn lấy lại). Bây giờ đăng loạt
+  “Ôn TOPIK cùng cô Ngân” `kt-NN-*.html` (khung `kt.css` + `ds.css`): chủ đề các trang khác hay đăng (cấu trúc đề, quán ngữ…) nhưng đúng + đầy đủ + rõ hơn,
+  **không đưa số liệu thống kê riêng của cô** (số đề, tỉ lệ đáp án…).
+  Cô thích dạng **bộ sưu tập nhiều ảnh** (10–15 ảnh, bìa có mục lục + ảnh ôn tập cuối) để học sinh lưu về học lâu dài: `qn-NN-*.html` = 96 quán ngữ theo bộ phận cơ thể,
+  sinh bằng `python3 tools/fb_quan_ngu.py` (8 mục/ảnh: quán ngữ | nghĩa | câu ví dụ + dịch). **Khung ảnh cô duyệt 30/10: `khung.css`** (mẫu `mau-khung`): nền tím chuyển màu + viền vàng mảnh,
+  thẻ trắng bên trong, số thứ tự chấm tròn tím, từ đang học gạch nền vàng — bộ quán ngữ đã đổi sang khung này; bộ mới làm theo khung này (`qn.css` là khung cũ).
+  `tb-NN-*.html` = 80 từ vựng đọc tiêu đề báo (câu 25–27), 10 nhóm nghĩa × 8 từ (nghĩa + Hán Việt + tiêu đề mẫu tự soạn + dịch), sinh bằng `python3 tools/fb_tieu_de.py` (cùng khung `qn.css`).
+  **Dấu bản quyền ảnh FB**: cô thấy vòng tròn to giữa ảnh làm rối → dùng `wm.js` `data-style="tile"` (chữ “Nari TOPIK · Zalo” nhạt .045 lặp chéo khắp ảnh); ảnh `quang-cao/` vẫn kiểu cũ. Chụp PNG: `node tools/chup_anh.js fb/ca-nhan/*.html` (cỡ khác 1080×1350 ghi `<meta name=size content="WxH">`).
 - `fb/90-ngay/`: loạt “90 ngày TOPIK II” (mỗi ngày 1 bài, chia sẻ miễn phí): Ngày 0 lộ trình; chặng 1 (1–30) từ cốt lõi Tầng 1 + ngữ pháp câu 1–4 (11 nhóm `PLAN` của `ngu-phap-luyen/`),
   chặng 2 (31–60) Tầng 2 + từ theo dạng câu đọc, chặng 3 (61–90) Tầng 3 + từ nghe / viết 51–54; ngày 10, 20… là ngày ôn (ảnh kiểm tra, đáp án ở comment).
   Sinh tự động: `python3 tools/fb_90.py` (lịch ở `CAU2`/`CAU3`/`lich()`, lấy từ `thi-thu/vocab.json`) → `ngay-NN.html` + `caption.md` (bản nháp lời đăng); chụp `node tools/chup_anh.js fb/90-ngay/*.html`.
 - `fb/de-viet-108/`: đề viết kỳ 108 (18.10.2026, đề thí sinh nhớ lại, câu chữ theo bản của Tiếng Hàn Thầy Tư) — 2 ảnh đề sạch `de-1`/`de-2` cho bài chính,
   ảnh đáp án đăng ở comment: bìa, 51, 52 (đáp án + cách viết khác), 53 đề (biểu đồ vẽ lại bằng SVG) + bài mẫu, 54 đề + dàn ý + bài mẫu; `de.css`, lời đăng `caption.md`.
+- **Trang lấy ảnh + lời đăng** `fb/` (https://hoc.naritopik.com/fb/, `noindex`, chỉ cô dùng): mỗi mục `## ` của `fb/*/caption.md` = một bài (ảnh theo thứ tự đăng,
+  nút “Lưu cả N ảnh” — điện thoại mở bảng chia sẻ để lưu vào Ảnh, chép lời đăng / bình luận đáp án). Sinh bằng `python3 tools/fb_trang.py` (khung `fb/trang.tpl.html`):
+  ảnh = tên file `.png` nhắc trong tiêu đề / thân mục (cùng thư mục rồi `quang-cao/*/`; `a → b` cùng tiền tố lấy cả dãy), lời đăng tới dòng `**Comment đáp án**`.
+  **Làm ảnh / sửa caption.md xong thì chạy lại script.**
 - Cô: cử nhân Quản trị kinh doanh Đại học Daegu, đang ở Quỳnh Lưu, dạy trực tiếp tại Quỳnh Lưu + online toàn quốc.

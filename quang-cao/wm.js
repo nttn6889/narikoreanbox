@@ -3,6 +3,20 @@
 // Dùng: <script src="../../quang-cao/wm.js"></script> ở cuối trang. Cỡ/độ mờ: data-size, data-op trên thẻ script.
 (() => {
   const me = document.currentScript, base = me.src.replace(/quang-cao\/wm\.js.*$/, '');
+  // data-style="tile": chữ nhỏ rất nhạt lặp chéo khắp ảnh (sạch hơn vòng tròn to, cắt chỗ nào cũng còn tên + số).
+  if (me.dataset.style === 'tile') {
+    const W = document.body.scrollWidth, H = document.body.scrollHeight, op2 = me.dataset.op || '.045';
+    const line = 'Nari TOPIK · Zalo 0399 214 554';
+    let rows = '';
+    for (let y = -200, i = 0; y < H + 400; y += 180, i++)
+      for (let x = -400 + (i % 2) * 250; x < W + 400; x += 500)
+        rows += `<text x="${x}" y="${y}">${line}</text>`;
+    const t2 = document.createElement('div');
+    t2.style.cssText = `position:absolute;inset:0;pointer-events:none;z-index:50;opacity:${op2}`;
+    t2.innerHTML = `<svg width="${W}" height="${H}"><g transform="rotate(-24 ${W / 2} ${H / 2})" font-family="Be Vietnam Pro" font-size="22" font-weight="700" fill="#53468F">${rows}</g></svg>`;
+    document.body.appendChild(t2);
+    return;
+  }
   const S = +(me.dataset.size || 560), op = me.dataset.op || '.13';
   const t = 'ZALO CÔ NGÂN 0399 214 554 · NARITOPIK.COM · NARI TOPIK · ';
   const d = document.createElement('div');

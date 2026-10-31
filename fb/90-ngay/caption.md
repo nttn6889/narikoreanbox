@@ -7,7 +7,7 @@ Lời đăng dưới đây là bản nháp, cô sửa theo giọng của cô. M�
 
 Rất nhiều em nhắn cô: “Em có 30 / 60 / 90 ngày trước kỳ thi TOPIK II thì học gì trước?”
 
-Câu trả lời của cô: **học đúng phần đề hay ra, theo đúng dạng câu.** Cô đã thống kê 20 đề đọc TOPIK II: có những từ gặp ở 15/20 đề, có những mẫu ngữ pháp năm nào cũng ra ở câu 1–4.
+Câu trả lời của cô: **học đúng phần đề hay ra, theo đúng dạng câu.** Có những từ đề đọc nào cũng gặp, có những nhóm ngữ pháp năm nào cũng ra ở câu 1–4 — học trước những phần đó là lời nhất.
 
 Từ ngày mai cô đăng loạt **90 ngày TOPIK II**, mỗi ngày một bài, chia sẻ miễn phí:
 🔹 Ngày 1–30: từ cốt lõi Tầng 1 + ngữ pháp câu 1–4 — đủ nền để đọc nửa đầu đề.
@@ -25,7 +25,7 @@ Comment “90” nếu em học cùng cô từ ngày 1!
 
 📅 90 ngày TOPIK II · Ngày 1/90
 
-Hôm nay là 7 từ cốt lõi Tầng 1 — những từ gặp ở ≥ 15/20 đề đọc TOPIK II. Gặp lại trong đề là đọc được ngay.
+Hôm nay là 7 từ cốt lõi Tầng 1 — từ đề đọc nào cũng có. Gặp lại trong đề là đọc được ngay.
 
 • 위하다 – vì, để (위해)
 • 대하다 – về, đối với (에 대해)
@@ -66,7 +66,7 @@ Ngữ pháp câu 1–4: nhóm **Thời gian – trình tự**. Câu 1–2 điề
 
 📅 90 ngày TOPIK II · Ngày 3/90
 
-Hôm nay là 7 từ cốt lõi Tầng 1 — những từ gặp ở ≥ 15/20 đề đọc TOPIK II. Gặp lại trong đề là đọc được ngay.
+Hôm nay là 7 từ cốt lõi Tầng 1 — từ đề đọc nào cũng có. Gặp lại trong đề là đọc được ngay.
 
 • 필요하다 – cần thiết
 • 인하다 – do, bởi (로 인해)
@@ -107,7 +107,7 @@ Ngữ pháp câu 1–4: nhóm **Lý do – nguyên nhân**. Câu 1–2 điền n
 
 📅 90 ngày TOPIK II · Ngày 5/90
 
-Hôm nay là 7 từ cốt lõi Tầng 1 — những từ gặp ở ≥ 15/20 đề đọc TOPIK II. Gặp lại trong đề là đọc được ngay.
+Hôm nay là 7 từ cốt lõi Tầng 1 — từ đề đọc nào cũng có. Gặp lại trong đề là đọc được ngay.
 
 • 최근 – gần đây
 • 새롭다 – mới mẻ
@@ -148,7 +148,7 @@ Ngữ pháp câu 1–4: nhóm **Mục đích**. Câu 1–2 điền ngữ pháp, 
 
 📅 90 ngày TOPIK II · Ngày 7/90
 
-Hôm nay là 7 từ cốt lõi Tầng 1 — những từ gặp ở ≥ 15/20 đề đọc TOPIK II. Gặp lại trong đề là đọc được ngay.
+Hôm nay là 7 từ cốt lõi Tầng 1 — từ đề đọc nào cũng có. Gặp lại trong đề là đọc được ngay.
 
 • 환경 – môi trường
 • 중요하다 – quan trọng
@@ -189,7 +189,7 @@ Ngữ pháp câu 1–4: nhóm **Điều kiện**. Câu 1–2 điền ngữ pháp
 
 📅 90 ngày TOPIK II · Ngày 9/90
 
-Hôm nay là 7 từ cốt lõi Tầng 1 — những từ gặp ở ≥ 15/20 đề đọc TOPIK II. Gặp lại trong đề là đọc được ngay.
+Hôm nay là 7 từ cốt lõi Tầng 1 — từ đề đọc nào cũng có. Gặp lại trong đề là đọc được ngay.
 
 • 관심 – quan tâm
 • 대부분 – phần lớn
@@ -249,7 +249,7 @@ Ngữ pháp câu 1–4: nhóm **Nhượng bộ**. Câu 1–2 điền ngữ pháp
 
 📅 90 ngày TOPIK II · Ngày 12/90
 
-Hôm nay là 7 từ cốt lõi Tầng 1 — những từ gặp ở ≥ 15/20 đề đọc TOPIK II. Gặp lại trong đề là đọc được ngay.
+Hôm nay là 7 từ cốt lõi Tầng 1 — từ đề đọc nào cũng có. Gặp lại trong đề là đọc được ngay.
 
 • 경제 – kinh tế
 • 또한 – ngoài ra, cũng
@@ -289,7 +289,7 @@ Ngữ pháp câu 1–4: nhóm **Lựa chọn – bất kể – đối lập**. 
 
 📅 90 ngày TOPIK II · Ngày 14/90
 
-Hôm nay là 7 từ cốt lõi Tầng 1 — những từ gặp ở ≥ 15/20 đề đọc TOPIK II. Gặp lại trong đề là đọc được ngay.
+Hôm nay là 7 từ cốt lõi Tầng 1 — từ đề đọc nào cũng có. Gặp lại trong đề là đọc được ngay.
 
 • 정부 – chính phủ
 • 모습 – dáng vẻ
@@ -330,7 +330,7 @@ Ngữ pháp câu 1–4: nhóm **Quan sát – bổ sung**. Câu 1–2 điền ng
 
 📅 90 ngày TOPIK II · Ngày 16/90
 
-Hôm nay là 7 từ cốt lõi Tầng 1 — những từ gặp ở ≥ 15/20 đề đọc TOPIK II. Gặp lại trong đề là đọc được ngay.
+Hôm nay là 7 từ cốt lõi Tầng 1 — từ đề đọc nào cũng có. Gặp lại trong đề là đọc được ngay.
 
 • 기업 – doanh nghiệp
 • 변화 – thay đổi
@@ -371,7 +371,7 @@ Ngữ pháp câu 1–4: nhóm **Đuôi câu: trạng thái, thay đổi, kinh ng
 
 📅 90 ngày TOPIK II · Ngày 18/90
 
-Hôm nay là 7 từ cốt lõi Tầng 1 — những từ gặp ở ≥ 15/20 đề đọc TOPIK II. Gặp lại trong đề là đọc được ngay.
+Hôm nay là 7 từ cốt lõi Tầng 1 — từ đề đọc nào cũng có. Gặp lại trong đề là đọc được ngay.
 
 • 이용하다 – sử dụng, tận dụng
 • 국가 – quốc gia
@@ -430,7 +430,7 @@ Em đúng được mấy từ? Comment số câu đúng: 7/7 là em đang đi r�
 
 📅 90 ngày TOPIK II · Ngày 21/90
 
-Hôm nay là 7 từ cốt lõi Tầng 1 — những từ gặp ở ≥ 15/20 đề đọc TOPIK II. Gặp lại trong đề là đọc được ngay.
+Hôm nay là 7 từ cốt lõi Tầng 1 — từ đề đọc nào cũng có. Gặp lại trong đề là đọc được ngay.
 
 • 미치다 – gây (ảnh hưởng) (영향을 미치다)
 • 비하다 – so với (에 비해)
@@ -471,7 +471,7 @@ Ngữ pháp câu 1–4: nhóm **Coi như – đương nhiên – chỉ là**. C�
 
 📅 90 ngày TOPIK II · Ngày 23/90
 
-Hôm nay là 7 từ cốt lõi Tầng 1 — những từ gặp ở ≥ 15/20 đề đọc TOPIK II. Gặp lại trong đề là đọc được ngay.
+Hôm nay là 7 từ cốt lõi Tầng 1 — từ đề đọc nào cũng có. Gặp lại trong đề là đọc được ngay.
 
 • 소리 – âm thanh
 • 즐기다 – tận hưởng
@@ -512,7 +512,7 @@ Ngữ pháp câu 1–4: nhóm **Mức độ, so sánh + mẫu ít gặp**. Câu 
 
 📅 90 ngày TOPIK II · Ngày 25/90
 
-Hôm nay là 7 từ cốt lõi Tầng 1 — những từ gặp ở ≥ 15/20 đề đọc TOPIK II. Gặp lại trong đề là đọc được ngay.
+Hôm nay là 7 từ cốt lõi Tầng 1 — từ đề đọc nào cũng có. Gặp lại trong đề là đọc được ngay.
 
 • 긍정 – khẳng định, tích cực (긍정적)
 • 가능 – khả năng
@@ -532,7 +532,7 @@ Câu trong đề: 미국에서는 엄지손가락과 집게손가락을 붙여 �
 
 📅 90 ngày TOPIK II · Ngày 26/90
 
-Hôm nay là 6 từ cốt lõi Tầng 1 — những từ gặp ở ≥ 15/20 đề đọc TOPIK II. Gặp lại trong đề là đọc được ngay.
+Hôm nay là 6 từ cốt lõi Tầng 1 — từ đề đọc nào cũng có. Gặp lại trong đề là đọc được ngay.
 
 • 줄어들다 – giảm đi
 • 및 – và
@@ -551,7 +551,7 @@ Câu trong đề: 이제 거래 과정에서 화폐를 매개로 대가를 지�
 
 📅 90 ngày TOPIK II · Ngày 27/90
 
-Hôm nay là 6 từ cốt lõi Tầng 1 — những từ gặp ở ≥ 15/20 đề đọc TOPIK II. Gặp lại trong đề là đọc được ngay.
+Hôm nay là 6 từ cốt lõi Tầng 1 — từ đề đọc nào cũng có. Gặp lại trong đề là đọc được ngay.
 
 • 발생하다 – phát sinh, xảy ra
 • 지역 – khu vực, địa phương
@@ -570,7 +570,7 @@ Câu trong đề: 미국 뉴올리언스는 도시 대부분이 평균 해수면
 
 📅 90 ngày TOPIK II · Ngày 28/90
 
-Hôm nay là 6 từ cốt lõi Tầng 1 — những từ gặp ở ≥ 15/20 đề đọc TOPIK II. Gặp lại trong đề là đọc được ngay.
+Hôm nay là 6 từ cốt lõi Tầng 1 — từ đề đọc nào cũng có. Gặp lại trong đề là đọc được ngay.
 
 • 방식 – phương thức
 • 늘어나다 – tăng lên
@@ -589,7 +589,7 @@ Câu trong đề: 다른 사람의 범죄 행동을 보고 똑같은 방식으�
 
 📅 90 ngày TOPIK II · Ngày 29/90
 
-Hôm nay là 6 từ cốt lõi Tầng 1 — những từ gặp ở ≥ 15/20 đề đọc TOPIK II. Gặp lại trong đề là đọc được ngay.
+Hôm nay là 6 từ cốt lõi Tầng 1 — từ đề đọc nào cũng có. Gặp lại trong đề là đọc được ngay.
 
 • 보통 – thông thường
 • 특히 – đặc biệt
@@ -627,7 +627,7 @@ Em đúng được mấy từ? Comment số câu đúng: 7/7 là em đang đi r�
 
 📅 90 ngày TOPIK II · Ngày 31/90
 
-Hôm nay là 8 từ cốt lõi Tầng 2 — những từ gặp ở 10–14/20 đề đọc. Gặp lại trong đề là đọc được ngay.
+Hôm nay là 8 từ cốt lõi Tầng 2 — từ đề đọc rất hay gặp. Gặp lại trong đề là đọc được ngay.
 
 • 물질 – vật chất, chất
 • 사용 – sự sử dụng
@@ -671,7 +671,7 @@ Câu 5 · Quảng cáo sản phẩm — thấy cụm này → đoán ra đồ v�
 
 📅 90 ngày TOPIK II · Ngày 33/90
 
-Hôm nay là 8 từ cốt lõi Tầng 2 — những từ gặp ở 10–14/20 đề đọc. Gặp lại trong đề là đọc được ngay.
+Hôm nay là 8 từ cốt lõi Tầng 2 — từ đề đọc rất hay gặp. Gặp lại trong đề là đọc được ngay.
 
 • 스트레스 – căng thẳng
 • 알리다 – thông báo
@@ -715,7 +715,7 @@ Câu 6 · Quảng cáo nơi chốn — thấy cụm này → đoán ra địa đ
 
 📅 90 ngày TOPIK II · Ngày 35/90
 
-Hôm nay là 8 từ cốt lõi Tầng 2 — những từ gặp ở 10–14/20 đề đọc. Gặp lại trong đề là đọc được ngay.
+Hôm nay là 8 từ cốt lõi Tầng 2 — từ đề đọc rất hay gặp. Gặp lại trong đề là đọc được ngay.
 
 • 건강하다 – khỏe mạnh
 • 이루어지다 – được thực hiện, được tạo thành
@@ -759,7 +759,7 @@ Câu 7 · Quảng cáo công ích — chiến dịch nói về điều gì?.
 
 📅 90 ngày TOPIK II · Ngày 37/90
 
-Hôm nay là 8 từ cốt lõi Tầng 2 — những từ gặp ở 10–14/20 đề đọc. Gặp lại trong đề là đọc được ngay.
+Hôm nay là 8 từ cốt lõi Tầng 2 — từ đề đọc rất hay gặp. Gặp lại trong đề là đọc được ngay.
 
 • 살아가다 – sống, sinh tồn
 • 점 – điểm
@@ -799,7 +799,7 @@ Câu 8–9 · Thông báo, áp phích — từ hay gặp trong bản thông báo
 
 📅 90 ngày TOPIK II · Ngày 39/90
 
-Hôm nay là 8 từ cốt lõi Tầng 2 — những từ gặp ở 10–14/20 đề đọc. Gặp lại trong đề là đọc được ngay.
+Hôm nay là 8 từ cốt lõi Tầng 2 — từ đề đọc rất hay gặp. Gặp lại trong đề là đọc được ngay.
 
 • 짓다 – xây, làm (nhà, cơm…)
 • 거의 – hầu như
@@ -861,7 +861,7 @@ Câu 10 · Biểu đồ — đọc tăng – giảm – thứ hạng.
 
 📅 90 ngày TOPIK II · Ngày 42/90
 
-Hôm nay là 8 từ cốt lõi Tầng 2 — những từ gặp ở 10–14/20 đề đọc. Gặp lại trong đề là đọc được ngay.
+Hôm nay là 8 từ cốt lõi Tầng 2 — từ đề đọc rất hay gặp. Gặp lại trong đề là đọc được ngay.
 
 • 지식 – kiến thức
 • 키우다 – gia tăng
@@ -903,7 +903,7 @@ Câu 11–12 · Tin ngắn — từ hay gặp trong tin tức.
 
 📅 90 ngày TOPIK II · Ngày 44/90
 
-Hôm nay là 8 từ cốt lõi Tầng 2 — những từ gặp ở 10–14/20 đề đọc. Gặp lại trong đề là đọc được ngay.
+Hôm nay là 8 từ cốt lõi Tầng 2 — từ đề đọc rất hay gặp. Gặp lại trong đề là đọc được ngay.
 
 • 관련 – liên quan
 • 관리 – quản lý
@@ -945,7 +945,7 @@ Câu 19–20 · Từ nối — phó từ quyết định ô trống.
 
 📅 90 ngày TOPIK II · Ngày 46/90
 
-Hôm nay là 8 từ cốt lõi Tầng 2 — những từ gặp ở 10–14/20 đề đọc. Gặp lại trong đề là đọc được ngay.
+Hôm nay là 8 từ cốt lõi Tầng 2 — từ đề đọc rất hay gặp. Gặp lại trong đề là đọc được ngay.
 
 • 끌다 – thu hút; kéo (인기를 끌다)
 • 안내 – hướng dẫn
@@ -985,7 +985,7 @@ Câu 21–22 · Quán dụng ngữ — nghĩa bóng, không dịch từng chữ.
 
 📅 90 ngày TOPIK II · Ngày 48/90
 
-Hôm nay là 8 từ cốt lõi Tầng 2 — những từ gặp ở 10–14/20 đề đọc. Gặp lại trong đề là đọc được ngay.
+Hôm nay là 8 từ cốt lõi Tầng 2 — từ đề đọc rất hay gặp. Gặp lại trong đề là đọc được ngay.
 
 • 즉 – tức là
 • 증가 – sự gia tăng
@@ -1044,7 +1044,7 @@ Em đúng được mấy từ? Comment số câu đúng: 7/7 là em đang đi r�
 
 📅 90 ngày TOPIK II · Ngày 51/90
 
-Hôm nay là 8 từ cốt lõi Tầng 2 — những từ gặp ở 10–14/20 đề đọc. Gặp lại trong đề là đọc được ngay.
+Hôm nay là 8 từ cốt lõi Tầng 2 — từ đề đọc rất hay gặp. Gặp lại trong đề là đọc được ngay.
 
 • 자녀 – con cái
 • 제도 – chế độ, hệ thống (quy định)
@@ -1086,7 +1086,7 @@ Câu 25–27 · Tiêu đề báo — được yêu thích – đông người.
 
 📅 90 ngày TOPIK II · Ngày 53/90
 
-Hôm nay là 8 từ cốt lõi Tầng 2 — những từ gặp ở 10–14/20 đề đọc. Gặp lại trong đề là đọc được ngay.
+Hôm nay là 8 từ cốt lõi Tầng 2 — từ đề đọc rất hay gặp. Gặp lại trong đề là đọc được ngay.
 
 • 공간 – không gian
 • 넣다 – nhỏ vào
@@ -1126,7 +1126,7 @@ Câu 25–27 · Tiêu đề báo — kinh tế, giá cả.
 
 📅 90 ngày TOPIK II · Ngày 55/90
 
-Hôm nay là 8 từ cốt lõi Tầng 2 — những từ gặp ở 10–14/20 đề đọc. Gặp lại trong đề là đọc được ngay.
+Hôm nay là 8 từ cốt lõi Tầng 2 — từ đề đọc rất hay gặp. Gặp lại trong đề là đọc được ngay.
 
 • 점점 – dần dần
 • 지나치다 – thái quá, quá mức
@@ -1166,7 +1166,7 @@ Câu 42–43 · Tiểu thuyết — cảm xúc nhân vật.
 
 📅 90 ngày TOPIK II · Ngày 57/90
 
-Hôm nay là 8 từ cốt lõi Tầng 2 — những từ gặp ở 10–14/20 đề đọc. Gặp lại trong đề là đọc được ngay.
+Hôm nay là 8 từ cốt lõi Tầng 2 — từ đề đọc rất hay gặp. Gặp lại trong đề là đọc được ngay.
 
 • 무료 – miễn phí
 • 주로 – chủ yếu
@@ -1208,7 +1208,7 @@ Câu 44–45 · Đoạn văn xã hội — từ của chủ đề xã hội, mô
 
 📅 90 ngày TOPIK II · Ngày 59/90
 
-Hôm nay là 8 từ cốt lõi Tầng 2 — những từ gặp ở 10–14/20 đề đọc. Gặp lại trong đề là đọc được ngay.
+Hôm nay là 8 từ cốt lõi Tầng 2 — từ đề đọc rất hay gặp. Gặp lại trong đề là đọc được ngay.
 
 • 심하다 – nghiêm trọng, quá mức
 • 우선 – trước hết
@@ -1248,7 +1248,7 @@ Em đúng được mấy từ? Comment số câu đúng: 7/7 là em đang đi r�
 
 📅 90 ngày TOPIK II · Ngày 61/90
 
-Hôm nay là 8 từ cốt lõi Tầng 3 — những từ gặp ở 7–9/20 đề đọc. Gặp lại trong đề là đọc được ngay.
+Hôm nay là 8 từ cốt lõi Tầng 3 — từ đề đọc hay gặp. Gặp lại trong đề là đọc được ngay.
 
 • 노인 – người già
 • 디지털 – kỹ thuật số
@@ -1288,7 +1288,7 @@ Nghe 4–12 · Ở công ty — hội thoại nơi làm việc.
 
 📅 90 ngày TOPIK II · Ngày 63/90
 
-Hôm nay là 8 từ cốt lõi Tầng 3 — những từ gặp ở 7–9/20 đề đọc. Gặp lại trong đề là đọc được ngay.
+Hôm nay là 8 từ cốt lõi Tầng 3 — từ đề đọc hay gặp. Gặp lại trong đề là đọc được ngay.
 
 • 가정 – gia đình; giả định
 • 소득 – thu nhập
@@ -1328,7 +1328,7 @@ Nghe 4–12 · Ở trường — hội thoại trường học.
 
 📅 90 ngày TOPIK II · Ngày 65/90
 
-Hôm nay là 8 từ cốt lõi Tầng 3 — những từ gặp ở 7–9/20 đề đọc. Gặp lại trong đề là đọc được ngay.
+Hôm nay là 8 từ cốt lõi Tầng 3 — từ đề đọc hay gặp. Gặp lại trong đề là đọc được ngay.
 
 • 관객 – khán giả
 • 속도 – tốc độ
@@ -1368,7 +1368,7 @@ Nghe 4–12 · Bệnh viện, nhà thuốc — biểu hiện hay nghe.
 
 📅 90 ngày TOPIK II · Ngày 67/90
 
-Hôm nay là 8 từ cốt lõi Tầng 3 — những từ gặp ở 7–9/20 đề đọc. Gặp lại trong đề là đọc được ngay.
+Hôm nay là 8 từ cốt lõi Tầng 3 — từ đề đọc hay gặp. Gặp lại trong đề là đọc được ngay.
 
 • 다양 – đa dạng
 • 인생 – cuộc đời
@@ -1408,7 +1408,7 @@ Nghe 4–12 · Ngân hàng — từ hay nghe ở ngân hàng.
 
 📅 90 ngày TOPIK II · Ngày 69/90
 
-Hôm nay là 8 từ cốt lõi Tầng 3 — những từ gặp ở 7–9/20 đề đọc. Gặp lại trong đề là đọc được ngay.
+Hôm nay là 8 từ cốt lõi Tầng 3 — từ đề đọc hay gặp. Gặp lại trong đề là đọc được ngay.
 
 • 반드시 – nhất định, chắc chắn phải
 • 직원 – nhân viên
@@ -1469,7 +1469,7 @@ Nghe 4–12 · Bưu điện, đồ thất lạc — gửi đồ – tìm đồ.
 
 📅 90 ngày TOPIK II · Ngày 72/90
 
-Hôm nay là 8 từ cốt lõi Tầng 3 — những từ gặp ở 7–9/20 đề đọc. Gặp lại trong đề là đọc được ngay.
+Hôm nay là 8 từ cốt lõi Tầng 3 — từ đề đọc hay gặp. Gặp lại trong đề là đọc được ngay.
 
 • 특징 – đặc điểm
 • 개발 – sự phát triển, khai thác
@@ -1511,7 +1511,7 @@ Nghe 15 · Bản tin sự cố — tai nạn, giao thông.
 
 📅 90 ngày TOPIK II · Ngày 74/90
 
-Hôm nay là 8 từ cốt lõi Tầng 3 — những từ gặp ở 7–9/20 đề đọc. Gặp lại trong đề là đọc được ngay.
+Hôm nay là 8 từ cốt lõi Tầng 3 — từ đề đọc hay gặp. Gặp lại trong đề là đọc được ngay.
 
 • 효율 – hiệu suất (효율적)
 • 강화하다 – tăng cường
@@ -1551,7 +1551,7 @@ Nghe 15 · Dự báo thời tiết — mưa, nắng, nhiệt độ.
 
 📅 90 ngày TOPIK II · Ngày 76/90
 
-Hôm nay là 8 từ cốt lõi Tầng 3 — những từ gặp ở 7–9/20 đề đọc. Gặp lại trong đề là đọc được ngay.
+Hôm nay là 8 từ cốt lõi Tầng 3 — từ đề đọc hay gặp. Gặp lại trong đề là đọc được ngay.
 
 • 익숙하다 – quen thuộc
 • 전국 – toàn quốc
@@ -1593,7 +1593,7 @@ Nghe 31–32 · Tán thành – phản đối — nhận ra lập trường ngư
 
 📅 90 ngày TOPIK II · Ngày 78/90
 
-Hôm nay là 8 từ cốt lõi Tầng 3 — những từ gặp ở 7–9/20 đề đọc. Gặp lại trong đề là đọc được ngay.
+Hôm nay là 8 từ cốt lõi Tầng 3 — từ đề đọc hay gặp. Gặp lại trong đề là đọc được ngay.
 
 • 신경 – dây thần kinh
 • 인정하다 – công nhận, thừa nhận
@@ -1652,7 +1652,7 @@ Em đúng được mấy từ? Comment số câu đúng: 7/7 là em đang đi r�
 
 📅 90 ngày TOPIK II · Ngày 81/90
 
-Hôm nay là 8 từ cốt lõi Tầng 3 — những từ gặp ở 7–9/20 đề đọc. Gặp lại trong đề là đọc được ngay.
+Hôm nay là 8 từ cốt lõi Tầng 3 — từ đề đọc hay gặp. Gặp lại trong đề là đọc được ngay.
 
 • 섭섭하다 – tiếc nuối, buồn phiền
 • 정치 – chính trị
@@ -1694,7 +1694,7 @@ Viết 51 · Email, tin nhắn — từ hay dùng khi viết câu 51.
 
 📅 90 ngày TOPIK II · Ngày 83/90
 
-Hôm nay là 8 từ cốt lõi Tầng 3 — những từ gặp ở 7–9/20 đề đọc. Gặp lại trong đề là đọc được ngay.
+Hôm nay là 8 từ cốt lõi Tầng 3 — từ đề đọc hay gặp. Gặp lại trong đề là đọc được ngay.
 
 • 환자 – bệnh nhân
 • 성격 – tính cách
@@ -1734,7 +1734,7 @@ Viết 53 · Biểu đồ — khung câu viết câu 53.
 
 📅 90 ngày TOPIK II · Ngày 85/90
 
-Hôm nay là 8 từ cốt lõi Tầng 3 — những từ gặp ở 7–9/20 đề đọc. Gặp lại trong đề là đọc được ngay.
+Hôm nay là 8 từ cốt lõi Tầng 3 — từ đề đọc hay gặp. Gặp lại trong đề là đọc được ngay.
 
 • 지구 – trái đất
 • 갖추다 – trang bị, có đủ
@@ -1774,7 +1774,7 @@ Viết 54 · Tục ngữ — mở bài câu 54 cho “có nghề”.
 
 📅 90 ngày TOPIK II · Ngày 87/90
 
-Hôm nay là 8 từ cốt lõi Tầng 3 — những từ gặp ở 7–9/20 đề đọc. Gặp lại trong đề là đọc được ngay.
+Hôm nay là 8 từ cốt lõi Tầng 3 — từ đề đọc hay gặp. Gặp lại trong đề là đọc được ngay.
 
 • 생산 – sản xuất
 • 실험 – thí nghiệm
@@ -1814,7 +1814,7 @@ Viết 54 · Tục ngữ — mở bài câu 54 cho “có nghề”.
 
 📅 90 ngày TOPIK II · Ngày 89/90
 
-Hôm nay là 8 từ cốt lõi Tầng 3 — những từ gặp ở 7–9/20 đề đọc. Gặp lại trong đề là đọc được ngay.
+Hôm nay là 8 từ cốt lõi Tầng 3 — từ đề đọc hay gặp. Gặp lại trong đề là đọc được ngay.
 
 • 온도 – nhiệt độ
 • 의식 – ý thức; nghi thức

@@ -117,3 +117,137 @@ Tối nay cô đăng đáp án và cách tách tiêu đề ở comment.
 Bạn nào chọn ③ là bị bẫy chiều ngược: 거래가 줄어들다 (giao dịch giảm) thì trái nghĩa với 기지개.
 Mẹo: dấu phẩy giữa hai nửa tiêu đề thường là **nguyên nhân → kết quả**.
 Bài sau cô viết tiếp về nhóm "được yêu thích, đông người" (열풍, 구름 관중, 북새통…) nhé. 💙
+
+---
+
+# ⏸ ĐỂ DÀNH — Loạt "Danh sách ôn TOPIK" (bí quyết riêng của cô)
+
+**Cô chốt 28/10: chưa đăng.** Đây là số liệu cô tự thống kê — đăng lúc trang còn ít người theo dõi thì page lớn dễ lấy lại. Chỉ đăng khi trang cá nhân đã đông người theo dõi / kết bạn.
+
+Mục đích: ai xem trang cá nhân đều thấy cô **tự thống kê đề thật** (con số cụ thể, nguồn rõ) — thứ trung tâm khác ít khi có.
+Mỗi bài = 1 ảnh danh sách để **lưu lại** + lời đăng ngắn + 1 câu hỏi để học sinh comment. Không đặt link trang học liệu.
+Khung `ds.css`, có dấu mờ `wm.js`. Chụp: `node tools/chup_anh.js fb/ca-nhan/ds-*.html`.
+Số liệu lấy từ repo (không bịa): #1 `tu-vung/de.json` + phần `Cốt lõi` của `thi-thu/vocab.json`; #2 `dong-trai/data.json` (`st.sig`).
+
+## 6. Danh sách #1 — 20 từ có mặt ở 20/20 đề đọc (ds-01-20-tu.png)
+
+Học TOPIK II, nhiều em mua sổ ghi 3.000–4.000 từ rồi… bỏ dở ở trang 30. 😅
+
+Cô làm ngược lại: cô tách từng chữ của **20 đề đọc TOPIK II**, bỏ từ sơ cấp, rồi đếm xem từ nào đề nào cũng có.
+Kết quả: đúng **20 từ không vắng mặt ở đề nào**. Riêng 위하다 gặp 396 lần.
+
+Hai điều cô rút ra:
+• 5 từ trong đó thật ra là **cụm ngữ pháp**: 을 위해, 에 대해, 에 따라, 을 통해, 로 인해. Học cả cụm thì đọc câu nhanh hơn hẳn.
+• 16/20 từ là từ Hán: 사회 – xã hội, 영향 – ảnh hưởng, 상황 – tình huống… Người Việt mình có lợi thế lớn ở đây.
+
+Em lưu ảnh lại, mỗi ngày đọc 5 từ. Em thấy từ nào em vẫn hay quên? Comment cho cô nhé 👇
+
+#DanhSachOnTOPIK #TuVungTOPIK #TOPIK2 #NariTOPIK
+
+## 7. Danh sách #2 — Chữ tín hiệu trong 4 lựa chọn (ds-02-chu-tin-hieu.png)
+
+Câu “chọn nội dung đúng với bài” (câu 9–12, 20, 22, 24, 32–34, 43, 47, 50) chiếm gần 1/3 đề đọc. Đọc không kịp bài thì làm sao?
+
+Cô soát lại **241 câu** dạng này trong 22 đề đọc, đếm từng lựa chọn có chữ “nói tuyệt đối”:
+❌ 전혀 / 절대 xuất hiện 7 lần — **chưa lần nào** là đáp án.
+❌ 항상 / 늘 / 매일: 1/11. 관계없다 / 필요 없다: 2/19.
+✅ Ngược lại, lựa chọn nói mềm (-기도 하다, -ㄹ 수도 있다, 경우에 따라): **11/12 lần là đáp án đúng.**
+
+Lý do: bài văn TOPIK hiếm khi nói chắc 100%. Lựa chọn sai thường giữ chữ của bài rồi “nói quá lên”.
+
+Nhưng cẩn thận: 모두, 만, 반드시, 가장 thì **không** phải tín hiệu (≈ 1/4, như đoán bừa). Mẹo này chỉ để loại nhanh khi phân vân, vẫn phải dò lại bài nhé.
+
+Em đã từng bị bẫy “nói quá” bao giờ chưa? 😄
+
+#DanhSachOnTOPIK #DocTOPIK #TOPIK2 #NariTOPIK
+
+## Các số tiếp theo (đã có số liệu trong repo — cô chọn, em làm ảnh)
+- **#3 Câu 13–15:** 66/66 câu đầu đúng **không có dấu bám**; danh sách dấu bám (그래서, 이, 그, 또한, 때문이다…) + 65/66 câu chỉ cần so 2 câu đầu. (`cau-13-15/`)
+- **#4 Câu 52:** bảng “thấy từ nối gì → viết đuôi gì” (9 nhóm tín hiệu, 28/32 ô dùng lại từ trong bài). (`viet-52/` Bảng tra)
+- **#5 Câu 3–4:** 6 nhóm ngữ pháp tương đồng = 16/21 câu đề thật kỳ 35–102. (`ngu-phap-34/`)
+- **#6 Câu 19–20:** 14 phó từ đi cặp kiểu tiếng Việt “Tuy… nhưng”, “Thà… còn hơn” — 7/22 bài ra đáp án chỉ nhờ cặp này. (`cau-19-20/`)
+- **#7 Câu 16–18:** 39/65 câu manh mối nằm **sau** ô trống → đọc qua ô. (`cau-16-18/`)
+- **#8 Câu 54:** 29 câu hỏi của 10 đề chia 6 kiểu; “giải pháp” có ở 9/10 đề. (`viet-54/` Khung đoạn)
+- **#9 Từ vựng tầng 2:** 30 từ gặp ở 15–19/20 đề (tiếp #1).
+
+Thứ tự đăng: xen kẽ 1 bài Danh sách · 1 bài “Một từ, một câu chuyện” / “Đọc tiêu đề báo” · thỉnh thoảng 1 ảnh lớp thật, cách nhau 1–2 ngày.
+Khi đi comment đấu giá thì có thể dẫn: “Cô có chia sẻ danh sách 20 từ đề nào cũng có trên trang cá nhân, em vào lưu về ôn nhé.”
+
+---
+
+# Loạt "Ôn TOPIK cùng cô Ngân" — đăng ngay bây giờ
+
+Chủ đề các trang khác hay đăng, nhưng làm **đúng, đầy đủ, rõ ràng hơn**. Không dùng số liệu thống kê riêng của cô (để dành cho loạt Danh sách).
+Ảnh `kt-*.png` (khung `kt.css` + `ds.css`), `qn-*.png` (khung `qn.css`). Dấu bản quyền: chữ “Nari TOPIK · Zalo 0399 214 554” rất nhạt lặp chéo khắp ảnh (`wm.js` `data-style="tile"`) — cô thấy vòng tròn to ở giữa làm ảnh rối. Chụp: `node tools/chup_anh.js fb/ca-nhan/kt-*.html`.
+
+## 8. Cấu trúc đề TOPIK II (ảnh: kt-01a-cau-truc-de → kt-01b-50-cau-doc)
+
+Nhiều em ôn TOPIK II mấy tháng mà vẫn chưa nắm rõ đề có những phần nào, câu nào hỏi gì. Cô tổng hợp lại trong 2 ảnh:
+
+📌 Ảnh 1: 3 phần thi, thời gian, điểm từng câu viết, điểm đạt từng cấp.
+📌 Ảnh 2: 50 câu đọc, câu nào hỏi gì.
+
+Ba điều nhiều bạn chưa biết:
+1️⃣ Câu sai **không bị trừ điểm** → đừng bỏ trống câu nào.
+2️⃣ **Không có điểm liệt từng phần**: cấp tính theo tổng 300 điểm. Nghe yếu vẫn bù bằng đọc và viết được.
+3️⃣ Câu 54 chiếm **50/100 điểm viết**. Bỏ câu 54 là gần như mất luôn cấp 4.
+
+Em lưu lại để ôn nhé. Em đang nhắm cấp mấy? Comment cho cô biết, cô gợi ý nên ưu tiên phần nào 👇
+
+#TOPIK2 #CauTrucDeTOPIK #LuyenthiTOPIK #NariTOPIK
+
+## 9. Bộ sưu tập 96 quán ngữ theo bộ phận cơ thể — 14 ảnh (qn-01-bia → qn-14-on-tap)
+
+Sinh bằng `python3 tools/fb_quan_ngu.py` (dữ liệu trong script), chụp `node tools/chup_anh.js fb/ca-nhan/qn-*.html`.
+Facebook cho đăng tối đa 80 ảnh/bài → đăng cả 14 ảnh trong **một bài** (ảnh bìa đầu tiên) để học sinh lưu một lần là đủ.
+
+📚 TỔNG HỢP 96 QUÁN NGỮ TIẾNG HÀN THEO BỘ PHẬN CƠ THỂ (관용 표현)
+
+귀가 얇다 không phải “tai mỏng” mà là **cả tin**. 손이 크다 không phải “tay to” mà là **rộng rãi, hào phóng**. 😄
+Quán ngữ là phần dịch từng chữ là sai ngay. Đề đọc TOPIK II có hẳn câu 21 hỏi quán ngữ, còn bài nghe và bài đọc khác cũng dùng rất nhiều.
+
+Cô tổng hợp 96 quán ngữ thông dụng, chia theo bộ phận cơ thể cho dễ nhớ:
+👀 눈 (mắt) · 👂 귀 (tai) · 👄 입 (miệng) · ✋ 손 (tay) · 🦶 발 (chân) · 🙂 머리 · 얼굴 · 코 · 💗 가슴 · 마음 · 😣 속 · 애 · 간 · 💪 어깨 · 허리 · 목
+Mỗi quán ngữ có nghĩa, câu ví dụ và bản dịch. Ảnh cuối là bài ôn tập 8 câu.
+
+📌 Cách học: mỗi ngày 1 ảnh · che cột nghĩa, nhìn quán ngữ đoán nghĩa · tự đặt 1 câu về em.
+
+👉 Em lưu bài lại để ôn dần, làm bài ôn tập ở ảnh cuối rồi comment đáp án (dạng 1A, 2B…), cô chữa cho nhé!
+
+#QuanNguTiengHan #관용표현 #TuVungTOPIK #TOPIK2 #NariTOPIK
+
+**Comment đáp án** (đăng sau 1 ngày): 1C · 2G · 3E · 4A · 5H · 6D · 7B · 8F
+1 발등에 불이 떨어지다 · 2 입이 무겁다 · 3 귀가 얇다 · 4 손이 크다 · 5 눈코 뜰 사이도 없다 · 6 머리를 맞대다 · 7 애를 먹다 · 8 어깨가 무겁다
+
+## 10. Bộ sưu tập 80 từ vựng đọc tiêu đề báo TOPIK — 12 ảnh (tb-01-bia → tb-12-on-tap)
+
+Sinh bằng `python3 tools/fb_tieu_de.py` (dữ liệu trong script), chụp `node tools/chup_anh.js fb/ca-nhan/tb-*.html`.
+Đăng cả 12 ảnh trong **một bài** (ảnh bìa đầu tiên). Tiêu đề mẫu tự soạn theo kiểu báo, không lấy đề thật.
+
+📰 80 TỪ VỰNG ĐỌC TIÊU ĐỀ BÁO TOPIK (câu 25–27)
+
+Tiêu đề báo Hàn ngắn mà khó: bỏ hết tiểu từ, kết thúc bằng danh từ, lại hay ví von. 껑충 không phải “nhảy” mà là giá **tăng vọt**, 기지개 không phải “vươn vai” mà là **khởi sắc trở lại**, 찬물 là **gáo nước lạnh** dội vào niềm vui. 😄
+
+Cô gom 80 từ hay gặp, chia theo 10 nhóm nghĩa cho dễ nhớ:
+🔥 Được yêu thích · 👥 Đông – vắng · 📈 Tăng – kỷ lục · 📉 Giảm – chững lại · 💰 Giá cả – mua bán
+🚦 Tín hiệu tốt – xấu · ⛔ Hủy – kẹt – trì hoãn · 🤝 Bắt tay – thúc đẩy · ⏩ Liên tiếp – sắp tới · 💬 Ý kiến – phản ứng
+
+Mỗi từ có nghĩa, âm Hán Việt (người Việt mình nhớ từ Hán rất nhanh), một tiêu đề mẫu và bản dịch. Ảnh cuối là bài ôn tập 8 câu.
+
+📌 Cách học: mỗi ngày 1 ảnh · che cột nghĩa, đọc tiêu đề mẫu rồi tự dịch · gặp tiêu đề thật trên báo Hàn thì đối chiếu lại.
+
+👉 Em lưu bài lại để ôn dần, làm bài ôn tập ở ảnh cuối rồi comment đáp án (dạng 1A, 2B…), cô chữa cho nhé!
+
+#TieuDeBao #TuVungTOPIK #TOPIK2 #DocTOPIK #NariTOPIK
+
+**Comment đáp án** (đăng sau 1 ngày): 1D · 2B · 3H · 4F · 5A · 6G · 7C · 8E
+1 껑충 · 2 결항 · 3 썰렁하다 · 4 기지개를 켜다 · 5 손을 잡다 · 6 무산 · 7 코앞 · 8 엇갈리다
+
+## Chủ đề phổ biến làm tiếp (cùng khung, không lộ số liệu riêng)
+- Tục ngữ 속담 hay gặp (bộ sưu tập cùng khuôn `qn`) (kho từ có phần `Câu 54 · 속담`, EBS).
+- Ngữ pháp tương đồng câu 3–4 (bảng cặp đồng nghĩa, như các trang khác nhưng có ví dụ + cặp dễ nhầm).
+- Từ nối (그러나, 따라서, 반면에…) chia theo chức năng.
+- Biểu hiện mô tả biểu đồ câu 53 (증가하다, 감소하다, 차지하다…).
+- Biểu hiện mở bài – thân bài – kết bài câu 54.
+- Đuôi văn viết -ㄴ/는다 và cách đổi văn nói → văn viết.
+- Lịch thi TOPIK 2027 (cần đối chiếu lịch chính thức trước khi đăng).

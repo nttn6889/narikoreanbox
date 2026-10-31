@@ -1,0 +1,29 @@
+/* Loạt "Danh sách ôn TOPIK" (1080×1350) — danh sách rút từ đề thật cô thống kê */
+h1.ds{font-size:60px;margin-top:8px}
+h1.ds .r{color:var(--r)}
+.lead{font-size:25px;margin-top:12px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:0 22px;margin-top:20px;padding:6px 26px}
+.grid .r{display:grid;grid-template-columns:44px 1fr;gap:8px;padding:6px 0;align-items:baseline}
+.grid .r:nth-child(n+3){border-top:2px dashed var(--line)}
+.grid .n{font-size:20px;font-weight:800;color:var(--g)}
+.grid .k{font-size:28px;font-weight:800;color:var(--v);line-height:1.15}
+.grid .k small{font-size:19px;font-weight:600;color:var(--dim);margin-left:6px}
+.grid .t{grid-column:2;font-size:20px;color:var(--ink);line-height:1.3}
+.grid .t i{font-style:normal;color:var(--g);font-weight:700}
+.tip{margin-top:20px;padding:18px 28px;background:var(--gs);border-radius:22px;font-size:23px;line-height:1.45}
+.tip b{color:#9A6F12}
+.tbl{margin-top:18px;padding:4px 30px}
+.tbl .h{font-size:22px;font-weight:800;color:var(--dim);text-transform:uppercase;letter-spacing:.4px;padding:10px 0 2px}
+.tbl .r{display:grid;grid-template-columns:1fr 150px 190px;gap:14px;align-items:center;padding:8px 0}
+.tbl .r+.r{border-top:2px dashed var(--line)}
+.tbl .k{font-size:27px;font-weight:800;line-height:1.25}
+.tbl .k small{display:block;font-size:19px;font-weight:600;color:var(--dim)}
+.tbl .s{font-size:30px;font-weight:900;text-align:right}
+.tbl .s small{font-size:18px;font-weight:600;color:var(--dim)}
+.bar{height:16px;border-radius:8px;background:#F1EEF8;overflow:hidden}
+.bar i{display:block;height:100%;border-radius:8px}
+.tbl.sai .s{color:var(--r)} .tbl.sai .bar i{background:var(--r)}
+.tbl.mo .s{color:var(--dim)} .tbl.mo .bar i{background:#A9A3BF}
+.tbl.dung .s{color:#1E8E3E} .tbl.dung .bar i{background:#1E8E3E}
+.foot{position:absolute;left:72px;right:72px;bottom:50px;display:flex;justify-content:space-between;align-items:center;font-size:24px;color:var(--dim)}
+.foot b{color:var(--v)}

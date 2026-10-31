@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Buổi câu 5 · Khung 90 phút · Nari TOPIK</title>
+<link rel="icon" href="https://hoc.naritopik.com/thi-thu/icon/icon-192.png">
+<style>
+:root{--ink:#1d1a2b;--muted:#6b6780;--soft:#dcd8ea;--sub:#f5f3fa;--bg:#fff;--acc:#53468F;--gold:#D4A843;--ok:#1d7a3a;--okbg:#e8f5ec;--bad:#b0283c;--badbg:#fbe9ec;--hl:#ffe49a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Arial,"Noto Sans KR","Malgun Gothic",sans-serif}
+main{max-width:1000px;margin:0 auto;padding:12px 16px 60px}
+h1{font-size:22px;margin:4px 0}
+.sub{color:var(--muted);font-size:14px;margin:0 0 8px}
+nav{display:flex;flex-wrap:wrap;gap:4px;position:sticky;top:0;background:var(--bg);padding:8px 0;border-bottom:2px solid var(--acc);z-index:5}
+nav a{flex:1 1 90px;text-align:center;text-decoration:none;color:var(--ink);border:1px solid var(--soft);border-radius:8px;padding:5px 4px;font-size:14px;line-height:1.2;background:var(--sub)}
+nav a small{display:block;color:var(--muted);font-size:11px}
+nav a.on{background:var(--acc);color:#fff;border-color:var(--acc)}
+nav a.on small{color:#e6e1f7}
+nav a.now{outline:3px solid var(--gold)}
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:8px 0;font-size:14px}
+button{font:inherit;font-size:14px;border:1px solid var(--acc);background:#fff;color:var(--acc);border-radius:8px;padding:6px 12px;cursor:pointer}
+button.pri{background:var(--acc);color:#fff}
+button:disabled{opacity:.4;cursor:default}
+.clock{font-weight:bold;font-variant-numeric:tabular-nums}
+section{display:none}
+section.on{display:block}
+h2{font-size:20px;margin:14px 0 6px;color:var(--acc)}
+h3{font-size:17px;margin:14px 0 4px}
+.box{border:1px solid var(--soft);border-radius:10px;padding:10px 14px;margin:8px 0;background:var(--sub)}
+.box p{margin:4px 0}
+.note{font-size:14px;color:var(--muted)}
+ul{margin:4px 0;padding-left:20px}
+li{margin:2px 0}
+a{color:var(--acc)}
+table{border-collapse:collapse;width:100%;font-size:14px;margin:6px 0}
+th,td{border:1px solid var(--soft);padding:4px 6px;text-align:center}
+th{background:var(--sub)}
+td.l,th.l{text-align:left}
+.bad{color:var(--bad);font-weight:bold}
+.okc{color:var(--ok);font-weight:bold}
+/* màn chiếu */
+.stage{border:2px solid var(--acc);border-radius:12px;padding:14px 18px;margin:8px 0;font-size:calc(var(--fz,1)*20px)}
+.stage .top{display:flex;justify-content:space-between;align-items:center;font-size:15px;color:var(--muted)}
+.stage .t{font-size:30px;font-weight:bold;font-variant-numeric:tabular-nums;color:var(--acc)}
+.stage .t.end{color:var(--bad)}
+.ad{border:2px dashed var(--gold);border-radius:10px;padding:14px 16px;margin:10px 0;background:#fffdf5;font-size:1.45em;line-height:1.55;font-family:"Noto Sans KR","Malgun Gothic",sans-serif}
+.ad .ln{margin:2px 0}
+.ad .ln.hid{visibility:hidden}
+.ad .vi{display:block;font-size:.55em;color:var(--muted);font-family:Arial,sans-serif}
+.q{font-weight:bold;margin:6px 0}
+.ops{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.op{border:1px solid var(--soft);border-radius:8px;padding:8px 12px;font-size:1.25em;font-family:"Noto Sans KR","Malgun Gothic",sans-serif;background:#fff}
+.op small{display:block;font-size:.6em;color:var(--muted);font-family:Arial,sans-serif}
+.op.ok{background:var(--okbg);border-color:var(--ok)}
+.op.x{opacity:.75}
+.op .tr{display:block;font-size:.55em;color:var(--bad);font-family:Arial,sans-serif}
+mark{background:var(--hl);padding:0 2px}
+.exp{border-left:4px solid var(--ok);background:var(--okbg);padding:8px 12px;margin:10px 0;font-size:.85em}
+.tick{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:10px 0 0;font-size:14px}
+.tick b{margin-right:4px}
+.chip{border:1px solid var(--soft);border-radius:16px;padding:4px 12px;background:#fff;color:var(--ink);cursor:pointer;user-select:none}
+.chip.x{background:var(--bad);color:#fff;border-color:var(--bad)}
+.dots{display:flex;gap:4px;flex-wrap:wrap}
+.dots span{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--soft);font-size:12px;cursor:pointer}
+.dots span.on{background:var(--acc);color:#fff}
+.dots span.d{border-color:var(--ok)}
+textarea,input[type=text]{font:inherit;font-size:14px;width:100%;border:1px solid var(--soft);border-radius:8px;padding:6px 8px}
+.full .hideFull{display:none}
+@media (max-width:640px){.ops{grid-template-columns:1fr}.stage{padding:10px}}
+@media print{nav,.bar,button{display:none}}
+</style>
+</head>
+<body>
+<main>
+<div class="hideFull">
+<h1>Buổi học câu 5 · Quảng cáo sản phẩm</h1>
+<p class="sub">Giáo án của cô theo khung 90 phút cố định (đo 4 lần: trước buổi · đầu giờ · làm như thi · ra lớp). Tên học sinh chỉ lưu trên máy này.</p>
+<div class="box">
+<b>Học sinh hôm nay</b> (tên ngắn, ngăn bằng dấu phẩy):
+<input type="text" id="hs" placeholder="vd. Lan, Minh, Hà">
+<div class="bar"><button class="pri" id="bStart">▶ Bắt đầu buổi (bấm giờ 90′)</button><span>Đã học: <span class="clock" id="clk">00:00</span></span>
+<button id="bFz">A+</button><button id="bFz2">A−</button><button id="bFull">⛶ Chiếu</button><button id="bReset">Xóa kết quả buổi này</button></div>
+</div>
+</div>
+<nav id="nav"></nav>
+
+<section id="s0">
+<h2>Trước buổi · tự học</h2>
+<div class="box">
+<p><b>Buổi đầu của khóa nên chưa có bài trước buổi.</b> Vì vậy khối ① hôm nay là <b>làm thử 5 câu</b> (chưa dạy mẹo) để đo đầu vào dạng câu 5.
+Cuối khóa phần dạng 5–8, 5 câu này làm lại để so trước – sau.</p>
+<p>Từ buổi sau: gửi trước 1–2 ngày link học liệu buổi sau (khoảng 30–40 phút) + 2 chủ điểm từ vựng của chủ đề tuần; khối ① kiểm tra đúng phần đó.</p>
+</div>
+<h3>Cách chia 22 câu 5 trong repo (giữ câu chưa gặp cho kiểm tra)</h3>
+<table id="alloc"></table>
+</section>
+
+<section id="s1">
+<h2>① 0–10′ · Làm thử 5 câu (đầu giờ)</h2>
+<p class="note">Chiếu từng câu, mỗi câu 30 giây. Cả lớp cùng giơ thẻ ①②③④ (hoặc viết số lên giấy). Bấm “Đáp án” → chạm tên em <b>sai</b> (đỏ). Hôm nay chưa chữa kỹ — chỉ ghi lại để so sau.</p>
+<div data-quiz="dau"></div>
+</section>
+
+<section id="s2">
+<h2>② 10–15′ · Chữa nhanh</h2>
+<p class="note">Chỉ chữa câu nhiều em sai ở khối ①. Hôm nay: hỏi các em đã chọn vì chữ nào trong quảng cáo → dẫn vào bài “quảng cáo ít khi gọi tên đồ vật”.</p>
+<div id="fix"></div>
+</section>
+
+<section id="s3">
+<h2>③ 15–45′ · Dạy dạng</h2>
+<div class="box">
+<p><b>a. Đề ra gì + đọc quảng cáo trong 3 bước (5′)</b> — <a href="https://hoc.naritopik.com/cau-5/#b=1" target="_blank">mở Buổi 1 ›</a> mục 1–2.</p>
+<p><b>b. Cụm theo đồ vật, 6 nhóm (10′)</b> — <a href="https://hoc.naritopik.com/cau-5/#b=1" target="_blank">Buổi 1 mục 3 ›</a> (nút “Che nghĩa”). Mỗi nhóm hỏi nhanh 1–2 em: “빨래 → ?”.
+Nhấn mạnh cặp hay nhầm: 제습기 / 가습기, 세제 / 비누 / 샴푸, 에어컨 / 선풍기, 냉장고 / 정수기.</p>
+<p><b>c. Năm kiểu tín hiệu (10′)</b> — <a href="https://hoc.naritopik.com/cau-5/#b=2" target="_blank">Buổi 2 mục 1 ›</a>: K kết quả · S so sánh / ví von · D động từ · B chức năng · V thứ được xử lý.
+Chuỗi suy luận <b>kết quả → việc → đồ vật</b> (mục 2): “한여름에도 가을처럼” → mát → điều hòa.</p>
+<p><b>d. Bẫy chữ (5′)</b> — <a href="https://hoc.naritopik.com/cau-5/#b=2" target="_blank">Buổi 2 mục 3 ›</a>: G đồ vật cùng nhóm · C chữ bẫy (thứ được nhắc ≠ sản phẩm) · K không liên quan.</p>
+</div>
+<h3>✋ Luyện ngay (chiếu, hỏi miệng)</h3>
+<div id="mini"></div>
+</section>
+
+<section id="s4">
+<h2>④ 45–60′ · Cô làm mẫu + làm từng bước</h2>
+<p class="note">Hiện từng dòng (“Dòng tiếp”). Hỏi: “Tới dòng này đã chọn được chưa? Chữ nào?”. Câu đầu (kỳ 91) cô làm mẫu, không chấm; 3 câu sau chạm tên em sai.</p>
+<div data-quiz="buoc"></div>
+</section>
+
+<section id="s5">
+<h2>⑤ 60–75′ · Làm như thi · 8 câu × 30 giây</h2>
+<p class="note">Làm liền 8 câu (giơ thẻ hoặc ghi giấy), xong mới chữa từng câu theo mã tín hiệu và mã bẫy.</p>
+<div data-quiz="thi"></div>
+</section>
+
+<section id="s6">
+<h2>⑥ 75–85′ · Góc chủ đề: Đời sống – tiêu dùng</h2>
+<div class="box">
+<p>Chủ đề 2 tuần đầu = <b>Đời sống – tiêu dùng</b> (khớp câu 5–8). Hôm nay dùng 10′ này để:</p>
+<ul>
+<li>Hỏi miệng vòng tròn: cô nói tên đồ vật tiếng Việt → em nói tên Hàn + 1 cụm quảng cáo của nó.</li>
+<li>Xem trước câu 6–8 (buổi sau): quảng cáo <b>nơi chốn / dịch vụ</b> (câu 6), <b>chiến dịch</b> (câu 7), <b>loại văn bản</b> (câu 8) — cùng cách đọc: tìm kết quả / việc → gọi tên.</li>
+<li>Bảng tra: <a href="https://hoc.naritopik.com/cau-5/#b=tra" target="_blank">nhóm đồ vật dễ nhầm, động từ chỉ đúng một loại đồ vật ›</a></li>
+</ul>
+</div>
+</section>
+
+<section id="s7">
+<h2>⑦ 85–90′ · Phiếu ra lớp (3 câu chưa gặp) + giao bài</h2>
+<div data-quiz="ra"></div>
+<h3>Giao bài sau buổi</h3>
+<textarea id="msg" rows="7"></textarea>
+<div class="bar"><button id="bMsg">Chép tin nhắn</button></div>
+</section>
+
+<section id="s8">
+<h2>Kết quả buổi</h2>
+<div id="res"></div>
+<div class="bar"><button class="pri" id="bCopy">Chép kết quả (dán vào ghi chú / Zalo của cô)</button></div>
+<p class="note">Đạt: làm như thi ≥ 6/8, phiếu ra lớp 3/3. Em chưa đạt → buổi sau đưa câu 5 vào khối ⑥ (ôn lại dạng cũ).</p>
+</section>
+</main>
+<script>
+var KEY = 'nari-lop5';
+var R = [{"id":"Eys5","src":"Yonsei đề 5","l":["언제나 새 옷 같이!","더 조용하고 더 강력한 힘으로 돌아왔다."],"v":["Lúc nào cũng như áo mới!","Đã trở lại với sức mạnh lớn hơn mà êm hơn."],"o":["냉장고","선풍기","세탁기","정수기"],"a":2,"k":"S","c":["새 옷 같이","조용하고 더 강력한 힘"],"w":"“Quần áo lúc nào cũng như mới” = được giặt sạch. Dòng 2 nói về một cái máy (êm, mạnh). Việc giặt + là máy → 세탁기.","x":["G Máy điện, cũng “êm, mạnh”, nhưng không liên quan gì đến 옷.","G Quạt cũng quay và cần êm, nhưng không làm áo như mới.","","K Máy lọc nước, không liên quan 옷."]},{"id":"Entk2","src":"NTK đề 2","l":["가벼운 무게, 세련된 디자인,","깊은 산에서 불어오는 듯한 자연스러운 바람","저렴한 전기 요금으로 시원한 여름을!"],"v":["Trọng lượng nhẹ, thiết kế sang trọng,","Làn gió tự nhiên như thổi từ núi sâu","Mùa hè mát mẻ với tiền điện rẻ!"],"o":["선풍기","가습기","냉장고","정수기"],"a":0,"k":"S","c":["불어오는 듯한 자연스러운 바람","저렴한 전기 요금"],"w":"“Gió như thổi từ núi sâu” (-는 듯한 = như là) + mùa hè mát → quạt hoặc điều hòa. Nhẹ, tiền điện rẻ → quạt. (Nếu có 에어컨 trong lựa chọn thì chữ “가벼운 무게, 저렴한 전기 요금” loại nó.)","x":["","G Máy tạo ẩm cũng phả hơi ra nhưng không làm mát mùa hè.","C 시원하다 cũng dùng cho tủ lạnh, nhưng tủ lạnh không có 바람.","K Máy lọc nước."]},{"id":"Eys2","src":"Yonsei đề 2","l":["구석구석 깨끗이!","당신의 입에선 향기가 ……."],"v":["Sạch từng ngóc ngách!","Miệng bạn thơm tho …"],"o":["수건","치약","향수","청소기"],"a":1,"k":"K","c":["입에선 향기가"],"w":"Dòng 1 chung chung (nhiều thứ “sạch từng ngóc ngách”). Dòng 2 quyết định: thơm <b>ở miệng</b> → kem đánh răng.","x":["G Khăn để lau, không làm miệng thơm.","","C Bẫy chữ 향기 (hương thơm) → nước hoa. Nhưng thơm ở 입 (miệng).","C Bẫy dòng 1: 구석구석 깨끗이 nghe như máy hút bụi. Chọn ở dòng 1 là dính."]},{"id":"Ehot2","src":"HOT đề 2","l":["커피 자국, 김치 자국 더 이상 걱정하지 마세요.","이 하나로 쏙!"],"v":["Vết cà phê, vết kim chi, đừng lo nữa.","Chỉ cần một thứ này là sạch bong!"],"o":["요리","양념","세제","빨래"],"a":2,"k":"V","c":["자국","쏙"],"w":"Bài nói về <b>vết bẩn</b> (자국) trên quần áo, 쏙 = (vết) biến mất sạch. Thứ làm sạch vết bẩn → bột giặt / nước giặt.","x":["C Bẫy chữ 커피, 김치 → món ăn. Nhưng đó là vết bẩn.","C Bẫy chữ 김치 → gia vị.","","G 빨래 là việc giặt / đồ cần giặt, không phải “이 하나” (một sản phẩm)."]},{"id":"Eys4","src":"Yonsei đề 4","l":["다림질이 필요 없다.","안 입은 것처럼 가볍다."],"v":["Không cần là (ủi).","Nhẹ như không mặc."],"o":["옷","다리미","선풍기","운동화"],"a":0,"k":"S","c":["다림질이 필요 없다","안 입은 것처럼"],"w":"입다 (mặc) chỉ dùng cho quần áo. “Không cần ủi” = vải không nhăn, “nhẹ như không mặc” → 옷.","x":["","C Bẫy chữ 다림질 → bàn là. Nhưng bài nói KHÔNG cần ủi.","K 가볍다 cũng tả quạt, nhưng không 입다.","G Giày cũng “nhẹ” nhưng giày là 신다, không phải 입다."]},{"id":"Et3004","src":"TOPIK 3 đề 4","l":["한여름 소나기처럼 입안을 시원하게~","충치 예방부터 미백까지 한 번에 해결하세요!"],"v":["Mát lạnh khoang miệng như cơn mưa rào giữa hè~","Từ ngừa sâu răng đến làm trắng răng, giải quyết một lần!"],"o":["치약","냉장고","에어컨","화장품"],"a":0,"k":"S","c":["입안을","충치 예방","미백"],"w":"“Như mưa rào giữa hè” chỉ là so sánh; cái được làm mát là 입안 (trong miệng). 충치 (sâu răng) → kem đánh răng.","x":["","C Bẫy so sánh 한여름, 시원하게 → tủ lạnh.","C Bẫy so sánh 한여름, 시원하게 → điều hòa.","G 미백 (làm trắng) cũng là từ của mỹ phẩm, nhưng 충치, 입안 là răng."]},{"id":"Etk091","src":"TOPIK kỳ 91","l":["입속 치아 사이사이를 깨끗이!","부드럽게 잘 닦여요~"],"v":["Sạch từng kẽ răng trong miệng!","Chải êm, sạch kỹ~"],"o":["비누","칫솔","안경","수건"],"a":1,"k":"D","c":["치아 사이사이","닦여요"],"w":"치아 (răng) + 닦이다 (được chải) + 부드럽게 (lông mềm, êm) → bàn chải đánh răng.","x":["G Xà phòng cũng làm sạch, nhưng rửa tay, không vào kẽ răng.","","C Bẫy động từ 닦다: kính cũng “lau” (안경을 닦다), nhưng không có 치아.","G Khăn cũng “lau” (닦다) nhưng không vào kẽ răng."]},{"id":"Etk083","src":"TOPIK kỳ 83","l":["가벼움을 신다!","어떤 길에서도 편한 세상을 경험해 보세요."],"v":["“Mang” sự nhẹ nhàng!","Hãy trải nghiệm sự thoải mái trên mọi con đường."],"o":["안경","침대","운동화","노트북"],"a":2,"k":"D","c":["신다","어떤 길에서도"],"w":"신다 chỉ dùng cho giày, tất. “가벼움을 신다” là chơi chữ: mang vào chân sự nhẹ nhàng. Thêm “trên mọi con đường” → giày thể thao.","x":["K 세상 (thế giới) gợi “nhìn thế giới” nhưng không có chữ nào về mắt.","G 편하다 cũng tả giường, nhưng không 신다, không 길.","","G 가벼움 cũng tả laptop, nhưng laptop không 신다."]},{"id":"Ehot1","src":"HOT đề 1","l":["“당신의 개인 비서”","일정도, 예약도, 통화도 이 하나로!"],"v":["“Thư ký riêng của bạn”","Lịch, đặt chỗ, gọi điện, tất cả bằng một thứ này!"],"o":["가방","자동차","텔레비전","휴대 전화"],"a":3,"k":"S","c":["개인 비서","통화도"],"w":"개인 비서 (thư ký riêng) là ẩn dụ: thứ làm hộ việc cho mình. Chữ quyết định là 통화 (gọi điện) → điện thoại.","x":["K “이 하나로” nghe như “đựng tất cả”, nhưng túi không gọi điện.","K","G Đồ điện tử, nhưng TV không gọi điện, không đặt chỗ.",""]},{"id":"Ehot3","src":"HOT đề 3","l":["바를수록 촉촉하게 빛나는 피부","매일 피부에 수분 공급하세요."],"v":["Càng thoa, da càng ẩm mịn, rạng rỡ","Hãy cấp nước cho da mỗi ngày."],"o":["비누","연고","화장품","영양제"],"a":2,"k":"D","c":["바를수록","빛나는 피부","수분 공급"],"w":"바르다 (thoa) + 피부 + 수분 (độ ẩm) → kem dưỡng da, tức mỹ phẩm.","x":["G Xà phòng cũng dùng cho da nhưng là 씻다 (rửa), không 바르다.","G Thuốc mỡ cũng 바르다, nhưng bôi lên 상처 (vết thương), không làm da 빛나다.","","G Thuốc bổ thì 먹다 (uống), không thoa."]},{"id":"Ehot4","src":"HOT đề 4","l":["새살이 솔솔~ 아기 피부처럼 깨끗하게!","상처에 잊지 말고 바르세요."],"v":["Da non lên đều~ sạch đẹp như da em bé!","Đừng quên thoa lên vết thương."],"o":["연고","붕대","소화제","감기약"],"a":0,"k":"D","c":["새살이","상처에","바르세요"],"w":"상처 (vết thương) + 새살 (da non) + 바르다 → thuốc mỡ. “아기 피부처럼” là so sánh (bẫy nghe giống mỹ phẩm).","x":["","G Băng cũng dùng cho vết thương nhưng là 감다 (quấn), không 바르다.","K Thuốc tiêu hóa, uống.","K Thuốc cảm, uống."]},{"id":"Ehot5","src":"HOT đề 5","l":["흔들림 없이 선명하게!","순간을 기록하다."],"v":["Rõ nét, không bị rung!","Ghi lại khoảnh khắc."],"o":["카메라","냉장고","에어컨","노트북"],"a":0,"k":"K","c":["흔들림 없이","순간을 기록하다"],"w":"순간을 기록하다 (ghi lại khoảnh khắc) = chụp ảnh. 흔들림 없이 (không rung, không nhòe) là chất lượng ảnh → máy ảnh.","x":["","K","K","G 선명하다 cũng tả màn hình laptop, nhưng “ghi lại khoảnh khắc” là chụp."]},{"id":"Entk1","src":"NTK đề 1","l":["시골에서 막 딴 것 같은 신선한 과일을 집에서도 맛보세요.","더 넓어진 보관 공간을 누려 보세요!"],"v":["Hãy thưởng thức ngay tại nhà trái cây tươi như vừa hái ở quê.","Hãy tận hưởng không gian bảo quản rộng hơn!"],"o":["정수기","제습기","냉장고","에어컨"],"a":2,"k":"S","c":["막 딴 것 같은 신선한","보관 공간"],"w":"“Tươi như vừa hái” (같은 = như) = giữ được độ tươi. 보관 공간 (chỗ bảo quản) → tủ lạnh. Trái cây là thứ được bảo quản, không phải sản phẩm.","x":["G Đồ điện trong bếp, nhưng lọc nước.","G Hút ẩm, không bảo quản trái cây.","","G Làm mát phòng, không có 보관 공간."]},{"id":"Entk3","src":"NTK đề 3","l":["소나무 원목을 사용하여 더 튼튼해진 다리","수납 공간을 늘린 서랍형 평상","편안한 메트리스가 여러분의 깊은 잠을 약속합니다."],"v":["Chân bằng gỗ thông nguyên khối chắc hơn","Phần đế có ngăn kéo, tăng chỗ cất đồ","Nệm êm hứa hẹn cho bạn giấc ngủ sâu."],"o":["책상","침대","세탁기","안마 의자"],"a":1,"k":"B","c":["메트리스","깊은 잠"],"w":"메트리스 (= 매트리스, nệm) + 깊은 잠 (giấc ngủ sâu) → giường. 다리 (chân), 서랍 (ngăn kéo) là bẫy vì bàn cũng có.","x":["C Bẫy chữ 다리, 서랍: bàn cũng có chân, ngăn kéo, nhưng không có nệm, giấc ngủ.","","K","G Ghế massage cũng 편안하다 nhưng không có nệm, không ngủ sâu."]},{"id":"Et3001","src":"TOPIK 3 đề 1","l":["발이 편안해야 몸 전체가 편안합니다.","여러분이 가는 곳 어디든 편안하고 안전하게"],"v":["Chân có thoải mái thì cả cơ thể mới thoải mái.","Thoải mái và an toàn ở bất cứ nơi đâu bạn đi"],"o":["신발","장갑","칫솔","모자"],"a":0,"k":"K","c":["발이","가는 곳 어디든"],"w":"발 (bàn chân) + đi đâu cũng thoải mái → giày.","x":["","G Đồ mang trên người nhưng cho 손 (tay).","K","G Đồ mang trên người nhưng cho 머리 (đầu)."]},{"id":"Et3002","src":"TOPIK 3 đề 2","l":["얇고 가벼워~ 한 손에 쏙!","이제 모든 곳이 나의 사무실이 된다~"],"v":["Mỏng và nhẹ~ gọn trong một tay!","Giờ mọi nơi đều thành văn phòng của tôi~"],"o":["노트북","에어컨","자동차","카메라"],"a":0,"k":"S","c":["얇고 가벼워","사무실"],"w":"“Mọi nơi thành văn phòng” = mang đi làm việc ở đâu cũng được. Mỏng, nhẹ → laptop.","x":["","K","K Xe cũng “đi mọi nơi” nhưng không mỏng nhẹ cầm một tay.","G “한 손에 쏙” cũng tả máy ảnh, nhưng 사무실 là làm việc."]},{"id":"Et3003","src":"TOPIK 3 đề 3","l":["집안 곳곳 습기를 말끔하게~","건강하고 쾌적한 여름을 경험해 보세요!~"],"v":["Sạch bong hơi ẩm khắp nhà~","Hãy trải nghiệm mùa hè khỏe khoắn, dễ chịu!~"],"o":["냉장고","제습기","화장품","청소기"],"a":1,"k":"V","c":["습기를 말끔하게"],"w":"습기 (hơi ẩm) bị dọn sạch → máy hút ẩm: 제(除 trừ) + 습(濕 ẩm) + 기(機 máy).","x":["K","","K","C Bẫy 곳곳, 말끔하게 (khắp nơi, sạch bong) → máy hút bụi. Nhưng thứ bị dọn là 습기, không phải 먼지 (bụi)."]},{"id":"Et3005","src":"TOPIK 3 đề 5","l":["흐릿한 글자, 희미한 사람","당신에게 필요한 건 선명한 세상!"],"v":["Chữ nhòe, người mờ","Thứ bạn cần là một thế giới rõ nét!"],"o":["수건","세제","안경","거울"],"a":2,"k":"K","c":["흐릿한 글자","선명한 세상"],"w":"Nhìn chữ, nhìn người bị mờ → cần nhìn rõ → kính.","x":["K","K","","G Nhìn vào gương cũng “thấy người”, nhưng gương không làm chữ rõ hơn."]},{"id":"Eebs1","src":"EBS đề 1","l":["밝은 세상, 밝은 마음, 속 시원하게 보고 삽시다!","100M 앞까지 환하게! 밝은 세상으로 오세요."],"v":["Thế giới sáng, lòng sáng, hãy sống mà nhìn cho thỏa!","Sáng rõ tới tận 100 m phía trước! Hãy đến với thế giới sáng rõ."],"o":["신문사","자동차","안경점","달리기"],"a":2,"k":"K","c":["보고","100M 앞까지 환하게","오세요"],"w":"보다 + “sáng rõ tới 100 m phía trước” = nhìn rõ xa → kính. Có 오세요 (“hãy đến”) nên là một <b>nơi</b>: 안경점 (tiệm kính).","x":["K 밝은 세상 nghe như tin tức nhưng không có đọc, tin.","C Bẫy 100M 앞 → đường đi, đèn xe.","","C Bẫy con số 100M → chạy 100 m."]},{"id":"Eebs2","src":"EBS đề 2","l":["상하기 쉬운 과일, 채소, 생선도? 뭐든지 집까지","신선하게! 신속하게!","(단, 30,000원 이상 구매 시)"],"v":["Cả trái cây, rau, cá dễ hỏng? Gì cũng giao đến tận nhà","Tươi! Nhanh!","(Chỉ áp dụng khi mua từ 30.000 won)"],"o":["식당","마트","인터넷","냉장고"],"a":1,"k":"B","c":["집까지","구매 시"],"w":"Giao tận nhà (집까지) + mua từ 30.000 won (구매) → dịch vụ giao hàng của siêu thị. Câu 5 đôi khi là nơi bán, không chỉ đồ vật.","x":["G Nhà hàng bán món đã nấu, không bán cá, rau sống.","","G Mua online được, nhưng 인터넷 là mạng, không phải nơi bán.","C Bẫy chữ 상하기 쉬운, 신선하게 → tủ lạnh giữ tươi. Nhưng tủ lạnh không giao 집까지, không có 구매."]},{"id":"Eys1","src":"Yonsei đề 1","l":["당신이 가장 편안한 시간!","밤이 편해야 하루가 즐겁습니다."],"v":["Khoảng thời gian bạn thoải mái nhất!","Đêm có dễ chịu thì cả ngày mới vui."],"o":["책","가방","침대","컴퓨터"],"a":2,"k":"K","c":["밤이 편해야"],"w":"“Đêm dễ chịu” = ngủ ngon → giường.","x":["K","K","","K Giờ thoải mái nhất có thể là lúc giải trí, nhưng 밤 (đêm) → ngủ."]},{"id":"Eys3","src":"Yonsei đề 3","l":["편안한 승차감! 높은 안전성!","가족과 함께하는 외출이 즐겁습니다."],"v":["Cảm giác ngồi xe êm ái! Độ an toàn cao!","Chuyến đi chơi cùng gia đình thật vui."],"o":["옷","신발","자동차","엘리베이터"],"a":2,"k":"B","c":["승차감"],"w":"승차감 (乘車感: cảm giác khi ngồi xe) → ô tô. Có từ này là đủ.","x":["K","G Giày cũng 편안하다, cũng dùng khi 외출, nhưng không 승차.","","G Thang máy cũng “đi” (타다), cũng cần an toàn, nhưng không đi chơi cùng gia đình."]}];
+var SETS = {
+ dau:{n:'① Làm thử', ids:['Eys2','Ehot2','Eys4','Entk3','Et3001'], t:30},
+ buoc:{n:'④ Từng bước', ids:['Etk091','Etk083','Ehot1','Eebs2'], step:1, demo:'Etk091'},
+ thi:{n:'⑤ Như thi', ids:['Eys5','Entk2','Et3004','Ehot3','Ehot4','Ehot5','Entk1','Et3003'], t:30},
+ ra:{n:'⑦ Ra lớp', ids:['Et3002','Eebs1','Eys1'], t:30}
+};
+var KEEP = ['Eys3','Et3005'];
+var BL = [['0','Trước buổi','tự học',0],['1','① Đầu giờ','0–10′',0],['2','② Chữa','10–15′',10],['3','③ Dạy dạng','15–45′',15],['4','④ Từng bước','45–60′',45],['5','⑤ Như thi','60–75′',60],['6','⑥ Chủ đề','75–85′',75],['7','⑦ Ra lớp','85–90′',85],['8','Kết quả','',999]];
+var KN = {K:'K kết quả',S:'S so sánh / ví von',D:'D động từ',B:'B chức năng',V:'V thứ được xử lý'};
+var BN = {G:'Bẫy G · cùng nhóm',C:'Bẫy C · chữ bẫy',K:'Bẫy K · không liên quan'};
+var MINI = [
+ ['빨래 · 탈수','세탁기'],['습기 · 곰팡이 · 장마철','제습기'],['건조한 공기 · 수분 공급','가습기'],['얼룩 · 찌든 때','세제'],
+ ['충치 예방 · 잇몸','치약'],['필터 · 물을 걸러 주다','정수기'],['먼지 · 흡입력','청소기'],['구김 · 스팀','다리미'],
+ ['한여름에도 가을처럼','에어컨'],['밤이 편해야 하루가 즐겁다','침대']
+];
+var byId = {}; R.forEach(function(r){byId[r.id]=r;});
+var st; try{st = JSON.parse(localStorage.getItem(KEY))||{};}catch(e){st={};}
+st.x = st.x||{}; st.i = st.i||{};
+function save(){try{localStorage.setItem(KEY, JSON.stringify(st));}catch(e){}}
+function $(id){return document.getElementById(id);}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function names(){return (st.hs||'').split(/[,，]/).map(function(s){return s.trim();}).filter(Boolean);}
+var NUM = ['①','②','③','④'];
+
+/* ---------- nav + đồng hồ ---------- */
+function nav(){
+  var k = (location.hash.match(/b=(\w+)/)||[])[1]||st.tab||'0';
+  if(!$('s'+k)) k='0';
+  st.tab=k; save();
+  $('nav').innerHTML = BL.map(function(b){return '<a href="#b='+b[0]+'" data-k="'+b[0]+'"'+(b[0]===k?' class="on"':'')+'>'+b[1]+'<small>'+b[2]+'</small></a>';}).join('');
+  [].forEach.call(document.querySelectorAll('section'),function(s){s.classList.toggle('on',s.id==='s'+k);});
+  if(k==='2') renderFix();
+  if(k==='8') renderRes();
+  tickClock();
+}
+function tickClock(){
+  if(!st.t0){$('clk').textContent='00:00';return;}
+  var m = (Date.now()-st.t0)/60000, mm=Math.floor(m), ss=Math.floor((m-mm)*60);
+  $('clk').textContent=(mm<10?'0':'')+mm+':'+(ss<10?'0':'')+ss;
+  var cur='1'; BL.forEach(function(b){if(b[3]<=m && b[3]<999 && b[0]!=='0') cur=b[0];});
+  [].forEach.call(document.querySelectorAll('#nav a'),function(a){a.classList.toggle('now',a.dataset.k===cur);});
+}
+setInterval(tickClock,1000);
+
+/* ---------- màn chiếu câu đề ---------- */
+var QS = {}; // trạng thái từng bộ: {i, ln, show, left, timer}
+function hlLine(s, c){
+  var h = esc(s);
+  (c||[]).forEach(function(w){var e=esc(w); if(e && h.indexOf(e)>=0) h=h.split(e).join('<mark>'+e+'</mark>');});
+  return h;
+}
+function quiz(el){
+  var key = el.dataset.quiz, S = SETS[key];
+  var q = QS[key] || (QS[key] = {i:0, ln:S.step?1:99, show:false, left:S.t||0});
+  var id = S.ids[q.i], r = byId[id], show = q.show;
+  var x = (st.x[key]||{})[id]||[];
+  var h = '<div class="stage"><div class="top"><span>'+S.n+' · câu '+(q.i+1)+'/'+S.ids.length+' · '+esc(r.src)+(id===S.demo?' · <b>cô làm mẫu</b>':'')+'</span>'+
+    (S.t?'<span class="t'+(q.left<=0?' end':'')+'">'+(q.left>0?q.left+'″':'Hết giờ')+'</span>':'')+'</div>';
+  h += '<div class="q">다음은 무엇에 대한 글인지 고르십시오.</div><div class="ad">';
+  r.l.forEach(function(s,j){h += '<div class="ln'+(j>=q.ln?' hid':'')+'">'+(show?hlLine(s,r.c):esc(s))+(show?'<span class="vi">'+esc(r.v[j]||'')+'</span>':'')+'</div>';});
+  h += '</div><div class="ops">';
+  r.o.forEach(function(o,j){
+    var cls = show?(j===r.a?' ok':' x'):'';
+    var tr = show && j!==r.a && r.x[j] ? '<span class="tr">'+esc(r.x[j])+'</span>':'';
+    h += '<div class="op'+cls+'">'+NUM[j]+' '+esc(o)+(show?'<small>'+esc(viOf(o))+'</small>':'')+tr+'</div>';
+  });
+  h += '</div>';
+  if(show) h += '<div class="exp"><b>Tín hiệu: '+esc(KN[r.k]||r.k)+'</b> · '+esc(r.w)+'</div>';
+  h += '<div class="bar">';
+  h += '<button data-a="prev"'+(q.i?'':' disabled')+'>‹ Câu trước</button>';
+  if(S.t) h += '<button data-a="go">▶ '+(q.left===S.t?'Bắt đầu':'Chạy lại')+' '+S.t+'″</button>';
+  if(S.step) h += '<button data-a="ln"'+(q.ln>=r.l.length?' disabled':'')+'>Dòng tiếp ▾</button>';
+  h += '<button class="pri" data-a="ans">'+(show?'Ẩn đáp án':'Đáp án')+'</button>';
+  h += '<button data-a="next"'+(q.i<S.ids.length-1?'':' disabled')+'>Câu sau ›</button>';
+  h += '<span class="dots">'+S.ids.map(function(_,j){return '<span data-j="'+j+'" class="'+(j===q.i?'on ':'')+((st.i[key]||{})[S.ids[j]]?'d':'')+'">'+(j+1)+'</span>';}).join('')+'</span>';
+  h += '</div>';
+  if(id!==S.demo){
+    var ns = names();
+    h += '<div class="tick"><b>Em sai:</b>'+(ns.length?ns.map(function(n){return '<span class="chip'+(x.indexOf(n)>=0?' x':'')+'" data-n="'+esc(n)+'">'+esc(n)+'</span>';}).join(''):'<span class="note">Nhập tên học sinh ở đầu trang.</span>')+
+      (ns.length?'<span class="note">(chạm tên em sai; không chạm = đúng)</span>':'')+'</div>';
+  }
+  h += '</div>';
+  el.innerHTML = h;
+}
+function viOf(ko){return (VIO[ko]||'');}
+var VIO = {"냉장고":"tủ lạnh","선풍기":"quạt","세탁기":"máy giặt","정수기":"máy lọc nước","가습기":"máy tạo ẩm","수건":"khăn","치약":"kem đánh răng","향수":"nước hoa","청소기":"máy hút bụi","요리":"nấu ăn, món ăn","양념":"gia vị","세제":"bột giặt, nước giặt","빨래":"việc giặt, đồ giặt","옷":"quần áo","다리미":"bàn là (bàn ủi)","운동화":"giày thể thao","에어컨":"điều hòa","화장품":"mỹ phẩm","비누":"xà phòng","칫솔":"bàn chải đánh răng","안경":"kính","침대":"giường","노트북":"máy tính xách tay","가방":"túi, cặp","자동차":"ô tô","텔레비전":"tivi","휴대 전화":"điện thoại di động","연고":"thuốc mỡ","영양제":"thuốc bổ","붕대":"băng (quấn)","소화제":"thuốc tiêu hóa","감기약":"thuốc cảm","카메라":"máy ảnh","제습기":"máy hút ẩm","책상":"bàn học, bàn làm việc","안마 의자":"ghế massage","신발":"giày","장갑":"găng tay","모자":"mũ","거울":"gương","신문사":"tòa soạn báo","안경점":"tiệm kính","달리기":"chạy bộ","식당":"nhà hàng","마트":"siêu thị","인터넷":"internet","책":"sách","컴퓨터":"máy tính","엘리베이터":"thang máy"};
+function startT(key){
+  var q = QS[key], S = SETS[key];
+  clearInterval(q.timer); q.left = S.t;
+  q.timer = setInterval(function(){q.left--; if(q.left<=0){clearInterval(q.timer);} redraw(key);},1000);
+  redraw(key);
+}
+function redraw(key){var el=document.querySelector('[data-quiz="'+key+'"]'); if(el) quiz(el);}
+document.addEventListener('click',function(e){
+  var el = e.target.closest('[data-quiz]'); if(!el) return;
+  var key = el.dataset.quiz, S = SETS[key], q = QS[key], id = S.ids[q.i];
+  var a = e.target.closest('[data-a]'), chip = e.target.closest('.chip'), dot = e.target.closest('.dots span');
+  function go(i){clearInterval(q.timer); q.i=i; q.show=false; q.ln=S.step?1:99; q.left=S.t||0;}
+  if(a){
+    var k=a.dataset.a;
+    if(k==='prev') go(q.i-1);
+    else if(k==='next') go(q.i+1);
+    else if(k==='go'){startT(key);return;}
+    else if(k==='ln') q.ln++;
+    else if(k==='ans'){q.show=!q.show; if(q.show){clearInterval(q.timer); q.ln=99; st.i[key]=st.i[key]||{}; st.i[key][id]=1; save();}}
+  } else if(dot) go(+dot.dataset.j);
+  else if(chip){
+    st.x[key]=st.x[key]||{}; var arr = st.x[key][id] = st.x[key][id]||[];
+    var n=chip.dataset.n, p=arr.indexOf(n); if(p>=0) arr.splice(p,1); else arr.push(n);
+    st.i[key]=st.i[key]||{}; st.i[key][id]=1; save();
+  } else return;
+  quiz(el);
+});
+
+/* ---------- khối ② chữa, ③ luyện nhanh ---------- */
+function renderFix(){
+  var S=SETS.dau, ns=names(), h='';
+  var rows = S.ids.map(function(id){return [id,((st.x.dau||{})[id]||[]).length];}).sort(function(a,b){return b[1]-a[1];});
+  h += '<table><tr><th class="l">Câu</th><th>Số em sai</th><th class="l">Đáp án · tín hiệu</th></tr>'+rows.map(function(r){var q=byId[r[0]];
+    return '<tr><td class="l">'+esc(q.src)+'<br><span class="note">'+esc(q.l[0])+'</span></td><td class="'+(r[1]?'bad':'')+'">'+(st.i.dau&&st.i.dau[r[0]]?r[1]+(ns.length?'/'+ns.length:''):'—')+'</td><td class="l">'+NUM[q.a]+' '+esc(q.o[q.a])+' · '+esc(KN[q.k]||q.k)+'</td></tr>';}).join('')+'</table>';
+  h += '<p class="note">Mở lại câu ở khối ① (“Đáp án” hiện chữ quyết định tô vàng + bẫy của từng lựa chọn sai).</p>';
+  $('fix').innerHTML=h;
+}
+function renderMini(){
+  $('mini').innerHTML = '<div class="stage"><div class="top"><span>Cụm → đồ vật · cô chỉ từng em</span><button id="miniAll">Hiện hết</button></div><table>'+
+    MINI.map(function(m,i){return '<tr><td class="l" style="font-size:1.1em">'+(i+1)+'. '+esc(m[0])+'</td><td style="width:40%"><span class="chip mini" data-k="'+esc(m[1])+'">?</span></td></tr>';}).join('')+'</table></div>';
+}
+document.addEventListener('click',function(e){
+  var c=e.target.closest('.chip.mini'); if(c){c.textContent=c.textContent==='?'?c.dataset.k+' · '+viOf(c.dataset.k):'?';}
+  if(e.target.id==='miniAll'){[].forEach.call(document.querySelectorAll('.chip.mini'),function(c){c.textContent=c.dataset.k+' · '+viOf(c.dataset.k);});}
+});
+
+/* ---------- kết quả ---------- */
+function score(key,n){
+  var S=SETS[key], ids=S.ids.filter(function(id){return id!==S.demo && st.i[key] && st.i[key][id];});
+  var bad=ids.filter(function(id){return ((st.x[key]||{})[id]||[]).indexOf(n)>=0;});
+  return {done:ids.length, ok:ids.length-bad.length, bad:bad};
+}
+function renderRes(){
+  var ns=names(), keys=['dau','buoc','thi','ra'];
+  if(!ns.length){$('res').innerHTML='<p class="note">Chưa nhập tên học sinh.</p>';return;}
+  var h='<table><tr><th class="l">Em</th>'+keys.map(function(k){return '<th>'+SETS[k].n+'</th>';}).join('')+'<th class="l">Tín hiệu còn sai</th></tr>';
+  ns.forEach(function(n){
+    var sig={};
+    h+='<tr><td class="l">'+esc(n)+'</td>'+keys.map(function(k){var s=score(k,n); s.bad.forEach(function(id){var t=byId[id].k; sig[t]=(sig[t]||0)+1;});
+      var pass = k==='thi'? s.ok>=6 : k==='ra'? s.ok===s.done : true;
+      return '<td class="'+(s.done?(pass?'okc':'bad'):'')+'">'+(s.done?s.ok+'/'+s.done:'—')+'</td>';}).join('')+
+      '<td class="l">'+Object.keys(sig).map(function(t){return esc(KN[t]||t)+' ×'+sig[t];}).join(', ')+'</td></tr>';
+  });
+  h+='</table>';
+  var hard=[]; keys.forEach(function(k){SETS[k].ids.forEach(function(id){var c=((st.x[k]||{})[id]||[]).length; if(c) hard.push([c,k,id]);});});
+  hard.sort(function(a,b){return b[0]-a[0];});
+  if(hard.length) h+='<h3>Câu nhiều em sai</h3><ul>'+hard.slice(0,6).map(function(x){var r=byId[x[2]];return '<li>'+esc(SETS[x[1]].n)+' · '+esc(r.src)+' (“'+esc(r.l[0])+'”): '+x[0]+' em · đáp án '+esc(r.o[r.a])+' · '+esc(KN[r.k]||r.k)+'</li>';}).join('')+'</ul>';
+  $('res').innerHTML=h;
+}
+function resText(){
+  var ns=names(), keys=['dau','buoc','thi','ra'], d=new Date();
+  var t='Buổi câu 5 · '+d.getDate()+'/'+(d.getMonth()+1)+'/'+d.getFullYear()+'\n';
+  ns.forEach(function(n){t+='- '+n+': '+keys.map(function(k){var s=score(k,n);return SETS[k].n.replace(/^\S+ /,'')+' '+(s.done?s.ok+'/'+s.done:'—');}).join(' · ')+'\n';});
+  return t;
+}
+function copy(s,btn){
+  function ok(){var o=btn.textContent; btn.textContent='✓ Đã chép'; setTimeout(function(){btn.textContent=o;},1500);}
+  if(navigator.clipboard) navigator.clipboard.writeText(s).then(ok,function(){prompt('Chép:',s);}); else prompt('Chép:',s);
+}
+
+/* ---------- bảng chia câu ---------- */
+function renderAlloc(){
+  var rows=[['① Làm thử (đầu giờ, làm lại khi kiểm tra dạng 5–8)',SETS.dau.ids],['④ Cô làm mẫu + làm từng bước',SETS.buoc.ids],['⑤ Làm như thi',SETS.thi.ids],['⑦ Phiếu ra lớp',SETS.ra.ids],['Để dành · kiểm tra dạng 5–8',KEEP]];
+  $('alloc').innerHTML='<tr><th class="l">Dùng ở</th><th class="l">Câu</th></tr>'+rows.map(function(r){return '<tr><td class="l">'+r[0]+'</td><td class="l">'+r[1].map(function(id){var q=byId[id];return esc(q.src)+' ('+q.k+')';}).join(' · ')+'</td></tr>';}).join('');
+}
+
+/* ---------- khởi động ---------- */
+$('hs').value = st.hs||'';
+$('hs').addEventListener('input',function(){st.hs=this.value; save(); [].forEach.call(document.querySelectorAll('[data-quiz]'),quiz);});
+$('bStart').onclick=function(){if(st.t0 && !confirm('Bấm giờ lại từ đầu?')) return; st.t0=Date.now(); save(); tickClock(); location.hash='b=1';};
+$('bReset').onclick=function(){if(confirm('Xóa kết quả tick của buổi này (giữ tên học sinh)?')){st.x={};st.i={};st.t0=0;save();location.reload();}};
+var fz=st.fz||1; document.documentElement.style.setProperty('--fz',fz);
+$('bFz').onclick=function(){fz=Math.min(2,fz+0.1);st.fz=fz;save();document.documentElement.style.setProperty('--fz',fz);};
+$('bFz2').onclick=function(){fz=Math.max(.7,fz-0.1);st.fz=fz;save();document.documentElement.style.setProperty('--fz',fz);};
+$('bFull').onclick=function(){if(document.fullscreenElement) document.exitFullscreen(); else if(document.documentElement.requestFullscreen) document.documentElement.requestFullscreen();};
+document.addEventListener('fullscreenchange',function(){document.body.classList.toggle('full',!!document.fullscreenElement);});
+$('msg').value='Bài sau buổi câu 5 (làm trước buổi sau):\n1. Học bảng cụm theo đồ vật + luyện hai chiều: https://hoc.naritopik.com/cau-5/#b=1\n2. Làm phần Ôn (ôn ngắt quãng): https://hoc.naritopik.com/cau-5/#b=on\nĐầu giờ buổi sau cô kiểm tra 10 cụm → đồ vật (chiếu trên lớp).\nBuổi sau học câu 6–8.';
+$('bMsg').onclick=function(){copy($('msg').value,this);};
+$('bCopy').onclick=function(){copy(resText(),this);};
+renderAlloc(); renderMini();
+[].forEach.call(document.querySelectorAll('[data-quiz]'),quiz);
+window.addEventListener('hashchange',nav); nav();
+</script>
+</body>
+</html>

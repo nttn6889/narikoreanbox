@@ -1,0 +1,39 @@
+/* Bộ "Quán ngữ tiếng Hàn theo bộ phận cơ thể" (1080×1350) — bản thoáng: nền sáng, ít khung, dấu bản quyền chữ nhạt lặp (wm.js data-style=tile) */
+body{background:#FBFAFE}
+.eye{font-size:24px;margin-top:22px;color:#8A82B4;letter-spacing:1px}
+h1.pt{display:flex;align-items:baseline;gap:18px;font-size:72px;color:var(--v);margin-top:6px;letter-spacing:0}
+h1.pt .e{font-size:58px}
+h1.pt small{font-size:28px;font-weight:600;color:var(--g);letter-spacing:0}
+.list{margin-top:22px;border-top:3px solid var(--v)}
+.it{display:grid;grid-template-columns:430px 1fr;column-gap:20px;padding:15px 4px 14px;border-bottom:1.5px solid #E7E3F2}
+.it .a{display:flex;align-items:baseline;gap:12px}
+.it .n{font-size:18px;font-weight:800;color:#B9B2D6;width:26px;flex:none}
+.it .a b{font-size:30px;font-weight:800;color:var(--ink);line-height:1.2}
+.it .m{font-size:25px;font-weight:600;color:var(--v);line-height:1.3;align-self:center}
+.it .m i{font-style:normal;font-weight:500;font-size:20px;color:#9A93BC}
+.it .x{grid-column:1/-1;padding-left:38px;margin-top:5px;font-size:20px;line-height:1.4;color:var(--dim)}
+.it .x .ko{color:#3D3852;margin-right:12px}
+.it .x .ko b{color:var(--ink);font-weight:700;background:linear-gradient(transparent 62%,#F6E7BF 62%)}
+.it .x .vi{color:#8A84A3}
+.foot{position:absolute;left:72px;right:72px;bottom:44px;display:flex;justify-content:space-between;align-items:center;font-size:22px;color:#8A84A3}
+.foot b{color:var(--v)} .foot .pg{font-weight:800;color:var(--v)}
+/* bìa */
+h1.cv{font-size:70px;line-height:1.12;margin-top:14px;letter-spacing:-1px}
+h1.cv b{color:var(--r)} h1.cv span{color:var(--v)}
+.lead{font-size:26px;margin-top:16px;color:var(--dim)}
+.toc{display:grid;grid-template-columns:1fr 1fr;gap:10px 22px;margin-top:24px}
+.toc div{display:grid;grid-template-columns:48px 1fr 40px;grid-template-rows:auto auto;align-items:center;background:#fff;border-radius:18px;padding:8px 18px}
+.toc .e{grid-row:1/3;font-size:30px}
+.toc b{font-size:27px;color:var(--ink)} .toc small{font-size:18px;color:#8A84A3}
+.toc i{grid-row:1/3;grid-column:3;font-style:normal;font-weight:800;color:#B9B2D6;font-size:22px;text-align:right}
+.toc .q{background:var(--vs)}
+.how{margin-top:20px;font-size:23px;line-height:1.5;color:var(--dim);border-left:5px solid var(--gl);padding:6px 0 6px 20px}
+.how b{color:var(--ink)}
+/* ôn tập */
+.box{display:grid;grid-template-columns:1fr 1fr;gap:10px 18px;margin-top:24px;background:#fff;border-radius:22px;padding:20px 26px}
+.box div{font-size:25px;font-weight:700;color:var(--ink)} .box div b{display:inline-block;width:38px;color:var(--g)}
+.quiz{margin-top:20px;border-top:3px solid var(--v)}
+.quiz .r{display:grid;grid-template-columns:44px 1fr 90px;align-items:center;padding:11px 4px;border-bottom:1.5px solid #E7E3F2;font-size:26px}
+.quiz .n{font-weight:900;color:var(--v)}
+.quiz .blank{height:44px;border-bottom:3px dashed #C9C2E2}
+h1.pt.q{font-size:60px;flex-wrap:wrap;row-gap:0}
