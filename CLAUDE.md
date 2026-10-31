@@ -166,6 +166,8 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   Nút “✏ Bảng” cuối thanh chọn buổi (đang chiếu thì nằm trên thanh chiếu) → “⬜ Bảng” nền trắng (kẻ ô ▦, nhiều trang ‹ ›) hoặc “📄 Trên trang” (viết đè lên học liệu, nét đi theo trang khi cuộn,
   mỗi `#hash` một lớp, ✋ tạm thôi vẽ để cuộn / bấm trong trang). Bút, bút tô, T = **khung chữ** (cô góp ý 31/10: chữ gõ không được dính vào trang; một khung nền vàng cố định trên màn hình, kéo đầu khung để dời, góc để đổi cỡ, A− A+;
   bấm T / — để ẩn, bấm T hiện lại viết tiếp, chữ lưu ở `st.n`), tẩy theo nét, 6 màu, 3 cỡ, ↶ ↷, 🗑. Bút cảm ứng thì bỏ chạm lòng bàn tay.
+  Cô góp ý 31/10 (chuyển qua lại bảng ↔ chọn đáp án): bảng trắng mặc định là **cửa sổ nổi** (`cfg.win`; ⠿ kéo dời, góc dưới phải đổi cỡ, ⛶ / ⧉ cả màn hình ↔ cửa sổ) — trang bên cạnh vẫn bấm được;
+  “Trên trang”: **chạm nhẹ (không kéo, < 0,4 giây) = bấm vào trang** (`passClick`), kéo = vẽ; phím **B** bật / tắt bảng.
   Lưu localStorage `nari-bang` theo đường dẫn trang. Thuộc tính của thanh dùng `data-bt` (nhiều trang đã dùng `data-t` cho câu hỏi).
 - **Mỗi lần làm trang học liệu mới** (site hoặc claude.ai): tự thêm link vào trang “Mục lục học liệu Nari” (https://claude.ai/artifact/6bTfJWsvsCeMrmggceXPjQ,
   mảng `L` theo lớp → nhóm; Artifact `read` → sửa → `publish` với `url`, đổi ngày “cập nhật”), trang cũ đã gộp thì ghi chú “Bản cũ, đã gộp vào …”, trang đã xóa thì bỏ dòng.
