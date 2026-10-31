@@ -43,6 +43,16 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   thêm tay vào `HL['<lớp>']['<phần>:<cuốn>-<bài>']` hoặc `'<phần>:chung'` (hiện nút “★ Dùng chung”). Link `lop/2a/#k=tu|np|nghe|doc|viet&b=2A-3&t=bang|mau|hl`.
 - Không đưa giáo án / bản trình chiếu của cô (trang `noindex`, `viet-51/`, `viet-52/`, `viet-53/`, `cau-25-27/`, `seoul/so-dem|tuong-dong|tu-de-hoi/`, `seoul/2a-1|3a-1/`, `ngu-phap-sau/`).
 
+## Khóa 110 (thi khoảng 11/4/2027, mục tiêu TOPIK 4) — khung buổi 90 phút cố định
+- Cô chốt 31/10: 3 buổi/tuần, Tết nghỉ khoảng 10 ngày, học sinh mới hết sơ cấp, kiểm tra đầu giờ **chiếu trên lớp, cô kiểm tra trực tiếp** (cả lớp giơ thẻ ①②③④).
+  Khung mỗi buổi: trước buổi tự học (30–40′) → ① kiểm tra đầu giờ 10′ (đạt 8/10) → ② chữa 5′ → ③ dạy dạng 30′ → ④ cô làm mẫu + làm từng bước 15′ → ⑤ như thi 15′
+  → ⑥ góc chủ đề / ôn dạng cũ 10′ → ⑦ phiếu ra lớp 3 câu chưa gặp + giao bài 5′; hết dạng có kiểm tra dạng (80%), hết giai đoạn có kiểm tra giai đoạn.
+  Câu đề của mỗi dạng chia cố định: làm thử · làm mẫu/từng bước · như thi · ra lớp · để dành cho kiểm tra (không cho học sinh gặp trước).
+- `khoa-110/` (trang học sinh): lộ trình theo **Tuần 1–23 × Buổi 1–3** (không ghi thứ/ngày — cô đổi lịch được), biến `W` = [giai đoạn, chủ đề, [buổi: loại, tên, `k:c` link trang chủ, ghi chú, kiểm tra đầu giờ]].
+  Chủ đề 2 tuần một chủ đề theo 10 chủ đề × 12 chủ điểm (trang https://claude.ai/artifact/ExdBDgYYhxrysxqHEDB27S, tab Theo chủ đề). `#t=<tuần>` tô + cuộn tới tuần đó. localStorage `nari-k110` (em tick “Đã học”).
+- `cau-5/lop/` (giáo án của cô, `noindex`): buổi câu 5 theo khung — chiếu câu đề (`R` chép từ `cau-5/`, nghĩa lựa chọn `VIO`), bấm giờ, chạm tên em sai, Kết quả buổi + “Chép kết quả”.
+  Bộ câu `SETS` (dau 5 làm thử · buoc 4 · thi 8 · ra 3) + `KEEP` 2 câu để dành. Tên học sinh chỉ ở localStorage `nari-lop5`. Buổi dạng khác làm cùng khuôn `cau-<dạng>/lop/`.
+
 ## Phòng thi thử (`thi-thu/`)
 - Trang **quản lý** của cô vẫn nằm trên claude.ai: https://claude.ai/artifact/7EWoCB9sEomX2FHY8d1QY8
   (dùng cơ sở dữ liệu của artifact: ngân hàng đề, học viên, sổ điểm). Cô giao bài ở đó.
