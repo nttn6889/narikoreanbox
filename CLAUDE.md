@@ -42,6 +42,7 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   Học liệu tự sinh: `seoul/#b&c`, `seoul/bai-tap/` (bài trong `BT` — thêm bài thì sửa `BT` trong `khung.js`; `TS` để trống: `seoul/tu-sau/` là giáo án của cô), `seoul/ngu-phap/`;
   thêm tay vào `HL['<lớp>']['<phần>:<cuốn>-<bài>']` hoặc `'<phần>:chung'` (hiện nút “★ Dùng chung”). Link `lop/2a/#k=tu|np|nghe|doc|viet&b=2A-3&t=bang|mau|hl`.
 - Không đưa giáo án / bản trình chiếu của cô (trang `noindex`, `viet-51/`, `viet-52/`, `viet-53/`, `cau-25-27/`, `seoul/so-dem|tuong-dong|tu-de-hoi/`, `seoul/2a-1|3a-1/`, `ngu-phap-sau/`).
+  Cô chốt 31/10: `ngu-phap-12/`, `ngu-phap-34/`, `cau-13-15/`, `cau-16-18/`, `cau-19-20/`, `cau-23-24/`, `cau-42-43/` (kể cả `#b=3` luyện như thi) cũng là giáo án — đã gỡ khỏi `HL` và nút Luyện tập của `tu-vung/` (nay trỏ `ngu-phap-luyen/`), link ở Mục lục giáo án.
 
 ## Khóa 110 (thi khoảng 11/4/2027, mục tiêu TOPIK 4) — khung buổi 90 phút cố định
 - Cô chốt 31/10: 3 buổi/tuần, Tết nghỉ khoảng 10 ngày, học sinh mới hết sơ cấp, kiểm tra đầu giờ **chiếu trên lớp, cô kiểm tra trực tiếp** (cả lớp giơ thẻ ①②③④).

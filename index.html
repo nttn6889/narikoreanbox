@@ -56,16 +56,13 @@
   };
   /* Học liệu theo dạng: '<phần>:<câu đầu>' → [[loại, tên, link, mô tả]] — chỉ trang dành cho học sinh (không đưa giáo án / bản trình chiếu của cô) */
   var HL = {
-    'doc:1': [['Chiến thuật','Học câu 1–2 theo cặp dễ nhầm','ngu-phap-12/','4 buổi: đuôi nối, đuôi câu, tiểu từ, trộn đề'],['Luyện tập','Tự luyện ngữ pháp câu 1–4 · 20 ngày','ngu-phap-luyen/#d=1','Mỗi ngày một nhóm, ôn ngắt quãng']],
-    'doc:3': [['Chiến thuật','Học câu 3–4 theo tần suất đề thật','ngu-phap-34/','Cặp hay ra, quy trình 3 bước, bẫy'],['Luyện tập','Tự luyện ngữ pháp câu 1–4 · 20 ngày','ngu-phap-luyen/#d=1','Mỗi ngày một nhóm, ôn ngắt quãng']],
+    'doc:1': [['Luyện tập','Tự luyện ngữ pháp câu 1–4 · 20 ngày','ngu-phap-luyen/#d=1','Mỗi ngày một nhóm, ôn ngắt quãng']],
+    'doc:3': [['Luyện tập','Tự luyện ngữ pháp câu 1–4 · 20 ngày','ngu-phap-luyen/#d=1','Mỗi ngày một nhóm, ôn ngắt quãng']],
     'doc:5': [['Luyện tập','Luyện từ vựng câu 5','cau-5/luyen/','55 đồ vật chia 10 nhóm + từ láy, luyện nhanh, bài trắc nghiệm gửi cô']],
     'doc:11': [['Luyện tập','Tự học câu 11–12 · Tin ngắn (3 ngày)','cau-11-12/hoc/','6 bước theo thứ tự: từ tin tức, đọc + làm thử, cặp từ cùng ý / khác ý, làm từng bước, luyện như thi, kiểm tra'],['Luyện tập','Luyện câu 11–12 như thi','cau-11-12/hoc/#b=5','2 lượt × 6 câu, 1 phút/câu, hỏi lại câu sai']],
-    'doc:13': [['Chiến thuật','Học câu 13–15 · Sắp xếp câu','cau-13-15/','Dấu bám, chọn câu đầu, so một vị trí'],['Luyện tập','Tự luyện 66 câu sắp xếp','cau-13-15/luyen/','Làm 2 bước, có gợi ý']],
-    'doc:16': [['Chiến thuật','Học câu 16–18 · Điền chỗ trống','cau-16-18/','Đọc qua ô, 5 tín hiệu, 4 bẫy'],['Luyện tập','Luyện câu 16–18 như thi','cau-16-18/#b=3','1 phút/câu']],
-    'doc:19': [['Luyện tập','Tự học câu 19–20 (3 ngày)','cau-19-20/hoc/','6 bước theo thứ tự: phó từ – từ nối, đọc + làm thử, đi cặp + quan hệ, làm từng bước, luyện như thi, kiểm tra'],['Luyện tập','Luyện câu 19–20 như thi (bài tự học)','cau-19-20/hoc/#b=5','2 lượt × 4 bài, 1 phút 30/bài, hỏi lại bài sai'],['Chiến thuật','Học câu 19–20','cau-19-20/','Tìm cặp → xét quan hệ → chủ đề'],['Luyện tập','Luyện câu 19–20 như thi','cau-19-20/#b=3','1 phút 30/bài']],
-    'doc:23': [['Chiến thuật','Học câu 23–24 · Tâm trạng','cau-23-24/','Tìm nguyên nhân, chia + / −, sắc thái'],['Luyện tập','Luyện câu 23–24 như thi','cau-23-24/#b=3','2 phút/bài']],
+    'doc:13': [['Luyện tập','Tự luyện 66 câu sắp xếp','cau-13-15/luyen/','Làm 2 bước, có gợi ý']],
+    'doc:19': [['Luyện tập','Tự học câu 19–20 (3 ngày)','cau-19-20/hoc/','6 bước theo thứ tự: phó từ – từ nối, đọc + làm thử, đi cặp + quan hệ, làm từng bước, luyện như thi, kiểm tra'],['Luyện tập','Luyện câu 19–20 như thi (bài tự học)','cau-19-20/hoc/#b=5','2 lượt × 4 bài, 1 phút 30/bài, hỏi lại bài sai']],
     'doc:25': [['Luyện tập','63 tiêu đề báo theo chủ đề','tu-vung/tieu-de/','Tách khúc, nghĩa từ, che đáp án']],
-    'doc:42': [['Chiến thuật','Học câu 42–43 · Tiểu thuyết','cau-42-43/','Đúng người, đúng lúc, nguyên nhân'],['Luyện tập','Luyện câu 42–43 như thi','cau-42-43/#b=3','2 phút 30/bài']],
     'viet:51': [['Chiến thuật','Dấu hiệu nhận biết câu 51','dau-hieu-51-52/#b=51','Thấy chữ gì quanh ô → viết mẫu gì'],['Từ vựng','Cặp danh từ → động từ','dau-hieu-51-52/#b=tu','Đoán động từ cho ô trống'],
       ['Luyện tập','Dịch đề câu 51','dich-51-52/#b=51','36 đề, tự chấm'],['Luyện tập','Luyện nhanh dấu hiệu 51–52','dau-hieu-51-52/#b=luyen','38 câu trắc nghiệm']],
     'viet:52': [['Chiến thuật','Dấu hiệu nhận biết câu 52','dau-hieu-51-52/#b=52','Từ nối → đuôi, Chép hay Lật'],['Từ vựng','Cặp danh từ → động từ','dau-hieu-51-52/#b=tu','Đoán động từ cho ô trống'],
