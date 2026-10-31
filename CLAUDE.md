@@ -164,7 +164,8 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   tiêu đề h2–h4, `.hd`, `.ph`, summary đi liền khối sau) → trang mới không cần soạn thêm. Link mở thẳng chỗ đang giảng: `#…&cf=<số khối>`. localStorage `nari-chieu` (cỡ chữ, chế độ).
 - **Bảng trắng** (`bang.js`, cô hỏi 31/10: giảng trong trang khỏi chuyển sang Google Docs): gắn cuối trang `<script src="../bang.js"></script>` (sau `dd.js`/`chieu.js`; đã gắn ở `cau-11-12/`).
   Nút “✏ Bảng” cuối thanh chọn buổi (đang chiếu thì nằm trên thanh chiếu) → “⬜ Bảng” nền trắng (kẻ ô ▦, nhiều trang ‹ ›) hoặc “📄 Trên trang” (viết đè lên học liệu, nét đi theo trang khi cuộn,
-  mỗi `#hash` một lớp, ✋ tạm thôi vẽ để cuộn / bấm trong trang). Bút, bút tô, gõ chữ (gõ được tiếng Hàn), tẩy theo nét, 6 màu, 3 cỡ, ↶ ↷, 🗑. Bút cảm ứng thì bỏ chạm lòng bàn tay.
+  mỗi `#hash` một lớp, ✋ tạm thôi vẽ để cuộn / bấm trong trang). Bút, bút tô, T = **khung chữ** (cô góp ý 31/10: chữ gõ không được dính vào trang; một khung nền vàng cố định trên màn hình, kéo đầu khung để dời, góc để đổi cỡ, A− A+;
+  bấm T / — để ẩn, bấm T hiện lại viết tiếp, chữ lưu ở `st.n`), tẩy theo nét, 6 màu, 3 cỡ, ↶ ↷, 🗑. Bút cảm ứng thì bỏ chạm lòng bàn tay.
   Lưu localStorage `nari-bang` theo đường dẫn trang. Thuộc tính của thanh dùng `data-bt` (nhiều trang đã dùng `data-t` cho câu hỏi).
 - **Mỗi lần làm trang học liệu mới** (site hoặc claude.ai): tự thêm link vào trang “Mục lục học liệu Nari” (https://claude.ai/artifact/6bTfJWsvsCeMrmggceXPjQ,
   mảng `L` theo lớp → nhóm; Artifact `read` → sửa → `publish` với `url`, đổi ngày “cập nhật”), trang cũ đã gộp thì ghi chú “Bản cũ, đã gộp vào …”, trang đã xóa thì bỏ dòng.

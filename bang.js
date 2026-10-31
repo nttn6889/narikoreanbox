@@ -3,7 +3,7 @@
    - Nút “✏ Bảng” cuối thanh chọn buổi (không có nav thì nổi góc phải dưới); đang chiếu (chieu.js) thì nút nằm trên thanh chiếu.
    - Hai kiểu: “⬜ Bảng trắng” (nền trắng / kẻ ô, nhiều trang) và “📄 Vẽ lên trang” (viết đè lên học liệu, nét đi theo trang khi cuộn,
      mỗi thẻ / buổi một lớp riêng; “✋” = tạm thôi vẽ để cuộn, bấm nút trong trang).
-   - Công cụ: bút, bút tô (vàng trong), gõ chữ (gõ được tiếng Hàn), tẩy (chạm nét nào xóa nét đó), 6 màu, 3 cỡ, ↶ ↷, Xóa hết.
+   - Công cụ: bút, bút tô (vàng trong), T = khung chữ nền vàng cố định trên màn hình (kéo đầu khung để dời, kéo góc để đổi cỡ; T / — ẩn, bấm T hiện lại, chữ giữ nguyên), tẩy (chạm nét nào xóa nét đó), 6 màu, 3 cỡ, ↶ ↷, Xóa hết.
    - Phím: Esc đóng · Ctrl+Z / Ctrl+Y. Nét vẽ lưu trên máy (localStorage `nari-bang`, theo từng trang), mở lại vẫn còn. */
 (function(){
   if(window.__bang)return;window.__bang=1;
@@ -11,9 +11,9 @@
   var COL=['#1d1a2c','#E0313F','#1f5fd1','#1b8a3a','#53468F','#e08a00'],HL=['#ffe14d','#7ee0ff','#9cf29c','#ffb3d9'];
   var SZ=[2.5,5,10];
   var st={w:[[]],p:{}},cfg={tool:'pen',c:0,hc:0,z:1,grid:0},mode='w',page=0,on=false,hand=false;
-  var redoS=[],ov,bar,base,live,bx,lx,dpr=1,cur=null,txt=null,penSeen=0,btn;
+  var redoS=[],ov,bar,base,live,bx,lx,dpr=1,cur=null,nb,nt,penSeen=0,btn;
   try{var all=JSON.parse(localStorage.getItem(LS)||'{}');if(all[PG])st=all[PG];if(all._cfg)for(var k in all._cfg)cfg[k]=all._cfg[k];}catch(e){}
-  if(!st.w||!st.w.length)st.w=[[]];if(!st.p)st.p={};
+  if(!st.w||!st.w.length)st.w=[[]];if(!st.p)st.p={};if(!st.n)st.n={s:'',z:26,show:0};if(cfg.tool==='text')cfg.tool='pen';
   function save(){try{var all=JSON.parse(localStorage.getItem(LS)||'{}');all[PG]=st;all._cfg=cfg;localStorage.setItem(LS,JSON.stringify(all));}catch(e){}}
 
   var css=
@@ -27,7 +27,7 @@
 '#bang.w{background:#fff}#bang.w.grid{background:#fff linear-gradient(#e6e3f0 1px,transparent 1px) 0 0/40px 40px,linear-gradient(90deg,#e6e3f0 1px,transparent 1px) 0 0/40px 40px}'+
 '#bang.p{background:transparent}#bang.hand{pointer-events:none}#bang.hand #bgbar,#bang.hand #bgbar *{pointer-events:auto}'+
 '#bang canvas{position:absolute;left:0;top:0;width:100%;height:100%}'+
-'#bang.t-text canvas{cursor:text}#bang.t-pen canvas,#bang.t-hl canvas{cursor:crosshair}#bang.t-er canvas{cursor:cell}'+
+'#bang.t-pen canvas,#bang.t-hl canvas{cursor:crosshair}#bang.t-er canvas{cursor:cell}'+
 '#bgbar{position:absolute;left:50%;top:6px;transform:translateX(-50%);max-width:calc(100% - 12px);box-sizing:border-box;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:4px;'+
 'padding:5px 8px;background:rgba(29,26,44,.94);color:#fff;border-radius:12px;font:14px/1.2 Arial,sans-serif;box-shadow:0 3px 12px rgba(0,0,0,.25);z-index:2}'+
 '#bgbar button{font:bold 15px Arial,sans-serif;min-width:36px;height:36px;padding:0 8px;border:1px solid #666;border-radius:8px;background:#2c2840;color:#fff;cursor:pointer}'+
@@ -35,8 +35,13 @@
 '#bgbar .sw{min-width:28px;width:28px;height:28px;padding:0;border-radius:50%;border:2px solid #fff3}#bgbar .sw.on{border:3px solid #fff;box-shadow:0 0 0 2px #D4A843}'+
 '#bgbar .dt{display:inline-block;border-radius:50%;background:#fff;vertical-align:middle}'+
 '#bgbar .sp{width:1px;height:26px;background:#fff3;margin:0 3px}#bgbar .pg{min-width:44px;text-align:center;opacity:.9}'+
-'#bang textarea.bgt{position:absolute;z-index:3;min-width:120px;min-height:1.4em;padding:2px 4px;border:2px dashed #53468F;background:rgba(255,255,255,.85);'+
-'font-family:"Malgun Gothic","Apple SD Gothic Neo","Noto Sans KR",Arial,sans-serif;line-height:1.25;resize:both;outline:none}'+
+'#bgnote{position:absolute;z-index:3;display:none;flex-direction:column;min-width:200px;min-height:110px;resize:both;overflow:hidden;pointer-events:auto;'+
+'background:#FFF6CC;border:3px solid #D4A843;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,.25)}#bgnote.on{display:flex}'+
+'#bgnote .nh{flex:none;display:flex;align-items:center;gap:4px;padding:4px 6px;background:#D4A843;color:#1d1a2c;font:bold 14px Arial,sans-serif;cursor:move;touch-action:none;user-select:none}'+
+'#bgnote .nh span{flex:1}#bgnote .nh button{font:bold 14px Arial,sans-serif;min-width:30px;height:28px;border:0;border-radius:6px;background:#fff8;color:#1d1a2c;cursor:pointer}'+
+'#bgnote .nh button:hover{background:#fff}'+
+'#bgnote textarea{flex:1;width:100%;box-sizing:border-box;border:0;padding:8px 12px;background:transparent;color:#1d1a2c;resize:none;outline:none;'+
+'font-family:"Malgun Gothic","Apple SD Gothic Neo","Noto Sans KR",Arial,sans-serif;line-height:1.35}'+
 '@media (max-width:620px){#bgbar{top:auto;bottom:6px}#bgbar button{min-width:32px;height:32px;padding:0 6px}}';
 
   function el(t,c,h){var e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e;}
@@ -104,9 +109,8 @@
     if(e.pointerType==='pen')penSeen=Date.now();
     else if(e.pointerType==='touch'&&Date.now()-penSeen<4000)return; /* đang dùng bút cảm ứng → bỏ chạm lòng bàn tay */
     if(e.button>0)return;
-    e.preventDefault();commitText();
+    e.preventDefault();if(nt)nt.blur();
     var q=pt(e);
-    if(cfg.tool==='text'){openText(e.clientX,e.clientY);return;}
     try{live.setPointerCapture(e.pointerId);}catch(_){}
     if(cfg.tool==='er'){cur={er:1,items:[]};erase(q);return;}
     var hl=cfg.tool==='hl';
@@ -135,23 +139,42 @@
     for(var i=L.length-1;i>=0;i--)if(hit(L[i],q[0],q[1],r)){cur.items.push([i,L[i]]);L.splice(i,1);ch=true;}
     if(ch)redraw();
   }
-  function openText(cx,cy){
-    var z=[20,30,46][cfg.z];
-    txt=el('textarea','bgt');txt.style.left=cx+'px';txt.style.top=(cy-4)+'px';txt.style.fontSize=z+'px';txt.style.color=COL[cfg.c];
-    txt.dataset.x=cx+ox();txt.dataset.y=cy+oy();txt.dataset.z=z;txt.rows=1;
-    txt.placeholder='Gõ chữ…';ov.appendChild(txt);txt.focus();setTimeout(function(){txt&&txt.focus();},0);
-    txt.addEventListener('keydown',function(e){e.stopPropagation();if(e.key==='Escape'){commitText();}});
-    txt.addEventListener('input',function(){this.style.height='auto';this.style.height=this.scrollHeight+'px';});
+  /* Khung chữ: một khung cố định trên màn hình, nền vàng nhạt, ẩn / hiện bằng nút T, chữ giữ nguyên để viết tiếp */
+  function buildNote(){
+    nb=el('div','','<div class="nh"><span>✍ Khung chữ</span><button data-n="zo" title="Chữ nhỏ">A−</button><button data-n="zi" title="Chữ to">A+</button>'+
+      '<button data-n="clr" title="Xóa hết chữ">🗑</button><button data-n="hide" title="Ẩn khung (bấm T để hiện lại)">—</button></div><textarea placeholder="Gõ chữ ở đây… (gõ được tiếng Hàn)"></textarea>');
+    nb.id='bgnote';nt=nb.querySelector('textarea');ov.appendChild(nb);
+    var n=st.n;nt.value=n.s||'';
+    nt.addEventListener('input',function(){n.s=nt.value;save();});
+    nt.addEventListener('keydown',function(e){e.stopPropagation();if(e.key==='Escape')nt.blur();});
+    nb.addEventListener('pointerdown',function(e){e.stopPropagation();});
+    nb.querySelector('.nh').onclick=function(e){var b=e.target.closest('[data-n]');if(!b)return;var a=b.dataset.n;
+      if(a==='zi')n.z=Math.min(80,n.z+4);else if(a==='zo')n.z=Math.max(14,n.z-4);
+      else if(a==='clr'){if(nt.value&&confirm('Xóa hết chữ trong khung?')){nt.value='';n.s='';}}
+      else if(a==='hide'){n.show=0;}
+      save();placeNote();paintBar();};
+    var h=nb.querySelector('.nh'),dr=null;
+    h.addEventListener('pointerdown',function(e){if(e.target.closest('button'))return;e.preventDefault();
+      dr=[e.clientX-nb.offsetLeft,e.clientY-nb.offsetTop];try{h.setPointerCapture(e.pointerId);}catch(_){}});
+    h.addEventListener('pointermove',function(e){if(!dr)return;
+      n.x=Math.max(0,Math.min(innerWidth-60,e.clientX-dr[0]));n.y=Math.max(0,Math.min(innerHeight-40,e.clientY-dr[1]));placeNote();});
+    h.addEventListener('pointerup',function(){if(dr){dr=null;save();}});
+    if(window.ResizeObserver)new ResizeObserver(function(){if(!nb.classList.contains('on'))return;
+      n.w=nb.offsetWidth;n.h=nb.offsetHeight;save();}).observe(nb);
   }
-  function commitText(){
-    if(!txt)return;var t=txt;txt=null;var s=t.value.replace(/\s+$/,'');t.remove();if(!s)return;
-    var o={t:'x',x:+t.dataset.x+6,y:+t.dataset.y+6,z:+t.dataset.z,c:COL[cfg.c],s:s};o.b=bbox(o);list().push(o);push({a:'add',s:o});done();
+  function placeNote(){
+    var n=st.n;
+    if(n.w==null){n.w=Math.min(520,innerWidth-24);n.h=Math.min(260,innerHeight-160);n.x=Math.max(12,innerWidth-n.w-20);n.y=Math.min(110,innerHeight-n.h-12);}
+    n.x=Math.max(0,Math.min(innerWidth-60,n.x));n.y=Math.max(0,Math.min(innerHeight-40,n.y));
+    nb.style.left=n.x+'px';nb.style.top=n.y+'px';nb.style.width=Math.min(n.w,innerWidth)+'px';nb.style.height=Math.min(n.h,innerHeight)+'px';
+    nt.style.fontSize=n.z+'px';nb.classList.toggle('on',!!n.show);
   }
+  function toggleNote(){st.n.show=st.n.show?0:1;save();placeNote();if(st.n.show){nt.focus();var l=nt.value.length;try{nt.setSelectionRange(l,l);}catch(_){}}}
 
   function paintBar(){
     if(!bar)return;
     bar.querySelectorAll('[data-bt]').forEach(function(b){b.classList.toggle('on',!hand&&b.dataset.bt===cfg.tool);});
-    bar.querySelector('[data-a=hand]').classList.toggle('on',hand);
+    bar.querySelector('[data-a=hand]').classList.toggle('on',hand);bar.querySelector('[data-a=note]').classList.toggle('on',!!st.n.show);
     bar.querySelector('[data-m=w]').classList.toggle('on',mode==='w');bar.querySelector('[data-m=p]').classList.toggle('on',mode==='p');
     var hl=cfg.tool==='hl';
     bar.querySelectorAll('.sw').forEach(function(b){var i=+b.dataset.i,isH=b.dataset.h==='1';b.style.display=(isH===hl)?'':'none';
@@ -170,26 +193,27 @@
     var zs='';SZ.forEach(function(z,i){var d=[6,10,16][i];zs+='<button data-z="'+i+'" title="Cỡ nét"><span class="dt" style="width:'+d+'px;height:'+d+'px"></span></button>';});
     bar=el('div','',
       '<button data-m="w" title="Bảng trắng">⬜ Bảng</button><button data-m="p" title="Viết đè lên trang học liệu">📄 Trên trang</button><span class="sp"></span>'+
-      '<button data-bt="pen" title="Bút">✏️</button><button data-bt="hl" title="Bút tô màu">🖍</button><button data-bt="text" title="Gõ chữ">T</button>'+
+      '<button data-bt="pen" title="Bút">✏️</button><button data-bt="hl" title="Bút tô màu">🖍</button><button data-a="note" title="Khung chữ: hiện / ẩn (chữ giữ nguyên để viết tiếp)">T</button>'+
       '<button data-bt="er" title="Tẩy: chạm nét nào xóa nét đó">⌫</button><button data-a="hand" title="Tạm thôi vẽ: cuộn / bấm trong trang">✋</button><span class="sp"></span>'+
       sw+'<span class="sp"></span>'+zs+'<span class="sp"></span>'+
       '<button data-a="undo" title="Hoàn tác (Ctrl+Z)">↶</button><button data-a="redo" title="Làm lại (Ctrl+Y)">↷</button><button data-a="clr" title="Xóa hết trang bảng này">🗑</button>'+
       '<span class="sp wo"></span><button class="wo" data-a="grid" title="Kẻ ô">▦</button><button class="wo" data-a="pp" title="Trang bảng trước">‹</button><span class="pg wo"></span>'+
       '<button class="wo" data-a="pn" title="Trang bảng sau / thêm trang mới">›</button><span class="sp"></span><button data-a="x" title="Đóng bảng (Esc)">✕</button>');
     bar.id='bgbar';
-    ov.appendChild(base);ov.appendChild(live);ov.appendChild(bar);document.body.appendChild(ov);
+    ov.appendChild(base);ov.appendChild(live);ov.appendChild(bar);document.body.appendChild(ov);buildNote();
     live.addEventListener('pointerdown',down);live.addEventListener('pointermove',move);
     live.addEventListener('pointerup',up);live.addEventListener('pointercancel',up);
     live.addEventListener('wheel',function(e){if(mode==='p'){e.preventDefault();scrollBy(e.deltaX,e.deltaY);}},{passive:false});
     bar.addEventListener('pointerdown',function(e){e.stopPropagation();});ov.addEventListener('click',function(e){e.stopPropagation();});
     bar.onclick=function(e){
-      var b=e.target.closest('button');if(!b)return;commitText();
+      var b=e.target.closest('button');if(!b)return;
       if(b.dataset.m){mode=b.dataset.m;hand=false;redraw();return;}
       if(b.dataset.bt){cfg.tool=b.dataset.bt;hand=false;}
       else if(b.dataset.i!=null){if(b.dataset.h)cfg.hc=+b.dataset.i;else{cfg.c=+b.dataset.i;if(cfg.tool==='er')cfg.tool='pen';}hand=false;}
       else if(b.dataset.z!=null)cfg.z=+b.dataset.z;
       else{var a=b.dataset.a;
         if(a==='x'){close();return;}
+        if(a==='note'){toggleNote();paintBar();return;}
         if(a==='hand')hand=!hand;
         else if(a==='undo')undo();else if(a==='redo')redo();
         else if(a==='clr'){var L=list();if(L.length&&confirm(mode==='w'?'Xóa hết trang bảng này?':'Xóa hết nét vẽ trên thẻ này?')){push({a:'clr',items:L.slice()});L.length=0;}}
@@ -199,18 +223,18 @@
       }
       save();redraw();
     };
-    addEventListener('resize',function(){if(on)size();});
+    addEventListener('resize',function(){if(on){size();placeNote();}});
     addEventListener('scroll',function(){if(on&&mode==='p'&&!cur)redraw();},{passive:true});
-    addEventListener('hashchange',function(){if(on&&mode==='p'){commitText();redraw();}});
+    addEventListener('hashchange',function(){if(on&&mode==='p')redraw();});
     document.addEventListener('keydown',function(e){
-      if(!on||txt)return;
+      if(!on||document.activeElement===nt)return;
       if(e.key==='Escape'){e.preventDefault();e.stopImmediatePropagation();close();}
       else if((e.ctrlKey||e.metaKey)&&(e.key==='z'||e.key==='Z')){e.preventDefault();e.shiftKey?redo():undo();}
       else if((e.ctrlKey||e.metaKey)&&(e.key==='y'||e.key==='Y')){e.preventDefault();redo();}
     },true);
   }
-  function open(){if(!ov)build();on=true;hand=false;ov.classList.add('on');size();}
-  function close(){commitText();on=false;cur=null;ov.className='';save();}
+  function open(){if(!ov)build();on=true;hand=false;ov.classList.add('on');size();placeNote();}
+  function close(){if(nt)nt.blur();on=false;cur=null;ov.className='';save();}
 
   function init(){
     var s=el('style');s.textContent=css;document.head.appendChild(s);
