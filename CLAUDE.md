@@ -762,6 +762,11 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - Biến `R` = 22 câu 5 (16 câu đề là ảnh, chữ chép tay từ ảnh; đáp án `a` 0-based, đã đối chiếu `bank/<đề>/q/q05`): `l` dòng, `v` nghĩa, `c` chữ quyết định (phải có đúng trong `l`),
   `k` tín hiệu, `x[i]` bẫy lựa chọn sai (G cùng nhóm / C chữ bẫy / K không liên quan). `P` = 30 đồ vật {vi, n: đồ vật dễ nhầm, c:[[ko, vi, 1 = ví von]]} — mỗi cụm chỉ đồ vật đó dùng được,
   `c[1]` là cụm phân biệt (bài ngược dùng `c[1]` + câu ví von đầu); `G` nhóm; `OV` cặp quá gần không lấy cụm của nhau làm nhiễu; `PX` nghĩa đồ vật chỉ làm lựa chọn nhiễu. localStorage `nari-5`.
+- Buổi 2 mục 1 “Năm kiểu tín hiệu” (cô góp ý 31/10: chưa giải thích kỹ): mỗi kiểu một khối `.kb` = bảng nhận ra bằng gì → cách làm → 2 câu đề thật (`<div class="sx" data-id>`, vẽ từ `R`, tô `c`)
+  → bẫy hay gặp → ✋ luyện ngay 3 câu `MCQ.sK|sS|sD|sB|sV` (cô tự soạn; phần tử 5 = câu hỏi riêng; giải thích gọi tên tín hiệu). Bảng tóm tắt `SIG` giữ ở đầu mục + Bảng tra.
+- Thẻ **Từ ngữ câu 5–8** (`#b=tu`, section `stu`; cô góp ý 31/10: câu 5–8 nhiều từ láy, tượng thanh, từ quảng cáo chưa liệt kê): 3 luật đọc từ láy · `TL` từ láy theo cảm giác
+  ([ko, nghĩa, hay tả, ví dụ, dịch, ★ đề có từ đó]; “Che nghĩa”) + luyện `MCQ.tl` · câu cụt của quảng cáo / khẩu hiệu · `TB` từ ngữ quảng cáo – thông báo câu 5–6 / 6 / 7 / 8
+  ([ko, nghĩa, dẫn tới, ★]) + luyện `MCQ.tb`. ★ chỉ ghi khi chữ có trong câu 5–8 của 22 đề (`tools/dau_hieu/5-8.json` `tx` hoặc `thi-thu/de/`).
 
 ## Học câu 11–12 tin ngắn (`cau-11-12/`) — bài dạng câu gom cả 5 chuyên đề Đọc (cô yêu cầu 26/10, làm thử dạng đầu tiên)
 - Ý cô: dạy lần đầu theo dạng câu; mỗi dạng lấy **hết** dấu hiệu / cách giải của 5 chuyên đề (`dau-hieu/`, `doc-chon-loc/`, `dong-trai/`, `doc-dap-an/`, `doc-hieu/`) nhưng chỉ phần của dạng đó,
