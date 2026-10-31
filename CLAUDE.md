@@ -163,6 +163,9 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
 - **Mỗi lần cô nhờ trả lời comment đấu giá / bài tìm gia sư:** soạn xong (cô duyệt bản cuối) thì tự lưu luôn, không cần cô nhắc:
   ArtifactData `set` collection `tuvan`, doc `T<yyyymmdd><a|b|c…>` (trang quản lý https://claude.ai/artifact/7EWoCB9sEomX2FHY8d1QY8),
   `st:"chua"`, `post` = bài học sinh đăng, `outer`/`inner` = bản cô chốt, `kase`/`tags` tóm tắt, `qna` = bản hỏi – đáp không tên. Cô sửa tiếp thì `update` bản đó.
+  **Cô không trả lời / không sửa gì thêm thì coi bản cuối Claude gửi là bản chốt, tự lưu luôn** (kể cả còn chỗ `[…]` cô chưa điền) — cô dặn 31/10.
+- Tư vấn giữ trong trang quản lý (không đưa vào repo công khai: bài đăng là của người khác, có trạng thái inbox/học/không). Chỉ phần `qna` (không tên) sau này đưa lên naritopik.com
+  làm trang Hỏi – đáp, cùng lúc với việc chuyển `ve-co/`, `hoc-cung-co/` (chưa làm, hỏi cô trước khi tạo kho).
 
 ## Lưu ý
 - Repo không được chứa tên, điểm, nhận xét của học sinh.
