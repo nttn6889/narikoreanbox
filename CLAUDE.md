@@ -766,7 +766,8 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   → bẫy hay gặp → ✋ luyện ngay 3 câu `MCQ.sK|sS|sD|sB|sV` (cô tự soạn; phần tử 5 = câu hỏi riêng; giải thích gọi tên tín hiệu). Bảng tóm tắt `SIG` giữ ở đầu mục + Bảng tra.
 - Thẻ **Từ ngữ câu 5–8** (`#b=tu`, section `stu`; cô góp ý 31/10: câu 5–8 nhiều từ láy, tượng thanh, từ quảng cáo chưa liệt kê): 3 luật đọc từ láy · `TL` từ láy theo cảm giác
   ([ko, nghĩa, hay tả, ví dụ, dịch, ★ đề có từ đó]; “Che nghĩa”) + luyện `MCQ.tl` · câu cụt của quảng cáo / khẩu hiệu · `TB` từ ngữ quảng cáo – thông báo câu 5–6 / 6 / 7 / 8
-  ([ko, nghĩa, dẫn tới, ★]) + luyện `MCQ.tb`. ★ chỉ ghi khi chữ có trong câu 5–8 của 22 đề (`tools/dau_hieu/5-8.json` `tx` hoặc `thi-thu/de/`).
+  ([ko, nghĩa, dẫn tới, ★]) + luyện `MCQ.tb`.
+- Bài trắc nghiệm từ vựng (31/10): 8 link `thi-thu/#v=` (kv+vk) trong biến `TQ` — `C5N1…6` theo 6 nhóm đồ vật `G` (tên đồ vật + cụm `P`), `C5L1/2` từ láy `TL`; nút ở cuối Buổi 1 mục 3 (`#tqN`) và thẻ Từ ngữ (`#tqL`). Đã ghi `vassigns/C5N1…C5L2` để chấm mã `NV1-`. Sửa `P`/`TL` thì tạo lại link + ghi lại `vassigns`. ★ chỉ ghi khi chữ có trong câu 5–8 của 22 đề (`tools/dau_hieu/5-8.json` `tx` hoặc `thi-thu/de/`).
 
 ## Học câu 11–12 tin ngắn (`cau-11-12/`) — bài dạng câu gom cả 5 chuyên đề Đọc (cô yêu cầu 26/10, làm thử dạng đầu tiên)
 - Ý cô: dạy lần đầu theo dạng câu; mỗi dạng lấy **hết** dấu hiệu / cách giải của 5 chuyên đề (`dau-hieu/`, `doc-chon-loc/`, `dong-trai/`, `doc-dap-an/`, `doc-hieu/`) nhưng chỉ phần của dạng đó,
