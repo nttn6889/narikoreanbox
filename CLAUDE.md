@@ -786,7 +786,7 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   đồ vật → chọn mọi cụm của nó, từ láy → nghĩa; chỉ hỏi cụm thuộc đúng một đồ vật, bỏ từ quá chung (`GEN`). `VV` (cụm ví von, tô xanh) và `TLX` (từ láy: hay tả, dịch ví dụ, ★) nhúng trong trang.
   Bài trắc nghiệm: `python3 tools/cau_5_luyen.py <thư mục>` → `cau-5/luyen/tq.json` (mã `C5G<nhóm>[A|B]`, `C5T1/2`, ≤ 36 từ/bài, kv+vk) + `<thư mục>/vassigns/*.json` → ArtifactData batch `set` `vassigns`
   (đã ghi 31/10). Sửa từ câu 5 trong kho thì chạy lại + ghi lại `vassigns`. Mã cũ `C5N1…6`, `C5L1/2` vẫn ở `vassigns` (giáo án `cau-5/` còn dùng `P`/`TL`/`TQ` riêng, không đổi). localStorage `nari-5luyen`.
-  Dữ liệu nhúng `var D` chép một lần từ `cau-5/index.html` (sửa `P`/`TL`/`TQ` ở trang chính thì chép lại). localStorage `nari-5luyen`. Đã thêm vào `HL['doc:5']`. ★ chỉ ghi khi chữ có trong câu 5–8 của 22 đề (`tools/dau_hieu/5-8.json` `tx` hoặc `thi-thu/de/`).
+  Dữ liệu nhúng `var D` chép một lần từ `cau-5/index.html` (sửa `P`/`TL`/`TQ` ở trang chính thì chép lại). localStorage `nari-5luyen`. Đã thêm vào `HL['doc:5']` — câu 5 ở trang chủ học sinh chỉ còn link này (cô chốt 31/10: `cau-5/` và `cau-5/#b=3` là giáo án, chỉ để ở Mục lục giáo án). ★ chỉ ghi khi chữ có trong câu 5–8 của 22 đề (`tools/dau_hieu/5-8.json` `tx` hoặc `thi-thu/de/`).
 
 ## Học câu 11–12 tin ngắn (`cau-11-12/`) — bài dạng câu gom cả 5 chuyên đề Đọc (cô yêu cầu 26/10, làm thử dạng đầu tiên)
 - Ý cô: dạy lần đầu theo dạng câu; mỗi dạng lấy **hết** dấu hiệu / cách giải của 5 chuyên đề (`dau-hieu/`, `doc-chon-loc/`, `dong-trai/`, `doc-dap-an/`, `doc-hieu/`) nhưng chỉ phần của dạng đó,
