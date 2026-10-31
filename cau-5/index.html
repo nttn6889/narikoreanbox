@@ -33,7 +33,7 @@ nav a{flex:1;min-width:0;text-align:center;padding:6px 2px;color:var(--ink);text
 nav a+a{border-left:2px solid var(--ink)}
 nav a small{display:block;font-weight:normal;font-size:11.5px}
 nav a.on{background:var(--ink);color:#fff}
-@media(max-width:520px){nav a{font-size:13px}nav a small{font-size:10.5px}}
+@media(max-width:520px){nav a{font-size:13px}nav a small{font-size:10.5px}nav.lm{flex-wrap:wrap;row-gap:6px}nav.lm>.bar{flex:1 1 100%!important}}
 .sec{display:none}.sec.on{display:block}
 h2{font-size:23px;margin:6px 0 4px}
 h3{font-size:19px;margin:24px 0 8px;padding-bottom:3px;border-bottom:2px solid var(--ink)}
@@ -1223,5 +1223,6 @@ renderStats();renderSx();renderTL();renderTB();['sK','sS','sD','sB','sV','tl','t
 window.addEventListener('hashchange',function(){if(!show())scrollTo(0,0);});show();
 </script>
 <script src="../danh-dau/dd.js"></script>
+<script src="../bang.js"></script>
 </body>
 </html>
