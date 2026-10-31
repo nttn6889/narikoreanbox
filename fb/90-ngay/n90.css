@@ -1,0 +1,49 @@
+/* Loạt "90 ngày TOPIK II" (1080×1350) — sinh bằng tools/fb_90.py */
+.eye{margin-top:18px;display:flex;align-items:center;gap:22px}
+.eye .dn{background:var(--v);color:#fff;border-radius:18px;padding:8px 22px;font-size:40px;font-weight:900;letter-spacing:0;text-transform:none}
+.eye .dn small{font-size:24px;opacity:.75;font-weight:700}
+.eye .ch{font-size:26px;color:var(--g);text-transform:none;letter-spacing:0}
+h1.t1{font-size:56px;line-height:1.1;margin-top:16px}
+h1.t0{font-size:80px;margin-top:16px}
+.lead{font-size:27px;margin-top:10px}
+.tb{margin-top:20px;padding:10px 36px}
+.tb .r,.pt .r{display:grid;grid-template-columns:330px 1fr;gap:18px;padding:12px 0;align-items:baseline}
+.tb .r+.r,.pt .r+.r{border-top:2px dashed var(--line)}
+.tb .k{font-size:32px;font-weight:800;color:var(--v)}
+.tb .t{font-size:26px;line-height:1.35}
+.tb.big .r{padding:15px 0}.tb.big .k{font-size:36px}.tb.big .t{font-size:28px}
+.tb .gh{font-size:21px;font-weight:800;color:var(--g);letter-spacing:.5px;padding:16px 0 2px;border-top:3px solid var(--gs)}
+.tb .gh:first-child{border-top:0;padding-top:10px}
+.tb .gh+.r{border-top:0}
+.pt{margin-top:20px;padding:8px 36px}
+.pt .r{grid-template-columns:290px 1fr;padding:14px 0}
+.pt .k{font-size:30px;font-weight:800;color:var(--v)}
+.pt .t{font-size:26px;line-height:1.35;font-weight:600}
+.pt .t small{display:block;font-size:23px;font-weight:400;color:var(--dim);margin-top:6px;line-height:1.45}
+u{text-decoration:none;background:linear-gradient(transparent 55%,#F6DE9C 55%);font-weight:800;color:var(--ink)}
+.ex{margin-top:18px;padding:18px 36px;border-left:10px solid var(--gl)}
+.ex .h,.tip .h{font-size:21px;font-weight:700;color:var(--g);letter-spacing:.5px;text-transform:uppercase}
+.ex .k{font-size:25px;line-height:1.45;margin-top:8px}
+.tip{margin-top:18px;padding:18px 36px;font-size:23px;line-height:1.45;background:var(--gs);border-color:#EED9A6}
+.qz{margin-top:28px;padding:14px 40px}
+.qz .r{display:grid;grid-template-columns:60px 420px 1fr;align-items:center;gap:18px;padding:18px 0}
+.qz .r+.r{border-top:2px dashed var(--line)}
+.qz .no{width:48px;height:48px;border-radius:50%;background:var(--vs);color:var(--v);font-weight:800;font-size:26px;display:flex;align-items:center;justify-content:center}
+.qz .k{font-size:36px;font-weight:800;color:var(--v)}
+.qz .bl{border-bottom:3px solid var(--line);height:34px}
+.cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-top:34px}
+.cc{padding:28px 26px}
+.cc .n{font-size:58px;font-weight:900;color:var(--v);line-height:1}
+.cc .d{font-size:24px;font-weight:700;color:var(--g);margin-top:8px}
+.cc .s{font-size:23px;font-weight:700;margin-top:14px;line-height:1.35}
+.cc ul{margin-top:14px;padding-left:24px;font-size:22px;line-height:1.45;color:var(--dim)}
+.cc li+li{margin-top:8px}
+.rule{margin-top:22px;padding:24px 32px;font-size:27px;background:var(--vs);border-color:var(--vs)}
+.bar{position:absolute;left:72px;right:72px;bottom:112px;height:14px;border-radius:10px;background:var(--line)}
+.bar i{position:absolute;left:0;top:0;bottom:0;border-radius:10px;background:var(--gl)}
+.bar b{position:absolute;top:-5px;width:4px;height:24px;background:var(--v);border-radius:2px}
+.foot{position:absolute;left:72px;right:72px;bottom:50px;display:flex;justify-content:space-between;align-items:center;font-size:24px;color:var(--dim)}
+.foot b{color:var(--v)}
+.tb .r.s,.pt .r.s{grid-template-columns:1fr;gap:4px}
+.tb .r.s .k{font-size:28px}
+.qz .r.s{grid-template-columns:60px 1fr}.qz .r.s .k{font-size:30px}.qz .r.s .bl{grid-column:2}

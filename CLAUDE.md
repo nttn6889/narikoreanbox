@@ -859,6 +859,9 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   (chữ để trên + hai bên, vì trên điện thoại ảnh đại diện che giữa phía dưới), `ghim-1` bài ghim, loạt “Một từ, một câu chuyện” `tu-NN-*.html`
   (khung `tu.css`, từ lấy từ phần `Cốt lõi` của `thi-thu/vocab.json` + số đề trong `tu-vung/de.json`), lời đăng ở `caption.md`.
   Dùng chung `quang-cao/topik2-len-3-4/base.css`. Chụp PNG: `node tools/chup_anh.js fb/ca-nhan/*.html` (cỡ khác 1080×1350 ghi `<meta name=size content="WxH">`).
+- `fb/90-ngay/`: loạt “90 ngày TOPIK II” (mỗi ngày 1 bài, chia sẻ miễn phí): Ngày 0 lộ trình; chặng 1 (1–30) từ cốt lõi Tầng 1 + ngữ pháp câu 1–4 (11 nhóm `PLAN` của `ngu-phap-luyen/`),
+  chặng 2 (31–60) Tầng 2 + từ theo dạng câu đọc, chặng 3 (61–90) Tầng 3 + từ nghe / viết 51–54; ngày 10, 20… là ngày ôn (ảnh kiểm tra, đáp án ở comment).
+  Sinh tự động: `python3 tools/fb_90.py` (lịch ở `CAU2`/`CAU3`/`lich()`, lấy từ `thi-thu/vocab.json`) → `ngay-NN.html` + `caption.md` (bản nháp lời đăng); chụp `node tools/chup_anh.js fb/90-ngay/*.html`.
 - `fb/de-viet-108/`: đề viết kỳ 108 (18.10.2026, đề thí sinh nhớ lại, câu chữ theo bản của Tiếng Hàn Thầy Tư) — 2 ảnh đề sạch `de-1`/`de-2` cho bài chính,
   ảnh đáp án đăng ở comment: bìa, 51, 52 (đáp án + cách viết khác), 53 đề (biểu đồ vẽ lại bằng SVG) + bài mẫu, 54 đề + dàn ý + bài mẫu; `de.css`, lời đăng `caption.md`.
 - Cô: cử nhân Quản trị kinh doanh Đại học Daegu, đang ở Quỳnh Lưu, dạy trực tiếp tại Quỳnh Lưu + online toàn quốc.
