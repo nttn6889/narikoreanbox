@@ -778,7 +778,14 @@ Repo để công khai vì Pages miễn phí yêu cầu vậy — tuyệt đối 
   ([ko, nghĩa, hay tả, ví dụ, dịch, ★ đề có từ đó]; “Che nghĩa”) + luyện `MCQ.tl` · câu cụt của quảng cáo / khẩu hiệu · `TB` từ ngữ quảng cáo – thông báo câu 5–6 / 6 / 7 / 8
   ([ko, nghĩa, dẫn tới, ★]) + luyện `MCQ.tb`.
 - Bài trắc nghiệm từ vựng (31/10): 8 link `thi-thu/#v=` (kv+vk) trong biến `TQ` — `C5N1…6` theo 6 nhóm đồ vật `G` (tên đồ vật + cụm `P`), `C5L1/2` từ láy `TL`; nút ở cuối Buổi 1 mục 3 (`#tqN`) và thẻ Từ ngữ (`#tqL`). Đã ghi `vassigns/C5N1…C5L2` để chấm mã `NV1-`. Sửa `P`/`TL` thì tạo lại link + ghi lại `vassigns`.
-- **Trang học sinh `cau-5/luyen/`** (cô yêu cầu 31/10: link luyện riêng): chỉ bảng từ 6 nhóm (`G`/`P`) + từ láy (`TL`, 2 thẻ) + nút làm bài `TQ` mỗi thẻ, “Che nghĩa”; link `#t=n1…n6|l1|l2`.
+- **Trang học sinh `cau-5/luyen/`** (cô yêu cầu 31/10; gộp với kho từ cùng ngày): bảng từ **đọc thẳng `thi-thu/vocab.json`** — cùng nguồn với thẻ Từ vựng câu 5 ở trang chủ
+  (`#k=doc&c=5&t=tu`, mỗi nhóm có nút “Luyện nhóm này ›” = `tuLuyen` trong `index.html`). Kho từ câu 5 = 55 đồ vật (50 của sách 합격 레시피 + 5 của `P`: 다리미, 옷, 제습기, 연고, 휴대 전화),
+  mỗi đồ vật một nhóm `V05_00…54` (từ khóa sách + cụm/ví von của `P`, id `w5_<nhóm>_<i>`), chia 10 phần `Câu 5 · 제품 광고 N · <tên nhóm>` (secOrder 1, `order` chạy liên tục) + phần
+  `Câu 5–8 · 의성어·의태어 · …` (`V05T_01…08` = `TL`, câu ví dụ trong `ex`; hiện ở cả dạng 5 và 6–8). Sửa từ trong trang quản lý (Từ vựng) → đồng bộ kho từ là hai trang tự đổi.
+  Trang: thẻ `#t=n1…n10` (thẻ đồ vật, “Che nghĩa”), `l1|l2` từ láy, `tr` bài trộn; **✋ Luyện nhanh** tự sinh (chấm ngay, “Làm lại” đổi câu, `st.q[thẻ] = {sd, a}`): cụm → đồ vật (lựa chọn = đồ vật cùng nhóm),
+  đồ vật → chọn mọi cụm của nó, từ láy → nghĩa; chỉ hỏi cụm thuộc đúng một đồ vật, bỏ từ quá chung (`GEN`). `VV` (cụm ví von, tô xanh) và `TLX` (từ láy: hay tả, dịch ví dụ, ★) nhúng trong trang.
+  Bài trắc nghiệm: `python3 tools/cau_5_luyen.py <thư mục>` → `cau-5/luyen/tq.json` (mã `C5G<nhóm>[A|B]`, `C5T1/2`, ≤ 36 từ/bài, kv+vk) + `<thư mục>/vassigns/*.json` → ArtifactData batch `set` `vassigns`
+  (đã ghi 31/10). Sửa từ câu 5 trong kho thì chạy lại + ghi lại `vassigns`. Mã cũ `C5N1…6`, `C5L1/2` vẫn ở `vassigns` (giáo án `cau-5/` còn dùng `P`/`TL`/`TQ` riêng, không đổi). localStorage `nari-5luyen`.
   Dữ liệu nhúng `var D` chép một lần từ `cau-5/index.html` (sửa `P`/`TL`/`TQ` ở trang chính thì chép lại). localStorage `nari-5luyen`. Đã thêm vào `HL['doc:5']`. ★ chỉ ghi khi chữ có trong câu 5–8 của 22 đề (`tools/dau_hieu/5-8.json` `tx` hoặc `thi-thu/de/`).
 
 ## Học câu 11–12 tin ngắn (`cau-11-12/`) — bài dạng câu gom cả 5 chuyên đề Đọc (cô yêu cầu 26/10, làm thử dạng đầu tiên)

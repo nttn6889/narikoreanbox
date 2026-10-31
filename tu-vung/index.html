@@ -162,7 +162,8 @@ h4{font-size:14px;margin:12px 0 4px;color:var(--muted)}
     secs.forEach(function(sec, si){
       var id = 's' + si, parts = sec.split(' · ');
       parts[0] = parts[0].replace(/^Nghe/, 'Câu');  // trong thẻ Nghe chỉ cần ghi "Câu 4–12" 
-      nv += '<a href="javascript:void 0" data-to="' + si + '">' + esc(parts[0]) + '</a>';
+      var sub = /\s(\d+)$/.exec(parts[1] || '');  // phần chia nhóm (vd. “Câu 5 · 제품 광고 3 · …”) → nút “Câu 5 · 3”
+      nv += '<a href="javascript:void 0" data-to="' + si + '">' + esc(parts[0] + (sub ? ' · ' + sub[1] : '')) + '</a>';
       var lt = PRACTICE[secNum(sec)];
       lt = lt ? '<a class="lt" href="' + lt.url + '">✎ Luyện tập ' + esc(parts[0]) + ' <small>(' + esc(lt.what) + ')</small></a>' : '';
       var hay = DE && DE.hay && part === 'doc' && DE.hay[secNum(sec)];
@@ -172,7 +173,7 @@ h4{font-size:14px;margin:12px 0 4px;color:var(--muted)}
         h += '<h3>' + esc(g.ko) + (g.vi ? ' <small>(' + esc(g.vi) + ')</small>' : '') + '</h3>';
         if (g.w.some(function(w){ return w[3]; })) {
           // ngữ pháp (câu 1–4): mỗi dòng một mẫu, kèm câu ví dụ
-          h += '<div class="tb gr"><div class="h">Ngữ pháp</div><div class="h">Nghĩa tiếng Việt</div><div class="h wide">Ví dụ</div>';
+          h += '<div class="tb gr"><div class="h">' + (secNum(sec) <= 4 ? 'Ngữ pháp' : 'Từ vựng') + '</div><div class="h">Nghĩa tiếng Việt</div><div class="h wide">Ví dụ</div>';
           g.w.forEach(function(w){ h += '<div class="ko">' + esc(w[1]) + '</div><div class="vi">' + esc(w[2]) + '</div><div class="ex">' + ul(w[3] || '') + '</div>'; });
         } else {
           h += '<div class="tb">' +

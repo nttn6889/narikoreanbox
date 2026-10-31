@@ -58,7 +58,7 @@
   var HL = {
     'doc:1': [['Chiến thuật','Học câu 1–2 theo cặp dễ nhầm','ngu-phap-12/','4 buổi: đuôi nối, đuôi câu, tiểu từ, trộn đề'],['Luyện tập','Tự luyện ngữ pháp câu 1–4 · 20 ngày','ngu-phap-luyen/#d=1','Mỗi ngày một nhóm, ôn ngắt quãng']],
     'doc:3': [['Chiến thuật','Học câu 3–4 theo tần suất đề thật','ngu-phap-34/','Cặp hay ra, quy trình 3 bước, bẫy'],['Luyện tập','Tự luyện ngữ pháp câu 1–4 · 20 ngày','ngu-phap-luyen/#d=1','Mỗi ngày một nhóm, ôn ngắt quãng']],
-    'doc:5': [['Chiến thuật','Học câu 5 · Quảng cáo sản phẩm','cau-5/','Cụm từ theo đồ vật, tín hiệu, bẫy chữ'],['Luyện tập','Luyện câu 5 như thi','cau-5/#b=3','16 câu, 30 giây/câu'],['Luyện tập','Luyện từ vựng câu 5','cau-5/luyen/','Bảng từ 6 nhóm đồ vật + từ láy, làm bài trắc nghiệm gửi cô']],
+    'doc:5': [['Chiến thuật','Học câu 5 · Quảng cáo sản phẩm','cau-5/','Cụm từ theo đồ vật, tín hiệu, bẫy chữ'],['Luyện tập','Luyện câu 5 như thi','cau-5/#b=3','16 câu, 30 giây/câu'],['Luyện tập','Luyện từ vựng câu 5','cau-5/luyen/','55 đồ vật chia 10 nhóm + từ láy, luyện nhanh, bài trắc nghiệm gửi cô']],
     'doc:11': [['Luyện tập','Tự học câu 11–12 · Tin ngắn (3 ngày)','cau-11-12/hoc/','6 bước theo thứ tự: từ tin tức, đọc + làm thử, cặp từ cùng ý / khác ý, làm từng bước, luyện như thi, kiểm tra'],['Luyện tập','Luyện câu 11–12 như thi','cau-11-12/hoc/#b=5','2 lượt × 6 câu, 1 phút/câu, hỏi lại câu sai']],
     'doc:13': [['Chiến thuật','Học câu 13–15 · Sắp xếp câu','cau-13-15/','Dấu bám, chọn câu đầu, so một vị trí'],['Luyện tập','Tự luyện 66 câu sắp xếp','cau-13-15/luyen/','Làm 2 bước, có gợi ý']],
     'doc:16': [['Chiến thuật','Học câu 16–18 · Điền chỗ trống','cau-16-18/','Đọc qua ô, 5 tín hiệu, 4 bẫy'],['Luyện tập','Luyện câu 16–18 như thi','cau-16-18/#b=3','1 phút/câu']],
@@ -129,15 +129,24 @@
     });
     return order.map(function(s){ return {sec: s, r: secs[s].r, g: secs[s].g}; });
   }
+  /* phần kho từ có trang luyện riêng → nút “Luyện nhóm này ›” */
+  function tuLuyen(sec){
+    var m = /^Câu 5 · 제품 광고 (\d+)/.exec(sec);
+    if(m) return 'cau-5/luyen/#t=n' + m[1];
+    if(/^Câu 5–8 · 의성어/.test(sec)) return 'cau-5/luyen/#t=l1';
+    return '';
+  }
   function tuHTML(k, d, jump){
     var list = vocabFor(k, d);
     if(!list.length) return '<p class="empty">Dạng này chưa có bảng từ riêng. Em học <a href="#k=tu&s=uu">⭐ Từ cốt lõi</a> trước nhé.</p>';
     var h = TOOLS, j = 0, chips = [];
     if(jump) list.forEach(function(s){ s.g.forEach(function(g){ chips.push(['g' + (j++), g.vi || g.ko]); }); });
-    h += jump ? jumpChips(chips) : '';
+    if(jump) h += jumpChips(chips);
+    else if(list.length > 1) h += jumpChips(list.map(function(s, si){ return ['s' + si, s.sec.replace(/^[^·]*· /, '').replace(/^[^·\d]*?(\d+) · /, '$1 · ').replace(/^의성어·의태어 · /, '')]; }));
     h += '<div id="tbs">'; j = 0;
-    list.forEach(function(s){
-      h += '<h3 class="kr">' + esc(s.sec) + '</h3>';
+    list.forEach(function(s, si){
+      var lt = tuLuyen(s.sec);
+      h += '<h3 class="kr" id="s' + si + '">' + esc(s.sec) + (lt ? ' <a class="lt" href="' + lt + '">Luyện nhóm này ›</a>' : '') + '</h3>';
       s.g.forEach(function(g){ h += blkHTML(g, jump ? 'g' + (j++) : ''); });
     });
     return h + '</div>';
